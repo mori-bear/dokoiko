@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="header-inner">
       <h1 class="site-title">どこ行こ？</h1>
-      <p class="site-tagline">知らない街と出会い、納得して、予約まで。</p>
+      <p class="site-tagline">知らない街と出会いませんか？</p>
     </div>
   </header>
 
@@ -43,6 +43,24 @@
             <span class="d-stars">★★★★★</span>
             <span class="d-label">かなり遠い</span>
           </button>
+        </div>
+      </div>
+
+      <hr class="card-divider">
+
+      <!-- 地方フィルタ -->
+      <div class="field-block">
+        <p class="field-label">地方</p>
+        <div class="region-row">
+          <button class="region-btn active" type="button" data-value="全国">全国</button>
+          <button class="region-btn" type="button" data-value="北海道">北海道</button>
+          <button class="region-btn" type="button" data-value="東北">東北</button>
+          <button class="region-btn" type="button" data-value="関東">関東</button>
+          <button class="region-btn" type="button" data-value="中部">中部</button>
+          <button class="region-btn" type="button" data-value="近畿">近畿</button>
+          <button class="region-btn" type="button" data-value="中国">中国</button>
+          <button class="region-btn" type="button" data-value="四国">四国</button>
+          <button class="region-btn" type="button" data-value="九州">九州</button>
         </div>
       </div>
 
@@ -101,12 +119,21 @@
             <option value="2night">2泊3日</option>
           </select>
         </div>
+        <div class="form-row budget-row">
+          <p class="field-label">予算（交通＋宿の目安）</p>
+          <div class="budget-chips">
+            <button class="budget-btn active" type="button" data-value="">指定なし</button>
+            <button class="budget-btn" type="button" data-value="~2">〜2万円</button>
+            <button class="budget-btn" type="button" data-value="2-5">2〜5万円</button>
+            <button class="budget-btn" type="button" data-value="5+">5万円以上</button>
+          </div>
+        </div>
       </div>
 
       <!-- 抽選ボタン -->
       <div class="generate-row">
         <button type="button" id="generatePlanBtn" class="generate-btn">
-          プランを生成する
+          どこ行こ？
         </button>
       </div>
 

@@ -5,10 +5,12 @@ const state = {
   destinations: [],
   current: null,
   selectedDistanceLevel: null,
-  selectedDate: null,   // 確定日付文字列 (YYYY-MM-DD)
+  selectedDate: null,
   selectedTime: '10:00',
   stayType: 'daytrip',
   departure: '東京',
+  region: '全国',
+  budget: '',
   mode: 'manual',
 };
 
@@ -43,17 +45,33 @@ function bindEvents() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.distance-btn').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-
       state.selectedDistanceLevel = parseInt(btn.dataset.value, 10);
       state.current = null;
       state.mode = 'manual';
       renderPlan(null);
       renderCityCards(
-        filterDestinations(state.destinations, state.departure, state.selectedDistanceLevel),
+        filterDestinations(state.destinations, state.departure, state.selectedDistanceLevel, state.region, state.budget),
         onCitySelect
       );
-
       document.getElementById('city-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+
+  // 地方フィルタ
+  document.querySelectorAll('.region-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.region-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.region = btn.dataset.value;
+    });
+  });
+
+  // 予算フィルタ
+  document.querySelectorAll('.budget-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.budget-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.budget = btn.dataset.value;
     });
   });
 
@@ -68,10 +86,17 @@ function bindEvents() {
 
     if (!state.selectedDate) state.selectedDate = getDateStr(0);
 
-    const matches = filterDestinations(state.destinations, state.departure, state.selectedDistanceLevel);
+    const matches = filterDestinations(
+      state.destinations,
+      state.departure,
+      state.selectedDistanceLevel,
+      state.region,
+      state.budget
+    );
+
     if (matches.length === 0) {
       const cardsEl = document.getElementById('city-cards');
-      cardsEl.innerHTML = '<p class="empty-state">この出発地・距離の組み合わせは現在準備中です。</p>';
+      cardsEl.innerHTML = '<p class="empty-state">この条件に合う街は現在準備中です。<br>条件を変えて再度お試しください。</p>';
       cardsEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
@@ -103,7 +128,7 @@ function bindEvents() {
     state.departure = e.target.value;
   });
 
-  // 日付モード（label.click で確実に拾う）
+  // 日付モード
   document.querySelectorAll('.date-mode-btn').forEach((lbl) => {
     lbl.addEventListener('click', () => {
       document.querySelectorAll('.date-mode-btn').forEach((b) => b.classList.remove('active'));
@@ -112,24 +137,19 @@ function bindEvents() {
       document.getElementById('date-custom-wrap').hidden = mode !== 'custom';
       if (mode === 'today')    state.selectedDate = getDateStr(0);
       if (mode === 'tomorrow') state.selectedDate = getDateStr(1);
-      // 'custom' は date-input の change で設定
     });
   });
 
-  // 日付指定入力
   document.getElementById('date-input').addEventListener('change', (e) => {
     if (e.target.value) state.selectedDate = e.target.value;
   });
 
-  // ページロード時に今日をセット
   state.selectedDate = getDateStr(0);
 
-  // 出発時刻
   document.getElementById('time-select').addEventListener('change', (e) => {
     state.selectedTime = e.target.value;
   });
 
-  // 滞在タイプ
   document.getElementById('stay-select').addEventListener('change', (e) => {
     state.stayType = e.target.value;
   });

@@ -2,6 +2,7 @@
   {
     "id": "hakone",
     "city": "箱根",
+    "yomi": "はこね",
     "prefecture": "神奈川県",
     "region": "関東",
     "mainStation": "箱根湯本駅",
@@ -9,22 +10,41 @@
     "jrArea": "none",
     "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["温泉", "自然", "美術館"],
     "from": ["東京"],
     "appeal": [
       "週末のふらっとに、ちょうどいい距離感。",
       "湯煙と山の静けさが、都市の疲れを溶かしてくれる。",
-      "温泉、美術館、自然。ぜんぶが小さな圏内に収まっている。"
+      "温泉、美術館、芦ノ湖。小さな圏内に密度がある。"
     ],
     "highlights": [
       { "name": "箱根美術館", "url": "https://www.moa-hakone.or.jp/" },
-      { "name": "芦ノ湖", "url": "https://www.hakone.or.jp/" }
+      { "name": "芦ノ湖", "url": "https://www.hakone.or.jp/" },
+      { "name": "大涌谷", "url": "https://www.owakudani.com/" }
     ],
-    "departure": { "label": "新宿" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "小田急ロマンスカーで新宿から直行",
+        "duration": "約1.5時間",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスなら乗り換えなしでアクセスできる",
+        "duration": "約2時間",
+        "links": ["highwaybus"]
+      }
+    ]
   },
   {
     "id": "nikko",
     "city": "日光",
+    "yomi": "にっこう",
     "prefecture": "栃木県",
     "region": "関東",
     "mainStation": "東武日光駅",
@@ -32,22 +52,41 @@
     "jrArea": "none",
     "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["世界遺産", "神社仏閣", "自然"],
     "from": ["東京"],
     "appeal": [
-      "日本の「豪華」が、山の中に静かに残っている。",
-      "世界遺産の社殿群。その密度に、ただ圧倒される。",
-      "奥日光まで足を伸ばせば、また別の顔が待っている。"
+      "世界遺産の社殿群が、山の中に静かに建っている。",
+      "奥日光の湯元温泉、華厳の滝。別の顔が奥に重なる。",
+      "東武特急で浅草から約2時間。意外に近い場所にある。"
     ],
     "highlights": [
       { "name": "日光東照宮", "url": "https://www.toshogu.jp/" },
-      { "name": "華厳の滝", "url": "https://www.kegon.jp/" }
+      { "name": "華厳の滝", "url": "https://www.kegon.jp/" },
+      { "name": "日光国立公園", "url": "https://www.nikko-kankou.org/" }
     ],
-    "departure": { "label": "浅草" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "東武特急スペーシアで浅草から直行",
+        "duration": "約2時間",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで新宿・池袋から乗り換えなし",
+        "duration": "約2〜2.5時間",
+        "links": ["highwaybus"]
+      }
+    ]
   },
   {
     "id": "kamakura",
     "city": "鎌倉",
+    "yomi": "かまくら",
     "prefecture": "神奈川県",
     "region": "関東",
     "mainStation": "鎌倉駅",
@@ -55,22 +94,41 @@
     "jrArea": "none",
     "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["歴史", "海", "寺社"],
     "from": ["東京"],
     "appeal": [
-      "武家の古都が、海と山にはさまれて息づいている。",
-      "大仏から海岸まで、歩くほどに発見がある街。",
+      "武家の古都が海と山にはさまれて、今も息づいている。",
+      "大仏から海岸まで、歩くほどに発見が増える街。",
       "鎌倉野菜と海の幸。食でも裏切られない。"
     ],
     "highlights": [
       { "name": "鶴岡八幡宮", "url": "https://www.hachimangu.or.jp/" },
-      { "name": "高徳院（鎌倉大仏）", "url": "https://www.kotoku-in.jp/" }
+      { "name": "高徳院（鎌倉大仏）", "url": "https://www.kotoku-in.jp/" },
+      { "name": "小町通り", "url": "https://www.kamakura-info.jp/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR横須賀線で東京から乗り換えなし",
+        "duration": "約1時間",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで渋滞を避けて座っていける",
+        "duration": "約1.5〜2時間",
+        "links": ["highwaybus"]
+      }
+    ]
   },
   {
     "id": "atami",
     "city": "熱海",
+    "yomi": "あたみ",
     "prefecture": "静岡県",
     "region": "東海",
     "mainStation": "熱海駅",
@@ -78,7 +136,9 @@
     "jrArea": "east",
     "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["温泉", "海", "リゾート"],
     "from": ["東京"],
     "appeal": [
       "新幹線で1時間。なのに、完全に「旅」の気分になれる。",
@@ -87,13 +147,30 @@
     ],
     "highlights": [
       { "name": "熱海城", "url": "https://atamijo.com/" },
-      { "name": "MOA美術館", "url": "https://www.moaart.or.jp/" }
+      { "name": "MOA美術館", "url": "https://www.moaart.or.jp/" },
+      { "name": "起雲閣", "url": "https://www.ataminews.gr.jp/kikankan/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "東海道新幹線こだまで東京から直行",
+        "duration": "約40〜50分",
+        "links": ["yahoo", "jr-east"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "rail",
+        "desc": "普通列車でゆっくり海沿いを楽しむ",
+        "duration": "約1.5〜2時間",
+        "links": ["yahoo"]
+      }
+    ]
   },
   {
     "id": "utsunomiya",
     "city": "宇都宮",
+    "yomi": "うつのみや",
     "prefecture": "栃木県",
     "region": "関東",
     "mainStation": "宇都宮駅",
@@ -101,597 +178,588 @@
     "jrArea": "east",
     "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["餃子", "歴史", "石文化"],
     "from": ["東京"],
     "appeal": [
       "餃子の聖地。本場を食べずして餃子を語るなかれ。",
-      "新幹線でひと飛び。日帰りにちょうどいい距離感。",
-      "大谷石の採石場跡は、地下に広がる別世界。"
+      "新幹線で約50分。日帰りにちょうどいい距離感。",
+      "大谷石の採石場跡は、地下に広がる別世界だ。"
     ],
     "highlights": [
       { "name": "宇都宮二荒山神社", "url": "https://www.futaarayamajinja.jp/" },
-      { "name": "大谷資料館", "url": "https://www.oya909.co.jp/" }
+      { "name": "大谷資料館", "url": "https://www.oya909.co.jp/" },
+      { "name": "宇都宮餃子会加盟店", "url": "https://www.gyozakai.com/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "東北新幹線やまびこで東京から直行",
+        "duration": "約50分",
+        "links": ["yahoo", "jr-east"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで節約。東武バスが運行",
+        "duration": "約2時間",
+        "links": ["highwaybus"]
+      }
+    ]
   },
   {
     "id": "yokohama",
     "city": "横浜",
+    "yomi": "よこはま",
     "prefecture": "神奈川県",
     "region": "関東",
     "mainStation": "横浜駅",
     "railType": "jr",
     "jrArea": "none",
-    "transportType": ["rail", "highwaybus"],
+    "transportType": ["rail"],
     "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
+    "themes": ["港町", "中華街", "夜景"],
     "from": ["東京"],
     "appeal": [
-      "東京から30分。でも、空気はもう別の街だ。",
+      "東京から30分。なのに、港の空気がもう別の街だ。",
       "中華街、みなとみらい、元町。歩くたびに表情が変わる。",
-      "港の夜景と横浜中華。これだけで完成する一日。"
+      "横浜中華と夜景。これだけで完成する一日がある。"
     ],
     "highlights": [
       { "name": "横浜中華街", "url": "https://www.chinatown.or.jp/" },
-      { "name": "山下公園", "url": "https://www.city.yokohama.lg.jp/" }
+      { "name": "山下公園", "url": "https://www.city.yokohama.lg.jp/" },
+      { "name": "横浜赤レンガ倉庫", "url": "https://www.yokohama-akarenga.jp/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR東海道線・京浜東北線で直行",
+        "duration": "約30〜40分",
+        "links": ["yahoo"]
+      }
+    ]
   },
   {
-    "id": "sendai",
-    "city": "仙台",
+    "id": "chichibu",
+    "city": "秩父",
+    "yomi": "ちちぶ",
+    "prefecture": "埼玉県",
+    "region": "関東",
+    "mainStation": "西武秩父駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["自然", "神社", "B級グルメ"],
+    "from": ["東京"],
+    "appeal": [
+      "山あいに突然現れる、なつかしい商店街と神社。",
+      "西武特急ラビューで池袋から約80分。お手軽な奥地感。",
+      "わらじかつ、みそポテト、そば。B級グルメが充実している。"
+    ],
+    "highlights": [
+      { "name": "三峯神社", "url": "https://www.mitsuminejinja.or.jp/" },
+      { "name": "芝桜の丘（羊山公園）", "url": "https://www.chichibu-jikan.jp/" },
+      { "name": "秩父神社", "url": "https://www.chichibu-jinja.or.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "西武特急ラビューで池袋から直行",
+        "duration": "約80分",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで新宿・渋谷から座っていける",
+        "duration": "約2時間",
+        "links": ["highwaybus"]
+      }
+    ]
+  },
+  {
+    "id": "shuzenji",
+    "city": "修善寺",
+    "yomi": "しゅぜんじ",
+    "prefecture": "静岡県",
+    "region": "東海",
+    "mainStation": "修善寺駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["温泉", "竹林", "歴史"],
+    "from": ["東京"],
+    "appeal": [
+      "伊豆の山中に温泉と竹林が広がる、ひっそりとした宿場。",
+      "修善寺温泉は、伊豆最古の温泉地とされている。",
+      "踊り子号で東京から2時間。気づけば別の空気の中にいる。"
+    ],
+    "highlights": [
+      { "name": "修禅寺", "url": "https://www.shuzenji-kankou.com/" },
+      { "name": "竹林の小径", "url": "https://www.shuzenji-kankou.com/" },
+      { "name": "独鈷の湯", "url": "https://www.shuzenji-kankou.com/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "特急踊り子号＋伊豆箱根鉄道で直行",
+        "duration": "約2時間",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで東京・新宿から乗り換えなし",
+        "duration": "約2.5時間",
+        "links": ["highwaybus"]
+      }
+    ]
+  },
+  {
+    "id": "kinosaki",
+    "city": "城崎温泉",
+    "yomi": "きのさきおんせん",
+    "prefecture": "兵庫県",
+    "region": "近畿",
+    "mainStation": "城崎温泉駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "2-5",
+    "staySupport": ["1night", "2night"],
+    "themes": ["温泉", "外湯", "カニ"],
+    "from": ["大阪"],
+    "appeal": [
+      "7つの外湯めぐりが、旅の軸になる温泉街。",
+      "下駄の音が石畳に響く。昔ながらの温泉情緒がそのまま残る。",
+      "松葉ガニの季節は特別。海の幸と湯に包まれる一泊がある。"
+    ],
+    "highlights": [
+      { "name": "城崎温泉外湯めぐり", "url": "https://kinosaki-spa.gr.jp/" },
+      { "name": "玄武洞公園", "url": "https://genbudo-park.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "特急こうのとりで大阪から直行",
+        "duration": "約2.5時間",
+        "links": ["yahoo", "jr-west"]
+      }
+    ]
+  },
+  {
+    "id": "himeji",
+    "city": "姫路",
+    "yomi": "ひめじ",
+    "prefecture": "兵庫県",
+    "region": "近畿",
+    "mainStation": "姫路駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["城", "世界遺産", "歴史"],
+    "from": ["大阪", "名古屋"],
+    "appeal": [
+      "白鷺城の名の通り、白く輝く天守閣が城下を見渡す。",
+      "姫路城は、日本で最初に世界文化遺産に登録された城。",
+      "新快速で大阪から約1時間。ちょっとした遠足感がある。"
+    ],
+    "highlights": [
+      { "name": "姫路城", "url": "https://www.city.himeji.lg.jp/guide/castle/" },
+      { "name": "好古園", "url": "https://www.city.himeji.lg.jp/koukoen/" },
+      { "name": "書写山円教寺", "url": "https://www.shosha.or.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR新快速で大阪から直行（名古屋は新幹線）",
+        "duration": "約1時間（大阪）／約45分（名古屋・新幹線）",
+        "links": ["yahoo", "jr-west"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで節約できる",
+        "duration": "約1.5〜2時間",
+        "links": ["highwaybus"]
+      }
+    ]
+  },
+  {
+    "id": "nara",
+    "city": "奈良",
+    "yomi": "なら",
+    "prefecture": "奈良県",
+    "region": "近畿",
+    "mainStation": "近鉄奈良駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["世界遺産", "鹿", "古都"],
+    "from": ["大阪", "名古屋"],
+    "appeal": [
+      "奈良公園の鹿は、観光客に慣れすぎていてむしろ怖い。",
+      "東大寺、春日大社、興福寺。歴史密度が異常に高い街。",
+      "柿の葉寿司とわらび餅。古都の食も侮れない。"
+    ],
+    "highlights": [
+      { "name": "東大寺", "url": "https://www.todaiji.or.jp/" },
+      { "name": "春日大社", "url": "https://www.kasugataisha.or.jp/" },
+      { "name": "奈良公園", "url": "https://www.pref.nara.jp/1413.htm" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "近鉄特急で大阪難波から直行",
+        "duration": "約35〜40分",
+        "links": ["yahoo"]
+      }
+    ]
+  },
+  {
+    "id": "arima",
+    "city": "有馬温泉",
+    "yomi": "ありまおんせん",
+    "prefecture": "兵庫県",
+    "region": "近畿",
+    "mainStation": "有馬温泉駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "2-5",
+    "staySupport": ["1night", "2night"],
+    "themes": ["温泉", "金泉", "銀泉"],
+    "from": ["大阪"],
+    "appeal": [
+      "金泉と銀泉、二種類の泉質が一つの温泉地に湧いている。",
+      "日本最古の温泉の一つ。太閤秀吉も通った湯。",
+      "神戸から電車で約40分。都市のすぐ裏にある秘湯感。"
+    ],
+    "highlights": [
+      { "name": "有馬温泉観光協会", "url": "https://arima-onsen.com/" },
+      { "name": "金の湯・銀の湯", "url": "https://arima-onsen.com/play/goldandsilver/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "阪急＋神鉄電車で大阪から乗り継ぎ",
+        "duration": "約50〜60分",
+        "links": ["yahoo"]
+      }
+    ]
+  },
+  {
+    "id": "ise",
+    "city": "伊勢",
+    "yomi": "いせ",
+    "prefecture": "三重県",
+    "region": "東海",
+    "mainStation": "伊勢市駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["神社", "参拝", "食文化"],
+    "from": ["名古屋", "大阪"],
+    "appeal": [
+      "20年に一度の式年遷宮で知られる、日本人の心の故郷。",
+      "おかげ横丁の赤福と伊勢うどん。参拝の腹ごしらえに。",
+      "近鉄特急で名古屋から90分。外宮から内宮へ、歩いて参拝できる。"
+    ],
+    "highlights": [
+      { "name": "伊勢神宮（内宮）", "url": "https://www.isejingu.or.jp/" },
+      { "name": "おかげ横丁", "url": "https://www.okageyokocho.co.jp/" },
+      { "name": "赤福本店", "url": "https://www.akafuku.co.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "近鉄特急で名古屋・大阪から直行",
+        "duration": "約1.5時間（名古屋）／約2時間（大阪）",
+        "links": ["yahoo"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで節約できる",
+        "duration": "約2〜2.5時間",
+        "links": ["highwaybus"]
+      }
+    ]
+  },
+  {
+    "id": "tendo",
+    "city": "天童",
+    "yomi": "てんどう",
+    "prefecture": "山形県",
+    "region": "東北",
+    "mainStation": "天童駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["将棋", "温泉", "果物"],
+    "from": ["仙台"],
+    "appeal": [
+      "将棋駒の生産量日本一。街中に将棋文化が溶け込んでいる。",
+      "天童温泉は、山形市の隣に静かに湧く穏やかな湯処。",
+      "さくらんぼとラ・フランス。山形の果物は季節ごとに輝く。"
+    ],
+    "highlights": [
+      { "name": "天童将棋資料館", "url": "https://www.tendoshogi.jp/" },
+      { "name": "天童温泉", "url": "https://www.tendoonsen.or.jp/" },
+      { "name": "人間将棋（春・舞鶴山）", "url": "https://www.tendoshogi.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "山形新幹線つばさ＋奥羽本線で仙台から",
+        "duration": "約1〜1.5時間",
+        "links": ["yahoo", "jr-east"]
+      }
+    ]
+  },
+  {
+    "id": "onagawa",
+    "city": "女川",
+    "yomi": "おながわ",
     "prefecture": "宮城県",
     "region": "東北",
-    "mainStation": "仙台駅",
+    "mainStation": "女川駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京"],
-    "appeal": [
-      "東北の玄関口。都市と自然が混在するちょうどいい街。",
-      "牛タン、海鮮、ずんだ。食べるだけで一日が終わる。",
-      "松島、蔵王、鳴子。街を起点にした旅の幅が広い。"
-    ],
-    "highlights": [
-      { "name": "松島", "url": "https://www.matsushima-kanko.com/" },
-      { "name": "仙台城跡（青葉城）", "url": "https://www.aoba-castle.co.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "nagano",
-    "city": "長野",
-    "prefecture": "長野県",
-    "region": "信越",
-    "mainStation": "長野駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
     "staySupport": ["daytrip", "1night"],
-    "from": ["東京"],
+    "themes": ["復興", "海産物", "港町"],
+    "from": ["仙台"],
     "appeal": [
-      "山に囲まれた盆地の街。空気が澄んでいて、頭が冷える。",
-      "善光寺の参道を歩くだけで、旅の気分が整う。",
-      "戸隠、上高地、別所温泉。長野は奥が深い。"
+      "東日本大震災から立ち上がった、コンパクトで明るい港町。",
+      "女川駅前には、温浴施設と海鮮マーケットが並んでいる。",
+      "さんまとウニ。三陸の海産物はシンプルに強い。"
     ],
     "highlights": [
-      { "name": "善光寺", "url": "https://www.zenkoji.jp/" },
-      { "name": "戸隠神社", "url": "https://www.togakushi-jinja.jp/" }
+      { "name": "シーパルピア女川", "url": "https://onagawa.town/" },
+      { "name": "女川温泉ゆぽっぽ", "url": "https://onagawa-yupoppo.com/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR石巻線で仙台から乗り継ぎ",
+        "duration": "約1.5時間",
+        "links": ["yahoo"]
+      }
+    ]
   },
   {
-    "id": "niigata",
-    "city": "新潟",
-    "prefecture": "新潟県",
-    "region": "信越",
-    "mainStation": "新潟駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京"],
-    "appeal": [
-      "日本海に面した米どころ。ご飯がおいしい街はそれだけで正義。",
-      "へぎそば、のどぐろ、日本酒。食の密度が高い。",
-      "古町の夜、朱鷺メッセからの夕焼け。都市としても魅力的。"
-    ],
-    "highlights": [
-      { "name": "新潟市水族館 マリンピア日本海", "url": "https://www.marinepia.or.jp/" },
-      { "name": "古町", "url": "https://www.niigata-kankou.or.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "karuizawa",
-    "city": "軽井沢",
-    "prefecture": "長野県",
-    "region": "信越",
-    "mainStation": "軽井沢駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
-    "staySupport": ["daytrip", "1night"],
-    "from": ["東京"],
-    "appeal": [
-      "新幹線で70分。高原の空気は都市とまったく違う。",
-      "アウトレット、旧軽銀座、白糸の滝。行動量が増える街。",
-      "夏も冬も、季節の使い方を選べる贅沢な場所。"
-    ],
-    "highlights": [
-      { "name": "白糸の滝", "url": "https://www.karuizawa-kankokyokai.jp/" },
-      { "name": "旧軽井沢銀座", "url": "https://www.karuizawa-kankokyokai.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "nagoya",
-    "city": "名古屋",
-    "prefecture": "愛知県",
-    "region": "東海",
-    "mainStation": "名古屋駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
-    "staySupport": ["daytrip", "1night"],
-    "from": ["東京", "大阪"],
-    "appeal": [
-      "独自の食文化が育つ街。味噌カツ、ひつまぶし、あんかけスパ。",
-      "東海道の中継地点。歴史と産業が交差する都市。",
-      "名古屋城、熱田神宮、大須。見所は想像以上に多い。"
-    ],
-    "highlights": [
-      { "name": "名古屋城", "url": "https://www.nagoyajo.city.nagoya.jp/" },
-      { "name": "熱田神宮", "url": "https://www.atsutajingu.or.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "morioka",
-    "city": "盛岡",
-    "prefecture": "岩手県",
-    "region": "東北",
-    "mainStation": "盛岡駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 2,
-    "staySupport": ["daytrip", "1night"],
-    "from": ["東京", "仙台"],
-    "appeal": [
-      "新幹線で約2時間、東北の奥座敷へ。",
-      "わんこそばと南部鉄器が待っている。",
-      "城下町の風情が路地に残る。"
-    ],
-    "highlights": [
-      { "name": "盛岡城跡公園", "url": "https://www.morioka-kanko.com/" },
-      { "name": "わんこそば体験", "url": "https://www.morioka-kanko.com/wanko/" },
-      { "name": "岩手銀行赤レンガ館", "url": "https://www.iwagin-akarengakan.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "kanazawa",
-    "city": "金沢",
-    "prefecture": "石川県",
-    "region": "北陸",
-    "mainStation": "金沢駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋"],
-    "appeal": [
-      "北陸の空気は、少し違う。時間の流れが静かに感じられる。",
-      "兼六園、東茶屋街、近江町市場。歩けば街が語りかけてくる。",
-      "加賀料理と地酒。食の密度が異常に高い街。"
-    ],
-    "highlights": [
-      { "name": "兼六園", "url": "https://www.pref.ishikawa.jp/siro-niwa/kenrokuen/" },
-      { "name": "ひがし茶屋街", "url": "https://www.kanazawa-tourism.com/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "kyoto",
-    "city": "京都",
-    "prefecture": "京都府",
-    "region": "近畿",
-    "mainStation": "京都駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋"],
-    "appeal": [
-      "千年の都。来るたびに、まだ知らない路地がある。",
-      "寺社仏閣の密度は世界屈指。歩いているだけでいい。",
-      "和食、甘味、京野菜。食のレベルが街全体で高い。"
-    ],
-    "highlights": [
-      { "name": "嵐山", "url": "https://www.kyoto-arashiyama.jp/" },
-      { "name": "伏見稲荷大社", "url": "https://inari.jp/" },
-      { "name": "祇園", "url": "https://www.kyokanko.or.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "osaka",
-    "city": "大阪",
-    "prefecture": "大阪府",
-    "region": "近畿",
-    "mainStation": "大阪駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "名古屋"],
-    "appeal": [
-      "食い倒れの街。たこ焼き、串カツ、お好み焼き。全部うまい。",
-      "人が明るく、会話が弾む。旅の空気が自然と軽くなる。",
-      "道頓堀、なんば、天満。夜まで飽きない街。"
-    ],
-    "highlights": [
-      { "name": "道頓堀", "url": "https://www.dotonbori.or.jp/" },
-      { "name": "大阪城", "url": "https://www.osakacastle.net/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "hiroshima",
-    "city": "広島",
-    "prefecture": "広島県",
-    "region": "中国",
-    "mainStation": "広島駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "flight", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡", "高松"],
-    "appeal": [
-      "歴史の重さと、人の温かさが共存している街。",
-      "お好み焼きと牡蠣。カープと路面電車。",
-      "宮島は、できれば夜に渡ってほしい。"
-    ],
-    "highlights": [
-      { "name": "厳島神社（宮島）", "url": "https://www.miyajima.or.jp/" },
-      { "name": "広島平和記念資料館", "url": "https://hpmmuseum.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "takamatsu",
-    "city": "高松",
-    "prefecture": "香川県",
-    "region": "四国",
-    "mainStation": "高松駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "flight", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "広島"],
-    "appeal": [
-      "うどん県の玄関口。本場の讃岐うどんは、別次元のうまさ。",
-      "栗林公園の美しさは、日本庭園の中でも別格。",
-      "瀬戸内の島々へのアクセス拠点として使える。"
-    ],
-    "highlights": [
-      { "name": "栗林公園", "url": "https://www.ritsuringarden.jp/" },
-      { "name": "直島（アートの島）", "url": "https://benesse-artsite.jp/art/naoshima.html" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "matsuyama",
-    "city": "松山",
-    "prefecture": "愛媛県",
-    "region": "四国",
-    "mainStation": "松山駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "flight", "ferry", "highwaybus"],
-    "ferryUrl": "https://www.sunflower.co.jp/",
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "高松"],
-    "appeal": [
-      "道後温泉は、日本最古の温泉地。それだけで来る価値がある。",
-      "坊っちゃんの舞台。路面電車が今も街を走っている。",
-      "鯛めし、じゃこ天、蛇口からミカンジュース。愛媛らしさが濃い。"
-    ],
-    "highlights": [
-      { "name": "道後温泉本館", "url": "https://dogo.jp/" },
-      { "name": "松山城", "url": "https://www.matsuyamajo.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "nagasaki",
-    "city": "長崎",
-    "prefecture": "長崎県",
-    "region": "九州",
-    "mainStation": "長崎駅",
-    "railType": "jr",
-    "jrArea": "kyushu",
-    "transportType": ["rail", "flight", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡"],
-    "appeal": [
-      "坂の街。港の街。異国情緒が自然と街に溶け込んでいる。",
-      "ちゃんぽん、皿うどん、角煮まん。長崎の食は独自の進化を遂げた。",
-      "グラバー園からの夜景は、日本三大夜景のひとつ。"
-    ],
-    "highlights": [
-      { "name": "グラバー園", "url": "https://www.glover-garden.jp/" },
-      { "name": "長崎平和公園", "url": "https://nagasakipeace.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "okayama",
-    "city": "岡山",
-    "prefecture": "岡山県",
-    "region": "中国",
-    "mainStation": "岡山駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["daytrip", "1night"],
-    "from": ["東京", "大阪", "名古屋", "広島"],
-    "appeal": [
-      "晴れの国、岡山。白桃とマスカットの土地。",
-      "後楽園が四季ごとに表情を変える。",
-      "瀬戸内の入口、どこへでも繋がる街。"
-    ],
-    "highlights": [
-      { "name": "後楽園", "url": "https://www.okayama-korakuen.jp/" },
-      { "name": "岡山城", "url": "https://okayama-castle.jp/" },
-      { "name": "倉敷美観地区", "url": "https://www.kurashiki-tabi.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "kumamoto",
-    "city": "熊本",
-    "prefecture": "熊本県",
-    "region": "九州",
-    "mainStation": "熊本駅",
-    "railType": "jr",
-    "jrArea": "kyushu",
-    "transportType": ["rail", "flight"],
-    "distanceLevel": 4,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松"],
-    "appeal": [
-      "くまもんの故郷。でも街に来てみると、歴史の深さに驚く。",
-      "馬刺し、辛子蓮根、太平燕。熊本の食は意外にバラエティ豊か。",
-      "阿蘇という火山が、すぐそこにある。自然のスケールが違う。"
-    ],
-    "highlights": [
-      { "name": "熊本城", "url": "https://castle.kumamoto-guide.jp/" },
-      { "name": "阿蘇山", "url": "https://www.aso.ne.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "kagoshima",
-    "city": "鹿児島",
-    "prefecture": "鹿児島県",
-    "region": "九州",
-    "mainStation": "鹿児島中央駅",
-    "railType": "jr",
-    "jrArea": "kyushu",
-    "transportType": ["rail", "flight"],
-    "distanceLevel": 4,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡"],
-    "appeal": [
-      "桜島が街のすぐ向こうにある。その存在感は圧倒的だ。",
-      "黒豚、黒牛、薩摩焼酎。南九州の食材は豊かすぎる。",
-      "指宿の砂むし温泉。ここでしか体験できない感覚がある。"
-    ],
-    "highlights": [
-      { "name": "桜島", "url": "https://www.kagoshima-kankou.com/" },
-      { "name": "仙巌園", "url": "https://www.senganen.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "aomori",
-    "city": "青森",
-    "prefecture": "青森県",
-    "region": "東北",
-    "mainStation": "青森駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "flight"],
-    "distanceLevel": 4,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "仙台"],
-    "appeal": [
-      "ねぶた祭りの街。あのエネルギーは、実際に見ないとわからない。",
-      "りんごとホタテ。青森の食材はシンプルに強い。",
-      "奥入瀬渓流と十和田湖。東北最高峰の自然が待っている。"
-    ],
-    "highlights": [
-      { "name": "奥入瀬渓流", "url": "https://www.towada.travel/" },
-      { "name": "ねぶたの家 ワ・ラッセ", "url": "https://www.nebuta.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "akita",
-    "city": "秋田",
-    "prefecture": "秋田県",
-    "region": "東北",
-    "mainStation": "秋田駅",
-    "railType": "jr",
-    "jrArea": "east",
-    "transportType": ["rail", "flight"],
-    "distanceLevel": 4,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "仙台"],
-    "appeal": [
-      "きりたんぽ、比内地鶏、横手やきそば。秋田の食は奥が深い。",
-      "なまはげ。恐ろしいけど、あれは愛情の形だ。",
-      "田沢湖の青さは、国内随一。その透明度に言葉を失う。"
-    ],
-    "highlights": [
-      { "name": "田沢湖", "url": "https://www.tazawako.org/" },
-      { "name": "角館（武家屋敷通り）", "url": "https://www.city.semboku.akita.jp/kanko/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "fukuoka",
-    "city": "福岡",
+    "id": "yanagawa",
+    "city": "柳川",
+    "yomi": "やながわ",
     "prefecture": "福岡県",
     "region": "九州",
-    "mainStation": "博多駅",
-    "railType": "jr",
-    "jrArea": "kyushu",
-    "transportType": ["rail", "flight", "highwaybus"],
-    "distanceLevel": 4,
-    "staySupport": ["daytrip", "1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "広島", "高松", "仙台", "札幌"],
+    "mainStation": "西鉄柳川駅",
+    "railType": "private",
+    "jrArea": "none",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["水郷", "うなぎ", "掘割"],
+    "from": ["福岡"],
     "appeal": [
-      "ラーメン、もつ鍋、屋台。食が圧倒的に強い街。",
-      "博多と天神、二つの顔が共存する。",
-      "アジアへの玄関口として独自の熱量がある。"
+      "掘割を舟でのんびり流れる、水郷の風景がここにある。",
+      "うなぎのせいろ蒸し。この食べ方は柳川でしか出会えない。",
+      "西鉄電車で天神から45分。日帰りで別世界に迷い込む。"
     ],
     "highlights": [
-      { "name": "中洲屋台", "url": "https://nakasu.com/" },
-      { "name": "太宰府天満宮", "url": "https://www.dazaifutenmangu.or.jp/" },
-      { "name": "福岡市美術館", "url": "https://www.fukuoka-art-museum.jp/" }
+      { "name": "川下り（どんこ舟）", "url": "https://www.yanagawa-kankou.jp/" },
+      { "name": "御花", "url": "https://www.ohana.co.jp/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "西鉄天神大牟田線で天神から直行",
+        "duration": "約45分",
+        "links": ["yahoo"]
+      }
+    ]
   },
   {
-    "id": "sapporo",
-    "city": "札幌",
+    "id": "takehara",
+    "city": "竹原",
+    "yomi": "たけはら",
+    "prefecture": "広島県",
+    "region": "中国",
+    "mainStation": "竹原駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["町並み保存", "酒蔵", "歴史"],
+    "from": ["広島"],
+    "appeal": [
+      "江戸時代の製塩で栄えた、白壁の町並みが残る港町。",
+      "たけはら街並み保存地区は、ドラマのロケ地にもなった。",
+      "呉線で広島から約1.5時間。海沿いの景色が車窓を彩る。"
+    ],
+    "highlights": [
+      { "name": "たけはら街並み保存地区", "url": "https://www.takeharakankou.jp/" },
+      { "name": "西方寺・普明閣", "url": "https://www.takeharakankou.jp/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR呉線で広島から海沿いを直行",
+        "duration": "約1.5時間",
+        "links": ["yahoo"]
+      }
+    ]
+  },
+  {
+    "id": "otaru",
+    "city": "小樽",
+    "yomi": "おたる",
     "prefecture": "北海道",
     "region": "北海道",
-    "mainStation": "札幌駅",
+    "mainStation": "小樽駅",
     "railType": "jr",
     "jrArea": "none",
-    "transportType": ["flight", "car"],
-    "distanceLevel": 5,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "仙台", "福岡", "広島", "高松"],
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["港町", "運河", "海産物"],
+    "from": ["札幌"],
     "appeal": [
-      "広さがちがう。空が広く、道が広く、景色がでかい。",
-      "スープカレー、ジンギスカン、海産物。食の多様性は日本随一。",
-      "小樽、富良野、知床。札幌を起点にした先も面白い。"
+      "明治の港町の面影が運河沿いに残る、北海道随一の観光地。",
+      "すし屋通りの海鮮丼と、北一硝子のランプの灯り。",
+      "札幌から快速で30分。ちょっとした日帰り旅行の定番。"
     ],
     "highlights": [
-      { "name": "大通公園", "url": "https://www.sapporo-park.or.jp/odori/" },
-      { "name": "狸小路商店街", "url": "https://www.tanukikoji.or.jp/" }
+      { "name": "小樽運河", "url": "https://www.city.otaru.lg.jp/" },
+      { "name": "北一硝子", "url": "https://kitaichiglass.co.jp/" },
+      { "name": "三角市場", "url": "https://www.otaru.gr.jp/" }
     ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR函館本線の快速エアポートで札幌から直行",
+        "duration": "約30〜40分",
+        "links": ["yahoo"]
+      }
+    ]
   },
   {
-    "id": "hakodate",
-    "city": "函館",
-    "prefecture": "北海道",
-    "region": "北海道",
-    "mainStation": "函館駅",
+    "id": "marugame",
+    "city": "丸亀",
+    "yomi": "まるがめ",
+    "prefecture": "香川県",
+    "region": "四国",
+    "mainStation": "丸亀駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip"],
+    "themes": ["城", "うどん", "歴史"],
+    "from": ["高松"],
+    "appeal": [
+      "丸亀城は、現存する12天守の一つ。石垣の美しさで知られる。",
+      "丸亀うちわは、国内シェア9割を超える工芸品。",
+      "高松から15分。讃岐うどんの聖地巡礼の途中に立ち寄れる。"
+    ],
+    "highlights": [
+      { "name": "丸亀城", "url": "https://www.city.marugame.lg.jp/site/marugamejo/" },
+      { "name": "丸亀市猪熊弦一郎現代美術館", "url": "https://www.mimoca.org/" }
+    ],
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "JR予讃線で高松から直行",
+        "duration": "約15〜20分",
+        "links": ["yahoo"]
+      }
+    ]
+  },
+  {
+    "id": "takasaki",
+    "city": "高崎",
+    "yomi": "たかさき",
+    "prefecture": "群馬県",
+    "region": "関東",
+    "mainStation": "高崎駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail", "flight"],
-    "distanceLevel": 5,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "仙台"],
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 1,
+    "budget": "~2",
+    "staySupport": ["daytrip", "1night"],
+    "themes": ["だるま", "焼きまんじゅう", "交通拠点"],
+    "from": ["東京"],
     "appeal": [
-      "函館山から見下ろす夜景は、世界三大夜景のひとつ。",
-      "朝市のいくら丼と塩ラーメン。函館の朝は食から始まる。",
-      "元町の西洋建築と、和の街並みが混在する不思議な空気感。"
+      "達磨の生産地。赤いだるまが街のあちこちに顔を出す。",
+      "上毛野のソウルフード、焼きまんじゅう。甘辛タレが癖になる。",
+      "新幹線の分岐点。ここから北陸も信越も東北も広がる。"
     ],
     "highlights": [
-      { "name": "函館山（夜景）", "url": "https://www.334.co.jp/" },
-      { "name": "五稜郭", "url": "https://www.hakodate-jts-kosya.jp/parks/goryokaku/" }
+      { "name": "少林山達磨寺", "url": "https://www.daruma.or.jp/" },
+      { "name": "高崎市美術館", "url": "https://www.city.takasaki.gunma.jp/docs/2014011500015/" }
     ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "okinawa",
-    "city": "那覇",
-    "prefecture": "沖縄県",
-    "region": "沖縄",
-    "mainStation": "那覇空港",
-    "railType": "none",
-    "jrArea": "none",
-    "transportType": ["flight", "car"],
-    "distanceLevel": 5,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松", "仙台", "札幌"],
-    "appeal": [
-      "空の青さが、本土とはぜんぜんちがう。",
-      "首里城、国際通り、離島。どこを選んでも外れがない。",
-      "沖縄料理とオリオンビール。夜の気温が、旅の記憶を変える。"
-    ],
-    "highlights": [
-      { "name": "首里城", "url": "https://oki-park.jp/shurijo/" },
-      { "name": "美ら海水族館", "url": "https://churaumi.okinawa/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "ishigaki",
-    "city": "石垣島",
-    "prefecture": "沖縄県",
-    "region": "沖縄",
-    "mainStation": "南ぬ島石垣空港",
-    "railType": "none",
-    "jrArea": "none",
-    "transportType": ["flight", "car"],
-    "distanceLevel": 5,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松", "仙台", "札幌"],
-    "appeal": [
-      "那覇からさらに飛んだ先。海の青さがまた一段違う。",
-      "川平湾のグラデーションは、写真では伝わらない種類の美しさ。",
-      "八重山そばと石垣牛。離島でしか食べられない豊かさがある。"
-    ],
-    "highlights": [
-      { "name": "川平湾", "url": "https://www.yaeyama.or.jp/" },
-      { "name": "竹富島", "url": "https://www.taketomijima.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
-    "id": "yakushima",
-    "city": "屋久島",
-    "prefecture": "鹿児島県",
-    "region": "九州",
-    "mainStation": "屋久島空港",
-    "railType": "none",
-    "jrArea": "none",
-    "transportType": ["flight", "car"],
-    "distanceLevel": 5,
-    "staySupport": ["1night", "2night"],
-    "from": ["東京", "大阪", "名古屋", "福岡"],
-    "appeal": [
-      "樹齢数千年の縄文杉が、今もそこに立っている。",
-      "島全体が世界自然遺産。密林と滝と海が一つの島に共存する。",
-      "雨が多い。でも、その雨がこの島の緑をつくっている。"
-    ],
-    "highlights": [
-      { "name": "縄文杉トレッキング", "url": "https://www.yakushima-toha.com/" },
-      { "name": "白谷雲水峡", "url": "https://www.town.yakushima.kagoshima.jp/" }
-    ],
-    "departure": { "label": "東京" }
+    "transitPatterns": [
+      {
+        "rank": 1, "rankLabel": "王道",
+        "mode": "rail",
+        "desc": "上越・北陸新幹線で東京から直行",
+        "duration": "約50分",
+        "links": ["yahoo", "jr-east"]
+      },
+      {
+        "rank": 2, "rankLabel": "代替",
+        "mode": "highwaybus",
+        "desc": "高速バスで節約できる",
+        "duration": "約2時間",
+        "links": ["highwaybus"]
+      }
+    ]
   }
 ]
