@@ -1,4 +1,4 @@
-import { filterByDistance, generatePlan, drawDestination } from './core/planEngine.js';
+import { filterDestinations, generatePlan, drawDestination } from './core/planEngine.js';
 import { renderCityCards, renderPlan, renderResult } from './ui/render.js';
 
 const state = {
@@ -48,7 +48,10 @@ function bindEvents() {
       state.current = null;
       state.mode = 'manual';
       renderPlan(null);
-      renderCityCards(filterByDistance(state.destinations, state.selectedDistanceLevel), onCitySelect);
+      renderCityCards(
+        filterDestinations(state.destinations, state.departure, state.selectedDistanceLevel),
+        onCitySelect
+      );
 
       document.getElementById('city-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
@@ -65,11 +68,15 @@ function bindEvents() {
 
     if (!state.selectedDate) state.selectedDate = getDateStr(0);
 
-    const matches = filterByDistance(state.destinations, state.selectedDistanceLevel);
-    // 該当ゼロ時は全件から抽選（簡易フォールバック）
-    const pool = matches.length > 0 ? matches : state.destinations;
-    const picked = drawDestination(pool);
+    const matches = filterDestinations(state.destinations, state.departure, state.selectedDistanceLevel);
+    if (matches.length === 0) {
+      const cardsEl = document.getElementById('city-cards');
+      cardsEl.innerHTML = '<p class="empty-state">この出発地・距離の組み合わせは現在準備中です。</p>';
+      cardsEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
 
+    const picked = drawDestination(matches);
     if (!picked) {
       document.getElementById('city-cards').innerHTML =
         '<p class="empty-state">この距離の街は現在準備中です。</p>';
@@ -94,7 +101,6 @@ function bindEvents() {
   // 出発地
   document.getElementById('departure-select').addEventListener('change', (e) => {
     state.departure = e.target.value;
-    refresh();
   });
 
   // 日付モード（label.click で確実に拾う）
@@ -107,14 +113,12 @@ function bindEvents() {
       if (mode === 'today')    state.selectedDate = getDateStr(0);
       if (mode === 'tomorrow') state.selectedDate = getDateStr(1);
       // 'custom' は date-input の change で設定
-      refresh();
     });
   });
 
   // 日付指定入力
   document.getElementById('date-input').addEventListener('change', (e) => {
     if (e.target.value) state.selectedDate = e.target.value;
-    refresh();
   });
 
   // ページロード時に今日をセット
@@ -123,13 +127,11 @@ function bindEvents() {
   // 出発時刻
   document.getElementById('time-select').addEventListener('change', (e) => {
     state.selectedTime = e.target.value;
-    refresh();
   });
 
   // 滞在タイプ
   document.getElementById('stay-select').addEventListener('change', (e) => {
     state.stayType = e.target.value;
-    refresh();
   });
 }
 

@@ -5,14 +5,13 @@
  *   railType "jr"      → Yahoo乗換 + JR予約（jrAreaで分岐）
  *   railType "private" → Yahoo乗換のみ
  *   railType "none"    → 鉄道導線なし
- *   jrArea "east"      → えきねっと
- *   jrArea "west"      → e5489（JR西日本）
- *   jrArea "kyushu"    → 九州ネット予約
+ *   jrArea "east"      → えきねっと（緑）
+ *   jrArea "west"      → e5489（青）
+ *   jrArea "kyushu"    → 九州ネット予約（赤）
  *   transportType "flight" → 飛行機テキスト（現地移動ブロック）
- *   transportType "bus"    → バステキスト（現地移動ブロック）
- *   transportType "ferry"  → フェリーテキスト（現地移動ブロック）
- *   transportType "car"    → レンタカーリンク（現地移動ブロック）
- *   intercityAlternatives "highwaybus" → 高速バス比較ブロック
+ *   transportType "ferry"  → ferryUrl がある場合はリンク、ない場合はテキスト
+ *   transportType "car"    → 楽天レンタカー + じゃらんレンタカー
+ *   transportType "highwaybus" → 高速バス比較ブロック
  *   stayType 1night/2night → 楽天 + じゃらんリンク
  *
  * 表示順: rail → highwaybus → flight → ferry → car → stay
@@ -21,8 +20,11 @@ import { buildYahooUrl } from '../links/yahoo.js';
 import { buildRakutenUrl } from '../links/rakuten.js';
 import { generateJalanLink } from '../links/jalan.js';
 
-export function filterByDistance(destinations, level) {
-  return destinations.filter((d) => d.distanceLevel === level);
+/** 出発地 + 距離レベルでフィルタリング */
+export function filterDestinations(destinations, departure, level) {
+  return destinations.filter(
+    (d) => d.from.includes(departure) && d.distanceLevel === level
+  );
 }
 
 /** 抽選: 候補からランダムに1件選ぶ */
@@ -49,7 +51,6 @@ function buildTransitLinks(destination, date, time, departure) {
   const { transportType, railType, jrArea } = destination;
   const links = [];
 
-  // 鉄道のみ（flight はローカルブロックへ移動）
   if (transportType.includes('rail') && railType !== 'none') {
     links.push({
       type: 'yahoo',
@@ -69,21 +70,21 @@ function buildTransitLinks(destination, date, time, departure) {
 function buildJrLink(jrArea) {
   if (jrArea === 'east') {
     return {
-      type: 'jr',
+      type: 'jr-east',
       label: '新幹線を予約する（えきねっと）',
       url: 'https://www.eki-net.com/',
     };
   }
   if (jrArea === 'west') {
     return {
-      type: 'jr',
+      type: 'jr-west',
       label: '新幹線を予約する（e5489）',
       url: 'https://www.jr-odekake.net/goyoyaku/',
     };
   }
   if (jrArea === 'kyushu') {
     return {
-      type: 'jr',
+      type: 'jr-kyushu',
       label: '新幹線を予約する（JR九州）',
       url: 'https://train.yoyaku.jrkyushu.co.jp/',
     };
@@ -95,7 +96,6 @@ function buildLocalItems(destination) {
   const { transportType } = destination;
   const items = [];
 
-  // 飛行機（交通比較の後・現地移動の前に表示）
   if (transportType.includes('flight')) {
     items.push({
       type: 'flight',
@@ -104,7 +104,6 @@ function buildLocalItems(destination) {
     });
   }
 
-  // バス
   if (transportType.includes('bus')) {
     items.push({
       type: 'bus',
@@ -113,25 +112,29 @@ function buildLocalItems(destination) {
     });
   }
 
-  // 4. フェリー
   if (transportType.includes('ferry')) {
     items.push({
       type: 'ferry',
       label: 'フェリーでアクセスできます',
-      url: null,
+      url: destination.ferryUrl || null,
     });
   }
 
-  // 5. レンタカー
   if (transportType.includes('car')) {
     const fromAir = transportType.includes('flight');
-    items.push({
-      type: 'car',
-      label: fromAir
-        ? '空港からレンタカーで移動できます'
-        : 'レンタカーで移動できます',
-      url: 'https://www.jalan.net/drive/',
-    });
+    const label = fromAir ? '空港からレンタカーで移動できます' : 'レンタカーで移動できます';
+    items.push(
+      {
+        type: 'car-rakuten',
+        label: `${label}（楽天レンタカー）`,
+        url: 'https://travel.rakuten.co.jp/car/',
+      },
+      {
+        type: 'car-jalan',
+        label: `${label}（じゃらんレンタカー）`,
+        url: 'https://www.jalan.net/drive/',
+      }
+    );
   }
 
   return items;
@@ -139,9 +142,9 @@ function buildLocalItems(destination) {
 
 function buildAlternativeLinks(destination) {
   const items = [];
-  const { intercityAlternatives = [] } = destination;
+  const { transportType } = destination;
 
-  if (intercityAlternatives.includes('highwaybus')) {
+  if (transportType.includes('highwaybus')) {
     items.push({
       type: 'highwaybus',
       label: '高速バスで比較する',

@@ -7,10 +7,10 @@
     "mainStation": "箱根湯本駅",
     "railType": "private",
     "jrArea": "none",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "週末のふらっとに、ちょうどいい距離感。",
       "湯煙と山の静けさが、都市の疲れを溶かしてくれる。",
@@ -30,10 +30,10 @@
     "mainStation": "東武日光駅",
     "railType": "private",
     "jrArea": "none",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "日本の「豪華」が、山の中に静かに残っている。",
       "世界遺産の社殿群。その密度に、ただ圧倒される。",
@@ -53,10 +53,10 @@
     "mainStation": "鎌倉駅",
     "railType": "jr",
     "jrArea": "none",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "武家の古都が、海と山にはさまれて息づいている。",
       "大仏から海岸まで、歩くほどに発見がある街。",
@@ -76,10 +76,10 @@
     "mainStation": "熱海駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "新幹線で1時間。なのに、完全に「旅」の気分になれる。",
       "温泉と海。昭和の観光地が、今また輝き始めている。",
@@ -99,10 +99,10 @@
     "mainStation": "宇都宮駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "餃子の聖地。本場を食べずして餃子を語るなかれ。",
       "新幹線でひと飛び。日帰りにちょうどいい距離感。",
@@ -122,10 +122,10 @@
     "mainStation": "横浜駅",
     "railType": "jr",
     "jrArea": "none",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 1,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "東京から30分。でも、空気はもう別の街だ。",
       "中華街、みなとみらい、元町。歩くたびに表情が変わる。",
@@ -145,10 +145,10 @@
     "mainStation": "仙台駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 2,
     "staySupport": ["1night", "2night"],
+    "from": ["東京"],
     "appeal": [
       "東北の玄関口。都市と自然が混在するちょうどいい街。",
       "牛タン、海鮮、ずんだ。食べるだけで一日が終わる。",
@@ -168,10 +168,10 @@
     "mainStation": "長野駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 2,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "山に囲まれた盆地の街。空気が澄んでいて、頭が冷える。",
       "善光寺の参道を歩くだけで、旅の気分が整う。",
@@ -191,10 +191,10 @@
     "mainStation": "新潟駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 2,
     "staySupport": ["1night", "2night"],
+    "from": ["東京"],
     "appeal": [
       "日本海に面した米どころ。ご飯がおいしい街はそれだけで正義。",
       "へぎそば、のどぐろ、日本酒。食の密度が高い。",
@@ -214,10 +214,10 @@
     "mainStation": "軽井沢駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 2,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京"],
     "appeal": [
       "新幹線で70分。高原の空気は都市とまったく違う。",
       "アウトレット、旧軽銀座、白糸の滝。行動量が増える街。",
@@ -237,10 +237,10 @@
     "mainStation": "名古屋駅",
     "railType": "jr",
     "jrArea": "east",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 2,
     "staySupport": ["daytrip", "1night"],
+    "from": ["東京", "大阪"],
     "appeal": [
       "独自の食文化が育つ街。味噌カツ、ひつまぶし、あんかけスパ。",
       "東海道の中継地点。歴史と産業が交差する都市。",
@@ -253,6 +253,30 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "morioka",
+    "city": "盛岡",
+    "prefecture": "岩手県",
+    "region": "東北",
+    "mainStation": "盛岡駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 2,
+    "staySupport": ["daytrip", "1night"],
+    "from": ["東京", "仙台"],
+    "appeal": [
+      "新幹線で約2時間、東北の奥座敷へ。",
+      "わんこそばと南部鉄器が待っている。",
+      "城下町の風情が路地に残る。"
+    ],
+    "highlights": [
+      { "name": "盛岡城跡公園", "url": "https://www.morioka-kanko.com/" },
+      { "name": "わんこそば体験", "url": "https://www.morioka-kanko.com/wanko/" },
+      { "name": "岩手銀行赤レンガ館", "url": "https://www.iwagin-akarengakan.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "kanazawa",
     "city": "金沢",
     "prefecture": "石川県",
@@ -260,10 +284,10 @@
     "mainStation": "金沢駅",
     "railType": "jr",
     "jrArea": "west",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋"],
     "appeal": [
       "北陸の空気は、少し違う。時間の流れが静かに感じられる。",
       "兼六園、東茶屋街、近江町市場。歩けば街が語りかけてくる。",
@@ -276,29 +300,6 @@
     "departure": { "label": "東京" }
   },
   {
-    "id": "hiroshima",
-    "city": "広島",
-    "prefecture": "広島県",
-    "region": "中国",
-    "mainStation": "広島駅",
-    "railType": "jr",
-    "jrArea": "west",
-    "transportType": ["rail", "flight"],
-    "intercityAlternatives": ["highwaybus"],
-    "distanceLevel": 3,
-    "staySupport": ["1night", "2night"],
-    "appeal": [
-      "歴史の重さと、人の温かさが共存している街。",
-      "お好み焼きと牡蠣。カープと路面電車。",
-      "宮島は、できれば夜に渡ってほしい。"
-    ],
-    "highlights": [
-      { "name": "厳島神社（宮島）", "url": "https://www.miyajima.or.jp/" },
-      { "name": "広島平和記念資料館", "url": "https://hpmmuseum.jp/" }
-    ],
-    "departure": { "label": "東京" }
-  },
-  {
     "id": "kyoto",
     "city": "京都",
     "prefecture": "京都府",
@@ -306,10 +307,10 @@
     "mainStation": "京都駅",
     "railType": "jr",
     "jrArea": "west",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋"],
     "appeal": [
       "千年の都。来るたびに、まだ知らない路地がある。",
       "寺社仏閣の密度は世界屈指。歩いているだけでいい。",
@@ -330,10 +331,10 @@
     "mainStation": "大阪駅",
     "railType": "jr",
     "jrArea": "west",
-    "transportType": ["rail"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "highwaybus"],
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "名古屋"],
     "appeal": [
       "食い倒れの街。たこ焼き、串カツ、お好み焼き。全部うまい。",
       "人が明るく、会話が弾む。旅の空気が自然と軽くなる。",
@@ -346,6 +347,29 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "hiroshima",
+    "city": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "mainStation": "広島駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail", "flight", "highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡", "高松"],
+    "appeal": [
+      "歴史の重さと、人の温かさが共存している街。",
+      "お好み焼きと牡蠣。カープと路面電車。",
+      "宮島は、できれば夜に渡ってほしい。"
+    ],
+    "highlights": [
+      { "name": "厳島神社（宮島）", "url": "https://www.miyajima.or.jp/" },
+      { "name": "広島平和記念資料館", "url": "https://hpmmuseum.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "takamatsu",
     "city": "高松",
     "prefecture": "香川県",
@@ -353,10 +377,10 @@
     "mainStation": "高松駅",
     "railType": "jr",
     "jrArea": "west",
-    "transportType": ["rail", "flight"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "flight", "highwaybus"],
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "広島"],
     "appeal": [
       "うどん県の玄関口。本場の讃岐うどんは、別次元のうまさ。",
       "栗林公園の美しさは、日本庭園の中でも別格。",
@@ -376,10 +400,11 @@
     "mainStation": "松山駅",
     "railType": "jr",
     "jrArea": "west",
-    "transportType": ["rail", "flight", "ferry"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "flight", "ferry", "highwaybus"],
+    "ferryUrl": "https://www.sunflower.co.jp/",
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "高松"],
     "appeal": [
       "道後温泉は、日本最古の温泉地。それだけで来る価値がある。",
       "坊っちゃんの舞台。路面電車が今も街を走っている。",
@@ -399,10 +424,10 @@
     "mainStation": "長崎駅",
     "railType": "jr",
     "jrArea": "kyushu",
-    "transportType": ["rail", "flight"],
-    "intercityAlternatives": ["highwaybus"],
+    "transportType": ["rail", "flight", "highwaybus"],
     "distanceLevel": 3,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡"],
     "appeal": [
       "坂の街。港の街。異国情緒が自然と街に溶け込んでいる。",
       "ちゃんぽん、皿うどん、角煮まん。長崎の食は独自の進化を遂げた。",
@@ -415,6 +440,30 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "okayama",
+    "city": "岡山",
+    "prefecture": "岡山県",
+    "region": "中国",
+    "mainStation": "岡山駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail", "highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["daytrip", "1night"],
+    "from": ["東京", "大阪", "名古屋", "広島"],
+    "appeal": [
+      "晴れの国、岡山。白桃とマスカットの土地。",
+      "後楽園が四季ごとに表情を変える。",
+      "瀬戸内の入口、どこへでも繋がる街。"
+    ],
+    "highlights": [
+      { "name": "後楽園", "url": "https://www.okayama-korakuen.jp/" },
+      { "name": "岡山城", "url": "https://okayama-castle.jp/" },
+      { "name": "倉敷美観地区", "url": "https://www.kurashiki-tabi.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "kumamoto",
     "city": "熊本",
     "prefecture": "熊本県",
@@ -423,9 +472,9 @@
     "railType": "jr",
     "jrArea": "kyushu",
     "transportType": ["rail", "flight"],
-    "intercityAlternatives": [],
     "distanceLevel": 4,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松"],
     "appeal": [
       "くまもんの故郷。でも街に来てみると、歴史の深さに驚く。",
       "馬刺し、辛子蓮根、太平燕。熊本の食は意外にバラエティ豊か。",
@@ -446,9 +495,9 @@
     "railType": "jr",
     "jrArea": "kyushu",
     "transportType": ["rail", "flight"],
-    "intercityAlternatives": [],
     "distanceLevel": 4,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡"],
     "appeal": [
       "桜島が街のすぐ向こうにある。その存在感は圧倒的だ。",
       "黒豚、黒牛、薩摩焼酎。南九州の食材は豊かすぎる。",
@@ -469,9 +518,9 @@
     "railType": "jr",
     "jrArea": "east",
     "transportType": ["rail", "flight"],
-    "intercityAlternatives": [],
     "distanceLevel": 4,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "仙台"],
     "appeal": [
       "ねぶた祭りの街。あのエネルギーは、実際に見ないとわからない。",
       "りんごとホタテ。青森の食材はシンプルに強い。",
@@ -492,9 +541,9 @@
     "railType": "jr",
     "jrArea": "east",
     "transportType": ["rail", "flight"],
-    "intercityAlternatives": [],
     "distanceLevel": 4,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "仙台"],
     "appeal": [
       "きりたんぽ、比内地鶏、横手やきそば。秋田の食は奥が深い。",
       "なまはげ。恐ろしいけど、あれは愛情の形だ。",
@@ -507,6 +556,30 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "fukuoka",
+    "city": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "mainStation": "博多駅",
+    "railType": "jr",
+    "jrArea": "kyushu",
+    "transportType": ["rail", "flight", "highwaybus"],
+    "distanceLevel": 4,
+    "staySupport": ["daytrip", "1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "広島", "高松", "仙台", "札幌"],
+    "appeal": [
+      "ラーメン、もつ鍋、屋台。食が圧倒的に強い街。",
+      "博多と天神、二つの顔が共存する。",
+      "アジアへの玄関口として独自の熱量がある。"
+    ],
+    "highlights": [
+      { "name": "中洲屋台", "url": "https://nakasu.com/" },
+      { "name": "太宰府天満宮", "url": "https://www.dazaifutenmangu.or.jp/" },
+      { "name": "福岡市美術館", "url": "https://www.fukuoka-art-museum.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "sapporo",
     "city": "札幌",
     "prefecture": "北海道",
@@ -515,9 +588,9 @@
     "railType": "jr",
     "jrArea": "none",
     "transportType": ["flight", "car"],
-    "intercityAlternatives": [],
     "distanceLevel": 5,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "仙台", "福岡", "広島", "高松"],
     "appeal": [
       "広さがちがう。空が広く、道が広く、景色がでかい。",
       "スープカレー、ジンギスカン、海産物。食の多様性は日本随一。",
@@ -538,9 +611,9 @@
     "railType": "jr",
     "jrArea": "east",
     "transportType": ["rail", "flight"],
-    "intercityAlternatives": [],
     "distanceLevel": 5,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "仙台"],
     "appeal": [
       "函館山から見下ろす夜景は、世界三大夜景のひとつ。",
       "朝市のいくら丼と塩ラーメン。函館の朝は食から始まる。",
@@ -561,9 +634,9 @@
     "railType": "none",
     "jrArea": "none",
     "transportType": ["flight", "car"],
-    "intercityAlternatives": [],
     "distanceLevel": 5,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松", "仙台", "札幌"],
     "appeal": [
       "空の青さが、本土とはぜんぜんちがう。",
       "首里城、国際通り、離島。どこを選んでも外れがない。",
@@ -584,9 +657,9 @@
     "railType": "none",
     "jrArea": "none",
     "transportType": ["flight", "car"],
-    "intercityAlternatives": [],
     "distanceLevel": 5,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡", "広島", "高松", "仙台", "札幌"],
     "appeal": [
       "那覇からさらに飛んだ先。海の青さがまた一段違う。",
       "川平湾のグラデーションは、写真では伝わらない種類の美しさ。",
@@ -607,9 +680,9 @@
     "railType": "none",
     "jrArea": "none",
     "transportType": ["flight", "car"],
-    "intercityAlternatives": [],
     "distanceLevel": 5,
     "staySupport": ["1night", "2night"],
+    "from": ["東京", "大阪", "名古屋", "福岡"],
     "appeal": [
       "樹齢数千年の縄文杉が、今もそこに立っている。",
       "島全体が世界自然遺産。密林と滝と海が一つの島に共存する。",
