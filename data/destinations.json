@@ -46,6 +46,98 @@
     "departure": { "label": "浅草" }
   },
   {
+    "id": "kamakura",
+    "city": "鎌倉",
+    "prefecture": "神奈川県",
+    "region": "関東",
+    "mainStation": "鎌倉駅",
+    "railType": "jr",
+    "jrArea": "none",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 1,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "武家の古都が、海と山にはさまれて息づいている。",
+      "大仏から海岸まで、歩くほどに発見がある街。",
+      "鎌倉野菜と海の幸。食でも裏切られない。"
+    ],
+    "highlights": [
+      { "name": "鶴岡八幡宮", "url": "https://www.hachimangu.or.jp/" },
+      { "name": "高徳院（鎌倉大仏）", "url": "https://www.kotoku-in.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "atami",
+    "city": "熱海",
+    "prefecture": "静岡県",
+    "region": "東海",
+    "mainStation": "熱海駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 1,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "新幹線で1時間。なのに、完全に「旅」の気分になれる。",
+      "温泉と海。昭和の観光地が、今また輝き始めている。",
+      "花火、梅、ミカン。季節ごとに違う顔を見せる街。"
+    ],
+    "highlights": [
+      { "name": "熱海城", "url": "https://atamijo.com/" },
+      { "name": "MOA美術館", "url": "https://www.moaart.or.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "utsunomiya",
+    "city": "宇都宮",
+    "prefecture": "栃木県",
+    "region": "関東",
+    "mainStation": "宇都宮駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 1,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "餃子の聖地。本場を食べずして餃子を語るなかれ。",
+      "新幹線でひと飛び。日帰りにちょうどいい距離感。",
+      "大谷石の採石場跡は、地下に広がる別世界。"
+    ],
+    "highlights": [
+      { "name": "宇都宮二荒山神社", "url": "https://www.futaarayamajinja.jp/" },
+      { "name": "大谷資料館", "url": "https://www.oya909.co.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "yokohama",
+    "city": "横浜",
+    "prefecture": "神奈川県",
+    "region": "関東",
+    "mainStation": "横浜駅",
+    "railType": "jr",
+    "jrArea": "none",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 1,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "東京から30分。でも、空気はもう別の街だ。",
+      "中華街、みなとみらい、元町。歩くたびに表情が変わる。",
+      "港の夜景と横浜中華。これだけで完成する一日。"
+    ],
+    "highlights": [
+      { "name": "横浜中華街", "url": "https://www.chinatown.or.jp/" },
+      { "name": "山下公園", "url": "https://www.city.yokohama.lg.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "sendai",
     "city": "仙台",
     "prefecture": "宮城県",
@@ -65,6 +157,98 @@
     "highlights": [
       { "name": "松島", "url": "https://www.matsushima-kanko.com/" },
       { "name": "仙台城跡（青葉城）", "url": "https://www.aoba-castle.co.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "nagano",
+    "city": "長野",
+    "prefecture": "長野県",
+    "region": "信越",
+    "mainStation": "長野駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 2,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "山に囲まれた盆地の街。空気が澄んでいて、頭が冷える。",
+      "善光寺の参道を歩くだけで、旅の気分が整う。",
+      "戸隠、上高地、別所温泉。長野は奥が深い。"
+    ],
+    "highlights": [
+      { "name": "善光寺", "url": "https://www.zenkoji.jp/" },
+      { "name": "戸隠神社", "url": "https://www.togakushi-jinja.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "niigata",
+    "city": "新潟",
+    "prefecture": "新潟県",
+    "region": "信越",
+    "mainStation": "新潟駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 2,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "日本海に面した米どころ。ご飯がおいしい街はそれだけで正義。",
+      "へぎそば、のどぐろ、日本酒。食の密度が高い。",
+      "古町の夜、朱鷺メッセからの夕焼け。都市としても魅力的。"
+    ],
+    "highlights": [
+      { "name": "新潟市水族館 マリンピア日本海", "url": "https://www.marinepia.or.jp/" },
+      { "name": "古町", "url": "https://www.niigata-kankou.or.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "karuizawa",
+    "city": "軽井沢",
+    "prefecture": "長野県",
+    "region": "信越",
+    "mainStation": "軽井沢駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 2,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "新幹線で70分。高原の空気は都市とまったく違う。",
+      "アウトレット、旧軽銀座、白糸の滝。行動量が増える街。",
+      "夏も冬も、季節の使い方を選べる贅沢な場所。"
+    ],
+    "highlights": [
+      { "name": "白糸の滝", "url": "https://www.karuizawa-kankokyokai.jp/" },
+      { "name": "旧軽井沢銀座", "url": "https://www.karuizawa-kankokyokai.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "nagoya",
+    "city": "名古屋",
+    "prefecture": "愛知県",
+    "region": "東海",
+    "mainStation": "名古屋駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 2,
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "独自の食文化が育つ街。味噌カツ、ひつまぶし、あんかけスパ。",
+      "東海道の中継地点。歴史と産業が交差する都市。",
+      "名古屋城、熱田神宮、大須。見所は想像以上に多い。"
+    ],
+    "highlights": [
+      { "name": "名古屋城", "url": "https://www.nagoyajo.city.nagoya.jp/" },
+      { "name": "熱田神宮", "url": "https://www.atsutajingu.or.jp/" }
     ],
     "departure": { "label": "東京" }
   },
@@ -115,6 +299,214 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "kyoto",
+    "city": "京都",
+    "prefecture": "京都府",
+    "region": "近畿",
+    "mainStation": "京都駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "千年の都。来るたびに、まだ知らない路地がある。",
+      "寺社仏閣の密度は世界屈指。歩いているだけでいい。",
+      "和食、甘味、京野菜。食のレベルが街全体で高い。"
+    ],
+    "highlights": [
+      { "name": "嵐山", "url": "https://www.kyoto-arashiyama.jp/" },
+      { "name": "伏見稲荷大社", "url": "https://inari.jp/" },
+      { "name": "祇園", "url": "https://www.kyokanko.or.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "osaka",
+    "city": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "mainStation": "大阪駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "食い倒れの街。たこ焼き、串カツ、お好み焼き。全部うまい。",
+      "人が明るく、会話が弾む。旅の空気が自然と軽くなる。",
+      "道頓堀、なんば、天満。夜まで飽きない街。"
+    ],
+    "highlights": [
+      { "name": "道頓堀", "url": "https://www.dotonbori.or.jp/" },
+      { "name": "大阪城", "url": "https://www.osakacastle.net/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "takamatsu",
+    "city": "高松",
+    "prefecture": "香川県",
+    "region": "四国",
+    "mainStation": "高松駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "うどん県の玄関口。本場の讃岐うどんは、別次元のうまさ。",
+      "栗林公園の美しさは、日本庭園の中でも別格。",
+      "瀬戸内の島々へのアクセス拠点として使える。"
+    ],
+    "highlights": [
+      { "name": "栗林公園", "url": "https://www.ritsuringarden.jp/" },
+      { "name": "直島（アートの島）", "url": "https://benesse-artsite.jp/art/naoshima.html" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "matsuyama",
+    "city": "松山",
+    "prefecture": "愛媛県",
+    "region": "四国",
+    "mainStation": "松山駅",
+    "railType": "jr",
+    "jrArea": "west",
+    "transportType": ["rail", "flight", "ferry"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "道後温泉は、日本最古の温泉地。それだけで来る価値がある。",
+      "坊っちゃんの舞台。路面電車が今も街を走っている。",
+      "鯛めし、じゃこ天、蛇口からミカンジュース。愛媛らしさが濃い。"
+    ],
+    "highlights": [
+      { "name": "道後温泉本館", "url": "https://dogo.jp/" },
+      { "name": "松山城", "url": "https://www.matsuyamajo.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "nagasaki",
+    "city": "長崎",
+    "prefecture": "長崎県",
+    "region": "九州",
+    "mainStation": "長崎駅",
+    "railType": "jr",
+    "jrArea": "kyushu",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": ["highwaybus"],
+    "distanceLevel": 3,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "坂の街。港の街。異国情緒が自然と街に溶け込んでいる。",
+      "ちゃんぽん、皿うどん、角煮まん。長崎の食は独自の進化を遂げた。",
+      "グラバー園からの夜景は、日本三大夜景のひとつ。"
+    ],
+    "highlights": [
+      { "name": "グラバー園", "url": "https://www.glover-garden.jp/" },
+      { "name": "長崎平和公園", "url": "https://nagasakipeace.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "kumamoto",
+    "city": "熊本",
+    "prefecture": "熊本県",
+    "region": "九州",
+    "mainStation": "熊本駅",
+    "railType": "jr",
+    "jrArea": "kyushu",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": [],
+    "distanceLevel": 4,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "くまもんの故郷。でも街に来てみると、歴史の深さに驚く。",
+      "馬刺し、辛子蓮根、太平燕。熊本の食は意外にバラエティ豊か。",
+      "阿蘇という火山が、すぐそこにある。自然のスケールが違う。"
+    ],
+    "highlights": [
+      { "name": "熊本城", "url": "https://castle.kumamoto-guide.jp/" },
+      { "name": "阿蘇山", "url": "https://www.aso.ne.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "kagoshima",
+    "city": "鹿児島",
+    "prefecture": "鹿児島県",
+    "region": "九州",
+    "mainStation": "鹿児島中央駅",
+    "railType": "jr",
+    "jrArea": "kyushu",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": [],
+    "distanceLevel": 4,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "桜島が街のすぐ向こうにある。その存在感は圧倒的だ。",
+      "黒豚、黒牛、薩摩焼酎。南九州の食材は豊かすぎる。",
+      "指宿の砂むし温泉。ここでしか体験できない感覚がある。"
+    ],
+    "highlights": [
+      { "name": "桜島", "url": "https://www.kagoshima-kankou.com/" },
+      { "name": "仙巌園", "url": "https://www.senganen.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "aomori",
+    "city": "青森",
+    "prefecture": "青森県",
+    "region": "東北",
+    "mainStation": "青森駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": [],
+    "distanceLevel": 4,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "ねぶた祭りの街。あのエネルギーは、実際に見ないとわからない。",
+      "りんごとホタテ。青森の食材はシンプルに強い。",
+      "奥入瀬渓流と十和田湖。東北最高峰の自然が待っている。"
+    ],
+    "highlights": [
+      { "name": "奥入瀬渓流", "url": "https://www.towada.travel/" },
+      { "name": "ねぶたの家 ワ・ラッセ", "url": "https://www.nebuta.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "akita",
+    "city": "秋田",
+    "prefecture": "秋田県",
+    "region": "東北",
+    "mainStation": "秋田駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": [],
+    "distanceLevel": 4,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "きりたんぽ、比内地鶏、横手やきそば。秋田の食は奥が深い。",
+      "なまはげ。恐ろしいけど、あれは愛情の形だ。",
+      "田沢湖の青さは、国内随一。その透明度に言葉を失う。"
+    ],
+    "highlights": [
+      { "name": "田沢湖", "url": "https://www.tazawako.org/" },
+      { "name": "角館（武家屋敷通り）", "url": "https://www.city.semboku.akita.jp/kanko/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "sapporo",
     "city": "札幌",
     "prefecture": "北海道",
@@ -138,6 +530,29 @@
     "departure": { "label": "東京" }
   },
   {
+    "id": "hakodate",
+    "city": "函館",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "mainStation": "函館駅",
+    "railType": "jr",
+    "jrArea": "east",
+    "transportType": ["rail", "flight"],
+    "intercityAlternatives": [],
+    "distanceLevel": 5,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "函館山から見下ろす夜景は、世界三大夜景のひとつ。",
+      "朝市のいくら丼と塩ラーメン。函館の朝は食から始まる。",
+      "元町の西洋建築と、和の街並みが混在する不思議な空気感。"
+    ],
+    "highlights": [
+      { "name": "函館山（夜景）", "url": "https://www.334.co.jp/" },
+      { "name": "五稜郭", "url": "https://www.hakodate-jts-kosya.jp/parks/goryokaku/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
     "id": "okinawa",
     "city": "那覇",
     "prefecture": "沖縄県",
@@ -157,6 +572,52 @@
     "highlights": [
       { "name": "首里城", "url": "https://oki-park.jp/shurijo/" },
       { "name": "美ら海水族館", "url": "https://churaumi.okinawa/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "ishigaki",
+    "city": "石垣島",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "mainStation": "南ぬ島石垣空港",
+    "railType": "none",
+    "jrArea": "none",
+    "transportType": ["flight", "car"],
+    "intercityAlternatives": [],
+    "distanceLevel": 5,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "那覇からさらに飛んだ先。海の青さがまた一段違う。",
+      "川平湾のグラデーションは、写真では伝わらない種類の美しさ。",
+      "八重山そばと石垣牛。離島でしか食べられない豊かさがある。"
+    ],
+    "highlights": [
+      { "name": "川平湾", "url": "https://www.yaeyama.or.jp/" },
+      { "name": "竹富島", "url": "https://www.taketomijima.jp/" }
+    ],
+    "departure": { "label": "東京" }
+  },
+  {
+    "id": "yakushima",
+    "city": "屋久島",
+    "prefecture": "鹿児島県",
+    "region": "九州",
+    "mainStation": "屋久島空港",
+    "railType": "none",
+    "jrArea": "none",
+    "transportType": ["flight", "car"],
+    "intercityAlternatives": [],
+    "distanceLevel": 5,
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "樹齢数千年の縄文杉が、今もそこに立っている。",
+      "島全体が世界自然遺産。密林と滝と海が一つの島に共存する。",
+      "雨が多い。でも、その雨がこの島の緑をつくっている。"
+    ],
+    "highlights": [
+      { "name": "縄文杉トレッキング", "url": "https://www.yakushima-toha.com/" },
+      { "name": "白谷雲水峡", "url": "https://www.town.yakushima.kagoshima.jp/" }
     ],
     "departure": { "label": "東京" }
   }

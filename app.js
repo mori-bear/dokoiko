@@ -6,6 +6,7 @@ const state = {
   current: null,
   selectedDistanceLevel: null,
   selectedDate: null,   // 確定日付文字列 (YYYY-MM-DD)
+  selectedTime: '10:00',
   stayType: 'daytrip',
   departure: '東京',
   mode: 'manual',
@@ -81,6 +82,7 @@ function bindEvents() {
 
     const plan = generatePlan(picked, {
       date: resolveDate(),
+      time: state.selectedTime,
       stayType: state.stayType,
       departure: state.departure,
     });
@@ -118,6 +120,12 @@ function bindEvents() {
   // ページロード時に今日をセット
   state.selectedDate = getDateStr(0);
 
+  // 出発時刻
+  document.getElementById('time-select').addEventListener('change', (e) => {
+    state.selectedTime = e.target.value;
+    refresh();
+  });
+
   // 滞在タイプ
   document.getElementById('stay-select').addEventListener('change', (e) => {
     state.stayType = e.target.value;
@@ -137,6 +145,7 @@ function refresh() {
 
   const plan = generatePlan(state.current, {
     date: resolveDate(),
+    time: state.selectedTime,
     stayType: state.stayType,
     departure: state.departure,
   });

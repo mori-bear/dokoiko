@@ -8,14 +8,14 @@
  *   jrArea "east"      → えきねっと
  *   jrArea "west"      → e5489（JR西日本）
  *   jrArea "kyushu"    → 九州ネット予約
- *   transportType "flight" → 飛行機テキスト（行き方ブロック）
+ *   transportType "flight" → 飛行機テキスト（現地移動ブロック）
  *   transportType "bus"    → バステキスト（現地移動ブロック）
  *   transportType "ferry"  → フェリーテキスト（現地移動ブロック）
  *   transportType "car"    → レンタカーリンク（現地移動ブロック）
  *   intercityAlternatives "highwaybus" → 高速バス比較ブロック
  *   stayType 1night/2night → 楽天 + じゃらんリンク
  *
- * 表示順: 鉄道 → 飛行機 → [交通比較] → バス → フェリー → レンタカー → 宿
+ * 表示順: rail → highwaybus → flight → ferry → car → stay
  */
 import { buildYahooUrl } from '../links/yahoo.js';
 import { buildRakutenUrl } from '../links/rakuten.js';
@@ -32,44 +32,35 @@ export function drawDestination(destinations) {
 }
 
 export function generatePlan(destination, options = {}) {
-  const { date = null, stayType = 'daytrip', departure = '東京' } = options;
+  const { date = null, time = null, stayType = 'daytrip', departure = '東京' } = options;
   const hasStay = stayType === '1night' || stayType === '2night';
 
   return {
     destination,
     stayType,
-    transitLinks: buildTransitLinks(destination, date, departure),
+    transitLinks: buildTransitLinks(destination, date, time, departure),
     localItems: buildLocalItems(destination),
     alternativeLinks: buildAlternativeLinks(destination),
     accommodationLinks: hasStay ? buildAccommodationLinks(destination, date, stayType) : [],
   };
 }
 
-function buildTransitLinks(destination, date, departure) {
+function buildTransitLinks(destination, date, time, departure) {
   const { transportType, railType, jrArea } = destination;
   const links = [];
 
-  // 1. 鉄道
+  // 鉄道のみ（flight はローカルブロックへ移動）
   if (transportType.includes('rail') && railType !== 'none') {
     links.push({
       type: 'yahoo',
       label: '乗換案内を見る（Yahoo!路線情報）',
-      url: buildYahooUrl(destination, date, null, departure),
+      url: buildYahooUrl(destination, date, time, departure),
     });
 
     if (railType === 'jr') {
       const jrLink = buildJrLink(jrArea);
       if (jrLink) links.push(jrLink);
     }
-  }
-
-  // 2. 飛行機
-  if (transportType.includes('flight')) {
-    links.push({
-      type: 'flight',
-      label: '飛行機でアクセスできます',
-      url: null,
-    });
   }
 
   return links;
@@ -80,21 +71,21 @@ function buildJrLink(jrArea) {
     return {
       type: 'jr',
       label: '新幹線を予約する（えきねっと）',
-      url: 'https://www.eki-net.com/personal/top/index.html',
+      url: 'https://www.eki-net.com/',
     };
   }
   if (jrArea === 'west') {
     return {
       type: 'jr',
       label: '新幹線を予約する（e5489）',
-      url: 'https://e5489.jr-odekake.net/',
+      url: 'https://www.jr-odekake.net/goyoyaku/',
     };
   }
   if (jrArea === 'kyushu') {
     return {
       type: 'jr',
-      label: '新幹線を予約する（九州ネット予約）',
-      url: 'https://www.jrkyushu.co.jp/trains/net/',
+      label: '新幹線を予約する（JR九州）',
+      url: 'https://train.yoyaku.jrkyushu.co.jp/',
     };
   }
   return null;
@@ -104,7 +95,16 @@ function buildLocalItems(destination) {
   const { transportType } = destination;
   const items = [];
 
-  // 3. バス
+  // 飛行機（交通比較の後・現地移動の前に表示）
+  if (transportType.includes('flight')) {
+    items.push({
+      type: 'flight',
+      label: '飛行機でアクセスできます',
+      url: null,
+    });
+  }
+
+  // バス
   if (transportType.includes('bus')) {
     items.push({
       type: 'bus',
