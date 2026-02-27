@@ -1,13 +1,10 @@
-/**
- * 体験・アクティビティリンク（じゃらん遊び / アソビュー）
- */
 export function buildExperienceLinks(city) {
   const area = city.affiliate.hotelArea;
 
   return [
     {
       type: 'jalan-exp',
-      label: 'じゃらんで体験・遊びを探す',
+      label: 'じゃらんで体験を探す',
       url: `https://www.jalan.net/activity/asp-webapp/web/WFsearch.do?keyword=${encodeURIComponent(area)}`,
     },
     {

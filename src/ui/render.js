@@ -3,13 +3,13 @@
  * 縦導線: 都市 → 交通 → 宿泊 → 体験
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, rentalLinks, experienceLinks }) {
+export function renderResult({ city, transportLinks, hotelLinks, experienceLinks, distanceLabel, budgetLabel }) {
   const el = document.getElementById('result-inner');
   el.innerHTML = [
-    buildCityBlock(city),
+    buildCityBlock(city, distanceLabel, budgetLabel),
     buildTransportBlock(transportLinks),
     buildHotelBlock(hotelLinks),
-    buildExperienceBlock(experienceLinks, rentalLinks),
+    buildExperienceBlock(experienceLinks),
   ].join('');
 }
 
@@ -20,69 +20,70 @@ export function clearResult() {
 
 /* ── 各ブロック ── */
 
-function buildCityBlock(city) {
-  const { name, reading, prefecture, region, mainStation } = city.basic;
-  const experienceHtml = city.experience
-    .map((line) => `<p class="experience-line">${line}</p>`)
+function buildCityBlock(city, distanceLabel, budgetLabel) {
+  const appealHtml = city.appeal
+    .map((line) => `<p class="appeal-line">${line}</p>`)
     .join('');
+
+  const themesHtml = city.themes
+    .map((t) => `<span class="theme-tag">${t}</span>`)
+    .join('');
+
+  const distanceStars = distanceLabel ? `<span class="meta-label">距離</span><span class="meta-value">${distanceLabel}</span>` : '';
+  const budgetStars = budgetLabel ? `<span class="meta-label">予算</span><span class="meta-value">${budgetLabel}</span>` : '';
 
   return `
     <div class="city-block">
       <div class="city-header">
-        <span class="city-reading">${reading}</span>
-        <h2 class="city-name">${name}</h2>
-        <p class="city-meta">${prefecture}　${region}　${mainStation}</p>
+        <h2 class="city-name">${city.name}</h2>
+        <p class="city-sub">${city.prefecture} ${city.region}</p>
       </div>
-      <div class="city-experience">
-        ${experienceHtml}
+      <div class="city-meta-row">
+        ${distanceStars}
+        ${budgetStars}
+      </div>
+      <div class="themes-row">${themesHtml}</div>
+      <div class="city-appeal">
+        ${appealHtml}
       </div>
     </div>
   `;
 }
 
 function buildTransportBlock(links) {
-  const linksHtml = links
-    .map((link) => buildLinkItem(link))
-    .join('');
-
+  if (!links || links.length === 0) {
+    return `
+      <div class="result-block">
+        <div class="block-label">交通</div>
+        <p class="block-empty">交通情報がありません。</p>
+      </div>
+    `;
+  }
+  const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
     <div class="result-block">
       <div class="block-label">交通</div>
-      <div class="link-list">
-        ${linksHtml}
-      </div>
-      <p class="transport-note">※ 一部列車は窓口購入のみの場合があります。運賃・時刻は公式サイトでご確認ください。</p>
+      <div class="link-list">${linksHtml}</div>
     </div>
   `;
 }
 
 function buildHotelBlock(links) {
-  const linksHtml = links
-    .map((link) => buildLinkItem(link))
-    .join('');
-
+  const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
     <div class="result-block">
       <div class="block-label">宿泊</div>
-      <div class="link-list">
-        ${linksHtml}
-      </div>
+      <div class="link-list">${linksHtml}</div>
     </div>
   `;
 }
 
-function buildExperienceBlock(expLinks, rentalLinks) {
-  const allLinks = [...rentalLinks, ...expLinks];
-  const linksHtml = allLinks
-    .map((link) => buildLinkItem(link))
-    .join('');
-
+function buildExperienceBlock(links) {
+  const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
     <div class="result-block">
-      <div class="block-label">体験・移動手段</div>
-      <div class="link-list">
-        ${linksHtml}
-      </div>
+      <div class="block-label">体験</div>
+      <div class="link-list">${linksHtml}</div>
     </div>
   `;
 }
@@ -91,14 +92,10 @@ function buildLinkItem(link) {
   if (!link.url) {
     return `<span class="link-item link-nourl link-${link.type}">${link.label}</span>`;
   }
-  const noteHtml = link.note
-    ? `<span class="link-note">${link.note}</span>`
-    : '';
   return `
     <a href="${link.url}" target="_blank" rel="noopener noreferrer"
        class="link-item link-${link.type}">
       ${link.label}
-      ${noteHtml}
     </a>
   `;
 }

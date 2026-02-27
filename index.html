@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>どこいこ — 距離と予算で街を引く</title>
-  <meta name="description" content="距離と予算を選ぶだけで、次の旅先を1都市提案します。交通から宿泊まで一画面で完結。">
+  <title>どこいこ — 距離と予算で旅先を決める</title>
+  <meta name="description" content="距離と予算を選ぶだけで、次の旅先を1都市提案します。迷う時間を減らすためのサイトです。">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -24,8 +24,7 @@
     <div class="container">
 
       <section class="hero">
-        <h1 class="hero-title">どこ行こうか、迷っているなら。</h1>
-        <p class="hero-sub">距離と予算を選ぶと、1つの街を提案します。</p>
+        <p class="hero-text">旅行先を決めるのがいちばん難しい。その時間を減らしたくて、このサイトを作りました。距離と予算だけ選べば、行き先をひとつ提案します。気に入らなければ、引き直してください。</p>
       </section>
 
       <section class="controls">
@@ -61,23 +60,11 @@
         <div class="control-group">
           <label class="control-label">予算（交通＋宿の目安）</label>
           <div class="btn-group">
-            <button class="sel-btn" data-group="budget" data-value="1">～1.5万円</button>
-            <button class="sel-btn" data-group="budget" data-value="2">～3万円</button>
-            <button class="sel-btn" data-group="budget" data-value="3">～5万円</button>
-          </div>
-        </div>
-
-        <!-- 日付・時刻 -->
-        <div class="control-group">
-          <label class="control-label">いつ？</label>
-          <div class="datetime-row">
-            <div class="btn-group">
-              <button class="sel-btn active" data-group="date" data-mode="today">今日</button>
-              <button class="sel-btn" data-group="date" data-mode="tomorrow">明日</button>
-              <button class="sel-btn" data-group="date" data-mode="custom">日付指定</button>
-            </div>
-            <input type="date" id="date-input" class="date-input" hidden>
-            <select id="time-select" class="time-select" aria-label="出発時刻"></select>
+            <button class="sel-btn" data-group="budget" data-value="1">～1万円</button>
+            <button class="sel-btn" data-group="budget" data-value="2">～2万円</button>
+            <button class="sel-btn" data-group="budget" data-value="3">～3.5万円</button>
+            <button class="sel-btn" data-group="budget" data-value="4">～5万円</button>
+            <button class="sel-btn" data-group="budget" data-value="5">～8万円</button>
           </div>
         </div>
 

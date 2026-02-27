@@ -1,950 +1,1834 @@
 [
   {
     "id": "yokohama",
-    "basic": { "name": "横浜", "reading": "よこはま", "prefecture": "神奈川県", "region": "関東", "mainStation": "横浜駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "みなとみらいの赤レンガ倉庫と横浜中華街は徒歩圏内にある。",
-      "山下公園から見る夜景は、港町の古さと新しさが混ざっている。",
-      "東京から30分。所要時間の割に、別の街に来た感が強い。"
+    "name": "横浜",
+    "prefecture": "神奈川県",
+    "region": "関東",
+    "departures": ["東京"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["港町", "中華街", "夜景"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "みなとみらいの高層ビルと赤レンガ倉庫が30分圏内に共存する。",
+      "中華街の路地を歩いていると、ここが東京のとなりであることを忘れる。",
+      "港を背にした丘の住宅街は、日本で最初に異国文化が溶け込んだ場所だ。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "横浜", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "横浜駅" }
+    },
+    "affiliate": { "hotelArea": "横浜" }
   },
   {
     "id": "kamakura",
-    "basic": { "name": "鎌倉", "reading": "かまくら", "prefecture": "神奈川県", "region": "関東", "mainStation": "鎌倉駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "鎌倉大仏（高徳院）は高さ11.3m、鎌倉時代から屋外に座り続けている。",
-      "小町通りから鶴岡八幡宮まで歩いて10分。古都の密度は高い。",
-      "江ノ電で稲村ヶ崎まで行くと、海と山が同時に視界に入る。"
+    "name": "鎌倉",
+    "prefecture": "神奈川県",
+    "region": "関東",
+    "departures": ["東京"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["寺社", "海", "古都"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "鎌倉の路地は狭く、観光客と地元の時間が混在している。",
+      "大仏を囲む森は、海が近いことと山が深いことを同時に感じさせる。",
+      "東京から1時間で、江戸より古い時代の空気に切り替わる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "鎌倉", "rentalArea": null }
-  },
-  {
-    "id": "chichibu",
-    "basic": { "name": "秩父", "reading": "ちちぶ", "prefecture": "埼玉県", "region": "関東", "mainStation": "西武秩父駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "三峯神社は奥秩父山中にある古社。標高1,100mの境内に朝霧が出ることがある。",
-      "わらじかつとみそポテトは秩父の定番。B級だが現地で食べると満足度が高い。",
-      "西武特急ラビューで池袋から約80分。都内から日帰りできる山の雰囲気。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "秩父", "rentalArea": null }
-  },
-  {
-    "id": "hakone",
-    "basic": { "name": "箱根", "reading": "はこね", "prefecture": "神奈川県", "region": "関東", "mainStation": "箱根湯本駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "箱根フリーパスで電車・ケーブルカー・ロープウェイ・船が乗り放題になる。",
-      "ポーラ美術館やハコネグラン。温泉地に美術館が複数あるのは箱根の特徴。",
-      "小田急ロマンスカーで新宿から約1.5時間。温泉付き宿なら1泊で十分リセットできる。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "箱根", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "鎌倉駅" }
+    },
+    "affiliate": { "hotelArea": "鎌倉" }
   },
   {
     "id": "atami",
-    "basic": { "name": "熱海", "reading": "あたみ", "prefecture": "静岡県", "region": "東海", "mainStation": "熱海駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "MOA美術館は熱海の高台にあり、海を見下ろしながら国宝を観覧できる。",
-      "熱海銀座の飲食店は夜まで開いていて、温泉上がりの散歩に向いている。",
-      "東海道新幹線こだまで東京から約40分。1泊で温泉と海が完結する。"
+    "name": "熱海",
+    "prefecture": "静岡県",
+    "region": "中部",
+    "departures": ["東京"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["温泉", "海", "リゾート"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "駅を出ると海が見える。昭和の保養地が、今また賑わいを取り戻している。",
+      "温泉宿で迎える朝は、都市の疲れとは別の時間の流れ方をする。",
+      "夜の熱海銀座と昼の海岸は、同じ街とは思えないほど表情が違う。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "熱海", "rentalArea": null }
-  },
-  {
-    "id": "shuzenji",
-    "basic": { "name": "修善寺", "reading": "しゅぜんじ", "prefecture": "静岡県", "region": "東海", "mainStation": "修善寺駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "修禅寺の竹林の小径は、温泉街の中を流れる桂川沿いに整備されている。",
-      "独鈷の湯は弘法大師が開いたとされる伊豆最古の温泉。川の中に湧いている。",
-      "特急踊り子号で東京から約2時間。伊豆らしい山里の空気に包まれる。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "修善寺", "rentalArea": null }
-  },
-  {
-    "id": "utsunomiya",
-    "basic": { "name": "宇都宮", "reading": "うつのみや", "prefecture": "栃木県", "region": "関東", "mainStation": "宇都宮駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "宇都宮の餃子は年間消費量が全国1位（2023年）で、駅周辺に専門店が密集する。",
-      "大谷資料館は採石場跡の地下空間。気温10度前後で夏でも冷える、異空間体験。",
-      "東北新幹線で東京から約50分。餃子＋大谷でちょうどよい日帰り距離。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "宇都宮", "rentalArea": "宇都宮" }
-  },
-  {
-    "id": "takasaki",
-    "basic": { "name": "高崎", "reading": "たかさき", "prefecture": "群馬県", "region": "関東", "mainStation": "高崎駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "高崎は達磨の生産地で、全国シェア約80%を占める。少林山達磨寺が有名。",
-      "焼きまんじゅうは群馬のソウルフード。甘辛みそダレを塗って炭火で焼く。",
-      "上越・北陸新幹線で東京から約50分。群馬への起点として使い勝手がいい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "高崎", "rentalArea": "高崎" }
-  },
-  {
-    "id": "kofu",
-    "basic": { "name": "甲府", "reading": "こうふ", "prefecture": "山梨県", "region": "甲信", "mainStation": "甲府駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "武田信玄の城下町。甲府城（舞鶴城）跡は駅のすぐ北にある。",
-      "山梨ワインの産地で、甲府市内には複数のワイナリーがある。試飲ができる施設も多い。",
-      "JR中央本線の特急あずさで新宿から約1.5時間。盆地に広がる城下町の空気がある。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "甲府", "rentalArea": "甲府" }
-  },
-  {
-    "id": "karuizawa",
-    "basic": { "name": "軽井沢", "reading": "かるいざわ", "prefecture": "長野県", "region": "甲信", "mainStation": "軽井沢駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "旧軽井沢銀座通りは明治の別荘地の面影を残す。外国人観光客が通った通りに今も店が並ぶ。",
-      "標高1,000m。夏の最高気温は東京より平均5〜7度低い。8月でも半袖では寒い日がある。",
-      "北陸新幹線で東京から約1時間。アウトレットと森の散策を1日に収められる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "軽井沢", "rentalArea": "軽井沢" }
+    "gateway": {
+      "rail": { "station": "熱海駅" },
+      "bus": { "terminal": "熱海" }
+    },
+    "affiliate": { "hotelArea": "熱海" }
   },
   {
     "id": "nikko",
-    "basic": { "name": "日光", "reading": "にっこう", "prefecture": "栃木県", "region": "関東", "mainStation": "東武日光駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "日光東照宮は徳川家康を祀る社殿群。国宝・重要文化財55棟が密集するエリア。",
-      "奥日光の湯元温泉や中禅寺湖は、市街地から路線バスで奥へ入った先にある。",
-      "東武特急スペーシアで浅草から約2時間。社殿と自然を1泊で回れる距離感。"
+    "name": "日光",
+    "prefecture": "栃木県",
+    "region": "関東",
+    "departures": ["東京"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["世界遺産", "自然", "温泉"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "東照宮の彫刻は見るたびに新しい細部を発見させる。",
+      "中禅寺湖への道は、高度を上げるたびに空気が変わる。",
+      "日光の紅葉は関東随一とも言われるが、冬の静けさも格別だ。"
     ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "日光", "rentalArea": "日光" }
+    "gateway": {
+      "rail": { "station": "日光駅" }
+    },
+    "affiliate": { "hotelArea": "日光" }
   },
   {
-    "id": "nagano",
-    "basic": { "name": "長野", "reading": "ながの", "prefecture": "長野県", "region": "甲信", "mainStation": "長野駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "善光寺は無宗派の古刹で、年間約700万人が参拝する。本堂の地下「お戒壇めぐり」は暗闇を歩く体験。",
-      "長野市内には戸隠神社（車で約40分）や松代（旧城下町）など、周辺に見どころが多い。",
-      "北陸新幹線で東京から約1.5時間。善光寺参道の精進料理や信州そばが待っている。"
+    "id": "karuizawa",
+    "name": "軽井沢",
+    "prefecture": "長野県",
+    "region": "中部",
+    "departures": ["東京"],
+    "distanceLevel": 2,
+    "budgetLevel": 3,
+    "themes": ["高原", "リゾート", "アウトレット"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "新幹線で1時間。都市の湿度から解放されるリゾートの代名詞。",
+      "旧軽井沢の別荘地は、日本の避暑文化の原点を今も保っている。",
+      "秋の落葉松林は、日本の紅葉とは異なる北欧的な美しさがある。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "長野", "rentalArea": "長野" }
+    "gateway": {
+      "rail": { "station": "軽井沢駅" },
+      "bus": { "terminal": "軽井沢" }
+    },
+    "affiliate": { "hotelArea": "軽井沢" }
   },
   {
-    "id": "sendai",
-    "basic": { "name": "仙台", "reading": "せんだい", "prefecture": "宮城県", "region": "東北", "mainStation": "仙台駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "仙台は東北最大の都市。定禅寺通のケヤキ並木と広瀬川が街に緑を与えている。",
-      "牛タン定食は仙台の定番。駅地下の牛タン通りだけで複数の専門店が揃う。",
-      "東北新幹線はやぶさで東京から約1.5時間。近いのに東北の空気感がある。"
+    "id": "fujikawaguchiko",
+    "name": "富士河口湖",
+    "prefecture": "山梨県",
+    "region": "中部",
+    "departures": ["東京"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["富士山", "湖", "温泉"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "河口湖の湖面に富士山が映る朝は、現実離れした静けさがある。",
+      "山梨のワイナリーと富士山の組み合わせは、意外なほど相性がいい。",
+      "雲海が出た日の富士五合目は、普段とまったく別の山に見える。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": true, "flightCode": "SDJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "仙台", "rentalArea": "仙台" }
+    "gateway": {
+      "rail": { "station": "河口湖駅" },
+      "bus": { "terminal": "富士河口湖" }
+    },
+    "affiliate": { "hotelArea": "富士河口湖" }
   },
   {
-    "id": "niigata",
-    "basic": { "name": "新潟", "reading": "にいがた", "prefecture": "新潟県", "region": "甲信越", "mainStation": "新潟駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "日本酒の生産量は全国1位の県。越後湯沢から新潟市内まで複数の酒蔵が点在する。",
-      "日本海の海産物は鮮度が高い。特にノドグロ（アカムツ）は現地で食べるべき一品。",
-      "上越新幹線とき号で東京から約2時間。日本海側の空気は太平洋側と確かに違う。"
+    "id": "nagoya-t",
+    "name": "名古屋",
+    "prefecture": "愛知県",
+    "region": "中部",
+    "departures": ["東京"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["城下町", "グルメ", "ものづくり"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "名古屋飯という独自の食文化が、この都市のアイデンティティを示す。",
+      "名古屋城の金鯱は、権力の象徴というより街のマスコットとして機能している。",
+      "トヨタ産業技術記念館は、工業都市の自負を丁寧に見せてくれる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "新潟", "rentalArea": "新潟" }
+    "gateway": {
+      "rail": { "station": "名古屋駅" },
+      "bus": { "terminal": "名古屋" }
+    },
+    "affiliate": { "hotelArea": "名古屋" }
   },
   {
-    "id": "matsumoto",
-    "basic": { "name": "松本", "reading": "まつもと", "prefecture": "長野県", "region": "甲信", "mainStation": "松本駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "松本城は現存する五重六階の天守では最古。黒と白のコントラストが特徴的。",
-      "中町通りと縄手通りは蔵造りの建物が残るエリア。食器・雑貨・工芸品の店が多い。",
-      "特急あずさで新宿から約2.5時間。アルプスを背景にした城下町の空気が待っている。"
+    "id": "sendai-t",
+    "name": "仙台",
+    "prefecture": "宮城県",
+    "region": "東北",
+    "departures": ["東京"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["城下町", "海鮮", "杜の都"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "仙台は東北の玄関口だが、それ以上に独立した食文化を持つ都市だ。",
+      "松島を含む宮城の海は、牡蠣・ホタテ・ウニを同時に味わえる稀な場所。",
+      "「杜の都」という異名は、街路樹が多いだけでなく川と緑が都市に溶けている。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "松本", "rentalArea": "松本" }
+    "gateway": {
+      "rail": { "station": "仙台駅" },
+      "bus": { "terminal": "仙台" }
+    },
+    "affiliate": { "hotelArea": "仙台" }
   },
   {
-    "id": "kanazawa-from-tokyo",
-    "basic": { "name": "金沢", "reading": "かなざわ", "prefecture": "石川県", "region": "北陸", "mainStation": "金沢駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "兼六園は加賀百万石の大名庭園。雪吊りで知られる冬の景色は格別。",
-      "近江町市場は金沢の台所。鮮魚・青果・惣菜が並ぶ昔ながらの市場。",
-      "北陸新幹線かがやきで東京から約2.5時間。工芸と食で1泊が埋まる。"
+    "id": "kanazawa-t",
+    "name": "金沢",
+    "prefecture": "石川県",
+    "region": "中部",
+    "departures": ["東京"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["工芸", "兼六園", "海の幸"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "兼六園は四季それぞれに顔を変えるが、雪吊りの冬が一番印象に残る。",
+      "近江町市場の鮮魚は、日本海側の豊かさを一か所で実感させてくれる。",
+      "東茶屋街は観光地化されていても、路地の奥に生活の気配が残っている。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "金沢", "rentalArea": "金沢" }
+    "gateway": {
+      "rail": { "station": "金沢駅" },
+      "bus": { "terminal": "金沢" }
+    },
+    "affiliate": { "hotelArea": "金沢" }
   },
   {
-    "id": "kyoto-from-tokyo",
-    "basic": { "name": "京都", "reading": "きょうと", "prefecture": "京都府", "region": "近畿", "mainStation": "京都駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 3, "departures": ["東京"] },
-    "experience": [
-      "世界遺産の社寺が17か所。伏見稲荷・金閣寺・嵐山・祇園と、1泊では回りきれない。",
-      "錦市場の食べ歩きと、鴨川沿いの夕暮れ。京都は歩いた分だけ顔を見せる。",
-      "東海道新幹線のぞみで東京から約2時間15分。高级宿泊なら早めの予約が不可欠。"
+    "id": "osaka-t",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["東京"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "大阪の食文化は量と価格のバランスが独特で、東京とはまったく別の感覚がある。",
+      "道頓堀から一本路地を入ると、昭和の居酒屋文化がそのままの形で残っている。",
+      "新世界と梅田が同じ市内にあることが、大阪の階層の多様さを物語る。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "京都", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "新大阪駅" },
+      "bus": { "terminal": "大阪" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
   },
   {
-    "id": "hiroshima-from-tokyo",
-    "basic": { "name": "広島", "reading": "ひろしま", "prefecture": "広島県", "region": "中国", "mainStation": "広島駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "原爆ドームと平和記念公園は、広島の中心部にある。世界で唯一の被爆国の記憶がここにある。",
-      "お好み焼きは広島流。生地・キャベツ・そばを重ねて焼くスタイルで東京とは別物。",
-      "東海道・山陽新幹線のぞみで東京から約4時間。宮島と広島を組み合わせる1泊プランが定番。"
+    "id": "kyoto-t",
+    "name": "京都",
+    "prefecture": "京都府",
+    "region": "近畿",
+    "departures": ["東京"],
+    "distanceLevel": 3,
+    "budgetLevel": 4,
+    "themes": ["寺社", "歴史", "町家"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "京都は何度来ても初めて気づく路地がある。観光地でありながら生活都市でもある。",
+      "祇園の石畳は夜歩きに向いている。昼間とは別の静けさがそこにある。",
+      "寺の庭は日本語で「枯山水」と呼ぶが、見るたびに言葉の意味が深くなる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": true, "flightCode": "HIJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "広島", "rentalArea": "広島" }
+    "gateway": {
+      "rail": { "station": "京都駅" },
+      "bus": { "terminal": "京都" }
+    },
+    "affiliate": { "hotelArea": "京都" }
   },
   {
-    "id": "fukuoka-from-tokyo",
-    "basic": { "name": "福岡", "reading": "ふくおか", "prefecture": "福岡県", "region": "九州", "mainStation": "博多駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "博多駅から天神まで地下鉄5分。コンパクトな都市構造で移動しやすい。",
-      "中洲の屋台は博多の夜の顔。ラーメン・焼き鳥・もつ鍋が横並びに並ぶ。",
-      "山陽・九州新幹線のぞみで東京から約5時間、飛行機なら約1.5時間。どちらでも行ける。"
+    "id": "hiroshima-t",
+    "name": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["東京"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["平和", "牡蠣", "宮島"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "平和記念公園は、観光地としての重さと静寂さが共存している場所だ。",
+      "広島のお好み焼きは、大阪とは別の食べ物と割り切って味わうべきだ。",
+      "宮島への船上から見る厳島神社は、どの写真よりも実物のほうが驚く。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "FUK", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "福岡", "rentalArea": "福岡" }
+    "gateway": {
+      "rail": { "station": "広島駅" },
+      "bus": { "terminal": "広島" }
+    },
+    "affiliate": { "hotelArea": "広島" }
   },
   {
-    "id": "sapporo-from-tokyo",
-    "basic": { "name": "札幌", "reading": "さっぽろ", "prefecture": "北海道", "region": "北海道", "mainStation": "札幌駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "大通公園を軸に、すすきの・円山・北大キャンパスが点在する計画都市。",
-      "札幌ラーメンは味噌が定番。すすきのエリアに老舗が集まっている。",
-      "飛行機で羽田から約1.5時間。北海道の食材（ウニ・カニ・乳製品）が目当てでも十分。"
+    "id": "fukuoka-t",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["東京"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "博多の屋台文化は、食べる場所と話す場所が同一になった独自の空間だ。",
+      "中洲の夜は、九州最大の繁華街の密度を一身に感じさせる。",
+      "福岡はアジアに最も近い日本の大都市であることが、街の空気に出ている。"
     ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": true, "flightCode": "CTS", "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "札幌", "rentalArea": "札幌" }
+    "gateway": {
+      "rail": { "station": "博多駅" },
+      "bus": { "terminal": "福岡" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
   },
   {
-    "id": "naha-from-tokyo",
-    "basic": { "name": "那覇", "reading": "なは", "prefecture": "沖縄県", "region": "沖縄", "mainStation": "那覇空港駅" },
-    "selection": { "distanceLevel": 5, "budgetLevel": 3, "departures": ["東京"] },
-    "experience": [
-      "首里城は琉球王国の王城。2019年の火災から復元工事が進み、一部が公開されている。",
-      "国際通りとその裏路地に、泡盛・三線・沖縄料理の店が集中している。",
-      "羽田から約2.5時間。本土と気候・文化・食が明確に異なる島での非日常。"
+    "id": "sapporo-t",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["東京"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "札幌は北海道最大の都市だが、少し郊外に出ると突然の自然規模に驚く。",
+      "ジンギスカンとラーメンと海鮮を一度の旅で全部食べたくなる。",
+      "冬の大通公園の雪まつりは、冷気が作品の一部として機能している。"
     ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": true, "flightCode": "OKA", "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "那覇", "rentalArea": "那覇" }
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
+  },
+  {
+    "id": "okinawa-t",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["東京"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "那覇空港を出た瞬間の空気は、日本のどの都市とも違う南国の湿度がある。",
+      "沖縄の海の色は本土では再現できない。透明度と青の濃度が別次元だ。",
+      "国際通りから一本入ると、観光と生活が重なった独自の商店街文化がある。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
   },
   {
     "id": "nara",
-    "basic": { "name": "奈良", "reading": "なら", "prefecture": "奈良県", "region": "近畿", "mainStation": "近鉄奈良駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["大阪", "名古屋"] },
-    "experience": [
-      "奈良公園の鹿は約1,300頭。国の天然記念物で、人慣れしているが油断すると服を引っ張られる。",
-      "東大寺大仏殿は世界最大級の木造建築。高さ49mの建物の中に15mの大仏が座っている。",
-      "大阪難波から近鉄特急で約35分。世界遺産を複数回れる古都の密度がある。"
+    "name": "奈良",
+    "prefecture": "奈良県",
+    "region": "近畿",
+    "departures": ["大阪", "名古屋"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["世界遺産", "鹿", "古都"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "奈良公園の鹿は野生だが、人間社会に慣れすぎて存在が哲学的になっている。",
+      "東大寺の大仏は、何度見ても正面から見上げた時の大きさに更新される。",
+      "春日大社から山に入ると、市街地の喧騒が消えて千年前の空気が戻る。"
     ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "奈良", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "奈良駅" }
+    },
+    "affiliate": { "hotelArea": "奈良" }
+  },
+  {
+    "id": "kobe",
+    "name": "神戸",
+    "prefecture": "兵庫県",
+    "region": "近畿",
+    "departures": ["大阪"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["港町", "異人館", "スイーツ"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "神戸は山と海の間に挟まれた街で、その地形が独特のコンパクトさを生んでいる。",
+      "北野の異人館は観光地だが、坂を登る行為そのものが神戸らしい体験だ。",
+      "神戸牛は価格の高さより、その繊細な脂の甘さに驚く。"
+    ],
+    "gateway": {
+      "rail": { "station": "三ノ宮駅" }
+    },
+    "affiliate": { "hotelArea": "神戸" }
+  },
+  {
+    "id": "kyoto-o",
+    "name": "京都",
+    "prefecture": "京都府",
+    "region": "近畿",
+    "departures": ["大阪"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["寺社", "歴史", "町家"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "京都は何度来ても初めて気づく路地がある。観光地でありながら生活都市でもある。",
+      "祇園の石畳は夜歩きに向いている。昼間とは別の静けさがそこにある。",
+      "嵐山の竹林は、写真より実物のほうが音と香りで別次元の体験になる。"
+    ],
+    "gateway": {
+      "rail": { "station": "京都駅" }
+    },
+    "affiliate": { "hotelArea": "京都" }
   },
   {
     "id": "himeji",
-    "basic": { "name": "姫路", "reading": "ひめじ", "prefecture": "兵庫県", "region": "近畿", "mainStation": "姫路駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["大阪", "名古屋"] },
-    "experience": [
-      "姫路城は現存する木造天守の中で最大規模。白漆喰の外観から「白鷺城」と呼ばれる。",
-      "好古園は姫路城の西隣にある大名庭園。無料ではないが城とセットで回れる。",
-      "JR新快速で大阪から約1時間、新幹線なら名古屋から約45分。城以外の選択肢も充実している。"
+    "name": "姫路",
+    "prefecture": "兵庫県",
+    "region": "近畿",
+    "departures": ["大阪"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["城", "世界遺産", "播磨"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "姫路城は遠くから見るほど白く、近づくほど石垣の巨大さに圧倒される。",
+      "城下町の痕跡が現代の街区に残っており、地図と照らすと江戸の設計が見えてくる。",
+      "好古園の日本庭園は、城を借景にした構成が見事で滞在時間を忘れる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "姫路", "rentalArea": "姫路" }
-  },
-  {
-    "id": "kyoto-from-osaka",
-    "basic": { "name": "京都", "reading": "きょうと", "prefecture": "京都府", "region": "近畿", "mainStation": "京都駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "JR東海道線・新快速で大阪から約15分。距離は短いが内容は別格の古都。",
-      "祇園・東山・哲学の道。歩くほどに社寺と路地が重なる街の構造がある。",
-      "錦市場の食べ歩きと、夜の鴨川デルタ。1泊してやっと半分くらいの密度がある。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "京都", "rentalArea": null }
-  },
-  {
-    "id": "arima",
-    "basic": { "name": "有馬温泉", "reading": "ありまおんせん", "prefecture": "兵庫県", "region": "近畿", "mainStation": "有馬温泉駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "金泉（含鉄食塩泉）と銀泉（炭酸泉・放射能泉）の二種類が一か所で湧く珍しい温泉地。",
-      "日本最古の温泉の一つとされ、豊臣秀吉が好んで訪れた記録が残る。",
-      "神戸電鉄・阪急経由で大阪梅田から約1時間。六甲山のすぐ裏に別世界がある。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "有馬温泉", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "姫路駅" }
+    },
+    "affiliate": { "hotelArea": "姫路" }
   },
   {
     "id": "wakayama",
-    "basic": { "name": "和歌山", "reading": "わかやま", "prefecture": "和歌山県", "region": "近畿", "mainStation": "和歌山駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["大阪"] },
-    "experience": [
-      "和歌山城は重要文化財の天守閣を持つ城。周囲は公園になっていて散策しやすい。",
-      "和歌山ラーメンは豚骨醤油ベース。市内に老舗が多く、朝からラーメンを食べる文化がある。",
-      "JR阪和線の特急くろしおで大阪から約1時間。紀伊半島への起点になる都市。"
+    "name": "和歌山",
+    "prefecture": "和歌山県",
+    "region": "近畿",
+    "departures": ["大阪"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["高野山", "温泉", "海"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "高野山は標高900mの宗教都市で、泊まると翌朝の勤行で別世界に引き込まれる。",
+      "白浜の海は関西圏でありながら沖縄に近い透明度がある。",
+      "熊野古道は歩く速度でしか感じられない時間の厚さを持っている。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "和歌山", "rentalArea": "和歌山" }
+    "gateway": {
+      "rail": { "station": "和歌山駅" }
+    },
+    "affiliate": { "hotelArea": "和歌山" }
   },
   {
-    "id": "ise-from-osaka",
-    "basic": { "name": "伊勢", "reading": "いせ", "prefecture": "三重県", "region": "東海", "mainStation": "伊勢市駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["大阪"] },
-    "experience": [
-      "伊勢神宮は内宮・外宮の2社を中心に125社の宮社からなる。参拝の作法は外宮から始める。",
-      "おかげ横丁の赤福本店と伊勢うどん。参拝後の腹ごしらえの選択肢が豊富。",
-      "近鉄特急で大阪難波から約2時間。日帰りで内宮・外宮・おかげ横丁を回れる。"
+    "id": "okayama-o",
+    "name": "岡山",
+    "prefecture": "岡山県",
+    "region": "中国",
+    "departures": ["大阪"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["後楽園", "倉敷", "桃"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "後楽園は日本三名園のひとつだが、対岸の烏城との組み合わせが特に美しい。",
+      "倉敷美観地区は観光地化が進んでいるが、白壁の路地は本物の趣が残る。",
+      "岡山は晴れの国と呼ばれ、天候に恵まれた日の後楽園は格別だ。"
     ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "伊勢", "rentalArea": "伊勢" }
+    "gateway": {
+      "rail": { "station": "岡山駅" }
+    },
+    "affiliate": { "hotelArea": "岡山" }
   },
   {
-    "id": "kinosaki",
-    "basic": { "name": "城崎温泉", "reading": "きのさきおんせん", "prefecture": "兵庫県", "region": "近畿", "mainStation": "城崎温泉駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 3, "departures": ["大阪"] },
-    "experience": [
-      "7つの外湯が徒歩圏内に集まる。旅館に泊まると外湯の入場券が付くのが基本スタイル。",
-      "下駄と浴衣で石畳の温泉街を歩く。昭和の温泉情緒がそのまま現役で動いている。",
-      "特急こうのとりで大阪から約2.5時間。松葉ガニの解禁は11月。"
+    "id": "nagoya-o",
+    "name": "名古屋",
+    "prefecture": "愛知県",
+    "region": "中部",
+    "departures": ["大阪"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["城下町", "グルメ", "ものづくり"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "ひつまぶしと味噌カツと手羽先を一日で制覇できる、食の濃い都市だ。",
+      "名古屋城本丸御殿の復元は、日本の宮殿建築の精巧さを現代の技術で体験できる。",
+      "大須商店街のカオスな雑多さは、東京の秋葉原とは異なる独自の熱量がある。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "城崎温泉", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "名古屋駅" },
+      "bus": { "terminal": "名古屋" }
+    },
+    "affiliate": { "hotelArea": "名古屋" }
   },
   {
-    "id": "shirahama",
-    "basic": { "name": "白浜", "reading": "しらはま", "prefecture": "和歌山県", "region": "近畿", "mainStation": "白浜駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "白良浜は350mの白砂のビーチ。海水浴のシーズンは7〜8月で混雑するが、春秋は静か。",
-      "崎の湯は波打ち際に湧く露天温泉。海を見ながら入れる岩風呂は日本最古の温泉の一つ。",
-      "JR特急くろしおで大阪から約2時間。ビーチと温泉のリゾートを1泊で完結させられる。"
+    "id": "kanazawa-o",
+    "name": "金沢",
+    "prefecture": "石川県",
+    "region": "中部",
+    "departures": ["大阪"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["工芸", "兼六園", "海の幸"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "ひがし茶屋街の朝は観光客が少なく、金沢の本来の静けさが顔を出す。",
+      "近江町市場の活気は、日本海の食文化の豊かさをそのまま反映している。",
+      "兼六園の雪吊りは、美しさと機能性が融合した日本的な冬の風景だ。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "白浜", "rentalArea": "白浜" }
+    "gateway": {
+      "rail": { "station": "金沢駅" },
+      "bus": { "terminal": "金沢" }
+    },
+    "affiliate": { "hotelArea": "金沢" }
   },
   {
-    "id": "koyasan",
-    "basic": { "name": "高野山", "reading": "こうやさん", "prefecture": "和歌山県", "region": "近畿", "mainStation": "高野山駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 3, "departures": ["大阪"] },
-    "experience": [
-      "真言宗の総本山。奥之院参道には約20万基の墓碑が並び、武将・企業の墓が混在する。",
-      "宿坊（寺院の宿泊施設）では精進料理と朝の勤行を体験できる。全国から参拝者が訪れる。",
-      "南海高野線で大阪難波から約2時間（ケーブルカー含む）。標高800m、気温は市街より5度低い。"
+    "id": "hiroshima-o",
+    "name": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["大阪"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["平和", "牡蠣", "宮島"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "広島は復興した都市だが、平和記念公園に立つと歴史の重さが皮膚感覚で伝わる。",
+      "宮島の鹿は奈良の鹿より少なく、神聖な空気の中にひっそりと存在する。",
+      "広島の牡蠣は量・質ともに圧倒的で、季節を合わせて食べに来る価値がある。"
     ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "高野山", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "広島駅" },
+      "bus": { "terminal": "広島" }
+    },
+    "affiliate": { "hotelArea": "広島" }
   },
   {
-    "id": "okayama",
-    "basic": { "name": "岡山", "reading": "おかやま", "prefecture": "岡山県", "region": "中国", "mainStation": "岡山駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["大阪", "広島"] },
-    "experience": [
-      "後楽園は日本三名園の一つ。岡山城（烏城）と川を挟んで向き合う配置がある。",
-      "岡山市内は晴れの日が多く「晴れの国おかやま」と呼ばれる。ピオーネとマスカットが有名。",
-      "山陽新幹線で大阪から約35分、広島から約30分。四国への起点にもなる交通の要所。"
+    "id": "tokyo-o",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["大阪"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "東京は街の密度が異常に高く、一日で全く異なる複数の都市を体験できる。",
+      "新宿と谷根千が同じ都市にあることが、東京のスケールと多様性を証明する。",
+      "築地外市場の朝は観光地でありながら、本物の仕事の場でもある。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "岡山", "rentalArea": "岡山" }
+    "gateway": {
+      "rail": { "station": "東京駅" },
+      "bus": { "terminal": "東京" }
+    },
+    "affiliate": { "hotelArea": "東京" }
   },
   {
-    "id": "kanazawa-from-osaka",
-    "basic": { "name": "金沢", "reading": "かなざわ", "prefecture": "石川県", "region": "北陸", "mainStation": "金沢駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["大阪", "名古屋"] },
-    "experience": [
-      "兼六園・21世紀美術館・近江町市場が徒歩圏内にある。金沢は回りやすい規模の城下町。",
-      "香箱ガニ（ズワイガニのメス）は北陸の冬の味覚。11〜12月限定で市場と飲食店に並ぶ。",
-      "特急サンダーバード＋北陸新幹線で大阪から約2.5時間。宿は金沢駅周辺が便利。"
+    "id": "fukuoka-o",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["大阪"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "博多ラーメンのスープは、豚骨の深みと濃度の点で東京系ラーメンと完全に別物だ。",
+      "中洲屋台は夜の博多に溶け込む独特の食文化で、屋外席の解放感が独自だ。",
+      "天神の地下街は雨の日でも完結する都市設計で、福岡の都市力を感じる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "金沢", "rentalArea": "金沢" }
+    "gateway": {
+      "rail": { "station": "博多駅" },
+      "bus": { "terminal": "福岡" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
   },
   {
-    "id": "hiroshima-from-osaka",
-    "basic": { "name": "広島", "reading": "ひろしま", "prefecture": "広島県", "region": "中国", "mainStation": "広島駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "平和記念公園と原爆ドームは広島市の中心部にある。被爆から80年が経った今も、訪れる意味のある場所。",
-      "お好み焼きは広島流。鉄板の上でキャベツ・麺・生地を重ねて焼く。大阪のものとは別物。",
-      "山陽新幹線のぞみで大阪から約1.5時間。宮島を組み合わせて1泊が標準的なプラン。"
+    "id": "sapporo-o",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["大阪"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "大阪からの距離感があるからこそ、北海道に来た実感が強くなる。",
+      "狸小路から時計台まで歩ける街のコンパクトさが、観光を楽にする。",
+      "夏の北海道は本州の夏の概念を覆す。湿度が低く、空が広い。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "広島", "rentalArea": "広島" }
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
   },
   {
-    "id": "matsuyama-from-osaka",
-    "basic": { "name": "松山", "reading": "まつやま", "prefecture": "愛媛県", "region": "四国", "mainStation": "松山駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "道後温泉本館は日本最古の温泉施設の一つ。重要文化財に指定されながら現役の公衆浴場として使われている。",
-      "坊っちゃん列車が走る松山市内線は、明治時代から続く路面電車。今も市民の足として機能している。",
-      "フェリーで大阪南港から約10時間（夜行）または飛行機で約1時間。道後温泉と松山城を1泊2日で回れる。"
+    "id": "okinawa-o",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["大阪"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "大阪から2時間半のフライトで、海の色がまったく違う世界に着く。",
+      "首里城は琉球王国の建築様式が本土とは異なり、独立した文化の重みがある。",
+      "沖縄の食文化はゴーヤーチャンプルーだけでなく、ソーキそばの奥深さも発見がある。"
     ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": true, "flightCode": "MYJ", "bus": false, "ferry": true, "ferryUrl": "https://www.sunflower.co.jp/" },
-    "affiliate": { "hotelArea": "松山", "rentalArea": "松山" }
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
   },
   {
-    "id": "fukuoka-from-osaka",
-    "basic": { "name": "福岡", "reading": "ふくおか", "prefecture": "福岡県", "region": "九州", "mainStation": "博多駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 2, "departures": ["大阪"] },
-    "experience": [
-      "博多・天神の二大繁華街は地下鉄5分の距離にある。コンパクトで動きやすい都市。",
-      "博多ラーメン（豚骨）・もつ鍋・水炊き。食の選択肢が多い。屋台は夜が本番。",
-      "山陽・九州新幹線のぞみで大阪から約2.5時間。飛行機なら約1時間。"
+    "id": "ishigaki",
+    "name": "石垣島",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["大阪"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["離島", "サンゴ礁", "星空"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "石垣島の川平湾はグラスボートから見るサンゴが本物のリゾートの基準を更新する。",
+      "夜の星空は、光害のない島でしか見られない天の川の密度がある。",
+      "竹富島へのフェリーで15分。時間の流れがさらにもう一段階ゆっくりになる。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "FUK", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "福岡", "rentalArea": "福岡" }
-  },
-  {
-    "id": "naha-from-osaka",
-    "basic": { "name": "那覇", "reading": "なは", "prefecture": "沖縄県", "region": "沖縄", "mainStation": "那覇空港駅" },
-    "selection": { "distanceLevel": 5, "budgetLevel": 3, "departures": ["大阪"] },
-    "experience": [
-      "国際通りの背後の牧志公設市場には、本土では見かけない魚・野菜が並ぶ。",
-      "沖縄そばとゴーヤーチャンプルーは日常食。居酒屋の夜は泡盛から始まる。",
-      "関西空港から飛行機で約2時間。海・食・文化が本土と明確に異なるリゾート。"
-    ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": true, "flightCode": "OKA", "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "那覇", "rentalArea": "那覇" }
-  },
-  {
-    "id": "inuyama",
-    "basic": { "name": "犬山", "reading": "いぬやま", "prefecture": "愛知県", "region": "東海", "mainStation": "犬山駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["名古屋"] },
-    "experience": [
-      "犬山城は現存する最古の天守（1537年築）。木曽川沿いの崖上に建ち、眺望が良い。",
-      "城下町に古い商家が残る本町通りには、食べ歩きができる和スイーツの店が多い。",
-      "名鉄で名古屋駅から約30分。国宝の天守と川沿いの景色を日帰りで楽しめる。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "犬山", "rentalArea": null }
-  },
-  {
-    "id": "ise-from-nagoya",
-    "basic": { "name": "伊勢", "reading": "いせ", "prefecture": "三重県", "region": "東海", "mainStation": "伊勢市駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["名古屋"] },
-    "experience": [
-      "伊勢神宮は外宮・内宮・別宮合わせて125の宮社からなる。参拝順は外宮→内宮が正式。",
-      "おかげ横丁では赤福・伊勢うどん・てこね寿司など三重の食が一か所に揃う。",
-      "近鉄特急で名古屋から約1.5時間。日帰り参拝から1泊グルメ旅まで幅広く対応できる。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "伊勢", "rentalArea": "伊勢" }
-  },
-  {
-    "id": "takayama",
-    "basic": { "name": "高山", "reading": "たかやま", "prefecture": "岐阜県", "region": "東海", "mainStation": "高山駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["名古屋"] },
-    "experience": [
-      "三町の古い町並みは江戸時代の商家が保存された地区。築200年以上の建物が今も現役。",
-      "高山陣屋は江戸幕府の直轄地（天領）だった頃の代官所。全国で唯一現存する。",
-      "JR特急ひだで名古屋から約2.5時間。飛騨牛の朴葉味噌焼きは現地で食べるべき一品。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "高山", "rentalArea": "高山" }
-  },
-  {
-    "id": "shirakawago",
-    "basic": { "name": "白川郷", "reading": "しらかわごう", "prefecture": "岐阜県", "region": "東海", "mainStation": "白川郷バスターミナル" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["名古屋"] },
-    "experience": [
-      "合掌造りの集落は世界文化遺産。茅葺き屋根の家屋が現在も民家・民宿として使われている。",
-      "荻町城跡からの展望台が有名。集落全体を見渡せるビュースポット。",
-      "名古屋から高速バスで約2.5時間。高山経由のルートで飛騨地方を合わせて回る旅程が人気。"
-    ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "白川郷", "rentalArea": null }
-  },
-  {
-    "id": "toyama",
-    "basic": { "name": "富山", "reading": "とやま", "prefecture": "富山県", "region": "北陸", "mainStation": "富山駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["名古屋"] },
-    "experience": [
-      "立山連峰が市街地から見える。富山湾は世界で最も美しい湾10選に選ばれたこともある。",
-      "富山湾のホタルイカと白エビは4〜6月の旬に現地で食べると格別。鮮度が違う。",
-      "北陸新幹線つるぎ・はくたか乗り継ぎで名古屋から約2時間。海産物目当ての食旅向き。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "富山", "rentalArea": "富山" }
-  },
-  {
-    "id": "yanagawa",
-    "basic": { "name": "柳川", "reading": "やながわ", "prefecture": "福岡県", "region": "九州", "mainStation": "西鉄柳川駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["福岡"] },
-    "experience": [
-      "掘割（堀川）をどんこ舟でゆっくり流れる川下りが柳川観光の核。船頭が竹ざおで操る約70分の舟旅。",
-      "うなぎのせいろ蒸しは柳川の名物料理。蒸すことでふっくらとした食感になる。",
-      "西鉄天神大牟田線で天神から約45分。日帰りで別の時間軸に入れる水郷の街。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "柳川", "rentalArea": null }
-  },
-  {
-    "id": "dazaifu",
-    "basic": { "name": "太宰府", "reading": "だざいふ", "prefecture": "福岡県", "region": "九州", "mainStation": "太宰府駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["福岡"] },
-    "experience": [
-      "太宰府天満宮は学問の神・菅原道真を祀る全国天満宮の総本社。受験シーズンは参拝者が増える。",
-      "参道の梅ヶ枝餅（梅の焼き印が入った餅菓子）は複数の店が並び、焼きたてを食べられる。",
-      "西鉄電車で福岡天神から乗り換えを含め約40分。九州国立博物館も隣接する。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "太宰府", "rentalArea": null }
-  },
-  {
-    "id": "saga",
-    "basic": { "name": "佐賀", "reading": "さが", "prefecture": "佐賀県", "region": "九州", "mainStation": "佐賀駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["福岡"] },
-    "experience": [
-      "有田焼・伊万里焼・唐津焼の3つの焼き物が佐賀県内で生産されている。窯元を訪問できる工場もある。",
-      "吉野ヶ里遺跡は国内最大規模の弥生時代の環濠集落跡。佐賀平野の田園地帯にある。",
-      "特急みどりで博多から約40分。有田・嬉野・唐津への起点にもなる県庁所在地。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "佐賀", "rentalArea": "佐賀" }
-  },
-  {
-    "id": "kumamoto",
-    "basic": { "name": "熊本", "reading": "くまもと", "prefecture": "熊本県", "region": "九州", "mainStation": "熊本駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["福岡"] },
-    "experience": [
-      "熊本城は2016年の熊本地震で大きな被害を受けたが、2021年に天守閣が復元された。復元工事は継続中。",
-      "馬刺しは熊本の代表的な食文化。赤身とたてがみ（コウネ）の2種を合わせて食べるのが基本。",
-      "九州新幹線で博多から約37分。熊本城・水前寺公園・桜町の食べ歩きで1日埋まる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "熊本", "rentalArea": "熊本" }
-  },
-  {
-    "id": "beppu",
-    "basic": { "name": "別府", "reading": "べっぷ", "prefecture": "大分県", "region": "九州", "mainStation": "別府駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["福岡"] },
-    "experience": [
-      "源泉数・湧出量ともに日本一の温泉地。地獄めぐり（8か所の源泉）は観光コースとして定番。",
-      "共同浴場（竹瓦温泉など）が市内に多数あり、100円前後で入れるものもある。",
-      "JR特急ソニックで博多から約2時間。湯量が多すぎて市内のあちこちに湯気が立ち上っている。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "別府", "rentalArea": "別府" }
-  },
-  {
-    "id": "nagasaki",
-    "basic": { "name": "長崎", "reading": "ながさき", "prefecture": "長崎県", "region": "九州", "mainStation": "長崎駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["福岡"] },
-    "experience": [
-      "出島・旧グラバー邸・大浦天主堂。鎖国時代の海外交流の痕跡が市内に残る。",
-      "長崎ちゃんぽんと皿うどんは市内の中華料理店がルーツ。本場の味は東京のものと異なる。",
-      "西九州新幹線かもめで博多から約80分（武雄温泉乗り継ぎ）。坂の街の景色は夜景も美しい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "NGS", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "長崎", "rentalArea": "長崎" }
-  },
-  {
-    "id": "oita",
-    "basic": { "name": "大分", "reading": "おおいた", "prefecture": "大分県", "region": "九州", "mainStation": "大分駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["福岡"] },
-    "experience": [
-      "大分県は温泉地の数・湧出量ともに全国1位。別府・由布院・湯平・長湯など多様な温泉地がある。",
-      "関サバ・関アジは豊予海峡の急流で育った高級魚。大分市内の刺身でそのレベルを確認できる。",
-      "JR特急ソニックで博多から約2時間。由布院へのアクセス起点にもなる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "OIT", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "大分", "rentalArea": "大分" }
-  },
-  {
-    "id": "kagoshima",
-    "basic": { "name": "鹿児島", "reading": "かごしま", "prefecture": "鹿児島県", "region": "九州", "mainStation": "鹿児島中央駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["福岡"] },
-    "experience": [
-      "桜島は錦江湾に浮かぶ活火山。フェリーで鹿児島市から15分で渡れる。灰が降る日は日常的。",
-      "薩摩揚げ・黒豚しゃぶしゃぶ・鶏刺し。鹿児島の食は独自文化が根付いている。",
-      "九州新幹線さくらで博多から約1.5時間。桜島と仙巌園を組み合わせた1泊が定番。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "KOJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "鹿児島", "rentalArea": "鹿児島" }
-  },
-  {
-    "id": "miyazaki",
-    "basic": { "name": "宮崎", "reading": "みやざき", "prefecture": "宮崎県", "region": "九州", "mainStation": "宮崎駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["福岡"] },
-    "experience": [
-      "青島神社は波状岩（鬼の洗濯板）に囲まれた小島に立つ。干潮時に歩いて渡れる。",
-      "宮崎は日照時間が全国トップクラス。冬でも温暖で、プロ野球の春季キャンプ地が多い。",
-      "JR特急にちりんシーガイアで博多から約3時間。鶏の炭火焼きと冷や汁は宮崎独自の食文化。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": true, "flightCode": "KMI", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "宮崎", "rentalArea": "宮崎" }
-  },
-  {
-    "id": "naha-from-fukuoka",
-    "basic": { "name": "那覇", "reading": "なは", "prefecture": "沖縄県", "region": "沖縄", "mainStation": "那覇空港駅" },
-    "selection": { "distanceLevel": 4, "budgetLevel": 3, "departures": ["福岡"] },
-    "experience": [
-      "国際通りはモノレールのおもろまち駅から牧志駅の間に全長1.6kmある商店街。土産物・飲食・ドラッグストアが密集。",
-      "首里城は琉球王国の中心で、2019年の火災後も見学エリアが順次公開されている。",
-      "福岡空港から飛行機で約1時間20分。本土と異なる食・言語・景色が待っている。"
-    ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": true, "flightCode": "OKA", "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "那覇", "rentalArea": "那覇" }
-  },
-  {
-    "id": "otaru",
-    "basic": { "name": "小樽", "reading": "おたる", "prefecture": "北海道", "region": "北海道", "mainStation": "小樽駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["札幌"] },
-    "experience": [
-      "小樽運河沿いの石造り倉庫群は明治〜大正期の港湾都市の遺産。夜はガス灯が点灯する。",
-      "すし屋通りには海鮮を提供する寿司屋が並ぶ。駅から徒歩圏内でニシン・ウニ・ホッケを食べられる。",
-      "JR函館本線（快速エアポート）で札幌から約30分。日帰りで完結する北海道の港町体験。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "小樽", "rentalArea": null }
-  },
-  {
-    "id": "noboribetsu",
-    "basic": { "name": "登別", "reading": "のぼりべつ", "prefecture": "北海道", "region": "北海道", "mainStation": "登別駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["札幌"] },
-    "experience": [
-      "地獄谷は直径450mの爆裂火口跡。黄褐色の地肌から蒸気と硫黄泉が絶えず噴き出している。",
-      "11の泉質（日本でも最多級）を持つ温泉地。宿によって異なる泉質を楽しめる。",
-      "JR特急すずらんで札幌から約1時間20分。温泉宿でゆっくりする1泊がベストな使い方。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "登別", "rentalArea": null }
-  },
-  {
-    "id": "furano",
-    "basic": { "name": "富良野", "reading": "ふらの", "prefecture": "北海道", "region": "北海道", "mainStation": "富良野駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["札幌"] },
-    "experience": [
-      "ファーム富田のラベンダー畑は7月が見頃。北海道の広大な丘陵に紫の帯が広がる。",
-      "富良野チーズ工房では地元牛乳を使ったチーズとバターの製造見学と体験ができる。",
-      "JR富良野線で旭川から約1時間（札幌から約2時間）。ドラマ「北の国から」のロケ地でもある。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "富良野", "rentalArea": "富良野" }
-  },
-  {
-    "id": "asahikawa",
-    "basic": { "name": "旭川", "reading": "あさひかわ", "prefecture": "北海道", "region": "北海道", "mainStation": "旭川駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["札幌"] },
-    "experience": [
-      "旭山動物園は日本最北の動物園。2000年代に入館者数で上野を抜いた展示手法が有名。",
-      "旭川ラーメンは醤油ベースに豚骨・鶏がら合わせのスープが特徴。市内に老舗が多い。",
-      "JR特急カムイ・ライラックで札幌から約1.5時間。富良野・美瑛への乗り換え起点でもある。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": true, "flightCode": "AKJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "旭川", "rentalArea": "旭川" }
-  },
-  {
-    "id": "hakodate",
-    "basic": { "name": "函館", "reading": "はこだて", "prefecture": "北海道", "region": "北海道", "mainStation": "函館駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["札幌"] },
-    "experience": [
-      "函館山の夜景は日本三大夜景の一つ。山頂からの扇形に広がる光の帯は観光の定番。",
-      "朝市は函館駅前にある。海鮮丼・イカそうめん・カニを朝早くから食べられる市場。",
-      "JR特急北斗で札幌から約3.5時間。函館は坂の街で、洋館と教会が港に向いている。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": true, "flightCode": "HKD", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "函館", "rentalArea": "函館" }
-  },
-  {
-    "id": "matsushima",
-    "basic": { "name": "松島", "reading": "まつしま", "prefecture": "宮城県", "region": "東北", "mainStation": "松島海岸駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["仙台"] },
-    "experience": [
-      "日本三景の一つ。260あまりの島が湾内に浮かぶ景観は、江戸時代から詩歌に詠まれてきた。",
-      "瑞巌寺は伊達政宗が創建した臨済宗の名刹。岩窟に彫られた羅漢像の廊下が独特。",
-      "仙石線で仙台から約40分。牡蠣・穴子・笹かまぼこが海沿いの食の定番。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "松島", "rentalArea": null }
-  },
-  {
-    "id": "tendo",
-    "basic": { "name": "天童", "reading": "てんどう", "prefecture": "山形県", "region": "東北", "mainStation": "天童駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["仙台"] },
-    "experience": [
-      "将棋駒の生産量が全国の95%以上を占める。街のあちこちに将棋の意匠が施されている。",
-      "天童温泉は山形市の隣に静かに広がる温泉地。観光地化が過度でなく、落ち着いた雰囲気がある。",
-      "山形新幹線つばさ＋奥羽本線で仙台から約1時間。さくらんぼ・ラ・フランスが旬の季節に合わせたい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "天童", "rentalArea": null }
-  },
-  {
-    "id": "onagawa",
-    "basic": { "name": "女川", "reading": "おながわ", "prefecture": "宮城県", "region": "東北", "mainStation": "女川駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["仙台"] },
-    "experience": [
-      "東日本大震災で甚大な被害を受けた港町が、震災後に街ごと再設計された。新しい建物と港の景色がある。",
-      "女川駅前のシーパルピア女川は海鮮市場・温浴施設・飲食店が集まる複合施設。",
-      "JR石巻線で仙台から乗り換え含め約1.5時間。さんま・ウニ・ホタテが水揚げされる三陸の港。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "女川", "rentalArea": null }
-  },
-  {
-    "id": "yamagata",
-    "basic": { "name": "山形", "reading": "やまがた", "prefecture": "山形県", "region": "東北", "mainStation": "山形駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["仙台"] },
-    "experience": [
-      "山寺（立石寺）は松尾芭蕉が「閑さや岩にしみ入る蝉の声」と詠んだ場所。1,000段超の石段を登る。",
-      "芋煮会は山形の秋の風物詩。里芋・牛肉・こんにゃくを醤油ベースで煮た鍋料理。",
-      "山形新幹線つばさで仙台から約40分。蔵王温泉（蔵王スキー場）への起点にもなる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": true, "flightCode": "GAJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "山形", "rentalArea": "山形" }
-  },
-  {
-    "id": "morioka",
-    "basic": { "name": "盛岡", "reading": "もりおか", "prefecture": "岩手県", "region": "東北", "mainStation": "盛岡駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["仙台"] },
-    "experience": [
-      "わんこそばは給仕が次々に椀を追加していくスタイル。平均は60〜70杯程度、記録挑戦もできる。",
-      "盛岡冷麺は韓国朝鮮族の麺料理をルーツに持つ。弾力の強い麺と水キムチのスープが特徴。",
-      "東北新幹線はやぶさで仙台から約35分。小岩井農場（車で30分）も近く食旅に向く。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "盛岡", "rentalArea": "盛岡" }
-  },
-  {
-    "id": "akita",
-    "basic": { "name": "秋田", "reading": "あきた", "prefecture": "秋田県", "region": "東北", "mainStation": "秋田駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["仙台"] },
-    "experience": [
-      "なまはげは男鹿半島の伝統行事（国重要無形民俗文化財）。なまはげ館で年中体験できる。",
-      "稲庭うどんは秋田の代表的な手延べ麺。干しうどんなのにつるりとした食感がある。",
-      "JR特急こまちで仙台から約1.5時間。竿燈まつりは8月上旬の4日間が見頃。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": true, "flightCode": "AXT", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "秋田", "rentalArea": "秋田" }
-  },
-  {
-    "id": "aomori",
-    "basic": { "name": "青森", "reading": "あおもり", "prefecture": "青森県", "region": "東北", "mainStation": "青森駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["仙台"] },
-    "experience": [
-      "青森ねぶた祭りは8月上旬の夜に大型灯籠（ねぶた）が市街を練り歩く東北最大級の祭り。",
-      "八食センターは市場・レストラン・七厘村が一体化した複合施設。生鮮魚介を自分で焼いて食べられる。",
-      "東北新幹線はやぶさで仙台から約1時間20分。弘前・十和田湖への拠点にもなる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": true, "flightCode": "AOJ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "青森", "rentalArea": "青森" }
-  },
-  {
-    "id": "miyajima",
-    "basic": { "name": "宮島", "reading": "みやじま", "prefecture": "広島県", "region": "中国", "mainStation": "宮島口駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["広島"] },
-    "experience": [
-      "厳島神社の海に浮かぶ大鳥居は干潮時に歩いて近づける。朱色の社殿が海水に映る景色が有名。",
-      "もみじ饅頭は宮島島内の複数の店で作り方・餡の種類が異なる。焼きたてを食べられる店もある。",
-      "JR山陽本線で広島駅から宮島口まで約25分、フェリーで約10分。日本三景の一つ。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": true, "ferryUrl": "https://www.jrferry.co.jp/" },
-    "affiliate": { "hotelArea": "宮島", "rentalArea": null }
-  },
-  {
-    "id": "onomichi",
-    "basic": { "name": "尾道", "reading": "おのみち", "prefecture": "広島県", "region": "中国", "mainStation": "尾道駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["広島"] },
-    "experience": [
-      "海と坂と寺の街。駅前すぐから尾道水道が広がり、対岸の向島との水路が生活の一部になっている。",
-      "猫の細道と呼ばれる石畳の路地は、多くの猫が住む迷路のような路地裏エリア。",
-      "JR山陽本線で広島から約1時間。尾道ラーメンは平打ち麺と鶏がら醤油スープが特徴。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "尾道", "rentalArea": null }
-  },
-  {
-    "id": "takehara",
-    "basic": { "name": "竹原", "reading": "たけはら", "prefecture": "広島県", "region": "中国", "mainStation": "竹原駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["広島"] },
-    "experience": [
-      "竹原の町並み保存地区は江戸時代の製塩業で栄えた商家の街並み。漆喰壁の建物が今も残る。",
-      "アニメ「たまゆら」の聖地でもあり、ファンの巡礼地になっている。地元住民も普通に生活している。",
-      "JR呉線で広島から約1.5時間。海沿いを走る車窓も絵になる路線。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "竹原", "rentalArea": null }
-  },
-  {
-    "id": "iwakuni",
-    "basic": { "name": "岩国", "reading": "いわくに", "prefecture": "山口県", "region": "中国", "mainStation": "岩国駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["広島"] },
-    "experience": [
-      "錦帯橋は5連のアーチが特徴的な木造橋。江戸時代の技術で架けられ、現在も修復技術を受け継ぐ。",
-      "岩国城は橋の先の山上に復元された城。ロープウェイで上がると広島湾・瀬戸内海が見渡せる。",
-      "JR山陽本線で広島から約40分。橋・城・白蛇（天然記念物）という3点セットが特徴。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "岩国", "rentalArea": null }
-  },
-  {
-    "id": "matsuyama",
-    "basic": { "name": "松山", "reading": "まつやま", "prefecture": "愛媛県", "region": "四国", "mainStation": "松山駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["広島", "高松"] },
-    "experience": [
-      "道後温泉本館は3,000年の歴史を持つとされる日本最古の温泉の一つ。現在も重要文化財として稼働中。",
-      "松山城は標高132mの山頂に天守が立つ現存12天守の一つ。ロープウェイで上がれる。",
-      "広島からフェリーで約1時間（スーパージェット）、高松からは特急しおかぜで約2時間。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": true, "flightCode": "MYJ", "bus": false, "ferry": true, "ferryUrl": "https://www.setonaikaikisen.co.jp/" },
-    "affiliate": { "hotelArea": "松山", "rentalArea": "松山" }
-  },
-  {
-    "id": "marugame",
-    "basic": { "name": "丸亀", "reading": "まるがめ", "prefecture": "香川県", "region": "四国", "mainStation": "丸亀駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["高松"] },
-    "experience": [
-      "丸亀城は現存12天守の一つで、石垣の高さは日本一（60m）。石垣だけ見ても訪れる価値がある。",
-      "丸亀うちわは国内シェア約9割を占める工芸品。体験工房で自分用の一枚を作れる。",
-      "JR予讃線で高松から約20分。讃岐うどんの聖地巡礼コースの一つとして組み込みやすい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "丸亀", "rentalArea": null }
-  },
-  {
-    "id": "kotohira",
-    "basic": { "name": "琴平", "reading": "ことひら", "prefecture": "香川県", "region": "四国", "mainStation": "琴電琴平駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["高松"] },
-    "experience": [
-      "金刀比羅宮（こんぴらさん）は本宮まで785段、奥社まで1,368段の石段が続く。",
-      "参道には土産物屋と飲食店が並ぶ。境内の資生堂パーラーは大正時代から続く洋食店。",
-      "JR土讃線または琴電で高松から約1時間。うどんと参拝を組み合わせる1日コースが定番。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "琴平", "rentalArea": null }
-  },
-  {
-    "id": "shodoshima",
-    "basic": { "name": "小豆島", "reading": "しょうどしま", "prefecture": "香川県", "region": "四国", "mainStation": "土庄港" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["高松"] },
-    "experience": [
-      "オリーブの生産量が日本一の島。春の新漬けオリーブと秋の収穫シーズンが見頃。",
-      "醤油と素麺の産地でもある。島内の醤油醸造所でもろみの香りを感じながら見学できる。",
-      "高松港からフェリーで約60分（高速艇なら35分）。瀬戸内海の島でゆっくりする1泊向き。"
-    ],
-    "transport": { "rail": false, "railType": "none", "jrArea": "none", "flight": false, "flightCode": null, "bus": false, "ferry": true, "ferryUrl": "https://www.shoudoshima-ferry.co.jp/" },
-    "affiliate": { "hotelArea": "小豆島", "rentalArea": "小豆島" }
-  },
-  {
-    "id": "tokushima",
-    "basic": { "name": "徳島", "reading": "とくしま", "prefecture": "徳島県", "region": "四国", "mainStation": "徳島駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 1, "departures": ["高松"] },
-    "experience": [
-      "阿波踊りは8月12〜15日の4日間に約80万人を集める日本最大の盆踊り。観る側と踊る側が混ざる祭り。",
-      "鳴門の渦潮は大潮の干満時に直径30m近い渦が瀬戸内海と太平洋の境に生まれる自然現象。",
-      "JR高徳線で高松から約1時間。鳴門への起点として使い、渦と踊りを組み合わせる旅が定番。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "徳島", "rentalArea": "徳島" }
-  },
-  {
-    "id": "kochi",
-    "basic": { "name": "高知", "reading": "こうち", "prefecture": "高知県", "region": "四国", "mainStation": "高知駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 2, "departures": ["高松"] },
-    "experience": [
-      "ひろめ市場は鰹のたたきと日本酒が揃う屋内型の市場・飲食街。昼から飲んでいる地元客がいる。",
-      "日曜市は400年以上続く高知城下の朝市。農産物・野菜・骨董が約1kmにわたって並ぶ。",
-      "JR土讃線で高松から特急あしずり・南風で約2時間。鰹・うつぼ・土佐文旦が現地の食。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "none", "flight": true, "flightCode": "KCZ", "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "高知", "rentalArea": "高知" }
-  },
-  {
-    "id": "tanzawayama",
-    "basic": { "name": "丹沢山麓・宮ヶ瀬", "reading": "たんざわさんろく・みやがせ", "prefecture": "神奈川県", "region": "関東", "mainStation": "本厚木駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["東京"] },
-    "experience": [
-      "宮ヶ瀬湖は首都圏最大級のダム湖。湖畔に遊歩道があり、特にクリスマスのイルミネーションが有名。",
-      "丹沢山塊はハイキングの場として首都圏から近い。塔ノ岳・大山など日帰りで登れる山がある。",
-      "本厚木から路線バスで40〜60分。マイナーな静けさと自然が東京の近郊にある。"
-    ],
-    "transport": { "rail": true, "railType": "private", "jrArea": "none", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "厚木", "rentalArea": null }
-  },
-  {
-    "id": "yugawara",
-    "basic": { "name": "湯河原", "reading": "ゆがわら", "prefecture": "神奈川県", "region": "関東", "mainStation": "湯河原駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 2, "departures": ["東京"] },
-    "experience": [
-      "万葉集にも詠まれた歴史ある温泉地。文人墨客が多く訪れた宿場の面影がわずかに残る。",
-      "温泉街は駅からバスで奥湯河原方面へ続く。旅館の露天風呂から湯河原川の渓流が見える。",
-      "JR東海道本線で東京から約1.5時間。熱海の一駅手前にある静かな温泉地。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "湯河原", "rentalArea": null }
-  },
-  {
-    "id": "yufuin",
-    "basic": { "name": "由布院", "reading": "ゆふいん", "prefecture": "大分県", "region": "九州", "mainStation": "由布院駅" },
-    "selection": { "distanceLevel": 2, "budgetLevel": 3, "departures": ["福岡"] },
-    "experience": [
-      "由布岳を背景に広がる盆地の温泉地。朝霧が立ち込める早朝の金鱗湖の景色が有名。",
-      "湯の坪街道には土産物屋・カフェ・美術館が連なる。人気のため週末は混雑する。",
-      "JR特急ゆふいんの森で博多から約2時間。木製の特急車両と車窓の景色が旅らしい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "kyushu", "flight": false, "flightCode": null, "bus": true, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "由布院", "rentalArea": null }
-  },
-  {
-    "id": "hiroshima-from-nagoya",
-    "basic": { "name": "広島", "reading": "ひろしま", "prefecture": "広島県", "region": "中国", "mainStation": "広島駅" },
-    "selection": { "distanceLevel": 3, "budgetLevel": 2, "departures": ["名古屋"] },
-    "experience": [
-      "平和記念公園・原爆ドームは広島の中心部にある。記念館の展示は時間をかけて見る価値がある。",
-      "広島風お好み焼きは生地・キャベツ・麺を重ねて焼く。専門店は市内に多い。",
-      "山陽新幹線のぞみで名古屋から約2時間。宮島（世界文化遺産）と合わせて1泊2日がちょうどいい。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "west", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "広島", "rentalArea": "広島" }
-  },
-  {
-    "id": "toyohashi",
-    "basic": { "name": "豊橋", "reading": "とよはし", "prefecture": "愛知県", "region": "東海", "mainStation": "豊橋駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["名古屋"] },
-    "experience": [
-      "豊橋カレーうどんは名物。とろみのあるカレーの下にとろろご飯が隠れている独自スタイル。",
-      "吉田城は豊橋公園内に再建された模擬天守。豊川が城の堀の役割を果たしている。",
-      "東海道新幹線こだまで名古屋から約20分。浜名湖・渥美半島へのアクセス起点にもなる。"
-    ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "豊橋", "rentalArea": "豊橋" }
+    "gateway": {
+      "air": { "code": "ISG" },
+      "requiresLocalTransport": true
+    },
+    "affiliate": { "hotelArea": "石垣島" }
   },
   {
     "id": "gifu",
-    "basic": { "name": "岐阜", "reading": "ぎふ", "prefecture": "岐阜県", "region": "東海", "mainStation": "岐阜駅" },
-    "selection": { "distanceLevel": 1, "budgetLevel": 1, "departures": ["名古屋"] },
-    "experience": [
-      "長良川の鵜飼は5月〜10月に行われる夜の漁業行事。観覧船から間近で見られる。",
-      "岐阜城は金華山の頂上（329m）にある。ロープウェイで上がると濃尾平野が一望できる。",
-      "JRまたは名鉄で名古屋から約20分。岐阜提灯・岐阜和傘などの伝統工芸も有名。"
+    "name": "岐阜",
+    "prefecture": "岐阜県",
+    "region": "中部",
+    "departures": ["名古屋"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["城", "長良川", "鵜飼"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "岐阜城は金華山山頂にあり、ロープウェイで登ると岐阜平野が一望できる。",
+      "長良川の鵜飼は夏の夜、篝火と鵜匠の技が川面に映える非日常の体験だ。",
+      "名古屋から20分の距離だが、街のスケールと温度感は明確に別の都市だ。"
     ],
-    "transport": { "rail": true, "railType": "jr", "jrArea": "east", "flight": false, "flightCode": null, "bus": false, "ferry": false, "ferryUrl": null },
-    "affiliate": { "hotelArea": "岐阜", "rentalArea": null }
+    "gateway": {
+      "rail": { "station": "岐阜駅" }
+    },
+    "affiliate": { "hotelArea": "岐阜" }
+  },
+  {
+    "id": "kyoto-n",
+    "name": "京都",
+    "prefecture": "京都府",
+    "region": "近畿",
+    "departures": ["名古屋"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["寺社", "歴史", "町家"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "名古屋から新幹線で40分。距離の短さと文化的な落差が面白い。",
+      "伏見稲荷の千本鳥居は朝早い時間に行くと、観光地の顔が消えて信仰の場になる。",
+      "錦市場は短い通路に京都の食文化が凝縮されており、歩くだけで勉強になる。"
+    ],
+    "gateway": {
+      "rail": { "station": "京都駅" }
+    },
+    "affiliate": { "hotelArea": "京都" }
+  },
+  {
+    "id": "ise",
+    "name": "伊勢",
+    "prefecture": "三重県",
+    "region": "中部",
+    "departures": ["名古屋"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["神宮", "おかげ横丁", "海の幸"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "伊勢神宮の内宮は、建物の簡素さが神聖さを際立たせる日本建築の原点だ。",
+      "おかげ横丁は観光地だが、伊勢うどんと赤福を食べる場所としての機能は本物だ。",
+      "志摩の海産物は伊勢海老・真珠・牡蠣が揃う、日本の漁業文化の縮図だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "伊勢市駅" }
+    },
+    "affiliate": { "hotelArea": "伊勢" }
+  },
+  {
+    "id": "osaka-n",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["名古屋"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "名古屋から50分で、食文化が大きく変わる。粉もん文化の本場に着く。",
+      "通天閣周辺の新世界は、昭和の大衆文化が色濃く残るエリアだ。",
+      "梅田の地下街は迷路のようだが、迷いながらでも面白い店に出会える。"
+    ],
+    "gateway": {
+      "rail": { "station": "新大阪駅" },
+      "bus": { "terminal": "大阪" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "kanazawa-n",
+    "name": "金沢",
+    "prefecture": "石川県",
+    "region": "中部",
+    "departures": ["名古屋"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["工芸", "兼六園", "海の幸"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "名古屋から2時間、日本海側に出ると空の色と食の豊かさが変わる。",
+      "21世紀美術館は「見に行く」より「中を歩く」美術館として機能している。",
+      "金沢の地酒は海産物と合わせると、料理の余韻が格段に長くなる。"
+    ],
+    "gateway": {
+      "rail": { "station": "金沢駅" }
+    },
+    "affiliate": { "hotelArea": "金沢" }
+  },
+  {
+    "id": "tokyo-n",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["名古屋"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "1時間40分で到着する東京は、名古屋人にとって異国と言えるほど空気感が違う。",
+      "渋谷スクランブルは何度見ても現代都市の密度として新鮮な驚きがある。",
+      "上野・浅草エリアは下町の文脈で東京の原点を体験できる地区だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "東京駅" },
+      "bus": { "terminal": "東京" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "hiroshima-n",
+    "name": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["名古屋"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["平和", "牡蠣", "宮島"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "新幹線で2時間、中国地方最大の都市は食と歴史の両方が充実している。",
+      "お好み焼きは広島風を本場で食べると、鉄板の前で食べる文化の理由がわかる。",
+      "平和記念資料館は訪れるべき場所だが、入館前の心の準備をしてから行くべきだ。"
+    ],
+    "gateway": {
+      "rail": { "station": "広島駅" }
+    },
+    "affiliate": { "hotelArea": "広島" }
+  },
+  {
+    "id": "sendai-n",
+    "name": "仙台",
+    "prefecture": "宮城県",
+    "region": "東北",
+    "departures": ["名古屋"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["城下町", "海鮮", "杜の都"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "名古屋から東北へ。食文化の変化は予想以上に大きく、牛タンの厚みに驚く。",
+      "七夕まつりの飾りは、紙と竹だけでここまで華やかになるかという巧みさがある。",
+      "青葉山から見る仙台市街は「杜の都」の異名の意味を地図で理解させてくれる。"
+    ],
+    "gateway": {
+      "rail": { "station": "仙台駅" }
+    },
+    "affiliate": { "hotelArea": "仙台" }
+  },
+  {
+    "id": "fukuoka-n",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["名古屋"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "新幹線で3時間、九州最大の都市は食の選択肢の多さで旅の密度が高い。",
+      "博多と天神が徒歩圏内にある地理的な集約が、福岡の使いやすさを生んでいる。",
+      "屋台でラーメンを食べながら隣の見知らぬ人と話す経験は、博多でしか起きにくい。"
+    ],
+    "gateway": {
+      "rail": { "station": "博多駅" },
+      "bus": { "terminal": "福岡" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
+  },
+  {
+    "id": "sapporo-n",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["名古屋"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "名古屋空港から1時間半で北海道に着く。地理的距離が食文化の落差を作る。",
+      "すすきのの夜は、北海道の食材とクラフトビールの組み合わせが際立つ。",
+      "円山公園周辺の住宅街は、北海道の都市生活の豊かさを静かに見せてくれる。"
+    ],
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
+  },
+  {
+    "id": "okinawa-n",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["名古屋"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "名古屋から3時間のフライトで亜熱帯へ。気候の変化が旅の始まりを実感させる。",
+      "恩納村のビーチは開発と自然のバランスが保たれており、リゾートとして完成度が高い。",
+      "泡盛は島ごとに銘柄が違い、飲み比べること自体が沖縄文化の体験になる。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
+  },
+  {
+    "id": "saga",
+    "name": "佐賀",
+    "prefecture": "佐賀県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["陶芸", "バルーン", "温泉"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "有田・伊万里の磁器は、窯元を訪ねると職人の手仕事の精度に静止する。",
+      "吉野ヶ里遺跡は教科書で見た弥生時代を、風の中で体感できる場所だ。",
+      "嬉野温泉のお茶は、入浴後の一杯が単なる飲み物を超えた体験になる。"
+    ],
+    "gateway": {
+      "rail": { "station": "佐賀駅" }
+    },
+    "affiliate": { "hotelArea": "佐賀" }
+  },
+  {
+    "id": "kumamoto",
+    "name": "熊本",
+    "prefecture": "熊本県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["城", "阿蘇", "グルメ"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "熊本城は再建途中だが、その過程自体が城の生命力を見せる展示になっている。",
+      "阿蘇の草千里は、カルデラの規模が視野に収まらないほど広大だ。",
+      "馬刺しは熊本で食べると品質と価格のバランスが圧倒的に地元有利だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "熊本駅" }
+    },
+    "affiliate": { "hotelArea": "熊本" }
+  },
+  {
+    "id": "nagasaki",
+    "name": "長崎",
+    "prefecture": "長崎県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["坂の街", "異国情緒", "歴史"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "長崎の地形は坂と海の組み合わせで、どの路地も絵になる。",
+      "中華街・出島・グラバー園が徒歩圏内にある歴史の密度は九州随一だ。",
+      "ちゃんぽんは長崎で食べると、他の都市のそれとは全く別の食べ物だとわかる。"
+    ],
+    "gateway": {
+      "rail": { "station": "長崎駅" }
+    },
+    "affiliate": { "hotelArea": "長崎" }
+  },
+  {
+    "id": "beppu",
+    "name": "別府",
+    "prefecture": "大分県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["温泉", "地獄めぐり", "海の幸"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "別府は日本一の湯量を誇る温泉都市で、街全体が温泉の香りに包まれている。",
+      "地獄めぐりの地熱の色は、自然が作り出した絵の具のような鮮烈さがある。",
+      "関あじ・関さばは別府湾で獲れる高級魚で、漁師町の食堂で食べると価値が倍になる。"
+    ],
+    "gateway": {
+      "rail": { "station": "別府駅" }
+    },
+    "affiliate": { "hotelArea": "別府" }
+  },
+  {
+    "id": "kagoshima",
+    "name": "鹿児島",
+    "prefecture": "鹿児島県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 2,
+    "budgetLevel": 3,
+    "themes": ["桜島", "温泉", "薩摩"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "桜島は市内から見える活火山で、日常と異常が同居する鹿児島の象徴だ。",
+      "黒豚・黒牛・地鶏・焼酎。九州の食材が最も集まる都市は鹿児島かもしれない。",
+      "天文館の夜は、九州の最南端の大都市としての繁華街の活気がある。"
+    ],
+    "gateway": {
+      "rail": { "station": "鹿児島中央駅" }
+    },
+    "affiliate": { "hotelArea": "鹿児島" }
+  },
+  {
+    "id": "miyazaki",
+    "name": "宮崎",
+    "prefecture": "宮崎県",
+    "region": "九州",
+    "departures": ["福岡"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["海", "神話", "地鶏"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "宮崎の太陽は本州と角度が違う。海岸線を歩くと、南国の光の質が実感できる。",
+      "宮崎地鶏の炭火焼きは、シンプルな調理が素材の品質を証明している。",
+      "日向岬の「馬ヶ背」は垂直の断崖と青い海のコントラストが圧倒的だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "宮崎駅" },
+      "air": { "code": "KMI" }
+    },
+    "affiliate": { "hotelArea": "宮崎" }
+  },
+  {
+    "id": "hiroshima-f",
+    "name": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["福岡"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["平和", "牡蠣", "宮島"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "福岡から新幹線で1時間半、瀬戸内の牡蠣を食べに来るだけでも価値がある。",
+      "平和記念公園は静謐な場所で、人が多くても喧噪が起きない特別な空気がある。",
+      "宮島の厳島神社は干潮と満潮で表情がまったく変わるため、時間を選ぶ楽しさがある。"
+    ],
+    "gateway": {
+      "rail": { "station": "広島駅" }
+    },
+    "affiliate": { "hotelArea": "広島" }
+  },
+  {
+    "id": "osaka-f",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["福岡"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "博多から新幹線で2時間半、関西の食文化と商人文化の本拠地に着く。",
+      "難波・心斎橋のエリアは一日いても全部回れない情報量がある。",
+      "黒門市場の活気は観光地化しているが、食材の品質は本物だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "新大阪駅" },
+      "bus": { "terminal": "大阪" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "tokyo-f",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["福岡"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "九州から東京に来ると、都市の規模と人口密度の違いが体感としてわかる。",
+      "六本木・銀座・下北沢が同じ都市にある振れ幅が、東京の奇妙さを生んでいる。",
+      "豊洲市場の早朝競りは、日本の食流通の最前線を間近で見られる。"
+    ],
+    "gateway": {
+      "rail": { "station": "東京駅" },
+      "air": { "code": "TYO" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "okinawa-f",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["福岡"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "福岡から1時間半のフライトで、別世界の海色が広がる。",
+      "本部半島の美ら海水族館は、水槽の大きさより展示の密度に驚く。",
+      "沖縄本島北部のやんばるは、観光地化されていない原生林の静けさがある。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
+  },
+  {
+    "id": "sapporo-f",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["福岡"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "福岡から北海道は日本の南北を横断する旅で、気候の変化が最も大きい移動だ。",
+      "北海道の食材は量・質ともに別格で、特に海産物は旅の満足度に直結する。",
+      "大通公園のビアガーデンは夏の北海道の開放感を最もシンプルに体験できる場所だ。"
+    ],
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
+  },
+  {
+    "id": "otaru",
+    "name": "小樽",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["札幌"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["運河", "海の幸", "ガラス工芸"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "小樽運河の石造倉庫は、明治の商都の繁栄をそのままの形で残している。",
+      "三角市場の海鮮丼は、朝の新鮮さと価格のバランスが道内でも屈指だ。",
+      "札幌から30分の距離感が、日帰りの選択肢として使いやすい街を作っている。"
+    ],
+    "gateway": {
+      "rail": { "station": "小樽駅" }
+    },
+    "affiliate": { "hotelArea": "小樽" }
+  },
+  {
+    "id": "asahikawa",
+    "name": "旭川",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["札幌"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["動物園", "ラーメン", "自然"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "旭山動物園は展示の発想が独自で、動物を見る体験の基準を変える場所だ。",
+      "旭川ラーメンは醤油ベースの澄んだスープが特徴で、札幌とは別系統の完成度がある。",
+      "美瑛・富良野への起点として使うと、北海道の風景の多様性が一度の旅で体験できる。"
+    ],
+    "gateway": {
+      "rail": { "station": "旭川駅" }
+    },
+    "affiliate": { "hotelArea": "旭川" }
+  },
+  {
+    "id": "furano",
+    "name": "富良野",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["札幌"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["ラベンダー", "農場", "スキー"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "富良野のラベンダー畑は7月に紫の絨毯を広げ、その香りが農場全体を包む。",
+      "美瑛の丘は写真で見た北海道の原風景そのもので、現実感が薄いほどに美しい。",
+      "冬のニセコや富良野のパウダースノーは、世界的なスキーリゾートとして通用する品質だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "富良野駅" },
+      "requiresLocalTransport": true
+    },
+    "affiliate": { "hotelArea": "富良野" }
+  },
+  {
+    "id": "kushiro",
+    "name": "釧路",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["札幌"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["湿原", "丹頂鶴", "炉端焼き"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "釧路湿原は日本最大の湿原で、カヌーで進むと時間の感覚が変わる。",
+      "冬に飛来する丹頂鶴は、雪の中に佇む姿が絵画的な完成度を持っている。",
+      "釧路の炉端焼きは道内でも別格で、北海道の海産物文化の精華が一か所に集まる。"
+    ],
+    "gateway": {
+      "rail": { "station": "釧路駅" },
+      "air": { "code": "KUH" }
+    },
+    "affiliate": { "hotelArea": "釧路" }
+  },
+  {
+    "id": "hakodate",
+    "name": "函館",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["札幌"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["夜景", "朝市", "洋館"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "函館山からの夜景は、日本三大夜景のなかで最も地形的な美しさがある。",
+      "函館朝市は早朝から活気があり、北海道の海産物を最も身近に体験できる市場だ。",
+      "元町の洋館街は明治・大正の建築が現役で使われており、北の異国情緒がある。"
+    ],
+    "gateway": {
+      "rail": { "station": "函館駅" }
+    },
+    "affiliate": { "hotelArea": "函館" }
+  },
+  {
+    "id": "tokyo-s",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["札幌"],
+    "distanceLevel": 3,
+    "budgetLevel": 4,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "札幌から飛行機で1時間半。日本の中心都市へのアクセスとして完成された距離だ。",
+      "東京の密度は北海道の広大さとの対比で、より強烈な印象として残る。",
+      "築地・豊洲・浅草を起点にすると、東京の食と歴史が効率よく体験できる。"
+    ],
+    "gateway": {
+      "air": { "code": "TYO" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "osaka-s",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["札幌"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "北海道と関西の食文化の落差は、旅の目的として十分な理由になる。",
+      "道頓堀の夜は大阪の消費文化の熱量が最も凝縮した時間だ。",
+      "心斎橋から難波まで歩くと、大阪の商業的なDNAが路地に透けて見える。"
+    ],
+    "gateway": {
+      "air": { "code": "OSA" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "fukuoka-s",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["札幌"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "日本の南北両端から考えると、福岡と北海道の食文化の距離は最大級だ。",
+      "博多屋台の気軽さと質の高さは、札幌のすすきのとは全く異なる夜の文化だ。",
+      "天神と博多が近い福岡の街構造は、初めての旅先として動きやすい設計だ。"
+    ],
+    "gateway": {
+      "air": { "code": "FUK" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
+  },
+  {
+    "id": "okinawa-s",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["札幌"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "北海道から沖縄へは、気候・食・言語すべてが変わる日本国内最大の旅だ。",
+      "雪の札幌を朝に発って、午後には青い海の沖縄に立っている落差は格別だ。",
+      "沖縄の砂浜は北海道の砂浜とは砂の細かさも色も海水温も別次元だ。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
+  },
+  {
+    "id": "matsushima",
+    "name": "松島",
+    "prefecture": "宮城県",
+    "region": "東北",
+    "departures": ["仙台"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["日本三景", "海", "牡蠣"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "松島の島々は遊覧船から見ると、どの角度でも絵になる密度で海に浮かんでいる。",
+      "松島の牡蠣は仙台港の質に並ぶレベルで、殻付きを炭火で焼いて食べると最高だ。",
+      "瑞巌寺の杉並木は、寺社林として東北最大級の存在感がある。"
+    ],
+    "gateway": {
+      "rail": { "station": "松島海岸駅" }
+    },
+    "affiliate": { "hotelArea": "松島" }
+  },
+  {
+    "id": "yamagata",
+    "name": "山形",
+    "prefecture": "山形県",
+    "region": "東北",
+    "departures": ["仙台"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["山寺", "温泉", "芋煮"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "山寺（立石寺）は奥の細道で松尾芭蕉が訪れた場所で、石段を登ると静寂が待っている。",
+      "山形の冬の芋煮会は、川原でやる鍋文化として東北の食の共同体意識を表している。",
+      "米沢牛は上質な肉の甘さという点で、他の和牛と比べても独自の評価を持つ。"
+    ],
+    "gateway": {
+      "rail": { "station": "山形駅" }
+    },
+    "affiliate": { "hotelArea": "山形" }
+  },
+  {
+    "id": "morioka",
+    "name": "盛岡",
+    "prefecture": "岩手県",
+    "region": "東北",
+    "departures": ["仙台"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["わんこそば", "冷麺", "城跡"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "盛岡三大麺（わんこそば・冷麺・じゃじゃ麺）は、一日で全部制覇する旅ができる。",
+      "岩手山を望む盛岡の市街地は、規模の割に生活密度が高く落ち着いた雰囲気だ。",
+      "盛岡城跡の石垣は、東北の城としては珍しく精緻な積み方で残っている。"
+    ],
+    "gateway": {
+      "rail": { "station": "盛岡駅" }
+    },
+    "affiliate": { "hotelArea": "盛岡" }
+  },
+  {
+    "id": "tokyo-se",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["仙台"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "仙台から新幹線で1時間半、東北とは別の速度と密度の都市に到着する。",
+      "秋葉原・上野・浅草は仙台人には異文化体験に近い刺激量がある。",
+      "新宿の夜は、日本最大規模の繁華街の正直な熱量がそこにある。"
+    ],
+    "gateway": {
+      "rail": { "station": "東京駅" },
+      "bus": { "terminal": "東京" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "niigata",
+    "name": "新潟",
+    "prefecture": "新潟県",
+    "region": "中部",
+    "departures": ["仙台"],
+    "distanceLevel": 3,
+    "budgetLevel": 2,
+    "themes": ["コシヒカリ", "日本酒", "海の幸"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "新潟は米・酒・魚が日本最高水準で揃う都市で、食目的だけで来る価値がある。",
+      "日本海側の冬の新潟は、雪と海と地酒の組み合わせが旅情を最大化する。",
+      "萬代橋と信濃川の夕景は、港湾都市の落ち着いた美しさを持っている。"
+    ],
+    "gateway": {
+      "rail": { "station": "新潟駅" }
+    },
+    "affiliate": { "hotelArea": "新潟" }
+  },
+  {
+    "id": "kanazawa-se",
+    "name": "金沢",
+    "prefecture": "石川県",
+    "region": "中部",
+    "departures": ["仙台"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["工芸", "兼六園", "海の幸"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "仙台から新幹線で乗り継いで4時間圏内。東北から日本海の食文化への旅。",
+      "金沢21世紀美術館は無料エリアだけでも十分に現代アートの空気が体験できる。",
+      "片町・香林坊の繁華街は、金沢の都市としての層の厚さを夜に感じさせる。"
+    ],
+    "gateway": {
+      "rail": { "station": "金沢駅" }
+    },
+    "affiliate": { "hotelArea": "金沢" }
+  },
+  {
+    "id": "osaka-se",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["仙台"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "仙台から大阪は4時間の新幹線。東北と関西の食文化の違いを体で理解する旅だ。",
+      "たこ焼き・串カツ・お好み焼きを梯子すると、粉もの文化の奥深さに気づく。",
+      "大阪城公園は広く、歴史と現代の公共空間が違和感なく共存している。"
+    ],
+    "gateway": {
+      "rail": { "station": "新大阪駅" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "fukuoka-se",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["仙台"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "仙台から飛行機で福岡へ。東北と九州の食文化は、どちらも豊かで全く異なる。",
+      "博多の屋台は冬の寒い夜でも外で食べることで成立する文化的な強さがある。",
+      "太宰府天満宮は梅の季節に来ると、九州の春の始まりが鮮やかに体験できる。"
+    ],
+    "gateway": {
+      "rail": { "station": "博多駅" },
+      "air": { "code": "FUK" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
+  },
+  {
+    "id": "miyajima",
+    "name": "宮島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["広島"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["厳島神社", "世界遺産", "鹿"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "満潮時の厳島神社は海に浮かぶように見え、その光景は写真で見るより実物が上回る。",
+      "島内の鹿は奈良より数が少なく、観光地の中に野生の気配が残っている。",
+      "もみじ饅頭は土産品だが、宮島で焼きたてを食べると別の食べ物になる。"
+    ],
+    "gateway": {
+      "rail": { "station": "宮島口駅" },
+      "ferry": { "url": "https://www.jr-miyajimaferry.co.jp/" }
+    },
+    "affiliate": { "hotelArea": "宮島" }
+  },
+  {
+    "id": "onomichi",
+    "name": "尾道",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["広島"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["坂の街", "映画の街", "瀬戸内"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "尾道の坂道は、海と路地と寺が同じ視野に入る日本でも稀な地形だ。",
+      "しまなみ海道の起点として使うと、橋と島と海の連続する景観が広がる。",
+      "映画監督・小津安二郎と大林宣彦が愛した街という事実が、その風情を物語る。"
+    ],
+    "gateway": {
+      "rail": { "station": "尾道駅" }
+    },
+    "affiliate": { "hotelArea": "尾道" }
+  },
+  {
+    "id": "okayama-h",
+    "name": "岡山",
+    "prefecture": "岡山県",
+    "region": "中国",
+    "departures": ["広島"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["後楽園", "倉敷", "桃"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "広島から新幹線で30分。後楽園の庭と烏城の組み合わせが一日の旅を完成させる。",
+      "倉敷の美観地区は川沿いの白壁が観光地として完成されており、歩く楽しさがある。",
+      "岡山の白桃とマスカットは、この土地の温暖な気候が生む品質の代表格だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "岡山駅" }
+    },
+    "affiliate": { "hotelArea": "岡山" }
+  },
+  {
+    "id": "matsuyama",
+    "name": "松山",
+    "prefecture": "愛媛県",
+    "region": "四国",
+    "departures": ["広島"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["道後温泉", "松山城", "坊っちゃん"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "道後温泉本館は日本最古の温泉のひとつで、明治建築の中で湯に浸かる体験は独自だ。",
+      "松山城は山の上にあり、ロープウェイで登ると市街地と瀬戸内海が一望できる。",
+      "坊っちゃん列車が今も走る松山は、明治の文学と現代が静かに共存している。"
+    ],
+    "gateway": {
+      "ferry": { "url": "https://www.setonaikaikisen.co.jp/" }
+    },
+    "affiliate": { "hotelArea": "松山" }
+  },
+  {
+    "id": "osaka-h",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["広島"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "広島から1時間半、関西の食と文化の中心へ。中国地方とは別の賑やかさがある。",
+      "心斎橋の商店街は昔と今が混在した独特のアーケードで、歩くだけで時間が経つ。",
+      "中之島の夜景は水都大阪の別名の意味を、光の反射で証明している。"
+    ],
+    "gateway": {
+      "rail": { "station": "新大阪駅" },
+      "bus": { "terminal": "大阪" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "fukuoka-h",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["広島"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "広島から新幹線で1時間、九州の入り口は食の密度で旅人を迎える。",
+      "中洲の屋台街と長浜のラーメン横丁は、博多の夜食文化の二大拠点だ。",
+      "モツ鍋は博多の鍋文化の核心で、濃い出汁と野菜の組み合わせが完成されている。"
+    ],
+    "gateway": {
+      "rail": { "station": "博多駅" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
+  },
+  {
+    "id": "kyoto-h",
+    "name": "京都",
+    "prefecture": "京都府",
+    "region": "近畿",
+    "departures": ["広島"],
+    "distanceLevel": 2,
+    "budgetLevel": 3,
+    "themes": ["寺社", "歴史", "町家"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "広島から1時間半で、戦争と平和の歴史が交差する旅の文脈が生まれる。",
+      "京都の老舗料亭は予約困難だが、近くの食堂でも京料理の文脈を体験できる。",
+      "哲学の道の朝は観光地らしくなく、地元の人が散歩する日常の美しさがある。"
+    ],
+    "gateway": {
+      "rail": { "station": "京都駅" }
+    },
+    "affiliate": { "hotelArea": "京都" }
+  },
+  {
+    "id": "nagoya-h",
+    "name": "名古屋",
+    "prefecture": "愛知県",
+    "region": "中部",
+    "departures": ["広島"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["城下町", "グルメ", "ものづくり"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "広島から新幹線で2時間、中国地方とは異なる工業都市の自負が街ににじんでいる。",
+      "名古屋めしの独自性は全国屈指で、味噌煮込みうどんと広島お好み焼きの対比が面白い。",
+      "名古屋城の復元天守と金鯱は、徳川家の威信を現代に伝えるランドマークだ。"
+    ],
+    "gateway": {
+      "rail": { "station": "名古屋駅" }
+    },
+    "affiliate": { "hotelArea": "名古屋" }
+  },
+  {
+    "id": "tokyo-h",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["広島"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "広島から新幹線で4時間。中国地方の静けさから日本最大の都市への落差が旅になる。",
+      "丸の内・銀座エリアは広島では体験できない商業の密度と歴史が共存している。",
+      "東京のラーメン多様性は、博多・広島の地域ラーメンとは別の方向性で面白い。"
+    ],
+    "gateway": {
+      "rail": { "station": "東京駅" },
+      "bus": { "terminal": "東京" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "okinawa-h",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["広島"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "広島から飛んで2時間、瀬戸内と南国の海の色の違いが着陸時に実感できる。",
+      "沖縄の戦争遺跡は広島とは別の文脈の歴史を持ち、両方を訪れる旅には意味がある。",
+      "ちんすこうと泡盛のセットは、沖縄土産の定番でありながら本場で食べると格別だ。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
+  },
+  {
+    "id": "sapporo-h",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["広島"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "広島から飛行機で2時間半。中国地方の温暖な気候から北海道の大気へ。",
+      "北海道の食材は広島のものとは産地の性質が全く異なり、食べ比べの旅になる。",
+      "すすきのの規模は北日本最大級で、夜の賑わいが北海道の都市力を見せる。"
+    ],
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
+  },
+  {
+    "id": "tokushima",
+    "name": "徳島",
+    "prefecture": "徳島県",
+    "region": "四国",
+    "departures": ["高松"],
+    "distanceLevel": 1,
+    "budgetLevel": 1,
+    "themes": ["阿波踊り", "鳴門", "すだち"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "鳴門の渦潮は潮の干満で規模が変わり、大潮の時は轟音と渦が別次元の迫力だ。",
+      "阿波踊りは8月の徳島全体が会場になり、観客と踊り手の境界が消える祭りだ。",
+      "すだちの香りは徳島の食文化の根底にあり、魚・鍋・うどんに万能に合う。"
+    ],
+    "gateway": {
+      "rail": { "station": "徳島駅" },
+      "bus": { "terminal": "徳島" }
+    },
+    "affiliate": { "hotelArea": "徳島" }
+  },
+  {
+    "id": "okayama-k",
+    "name": "岡山",
+    "prefecture": "岡山県",
+    "region": "中国",
+    "departures": ["高松"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["後楽園", "倉敷", "桃"],
+    "staySupport": ["daytrip", "1night"],
+    "appeal": [
+      "高松からマリンライナーで1時間、瀬戸大橋を渡る景色が旅の始まりになる。",
+      "倉敷美観地区の川と白壁は、讃岐の風景とはまったく異なる静謐さがある。",
+      "後楽園は日本庭園の教科書的な美しさを持ち、縮景の技法がよくわかる。"
+    ],
+    "gateway": {
+      "rail": { "station": "岡山駅" }
+    },
+    "affiliate": { "hotelArea": "岡山" }
+  },
+  {
+    "id": "shodoshima",
+    "name": "小豆島",
+    "prefecture": "香川県",
+    "region": "四国",
+    "departures": ["高松"],
+    "distanceLevel": 1,
+    "budgetLevel": 2,
+    "themes": ["オリーブ", "醤油", "映画の舞台"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "小豆島のオリーブ畑は日本で最初に作られ、地中海的な景観が瀬戸内に存在する。",
+      "醤油蔵が今も現役で稼働しており、醤油の香りが島の風に溶けている。",
+      "二十四の瞳の舞台として知られる海岸線は、昭和初期の四国の農村風景を今も持つ。"
+    ],
+    "gateway": {
+      "ferry": { "url": "https://www.shikokuferry.com/" }
+    },
+    "affiliate": { "hotelArea": "小豆島" }
+  },
+  {
+    "id": "kochi",
+    "name": "高知",
+    "prefecture": "高知県",
+    "region": "四国",
+    "departures": ["高松"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["カツオ", "よさこい", "坂本龍馬"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "カツオのたたきは高知で食べると、藁焼きの香りと鮮度が別の食べ物のように感じる。",
+      "ひろめ市場は地元の人も観光客も混在するフードコートで、高知の食が凝縮している。",
+      "桂浜の波は荒く、太平洋の広さを龍馬像越しに感じる場所として唯一無二だ。"
+    ],
+    "gateway": {
+      "rail": { "station": "高知駅" }
+    },
+    "affiliate": { "hotelArea": "高知" }
+  },
+  {
+    "id": "matsuyama-k",
+    "name": "松山",
+    "prefecture": "愛媛県",
+    "region": "四国",
+    "departures": ["高松"],
+    "distanceLevel": 2,
+    "budgetLevel": 2,
+    "themes": ["道後温泉", "松山城", "坊っちゃん"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "高松から特急で2時間半、四国を横断して辿り着く温泉城下町。",
+      "道後温泉本館は国の重要文化財で、今も現役の温泉施設として機能している。",
+      "松山は俳句の街でもあり、正岡子規ゆかりの地が市内に点在している。"
+    ],
+    "gateway": {
+      "rail": { "station": "松山駅" }
+    },
+    "affiliate": { "hotelArea": "松山" }
+  },
+  {
+    "id": "osaka-k",
+    "name": "大阪",
+    "prefecture": "大阪府",
+    "region": "近畿",
+    "departures": ["高松"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["グルメ", "エンタメ", "下町"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "高松からマリンライナー+新幹線で2時間半、四国から関西圏の中心へ。",
+      "大阪の食の振れ幅は讃岐とはまったく異なり、大衆から高級まで全部揃う。",
+      "USJは非日常体験として完成されており、四国では体験できない規模のエンタメだ。"
+    ],
+    "gateway": {
+      "rail": { "station": "新大阪駅" },
+      "bus": { "terminal": "大阪" }
+    },
+    "affiliate": { "hotelArea": "大阪" }
+  },
+  {
+    "id": "hiroshima-k",
+    "name": "広島",
+    "prefecture": "広島県",
+    "region": "中国",
+    "departures": ["高松"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["平和", "牡蠣", "宮島"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "高松から2時間、瀬戸内海を越えて中国地方最大の都市へ。",
+      "宮島は高松からの旅程に加えると、瀬戸内の島文化を両端から体験できる。",
+      "広島風お好み焼きのそば入りは、高松のうどん文化とは全く異なる食の豊かさだ。"
+    ],
+    "gateway": {
+      "rail": { "station": "広島駅" }
+    },
+    "affiliate": { "hotelArea": "広島" }
+  },
+  {
+    "id": "fukuoka-k",
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "region": "九州",
+    "departures": ["高松"],
+    "distanceLevel": 3,
+    "budgetLevel": 3,
+    "themes": ["ラーメン", "屋台", "活気"],
+    "staySupport": ["1night"],
+    "appeal": [
+      "高松から新幹線乗継か飛行機で、九州の入り口に到着する。",
+      "博多の食文化は香川の讃岐うどん文化とは対照的な濃さと量のある世界だ。",
+      "福岡タワーからの夜景は、博多湾を含む九州最大都市の夜の広がりを見せる。"
+    ],
+    "gateway": {
+      "air": { "code": "FUK" },
+      "rail": { "station": "博多駅" }
+    },
+    "affiliate": { "hotelArea": "福岡" }
+  },
+  {
+    "id": "tokyo-k",
+    "name": "東京",
+    "prefecture": "東京都",
+    "region": "関東",
+    "departures": ["高松"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["都市", "グルメ", "エンタメ"],
+    "staySupport": ["1night", "2night"],
+    "appeal": [
+      "高松から新幹線乗継で4時間半、四国の穏やかな空気から日本最大の都市へ。",
+      "讃岐と東京のうどんを比べる楽しみは、四国出身者ならではの旅の視点だ。",
+      "渋谷・原宿・表参道のエリアは、高松では体験できないトレンドの密度がある。"
+    ],
+    "gateway": {
+      "rail": { "station": "東京駅" }
+    },
+    "affiliate": { "hotelArea": "東京" }
+  },
+  {
+    "id": "okinawa-k",
+    "name": "沖縄",
+    "prefecture": "沖縄県",
+    "region": "沖縄",
+    "departures": ["高松"],
+    "distanceLevel": 4,
+    "budgetLevel": 4,
+    "themes": ["海", "リゾート", "琉球文化"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "高松空港から沖縄へ飛ぶと、瀬戸内の内海と南国の外海の対比が鮮やかだ。",
+      "国際通りのアーケードは観光化されているが、路地を入ると本物の沖縄がある。",
+      "沖縄の海は四国の海と同じ日本の海とは思えないほど透明度と色が違う。"
+    ],
+    "gateway": {
+      "air": { "code": "OKA" }
+    },
+    "affiliate": { "hotelArea": "沖縄" }
+  },
+  {
+    "id": "sapporo-k",
+    "name": "札幌",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "departures": ["高松"],
+    "distanceLevel": 5,
+    "budgetLevel": 5,
+    "themes": ["グルメ", "自然", "雪まつり"],
+    "staySupport": ["2night"],
+    "appeal": [
+      "高松から北海道は、四国の温暖な気候から北の大地への最大距離の旅だ。",
+      "北海道の食材と香川のうどんは、日本の食多様性を両端から体験できる対比だ。",
+      "大通公園のビアガーデンの夏、雪まつりの冬、どちらも本州とは別の季節感がある。"
+    ],
+    "gateway": {
+      "air": { "code": "CTS" }
+    },
+    "affiliate": { "hotelArea": "札幌" }
   }
 ]

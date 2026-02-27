@@ -1,12 +1,9 @@
 import { RAKUTEN_AFF_ID } from '../config/constants.js';
 
-/**
- * 楽天トラベル + じゃらん 宿泊リンク
- */
 export function buildHotelLinks(city, date) {
+  const area = city.affiliate.hotelArea;
   const checkIn = resolveCheckIn(date);
   const checkOut = addDays(checkIn, 1);
-  const area = city.affiliate.hotelArea;
 
   return [
     {
