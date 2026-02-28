@@ -1,11 +1,10 @@
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
 import {
-  buildRailLink,
+  buildTransitLink,
+  buildAirMapsLink,
+  buildSkyscannerLink,
   buildJrLink,
   buildJrExLink,
-  buildAirLink,
-  buildBusLink,
-  buildFerryLink,
   buildRentalLink,
 } from './linkBuilder.js';
 
@@ -13,15 +12,12 @@ import {
  * 交通リンクを組み立てる（ゲートウェイモデル）。
  *
  * 表示順:
- *   1. 🚄 鉄道     — Google Maps 経路 + JR予約
+ *   1. 🚄 鉄道     — Google Maps + JR予約
  *   2. 🚄 EX      — 東海道・山陽新幹線エリアのみ
- *   3. ✈  航空     — Google Maps（出発空港 → 目的空港）
+ *   3. ✈  航空     — Skyscanner + Google Maps（空港→空港）
  *   4. 🚌 高速バス  — Google Maps
- *   5. 🚢 フェリー  — child 限定
+ *   5. 🚢 フェリー  — child 限定、Google Maps
  *   6. 🚗 レンタカー — air gateway 存在時のみ
- *
- * @param {object} city        - destination (gateways 形式)
- * @param {string} departure   - 出発地名（DEPARTURE_CITY_INFO のキー）
  */
 export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
@@ -29,16 +25,16 @@ export function resolveTransportLinks(city, departure) {
 
   const fromRail    = fromCity.rail;
   const fromAirport = fromCity.airport;
+  const fromIata    = fromCity.iata;
   const { gateways } = city;
   const links = [];
   let hasEx = false;
 
   // 1. 鉄道
   for (const gw of gateways.rail || []) {
-    links.push(buildRailLink(fromRail, gw.name));
+    links.push(buildTransitLink(fromRail, gw.name));
     const jrLink = buildJrLink(gw.region);
     if (jrLink) links.push(jrLink);
-    // EX 判定: central_west_shikoku ゲートウェイは東海道・山陽新幹線圏
     if (gw.region === 'central_west_shikoku') hasEx = true;
   }
 
@@ -50,24 +46,26 @@ export function resolveTransportLinks(city, departure) {
   // 3. 航空
   const airGateways = gateways.air || [];
   for (const gw of airGateways) {
-    links.push(buildAirLink(fromAirport, gw.name));
+    const skyscanner = buildSkyscannerLink(fromIata, gw.name);
+    if (skyscanner) links.push(skyscanner);
+    links.push(buildAirMapsLink(fromAirport, gw.name));
   }
 
   // 4. 高速バス
   for (const gw of gateways.bus || []) {
-    links.push(buildBusLink(departure, gw.name));
+    links.push(buildTransitLink(departure, gw.name));
   }
 
   // 5. フェリー（child のみ）
   if (city.type === 'child') {
     for (const gw of gateways.ferry || []) {
-      links.push(buildFerryLink(fromRail, gw.name));
+      links.push(buildTransitLink(fromRail, gw.name));
     }
   }
 
   // 6. レンタカー（air gateway 存在時のみ）
-  for (const gw of airGateways) {
-    links.push(buildRentalLink(gw.name));
+  if (airGateways.length > 0) {
+    links.push(buildRentalLink());
   }
 
   return links.filter(Boolean);

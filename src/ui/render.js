@@ -2,18 +2,20 @@
  * DOM描画モジュール
  *
  * 表示順:
- *   1. 都市ブロック（空気感3行）
- *   2. 交通ブロック
- *   3. 宿泊ブロック（stayType=1night 時のみ）
+ *   1. カウンター（pool 情報）
+ *   2. 都市ブロック（空気感3行）
+ *   3. 交通ブロック
+ *   4. 宿泊ブロック（stayType=1night 時のみ）
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, distanceLabel }) {
+export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
   const hasDestHotel = hotelLinks.destination.length > 0;
   const hasHubHotel  = hotelLinks.hub.length > 0;
   const isLast = !hasDestHotel && !hasHubHotel;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = [
+    buildCounterBlock(poolIndex, poolTotal),
     buildCityBlock(city, distanceLabel),
     buildTransportBlock(transportLinks, isLast),
     hasDestHotel ? buildHotelBlock(hotelLinks.destination, city.name,  !hasHubHotel) : '',
@@ -24,6 +26,17 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel }
 export function clearResult() {
   const el = document.getElementById('result-inner');
   if (el) el.innerHTML = '';
+}
+
+/* ── カウンター ── */
+
+function buildCounterBlock(index, total) {
+  return `
+    <div class="result-counter">
+      <span>条件に合う場所：${total}件</span>
+      <span>表示中：${index + 1} / ${total}</span>
+    </div>
+  `;
 }
 
 /* ── 都市ブロック ── */

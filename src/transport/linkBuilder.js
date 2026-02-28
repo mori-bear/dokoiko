@@ -1,10 +1,13 @@
 /**
  * 交通リンクビルダー
  *
- * 鉄道・バス・フェリー: travelmode=transit（現在時刻+30分 UNIX秒）
- * 航空:               travelmode=driving（出発空港 → 目的空港）
- * JR予約:             各社トップページのみ（直リンク禁止）
- * EX:                東海道・山陽新幹線エリア
+ * ボタン文言ルール:
+ *   Google Maps → 「所要時間を見る（Googleマップ）」
+ *   Skyscanner  → 「航空券を比較する（Skyscanner）」
+ *   JR予約      → 「JRを予約する（会社名）」
+ *   EX          → 「新幹線を予約する（EX）」
+ *   レンタカー  → 「レンタカーを探す（じゃらん）」
+ *   スラッシュ禁止・空港名などをボタン文言に含めない
  */
 
 /* ── 内部ユーティリティ ── */
@@ -33,13 +36,56 @@ function drivingUrl(origin, destination) {
   );
 }
 
-/* ── 鉄道 ── */
+/* ── Skyscanner 空港名→IATAマップ ── */
 
-export function buildRailLink(fromStation, toStation) {
+const AIRPORT_IATA = {
+  '新千歳空港':       'CTS',
+  '那覇空港':         'OKA',
+  '石垣空港':         'ISG',
+  '福岡空港':         'FUK',
+  '仙台空港':         'SDJ',
+  '広島空港':         'HIJ',
+  '高松空港':         'TAK',
+  '中部国際空港':     'NGO',
+  '羽田空港':         'HND',
+  '大阪国際空港':     'ITM',
+  '関西国際空港':     'KIX',
+  '宮崎空港':         'KMI',
+  '松山空港':         'MYJ',
+  '釧路空港':         'KUH',
+  '久米島空港':       'UEO',
+  '宮古空港':         'MMY',
+};
+
+/* ── Google Maps（鉄道・バス・フェリー） ── */
+
+export function buildTransitLink(origin, destination) {
   return {
     type: 'google-maps',
-    label: `経路を調べる（${toStation} / Googleマップ）`,
-    url: transitUrl(fromStation, toStation),
+    label: '所要時間を見る（Googleマップ）',
+    url: transitUrl(origin, destination),
+  };
+}
+
+/* ── Google Maps（航空: 空港→空港 driving） ── */
+
+export function buildAirMapsLink(fromAirport, toAirport) {
+  return {
+    type: 'google-maps',
+    label: '所要時間を見る（Googleマップ）',
+    url: drivingUrl(fromAirport, toAirport),
+  };
+}
+
+/* ── Skyscanner ── */
+
+export function buildSkyscannerLink(fromIata, toAirportName) {
+  const toIata = AIRPORT_IATA[toAirportName];
+  if (!toIata) return null;
+  return {
+    type: 'skyscanner',
+    label: '航空券を比較する（Skyscanner）',
+    url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
 
@@ -70,7 +116,7 @@ export function buildJrLink(region) {
   }
 }
 
-/* ── EX（東海道・山陽新幹線） ── */
+/* ── EX ── */
 
 export function buildJrExLink() {
   return {
@@ -80,44 +126,12 @@ export function buildJrExLink() {
   };
 }
 
-/* ── 航空 ── */
-
-export function buildAirLink(fromAirport, toAirport) {
-  return {
-    type: 'google-maps',
-    label: `フライト経路を確認する（${toAirport} / Googleマップ）`,
-    url: drivingUrl(fromAirport, toAirport),
-  };
-}
-
-/* ── 高速バス ── */
-
-export function buildBusLink(fromCity, toBusTerminal) {
-  return {
-    type: 'bus',
-    label: `高速バスを探す（${toBusTerminal} / Googleマップ）`,
-    url: transitUrl(fromCity, toBusTerminal),
-  };
-}
-
-/* ── フェリー ── */
-
-export function buildFerryLink(fromStation, toTerminal) {
-  return {
-    type: 'ferry',
-    label: `フェリー乗り場へ（${toTerminal} / Googleマップ）`,
-    url: transitUrl(fromStation, toTerminal),
-  };
-}
-
 /* ── レンタカー ── */
 
-export function buildRentalLink(airportName) {
+export function buildRentalLink() {
   return {
     type: 'rental',
-    label: airportName
-      ? `${airportName}でレンタカーを探す（じゃらん）`
-      : 'レンタカーを探す（じゃらん）',
+    label: 'レンタカーを探す（じゃらん）',
     url: 'https://www.jalan.net/rentacar/',
   };
 }

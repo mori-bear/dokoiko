@@ -4,7 +4,6 @@ import { RAKUTEN_AFF_ID } from '../config/constants.js';
  * 宿泊リンクを組み立てる。
  *
  * stayType === '1night' かつ affiliate.hotelArea が存在する場合のみ返す。
- *
  * 返り値: { destination: Link[], hub: Link[] }
  */
 export function buildHotelLinks(city, date, stayType) {
@@ -15,16 +14,17 @@ export function buildHotelLinks(city, date, stayType) {
     return { destination: [], hub: [] };
   }
 
-  const area = city.affiliate.hotelArea;
+  const area     = city.affiliate.hotelArea;
   const checkIn  = resolveCheckIn(date);
   const checkOut = addDays(checkIn, 1);
 
-  const destLinks = [
-    buildRakutenLink(area, checkIn, checkOut),
-    buildJalanLink(area),
-  ];
-
-  return { destination: destLinks, hub: [] };
+  return {
+    destination: [
+      buildRakutenLink(area, checkIn, checkOut),
+      buildJalanLink(area),
+    ],
+    hub: [],
+  };
 }
 
 function buildRakutenLink(area, checkIn, checkOut) {
@@ -36,7 +36,7 @@ function buildRakutenLink(area, checkIn, checkOut) {
 
   return {
     type: 'rakuten',
-    label: `楽天トラベルで宿を探す（${area}）`,
+    label: '宿を探す（楽天）',
     url: `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFF_ID}/?pc=${encodeURIComponent(searchUrl)}`,
   };
 }
@@ -44,7 +44,7 @@ function buildRakutenLink(area, checkIn, checkOut) {
 function buildJalanLink(area) {
   return {
     type: 'jalan',
-    label: `じゃらんで宿を探す（${area}）`,
+    label: '宿を探す（じゃらん）',
     url: `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(area)}`,
   };
 }

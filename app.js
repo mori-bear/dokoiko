@@ -1,4 +1,4 @@
-import { selectDestination } from './src/engine/selectionEngine.js';
+import { buildPool } from './src/engine/selectionEngine.js';
 import { resolveTransportLinks } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/affiliate/hotel.js';
 import { renderResult } from './src/ui/render.js';
@@ -7,11 +7,13 @@ import { DISTANCE_LABELS } from './src/config/constants.js';
 
 const state = {
   destinations: [],
-  departure: '東京',
-  distance: null,
-  stayType: null,      // 'daytrip' | '1night'
-  datetime: buildDefaultDatetime(),
-  people: '1',
+  departure:    '東京',
+  distance:     null,
+  stayType:     null,      // 'daytrip' | '1night'
+  datetime:     buildDefaultDatetime(),
+  people:       '1',
+  pool:         [],        // 条件に合う全destinationをシャッフルした配列
+  poolIndex:    0,         // 現在表示中のインデックス
 };
 
 async function init() {
@@ -39,35 +41,60 @@ function go() {
     return;
   }
   clearFormError();
+
+  // プールを再構築（新しい条件で引き直し）
+  state.pool      = buildPool(state.destinations, state.departure, state.distance, state.stayType);
+  state.poolIndex = 0;
+
   draw();
 }
 
 function retry() {
+  if (state.poolIndex >= state.pool.length - 1) {
+    // 最後まで見た → プールを再シャッフルして最初から
+    state.pool      = buildPool(state.destinations, state.departure, state.distance, state.stayType);
+    state.poolIndex = 0;
+  } else {
+    state.poolIndex++;
+  }
   draw();
   document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function draw() {
-  const city = selectDestination(
-    state.destinations,
-    state.departure,
-    state.distance,
-    state.stayType
-  );
+  const city = state.pool[state.poolIndex];
+  if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure);
-  const hotelLinks = buildHotelLinks(city, state.datetime?.split('T')[0], state.stayType);
+  const hotelLinks     = buildHotelLinks(city, state.datetime?.split('T')[0], state.stayType);
 
   renderResult({
     city,
     transportLinks,
     hotelLinks,
     distanceLabel: DISTANCE_LABELS[state.distance],
+    poolIndex:     state.poolIndex,
+    poolTotal:     state.pool.length,
   });
+
+  updateRetryBtn();
 
   const resultEl = document.getElementById('result');
   resultEl.hidden = false;
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (state.poolIndex === 0) {
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function updateRetryBtn() {
+  const btn = document.getElementById('retry-btn');
+  if (!btn) return;
+  const { pool, poolIndex } = state;
+  if (poolIndex >= pool.length - 1) {
+    btn.textContent = 'もう一度最初から引く';
+  } else {
+    btn.textContent = `引き直す（次は ${poolIndex + 2} / ${pool.length}）`;
+  }
 }
 
 function showFormError(msg) {
@@ -80,7 +107,6 @@ function clearFormError() {
   if (el) { el.hidden = true; el.textContent = ''; }
 }
 
-/** 現在時刻 + 30分 を datetime-local 形式で返す */
 function buildDefaultDatetime() {
   const d = new Date();
   d.setMinutes(d.getMinutes() + 30);
