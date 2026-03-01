@@ -22,15 +22,17 @@ export function buildHotelLinks(city, date, stayType, people) {
 
 export function buildRakutenLink(cityName) {
   const encoded = encodeURIComponent(cityName);
+
   return {
     type: 'rakuten',
     label: 'この街の宿を見てみる（楽天トラベル）',
-    url: `https://travel.rakuten.co.jp/keyword/?f_query=${encoded}&cid=511c83ed.aa0fc172.511c83ee.51331b19`,
+    url: `https://travel.rakuten.co.jp/keyword_search/?f_query=${encoded}&cid=511c83ed.aa0fc172.511c83ee.51331b19`,
   };
 }
 
 export function buildJalanLink(cityName) {
-  const encoded = encodeURIComponent(cityName);
+  const encoded = encodeURIComponent(`${cityName} ホテル`);
+
   return {
     type: 'jalan',
     label: 'じゃらんで宿を探す',
