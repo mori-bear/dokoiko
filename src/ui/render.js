@@ -84,19 +84,23 @@ function buildAccessLine(city) {
 
   if (access.rail && access.rail.gatewayStation) {
     const { gatewayStation, lastTransport } = access.rail;
-    const transport = lastTransport ? `から${lastTransport}` : '直結';
+    const transport = lastTransport
+      ? `から、${lastTransport}`
+      : 'から直接アクセス';
     return `<p class="access-line">${gatewayStation}${transport}</p>`;
   }
 
   if (access.air && access.air.airportName) {
     const { airportName, lastTransport } = access.air;
-    const transport = lastTransport ? `から${lastTransport}` : '直結';
+    const transport = lastTransport
+      ? `から、${lastTransport}`
+      : 'に直接着陸';
     return `<p class="access-line">${airportName}${transport}</p>`;
   }
 
   if (access.ferry && access.ferry.portName) {
     const { portName, lastTransport } = access.ferry;
-    const dur = lastTransport ? ` ${lastTransport}` : '';
+    const dur = lastTransport ? `（${lastTransport}）` : '';
     return `<p class="access-line">${portName}からフェリー${dur}</p>`;
   }
 
@@ -132,10 +136,11 @@ function buildTransportBlock(links, isLast) {
 
 function buildHotelBlock(links, areaLabel, isLast) {
   const lastClass = isLast ? ' result-block-last' : '';
+  const label = areaLabel === 'ハブ拠点' ? '宿泊（近隣の拠点都市）' : '宿泊';
   const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
-    <div class="result-block${lastClass}">
-      <div class="block-label">宿泊 — ${areaLabel}</div>
+    <div class="result-block hotel-block${lastClass}">
+      <div class="block-label">${label}</div>
       <div class="link-list">${linksHtml}</div>
     </div>
   `;

@@ -110,11 +110,20 @@ body {
   padding: 28px 0 36px;
 }
 
+.hero-heading {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
 .hero-text {
   font-size: 14px;
   line-height: 1.9;
   color: var(--text-sub);
-  max-width: 480px;
+  max-width: 400px;
 }
 
 /* ── コントロール ── */
@@ -438,6 +447,12 @@ body {
 .link-jalan        { background: var(--c-jalan); }
 .link-jalan-rental { background: var(--c-jalan-rental); }
 
+/* 宿泊ブロック: 交通ブロックとの間に微妙な区切りを設ける */
+
+.hotel-block {
+  border-top: 2px solid var(--bg);
+}
+
 /* リトライボタン */
 
 .retry-btn {
@@ -502,8 +517,12 @@ body {
 .access-line {
   font-size: 13px;
   color: var(--text-sub);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-weight: 500;
+  padding: 6px 12px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  display: inline-block;
 }
 
 /* 距離★凡例 */

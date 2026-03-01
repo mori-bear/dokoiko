@@ -1,6 +1,7 @@
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
 import {
   buildGoogleMapsLink,
+  buildGoogleMapsLinkFromAirport,
   buildSkyscannerLink,
   buildJrLink,
   buildRentalLink,
@@ -42,12 +43,12 @@ export function resolveTransportLinks(city, departure, datetime) {
     const { airportName } = access.air;
     const skyscanner = buildSkyscannerLink(fromCity.iata, airportName);
     if (skyscanner) links.push(skyscanner);
-    links.push(buildGoogleMapsLink(fromCity.airport, dest, datetime, 'driving'));
+    links.push(buildGoogleMapsLinkFromAirport(airportName, dest, datetime));
     links.push(buildRentalLink());
   }
 
-  // 3. 高速バス
-  if (access.bus) {
+  // 3. 高速バス — railが既にある場合はGoogle Maps transitを追加しない（重複防止）
+  if (access.bus && !access.rail) {
     links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
   }
 

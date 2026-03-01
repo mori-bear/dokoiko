@@ -36,7 +36,7 @@ function buildRakutenLink(area, checkIn, checkOut) {
 
   return {
     type: 'rakuten',
-    label: '宿を探す（楽天）',
+    label: 'この街の宿を見てみる（楽天トラベル）',
     url: `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFF_ID}/?pc=${encodeURIComponent(searchUrl)}`,
   };
 }
@@ -44,7 +44,7 @@ function buildRakutenLink(area, checkIn, checkOut) {
 function buildJalanLink(area) {
   return {
     type: 'jalan',
-    label: '宿を探す（じゃらん）',
+    label: 'じゃらんで宿を探す',
     url: `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(area)}`,
   };
 }

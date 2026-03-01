@@ -61,6 +61,17 @@ export function buildGoogleMapsLink(origin, destination, datetime, mode = 'trans
   };
 }
 
+/* ── Google Maps（air専用: 空港→目的地の移動確認） ── */
+
+export function buildGoogleMapsLinkFromAirport(airportName, destination, datetime) {
+  const unix = datetimeToUnix(datetime);
+  return {
+    type: 'google-maps',
+    label: `${airportName}から目的地への移動（Googleマップ）`,
+    url: mapsUrl(airportName, destination, 'driving', unix),
+  };
+}
+
 /* ── Skyscanner ── */
 
 export function buildSkyscannerLink(fromIata, toAirportName) {
