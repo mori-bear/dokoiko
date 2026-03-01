@@ -53,7 +53,7 @@ function buildJalanLink(area) {
   return {
     type:  'jalan',
     label: 'じゃらんで宿を探す',
-    url:   `https://www.jalan.net/yadolist/?keyword=${encodeURIComponent(area)}`,
+    url:   `https://www.jalan.net/uw/uwp2011/uww2011.do?keyword=${encodeURIComponent(area)}`,
   };
 }
 
