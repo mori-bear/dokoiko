@@ -1,71 +1,59 @@
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
 import {
-  buildTransitLink,
-  buildAirMapsLink,
+  buildGoogleMapsLink,
   buildSkyscannerLink,
   buildJrLink,
-  buildJrExLink,
   buildRentalLink,
 } from './linkBuilder.js';
 
 /**
- * 交通リンクを組み立てる（ゲートウェイモデル）。
+ * 交通リンクを組み立てる（最大3モード: rail / air / bus）。
  *
  * 表示順:
- *   1. 🚄 鉄道     — Google Maps + JR予約
- *   2. 🚄 EX      — 東海道・山陽新幹線エリアのみ
- *   3. ✈  航空     — Skyscanner + Google Maps（空港→空港）
- *   4. 🚌 高速バス  — Google Maps
- *   5. 🚢 フェリー  — child 限定、Google Maps
- *   6. 🚗 レンタカー — air gateway 存在時のみ
+ *   1. 🚄 鉄道   — Google Maps（transit）+ JR予約（1ボタン）
+ *   2. ✈  航空   — Skyscanner + Google Maps（driving: 出発空港→mapDestination）
+ *   3. 🚌 高速バス — Google Maps（transit）
+ *
+ * - Google Maps の目的地は常に mapDestination（city.name）を使用する
+ * - 出発日時を URL に反映する
+ * - Yahoo は使用しない
+ * - レンタカーは air アクセスがある場合のみ追加
  */
-export function resolveTransportLinks(city, departure) {
+export function resolveTransportLinks(city, departure, datetime) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
   if (!fromCity) return [];
 
-  const fromRail    = fromCity.rail;
-  const fromAirport = fromCity.airport;
-  const fromIata    = fromCity.iata;
-  const { gateways } = city;
+  const dest = city.mapDestination || city.name;
+  const { access } = city;
+  if (!access) return [];
+
   const links = [];
-  let hasEx = false;
 
   // 1. 鉄道
-  for (const gw of gateways.rail || []) {
-    links.push(buildTransitLink(fromRail, gw.name));
-    const jrLink = buildJrLink(gw.region);
+  if (access.rail) {
+    const { bookingProvider } = access.rail;
+    links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
+    const jrLink = buildJrLink(bookingProvider);
     if (jrLink) links.push(jrLink);
-    if (gw.region === 'central_west_shikoku') hasEx = true;
   }
 
-  // 2. EX
-  if (hasEx) {
-    links.push(buildJrExLink());
-  }
-
-  // 3. 航空
-  const airGateways = gateways.air || [];
-  for (const gw of airGateways) {
-    const skyscanner = buildSkyscannerLink(fromIata, gw.name);
+  // 2. 航空
+  if (access.air) {
+    const { airportName } = access.air;
+    const skyscanner = buildSkyscannerLink(fromCity.iata, airportName);
     if (skyscanner) links.push(skyscanner);
-    links.push(buildAirMapsLink(fromAirport, gw.name));
-  }
-
-  // 4. 高速バス
-  for (const gw of gateways.bus || []) {
-    links.push(buildTransitLink(departure, gw.name));
-  }
-
-  // 5. フェリー（child のみ）
-  if (city.type === 'child') {
-    for (const gw of gateways.ferry || []) {
-      links.push(buildTransitLink(fromRail, gw.name));
-    }
-  }
-
-  // 6. レンタカー（air gateway 存在時のみ）
-  if (airGateways.length > 0) {
+    links.push(buildGoogleMapsLink(fromCity.airport, dest, datetime, 'driving'));
     links.push(buildRentalLink());
+  }
+
+  // 3. 高速バス
+  if (access.bus) {
+    links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
+  }
+
+  // 4. フェリーのみ（鉄道・航空なし）
+  if (access.ferry && !access.rail && !access.air) {
+    links.push(buildGoogleMapsLink(access.ferry.portName, dest, datetime, 'transit'));
   }
 
   return links.filter(Boolean);

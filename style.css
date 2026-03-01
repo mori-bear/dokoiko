@@ -497,6 +497,23 @@ body {
   color: var(--text);
 }
 
+/* アクセス行（代表駅→二次交通） */
+
+.access-line {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* 距離★凡例 */
+
+.star-legend {
+  font-size: 11px;
+  color: var(--text-sub);
+  letter-spacing: .3px;
+}
+
 /* ── 法律ページ共通 ── */
 
 .legal-main {

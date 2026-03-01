@@ -2,8 +2,8 @@
  * DOM描画モジュール
  *
  * 表示順:
- *   1. カウンター（pool 情報）
- *   2. 都市ブロック（空気感3行）
+ *   1. カウンター（あとN件）
+ *   2. 都市ブロック（アクセス行 + 空気感3行）
  *   3. 交通ブロック
  *   4. 宿泊ブロック（stayType=1night 時のみ）
  */
@@ -31,10 +31,14 @@ export function clearResult() {
 /* ── カウンター ── */
 
 function buildCounterBlock(index, total) {
+  const remaining = total - index - 1;
+  const remainingText = remaining > 0
+    ? `あと${remaining}件あります`
+    : 'すべて表示しました';
   return `
     <div class="result-counter">
-      <span>条件に合う場所：${total}件</span>
-      <span>表示中：${index + 1} / ${total}</span>
+      <span>${remainingText}</span>
+      <span>${index + 1} / ${total}</span>
     </div>
   `;
 }
@@ -42,6 +46,8 @@ function buildCounterBlock(index, total) {
 /* ── 都市ブロック ── */
 
 function buildCityBlock(city, distanceLabel) {
+  const accessLine = buildAccessLine(city);
+
   const atmosphereHtml = (city.atmosphere || [])
     .map((line) => `<p class="appeal-line">${line}</p>`)
     .join('');
@@ -62,11 +68,39 @@ function buildCityBlock(city, distanceLabel) {
         <h2 class="city-name">${city.name}</h2>
         <p class="city-sub">${city.region}${categoryBadge}</p>
       </div>
+      ${accessLine}
       <div class="city-meta-row">${distanceMeta}</div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       <div class="city-appeal">${atmosphereHtml}</div>
     </div>
   `;
+}
+
+/* ── アクセス行（1行目：代表駅から二次交通） ── */
+
+function buildAccessLine(city) {
+  const { access } = city;
+  if (!access) return '';
+
+  if (access.rail && access.rail.gatewayStation) {
+    const { gatewayStation, lastTransport } = access.rail;
+    const transport = lastTransport ? `から${lastTransport}` : '直結';
+    return `<p class="access-line">${gatewayStation}${transport}</p>`;
+  }
+
+  if (access.air && access.air.airportName) {
+    const { airportName, lastTransport } = access.air;
+    const transport = lastTransport ? `から${lastTransport}` : '直結';
+    return `<p class="access-line">${airportName}${transport}</p>`;
+  }
+
+  if (access.ferry && access.ferry.portName) {
+    const { portName, lastTransport } = access.ferry;
+    const dur = lastTransport ? ` ${lastTransport}` : '';
+    return `<p class="access-line">${portName}からフェリー${dur}</p>`;
+  }
+
+  return '';
 }
 
 function buildCategoryBadge(category) {

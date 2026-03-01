@@ -17,16 +17,13 @@ const state = {
 };
 
 async function init() {
-  // イベントバインドは即時実行（データ読み込みを待たない）
-  // これにより: ボタン反応・出発日時初期化が確実に行われる
   bindHandlers(state, go, retry);
 
-  // destinations.json 読み込み
   try {
     const res = await fetch('./src/data/destinations.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     state.destinations = await res.json();
-  } catch (err) {
+  } catch {
     const btn = document.getElementById('go-btn');
     if (btn) {
       btn.disabled = true;
@@ -70,7 +67,7 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  const transportLinks = resolveTransportLinks(city, state.departure);
+  const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
   const hotelLinks     = buildHotelLinks(city, state.datetime?.split('T')[0], state.stayType);
 
   renderResult({
@@ -95,10 +92,11 @@ function updateRetryBtn() {
   const btn = document.getElementById('retry-btn');
   if (!btn) return;
   const { pool, poolIndex } = state;
-  if (poolIndex >= pool.length - 1) {
+  const remaining = pool.length - poolIndex - 1;
+  if (remaining <= 0) {
     btn.textContent = 'もう一度最初から引く';
   } else {
-    btn.textContent = `引き直す（次は ${poolIndex + 2} / ${pool.length}）`;
+    btn.textContent = `引き直す（あと${remaining}件）`;
   }
 }
 
