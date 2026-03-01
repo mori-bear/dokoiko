@@ -6,6 +6,10 @@
  *   Skyscanner  → 「航空券を比較する（Skyscanner）」
  *   JR予約      → 各社1ボタン（ekinet/e5489/ex/jrkyushu）
  *   レンタカー  → 「レンタカーを探す（じゃらん）」
+ *
+ * 注意:
+ *   - 飛行機経路の Google Maps（driving）は使用しない
+ *   - 詳細な所要時間はすべて外部サービスへ委ねる
  */
 
 /* ── 内部ユーティリティ ── */
@@ -58,17 +62,6 @@ export function buildGoogleMapsLink(origin, destination, datetime, mode = 'trans
     type: 'google-maps',
     label: '所要時間を見る（Googleマップ）',
     url: mapsUrl(origin, destination, mode, unix),
-  };
-}
-
-/* ── Google Maps（air専用: 空港→目的地の移動確認） ── */
-
-export function buildGoogleMapsLinkFromAirport(airportName, destination, datetime) {
-  const unix = datetimeToUnix(datetime);
-  return {
-    type: 'google-maps',
-    label: `${airportName}から目的地への移動（Googleマップ）`,
-    url: mapsUrl(airportName, destination, 'driving', unix),
   };
 }
 

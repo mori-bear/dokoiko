@@ -46,8 +46,7 @@ function buildCounterBlock(index, total) {
 /* ── 都市ブロック ── */
 
 function buildCityBlock(city, _distanceLabel) {
-  const gatewayLabel = buildGatewayLabel(city);
-  const accessLine   = buildAccessLine(city);
+  const accessSentence = buildAccessSentence(city);
 
   const atmosphereHtml = (city.atmosphere || [])
     .map((line) => `<p class="appeal-line">${line}</p>`)
@@ -65,55 +64,50 @@ function buildCityBlock(city, _distanceLabel) {
         <h2 class="city-name">${city.name}</h2>
         <p class="city-sub">${city.region}${categoryBadge}</p>
       </div>
-      ${gatewayLabel}
-      ${accessLine}
+      ${accessSentence}
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       <div class="city-appeal">${atmosphereHtml}</div>
     </div>
   `;
 }
 
-/* ── 最寄り駅/空港/港ラベル（都市名直下・強調表示） ── */
-
-function buildGatewayLabel(city) {
+/**
+ * アクセス文（1文目固定）
+ *
+ * 代表入口（駅/空港/港）と二次交通を1文に統合して表示する。
+ * 「直結」は使用禁止。動詞で終わる形式を保つ。
+ *
+ * 形式:
+ *   rail + lastTransport  → 「○○駅から、△△」
+ *   rail + null           → 「○○駅から直接アクセス」
+ *   air  + lastTransport  → 「○○空港から、△△」
+ *   air  + null           → 「○○空港に到着後すぐ市内へ」
+ *   ferry                 → 「○○港からフェリー（△△）」
+ */
+function buildAccessSentence(city) {
   const { access } = city;
   if (!access) return '';
 
   if (access.rail?.gatewayStation) {
-    return `<p class="gateway-label"><span class="gateway-type">最寄り駅</span>${access.rail.gatewayStation}</p>`;
-  }
-  if (access.air?.airportName) {
-    return `<p class="gateway-label"><span class="gateway-type">最寄り空港</span>${access.air.airportName}</p>`;
-  }
-  if (access.ferry?.portName) {
-    return `<p class="gateway-label"><span class="gateway-type">最寄り港</span>${access.ferry.portName}</p>`;
-  }
-  return '';
-}
-
-/* ── アクセス行（二次交通のみ・直結の場合は非表示） ── */
-
-function buildAccessLine(city) {
-  const { access } = city;
-  if (!access) return '';
-
-  if (access.rail?.gatewayStation) {
-    const { lastTransport } = access.rail;
-    // 直結の場合はgateway-labelのみで完結するため非表示
-    if (!lastTransport) return '';
-    return `<p class="access-line">→ ${lastTransport}</p>`;
+    const { gatewayStation, lastTransport } = access.rail;
+    const journey = lastTransport
+      ? `から、${lastTransport}`
+      : 'から直接アクセス';
+    return `<p class="access-sentence">${gatewayStation}${journey}</p>`;
   }
 
   if (access.air?.airportName) {
-    const { lastTransport } = access.air;
-    if (!lastTransport) return '';
-    return `<p class="access-line">→ ${lastTransport}</p>`;
+    const { airportName, lastTransport } = access.air;
+    const journey = lastTransport
+      ? `から、${lastTransport}`
+      : 'に到着後すぐ市内へ';
+    return `<p class="access-sentence">${airportName}${journey}</p>`;
   }
 
   if (access.ferry?.portName) {
-    const { lastTransport } = access.ferry;
+    const { portName, lastTransport } = access.ferry;
     const dur = lastTransport ? `（${lastTransport}）` : '';
-    return `<p class="access-line">→ フェリー${dur}</p>`;
+    return `<p class="access-sentence">${portName}からフェリー${dur}</p>`;
   }
 
   return '';

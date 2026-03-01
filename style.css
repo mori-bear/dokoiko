@@ -512,40 +512,17 @@ body {
   color: var(--text);
 }
 
-/* 最寄り駅/空港/港ラベル */
+/* アクセス文（1文目固定・代表入口＋二次交通を統合） */
 
-.gateway-label {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 600;
+.access-sentence {
+  font-size: 13px;
+  font-weight: 500;
   color: var(--text);
-  margin-top: 12px;
-  margin-bottom: 2px;
-}
-
-.gateway-type {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-sub);
-  letter-spacing: .5px;
+  margin: 10px 0 16px;
+  padding: 7px 12px;
   background: var(--bg);
-  padding: 2px 7px;
-  border-radius: 100px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* アクセス行（二次交通のみ、直結は非表示） */
-
-.access-line {
-  font-size: 12px;
-  color: var(--text-sub);
-  margin-bottom: 16px;
-  font-weight: 400;
-  padding-left: 2px;
-  display: block;
+  border-radius: var(--radius);
+  display: inline-block;
 }
 
 /* 距離★凡例 */
