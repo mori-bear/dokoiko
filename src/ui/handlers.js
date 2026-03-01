@@ -12,13 +12,23 @@ export function bindHandlers(state, onGo, onRetry) {
     state.departure = e.target.value;
   });
 
-  const dtInput = document.getElementById('departure-dt');
-  if (dtInput) {
-    dtInput.value = state.datetime;
-    dtInput.addEventListener('change', (e) => {
-      if (e.target.value) state.datetime = e.target.value;
-    });
+  // 出発日時: date + time を組み合わせて state.datetime ("YYYY-MM-DDTHH:MM") を維持
+  const [defaultDate, defaultTime] = state.datetime.split('T');
+
+  const dateInput = document.getElementById('departure-date');
+  const timeInput = document.getElementById('departure-time');
+
+  if (dateInput) dateInput.value = defaultDate || '';
+  if (timeInput) timeInput.value = defaultTime || '00:00';
+
+  function syncDatetime() {
+    const d = dateInput?.value || defaultDate;
+    const t = timeInput?.value || defaultTime;
+    if (d) state.datetime = `${d}T${t}`;
   }
+
+  if (dateInput) dateInput.addEventListener('change', syncDatetime);
+  if (timeInput) timeInput.addEventListener('change', syncDatetime);
 
   /* ── クリック委任（document 一本化） ── */
 

@@ -38,7 +38,9 @@ export function buildHotelLinks(city, date, stayType, people) {
 /* ── 楽天トラベル ── */
 
 function buildRakutenLink(area, dates, adult) {
-  let url = `https://search.travel.rakuten.co.jp/ds/yado/?f_keyword=${encodeURIComponent(area)}&f_adult=${adult}&scid=af_pc_link_url&sc2id=${RAKUTEN_AFF_ID}`;
+  // 必ず絶対URLで生成（相対パス禁止）
+  const base = 'https://search.travel.rakuten.co.jp/ds/yado/';
+  let url = `${base}?f_keyword=${encodeURIComponent(area)}&f_adult=${adult}&scid=af_pc_link_url&sc2id=${RAKUTEN_AFF_ID}`;
   if (dates) {
     url += `&f_checkin=${dates.checkIn}&f_checkout=${dates.checkOut}`;
   }

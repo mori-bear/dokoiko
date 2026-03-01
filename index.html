@@ -80,8 +80,17 @@
 
         <!-- 出発日時 -->
         <div class="control-group">
-          <label class="control-label" for="departure-dt">出発日時</label>
-          <input type="datetime-local" id="departure-dt" class="datetime-input">
+          <label class="control-label">出発日時</label>
+          <div class="datetime-row">
+            <div class="input-group">
+              <label class="input-group-label" for="departure-date">日付</label>
+              <input type="date" id="departure-date" class="date-input">
+            </div>
+            <div class="input-group">
+              <label class="input-group-label" for="departure-time">時刻</label>
+              <input type="time" id="departure-time" class="time-input">
+            </div>
+          </div>
         </div>
 
         <!-- 人数 -->
