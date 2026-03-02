@@ -114,10 +114,17 @@ function buildHotelBlock(links) {
   `;
 }
 
+function btnClass(type) {
+  if (['rakuten'].includes(type))                              return 'btn-rakuten';
+  if (['jalan', 'jalan-rental'].includes(type))               return 'btn-jalan';
+  if (['google-maps', 'rental'].includes(type))               return 'btn-secondary';
+  return 'btn-primary'; // jr-*, skyscanner, bus, ferry
+}
+
 function buildLinkItem(link) {
   return `
     <a href="${link.url}" target="_blank" rel="noopener noreferrer"
-       class="link-item link-${link.type}">
+       class="btn ${btnClass(link.type)}">
       ${link.label}
     </a>
   `;

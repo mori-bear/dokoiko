@@ -462,58 +462,49 @@ body {
   gap: 8px;
 }
 
-/* リンクアイテム */
+/* ── ボタン共通 ── */
 
-.link-item {
+.btn {
   display: block;
-  padding: 12px 16px;
-  border-radius: var(--radius);
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--white);
+  text-align: center;
   text-decoration: none;
+  border: none;
   cursor: pointer;
-  transition: opacity .1s;
+  transition: all 0.2s ease;
 }
 
-.link-item:hover {
-  opacity: .85;
+/* primary（JR・航空・バス・フェリー） */
+.btn-primary {
+  background: #2f5fd2;
+  color: #fff;
 }
+.btn-primary:hover { opacity: 0.92; }
 
-/* primary（JR・航空）: 色付き solid */
-.link-jr-east    { background: var(--c-jr-east); }
-.link-jr-west    { background: var(--c-jr-west); }
-.link-jr-kyushu  { background: var(--c-jr-kyushu); }
-.link-jr-ex      { background: var(--c-jr-ex); }
-.link-skyscanner { background: var(--c-skyscanner); }
-.link-bus        { background: var(--c-bus); }
-.link-ferry      { background: var(--c-ferry); }
+/* secondary（Googleマップ・レンタカー） */
+.btn-secondary {
+  background: #f0f2f7;
+  color: #333;
+}
+.btn-secondary:hover { background: #e4e7ef; }
 
-/* secondary（地図・レンタカー）: アウトライン */
-.link-google-maps {
-  background: transparent;
-  color: var(--text-sub);
-  border: 1px solid var(--border);
-  font-weight: 500;
+/* affiliate（楽天） */
+.btn-rakuten {
+  background: #c7001e;
+  color: #fff;
 }
-.link-rental {
-  background: transparent;
-  color: var(--text-sub);
-  border: 1px solid var(--border);
-  font-weight: 500;
-}
+.btn-rakuten:hover { opacity: 0.9; }
 
-/* affiliate（楽天・じゃらん）: 控えめテキスト */
-.link-rakuten,
-.link-jalan,
-.link-jalan-rental {
-  background: transparent;
-  color: var(--text-sub);
-  border: 1px solid var(--border);
-  font-size: 13px;
-  font-weight: 400;
-  padding: 10px 16px;
+/* affiliate（じゃらん） */
+.btn-jalan {
+  background: #c8792f;
+  color: #fff;
 }
+.btn-jalan:hover { opacity: 0.9; }
 
 /* リトライボタン */
 
