@@ -137,19 +137,19 @@ body {
 }
 
 .hero-heading {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--text);
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.hero-text {
+.hero-sub {
   font-size: 14px;
   line-height: 1.9;
   color: var(--text-sub);
-  max-width: 400px;
+  max-width: 420px;
 }
 
 /* ── コントロール ── */
@@ -648,7 +648,7 @@ body {
 /* ── レスポンシブ ── */
 
 @media (max-width: 420px) {
-  .hero-text {
+  .hero-sub {
     font-size: 13px;
   }
 

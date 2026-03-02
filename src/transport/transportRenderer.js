@@ -33,7 +33,7 @@ export function resolveTransportLinks(city, departure, datetime) {
 
   // 2. JR/私鉄予約（鉄道のみ）
   if (access.railGateway) {
-    const provider = resolveRailProvider(departure, city);
+    const provider = resolveRailProvider(departure);
     const jrLink = buildJrLink(provider);
     if (jrLink) links.push(jrLink);
   }
@@ -54,41 +54,16 @@ export function resolveTransportLinks(city, departure, datetime) {
 }
 
 /**
- * 路線ベースでJR予約プロバイダを決定する。
+ * 出発地の JR エリアに基づいて予約プロバイダを決定する。
  *
- * ルール:
- *   東北・北海道系  → えきねっと（JR東日本）
- *   東海道・山陽系  → EX（スマートEX / EX予約）
- *   九州内         → 九州ネット予約（福岡出発時のみ）
- *   九州・山陽経由  → e5489（福岡以外の出発から九州方面）
- *   北陸           → e5489（JR西日本管轄）
- *   関東           → えきねっと（JR東日本）
+ * jrArea:
+ *   east   → えきねっと（JR東日本）
+ *   kyushu → JR九州ネット予約
+ *   west   → e5489（JR西日本 / 東海）
  */
-function resolveRailProvider(departure, city) {
-  const { region, name, access } = city;
-
-  // 九州エリア
-  if (region === '九州') {
-    // 福岡出発の九州内移動はJR九州
-    return departure === '福岡' ? 'jrkyushu' : 'e5489';
-  }
-
-  // 東北・北海道はえきねっと（JR東日本管轄）
-  if (region === '東北' || region === '北海道') return 'ekinet';
-
-  // 関東はえきねっと（JR東日本管轄）
-  if (region === '関東') return 'ekinet';
-
-  // 北陸（金沢・新潟）はe5489（JR西日本管轄）
-  if (region === '中部' && (name === '金沢' || name === '新潟' || name === '富山')) {
-    return 'e5489';
-  }
-
-  // 東海道・山陽系（近畿・中国・四国・中部の残り）はEX
-  if (region === '近畿' || region === '中国' || region === '四国' || region === '中部') {
-    return 'ex';
-  }
-
-  // フォールバック: データのrailBookingProviderを使用
-  return access?.railBookingProvider || 'ekinet';
+function resolveRailProvider(departure) {
+  const area = DEPARTURE_CITY_INFO[departure]?.jrArea || 'west';
+  if (area === 'east')   return 'ekinet';
+  if (area === 'kyushu') return 'jrkyushu';
+  return 'e5489';
 }

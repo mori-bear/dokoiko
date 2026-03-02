@@ -8,6 +8,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -42,6 +43,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -76,6 +78,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -109,6 +112,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -143,6 +147,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -176,6 +181,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -209,6 +215,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -242,6 +249,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -275,6 +283,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -308,6 +317,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -341,6 +351,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -374,6 +385,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -407,6 +419,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -440,6 +453,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -473,6 +487,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -506,6 +521,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -541,6 +557,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -575,6 +592,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -609,6 +627,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -643,6 +662,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -678,6 +698,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -712,6 +733,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -745,6 +767,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -778,6 +801,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -811,6 +835,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -844,6 +869,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -877,6 +903,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -910,6 +937,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -943,6 +971,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -979,6 +1008,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1013,6 +1043,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1047,6 +1078,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1081,6 +1113,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1114,6 +1147,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1147,6 +1181,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1180,6 +1215,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1213,6 +1249,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1246,6 +1283,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1279,6 +1317,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1312,6 +1351,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1345,6 +1385,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1379,6 +1420,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1413,6 +1455,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1446,6 +1489,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -1479,6 +1523,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1512,6 +1557,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1545,6 +1591,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1578,6 +1625,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1611,6 +1659,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1644,6 +1693,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1677,6 +1727,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1710,6 +1761,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -1744,6 +1796,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1777,6 +1830,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -1810,6 +1864,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1843,6 +1898,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1876,6 +1932,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1909,6 +1966,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1942,6 +2000,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -1975,6 +2034,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2008,6 +2068,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2042,6 +2103,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2076,6 +2138,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2109,6 +2172,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2142,6 +2206,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2175,6 +2240,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2208,6 +2274,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2241,6 +2308,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2274,6 +2342,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -2307,6 +2376,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1.2,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2341,6 +2411,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2375,6 +2446,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2408,6 +2480,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2441,6 +2514,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2474,6 +2548,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2507,6 +2582,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2540,6 +2616,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2573,6 +2650,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2606,6 +2684,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2639,6 +2718,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2673,6 +2753,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 0.5,
     "stayAllowed": [
       "daytrip",
       "1night"
@@ -2707,6 +2788,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 1,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -2740,6 +2822,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2773,6 +2856,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2806,6 +2890,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2839,6 +2924,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2872,6 +2958,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2905,6 +2992,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2938,6 +3026,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -2971,6 +3060,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -3004,6 +3094,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 3,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -3034,6 +3125,7 @@
     "parentHub": "和歌山",
     "hotelBase": "wakayama",
     "distanceStars": 3,
+    "weight": 1.2,
     "stayAllowed": [
       "1night"
     ],
@@ -3063,6 +3155,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 4,
+    "weight": 0.5,
     "stayAllowed": [
       "1night"
     ],
@@ -3103,6 +3196,7 @@
     "parentHub": "那覇",
     "hotelBase": "naha",
     "distanceStars": 5,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -3134,6 +3228,7 @@
     "parentHub": "那覇",
     "hotelBase": "naha",
     "distanceStars": 5,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -3169,6 +3264,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 5,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],
@@ -3205,6 +3301,7 @@
     "parentHub": null,
     "hotelBase": null,
     "distanceStars": 2,
+    "weight": 1,
     "stayAllowed": [
       "1night"
     ],

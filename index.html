@@ -35,8 +35,8 @@
     <div class="container">
 
       <section class="hero">
-        <h1 class="hero-heading">行き先を、引いてみよう。</h1>
-        <p class="hero-text">出発地と距離感だけで、ちゃんと行ける街を1つだけ。</p>
+        <h1 class="hero-heading">知らない街へ、行ってみる？</h1>
+        <p class="hero-sub">距離と日程を選ぶだけ。ちゃんと行ける場所を、ひとつだけ。</p>
       </section>
 
       <section class="controls">
@@ -45,14 +45,49 @@
         <div class="control-group">
           <label class="control-label" for="departure-select">出発地</label>
           <select id="departure-select" class="departure-select">
-            <option value="札幌">札幌</option>
-            <option value="仙台">仙台</option>
-            <option value="東京" selected>東京</option>
-            <option value="名古屋">名古屋</option>
-            <option value="大阪">大阪</option>
-            <option value="広島">広島</option>
-            <option value="高松">高松</option>
-            <option value="福岡">福岡</option>
+            <optgroup label="北海道・東北">
+              <option value="札幌">札幌</option>
+              <option value="函館">函館</option>
+              <option value="旭川">旭川</option>
+              <option value="仙台">仙台</option>
+              <option value="盛岡">盛岡</option>
+            </optgroup>
+            <optgroup label="関東">
+              <option value="東京" selected>東京</option>
+              <option value="横浜">横浜</option>
+              <option value="千葉">千葉</option>
+              <option value="大宮">大宮</option>
+              <option value="宇都宮">宇都宮</option>
+            </optgroup>
+            <optgroup label="中部">
+              <option value="長野">長野</option>
+              <option value="静岡">静岡</option>
+              <option value="名古屋">名古屋</option>
+              <option value="金沢">金沢</option>
+              <option value="富山">富山</option>
+            </optgroup>
+            <optgroup label="近畿">
+              <option value="大阪">大阪</option>
+              <option value="京都">京都</option>
+              <option value="神戸">神戸</option>
+              <option value="奈良">奈良</option>
+            </optgroup>
+            <optgroup label="中国・四国">
+              <option value="広島">広島</option>
+              <option value="岡山">岡山</option>
+              <option value="松江">松江</option>
+              <option value="高松">高松</option>
+              <option value="松山">松山</option>
+              <option value="高知">高知</option>
+              <option value="徳島">徳島</option>
+            </optgroup>
+            <optgroup label="九州">
+              <option value="福岡">福岡</option>
+              <option value="熊本">熊本</option>
+              <option value="鹿児島">鹿児島</option>
+              <option value="長崎">長崎</option>
+              <option value="宮崎">宮崎</option>
+            </optgroup>
           </select>
         </div>
 
