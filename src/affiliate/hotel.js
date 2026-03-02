@@ -35,7 +35,7 @@ export function buildRakutenLink(cityName) {
   return {
     type: 'rakuten',
     label: `楽天トラベルで${cityName}の宿を見る`,
-    url: `https://travel.rakuten.co.jp/keyword_search/?f_query=${encoded}&cid=${RAKUTEN_AFF_ID}`,
+    url: `https://search.travel.rakuten.co.jp/ds/yado/?f_query=${encoded}&f_adult_num=2&cid=${RAKUTEN_AFF_ID}`,
   };
 }
 
@@ -44,6 +44,6 @@ export function buildJalanLink(cityName) {
   return {
     type: 'jalan',
     label: `じゃらんで${cityName}の宿を見る`,
-    url: `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encoded}`,
+    url: `https://www.jalan.net/uw/uwp1700/uww1701.do?screenId=UWW1402&keyword=${encoded}`,
   };
 }
