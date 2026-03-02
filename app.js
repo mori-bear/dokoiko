@@ -69,8 +69,7 @@ function draw() {
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
-  const searchName     = resolveHotelSearchName(city, state.destinations);
-  const hotelLinks     = buildHotelLinks(city, state.stayType, searchName);
+  const hotelLinks     = buildHotelLinks(city, state.stayType, state.destinations);
 
   renderResult({
     city,
@@ -110,14 +109,6 @@ function showFormError(msg) {
 function clearFormError() {
   const el = document.getElementById('form-error');
   if (el) { el.hidden = true; el.textContent = ''; }
-}
-
-function resolveHotelSearchName(city, destinations) {
-  if (city.hotelBase) {
-    const hub = destinations.find(d => d.id === city.hotelBase);
-    if (hub) return hub.name;
-  }
-  return city.name;
 }
 
 function buildDefaultDatetime() {

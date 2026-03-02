@@ -75,15 +75,19 @@ function buildAccessLine(city) {
   if (!access) return '';
 
   if (access.railGateway) {
-    return `<p class="access-line">${access.railGateway}から街へ</p>`;
+    const note = access.railNote ? `、${access.railNote}` : 'から市内へ';
+    const text = access.railNote
+      ? `${access.railGateway}${note}`
+      : `${access.railGateway}から市内へ`;
+    return `<p class="access-line">${text}</p>`;
   }
 
   if (access.airportGateway) {
-    return `<p class="access-line">${access.airportGateway}から市内へ</p>`;
+    return `<p class="access-line">${access.airportGateway}からアクセス</p>`;
   }
 
   if (access.ferryGateway) {
-    return `<p class="access-line">${access.ferryGateway}からフェリー</p>`;
+    return `<p class="access-line">${access.ferryGateway}からフェリーで</p>`;
   }
 
   return '';

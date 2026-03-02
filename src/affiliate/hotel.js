@@ -1,31 +1,41 @@
+import { RAKUTEN_AFF_ID } from '../config/constants.js';
+
 /**
  * 宿泊リンクを組み立てる。
  *
- * searchName: city.hotelBase がある場合は呼び出し元でハブ名に解決して渡す。
- *             未指定の場合は city.name を使用。
+ * parentHub を持つ離島などでは destination（島の宿）と hub（那覇など）
+ * の両方を返す。
  */
-export function buildHotelLinks(city, stayType, searchName) {
+export function buildHotelLinks(city, stayType, destinations) {
   if (stayType !== '1night') {
     return { destination: [], hub: [] };
   }
 
-  const name = searchName || city.name;
+  const destination = [
+    buildRakutenLink(city.name),
+    buildJalanLink(city.name),
+  ];
 
-  return {
-    destination: [
-      buildRakutenLink(name),
-      buildJalanLink(name),
-    ],
-    hub: [],
-  };
+  let hub = [];
+  if (city.hotelBase) {
+    const hubCity = destinations.find(d => d.id === city.hotelBase);
+    if (hubCity) {
+      hub = [
+        buildRakutenLink(hubCity.name),
+        buildJalanLink(hubCity.name),
+      ];
+    }
+  }
+
+  return { destination, hub };
 }
 
 export function buildRakutenLink(cityName) {
   const encoded = encodeURIComponent(cityName);
   return {
     type: 'rakuten',
-    label: '楽天でこの街の宿を見る',
-    url: `https://www.google.com/search?q=${encoded}+楽天トラベル`,
+    label: `楽天トラベルで${cityName}の宿を見る`,
+    url: `https://travel.rakuten.co.jp/keyword_search/?f_query=${encoded}&cid=${RAKUTEN_AFF_ID}`,
   };
 }
 
@@ -33,7 +43,7 @@ export function buildJalanLink(cityName) {
   const encoded = encodeURIComponent(cityName);
   return {
     type: 'jalan',
-    label: 'じゃらんでこの街の宿を見る',
-    url: `https://www.google.com/search?q=${encoded}+じゃらん`,
+    label: `じゃらんで${cityName}の宿を見る`,
+    url: `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encoded}`,
   };
 }

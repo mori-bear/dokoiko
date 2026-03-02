@@ -9,12 +9,18 @@ import {
 /**
  * 交通リンクを組み立てる。
  *
- * 表示順:
- *   1. Googleマップ（railGatewayがある場合のみ）
- *   2. JR/私鉄予約（鉄道のみ）
- *   3. 航空券比較（air、rail不在のみ）
- *   4. レンタカー（air、rail不在のみ）
- *   5. フェリーのみの場合: Googleマップ（出発駅→港）
+ * 表示優先順:
+ *   1. JR/私鉄予約（鉄道あり）
+ *   2. Skyscanner（就航あり）
+ *   3. Googleマップ（飛行機なし時のみ）
+ *   4. レンタカー（飛行機あり・鉄道なし時のみ）
+ *
+ * ルール:
+ *   - 飛行機表示時はGoogleマップ削除
+ *   - 鉄道＋飛行機どちらもある場合: JR + Skyscanner（Googleマップなし）
+ *   - 鉄道のみ: JR + Googleマップ
+ *   - 飛行機のみ: Skyscanner + レンタカー
+ *   - フェリーのみ: Googleマップ（港→）
  */
 export function resolveTransportLinks(city, departure, datetime) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
@@ -24,30 +30,43 @@ export function resolveTransportLinks(city, departure, datetime) {
   const { access } = city;
   if (!access) return [];
 
+  const hasRail   = !!access.railGateway;
+  const hasAirRaw = !!access.airportGateway;
+  const hasFerry  = !!access.ferryGateway && !hasRail && !hasAirRaw;
+
+  // Skyscanner: 就航確認（IATA変換できない場合は null）
+  let skyscannerLink = null;
+  if (hasAirRaw) {
+    skyscannerLink = buildSkyscannerLink(fromCity.iata, access.airportGateway);
+  }
+  const hasAir = !!skyscannerLink;
+
   const links = [];
 
-  // 1. Googleマップ（railGatewayがある場合のみ）
-  if (access.railGateway) {
-    links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
-  }
-
-  // 2. JR/私鉄予約（鉄道のみ）
-  if (access.railGateway) {
+  // 1. JR予約（鉄道あり）
+  if (hasRail) {
     const provider = resolveRailProvider(departure, city);
     const jrLink = buildJrLink(provider);
     if (jrLink) links.push(jrLink);
   }
 
-  // 3 & 4. 航空（rail不在のみ）
-  if (access.airportGateway && !access.railGateway && links.length < 3) {
-    const skyscanner = buildSkyscannerLink(fromCity.iata, access.airportGateway);
-    if (skyscanner && links.length < 3) links.push(skyscanner);
-    if (links.length < 3) links.push(buildRentalLink());
+  // 2. Skyscanner（就航あり）
+  if (hasAir) {
+    links.push(skyscannerLink);
   }
 
-  // 5. フェリーのみ（rail・air不在）
-  if (access.ferryGateway && !access.railGateway && !access.airportGateway && links.length < 3) {
-    links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
+  // 3. Googleマップ（飛行機なし時のみ）
+  if (!hasAir) {
+    if (hasRail) {
+      links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
+    } else if (hasFerry) {
+      links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
+    }
+  }
+
+  // 4. レンタカー（飛行機あり・鉄道なし）
+  if (hasAir && !hasRail) {
+    links.push(buildRentalLink());
   }
 
   return links.filter(link => link && link.url);
@@ -57,24 +76,34 @@ export function resolveTransportLinks(city, departure, datetime) {
  * 出発地×到着地でJR予約プロバイダを決定する。
  *
  * EX（スマートEX / EX予約）:
- *   東海道直通区間のみ。
- *   出発・到着の両方が {東京, 横浜, 名古屋, 京都, 大阪} に属する場合のみ適用。
+ *   東海道・山陽・九州・西九州新幹線の利用区間。
+ *   出発・到着の両方が対象ネットワークに属する場合に適用。
  *
- * それ以外は出発地の jrArea 基準:
- *   east   → えきねっと（JR東日本）
- *   kyushu → JR九州ネット予約
- *   west   → e5489（JR西日本 / 東海）
+ * その他:
+ *   east（東北・北海道新幹線エリア）  → えきねっと
+ *   west（JR西日本・四国・山陰在来線）→ e5489
+ *   kyushu（九州内特急のみ）          → JR九州ネット予約
  */
 
-// 東海道直通EX対象駅（この集合の2都市間のみEX）
-const EX_STATIONS = new Set(['東京', '横浜', '名古屋', '京都', '大阪']);
+// 出発地：東海道/山陽/九州/西九州新幹線ネットワーク
+const EX_DEPARTURE = new Set([
+  '東京', '横浜', '静岡', '名古屋', '京都', '大阪', '神戸',
+  '広島', '岡山', '福岡', '熊本', '鹿児島', '長崎',
+]);
+
+// 到着都市名（destinations.json の name フィールド）: EXネットワーク対象
+const EX_DEST = new Set([
+  '名古屋', '京都', '大阪', '神戸', '姫路',
+  '広島', '岡山', '博多',
+  '熊本', '鹿児島', '長崎',
+]);
 
 function resolveRailProvider(departure, city) {
-  // EX特例: 東海道直通のみ
-  if (EX_STATIONS.has(departure) && EX_STATIONS.has(city.name)) {
+  // EX: 出発・到着の両方がEXネットワークに属する場合
+  if (EX_DEPARTURE.has(departure) && EX_DEST.has(city.name)) {
     return 'ex';
   }
-  // 出発地jrAreaベース
+  // 出発地のjrAreaで判定
   const area = DEPARTURE_CITY_INFO[departure]?.jrArea || 'west';
   if (area === 'east')   return 'ekinet';
   if (area === 'kyushu') return 'jrkyushu';

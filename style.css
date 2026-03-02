@@ -137,7 +137,7 @@ body {
 }
 
 .hero-heading {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--text);
@@ -147,10 +147,10 @@ body {
 }
 
 .hero-sub {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-sub);
-  max-width: 520px;
+  max-width: 480px;
 }
 
 /* ── コンセプト ── */
@@ -384,7 +384,7 @@ body {
 }
 
 .city-name {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -1.5px;
   line-height: 1.1;

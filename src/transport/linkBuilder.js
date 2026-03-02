@@ -72,7 +72,7 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
   if (!toIata) return null;
   return {
     type: 'skyscanner',
-    label: '航空券を比較する（Skyscanner）',
+    label: `航空券を比較する（${toAirportName}）`,
     url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
