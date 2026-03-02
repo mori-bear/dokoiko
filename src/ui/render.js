@@ -54,6 +54,7 @@ function buildCityBlock(city, _distanceLabel) {
     : '';
 
   const categoryBadge = buildCategoryBadge(city.type);
+  const spotListHtml  = buildSpotList(city.spots);
 
   return `
     <div class="city-block">
@@ -63,6 +64,7 @@ function buildCityBlock(city, _distanceLabel) {
       </div>
       ${accessLine}
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
+      ${spotListHtml}
       <div class="city-appeal">${atmosphereHtml}</div>
     </div>
   `;
@@ -85,6 +87,17 @@ function buildAccessLine(city) {
   }
 
   return '';
+}
+
+function buildSpotList(spots) {
+  if (!Array.isArray(spots) || spots.length === 0) return '';
+  const items = spots.map((s) => `<li>${s}</li>`).join('');
+  return `
+    <div class="spot-list">
+      <p class="spot-title">代表スポット</p>
+      <ul>${items}</ul>
+    </div>
+  `;
 }
 
 function buildCategoryBadge(type) {
