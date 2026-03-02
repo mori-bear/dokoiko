@@ -37,8 +37,11 @@ function weightedShuffle(arr) {
 }
 
 export function buildPool(destinations, departure, distanceStars, stayType) {
-  // stayAllowed フィルタ（island=1night 除外もここで処理）
-  const byStay = destinations.filter(d => d.stayAllowed.includes(stayType));
+  // island は stayType=1night 以外では完全除外（stayAllowed より先に評価）
+  const byStay = destinations.filter(d => {
+    if (d.type === 'island' && stayType !== '1night') return false;
+    return d.stayAllowed.includes(stayType);
+  });
 
   // departure フィルタ（nearestHub フォールバック込み）
   let byDeparture = byStay.filter(d => d.departures.includes(departure));

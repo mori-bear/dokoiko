@@ -331,6 +331,16 @@ body {
   margin-top: 48px;
 }
 
+/* カード */
+
+.result-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
 /* カウンター */
 
 .result-counter {
@@ -338,17 +348,13 @@ body {
   justify-content: flex-end;
   font-size: 11px;
   color: var(--text-sub);
-  padding: 0 4px 14px;
+  padding: 14px 24px 0;
 }
 
 /* 都市ブロック */
 
 .city-block {
-  background: var(--white);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  padding: 28px 24px 24px;
-  border: 1px solid var(--border);
-  border-bottom: none;
+  padding: 20px 24px 24px;
 }
 
 .city-header {
@@ -437,26 +443,15 @@ body {
   border-left: 2px solid var(--border);
 }
 
-/* 結果ブロック（交通・宿泊） */
+/* カードセクション（交通・宿泊） */
 
-.result-block {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: none;
+.card-section {
   padding: 20px 24px;
+  border-top: 1px solid var(--border);
 }
 
-.result-block-last {
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-}
-
-.block-label {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-sub);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+.card-section--hotel {
+  border-top: 2px solid var(--bg);
 }
 
 .link-list {
@@ -498,12 +493,6 @@ body {
 .link-rakuten      { background: var(--c-rakuten); }
 .link-jalan        { background: var(--c-jalan); }
 .link-jalan-rental { background: var(--c-jalan-rental); }
-
-/* 宿泊ブロック: 交通ブロックとの間に微妙な区切りを設ける */
-
-.hotel-block {
-  border-top: 2px solid var(--bg);
-}
 
 /* リトライボタン */
 
@@ -657,7 +646,7 @@ body {
   }
 
   .city-block,
-  .result-block {
+  .card-section {
     padding: 20px 16px;
   }
 

@@ -1,26 +1,28 @@
 /**
  * DOM描画モジュール
  *
- * 表示順:
- *   1. カウンター（N / total）
- *   2. 都市ブロック（アクセス行 + 空気感3行）
- *   3. 交通ブロック（ラベルなし）
- *   4. 宿泊ブロック（stayType=1night 時のみ）
+ * カード構造:
+ *   result-card
+ *     result-counter
+ *     city-block
+ *     card-section        （交通リンク、見出しなし）
+ *     card-section--hotel （宿泊リンク、見出しなし）
  */
 
 export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
   const hasDestHotel = hotelLinks.destination.length > 0;
   const hasHubHotel  = hotelLinks.hub.length > 0;
-  const isLast = !hasDestHotel && !hasHubHotel;
 
   const el = document.getElementById('result-inner');
-  el.innerHTML = [
-    buildCounterBlock(poolIndex, poolTotal),
-    buildCityBlock(city, distanceLabel),
-    buildTransportBlock(transportLinks, isLast),
-    hasDestHotel ? buildHotelBlock(hotelLinks.destination, city.name,  !hasHubHotel) : '',
-    hasHubHotel  ? buildHotelBlock(hotelLinks.hub,         'ハブ拠点', true) : '',
-  ].join('');
+  el.innerHTML = `
+    <div class="result-card">
+      ${buildCounterBlock(poolIndex, poolTotal)}
+      ${buildCityBlock(city, distanceLabel)}
+      ${buildTransportBlock(transportLinks)}
+      ${hasDestHotel ? buildHotelBlock(hotelLinks.destination) : ''}
+      ${hasHubHotel  ? buildHotelBlock(hotelLinks.hub) : ''}
+    </div>
+  `;
 }
 
 export function clearResult() {
@@ -92,11 +94,10 @@ function buildCategoryBadge(type) {
 
 /* ── 交通ブロック ── */
 
-function buildTransportBlock(links, isLast) {
-  const lastClass = isLast ? ' result-block-last' : '';
+function buildTransportBlock(links) {
   const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
-    <div class="result-block${lastClass}">
+    <div class="card-section">
       <div class="link-list">${linksHtml}</div>
     </div>
   `;
@@ -104,13 +105,10 @@ function buildTransportBlock(links, isLast) {
 
 /* ── 宿泊ブロック ── */
 
-function buildHotelBlock(links, areaLabel, isLast) {
-  const lastClass = isLast ? ' result-block-last' : '';
-  const label = areaLabel === 'ハブ拠点' ? '宿泊（近隣の拠点都市）' : '宿泊';
+function buildHotelBlock(links) {
   const linksHtml = links.map((link) => buildLinkItem(link)).join('');
   return `
-    <div class="result-block hotel-block${lastClass}">
-      <div class="block-label">${label}</div>
+    <div class="card-section card-section--hotel">
       <div class="link-list">${linksHtml}</div>
     </div>
   `;
