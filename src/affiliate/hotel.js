@@ -1,12 +1,20 @@
-export function buildHotelLinks(city, date, stayType, people) {
+/**
+ * 宿泊リンクを組み立てる。
+ *
+ * searchName: city.hotelBase がある場合は呼び出し元でハブ名に解決して渡す。
+ *             未指定の場合は city.name を使用。
+ */
+export function buildHotelLinks(city, stayType, searchName) {
   if (stayType !== '1night') {
     return { destination: [], hub: [] };
   }
 
+  const name = searchName || city.name;
+
   return {
     destination: [
-      buildRakutenLink(city.name),
-      buildJalanLink(city.name),
+      buildRakutenLink(name),
+      buildJalanLink(name),
     ],
     hub: [],
   };

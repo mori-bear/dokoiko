@@ -2,13 +2,13 @@
   {
     "id": "yokohama",
     "name": "横浜",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "横浜",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -36,13 +36,13 @@
   {
     "id": "kamakura",
     "name": "鎌倉",
-    "region": "関東",
     "type": "local",
+    "region": "関東",
     "mapDestination": "鎌倉",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -70,13 +70,13 @@
   {
     "id": "atami",
     "name": "熱海",
-    "region": "中部",
     "type": "local",
+    "region": "中部",
     "mapDestination": "熱海",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -103,13 +103,13 @@
   {
     "id": "nikko",
     "name": "日光",
-    "region": "関東",
     "type": "local",
+    "region": "関東",
     "mapDestination": "日光",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -137,13 +137,13 @@
   {
     "id": "karuizawa",
     "name": "軽井沢",
-    "region": "中部",
     "type": "local",
+    "region": "中部",
     "mapDestination": "軽井沢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -170,13 +170,13 @@
   {
     "id": "fujikawaguchiko",
     "name": "富士河口湖",
-    "region": "中部",
     "type": "local",
+    "region": "中部",
     "mapDestination": "富士河口湖",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -203,13 +203,13 @@
   {
     "id": "nagoya-t",
     "name": "名古屋",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "名古屋",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -236,13 +236,13 @@
   {
     "id": "sendai-t",
     "name": "仙台",
-    "region": "東北",
     "type": "hub",
+    "region": "東北",
     "mapDestination": "仙台",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -269,13 +269,13 @@
   {
     "id": "kanazawa-t",
     "name": "金沢",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "金沢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -302,13 +302,13 @@
   {
     "id": "osaka-t",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -335,13 +335,13 @@
   {
     "id": "kyoto-t",
     "name": "京都",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "京都",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -368,13 +368,13 @@
   {
     "id": "hiroshima-t",
     "name": "広島",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "広島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -401,13 +401,13 @@
   {
     "id": "fukuoka-t",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -434,13 +434,13 @@
   {
     "id": "sapporo-t",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -467,13 +467,13 @@
   {
     "id": "okinawa-t",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -500,13 +500,13 @@
   {
     "id": "nara",
     "name": "奈良",
-    "region": "近畿",
     "type": "local",
+    "region": "近畿",
     "mapDestination": "奈良",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -535,13 +535,13 @@
   {
     "id": "kobe",
     "name": "神戸",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "神戸",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -569,13 +569,13 @@
   {
     "id": "kyoto-o",
     "name": "京都",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "京都",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -603,13 +603,13 @@
   {
     "id": "himeji",
     "name": "姫路",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "姫路",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -637,13 +637,13 @@
   {
     "id": "wakayama",
     "name": "和歌山",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "和歌山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -672,13 +672,13 @@
   {
     "id": "okayama-o",
     "name": "岡山",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "岡山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -706,13 +706,13 @@
   {
     "id": "nagoya-o",
     "name": "名古屋",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "名古屋",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -739,13 +739,13 @@
   {
     "id": "kanazawa-o",
     "name": "金沢",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "金沢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -772,13 +772,13 @@
   {
     "id": "hiroshima-o",
     "name": "広島",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "広島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -805,13 +805,13 @@
   {
     "id": "tokyo-o",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -838,13 +838,13 @@
   {
     "id": "fukuoka-o",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -871,13 +871,13 @@
   {
     "id": "sapporo-o",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -904,13 +904,13 @@
   {
     "id": "okinawa-o",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -937,13 +937,13 @@
   {
     "id": "ishigaki",
     "name": "石垣島",
-    "region": "沖縄",
     "type": "island",
+    "region": "沖縄",
     "mapDestination": "石垣島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -973,13 +973,13 @@
   {
     "id": "gifu",
     "name": "岐阜",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "岐阜",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1007,13 +1007,13 @@
   {
     "id": "kyoto-n",
     "name": "京都",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "京都",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1041,13 +1041,13 @@
   {
     "id": "ise",
     "name": "伊勢",
-    "region": "中部",
     "type": "local",
+    "region": "中部",
     "mapDestination": "伊勢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1075,13 +1075,13 @@
   {
     "id": "osaka-n",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1108,13 +1108,13 @@
   {
     "id": "kanazawa-n",
     "name": "金沢",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "金沢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1141,13 +1141,13 @@
   {
     "id": "tokyo-n",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1174,13 +1174,13 @@
   {
     "id": "hiroshima-n",
     "name": "広島",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "広島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1207,13 +1207,13 @@
   {
     "id": "sendai-n",
     "name": "仙台",
-    "region": "東北",
     "type": "hub",
+    "region": "東北",
     "mapDestination": "仙台",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1240,13 +1240,13 @@
   {
     "id": "fukuoka-n",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1273,13 +1273,13 @@
   {
     "id": "sapporo-n",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1306,13 +1306,13 @@
   {
     "id": "okinawa-n",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1339,13 +1339,13 @@
   {
     "id": "saga",
     "name": "佐賀",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "佐賀",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1373,13 +1373,13 @@
   {
     "id": "kumamoto",
     "name": "熊本",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "熊本",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1407,13 +1407,13 @@
   {
     "id": "nagasaki",
     "name": "長崎",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "長崎",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1440,13 +1440,13 @@
   {
     "id": "beppu",
     "name": "別府",
-    "region": "九州",
     "type": "local",
+    "region": "九州",
     "mapDestination": "別府",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1473,13 +1473,13 @@
   {
     "id": "kagoshima",
     "name": "鹿児島",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "鹿児島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1506,13 +1506,13 @@
   {
     "id": "miyazaki",
     "name": "宮崎",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "宮崎",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1539,13 +1539,13 @@
   {
     "id": "hiroshima-f",
     "name": "広島",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "広島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1572,13 +1572,13 @@
   {
     "id": "osaka-f",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1605,13 +1605,13 @@
   {
     "id": "tokyo-f",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1638,13 +1638,13 @@
   {
     "id": "okinawa-f",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1671,13 +1671,13 @@
   {
     "id": "sapporo-f",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1704,13 +1704,13 @@
   {
     "id": "otaru",
     "name": "小樽",
-    "region": "北海道",
     "type": "local",
+    "region": "北海道",
     "mapDestination": "小樽",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -1738,13 +1738,13 @@
   {
     "id": "asahikawa",
     "name": "旭川",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "旭川",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1771,13 +1771,13 @@
   {
     "id": "furano",
     "name": "富良野",
-    "region": "北海道",
     "type": "local",
+    "region": "北海道",
     "mapDestination": "富良野",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1804,13 +1804,13 @@
   {
     "id": "kushiro",
     "name": "釧路",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "釧路",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1837,13 +1837,13 @@
   {
     "id": "hakodate",
     "name": "函館",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "函館",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1870,13 +1870,13 @@
   {
     "id": "tokyo-s",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1903,13 +1903,13 @@
   {
     "id": "osaka-s",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1936,13 +1936,13 @@
   {
     "id": "fukuoka-s",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -1969,13 +1969,13 @@
   {
     "id": "okinawa-s",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2002,13 +2002,13 @@
   {
     "id": "matsushima",
     "name": "松島",
-    "region": "東北",
     "type": "local",
+    "region": "東北",
     "mapDestination": "松島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2036,13 +2036,13 @@
   {
     "id": "yamagata",
     "name": "山形",
-    "region": "東北",
     "type": "hub",
+    "region": "東北",
     "mapDestination": "山形",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2070,13 +2070,13 @@
   {
     "id": "morioka",
     "name": "盛岡",
-    "region": "東北",
     "type": "hub",
+    "region": "東北",
     "mapDestination": "盛岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2103,13 +2103,13 @@
   {
     "id": "tokyo-se",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2136,13 +2136,13 @@
   {
     "id": "niigata",
     "name": "新潟",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "新潟",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2169,13 +2169,13 @@
   {
     "id": "kanazawa-se",
     "name": "金沢",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "金沢",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2202,13 +2202,13 @@
   {
     "id": "osaka-se",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2235,13 +2235,13 @@
   {
     "id": "fukuoka-se",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2268,14 +2268,13 @@
   {
     "id": "miyajima",
     "name": "宮島",
-    "region": "中国",
     "type": "island",
+    "region": "中国",
     "mapDestination": "宮島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
-      "daytrip",
+    "distanceStars": 1,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2302,13 +2301,13 @@
   {
     "id": "onomichi",
     "name": "尾道",
-    "region": "中国",
     "type": "local",
+    "region": "中国",
     "mapDestination": "尾道",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2336,13 +2335,13 @@
   {
     "id": "okayama-h",
     "name": "岡山",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "岡山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2370,13 +2369,13 @@
   {
     "id": "matsuyama",
     "name": "松山",
-    "region": "四国",
     "type": "hub",
+    "region": "四国",
     "mapDestination": "松山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2403,13 +2402,13 @@
   {
     "id": "osaka-h",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2436,13 +2435,13 @@
   {
     "id": "fukuoka-h",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2469,13 +2468,13 @@
   {
     "id": "kyoto-h",
     "name": "京都",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "京都",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2502,13 +2501,13 @@
   {
     "id": "nagoya-h",
     "name": "名古屋",
-    "region": "中部",
     "type": "hub",
+    "region": "中部",
     "mapDestination": "名古屋",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2535,13 +2534,13 @@
   {
     "id": "tokyo-h",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2568,13 +2567,13 @@
   {
     "id": "okinawa-h",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2601,13 +2600,13 @@
   {
     "id": "sapporo-h",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2634,13 +2633,13 @@
   {
     "id": "tokushima",
     "name": "徳島",
-    "region": "四国",
     "type": "hub",
+    "region": "四国",
     "mapDestination": "徳島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2668,13 +2667,13 @@
   {
     "id": "okayama-k",
     "name": "岡山",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "岡山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "daytrip",
       "1night"
     ],
@@ -2702,13 +2701,13 @@
   {
     "id": "shodoshima",
     "name": "小豆島",
-    "region": "四国",
     "type": "island",
+    "region": "四国",
     "mapDestination": "小豆島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 1,
-    "stayTypeAllowed": [
+    "distanceStars": 1,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2735,13 +2734,13 @@
   {
     "id": "kochi",
     "name": "高知",
-    "region": "四国",
     "type": "hub",
+    "region": "四国",
     "mapDestination": "高知",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2768,13 +2767,13 @@
   {
     "id": "matsuyama-k",
     "name": "松山",
-    "region": "四国",
     "type": "hub",
+    "region": "四国",
     "mapDestination": "松山",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2801,13 +2800,13 @@
   {
     "id": "osaka-k",
     "name": "大阪",
-    "region": "近畿",
     "type": "hub",
+    "region": "近畿",
     "mapDestination": "大阪",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2834,13 +2833,13 @@
   {
     "id": "hiroshima-k",
     "name": "広島",
-    "region": "中国",
     "type": "hub",
+    "region": "中国",
     "mapDestination": "広島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2867,13 +2866,13 @@
   {
     "id": "fukuoka-k",
     "name": "福岡",
-    "region": "九州",
     "type": "hub",
+    "region": "九州",
     "mapDestination": "福岡",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2900,13 +2899,13 @@
   {
     "id": "tokyo-k",
     "name": "東京",
-    "region": "関東",
     "type": "hub",
+    "region": "関東",
     "mapDestination": "東京",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2933,13 +2932,13 @@
   {
     "id": "okinawa-k",
     "name": "沖縄",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "沖縄",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2966,13 +2965,13 @@
   {
     "id": "sapporo-k",
     "name": "札幌",
-    "region": "北海道",
     "type": "hub",
+    "region": "北海道",
     "mapDestination": "札幌",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -2999,13 +2998,13 @@
   {
     "id": "mihonoseki",
     "name": "美保関",
-    "region": "中国",
     "type": "local",
+    "region": "中国",
     "mapDestination": "美保関",
     "parentHub": null,
     "hotelBase": null,
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3029,13 +3028,13 @@
   {
     "id": "ryujin-onsen",
     "name": "龍神温泉",
-    "region": "近畿",
     "type": "local",
+    "region": "近畿",
     "mapDestination": "龍神温泉",
     "parentHub": "和歌山",
     "hotelBase": "wakayama",
-    "star": 3,
-    "stayTypeAllowed": [
+    "distanceStars": 3,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3058,13 +3057,13 @@
   {
     "id": "naha",
     "name": "那覇",
-    "region": "沖縄",
     "type": "hub",
+    "region": "沖縄",
     "mapDestination": "那覇",
     "parentHub": null,
     "hotelBase": null,
-    "star": 4,
-    "stayTypeAllowed": [
+    "distanceStars": 4,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3098,13 +3097,13 @@
   {
     "id": "tokashiki-jima",
     "name": "渡嘉敷島",
-    "region": "沖縄",
     "type": "island",
+    "region": "沖縄",
     "mapDestination": "渡嘉敷島",
     "parentHub": "那覇",
     "hotelBase": "naha",
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3129,13 +3128,13 @@
   {
     "id": "kumejima",
     "name": "久米島",
-    "region": "沖縄",
     "type": "island",
+    "region": "沖縄",
     "mapDestination": "久米島",
     "parentHub": "那覇",
     "hotelBase": "naha",
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3164,13 +3163,13 @@
   {
     "id": "miyakojima",
     "name": "宮古島",
-    "region": "沖縄",
     "type": "island",
+    "region": "沖縄",
     "mapDestination": "宮古島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 5,
-    "stayTypeAllowed": [
+    "distanceStars": 5,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
@@ -3200,13 +3199,13 @@
   {
     "id": "kouzushima",
     "name": "神津島",
-    "region": "伊豆諸島",
     "type": "island",
+    "region": "伊豆諸島",
     "mapDestination": "神津島",
     "parentHub": null,
     "hotelBase": null,
-    "star": 2,
-    "stayTypeAllowed": [
+    "distanceStars": 2,
+    "stayAllowed": [
       "1night"
     ],
     "departures": [
