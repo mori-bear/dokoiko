@@ -13,7 +13,7 @@
 import { applyAffiliateLinks } from '../affiliate/affiliate.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
-  const showHotel = hotelLinks.destination.length > 0;
+  const showHotel = hotelLinks.show;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `

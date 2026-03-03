@@ -1,8 +1,10 @@
 // ===== AFFILIATE CONFIG =====
-const JALAN_SID      = "3764408";
+const JALAN_SID       = "3764408";
 const JALAN_HOTEL_PID = "892559852";
 const JALAN_RENT_PID  = "892559858";
-const RAKUTEN_AFF_ID  = "511c83ed.aa0fc172.511c83ee.51331b19";
+
+const RAKUTEN_AFF_ID = "5113ee4b.8662cfc5.5113ee4c.119de89a";
+const RAKUTEN_BASE   = "https://travel.rakuten.co.jp";
 
 // ===== LINKS =====
 
@@ -11,8 +13,14 @@ export function getJalanHotelUrl(cityName) {
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_SID}&pid=${JALAN_HOTEL_PID}&vc_url=${encodeURIComponent(target)}`;
 }
 
-export function getRakutenHotelUrl(cityName) {
-  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(cityName)}&rafcid=${RAKUTEN_AFF_ID}`;
+/**
+ * 楽天トラベル — hb.afl 方式（/yado/ 固定URL）
+ * city.rakutenPath が null の都市はボタンを非表示にする。
+ */
+function buildRakutenUrl(city) {
+  if (!city.rakutenPath) return null;
+  const targetUrl = RAKUTEN_BASE + city.rakutenPath;
+  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFF_ID}/?pc=${encodeURIComponent(targetUrl)}&link_type=text`;
 }
 
 export function getJalanRentUrl() {
@@ -22,9 +30,23 @@ export function getJalanRentUrl() {
 
 /** renderResult からDOM構築直後に呼び出す */
 export function applyAffiliateLinks(city) {
-  document.getElementById("jalanHotelBtn").href   = getJalanHotelUrl(city.name);
-  document.getElementById("rakutenHotelBtn").href = getRakutenHotelUrl(city.name);
-  // レンタカーボタンは needsCar=true のときのみ存在する
+  // じゃらん（宿）
+  const jalanBtn = document.getElementById("jalanHotelBtn");
+  if (jalanBtn) jalanBtn.href = getJalanHotelUrl(city.name);
+
+  // 楽天トラベル（/yado/ 固定URL — rakutenPath がなければ非表示）
+  const rakutenBtn = document.getElementById("rakutenHotelBtn");
+  if (rakutenBtn) {
+    const url = buildRakutenUrl(city);
+    if (url) {
+      rakutenBtn.href   = url;
+      rakutenBtn.hidden = false;
+    } else {
+      rakutenBtn.hidden = true;
+    }
+  }
+
+  // レンタカー（needsCar=true のときのみ存在する）
   const rentBtn = document.getElementById("jalanRentBtn");
   if (rentBtn) rentBtn.href = getJalanRentUrl();
 }

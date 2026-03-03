@@ -71,7 +71,7 @@ function draw() {
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
-  const hotelLinks     = buildHotelLinks(city, state.stayType, state.destinations);
+  const hotelLinks     = buildHotelLinks(city, state.stayType);
 
   renderResult({
     city,

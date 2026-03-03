@@ -66,5 +66,3 @@ export const DEPARTURE_CITY_INFO = {
   '長崎':   { rail: '長崎駅',       airport: '長崎空港',                       iata: 'NGS', jrArea: 'kyushu', nearestHub: '福岡' },
   '宮崎':   { rail: '宮崎駅',       airport: '宮崎ブーゲンビリア空港',         iata: 'KMI', jrArea: 'kyushu', nearestHub: '福岡' },
 };
-
-export const RAKUTEN_AFF_ID = '511c83ed.aa0fc172.511c83ee.51331b19';

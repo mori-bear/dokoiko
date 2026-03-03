@@ -38,7 +38,8 @@
       "山下公園",
       "中華街"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kanagawa/yokohama.html"
   },
   {
     "id": "kamakura",
@@ -79,7 +80,8 @@
       "鶴岡八幡宮",
       "長谷寺"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kanagawa/kamakura.html"
   },
   {
     "id": "atami",
@@ -119,7 +121,8 @@
       "起雲閣",
       "MOA美術館"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/atami.html"
   },
   {
     "id": "nikko",
@@ -160,7 +163,8 @@
       "中禅寺湖",
       "竜頭の滝"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/tochigi/nikko.html"
   },
   {
     "id": "karuizawa",
@@ -200,7 +204,8 @@
       "雲場池",
       "白糸の滝"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/nagano/karuizawa.html"
   },
   {
     "id": "fujikawaguchiko",
@@ -240,7 +245,8 @@
       "富士山五合目",
       "富岳風穴"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html"
   },
   {
     "id": "nagoya-t",
@@ -280,7 +286,8 @@
       "熱田神宮",
       "大須商店街"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/aichi/nagoya.html"
   },
   {
     "id": "sendai-t",
@@ -320,7 +327,8 @@
       "瑞鳳殿",
       "仙台城跡"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/miyagi/sendai.html"
   },
   {
     "id": "kanazawa-t",
@@ -360,7 +368,8 @@
       "東茶屋街",
       "近江町市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kanazawa.html"
   },
   {
     "id": "osaka-t",
@@ -400,7 +409,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "kyoto-t",
@@ -440,7 +450,8 @@
       "伏見稲荷大社",
       "嵐山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/kyoto.html"
   },
   {
     "id": "hiroshima-t",
@@ -480,7 +491,8 @@
       "原爆ドーム",
       "縮景園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
   },
   {
     "id": "fukuoka-t",
@@ -520,7 +532,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "sapporo-t",
@@ -560,7 +573,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "nara",
@@ -602,7 +616,8 @@
       "春日大社",
       "奈良公園（鹿）"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/nara/nara.html"
   },
   {
     "id": "kobe",
@@ -643,7 +658,8 @@
       "ハーバーランド",
       "六甲山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/kobe.html"
   },
   {
     "id": "kyoto-o",
@@ -684,7 +700,8 @@
       "伏見稲荷大社",
       "嵐山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/kyoto.html"
   },
   {
     "id": "himeji",
@@ -725,7 +742,8 @@
       "好古園",
       "書写山円教寺"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/himeji.html"
   },
   {
     "id": "wakayama",
@@ -767,7 +785,8 @@
       "那智大滝",
       "白浜海岸"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/wakayama/wakayama.html"
   },
   {
     "id": "okayama-o",
@@ -808,7 +827,8 @@
       "倉敷美観地区",
       "岡山城"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/okayama.html"
   },
   {
     "id": "nagoya-o",
@@ -848,7 +868,8 @@
       "熱田神宮",
       "大須商店街"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/aichi/nagoya.html"
   },
   {
     "id": "kanazawa-o",
@@ -888,7 +909,8 @@
       "東茶屋街",
       "近江町市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kanazawa.html"
   },
   {
     "id": "hiroshima-o",
@@ -928,7 +950,8 @@
       "原爆ドーム",
       "縮景園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
   },
   {
     "id": "tokyo-o",
@@ -968,7 +991,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "fukuoka-o",
@@ -1008,7 +1032,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "sapporo-o",
@@ -1048,7 +1073,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "ishigaki",
@@ -1091,7 +1117,8 @@
       "竹富島",
       "白保サンゴ礁"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/ishigakijima.html"
   },
   {
     "id": "gifu",
@@ -1132,7 +1159,8 @@
       "長良川",
       "白川郷"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/gifu.html"
   },
   {
     "id": "kyoto-n",
@@ -1173,7 +1201,8 @@
       "伏見稲荷大社",
       "嵐山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/kyoto.html"
   },
   {
     "id": "ise",
@@ -1214,7 +1243,8 @@
       "おかげ横丁",
       "二見浦"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/mie/ise.html"
   },
   {
     "id": "osaka-n",
@@ -1254,7 +1284,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "kanazawa-n",
@@ -1294,7 +1325,8 @@
       "東茶屋街",
       "近江町市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kanazawa.html"
   },
   {
     "id": "tokyo-n",
@@ -1334,7 +1366,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "hiroshima-n",
@@ -1374,7 +1407,8 @@
       "原爆ドーム",
       "縮景園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
   },
   {
     "id": "sendai-n",
@@ -1414,7 +1448,8 @@
       "瑞鳳殿",
       "仙台城跡"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/miyagi/sendai.html"
   },
   {
     "id": "fukuoka-n",
@@ -1454,7 +1489,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "sapporo-n",
@@ -1494,7 +1530,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "saga",
@@ -1535,7 +1572,8 @@
       "吉野ヶ里遺跡",
       "嬉野温泉"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/saga/saga.html"
   },
   {
     "id": "kumamoto",
@@ -1576,7 +1614,8 @@
       "阿蘇草千里",
       "水前寺成趣園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kumamoto/kumamoto.html"
   },
   {
     "id": "nagasaki",
@@ -1616,7 +1655,8 @@
       "グラバー園",
       "出島"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/nagasaki/nagasaki.html"
   },
   {
     "id": "beppu",
@@ -1656,7 +1696,8 @@
       "鉄輪温泉",
       "湯布院"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/oita/beppu.html"
   },
   {
     "id": "kagoshima",
@@ -1696,7 +1737,8 @@
       "仙巌園",
       "霧島温泉"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kagoshima/kagoshima.html"
   },
   {
     "id": "miyazaki",
@@ -1736,7 +1778,8 @@
       "日向岬（馬ヶ背）",
       "高千穂峡"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/miyazaki/miyazaki.html"
   },
   {
     "id": "hiroshima-f",
@@ -1776,7 +1819,8 @@
       "原爆ドーム",
       "縮景園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
   },
   {
     "id": "osaka-f",
@@ -1816,7 +1860,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "tokyo-f",
@@ -1856,7 +1901,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "sapporo-f",
@@ -1896,7 +1942,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "otaru",
@@ -1937,7 +1984,8 @@
       "堺町通り",
       "天狗山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/otaru.html"
   },
   {
     "id": "asahikawa",
@@ -1977,7 +2025,8 @@
       "美瑛（青い池）",
       "富良野ラベンダー畑"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/asahikawa.html"
   },
   {
     "id": "furano",
@@ -2017,7 +2066,8 @@
       "美瑛の丘",
       "富良野スキー場"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/hokkaido/furano.html"
   },
   {
     "id": "kushiro",
@@ -2057,7 +2107,8 @@
       "和商市場",
       "丹頂の里"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/kushiro.html"
   },
   {
     "id": "hakodate",
@@ -2097,7 +2148,8 @@
       "元町洋館街",
       "函館朝市"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/hakodate.html"
   },
   {
     "id": "tokyo-s",
@@ -2137,7 +2189,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "osaka-s",
@@ -2177,7 +2230,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "fukuoka-s",
@@ -2217,7 +2271,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "matsushima",
@@ -2258,7 +2313,8 @@
       "瑞巌寺",
       "五大堂"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/miyagi/matsushima.html"
   },
   {
     "id": "yamagata",
@@ -2299,7 +2355,8 @@
       "蔵王温泉",
       "上杉神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/yamagata/yamagata.html"
   },
   {
     "id": "morioka",
@@ -2339,7 +2396,8 @@
       "盛岡八幡宮",
       "石割桜"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/iwate/morioka.html"
   },
   {
     "id": "tokyo-se",
@@ -2379,7 +2437,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "niigata",
@@ -2419,7 +2478,8 @@
       "古町",
       "佐渡島（日帰り）"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/niigata/niigata.html"
   },
   {
     "id": "kanazawa-se",
@@ -2459,7 +2519,8 @@
       "東茶屋街",
       "近江町市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kanazawa.html"
   },
   {
     "id": "osaka-se",
@@ -2499,7 +2560,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "fukuoka-se",
@@ -2539,7 +2601,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "miyajima",
@@ -2579,7 +2642,8 @@
       "大鳥居",
       "弥山"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/hiroshima/miyajima.html"
   },
   {
     "id": "onomichi",
@@ -2620,7 +2684,8 @@
       "猫の細道",
       "しまなみ海道"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/onomichi.html"
   },
   {
     "id": "okayama-h",
@@ -2661,7 +2726,8 @@
       "倉敷美観地区",
       "岡山城"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/okayama.html"
   },
   {
     "id": "matsuyama",
@@ -2701,7 +2767,8 @@
       "松山城",
       "坂の上の雲ミュージアム"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ehime/matsuyama.html"
   },
   {
     "id": "osaka-h",
@@ -2741,7 +2808,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "fukuoka-h",
@@ -2781,7 +2849,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "kyoto-h",
@@ -2821,7 +2890,8 @@
       "伏見稲荷大社",
       "嵐山"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/kyoto.html"
   },
   {
     "id": "nagoya-h",
@@ -2861,7 +2931,8 @@
       "熱田神宮",
       "大須商店街"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/aichi/nagoya.html"
   },
   {
     "id": "tokyo-h",
@@ -2901,7 +2972,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "sapporo-h",
@@ -2941,7 +3013,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "tokushima",
@@ -2982,7 +3055,8 @@
       "大塚国際美術館",
       "阿波踊り会館"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokushima/tokushima.html"
   },
   {
     "id": "okayama-k",
@@ -3023,7 +3097,8 @@
       "倉敷美観地区",
       "岡山城"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/okayama.html"
   },
   {
     "id": "shodoshima",
@@ -3063,7 +3138,8 @@
       "エンジェルロード",
       "オリーブ公園"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/kagawa/shodoshima.html"
   },
   {
     "id": "kochi",
@@ -3103,7 +3179,8 @@
       "桂浜",
       "ひろめ市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/kochi/kochi.html"
   },
   {
     "id": "matsuyama-k",
@@ -3143,7 +3220,8 @@
       "松山城",
       "坂の上の雲ミュージアム"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/ehime/matsuyama.html"
   },
   {
     "id": "osaka-k",
@@ -3183,7 +3261,8 @@
       "大阪城",
       "通天閣"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html"
   },
   {
     "id": "hiroshima-k",
@@ -3223,7 +3302,8 @@
       "原爆ドーム",
       "縮景園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
   },
   {
     "id": "fukuoka-k",
@@ -3263,7 +3343,8 @@
       "太宰府天満宮",
       "櫛田神社"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
   },
   {
     "id": "tokyo-k",
@@ -3303,7 +3384,8 @@
       "新宿御苑",
       "渋谷スクランブル交差点"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html"
   },
   {
     "id": "sapporo-k",
@@ -3343,7 +3425,8 @@
       "北海道庁旧本庁舎",
       "円山動物園"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
   },
   {
     "id": "mihonoseki",
@@ -3380,7 +3463,8 @@
       "地蔵崎灯台",
       "境港"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": null
   },
   {
     "id": "ryujin-onsen",
@@ -3416,7 +3500,8 @@
       "護摩壇山",
       "高野龍神スカイライン"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/wakayama/ryujin.html"
   },
   {
     "id": "naha",
@@ -3463,7 +3548,8 @@
       "国際通り",
       "牧志公設市場"
     ],
-    "needsCar": false
+    "needsCar": false,
+    "rakutenPath": "/yado/okinawa/naha.html"
   },
   {
     "id": "tokashiki-jima",
@@ -3501,7 +3587,8 @@
       "渡嘉敷ビーチ",
       "展望台"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/tokashikijima.html"
   },
   {
     "id": "kumejima",
@@ -3543,7 +3630,8 @@
       "畳石",
       "久米島ウミガメ館"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/kumejima.html"
   },
   {
     "id": "miyakojima",
@@ -3586,7 +3674,8 @@
       "伊良部大橋",
       "砂山ビーチ"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/miyakojima.html"
   },
   {
     "id": "kouzushima",
@@ -3626,6 +3715,7 @@
       "天上山",
       "多幸湾"
     ],
-    "needsCar": true
+    "needsCar": true,
+    "rakutenPath": "/yado/tokyo/kouzushima.html"
   }
 ]
