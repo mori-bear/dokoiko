@@ -12,8 +12,7 @@ export function getJalanHotelUrl(cityName) {
 }
 
 export function getRakutenHotelUrl(cityName) {
-  // Search.do?f_keyword= が正式な楽天トラベルの検索URL形式
-  return `https://travel.rakuten.co.jp/Search.do?f_keyword=${encodeURIComponent(cityName)}&rafcid=${RAKUTEN_AFF_ID}`;
+  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(cityName)}&rafcid=${RAKUTEN_AFF_ID}`;
 }
 
 export function getJalanRentUrl() {
