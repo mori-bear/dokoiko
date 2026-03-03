@@ -55,7 +55,7 @@ export function bindHandlers(state, onGo, onRetry) {
 
       if (group === 'people') {
         setActive('[data-group="people"]', selBtn);
-        state.people = value;
+        state.people = parseInt(value, 10);
         return;
       }
     }

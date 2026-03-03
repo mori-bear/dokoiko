@@ -5,13 +5,15 @@ import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DISTANCE_LABELS } from './src/config/constants.js';
 
+const DEFAULT_GUESTS = 1;
+
 const state = {
   destinations: [],
   departure:    '東京',
   distance:     null,
   stayType:     null,
   datetime:     buildDefaultDatetime(),
-  people:       '1',
+  people:       DEFAULT_GUESTS,
   pool:         [],
   poolIndex:    0,
 };
