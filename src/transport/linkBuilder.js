@@ -32,7 +32,13 @@ function mapsUrl(origin, destination, mode, unix) {
   );
 }
 
-/* ── Skyscanner 空港名→IATAマップ ── */
+/* ── Skyscanner 空港名→IATAマップ ──
+ *
+ * destinations.json の airportGateway 値と完全一致させること。
+ * 未登録の空港名が来た場合は buildSkyscannerLink() が null を返し、
+ * transportRenderer.js のフィルタで除外される（エラーにはならない）。
+ * 新都市追加時はここにエントリーを追加すること。
+ */
 
 const AIRPORT_IATA = {
   '新千歳空港':   'CTS',

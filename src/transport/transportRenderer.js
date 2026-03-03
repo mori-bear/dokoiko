@@ -34,7 +34,7 @@ export function resolveTransportLinks(city, departure, datetime) {
   const hasAirRaw = !!access.airportGateway;
   const hasFerry  = !!access.ferryGateway && !hasRail && !hasAirRaw;
 
-  // Skyscanner: 就航確認（IATA変換できない場合は null）
+  // Skyscanner: AIRPORT_IATAに未登録の空港名はnullになり表示されない（エラーなし）
   let skyscannerLink = null;
   if (hasAirRaw) {
     skyscannerLink = buildSkyscannerLink(fromCity.iata, access.airportGateway);
