@@ -21,6 +21,7 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, 
       ${buildTransportBlock(transportLinks)}
       ${hasDestHotel ? buildHotelBlock(hotelLinks.destination) : ''}
       ${hasHubHotel  ? buildHotelBlock(hotelLinks.hub) : ''}
+      ${hasDestHotel ? buildStayBlock() : ''}
     </div>
   `;
 }
@@ -141,6 +142,23 @@ function btnClass(type) {
   if (type === 'jalan' || type === 'jalan-rental') return 'btn-jalan';
   if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
   return 'btn-primary'; // bus, ferry, fallback
+}
+
+/* ── アフィリエイト宿泊ブロック（IDs は applyAffiliateLinks が書き換え） ── */
+
+function buildStayBlock() {
+  return `
+    <div class="stay-block">
+      <h3>この街に泊まる</h3>
+      <div class="stay-buttons">
+        <a id="jalanHotelBtn" target="_blank" rel="noopener noreferrer">じゃらん</a>
+        <a id="rakutenHotelBtn" target="_blank" rel="noopener noreferrer">楽天トラベル</a>
+      </div>
+      <div class="rent-block">
+        <a id="jalanRentBtn" target="_blank" rel="noopener noreferrer">レンタカーを見る</a>
+      </div>
+    </div>
+  `;
 }
 
 function buildLinkItem(link) {

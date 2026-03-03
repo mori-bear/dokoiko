@@ -794,3 +794,69 @@ body {
     padding: 7px 14px;
   }
 }
+
+/* ── アフィリエイト宿泊ブロック ── */
+
+.stay-block {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.stay-block h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+
+.stay-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.stay-buttons a {
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.stay-buttons a:first-child {
+  background: #ff6b3d;
+  color: white;
+}
+
+.stay-buttons a:last-child {
+  background: #c7001e;
+  color: white;
+}
+
+.stay-buttons a:hover { opacity: 0.88; }
+
+.rent-block {
+  margin-top: 12px;
+}
+
+.rent-block a {
+  display: block;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.rent-block a:hover { opacity: 0.85; }
