@@ -121,7 +121,7 @@ export function buildJrLink(bookingProvider) {
 export function buildRentalLink() {
   return {
     type: 'rental',
-    label: 'レンタカーを探す（じゃらん）',
+    label: 'レンタカーを探す',
     url: 'https://www.jalan.net/rentacar/',
   };
 }

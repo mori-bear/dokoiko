@@ -43,7 +43,7 @@ export function resolveTransportLinks(city, departure, datetime) {
 
   // 1. JR予約（鉄道あり）
   if (hasRail) {
-    const provider = resolveRailProvider(departure);
+    const provider = resolveRailProvider(departure, city);
     const jrLink = buildJrLink(provider);
     if (jrLink) links.push(jrLink);
   }
@@ -66,12 +66,30 @@ export function resolveTransportLinks(city, departure, datetime) {
 }
 
 /**
- * 出発地のjrAreaでJR予約プロバイダを決定する。
- *   east（東北・北海道新幹線エリア）  → えきねっと
- *   kyushu（九州内特急のみ）          → JR九州ネット予約
- *   west（JR西日本・四国・山陰在来線）→ e5489
+ * 出発地×到着地でJR予約プロバイダを決定する。
+ *
+ * EX（スマートEX）:
+ *   東京・横浜・大宮 発 → 東海道/山陽新幹線圏の主要都市 着 の場合のみ
+ *   JR西日本エリア発は e5489 固定（EX適用なし）
+ *
+ *   east → ekinet（EX対象外の東北/北海道方面）
+ *   west → e5489 固定
+ *   kyushu → JR九州ネット予約
  */
-function resolveRailProvider(departure) {
+
+// EXを使う出発地（東海道側 JR East 主要駅のみ）
+const EX_DEPARTURE = new Set(['東京', '横浜', '大宮']);
+
+// EX対象の到着都市名（東海道/山陽/九州新幹線）
+const EX_DEST = new Set([
+  '名古屋', '京都', '大阪', '神戸', '姫路',
+  '広島', '岡山', '博多', '熊本', '鹿児島', '長崎',
+]);
+
+function resolveRailProvider(departure, city) {
+  if (EX_DEPARTURE.has(departure) && EX_DEST.has(city.name)) {
+    return 'ex';
+  }
   const area = DEPARTURE_CITY_INFO[departure]?.jrArea || 'west';
   if (area === 'east')   return 'ekinet';
   if (area === 'kyushu') return 'jrkyushu';
