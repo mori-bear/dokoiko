@@ -10,63 +10,77 @@ const JALAN_BASE     = "https://www.jalan.net";
 // ===== じゃらん URL =====
 
 /**
- * じゃらん宿泊 URL
- *   jalanPath あり → /kenCd/LRG_lrgCd/ エリアページ（VC経由）
- *   jalanPath なし → /search/?keyword= フォールバック（VC経由）
+ * じゃらん宿泊 URL — 例外上書き方式
+ *
+ *   優先順:
+ *   1. city.jalanUrl が存在すれば完成リンクをそのまま使用（encode なし）
+ *   2. city.jalanPath あり → /kenCd/LRG_lrgCd/ エリアページ（VC 自動生成）
+ *   3. フォールバック → /search/?keyword= キーワード検索（VC 自動生成）
  */
-function buildJalanHotelTarget(city) {
-  if (city.jalanPath) {
-    return JALAN_BASE + city.jalanPath;
-  }
-  return JALAN_BASE + '/search/?keyword=' + encodeURIComponent(city.name);
-}
-
 export function getJalanHotelUrl(city) {
-  const target = buildJalanHotelTarget(city);
+  // 例外 URL（明示指定・二重 encode なし）
+  if (city.jalanUrl) return city.jalanUrl;
+
+  // 自動生成（jalanPath または キーワード）
+  const target = city.jalanPath
+    ? JALAN_BASE + city.jalanPath
+    : JALAN_BASE + '/search/?keyword=' + encodeURIComponent(city.name);
+
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_SID}&pid=${JALAN_HOTEL_PID}&vc_url=${encodeURIComponent(target)}`;
 }
 
 /**
  * じゃらんレンタカー URL
- *   jalanPath あり → /rentacar/search/kenCd/LRG_lrgCd/ エリア指定（VC経由）
- *   jalanPath なし → /rentacar/ トップ（VC経由）
+ *   jalanPath あり → /rentacar/search/kenCd/LRG_lrgCd/ エリア指定（VC 経由）
+ *   jalanPath なし → /rentacar/ トップ（VC 経由）
  */
-function buildJalanRentTarget(city) {
-  if (city.jalanPath) {
-    return JALAN_BASE + '/rentacar/search' + city.jalanPath;
-  }
-  return JALAN_BASE + '/rentacar/';
-}
-
 export function getJalanRentUrl(city) {
-  const target = buildJalanRentTarget(city);
+  const target = city.jalanPath
+    ? JALAN_BASE + '/rentacar/search' + city.jalanPath
+    : JALAN_BASE + '/rentacar/';
+
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_SID}&pid=${JALAN_RENT_PID}&vc_url=${encodeURIComponent(target)}`;
 }
 
 // ===== 楽天トラベル URL =====
 
 /**
- * 楽天トラベル — hb.afl 方式（/yado/ 固定URL）
- * rakutenPath が null の都市はボタンを非表示にする。
+ * 楽天トラベル — 例外上書き方式
+ *
+ *   優先順:
+ *   1. city.rakutenUrl が存在すれば完成リンクをそのまま使用（encode なし）
+ *   2. city.rakutenPath あり → hb.afl /yado/ 固定 URL（自動生成）
+ *   3. rakutenPath なし → null（ボタン非表示）
  */
 function buildRakutenUrl(city) {
+  // 例外 URL（明示指定・二重 encode なし）
+  if (city.rakutenUrl) return city.rakutenUrl;
+
+  // 自動生成
   if (!city.rakutenPath) return null;
   const targetUrl = RAKUTEN_BASE + city.rakutenPath;
   return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFF_ID}/?pc=${encodeURIComponent(targetUrl)}&link_type=text`;
 }
 
-// ===== DOM適用 =====
+// ===== DOM 適用 =====
 
 /** renderResult からDOM構築直後に呼び出す */
 export function applyAffiliateLinks(city) {
   // じゃらん（宿）
   const jalanBtn = document.getElementById('jalanHotelBtn');
-  if (jalanBtn) jalanBtn.href = getJalanHotelUrl(city);
+  if (jalanBtn) {
+    const url = getJalanHotelUrl(city);
+    // eslint-disable-next-line no-console
+    console.log(`[affiliate] jalan(${city.name}):`, url);
+    jalanBtn.href = url;
+  }
 
-  // 楽天トラベル（/yado/ 固定URL — rakutenPath がなければ非表示）
+  // 楽天トラベル（rakutenPath / rakutenUrl がなければ非表示）
   const rakutenBtn = document.getElementById('rakutenHotelBtn');
   if (rakutenBtn) {
     const url = buildRakutenUrl(city);
+    // eslint-disable-next-line no-console
+    console.log(`[affiliate] rakuten(${city.name}):`, url ?? '(hidden)');
     if (url) {
       rakutenBtn.href   = url;
       rakutenBtn.hidden = false;
@@ -77,5 +91,10 @@ export function applyAffiliateLinks(city) {
 
   // レンタカー（needsCar=true のときのみ存在する）
   const rentBtn = document.getElementById('jalanRentBtn');
-  if (rentBtn) rentBtn.href = getJalanRentUrl(city);
+  if (rentBtn) {
+    const url = getJalanRentUrl(city);
+    // eslint-disable-next-line no-console
+    console.log(`[affiliate] rent(${city.name}):`, url);
+    rentBtn.href = url;
+  }
 }
