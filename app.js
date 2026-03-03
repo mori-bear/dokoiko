@@ -1,7 +1,6 @@
 import { buildPool } from './src/engine/selectionEngine.js';
 import { resolveTransportLinks } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/affiliate/hotel.js';
-import { applyAffiliateLinks } from './src/affiliate/affiliate.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DISTANCE_LABELS } from './src/config/constants.js';
@@ -82,8 +81,6 @@ function draw() {
     poolIndex:     state.poolIndex,
     poolTotal:     state.pool.length,
   });
-
-  if (state.stayType === '1night') applyAffiliateLinks(city);
 
   updateRetryBtn();
 

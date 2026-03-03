@@ -795,68 +795,71 @@ body {
   }
 }
 
-/* ── アフィリエイト宿泊ブロック ── */
+/* ── 宿泊ブロック（この街に泊まる） ── */
 
 .stay-block {
-  margin-top: 28px;
-  padding: 20px;
-  border-radius: 14px;
-  background: #f9f9f9;
-  border: 1px solid #eee;
+  margin-top: 24px;
+  padding: 16px 18px 18px;
+  border-radius: 12px;
+  background: #f7f7f7;
+  border: 1px solid #ebebeb;
 }
 
-.stay-block h3 {
-  margin: 0;
-  font-size: 13px;
+.stay-label {
+  margin: 0 0 10px;
+  font-size: 11px;
   font-weight: 600;
-  color: #666;
-  letter-spacing: 0.02em;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .stay-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 10px;
 }
 
 .stay-buttons a {
-  padding: 14px;
+  padding: 13px 8px;
   text-align: center;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 9px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.18s ease;
 }
 
 .stay-buttons a:first-child {
   background: #ff6b3d;
-  color: white;
+  color: #fff;
 }
 
 .stay-buttons a:last-child {
-  background: #c7001e;
-  color: white;
+  background: #bf0000;
+  color: #fff;
 }
 
-.stay-buttons a:hover { opacity: 0.88; }
+.stay-buttons a:hover { opacity: 0.86; }
 
-.rent-block {
-  margin-top: 12px;
+/* ── レンタカーブロック（needsCar=true のみ表示） ── */
+
+.car-block {
+  margin-top: 10px;
 }
 
-.rent-block a {
+.car-block a {
   display: block;
   padding: 12px;
-  background: #333;
-  color: white;
-  border-radius: 8px;
+  background: #fff;
+  color: #444;
+  border: 1px solid #ddd;
+  border-radius: 9px;
   text-align: center;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: background 0.18s ease;
 }
 
-.rent-block a:hover { opacity: 0.85; }
+.car-block a:hover { background: #f5f5f5; }

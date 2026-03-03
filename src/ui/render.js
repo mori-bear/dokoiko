@@ -1,17 +1,19 @@
 /**
  * DOM描画モジュール
  *
- * カード構造:
+ * カード表示順:
  *   result-card
  *     result-counter
  *     city-block
- *     card-section        （交通リンク、見出しなし）
- *     card-section--hotel （宿泊リンク、見出しなし）
+ *     card-section        （交通リンク）
+ *     stay-block          （この街に泊まる — 1night のみ）
+ *     car-block           （レンタカー — 1night かつ needsCar=true のみ）
  */
 
+import { applyAffiliateLinks } from '../affiliate/affiliate.js';
+
 export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
-  const hasDestHotel = hotelLinks.destination.length > 0;
-  const hasHubHotel  = hotelLinks.hub.length > 0;
+  const showHotel = hotelLinks.destination.length > 0;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
@@ -19,11 +21,12 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, 
       ${buildCounterBlock(poolIndex, poolTotal)}
       ${buildCityBlock(city, distanceLabel)}
       ${buildTransportBlock(transportLinks)}
-      ${hasDestHotel ? buildHotelBlock(hotelLinks.destination) : ''}
-      ${hasHubHotel  ? buildHotelBlock(hotelLinks.hub) : ''}
-      ${hasDestHotel ? buildStayBlock() : ''}
+      ${showHotel ? buildStayBlock() : ''}
+      ${showHotel && city.needsCar ? buildCarBlock() : ''}
     </div>
   `;
+
+  if (showHotel) applyAffiliateLinks(city);
 }
 
 export function clearResult() {
@@ -76,9 +79,8 @@ function buildAccessLine(city) {
   if (!access) return '';
 
   if (access.railGateway) {
-    const note = access.railNote ? `、${access.railNote}` : 'から市内へ';
     const text = access.railNote
-      ? `${access.railGateway}${note}`
+      ? `${access.railGateway}、${access.railNote}`
       : `${access.railGateway}から市内へ`;
     return `<p class="access-line">${text}</p>`;
   }
@@ -121,16 +123,31 @@ function buildTransportBlock(links) {
   `;
 }
 
-/* ── 宿泊ブロック ── */
+/* ── 宿泊ブロック（アフィリエイト） ── */
 
-function buildHotelBlock(links) {
-  const linksHtml = links.map((link) => buildLinkItem(link)).join('');
+function buildStayBlock() {
   return `
-    <div class="card-section card-section--hotel">
-      <div class="link-list">${linksHtml}</div>
+    <div class="stay-block">
+      <p class="stay-label">この街に泊まる</p>
+      <div class="stay-buttons">
+        <a id="jalanHotelBtn" target="_blank" rel="noopener noreferrer">じゃらん</a>
+        <a id="rakutenHotelBtn" target="_blank" rel="noopener noreferrer">楽天トラベル</a>
+      </div>
     </div>
   `;
 }
+
+/* ── レンタカーブロック（needsCar=true のみ） ── */
+
+function buildCarBlock() {
+  return `
+    <div class="car-block">
+      <a id="jalanRentBtn" target="_blank" rel="noopener noreferrer">レンタカーを探す</a>
+    </div>
+  `;
+}
+
+/* ── リンクアイテム ── */
 
 function btnClass(type) {
   if (type === 'jr-east')    return 'btn-jr-east';
@@ -138,27 +155,10 @@ function btnClass(type) {
   if (type === 'jr-kyushu')  return 'btn-jr-kyushu';
   if (type === 'jr-ex')      return 'btn-jr-ex';
   if (type === 'skyscanner') return 'btn-skyscanner';
-  if (type === 'rakuten')                        return 'btn-rakuten';
+  if (type === 'rakuten'  )                        return 'btn-rakuten';
   if (type === 'jalan' || type === 'jalan-rental') return 'btn-jalan';
   if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
-  return 'btn-primary'; // bus, ferry, fallback
-}
-
-/* ── アフィリエイト宿泊ブロック（IDs は applyAffiliateLinks が書き換え） ── */
-
-function buildStayBlock() {
-  return `
-    <div class="stay-block">
-      <h3>この街に泊まる</h3>
-      <div class="stay-buttons">
-        <a id="jalanHotelBtn" target="_blank" rel="noopener noreferrer">じゃらん</a>
-        <a id="rakutenHotelBtn" target="_blank" rel="noopener noreferrer">楽天トラベル</a>
-      </div>
-      <div class="rent-block">
-        <a id="jalanRentBtn" target="_blank" rel="noopener noreferrer">レンタカーを見る</a>
-      </div>
-    </div>
-  `;
+  return 'btn-primary';
 }
 
 function buildLinkItem(link) {
