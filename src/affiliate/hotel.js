@@ -31,11 +31,10 @@ export function buildHotelLinks(city, stayType, destinations) {
 export function buildRakutenLink(cityName) {
   const encoded = encodeURIComponent(cityName);
   // TODO: アフィリエイトID確定後に &af_id={ID} を末尾に追加する
-  const url = `https://travel.rakuten.co.jp/search/?f_keyword=${encoded}`;
   return {
     type: 'rakuten',
     label: `楽天トラベルで${cityName}の宿を見る`,
-    url,
+    url: `https://travel.rakuten.co.jp/Search.do?f_keyword=${encoded}`,
   };
 }
 
@@ -44,7 +43,6 @@ export function buildJalanLink(cityName) {
   return {
     type: 'jalan',
     label: `じゃらんで${cityName}の宿を見る`,
-    // /yad/ はじゃらん宿泊検索の公式エンドポイント。KW= のみで検索CD不要。
-    url: `https://www.jalan.net/yad/?KW=${encoded}`,
+    url: `https://www.jalan.net/search/?keyword=${encoded}`,
   };
 }
