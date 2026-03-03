@@ -847,6 +847,15 @@ body {
   opacity: 0.82;
 }
 
+/* ── 宿情報準備中メッセージ ── */
+
+.hotel-pending {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+
 /* ── レンタカーブロック（needsCar=true のみ表示） ── */
 
 .car-block {
