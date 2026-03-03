@@ -132,10 +132,15 @@ function buildHotelBlock(links) {
 }
 
 function btnClass(type) {
-  if (['rakuten'].includes(type))                              return 'btn-rakuten';
-  if (['jalan', 'jalan-rental'].includes(type))               return 'btn-jalan';
-  if (['google-maps', 'rental'].includes(type))               return 'btn-secondary';
-  return 'btn-primary'; // jr-*, skyscanner, bus, ferry
+  if (type === 'jr-east')    return 'btn-jr-east';
+  if (type === 'jr-west')    return 'btn-jr-west';
+  if (type === 'jr-kyushu')  return 'btn-jr-kyushu';
+  if (type === 'jr-ex')      return 'btn-jr-ex';
+  if (type === 'skyscanner') return 'btn-skyscanner';
+  if (type === 'rakuten')                        return 'btn-rakuten';
+  if (type === 'jalan' || type === 'jalan-rental') return 'btn-jalan';
+  if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
+  return 'btn-primary'; // bus, ferry, fallback
 }
 
 function buildLinkItem(link) {

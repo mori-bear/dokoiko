@@ -96,7 +96,8 @@ body {
   justify-content: space-between;
 }
 
-.logo {
+.logo,
+.site-logo {
   font-size: 17px;
   font-weight: 800;
   color: var(--text);
@@ -104,18 +105,21 @@ body {
   letter-spacing: -.5px;
 }
 
-.nav {
+.nav,
+.site-nav {
   display: flex;
   gap: 20px;
 }
 
-.nav a {
+.nav a,
+.site-nav a {
   font-size: 13px;
   color: var(--text-sub);
   text-decoration: none;
 }
 
-.nav a:hover {
+.nav a:hover,
+.site-nav a:hover {
   color: var(--text);
 }
 
@@ -543,6 +547,19 @@ body {
 }
 .btn-secondary:hover { background: #e4e7ef; }
 
+/* JR各社・Skyscanner（個別ブランド色） */
+.btn-jr-east    { background: var(--c-jr-east);    color: #fff; }
+.btn-jr-west    { background: var(--c-jr-west);    color: #fff; }
+.btn-jr-kyushu  { background: var(--c-jr-kyushu);  color: #fff; }
+.btn-jr-ex      { background: var(--c-jr-ex);      color: #fff; }
+.btn-skyscanner { background: var(--c-skyscanner); color: #fff; }
+
+.btn-jr-east:hover,
+.btn-jr-west:hover,
+.btn-jr-kyushu:hover,
+.btn-jr-ex:hover,
+.btn-skyscanner:hover { opacity: 0.92; }
+
 /* affiliate（楽天） */
 .btn-rakuten {
   background: #c7001e;
@@ -585,6 +602,11 @@ body {
   padding: 60px 20px;
   margin-top: 80px;
   border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .site-footer p {

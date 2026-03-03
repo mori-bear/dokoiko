@@ -1,5 +1,3 @@
-import { RAKUTEN_AFF_ID } from '../config/constants.js';
-
 /**
  * 宿泊リンクを組み立てる。
  *
@@ -35,7 +33,7 @@ export function buildRakutenLink(cityName) {
   return {
     type: 'rakuten',
     label: `楽天トラベルで${cityName}の宿を見る`,
-    url: `https://search.travel.rakuten.co.jp/ds/yado/?f_query=${encoded}&f_adult_num=2&cid=${RAKUTEN_AFF_ID}`,
+    url: `https://travel.rakuten.co.jp/search/?f_keyword=${encoded}`,
   };
 }
 
