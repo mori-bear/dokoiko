@@ -65,8 +65,8 @@ function buildRakutenUrl(city) {
 // ===== DOM 適用 =====
 
 /** renderResult からDOM構築直後に呼び出す */
-export function applyAffiliateLinks(city) {
-  // じゃらん（宿）
+export function applyAffiliateLinks(city, hubCity = null) {
+  // ── 目的地宿 ──
   const jalanBtn = document.getElementById('jalanHotelBtn');
   if (jalanBtn) {
     const url = getJalanHotelUrl(city);
@@ -75,7 +75,6 @@ export function applyAffiliateLinks(city) {
     jalanBtn.href = url;
   }
 
-  // 楽天トラベル（rakutenPath / rakutenUrl がなければ非表示）
   const rakutenBtn = document.getElementById('rakutenHotelBtn');
   if (rakutenBtn) {
     const url = buildRakutenUrl(city);
@@ -89,7 +88,31 @@ export function applyAffiliateLinks(city) {
     }
   }
 
-  // レンタカー（needsCar=true のときのみ存在する）
+  // ── ハブ都市宿（hubHotel あり のみ） ──
+  if (hubCity) {
+    const jalanHubBtn = document.getElementById('jalanHubHotelBtn');
+    if (jalanHubBtn) {
+      const url = getJalanHotelUrl(hubCity);
+      // eslint-disable-next-line no-console
+      console.log(`[affiliate] jalan-hub(${hubCity.name}):`, url);
+      jalanHubBtn.href = url;
+    }
+
+    const rakutenHubBtn = document.getElementById('rakutenHubHotelBtn');
+    if (rakutenHubBtn) {
+      const url = buildRakutenUrl(hubCity);
+      // eslint-disable-next-line no-console
+      console.log(`[affiliate] rakuten-hub(${hubCity.name}):`, url ?? '(hidden)');
+      if (url) {
+        rakutenHubBtn.href   = url;
+        rakutenHubBtn.hidden = false;
+      } else {
+        rakutenHubBtn.hidden = true;
+      }
+    }
+  }
+
+  // ── レンタカー（needsCar=true のときのみ存在する） ──
   const rentBtn = document.getElementById('jalanRentBtn');
   if (rentBtn) {
     const url = getJalanRentUrl(city);

@@ -6,7 +6,6 @@
     "region": "関東",
     "mapDestination": "横浜駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.3,
     "stayAllowed": [
@@ -40,7 +39,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kanagawa/yokohama.html",
-    "jalanPath": "/14/LRG_140020/"
+    "jalanPath": "/14/LRG_140020/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kamakura",
@@ -49,7 +50,6 @@
     "region": "関東",
     "mapDestination": "鎌倉駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -83,7 +83,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kanagawa/kamakura.html",
-    "jalanPath": "/14/LRG_140050/"
+    "jalanPath": "/14/LRG_140050/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "atami",
@@ -92,7 +94,6 @@
     "region": "中部",
     "mapDestination": "熱海駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -125,7 +126,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/shizuoka/atami.html",
-    "jalanPath": "/22/LRG_220010/"
+    "jalanPath": "/22/LRG_220010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nikko",
@@ -134,7 +137,6 @@
     "region": "関東",
     "mapDestination": "日光駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -168,7 +170,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/tochigi/nikko.html",
-    "jalanPath": "/09/LRG_090020/"
+    "jalanPath": "/09/LRG_090020/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "karuizawa",
@@ -177,7 +181,6 @@
     "region": "中部",
     "mapDestination": "軽井沢駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -210,7 +213,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/nagano/karuizawa.html",
-    "jalanPath": null
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fujikawaguchiko",
@@ -219,7 +224,6 @@
     "region": "中部",
     "mapDestination": "河口湖駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -252,7 +256,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html",
-    "jalanPath": "/19/LRG_190010/"
+    "jalanPath": "/19/LRG_190010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nagoya-t",
@@ -261,7 +267,6 @@
     "region": "中部",
     "mapDestination": "名古屋駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -294,7 +299,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/aichi/nagoya.html",
-    "jalanPath": "/23/LRG_230010/"
+    "jalanPath": "/23/LRG_230010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sendai-t",
@@ -303,7 +310,6 @@
     "region": "東北",
     "mapDestination": "仙台駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -336,7 +342,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/miyagi/sendai.html",
-    "jalanPath": "/04/LRG_040010/"
+    "jalanPath": "/04/LRG_040010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kanazawa-t",
@@ -345,7 +353,6 @@
     "region": "中部",
     "mapDestination": "金沢駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -378,7 +385,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
-    "jalanPath": "/17/LRG_170010/"
+    "jalanPath": "/17/LRG_170010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-t",
@@ -387,7 +396,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -420,7 +428,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kyoto-t",
@@ -429,7 +439,6 @@
     "region": "近畿",
     "mapDestination": "京都駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -462,7 +471,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kyoto/kyoto.html",
-    "jalanPath": "/26/LRG_260010/"
+    "jalanPath": "/26/LRG_260010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hiroshima-t",
@@ -471,7 +482,6 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -504,7 +514,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/"
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-t",
@@ -513,7 +525,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -546,7 +557,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-t",
@@ -555,7 +568,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -588,7 +600,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nara",
@@ -597,7 +611,6 @@
     "region": "近畿",
     "mapDestination": "奈良駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -632,7 +645,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/nara/nara.html",
-    "jalanPath": "/29/LRG_290010/"
+    "jalanPath": "/29/LRG_290010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kobe",
@@ -641,7 +656,6 @@
     "region": "近畿",
     "mapDestination": "三ノ宮駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -675,7 +689,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hyogo/kobe.html",
-    "jalanPath": "/28/LRG_280010/"
+    "jalanPath": "/28/LRG_280010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kyoto-o",
@@ -684,7 +700,6 @@
     "region": "近畿",
     "mapDestination": "京都駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.3,
     "stayAllowed": [
@@ -718,7 +733,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kyoto/kyoto.html",
-    "jalanPath": "/26/LRG_260010/"
+    "jalanPath": "/26/LRG_260010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "himeji",
@@ -727,7 +744,6 @@
     "region": "近畿",
     "mapDestination": "姫路駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -761,7 +777,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hyogo/himeji.html",
-    "jalanPath": "/28/LRG_280050/"
+    "jalanPath": "/28/LRG_280050/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "wakayama",
@@ -770,7 +788,6 @@
     "region": "近畿",
     "mapDestination": "和歌山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -805,7 +822,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/wakayama/wakayama.html",
-    "jalanPath": "/30/LRG_300010/"
+    "jalanPath": "/30/LRG_300010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "okayama-o",
@@ -814,7 +833,6 @@
     "region": "中国",
     "mapDestination": "岡山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -848,7 +866,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/okayama/okayama.html",
-    "jalanPath": "/33/LRG_330010/"
+    "jalanPath": "/33/LRG_330010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nagoya-o",
@@ -857,7 +877,6 @@
     "region": "中部",
     "mapDestination": "名古屋駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -890,7 +909,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/aichi/nagoya.html",
-    "jalanPath": "/23/LRG_230010/"
+    "jalanPath": "/23/LRG_230010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kanazawa-o",
@@ -899,7 +920,6 @@
     "region": "中部",
     "mapDestination": "金沢駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -932,7 +952,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
-    "jalanPath": "/17/LRG_170010/"
+    "jalanPath": "/17/LRG_170010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hiroshima-o",
@@ -941,7 +963,6 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -974,7 +995,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/"
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-o",
@@ -983,7 +1006,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1016,7 +1038,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-o",
@@ -1025,7 +1049,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1058,7 +1081,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-o",
@@ -1067,7 +1092,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -1100,7 +1124,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "ishigaki",
@@ -1109,7 +1135,6 @@
     "region": "沖縄",
     "mapDestination": "石垣港",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 1.5,
     "stayAllowed": [
@@ -1147,7 +1172,9 @@
     "rakutenPath": "/yado/okinawa/ishigakijima.html",
     "jalanPath": "/47/LRG_470030/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470030%2F",
-    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fishigakijima.html&link_type=text"
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fishigakijima.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "gifu",
@@ -1156,7 +1183,6 @@
     "region": "中部",
     "mapDestination": "岐阜駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -1190,7 +1216,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/gifu/gifu.html",
-    "jalanPath": "/21/LRG_210010/"
+    "jalanPath": "/21/LRG_210010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kyoto-n",
@@ -1199,7 +1227,6 @@
     "region": "近畿",
     "mapDestination": "京都駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.3,
     "stayAllowed": [
@@ -1233,7 +1260,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kyoto/kyoto.html",
-    "jalanPath": "/26/LRG_260010/"
+    "jalanPath": "/26/LRG_260010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "ise",
@@ -1242,7 +1271,6 @@
     "region": "中部",
     "mapDestination": "伊勢市駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -1276,7 +1304,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/mie/ise.html",
-    "jalanPath": "/24/LRG_240020/"
+    "jalanPath": "/24/LRG_240020/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-n",
@@ -1285,7 +1315,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -1318,7 +1347,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kanazawa-n",
@@ -1327,7 +1358,6 @@
     "region": "中部",
     "mapDestination": "金沢駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -1360,7 +1390,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
-    "jalanPath": "/17/LRG_170010/"
+    "jalanPath": "/17/LRG_170010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-n",
@@ -1369,7 +1401,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -1402,7 +1433,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hiroshima-n",
@@ -1411,7 +1444,6 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1444,7 +1476,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/"
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sendai-n",
@@ -1453,7 +1487,6 @@
     "region": "東北",
     "mapDestination": "仙台駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1486,7 +1519,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/miyagi/sendai.html",
-    "jalanPath": "/04/LRG_040010/"
+    "jalanPath": "/04/LRG_040010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-n",
@@ -1495,7 +1530,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1528,7 +1562,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-n",
@@ -1537,7 +1573,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -1570,7 +1605,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "saga",
@@ -1579,7 +1616,6 @@
     "region": "九州",
     "mapDestination": "佐賀駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -1613,7 +1649,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/saga/saga.html",
-    "jalanPath": "/41/LRG_410010/"
+    "jalanPath": "/41/LRG_410010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kumamoto",
@@ -1622,7 +1660,6 @@
     "region": "九州",
     "mapDestination": "熊本駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -1656,7 +1693,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kumamoto/kumamoto.html",
-    "jalanPath": "/43/LRG_430010/"
+    "jalanPath": "/43/LRG_430010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nagasaki",
@@ -1665,7 +1704,6 @@
     "region": "九州",
     "mapDestination": "長崎駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -1698,7 +1736,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/nagasaki/nagasaki.html",
-    "jalanPath": "/42/LRG_420010/"
+    "jalanPath": "/42/LRG_420010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "beppu",
@@ -1707,7 +1747,6 @@
     "region": "九州",
     "mapDestination": "別府駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -1740,7 +1779,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/oita/beppu.html",
-    "jalanPath": "/44/LRG_440030/"
+    "jalanPath": "/44/LRG_440030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kagoshima",
@@ -1749,7 +1790,6 @@
     "region": "九州",
     "mapDestination": "鹿児島中央駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -1782,7 +1822,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kagoshima/kagoshima.html",
-    "jalanPath": "/46/LRG_460010/"
+    "jalanPath": "/46/LRG_460010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "miyazaki",
@@ -1791,7 +1833,6 @@
     "region": "九州",
     "mapDestination": "宮崎駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -1824,7 +1865,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/miyazaki/miyazaki.html",
-    "jalanPath": "/45/LRG_450010/"
+    "jalanPath": "/45/LRG_450010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hiroshima-f",
@@ -1833,7 +1876,6 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1866,7 +1908,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/"
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-f",
@@ -1875,7 +1919,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -1908,7 +1951,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-f",
@@ -1917,7 +1962,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -1950,7 +1994,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-f",
@@ -1959,7 +2005,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 0.3,
     "stayAllowed": [
@@ -1992,7 +2037,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "otaru",
@@ -2001,7 +2048,6 @@
     "region": "北海道",
     "mapDestination": "小樽駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -2035,7 +2081,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/otaru.html",
-    "jalanPath": "/01/LRG_010140/"
+    "jalanPath": "/01/LRG_010140/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "asahikawa",
@@ -2044,7 +2092,6 @@
     "region": "北海道",
     "mapDestination": "旭川駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -2077,7 +2124,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/asahikawa.html",
-    "jalanPath": "/01/LRG_010060/"
+    "jalanPath": "/01/LRG_010060/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "furano",
@@ -2086,7 +2135,6 @@
     "region": "北海道",
     "mapDestination": "富良野駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.2,
     "stayAllowed": [
@@ -2119,7 +2167,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/hokkaido/furano.html",
-    "jalanPath": "/01/LRG_010170/"
+    "jalanPath": "/01/LRG_010170/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kushiro",
@@ -2128,7 +2178,6 @@
     "region": "北海道",
     "mapDestination": "釧路駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -2161,7 +2210,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/kushiro.html",
-    "jalanPath": "/01/LRG_010110/"
+    "jalanPath": "/01/LRG_010110/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hakodate",
@@ -2170,7 +2221,6 @@
     "region": "北海道",
     "mapDestination": "函館駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -2203,7 +2253,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/hakodate.html",
-    "jalanPath": "/01/LRG_010050/"
+    "jalanPath": "/01/LRG_010050/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-s",
@@ -2212,7 +2264,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -2245,7 +2296,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-s",
@@ -2254,7 +2307,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -2287,7 +2339,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-s",
@@ -2296,7 +2350,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 0.3,
     "stayAllowed": [
@@ -2329,7 +2382,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "matsushima",
@@ -2338,7 +2393,6 @@
     "region": "東北",
     "mapDestination": "松島海岸駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -2372,7 +2426,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/miyagi/matsushima.html",
-    "jalanPath": "/04/LRG_040030/"
+    "jalanPath": "/04/LRG_040030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "yamagata",
@@ -2381,7 +2437,6 @@
     "region": "東北",
     "mapDestination": "山形駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -2415,7 +2470,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/yamagata/yamagata.html",
-    "jalanPath": "/06/LRG_060010/"
+    "jalanPath": "/06/LRG_060010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "morioka",
@@ -2424,7 +2481,6 @@
     "region": "東北",
     "mapDestination": "盛岡駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -2457,7 +2513,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/iwate/morioka.html",
-    "jalanPath": "/03/LRG_030010/"
+    "jalanPath": "/03/LRG_030010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-se",
@@ -2466,7 +2524,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -2499,7 +2556,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "niigata",
@@ -2508,7 +2567,6 @@
     "region": "中部",
     "mapDestination": "新潟駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -2541,7 +2599,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/niigata/niigata.html",
-    "jalanPath": "/15/LRG_150010/"
+    "jalanPath": "/15/LRG_150010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kanazawa-se",
@@ -2550,7 +2610,6 @@
     "region": "中部",
     "mapDestination": "金沢駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.35,
     "stayAllowed": [
@@ -2583,7 +2642,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
-    "jalanPath": "/17/LRG_170010/"
+    "jalanPath": "/17/LRG_170010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-se",
@@ -2592,7 +2653,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -2625,7 +2685,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-se",
@@ -2634,7 +2696,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 0.3,
     "stayAllowed": [
@@ -2667,7 +2728,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "miyajima",
@@ -2676,7 +2739,6 @@
     "region": "中国",
     "mapDestination": "宮島口駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.5,
     "stayAllowed": [
@@ -2709,7 +2771,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/hiroshima/miyajima.html",
-    "jalanPath": "/34/LRG_340060/"
+    "jalanPath": "/34/LRG_340060/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "onomichi",
@@ -2718,7 +2782,6 @@
     "region": "中国",
     "mapDestination": "尾道駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.2,
     "stayAllowed": [
@@ -2752,7 +2815,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/onomichi.html",
-    "jalanPath": "/34/LRG_340020/"
+    "jalanPath": "/34/LRG_340020/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "okayama-h",
@@ -2761,7 +2826,6 @@
     "region": "中国",
     "mapDestination": "岡山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -2795,7 +2859,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/okayama/okayama.html",
-    "jalanPath": "/33/LRG_330010/"
+    "jalanPath": "/33/LRG_330010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "matsuyama",
@@ -2804,7 +2870,6 @@
     "region": "四国",
     "mapDestination": "松山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -2837,7 +2902,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ehime/matsuyama.html",
-    "jalanPath": "/38/LRG_380010/"
+    "jalanPath": "/38/LRG_380010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-h",
@@ -2846,7 +2913,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -2879,7 +2945,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-h",
@@ -2888,7 +2956,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -2921,7 +2988,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kyoto-h",
@@ -2930,7 +2999,6 @@
     "region": "近畿",
     "mapDestination": "京都駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
@@ -2963,7 +3031,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kyoto/kyoto.html",
-    "jalanPath": "/26/LRG_260010/"
+    "jalanPath": "/26/LRG_260010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "nagoya-h",
@@ -2972,7 +3042,6 @@
     "region": "中部",
     "mapDestination": "名古屋駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -3005,7 +3074,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/aichi/nagoya.html",
-    "jalanPath": "/23/LRG_230010/"
+    "jalanPath": "/23/LRG_230010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-h",
@@ -3014,7 +3085,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -3047,7 +3117,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-h",
@@ -3056,7 +3128,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 0.3,
     "stayAllowed": [
@@ -3089,7 +3160,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokushima",
@@ -3098,7 +3171,6 @@
     "region": "四国",
     "mapDestination": "徳島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -3132,7 +3204,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokushima/tokushima.html",
-    "jalanPath": "/36/LRG_360010/"
+    "jalanPath": "/36/LRG_360010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "okayama-k",
@@ -3141,7 +3215,6 @@
     "region": "中国",
     "mapDestination": "岡山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
@@ -3175,7 +3248,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/okayama/okayama.html",
-    "jalanPath": "/33/LRG_330010/"
+    "jalanPath": "/33/LRG_330010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "shodoshima",
@@ -3184,7 +3259,6 @@
     "region": "四国",
     "mapDestination": "土庄港",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 1,
     "weight": 1.5,
     "stayAllowed": [
@@ -3217,7 +3291,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/kagawa/shodoshima.html",
-    "jalanPath": null
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kochi",
@@ -3226,7 +3302,6 @@
     "region": "四国",
     "mapDestination": "高知駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -3259,7 +3334,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/kochi/kochi.html",
-    "jalanPath": "/39/LRG_390010/"
+    "jalanPath": "/39/LRG_390010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "matsuyama-k",
@@ -3268,7 +3345,6 @@
     "region": "四国",
     "mapDestination": "松山駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
@@ -3301,7 +3377,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/ehime/matsuyama.html",
-    "jalanPath": "/38/LRG_380010/"
+    "jalanPath": "/38/LRG_380010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "osaka-k",
@@ -3310,7 +3388,6 @@
     "region": "近畿",
     "mapDestination": "大阪駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -3343,7 +3420,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/"
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "hiroshima-k",
@@ -3352,7 +3431,6 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -3385,7 +3463,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/"
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "fukuoka-k",
@@ -3394,7 +3474,6 @@
     "region": "九州",
     "mapDestination": "博多駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 0.3,
     "stayAllowed": [
@@ -3427,7 +3506,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/"
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokyo-k",
@@ -3436,7 +3517,6 @@
     "region": "関東",
     "mapDestination": "東京駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -3469,7 +3549,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/"
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "sapporo-k",
@@ -3478,7 +3560,6 @@
     "region": "北海道",
     "mapDestination": "札幌駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 0.3,
     "stayAllowed": [
@@ -3511,7 +3592,9 @@
     ],
     "needsCar": false,
     "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/"
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "mihonoseki",
@@ -3520,7 +3603,6 @@
     "region": "中国",
     "mapDestination": "境港駅",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 3,
     "weight": 1.2,
     "stayAllowed": [
@@ -3550,7 +3632,9 @@
     ],
     "needsCar": true,
     "rakutenPath": null,
-    "jalanPath": null
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "ryujin-onsen",
@@ -3559,7 +3643,6 @@
     "region": "近畿",
     "mapDestination": "龍神温泉 元湯",
     "parentHub": "和歌山",
-    "hotelBase": "wakayama",
     "distanceStars": 3,
     "weight": 1.2,
     "stayAllowed": [
@@ -3588,7 +3671,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/wakayama/ryujin.html",
-    "jalanPath": null
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": "wakayama"
   },
   {
     "id": "naha",
@@ -3597,7 +3682,6 @@
     "region": "沖縄",
     "mapDestination": "那覇空港",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 4,
     "weight": 0.3,
     "stayAllowed": [
@@ -3639,7 +3723,9 @@
     "rakutenPath": "/yado/okinawa/naha.html",
     "jalanPath": "/47/LRG_470010/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470010%2F",
-    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fnaha.html&link_type=text"
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fnaha.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "tokashiki-jima",
@@ -3648,7 +3734,6 @@
     "region": "沖縄",
     "mapDestination": "渡嘉敷港",
     "parentHub": "那覇",
-    "hotelBase": "naha",
     "distanceStars": 5,
     "weight": 1.5,
     "stayAllowed": [
@@ -3679,7 +3764,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/okinawa/tokashikijima.html",
-    "jalanPath": null
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": "naha"
   },
   {
     "id": "kumejima",
@@ -3688,7 +3775,6 @@
     "region": "沖縄",
     "mapDestination": "久米島空港",
     "parentHub": "那覇",
-    "hotelBase": "naha",
     "distanceStars": 5,
     "weight": 1.5,
     "stayAllowed": [
@@ -3725,7 +3811,9 @@
     "rakutenPath": "/yado/okinawa/kumejima.html",
     "jalanPath": "/47/LRG_470060/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470060%2F",
-    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fkumejima.html&link_type=text"
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fkumejima.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": "naha"
   },
   {
     "id": "miyakojima",
@@ -3734,7 +3822,6 @@
     "region": "沖縄",
     "mapDestination": "宮古空港",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 5,
     "weight": 1.5,
     "stayAllowed": [
@@ -3770,7 +3857,9 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/okinawa/miyakojima.html",
-    "jalanPath": "/47/LRG_470040/"
+    "jalanPath": "/47/LRG_470040/",
+    "hasHotel": true,
+    "hubHotel": null
   },
   {
     "id": "kouzushima",
@@ -3779,7 +3868,6 @@
     "region": "伊豆諸島",
     "mapDestination": "神津島港",
     "parentHub": null,
-    "hotelBase": null,
     "distanceStars": 2,
     "weight": 1.5,
     "stayAllowed": [
@@ -3812,6 +3900,8 @@
     ],
     "needsCar": true,
     "rakutenPath": "/yado/tokyo/kouzushima.html",
-    "jalanPath": "/13/LRG_130120/"
+    "jalanPath": "/13/LRG_130120/",
+    "hasHotel": true,
+    "hubHotel": null
   }
 ]

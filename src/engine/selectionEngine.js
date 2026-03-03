@@ -1,24 +1,20 @@
 /**
  * 抽選エンジン
  *
- * buildPool : 条件に合う全件を重み付きシャッフルして返す
+ * buildPool: star + stayType のみでフィルタし重み付きシャッフルを返す。
+ * 出発地は使用しない —— 「知らない街と出会う装置」としての設計。
  *
- * 抽選優先順:
- *   1. departure + distanceStars 完全一致 + stayAllowed
- *   2. distanceStars ±1〜2（departure + stayAllowed 維持）
- *   3. departure 一致のみ（stayAllowed 維持）
- *   4. nearestHub フォールバック（新出発地用）
- *   5. 全国フォールバック（stayAllowed 維持）
+ * フォールバック:
+ *   1. distanceStars + stayType 完全一致
+ *   2. stayType 一致のみ（star 範囲外のとき）
+ *   3. 全件（stayType も一致なし ── 実運用では発生しない）
  *
- * island は stayAllowed=["1night"] のみなので daytrip では自然に除外される。
  * weight: urban=0.3（出にくい）, hub=0.35, local=1.2（出やすい）, island=1.5
  *
  * 追加重み:
  *   - ★3,4 を優遇 / ★1,5 を抑制
  *   - 県庁所在地は軽く抑制
  */
-
-import { DEPARTURE_CITY_INFO } from '../config/constants.js';
 
 /** ★別の重み乗数 — ★3,4 中心設計 */
 const STAR_MULTIPLIER = { 1: 0.6, 2: 0.85, 3: 1.3, 4: 1.3, 5: 0.7 };
@@ -34,12 +30,6 @@ const PREF_CAPITALS = new Set([
   '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '那覇',
 ]);
 
-/**
- * 最終的な抽選重みを算出する
- *   base  : destinations.json の weight（type 別設定済み）
- *   starW : ★3,4 を優遇、★1,5 を抑制
- *   capW  : 県庁所在地を軽く抑制
- */
 function getSelectionWeight(city) {
   const base  = city.weight ?? 1;
   const starW = STAR_MULTIPLIER[city.distanceStars] ?? 1;
@@ -47,9 +37,6 @@ function getSelectionWeight(city) {
   return base * starW * capW;
 }
 
-/**
- * 重み付きシャッフル — getSelectionWeight が大きいほど先に出現しやすい
- */
 function weightedShuffle(arr) {
   const result = [];
   const pool = arr.map(item => ({ item, w: getSelectionWeight(item) }));
@@ -67,47 +54,17 @@ function weightedShuffle(arr) {
   return result;
 }
 
-export function buildPool(destinations, departure, distanceStars, stayType) {
-  // island は stayType=1night 以外では完全除外（stayAllowed より先に評価）
+export function buildPool(destinations, distanceStars, stayType) {
+  // island は stayType=1night 以外では完全除外
   const byStay = destinations.filter(d => {
     if (d.type === 'island' && stayType !== '1night') return false;
     return d.stayAllowed.includes(stayType);
   });
 
-  // departure フィルタ（nearestHub フォールバック込み）
-  let byDeparture = byStay.filter(d => d.departures.includes(departure));
-  if (byDeparture.length === 0) {
-    const hub = DEPARTURE_CITY_INFO[departure]?.nearestHub;
-    if (hub) byDeparture = byStay.filter(d => d.departures.includes(hub));
-  }
-
-  // 1. 完全一致
-  const exact = byDeparture.filter(d => d.distanceStars === distanceStars);
+  // star + stayType で完全一致
+  const exact = byStay.filter(d => d.distanceStars === distanceStars);
   if (exact.length > 0) return weightedShuffle(exact);
 
-  // 2. ±1〜2（stayAllowed + departure 維持）
-  const seen     = new Set();
-  const expanded = [];
-  for (const delta of [1, -1, 2, -2]) {
-    const s = distanceStars + delta;
-    if (s < 1 || s > 5) continue;
-    for (const d of byDeparture) {
-      if (d.distanceStars === s && !seen.has(d.id)) {
-        seen.add(d.id);
-        expanded.push(d);
-      }
-    }
-  }
-  if (expanded.length > 0) return weightedShuffle(expanded);
-
-  // 3. departure 一致のみ（stayAllowed 維持）
-  if (byDeparture.length > 0) return weightedShuffle(byDeparture);
-
-  // 4. 全国フォールバック（stayAllowed 維持）
+  // フォールバック: stayType 一致のみ
   return weightedShuffle(byStay.length > 0 ? byStay : destinations);
-}
-
-/** 後方互換: pool の先頭 1 件を返す */
-export function selectDestination(destinations, departure, distanceStars, stayType) {
-  return buildPool(destinations, departure, distanceStars, stayType)[0];
 }

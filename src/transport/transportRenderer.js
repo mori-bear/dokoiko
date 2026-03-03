@@ -8,17 +8,10 @@ import {
 /**
  * 交通リンクを組み立てる。
  *
- * 表示優先順:
- *   1. JR/私鉄予約（鉄道あり）
- *   2. Skyscanner（就航あり）
- *   3. Googleマップ（飛行機なし時のみ）
- *
- * ルール:
- *   - 飛行機表示時はGoogleマップ削除
- *   - 鉄道＋飛行機どちらもある場合: JR + Skyscanner（Googleマップなし）
- *   - 鉄道のみ: JR + Googleマップ
- *   - 飛行機のみ: Skyscanner
- *   - フェリーのみ: Googleマップ（港→）
+ * access に情報がある交通手段はすべて表示する（優遇・除外なし）。
+ *   - 鉄道あり    → JR予約 + Googleマップ（transit）
+ *   - 飛行機あり  → Skyscanner
+ *   - フェリーのみ → Googleマップ（港→）
  */
 export function resolveTransportLinks(city, departure, datetime) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
@@ -28,38 +21,28 @@ export function resolveTransportLinks(city, departure, datetime) {
   const { access } = city;
   if (!access) return [];
 
-  const hasRail   = !!access.railGateway;
-  const hasAirRaw = !!access.airportGateway;
-  const hasFerry  = !!access.ferryGateway && !hasRail && !hasAirRaw;
-
-  // Skyscanner: AIRPORT_IATAに未登録の空港名はnullになり表示されない（エラーなし）
-  let skyscannerLink = null;
-  if (hasAirRaw) {
-    skyscannerLink = buildSkyscannerLink(fromCity.iata, access.airportGateway);
-  }
-  const hasAir = !!skyscannerLink;
+  const hasRail  = !!access.railGateway;
+  const hasAir   = !!access.airportGateway;
+  const hasFerry = !!access.ferryGateway && !hasRail && !hasAir;
 
   const links = [];
 
-  // 1. JR予約（鉄道あり）
+  // 鉄道: JR予約 + Googleマップ（transit）
   if (hasRail) {
-    const provider = resolveRailProvider(departure, city);
-    const jrLink = buildJrLink(provider);
+    const jrLink = buildJrLink(resolveRailProvider(departure, city));
     if (jrLink) links.push(jrLink);
+    links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
   }
 
-  // 2. Skyscanner（就航あり）
+  // 飛行機: Skyscanner（IATA未登録の空港は自動スキップ）
   if (hasAir) {
-    links.push(skyscannerLink);
+    const sc = buildSkyscannerLink(fromCity.iata, access.airportGateway);
+    if (sc) links.push(sc);
   }
 
-  // 3. Googleマップ（飛行機なし時のみ）
-  if (!hasAir) {
-    if (hasRail) {
-      links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
-    } else if (hasFerry) {
-      links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
-    }
+  // フェリーのみ: Googleマップ（港→）
+  if (hasFerry) {
+    links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
   }
 
   return links.filter(link => link && link.url);

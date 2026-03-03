@@ -50,14 +50,14 @@ function go() {
   }
   clearFormError();
 
-  state.pool      = buildPool(state.destinations, state.departure, state.distance, state.stayType);
+  state.pool      = buildPool(state.destinations, state.distance, state.stayType);
   state.poolIndex = 0;
   draw();
 }
 
 function retry() {
   if (state.poolIndex >= state.pool.length - 1) {
-    state.pool      = buildPool(state.destinations, state.departure, state.distance, state.stayType);
+    state.pool      = buildPool(state.destinations, state.distance, state.stayType);
     state.poolIndex = 0;
   } else {
     state.poolIndex++;
@@ -71,7 +71,7 @@ function draw() {
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
-  const hotelLinks     = buildHotelLinks(city, state.stayType);
+  const hotelLinks     = buildHotelLinks(city, state.destinations);
 
   renderResult({
     city,

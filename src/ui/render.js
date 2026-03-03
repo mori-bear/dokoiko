@@ -6,14 +6,16 @@
  *     result-counter
  *     city-block
  *     card-section        （交通リンク）
- *     stay-block          （この街に泊まる — 1night のみ）
- *     car-block           （レンタカー — 1night かつ needsCar=true のみ）
+ *     stay-block          （この街に泊まる — hasHotel=true のみ）
+ *     stay-block--hub     （ハブ都市宿 — hubHotel あり のみ）
+ *     car-block           （レンタカー — hasHotel=true かつ needsCar=true のみ）
  */
 
 import { applyAffiliateLinks } from '../affiliate/affiliate.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
   const showHotel = hotelLinks.show;
+  const showHub   = showHotel && !!hotelLinks.hub;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
@@ -22,11 +24,12 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, 
       ${buildCityBlock(city, distanceLabel)}
       ${buildTransportBlock(transportLinks)}
       ${showHotel ? buildStayBlock() : ''}
+      ${showHub ? buildHubStayBlock(hotelLinks.hub.name) : ''}
       ${showHotel && city.needsCar ? buildCarBlock() : ''}
     </div>
   `;
 
-  if (showHotel) applyAffiliateLinks(city);
+  if (showHotel) applyAffiliateLinks(city, hotelLinks.hub);
 }
 
 export function clearResult() {
@@ -123,7 +126,7 @@ function buildTransportBlock(links) {
   `;
 }
 
-/* ── 宿泊ブロック（アフィリエイト） ── */
+/* ── 宿泊ブロック（目的地） ── */
 
 function buildStayBlock() {
   return `
@@ -132,6 +135,20 @@ function buildStayBlock() {
       <div class="stay-buttons">
         <a id="jalanHotelBtn" target="_blank" rel="noopener noreferrer">じゃらん</a>
         <a id="rakutenHotelBtn" target="_blank" rel="noopener noreferrer">楽天トラベル</a>
+      </div>
+    </div>
+  `;
+}
+
+/* ── 宿泊ブロック（ハブ都市） ── */
+
+function buildHubStayBlock(hubName) {
+  return `
+    <div class="stay-block stay-block--hub">
+      <p class="stay-label">${hubName}から宿を探す</p>
+      <div class="stay-buttons">
+        <a id="jalanHubHotelBtn" target="_blank" rel="noopener noreferrer">じゃらん</a>
+        <a id="rakutenHubHotelBtn" target="_blank" rel="noopener noreferrer">楽天トラベル</a>
       </div>
     </div>
   `;

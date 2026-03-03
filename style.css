@@ -840,6 +840,13 @@ body {
 
 .stay-buttons a:hover { opacity: 0.86; }
 
+/* ── ハブ都市宿泊ブロック ── */
+
+.stay-block--hub {
+  margin-top: 8px;
+  opacity: 0.82;
+}
+
 /* ── レンタカーブロック（needsCar=true のみ表示） ── */
 
 .car-block {
