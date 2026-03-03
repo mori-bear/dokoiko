@@ -39,10 +39,9 @@ export function buildRakutenLink(cityName) {
 }
 
 export function buildJalanLink(cityName) {
-  const encoded = encodeURIComponent(cityName);
   return {
     type: 'jalan',
     label: `じゃらんで${cityName}の宿を見る`,
-    url: `https://www.jalan.net/keyword/?keyword=${encoded}`,
+    url: 'https://www.jalan.net/',
   };
 }
