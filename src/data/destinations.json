@@ -41,7 +41,14 @@
     "rakutenPath": "/yado/kanagawa/yokohama.html",
     "jalanPath": "/14/LRG_140020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から電車で30分。横浜駅周辺が観光の起点。 みなとみらい・中華街・山下公園",
+    "tags": [
+      "港町",
+      "中華街",
+      "夜景"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kamakura",
@@ -85,7 +92,14 @@
     "rakutenPath": "/yado/kanagawa/kamakura.html",
     "jalanPath": "/14/LRG_140050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から電車で約1時間。鎌倉駅から主要スポットへ歩いて行ける。 鶴岡八幡宮・高徳院（大仏）・長谷寺",
+    "tags": [
+      "寺社",
+      "海",
+      "古都"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "atami",
@@ -128,7 +142,14 @@
     "rakutenPath": "/yado/shizuoka/atami.html",
     "jalanPath": "/22/LRG_220010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で45分。熱海駅から温泉街まで徒歩圏内。 熱海温泉・MOA美術館・起雲閣",
+    "tags": [
+      "温泉",
+      "海",
+      "リゾート"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "nikko",
@@ -172,7 +193,14 @@
     "rakutenPath": "/yado/tochigi/nikko.html",
     "jalanPath": "/09/LRG_090020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から電車で約2時間。日光駅からバスで社寺エリアへ。 日光東照宮・中禅寺湖・華厳ノ滝",
+    "tags": [
+      "世界遺産",
+      "自然",
+      "温泉"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "karuizawa",
@@ -215,7 +243,14 @@
     "rakutenPath": "/yado/nagano/karuizawa.html",
     "jalanPath": null,
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間20分。軽井沢駅が起点。 旧軽井沢銀座・白糸の滝・雲場池",
+    "tags": [
+      "高原",
+      "リゾート",
+      "アウトレット"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "fujikawaguchiko",
@@ -258,7 +293,14 @@
     "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html",
     "jalanPath": "/19/LRG_190010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "新宿からバスで約2時間。河口湖駅または高速バスが起点。 河口湖・忍野八海・富士山五合目",
+    "tags": [
+      "富士山",
+      "湖",
+      "温泉"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "nagoya-t",
@@ -301,7 +343,14 @@
     "rakutenPath": "/yado/aichi/nagoya.html",
     "jalanPath": "/23/LRG_230010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。 名古屋城・熱田神宮・東山動植物園",
+    "tags": [
+      "城下町",
+      "グルメ",
+      "ものづくり"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "sendai-t",
@@ -344,7 +393,14 @@
     "rakutenPath": "/yado/miyagi/sendai.html",
     "jalanPath": "/04/LRG_040010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間40分。仙台駅から地下鉄・バスで各地へ。 瑞鳳殿・仙台城跡・松島（電車30分）",
+    "tags": [
+      "城下町",
+      "海鮮",
+      "杜の都"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kanazawa-t",
@@ -387,7 +443,14 @@
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
     "jalanPath": "/17/LRG_170010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。 兼六園・ひがし茶屋街・近江町市場",
+    "tags": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-t",
@@ -430,7 +493,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kyoto-t",
@@ -473,7 +543,14 @@
     "rakutenPath": "/yado/kyoto/kyoto.html",
     "jalanPath": "/26/LRG_260010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間15分、大阪駅から電車で15分。 金閣寺・伏見稲荷大社・清水寺",
+    "tags": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "hiroshima-t",
@@ -516,7 +593,14 @@
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
     "jalanPath": "/34/LRG_340010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。 原爆ドーム・厳島神社（宮島）・広島城",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "fukuoka-t",
@@ -559,7 +643,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "sapporo-t",
@@ -602,7 +693,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "nara",
@@ -647,7 +745,14 @@
     "rakutenPath": "/yado/nara/nara.html",
     "jalanPath": "/29/LRG_290010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から電車で45分。奈良駅・近鉄奈良駅が観光の起点。 東大寺・春日大社・奈良公園（鹿）",
+    "tags": [
+      "世界遺産",
+      "鹿",
+      "古都"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kobe",
@@ -691,7 +796,14 @@
     "rakutenPath": "/yado/hyogo/kobe.html",
     "jalanPath": "/28/LRG_280010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から電車で30分。三ノ宮駅が市内交通の中心。 北野異人館・神戸港ハーバーランド・南京町",
+    "tags": [
+      "港町",
+      "異人館",
+      "スイーツ"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kyoto-o",
@@ -735,7 +847,14 @@
     "rakutenPath": "/yado/kyoto/kyoto.html",
     "jalanPath": "/26/LRG_260010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間15分、大阪駅から電車で15分。 金閣寺・伏見稲荷大社・清水寺",
+    "tags": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "himeji",
@@ -779,7 +898,14 @@
     "rakutenPath": "/yado/hyogo/himeji.html",
     "jalanPath": "/28/LRG_280050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で35分。姫路駅から姫路城まで徒歩15分。 姫路城・好古園・書写山円教寺",
+    "tags": [
+      "城",
+      "世界遺産",
+      "播磨"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "wakayama",
@@ -824,7 +950,14 @@
     "rakutenPath": "/yado/wakayama/wakayama.html",
     "jalanPath": "/30/LRG_300010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から電車で1時間。和歌山駅が市内の起点。 和歌山城・友ヶ島・加太の海",
+    "tags": [
+      "高野山",
+      "温泉",
+      "海"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "okayama-o",
@@ -868,7 +1001,14 @@
     "rakutenPath": "/yado/okayama/okayama.html",
     "jalanPath": "/33/LRG_330010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。 後楽園・岡山城・倉敷美観地区",
+    "tags": [
+      "後楽園",
+      "倉敷",
+      "桃"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "nagoya-o",
@@ -911,7 +1051,14 @@
     "rakutenPath": "/yado/aichi/nagoya.html",
     "jalanPath": "/23/LRG_230010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。 名古屋城・熱田神宮・東山動植物園",
+    "tags": [
+      "城下町",
+      "グルメ",
+      "ものづくり"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kanazawa-o",
@@ -954,7 +1101,14 @@
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
     "jalanPath": "/17/LRG_170010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。 兼六園・ひがし茶屋街・近江町市場",
+    "tags": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "hiroshima-o",
@@ -997,7 +1151,14 @@
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
     "jalanPath": "/34/LRG_340010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。 原爆ドーム・厳島神社（宮島）・広島城",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tokyo-o",
@@ -1040,7 +1201,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "fukuoka-o",
@@ -1083,7 +1251,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "sapporo-o",
@@ -1126,7 +1301,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "ishigaki",
@@ -1174,7 +1356,16 @@
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470030%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fishigakijima.html&link_type=text",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "那覇から飛行機で1時間。石垣空港から市街まで車で30分。 川平湾・竹富島（フェリー10分）・石垣市公設市場",
+    "tags": [
+      "離島",
+      "サンゴ礁",
+      "星空"
+    ],
+    "jr_region": "okinawa",
+    "access_city": "石垣島",
+    "port": "石垣港"
   },
   {
     "id": "gifu",
@@ -1218,7 +1409,14 @@
     "rakutenPath": "/yado/gifu/gifu.html",
     "jalanPath": "/21/LRG_210010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "名古屋駅から電車で30分。岐阜駅からバスで観光地へ。 岐阜城・川原町・長良川鵜飼",
+    "tags": [
+      "城",
+      "長良川",
+      "鵜飼"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kyoto-n",
@@ -1262,7 +1460,14 @@
     "rakutenPath": "/yado/kyoto/kyoto.html",
     "jalanPath": "/26/LRG_260010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間15分、大阪駅から電車で15分。 金閣寺・伏見稲荷大社・清水寺",
+    "tags": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "ise",
@@ -1306,7 +1511,14 @@
     "rakutenPath": "/yado/mie/ise.html",
     "jalanPath": "/24/LRG_240020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "名古屋駅から特急で1時間30分。伊勢市駅が観光の起点。 伊勢神宮（内宮・外宮）・おかげ横丁・二見興玉神社",
+    "tags": [
+      "神宮",
+      "おかげ横丁",
+      "海の幸"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-n",
@@ -1349,7 +1561,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kanazawa-n",
@@ -1392,7 +1611,14 @@
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
     "jalanPath": "/17/LRG_170010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。 兼六園・ひがし茶屋街・近江町市場",
+    "tags": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tokyo-n",
@@ -1435,7 +1661,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "hiroshima-n",
@@ -1478,7 +1711,14 @@
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
     "jalanPath": "/34/LRG_340010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。 原爆ドーム・厳島神社（宮島）・広島城",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "sendai-n",
@@ -1521,7 +1761,14 @@
     "rakutenPath": "/yado/miyagi/sendai.html",
     "jalanPath": "/04/LRG_040010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間40分。仙台駅から地下鉄・バスで各地へ。 瑞鳳殿・仙台城跡・松島（電車30分）",
+    "tags": [
+      "城下町",
+      "海鮮",
+      "杜の都"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "fukuoka-n",
@@ -1564,7 +1811,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "sapporo-n",
@@ -1607,7 +1861,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "saga",
@@ -1651,7 +1912,14 @@
     "rakutenPath": "/yado/saga/saga.html",
     "jalanPath": "/41/LRG_410010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多駅から特急で35分。佐賀駅からバスで有田・唐津へ。 有田焼（有田）・吉野ヶ里歴史公園・唐津城",
+    "tags": [
+      "陶芸",
+      "バルーン",
+      "温泉"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "kumamoto",
@@ -1695,7 +1963,14 @@
     "rakutenPath": "/yado/kumamoto/kumamoto.html",
     "jalanPath": "/43/LRG_430010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多駅から新幹線で35分。熊本駅から市電で市内へ。 熊本城・水前寺成趣園・黒川温泉（車1時間）",
+    "tags": [
+      "城",
+      "阿蘇",
+      "グルメ"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "nagasaki",
@@ -1738,7 +2013,14 @@
     "rakutenPath": "/yado/nagasaki/nagasaki.html",
     "jalanPath": "/42/LRG_420010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多駅から新幹線で約30分。長崎駅から路面電車で観光地へ。 グラバー園・出島・稲佐山夜景",
+    "tags": [
+      "坂の街",
+      "異国情緒",
+      "歴史"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "beppu",
@@ -1781,7 +2063,14 @@
     "rakutenPath": "/yado/oita/beppu.html",
     "jalanPath": "/44/LRG_440030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多駅から特急で約2時間。別府駅から温泉街へバスで。 地獄めぐり（海地獄など）・別府温泉・湯布院（車30分）",
+    "tags": [
+      "温泉",
+      "地獄めぐり",
+      "海の幸"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "kagoshima",
@@ -1824,7 +2113,14 @@
     "rakutenPath": "/yado/kagoshima/kagoshima.html",
     "jalanPath": "/46/LRG_460010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多駅から新幹線で1時間20分。鹿児島中央駅から市電で市内へ。 桜島・仙巌園・天文館",
+    "tags": [
+      "桜島",
+      "温泉",
+      "薩摩"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "miyazaki",
@@ -1867,7 +2163,14 @@
     "rakutenPath": "/yado/miyazaki/miyazaki.html",
     "jalanPath": "/45/LRG_450010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "博多から飛行機で45分または特急で約2時間。宮崎駅が起点。 青島神社・鵜戸神宮・高千穂峡（車2時間）",
+    "tags": [
+      "海",
+      "神話",
+      "地鶏"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "hiroshima-f",
@@ -1910,7 +2213,14 @@
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
     "jalanPath": "/34/LRG_340010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。 原爆ドーム・厳島神社（宮島）・広島城",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-f",
@@ -1953,7 +2263,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tokyo-f",
@@ -1996,7 +2313,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "sapporo-f",
@@ -2039,7 +2363,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "otaru",
@@ -2083,7 +2414,14 @@
     "rakutenPath": "/yado/hokkaido/otaru.html",
     "jalanPath": "/01/LRG_010140/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "札幌駅から電車で40分。小樽駅から運河まで徒歩10分。 小樽運河・小樽オルゴール堂・堺町通り（寿司）",
+    "tags": [
+      "運河",
+      "海の幸",
+      "ガラス工芸"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "asahikawa",
@@ -2126,7 +2464,14 @@
     "rakutenPath": "/yado/hokkaido/asahikawa.html",
     "jalanPath": "/01/LRG_010060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "札幌駅から特急で1時間30分。旭川駅が道北の拠点。 旭山動物園・神楽岡公園・旭川ラーメン",
+    "tags": [
+      "動物園",
+      "ラーメン",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "furano",
@@ -2169,7 +2514,14 @@
     "rakutenPath": "/yado/hokkaido/furano.html",
     "jalanPath": "/01/LRG_010170/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "旭川駅から電車で1時間。富良野駅が観光の起点。 ファーム富田（ラベンダー）・北の国から聖地・富良野チーズ工房",
+    "tags": [
+      "ラベンダー",
+      "農場",
+      "スキー"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kushiro",
@@ -2212,7 +2564,14 @@
     "rakutenPath": "/yado/hokkaido/kushiro.html",
     "jalanPath": "/01/LRG_010110/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "札幌から飛行機で1時間または特急で3時間30分。釧路駅が起点。 釧路湿原・和商市場・釧路フィッシャーマンズワーフ",
+    "tags": [
+      "湿原",
+      "丹頂鶴",
+      "炉端焼き"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "hakodate",
@@ -2255,7 +2614,14 @@
     "rakutenPath": "/yado/hokkaido/hakodate.html",
     "jalanPath": "/01/LRG_010050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で4時間。函館駅からトラムで各地へ。 函館山夜景・元町・五稜郭",
+    "tags": [
+      "夜景",
+      "朝市",
+      "洋館"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "tokyo-s",
@@ -2298,7 +2664,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "osaka-s",
@@ -2341,7 +2714,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "fukuoka-s",
@@ -2384,7 +2764,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "matsushima",
@@ -2428,7 +2815,14 @@
     "rakutenPath": "/yado/miyagi/matsushima.html",
     "jalanPath": "/04/LRG_040030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "仙台駅から電車で30分。松島海岸駅から海岸まで徒歩5分。 松島湾の島々・瑞巌寺・五大堂",
+    "tags": [
+      "日本三景",
+      "海",
+      "牡蠣"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "yamagata",
@@ -2472,7 +2866,14 @@
     "rakutenPath": "/yado/yamagata/yamagata.html",
     "jalanPath": "/06/LRG_060010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "仙台駅から新幹線で30分。山形駅からバスで各地へ。 山寺（立石寺）・銀山温泉（車1時間）・蔵王（車1時間）",
+    "tags": [
+      "山寺",
+      "温泉",
+      "芋煮"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "morioka",
@@ -2515,7 +2916,14 @@
     "rakutenPath": "/yado/iwate/morioka.html",
     "jalanPath": "/03/LRG_030010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間15分。盛岡駅が東北北部の拠点。 盛岡城跡公園・開運橋・岩手山",
+    "tags": [
+      "わんこそば",
+      "冷麺",
+      "城跡"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "tokyo-se",
@@ -2558,7 +2966,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "niigata",
@@ -2601,7 +3016,14 @@
     "rakutenPath": "/yado/niigata/niigata.html",
     "jalanPath": "/15/LRG_150010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間。新潟駅が日本海側の玄関口。 北方文化博物館・古町・日本酒の蔵",
+    "tags": [
+      "コシヒカリ",
+      "日本酒",
+      "海の幸"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kanazawa-se",
@@ -2644,7 +3066,14 @@
     "rakutenPath": "/yado/ishikawa/kanazawa.html",
     "jalanPath": "/17/LRG_170010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。 兼六園・ひがし茶屋街・近江町市場",
+    "tags": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-se",
@@ -2687,7 +3116,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "fukuoka-se",
@@ -2730,7 +3166,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "miyajima",
@@ -2773,7 +3216,16 @@
     "rakutenPath": "/yado/hiroshima/miyajima.html",
     "jalanPath": "/34/LRG_340060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "広島駅から電車＋フェリーで45分。宮島口駅からフェリーで10分。 厳島神社（水上鳥居）・弥山・焼き牡蠣",
+    "tags": [
+      "厳島神社",
+      "世界遺産",
+      "鹿"
+    ],
+    "jr_region": "west",
+    "access_city": null,
+    "port": null
   },
   {
     "id": "onomichi",
@@ -2817,7 +3269,14 @@
     "rakutenPath": "/yado/hiroshima/onomichi.html",
     "jalanPath": "/34/LRG_340020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "広島駅から電車で1時間。尾道駅から坂の街へ徒歩5分。 千光寺・猫の細道・尾道水道の渡船",
+    "tags": [
+      "坂の街",
+      "映画の街",
+      "瀬戸内"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "okayama-h",
@@ -2861,7 +3320,14 @@
     "rakutenPath": "/yado/okayama/okayama.html",
     "jalanPath": "/33/LRG_330010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。 後楽園・岡山城・倉敷美観地区",
+    "tags": [
+      "後楽園",
+      "倉敷",
+      "桃"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "matsuyama",
@@ -2904,7 +3370,14 @@
     "rakutenPath": "/yado/ehime/matsuyama.html",
     "jalanPath": "/38/LRG_380010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪から飛行機で1時間または高松から特急で2時間。 道後温泉・松山城・坊っちゃんからくり時計",
+    "tags": [
+      "道後温泉",
+      "松山城",
+      "坊っちゃん"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-h",
@@ -2947,7 +3420,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "fukuoka-h",
@@ -2990,7 +3470,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "kyoto-h",
@@ -3033,7 +3520,14 @@
     "rakutenPath": "/yado/kyoto/kyoto.html",
     "jalanPath": "/26/LRG_260010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間15分、大阪駅から電車で15分。 金閣寺・伏見稲荷大社・清水寺",
+    "tags": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "nagoya-h",
@@ -3076,7 +3570,14 @@
     "rakutenPath": "/yado/aichi/nagoya.html",
     "jalanPath": "/23/LRG_230010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。 名古屋城・熱田神宮・東山動植物園",
+    "tags": [
+      "城下町",
+      "グルメ",
+      "ものづくり"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tokyo-h",
@@ -3119,7 +3620,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "sapporo-h",
@@ -3162,7 +3670,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "tokushima",
@@ -3206,7 +3721,14 @@
     "rakutenPath": "/yado/tokushima/tokushima.html",
     "jalanPath": "/36/LRG_360010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪から高速バスで2時間30分。徳島駅が市内の起点。 大塚国際美術館・鳴門の渦潮・阿波踊り会館",
+    "tags": [
+      "阿波踊り",
+      "鳴門",
+      "すだち"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "okayama-k",
@@ -3250,7 +3772,14 @@
     "rakutenPath": "/yado/okayama/okayama.html",
     "jalanPath": "/33/LRG_330010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。 後楽園・岡山城・倉敷美観地区",
+    "tags": [
+      "後楽園",
+      "倉敷",
+      "桃"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "shodoshima",
@@ -3293,7 +3822,16 @@
     "rakutenPath": "/yado/kagawa/shodoshima.html",
     "jalanPath": null,
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "高松港からフェリーで1時間。土庄港が島の玄関口。 エンジェルロード・二十四の瞳映画村・寒霞渓",
+    "tags": [
+      "オリーブ",
+      "醤油",
+      "映画の舞台"
+    ],
+    "jr_region": "west",
+    "access_city": "高松",
+    "port": "高松港"
   },
   {
     "id": "kochi",
@@ -3336,7 +3874,14 @@
     "rakutenPath": "/yado/kochi/kochi.html",
     "jalanPath": "/39/LRG_390010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪から特急で3時間。高知駅から路面電車で市内へ。 高知城・桂浜・ひろめ市場（カツオのたたき）",
+    "tags": [
+      "カツオ",
+      "よさこい",
+      "坂本龍馬"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "matsuyama-k",
@@ -3379,7 +3924,14 @@
     "rakutenPath": "/yado/ehime/matsuyama.html",
     "jalanPath": "/38/LRG_380010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪から飛行機で1時間または高松から特急で2時間。 道後温泉・松山城・坊っちゃんからくり時計",
+    "tags": [
+      "道後温泉",
+      "松山城",
+      "坊っちゃん"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "osaka-k",
@@ -3422,7 +3974,14 @@
     "rakutenPath": "/yado/osaka/osaka.html",
     "jalanPath": "/27/LRG_270010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。 道頓堀・大阪城・新世界",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "hiroshima-k",
@@ -3465,7 +4024,14 @@
     "rakutenPath": "/yado/hiroshima/hiroshima.html",
     "jalanPath": "/34/LRG_340010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。 原爆ドーム・厳島神社（宮島）・広島城",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "fukuoka-k",
@@ -3508,7 +4074,14 @@
     "rakutenPath": "/yado/fukuoka/fukuoka.html",
     "jalanPath": "/40/LRG_400010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。 中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "tokyo-k",
@@ -3551,7 +4124,14 @@
     "rakutenPath": "/yado/tokyo/tokyo.html",
     "jalanPath": "/13/LRG_130010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "各地から新幹線・飛行機でアクセス可能。東京駅が起点。 浅草・渋谷・東京スカイツリー",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "sapporo-k",
@@ -3594,7 +4174,14 @@
     "rakutenPath": "/yado/hokkaido/sapporo.html",
     "jalanPath": "/01/LRG_010030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で1時間30分。新千歳空港から電車で40分。 大通公園・北海道神宮・サッポロビール博物館",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "mihonoseki",
@@ -3634,7 +4221,10 @@
     "rakutenPath": null,
     "jalanPath": null,
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "米子空港から車で30分または境港駅から車で30分。 美保神社・美保関灯台・青石畳通り",
+    "tags": [],
+    "jr_region": "west"
   },
   {
     "id": "ryujin-onsen",
@@ -3673,7 +4263,10 @@
     "rakutenPath": "/yado/wakayama/ryujin.html",
     "jalanPath": null,
     "hasHotel": true,
-    "hubHotel": "wakayama"
+    "hubHotel": "wakayama",
+    "description": "大阪から特急＋龍神バスで約3時間。紀伊田辺駅で乗換え。 龍神温泉元湯・護摩壇山・道の駅龍游",
+    "tags": [],
+    "jr_region": "west"
   },
   {
     "id": "naha",
@@ -3725,7 +4318,14 @@
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470010%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fnaha.html&link_type=text",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から飛行機で約3時間。那覇空港からモノレールで市内へ。 首里城・国際通り・牧志公設市場",
+    "tags": [
+      "琉球文化",
+      "海",
+      "グルメ"
+    ],
+    "jr_region": "okinawa"
   },
   {
     "id": "tokashiki-jima",
@@ -3766,7 +4366,12 @@
     "rakutenPath": "/yado/okinawa/tokashikijima.html",
     "jalanPath": null,
     "hasHotel": true,
-    "hubHotel": "naha"
+    "hubHotel": "naha",
+    "description": "那覇港から高速フェリーで35分。島内はレンタサイクルで移動。 阿波連ビーチ・渡嘉敷ビーチ・ケラマブルーの海",
+    "tags": [],
+    "jr_region": "okinawa",
+    "access_city": "那覇",
+    "port": "那覇港"
   },
   {
     "id": "kumejima",
@@ -3813,7 +4418,16 @@
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470060%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fkumejima.html&link_type=text",
     "hasHotel": true,
-    "hubHotel": "naha"
+    "hubHotel": "naha",
+    "description": "那覇から飛行機で30分。島内移動はレンタカーが便利。 はての浜（無人島）・畳石・ウミガメ館",
+    "tags": [
+      "離島",
+      "砂浜",
+      "ダイビング"
+    ],
+    "jr_region": "okinawa",
+    "access_city": "那覇",
+    "port": "那覇港"
   },
   {
     "id": "miyakojima",
@@ -3859,7 +4473,16 @@
     "rakutenPath": "/yado/okinawa/miyakojima.html",
     "jalanPath": "/47/LRG_470040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "那覇から飛行機で1時間。宮古空港から市街まで車で20分。 与那覇前浜・伊良部大橋・池間島",
+    "tags": [
+      "離島",
+      "ダイビング",
+      "ビーチ"
+    ],
+    "jr_region": "okinawa",
+    "access_city": null,
+    "port": null
   },
   {
     "id": "kouzushima",
@@ -3902,7 +4525,16 @@
     "rakutenPath": "/yado/tokyo/kouzushima.html",
     "jalanPath": "/13/LRG_130120/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "竹芝客船ターミナルから高速船で約2時間30分。 赤崎遊歩道・天上山・神津島の星空（日本三選星空）",
+    "tags": [
+      "離島",
+      "ハイキング",
+      "ダイビング"
+    ],
+    "jr_region": "east",
+    "access_city": "東京",
+    "port": "竹芝客船ターミナル"
   },
   {
     "id": "hakone",
@@ -3946,7 +4578,14 @@
     "rakutenPath": "/yado/kanagawa/hakone.html",
     "jalanPath": "/14/LRG_140060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "山と湖に抱かれた温泉郷。 芦ノ湖・大涌谷・箱根関所",
+    "tags": [
+      "温泉",
+      "富士山",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "shuzenji",
@@ -3989,7 +4628,14 @@
     "rakutenPath": "/yado/shizuoka/shuzenji.html",
     "jalanPath": "/22/LRG_220020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "伊豆最古の温泉、竹林に静まる。 修禅寺・竹林の小径・独鈷の湯",
+    "tags": [
+      "温泉",
+      "竹林",
+      "歴史"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kusatsu-onsen",
@@ -4032,7 +4678,14 @@
     "rakutenPath": "/yado/gunma/kusatsu.html",
     "jalanPath": "/10/LRG_100050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "日本三名泉のひとつ、源泉かけ流し。 湯畑・西の河原・熱の湯",
+    "tags": [
+      "温泉",
+      "湯畑",
+      "秘湯"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "shimoda",
@@ -4075,7 +4728,14 @@
     "rakutenPath": "/yado/shizuoka/shimoda.html",
     "jalanPath": "/22/LRG_220060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "黒船が来た港まち、開国の面影。 了仙寺・白浜海岸・爪木崎",
+    "tags": [
+      "歴史",
+      "海",
+      "開国"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "izu-oshima",
@@ -4118,7 +4778,16 @@
     "rakutenPath": "/yado/tokyo/oshima.html",
     "jalanPath": "/13/LRG_130100/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "東京から船で行ける火山の島。 三原山・砂の砂漠・波浮港",
+    "tags": [
+      "島",
+      "火山",
+      "自然"
+    ],
+    "jr_region": "east",
+    "access_city": "東京",
+    "port": "竹芝客船ターミナル"
   },
   {
     "id": "shirakawago-t",
@@ -4161,7 +4830,14 @@
     "rakutenPath": "/yado/gifu/shirakawago.html",
     "jalanPath": "/21/LRG_210070/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "雪に埋もれた合掌造りの集落。 荻町城跡展望台・神田家・明善寺",
+    "tags": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "arima-onsen",
@@ -4205,7 +4881,14 @@
     "rakutenPath": "/yado/hyogo/arima.html",
     "jalanPath": "/28/LRG_280010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "六甲山麓に湧く、千年の湯処。 金の湯・銀の湯・太閤の湯殿館",
+    "tags": [
+      "温泉",
+      "歴史",
+      "古湯"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kinosaki-onsen",
@@ -4249,7 +4932,14 @@
     "rakutenPath": "/yado/hyogo/kinosaki.html",
     "jalanPath": "/28/LRG_280060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "七つの外湯を浴衣で巡る温泉街。 さとの湯・一の湯・まんだら湯",
+    "tags": [
+      "温泉",
+      "外湯巡り",
+      "温泉街"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kurashiki-o",
@@ -4293,7 +4983,14 @@
     "rakutenPath": "/yado/okayama/kurashiki.html",
     "jalanPath": "/33/LRG_330020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "白壁と柳の美観地区。 大原美術館・倉敷川・阿智神社",
+    "tags": [
+      "美観地区",
+      "美術館",
+      "歴史"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "shirahama-o",
@@ -4336,7 +5033,14 @@
     "rakutenPath": "/yado/wakayama/shirahama.html",
     "jalanPath": "/30/LRG_300020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "南紀の白い砂浜とエメラルドの海。 白良浜・三段壁・千畳敷",
+    "tags": [
+      "海",
+      "リゾート",
+      "温泉"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "takayama-o",
@@ -4379,7 +5083,14 @@
     "rakutenPath": "/yado/gifu/takayama.html",
     "jalanPath": "/21/LRG_210060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "江戸の町割りが残る飛騨の山里。 古い町並・高山陣屋・朝市",
+    "tags": [
+      "古い町並",
+      "飛騨",
+      "温泉"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "takayama-n",
@@ -4423,7 +5134,14 @@
     "rakutenPath": "/yado/gifu/takayama.html",
     "jalanPath": "/21/LRG_210060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "飛騨の山あいに息づく古き街。 三之町・高山陣屋・飛騨の里",
+    "tags": [
+      "古い町並",
+      "飛騨",
+      "朝市"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "shirakawago-n",
@@ -4467,7 +5185,14 @@
     "rakutenPath": "/yado/gifu/shirakawago.html",
     "jalanPath": "/21/LRG_210070/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "雪の重さに耐えた合掌造りの村。 荻町・和田家・萩町城跡展望台",
+    "tags": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "toba",
@@ -4511,7 +5236,14 @@
     "rakutenPath": "/yado/mie/toba.html",
     "jalanPath": "/24/LRG_240040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "真珠と海女の海、伊勢湾に抱かれた港。 鳥羽水族館・ミキモト真珠島・海女小屋",
+    "tags": [
+      "海",
+      "真珠",
+      "海女"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "matsumoto-n",
@@ -4555,7 +5287,14 @@
     "rakutenPath": "/yado/nagano/matsumoto.html",
     "jalanPath": "/20/LRG_200010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "アルプスを望む城下町。 松本城・縄手通り・旧開智学校",
+    "tags": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "yufuin",
@@ -4598,7 +5337,14 @@
     "rakutenPath": "/yado/oita/yufuin.html",
     "jalanPath": "/44/LRG_440020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "由布岳を望む霧の温泉郷。 湯の坪街道・金鱗湖・由布院玉の湯",
+    "tags": [
+      "温泉",
+      "自然",
+      "由布岳"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "kurokawa-onsen",
@@ -4641,7 +5387,14 @@
     "rakutenPath": "/yado/kumamoto/kurokawa.html",
     "jalanPath": "/43/LRG_430060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "杉林の奥に隠れた秘湯の集落。 入湯手形・山みず木・山河",
+    "tags": [
+      "温泉",
+      "秘湯",
+      "自然"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "aso",
@@ -4685,7 +5438,14 @@
     "rakutenPath": "/yado/kumamoto/aso.html",
     "jalanPath": "/43/LRG_430020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "活火山と広大なカルデラの大地。 草千里・中岳火口・大観峰",
+    "tags": [
+      "火山",
+      "自然",
+      "カルデラ"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "yakushima",
@@ -4728,7 +5488,16 @@
     "rakutenPath": "/yado/kagoshima/yakushima.html",
     "jalanPath": "/46/LRG_460040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "樹齢七千年の縄文杉が待つ、森の島。 縄文杉・白谷雲水峡・千尋の滝",
+    "tags": [
+      "世界遺産",
+      "縄文杉",
+      "自然"
+    ],
+    "jr_region": "kyushu",
+    "access_city": null,
+    "port": null
   },
   {
     "id": "amakusa",
@@ -4771,7 +5540,14 @@
     "rakutenPath": "/yado/kumamoto/amakusa.html",
     "jalanPath": "/43/LRG_430040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "海と島と橋が連なる天草の原風景。 天草五橋・崎津集落・イルカウォッチング",
+    "tags": [
+      "世界遺産",
+      "キリシタン",
+      "海"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "hiraizumi",
@@ -4815,7 +5591,14 @@
     "rakutenPath": "/yado/iwate/hiraizumi.html",
     "jalanPath": "/03/LRG_030020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "黄金の平泉、奥州藤原氏の夢の跡。 中尊寺金色堂・毛越寺・達谷窟",
+    "tags": [
+      "世界遺産",
+      "金色堂",
+      "歴史"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kakunodate",
@@ -4858,7 +5641,14 @@
     "rakutenPath": "/yado/akita/kakunodate.html",
     "jalanPath": "/05/LRG_050010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "武家屋敷と枝垂れ桜の城下町。 武家屋敷通り・桧木内川堤・青柳家",
+    "tags": [
+      "武家屋敷",
+      "桜",
+      "城下町"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "aizu",
@@ -4901,7 +5691,14 @@
     "rakutenPath": "/yado/fukushima/aizu.html",
     "jalanPath": "/07/LRG_070020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "鶴ヶ城と会津の心意気が残る城下町。 鶴ヶ城・芦ノ牧温泉・大内宿",
+    "tags": [
+      "城",
+      "歴史",
+      "温泉"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "zaosan",
@@ -4944,7 +5741,14 @@
     "rakutenPath": "/yado/yamagata/zao.html",
     "jalanPath": "/06/LRG_060010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "蔵王の火口湖、御釜の青緑は別世界。 お釜・蔵王温泉・樹氷",
+    "tags": [
+      "火口湖",
+      "温泉",
+      "樹氷"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "hagi",
@@ -4987,7 +5791,14 @@
     "rakutenPath": "/yado/yamaguchi/hagi.html",
     "jalanPath": "/35/LRG_350020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "幕末の志士たちが歩いた城下町。 萩城跡・松陰神社・菊屋家住宅",
+    "tags": [
+      "幕末",
+      "城下町",
+      "歴史"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "shimonoseki",
@@ -5032,7 +5843,14 @@
     "rakutenPath": "/yado/yamaguchi/shimonoseki.html",
     "jalanPath": "/35/LRG_350010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "本州最西端、海峡の街。 関門橋・唐戸市場・巌流島",
+    "tags": [
+      "海峡",
+      "ふぐ",
+      "歴史"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kurashiki-h",
@@ -5076,7 +5894,14 @@
     "rakutenPath": "/yado/okayama/kurashiki.html",
     "jalanPath": "/33/LRG_330020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "瀬戸内の白壁の街、倉敷。 美観地区・大原美術館・倉敷川",
+    "tags": [
+      "美観地区",
+      "美術館",
+      "白壁"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "naoshima",
@@ -5119,7 +5944,16 @@
     "rakutenPath": "/yado/kagawa/naoshima.html",
     "jalanPath": "/37/LRG_370020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "現代アートが島ごと美術館になった場所。 地中美術館・家プロジェクト・ANDO MUSEUM",
+    "tags": [
+      "現代アート",
+      "島",
+      "美術館"
+    ],
+    "jr_region": "west",
+    "access_city": "高松",
+    "port": "高松港"
   },
   {
     "id": "kotohira",
@@ -5163,7 +5997,14 @@
     "rakutenPath": "/yado/kagawa/kotohira.html",
     "jalanPath": "/37/LRG_370030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "讃岐の金刀比羅宮、785段の石段。 こんぴらさん・表書院・旧金毘羅大芝居",
+    "tags": [
+      "金刀比羅宮",
+      "石段",
+      "参拝"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "uwajima",
@@ -5207,7 +6048,14 @@
     "rakutenPath": "/yado/ehime/uwajima.html",
     "jalanPath": "/38/LRG_380020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "南予の闘牛と鯛めしの海辺の城下町。 宇和島城・道後温泉・じゃこ天",
+    "tags": [
+      "城",
+      "闘牛",
+      "鯛めし"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "toyako",
@@ -5250,7 +6098,14 @@
     "rakutenPath": "/yado/hokkaido/toyako.html",
     "jalanPath": "/01/LRG_010140/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "昭和新山と有珠山を望む、静かな湖畔。 洞爺湖・有珠山ロープウェイ・サイロ展望台",
+    "tags": [
+      "湖",
+      "温泉",
+      "火山"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "noboribetsu",
@@ -5293,7 +6148,14 @@
     "rakutenPath": "/yado/hokkaido/noboribetsu.html",
     "jalanPath": "/01/LRG_010130/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "北海道最大の温泉地、地獄谷へ。 地獄谷・大湯沼・クマ牧場",
+    "tags": [
+      "温泉",
+      "地獄谷",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "shiretoko",
@@ -5336,7 +6198,14 @@
     "rakutenPath": "/yado/hokkaido/shiretoko.html",
     "jalanPath": "/01/LRG_010290/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "世界自然遺産、手つかずの原生林と海。 知床五湖・カムイワッカの滝・羅臼岳",
+    "tags": [
+      "世界遺産",
+      "自然",
+      "原生林"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "wajima",
@@ -5379,7 +6248,14 @@
     "rakutenPath": "/yado/ishikawa/wajima.html",
     "jalanPath": "/17/LRG_170030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "能登の先端、輪島塗と朝市の街。 朝市通り・重蔵神社・白米千枚田",
+    "tags": [
+      "輪島塗",
+      "朝市",
+      "棚田"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "shirakawago-k",
@@ -5423,7 +6299,14 @@
     "rakutenPath": "/yado/gifu/shirakawago.html",
     "jalanPath": "/21/LRG_210070/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "冬の合掌造り、雪に輝く世界遺産。 荻町合掌集落・和田家・展望台",
+    "tags": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kaga-onsen",
@@ -5467,7 +6350,14 @@
     "rakutenPath": "/yado/ishikawa/kaga.html",
     "jalanPath": "/17/LRG_170020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "九谷焼と山代・山中・片山津が集まる温泉郷。 山代温泉・山中温泉・片山津温泉",
+    "tags": [
+      "温泉",
+      "九谷焼",
+      "加賀"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "matsumoto-l",
@@ -5511,7 +6401,14 @@
     "rakutenPath": "/yado/nagano/matsumoto.html",
     "jalanPath": "/20/LRG_200010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "松本城を仰ぐ、アルプスの城下町。 松本城・縄手通り・美ヶ原",
+    "tags": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "hakuba",
@@ -5554,7 +6451,14 @@
     "rakutenPath": "/yado/nagano/hakuba.html",
     "jalanPath": "/20/LRG_200020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "北アルプスの峰々を望む高原リゾート。 八方尾根・白馬大雪渓・岩岳",
+    "tags": [
+      "スキー",
+      "登山",
+      "アルプス"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "amanohashidate",
@@ -5599,7 +6503,14 @@
     "rakutenPath": "/yado/kyoto/amanohashidate.html",
     "jalanPath": "/26/LRG_260030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "天橋立の砂洲を、股のぞきで。 智恩寺・天橋立ビューランド・傘松公園",
+    "tags": [
+      "日本三景",
+      "砂洲",
+      "絶景"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "ine",
@@ -5642,7 +6553,14 @@
     "rakutenPath": "/yado/kyoto/ine.html",
     "jalanPath": "/26/LRG_260040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "舟屋が海に並ぶ、伊根の静かな入り江。 伊根の舟屋・道の駅舟屋の里伊根・浦島神社",
+    "tags": [
+      "舟屋",
+      "漁村",
+      "海"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "ibusuki",
@@ -5686,7 +6604,14 @@
     "rakutenPath": "/yado/kagoshima/ibusuki.html",
     "jalanPath": "/46/LRG_460010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "砂に埋まる砂むし温泉、薩摩の南端。 砂むし会館・長崎鼻・池田湖",
+    "tags": [
+      "砂むし温泉",
+      "温泉",
+      "自然"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "yakushima-k",
@@ -5729,7 +6654,16 @@
     "rakutenPath": "/yado/kagoshima/yakushima.html",
     "jalanPath": "/46/LRG_460040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "世界遺産の森、屋久杉の圧倒的な存在感。 縄文杉・ヤクスギランド・永田いなか浜",
+    "tags": [
+      "世界遺産",
+      "屋久杉",
+      "自然"
+    ],
+    "jr_region": "kyushu",
+    "access_city": null,
+    "port": null
   },
   {
     "id": "sasebo",
@@ -5774,7 +6708,14 @@
     "rakutenPath": "/yado/nagasaki/sasebo.html",
     "jalanPath": "/42/LRG_420030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "長崎県北、海と島の入り組む軍港の街。 九十九島・旧海軍鎮守府跡・佐世保バーガー",
+    "tags": [
+      "九十九島",
+      "軍港",
+      "海"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "hirado",
@@ -5817,7 +6758,14 @@
     "rakutenPath": "/yado/nagasaki/hirado.html",
     "jalanPath": "/42/LRG_420040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "日本で最初に外国人が訪れた港まち。 平戸城・オランダ商館・川内峠",
+    "tags": [
+      "歴史",
+      "教会",
+      "港"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "aso-k",
@@ -5861,7 +6809,14 @@
     "rakutenPath": "/yado/kumamoto/aso.html",
     "jalanPath": "/43/LRG_430020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "活火山のふもと、草原と温泉の大地。 草千里・大観峰・阿蘇山上広場",
+    "tags": [
+      "火山",
+      "草原",
+      "自然"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "kurokawa-k",
@@ -5904,7 +6859,14 @@
     "rakutenPath": "/yado/kumamoto/kurokawa.html",
     "jalanPath": "/43/LRG_430060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "熊本から最も近い秘湯の里。 黒川温泉・山みず木・豊礼の湯",
+    "tags": [
+      "温泉",
+      "秘湯",
+      "湯めぐり"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "hiraizumi-m",
@@ -5948,7 +6910,14 @@
     "rakutenPath": "/yado/iwate/hiraizumi.html",
     "jalanPath": "/03/LRG_030020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "金色堂と中尊寺、岩手の誇る世界遺産。 中尊寺金色堂・毛越寺・無量光院跡",
+    "tags": [
+      "世界遺産",
+      "金色堂",
+      "歴史"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "kakunodate-m",
@@ -5992,7 +6961,14 @@
     "rakutenPath": "/yado/akita/kakunodate.html",
     "jalanPath": "/05/LRG_050010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "武家屋敷通りと桜、東北の小京都。 武家屋敷・桧木内川堤・安藤醸造",
+    "tags": [
+      "武家屋敷",
+      "桜",
+      "城下町"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "tottori",
@@ -6036,7 +7012,14 @@
     "rakutenPath": "/yado/tottori/tottori.html",
     "jalanPath": "/31/LRG_310010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "砂丘と蟹と名探偵の街。 鳥取砂丘・砂の美術館・浦富海岸",
+    "tags": [
+      "砂丘",
+      "蟹",
+      "自然"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "akita",
@@ -6080,7 +7063,14 @@
     "rakutenPath": "/yado/akita/akita.html",
     "jalanPath": "/05/LRG_050020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "きりたんぽと竿燈祭り、男鹿の鬼が宿る街。 竿燈まつり・千秋公園・男鹿半島",
+    "tags": [
+      "竿燈まつり",
+      "城下町",
+      "食"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "awaji",
@@ -6125,7 +7115,14 @@
     "rakutenPath": "/yado/hyogo/awajishima.html",
     "jalanPath": "/28/LRG_280070/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "玉ねぎと鳴門の渦巻く、橋の先の島。 鳴門海峡・淡路夢舞台・伊弉諾神宮",
+    "tags": [
+      "自然",
+      "グルメ",
+      "歴史"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "takao",
@@ -6168,7 +7165,14 @@
     "rakutenPath": "/yado/tokyo/takao.html",
     "jalanPath": "/13/LRG_130030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "都心から一時間、599メートルの霊峰。 ケーブルカー・薬王院・山頂の展望台",
+    "tags": [
+      "ハイキング",
+      "寺社",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "tateyama-chiba",
@@ -6212,7 +7216,14 @@
     "rakutenPath": "/yado/chiba/tateyama.html",
     "jalanPath": "/12/LRG_120110/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "南房総の先端、黒潮が運ぶ温暖な海。 城山公園・沖ノ島・館山城",
+    "tags": [
+      "海",
+      "花",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "gokayama",
@@ -6256,7 +7267,14 @@
     "rakutenPath": "/yado/toyama/gokayama.html",
     "jalanPath": "/16/LRG_160020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "白川郷の隣、より静かな合掌造りの里。 菅沼集落・相倉集落・岩瀬家",
+    "tags": [
+      "世界遺産",
+      "歴史",
+      "自然"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "jozankei",
@@ -6299,7 +7317,14 @@
     "rakutenPath": "/yado/hokkaido/jozankei.html",
     "jalanPath": "/01/LRG_010220/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "札幌の奥座敷、豊平川沿いの温泉郷。 定山渓温泉・二見岩・定山渓神社",
+    "tags": [
+      "温泉",
+      "紅葉",
+      "自然"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "biei",
@@ -6343,7 +7368,14 @@
     "rakutenPath": "/yado/hokkaido/biei.html",
     "jalanPath": "/01/LRG_010370/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "丘と畑が織りなすパッチワークの大地。 パッチワークの路・青い池・四季彩の丘",
+    "tags": [
+      "自然",
+      "写真映え",
+      "農村"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "miyako-iwate",
@@ -6387,7 +7419,14 @@
     "rakutenPath": "/yado/iwate/miyako.html",
     "jalanPath": "/03/LRG_030050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "浄土ヶ浜の白い岩と碧い海。 浄土ヶ浜・北山崎・三陸ジオパーク",
+    "tags": [
+      "海",
+      "自然",
+      "三陸"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "sakata",
@@ -6430,7 +7469,14 @@
     "rakutenPath": "/yado/yamagata/sakata.html",
     "jalanPath": "/06/LRG_060040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "かつて北前船が行き交った湊町。 山居倉庫・土門拳記念館・日和山公園",
+    "tags": [
+      "歴史",
+      "港町",
+      "文化"
+    ],
+    "jr_region": "east"
   },
   {
     "id": "takachiho",
@@ -6474,7 +7520,14 @@
     "rakutenPath": "/yado/miyazaki/takachiho.html",
     "jalanPath": "/45/LRG_450030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "神話の里、峡谷に響く真名井の滝。 高千穂峡・天岩戸神社・夜神楽",
+    "tags": [
+      "神話",
+      "自然",
+      "渓谷"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "amami",
@@ -6517,7 +7570,16 @@
     "rakutenPath": "/yado/kagoshima/amami.html",
     "jalanPath": "/46/LRG_460020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "亜熱帯の森とサンゴの海、奄美の原風景。 金作原原生林・大浜海浜公園・マングローブ林",
+    "tags": [
+      "離島",
+      "自然",
+      "ダイビング"
+    ],
+    "jr_region": "kyushu",
+    "access_city": "鹿児島",
+    "port": "鹿児島港"
   },
   {
     "id": "goto",
@@ -6560,7 +7622,16 @@
     "rakutenPath": "/yado/nagasaki/goto.html",
     "jalanPath": "/42/LRG_420060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "教会と海が共存する、キリシタンの島々。 堂崎天主堂・大瀬崎灯台・高浜海水浴場",
+    "tags": [
+      "離島",
+      "世界遺産",
+      "キリシタン"
+    ],
+    "jr_region": "kyushu",
+    "access_city": "長崎",
+    "port": "長崎港"
   },
   {
     "id": "unzen",
@@ -6603,7 +7674,14 @@
     "rakutenPath": "/yado/nagasaki/unzen.html",
     "jalanPath": "/42/LRG_420050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "長崎県の山上に湧く、地獄と温泉の街。 雲仙地獄・雲仙温泉・妙見岳",
+    "tags": [
+      "温泉",
+      "自然",
+      "火山"
+    ],
+    "jr_region": "kyushu"
   },
   {
     "id": "ashizuri",
@@ -6646,7 +7724,14 @@
     "rakutenPath": "/yado/kochi/ashizuri.html",
     "jalanPath": "/39/LRG_390020/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "四国最南端、太平洋に突き出した岬。 足摺岬灯台・唐人駄馬・ジョン万次郎像",
+    "tags": [
+      "絶景",
+      "自然",
+      "岬"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "oboke",
@@ -6690,7 +7775,14 @@
     "rakutenPath": "/yado/tokushima/iya.html",
     "jalanPath": "/36/LRG_360030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "吉野川の峡谷と、かずら橋で揺れる祖谷。 大歩危峡・祖谷のかずら橋・かずら橋夢舞台",
+    "tags": [
+      "渓谷",
+      "秘境",
+      "自然"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tsuwano",
@@ -6734,7 +7826,14 @@
     "rakutenPath": "/yado/shimane/tsuwano.html",
     "jalanPath": "/32/LRG_320030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "山陰の小京都、鯉が泳ぐ城下町。 津和野城跡・太皷谷稲成神社・殿町通り",
+    "tags": [
+      "城下町",
+      "歴史",
+      "神社"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "inuyama",
@@ -6778,7 +7877,14 @@
     "rakutenPath": "/yado/aichi/inuyama.html",
     "jalanPath": "/23/LRG_230040/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "木曽川沿いに建つ、現存する国宝の城。 犬山城・木曽川・博物館明治村",
+    "tags": [
+      "城",
+      "歴史",
+      "川"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "kiso",
@@ -6823,7 +7929,14 @@
     "rakutenPath": "/yado/nagano/kiso.html",
     "jalanPath": "/20/LRG_200060/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "中山道の宿場町が眠る、木曽の山あい。 妻籠宿・奈良井宿・馬籠宿",
+    "tags": [
+      "宿場町",
+      "歴史",
+      "自然"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "miyama",
@@ -6867,7 +7980,14 @@
     "rakutenPath": "/yado/kyoto/miyama.html",
     "jalanPath": "/26/LRG_260050/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "茅葺き屋根が50棟並ぶ、山の集落。 かやぶきの里・美山ふれあい広場・自然文化村",
+    "tags": [
+      "古民家",
+      "自然",
+      "田舎"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "tateyama-kurobe",
@@ -6911,7 +8031,14 @@
     "rakutenPath": "/yado/toyama/tateyama.html",
     "jalanPath": "/16/LRG_160030/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "3000メートルの稜線を歩く、アルペンルート。 室堂・雪の大谷・黒部ダム",
+    "tags": [
+      "山岳",
+      "絶景",
+      "自然"
+    ],
+    "jr_region": "west"
   },
   {
     "id": "himi",
@@ -6956,6 +8083,13 @@
     "rakutenPath": "/yado/toyama/himi.html",
     "jalanPath": "/16/LRG_160010/",
     "hasHotel": true,
-    "hubHotel": null
+    "hubHotel": null,
+    "description": "立山連峰を望む、漁師町の朝市。 氷見漁港・氷見温泉郷・光禅寺",
+    "tags": [
+      "漁港",
+      "温泉",
+      "グルメ"
+    ],
+    "jr_region": "west"
   }
 ]

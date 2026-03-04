@@ -41,7 +41,7 @@ export function resolveTransportLinks(city, departure, datetime) {
     if (sc) links.push(sc);
   }
 
-  // フェリーのみ: Googleマップ（港→）
+  // フェリーのみ: Googleマップ（出発地 → フェリー港）
   if (hasFerry) {
     links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
   }

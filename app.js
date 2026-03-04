@@ -74,12 +74,6 @@ function draw() {
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
   const hotelLinks     = buildHotelLinks(city, state.destinations);
 
-  const transportType = transportLinks.map(l => l.type).join(', ') || 'none';
-  console.log('departure:', state.departure);
-  console.log('destination:', city.name);
-  console.log('distanceStar:', state.distance);
-  console.log('transportType:', transportType);
-
   renderResult({
     city,
     transportLinks,
@@ -88,6 +82,7 @@ function draw() {
     poolIndex:     state.poolIndex,
     poolTotal:     state.pool.length,
     fromCity,
+    departure:     state.departure,
   });
 
   updateRetryBtn();

@@ -100,6 +100,16 @@ function weightedShuffle(arr) {
   return result;
 }
 
+/** 同一 name の都市を1件に絞る（高重み順） */
+function deduplicateByName(arr) {
+  const seen = new Set();
+  return arr.filter(city => {
+    if (seen.has(city.name)) return false;
+    seen.add(city.name);
+    return true;
+  });
+}
+
 export function buildPool(destinations, distanceStars, stayType, departure = '') {
   // 2泊3日は1泊2日と同じ目的地セットを使用
   const normalizedStay = stayType === '2night' ? '1night' : stayType;
@@ -116,8 +126,9 @@ export function buildPool(destinations, distanceStars, stayType, departure = '')
 
   // star + stayType で完全一致
   const exact = filtered.filter(d => d.distanceStars === distanceStars);
-  if (exact.length > 0) return weightedShuffle(exact);
+  if (exact.length > 0) return deduplicateByName(weightedShuffle(exact));
 
   // フォールバック: normalizedStay 一致のみ
-  return weightedShuffle(filtered.length > 0 ? filtered : destinations);
+  const base = filtered.length > 0 ? filtered : destinations;
+  return deduplicateByName(weightedShuffle(base));
 }

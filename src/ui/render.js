@@ -13,7 +13,7 @@
 
 import { applyAffiliateLinks } from '../affiliate/affiliate.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal, fromCity }) {
+export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal, fromCity, departure }) {
   const showHotel = hotelLinks.show;
   const showHub   = showHotel && !!hotelLinks.hub;
 
@@ -21,7 +21,7 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, 
   el.innerHTML = `
     <div class="result-card">
       ${buildCounterBlock(poolIndex, poolTotal)}
-      ${buildCityBlock(city, distanceLabel, fromCity)}
+      ${buildCityBlock(city, distanceLabel, fromCity, departure)}
       ${buildTransportBlock(transportLinks)}
       ${showHotel ? buildStayBlock() : ''}
       ${showHub ? buildHubStayBlock(hotelLinks.hub.name) : ''}
@@ -62,7 +62,7 @@ const STAR_TIME_LABEL = {
  * 出発地情報を使ってアクセス行を自然文で生成する。
  * fromCity = DEPARTURE_CITY_INFO[departure] の値。
  */
-function generateAccessText(fromCity, city) {
+function generateAccessText(fromCity, city, departure) {
   const { access, distanceStars } = city;
   if (!access) return '';
 
@@ -79,14 +79,19 @@ function generateAccessText(fromCity, city) {
   }
 
   if (access.ferryGateway) {
+    // access_city（中継ハブ都市）が出発地と異なる場合は経由表記
+    const hub = city.access_city;
+    if (hub && hub !== city.name && hub !== departure) {
+      return `<p class="access-line">${hub}経由 → ${access.ferryGateway}からフェリーで</p>`;
+    }
     return `<p class="access-line">${access.ferryGateway}からフェリーで</p>`;
   }
 
   return '';
 }
 
-function buildCityBlock(city, _distanceLabel, fromCity) {
-  const accessLine = generateAccessText(fromCity, city);
+function buildCityBlock(city, _distanceLabel, fromCity, departure) {
+  const accessLine = generateAccessText(fromCity, city, departure);
 
   // 「〜行かない？」系の呼びかけ文を除去
   const atmosphereHtml = (city.atmosphere || [])
