@@ -3,7 +3,7 @@ import { resolveTransportLinks } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/affiliate/hotel.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
-import { DISTANCE_LABELS } from './src/config/constants.js';
+import { DISTANCE_LABELS, DEPARTURE_CITY_INFO } from './src/config/constants.js';
 
 const DEFAULT_GUESTS = 1;
 
@@ -50,14 +50,14 @@ function go() {
   }
   clearFormError();
 
-  state.pool      = buildPool(state.destinations, state.distance, state.stayType);
+  state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure);
   state.poolIndex = 0;
   draw();
 }
 
 function retry() {
   if (state.poolIndex >= state.pool.length - 1) {
-    state.pool      = buildPool(state.destinations, state.distance, state.stayType);
+    state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure);
     state.poolIndex = 0;
   } else {
     state.poolIndex++;
@@ -70,8 +70,15 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
+  const fromCity       = DEPARTURE_CITY_INFO[state.departure];
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
   const hotelLinks     = buildHotelLinks(city, state.destinations);
+
+  const transportType = transportLinks.map(l => l.type).join(', ') || 'none';
+  console.log('departure:', state.departure);
+  console.log('destination:', city.name);
+  console.log('distanceStar:', state.distance);
+  console.log('transportType:', transportType);
 
   renderResult({
     city,
@@ -80,6 +87,7 @@ function draw() {
     distanceLabel: DISTANCE_LABELS[state.distance],
     poolIndex:     state.poolIndex,
     poolTotal:     state.pool.length,
+    fromCity,
   });
 
   updateRetryBtn();

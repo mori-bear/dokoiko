@@ -22,7 +22,8 @@ export function resolveTransportLinks(city, departure, datetime) {
   if (!access) return [];
 
   const hasRail  = !!access.railGateway;
-  const hasAir   = !!access.airportGateway;
+  // 短距離（★1〜2）は航空表示しない。★3以上のみ有効。
+  const hasAir   = !!access.airportGateway && (city.distanceStars ?? 0) >= 3;
   const hasFerry = !!access.ferryGateway && !hasRail && !hasAir;
 
   const links = [];

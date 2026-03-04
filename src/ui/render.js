@@ -13,7 +13,7 @@
 
 import { applyAffiliateLinks } from '../affiliate/affiliate.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal }) {
+export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, poolIndex, poolTotal, fromCity }) {
   const showHotel = hotelLinks.show;
   const showHub   = showHotel && !!hotelLinks.hub;
 
@@ -21,7 +21,7 @@ export function renderResult({ city, transportLinks, hotelLinks, distanceLabel, 
   el.innerHTML = `
     <div class="result-card">
       ${buildCounterBlock(poolIndex, poolTotal)}
-      ${buildCityBlock(city, distanceLabel)}
+      ${buildCityBlock(city, distanceLabel, fromCity)}
       ${buildTransportBlock(transportLinks)}
       ${showHotel ? buildStayBlock() : ''}
       ${showHub ? buildHubStayBlock(hotelLinks.hub.name) : ''}
@@ -49,8 +49,44 @@ function buildCounterBlock(index, total) {
 
 /* ── 都市ブロック ── */
 
-function buildCityBlock(city, _distanceLabel) {
-  const accessLine = buildAccessLine(city);
+/** distanceStars → 所要時間ラベル */
+const STAR_TIME_LABEL = {
+  1: '約1時間以内',
+  2: '約2時間',
+  3: '約3〜4時間',
+  4: '約5〜6時間',
+  5: '6時間以上',
+};
+
+/**
+ * 出発地情報を使ってアクセス行を自然文で生成する。
+ * fromCity = DEPARTURE_CITY_INFO[departure] の値。
+ */
+function generateAccessText(fromCity, city) {
+  const { access, distanceStars } = city;
+  if (!access) return '';
+
+  if (access.railGateway) {
+    const timeLabel = STAR_TIME_LABEL[distanceStars] ?? '';
+    const note = access.railNote ? `（${access.railNote}）` : '';
+    const from = fromCity?.rail ?? access.railGateway;
+    return `<p class="access-line">${from}から${timeLabel}${note}</p>`;
+  }
+
+  if (access.airportGateway) {
+    const from = fromCity?.airport ?? '出発空港';
+    return `<p class="access-line">${from}から${access.airportGateway}へ</p>`;
+  }
+
+  if (access.ferryGateway) {
+    return `<p class="access-line">${access.ferryGateway}からフェリーで</p>`;
+  }
+
+  return '';
+}
+
+function buildCityBlock(city, _distanceLabel, fromCity) {
+  const accessLine = generateAccessText(fromCity, city);
 
   const atmosphereHtml = (city.atmosphere || [])
     .map((line) => `<p class="appeal-line">${line}</p>`)
@@ -77,27 +113,6 @@ function buildCityBlock(city, _distanceLabel) {
   `;
 }
 
-function buildAccessLine(city) {
-  const { access } = city;
-  if (!access) return '';
-
-  if (access.railGateway) {
-    const text = access.railNote
-      ? `${access.railGateway}、${access.railNote}`
-      : `${access.railGateway}から市内へ`;
-    return `<p class="access-line">${text}</p>`;
-  }
-
-  if (access.airportGateway) {
-    return `<p class="access-line">${access.airportGateway}からアクセス</p>`;
-  }
-
-  if (access.ferryGateway) {
-    return `<p class="access-line">${access.ferryGateway}からフェリーで</p>`;
-  }
-
-  return '';
-}
 
 function buildSpotList(spots) {
   if (!Array.isArray(spots) || spots.length === 0) return '';

@@ -1,8 +1,7 @@
 /**
  * 抽選エンジン
  *
- * buildPool: star + stayType のみでフィルタし重み付きシャッフルを返す。
- * 出発地は使用しない —— 「知らない街と出会う装置」としての設計。
+ * buildPool: star + stayType + departure でフィルタし重み付きシャッフルを返す。
  *
  * フォールバック:
  *   1. distanceStars + stayType 完全一致
@@ -30,6 +29,53 @@ const PREF_CAPITALS = new Set([
   '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '那覇',
 ]);
 
+/**
+ * 出発地の別名マッピング
+ * 出発地名と表記が異なる目的地名を同一都市として扱う
+ */
+const DEPARTURE_ALIASES = {
+  '福岡': ['博多'],
+};
+
+/**
+ * 出発地の都道府県
+ * 日帰り以外で同一都道府県の目的地を除外するために使用
+ */
+const DEPARTURE_PREFECTURE = {
+  '札幌': '北海道', '函館': '北海道', '旭川': '北海道',
+  '仙台': '宮城',   '盛岡': '岩手',
+  '東京': '東京',   '横浜': '神奈川', '千葉': '千葉', '大宮': '埼玉', '宇都宮': '栃木',
+  '長野': '長野',   '静岡': '静岡',   '名古屋': '愛知', '金沢': '石川', '富山': '富山',
+  '大阪': '大阪',   '京都': '京都',   '神戸': '兵庫', '奈良': '奈良',
+  '広島': '広島',   '岡山': '岡山',   '松江': '島根',
+  '高松': '香川',   '松山': '愛媛',   '高知': '高知', '徳島': '徳島',
+  '福岡': '福岡',   '熊本': '熊本',   '鹿児島': '鹿児島', '長崎': '長崎', '宮崎': '宮崎',
+};
+
+/**
+ * ★1・非island 目的地の都道府県マップ
+ * 出発地と同一都道府県の場合、日帰り以外で除外する対象のみ収録
+ */
+const DESTINATION_PREFECTURE_MAP = {
+  'matsushima': '宮城',  // 仙台と同一県
+  'onomichi':   '広島',  // 広島と同一県
+  'otaru':      '北海道', // 札幌と同一道
+};
+
+function isSameCity(destination, departure) {
+  if (destination.name === departure) return true;
+  const aliases = DEPARTURE_ALIASES[departure] ?? [];
+  return aliases.includes(destination.name);
+}
+
+function isSamePrefectureOvernight(destination, departure, stayType) {
+  if (stayType === 'daytrip') return false;
+  if (destination.type === 'island') return false;
+  const destPref = DESTINATION_PREFECTURE_MAP[destination.id];
+  if (!destPref) return false;
+  return destPref === DEPARTURE_PREFECTURE[departure];
+}
+
 function getSelectionWeight(city) {
   const base  = city.weight ?? 1;
   const starW = STAR_MULTIPLIER[city.distanceStars] ?? 1;
@@ -54,17 +100,21 @@ function weightedShuffle(arr) {
   return result;
 }
 
-export function buildPool(destinations, distanceStars, stayType) {
+export function buildPool(destinations, distanceStars, stayType, departure = '') {
   // island は stayType=1night 以外では完全除外
-  const byStay = destinations.filter(d => {
+  // 出発地と同一都市・同一都道府県（非island・1night）を除外
+  const filtered = destinations.filter(d => {
     if (d.type === 'island' && stayType !== '1night') return false;
-    return d.stayAllowed.includes(stayType);
+    if (!d.stayAllowed.includes(stayType)) return false;
+    if (departure && isSameCity(d, departure)) return false;
+    if (departure && isSamePrefectureOvernight(d, departure, stayType)) return false;
+    return true;
   });
 
   // star + stayType で完全一致
-  const exact = byStay.filter(d => d.distanceStars === distanceStars);
+  const exact = filtered.filter(d => d.distanceStars === distanceStars);
   if (exact.length > 0) return weightedShuffle(exact);
 
   // フォールバック: stayType 一致のみ
-  return weightedShuffle(byStay.length > 0 ? byStay : destinations);
+  return weightedShuffle(filtered.length > 0 ? filtered : destinations);
 }
