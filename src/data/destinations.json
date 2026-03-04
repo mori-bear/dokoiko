@@ -3903,5 +3903,2183 @@
     "jalanPath": "/13/LRG_130120/",
     "hasHotel": true,
     "hubHotel": null
+  },
+  {
+    "id": "hakone",
+    "name": "箱根",
+    "type": "local",
+    "region": "関東",
+    "mapDestination": "箱根湯本駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "箱根湯本駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "山と湖に抱かれた温泉郷。",
+      "芦ノ湖・大涌谷・箱根関所",
+      "富士を仰ぎながら、一湯どうぞ。"
+    ],
+    "themes": [
+      "温泉",
+      "富士山",
+      "自然"
+    ],
+    "spots": [
+      "芦ノ湖",
+      "大涌谷",
+      "箱根関所"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kanagawa/hakone.html",
+    "jalanPath": "/14/LRG_140060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shuzenji",
+    "name": "修善寺",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "修善寺駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "修善寺駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "伊豆最古の温泉、竹林に静まる。",
+      "修禅寺・竹林の小径・独鈷の湯",
+      "川のせせらぎと湯煙、ここにしかない夜がある。"
+    ],
+    "themes": [
+      "温泉",
+      "竹林",
+      "歴史"
+    ],
+    "spots": [
+      "修禅寺",
+      "竹林の小径",
+      "独鈷の湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/shuzenji.html",
+    "jalanPath": "/22/LRG_220020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kusatsu-onsen",
+    "name": "草津温泉",
+    "type": "local",
+    "region": "関東",
+    "mapDestination": "長野原草津口駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "長野原草津口駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日本三名泉のひとつ、源泉かけ流し。",
+      "湯畑・西の河原・熱の湯",
+      "硫黄の香りと白い湯気、草津の朝。"
+    ],
+    "themes": [
+      "温泉",
+      "湯畑",
+      "秘湯"
+    ],
+    "spots": [
+      "湯畑",
+      "西の河原",
+      "熱の湯"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/gunma/kusatsu.html",
+    "jalanPath": "/10/LRG_100050/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shimoda",
+    "name": "下田",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "伊豆急下田駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "伊豆急下田駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "黒船が来た港まち、開国の面影。",
+      "了仙寺・白浜海岸・爪木崎",
+      "太平洋に開けた伊豆の端、静かな青がある。"
+    ],
+    "themes": [
+      "歴史",
+      "海",
+      "開国"
+    ],
+    "spots": [
+      "了仙寺",
+      "白浜海岸",
+      "爪木崎"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/shimoda.html",
+    "jalanPath": "/22/LRG_220060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "izu-oshima",
+    "name": "伊豆大島",
+    "type": "island",
+    "region": "伊豆諸島",
+    "mapDestination": "元町港",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": "竹芝客船ターミナル"
+    },
+    "atmosphere": [
+      "東京から船で行ける火山の島。",
+      "三原山・砂の砂漠・波浮港",
+      "都会の喧騒を離れ、島の時間に身を委ねよう。"
+    ],
+    "themes": [
+      "島",
+      "火山",
+      "自然"
+    ],
+    "spots": [
+      "三原山",
+      "波浮港",
+      "砂漠"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/tokyo/oshima.html",
+    "jalanPath": "/13/LRG_130100/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shirakawago-t",
+    "name": "白川郷",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "白川郷バスターミナル",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "雪に埋もれた合掌造りの集落。",
+      "荻町城跡展望台・神田家・明善寺",
+      "世界遺産の里、冬の静けさが心に染みる。"
+    ],
+    "themes": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "spots": [
+      "荻町城跡展望台",
+      "神田家",
+      "明善寺"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/gifu/shirakawago.html",
+    "jalanPath": "/21/LRG_210070/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "arima-onsen",
+    "name": "有馬温泉",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "有馬温泉駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "神戸"
+    ],
+    "access": {
+      "railGateway": "有馬温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "六甲山麓に湧く、千年の湯処。",
+      "金の湯・銀の湯・太閤の湯殿館",
+      "日本書紀にも登場する古湯に、浸かりに行かない？"
+    ],
+    "themes": [
+      "温泉",
+      "歴史",
+      "古湯"
+    ],
+    "spots": [
+      "金の湯",
+      "銀の湯",
+      "太閤の湯殿館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/arima.html",
+    "jalanPath": "/28/LRG_280010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kinosaki-onsen",
+    "name": "城崎温泉",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "城崎温泉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都"
+    ],
+    "access": {
+      "railGateway": "城崎温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "七つの外湯を浴衣で巡る温泉街。",
+      "さとの湯・一の湯・まんだら湯",
+      "下駄の音と川沿いの柳、昭和の旅情がある。"
+    ],
+    "themes": [
+      "温泉",
+      "外湯巡り",
+      "温泉街"
+    ],
+    "spots": [
+      "さとの湯",
+      "一の湯",
+      "まんだら湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/kinosaki.html",
+    "jalanPath": "/28/LRG_280060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kurashiki-o",
+    "name": "倉敷",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "倉敷駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "倉敷駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "白壁と柳の美観地区。",
+      "大原美術館・倉敷川・阿智神社",
+      "川舟に揺られながら、江戸の街並みを歩く。"
+    ],
+    "themes": [
+      "美観地区",
+      "美術館",
+      "歴史"
+    ],
+    "spots": [
+      "大原美術館",
+      "倉敷川",
+      "阿智神社"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/kurashiki.html",
+    "jalanPath": "/33/LRG_330020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shirahama-o",
+    "name": "白浜",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "白浜駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "白浜駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "南紀の白い砂浜とエメラルドの海。",
+      "白良浜・三段壁・千畳敷",
+      "和歌山の太陽と波音、リゾート気分はここで。"
+    ],
+    "themes": [
+      "海",
+      "リゾート",
+      "温泉"
+    ],
+    "spots": [
+      "白良浜",
+      "三段壁",
+      "千畳敷"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/wakayama/shirahama.html",
+    "jalanPath": "/30/LRG_300020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "takayama-o",
+    "name": "高山",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "高山駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "高山駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "江戸の町割りが残る飛騨の山里。",
+      "古い町並・高山陣屋・朝市",
+      "山に囲まれた静かな城下町、時間がゆっくり流れる。"
+    ],
+    "themes": [
+      "古い町並",
+      "飛騨",
+      "温泉"
+    ],
+    "spots": [
+      "古い町並",
+      "高山陣屋",
+      "朝市"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/takayama.html",
+    "jalanPath": "/21/LRG_210060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "takayama-n",
+    "name": "高山",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "高山駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "高山駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "飛騨の山あいに息づく古き街。",
+      "三之町・高山陣屋・飛騨の里",
+      "朝市の声と漬物の香り、高山でしか嗅げない朝がある。"
+    ],
+    "themes": [
+      "古い町並",
+      "飛騨",
+      "朝市"
+    ],
+    "spots": [
+      "三之町",
+      "高山陣屋",
+      "飛騨の里"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/takayama.html",
+    "jalanPath": "/21/LRG_210060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shirakawago-n",
+    "name": "白川郷",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "白川郷バスターミナル",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "雪の重さに耐えた合掌造りの村。",
+      "荻町・和田家・萩町城跡展望台",
+      "ユネスコの世界遺産、冬も夏も絵になる集落。"
+    ],
+    "themes": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "spots": [
+      "荻町",
+      "和田家",
+      "萩町城跡展望台"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/gifu/shirakawago.html",
+    "jalanPath": "/21/LRG_210070/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "toba",
+    "name": "鳥羽",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "鳥羽駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "鳥羽駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "真珠と海女の海、伊勢湾に抱かれた港。",
+      "鳥羽水族館・ミキモト真珠島・海女小屋",
+      "潮の香りと真珠の輝き、伊勢志摩の旅のもうひとつの顔。"
+    ],
+    "themes": [
+      "海",
+      "真珠",
+      "海女"
+    ],
+    "spots": [
+      "鳥羽水族館",
+      "ミキモト真珠島",
+      "海女小屋"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/mie/toba.html",
+    "jalanPath": "/24/LRG_240040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "matsumoto-n",
+    "name": "松本",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "松本駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "松本駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "アルプスを望む城下町。",
+      "松本城・縄手通り・旧開智学校",
+      "黒い天守と雪山のコントラストは忘れられない。"
+    ],
+    "themes": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "spots": [
+      "松本城",
+      "縄手通り",
+      "旧開智学校"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/matsumoto.html",
+    "jalanPath": "/20/LRG_200010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "yufuin",
+    "name": "湯布院",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "由布院駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "由布院駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "由布岳を望む霧の温泉郷。",
+      "湯の坪街道・金鱗湖・由布院玉の湯",
+      "朝霧に包まれた静かな谷、九州の奥座敷へ。"
+    ],
+    "themes": [
+      "温泉",
+      "自然",
+      "由布岳"
+    ],
+    "spots": [
+      "湯の坪街道",
+      "金鱗湖",
+      "由布院玉の湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/oita/yufuin.html",
+    "jalanPath": "/44/LRG_440020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kurokawa-onsen",
+    "name": "黒川温泉",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "黒川温泉バス停",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "杉林の奥に隠れた秘湯の集落。",
+      "入湯手形・山みず木・山河",
+      "露天風呂と自然、何もかも忘れられる場所がある。"
+    ],
+    "themes": [
+      "温泉",
+      "秘湯",
+      "自然"
+    ],
+    "spots": [
+      "入湯手形",
+      "山みず木",
+      "山河"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/kurokawa.html",
+    "jalanPath": "/43/LRG_430060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "aso",
+    "name": "阿蘇",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "阿蘇駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "阿蘇駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "活火山と広大なカルデラの大地。",
+      "草千里・中岳火口・大観峰",
+      "煙を上げる山と青い空、日本最大の火山にのぼる。"
+    ],
+    "themes": [
+      "火山",
+      "自然",
+      "カルデラ"
+    ],
+    "spots": [
+      "草千里",
+      "中岳火口",
+      "大観峰"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/aso.html",
+    "jalanPath": "/43/LRG_430020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "yakushima",
+    "name": "屋久島",
+    "type": "island",
+    "region": "九州",
+    "mapDestination": "屋久島空港",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "屋久島空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "樹齢七千年の縄文杉が待つ、森の島。",
+      "縄文杉・白谷雲水峡・千尋の滝",
+      "屋久島の雨と緑、ここは地球の原始を感じる場所。"
+    ],
+    "themes": [
+      "世界遺産",
+      "縄文杉",
+      "自然"
+    ],
+    "spots": [
+      "縄文杉",
+      "白谷雲水峡",
+      "千尋の滝"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kagoshima/yakushima.html",
+    "jalanPath": "/46/LRG_460040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "amakusa",
+    "name": "天草",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "天草港",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "海と島と橋が連なる天草の原風景。",
+      "天草五橋・崎津集落・イルカウォッチング",
+      "潮風と世界遺産のキリシタン集落、長崎に負けない歴史がある。"
+    ],
+    "themes": [
+      "世界遺産",
+      "キリシタン",
+      "海"
+    ],
+    "spots": [
+      "天草五橋",
+      "崎津集落",
+      "イルカウォッチング"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/amakusa.html",
+    "jalanPath": "/43/LRG_430040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "hiraizumi",
+    "name": "平泉",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "平泉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "平泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "黄金の平泉、奥州藤原氏の夢の跡。",
+      "中尊寺金色堂・毛越寺・達谷窟",
+      "かつてここに、都と並ぶ輝きがあった。"
+    ],
+    "themes": [
+      "世界遺産",
+      "金色堂",
+      "歴史"
+    ],
+    "spots": [
+      "中尊寺金色堂",
+      "毛越寺",
+      "達谷窟"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/iwate/hiraizumi.html",
+    "jalanPath": "/03/LRG_030020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kakunodate",
+    "name": "角館",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "角館駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "角館駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "武家屋敷と枝垂れ桜の城下町。",
+      "武家屋敷通り・桧木内川堤・青柳家",
+      "秋田の山あいに残る、江戸時代の静けさ。"
+    ],
+    "themes": [
+      "武家屋敷",
+      "桜",
+      "城下町"
+    ],
+    "spots": [
+      "武家屋敷通り",
+      "桧木内川堤",
+      "青柳家"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/akita/kakunodate.html",
+    "jalanPath": "/05/LRG_050010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "aizu",
+    "name": "会津若松",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "会津若松駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "会津若松駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "鶴ヶ城と会津の心意気が残る城下町。",
+      "鶴ヶ城・芦ノ牧温泉・大内宿",
+      "白虎隊の里、東北の誇りがここにある。"
+    ],
+    "themes": [
+      "城",
+      "歴史",
+      "温泉"
+    ],
+    "spots": [
+      "鶴ヶ城",
+      "芦ノ牧温泉",
+      "大内宿"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/fukushima/aizu.html",
+    "jalanPath": "/07/LRG_070020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "zaosan",
+    "name": "蔵王",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "蔵王駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "蔵王駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "蔵王の火口湖、御釜の青緑は別世界。",
+      "お釜・蔵王温泉・樹氷",
+      "変色する湖と樹氷のモンスター、季節ごとに表情が変わる山。"
+    ],
+    "themes": [
+      "火口湖",
+      "温泉",
+      "樹氷"
+    ],
+    "spots": [
+      "お釜",
+      "蔵王温泉",
+      "樹氷"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/yamagata/zao.html",
+    "jalanPath": "/06/LRG_060010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "hagi",
+    "name": "萩",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "萩駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "広島"
+    ],
+    "access": {
+      "railGateway": "萩駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "幕末の志士たちが歩いた城下町。",
+      "萩城跡・松陰神社・菊屋家住宅",
+      "海と山に囲まれた萩は、今も明治維新の空気が漂う。"
+    ],
+    "themes": [
+      "幕末",
+      "城下町",
+      "歴史"
+    ],
+    "spots": [
+      "萩城跡",
+      "松陰神社",
+      "菊屋家住宅"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/yamaguchi/hagi.html",
+    "jalanPath": "/35/LRG_350020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shimonoseki",
+    "name": "下関",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "下関駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "広島",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "下関駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "本州最西端、海峡の街。",
+      "関門橋・唐戸市場・巌流島",
+      "ふぐと潮流、歴史の舞台を歩く旅。"
+    ],
+    "themes": [
+      "海峡",
+      "ふぐ",
+      "歴史"
+    ],
+    "spots": [
+      "関門橋",
+      "唐戸市場",
+      "巌流島"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/yamaguchi/shimonoseki.html",
+    "jalanPath": "/35/LRG_350010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kurashiki-h",
+    "name": "倉敷",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "倉敷駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "広島"
+    ],
+    "access": {
+      "railGateway": "倉敷駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "瀬戸内の白壁の街、倉敷。",
+      "美観地区・大原美術館・倉敷川",
+      "美しい蔵の街で、日常を忘れる一日を。"
+    ],
+    "themes": [
+      "美観地区",
+      "美術館",
+      "白壁"
+    ],
+    "spots": [
+      "美観地区",
+      "大原美術館",
+      "倉敷川"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/kurashiki.html",
+    "jalanPath": "/33/LRG_330020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "naoshima",
+    "name": "直島",
+    "type": "island",
+    "region": "四国",
+    "mapDestination": "宮浦港",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": "高松港"
+    },
+    "atmosphere": [
+      "現代アートが島ごと美術館になった場所。",
+      "地中美術館・家プロジェクト・ANDO MUSEUM",
+      "海と作品と空間が溶け合う、不思議な島。"
+    ],
+    "themes": [
+      "現代アート",
+      "島",
+      "美術館"
+    ],
+    "spots": [
+      "地中美術館",
+      "家プロジェクト",
+      "ANDO MUSEUM"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagawa/naoshima.html",
+    "jalanPath": "/37/LRG_370020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kotohira",
+    "name": "琴平",
+    "type": "local",
+    "region": "四国",
+    "mapDestination": "琴電琴平駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": "琴電琴平駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "讃岐の金刀比羅宮、785段の石段。",
+      "こんぴらさん・表書院・旧金毘羅大芝居",
+      "石段を登った先に、瀬戸内海の絶景が広がる。"
+    ],
+    "themes": [
+      "金刀比羅宮",
+      "石段",
+      "参拝"
+    ],
+    "spots": [
+      "こんぴらさん",
+      "表書院",
+      "旧金毘羅大芝居"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagawa/kotohira.html",
+    "jalanPath": "/37/LRG_370030/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "uwajima",
+    "name": "宇和島",
+    "type": "local",
+    "region": "四国",
+    "mapDestination": "宇和島駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松",
+      "松山"
+    ],
+    "access": {
+      "railGateway": "宇和島駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "南予の闘牛と鯛めしの海辺の城下町。",
+      "宇和島城・道後温泉・じゃこ天",
+      "穏やかな内海に面した、知られざる四国の宝。"
+    ],
+    "themes": [
+      "城",
+      "闘牛",
+      "鯛めし"
+    ],
+    "spots": [
+      "宇和島城",
+      "道後温泉",
+      "じゃこ天"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/ehime/uwajima.html",
+    "jalanPath": "/38/LRG_380020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "toyako",
+    "name": "洞爺湖",
+    "type": "local",
+    "region": "北海道",
+    "mapDestination": "洞爺駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "洞爺駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "昭和新山と有珠山を望む、静かな湖畔。",
+      "洞爺湖・有珠山ロープウェイ・サイロ展望台",
+      "湖面に映る山、温泉と花火、北海道の大地を感じる。"
+    ],
+    "themes": [
+      "湖",
+      "温泉",
+      "火山"
+    ],
+    "spots": [
+      "洞爺湖",
+      "有珠山ロープウェイ",
+      "サイロ展望台"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/hokkaido/toyako.html",
+    "jalanPath": "/01/LRG_010140/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "noboribetsu",
+    "name": "登別",
+    "type": "local",
+    "region": "北海道",
+    "mapDestination": "登別駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "登別駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "北海道最大の温泉地、地獄谷へ。",
+      "地獄谷・大湯沼・クマ牧場",
+      "硫黄が立ち込める地獄谷、北海道の野生を感じる一泊。"
+    ],
+    "themes": [
+      "温泉",
+      "地獄谷",
+      "自然"
+    ],
+    "spots": [
+      "地獄谷",
+      "大湯沼",
+      "クマ牧場"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/noboribetsu.html",
+    "jalanPath": "/01/LRG_010130/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shiretoko",
+    "name": "知床",
+    "type": "local",
+    "region": "北海道",
+    "mapDestination": "知床斜里駅",
+    "parentHub": null,
+    "distanceStars": 4,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "知床斜里駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "世界自然遺産、手つかずの原生林と海。",
+      "知床五湖・カムイワッカの滝・羅臼岳",
+      "クマと鮭と流氷、地の果ての自然がここにある。"
+    ],
+    "themes": [
+      "世界遺産",
+      "自然",
+      "原生林"
+    ],
+    "spots": [
+      "知床五湖",
+      "カムイワッカの滝",
+      "羅臼岳"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/hokkaido/shiretoko.html",
+    "jalanPath": "/01/LRG_010290/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "wajima",
+    "name": "輪島",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "輪島バスターミナル",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "金沢"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "能登の先端、輪島塗と朝市の街。",
+      "朝市通り・重蔵神社・白米千枚田",
+      "海と棚田と漆器、日本の原風景が残る能登の突端。"
+    ],
+    "themes": [
+      "輪島塗",
+      "朝市",
+      "棚田"
+    ],
+    "spots": [
+      "朝市通り",
+      "重蔵神社",
+      "白米千枚田"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/ishikawa/wajima.html",
+    "jalanPath": "/17/LRG_170030/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "shirakawago-k",
+    "name": "白川郷",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "白川郷バスターミナル",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "金沢"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "冬の合掌造り、雪に輝く世界遺産。",
+      "荻町合掌集落・和田家・展望台",
+      "金沢から一時間、別世界への扉が開く。"
+    ],
+    "themes": [
+      "世界遺産",
+      "合掌造り",
+      "雪景色"
+    ],
+    "spots": [
+      "荻町合掌集落",
+      "和田家",
+      "展望台"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/gifu/shirakawago.html",
+    "jalanPath": "/21/LRG_210070/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kaga-onsen",
+    "name": "加賀温泉郷",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "加賀温泉駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "金沢",
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "加賀温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "九谷焼と山代・山中・片山津が集まる温泉郷。",
+      "山代温泉・山中温泉・片山津温泉",
+      "加賀の茶の湯と名湯、古都の香りが漂う。"
+    ],
+    "themes": [
+      "温泉",
+      "九谷焼",
+      "加賀"
+    ],
+    "spots": [
+      "山代温泉",
+      "山中温泉",
+      "片山津温泉"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kaga.html",
+    "jalanPath": "/17/LRG_170020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "matsumoto-l",
+    "name": "松本",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "松本駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "長野"
+    ],
+    "access": {
+      "railGateway": "松本駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "松本城を仰ぐ、アルプスの城下町。",
+      "松本城・縄手通り・美ヶ原",
+      "黒い天守と北アルプス、信州の誇りがここにある。"
+    ],
+    "themes": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "spots": [
+      "松本城",
+      "縄手通り",
+      "美ヶ原"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/matsumoto.html",
+    "jalanPath": "/20/LRG_200010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "hakuba",
+    "name": "白馬",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "白馬駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "長野"
+    ],
+    "access": {
+      "railGateway": "白馬駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "北アルプスの峰々を望む高原リゾート。",
+      "八方尾根・白馬大雪渓・岩岳",
+      "冬はスキー、夏は登山、四季を通じて山が呼ぶ。"
+    ],
+    "themes": [
+      "スキー",
+      "登山",
+      "アルプス"
+    ],
+    "spots": [
+      "八方尾根",
+      "白馬大雪渓",
+      "岩岳"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/nagano/hakuba.html",
+    "jalanPath": "/20/LRG_200020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "amanohashidate",
+    "name": "天橋立",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "天橋立駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "京都",
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "天橋立駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "天橋立の砂洲を、股のぞきで。",
+      "智恩寺・天橋立ビューランド・傘松公園",
+      "日本三景のひとつ、松並木越しに見える海峡の青。"
+    ],
+    "themes": [
+      "日本三景",
+      "砂洲",
+      "絶景"
+    ],
+    "spots": [
+      "智恩寺",
+      "天橋立ビューランド",
+      "傘松公園"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/amanohashidate.html",
+    "jalanPath": "/26/LRG_260030/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "ine",
+    "name": "伊根",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "伊根バス停",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "京都"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "舟屋が海に並ぶ、伊根の静かな入り江。",
+      "伊根の舟屋・道の駅舟屋の里伊根・浦島神社",
+      "生活と海が一体になった、時間の止まった漁村。"
+    ],
+    "themes": [
+      "舟屋",
+      "漁村",
+      "海"
+    ],
+    "spots": [
+      "伊根の舟屋",
+      "道の駅舟屋の里伊根",
+      "浦島神社"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kyoto/ine.html",
+    "jalanPath": "/26/LRG_260040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "ibusuki",
+    "name": "指宿",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "指宿駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "鹿児島"
+    ],
+    "access": {
+      "railGateway": "指宿駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "砂に埋まる砂むし温泉、薩摩の南端。",
+      "砂むし会館・長崎鼻・池田湖",
+      "砂の熱で全身が温まる、鹿児島でしかできない体験。"
+    ],
+    "themes": [
+      "砂むし温泉",
+      "温泉",
+      "自然"
+    ],
+    "spots": [
+      "砂むし会館",
+      "長崎鼻",
+      "池田湖"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagoshima/ibusuki.html",
+    "jalanPath": "/46/LRG_460010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "yakushima-k",
+    "name": "屋久島",
+    "type": "island",
+    "region": "九州",
+    "mapDestination": "屋久島空港",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "鹿児島"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "屋久島空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "世界遺産の森、屋久杉の圧倒的な存在感。",
+      "縄文杉・ヤクスギランド・永田いなか浜",
+      "島を覆う原始の森、鹿児島から旅立つ本格ハイク。"
+    ],
+    "themes": [
+      "世界遺産",
+      "屋久杉",
+      "自然"
+    ],
+    "spots": [
+      "縄文杉",
+      "ヤクスギランド",
+      "永田いなか浜"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kagoshima/yakushima.html",
+    "jalanPath": "/46/LRG_460040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "sasebo",
+    "name": "佐世保",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "佐世保駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "長崎",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "佐世保駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "長崎県北、海と島の入り組む軍港の街。",
+      "九十九島・旧海軍鎮守府跡・佐世保バーガー",
+      "佐世保バーガーと九十九島の夕陽、忘れられない旅になる。"
+    ],
+    "themes": [
+      "九十九島",
+      "軍港",
+      "海"
+    ],
+    "spots": [
+      "九十九島",
+      "旧海軍鎮守府跡",
+      "佐世保バーガー"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagasaki/sasebo.html",
+    "jalanPath": "/42/LRG_420030/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "hirado",
+    "name": "平戸",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "平戸口駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "長崎"
+    ],
+    "access": {
+      "railGateway": "平戸口駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日本で最初に外国人が訪れた港まち。",
+      "平戸城・オランダ商館・川内峠",
+      "教会と寺が共存する不思議な歴史の街。"
+    ],
+    "themes": [
+      "歴史",
+      "教会",
+      "港"
+    ],
+    "spots": [
+      "平戸城",
+      "オランダ商館",
+      "川内峠"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/nagasaki/hirado.html",
+    "jalanPath": "/42/LRG_420040/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "aso-k",
+    "name": "阿蘇",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "阿蘇駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "熊本"
+    ],
+    "access": {
+      "railGateway": "阿蘇駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "活火山のふもと、草原と温泉の大地。",
+      "草千里・大観峰・阿蘇山上広場",
+      "熊本から最も近い大自然、阿蘇の風を感じに行く。"
+    ],
+    "themes": [
+      "火山",
+      "草原",
+      "自然"
+    ],
+    "spots": [
+      "草千里",
+      "大観峰",
+      "阿蘇山上広場"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/aso.html",
+    "jalanPath": "/43/LRG_430020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kurokawa-k",
+    "name": "黒川温泉",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "黒川温泉バス停",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "熊本"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "熊本から最も近い秘湯の里。",
+      "黒川温泉・山みず木・豊礼の湯",
+      "入湯手形で湯めぐり、山の奥の贅沢な一泊。"
+    ],
+    "themes": [
+      "温泉",
+      "秘湯",
+      "湯めぐり"
+    ],
+    "spots": [
+      "黒川温泉",
+      "山みず木",
+      "豊礼の湯"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/kurokawa.html",
+    "jalanPath": "/43/LRG_430060/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "hiraizumi-m",
+    "name": "平泉",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "平泉駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "盛岡"
+    ],
+    "access": {
+      "railGateway": "平泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "金色堂と中尊寺、岩手の誇る世界遺産。",
+      "中尊寺金色堂・毛越寺・無量光院跡",
+      "盛岡から足を延ばせば、奥州の黄金文化が待っている。"
+    ],
+    "themes": [
+      "世界遺産",
+      "金色堂",
+      "歴史"
+    ],
+    "spots": [
+      "中尊寺金色堂",
+      "毛越寺",
+      "無量光院跡"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/iwate/hiraizumi.html",
+    "jalanPath": "/03/LRG_030020/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "kakunodate-m",
+    "name": "角館",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "角館駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "盛岡"
+    ],
+    "access": {
+      "railGateway": "角館駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "武家屋敷通りと桜、東北の小京都。",
+      "武家屋敷・桧木内川堤・安藤醸造",
+      "盛岡から新幹線で一本、秋田の城下町へ迷い込む。"
+    ],
+    "themes": [
+      "武家屋敷",
+      "桜",
+      "城下町"
+    ],
+    "spots": [
+      "武家屋敷",
+      "桧木内川堤",
+      "安藤醸造"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/akita/kakunodate.html",
+    "jalanPath": "/05/LRG_050010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "tottori",
+    "name": "鳥取",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "鳥取駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "広島"
+    ],
+    "access": {
+      "railGateway": "鳥取駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "砂丘と蟹と名探偵の街。",
+      "鳥取砂丘・砂の美術館・浦富海岸",
+      "日本唯一の砂漠的風景、海と砂の不思議な場所。"
+    ],
+    "themes": [
+      "砂丘",
+      "蟹",
+      "自然"
+    ],
+    "spots": [
+      "鳥取砂丘",
+      "砂の美術館",
+      "浦富海岸"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/tottori/tottori.html",
+    "jalanPath": "/31/LRG_310010/",
+    "hasHotel": true,
+    "hubHotel": null
+  },
+  {
+    "id": "akita",
+    "name": "秋田",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "秋田駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台",
+      "盛岡"
+    ],
+    "access": {
+      "railGateway": "秋田駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "きりたんぽと竿燈祭り、男鹿の鬼が宿る街。",
+      "竿燈まつり・千秋公園・男鹿半島",
+      "東北の静かな城下町、秋田の空は広く澄んでいる。"
+    ],
+    "themes": [
+      "竿燈まつり",
+      "城下町",
+      "食"
+    ],
+    "spots": [
+      "竿燈まつり",
+      "千秋公園",
+      "男鹿半島"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/akita/akita.html",
+    "jalanPath": "/05/LRG_050020/",
+    "hasHotel": true,
+    "hubHotel": null
   }
 ]
