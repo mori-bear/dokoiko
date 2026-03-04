@@ -88,12 +88,15 @@ function generateAccessText(fromCity, city) {
 function buildCityBlock(city, _distanceLabel, fromCity) {
   const accessLine = generateAccessText(fromCity, city);
 
+  // 「〜行かない？」系の呼びかけ文を除去
   const atmosphereHtml = (city.atmosphere || [])
+    .filter(line => !line.endsWith('？'))
     .map((line) => `<p class="appeal-line">${line}</p>`)
     .join('');
 
+  // タグは最大3つ
   const themesHtml = Array.isArray(city.themes) && city.themes.length
-    ? city.themes.map((t) => `<span class="theme-tag">${t}</span>`).join('')
+    ? city.themes.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
     : '';
 
   const categoryBadge = buildCategoryBadge(city.type);

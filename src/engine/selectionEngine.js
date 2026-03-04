@@ -101,13 +101,16 @@ function weightedShuffle(arr) {
 }
 
 export function buildPool(destinations, distanceStars, stayType, departure = '') {
-  // island は stayType=1night 以外では完全除外
+  // 2泊3日は1泊2日と同じ目的地セットを使用
+  const normalizedStay = stayType === '2night' ? '1night' : stayType;
+
+  // island は 1night 以外では完全除外
   // 出発地と同一都市・同一都道府県（非island・1night）を除外
   const filtered = destinations.filter(d => {
-    if (d.type === 'island' && stayType !== '1night') return false;
-    if (!d.stayAllowed.includes(stayType)) return false;
+    if (d.type === 'island' && normalizedStay !== '1night') return false;
+    if (!d.stayAllowed.includes(normalizedStay)) return false;
     if (departure && isSameCity(d, departure)) return false;
-    if (departure && isSamePrefectureOvernight(d, departure, stayType)) return false;
+    if (departure && isSamePrefectureOvernight(d, departure, normalizedStay)) return false;
     return true;
   });
 
@@ -115,6 +118,6 @@ export function buildPool(destinations, distanceStars, stayType, departure = '')
   const exact = filtered.filter(d => d.distanceStars === distanceStars);
   if (exact.length > 0) return weightedShuffle(exact);
 
-  // フォールバック: stayType 一致のみ
+  // フォールバック: normalizedStay 一致のみ
   return weightedShuffle(filtered.length > 0 ? filtered : destinations);
 }

@@ -701,6 +701,7 @@ body {
   font-size: 11px;
   color: var(--text-sub);
   letter-spacing: .3px;
+  line-height: 1.9;
 }
 
 /* ── 法律ページ共通 ── */
