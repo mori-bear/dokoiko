@@ -3267,7 +3267,7 @@
     "access": {
       "railGateway": null,
       "railNote": null,
-      "railBookingProvider": "e5489",
+      "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "宮島口港"
     },
@@ -4923,7 +4923,7 @@
       "東京"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "金沢駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -5287,7 +5287,7 @@
       "名古屋"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "名古屋駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -5495,7 +5495,7 @@
       "福岡"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "博多駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -5654,7 +5654,7 @@
       "福岡"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "熊本駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -6379,7 +6379,7 @@
       "金沢"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "金沢駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -6433,7 +6433,7 @@
       "金沢"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "金沢駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -6694,7 +6694,7 @@
       "京都"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "天橋立駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7009,7 +7009,7 @@
       "熊本"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "熊本駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7272,7 +7272,7 @@
       "大阪"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "三ノ宮駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7429,7 +7429,7 @@
       "金沢"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "金沢駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7482,7 +7482,7 @@
       "札幌"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "札幌駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7691,7 +7691,7 @@
       "熊本"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "熊本駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -7850,7 +7850,7 @@
       "長崎"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "諫早駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,
@@ -8168,7 +8168,7 @@
       "京都"
     ],
     "access": {
-      "railGateway": null,
+      "railGateway": "園部駅",
       "railNote": "バスあり",
       "railBookingProvider": null,
       "airportGateway": null,

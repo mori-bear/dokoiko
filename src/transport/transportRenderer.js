@@ -25,8 +25,7 @@ export function resolveTransportLinks(city, departure, datetime) {
   const isIsland = city.type === 'island';
   // 島はJR予約リンク禁止。railGateway は Google Maps 起点としてのみ使用可。
   const hasRail  = !!access.railGateway && !isIsland;
-  // 短距離（★1〜2）は航空表示しない。★3以上のみ有効。
-  const hasAir   = !!access.airportGateway && (city.distanceStars ?? 0) >= 3;
+  const hasAir   = !!access.airportGateway;
   // 島はフェリーを常時表示（air との組み合わせも可）
   // 非島: ferryGateway あり かつ air なしの場合のみ
   const hasFerry = !!access.ferryGateway && (isIsland || !hasAir);
