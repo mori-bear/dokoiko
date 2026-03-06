@@ -27,8 +27,9 @@ export function resolveTransportLinks(city, departure, datetime) {
   const hasRail  = !!access.railGateway && !isIsland;
   // 短距離（★1〜2）は航空表示しない。★3以上のみ有効。
   const hasAir   = !!access.airportGateway && (city.distanceStars ?? 0) >= 3;
-  // 島はフェリー優先（rail/air 両方なしでも ferryGateway があれば表示）
-  const hasFerry = !!access.ferryGateway && !hasAir;
+  // 島はフェリーを常時表示（air との組み合わせも可）
+  // 非島: ferryGateway あり かつ air なしの場合のみ
+  const hasFerry = !!access.ferryGateway && (isIsland || !hasAir);
 
   const links = [];
   const stars = city.distanceStars ?? 0;

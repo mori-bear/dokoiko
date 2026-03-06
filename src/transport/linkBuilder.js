@@ -135,12 +135,13 @@ export function buildRentalLink() {
  * 港が不明な場合は null を返す。
  */
 const FERRY_LINKS = {
-  '竹芝客船ターミナル': { label: 'フェリーを予約する（東海汽船）', url: 'https://www.tokaikisen.co.jp/' },
-  '那覇港':             { label: 'フェリーを調べる（琉球海運）',   url: 'https://www.ryukyu-marine.co.jp/' },
-  '鹿児島港':           { label: 'フェリーを調べる（マリックスライン）', url: 'https://www.marixline.com/' },
-  '長崎港':             { label: 'フェリーを調べる（九州商船）',   url: 'https://www.kysho.co.jp/' },
-  '高松港':             { label: 'フェリーを調べる（小豆島フェリー）', url: 'https://www.shoudoshima-ferry.co.jp/' },
+  '竹芝客船ターミナル': { label: 'フェリーを予約する（東海汽船）',      url: 'https://www.tokaikisen.co.jp/' },
+  '那覇港':             { label: 'フェリーを調べる（マリンライナー）',  url: 'https://www.agui.net/' },
+  '鹿児島港':           { label: 'フェリーを調べる（種子屋久高速船）',  url: 'https://www.tykousoku.jp/' },
+  '長崎港':             { label: 'フェリーを調べる（九州商船）',        url: 'https://www.kysho.co.jp/' },
+  '高松港':             { label: 'フェリーを調べる（小豆島フェリー）',  url: 'https://www.shoudoshima-ferry.co.jp/' },
   '宮島口港':           { label: 'フェリーを調べる（宮島松大フェリー）', url: 'https://miyajima-matsudai.co.jp/' },
+  '石垣港':             { label: 'フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
 };
 
 export function buildFerryLink(ferryGateway) {
