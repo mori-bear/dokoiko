@@ -152,9 +152,13 @@ function buildCityBlock(city, _distanceLabel, fromCity, departure) {
 
   const categoryBadge = buildCategoryBadge(city.type);
   const spotListHtml  = buildSpotList(city.spots);
+  const imageHtml     = city.image
+    ? `<img class="city-image" src="${city.image}" alt="${city.name}" loading="lazy">`
+    : '';
 
   return `
     <div class="city-block">
+      ${imageHtml}
       <div class="city-header">
         <h2 class="city-name">${city.name}</h2>
         <p class="city-sub">${city.region}${categoryBadge}</p>

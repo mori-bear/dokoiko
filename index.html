@@ -33,7 +33,7 @@
     <div class="container">
 
       <section class="hero">
-        <h1 class="hero-heading">明日、どこ行こ？</h1>
+        <h1 class="hero-heading">明日どこ行こ？</h1>
         <p class="hero-sub">距離と日程を選ぶだけ。<br>次の旅先が1つ出てくる。</p>
       </section>
 
@@ -98,14 +98,13 @@
         <!-- 距離 -->
         <div class="control-group">
           <label class="control-label">どのくらい遠い？</label>
-          <div class="btn-group">
-            <button class="sel-btn" data-group="distance" data-value="1">★1</button>
-            <button class="sel-btn" data-group="distance" data-value="2">★2</button>
-            <button class="sel-btn" data-group="distance" data-value="3">★3</button>
-            <button class="sel-btn" data-group="distance" data-value="4">★4</button>
-            <button class="sel-btn" data-group="distance" data-value="5">★5</button>
+          <div class="btn-group btn-group--distance">
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="1"><span class="star-val">★1</span><span class="star-desc">近場</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="2"><span class="star-val">★2</span><span class="star-desc">小旅行</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="3"><span class="star-val">★3</span><span class="star-desc">日帰り旅</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="4"><span class="star-val">★4</span><span class="star-desc">週末旅行</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="5"><span class="star-val">★5</span><span class="star-desc">遠出</span></button>
           </div>
-          <p class="star-legend">★1 近場（〜1時間）&ensp;★2 小旅行（〜2時間）&ensp;★3 日帰り旅（〜4時間）&ensp;★4 週末旅行（〜6時間）&ensp;★5 遠出（6時間以上）</p>
         </div>
 
         <!-- 日程 -->

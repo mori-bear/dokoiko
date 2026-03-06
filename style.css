@@ -697,13 +697,48 @@ body {
   display: inline-block;
 }
 
-/* 距離★凡例 */
+/* 距離★ボタン（縦表示） */
 
-.star-legend {
+.btn-group--distance {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.sel-btn--distance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border-radius: var(--radius);
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.sel-btn--distance .star-val {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.sel-btn--distance .star-desc {
   font-size: 11px;
   color: var(--text-sub);
-  letter-spacing: .3px;
-  line-height: 1.9;
+}
+
+.sel-btn--distance.active .star-desc {
+  color: rgba(255,255,255,0.8);
+}
+
+/* 都市カード画像 */
+
+.city-image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: block;
 }
 
 /* ── 法律ページ共通 ── */
