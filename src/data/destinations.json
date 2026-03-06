@@ -9180,5 +9180,1044 @@
       "歴史"
     ],
     "jr_region": "west"
+  },
+  {
+    "id": "tsumago",
+    "name": "妻籠",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "妻籠宿",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "南木曽駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "石畳の中山道が、宿場の面影をそのまま残す。",
+      "妻籠宿・馬籠峠・南木曽岳",
+      "木曽路に吹く風、旅人が歩いた同じ道を踏みしめる。"
+    ],
+    "themes": [
+      "宿場町",
+      "中山道",
+      "木曽路"
+    ],
+    "spots": [
+      "妻籠宿本陣",
+      "脇本陣奥谷",
+      "妻籠城跡"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/tsumago.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "石畳の中山道が、宿場の面影をそのまま残す。 妻籠宿・馬籠峠・南木曽岳",
+    "tags": [
+      "宿場町",
+      "中山道",
+      "木曽路"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "magome",
+    "name": "馬籠",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "馬籠宿",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "中津川駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "峠の頂上に立つ宿場、石畳の坂道が山を下る。",
+      "馬籠宿・藤村記念館・神坂峠",
+      "島崎藤村が生まれた木曽路、霧の中の石畳を歩く。"
+    ],
+    "themes": [
+      "宿場町",
+      "文学",
+      "木曽路"
+    ],
+    "spots": [
+      "島崎藤村記念館",
+      "馬籠宿本陣跡",
+      "清水屋資料館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/magome.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "峠の頂上に立つ宿場、石畳の坂道が山を下る。 馬籠宿・藤村記念館・神坂峠",
+    "tags": [
+      "宿場町",
+      "文学",
+      "木曽路"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "nagahama",
+    "name": "長浜",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "長浜駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "長浜駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "琵琶湖畔に広がる、黒壁ガラスの文化の街。",
+      "黒壁スクエア・長浜城・豊国神社",
+      "秀吉ゆかりの城下町に、ステンドグラスの光が差し込む。"
+    ],
+    "themes": [
+      "城下町",
+      "ガラス工芸",
+      "琵琶湖"
+    ],
+    "spots": [
+      "黒壁スクエア",
+      "長浜城",
+      "慶雲館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shiga/nagahama.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "琵琶湖畔に広がる、黒壁ガラスの文化の街。 黒壁スクエア・長浜城・豊国神社",
+    "tags": [
+      "城下町",
+      "ガラス工芸",
+      "琵琶湖"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "hikone",
+    "name": "彦根",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "彦根駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "彦根駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "国宝の天守が、琵琶湖を見下ろして静かに立つ。",
+      "彦根城・玄宮園・夢京橋キャッスルロード",
+      "江戸三百年の城下の風格が、今も町並みに宿る。"
+    ],
+    "themes": [
+      "国宝",
+      "城下町",
+      "琵琶湖"
+    ],
+    "spots": [
+      "彦根城",
+      "玄宮園",
+      "夢京橋キャッスルロード"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shiga/hikone.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "国宝の天守が、琵琶湖を見下ろして静かに立つ。 彦根城・玄宮園・夢京橋キャッスルロード",
+    "tags": [
+      "国宝",
+      "城下町",
+      "琵琶湖"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "koyasan",
+    "name": "高野山",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "高野山",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都",
+      "神戸"
+    ],
+    "access": {
+      "railGateway": "高野山駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "真言密教の聖域、標高900mに広がる宗教都市。",
+      "奥之院・根本大塔・金剛峯寺",
+      "コウヤマキの森と灯籠が続く参道、宿坊で一夜を過ごす。"
+    ],
+    "themes": [
+      "宿坊",
+      "密教",
+      "世界遺産"
+    ],
+    "spots": [
+      "奥之院",
+      "金剛峯寺",
+      "根本大塔"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/wakayama/koyasan.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "真言密教の聖域、標高900mに広がる宗教都市。 奥之院・根本大塔・金剛峯寺",
+    "tags": [
+      "宿坊",
+      "密教",
+      "世界遺産"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "gero-onsen",
+    "name": "下呂温泉",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "下呂駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "名古屋",
+      "東京",
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "下呂駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "飛騨川沿いに湯けむりが立ちのぼる、日本三名泉のひとつ。",
+      "下呂温泉・噴泉池・飛騨川",
+      "露天の足湯が街中に点在する、アルプスの麓の温泉地。"
+    ],
+    "themes": [
+      "温泉",
+      "三名泉",
+      "足湯"
+    ],
+    "spots": [
+      "噴泉池",
+      "下呂温泉合掌村",
+      "温泉寺"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/gero.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "飛騨川沿いに湯けむりが立ちのぼる、日本三名泉のひとつ。 下呂温泉・噴泉池・飛騨川",
+    "tags": [
+      "温泉",
+      "三名泉",
+      "足湯"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "naruko-onsen",
+    "name": "鳴子温泉",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "鳴子温泉駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "鳴子温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "こけしの故郷、奥羽山脈に囲まれた温泉の里。",
+      "鳴子温泉・鳴子峡・こけし館",
+      "紅葉に染まる渓谷、硫黄の香りと湯治の風習が残る。"
+    ],
+    "themes": [
+      "温泉",
+      "こけし",
+      "紅葉"
+    ],
+    "spots": [
+      "鳴子峡",
+      "東北こけし館",
+      "早稲田桟敷湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/miyagi/naruko.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "こけしの故郷、奥羽山脈に囲まれた温泉の里。 鳴子温泉・鳴子峡・こけし館",
+    "tags": [
+      "温泉",
+      "こけし",
+      "紅葉"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "shima-onsen",
+    "name": "四万温泉",
+    "type": "local",
+    "region": "関東",
+    "mapDestination": "四万温泉",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "中之条駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "奥利根の山あいに湧く、千年の湯治場。",
+      "四万温泉・積善館・四万川",
+      "大正時代の建物が現役で使われる、赤い橋と青い川。"
+    ],
+    "themes": [
+      "温泉",
+      "湯治",
+      "大正建築"
+    ],
+    "spots": [
+      "積善館",
+      "四万川ダム",
+      "甌穴"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gunma/shima.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "奥利根の山あいに湧く、千年の湯治場。 四万温泉・積善館・四万川",
+    "tags": [
+      "温泉",
+      "湯治",
+      "大正建築"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "hirosaki",
+    "name": "弘前",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "弘前駅",
+    "parentHub": null,
+    "distanceStars": 4,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "弘前駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "青森空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日本一の桜の名所と言われる、津軽の城下町。",
+      "弘前城・弘前公園・明治洋館群",
+      "天守を取り囲む桜と、洋風建築が共存する北の城下。"
+    ],
+    "themes": [
+      "桜",
+      "城下町",
+      "洋館"
+    ],
+    "spots": [
+      "弘前城",
+      "弘前公園",
+      "旧弘前市立図書館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/aomori/hirosaki.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日本一の桜の名所と言われる、津軽の城下町。 弘前城・弘前公園・明治洋館群",
+    "tags": [
+      "桜",
+      "城下町",
+      "洋館"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "oirase",
+    "name": "奥入瀬",
+    "type": "local",
+    "region": "東北",
+    "mapDestination": "奥入瀬渓流",
+    "parentHub": null,
+    "distanceStars": 4,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "八戸駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": "青森空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "原生林を縫うように流れる、清流の渓谷路。",
+      "奥入瀬渓流・阿修羅の流れ・十和田湖",
+      "苔と滝と木漏れ日、歩くたびに変わる渓流の表情。"
+    ],
+    "themes": [
+      "渓流",
+      "自然",
+      "十和田湖"
+    ],
+    "spots": [
+      "阿修羅の流れ",
+      "雲井の滝",
+      "十和田湖"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/aomori/oirase.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "原生林を縫うように流れる、清流の渓谷路。 奥入瀬渓流・阿修羅の流れ・十和田湖",
+    "tags": [
+      "渓流",
+      "自然",
+      "十和田湖"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "mashiko",
+    "name": "益子",
+    "type": "local",
+    "region": "関東",
+    "mapDestination": "益子駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "益子駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "陶土の香りが漂う、関東随一の焼き物の里。",
+      "益子焼・濱田庄司記念館・つかもと",
+      "ざっくりとした土の器が並ぶ窯元、作り手の顔が見える町。"
+    ],
+    "themes": [
+      "陶芸",
+      "益子焼",
+      "窯元"
+    ],
+    "spots": [
+      "つかもと",
+      "濱田庄司記念館",
+      "益子焼窯元共販センター"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/tochigi/mashiko.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "陶土の香りが漂う、関東随一の焼き物の里。 益子焼・濱田庄司記念館・つかもと",
+    "tags": [
+      "陶芸",
+      "益子焼",
+      "窯元"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "bessho-onsen",
+    "name": "別所温泉",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "別所温泉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "別所温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "信州最古の温泉と言われる、長野盆地を見渡す静かな湯の里。",
+      "別所温泉・北向観音・安楽寺",
+      "三つの外湯と国宝の塔が点在する、静かな山間の温泉集落。"
+    ],
+    "themes": [
+      "温泉",
+      "古刹",
+      "外湯"
+    ],
+    "spots": [
+      "北向観音",
+      "安楽寺八角三重塔",
+      "大師湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/bessho.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "信州最古の温泉と言われる、長野盆地を見渡す静かな湯の里。 別所温泉・北向観音・安楽寺",
+    "tags": [
+      "温泉",
+      "古刹",
+      "外湯"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "izushi",
+    "name": "出石",
+    "type": "local",
+    "region": "近畿",
+    "mapDestination": "出石",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都",
+      "神戸"
+    ],
+    "access": {
+      "railGateway": "豊岡駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "但馬の小京都と呼ばれる、皿そばの城下町。",
+      "出石城跡・辰鼓楼・出石皿そば",
+      "白壁の蔵と時計台が続く宿場、小皿を重ねながらそばを食べる。"
+    ],
+    "themes": [
+      "皿そば",
+      "城下町",
+      "時計台"
+    ],
+    "spots": [
+      "出石城跡",
+      "辰鼓楼",
+      "永楽館"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/hyogo/izushi.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "但馬の小京都と呼ばれる、皿そばの城下町。 出石城跡・辰鼓楼・出石皿そば",
+    "tags": [
+      "皿そば",
+      "城下町",
+      "時計台"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "wakura-onsen",
+    "name": "和倉温泉",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "和倉温泉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "金沢",
+      "富山"
+    ],
+    "access": {
+      "railGateway": "和倉温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "七尾湾を望む能登半島の温泉地、海越しに夕日が沈む。",
+      "和倉温泉・総湯・能登島",
+      "塩分を含む黄金色の湯と、海の幸が能登の夜を包む。"
+    ],
+    "themes": [
+      "温泉",
+      "能登",
+      "海"
+    ],
+    "spots": [
+      "総湯",
+      "能登島",
+      "足湯の宿"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/wakura.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "七尾湾を望む能登半島の温泉地、海越しに夕日が沈む。 和倉温泉・総湯・能登島",
+    "tags": [
+      "温泉",
+      "能登",
+      "海"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "misasa-onsen",
+    "name": "三朝温泉",
+    "type": "local",
+    "region": "中国",
+    "mapDestination": "三朝温泉",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "岡山",
+      "鳥取"
+    ],
+    "access": {
+      "railGateway": "倉吉駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "世界屈指のラジウム泉が湧く、三徳川沿いの温泉地。",
+      "三朝温泉・三朝橋・三徳山投入堂",
+      "川床で湯に浸かる文化と、断崖の修行場が隣り合う。"
+    ],
+    "themes": [
+      "ラジウム温泉",
+      "修行",
+      "川床湯"
+    ],
+    "spots": [
+      "三徳山投入堂",
+      "株湯",
+      "三朝橋"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/tottori/misasa.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "世界屈指のラジウム泉が湧く、三徳川沿いの温泉地。 三朝温泉・三朝橋・三徳山投入堂",
+    "tags": [
+      "ラジウム温泉",
+      "修行",
+      "川床湯"
+    ],
+    "jr_region": "west"
+  },
+  {
+    "id": "obi",
+    "name": "飫肥",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "飫肥駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "宮崎",
+      "鹿児島"
+    ],
+    "access": {
+      "railGateway": "飫肥駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日南の小京都と呼ばれる、杉の板塀が続く城下町。",
+      "飫肥城・旧本丸跡・商人通り",
+      "黒い飫肥杉の塀と石畳の路地、天福餅の甘さが漂う。"
+    ],
+    "themes": [
+      "城下町",
+      "飫肥杉",
+      "日南海岸"
+    ],
+    "spots": [
+      "飫肥城",
+      "旧本丸大手門",
+      "商人通り"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/miyazaki/obi.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日南の小京都と呼ばれる、杉の板塀が続く城下町。 飫肥城・旧本丸跡・商人通り",
+    "tags": [
+      "城下町",
+      "飫肥杉",
+      "日南海岸"
+    ],
+    "jr_region": "kyushu"
+  },
+  {
+    "id": "hitoyoshi",
+    "name": "人吉",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "人吉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "熊本",
+      "鹿児島",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "人吉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "球磨川沿いに栄えた、焼酎と温泉と鉄道の城下町。",
+      "人吉城跡・青井阿蘇神社・球磨川",
+      "球磨焼酎の蔵が並ぶ街で、川下りと温泉が一日を締める。"
+    ],
+    "themes": [
+      "温泉",
+      "球磨焼酎",
+      "川下り"
+    ],
+    "spots": [
+      "青井阿蘇神社",
+      "人吉城跡",
+      "球磨川くだり"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kumamoto/hitoyoshi.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "球磨川沿いに栄えた、焼酎と温泉と鉄道の城下町。 人吉城跡・青井阿蘇神社・球磨川",
+    "tags": [
+      "温泉",
+      "球磨焼酎",
+      "川下り"
+    ],
+    "jr_region": "kyushu"
+  },
+  {
+    "id": "kamikochi",
+    "name": "上高地",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "上高地バスターミナル",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "松本駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日本アルプスの玄関、手つかずの自然が広がる高原。",
+      "河童橋・大正池・梓川",
+      "穂高連峰を映す清流、マイカーが入れない別天地の散歩道。"
+    ],
+    "themes": [
+      "アルプス",
+      "自然",
+      "トレッキング"
+    ],
+    "spots": [
+      "河童橋",
+      "大正池",
+      "明神池"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/kamikochi.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日本アルプスの玄関、手つかずの自然が広がる高原。 河童橋・大正池・梓川",
+    "tags": [
+      "アルプス",
+      "自然",
+      "トレッキング"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "minakami-onsen",
+    "name": "水上温泉",
+    "type": "local",
+    "region": "関東",
+    "mapDestination": "水上駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "水上駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "谷川岳を背に、利根川の源流が流れる山の温泉地。",
+      "水上温泉・諏訪峡・谷川岳",
+      "ラフティングと露天風呂が同じ渓谷に共存する、群馬の奥座敷。"
+    ],
+    "themes": [
+      "温泉",
+      "ラフティング",
+      "谷川岳"
+    ],
+    "spots": [
+      "諏訪峡",
+      "谷川岳",
+      "湯テルメ谷川"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gunma/minakami.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "谷川岳を背に、利根川の源流が流れる山の温泉地。 水上温泉・諏訪峡・谷川岳",
+    "tags": [
+      "温泉",
+      "ラフティング",
+      "谷川岳"
+    ],
+    "jr_region": "east"
+  },
+  {
+    "id": "minami-aso",
+    "name": "南阿蘇",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "南阿蘇",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "熊本",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "熊本駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": "阿蘇くまもと空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "阿蘇カルデラの南、湧水と牧草地が広がる静かな高原。",
+      "白川水源・高森峠・南阿蘇鉄道",
+      "地面から静かに水が湧き出す場所、草千里とは違う穏やかな阿蘇。"
+    ],
+    "themes": [
+      "湧水",
+      "牧草地",
+      "高原"
+    ],
+    "spots": [
+      "白川水源",
+      "高森湧水トンネル",
+      "池の川水源"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/minamiaso.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "阿蘇カルデラの南、湧水と牧草地が広がる静かな高原。 白川水源・高森峠・南阿蘇鉄道",
+    "tags": [
+      "湧水",
+      "牧草地",
+      "高原"
+    ],
+    "jr_region": "kyushu"
   }
 ]
