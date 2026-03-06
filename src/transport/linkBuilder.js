@@ -60,6 +60,9 @@ const AIRPORT_IATA = {
   '米子空港':     'YGJ',
   '女満別空港':   'MMB',
   '中標津空港':   'SHB',
+  '屋久島空港':   'KUM',
+  '奄美空港':     'ASJ',
+  '五島福江空港': 'FUJ',
 };
 
 /* ── Google Maps（transit / driving 統一） ── */
