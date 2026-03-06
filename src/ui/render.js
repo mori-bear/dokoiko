@@ -90,12 +90,37 @@ function generateAccessText(fromCity, city, departure) {
   return '';
 }
 
+/**
+ * atmosphere 行をフィルタする。
+ * - 「〜行かない？」等の呼びかけ文を除去
+ * - ユーザーの出発駅と異なる駅を起点とする交通案内文（「XX駅から新幹線で」等）を除去
+ *   ※ 目的地内移動（路面電車・バス等）は除去しない
+ */
+function filterAtmosphere(lines, userRail) {
+  // 出発地交通パターン: 「XX駅/港から新幹線/特急/急行/電車/飛行機/高速バスでY」
+  const DEPARTURE_TRANSPORT = /^([^\s、,（]+[駅港])から(新幹線|特急|急行|電車|飛行機|高速バス)/;
+
+  return lines
+    .filter(line => !line.endsWith('？'))
+    .flatMap(line => {
+      // 複合文（複数の。区切り）をバラして処理
+      const sentences = line.replace(/。/g, '。\u0000').split('\u0000').filter(s => s.trim());
+      const kept = sentences.filter(s => {
+        const m = s.match(DEPARTURE_TRANSPORT);
+        // 出発地交通パターンに一致 かつ ユーザー出発駅と異なる → 除去
+        if (m && userRail && m[1] !== userRail) return false;
+        return true;
+      });
+      if (kept.length === 0) return [];
+      return [kept.join('')];
+    });
+}
+
 function buildCityBlock(city, _distanceLabel, fromCity, departure) {
   const accessLine = generateAccessText(fromCity, city, departure);
 
-  // 「〜行かない？」系の呼びかけ文を除去
-  const atmosphereHtml = (city.atmosphere || [])
-    .filter(line => !line.endsWith('？'))
+  // atmosphere: 呼びかけ文除去 + 出発地依存の交通案内文を除去
+  const atmosphereHtml = filterAtmosphere(city.atmosphere || [], fromCity?.rail)
     .map((line) => `<p class="appeal-line">${line}</p>`)
     .join('');
 

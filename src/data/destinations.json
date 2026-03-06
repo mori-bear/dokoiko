@@ -3191,11 +3191,11 @@
       "広島"
     ],
     "access": {
-      "railGateway": "宮島口駅",
-      "railNote": "フェリーあり",
+      "railGateway": null,
+      "railNote": null,
       "railBookingProvider": "e5489",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": "宮島口港"
     },
     "atmosphere": [
       "広島駅から電車＋フェリーで45分。宮島口駅からフェリーで10分。",

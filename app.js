@@ -50,14 +50,18 @@ function go() {
   }
   clearFormError();
 
-  state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure);
+  const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
+  const nearestHub   = fromCityInfo?.nearestHub ?? null;
+  state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure, nearestHub);
   state.poolIndex = 0;
   draw();
 }
 
 function retry() {
   if (state.poolIndex >= state.pool.length - 1) {
-    state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure);
+    const fromCityInfoR = DEPARTURE_CITY_INFO[state.departure];
+    const nearestHubR   = fromCityInfoR?.nearestHub ?? null;
+    state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure, nearestHubR);
     state.poolIndex = 0;
   } else {
     state.poolIndex++;

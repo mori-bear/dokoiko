@@ -100,35 +100,66 @@ function weightedShuffle(arr) {
   return result;
 }
 
-/** 同一 name の都市を1件に絞る（高重み順） */
-function deduplicateByName(arr) {
+/** 同一 id の都市を1件に絞る（重み付きシャッフル後の順序維持） */
+function deduplicateById(arr) {
   const seen = new Set();
   return arr.filter(city => {
-    if (seen.has(city.name)) return false;
-    seen.add(city.name);
+    if (seen.has(city.id)) return false;
+    seen.add(city.id);
     return true;
   });
 }
 
-export function buildPool(destinations, distanceStars, stayType, departure = '') {
+/**
+ * buildPool — 出発地・距離・日程でフィルタし重み付きシャッフルを返す。
+ *
+ * @param {string} departure    - 出発都市名
+ * @param {string|null} nearestHub - 出発都市のnearestHub（フォールバック用）
+ *
+ * フォールバック順序:
+ *   1. departures + distanceStars 完全一致
+ *   2. departures + distanceStars ±1
+ *   3. departures 一致のみ（star 無視）
+ *   4. 全件（stayType のみ） — 最終手段
+ */
+export function buildPool(destinations, distanceStars, stayType, departure = '', nearestHub = null) {
   // 2泊3日は1泊2日と同じ目的地セットを使用
   const normalizedStay = stayType === '2night' ? '1night' : stayType;
 
-  // island は 1night 以外では完全除外
-  // 出発地と同一都市・同一都道府県（非island・1night）を除外
-  const filtered = destinations.filter(d => {
+  /** departures フィールドで出発地マッチを判定 */
+  function matchesDeparture(d) {
+    if (!d.departures || d.departures.length === 0) return true;
+    if (d.departures.includes(departure)) return true;
+    if (nearestHub && d.departures.includes(nearestHub)) return true;
+    return false;
+  }
+
+  // 出発地・stayType・同一都市・同一都道府県でフィルタ
+  const departurePool = destinations.filter(d => {
     if (d.type === 'island' && normalizedStay !== '1night') return false;
     if (!d.stayAllowed.includes(normalizedStay)) return false;
     if (departure && isSameCity(d, departure)) return false;
     if (departure && isSamePrefectureOvernight(d, departure, normalizedStay)) return false;
+    if (!matchesDeparture(d)) return false;
     return true;
   });
 
-  // star + stayType で完全一致
-  const exact = filtered.filter(d => d.distanceStars === distanceStars);
-  if (exact.length > 0) return deduplicateByName(weightedShuffle(exact));
+  // 1. star 完全一致
+  const exact = departurePool.filter(d => d.distanceStars === distanceStars);
+  if (exact.length > 0) return deduplicateById(weightedShuffle(exact));
 
-  // フォールバック: normalizedStay 一致のみ
-  const base = filtered.length > 0 ? filtered : destinations;
-  return deduplicateByName(weightedShuffle(base));
+  // 2. star ±1 フォールバック
+  const nearStar = departurePool.filter(d => Math.abs(d.distanceStars - distanceStars) <= 1);
+  if (nearStar.length > 0) return deduplicateById(weightedShuffle(nearStar));
+
+  // 3. 出発地一致のみ（star 無視）
+  if (departurePool.length > 0) return deduplicateById(weightedShuffle(departurePool));
+
+  // 4. 最終フォールバック: stayType のみ（出発地制約なし）
+  const globalPool = destinations.filter(d => {
+    if (d.type === 'island' && normalizedStay !== '1night') return false;
+    if (!d.stayAllowed.includes(normalizedStay)) return false;
+    return true;
+  });
+  return deduplicateById(weightedShuffle(globalPool));
 }

@@ -21,10 +21,13 @@ export function resolveTransportLinks(city, departure, datetime) {
   const { access } = city;
   if (!access) return [];
 
-  const hasRail  = !!access.railGateway;
+  const isIsland = city.type === 'island';
+  // 島はJR予約リンク禁止。railGateway は Google Maps 起点としてのみ使用可。
+  const hasRail  = !!access.railGateway && !isIsland;
   // 短距離（★1〜2）は航空表示しない。★3以上のみ有効。
   const hasAir   = !!access.airportGateway && (city.distanceStars ?? 0) >= 3;
-  const hasFerry = !!access.ferryGateway && !hasRail && !hasAir;
+  // 島はフェリー優先（rail/air 両方なしでも ferryGateway があれば表示）
+  const hasFerry = !!access.ferryGateway && !hasAir;
 
   const links = [];
 
@@ -41,9 +44,14 @@ export function resolveTransportLinks(city, departure, datetime) {
     if (sc) links.push(sc);
   }
 
-  // フェリーのみ: Googleマップ（出発地 → フェリー港）
+  // フェリー: Googleマップ（出発地 → フェリー港）
   if (hasFerry) {
     links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
+  }
+
+  // 島で railGateway あり（フェリー港への交通）: Googleマップ transit のみ（JR予約なし）
+  if (isIsland && access.railGateway && !hasFerry && !hasAir) {
+    links.push(buildGoogleMapsLink(fromCity.rail, access.railGateway, datetime, 'transit'));
   }
 
   return links.filter(link => link && link.url);
