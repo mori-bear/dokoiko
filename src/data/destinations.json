@@ -571,7 +571,7 @@
       "railGateway": "広島駅",
       "railNote": null,
       "railBookingProvider": "e5489",
-      "airportGateway": null,
+      "airportGateway": "広島空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -600,7 +600,8 @@
       "牡蠣",
       "宮島"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "fukuoka-t",
@@ -621,7 +622,7 @@
       "railGateway": "博多駅",
       "railNote": null,
       "railBookingProvider": "jrkyushu",
-      "airportGateway": null,
+      "airportGateway": "福岡空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -650,7 +651,8 @@
       "屋台",
       "活気"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "airportAccess": "地下鉄"
   },
   {
     "id": "sapporo-t",
@@ -3102,7 +3104,7 @@
       "railGateway": "新大阪駅",
       "railNote": null,
       "railBookingProvider": "e5489",
-      "airportGateway": null,
+      "airportGateway": "大阪国際空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -3131,7 +3133,8 @@
       "エンタメ",
       "下町"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "airportAccess": "モノレール・バス"
   },
   {
     "id": "fukuoka-se",
@@ -3606,7 +3609,7 @@
       "railGateway": "東京駅",
       "railNote": null,
       "railBookingProvider": "ekinet",
-      "airportGateway": null,
+      "airportGateway": "羽田空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -3635,7 +3638,8 @@
       "グルメ",
       "エンタメ"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "モノレール・京急"
   },
   {
     "id": "sapporo-h",
@@ -4111,7 +4115,7 @@
       "railGateway": "東京駅",
       "railNote": null,
       "railBookingProvider": "ekinet",
-      "airportGateway": null,
+      "airportGateway": "羽田空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -4140,7 +4144,8 @@
       "グルメ",
       "エンタメ"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "モノレール・京急"
   },
   {
     "id": "sapporo-k",
@@ -6203,7 +6208,7 @@
       "railGateway": "知床斜里駅",
       "railNote": null,
       "railBookingProvider": null,
-      "airportGateway": null,
+      "airportGateway": "女満別空港",
       "ferryGateway": null
     },
     "atmosphere": [
@@ -6232,7 +6237,8 @@
       "自然",
       "原生林"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "バス・レンタカー"
   },
   {
     "id": "wajima",

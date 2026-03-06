@@ -31,18 +31,35 @@ export function resolveTransportLinks(city, departure, datetime) {
   const hasFerry = !!access.ferryGateway && !hasAir;
 
   const links = [];
+  const stars = city.distanceStars ?? 0;
 
-  // 鉄道: JR予約 + Googleマップ（transit）
-  if (hasRail) {
-    const jrLink = buildJrLink(resolveRailProvider(departure, city));
-    if (jrLink) links.push(jrLink);
-    links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
-  }
+  // ★4〜5: 飛行機を優先表示 → 鉄道は後続
+  // ★1〜3: 鉄道を優先表示 → 飛行機は補助
 
-  // 飛行機: Skyscanner（IATA未登録の空港は自動スキップ）
-  if (hasAir) {
-    const sc = buildSkyscannerLink(fromCity.iata, access.airportGateway);
-    if (sc) links.push(sc);
+  if (stars >= 4) {
+    // 飛行機（優先）
+    if (hasAir) {
+      const sc = buildSkyscannerLink(fromCity.iata, access.airportGateway);
+      if (sc) links.push(sc);
+    }
+    // 鉄道（補助）
+    if (hasRail) {
+      const jrLink = buildJrLink(resolveRailProvider(departure, city));
+      if (jrLink) links.push(jrLink);
+      links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
+    }
+  } else {
+    // 鉄道（優先）
+    if (hasRail) {
+      const jrLink = buildJrLink(resolveRailProvider(departure, city));
+      if (jrLink) links.push(jrLink);
+      links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
+    }
+    // 飛行機（補助）
+    if (hasAir) {
+      const sc = buildSkyscannerLink(fromCity.iata, access.airportGateway);
+      if (sc) links.push(sc);
+    }
   }
 
   // フェリー: フェリー予約/案内 + Googleマップ（出発地 → フェリー港）

@@ -58,6 +58,8 @@ const AIRPORT_IATA = {
   '久米島空港':   'UEO',
   '宮古空港':     'MMY',
   '米子空港':     'YGJ',
+  '女満別空港':   'MMB',
+  '中標津空港':   'SHB',
 };
 
 /* ── Google Maps（transit / driving 統一） ── */
