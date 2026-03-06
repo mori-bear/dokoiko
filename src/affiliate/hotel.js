@@ -8,8 +8,7 @@
  */
 
 export function buildHotelLinks(city, destinations) {
-  if (!city.hasHotel) return { show: false, hub: null };
-
+  // 宿泊ブロックは常に表示（hasHotel=false でもキーワード検索 URL を使用）
   const hub = city.hubHotel
     ? destinations.find(d => d.id === city.hubHotel) || null
     : null;

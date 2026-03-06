@@ -209,7 +209,6 @@ function buildStayBlock() {
         <a id="jalanHotelBtn" target="_blank" rel="nofollow sponsored noopener">じゃらん</a>
         <a id="rakutenHotelBtn" target="_blank" rel="nofollow sponsored noopener">楽天トラベル</a>
       </div>
-      <p id="hotel-pending" class="hotel-pending" hidden>このエリアは宿情報準備中</p>
     </div>
   `;
 }
@@ -224,7 +223,6 @@ function buildHubStayBlock(hubName) {
         <a id="jalanHubHotelBtn" target="_blank" rel="nofollow sponsored noopener">じゃらん</a>
         <a id="rakutenHubHotelBtn" target="_blank" rel="nofollow sponsored noopener">楽天トラベル</a>
       </div>
-      <p id="hub-hotel-pending" class="hotel-pending" hidden>このエリアは宿情報準備中</p>
     </div>
   `;
 }

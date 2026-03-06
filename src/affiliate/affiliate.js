@@ -4,15 +4,19 @@ const JALAN_RENT_PID = "892559858";
 const JALAN_BASE     = "https://www.jalan.net";
 
 // ===== じゃらん宿泊 URL =====
-// city.jalanUrl が存在する場合のみ返す。自動生成は行わない。
+// city.jalanUrl があればそれを使用。なければキーワード検索 URL にフォールバック。
 function getJalanHotelUrl(city) {
-  return city.jalanUrl || null;
+  if (city.jalanUrl) return city.jalanUrl;
+  const name = city.hotelBase || city.name;
+  return `https://www.jalan.net/search/?keyword=${encodeURIComponent(name)}`;
 }
 
 // ===== 楽天トラベル URL =====
-// city.rakutenUrl が存在する場合のみ返す。自動生成は行わない。
+// city.rakutenUrl があればそれを使用。なければキーワード検索 URL にフォールバック。
 function buildRakutenUrl(city) {
-  return city.rakutenUrl || null;
+  if (city.rakutenUrl) return city.rakutenUrl;
+  const name = city.hotelBase || city.name;
+  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(name)}`;
 }
 
 // ===== じゃらんレンタカー URL（自動生成を維持） =====
@@ -27,51 +31,25 @@ export function getJalanRentUrl(city) {
 
 /** renderResult からDOM構築直後に呼び出す */
 export function applyAffiliateLinks(city, hubCity = null) {
-  applyHotelSection(city, 'jalanHotelBtn', 'rakutenHotelBtn', 'hotel-pending');
+  applyHotelSection(city, 'jalanHotelBtn', 'rakutenHotelBtn');
   if (hubCity) {
-    applyHotelSection(hubCity, 'jalanHubHotelBtn', 'rakutenHubHotelBtn', 'hub-hotel-pending');
+    applyHotelSection(hubCity, 'jalanHubHotelBtn', 'rakutenHubHotelBtn');
   }
 
   // ── レンタカー（needsCar=true のときのみ存在する） ──
   const rentBtn = document.getElementById('jalanRentBtn');
   if (rentBtn) {
-    const url = getJalanRentUrl(city);
-    // eslint-disable-next-line no-console
-    console.log(`[affiliate] rent(${city.name}):`, url);
-    rentBtn.href = url;
+    rentBtn.href = getJalanRentUrl(city);
   }
 }
 
-function applyHotelSection(city, jalanId, rakutenId, pendingId) {
+function applyHotelSection(city, jalanId, rakutenId) {
   const jalanUrl   = getJalanHotelUrl(city);
   const rakutenUrl = buildRakutenUrl(city);
 
-  // eslint-disable-next-line no-console
-  console.log(`[affiliate] jalan(${city.name}):`, jalanUrl ?? '(hidden)');
-  // eslint-disable-next-line no-console
-  console.log(`[affiliate] rakuten(${city.name}):`, rakutenUrl ?? '(hidden)');
-
   const jalanBtn = document.getElementById(jalanId);
-  if (jalanBtn) {
-    if (jalanUrl) {
-      jalanBtn.href = jalanUrl;
-    } else {
-      jalanBtn.hidden = true;
-    }
-  }
+  if (jalanBtn) jalanBtn.href = jalanUrl;
 
   const rakutenBtn = document.getElementById(rakutenId);
-  if (rakutenBtn) {
-    if (rakutenUrl) {
-      rakutenBtn.href = rakutenUrl;
-    } else {
-      rakutenBtn.hidden = true;
-    }
-  }
-
-  // 宿リンクが1件もない場合は「準備中」メッセージを表示
-  if (!jalanUrl && !rakutenUrl) {
-    const pending = document.getElementById(pendingId);
-    if (pending) pending.hidden = false;
-  }
+  if (rakutenBtn) rakutenBtn.href = rakutenUrl;
 }
