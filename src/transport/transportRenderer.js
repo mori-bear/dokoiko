@@ -3,6 +3,7 @@ import {
   buildGoogleMapsLink,
   buildSkyscannerLink,
   buildJrLink,
+  buildFerryLink,
 } from './linkBuilder.js';
 
 /**
@@ -44,8 +45,10 @@ export function resolveTransportLinks(city, departure, datetime) {
     if (sc) links.push(sc);
   }
 
-  // フェリー: Googleマップ（出発地 → フェリー港）
+  // フェリー: フェリー予約/案内 + Googleマップ（出発地 → フェリー港）
   if (hasFerry) {
+    const ferryLink = buildFerryLink(access.ferryGateway);
+    if (ferryLink) links.push(ferryLink);
     links.push(buildGoogleMapsLink(fromCity.rail, access.ferryGateway, datetime, 'transit'));
   }
 
@@ -69,17 +72,29 @@ export function resolveTransportLinks(city, departure, datetime) {
  *   kyushu → JR九州ネット予約
  */
 
-// EXを使う出発地（東海道側 JR East 主要駅のみ）
-const EX_DEPARTURE = new Set(['東京', '横浜', '大宮']);
-
-// EX対象の到着都市名（東海道/山陽/九州新幹線）
-const EX_DEST = new Set([
-  '名古屋', '京都', '大阪', '神戸', '姫路',
-  '広島', '岡山', '博多', '熊本', '鹿児島', '長崎',
+/**
+ * スマートEX（EX予約）: 東海道・山陽・九州新幹線を双方向カバー
+ * 出発・到着のどちらかがこのセットに含まれれば EX を優先
+ */
+const EX_CITIES = new Set([
+  '東京', '横浜', '大宮', '品川',
+  '名古屋',
+  '京都', '大阪', '神戸', '姫路',
+  '岡山', '広島', '小倉', '博多', '熊本', '鹿児島', '長崎',
 ]);
 
+/**
+ * JR予約プロバイダを決定する。
+ *
+ * スマートEX（新幹線）:
+ *   出発・到着 両方が EX_CITIES に含まれる場合
+ *
+ * えきねっと（在来線/特急）: JR東日本エリア
+ * JR九州予約: 九州エリア（EX非対象路線）
+ * e5489: JR西日本エリア
+ */
 function resolveRailProvider(departure, city) {
-  if (EX_DEPARTURE.has(departure) && EX_DEST.has(city.name)) {
+  if (EX_CITIES.has(departure) && EX_CITIES.has(city.name)) {
     return 'ex';
   }
   const area = DEPARTURE_CITY_INFO[departure]?.jrArea || 'west';

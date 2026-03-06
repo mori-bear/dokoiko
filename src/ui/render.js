@@ -245,6 +245,7 @@ function btnClass(type) {
   if (type === 'skyscanner') return 'btn-skyscanner';
   if (type === 'rakuten'  )                        return 'btn-rakuten';
   if (type === 'jalan' || type === 'jalan-rental') return 'btn-jalan';
+  if (type === 'ferry') return 'btn-ferry';
   if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
   return 'btn-primary';
 }

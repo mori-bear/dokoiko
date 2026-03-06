@@ -125,3 +125,24 @@ export function buildRentalLink() {
     url: 'https://www.jalan.net/rentacar/',
   };
 }
+
+/* ── フェリー（島アクセス） ── */
+
+/**
+ * フェリー港名からフェリー予約・案内リンクを生成する。
+ * 港が不明な場合は null を返す。
+ */
+const FERRY_LINKS = {
+  '竹芝客船ターミナル': { label: 'フェリーを予約する（東海汽船）', url: 'https://www.tokaikisen.co.jp/' },
+  '那覇港':             { label: 'フェリーを調べる（琉球海運）',   url: 'https://www.ryukyu-marine.co.jp/' },
+  '鹿児島港':           { label: 'フェリーを調べる（マリックスライン）', url: 'https://www.marixline.com/' },
+  '長崎港':             { label: 'フェリーを調べる（九州商船）',   url: 'https://www.kysho.co.jp/' },
+  '高松港':             { label: 'フェリーを調べる（小豆島フェリー）', url: 'https://www.shoudoshima-ferry.co.jp/' },
+  '宮島口港':           { label: 'フェリーを調べる（宮島松大フェリー）', url: 'https://miyajima-matsudai.co.jp/' },
+};
+
+export function buildFerryLink(ferryGateway) {
+  const info = FERRY_LINKS[ferryGateway];
+  if (!info) return null;
+  return { type: 'ferry', label: info.label, url: info.url };
+}

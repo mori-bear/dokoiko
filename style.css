@@ -589,12 +589,14 @@ body {
 .btn-jr-kyushu  { background: var(--c-jr-kyushu);  color: #fff; }
 .btn-jr-ex      { background: var(--c-jr-ex);      color: #fff; }
 .btn-skyscanner { background: var(--c-skyscanner); color: #fff; }
+.btn-ferry      { background: #1a6fa8;             color: #fff; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,
 .btn-jr-kyushu:hover,
 .btn-jr-ex:hover,
-.btn-skyscanner:hover { opacity: 0.92; }
+.btn-skyscanner:hover,
+.btn-ferry:hover { opacity: 0.92; }
 
 /* affiliate（楽天） */
 .btn-rakuten {
