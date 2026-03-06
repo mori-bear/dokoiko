@@ -700,7 +700,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "nara",
@@ -1308,7 +1309,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "ishigaki",
@@ -1365,7 +1367,8 @@
     ],
     "jr_region": "okinawa",
     "access_city": "石垣島",
-    "port": "石垣港"
+    "port": "石垣港",
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "gifu",
@@ -1868,7 +1871,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "saga",
@@ -2370,7 +2374,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "otaru",
@@ -2671,7 +2676,8 @@
       "グルメ",
       "エンタメ"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "モノレール・京急"
   },
   {
     "id": "osaka-s",
@@ -2721,7 +2727,8 @@
       "エンタメ",
       "下町"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "airportAccess": "南海・JR"
   },
   {
     "id": "fukuoka-s",
@@ -2771,7 +2778,8 @@
       "屋台",
       "活気"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "airportAccess": "地下鉄"
   },
   {
     "id": "matsushima",
@@ -3677,7 +3685,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "tokushima",
@@ -4181,7 +4190,8 @@
       "自然",
       "雪まつり"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート"
   },
   {
     "id": "mihonoseki",
@@ -4224,7 +4234,9 @@
     "hubHotel": null,
     "description": "米子空港から車で30分または境港駅から車で30分。 美保神社・美保関灯台・青石畳通り",
     "tags": [],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "境港駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "ryujin-onsen",
@@ -4266,7 +4278,9 @@
     "hubHotel": "wakayama",
     "description": "大阪から特急＋龍神バスで約3時間。紀伊田辺駅で乗換え。 龍神温泉元湯・護摩壇山・道の駅龍游",
     "tags": [],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "紀伊田辺駅",
+    "accessFromHub": "龍神バス"
   },
   {
     "id": "naha",
@@ -4325,7 +4339,8 @@
       "海",
       "グルメ"
     ],
-    "jr_region": "okinawa"
+    "jr_region": "okinawa",
+    "airportAccess": "ゆいレール"
   },
   {
     "id": "tokashiki-jima",
@@ -4371,7 +4386,8 @@
     "tags": [],
     "jr_region": "okinawa",
     "access_city": "那覇",
-    "port": "那覇港"
+    "port": "那覇港",
+    "airportAccess": "ゆいレール"
   },
   {
     "id": "kumejima",
@@ -4427,7 +4443,8 @@
     ],
     "jr_region": "okinawa",
     "access_city": "那覇",
-    "port": "那覇港"
+    "port": "那覇港",
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "miyakojima",
@@ -4482,7 +4499,8 @@
     ],
     "jr_region": "okinawa",
     "access_city": null,
-    "port": null
+    "port": null,
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "kouzushima",
@@ -4837,7 +4855,9 @@
       "合掌造り",
       "雪景色"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "金沢駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "arima-onsen",
@@ -5192,7 +5212,9 @@
       "合掌造り",
       "雪景色"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "名古屋駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "toba",
@@ -5394,7 +5416,9 @@
       "秘湯",
       "自然"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "hubCity": "熊本駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "aso",
@@ -5497,7 +5521,8 @@
     ],
     "jr_region": "kyushu",
     "access_city": null,
-    "port": null
+    "port": null,
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "amakusa",
@@ -5547,7 +5572,9 @@
       "キリシタン",
       "海"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "hubCity": "熊本駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "hiraizumi",
@@ -6255,7 +6282,9 @@
       "朝市",
       "棚田"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "金沢駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "shirakawago-k",
@@ -6306,7 +6335,9 @@
       "合掌造り",
       "雪景色"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "高松駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "kaga-onsen",
@@ -6560,7 +6591,9 @@
       "漁村",
       "海"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "天橋立駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "ibusuki",
@@ -6663,7 +6696,8 @@
     ],
     "jr_region": "kyushu",
     "access_city": null,
-    "port": null
+    "port": null,
+    "airportAccess": "バス・タクシー"
   },
   {
     "id": "sasebo",
@@ -6866,7 +6900,9 @@
       "秘湯",
       "湯めぐり"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "hubCity": "博多駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "hiraizumi-m",
@@ -7122,7 +7158,9 @@
       "グルメ",
       "歴史"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "神戸三宮駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "takao",
@@ -7274,7 +7312,9 @@
       "歴史",
       "自然"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "高岡駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "jozankei",
@@ -7324,7 +7364,9 @@
       "紅葉",
       "自然"
     ],
-    "jr_region": "east"
+    "jr_region": "east",
+    "hubCity": "札幌駅",
+    "accessFromHub": "定山渓温泉バス"
   },
   {
     "id": "biei",
@@ -7527,7 +7569,9 @@
       "自然",
       "渓谷"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "hubCity": "延岡駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "amami",
@@ -7681,7 +7725,9 @@
       "自然",
       "火山"
     ],
-    "jr_region": "kyushu"
+    "jr_region": "kyushu",
+    "hubCity": "長崎駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "ashizuri",
@@ -7731,7 +7777,9 @@
       "自然",
       "岬"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "中村駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "oboke",
@@ -7936,7 +7984,9 @@
       "歴史",
       "自然"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "南木曽駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "miyama",
@@ -7987,7 +8037,9 @@
       "自然",
       "田舎"
     ],
-    "jr_region": "west"
+    "jr_region": "west",
+    "hubCity": "綾部駅",
+    "accessFromHub": "バス"
   },
   {
     "id": "tateyama-kurobe",

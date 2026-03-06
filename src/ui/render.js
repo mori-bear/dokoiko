@@ -59,32 +59,53 @@ const STAR_TIME_LABEL = {
 };
 
 /**
- * 出発地情報を使ってアクセス行を自然文で生成する。
+ * 出発地情報を使ってアクセス行を交通チェーン形式で生成する。
  * fromCity = DEPARTURE_CITY_INFO[departure] の値。
+ *
+ * チェーン表示:
+ *   鉄道+バス: 出発駅 → ハブ駅 → バス → 目的地
+ *   航空:     出発空港 → 到着空港 → 空港アクセス → 目的地
+ *   フェリー: 出発駅 → フェリー港 → フェリー → 目的地
  */
 function generateAccessText(fromCity, city, departure) {
-  const { access, distanceStars } = city;
+  const { access } = city;
   if (!access) return '';
 
+  const fromRail    = fromCity?.rail    ?? null;
+  const fromAirport = fromCity?.airport ?? '出発空港';
+  const destName    = city.mapDestination || city.name;
+
+  // 鉄道ルート
   if (access.railGateway) {
-    const timeLabel = STAR_TIME_LABEL[distanceStars] ?? '';
-    const note = access.railNote ? `（${access.railNote}）` : '';
-    const from = fromCity?.rail ?? access.railGateway;
-    return `<p class="access-line">${from}から${timeLabel}${note}</p>`;
-  }
-
-  if (access.airportGateway) {
-    const from = fromCity?.airport ?? '出発空港';
-    return `<p class="access-line">${from}から${access.airportGateway}へ</p>`;
-  }
-
-  if (access.ferryGateway) {
-    // access_city（中継ハブ都市）が出発地と異なる場合は経由表記
-    const hub = city.access_city;
-    if (hub && hub !== city.name && hub !== departure) {
-      return `<p class="access-line">${hub}経由 → ${access.ferryGateway}からフェリーで</p>`;
+    if (city.hubCity && city.accessFromHub) {
+      // チェーン表示: 出発駅 → ハブ → バス/バス等 → 目的地
+      const from = fromRail ?? access.railGateway;
+      return `<p class="access-line">${from} → ${city.hubCity} → ${city.accessFromHub} → ${city.name}</p>`;
     }
-    return `<p class="access-line">${access.ferryGateway}からフェリーで</p>`;
+    if (access.railNote) {
+      // バス/フェリー付き: 出発駅 → ハブ駅（バスあり）
+      const from = fromRail ?? access.railGateway;
+      const mode = access.railNote.replace('あり', '').trim();
+      return `<p class="access-line">${from} → ${access.railGateway}（${mode}）→ ${city.name}</p>`;
+    }
+    // 通常鉄道: 出発駅から目的地へ
+    const from = fromRail ?? access.railGateway;
+    return `<p class="access-line">${from}から${access.railGateway}へ</p>`;
+  }
+
+  // 航空ルート
+  if (access.airportGateway) {
+    if (city.airportAccess) {
+      // チェーン: 出発空港 → 到着空港 → 空港アクセス → 目的地
+      return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${city.airportAccess} → ${destName}</p>`;
+    }
+    return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${destName}</p>`;
+  }
+
+  // フェリールート
+  if (access.ferryGateway) {
+    const from = fromRail ?? '出発地';
+    return `<p class="access-line">${from} → ${access.ferryGateway} → フェリー → ${city.name}</p>`;
   }
 
   return '';
