@@ -735,7 +735,7 @@ body {
 
 .city-image {
   width: 100%;
-  aspect-ratio: 16 / 7;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   display: block;
