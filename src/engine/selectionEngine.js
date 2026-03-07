@@ -100,12 +100,12 @@ function weightedShuffle(arr) {
   return result;
 }
 
-/** 同一 id の都市を1件に絞る（重み付きシャッフル後の順序維持） */
-function deduplicateById(arr) {
+/** 同一名称の都市を1件に絞る（重み付きシャッフル後の順序維持） */
+function deduplicateByName(arr) {
   const seen = new Set();
   return arr.filter(city => {
-    if (seen.has(city.id)) return false;
-    seen.add(city.id);
+    if (seen.has(city.name)) return false;
+    seen.add(city.name);
     return true;
   });
 }
@@ -146,14 +146,14 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
 
   // 1. star 完全一致
   const exact = departurePool.filter(d => d.distanceStars === distanceStars);
-  if (exact.length > 0) return deduplicateById(weightedShuffle(exact));
+  if (exact.length > 0) return deduplicateByName(weightedShuffle(exact));
 
   // 2. star ±1 フォールバック
   const nearStar = departurePool.filter(d => Math.abs(d.distanceStars - distanceStars) <= 1);
-  if (nearStar.length > 0) return deduplicateById(weightedShuffle(nearStar));
+  if (nearStar.length > 0) return deduplicateByName(weightedShuffle(nearStar));
 
   // 3. 出発地一致のみ（star 無視）
-  if (departurePool.length > 0) return deduplicateById(weightedShuffle(departurePool));
+  if (departurePool.length > 0) return deduplicateByName(weightedShuffle(departurePool));
 
   // 4. 最終フォールバック: stayType のみ（出発地制約なし）
   const globalPool = destinations.filter(d => {
@@ -161,5 +161,5 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
     if (!d.stayAllowed.includes(normalizedStay)) return false;
     return true;
   });
-  return deduplicateById(weightedShuffle(globalPool));
+  return deduplicateByName(weightedShuffle(globalPool));
 }

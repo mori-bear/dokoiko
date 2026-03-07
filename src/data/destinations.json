@@ -4638,7 +4638,7 @@
     "jalanPath": "/13/LRG_130120/",
     "hasHotel": true,
     "hubHotel": null,
-    "description": "東京から行ける指折りの星空を持つ離島。透明な海と山のハイキングで、都会を忘れられる場所だ。",
+    "description": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島。山と海と集落が凝縮された、ゆっくりとした時間が流れる島だ。",
     "tags": [
       "離島",
       "ハイキング",
@@ -4896,7 +4896,7 @@
     "jalanPath": "/13/LRG_130100/",
     "hasHotel": true,
     "hubHotel": null,
-    "description": "東京から船で行ける火山と自然の島。活火山と荒涼とした砂地、静かな港で都会とは別の時間が流れる。",
+    "description": "伊豆諸島最大の火山島。荒涼とした山の地形と温かな漁村文化が共存し、島ならではの旅情が広がる。",
     "tags": [
       "島",
       "火山",
@@ -7351,7 +7351,7 @@
     "jalanPath": "/13/LRG_130030/",
     "hasHotel": true,
     "hubHotel": null,
-    "description": "都心から一時間でアクセスできる霊峰の山。山岳信仰の歴史と豊かな自然が、気軽な山旅を楽しませる。",
+    "description": "都市に隣接しながら深い自然が残る霊峰の山。山岳信仰の歴史と豊かな森が、本格的な山旅を楽しませてくれる。",
     "tags": [
       "ハイキング",
       "寺社",
@@ -8571,58 +8571,6 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70"
-  },
-  {
-    "id": "ibusuki",
-    "name": "指宿",
-    "type": "local",
-    "region": "九州",
-    "mapDestination": "指宿駅",
-    "parentHub": null,
-    "distanceStars": 1,
-    "weight": 1.2,
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "鹿児島"
-    ],
-    "access": {
-      "railGateway": "指宿駅",
-      "railNote": null,
-      "railBookingProvider": null,
-      "airportGateway": null,
-      "ferryGateway": null
-    },
-    "atmosphere": [
-      "砂に埋まる露天、薩摩の南端に広がる海岸。",
-      "指宿砂むし温泉・長崎鼻・開聞岳",
-      "薩摩富士を望みながら、砂の中に全身を委ねる。"
-    ],
-    "themes": [
-      "砂蒸し温泉",
-      "海",
-      "南国"
-    ],
-    "spots": [
-      "砂むし会館",
-      "長崎鼻",
-      "池田湖"
-    ],
-    "needsCar": false,
-    "rakutenPath": "/yado/kagoshima/ibusuki.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
-    "description": "薩摩半島南端に広がる砂むし温泉の街。温かい砂に包まれる独特の体験と開聞岳の絶景が待っている。",
-    "tags": [
-      "砂蒸し温泉",
-      "海",
-      "南国"
-    ],
-    "jr_region": "kyushu",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70"
   },
   {
     "id": "onomichi",
