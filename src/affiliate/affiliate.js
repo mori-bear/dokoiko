@@ -29,13 +29,11 @@ function getPrefSlug(city) {
   return city.prefecture ?? null;
 }
 
-// ===== 楽天トラベル URL（アフィリエイトラッパー付き） =====
-// https://travel.rakuten.co.jp/yado/{prefecture}/
+// ===== 楽天トラベル URL（都市名検索 + アフィリエイトラッパー） =====
+// https://travel.rakuten.co.jp/search/?f_query=都市名
 function buildRakutenUrl(city) {
-  const pref = getPrefSlug(city);
-  const target = pref
-    ? `https://travel.rakuten.co.jp/yado/${pref}/`
-    : `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(city.name)}`;
+  const name = city.name;
+  const target = `https://travel.rakuten.co.jp/search/?f_query=${encodeURIComponent(name)}`;
   return `${RAKUTEN_AFF}?pc=${encodeURIComponent(target)}`;
 }
 

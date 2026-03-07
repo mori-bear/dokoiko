@@ -700,9 +700,10 @@ body {
 /* 距離★ボタン（縦表示） */
 
 .btn-group--distance {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 8px;
+  overflow-x: auto;
 }
 
 .sel-btn--distance {
@@ -710,10 +711,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  padding: 10px 4px;
+  padding: 10px 6px;
   border-radius: var(--radius);
-  white-space: normal;
-  line-height: 1.3;
+  white-space: nowrap;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .sel-btn--distance .star-val {

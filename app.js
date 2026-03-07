@@ -12,7 +12,7 @@ const state = {
   destinations: [],
   departure:    '東京',
   distance:     null,
-  stayType:     null,
+  stayType:     '1night',
   datetime:     buildDefaultDatetime(),
   people:       DEFAULT_GUESTS,
   pool:         [],
@@ -39,10 +39,6 @@ async function init() {
 function go() {
   if (state.distance === null) {
     showFormError('距離を選んでください。');
-    return;
-  }
-  if (state.stayType === null) {
-    showFormError('日帰り・宿泊を選んでください。');
     return;
   }
   if (state.destinations.length === 0) {
