@@ -287,7 +287,42 @@
           "福岡": 3,
           "熊本": 3
         },
-        "prefecture": "kumamoto"
+        "prefecture": "kumamoto",
+        "spots": [
+          {
+            "id": "nabegitaki",
+            "name": "鍋ヶ滝",
+            "type": "spot",
+            "region": "九州",
+            "prefecture": "kumamoto",
+            "mapDestination": "鍋ヶ滝",
+            "parentHub": "熊本",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": true,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "滝の裏側から水のカーテンを見上げる裏見の滝。",
+              "阿蘇外輪山の緑の中に隠れた秘境の絶景。"
+            ],
+            "themes": [
+              "絶景",
+              "秘境"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "aso",
@@ -1108,7 +1143,74 @@
         "prefecture": "miyazaki"
       }
     ],
-    "spots": [],
+    "spots": [
+      {
+        "id": "sakurajima",
+        "name": "桜島",
+        "type": "spot",
+        "region": "九州",
+        "prefecture": "kagoshima",
+        "mapDestination": "桜島",
+        "parentHub": "鹿児島",
+        "departures": [],
+        "distanceStars": 4,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "鹿児島港からフェリー15分、噴煙を上げる活火山の島。",
+          "溶岩原と黒砂浜、九州のシンボルが目の前に立つ。"
+        ],
+        "themes": [
+          "絶景",
+          "火山"
+        ],
+        "landmarks": [],
+        "description": ""
+      },
+      {
+        "id": "kirishima",
+        "name": "霧島温泉郷",
+        "type": "spot",
+        "region": "九州",
+        "prefecture": "kagoshima",
+        "mapDestination": "霧島温泉",
+        "parentHub": "鹿児島",
+        "departures": [],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "霧島連山の麓に湧く、坂本龍馬が訪れた温泉。",
+          "硫黄香る白濁の湯と霧に沈む山の風景。"
+        ],
+        "themes": [
+          "温泉",
+          "山岳"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "kagoshima"
   },
   {

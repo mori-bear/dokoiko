@@ -426,7 +426,74 @@
         "prefecture": "kochi"
       }
     ],
-    "spots": [],
+    "spots": [
+      {
+        "id": "ryugado",
+        "name": "龍河洞",
+        "type": "spot",
+        "region": "四国",
+        "prefecture": "kochi",
+        "mapDestination": "龍河洞",
+        "parentHub": "高松",
+        "departures": [],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "太古の鍾乳洞が高知の山中に口を開ける。",
+          "弥生時代の生活痕が岩に残る日本三大鍾乳洞。"
+        ],
+        "themes": [
+          "秘境",
+          "歴史"
+        ],
+        "landmarks": [],
+        "description": ""
+      },
+      {
+        "id": "shimanto-river",
+        "name": "四万十川",
+        "type": "spot",
+        "region": "四国",
+        "prefecture": "kochi",
+        "mapDestination": "四万十川",
+        "parentHub": "高松",
+        "departures": [],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本最後の清流と呼ばれる、欄干のない沈下橋が続く。",
+          "水面すれすれを舟で流れ、時間が止まるような静けさ。"
+        ],
+        "themes": [
+          "絶景",
+          "海岸"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "kochi"
   },
   {
@@ -738,7 +805,7 @@
       "海岸",
       "夕日"
     ],
-    "prefecture": "ehime"
+    "prefecture": "kagawa"
   },
   {
     "id": "kazurabashi",

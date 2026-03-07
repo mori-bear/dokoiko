@@ -703,5 +703,40 @@
     ],
     "spots": [],
     "prefecture": "tokyo"
+  },
+  {
+    "id": "fukuroda-falls",
+    "name": "袋田の滝",
+    "type": "spot",
+    "region": "関東",
+    "prefecture": "ibaraki",
+    "mapDestination": "袋田の滝",
+    "parentHub": null,
+    "departures": [
+      "東京"
+    ],
+    "distanceStars": 2,
+    "weight": 0.15,
+    "stayAllowed": [],
+    "hasHotel": false,
+    "hubHotel": null,
+    "needsCar": true,
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "4段に分かれて落ちる日本三名瀑のひとつ。",
+      "冬は完全凍結、四季ごとに別の顔を見せる。"
+    ],
+    "themes": [
+      "絶景",
+      "滝"
+    ],
+    "landmarks": [],
+    "description": ""
   }
 ]

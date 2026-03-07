@@ -223,7 +223,42 @@
           "大阪": 3,
           "名古屋": 2
         },
-        "prefecture": "gifu"
+        "prefecture": "gifu",
+        "spots": [
+          {
+            "id": "okuhida-onsen",
+            "name": "奥飛騨温泉郷",
+            "type": "spot",
+            "region": "中部",
+            "prefecture": "gifu",
+            "mapDestination": "奥飛騨温泉郷",
+            "parentHub": "名古屋",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": true,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "北アルプスを望む露天風呂が連なる温泉地。",
+              "新穂高ロープウェイで雲上へ、温泉で体を解かす。"
+            ],
+            "themes": [
+              "温泉",
+              "山岳"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "toba",
@@ -1368,7 +1403,42 @@
       "竹林の小径",
       "独鈷の湯"
     ],
-    "prefecture": "shizuoka"
+    "prefecture": "shizuoka",
+    "spots": [
+      {
+        "id": "shiraito-falls",
+        "name": "白糸の滝",
+        "type": "spot",
+        "region": "中部",
+        "prefecture": "shizuoka",
+        "mapDestination": "白糸ノ滝",
+        "parentHub": "名古屋",
+        "departures": [],
+        "distanceStars": 2,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": false,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "富士山の伏流水が無数の糸となって落ちる。",
+          "幅150mに及ぶ優美な白い滝。"
+        ],
+        "themes": [
+          "絶景",
+          "滝"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ]
   },
   {
     "id": "shimoda",

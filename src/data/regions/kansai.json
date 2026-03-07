@@ -116,7 +116,42 @@
           "春日大社",
           "奈良公園（鹿）"
         ],
-        "prefecture": "nara"
+        "prefecture": "nara",
+        "spots": [
+          {
+            "id": "yoshino-yama",
+            "name": "吉野山",
+            "type": "spot",
+            "region": "近畿",
+            "prefecture": "nara",
+            "mapDestination": "吉野山",
+            "parentHub": "大阪",
+            "departures": [],
+            "distanceStars": 2,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": false,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "約3万本の桜が山肌を染め上げる春の聖地。",
+              "金峯山寺と世界遺産の霊場が山に重なる。"
+            ],
+            "themes": [
+              "絶景",
+              "歴史"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "ryujin-onsen",
@@ -273,7 +308,42 @@
           "京都": 3,
           "神戸": 3
         },
-        "prefecture": "hyogo"
+        "prefecture": "hyogo",
+        "spots": [
+          {
+            "id": "genbudo",
+            "name": "玄武洞",
+            "type": "spot",
+            "region": "近畿",
+            "prefecture": "hyogo",
+            "mapDestination": "玄武洞",
+            "parentHub": "大阪",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": false,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "約160万年前の溶岩が冷えて生まれた柱状節理の洞窟。",
+              "城崎温泉近くに潜む地球の記憶。"
+            ],
+            "themes": [
+              "歴史",
+              "地質"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "shirahama-o",
@@ -995,7 +1065,41 @@
       "白浜海岸"
     ],
     "locals": [],
-    "spots": [],
+    "spots": [
+      {
+        "id": "kumano-kodo",
+        "name": "熊野古道",
+        "type": "spot",
+        "region": "近畿",
+        "prefecture": "wakayama",
+        "mapDestination": "熊野古道",
+        "parentHub": "大阪",
+        "departures": [],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "世界遺産の霊道が苔むした石畳で続く。",
+          "千年の巡礼路を歩き、熊野三山へと導かれる。"
+        ],
+        "themes": [
+          "歴史",
+          "秘境"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "wakayama"
   }
 ]

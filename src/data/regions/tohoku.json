@@ -269,7 +269,42 @@
           "芦ノ牧温泉",
           "大内宿"
         ],
-        "prefecture": "fukushima"
+        "prefecture": "fukushima",
+        "spots": [
+          {
+            "id": "jododaira",
+            "name": "浄土平",
+            "type": "spot",
+            "region": "東北",
+            "prefecture": "fukushima",
+            "mapDestination": "浄土平",
+            "parentHub": "仙台",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": true,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "標高1600m、吾妻山の火山性荒地が広がる秘境。",
+              "磐梯吾妻スカイライン最高地点から火口を見下ろす。"
+            ],
+            "themes": [
+              "山岳",
+              "絶景"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "zaosan",
@@ -639,7 +674,42 @@
           "東北こけし館",
           "早稲田桟敷湯"
         ],
-        "prefecture": "miyagi"
+        "prefecture": "miyagi",
+        "spots": [
+          {
+            "id": "naruko-kyo",
+            "name": "鳴子峡",
+            "type": "spot",
+            "region": "東北",
+            "prefecture": "miyagi",
+            "mapDestination": "鳴子峡",
+            "parentHub": "仙台",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": false,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "深さ100mの渓谷に錦秋が広がる。",
+              "鳴子温泉郷の奥に潜む東北の絶景。"
+            ],
+            "themes": [
+              "絶景",
+              "紅葉"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "hirosaki",
@@ -852,7 +922,41 @@
       "上杉神社"
     ],
     "locals": [],
-    "spots": [],
+    "spots": [
+      {
+        "id": "yamadera",
+        "name": "山寺（立石寺）",
+        "type": "spot",
+        "region": "東北",
+        "prefecture": "yamagata",
+        "mapDestination": "山寺",
+        "parentHub": "山形",
+        "departures": [],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": false,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "岩肌に刻まれた1000段の石段を登る。",
+          "松尾芭蕉が詠んだ蝉の声、今も静寂に満ちた聖地。"
+        ],
+        "themes": [
+          "歴史",
+          "山岳"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "yamagata"
   },
   {

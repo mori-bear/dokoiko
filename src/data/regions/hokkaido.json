@@ -434,7 +434,42 @@
           "旭川": 2,
           "札幌": 2
         },
-        "prefecture": "hokkaido"
+        "prefecture": "hokkaido",
+        "spots": [
+          {
+            "id": "aoi-ike",
+            "name": "青い池",
+            "type": "spot",
+            "region": "北海道",
+            "prefecture": "hokkaido",
+            "mapDestination": "青い池",
+            "parentHub": "旭川",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": true,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "白金温泉の近く、コバルトブルーが神秘的な池。",
+              "雪解けの春と初夏が最も鮮やかに輝く。"
+            ],
+            "themes": [
+              "絶景",
+              "自然"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       }
     ],
     "spots": [],
@@ -545,7 +580,41 @@
       "丹頂の里"
     ],
     "locals": [],
-    "spots": [],
+    "spots": [
+      {
+        "id": "mashu-ko",
+        "name": "摩周湖",
+        "type": "spot",
+        "region": "北海道",
+        "prefecture": "hokkaido",
+        "mapDestination": "摩周湖",
+        "parentHub": "釧路",
+        "departures": [],
+        "distanceStars": 4,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "霧が晴れた日だけ現れる、北海道最深の神秘の湖。",
+          "透明度世界屈指、濃紺の湖面が静かに空を映す。"
+        ],
+        "themes": [
+          "絶景",
+          "秘境"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "hokkaido"
   },
   {

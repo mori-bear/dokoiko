@@ -328,7 +328,42 @@
           "松陰神社",
           "菊屋家住宅"
         ],
-        "prefecture": "yamaguchi"
+        "prefecture": "yamaguchi",
+        "spots": [
+          {
+            "id": "akiyoshidai",
+            "name": "秋吉台",
+            "type": "spot",
+            "region": "中国",
+            "prefecture": "yamaguchi",
+            "mapDestination": "秋吉台",
+            "parentHub": "広島",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": true,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "日本最大のカルスト台地、白い岩が草原に点在する。",
+              "地下には秋芳洞、大自然の地底世界が広がる。"
+            ],
+            "themes": [
+              "秘境",
+              "地質"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "shimonoseki",
@@ -435,7 +470,42 @@
           "砂の美術館",
           "浦富海岸"
         ],
-        "prefecture": "tottori"
+        "prefecture": "tottori",
+        "spots": [
+          {
+            "id": "tottori-sakyuu",
+            "name": "鳥取砂丘",
+            "type": "spot",
+            "region": "中国",
+            "prefecture": "tottori",
+            "mapDestination": "鳥取砂丘",
+            "parentHub": "広島",
+            "departures": [],
+            "distanceStars": 3,
+            "weight": 0.15,
+            "stayAllowed": [],
+            "hasHotel": false,
+            "hubHotel": null,
+            "needsCar": false,
+            "access": {
+              "railGateway": null,
+              "railNote": null,
+              "railBookingProvider": null,
+              "airportGateway": null,
+              "ferryGateway": null
+            },
+            "atmosphere": [
+              "日本唯一の砂漠景観、風紋が刻む砂の芸術。",
+              "馬の背から日本海を一望する。"
+            ],
+            "themes": [
+              "絶景",
+              "海岸"
+            ],
+            "landmarks": [],
+            "description": ""
+          }
+        ]
       },
       {
         "id": "tsuwano",

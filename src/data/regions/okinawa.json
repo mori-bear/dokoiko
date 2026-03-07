@@ -60,7 +60,74 @@
       "牧志公設市場"
     ],
     "locals": [],
-    "spots": [],
+    "spots": [
+      {
+        "id": "kourijima",
+        "name": "古宇利島",
+        "type": "spot",
+        "region": "沖縄",
+        "prefecture": "okinawa",
+        "mapDestination": "古宇利島",
+        "parentHub": "那覇",
+        "departures": [],
+        "distanceStars": 4,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "橋を渡ると透明度の高い沖縄の海が広がる。",
+          "神の島と呼ばれる古宇利島のハート岩。"
+        ],
+        "themes": [
+          "海岸",
+          "絶景"
+        ],
+        "landmarks": [],
+        "description": ""
+      },
+      {
+        "id": "cape-zanpa",
+        "name": "残波岬",
+        "type": "spot",
+        "region": "沖縄",
+        "prefecture": "okinawa",
+        "mapDestination": "残波岬",
+        "parentHub": "那覇",
+        "departures": [],
+        "distanceStars": 4,
+        "weight": 0.15,
+        "stayAllowed": [],
+        "hasHotel": false,
+        "hubHotel": null,
+        "needsCar": true,
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "高さ30mの断崖絶壁が2kmにわたり続く沖縄の岬。",
+          "夕日が東シナ海を染める、島の最西端の絶景。"
+        ],
+        "themes": [
+          "絶景",
+          "海岸"
+        ],
+        "landmarks": [],
+        "description": ""
+      }
+    ],
     "prefecture": "okinawa"
   },
   {
