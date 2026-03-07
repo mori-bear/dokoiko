@@ -124,10 +124,12 @@ export function buildJrLink(bookingProvider) {
 /* ── レンタカー ── */
 
 export function buildRentalLink() {
+  const target = 'https://www.jalan.net/rentacar/';
+  const vc = `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=${encodeURIComponent(target)}`;
   return {
     type: 'rental',
     label: 'レンタカーを探す',
-    url: 'https://www.jalan.net/rentacar/',
+    url: vc,
   };
 }
 
