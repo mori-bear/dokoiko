@@ -96,10 +96,10 @@ function generateAccessText(fromCity, city, departure) {
   // 航空ルート
   if (access.airportGateway) {
     if (city.airportAccess) {
-      // チェーン: 出発空港 → 到着空港 → 空港アクセス → 目的地
-      return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${city.airportAccess} → ${destName}</p>`;
+      // チェーン: 出発空港 → 到着空港 → 空港アクセス → 都市名
+      return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${city.airportAccess} → ${city.name}</p>`;
     }
-    return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${destName}</p>`;
+    return `<p class="access-line">${fromAirport} → ${access.airportGateway} → ${city.name}</p>`;
   }
 
   // フェリールート
@@ -152,13 +152,9 @@ function buildCityBlock(city, _distanceLabel, fromCity, departure) {
 
   const categoryBadge = buildCategoryBadge(city.type);
   const spotListHtml  = buildSpotList(city.spots);
-  const imageHtml     = city.image
-    ? `<img class="city-image" src="${city.image}" alt="${city.name}" loading="lazy">`
-    : '';
 
   return `
     <div class="city-block">
-      ${imageHtml}
       <div class="city-header">
         <h2 class="city-name">${city.name}</h2>
         <p class="city-sub">${city.region}${categoryBadge}</p>
