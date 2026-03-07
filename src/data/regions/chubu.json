@@ -106,7 +106,8 @@
           "伊勢神宮",
           "おかげ横丁",
           "二見浦"
-        ]
+        ],
+        "prefecture": "mie"
       },
       {
         "id": "shirakawago",
@@ -165,7 +166,8 @@
           "東京": 3,
           "名古屋": 2,
           "金沢": 1
-        }
+        },
+        "prefecture": "gifu"
       },
       {
         "id": "takayama",
@@ -220,7 +222,8 @@
         "distanceMap": {
           "大阪": 3,
           "名古屋": 2
-        }
+        },
+        "prefecture": "gifu"
       },
       {
         "id": "toba",
@@ -272,7 +275,8 @@
           "鳥羽水族館",
           "ミキモト真珠島",
           "海女小屋"
-        ]
+        ],
+        "prefecture": "mie"
       },
       {
         "id": "inuyama",
@@ -324,7 +328,8 @@
           "犬山城",
           "木曽川",
           "博物館明治村"
-        ]
+        ],
+        "prefecture": "aichi"
       },
       {
         "id": "kiso",
@@ -379,7 +384,8 @@
           "妻籠宿",
           "奈良井宿",
           "馬籠宿"
-        ]
+        ],
+        "prefecture": "nagano"
       },
       {
         "id": "tsumago",
@@ -433,7 +439,8 @@
           "妻籠宿本陣",
           "脇本陣奥谷",
           "妻籠城跡"
-        ]
+        ],
+        "prefecture": "nagano"
       },
       {
         "id": "magome",
@@ -487,7 +494,8 @@
           "島崎藤村記念館",
           "馬籠宿本陣跡",
           "清水屋資料館"
-        ]
+        ],
+        "prefecture": "gifu"
       },
       {
         "id": "gero-onsen",
@@ -540,7 +548,8 @@
           "噴泉池",
           "下呂温泉合掌村",
           "温泉寺"
-        ]
+        ],
+        "prefecture": "gifu"
       },
       {
         "id": "kamikochi",
@@ -594,7 +603,8 @@
           "河童橋",
           "大正池",
           "明神池"
-        ]
+        ],
+        "prefecture": "nagano"
       }
     ],
     "spots": [
@@ -646,9 +656,11 @@
           "山岳",
           "絶景",
           "高原"
-        ]
+        ],
+        "prefecture": "nagano"
       }
-    ]
+    ],
+    "prefecture": "aichi"
   },
   {
     "id": "kanazawa",
@@ -760,7 +772,8 @@
           "朝市通り",
           "重蔵神社",
           "白米千枚田"
-        ]
+        ],
+        "prefecture": "ishikawa"
       },
       {
         "id": "kaga-onsen",
@@ -812,7 +825,8 @@
           "山代温泉",
           "山中温泉",
           "片山津温泉"
-        ]
+        ],
+        "prefecture": "ishikawa"
       },
       {
         "id": "gokayama",
@@ -866,7 +880,8 @@
           "菅沼集落",
           "相倉集落",
           "岩瀬家"
-        ]
+        ],
+        "prefecture": "toyama"
       },
       {
         "id": "himi",
@@ -919,7 +934,8 @@
           "氷見漁港朝市",
           "ひみ番屋街",
           "立山連峰展望"
-        ]
+        ],
+        "prefecture": "toyama"
       },
       {
         "id": "wakura-onsen",
@@ -971,10 +987,12 @@
           "総湯",
           "能登島",
           "足湯の宿"
-        ]
+        ],
+        "prefecture": "ishikawa"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "ishikawa"
   },
   {
     "id": "gifu",
@@ -1028,7 +1046,8 @@
       "白川郷"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "gifu"
   },
   {
     "id": "niigata",
@@ -1081,7 +1100,8 @@
       "佐渡島（日帰り）"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "niigata"
   },
   {
     "id": "matsumoto",
@@ -1139,7 +1159,8 @@
       "長野": 1
     },
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "nagano"
   },
   {
     "id": "atami",
@@ -1190,7 +1211,8 @@
       "熱海城",
       "起雲閣",
       "MOA美術館"
-    ]
+    ],
+    "prefecture": "shizuoka"
   },
   {
     "id": "karuizawa",
@@ -1241,7 +1263,8 @@
       "旧軽井沢銀座",
       "雲場池",
       "白糸の滝"
-    ]
+    ],
+    "prefecture": "nagano"
   },
   {
     "id": "fujikawaguchiko",
@@ -1292,7 +1315,8 @@
       "河口湖",
       "富士山五合目",
       "富岳風穴"
-    ]
+    ],
+    "prefecture": "yamanashi"
   },
   {
     "id": "shuzenji",
@@ -1343,7 +1367,8 @@
       "修禅寺",
       "竹林の小径",
       "独鈷の湯"
-    ]
+    ],
+    "prefecture": "shizuoka"
   },
   {
     "id": "shimoda",
@@ -1395,7 +1420,8 @@
       "了仙寺",
       "白浜海岸",
       "爪木崎"
-    ]
+    ],
+    "prefecture": "shizuoka"
   },
   {
     "id": "hakuba",
@@ -1446,7 +1472,8 @@
       "八方尾根",
       "白馬大雪渓",
       "岩岳"
-    ]
+    ],
+    "prefecture": "nagano"
   },
   {
     "id": "tateyama-kurobe",
@@ -1498,7 +1525,8 @@
       "室堂",
       "雪の大谷",
       "黒部ダム"
-    ]
+    ],
+    "prefecture": "toyama"
   },
   {
     "id": "obuse",
@@ -1551,7 +1579,8 @@
       "北斎館",
       "岩松院",
       "小布施堂"
-    ]
+    ],
+    "prefecture": "nagano"
   },
   {
     "id": "nozawa-onsen",
@@ -1603,7 +1632,8 @@
       "大湯",
       "麻釜",
       "野沢温泉スキー場"
-    ]
+    ],
+    "prefecture": "nagano"
   },
   {
     "id": "bessho-onsen",
@@ -1656,6 +1686,7 @@
       "北向観音",
       "安楽寺八角三重塔",
       "大師湯"
-    ]
+    ],
+    "prefecture": "nagano"
   }
 ]

@@ -60,7 +60,8 @@
       "牧志公設市場"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "okinawa"
   },
   {
     "id": "ishigaki",
@@ -119,7 +120,8 @@
       "川平湾",
       "竹富島",
       "白保サンゴ礁"
-    ]
+    ],
+    "prefecture": "okinawa"
   },
   {
     "id": "tokashiki-jima",
@@ -167,7 +169,8 @@
       "阿波連ビーチ",
       "渡嘉敷ビーチ",
       "展望台"
-    ]
+    ],
+    "prefecture": "okinawa"
   },
   {
     "id": "kumejima",
@@ -225,7 +228,8 @@
       "はての浜",
       "畳石",
       "久米島ウミガメ館"
-    ]
+    ],
+    "prefecture": "okinawa"
   },
   {
     "id": "miyakojima",
@@ -282,6 +286,7 @@
       "与那覇前浜",
       "伊良部大橋",
       "砂山ビーチ"
-    ]
+    ],
+    "prefecture": "okinawa"
   }
 ]

@@ -101,7 +101,8 @@
           "松島湾",
           "瑞巌寺",
           "五大堂"
-        ]
+        ],
+        "prefecture": "miyagi"
       },
       {
         "id": "hiraizumi",
@@ -157,7 +158,8 @@
         "distanceMap": {
           "仙台": 2,
           "盛岡": 1
-        }
+        },
+        "prefecture": "iwate"
       },
       {
         "id": "kakunodate",
@@ -214,7 +216,8 @@
           "仙台": 4,
           "盛岡": 1,
           "東京": 4
-        }
+        },
+        "prefecture": "akita"
       },
       {
         "id": "aizu",
@@ -265,7 +268,8 @@
           "鶴ヶ城",
           "芦ノ牧温泉",
           "大内宿"
-        ]
+        ],
+        "prefecture": "fukushima"
       },
       {
         "id": "zaosan",
@@ -316,7 +320,8 @@
           "お釜",
           "蔵王温泉",
           "樹氷"
-        ]
+        ],
+        "prefecture": "yamagata"
       },
       {
         "id": "akita",
@@ -368,7 +373,8 @@
           "竿燈まつり",
           "千秋公園",
           "男鹿半島"
-        ]
+        ],
+        "prefecture": "akita"
       },
       {
         "id": "sakata",
@@ -419,7 +425,8 @@
           "山居倉庫",
           "土門拳記念館",
           "日和山公園"
-        ]
+        ],
+        "prefecture": "yamagata"
       },
       {
         "id": "nyuto-onsen",
@@ -471,7 +478,8 @@
           "鶴の湯",
           "黒湯",
           "妙乃湯"
-        ]
+        ],
+        "prefecture": "akita"
       },
       {
         "id": "ginzan-onsen",
@@ -523,7 +531,8 @@
           "能登屋旅館",
           "白銀の滝",
           "銀山川沿い散策"
-        ]
+        ],
+        "prefecture": "yamagata"
       },
       {
         "id": "ouchi-juku",
@@ -576,7 +585,8 @@
           "大内宿町並み",
           "塔のへつり",
           "三澤屋"
-        ]
+        ],
+        "prefecture": "fukushima"
       },
       {
         "id": "naruko-onsen",
@@ -628,7 +638,8 @@
           "鳴子峡",
           "東北こけし館",
           "早稲田桟敷湯"
-        ]
+        ],
+        "prefecture": "miyagi"
       },
       {
         "id": "hirosaki",
@@ -681,7 +692,8 @@
           "弘前城",
           "弘前公園",
           "旧弘前市立図書館"
-        ]
+        ],
+        "prefecture": "aomori"
       },
       {
         "id": "oirase",
@@ -733,7 +745,8 @@
           "阿修羅の流れ",
           "雲井の滝",
           "十和田湖"
-        ]
+        ],
+        "prefecture": "aomori"
       }
     ],
     "spots": [
@@ -781,9 +794,11 @@
         "tags": [
           "霊場",
           "秘境"
-        ]
+        ],
+        "prefecture": "aomori"
       }
-    ]
+    ],
+    "prefecture": "miyagi"
   },
   {
     "id": "yamagata",
@@ -837,7 +852,8 @@
       "上杉神社"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "yamagata"
   },
   {
     "id": "morioka",
@@ -940,9 +956,11 @@
           "浄土ヶ浜",
           "北山崎",
           "浄土ヶ浜レストハウス"
-        ]
+        ],
+        "prefecture": "iwate"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "iwate"
   }
 ]

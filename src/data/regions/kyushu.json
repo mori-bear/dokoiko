@@ -65,7 +65,8 @@
       "高松": 3
     },
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "fukuoka"
   },
   {
     "id": "saga",
@@ -119,7 +120,8 @@
       "嬉野温泉"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "saga"
   },
   {
     "id": "kumamoto",
@@ -226,7 +228,8 @@
         "distanceMap": {
           "福岡": 3,
           "熊本": 3
-        }
+        },
+        "prefecture": "oita"
       },
       {
         "id": "kurokawa",
@@ -283,7 +286,8 @@
         "distanceMap": {
           "福岡": 3,
           "熊本": 3
-        }
+        },
+        "prefecture": "kumamoto"
       },
       {
         "id": "aso",
@@ -339,7 +343,8 @@
         "distanceMap": {
           "福岡": 2,
           "熊本": 1
-        }
+        },
+        "prefecture": "kumamoto"
       },
       {
         "id": "takachiho",
@@ -393,7 +398,8 @@
           "高千穂峡",
           "天岩戸神社",
           "高千穂神社"
-        ]
+        ],
+        "prefecture": "miyazaki"
       },
       {
         "id": "hitoyoshi",
@@ -447,7 +453,8 @@
           "青井阿蘇神社",
           "人吉城跡",
           "球磨川くだり"
-        ]
+        ],
+        "prefecture": "kumamoto"
       },
       {
         "id": "minami-aso",
@@ -500,10 +507,12 @@
           "白川水源",
           "高森湧水トンネル",
           "池の川水源"
-        ]
+        ],
+        "prefecture": "kumamoto"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "kumamoto"
   },
   {
     "id": "nagasaki",
@@ -607,7 +616,8 @@
           "九十九島",
           "旧海軍鎮守府跡",
           "佐世保バーガー"
-        ]
+        ],
+        "prefecture": "nagasaki"
       },
       {
         "id": "hirado",
@@ -658,7 +668,8 @@
           "平戸城",
           "オランダ商館",
           "川内峠"
-        ]
+        ],
+        "prefecture": "nagasaki"
       },
       {
         "id": "goto",
@@ -711,7 +722,8 @@
           "堂崎天主堂",
           "大瀬崎灯台",
           "高浜海水浴場"
-        ]
+        ],
+        "prefecture": "nagasaki"
       },
       {
         "id": "unzen",
@@ -764,7 +776,8 @@
           "雲仙地獄",
           "仁田峠",
           "雲仙温泉街"
-        ]
+        ],
+        "prefecture": "nagasaki"
       },
       {
         "id": "ureshino-onsen",
@@ -816,10 +829,12 @@
           "シーボルトの湯",
           "嬉野茶の農園",
           "不動山温泉"
-        ]
+        ],
+        "prefecture": "saga"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "nagasaki"
   },
   {
     "id": "kagoshima",
@@ -928,7 +943,8 @@
         "distanceMap": {
           "福岡": 3,
           "鹿児島": 2
-        }
+        },
+        "prefecture": "kagoshima"
       },
       {
         "id": "ibusuki",
@@ -980,7 +996,8 @@
           "砂むし会館",
           "長崎鼻",
           "池田湖"
-        ]
+        ],
+        "prefecture": "kagoshima"
       },
       {
         "id": "amami",
@@ -1033,7 +1050,8 @@
           "金作原原生林",
           "大浜海浜公園",
           "マングローブカヌー"
-        ]
+        ],
+        "prefecture": "kagoshima"
       },
       {
         "id": "obi",
@@ -1086,10 +1104,12 @@
           "飫肥城",
           "旧本丸大手門",
           "商人通り"
-        ]
+        ],
+        "prefecture": "miyazaki"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "kagoshima"
   },
   {
     "id": "miyazaki",
@@ -1142,7 +1162,8 @@
       "高千穂峡"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "miyazaki"
   },
   {
     "id": "beppu",
@@ -1193,7 +1214,8 @@
       "地獄めぐり",
       "鉄輪温泉",
       "湯布院"
-    ]
+    ],
+    "prefecture": "oita"
   },
   {
     "id": "amakusa",
@@ -1246,6 +1268,7 @@
       "天草五橋",
       "崎津集落",
       "イルカウォッチング"
-    ]
+    ],
+    "prefecture": "kumamoto"
   }
 ]

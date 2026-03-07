@@ -113,7 +113,8 @@
           "小樽運河",
           "堺町通り",
           "天狗山"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "furano",
@@ -164,7 +165,8 @@
           "ファーム富田",
           "美瑛の丘",
           "富良野スキー場"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "toyako",
@@ -215,7 +217,8 @@
           "洞爺湖",
           "有珠山ロープウェイ",
           "サイロ展望台"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "noboribetsu",
@@ -266,7 +269,8 @@
           "地獄谷",
           "大湯沼",
           "クマ牧場"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "shiretoko",
@@ -318,7 +322,8 @@
           "知床五湖",
           "カムイワッカの滝",
           "羅臼岳"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "jozankei",
@@ -371,7 +376,8 @@
           "定山渓温泉街",
           "二見公園",
           "豊平峡ダム"
-        ]
+        ],
+        "prefecture": "hokkaido"
       },
       {
         "id": "biei",
@@ -427,10 +433,12 @@
         "distanceMap": {
           "旭川": 2,
           "札幌": 2
-        }
+        },
+        "prefecture": "hokkaido"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "hokkaido"
   },
   {
     "id": "asahikawa",
@@ -483,7 +491,8 @@
       "富良野ラベンダー畑"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "hokkaido"
   },
   {
     "id": "kushiro",
@@ -536,7 +545,8 @@
       "丹頂の里"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "hokkaido"
   },
   {
     "id": "hakodate",
@@ -589,6 +599,7 @@
       "函館朝市"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "hokkaido"
   }
 ]

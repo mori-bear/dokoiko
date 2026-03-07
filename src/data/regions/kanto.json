@@ -51,7 +51,8 @@
       "中華街"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "kanagawa"
   },
   {
     "id": "tokyo",
@@ -168,7 +169,8 @@
           "鎌倉大仏",
           "鶴岡八幡宮",
           "長谷寺"
-        ]
+        ],
+        "prefecture": "kanagawa"
       },
       {
         "id": "nikko",
@@ -220,7 +222,8 @@
           "東照宮",
           "中禅寺湖",
           "竜頭の滝"
-        ]
+        ],
+        "prefecture": "tochigi"
       },
       {
         "id": "kouzushima",
@@ -273,7 +276,8 @@
           "前浜",
           "天上山",
           "多幸湾"
-        ]
+        ],
+        "prefecture": "tokyo"
       },
       {
         "id": "hakone",
@@ -325,7 +329,8 @@
           "芦ノ湖",
           "大涌谷",
           "箱根関所"
-        ]
+        ],
+        "prefecture": "kanagawa"
       },
       {
         "id": "kusatsu-onsen",
@@ -376,7 +381,8 @@
           "湯畑",
           "西の河原",
           "熱の湯"
-        ]
+        ],
+        "prefecture": "gunma"
       },
       {
         "id": "izu-oshima",
@@ -429,7 +435,8 @@
           "三原山",
           "波浮港",
           "砂漠"
-        ]
+        ],
+        "prefecture": "tokyo"
       },
       {
         "id": "takao",
@@ -480,7 +487,8 @@
           "薬王院",
           "高尾山頂",
           "もみじ台"
-        ]
+        ],
+        "prefecture": "tokyo"
       },
       {
         "id": "tateyama-chiba",
@@ -532,7 +540,8 @@
           "沖ノ島",
           "城山公園",
           "花畑"
-        ]
+        ],
+        "prefecture": "chiba"
       },
       {
         "id": "shima-onsen",
@@ -583,7 +592,8 @@
           "積善館",
           "四万川ダム",
           "甌穴"
-        ]
+        ],
+        "prefecture": "gunma"
       },
       {
         "id": "mashiko",
@@ -635,7 +645,8 @@
           "つかもと",
           "濱田庄司記念館",
           "益子焼窯元共販センター"
-        ]
+        ],
+        "prefecture": "tochigi"
       },
       {
         "id": "minakami-onsen",
@@ -686,9 +697,11 @@
           "諏訪峡",
           "谷川岳",
           "湯テルメ谷川"
-        ]
+        ],
+        "prefecture": "gunma"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "tokyo"
   }
 ]

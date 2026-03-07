@@ -101,7 +101,8 @@
           "宇和島城",
           "道後温泉",
           "じゃこ天"
-        ]
+        ],
+        "prefecture": "ehime"
       },
       {
         "id": "uchiko",
@@ -154,7 +155,8 @@
           "内子座",
           "八日市護国町並み",
           "木蝋資料館"
-        ]
+        ],
+        "prefecture": "ehime"
       }
     ],
     "spots": [
@@ -204,9 +206,11 @@
           "絶景",
           "駅",
           "海岸"
-        ]
+        ],
+        "prefecture": "ehime"
       }
-    ]
+    ],
+    "prefecture": "ehime"
   },
   {
     "id": "tokushima",
@@ -260,7 +264,8 @@
       "阿波踊り会館"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "tokushima"
   },
   {
     "id": "kochi",
@@ -364,7 +369,8 @@
           "足摺岬灯台",
           "唐人駄馬",
           "ジョン万次郎像"
-        ]
+        ],
+        "prefecture": "kochi"
       },
       {
         "id": "muroto",
@@ -416,10 +422,12 @@
           "室戸岬",
           "最御崎寺",
           "乱礁遊歩道"
-        ]
+        ],
+        "prefecture": "kochi"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "kochi"
   },
   {
     "id": "shodoshima",
@@ -472,7 +480,8 @@
       "寒霞渓",
       "エンジェルロード",
       "オリーブ公園"
-    ]
+    ],
+    "prefecture": "kagawa"
   },
   {
     "id": "naoshima",
@@ -525,7 +534,8 @@
       "地中美術館",
       "家プロジェクト",
       "ANDO MUSEUM"
-    ]
+    ],
+    "prefecture": "kagawa"
   },
   {
     "id": "kotohira",
@@ -577,7 +587,8 @@
       "こんぴらさん",
       "表書院",
       "旧金毘羅大芝居"
-    ]
+    ],
+    "prefecture": "kagawa"
   },
   {
     "id": "oboke",
@@ -629,7 +640,8 @@
       "大歩危峡",
       "祖谷のかずら橋",
       "平家屋敷"
-    ]
+    ],
+    "prefecture": "tokushima"
   },
   {
     "id": "iya",
@@ -681,7 +693,8 @@
       "かずら橋",
       "落合集落",
       "祖谷温泉"
-    ]
+    ],
+    "prefecture": "tokushima"
   },
   {
     "id": "chichibugahama",
@@ -724,7 +737,8 @@
       "絶景",
       "海岸",
       "夕日"
-    ]
+    ],
+    "prefecture": "ehime"
   },
   {
     "id": "kazurabashi",
@@ -768,6 +782,7 @@
     "tags": [
       "秘境",
       "渓谷"
-    ]
+    ],
+    "prefecture": "tokushima"
   }
 ]

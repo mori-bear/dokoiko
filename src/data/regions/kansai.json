@@ -115,7 +115,8 @@
           "東大寺",
           "春日大社",
           "奈良公園（鹿）"
-        ]
+        ],
+        "prefecture": "nara"
       },
       {
         "id": "ryujin-onsen",
@@ -160,7 +161,8 @@
           "龍神温泉元湯",
           "護摩壇山",
           "高野龍神スカイライン"
-        ]
+        ],
+        "prefecture": "wakayama"
       },
       {
         "id": "arima-onsen",
@@ -212,7 +214,8 @@
           "金の湯",
           "銀の湯",
           "太閤の湯殿館"
-        ]
+        ],
+        "prefecture": "hyogo"
       },
       {
         "id": "kinosaki-onsen",
@@ -269,7 +272,8 @@
           "大阪": 3,
           "京都": 3,
           "神戸": 3
-        }
+        },
+        "prefecture": "hyogo"
       },
       {
         "id": "shirahama-o",
@@ -320,7 +324,8 @@
           "白良浜",
           "三段壁",
           "千畳敷"
-        ]
+        ],
+        "prefecture": "wakayama"
       },
       {
         "id": "amanohashidate",
@@ -373,7 +378,8 @@
           "智恩寺",
           "天橋立ビューランド",
           "傘松公園"
-        ]
+        ],
+        "prefecture": "kyoto"
       },
       {
         "id": "awaji",
@@ -428,7 +434,8 @@
           "鳴門の渦潮",
           "淡路夢舞台",
           "伊弉諾神宮"
-        ]
+        ],
+        "prefecture": "hyogo"
       },
       {
         "id": "nagahama",
@@ -482,7 +489,8 @@
           "黒壁スクエア",
           "長浜城",
           "慶雲館"
-        ]
+        ],
+        "prefecture": "shiga"
       },
       {
         "id": "hikone",
@@ -536,7 +544,8 @@
           "彦根城",
           "玄宮園",
           "夢京橋キャッスルロード"
-        ]
+        ],
+        "prefecture": "shiga"
       },
       {
         "id": "koyasan",
@@ -589,7 +598,8 @@
           "奥之院",
           "金剛峯寺",
           "根本大塔"
-        ]
+        ],
+        "prefecture": "wakayama"
       },
       {
         "id": "izushi",
@@ -643,10 +653,12 @@
           "出石城跡",
           "辰鼓楼",
           "永楽館"
-        ]
+        ],
+        "prefecture": "hyogo"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "osaka"
   },
   {
     "id": "kyoto",
@@ -758,7 +770,8 @@
           "伊根の舟屋",
           "道の駅舟屋の里伊根",
           "浦島神社"
-        ]
+        ],
+        "prefecture": "kyoto"
       },
       {
         "id": "miyama",
@@ -812,10 +825,12 @@
           "かやぶきの里",
           "美山民俗資料館",
           "由良川"
-        ]
+        ],
+        "prefecture": "kyoto"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "kyoto"
   },
   {
     "id": "kobe",
@@ -869,7 +884,8 @@
       "六甲山"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "hyogo"
   },
   {
     "id": "himeji",
@@ -923,7 +939,8 @@
       "書写山円教寺"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "hyogo"
   },
   {
     "id": "wakayama",
@@ -978,6 +995,7 @@
       "白浜海岸"
     ],
     "locals": [],
-    "spots": []
+    "spots": [],
+    "prefecture": "wakayama"
   }
 ]

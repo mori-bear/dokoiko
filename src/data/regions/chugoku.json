@@ -112,7 +112,8 @@
           "厳島神社",
           "大鳥居",
           "弥山"
-        ]
+        ],
+        "prefecture": "hiroshima"
       },
       {
         "id": "onomichi",
@@ -170,7 +171,8 @@
           "広島": 2,
           "大阪": 2,
           "岡山": 2
-        }
+        },
+        "prefecture": "hiroshima"
       },
       {
         "id": "mihonoseki",
@@ -216,7 +218,8 @@
           "美保神社",
           "地蔵崎灯台",
           "境港"
-        ]
+        ],
+        "prefecture": "shimane"
       },
       {
         "id": "kurashiki",
@@ -272,7 +275,8 @@
         "distanceMap": {
           "大阪": 2,
           "広島": 1
-        }
+        },
+        "prefecture": "okayama"
       },
       {
         "id": "hagi",
@@ -323,7 +327,8 @@
           "萩城跡",
           "松陰神社",
           "菊屋家住宅"
-        ]
+        ],
+        "prefecture": "yamaguchi"
       },
       {
         "id": "shimonoseki",
@@ -376,7 +381,8 @@
           "関門橋",
           "唐戸市場",
           "巌流島"
-        ]
+        ],
+        "prefecture": "yamaguchi"
       },
       {
         "id": "tottori",
@@ -428,7 +434,8 @@
           "鳥取砂丘",
           "砂の美術館",
           "浦富海岸"
-        ]
+        ],
+        "prefecture": "tottori"
       },
       {
         "id": "tsuwano",
@@ -480,7 +487,8 @@
           "太皷谷稲成神社",
           "津和野城跡",
           "殿町通り"
-        ]
+        ],
+        "prefecture": "shimane"
       },
       {
         "id": "yuda-onsen",
@@ -533,7 +541,8 @@
           "瑠璃光寺",
           "中原中也記念館",
           "白狐の湯"
-        ]
+        ],
+        "prefecture": "yamaguchi"
       },
       {
         "id": "oku-izumo",
@@ -586,7 +595,8 @@
           "菅谷たたら山内",
           "鬼の舌震",
           "おろち湖"
-        ]
+        ],
+        "prefecture": "shimane"
       },
       {
         "id": "takehara",
@@ -639,7 +649,8 @@
           "町並み保存地区",
           "普明閣",
           "竹鶴酒造"
-        ]
+        ],
+        "prefecture": "hiroshima"
       }
     ],
     "spots": [
@@ -686,9 +697,11 @@
           "絶景",
           "海岸",
           "橋"
-        ]
+        ],
+        "prefecture": "yamaguchi"
       }
-    ]
+    ],
+    "prefecture": "hiroshima"
   },
   {
     "id": "okayama",
@@ -799,9 +812,11 @@
           "三徳山投入堂",
           "株湯",
           "三朝橋"
-        ]
+        ],
+        "prefecture": "tottori"
       }
     ],
-    "spots": []
+    "spots": [],
+    "prefecture": "okayama"
   }
 ]
