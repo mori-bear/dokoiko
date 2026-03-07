@@ -1,0 +1,773 @@
+[
+  {
+    "id": "matsuyama",
+    "name": "松山",
+    "type": "hub",
+    "region": "四国",
+    "mapDestination": "松山駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "松山空港",
+      "ferryGateway": "松山観光港"
+    },
+    "atmosphere": [
+      "大阪から飛行機で1時間または高松から特急で2時間。",
+      "道後温泉・松山城・坊っちゃんからくり時計",
+      "日本最古級の温泉地、夏目漱石の街に行かない？"
+    ],
+    "themes": [
+      "道後温泉",
+      "松山城",
+      "坊っちゃん"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/ehime/matsuyama.html",
+    "jalanPath": "/38/LRG_380010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "道後温泉を擁する四国最大の都市。夏目漱石ゆかりの地を歩きながら、千年の湯に浸かる旅ができる。",
+    "tags": [
+      "道後温泉",
+      "松山城",
+      "坊っちゃん"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "道後温泉本館",
+      "松山城",
+      "坂の上の雲ミュージアム"
+    ],
+    "locals": [
+      {
+        "id": "uwajima",
+        "name": "宇和島",
+        "type": "local",
+        "region": "四国",
+        "mapDestination": "宇和島駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "高松",
+          "松山"
+        ],
+        "access": {
+          "railGateway": "宇和島駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "南予の闘牛と鯛めしの海辺の城下町。",
+          "宇和島城・道後温泉・じゃこ天",
+          "穏やかな内海に面した、知られざる四国の宝。"
+        ],
+        "themes": [
+          "城",
+          "闘牛",
+          "鯛めし"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/ehime/uwajima.html",
+        "jalanPath": "/38/LRG_380020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "南予の海と山に囲まれた闘牛と鯛めしの城下町。穏やかな湾の風情と伊達の文化が独特の旅情をつくっている。",
+        "tags": [
+          "城",
+          "闘牛",
+          "鯛めし"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "宇和島城",
+          "道後温泉",
+          "じゃこ天"
+        ]
+      },
+      {
+        "id": "uchiko",
+        "name": "内子",
+        "type": "local",
+        "region": "四国",
+        "mapDestination": "内子駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "松山",
+          "高松"
+        ],
+        "access": {
+          "railGateway": "内子駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "白壁と木蝋の香り、四国の商人文化が残る街並み。",
+          "内子座・八日市護国町並み・本芳我家",
+          "江戸の商家が今も現役で息づく、静かな保存地区。"
+        ],
+        "themes": [
+          "町並み保存",
+          "伝統芸能",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/ehime/uchiko.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白壁と木蝋の香り漂う四国の商人文化の街。江戸・明治の街並みが保存され、時代を遡る旅ができる。",
+        "tags": [
+          "町並み保存",
+          "伝統芸能",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "内子座",
+          "八日市護国町並み",
+          "木蝋資料館"
+        ]
+      }
+    ],
+    "spots": [
+      {
+        "id": "shimonada-eki",
+        "name": "下灘駅",
+        "type": "spot",
+        "region": "四国",
+        "mapDestination": "下灘駅",
+        "parentHub": null,
+        "departures": [
+          "松山",
+          "高松"
+        ],
+        "distanceMap": {
+          "松山": 1,
+          "高松": 2
+        },
+        "weight": 0.15,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "access": {
+          "railGateway": "下灘駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "ホームから直接、何もない海が広がる無人駅。",
+          "夕日が海と線路と空に溶け合う瞬間が旅人を待っている。",
+          "ただ海を眺める時間が、ここにだけある。"
+        ],
+        "themes": [
+          "絶景",
+          "駅",
+          "海岸"
+        ],
+        "landmarks": [],
+        "needsCar": false,
+        "hasHotel": false,
+        "hubHotel": null,
+        "description": "愛媛の海沿いに佇む、ホームから直接海が見える無人駅。夕日に照らされた海と線路の景色が旅人の心に静かに刻まれる。",
+        "tags": [
+          "絶景",
+          "駅",
+          "海岸"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tokushima",
+    "name": "徳島",
+    "type": "hub",
+    "region": "四国",
+    "mapDestination": "徳島駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": "徳島駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪から高速バスで2時間30分。徳島駅が市内の起点。",
+      "大塚国際美術館・鳴門の渦潮・阿波踊り会館",
+      "世界最大規模の陶板美術館と渦潮、行かない？"
+    ],
+    "themes": [
+      "阿波踊り",
+      "鳴門",
+      "すだち"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/tokushima/tokushima.html",
+    "jalanPath": "/36/LRG_360010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "阿波踊りが夏の夜を染める、四国の玄関口。渦巻く海峡と世界最大規模の陶板美術館が旅を充実させる。",
+    "tags": [
+      "阿波踊り",
+      "鳴門",
+      "すだち"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "鳴門の渦潮",
+      "大塚国際美術館",
+      "阿波踊り会館"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "kochi",
+    "name": "高知",
+    "type": "hub",
+    "region": "四国",
+    "mapDestination": "高知駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": "高知駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪から特急で3時間。高知駅から路面電車で市内へ。",
+      "高知城・桂浜・ひろめ市場（カツオのたたき）",
+      "カツオのたたきと自由民権の城下町、行かない？"
+    ],
+    "themes": [
+      "カツオ",
+      "よさこい",
+      "坂本龍馬"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kochi/kochi.html",
+    "jalanPath": "/39/LRG_390010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "坂本龍馬ゆかりの自由民権精神が根づく城下町。カツオのたたきとよさこいが土佐の旅を盛り上げる。",
+    "tags": [
+      "カツオ",
+      "よさこい",
+      "坂本龍馬"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "高知城",
+      "桂浜",
+      "ひろめ市場"
+    ],
+    "locals": [
+      {
+        "id": "ashizuri",
+        "name": "足摺岬",
+        "type": "local",
+        "region": "四国",
+        "mapDestination": "足摺岬",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "高知"
+        ],
+        "access": {
+          "railGateway": "中村駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "四国最南端、太平洋に突き出した岬。",
+          "足摺岬灯台・唐人駄馬・ジョン万次郎像",
+          "黒潮が打ち寄せる断崖、四国の果てに立つ。"
+        ],
+        "themes": [
+          "絶景",
+          "自然",
+          "岬"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kochi/ashizuri.html",
+        "jalanPath": "/39/LRG_390020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "四国最南端に太平洋へ突き出した断崖の岬。荒波と椿の群落が、土佐の旅に力強い自然を刻みつける。",
+        "tags": [
+          "絶景",
+          "自然",
+          "岬"
+        ],
+        "jr_region": "west",
+        "hubCity": "中村駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "足摺岬灯台",
+          "唐人駄馬",
+          "ジョン万次郎像"
+        ]
+      },
+      {
+        "id": "muroto",
+        "name": "室戸",
+        "type": "local",
+        "region": "四国",
+        "mapDestination": "室戸岬",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "高知"
+        ],
+        "access": {
+          "railGateway": "高知駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "岬の突端に打ち寄せる、太平洋の荒波と奇岩群。",
+          "室戸岬・室戸ジオパーク・最御崎寺",
+          "修行者が歩いた断崖の道、地球の鼓動が感じられる場所。"
+        ],
+        "themes": [
+          "岬",
+          "ジオパーク",
+          "お遍路"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kochi/muroto.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬。弘法大師ゆかりの地でもあり、海と信仰の旅だ。",
+        "tags": [
+          "岬",
+          "ジオパーク",
+          "お遍路"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "室戸岬",
+          "最御崎寺",
+          "乱礁遊歩道"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "shodoshima",
+    "name": "小豆島",
+    "type": "island",
+    "region": "四国",
+    "mapDestination": "土庄港",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": "高松港"
+    },
+    "atmosphere": [
+      "高松港からフェリーで1時間。土庄港が島の玄関口。",
+      "エンジェルロード・二十四の瞳映画村・寒霞渓",
+      "オリーブの島と干潮で渡れる砂州、行かない？"
+    ],
+    "themes": [
+      "オリーブ",
+      "醤油",
+      "映画の舞台"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kagawa/shodoshima.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "オリーブと醤油の産地として知られる瀬戸内の島。干潮時に渡れる砂の道と穏やかな島時間が心を癒す。",
+    "tags": [
+      "オリーブ",
+      "醤油",
+      "映画の舞台"
+    ],
+    "jr_region": "west",
+    "access_city": "高松",
+    "port": "高松港",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "寒霞渓",
+      "エンジェルロード",
+      "オリーブ公園"
+    ]
+  },
+  {
+    "id": "naoshima",
+    "name": "直島",
+    "type": "island",
+    "region": "四国",
+    "mapDestination": "宮浦港",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": "高松港"
+    },
+    "atmosphere": [
+      "現代アートが島ごと美術館になった場所。",
+      "地中美術館・家プロジェクト・ANDO MUSEUM",
+      "海と作品と空間が溶け合う、不思議な島。"
+    ],
+    "themes": [
+      "現代アート",
+      "島",
+      "美術館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagawa/naoshima.html",
+    "jalanPath": "/37/LRG_370020/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "現代アートが島全体を美術館にした瀬戸内の離島。自然と建築と作品が一体となった体験が待っている。",
+    "tags": [
+      "現代アート",
+      "島",
+      "美術館"
+    ],
+    "jr_region": "west",
+    "access_city": "高松",
+    "port": "高松港",
+    "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "地中美術館",
+      "家プロジェクト",
+      "ANDO MUSEUM"
+    ]
+  },
+  {
+    "id": "kotohira",
+    "name": "琴平",
+    "type": "local",
+    "region": "四国",
+    "mapDestination": "琴電琴平駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": "琴電琴平駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "讃岐の金刀比羅宮、785段の石段。",
+      "こんぴらさん・表書院・旧金毘羅大芝居",
+      "石段を登った先に、瀬戸内海の絶景が広がる。"
+    ],
+    "themes": [
+      "金刀比羅宮",
+      "石段",
+      "参拝"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagawa/kotohira.html",
+    "jalanPath": "/37/LRG_370030/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "785段の石段で知られる金刀比羅宮の門前町。参道を登り切った先の絶景が、旅の疲れを吹き飛ばしてくれる。",
+    "tags": [
+      "金刀比羅宮",
+      "石段",
+      "参拝"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "こんぴらさん",
+      "表書院",
+      "旧金毘羅大芝居"
+    ]
+  },
+  {
+    "id": "oboke",
+    "name": "大歩危",
+    "type": "local",
+    "region": "四国",
+    "mapDestination": "大歩危駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "高松"
+    ],
+    "access": {
+      "railGateway": "大歩危駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "吉野川の峡谷と、かずら橋で揺れる祖谷。",
+      "大歩危峡・祖谷のかずら橋・かずら橋夢舞台",
+      "自然の造形と秘境、四国の山奥に迷い込む。"
+    ],
+    "themes": [
+      "渓谷",
+      "秘境",
+      "自然"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/tokushima/iya.html",
+    "jalanPath": "/36/LRG_360030/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街。かずら橋で揺れながら、祖谷の秘境を身近に感じられる。",
+    "tags": [
+      "渓谷",
+      "秘境",
+      "自然"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "大歩危峡",
+      "祖谷のかずら橋",
+      "平家屋敷"
+    ]
+  },
+  {
+    "id": "iya",
+    "name": "祖谷",
+    "type": "local",
+    "region": "四国",
+    "mapDestination": "祖谷のかずら橋",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "大歩危駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "日本三大秘境のひとつ、深い谷間に霧が漂う集落。",
+      "祖谷のかずら橋・落合集落・小便小僧",
+      "茅葺き屋根と急斜面の棚田、時間が止まったような山峡。"
+    ],
+    "themes": [
+      "秘境",
+      "かずら橋",
+      "秘湯"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/tokushima/iya.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日本三大秘境のひとつ、霧が漂う深い谷間の集落。吊り橋と滝と、人里離れた静けさが心に残る場所だ。",
+    "tags": [
+      "秘境",
+      "かずら橋",
+      "秘湯"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "かずら橋",
+      "落合集落",
+      "祖谷温泉"
+    ]
+  },
+  {
+    "id": "chichibugahama",
+    "name": "父母ヶ浜",
+    "type": "spot",
+    "region": "四国",
+    "mapDestination": "父母ヶ浜",
+    "parentHub": null,
+    "departures": [
+      "高松"
+    ],
+    "distanceStars": 1,
+    "weight": 0.15,
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "access": {
+      "railGateway": "詫間駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "夕暮れに潮が引くと、空と海が鏡のように溶け合う。",
+      "日本のウユニ塩湖と呼ばれる香川の浜辺。",
+      "光の角度が変わるたびに、世界が別の表情を見せる。"
+    ],
+    "themes": [
+      "絶景",
+      "海岸",
+      "夕日"
+    ],
+    "landmarks": [],
+    "needsCar": true,
+    "hasHotel": false,
+    "hubHotel": null,
+    "description": "潮が引いた後の水面が空を映し出す、香川の絶景ビーチ。鏡張りの夕焼けが日常を忘れさせる唯一無二の景色が広がる。",
+    "tags": [
+      "絶景",
+      "海岸",
+      "夕日"
+    ]
+  },
+  {
+    "id": "kazurabashi",
+    "name": "祖谷のかずら橋",
+    "type": "spot",
+    "region": "四国",
+    "mapDestination": "祖谷のかずら橋",
+    "parentHub": null,
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "distanceStars": 3,
+    "weight": 0.15,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "access": {
+      "railGateway": "大歩危駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "深山幽谷の祖谷渓に架かるシラクチカズラ製の吊り橋。",
+      "足元からのぞく渓流と揺れる橋板が秘境探検の緊張感を生む。",
+      "霧の中の橋が、古代への扉のように旅人を誘う。"
+    ],
+    "themes": [
+      "秘境",
+      "渓谷",
+      "絶景"
+    ],
+    "landmarks": [],
+    "needsCar": false,
+    "hasHotel": false,
+    "hubHotel": null,
+    "description": "深山幽谷の祖谷渓にかかるシラクチカズラ製の吊り橋。足元の渓流と揺れる橋が四国の秘境旅の核心をなしている。",
+    "tags": [
+      "秘境",
+      "渓谷"
+    ]
+  }
+]

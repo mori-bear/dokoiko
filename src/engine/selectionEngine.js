@@ -8,7 +8,7 @@
  *   2. stayType 一致のみ（star 範囲外のとき）
  *   3. 全件（stayType も一致なし ── 実運用では発生しない）
  *
- * weight: urban=0.3（出にくい）, hub=0.35, local=1.2（出やすい）, island=1.5
+ * weight: hub=0.3〜0.35（出にくい）, local=1.2（出やすい）, island=1.5, spot=0.15（低確率）
  *
  * 追加重み:
  *   - ★3,4 を優遇 / ★1,5 を抑制

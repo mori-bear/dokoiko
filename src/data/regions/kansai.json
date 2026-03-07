@@ -1,0 +1,983 @@
+[
+  {
+    "id": "osaka",
+    "name": "大阪",
+    "type": "hub",
+    "region": "近畿",
+    "mapDestination": "大阪駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "福岡",
+      "札幌",
+      "仙台",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": "新大阪駅",
+      "railNote": null,
+      "railBookingProvider": "ex",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
+      "道頓堀・大阪城・新世界",
+      "たこ焼きと串カツ、食い倒れの街に行かない？"
+    ],
+    "themes": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/osaka/osaka.html",
+    "jalanPath": "/27/LRG_270010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "食い倒れの街として知られる活気ある商都。笑い声と屋台の香りに包まれた路地が、旅人を飽きさせない。",
+    "tags": [
+      "グルメ",
+      "エンタメ",
+      "下町"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "道頓堀",
+      "大阪城",
+      "通天閣"
+    ],
+    "distanceMap": {
+      "東京": 3,
+      "名古屋": 2,
+      "福岡": 3,
+      "札幌": 4,
+      "仙台": 4,
+      "広島": 2,
+      "高松": 3
+    },
+    "locals": [
+      {
+        "id": "nara",
+        "name": "奈良",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "奈良駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "奈良駅",
+          "railNote": null,
+          "railBookingProvider": "e5489",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "大阪駅から電車で45分。奈良駅・近鉄奈良駅が観光の起点。",
+          "東大寺・春日大社・奈良公園（鹿）",
+          "鹿と仏教建築の古都、半日でも行かない？"
+        ],
+        "themes": [
+          "世界遺産",
+          "鹿",
+          "古都"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nara/nara.html",
+        "jalanPath": "/29/LRG_290010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "鹿と仏教建築が共存する千年の古都。大仏と寺社を巡りながら日本の原風景に出会える。",
+        "tags": [
+          "世界遺産",
+          "鹿",
+          "古都"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "東大寺",
+          "春日大社",
+          "奈良公園（鹿）"
+        ]
+      },
+      {
+        "id": "ryujin-onsen",
+        "name": "龍神温泉",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "龍神温泉 元湯",
+        "parentHub": "和歌山",
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "紀伊田辺駅",
+          "railNote": "龍神バスあり",
+          "railBookingProvider": "e5489",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "大阪から特急＋龍神バスで約3時間。紀伊田辺駅で乗換え。",
+          "龍神温泉元湯・護摩壇山・道の駅龍游",
+          "日本三美人の湯として知られる秘湯、行かない？"
+        ],
+        "themes": null,
+        "needsCar": true,
+        "rakutenPath": "/yado/wakayama/ryujin.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": "wakayama",
+        "description": "紀伊山地の奥深くに湧く日本三美人の湯。杉木立と渓流に包まれた秘湯で、日常を忘れて浸かりたい。",
+        "tags": [],
+        "jr_region": "west",
+        "hubCity": "紀伊田辺駅",
+        "accessFromHub": "龍神バス",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "龍神温泉元湯",
+          "護摩壇山",
+          "高野龍神スカイライン"
+        ]
+      },
+      {
+        "id": "arima-onsen",
+        "name": "有馬温泉",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "有馬温泉駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "神戸"
+        ],
+        "access": {
+          "railGateway": "有馬温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "六甲山麓に湧く、千年の湯処。",
+          "金の湯・銀の湯・太閤の湯殿館",
+          "日本書紀にも登場する古湯に、浸かりに行かない？"
+        ],
+        "themes": [
+          "温泉",
+          "歴史",
+          "古湯"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hyogo/arima.html",
+        "jalanPath": "/28/LRG_280010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本書紀にも記された六甲山麓の古湯。金泉と銀泉という二種の湯が、長い歴史と共に旅人を迎える。",
+        "tags": [
+          "温泉",
+          "歴史",
+          "古湯"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "金の湯",
+          "銀の湯",
+          "太閤の湯殿館"
+        ]
+      },
+      {
+        "id": "kinosaki-onsen",
+        "name": "城崎温泉",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "城崎温泉駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "京都",
+          "神戸"
+        ],
+        "access": {
+          "railGateway": "城崎温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "七つの外湯を浴衣で巡る温泉街。",
+          "さとの湯・一の湯・まんだら湯",
+          "下駄の音と川沿いの柳、昭和の旅情がある。"
+        ],
+        "themes": [
+          "温泉",
+          "外湯巡り",
+          "温泉街"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hyogo/kinosaki.html",
+        "jalanPath": "/28/LRG_280060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "浴衣で七つの外湯を巡る情緒ある温泉街。川沿いの柳と下駄の音が昭和の旅情をよみがえらせる。",
+        "tags": [
+          "温泉",
+          "外湯巡り",
+          "温泉街"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "さとの湯",
+          "一の湯",
+          "まんだら湯"
+        ],
+        "distanceMap": {
+          "大阪": 3,
+          "京都": 3,
+          "神戸": 3
+        }
+      },
+      {
+        "id": "shirahama-o",
+        "name": "白浜",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "白浜駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "白浜駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "南紀の白い砂浜とエメラルドの海。",
+          "白良浜・三段壁・千畳敷",
+          "和歌山の太陽と波音、リゾート気分はここで。"
+        ],
+        "themes": [
+          "海",
+          "リゾート",
+          "温泉"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/wakayama/shirahama.html",
+        "jalanPath": "/30/LRG_300020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白い砂浜と透明な海が広がる南紀のリゾート地。温泉と海水浴が同時に楽しめる和歌山を代表する観光地。",
+        "tags": [
+          "海",
+          "リゾート",
+          "温泉"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "白良浜",
+          "三段壁",
+          "千畳敷"
+        ]
+      },
+      {
+        "id": "amanohashidate",
+        "name": "天橋立",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "天橋立駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "京都",
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "天橋立駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "天橋立の砂洲を、股のぞきで。",
+          "智恩寺・天橋立ビューランド・傘松公園",
+          "日本三景のひとつ、松並木越しに見える海峡の青。"
+        ],
+        "themes": [
+          "日本三景",
+          "砂洲",
+          "絶景"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/kyoto/amanohashidate.html",
+        "jalanPath": "/26/LRG_260030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "天に昇る橋のような砂洲が続く日本三景の地。股のぞきで空に浮かぶ景色が、独特の驚きをもたらす。",
+        "tags": [
+          "日本三景",
+          "砂洲",
+          "絶景"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "智恩寺",
+          "天橋立ビューランド",
+          "傘松公園"
+        ]
+      },
+      {
+        "id": "awaji",
+        "name": "淡路島",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "淡路島",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "神戸",
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "三ノ宮駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "玉ねぎと鳴門の渦巻く、橋の先の島。",
+          "鳴門海峡・淡路夢舞台・伊弉諾神宮",
+          "海峡を渡れば、時間がゆっくり流れる場所がある。"
+        ],
+        "themes": [
+          "自然",
+          "グルメ",
+          "歴史"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hyogo/awajishima.html",
+        "jalanPath": "/28/LRG_280070/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "玉ねぎと潮風に包まれた明石海峡の先の島。海峡の渦と豊かな海の幸が、淡路の旅の核心をなしている。",
+        "tags": [
+          "自然",
+          "グルメ",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "hubCity": "神戸三宮駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鳴門の渦潮",
+          "淡路夢舞台",
+          "伊弉諾神宮"
+        ]
+      },
+      {
+        "id": "nagahama",
+        "name": "長浜",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "長浜駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "京都",
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "長浜駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "琵琶湖畔に広がる、黒壁ガラスの文化の街。",
+          "黒壁スクエア・長浜城・豊国神社",
+          "秀吉ゆかりの城下町に、ステンドグラスの光が差し込む。"
+        ],
+        "themes": [
+          "城下町",
+          "ガラス工芸",
+          "琵琶湖"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/shiga/nagahama.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "琵琶湖畔に広がる黒壁ガラスの文化の街。豊臣秀吉ゆかりの城下と湖の景色が穏やかな旅をつくる。",
+        "tags": [
+          "城下町",
+          "ガラス工芸",
+          "琵琶湖"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "黒壁スクエア",
+          "長浜城",
+          "慶雲館"
+        ]
+      },
+      {
+        "id": "hikone",
+        "name": "彦根",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "彦根駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "京都",
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "彦根駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "国宝の天守が、琵琶湖を見下ろして静かに立つ。",
+          "彦根城・玄宮園・夢京橋キャッスルロード",
+          "江戸三百年の城下の風格が、今も町並みに宿る。"
+        ],
+        "themes": [
+          "国宝",
+          "城下町",
+          "琵琶湖"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/shiga/hikone.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "国宝の天守が琵琶湖を見下ろして立つ城下町。ひこにゃんで有名な城と湖の風景が旅の主役だ。",
+        "tags": [
+          "国宝",
+          "城下町",
+          "琵琶湖"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "彦根城",
+          "玄宮園",
+          "夢京橋キャッスルロード"
+        ]
+      },
+      {
+        "id": "koyasan",
+        "name": "高野山",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "高野山",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "京都",
+          "神戸"
+        ],
+        "access": {
+          "railGateway": "高野山駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "真言密教の聖域、標高900mに広がる宗教都市。",
+          "奥之院・根本大塔・金剛峯寺",
+          "コウヤマキの森と灯籠が続く参道、宿坊で一夜を過ごす。"
+        ],
+        "themes": [
+          "宿坊",
+          "密教",
+          "世界遺産"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/wakayama/koyasan.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "真言密教の聖域として山上に広がる宗教都市。荘厳な杉並木と精進料理が、魂に響く旅を与えてくれる。",
+        "tags": [
+          "宿坊",
+          "密教",
+          "世界遺産"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "奥之院",
+          "金剛峯寺",
+          "根本大塔"
+        ]
+      },
+      {
+        "id": "izushi",
+        "name": "出石",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "出石",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "京都",
+          "神戸"
+        ],
+        "access": {
+          "railGateway": "豊岡駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "但馬の小京都と呼ばれる、皿そばの城下町。",
+          "出石城跡・辰鼓楼・出石皿そば",
+          "白壁の蔵と時計台が続く宿場、小皿を重ねながらそばを食べる。"
+        ],
+        "themes": [
+          "皿そば",
+          "城下町",
+          "時計台"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hyogo/izushi.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "但馬の小京都と呼ばれる皿そばの城下町。時計楼が見守る静かな街並みで、但馬の食と歴史を楽しめる。",
+        "tags": [
+          "皿そば",
+          "城下町",
+          "時計台"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "出石城跡",
+          "辰鼓楼",
+          "永楽館"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "kyoto",
+    "name": "京都",
+    "type": "hub",
+    "region": "近畿",
+    "mapDestination": "京都駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "広島"
+    ],
+    "access": {
+      "railGateway": "京都駅",
+      "railNote": null,
+      "railBookingProvider": "ex",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で2時間15分、大阪駅から電車で15分。",
+      "金閣寺・伏見稲荷大社・清水寺",
+      "古都の寺社巡り、何度行っても飽きない？"
+    ],
+    "themes": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kyoto/kyoto.html",
+    "jalanPath": "/26/LRG_260010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "古都の寺社仏閣と伝統文化が今も息づく街。四季を通じて移り変わる古都の景色に心を奪われる。",
+    "tags": [
+      "寺社",
+      "歴史",
+      "町家"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "金閣寺",
+      "伏見稲荷大社",
+      "嵐山"
+    ],
+    "distanceMap": {
+      "東京": 3,
+      "大阪": 1,
+      "名古屋": 1,
+      "広島": 2
+    },
+    "locals": [
+      {
+        "id": "ine",
+        "name": "伊根",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "伊根バス停",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "京都"
+        ],
+        "access": {
+          "railGateway": "天橋立駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "舟屋が海に並ぶ、伊根の静かな入り江。",
+          "伊根の舟屋・道の駅舟屋の里伊根・浦島神社",
+          "生活と海が一体になった、時間の止まった漁村。"
+        ],
+        "themes": [
+          "舟屋",
+          "漁村",
+          "海"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kyoto/ine.html",
+        "jalanPath": "/26/LRG_260040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落。静かな入り江と時間の止まった景色が心を落ち着かせる。",
+        "tags": [
+          "舟屋",
+          "漁村",
+          "海"
+        ],
+        "jr_region": "west",
+        "hubCity": "天橋立駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "伊根の舟屋",
+          "道の駅舟屋の里伊根",
+          "浦島神社"
+        ]
+      },
+      {
+        "id": "miyama",
+        "name": "美山",
+        "type": "local",
+        "region": "近畿",
+        "mapDestination": "美山かやぶきの里",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "京都"
+        ],
+        "access": {
+          "railGateway": "園部駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "茅葺き屋根が50棟並ぶ、山の集落。",
+          "かやぶきの里・美山ふれあい広場・自然文化村",
+          "川霧と茅葺き屋根、京都から来た別世界がある。"
+        ],
+        "themes": [
+          "古民家",
+          "自然",
+          "田舎"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kyoto/miyama.html",
+        "jalanPath": "/26/LRG_260050/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "茅葺き屋根が50棟以上並ぶ山の集落。京都の奥に残る静かな農村風景が、時間の感覚を変えてくれる。",
+        "tags": [
+          "古民家",
+          "自然",
+          "田舎"
+        ],
+        "jr_region": "west",
+        "hubCity": "綾部駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "かやぶきの里",
+          "美山民俗資料館",
+          "由良川"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "kobe",
+    "name": "神戸",
+    "type": "hub",
+    "region": "近畿",
+    "mapDestination": "三ノ宮駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "三ノ宮駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から電車で30分。三ノ宮駅が市内交通の中心。",
+      "北野異人館・神戸港ハーバーランド・南京町",
+      "異国情緒と港の景色、行かない？"
+    ],
+    "themes": [
+      "港町",
+      "異人館",
+      "スイーツ"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/kobe.html",
+    "jalanPath": "/28/LRG_280010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "港と異国情緒が溶け合うモダンな港町。山と海の間に広がる夜景と洋風建築が旅情を高める。",
+    "tags": [
+      "港町",
+      "異人館",
+      "スイーツ"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "北野異人館",
+      "ハーバーランド",
+      "六甲山"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "himeji",
+    "name": "姫路",
+    "type": "hub",
+    "region": "近畿",
+    "mapDestination": "姫路駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪"
+    ],
+    "access": {
+      "railGateway": "姫路駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から新幹線で35分。姫路駅から姫路城まで徒歩15分。",
+      "姫路城・好古園・書写山円教寺",
+      "白鷺城の圧倒的な存在感、見に行かない？"
+    ],
+    "themes": [
+      "城",
+      "世界遺産",
+      "播磨"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hyogo/himeji.html",
+    "jalanPath": "/28/LRG_280050/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "白鷺城と呼ばれる世界遺産の名城を持つ街。圧倒的な存在感の天守閣と和の庭園が旅の目玉だ。",
+    "tags": [
+      "城",
+      "世界遺産",
+      "播磨"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "姫路城",
+      "好古園",
+      "書写山円教寺"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "wakayama",
+    "name": "和歌山",
+    "type": "hub",
+    "region": "近畿",
+    "mapDestination": "和歌山駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "東京",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "和歌山駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から電車で1時間。和歌山駅が市内の起点。",
+      "和歌山城・友ヶ島・加太の海",
+      "大阪から近い城と海と温泉、行かない？"
+    ],
+    "themes": [
+      "高野山",
+      "温泉",
+      "海"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/wakayama/wakayama.html",
+    "jalanPath": "/30/LRG_300010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "紀伊半島に広がる山と海と霊場の豊かな土地。世界遺産の聖地と白砂の海岸が、一度ではとても歩ききれない。",
+    "tags": [
+      "高野山",
+      "温泉",
+      "海"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "高野山",
+      "那智大滝",
+      "白浜海岸"
+    ],
+    "locals": [],
+    "spots": []
+  }
+]

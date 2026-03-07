@@ -151,7 +151,7 @@ function buildCityBlock(city, _distanceLabel, fromCity, departure) {
     : '';
 
   const categoryBadge = buildCategoryBadge(city.type);
-  const spotListHtml  = buildSpotList(city.spots);
+  const spotListHtml  = buildSpotList(city.landmarks ?? city.spots);
 
   return `
     <div class="city-block">

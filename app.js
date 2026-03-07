@@ -4,6 +4,7 @@ import { buildHotelLinks } from './src/affiliate/hotel.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DISTANCE_LABELS, DEPARTURE_CITY_INFO } from './src/config/constants.js';
+import { loadDestinations } from './src/data/loader.js';
 
 const DEFAULT_GUESTS = 2;
 

@@ -1,0 +1,948 @@
+[
+  {
+    "id": "sendai",
+    "name": "仙台",
+    "type": "hub",
+    "region": "東北",
+    "mapDestination": "仙台駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "仙台駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で1時間40分。仙台駅から地下鉄・バスで各地へ。",
+      "瑞鳳殿・仙台城跡・松島（電車30分）",
+      "杜の都と海の幸、行かない？"
+    ],
+    "themes": [
+      "城下町",
+      "海鮮",
+      "杜の都"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/miyagi/sendai.html",
+    "jalanPath": "/04/LRG_040010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "杜の都と呼ばれる緑豊かな城下町。牛タンや海鮮を楽しみながら東北最大の街を歩く。",
+    "tags": [
+      "城下町",
+      "海鮮",
+      "杜の都"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "松島",
+      "瑞鳳殿",
+      "仙台城跡"
+    ],
+    "locals": [
+      {
+        "id": "matsushima",
+        "name": "松島",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "松島海岸駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "松島海岸駅",
+          "railNote": null,
+          "railBookingProvider": "ekinet",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "仙台駅から電車で30分。松島海岸駅から海岸まで徒歩5分。",
+          "松島湾の島々・瑞巌寺・五大堂",
+          "日本三景のひとつ、牡蠣と絶景を楽しみに行かない？"
+        ],
+        "themes": [
+          "日本三景",
+          "海",
+          "牡蠣"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/miyagi/matsushima.html",
+        "jalanPath": "/04/LRG_040030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本三景のひとつ、松の島々が浮かぶ美しい海。牡蠣と遊覧船で絶景をゆっくり楽しめる。",
+        "tags": [
+          "日本三景",
+          "海",
+          "牡蠣"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "松島湾",
+          "瑞巌寺",
+          "五大堂"
+        ]
+      },
+      {
+        "id": "hiraizumi",
+        "name": "平泉",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "平泉駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "仙台",
+          "盛岡"
+        ],
+        "access": {
+          "railGateway": "平泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "黄金の平泉、奥州藤原氏の夢の跡。",
+          "中尊寺金色堂・毛越寺・達谷窟",
+          "かつてここに、都と並ぶ輝きがあった。"
+        ],
+        "themes": [
+          "世界遺産",
+          "金色堂",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/iwate/hiraizumi.html",
+        "jalanPath": "/03/LRG_030020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "奥州藤原氏の黄金文化が栄えた世界遺産の地。金色に輝く堂と庭園が、往時の繁栄をありありと今に伝える。",
+        "tags": [
+          "世界遺産",
+          "金色堂",
+          "歴史"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "中尊寺金色堂",
+          "毛越寺",
+          "達谷窟"
+        ],
+        "distanceMap": {
+          "仙台": 2,
+          "盛岡": 1
+        }
+      },
+      {
+        "id": "kakunodate",
+        "name": "角館",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "角館駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "仙台",
+          "盛岡",
+          "東京"
+        ],
+        "access": {
+          "railGateway": "角館駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "武家屋敷と枝垂れ桜の城下町。",
+          "武家屋敷通り・桧木内川堤・青柳家",
+          "秋田の山あいに残る、江戸時代の静けさ。"
+        ],
+        "themes": [
+          "武家屋敷",
+          "桜",
+          "城下町"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/akita/kakunodate.html",
+        "jalanPath": "/05/LRG_050010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "武家屋敷と枝垂れ桜が残る秋田の城下町。江戸時代の街並みがそのまま残り、静かな旅の舞台になる。",
+        "tags": [
+          "武家屋敷",
+          "桜",
+          "城下町"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "武家屋敷通り",
+          "桧木内川堤",
+          "青柳家"
+        ],
+        "distanceMap": {
+          "仙台": 4,
+          "盛岡": 1,
+          "東京": 4
+        }
+      },
+      {
+        "id": "aizu",
+        "name": "会津若松",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "会津若松駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "会津若松駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "鶴ヶ城と会津の心意気が残る城下町。",
+          "鶴ヶ城・芦ノ牧温泉・大内宿",
+          "白虎隊の里、東北の誇りがここにある。"
+        ],
+        "themes": [
+          "城",
+          "歴史",
+          "温泉"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/fukushima/aizu.html",
+        "jalanPath": "/07/LRG_070020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白虎隊の悲話で知られる東北の誇り高い城下町。会津の歴史と温泉が心に刻まれる深い旅ができる場所だ。",
+        "tags": [
+          "城",
+          "歴史",
+          "温泉"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鶴ヶ城",
+          "芦ノ牧温泉",
+          "大内宿"
+        ]
+      },
+      {
+        "id": "zaosan",
+        "name": "蔵王",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "蔵王駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "蔵王駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "蔵王の火口湖、御釜の青緑は別世界。",
+          "お釜・蔵王温泉・樹氷",
+          "変色する湖と樹氷のモンスター、季節ごとに表情が変わる山。"
+        ],
+        "themes": [
+          "火口湖",
+          "温泉",
+          "樹氷"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/yamagata/zao.html",
+        "jalanPath": "/06/LRG_060010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯。季節ごとに異なる表情を見せる蔵王は、何度でも訪れたくなる。",
+        "tags": [
+          "火口湖",
+          "温泉",
+          "樹氷"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "お釜",
+          "蔵王温泉",
+          "樹氷"
+        ]
+      },
+      {
+        "id": "akita",
+        "name": "秋田",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "秋田駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "仙台",
+          "盛岡"
+        ],
+        "access": {
+          "railGateway": "秋田駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "きりたんぽと竿燈祭り、男鹿の鬼が宿る街。",
+          "竿燈まつり・千秋公園・男鹿半島",
+          "東北の静かな城下町、秋田の空は広く澄んでいる。"
+        ],
+        "themes": [
+          "竿燈まつり",
+          "城下町",
+          "食"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/akita/akita.html",
+        "jalanPath": "/05/LRG_050020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "きりたんぽと竿燈祭りで知られる東北の米どころ。男鹿のなまはげなど固有の伝統文化が旅に深みを加える。",
+        "tags": [
+          "竿燈まつり",
+          "城下町",
+          "食"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "竿燈まつり",
+          "千秋公園",
+          "男鹿半島"
+        ]
+      },
+      {
+        "id": "sakata",
+        "name": "酒田",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "酒田駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "酒田駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "かつて北前船が行き交った湊町。",
+          "山居倉庫・土門拳記念館・日和山公園",
+          "庄内の風と米と海、静かな港の街へ。"
+        ],
+        "themes": [
+          "歴史",
+          "港町",
+          "文化"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/yamagata/sakata.html",
+        "jalanPath": "/06/LRG_060040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "北前船の交易で栄えた日本海の湊町。出羽の歴史を刻んだ倉庫群と豊かな食文化が今も息づいている。",
+        "tags": [
+          "歴史",
+          "港町",
+          "文化"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "山居倉庫",
+          "土門拳記念館",
+          "日和山公園"
+        ]
+      },
+      {
+        "id": "nyuto-onsen",
+        "name": "乳頭温泉",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "乳頭温泉郷",
+        "parentHub": null,
+        "distanceStars": 4,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "田沢湖駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "ブナ林に抱かれた、乳白色の湯が七湯に湧く。",
+          "乳頭温泉郷・鶴の湯・黒湯",
+          "泉質も景色も違う秘湯を、入湯手形で巡る。"
+        ],
+        "themes": [
+          "秘湯",
+          "温泉",
+          "ブナ林"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/akita/nyuto.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里。個性豊かな温泉宿が旅の目的地そのものになる。",
+        "tags": [
+          "秘湯",
+          "温泉",
+          "ブナ林"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鶴の湯",
+          "黒湯",
+          "妙乃湯"
+        ]
+      },
+      {
+        "id": "ginzan-onsen",
+        "name": "銀山温泉",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "銀山温泉",
+        "parentHub": null,
+        "distanceStars": 4,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "大石田駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "大正ロマンの洋館が、銀山川の両岸に立ち並ぶ。",
+          "銀山温泉・能登屋旅館・白銀の滝",
+          "夜のガス灯と川のせせらぎ、時間旅行のような温泉街。"
+        ],
+        "themes": [
+          "大正ロマン",
+          "温泉",
+          "雪景色"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/yamagata/ginzan.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街。雪景色とレトロな建物が、どこか懐かしい旅情をつくる。",
+        "tags": [
+          "大正ロマン",
+          "温泉",
+          "雪景色"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "能登屋旅館",
+          "白銀の滝",
+          "銀山川沿い散策"
+        ]
+      },
+      {
+        "id": "ouchi-juku",
+        "name": "大内宿",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "大内宿",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "湯野上温泉駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "江戸の宿場町が、茅葺きのまま現代に残る。",
+          "大内宿・塔のへつり・湯野上温泉",
+          "ネギ一本で食べる高遠そば、煙たい囲炉裏の温もり。"
+        ],
+        "themes": [
+          "宿場町",
+          "茅葺き",
+          "そば"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/fukushima/ouchi.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里。ネギそばで有名な冬の宿場が旅人を温かく迎える。",
+        "tags": [
+          "宿場町",
+          "茅葺き",
+          "そば"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "大内宿町並み",
+          "塔のへつり",
+          "三澤屋"
+        ]
+      },
+      {
+        "id": "naruko-onsen",
+        "name": "鳴子温泉",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "鳴子温泉駅",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "鳴子温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "こけしの故郷、奥羽山脈に囲まれた温泉の里。",
+          "鳴子温泉・鳴子峡・こけし館",
+          "紅葉に染まる渓谷、硫黄の香りと湯治の風習が残る。"
+        ],
+        "themes": [
+          "温泉",
+          "こけし",
+          "紅葉"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/miyagi/naruko.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "こけし発祥の地として知られる東北の温泉の里。奥羽の山深くに湧く多彩な泉質が旅人を迎えてくれる。",
+        "tags": [
+          "温泉",
+          "こけし",
+          "紅葉"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鳴子峡",
+          "東北こけし館",
+          "早稲田桟敷湯"
+        ]
+      },
+      {
+        "id": "hirosaki",
+        "name": "弘前",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "弘前駅",
+        "parentHub": null,
+        "distanceStars": 4,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "弘前駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": "青森空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本一の桜の名所と言われる、津軽の城下町。",
+          "弘前城・弘前公園・明治洋館群",
+          "天守を取り囲む桜と、洋風建築が共存する北の城下。"
+        ],
+        "themes": [
+          "桜",
+          "城下町",
+          "洋館"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/aomori/hirosaki.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "津軽の城下町に日本一の桜の名所が広がる街。洋館や禅寺など明治の遺産も点在し、深い旅ができる。",
+        "tags": [
+          "桜",
+          "城下町",
+          "洋館"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "弘前城",
+          "弘前公園",
+          "旧弘前市立図書館"
+        ]
+      },
+      {
+        "id": "oirase",
+        "name": "奥入瀬",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "奥入瀬渓流",
+        "parentHub": null,
+        "distanceStars": 4,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "仙台"
+        ],
+        "access": {
+          "railGateway": "八戸駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": "青森空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "原生林を縫うように流れる、清流の渓谷路。",
+          "奥入瀬渓流・阿修羅の流れ・十和田湖",
+          "苔と滝と木漏れ日、歩くたびに変わる渓流の表情。"
+        ],
+        "themes": [
+          "渓流",
+          "自然",
+          "十和田湖"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/aomori/oirase.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "原生林を縫うように清流が流れる渓谷路。苔と滝と木漏れ日が、徒歩でしか味わえない静寂をつくっている。",
+        "tags": [
+          "渓流",
+          "自然",
+          "十和田湖"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "阿修羅の流れ",
+          "雲井の滝",
+          "十和田湖"
+        ]
+      }
+    ],
+    "spots": [
+      {
+        "id": "osorezan",
+        "name": "恐山",
+        "type": "spot",
+        "region": "東北",
+        "mapDestination": "恐山",
+        "parentHub": null,
+        "departures": [
+          "仙台",
+          "盛岡"
+        ],
+        "distanceMap": {
+          "仙台": 4,
+          "盛岡": 3
+        },
+        "weight": 0.15,
+        "stayAllowed": [
+          "1night"
+        ],
+        "access": {
+          "railGateway": "下北駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "硫黄の匂いと荒涼とした岩場が広がる、下北半島の霊山。",
+          "日本三大霊場として、死者の魂が集まると伝わる場所。",
+          "宇曽利山湖の青い水が、この世ならぬ静けさを持っている。"
+        ],
+        "themes": [
+          "霊場",
+          "秘境",
+          "絶景"
+        ],
+        "landmarks": [],
+        "needsCar": false,
+        "hasHotel": false,
+        "hubHotel": null,
+        "description": "死者の魂が集まるとされる下北半島の霊場。荒涼とした山と湖と硫黄の匂いが、この世ならぬ静寂な光景をつくり出している。",
+        "tags": [
+          "霊場",
+          "秘境"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yamagata",
+    "name": "山形",
+    "type": "hub",
+    "region": "東北",
+    "mapDestination": "山形駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "山形駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "仙台駅から新幹線で30分。山形駅からバスで各地へ。",
+      "山寺（立石寺）・銀山温泉（車1時間）・蔵王（車1時間）",
+      "芭蕉が詠んだ岩山と雪の温泉街、行かない？"
+    ],
+    "themes": [
+      "山寺",
+      "温泉",
+      "芋煮"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/yamagata/yamagata.html",
+    "jalanPath": "/06/LRG_060010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "奥山に刻まれた句碑と銀山温泉が輝く山の街。芭蕉が詠んだ岩肌と雪の温泉街が今も残っている。",
+    "tags": [
+      "山寺",
+      "温泉",
+      "芋煮"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "山寺（立石寺）",
+      "蔵王温泉",
+      "上杉神社"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "morioka",
+    "name": "盛岡",
+    "type": "hub",
+    "region": "東北",
+    "mapDestination": "盛岡駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "盛岡駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で2時間15分。盛岡駅が東北北部の拠点。",
+      "盛岡城跡公園・開運橋・岩手山",
+      "冷麺とわんこそば、岩手の食文化を試しに行かない？"
+    ],
+    "themes": [
+      "わんこそば",
+      "冷麺",
+      "城跡"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/iwate/morioka.html",
+    "jalanPath": "/03/LRG_030010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "わんこそばと冷麺が名物の岩手の城下町。南部鉄器と岩手山を背景にした風景が落ち着いた旅をつくる。",
+    "tags": [
+      "わんこそば",
+      "冷麺",
+      "城跡"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "盛岡城跡",
+      "盛岡八幡宮",
+      "石割桜"
+    ],
+    "locals": [
+      {
+        "id": "miyako-iwate",
+        "name": "宮古",
+        "type": "local",
+        "region": "東北",
+        "mapDestination": "宮古駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "盛岡"
+        ],
+        "access": {
+          "railGateway": "宮古駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "浄土ヶ浜の白い岩と碧い海。",
+          "浄土ヶ浜・北山崎・三陸ジオパーク",
+          "復興した街に広がる三陸の絶景、行かない？"
+        ],
+        "themes": [
+          "海",
+          "自然",
+          "三陸"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/iwate/miyako.html",
+        "jalanPath": "/03/LRG_030050/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "三陸の白い岩場と碧い海が広がる港町。リアスの絶景と豊かな海の幸が、東北の旅に深みを与える。",
+        "tags": [
+          "海",
+          "自然",
+          "三陸"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "浄土ヶ浜",
+          "北山崎",
+          "浄土ヶ浜レストハウス"
+        ]
+      }
+    ],
+    "spots": []
+  }
+]

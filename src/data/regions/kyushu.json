@@ -1,0 +1,1251 @@
+[
+  {
+    "id": "fukuoka",
+    "name": "博多",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "博多駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "札幌",
+      "仙台",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": "博多駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": "福岡空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
+      "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
+      "もつ鍋と屋台ラーメン、九州の食を味わいに行かない？"
+    ],
+    "themes": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/fukuoka/fukuoka.html",
+    "jalanPath": "/40/LRG_400010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "九州の玄関口として屋台文化と活気が溢れる街。もつ鍋やラーメンなど福岡グルメで夜を楽しみたい。",
+    "tags": [
+      "ラーメン",
+      "屋台",
+      "活気"
+    ],
+    "jr_region": "kyushu",
+    "airportAccess": "地下鉄",
+    "image": "https://images.unsplash.com/photo-1601823984263-44b96d82f2a9?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "中洲屋台",
+      "太宰府天満宮",
+      "櫛田神社"
+    ],
+    "distanceMap": {
+      "東京": 4,
+      "大阪": 3,
+      "名古屋": 3,
+      "札幌": 5,
+      "仙台": 5,
+      "広島": 2,
+      "高松": 3
+    },
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "saga",
+    "name": "佐賀",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "佐賀駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "佐賀駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多駅から特急で35分。佐賀駅からバスで有田・唐津へ。",
+      "有田焼（有田）・吉野ヶ里歴史公園・唐津城",
+      "焼き物と弥生遺跡、九州でまだ行っていないなら行かない？"
+    ],
+    "themes": [
+      "陶芸",
+      "バルーン",
+      "温泉"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/saga/saga.html",
+    "jalanPath": "/41/LRG_410010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "有田焼と弥生遺跡が共存する静かな城下町。陶芸と歴史の奥深さを掘り下げたい人に向いた街だ。",
+    "tags": [
+      "陶芸",
+      "バルーン",
+      "温泉"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "有田陶磁器の里",
+      "吉野ヶ里遺跡",
+      "嬉野温泉"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "kumamoto",
+    "name": "熊本",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "熊本駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "熊本駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多駅から新幹線で35分。熊本駅から市電で市内へ。",
+      "熊本城・水前寺成趣園・黒川温泉（車1時間）",
+      "加藤清正の名城と熊本の食、行かない？"
+    ],
+    "themes": [
+      "城",
+      "阿蘇",
+      "グルメ"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kumamoto/kumamoto.html",
+    "jalanPath": "/43/LRG_430010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "加藤清正の名城と火の国の食文化が根づく街。馬刺しや辛子蓮根など九州の個性が詰まっている。",
+    "tags": [
+      "城",
+      "阿蘇",
+      "グルメ"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "熊本城",
+      "阿蘇草千里",
+      "水前寺成趣園"
+    ],
+    "locals": [
+      {
+        "id": "yufuin",
+        "name": "湯布院",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "由布院駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "熊本"
+        ],
+        "access": {
+          "railGateway": "由布院駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "由布岳を望む霧の温泉郷。",
+          "湯の坪街道・金鱗湖・由布院玉の湯",
+          "朝霧に包まれた静かな谷、九州の奥座敷へ。"
+        ],
+        "themes": [
+          "温泉",
+          "自然",
+          "由布岳"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/oita/yufuin.html",
+        "jalanPath": "/44/LRG_440020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "霧立つ温泉郷として知られる九州の奥座敷。朝霧の中の旅館で静かな湯と山の自然を楽しめる。",
+        "tags": [
+          "温泉",
+          "自然",
+          "由布岳"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "湯の坪街道",
+          "金鱗湖",
+          "由布院玉の湯"
+        ],
+        "distanceMap": {
+          "福岡": 3,
+          "熊本": 3
+        }
+      },
+      {
+        "id": "kurokawa",
+        "name": "黒川温泉",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "黒川温泉バス停",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "熊本"
+        ],
+        "access": {
+          "railGateway": "博多駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "杉林の奥に隠れた秘湯の集落。",
+          "入湯手形・山みず木・山河",
+          "露天風呂と自然、何もかも忘れられる場所がある。"
+        ],
+        "themes": [
+          "温泉",
+          "秘湯",
+          "自然"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kumamoto/kurokawa.html",
+        "jalanPath": "/43/LRG_430060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "杉林に隠れた小さな温泉旅館が集まる秘湯の里。手形一枚で複数の露天風呂を渡り歩く体験が独特だ。",
+        "tags": [
+          "温泉",
+          "秘湯",
+          "自然"
+        ],
+        "jr_region": "kyushu",
+        "hubCity": "熊本駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "入湯手形",
+          "山みず木",
+          "山河"
+        ],
+        "distanceMap": {
+          "福岡": 3,
+          "熊本": 3
+        }
+      },
+      {
+        "id": "aso",
+        "name": "阿蘇",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "阿蘇駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "熊本"
+        ],
+        "access": {
+          "railGateway": "阿蘇駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "活火山と広大なカルデラの大地。",
+          "草千里・中岳火口・大観峰",
+          "煙を上げる山と青い空、日本最大の火山にのぼる。"
+        ],
+        "themes": [
+          "火山",
+          "自然",
+          "カルデラ"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kumamoto/aso.html",
+        "jalanPath": "/43/LRG_430020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "世界最大級のカルデラと活火山が広がる大自然の地。広大な草原と火口の青緑が圧倒的な景色をつくっている。",
+        "tags": [
+          "火山",
+          "自然",
+          "カルデラ"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "草千里",
+          "中岳火口",
+          "大観峰"
+        ],
+        "distanceMap": {
+          "福岡": 2,
+          "熊本": 1
+        }
+      },
+      {
+        "id": "takachiho",
+        "name": "高千穂",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "高千穂峡",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "熊本"
+        ],
+        "access": {
+          "railGateway": "熊本駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "神話の里、峡谷に響く真名井の滝。",
+          "高千穂峡・天岩戸神社・夜神楽",
+          "柱状節理の絶壁とボート、神様の国へ迷い込む。"
+        ],
+        "themes": [
+          "神話",
+          "自然",
+          "渓谷"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/miyazaki/takachiho.html",
+        "jalanPath": "/45/LRG_450030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "神話の里として知られる宮崎の峡谷地帯。深い谷と滝が神秘的な雰囲気をつくり、夜神楽が古代へと誘う。",
+        "tags": [
+          "神話",
+          "自然",
+          "渓谷"
+        ],
+        "jr_region": "kyushu",
+        "hubCity": "延岡駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "高千穂峡",
+          "天岩戸神社",
+          "高千穂神社"
+        ]
+      },
+      {
+        "id": "hitoyoshi",
+        "name": "人吉",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "人吉駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "熊本",
+          "鹿児島",
+          "福岡"
+        ],
+        "access": {
+          "railGateway": "人吉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "球磨川沿いに栄えた、焼酎と温泉と鉄道の城下町。",
+          "人吉城跡・青井阿蘇神社・球磨川",
+          "球磨焼酎の蔵が並ぶ街で、川下りと温泉が一日を締める。"
+        ],
+        "themes": [
+          "温泉",
+          "球磨焼酎",
+          "川下り"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/kumamoto/hitoyoshi.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "球磨川の清流沿いに栄えた九州の城下町。球磨焼酎と温泉、SL列車が旅の豊かさを三倍にしてくれる。",
+        "tags": [
+          "温泉",
+          "球磨焼酎",
+          "川下り"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "青井阿蘇神社",
+          "人吉城跡",
+          "球磨川くだり"
+        ]
+      },
+      {
+        "id": "minami-aso",
+        "name": "南阿蘇",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "南阿蘇",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "熊本",
+          "福岡"
+        ],
+        "access": {
+          "railGateway": "熊本駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": "阿蘇くまもと空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "阿蘇カルデラの南、湧水と牧草地が広がる静かな高原。",
+          "白川水源・高森峠・南阿蘇鉄道",
+          "地面から静かに水が湧き出す場所、草千里とは違う穏やかな阿蘇。"
+        ],
+        "themes": [
+          "湧水",
+          "牧草地",
+          "高原"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kumamoto/minamiaso.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "阿蘇カルデラの南に広がる湧水と牧草の高原。のどかな景色と澄んだ水が、阿蘇とは異なる静けさをくれる。",
+        "tags": [
+          "湧水",
+          "牧草地",
+          "高原"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "白川水源",
+          "高森湧水トンネル",
+          "池の川水源"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "nagasaki",
+    "name": "長崎",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "長崎駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "長崎駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多駅から新幹線で約30分。長崎駅から路面電車で観光地へ。",
+      "グラバー園・出島・稲佐山夜景",
+      "出島の歴史と坂の異国情緒に触れに行かない？"
+    ],
+    "themes": [
+      "坂の街",
+      "異国情緒",
+      "歴史"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagasaki/nagasaki.html",
+    "jalanPath": "/42/LRG_420010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "異国との交流が紡いだ独特の歴史と文化を持つ港町。坂道と教会と長崎ちゃんぽんが、ここだけの旅をつくる。",
+    "tags": [
+      "坂の街",
+      "異国情緒",
+      "歴史"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "平和公園",
+      "グラバー園",
+      "出島"
+    ],
+    "locals": [
+      {
+        "id": "sasebo",
+        "name": "佐世保",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "佐世保駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "長崎",
+          "福岡"
+        ],
+        "access": {
+          "railGateway": "佐世保駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "長崎県北、海と島の入り組む軍港の街。",
+          "九十九島・旧海軍鎮守府跡・佐世保バーガー",
+          "佐世保バーガーと九十九島の夕陽、忘れられない旅になる。"
+        ],
+        "themes": [
+          "九十九島",
+          "軍港",
+          "海"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nagasaki/sasebo.html",
+        "jalanPath": "/42/LRG_420030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "数えきれない島々が複雑な海岸線を描く長崎県北の街。海軍の歴史と異国情緒ある景観が旅に彩りを添える。",
+        "tags": [
+          "九十九島",
+          "軍港",
+          "海"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "九十九島",
+          "旧海軍鎮守府跡",
+          "佐世保バーガー"
+        ]
+      },
+      {
+        "id": "hirado",
+        "name": "平戸",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "平戸口駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "長崎"
+        ],
+        "access": {
+          "railGateway": "平戸口駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本で最初に外国人が訪れた港まち。",
+          "平戸城・オランダ商館・川内峠",
+          "教会と寺が共存する不思議な歴史の街。"
+        ],
+        "themes": [
+          "歴史",
+          "教会",
+          "港"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/nagasaki/hirado.html",
+        "jalanPath": "/42/LRG_420040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本で最初に外国貿易が行われた歴史ある港町。教会と城が共存する、異文化交流の痕跡が随所にある。",
+        "tags": [
+          "歴史",
+          "教会",
+          "港"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "平戸城",
+          "オランダ商館",
+          "川内峠"
+        ]
+      },
+      {
+        "id": "goto",
+        "name": "五島列島",
+        "type": "island",
+        "region": "九州",
+        "mapDestination": "福江港",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "長崎"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": "長崎港"
+        },
+        "atmosphere": [
+          "教会と海が共存する、キリシタンの島々。",
+          "堂崎天主堂・大瀬崎灯台・高浜海水浴場",
+          "世界遺産の教会群と紺碧の海、五島の静寂へ。"
+        ],
+        "themes": [
+          "離島",
+          "世界遺産",
+          "キリシタン"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/nagasaki/goto.html",
+        "jalanPath": "/42/LRG_420060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "教会と海が共存するキリシタンゆかりの島々。世界遺産の歴史と透明な海が、特別な旅体験を与えてくれる。",
+        "tags": [
+          "離島",
+          "世界遺産",
+          "キリシタン"
+        ],
+        "jr_region": "kyushu",
+        "access_city": "長崎",
+        "port": "長崎港",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "堂崎天主堂",
+          "大瀬崎灯台",
+          "高浜海水浴場"
+        ]
+      },
+      {
+        "id": "unzen",
+        "name": "雲仙",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "雲仙温泉",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "長崎"
+        ],
+        "access": {
+          "railGateway": "諫早駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "長崎県の山上に湧く、地獄と温泉の街。",
+          "雲仙地獄・雲仙温泉・妙見岳",
+          "噴気と硫黄の香り、長崎から来た山の温泉。"
+        ],
+        "themes": [
+          "温泉",
+          "自然",
+          "火山"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nagasaki/unzen.html",
+        "jalanPath": "/42/LRG_420050/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "長崎県の山上に湧く地獄と温泉の街。多彩な泉質と高原の涼しさが、九州の温泉旅の選択肢を広げる。",
+        "tags": [
+          "温泉",
+          "自然",
+          "火山"
+        ],
+        "jr_region": "kyushu",
+        "hubCity": "長崎駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "雲仙地獄",
+          "仁田峠",
+          "雲仙温泉街"
+        ]
+      },
+      {
+        "id": "ureshino-onsen",
+        "name": "嬉野温泉",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "嬉野温泉駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "長崎"
+        ],
+        "access": {
+          "railGateway": "嬉野温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本三大美肌の湯、とろとろの重曹泉。",
+          "嬉野温泉・嬉野茶・肥前の街並み",
+          "長崎街道の宿場町に、今も静かに湯が湧く。"
+        ],
+        "themes": [
+          "温泉",
+          "美肌",
+          "お茶"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/saga/ureshino.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本三大美肌の湯として知られる佐賀の重曹泉。とろとろの湯と嬉野茶で体も心も潤う温泉地だ。",
+        "tags": [
+          "温泉",
+          "美肌",
+          "お茶"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "シーボルトの湯",
+          "嬉野茶の農園",
+          "不動山温泉"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "kagoshima",
+    "name": "鹿児島",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "鹿児島中央駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "鹿児島中央駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多駅から新幹線で1時間20分。鹿児島中央駅から市電で市内へ。",
+      "桜島・仙巌園・天文館",
+      "活火山を望む城下町で黒豚と焼酎、行かない？"
+    ],
+    "themes": [
+      "桜島",
+      "温泉",
+      "薩摩"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kagoshima/kagoshima.html",
+    "jalanPath": "/46/LRG_460010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "湾の対岸に活火山がそびえる薩摩の城下町。黒豚や焼酎など薩摩文化の精髄を味わいに行きたい。",
+    "tags": [
+      "桜島",
+      "温泉",
+      "薩摩"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1584647347483-22b66260dfff?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "桜島",
+      "仙巌園",
+      "霧島温泉"
+    ],
+    "locals": [
+      {
+        "id": "yakushima",
+        "name": "屋久島",
+        "type": "island",
+        "region": "九州",
+        "mapDestination": "屋久島空港",
+        "parentHub": null,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "福岡",
+          "鹿児島"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": "屋久島空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "樹齢七千年の縄文杉が待つ、森の島。",
+          "縄文杉・白谷雲水峡・千尋の滝",
+          "屋久島の雨と緑、ここは地球の原始を感じる場所。"
+        ],
+        "themes": [
+          "世界遺産",
+          "縄文杉",
+          "自然"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kagoshima/yakushima.html",
+        "jalanPath": "/46/LRG_460040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "世界遺産に認定された原始の森が島を覆う、屋久島。樹齢数千年の巨木が立ち並ぶ苔の森に圧倒される。",
+        "tags": [
+          "世界遺産",
+          "縄文杉",
+          "自然"
+        ],
+        "jr_region": "kyushu",
+        "access_city": null,
+        "port": null,
+        "airportAccess": "バス・タクシー",
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "縄文杉",
+          "白谷雲水峡",
+          "千尋の滝"
+        ],
+        "distanceMap": {
+          "福岡": 3,
+          "鹿児島": 2
+        }
+      },
+      {
+        "id": "ibusuki",
+        "name": "指宿",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "指宿駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "鹿児島"
+        ],
+        "access": {
+          "railGateway": "指宿駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "砂に埋まる砂むし温泉、薩摩の南端。",
+          "砂むし会館・長崎鼻・池田湖",
+          "砂の熱で全身が温まる、鹿児島でしかできない体験。"
+        ],
+        "themes": [
+          "砂むし温泉",
+          "温泉",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/kagoshima/ibusuki.html",
+        "jalanPath": "/46/LRG_460010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "薩摩半島南端に広がる砂むし温泉の街。温かい砂に包まれる独特の体験と開聞岳の絶景が待っている。",
+        "tags": [
+          "砂むし温泉",
+          "温泉",
+          "自然"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "砂むし会館",
+          "長崎鼻",
+          "池田湖"
+        ]
+      },
+      {
+        "id": "amami",
+        "name": "奄美大島",
+        "type": "island",
+        "region": "九州",
+        "mapDestination": "奄美大島",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "鹿児島"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": "鹿児島港"
+        },
+        "atmosphere": [
+          "亜熱帯の森とサンゴの海、奄美の原風景。",
+          "金作原原生林・大浜海浜公園・マングローブ林",
+          "固有種が暮らす森と青い海、南の島に身を委ねる。"
+        ],
+        "themes": [
+          "離島",
+          "自然",
+          "ダイビング"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/kagoshima/amami.html",
+        "jalanPath": "/46/LRG_460020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "亜熱帯の原生林とサンゴ礁が広がる離島。固有の動植物と黒糖焼酎が、奄美だけの旅をつくっている。",
+        "tags": [
+          "離島",
+          "自然",
+          "ダイビング"
+        ],
+        "jr_region": "kyushu",
+        "access_city": "鹿児島",
+        "port": "鹿児島港",
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "金作原原生林",
+          "大浜海浜公園",
+          "マングローブカヌー"
+        ]
+      },
+      {
+        "id": "obi",
+        "name": "飫肥",
+        "type": "local",
+        "region": "九州",
+        "mapDestination": "飫肥駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "宮崎",
+          "鹿児島"
+        ],
+        "access": {
+          "railGateway": "飫肥駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日南の小京都と呼ばれる、杉の板塀が続く城下町。",
+          "飫肥城・旧本丸跡・商人通り",
+          "黒い飫肥杉の塀と石畳の路地、天福餅の甘さが漂う。"
+        ],
+        "themes": [
+          "城下町",
+          "飫肥杉",
+          "日南海岸"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/miyazaki/obi.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "杉の板塀が続く城下町、日南の小京都。伊東氏の城跡と商家の街並みに、南国の歴史の重みが漂っている。",
+        "tags": [
+          "城下町",
+          "飫肥杉",
+          "日南海岸"
+        ],
+        "jr_region": "kyushu",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "飫肥城",
+          "旧本丸大手門",
+          "商人通り"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "miyazaki",
+    "name": "宮崎",
+    "type": "hub",
+    "region": "九州",
+    "mapDestination": "宮崎駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "宮崎駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": "宮崎空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多から飛行機で45分または特急で約2時間。宮崎駅が起点。",
+      "青島神社・鵜戸神宮・高千穂峡（車2時間）",
+      "マンゴーと地鶏、神話の地に行かない？"
+    ],
+    "themes": [
+      "海",
+      "神話",
+      "地鶏"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/miyazaki/miyazaki.html",
+    "jalanPath": "/45/LRG_450010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "神話の地として知られる太平洋に面した温暖な街。マンゴーや地鶏など南国グルメと海の景色が魅力だ。",
+    "tags": [
+      "海",
+      "神話",
+      "地鶏"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "青島",
+      "日向岬（馬ヶ背）",
+      "高千穂峡"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "beppu",
+    "name": "別府",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "別府駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "別府駅",
+      "railNote": null,
+      "railBookingProvider": "jrkyushu",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "博多駅から特急で約2時間。別府駅から温泉街へバスで。",
+      "地獄めぐり（海地獄など）・別府温泉・湯布院（車30分）",
+      "日本最大の温泉都市、地獄の蒸気を見に行かない？"
+    ],
+    "themes": [
+      "温泉",
+      "地獄めぐり",
+      "海の幸"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/oita/beppu.html",
+    "jalanPath": "/44/LRG_440030/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市。個性豊かな源泉と海を望む露天が、旅人を癒す。",
+    "tags": [
+      "温泉",
+      "地獄めぐり",
+      "海の幸"
+    ],
+    "jr_region": "kyushu",
+    "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "地獄めぐり",
+      "鉄輪温泉",
+      "湯布院"
+    ]
+  },
+  {
+    "id": "amakusa",
+    "name": "天草",
+    "type": "local",
+    "region": "九州",
+    "mapDestination": "天草港",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "access": {
+      "railGateway": "熊本駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "海と島と橋が連なる天草の原風景。",
+      "天草五橋・崎津集落・イルカウォッチング",
+      "潮風と世界遺産のキリシタン集落、長崎に負けない歴史がある。"
+    ],
+    "themes": [
+      "世界遺産",
+      "キリシタン",
+      "海"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/kumamoto/amakusa.html",
+    "jalanPath": "/43/LRG_430040/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "世界遺産のキリシタン集落と海に囲まれた九州の島。潮風と信仰の歴史が重なる旅が、この島だけのものだ。",
+    "tags": [
+      "世界遺産",
+      "キリシタン",
+      "海"
+    ],
+    "jr_region": "kyushu",
+    "hubCity": "熊本駅",
+    "accessFromHub": "バス",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "天草五橋",
+      "崎津集落",
+      "イルカウォッチング"
+    ]
+  }
+]

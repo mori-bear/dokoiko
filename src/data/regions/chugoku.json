@@ -1,0 +1,807 @@
+[
+  {
+    "id": "hiroshima",
+    "name": "広島",
+    "type": "hub",
+    "region": "中国",
+    "mapDestination": "広島駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "福岡",
+      "高松"
+    ],
+    "access": {
+      "railGateway": "広島駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": "広島空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
+      "原爆ドーム・厳島神社（宮島）・広島城",
+      "歴史と平和を問い直す旅、行かない？"
+    ],
+    "themes": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hiroshima/hiroshima.html",
+    "jalanPath": "/34/LRG_340010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "平和の願いを刻んだ歴史と現代が共存する街。牡蠣や汁なし担担麺など地元の食文化も見どころだ。",
+    "tags": [
+      "平和",
+      "牡蠣",
+      "宮島"
+    ],
+    "jr_region": "west",
+    "airportAccess": "バス・タクシー",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "平和記念公園",
+      "原爆ドーム",
+      "縮景園"
+    ],
+    "distanceMap": {
+      "東京": 4,
+      "大阪": 3,
+      "名古屋": 3,
+      "福岡": 3,
+      "高松": 3
+    },
+    "locals": [
+      {
+        "id": "miyajima",
+        "name": "宮島",
+        "type": "island",
+        "region": "中国",
+        "mapDestination": "宮島口駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "広島"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": "宮島口港"
+        },
+        "atmosphere": [
+          "広島駅から電車＋フェリーで45分。宮島口駅からフェリーで10分。",
+          "厳島神社（水上鳥居）・弥山・焼き牡蠣",
+          "世界遺産の島、干満で変わる鳥居を見に行かない？"
+        ],
+        "themes": [
+          "厳島神社",
+          "世界遺産",
+          "鹿"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hiroshima/miyajima.html",
+        "jalanPath": "/34/LRG_340060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "海に浮かぶ鳥居が象徴する世界遺産の神の島。干潮と満潮で変わる海と社の表情が旅の記憶に深く刻まれる。",
+        "tags": [
+          "厳島神社",
+          "世界遺産",
+          "鹿"
+        ],
+        "jr_region": "west",
+        "access_city": null,
+        "port": null,
+        "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "厳島神社",
+          "大鳥居",
+          "弥山"
+        ]
+      },
+      {
+        "id": "onomichi",
+        "name": "尾道",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "尾道駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "広島",
+          "大阪",
+          "岡山"
+        ],
+        "access": {
+          "railGateway": "尾道駅",
+          "railNote": null,
+          "railBookingProvider": "e5489",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "広島駅から電車で1時間。尾道駅から坂の街へ徒歩5分。",
+          "千光寺・猫の細道・尾道水道の渡船",
+          "坂と寺と猫、映画の舞台になった港町に行かない？"
+        ],
+        "themes": [
+          "坂の街",
+          "映画の街",
+          "瀬戸内"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hiroshima/onomichi.html",
+        "jalanPath": "/34/LRG_340020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "坂と猫と寺社が点在する瀬戸内の港町。映画の舞台にもなった風景を歩くと物語が生まれそうだ。",
+        "tags": [
+          "坂の街",
+          "映画の街",
+          "瀬戸内"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "千光寺",
+          "猫の細道",
+          "しまなみ海道"
+        ],
+        "distanceMap": {
+          "広島": 2,
+          "大阪": 2,
+          "岡山": 2
+        }
+      },
+      {
+        "id": "mihonoseki",
+        "name": "美保関",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "境港駅",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "広島"
+        ],
+        "access": {
+          "railGateway": "境港駅",
+          "railNote": "バスあり",
+          "railBookingProvider": "e5489",
+          "airportGateway": "米子空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "米子空港から車で30分または境港駅から車で30分。",
+          "美保神社・美保関灯台・青石畳通り",
+          "島根半島東端の静かな港町、行かない？"
+        ],
+        "themes": null,
+        "needsCar": true,
+        "rakutenPath": null,
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "島根半島の東端に静かに佇む漁師町。青石畳の路地と白い灯台が醸し出す静謐な雰囲気が魅力だ。",
+        "tags": [],
+        "jr_region": "west",
+        "hubCity": "境港駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "美保神社",
+          "地蔵崎灯台",
+          "境港"
+        ]
+      },
+      {
+        "id": "kurashiki",
+        "name": "倉敷",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "倉敷駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "広島"
+        ],
+        "access": {
+          "railGateway": "倉敷駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "白壁と柳の美観地区。",
+          "大原美術館・倉敷川・阿智神社",
+          "川舟に揺られながら、江戸の街並みを歩く。"
+        ],
+        "themes": [
+          "美観地区",
+          "美術館",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/okayama/kurashiki.html",
+        "jalanPath": "/33/LRG_330020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白壁の土蔵と柳が並ぶ江戸の面影が残る街。川舟に揺られながら美観地区の静けさと美しさに触れたい。",
+        "tags": [
+          "美観地区",
+          "美術館",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "大原美術館",
+          "倉敷川",
+          "阿智神社"
+        ],
+        "distanceMap": {
+          "大阪": 2,
+          "広島": 1
+        }
+      },
+      {
+        "id": "hagi",
+        "name": "萩",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "萩駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "広島"
+        ],
+        "access": {
+          "railGateway": "萩駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "幕末の志士たちが歩いた城下町。",
+          "萩城跡・松陰神社・菊屋家住宅",
+          "海と山に囲まれた萩は、今も明治維新の空気が漂う。"
+        ],
+        "themes": [
+          "幕末",
+          "城下町",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/yamaguchi/hagi.html",
+        "jalanPath": "/35/LRG_350020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "幕末の志士たちが歩いた山口の城下町。海と山に囲まれた萩には、明治維新の空気が今も漂っている。",
+        "tags": [
+          "幕末",
+          "城下町",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "萩城跡",
+          "松陰神社",
+          "菊屋家住宅"
+        ]
+      },
+      {
+        "id": "shimonoseki",
+        "name": "下関",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "下関駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "広島",
+          "福岡"
+        ],
+        "access": {
+          "railGateway": "下関駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "本州最西端、海峡の街。",
+          "関門橋・唐戸市場・巌流島",
+          "ふぐと潮流、歴史の舞台を歩く旅。"
+        ],
+        "themes": [
+          "海峡",
+          "ふぐ",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/yamaguchi/shimonoseki.html",
+        "jalanPath": "/35/LRG_350010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "本州最西端に位置する関門海峡の街。ふぐ料理と壇ノ浦の歴史が、この街にしかない旅情をつくっている。",
+        "tags": [
+          "海峡",
+          "ふぐ",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "関門橋",
+          "唐戸市場",
+          "巌流島"
+        ]
+      },
+      {
+        "id": "tottori",
+        "name": "鳥取",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "鳥取駅",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "広島"
+        ],
+        "access": {
+          "railGateway": "鳥取駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "砂丘と蟹と名探偵の街。",
+          "鳥取砂丘・砂の美術館・浦富海岸",
+          "日本唯一の砂漠的風景、海と砂の不思議な場所。"
+        ],
+        "themes": [
+          "砂丘",
+          "蟹",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/tottori/tottori.html",
+        "jalanPath": "/31/LRG_310010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "巨大な砂丘と松葉がにが名物の日本海の街。砂漠のような景観と新鮮な海の幸で独特の旅が楽しめる。",
+        "tags": [
+          "砂丘",
+          "蟹",
+          "自然"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鳥取砂丘",
+          "砂の美術館",
+          "浦富海岸"
+        ]
+      },
+      {
+        "id": "tsuwano",
+        "name": "津和野",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "津和野駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "広島"
+        ],
+        "access": {
+          "railGateway": "津和野駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "山陰の小京都、鯉が泳ぐ城下町。",
+          "津和野城跡・太皷谷稲成神社・殿町通り",
+          "白壁の掘割と朱色の千本鳥居、静かな山の街。"
+        ],
+        "themes": [
+          "城下町",
+          "歴史",
+          "神社"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/shimane/tsuwano.html",
+        "jalanPath": "/32/LRG_320030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "山陰の小京都と呼ばれる鯉が泳ぐ城下町。石州瓦の赤と白壁が連なる静かな街で、旅人を落ち着かせる。",
+        "tags": [
+          "城下町",
+          "歴史",
+          "神社"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "太皷谷稲成神社",
+          "津和野城跡",
+          "殿町通り"
+        ]
+      },
+      {
+        "id": "yuda-onsen",
+        "name": "湯田温泉",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "湯田温泉駅",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "広島",
+          "大阪",
+          "福岡"
+        ],
+        "access": {
+          "railGateway": "湯田温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "白狐伝説が残る、山口市街に湧く城下の湯。",
+          "湯田温泉・瑠璃光寺・山口県立美術館",
+          "落ち着いた温泉街で、中原中也の詩碑を歩く。"
+        ],
+        "themes": [
+          "温泉",
+          "城下町",
+          "文学"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/yamaguchi/yuda.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白狐伝説が残る山口市街に湧く城下の湯。中原中也ゆかりの地でもあり、文学と温泉の旅ができる街だ。",
+        "tags": [
+          "温泉",
+          "城下町",
+          "文学"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "瑠璃光寺",
+          "中原中也記念館",
+          "白狐の湯"
+        ]
+      },
+      {
+        "id": "oku-izumo",
+        "name": "奥出雲",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "奥出雲",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "松江",
+          "広島"
+        ],
+        "access": {
+          "railGateway": "木次駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "たたら製鉄の記憶が残る、神話の里の山あい。",
+          "奥出雲たたら・鬼の舌震・おろち湖",
+          "斐伊川の源流、スサノオ伝説が息づく静かな山里。"
+        ],
+        "themes": [
+          "たたら製鉄",
+          "神話",
+          "渓谷"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/shimane/okuizumo.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "たたら製鉄の歴史が残る出雲の山あいの里。神話の記憶と険しい渓谷が、古代への旅を導いてくれる。",
+        "tags": [
+          "たたら製鉄",
+          "神話",
+          "渓谷"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "菅谷たたら山内",
+          "鬼の舌震",
+          "おろち湖"
+        ]
+      },
+      {
+        "id": "takehara",
+        "name": "竹原",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "竹原駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "広島"
+        ],
+        "access": {
+          "railGateway": "竹原駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "安芸の小京都と呼ばれる、江戸の商家が連なる街並み。",
+          "竹原町並み保存地区・普明閣・西方寺",
+          "白壁と格子窓が続く路地に、酒造りの香りが残る。"
+        ],
+        "themes": [
+          "町並み保存",
+          "酒蔵",
+          "歴史"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hiroshima/takehara.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街。静かな港町の佇まいが、瀬戸内の旅情を深める。",
+        "tags": [
+          "町並み保存",
+          "酒蔵",
+          "歴史"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "町並み保存地区",
+          "普明閣",
+          "竹鶴酒造"
+        ]
+      }
+    ],
+    "spots": [
+      {
+        "id": "tsunoshima-bridge",
+        "name": "角島大橋",
+        "type": "spot",
+        "region": "中国",
+        "mapDestination": "角島大橋",
+        "parentHub": null,
+        "departures": [
+          "広島",
+          "福岡"
+        ],
+        "distanceStars": 3,
+        "weight": 0.15,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "access": {
+          "railGateway": "下関駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "エメラルドグリーンの海に架かる、全長1780mの橋。",
+          "橋の上から見渡す角島の青い海が息をのむ絶景。",
+          "山口の最果てに辿り着いた旅人を穏やかに迎える場所。"
+        ],
+        "themes": [
+          "絶景",
+          "海岸",
+          "橋"
+        ],
+        "landmarks": [],
+        "needsCar": true,
+        "hasHotel": false,
+        "hubHotel": null,
+        "description": "透明度の高いエメラルドグリーンの海に架かる山口の絶景橋。橋の上から見渡す島と海のパノラマが訪れた旅人を魅了する。",
+        "tags": [
+          "絶景",
+          "海岸",
+          "橋"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "okayama",
+    "name": "岡山",
+    "type": "hub",
+    "region": "中国",
+    "mapDestination": "岡山駅",
+    "parentHub": null,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": "岡山駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。",
+      "後楽園・岡山城・倉敷美観地区",
+      "日本三名園と白壁の倉敷、行かない？"
+    ],
+    "themes": [
+      "後楽園",
+      "倉敷",
+      "桃"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/okayama/okayama.html",
+    "jalanPath": "/33/LRG_330010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "晴れの国として知られる穏やかな気候の城下町。日本三名園と白壁の美観地区が旅の中心になる。",
+    "tags": [
+      "後楽園",
+      "倉敷",
+      "桃"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "後楽園",
+      "倉敷美観地区",
+      "岡山城"
+    ],
+    "distanceMap": {
+      "大阪": 2,
+      "広島": 1,
+      "高松": 1
+    },
+    "locals": [
+      {
+        "id": "misasa-onsen",
+        "name": "三朝温泉",
+        "type": "local",
+        "region": "中国",
+        "mapDestination": "三朝温泉",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "岡山",
+          "鳥取"
+        ],
+        "access": {
+          "railGateway": "倉吉駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "世界屈指のラジウム泉が湧く、三徳川沿いの温泉地。",
+          "三朝温泉・三朝橋・三徳山投入堂",
+          "川床で湯に浸かる文化と、断崖の修行場が隣り合う。"
+        ],
+        "themes": [
+          "ラジウム温泉",
+          "修行",
+          "川床湯"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/tottori/misasa.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地。投入堂への険しい参拝と湯治の旅が組み合わさる場所だ。",
+        "tags": [
+          "ラジウム温泉",
+          "修行",
+          "川床湯"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "三徳山投入堂",
+          "株湯",
+          "三朝橋"
+        ]
+      }
+    ],
+    "spots": []
+  }
+]

@@ -1,0 +1,1661 @@
+[
+  {
+    "id": "nagoya",
+    "name": "名古屋",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "名古屋駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "広島"
+    ],
+    "access": {
+      "railGateway": "名古屋駅",
+      "railNote": null,
+      "railBookingProvider": "ex",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。",
+      "名古屋城・熱田神宮・東山動植物園",
+      "ひつまぶし・矢場とんなど独自の食文化を試しに行かない？"
+    ],
+    "themes": [
+      "城下町",
+      "グルメ",
+      "ものづくり"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/aichi/nagoya.html",
+    "jalanPath": "/23/LRG_230010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "独自の食文化と城下町の歴史が根づく都市。きしめんや味噌煮込みなど名古屋めしで街の個性を体感する。",
+    "tags": [
+      "城下町",
+      "グルメ",
+      "ものづくり"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "名古屋城",
+      "熱田神宮",
+      "大須商店街"
+    ],
+    "distanceMap": {
+      "東京": 2,
+      "大阪": 2,
+      "広島": 3
+    },
+    "locals": [
+      {
+        "id": "ise",
+        "name": "伊勢",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "伊勢市駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "伊勢市駅",
+          "railNote": null,
+          "railBookingProvider": "e5489",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "名古屋駅から特急で1時間30分。伊勢市駅が観光の起点。",
+          "伊勢神宮（内宮・外宮）・おかげ横丁・二見興玉神社",
+          "一生に一度のお伊勢参り、行かない？"
+        ],
+        "themes": [
+          "神宮",
+          "おかげ横丁",
+          "海の幸"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/mie/ise.html",
+        "jalanPath": "/24/LRG_240020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本最古の神宮が鎮座する神聖な参拝の地。参道の食と文化を楽しみながら、心の旅ができる場所だ。",
+        "tags": [
+          "神宮",
+          "おかげ横丁",
+          "海の幸"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "伊勢神宮",
+          "おかげ横丁",
+          "二見浦"
+        ]
+      },
+      {
+        "id": "shirakawago",
+        "name": "白川郷",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "白川郷バスターミナル",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "名古屋",
+          "金沢"
+        ],
+        "access": {
+          "railGateway": "金沢駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "雪に埋もれた合掌造りの集落。",
+          "荻町城跡展望台・神田家・明善寺",
+          "世界遺産の里、冬の静けさが心に染みる。"
+        ],
+        "themes": [
+          "世界遺産",
+          "合掌造り",
+          "雪景色"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/gifu/shirakawago.html",
+        "jalanPath": "/21/LRG_210070/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "雪に耐える合掌造りの集落が世界遺産に登録された里。季節を通じて日本の原風景と文化が凝縮されている。",
+        "tags": [
+          "世界遺産",
+          "合掌造り",
+          "雪景色"
+        ],
+        "jr_region": "west",
+        "hubCity": "金沢駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "荻町城跡展望台",
+          "神田家",
+          "明善寺"
+        ],
+        "distanceMap": {
+          "東京": 3,
+          "名古屋": 2,
+          "金沢": 1
+        }
+      },
+      {
+        "id": "takayama",
+        "name": "高山",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "高山駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "大阪",
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "高山駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "江戸の町割りが残る飛騨の山里。",
+          "古い町並・高山陣屋・朝市",
+          "山に囲まれた静かな城下町、時間がゆっくり流れる。"
+        ],
+        "themes": [
+          "古い町並",
+          "飛騨",
+          "温泉"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/gifu/takayama.html",
+        "jalanPath": "/21/LRG_210060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "江戸の町割りが残る飛騨山脈に囲まれた城下町。醤油と味噌の香りが漂う蔵の街で、昔ながらの市が今も続く。",
+        "tags": [
+          "古い町並",
+          "飛騨",
+          "温泉"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "古い町並",
+          "高山陣屋",
+          "朝市"
+        ],
+        "distanceMap": {
+          "大阪": 3,
+          "名古屋": 2
+        }
+      },
+      {
+        "id": "toba",
+        "name": "鳥羽",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "鳥羽駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "鳥羽駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "真珠と海女の海、伊勢湾に抱かれた港。",
+          "鳥羽水族館・ミキモト真珠島・海女小屋",
+          "潮の香りと真珠の輝き、伊勢志摩の旅のもうひとつの顔。"
+        ],
+        "themes": [
+          "海",
+          "真珠",
+          "海女"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/mie/toba.html",
+        "jalanPath": "/24/LRG_240040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "伊勢志摩の海女文化と真珠産業が息づく港町。潮風と海の幸、伊勢湾に面した旅情ある景色が出迎えてくれる。",
+        "tags": [
+          "海",
+          "真珠",
+          "海女"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鳥羽水族館",
+          "ミキモト真珠島",
+          "海女小屋"
+        ]
+      },
+      {
+        "id": "inuyama",
+        "name": "犬山",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "犬山駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "名古屋"
+        ],
+        "access": {
+          "railGateway": "犬山駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "木曽川沿いに建つ、現存する国宝の城。",
+          "犬山城・木曽川・博物館明治村",
+          "白亜の天守と川下り、名古屋から半日で江戸気分。"
+        ],
+        "themes": [
+          "城",
+          "歴史",
+          "川"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/aichi/inuyama.html",
+        "jalanPath": "/23/LRG_230040/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "清流沿いに建つ国宝天守を持つ城下町。鵜飼いと明治の遺産が、独特の城下文化を今に伝えている。",
+        "tags": [
+          "城",
+          "歴史",
+          "川"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "犬山城",
+          "木曽川",
+          "博物館明治村"
+        ]
+      },
+      {
+        "id": "kiso",
+        "name": "木曽",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "南木曽駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "名古屋",
+          "長野"
+        ],
+        "access": {
+          "railGateway": "南木曽駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "中山道の宿場町が眠る、木曽の山あい。",
+          "妻籠宿・奈良井宿・馬籠宿",
+          "石畳の宿場、江戸時代の旅人と同じ道を歩く。"
+        ],
+        "themes": [
+          "宿場町",
+          "歴史",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nagano/kiso.html",
+        "jalanPath": "/20/LRG_200060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "中山道の宿場町が今も残る木曽の山あい。江戸の旅情が漂う宿場町に出会える、静かな街道の旅だ。",
+        "tags": [
+          "宿場町",
+          "歴史",
+          "自然"
+        ],
+        "jr_region": "west",
+        "hubCity": "南木曽駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "妻籠宿",
+          "奈良井宿",
+          "馬籠宿"
+        ]
+      },
+      {
+        "id": "tsumago",
+        "name": "妻籠",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "妻籠宿",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "名古屋",
+          "長野"
+        ],
+        "access": {
+          "railGateway": "南木曽駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "石畳の中山道が、宿場の面影をそのまま残す。",
+          "妻籠宿・馬籠峠・南木曽岳",
+          "木曽路に吹く風、旅人が歩いた同じ道を踏みしめる。"
+        ],
+        "themes": [
+          "宿場町",
+          "中山道",
+          "木曽路"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nagano/tsumago.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "石畳と茅葺きの宿場が中山道に残る木曽の里。江戸時代の旅人の目線で、宿場の空気を歩いて感じられる。",
+        "tags": [
+          "宿場町",
+          "中山道",
+          "木曽路"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "妻籠宿本陣",
+          "脇本陣奥谷",
+          "妻籠城跡"
+        ]
+      },
+      {
+        "id": "magome",
+        "name": "馬籠",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "馬籠宿",
+        "parentHub": null,
+        "distanceStars": 3,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "名古屋",
+          "長野"
+        ],
+        "access": {
+          "railGateway": "中津川駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "峠の頂上に立つ宿場、石畳の坂道が山を下る。",
+          "馬籠宿・藤村記念館・神坂峠",
+          "島崎藤村が生まれた木曽路、霧の中の石畳を歩く。"
+        ],
+        "themes": [
+          "宿場町",
+          "文学",
+          "木曽路"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/gifu/magome.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "石畳の坂道が続く中山道の峠の宿場町。藤村の文学と山の清冽な空気が、旅人の足を引き止める場所だ。",
+        "tags": [
+          "宿場町",
+          "文学",
+          "木曽路"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "島崎藤村記念館",
+          "馬籠宿本陣跡",
+          "清水屋資料館"
+        ]
+      },
+      {
+        "id": "gero-onsen",
+        "name": "下呂温泉",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "下呂駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "名古屋",
+          "東京",
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "下呂駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "飛騨川沿いに湯けむりが立ちのぼる、日本三名泉のひとつ。",
+          "下呂温泉・噴泉池・飛騨川",
+          "露天の足湯が街中に点在する、アルプスの麓の温泉地。"
+        ],
+        "themes": [
+          "温泉",
+          "三名泉",
+          "足湯"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/gifu/gero.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉。湯の香りと飛騨の食文化が、温泉旅の王道を体感させる。",
+        "tags": [
+          "温泉",
+          "三名泉",
+          "足湯"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "噴泉池",
+          "下呂温泉合掌村",
+          "温泉寺"
+        ]
+      },
+      {
+        "id": "kamikochi",
+        "name": "上高地",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "上高地バスターミナル",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京",
+          "名古屋",
+          "長野"
+        ],
+        "access": {
+          "railGateway": "松本駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本アルプスの玄関、手つかずの自然が広がる高原。",
+          "河童橋・大正池・梓川",
+          "穂高連峰を映す清流、マイカーが入れない別天地の散歩道。"
+        ],
+        "themes": [
+          "アルプス",
+          "自然",
+          "トレッキング"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/nagano/kamikochi.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "北アルプスの玄関口に広がる手つかずの高原。梓川と雪山の絶景が、山岳旅の始まりを特別なものにする。",
+        "tags": [
+          "アルプス",
+          "自然",
+          "トレッキング"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "河童橋",
+          "大正池",
+          "明神池"
+        ]
+      }
+    ],
+    "spots": [
+      {
+        "id": "senjojiki",
+        "name": "千畳敷カール",
+        "type": "spot",
+        "region": "中部",
+        "mapDestination": "千畳敷カール",
+        "parentHub": null,
+        "departures": [
+          "名古屋",
+          "長野",
+          "東京"
+        ],
+        "distanceMap": {
+          "名古屋": 2,
+          "長野": 1,
+          "東京": 3
+        },
+        "weight": 0.15,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "access": {
+          "railGateway": "駒ヶ根駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "中央アルプスの標高2612mに広がる、氷河地形の圏谷。",
+          "ロープウェイで辿り着く天空の草原に360度の山岳展望が広がる。",
+          "雲の上に立つ感覚が、日常から旅人を切り離してくれる。"
+        ],
+        "themes": [
+          "山岳",
+          "絶景",
+          "高原"
+        ],
+        "landmarks": [],
+        "needsCar": false,
+        "hasHotel": false,
+        "hubHotel": null,
+        "description": "中央アルプスの標高2600mに広がる氷河地形の圏谷。ロープウェイで辿り着く天空の草原と360度の山岳展望が息をのむほど美しい。",
+        "tags": [
+          "山岳",
+          "絶景",
+          "高原"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kanazawa",
+    "name": "金沢",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "金沢駅",
+    "parentHub": null,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "金沢駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。",
+      "兼六園・ひがし茶屋街・近江町市場",
+      "北陸の工芸と鮮魚と温泉、一度は行かない？"
+    ],
+    "themes": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/ishikawa/kanazawa.html",
+    "jalanPath": "/17/LRG_170010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "北陸の工芸と食文化が凝縮された城下町。日本海の幸と伝統工芸品が街のいたるところで出会える。",
+    "tags": [
+      "工芸",
+      "兼六園",
+      "海の幸"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "兼六園",
+      "東茶屋街",
+      "近江町市場"
+    ],
+    "distanceMap": {
+      "東京": 3,
+      "大阪": 3,
+      "名古屋": 2,
+      "仙台": 3
+    },
+    "locals": [
+      {
+        "id": "wajima",
+        "name": "輪島",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "輪島バスターミナル",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "金沢"
+        ],
+        "access": {
+          "railGateway": "金沢駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "能登の先端、輪島塗と朝市の街。",
+          "朝市通り・重蔵神社・白米千枚田",
+          "海と棚田と漆器、日本の原風景が残る能登の突端。"
+        ],
+        "themes": [
+          "輪島塗",
+          "朝市",
+          "棚田"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/ishikawa/wajima.html",
+        "jalanPath": "/17/LRG_170030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "能登半島の先端、輪島塗の伝統と朝市が息づく街。海産物と漆工芸が深く根づいた漁師の街だ。",
+        "tags": [
+          "輪島塗",
+          "朝市",
+          "棚田"
+        ],
+        "jr_region": "west",
+        "hubCity": "金沢駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "朝市通り",
+          "重蔵神社",
+          "白米千枚田"
+        ]
+      },
+      {
+        "id": "kaga-onsen",
+        "name": "加賀温泉郷",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "加賀温泉駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "金沢",
+          "大阪"
+        ],
+        "access": {
+          "railGateway": "加賀温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "九谷焼と山代・山中・片山津が集まる温泉郷。",
+          "山代温泉・山中温泉・片山津温泉",
+          "加賀の茶の湯と名湯、古都の香りが漂う。"
+        ],
+        "themes": [
+          "温泉",
+          "九谷焼",
+          "加賀"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/ishikawa/kaga.html",
+        "jalanPath": "/17/LRG_170020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "九谷焼の産地に広がる北陸の温泉地帯。山代・山中・片山津の三温泉が旅人の疲れを癒してくれる。",
+        "tags": [
+          "温泉",
+          "九谷焼",
+          "加賀"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "山代温泉",
+          "山中温泉",
+          "片山津温泉"
+        ]
+      },
+      {
+        "id": "gokayama",
+        "name": "五箇山",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "五箇山合掌集落",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "金沢"
+        ],
+        "access": {
+          "railGateway": "金沢駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "白川郷の隣、より静かな合掌造りの里。",
+          "菅沼集落・相倉集落・岩瀬家",
+          "世界遺産の棚田と雪、山あいの秘境へ。"
+        ],
+        "themes": [
+          "世界遺産",
+          "歴史",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/toyama/gokayama.html",
+        "jalanPath": "/16/LRG_160020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "白川郷と並ぶ合掌造りの集落が残る山深い里。より静かで素朴な原風景に、じっくりと向き合える場所だ。",
+        "tags": [
+          "世界遺産",
+          "歴史",
+          "自然"
+        ],
+        "jr_region": "west",
+        "hubCity": "高岡駅",
+        "accessFromHub": "バス",
+        "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "菅沼集落",
+          "相倉集落",
+          "岩瀬家"
+        ]
+      },
+      {
+        "id": "himi",
+        "name": "氷見",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "氷見駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "富山",
+          "金沢"
+        ],
+        "access": {
+          "railGateway": "氷見駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "立山連峰を望む、漁師町の朝市。",
+          "氷見漁港・氷見温泉郷・光禅寺",
+          "寒ぶりと朝の海、富山湾越しに見える雪山。"
+        ],
+        "themes": [
+          "漁港",
+          "温泉",
+          "グルメ"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/toyama/himi.html",
+        "jalanPath": "/16/LRG_160010/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "立山連峰を望む富山湾の漁師町。寒ぶりと新鮮な海の幸が、冬の日本海を旅する最大の楽しみになる。",
+        "tags": [
+          "漁港",
+          "温泉",
+          "グルメ"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "氷見漁港朝市",
+          "ひみ番屋街",
+          "立山連峰展望"
+        ]
+      },
+      {
+        "id": "wakura-onsen",
+        "name": "和倉温泉",
+        "type": "local",
+        "region": "中部",
+        "mapDestination": "和倉温泉駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "金沢",
+          "富山"
+        ],
+        "access": {
+          "railGateway": "和倉温泉駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "七尾湾を望む能登半島の温泉地、海越しに夕日が沈む。",
+          "和倉温泉・総湯・能登島",
+          "塩分を含む黄金色の湯と、海の幸が能登の夜を包む。"
+        ],
+        "themes": [
+          "温泉",
+          "能登",
+          "海"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/ishikawa/wakura.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "七尾湾に面した能登半島の名湯。夕日に染まる海と上質な旅館が、加賀屈指の温泉旅を演出している。",
+        "tags": [
+          "温泉",
+          "能登",
+          "海"
+        ],
+        "jr_region": "west",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "総湯",
+          "能登島",
+          "足湯の宿"
+        ]
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "gifu",
+    "name": "岐阜",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "岐阜駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": "岐阜駅",
+      "railNote": null,
+      "railBookingProvider": "e5489",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "名古屋駅から電車で30分。岐阜駅からバスで観光地へ。",
+      "岐阜城・川原町・長良川鵜飼",
+      "信長の城と鵜飼の伝統、行かない？"
+    ],
+    "themes": [
+      "城",
+      "長良川",
+      "鵜飼"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/gifu/gifu.html",
+    "jalanPath": "/21/LRG_210010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "信長ゆかりの城が山頂に立つ、歴史と清流の街。鵜飼いの伝統と川沿いの風情が独特の旅情をもたらす。",
+    "tags": [
+      "城",
+      "長良川",
+      "鵜飼"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "岐阜城",
+      "長良川",
+      "白川郷"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "niigata",
+    "name": "新潟",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "新潟駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台"
+    ],
+    "access": {
+      "railGateway": "新潟駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で2時間。新潟駅が日本海側の玄関口。",
+      "北方文化博物館・古町・日本酒の蔵",
+      "コシヒカリと日本海の魚介、日本酒の産地に行かない？"
+    ],
+    "themes": [
+      "コシヒカリ",
+      "日本酒",
+      "海の幸"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/niigata/niigata.html",
+    "jalanPath": "/15/LRG_150010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "コシヒカリと日本酒の産地として知られる日本海の街。海の幸と酒蔵巡りで新潟の食文化に浸れる。",
+    "tags": [
+      "コシヒカリ",
+      "日本酒",
+      "海の幸"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "萬代橋",
+      "古町",
+      "佐渡島（日帰り）"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "matsumoto",
+    "name": "松本",
+    "type": "hub",
+    "region": "中部",
+    "mapDestination": "松本駅",
+    "parentHub": null,
+    "weight": 0.35,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "名古屋",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "松本駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "アルプスを望む城下町。",
+      "松本城・縄手通り・旧開智学校",
+      "黒い天守と雪山のコントラストは忘れられない。"
+    ],
+    "themes": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/matsumoto.html",
+    "jalanPath": "/20/LRG_200010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "アルプスを望む黒い天守が象徴する山岳の城下町。城下の路地と明治の遺産が重なり、歩くほどに発見がある。",
+    "tags": [
+      "城",
+      "アルプス",
+      "城下町"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "松本城",
+      "縄手通り",
+      "旧開智学校"
+    ],
+    "distanceMap": {
+      "名古屋": 2,
+      "長野": 1
+    },
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "atami",
+    "name": "熱海",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "熱海駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "熱海駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で45分。熱海駅から温泉街まで徒歩圏内。",
+      "熱海温泉・MOA美術館・起雲閣",
+      "昭和レトロな温泉保養地、週末に行かない？"
+    ],
+    "themes": [
+      "温泉",
+      "海",
+      "リゾート"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/atami.html",
+    "jalanPath": "/22/LRG_220010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "昭和レトロと温泉が絡み合う海辺の保養地。海を見ながら温泉でゆっくりと時間を過ごせる。",
+    "tags": [
+      "温泉",
+      "海",
+      "リゾート"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "熱海城",
+      "起雲閣",
+      "MOA美術館"
+    ]
+  },
+  {
+    "id": "karuizawa",
+    "name": "軽井沢",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "軽井沢駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "軽井沢駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で1時間20分。軽井沢駅が起点。",
+      "旧軽井沢銀座・白糸の滝・雲場池",
+      "高原の空気と別荘文化、体感しに行かない？"
+    ],
+    "themes": [
+      "高原",
+      "リゾート",
+      "アウトレット"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/nagano/karuizawa.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "高原の空気と別荘文化が溶け合う避暑地。森の中をサイクリングしながら旅の気分を変えたい。",
+    "tags": [
+      "高原",
+      "リゾート",
+      "アウトレット"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "旧軽井沢銀座",
+      "雲場池",
+      "白糸の滝"
+    ]
+  },
+  {
+    "id": "fujikawaguchiko",
+    "name": "富士河口湖",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "河口湖駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "河口湖駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "新宿からバスで約2時間。河口湖駅または高速バスが起点。",
+      "河口湖・忍野八海・富士山五合目",
+      "湖面に映る富士山、見に行かない？"
+    ],
+    "themes": [
+      "富士山",
+      "湖",
+      "温泉"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html",
+    "jalanPath": "/19/LRG_190010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "富士山を映す湖と雄大な自然に包まれた高原地。四季ごとに変わる湖面の表情と富士の景色が旅を彩る。",
+    "tags": [
+      "富士山",
+      "湖",
+      "温泉"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "河口湖",
+      "富士山五合目",
+      "富岳風穴"
+    ]
+  },
+  {
+    "id": "shuzenji",
+    "name": "修善寺",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "修善寺駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "修善寺駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "伊豆最古の温泉、竹林に静まる。",
+      "修禅寺・竹林の小径・独鈷の湯",
+      "川のせせらぎと湯煙、ここにしかない夜がある。"
+    ],
+    "themes": [
+      "温泉",
+      "竹林",
+      "歴史"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/shuzenji.html",
+    "jalanPath": "/22/LRG_220020/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "竹林に囲まれた伊豆最古の温泉郷。川のせせらぎと湯煙の中で、静かな旅の時間を過ごせる。",
+    "tags": [
+      "温泉",
+      "竹林",
+      "歴史"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "修禅寺",
+      "竹林の小径",
+      "独鈷の湯"
+    ]
+  },
+  {
+    "id": "shimoda",
+    "name": "下田",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "伊豆急下田駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "静岡"
+    ],
+    "access": {
+      "railGateway": "伊豆急下田駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "黒船が来た港まち、開国の面影。",
+      "了仙寺・白浜海岸・爪木崎",
+      "太平洋に開けた伊豆の端、静かな青がある。"
+    ],
+    "themes": [
+      "歴史",
+      "海",
+      "開国"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/shizuoka/shimoda.html",
+    "jalanPath": "/22/LRG_220060/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "黒船来航の歴史が残る伊豆半島南端の港町。太平洋に開けた青い海と開国の面影が旅情を誘う。",
+    "tags": [
+      "歴史",
+      "海",
+      "開国"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "了仙寺",
+      "白浜海岸",
+      "爪木崎"
+    ]
+  },
+  {
+    "id": "hakuba",
+    "name": "白馬",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "白馬駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "長野"
+    ],
+    "access": {
+      "railGateway": "白馬駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "北アルプスの峰々を望む高原リゾート。",
+      "八方尾根・白馬大雪渓・岩岳",
+      "冬はスキー、夏は登山、四季を通じて山が呼ぶ。"
+    ],
+    "themes": [
+      "スキー",
+      "登山",
+      "アルプス"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/nagano/hakuba.html",
+    "jalanPath": "/20/LRG_200020/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "北アルプスの峰々を望む高原の山岳リゾート。スキーとトレッキングで一年中アクティブな旅ができる。",
+    "tags": [
+      "スキー",
+      "登山",
+      "アルプス"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "八方尾根",
+      "白馬大雪渓",
+      "岩岳"
+    ]
+  },
+  {
+    "id": "tateyama-kurobe",
+    "name": "立山黒部",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "立山駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "富山"
+    ],
+    "access": {
+      "railGateway": "立山駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "3000メートルの稜線を歩く、アルペンルート。",
+      "室堂・雪の大谷・黒部ダム",
+      "一年中雪が残る峰々、富山から標高3000mへ。"
+    ],
+    "themes": [
+      "山岳",
+      "絶景",
+      "自然"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/toyama/tateyama.html",
+    "jalanPath": "/16/LRG_160030/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "3000メートル級の稜線を歩くアルペンルート。切り立つ雪壁と巨大ダムが、山岳観光の頂点を体感させる。",
+    "tags": [
+      "山岳",
+      "絶景",
+      "自然"
+    ],
+    "jr_region": "west",
+    "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "室堂",
+      "雪の大谷",
+      "黒部ダム"
+    ]
+  },
+  {
+    "id": "obuse",
+    "name": "小布施",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "小布施駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "小布施駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "栗と北斎が息づく、善光寺平を見渡す小さな文化の町。",
+      "北斎館・栗菓子・岩松院",
+      "街歩きが心地よい密度で詰まった、信州の美しい小町。"
+    ],
+    "themes": [
+      "北斎",
+      "栗",
+      "街歩き"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/obuse.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町。善光寺平を見渡す高台に、洗練された街並みが広がる。",
+    "tags": [
+      "北斎",
+      "栗",
+      "街歩き"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "北斎館",
+      "岩松院",
+      "小布施堂"
+    ]
+  },
+  {
+    "id": "nozawa-onsen",
+    "name": "野沢温泉",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "野沢温泉",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 1.2,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "飯山駅",
+      "railNote": "バスあり",
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "村全体が共同湯、信州の山里に湧く13の外湯。",
+      "野沢温泉・大湯・麻釜",
+      "雪深い温泉スキー村、熱湯で煮る野沢菜の匂いが漂う。"
+    ],
+    "themes": [
+      "温泉",
+      "スキー",
+      "外湯めぐり"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/nozawa.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "村全体が温泉場になった信州の山里。13の外湯を浴衣で渡り歩く旅が、ここでしか味わえない体験だ。",
+    "tags": [
+      "温泉",
+      "スキー",
+      "外湯めぐり"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "大湯",
+      "麻釜",
+      "野沢温泉スキー場"
+    ]
+  },
+  {
+    "id": "bessho-onsen",
+    "name": "別所温泉",
+    "type": "local",
+    "region": "中部",
+    "mapDestination": "別所温泉駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 1.2,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野"
+    ],
+    "access": {
+      "railGateway": "別所温泉駅",
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "信州最古の温泉と言われる、長野盆地を見渡す静かな湯の里。",
+      "別所温泉・北向観音・安楽寺",
+      "三つの外湯と国宝の塔が点在する、静かな山間の温泉集落。"
+    ],
+    "themes": [
+      "温泉",
+      "古刹",
+      "外湯"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/nagano/bessho.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "信州最古と言われる温泉地、観音様が守る山里。静かな田舎の湯と古い建築が旅に落ち着きを与える。",
+    "tags": [
+      "温泉",
+      "古刹",
+      "外湯"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "北向観音",
+      "安楽寺八角三重塔",
+      "大師湯"
+    ]
+  }
+]

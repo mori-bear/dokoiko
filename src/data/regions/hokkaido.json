@@ -1,0 +1,594 @@
+[
+  {
+    "id": "sapporo",
+    "name": "札幌",
+    "type": "hub",
+    "region": "北海道",
+    "mapDestination": "札幌駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "福岡",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "新千歳空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
+      "大通公園・北海道神宮・サッポロビール博物館",
+      "ラーメン・スープカレー・海鮮丼、食の都に行かない？"
+    ],
+    "themes": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/sapporo.html",
+    "jalanPath": "/01/LRG_010030/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "北海道の中枢として食と自然が充実した大都市。ラーメンや海鮮丼、夜景と雪まつりが旅を引き立てる。",
+    "tags": [
+      "グルメ",
+      "自然",
+      "雪まつり"
+    ],
+    "jr_region": "east",
+    "airportAccess": "JR快速エアポート",
+    "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "大通公園",
+      "北海道庁旧本庁舎",
+      "円山動物園"
+    ],
+    "distanceMap": {
+      "東京": 4,
+      "大阪": 4,
+      "名古屋": 4,
+      "福岡": 5,
+      "広島": 5,
+      "高松": 5
+    },
+    "locals": [
+      {
+        "id": "otaru",
+        "name": "小樽",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "小樽駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "小樽駅",
+          "railNote": null,
+          "railBookingProvider": "ekinet",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "札幌駅から電車で40分。小樽駅から運河まで徒歩10分。",
+          "小樽運河・小樽オルゴール堂・堺町通り（寿司）",
+          "北の港町で運河と寿司、行かない？"
+        ],
+        "themes": [
+          "運河",
+          "海の幸",
+          "ガラス工芸"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hokkaido/otaru.html",
+        "jalanPath": "/01/LRG_010140/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "北の港町に残る運河と倉庫群が旅情を誘う街。新鮮な海の幸とガラス工芸品が楽しめる観光地だ。",
+        "tags": [
+          "運河",
+          "海の幸",
+          "ガラス工芸"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "小樽運河",
+          "堺町通り",
+          "天狗山"
+        ]
+      },
+      {
+        "id": "furano",
+        "name": "富良野",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "富良野駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "富良野駅",
+          "railNote": null,
+          "railBookingProvider": "ekinet",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "旭川駅から電車で1時間。富良野駅が観光の起点。",
+          "ファーム富田（ラベンダー）・北の国から聖地・富良野チーズ工房",
+          "紫のラベンダー畑、一度は見に行かない？"
+        ],
+        "themes": [
+          "ラベンダー",
+          "農場",
+          "スキー"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hokkaido/furano.html",
+        "jalanPath": "/01/LRG_010170/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "ラベンダー畑と大自然が広がる北海道の高原地帯。紫の絨毯と青空が広がる夏の景色は絵のように美しい。",
+        "tags": [
+          "ラベンダー",
+          "農場",
+          "スキー"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "ファーム富田",
+          "美瑛の丘",
+          "富良野スキー場"
+        ]
+      },
+      {
+        "id": "toyako",
+        "name": "洞爺湖",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "洞爺駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "洞爺駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "昭和新山と有珠山を望む、静かな湖畔。",
+          "洞爺湖・有珠山ロープウェイ・サイロ展望台",
+          "湖面に映る山、温泉と花火、北海道の大地を感じる。"
+        ],
+        "themes": [
+          "湖",
+          "温泉",
+          "火山"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hokkaido/toyako.html",
+        "jalanPath": "/01/LRG_010140/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "活火山と湖が共存する北海道の絶景エリア。湖畔の温泉と自然の造形美が四季を通じて旅人を迎える。",
+        "tags": [
+          "湖",
+          "温泉",
+          "火山"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "洞爺湖",
+          "有珠山ロープウェイ",
+          "サイロ展望台"
+        ]
+      },
+      {
+        "id": "noboribetsu",
+        "name": "登別",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "登別駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "登別駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "北海道最大の温泉地、地獄谷へ。",
+          "地獄谷・大湯沼・クマ牧場",
+          "硫黄が立ち込める地獄谷、北海道の野生を感じる一泊。"
+        ],
+        "themes": [
+          "温泉",
+          "地獄谷",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hokkaido/noboribetsu.html",
+        "jalanPath": "/01/LRG_010130/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "北海道有数の温泉地、鉄泉が湧く地獄の景観。豊富な湯量と多彩な泉質が温泉ファンを惹きつける。",
+        "tags": [
+          "温泉",
+          "地獄谷",
+          "自然"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "地獄谷",
+          "大湯沼",
+          "クマ牧場"
+        ]
+      },
+      {
+        "id": "shiretoko",
+        "name": "知床",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "知床斜里駅",
+        "parentHub": null,
+        "distanceStars": 4,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "知床斜里駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": "女満別空港",
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "世界自然遺産、手つかずの原生林と海。",
+          "知床五湖・カムイワッカの滝・羅臼岳",
+          "クマと鮭と流氷、地の果ての自然がここにある。"
+        ],
+        "themes": [
+          "世界遺産",
+          "自然",
+          "原生林"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hokkaido/shiretoko.html",
+        "jalanPath": "/01/LRG_010290/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "世界自然遺産に認定された原生の大地と海。野生動物が息づく秘境で、手つかずの自然に向き合える。",
+        "tags": [
+          "世界遺産",
+          "自然",
+          "原生林"
+        ],
+        "jr_region": "east",
+        "airportAccess": "バス・レンタカー",
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "知床五湖",
+          "カムイワッカの滝",
+          "羅臼岳"
+        ]
+      },
+      {
+        "id": "jozankei",
+        "name": "定山渓",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "定山渓温泉",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "札幌駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "札幌の奥座敷、豊平川沿いの温泉郷。",
+          "定山渓温泉・二見岩・定山渓神社",
+          "紅葉の渓谷と湯けむり、北の静かな宿がある。"
+        ],
+        "themes": [
+          "温泉",
+          "紅葉",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/hokkaido/jozankei.html",
+        "jalanPath": "/01/LRG_010220/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "札幌市街に近い豊平川沿いの温泉郷。紅葉と雪の中で、北海道の湯に浸かれる隠れた奥座敷だ。",
+        "tags": [
+          "温泉",
+          "紅葉",
+          "自然"
+        ],
+        "jr_region": "east",
+        "hubCity": "札幌駅",
+        "accessFromHub": "定山渓温泉バス",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "定山渓温泉街",
+          "二見公園",
+          "豊平峡ダム"
+        ]
+      },
+      {
+        "id": "biei",
+        "name": "美瑛",
+        "type": "local",
+        "region": "北海道",
+        "mapDestination": "美瑛駅",
+        "parentHub": null,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "旭川",
+          "札幌"
+        ],
+        "access": {
+          "railGateway": "美瑛駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "丘と畑が織りなすパッチワークの大地。",
+          "パッチワークの路・青い池・四季彩の丘",
+          "北海道の空と丘、絵画の中に迷い込んだような一日。"
+        ],
+        "themes": [
+          "自然",
+          "写真映え",
+          "農村"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/hokkaido/biei.html",
+        "jalanPath": "/01/LRG_010370/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "丘と農場が織りなすパッチワークの大地。四季ごとに色を変える丘の景色が、いつまでも旅人の目を離さない。",
+        "tags": [
+          "自然",
+          "写真映え",
+          "農村"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "青い池",
+          "四季彩の丘",
+          "パッチワークの路"
+        ],
+        "distanceMap": {
+          "旭川": 2,
+          "札幌": 2
+        }
+      }
+    ],
+    "spots": []
+  },
+  {
+    "id": "asahikawa",
+    "name": "旭川",
+    "type": "hub",
+    "region": "北海道",
+    "mapDestination": "旭川駅",
+    "parentHub": null,
+    "distanceStars": 2,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "旭川駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "札幌駅から特急で1時間30分。旭川駅が道北の拠点。",
+      "旭山動物園・神楽岡公園・旭川ラーメン",
+      "行動展示で有名な日本屈指の動物園、見に行かない？"
+    ],
+    "themes": [
+      "動物園",
+      "ラーメン",
+      "自然"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/asahikawa.html",
+    "jalanPath": "/01/LRG_010060/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "北海道第二の都市として、雄大な自然と動物の王国が広がる街。冬の厳寒と夏の緑が四季の旅を彩る。",
+    "tags": [
+      "動物園",
+      "ラーメン",
+      "自然"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "旭山動物園",
+      "美瑛（青い池）",
+      "富良野ラベンダー畑"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "kushiro",
+    "name": "釧路",
+    "type": "hub",
+    "region": "北海道",
+    "mapDestination": "釧路駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "釧路駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": "釧路空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "札幌から飛行機で1時間または特急で3時間30分。釧路駅が起点。",
+      "釧路湿原・和商市場・釧路フィッシャーマンズワーフ",
+      "日本最大の湿原と夕暮れの港町、行かない？"
+    ],
+    "themes": [
+      "湿原",
+      "丹頂鶴",
+      "炉端焼き"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/kushiro.html",
+    "jalanPath": "/01/LRG_010110/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "日本最大の湿原と丹頂鶴が生息する、霧の街。炉端焼きと朝の市場で北の幸をたっぷり堪能できる。",
+    "tags": [
+      "湿原",
+      "丹頂鶴",
+      "炉端焼き"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "釧路湿原",
+      "和商市場",
+      "丹頂の里"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "hakodate",
+    "name": "函館",
+    "type": "hub",
+    "region": "北海道",
+    "mapDestination": "函館駅",
+    "parentHub": null,
+    "distanceStars": 3,
+    "weight": 0.35,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "access": {
+      "railGateway": "函館駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から新幹線で4時間。函館駅からトラムで各地へ。",
+      "函館山夜景・元町・五稜郭",
+      "日本三大夜景の一つ、海と異国の港町に行かない？"
+    ],
+    "themes": [
+      "夜景",
+      "朝市",
+      "洋館"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/hokkaido/hakodate.html",
+    "jalanPath": "/01/LRG_010050/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "異国情緒と坂道、港が溶け合う北海道南端の港町。夜景と朝市と洋館が三拍子揃った旅先だ。",
+    "tags": [
+      "夜景",
+      "朝市",
+      "洋館"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "函館山（夜景）",
+      "元町洋館街",
+      "函館朝市"
+    ],
+    "locals": [],
+    "spots": []
+  }
+]

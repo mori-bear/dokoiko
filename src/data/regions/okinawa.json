@@ -1,0 +1,287 @@
+[
+  {
+    "id": "naha",
+    "name": "那覇",
+    "type": "hub",
+    "region": "沖縄",
+    "mapDestination": "那覇空港",
+    "parentHub": null,
+    "distanceStars": 4,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡",
+      "名古屋",
+      "札幌",
+      "仙台",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "那覇空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京から飛行機で約3時間。那覇空港からモノレールで市内へ。",
+      "首里城・国際通り・牧志公設市場",
+      "沖縄の歴史と食文化、国際通りから探しに行かない？"
+    ],
+    "themes": [
+      "琉球文化",
+      "海",
+      "グルメ"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/okinawa/naha.html",
+    "jalanPath": "/47/LRG_470010/",
+    "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470010%2F",
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fnaha.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "琉球王国の歴史と南国の空気が混ざり合う街。沖縄グルメと伝統文化に触れながら海風を感じる旅。",
+    "tags": [
+      "琉球文化",
+      "海",
+      "グルメ"
+    ],
+    "jr_region": "okinawa",
+    "airportAccess": "ゆいレール",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "首里城",
+      "国際通り",
+      "牧志公設市場"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "ishigaki",
+    "name": "石垣島",
+    "type": "island",
+    "region": "沖縄",
+    "mapDestination": "石垣港",
+    "parentHub": null,
+    "distanceStars": 5,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "石垣空港",
+      "ferryGateway": "石垣港"
+    },
+    "atmosphere": [
+      "那覇から飛行機で1時間。石垣空港から市街まで車で30分。",
+      "川平湾・竹富島（フェリー10分）・石垣市公設市場",
+      "八重山の透明な海と離島文化、見に行かない？"
+    ],
+    "themes": [
+      "離島",
+      "サンゴ礁",
+      "星空"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/ishigakijima.html",
+    "jalanPath": "/47/LRG_470030/",
+    "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470030%2F",
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fishigakijima.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "八重山の文化と透明度抜群の珊瑚礁が広がる離島。ダイビングや離島めぐりで唯一無二の海を体感できる。",
+    "tags": [
+      "離島",
+      "サンゴ礁",
+      "星空"
+    ],
+    "jr_region": "okinawa",
+    "access_city": "石垣島",
+    "port": "石垣港",
+    "airportAccess": "バス・タクシー",
+    "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "川平湾",
+      "竹富島",
+      "白保サンゴ礁"
+    ]
+  },
+  {
+    "id": "tokashiki-jima",
+    "name": "渡嘉敷島",
+    "type": "island",
+    "region": "沖縄",
+    "mapDestination": "渡嘉敷港",
+    "parentHub": "那覇",
+    "distanceStars": 5,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "那覇空港",
+      "ferryGateway": "那覇港"
+    },
+    "atmosphere": [
+      "那覇港から高速フェリーで35分。島内はレンタサイクルで移動。",
+      "阿波連ビーチ・渡嘉敷ビーチ・ケラマブルーの海",
+      "那覇から30分で行けるケラマの海、行かない？"
+    ],
+    "themes": null,
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/tokashikijima.html",
+    "jalanPath": null,
+    "hasHotel": true,
+    "hubHotel": "naha",
+    "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
+    "tags": [],
+    "jr_region": "okinawa",
+    "access_city": "那覇",
+    "port": "那覇港",
+    "airportAccess": "ゆいレール",
+    "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "阿波連ビーチ",
+      "渡嘉敷ビーチ",
+      "展望台"
+    ]
+  },
+  {
+    "id": "kumejima",
+    "name": "久米島",
+    "type": "island",
+    "region": "沖縄",
+    "mapDestination": "久米島空港",
+    "parentHub": "那覇",
+    "distanceStars": 5,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "久米島空港",
+      "ferryGateway": "那覇港"
+    },
+    "atmosphere": [
+      "那覇から飛行機で30分。島内移動はレンタカーが便利。",
+      "はての浜（無人島）・畳石・ウミガメ館",
+      "手つかずの白砂浜と沖縄の原風景を体感しに行かない？"
+    ],
+    "themes": [
+      "離島",
+      "砂浜",
+      "ダイビング"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/kumejima.html",
+    "jalanPath": "/47/LRG_470060/",
+    "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470060%2F",
+    "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fkumejima.html&link_type=text",
+    "hasHotel": true,
+    "hubHotel": "naha",
+    "description": "手つかずの白砂浜と沖縄の原風景が残る離島。独特の地形と透明度抜群の海で深く自然に浸れる場所だ。",
+    "tags": [
+      "離島",
+      "砂浜",
+      "ダイビング"
+    ],
+    "jr_region": "okinawa",
+    "access_city": "那覇",
+    "port": "那覇港",
+    "airportAccess": "バス・タクシー",
+    "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "はての浜",
+      "畳石",
+      "久米島ウミガメ館"
+    ]
+  },
+  {
+    "id": "miyakojima",
+    "name": "宮古島",
+    "type": "island",
+    "region": "沖縄",
+    "mapDestination": "宮古空港",
+    "parentHub": null,
+    "distanceStars": 5,
+    "weight": 1.5,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡",
+      "名古屋"
+    ],
+    "access": {
+      "railGateway": null,
+      "railNote": null,
+      "railBookingProvider": null,
+      "airportGateway": "宮古空港",
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "那覇から飛行機で1時間。宮古空港から市街まで車で20分。",
+      "与那覇前浜・伊良部大橋・池間島",
+      "日本屈指の透明度、宮古ブルーを見に行かない？"
+    ],
+    "themes": [
+      "離島",
+      "ダイビング",
+      "ビーチ"
+    ],
+    "needsCar": true,
+    "rakutenPath": "/yado/okinawa/miyakojima.html",
+    "jalanPath": "/47/LRG_470040/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "宮古ブルーと称される透明度抜群の海を持つ離島。橋で結ばれた島々と無人のビーチで南国の美しさに浸れる。",
+    "tags": [
+      "離島",
+      "ダイビング",
+      "ビーチ"
+    ],
+    "jr_region": "okinawa",
+    "access_city": null,
+    "port": null,
+    "airportAccess": "バス・タクシー",
+    "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "与那覇前浜",
+      "伊良部大橋",
+      "砂山ビーチ"
+    ]
+  }
+]

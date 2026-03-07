@@ -1,0 +1,694 @@
+[
+  {
+    "id": "yokohama",
+    "name": "横浜",
+    "type": "hub",
+    "region": "関東",
+    "mapDestination": "横浜駅",
+    "parentHub": null,
+    "distanceStars": 1,
+    "weight": 0.3,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "access": {
+      "railGateway": "横浜駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "東京駅から電車で30分。横浜駅周辺が観光の起点。",
+      "みなとみらい・中華街・山下公園",
+      "港町の異国情緒を日帰りで味わいに行かない？"
+    ],
+    "themes": [
+      "港町",
+      "中華街",
+      "夜景"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/kanagawa/yokohama.html",
+    "jalanPath": "/14/LRG_140020/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "港町の異国情緒と近代的な都市が交わる街。海と中華料理と夜景、東京の隣に別の顔がある。",
+    "tags": [
+      "港町",
+      "中華街",
+      "夜景"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "みなとみらい",
+      "山下公園",
+      "中華街"
+    ],
+    "locals": [],
+    "spots": []
+  },
+  {
+    "id": "tokyo",
+    "name": "東京",
+    "type": "hub",
+    "region": "関東",
+    "mapDestination": "東京駅",
+    "parentHub": null,
+    "weight": 0.3,
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "名古屋",
+      "福岡",
+      "札幌",
+      "仙台",
+      "広島",
+      "高松"
+    ],
+    "access": {
+      "railGateway": "東京駅",
+      "railNote": null,
+      "railBookingProvider": "ekinet",
+      "airportGateway": null,
+      "ferryGateway": null
+    },
+    "atmosphere": [
+      "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
+      "浅草・渋谷・東京スカイツリー",
+      "首都の多様な顔を歩いて探しに行かない？"
+    ],
+    "themes": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "needsCar": false,
+    "rakutenPath": "/yado/tokyo/tokyo.html",
+    "jalanPath": "/13/LRG_130010/",
+    "hasHotel": true,
+    "hubHotel": null,
+    "description": "多様な文化と最先端が混在する首都。下町から近代的な摩天楼まで、何度訪れても新たな発見がある。",
+    "tags": [
+      "都市",
+      "グルメ",
+      "エンタメ"
+    ],
+    "jr_region": "east",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=70",
+    "landmarks": [
+      "浅草寺",
+      "新宿御苑",
+      "渋谷スクランブル交差点"
+    ],
+    "distanceMap": {
+      "大阪": 3,
+      "名古屋": 2,
+      "福岡": 4,
+      "札幌": 3,
+      "仙台": 2,
+      "広島": 4,
+      "高松": 4
+    },
+    "locals": [
+      {
+        "id": "kamakura",
+        "name": "鎌倉",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "鎌倉駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "鎌倉駅",
+          "railNote": null,
+          "railBookingProvider": "ekinet",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "東京駅から電車で約1時間。鎌倉駅から主要スポットへ歩いて行ける。",
+          "鶴岡八幡宮・高徳院（大仏）・長谷寺",
+          "古都の寺社と海、一度は歩かない？"
+        ],
+        "themes": [
+          "寺社",
+          "海",
+          "古都"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/kanagawa/kamakura.html",
+        "jalanPath": "/14/LRG_140050/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "古都の寺社と海が共存する歴史の街。潮の香りとともに、中世の空気を歩いて感じる。",
+        "tags": [
+          "寺社",
+          "海",
+          "古都"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "鎌倉大仏",
+          "鶴岡八幡宮",
+          "長谷寺"
+        ]
+      },
+      {
+        "id": "nikko",
+        "name": "日光",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "日光駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "日光駅",
+          "railNote": null,
+          "railBookingProvider": "ekinet",
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "東京から電車で約2時間。日光駅からバスで社寺エリアへ。",
+          "日光東照宮・中禅寺湖・華厳ノ滝",
+          "世界遺産の社寺群と滝、行かない？"
+        ],
+        "themes": [
+          "世界遺産",
+          "自然",
+          "温泉"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/tochigi/nikko.html",
+        "jalanPath": "/09/LRG_090020/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "山と湖と滝に囲まれた世界遺産の聖地。社寺群と大自然が一体となった歴史ある山岳地。",
+        "tags": [
+          "世界遺産",
+          "自然",
+          "温泉"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "東照宮",
+          "中禅寺湖",
+          "竜頭の滝"
+        ]
+      },
+      {
+        "id": "kouzushima",
+        "name": "神津島",
+        "type": "island",
+        "region": "伊豆諸島",
+        "mapDestination": "神津島港",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": "竹芝客船ターミナル"
+        },
+        "atmosphere": [
+          "竹芝客船ターミナルから高速船で約2時間30分。",
+          "赤崎遊歩道・天上山・神津島の星空（日本三選星空）",
+          "東京から行ける最高の星空と秘境の海、行かない？"
+        ],
+        "themes": [
+          "離島",
+          "ハイキング",
+          "ダイビング"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/tokyo/kouzushima.html",
+        "jalanPath": "/13/LRG_130120/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島。山と海と集落が凝縮された、ゆっくりとした時間が流れる島だ。",
+        "tags": [
+          "離島",
+          "ハイキング",
+          "ダイビング"
+        ],
+        "jr_region": "east",
+        "access_city": "東京",
+        "port": "竹芝客船ターミナル",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "前浜",
+          "天上山",
+          "多幸湾"
+        ]
+      },
+      {
+        "id": "hakone",
+        "name": "箱根",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "箱根湯本駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "箱根湯本駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "山と湖に抱かれた温泉郷。",
+          "芦ノ湖・大涌谷・箱根関所",
+          "富士を仰ぎながら、一湯どうぞ。"
+        ],
+        "themes": [
+          "温泉",
+          "富士山",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/kanagawa/hakone.html",
+        "jalanPath": "/14/LRG_140060/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "山と湖と温泉が揃う関東を代表する保養地。富士山を望みながらゆったりと温泉や美術館を楽しめる。",
+        "tags": [
+          "温泉",
+          "富士山",
+          "自然"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "芦ノ湖",
+          "大涌谷",
+          "箱根関所"
+        ]
+      },
+      {
+        "id": "kusatsu-onsen",
+        "name": "草津温泉",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "長野原草津口駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "長野原草津口駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "日本三名泉のひとつ、源泉かけ流し。",
+          "湯畑・西の河原・熱の湯",
+          "硫黄の香りと白い湯気、草津の朝。"
+        ],
+        "themes": [
+          "温泉",
+          "湯畑",
+          "秘湯"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/gunma/kusatsu.html",
+        "jalanPath": "/10/LRG_100050/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯。硫黄の香りと白い湯煙が漂う広場が旅の中心だ。",
+        "tags": [
+          "温泉",
+          "湯畑",
+          "秘湯"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "湯畑",
+          "西の河原",
+          "熱の湯"
+        ]
+      },
+      {
+        "id": "izu-oshima",
+        "name": "伊豆大島",
+        "type": "island",
+        "region": "伊豆諸島",
+        "mapDestination": "元町港",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.5,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": null,
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": "竹芝客船ターミナル"
+        },
+        "atmosphere": [
+          "東京から船で行ける火山の島。",
+          "三原山・砂の砂漠・波浮港",
+          "都会の喧騒を離れ、島の時間に身を委ねよう。"
+        ],
+        "themes": [
+          "島",
+          "火山",
+          "自然"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/tokyo/oshima.html",
+        "jalanPath": "/13/LRG_130100/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "伊豆諸島最大の火山島。荒涼とした山の地形と温かな漁村文化が共存し、島ならではの旅情が広がる。",
+        "tags": [
+          "島",
+          "火山",
+          "自然"
+        ],
+        "jr_region": "east",
+        "access_city": "東京",
+        "port": "竹芝客船ターミナル",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "三原山",
+          "波浮港",
+          "砂漠"
+        ]
+      },
+      {
+        "id": "takao",
+        "name": "高尾山",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "高尾山口駅",
+        "parentHub": null,
+        "distanceStars": 1,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "高尾山口駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "都心から一時間、599メートルの霊峰。",
+          "ケーブルカー・薬王院・山頂の展望台",
+          "天狗の山で深呼吸、東京の空気が変わる。"
+        ],
+        "themes": [
+          "ハイキング",
+          "寺社",
+          "自然"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/tokyo/takao.html",
+        "jalanPath": "/13/LRG_130030/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "都市に隣接しながら深い自然が残る霊峰の山。山岳信仰の歴史と豊かな森が、本格的な山旅を楽しませてくれる。",
+        "tags": [
+          "ハイキング",
+          "寺社",
+          "自然"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "薬王院",
+          "高尾山頂",
+          "もみじ台"
+        ]
+      },
+      {
+        "id": "tateyama-chiba",
+        "name": "館山",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "館山駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "館山駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "南房総の先端、黒潮が運ぶ温暖な海。",
+          "城山公園・沖ノ島・館山城",
+          "砂浜と花畑、東京から一番近い南国がある。"
+        ],
+        "themes": [
+          "海",
+          "花",
+          "自然"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/chiba/tateyama.html",
+        "jalanPath": "/12/LRG_120110/",
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総。のどかな漁村の雰囲気と海の幸が旅を充実させる。",
+        "tags": [
+          "海",
+          "花",
+          "自然"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "沖ノ島",
+          "城山公園",
+          "花畑"
+        ]
+      },
+      {
+        "id": "shima-onsen",
+        "name": "四万温泉",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "四万温泉",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "中之条駅",
+          "railNote": "バスあり",
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "奥利根の山あいに湧く、千年の湯治場。",
+          "四万温泉・積善館・四万川",
+          "大正時代の建物が現役で使われる、赤い橋と青い川。"
+        ],
+        "themes": [
+          "温泉",
+          "湯治",
+          "大正建築"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/gunma/shima.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "奥利根の山あいに湧く千年の歴史を持つ湯治場。江戸時代から続く古い旅館と山の静けさが、旅に特別感をもたらす。",
+        "tags": [
+          "温泉",
+          "湯治",
+          "大正建築"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "積善館",
+          "四万川ダム",
+          "甌穴"
+        ]
+      },
+      {
+        "id": "mashiko",
+        "name": "益子",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "益子駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "daytrip",
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "益子駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "陶土の香りが漂う、関東随一の焼き物の里。",
+          "益子焼・濱田庄司記念館・つかもと",
+          "ざっくりとした土の器が並ぶ窯元、作り手の顔が見える町。"
+        ],
+        "themes": [
+          "陶芸",
+          "益子焼",
+          "窯元"
+        ],
+        "needsCar": true,
+        "rakutenPath": "/yado/tochigi/mashiko.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "陶土の香りが漂う関東随一の焼き物の里。窯元が並ぶ街を巡りながら、日本の陶芸文化に触れられる。",
+        "tags": [
+          "陶芸",
+          "益子焼",
+          "窯元"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "つかもと",
+          "濱田庄司記念館",
+          "益子焼窯元共販センター"
+        ]
+      },
+      {
+        "id": "minakami-onsen",
+        "name": "水上温泉",
+        "type": "local",
+        "region": "関東",
+        "mapDestination": "水上駅",
+        "parentHub": null,
+        "distanceStars": 2,
+        "weight": 1.2,
+        "stayAllowed": [
+          "1night"
+        ],
+        "departures": [
+          "東京"
+        ],
+        "access": {
+          "railGateway": "水上駅",
+          "railNote": null,
+          "railBookingProvider": null,
+          "airportGateway": null,
+          "ferryGateway": null
+        },
+        "atmosphere": [
+          "谷川岳を背に、利根川の源流が流れる山の温泉地。",
+          "水上温泉・諏訪峡・谷川岳",
+          "ラフティングと露天風呂が同じ渓谷に共存する、群馬の奥座敷。"
+        ],
+        "themes": [
+          "温泉",
+          "ラフティング",
+          "谷川岳"
+        ],
+        "needsCar": false,
+        "rakutenPath": "/yado/gunma/minakami.html",
+        "jalanPath": null,
+        "hasHotel": true,
+        "hubHotel": null,
+        "description": "険しい双耳峰を背に利根川の源流が流れる山の温泉地。清流ラフティングと露天風呂が夏の旅を盛り上げる。",
+        "tags": [
+          "温泉",
+          "ラフティング",
+          "谷川岳"
+        ],
+        "jr_region": "east",
+        "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
+        "landmarks": [
+          "諏訪峡",
+          "谷川岳",
+          "湯テルメ谷川"
+        ]
+      }
+    ],
+    "spots": []
+  }
+]
