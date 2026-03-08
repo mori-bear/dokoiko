@@ -73,7 +73,7 @@ function draw() {
 
   const fromCity       = DEPARTURE_CITY_INFO[state.departure];
   const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
-  const hotelLinks     = buildHotelLinks(city, state.destinations);
+  const hotelLinks     = buildHotelLinks(city);
 
   renderResult({
     city,

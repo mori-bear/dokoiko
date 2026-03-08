@@ -41,10 +41,6 @@
       "中華街"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kanagawa/yokohama.html",
-    "jalanPath": "/14/LRG_140020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "港町の異国情緒と近代的な都市が交わる街。海と中華料理と夜景、東京の隣に別の顔がある。",
     "tags": [
       "港町",
@@ -53,7 +49,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "横浜"
   },
   {
     "id": "kamakura",
@@ -97,10 +94,6 @@
       "長谷寺"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kanagawa/kamakura.html",
-    "jalanPath": "/14/LRG_140050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "古都の寺社と海が共存する歴史の街。潮の香りとともに、中世の空気を歩いて感じる。",
     "tags": [
       "寺社",
@@ -109,7 +102,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鎌倉"
   },
   {
     "id": "atami",
@@ -152,10 +146,6 @@
       "MOA美術館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shizuoka/atami.html",
-    "jalanPath": "/22/LRG_220010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "昭和レトロと温泉が絡み合う海辺の保養地。海を見ながら温泉でゆっくりと時間を過ごせる。",
     "tags": [
       "温泉",
@@ -164,7 +154,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "熱海"
   },
   {
     "id": "nikko",
@@ -208,10 +199,6 @@
       "竜頭の滝"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tochigi/nikko.html",
-    "jalanPath": "/09/LRG_090020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "山と湖と滝に囲まれた世界遺産の聖地。社寺群と大自然が一体となった歴史ある山岳地。",
     "tags": [
       "世界遺産",
@@ -220,7 +207,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "日光"
   },
   {
     "id": "karuizawa",
@@ -263,10 +251,6 @@
       "白糸の滝"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/nagano/karuizawa.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "高原の空気と別荘文化が溶け合う避暑地。森の中をサイクリングしながら旅の気分を変えたい。",
     "tags": [
       "高原",
@@ -275,7 +259,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "軽井沢"
   },
   {
     "id": "fujikawaguchiko",
@@ -321,10 +306,6 @@
       "富岳風穴"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html",
-    "jalanPath": "/19/LRG_190010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "富士山を映す湖と雄大な自然に包まれた高原地。四季ごとに変わる湖面の表情と富士の景色が旅を彩る。",
     "tags": [
       "富士山",
@@ -333,7 +314,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "富士河口湖"
   },
   {
     "id": "nagoya-t",
@@ -378,10 +360,6 @@
       "大須商店街"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/aichi/nagoya.html",
-    "jalanPath": "/23/LRG_230010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "独自の食文化と城下町の歴史が根づく都市。きしめんや味噌煮込みなど名古屋めしで街の個性を体感する。",
     "tags": [
       "城下町",
@@ -390,7 +368,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "名古屋"
   },
   {
     "id": "sendai-t",
@@ -434,10 +413,6 @@
       "仙台城跡"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/miyagi/sendai.html",
-    "jalanPath": "/04/LRG_040010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "杜の都と呼ばれる緑豊かな城下町。牛タンや海鮮を楽しみながら東北最大の街を歩く。",
     "tags": [
       "城下町",
@@ -446,7 +421,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "仙台"
   },
   {
     "id": "kanazawa-t",
@@ -492,10 +468,6 @@
       "近江町市場"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ishikawa/kanazawa.html",
-    "jalanPath": "/17/LRG_170010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北陸の工芸と食文化が凝縮された城下町。日本海の幸と伝統工芸品が街のいたるところで出会える。",
     "tags": [
       "工芸",
@@ -504,7 +476,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "金沢"
   },
   {
     "id": "osaka-t",
@@ -553,10 +526,6 @@
       "通天閣"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/osaka/osaka.html",
-    "jalanPath": "/27/LRG_270010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "食い倒れの街として知られる活気ある商都。笑い声と屋台の香りに包まれた路地が、旅人を飽きさせない。",
     "tags": [
       "グルメ",
@@ -565,7 +534,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "大阪"
   },
   {
     "id": "kyoto-t",
@@ -611,10 +581,6 @@
       "嵐山"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kyoto/kyoto.html",
-    "jalanPath": "/26/LRG_260010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "古都の寺社仏閣と伝統文化が今も息づく街。四季を通じて移り変わる古都の景色に心を奪われる。",
     "tags": [
       "寺社",
@@ -623,7 +589,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "京都"
   },
   {
     "id": "hiroshima-t",
@@ -671,10 +638,6 @@
       "縮景園"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hiroshima/hiroshima.html",
-    "jalanPath": "/34/LRG_340010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "平和の願いを刻んだ歴史と現代が共存する街。牡蠣や汁なし担担麺など地元の食文化も見どころだ。",
     "tags": [
       "平和",
@@ -684,7 +647,8 @@
     "jr_region": "west",
     "airportAccess": "バス・タクシー",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "広島"
   },
   {
     "id": "fukuoka-t",
@@ -734,10 +698,6 @@
       "櫛田神社"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/fukuoka/fukuoka.html",
-    "jalanPath": "/40/LRG_400010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "九州の玄関口として屋台文化と活気が溢れる街。もつ鍋やラーメンなど福岡グルメで夜を楽しみたい。",
     "tags": [
       "ラーメン",
@@ -747,7 +707,8 @@
     "jr_region": "kyushu",
     "airportAccess": "地下鉄",
     "image": "https://images.unsplash.com/photo-1601823984263-44b96d82f2a9?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "博多"
   },
   {
     "id": "sapporo-t",
@@ -795,10 +756,6 @@
       "円山動物園"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/sapporo.html",
-    "jalanPath": "/01/LRG_010030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北海道の中枢として食と自然が充実した大都市。ラーメンや海鮮丼、夜景と雪まつりが旅を引き立てる。",
     "tags": [
       "グルメ",
@@ -808,7 +765,8 @@
     "jr_region": "east",
     "airportAccess": "JR快速エアポート",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "札幌"
   },
   {
     "id": "nara",
@@ -853,10 +811,6 @@
       "奈良公園（鹿）"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nara/nara.html",
-    "jalanPath": "/29/LRG_290010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "鹿と仏教建築が共存する千年の古都。大仏と寺社を巡りながら日本の原風景に出会える。",
     "tags": [
       "世界遺産",
@@ -865,7 +819,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "奈良"
   },
   {
     "id": "kobe",
@@ -909,10 +864,6 @@
       "六甲山"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hyogo/kobe.html",
-    "jalanPath": "/28/LRG_280010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "港と異国情緒が溶け合うモダンな港町。山と海の間に広がる夜景と洋風建築が旅情を高める。",
     "tags": [
       "港町",
@@ -921,7 +872,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "神戸"
   },
   {
     "id": "himeji",
@@ -965,10 +917,6 @@
       "書写山円教寺"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hyogo/himeji.html",
-    "jalanPath": "/28/LRG_280050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白鷺城と呼ばれる世界遺産の名城を持つ街。圧倒的な存在感の天守閣と和の庭園が旅の目玉だ。",
     "tags": [
       "城",
@@ -977,7 +925,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "姫路"
   },
   {
     "id": "wakayama",
@@ -1022,10 +971,6 @@
       "白浜海岸"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/wakayama/wakayama.html",
-    "jalanPath": "/30/LRG_300010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "紀伊半島に広がる山と海と霊場の豊かな土地。世界遺産の聖地と白砂の海岸が、一度ではとても歩ききれない。",
     "tags": [
       "高野山",
@@ -1034,7 +979,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "和歌山"
   },
   {
     "id": "okayama-o",
@@ -1080,10 +1026,6 @@
       "岡山城"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/okayama/okayama.html",
-    "jalanPath": "/33/LRG_330010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "晴れの国として知られる穏やかな気候の城下町。日本三名園と白壁の美観地区が旅の中心になる。",
     "tags": [
       "後楽園",
@@ -1092,7 +1034,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "岡山"
   },
   {
     "id": "tokyo-o",
@@ -1141,10 +1084,6 @@
       "渋谷スクランブル交差点"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/tokyo/tokyo.html",
-    "jalanPath": "/13/LRG_130010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "多様な文化と最先端が混在する首都。下町から近代的な摩天楼まで、何度訪れても新たな発見がある。",
     "tags": [
       "都市",
@@ -1153,7 +1092,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "東京"
   },
   {
     "id": "ishigaki",
@@ -1199,12 +1139,8 @@
       "白保サンゴ礁"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/okinawa/ishigakijima.html",
-    "jalanPath": "/47/LRG_470030/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470030%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fishigakijima.html&link_type=text",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "八重山の文化と透明度抜群の珊瑚礁が広がる離島。ダイビングや離島めぐりで唯一無二の海を体感できる。",
     "tags": [
       "離島",
@@ -1216,7 +1152,8 @@
     "port": "石垣港",
     "airportAccess": "バス・タクシー",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "石垣島"
   },
   {
     "id": "gifu",
@@ -1260,10 +1197,6 @@
       "白川郷"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gifu/gifu.html",
-    "jalanPath": "/21/LRG_210010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "信長ゆかりの城が山頂に立つ、歴史と清流の街。鵜飼いの伝統と川沿いの風情が独特の旅情をもたらす。",
     "tags": [
       "城",
@@ -1272,7 +1205,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "岐阜"
   },
   {
     "id": "ise",
@@ -1316,10 +1250,6 @@
       "二見浦"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/mie/ise.html",
-    "jalanPath": "/24/LRG_240020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本最古の神宮が鎮座する神聖な参拝の地。参道の食と文化を楽しみながら、心の旅ができる場所だ。",
     "tags": [
       "神宮",
@@ -1328,7 +1258,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "伊勢"
   },
   {
     "id": "saga",
@@ -1372,10 +1303,6 @@
       "嬉野温泉"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/saga/saga.html",
-    "jalanPath": "/41/LRG_410010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "有田焼と弥生遺跡が共存する静かな城下町。陶芸と歴史の奥深さを掘り下げたい人に向いた街だ。",
     "tags": [
       "陶芸",
@@ -1384,7 +1311,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "佐賀"
   },
   {
     "id": "kumamoto",
@@ -1428,10 +1356,6 @@
       "水前寺成趣園"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kumamoto/kumamoto.html",
-    "jalanPath": "/43/LRG_430010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "加藤清正の名城と火の国の食文化が根づく街。馬刺しや辛子蓮根など九州の個性が詰まっている。",
     "tags": [
       "城",
@@ -1440,7 +1364,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "熊本"
   },
   {
     "id": "nagasaki",
@@ -1483,10 +1408,6 @@
       "出島"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagasaki/nagasaki.html",
-    "jalanPath": "/42/LRG_420010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "異国との交流が紡いだ独特の歴史と文化を持つ港町。坂道と教会と長崎ちゃんぽんが、ここだけの旅をつくる。",
     "tags": [
       "坂の街",
@@ -1495,7 +1416,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "長崎"
   },
   {
     "id": "beppu",
@@ -1538,10 +1460,6 @@
       "湯布院"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/oita/beppu.html",
-    "jalanPath": "/44/LRG_440030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市。個性豊かな源泉と海を望む露天が、旅人を癒す。",
     "tags": [
       "温泉",
@@ -1550,7 +1468,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "別府"
   },
   {
     "id": "kagoshima",
@@ -1593,10 +1512,6 @@
       "霧島温泉"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kagoshima/kagoshima.html",
-    "jalanPath": "/46/LRG_460010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "湾の対岸に活火山がそびえる薩摩の城下町。黒豚や焼酎など薩摩文化の精髄を味わいに行きたい。",
     "tags": [
       "桜島",
@@ -1605,7 +1520,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1584647347483-22b66260dfff?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "鹿児島"
   },
   {
     "id": "miyazaki",
@@ -1649,10 +1565,6 @@
       "高千穂峡"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/miyazaki/miyazaki.html",
-    "jalanPath": "/45/LRG_450010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "神話の地として知られる太平洋に面した温暖な街。マンゴーや地鶏など南国グルメと海の景色が魅力だ。",
     "tags": [
       "海",
@@ -1661,7 +1573,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮崎"
   },
   {
     "id": "otaru",
@@ -1705,10 +1618,6 @@
       "天狗山"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/otaru.html",
-    "jalanPath": "/01/LRG_010140/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北の港町に残る運河と倉庫群が旅情を誘う街。新鮮な海の幸とガラス工芸品が楽しめる観光地だ。",
     "tags": [
       "運河",
@@ -1717,7 +1626,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "小樽"
   },
   {
     "id": "asahikawa",
@@ -1760,10 +1670,6 @@
       "富良野ラベンダー畑"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/asahikawa.html",
-    "jalanPath": "/01/LRG_010060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北海道第二の都市として、雄大な自然と動物の王国が広がる街。冬の厳寒と夏の緑が四季の旅を彩る。",
     "tags": [
       "動物園",
@@ -1772,7 +1678,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "旭川"
   },
   {
     "id": "furano",
@@ -1815,10 +1722,6 @@
       "富良野スキー場"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hokkaido/furano.html",
-    "jalanPath": "/01/LRG_010170/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "ラベンダー畑と大自然が広がる北海道の高原地帯。紫の絨毯と青空が広がる夏の景色は絵のように美しい。",
     "tags": [
       "ラベンダー",
@@ -1827,7 +1730,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "富良野"
   },
   {
     "id": "kushiro",
@@ -1871,10 +1775,6 @@
       "丹頂の里"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/kushiro.html",
-    "jalanPath": "/01/LRG_010110/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本最大の湿原と丹頂鶴が生息する、霧の街。炉端焼きと朝の市場で北の幸をたっぷり堪能できる。",
     "tags": [
       "湿原",
@@ -1883,7 +1783,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "釧路"
   },
   {
     "id": "hakodate",
@@ -1926,10 +1827,6 @@
       "函館朝市"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/hakodate.html",
-    "jalanPath": "/01/LRG_010050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "異国情緒と坂道、港が溶け合う北海道南端の港町。夜景と朝市と洋館が三拍子揃った旅先だ。",
     "tags": [
       "夜景",
@@ -1938,7 +1835,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "函館"
   },
   {
     "id": "matsushima",
@@ -1982,10 +1880,6 @@
       "五大堂"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/miyagi/matsushima.html",
-    "jalanPath": "/04/LRG_040030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本三景のひとつ、松の島々が浮かぶ美しい海。牡蠣と遊覧船で絶景をゆっくり楽しめる。",
     "tags": [
       "日本三景",
@@ -1994,7 +1888,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松島"
   },
   {
     "id": "yamagata",
@@ -2038,10 +1933,6 @@
       "上杉神社"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamagata/yamagata.html",
-    "jalanPath": "/06/LRG_060010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "奥山に刻まれた句碑と銀山温泉が輝く山の街。芭蕉が詠んだ岩肌と雪の温泉街が今も残っている。",
     "tags": [
       "山寺",
@@ -2050,7 +1941,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "山形"
   },
   {
     "id": "morioka",
@@ -2093,10 +1985,6 @@
       "石割桜"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/iwate/morioka.html",
-    "jalanPath": "/03/LRG_030010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "わんこそばと冷麺が名物の岩手の城下町。南部鉄器と岩手山を背景にした風景が落ち着いた旅をつくる。",
     "tags": [
       "わんこそば",
@@ -2105,7 +1993,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "盛岡"
   },
   {
     "id": "niigata",
@@ -2148,10 +2037,6 @@
       "佐渡島（日帰り）"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/niigata/niigata.html",
-    "jalanPath": "/15/LRG_150010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "コシヒカリと日本酒の産地として知られる日本海の街。海の幸と酒蔵巡りで新潟の食文化に浸れる。",
     "tags": [
       "コシヒカリ",
@@ -2160,7 +2045,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "新潟"
   },
   {
     "id": "miyajima",
@@ -2202,10 +2088,6 @@
       "弥山"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hiroshima/miyajima.html",
-    "jalanPath": "/34/LRG_340060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "海に浮かぶ鳥居が象徴する世界遺産の神の島。干潮と満潮で変わる海と社の表情が旅の記憶に深く刻まれる。",
     "tags": [
       "厳島神社",
@@ -2216,7 +2098,8 @@
     "access_city": null,
     "port": null,
     "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮島"
   },
   {
     "id": "onomichi",
@@ -2262,10 +2145,6 @@
       "しまなみ海道"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hiroshima/onomichi.html",
-    "jalanPath": "/34/LRG_340020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "坂と猫と寺社が点在する瀬戸内の港町。映画の舞台にもなった風景を歩くと物語が生まれそうだ。",
     "tags": [
       "坂の街",
@@ -2274,7 +2153,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "尾道"
   },
   {
     "id": "matsuyama",
@@ -2318,10 +2198,6 @@
       "坂の上の雲ミュージアム"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ehime/matsuyama.html",
-    "jalanPath": "/38/LRG_380010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "道後温泉を擁する四国最大の都市。夏目漱石ゆかりの地を歩きながら、千年の湯に浸かる旅ができる。",
     "tags": [
       "道後温泉",
@@ -2330,7 +2206,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松山"
   },
   {
     "id": "tokushima",
@@ -2374,10 +2251,6 @@
       "阿波踊り会館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/tokushima/tokushima.html",
-    "jalanPath": "/36/LRG_360010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "阿波踊りが夏の夜を染める、四国の玄関口。渦巻く海峡と世界最大規模の陶板美術館が旅を充実させる。",
     "tags": [
       "阿波踊り",
@@ -2386,7 +2259,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "徳島"
   },
   {
     "id": "shodoshima",
@@ -2428,10 +2302,6 @@
       "オリーブ公園"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kagawa/shodoshima.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "オリーブと醤油の産地として知られる瀬戸内の島。干潮時に渡れる砂の道と穏やかな島時間が心を癒す。",
     "tags": [
       "オリーブ",
@@ -2442,7 +2312,8 @@
     "access_city": "高松",
     "port": "高松港",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "小豆島"
   },
   {
     "id": "kochi",
@@ -2485,10 +2356,6 @@
       "ひろめ市場"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kochi/kochi.html",
-    "jalanPath": "/39/LRG_390010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "坂本龍馬ゆかりの自由民権精神が根づく城下町。カツオのたたきとよさこいが土佐の旅を盛り上げる。",
     "tags": [
       "カツオ",
@@ -2497,7 +2364,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高知"
   },
   {
     "id": "mihonoseki",
@@ -2538,17 +2406,14 @@
       "境港"
     ],
     "needsCar": true,
-    "rakutenPath": null,
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "島根半島の東端に静かに佇む漁師町。青石畳の路地と白い灯台が醸し出す静謐な雰囲気が魅力だ。",
     "tags": [],
     "jr_region": "west",
     "hubCity": "境港駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "米子"
   },
   {
     "id": "ryujin-onsen",
@@ -2591,17 +2456,14 @@
       "高野龍神スカイライン"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/wakayama/ryujin.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": "wakayama",
     "description": "紀伊山地の奥深くに湧く日本三美人の湯。杉木立と渓流に包まれた秘湯で、日常を忘れて浸かりたい。",
     "tags": [],
     "jr_region": "west",
     "hubCity": "紀伊田辺駅",
     "accessFromHub": "龍神バス",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白浜"
   },
   {
     "id": "naha",
@@ -2651,12 +2513,8 @@
       "牧志公設市場"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/okinawa/naha.html",
-    "jalanPath": "/47/LRG_470010/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470010%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fnaha.html&link_type=text",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "琉球王国の歴史と南国の空気が混ざり合う街。沖縄グルメと伝統文化に触れながら海風を感じる旅。",
     "tags": [
       "琉球文化",
@@ -2666,7 +2524,8 @@
     "jr_region": "okinawa",
     "airportAccess": "ゆいレール",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "tokashiki-jima",
@@ -2707,10 +2566,6 @@
       "展望台"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/okinawa/tokashikijima.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": "naha",
     "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
     "tags": [],
     "jr_region": "okinawa",
@@ -2718,7 +2573,8 @@
     "port": "那覇港",
     "airportAccess": "ゆいレール",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "渡嘉敷島"
   },
   {
     "id": "kumejima",
@@ -2763,12 +2619,8 @@
       "久米島ウミガメ館"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/okinawa/kumejima.html",
-    "jalanPath": "/47/LRG_470060/",
     "jalanUrl": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559852&vc_url=https%3A%2F%2Fwww.jalan.net%2F47%2FLRG_470060%2F",
     "rakutenUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fokinawa%2Fkumejima.html&link_type=text",
-    "hasHotel": true,
-    "hubHotel": "naha",
     "description": "手つかずの白砂浜と沖縄の原風景が残る離島。独特の地形と透明度抜群の海で深く自然に浸れる場所だ。",
     "tags": [
       "離島",
@@ -2780,7 +2632,8 @@
     "port": "那覇港",
     "airportAccess": "バス・タクシー",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "久米島"
   },
   {
     "id": "miyakojima",
@@ -2826,10 +2679,6 @@
       "砂山ビーチ"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/okinawa/miyakojima.html",
-    "jalanPath": "/47/LRG_470040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "宮古ブルーと称される透明度抜群の海を持つ離島。橋で結ばれた島々と無人のビーチで南国の美しさに浸れる。",
     "tags": [
       "離島",
@@ -2841,7 +2690,8 @@
     "port": null,
     "airportAccess": "バス・タクシー",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮古島"
   },
   {
     "id": "kouzushima",
@@ -2883,10 +2733,6 @@
       "多幸湾"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tokyo/kouzushima.html",
-    "jalanPath": "/13/LRG_130120/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島。山と海と集落が凝縮された、ゆっくりとした時間が流れる島だ。",
     "tags": [
       "離島",
@@ -2897,7 +2743,8 @@
     "access_city": "東京",
     "port": "竹芝客船ターミナル",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "神津島"
   },
   {
     "id": "hakone",
@@ -2941,10 +2788,6 @@
       "箱根関所"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kanagawa/hakone.html",
-    "jalanPath": "/14/LRG_140060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "山と湖と温泉が揃う関東を代表する保養地。富士山を望みながらゆったりと温泉や美術館を楽しめる。",
     "tags": [
       "温泉",
@@ -2953,7 +2796,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "箱根"
   },
   {
     "id": "shuzenji",
@@ -2996,10 +2840,6 @@
       "独鈷の湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shizuoka/shuzenji.html",
-    "jalanPath": "/22/LRG_220020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "竹林に囲まれた伊豆最古の温泉郷。川のせせらぎと湯煙の中で、静かな旅の時間を過ごせる。",
     "tags": [
       "温泉",
@@ -3008,7 +2848,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "修善寺"
   },
   {
     "id": "kusatsu-onsen",
@@ -3051,10 +2892,6 @@
       "熱の湯"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/gunma/kusatsu.html",
-    "jalanPath": "/10/LRG_100050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯。硫黄の香りと白い湯煙が漂う広場が旅の中心だ。",
     "tags": [
       "温泉",
@@ -3063,7 +2900,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "草津温泉"
   },
   {
     "id": "shimoda",
@@ -3107,10 +2945,6 @@
       "爪木崎"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shizuoka/shimoda.html",
-    "jalanPath": "/22/LRG_220060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "黒船来航の歴史が残る伊豆半島南端の港町。太平洋に開けた青い海と開国の面影が旅情を誘う。",
     "tags": [
       "歴史",
@@ -3119,7 +2953,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "下田"
   },
   {
     "id": "izu-oshima",
@@ -3161,10 +2996,6 @@
       "砂漠"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tokyo/oshima.html",
-    "jalanPath": "/13/LRG_130100/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "伊豆諸島最大の火山島。荒涼とした山の地形と温かな漁村文化が共存し、島ならではの旅情が広がる。",
     "tags": [
       "島",
@@ -3175,7 +3006,8 @@
     "access_city": "東京",
     "port": "竹芝客船ターミナル",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "伊豆大島"
   },
   {
     "id": "shirakawago-t",
@@ -3224,10 +3056,6 @@
       "明善寺"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/gifu/shirakawago.html",
-    "jalanPath": "/21/LRG_210070/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "雪に耐える合掌造りの集落が世界遺産に登録された里。季節を通じて日本の原風景と文化が凝縮されている。",
     "tags": [
       "世界遺産",
@@ -3238,7 +3066,8 @@
     "hubCity": "金沢駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白川郷"
   },
   {
     "id": "arima-onsen",
@@ -3282,10 +3111,6 @@
       "太閤の湯殿館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hyogo/arima.html",
-    "jalanPath": "/28/LRG_280010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本書紀にも記された六甲山麓の古湯。金泉と銀泉という二種の湯が、長い歴史と共に旅人を迎える。",
     "tags": [
       "温泉",
@@ -3294,7 +3119,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "有馬温泉"
   },
   {
     "id": "kinosaki-onsen",
@@ -3339,10 +3165,6 @@
       "まんだら湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hyogo/kinosaki.html",
-    "jalanPath": "/28/LRG_280060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "浴衣で七つの外湯を巡る情緒ある温泉街。川沿いの柳と下駄の音が昭和の旅情をよみがえらせる。",
     "tags": [
       "温泉",
@@ -3351,7 +3173,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "城崎温泉"
   },
   {
     "id": "kurashiki-o",
@@ -3396,10 +3219,6 @@
       "阿智神社"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/okayama/kurashiki.html",
-    "jalanPath": "/33/LRG_330020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白壁の土蔵と柳が並ぶ江戸の面影が残る街。川舟に揺られながら美観地区の静けさと美しさに触れたい。",
     "tags": [
       "美観地区",
@@ -3408,7 +3227,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "倉敷"
   },
   {
     "id": "shirahama-o",
@@ -3451,10 +3271,6 @@
       "千畳敷"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/wakayama/shirahama.html",
-    "jalanPath": "/30/LRG_300020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白い砂浜と透明な海が広がる南紀のリゾート地。温泉と海水浴が同時に楽しめる和歌山を代表する観光地。",
     "tags": [
       "海",
@@ -3463,7 +3279,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白浜"
   },
   {
     "id": "takayama-o",
@@ -3507,10 +3324,6 @@
       "朝市"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gifu/takayama.html",
-    "jalanPath": "/21/LRG_210060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "江戸の町割りが残る飛騨山脈に囲まれた城下町。醤油と味噌の香りが漂う蔵の街で、昔ながらの市が今も続く。",
     "tags": [
       "古い町並",
@@ -3519,7 +3332,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高山"
   },
   {
     "id": "toba",
@@ -3563,10 +3377,6 @@
       "海女小屋"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/mie/toba.html",
-    "jalanPath": "/24/LRG_240040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "伊勢志摩の海女文化と真珠産業が息づく港町。潮風と海の幸、伊勢湾に面した旅情ある景色が出迎えてくれる。",
     "tags": [
       "海",
@@ -3575,7 +3385,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳥羽"
   },
   {
     "id": "matsumoto-n",
@@ -3620,10 +3431,6 @@
       "旧開智学校"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/matsumoto.html",
-    "jalanPath": "/20/LRG_200010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "アルプスを望む黒い天守が象徴する山岳の城下町。城下の路地と明治の遺産が重なり、歩くほどに発見がある。",
     "tags": [
       "城",
@@ -3632,7 +3439,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松本"
   },
   {
     "id": "yufuin",
@@ -3676,10 +3484,6 @@
       "由布院玉の湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/oita/yufuin.html",
-    "jalanPath": "/44/LRG_440020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "霧立つ温泉郷として知られる九州の奥座敷。朝霧の中の旅館で静かな湯と山の自然を楽しめる。",
     "tags": [
       "温泉",
@@ -3688,7 +3492,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "湯布院"
   },
   {
     "id": "kurokawa-k",
@@ -3736,10 +3541,6 @@
       "山河"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kumamoto/kurokawa.html",
-    "jalanPath": "/43/LRG_430060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "杉林に隠れた小さな温泉旅館が集まる秘湯の里。手形一枚で複数の露天風呂を渡り歩く体験が独特だ。",
     "tags": [
       "温泉",
@@ -3750,7 +3551,8 @@
     "hubCity": "熊本駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "黒川温泉"
   },
   {
     "id": "aso",
@@ -3795,10 +3597,6 @@
       "大観峰"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kumamoto/aso.html",
-    "jalanPath": "/43/LRG_430020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "世界最大級のカルデラと活火山が広がる大自然の地。広大な草原と火口の青緑が圧倒的な景色をつくっている。",
     "tags": [
       "火山",
@@ -3807,7 +3605,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "阿蘇"
   },
   {
     "id": "yakushima",
@@ -3851,10 +3650,6 @@
       "千尋の滝"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kagoshima/yakushima.html",
-    "jalanPath": "/46/LRG_460040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "世界遺産に認定された原始の森が島を覆う、屋久島。樹齢数千年の巨木が立ち並ぶ苔の森に圧倒される。",
     "tags": [
       "世界遺産",
@@ -3866,7 +3661,8 @@
     "port": null,
     "airportAccess": "バス・タクシー",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "屋久島"
   },
   {
     "id": "amakusa",
@@ -3909,10 +3705,6 @@
       "イルカウォッチング"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kumamoto/amakusa.html",
-    "jalanPath": "/43/LRG_430040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "世界遺産のキリシタン集落と海に囲まれた九州の島。潮風と信仰の歴史が重なる旅が、この島だけのものだ。",
     "tags": [
       "世界遺産",
@@ -3923,7 +3715,8 @@
     "hubCity": "熊本駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "天草"
   },
   {
     "id": "hiraizumi",
@@ -3968,10 +3761,6 @@
       "達谷窟"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/iwate/hiraizumi.html",
-    "jalanPath": "/03/LRG_030020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "奥州藤原氏の黄金文化が栄えた世界遺産の地。金色に輝く堂と庭園が、往時の繁栄をありありと今に伝える。",
     "tags": [
       "世界遺産",
@@ -3980,7 +3769,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "平泉"
   },
   {
     "id": "kakunodate",
@@ -4025,10 +3815,6 @@
       "青柳家"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/akita/kakunodate.html",
-    "jalanPath": "/05/LRG_050010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "武家屋敷と枝垂れ桜が残る秋田の城下町。江戸時代の街並みがそのまま残り、静かな旅の舞台になる。",
     "tags": [
       "武家屋敷",
@@ -4037,7 +3823,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "角館"
   },
   {
     "id": "aizu",
@@ -4080,10 +3867,6 @@
       "大内宿"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/fukushima/aizu.html",
-    "jalanPath": "/07/LRG_070020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白虎隊の悲話で知られる東北の誇り高い城下町。会津の歴史と温泉が心に刻まれる深い旅ができる場所だ。",
     "tags": [
       "城",
@@ -4092,7 +3875,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "会津若松"
   },
   {
     "id": "zaosan",
@@ -4135,10 +3919,6 @@
       "樹氷"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/yamagata/zao.html",
-    "jalanPath": "/06/LRG_060010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯。季節ごとに異なる表情を見せる蔵王は、何度でも訪れたくなる。",
     "tags": [
       "火口湖",
@@ -4147,7 +3927,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "蔵王"
   },
   {
     "id": "hagi",
@@ -4190,10 +3971,6 @@
       "菊屋家住宅"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamaguchi/hagi.html",
-    "jalanPath": "/35/LRG_350020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "幕末の志士たちが歩いた山口の城下町。海と山に囲まれた萩には、明治維新の空気が今も漂っている。",
     "tags": [
       "幕末",
@@ -4202,7 +3979,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "萩"
   },
   {
     "id": "shimonoseki",
@@ -4247,10 +4025,6 @@
       "巌流島"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamaguchi/shimonoseki.html",
-    "jalanPath": "/35/LRG_350010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "本州最西端に位置する関門海峡の街。ふぐ料理と壇ノ浦の歴史が、この街にしかない旅情をつくっている。",
     "tags": [
       "海峡",
@@ -4259,7 +4033,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "下関"
   },
   {
     "id": "naoshima",
@@ -4301,10 +4076,6 @@
       "ANDO MUSEUM"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kagawa/naoshima.html",
-    "jalanPath": "/37/LRG_370020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "現代アートが島全体を美術館にした瀬戸内の離島。自然と建築と作品が一体となった体験が待っている。",
     "tags": [
       "現代アート",
@@ -4315,7 +4086,8 @@
     "access_city": "高松",
     "port": "高松港",
     "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "直島"
   },
   {
     "id": "kotohira",
@@ -4359,10 +4131,6 @@
       "旧金毘羅大芝居"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kagawa/kotohira.html",
-    "jalanPath": "/37/LRG_370030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "785段の石段で知られる金刀比羅宮の門前町。参道を登り切った先の絶景が、旅の疲れを吹き飛ばしてくれる。",
     "tags": [
       "金刀比羅宮",
@@ -4371,7 +4139,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "琴平"
   },
   {
     "id": "uwajima",
@@ -4415,10 +4184,6 @@
       "じゃこ天"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ehime/uwajima.html",
-    "jalanPath": "/38/LRG_380020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "南予の海と山に囲まれた闘牛と鯛めしの城下町。穏やかな湾の風情と伊達の文化が独特の旅情をつくっている。",
     "tags": [
       "城",
@@ -4427,7 +4192,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宇和島"
   },
   {
     "id": "toyako",
@@ -4470,10 +4236,6 @@
       "サイロ展望台"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hokkaido/toyako.html",
-    "jalanPath": "/01/LRG_010140/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "活火山と湖が共存する北海道の絶景エリア。湖畔の温泉と自然の造形美が四季を通じて旅人を迎える。",
     "tags": [
       "湖",
@@ -4482,7 +4244,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "洞爺湖"
   },
   {
     "id": "noboribetsu",
@@ -4525,10 +4288,6 @@
       "クマ牧場"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/noboribetsu.html",
-    "jalanPath": "/01/LRG_010130/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北海道有数の温泉地、鉄泉が湧く地獄の景観。豊富な湯量と多彩な泉質が温泉ファンを惹きつける。",
     "tags": [
       "温泉",
@@ -4537,7 +4296,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "登別"
   },
   {
     "id": "shiretoko",
@@ -4580,10 +4340,6 @@
       "羅臼岳"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hokkaido/shiretoko.html",
-    "jalanPath": "/01/LRG_010290/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "世界自然遺産に認定された原生の大地と海。野生動物が息づく秘境で、手つかずの自然に向き合える。",
     "tags": [
       "世界遺産",
@@ -4593,7 +4349,8 @@
     "jr_region": "east",
     "airportAccess": "バス・レンタカー",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "知床"
   },
   {
     "id": "wajima",
@@ -4636,10 +4393,6 @@
       "白米千枚田"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/ishikawa/wajima.html",
-    "jalanPath": "/17/LRG_170030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "能登半島の先端、輪島塗の伝統と朝市が息づく街。海産物と漆工芸が深く根づいた漁師の街だ。",
     "tags": [
       "輪島塗",
@@ -4650,7 +4403,8 @@
     "hubCity": "金沢駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "輪島"
   },
   {
     "id": "kaga-onsen",
@@ -4694,10 +4448,6 @@
       "片山津温泉"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ishikawa/kaga.html",
-    "jalanPath": "/17/LRG_170020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "九谷焼の産地に広がる北陸の温泉地帯。山代・山中・片山津の三温泉が旅人の疲れを癒してくれる。",
     "tags": [
       "温泉",
@@ -4706,7 +4456,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "加賀温泉郷"
   },
   {
     "id": "hakuba",
@@ -4749,10 +4500,6 @@
       "岩岳"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/nagano/hakuba.html",
-    "jalanPath": "/20/LRG_200020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北アルプスの峰々を望む高原の山岳リゾート。スキーとトレッキングで一年中アクティブな旅ができる。",
     "tags": [
       "スキー",
@@ -4761,7 +4508,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白馬"
   },
   {
     "id": "amanohashidate",
@@ -4806,10 +4554,6 @@
       "傘松公園"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kyoto/amanohashidate.html",
-    "jalanPath": "/26/LRG_260030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "天に昇る橋のような砂洲が続く日本三景の地。股のぞきで空に浮かぶ景色が、独特の驚きをもたらす。",
     "tags": [
       "日本三景",
@@ -4818,7 +4562,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "天橋立"
   },
   {
     "id": "ine",
@@ -4861,10 +4606,6 @@
       "浦島神社"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kyoto/ine.html",
-    "jalanPath": "/26/LRG_260040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落。静かな入り江と時間の止まった景色が心を落ち着かせる。",
     "tags": [
       "舟屋",
@@ -4875,7 +4616,8 @@
     "hubCity": "天橋立駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "伊根"
   },
   {
     "id": "ibusuki",
@@ -4919,10 +4661,6 @@
       "池田湖"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kagoshima/ibusuki.html",
-    "jalanPath": "/46/LRG_460010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "薩摩半島南端に広がる砂むし温泉の街。温かい砂に包まれる独特の体験と開聞岳の絶景が待っている。",
     "tags": [
       "砂むし温泉",
@@ -4931,7 +4669,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "指宿"
   },
   {
     "id": "sasebo",
@@ -4976,10 +4715,6 @@
       "佐世保バーガー"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagasaki/sasebo.html",
-    "jalanPath": "/42/LRG_420030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "数えきれない島々が複雑な海岸線を描く長崎県北の街。海軍の歴史と異国情緒ある景観が旅に彩りを添える。",
     "tags": [
       "九十九島",
@@ -4988,7 +4723,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "佐世保"
   },
   {
     "id": "hirado",
@@ -5031,10 +4767,6 @@
       "川内峠"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/nagasaki/hirado.html",
-    "jalanPath": "/42/LRG_420040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本で最初に外国貿易が行われた歴史ある港町。教会と城が共存する、異文化交流の痕跡が随所にある。",
     "tags": [
       "歴史",
@@ -5043,7 +4775,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "平戸"
   },
   {
     "id": "tottori",
@@ -5087,10 +4820,6 @@
       "浦富海岸"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/tottori/tottori.html",
-    "jalanPath": "/31/LRG_310010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "巨大な砂丘と松葉がにが名物の日本海の街。砂漠のような景観と新鮮な海の幸で独特の旅が楽しめる。",
     "tags": [
       "砂丘",
@@ -5099,7 +4828,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳥取"
   },
   {
     "id": "akita",
@@ -5143,10 +4873,6 @@
       "男鹿半島"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/akita/akita.html",
-    "jalanPath": "/05/LRG_050020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "きりたんぽと竿燈祭りで知られる東北の米どころ。男鹿のなまはげなど固有の伝統文化が旅に深みを加える。",
     "tags": [
       "竿燈まつり",
@@ -5155,7 +4881,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": true
+    "shinkansenAccess": true,
+    "hotelHub": "秋田"
   },
   {
     "id": "awaji",
@@ -5204,10 +4931,6 @@
       "伊弉諾神宮"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hyogo/awajishima.html",
-    "jalanPath": "/28/LRG_280070/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "玉ねぎと潮風に包まれた明石海峡の先の島。海峡の渦と豊かな海の幸が、淡路の旅の核心をなしている。",
     "tags": [
       "自然",
@@ -5218,7 +4941,8 @@
     "hubCity": "神戸三宮駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "淡路島"
   },
   {
     "id": "takao",
@@ -5261,10 +4985,6 @@
       "もみじ台"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/tokyo/takao.html",
-    "jalanPath": "/13/LRG_130030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "都市に隣接しながら深い自然が残る霊峰の山。山岳信仰の歴史と豊かな森が、本格的な山旅を楽しませてくれる。",
     "tags": [
       "ハイキング",
@@ -5273,7 +4993,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高尾山"
   },
   {
     "id": "tateyama-chiba",
@@ -5317,10 +5038,6 @@
       "花畑"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/chiba/tateyama.html",
-    "jalanPath": "/12/LRG_120110/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総。のどかな漁村の雰囲気と海の幸が旅を充実させる。",
     "tags": [
       "海",
@@ -5329,7 +5046,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "館山"
   },
   {
     "id": "gokayama",
@@ -5373,10 +5091,6 @@
       "岩瀬家"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/toyama/gokayama.html",
-    "jalanPath": "/16/LRG_160020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白川郷と並ぶ合掌造りの集落が残る山深い里。より静かで素朴な原風景に、じっくりと向き合える場所だ。",
     "tags": [
       "世界遺産",
@@ -5387,7 +5101,8 @@
     "hubCity": "高岡駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "五箇山"
   },
   {
     "id": "jozankei",
@@ -5430,10 +5145,6 @@
       "豊平峡ダム"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hokkaido/jozankei.html",
-    "jalanPath": "/01/LRG_010220/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "札幌市街に近い豊平川沿いの温泉郷。紅葉と雪の中で、北海道の湯に浸かれる隠れた奥座敷だ。",
     "tags": [
       "温泉",
@@ -5444,7 +5155,8 @@
     "hubCity": "札幌駅",
     "accessFromHub": "定山渓温泉バス",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "定山渓"
   },
   {
     "id": "biei",
@@ -5489,10 +5201,6 @@
       "パッチワークの路"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hokkaido/biei.html",
-    "jalanPath": "/01/LRG_010370/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "丘と農場が織りなすパッチワークの大地。四季ごとに色を変える丘の景色が、いつまでも旅人の目を離さない。",
     "tags": [
       "自然",
@@ -5501,7 +5209,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "美瑛"
   },
   {
     "id": "miyako-iwate",
@@ -5545,10 +5254,6 @@
       "浄土ヶ浜レストハウス"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/iwate/miyako.html",
-    "jalanPath": "/03/LRG_030050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "三陸の白い岩場と碧い海が広がる港町。リアスの絶景と豊かな海の幸が、東北の旅に深みを与える。",
     "tags": [
       "海",
@@ -5557,7 +5262,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮古"
   },
   {
     "id": "sakata",
@@ -5600,10 +5306,6 @@
       "日和山公園"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamagata/sakata.html",
-    "jalanPath": "/06/LRG_060040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北前船の交易で栄えた日本海の湊町。出羽の歴史を刻んだ倉庫群と豊かな食文化が今も息づいている。",
     "tags": [
       "歴史",
@@ -5612,7 +5314,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "酒田"
   },
   {
     "id": "takachiho",
@@ -5660,10 +5363,6 @@
       "高千穂神社"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/miyazaki/takachiho.html",
-    "jalanPath": "/45/LRG_450030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "神話の里として知られる宮崎の峡谷地帯。深い谷と滝が神秘的な雰囲気をつくり、夜神楽が古代へと誘う。",
     "tags": [
       "神話",
@@ -5674,7 +5373,8 @@
     "hubCity": "延岡駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高千穂"
   },
   {
     "id": "amami",
@@ -5716,10 +5416,6 @@
       "マングローブカヌー"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kagoshima/amami.html",
-    "jalanPath": "/46/LRG_460020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "亜熱帯の原生林とサンゴ礁が広がる離島。固有の動植物と黒糖焼酎が、奄美だけの旅をつくっている。",
     "tags": [
       "離島",
@@ -5730,7 +5426,8 @@
     "access_city": "鹿児島",
     "port": "鹿児島港",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "奄美大島"
   },
   {
     "id": "goto",
@@ -5772,10 +5469,6 @@
       "高浜海水浴場"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/nagasaki/goto.html",
-    "jalanPath": "/42/LRG_420060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "教会と海が共存するキリシタンゆかりの島々。世界遺産の歴史と透明な海が、特別な旅体験を与えてくれる。",
     "tags": [
       "離島",
@@ -5786,7 +5479,8 @@
     "access_city": "長崎",
     "port": "長崎港",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "五島列島"
   },
   {
     "id": "unzen",
@@ -5829,10 +5523,6 @@
       "雲仙温泉街"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagasaki/unzen.html",
-    "jalanPath": "/42/LRG_420050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "長崎県の山上に湧く地獄と温泉の街。多彩な泉質と高原の涼しさが、九州の温泉旅の選択肢を広げる。",
     "tags": [
       "温泉",
@@ -5843,7 +5533,8 @@
     "hubCity": "長崎駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "雲仙"
   },
   {
     "id": "ashizuri",
@@ -5886,10 +5577,6 @@
       "ジョン万次郎像"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kochi/ashizuri.html",
-    "jalanPath": "/39/LRG_390020/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "四国最南端に太平洋へ突き出した断崖の岬。荒波と椿の群落が、土佐の旅に力強い自然を刻みつける。",
     "tags": [
       "絶景",
@@ -5900,7 +5587,8 @@
     "hubCity": "中村駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "足摺岬"
   },
   {
     "id": "oboke",
@@ -5944,10 +5632,6 @@
       "平家屋敷"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tokushima/iya.html",
-    "jalanPath": "/36/LRG_360030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街。かずら橋で揺れながら、祖谷の秘境を身近に感じられる。",
     "tags": [
       "渓谷",
@@ -5956,7 +5640,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "大歩危"
   },
   {
     "id": "tsuwano",
@@ -6000,10 +5685,6 @@
       "殿町通り"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shimane/tsuwano.html",
-    "jalanPath": "/32/LRG_320030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "山陰の小京都と呼ばれる鯉が泳ぐ城下町。石州瓦の赤と白壁が連なる静かな街で、旅人を落ち着かせる。",
     "tags": [
       "城下町",
@@ -6012,7 +5693,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "津和野"
   },
   {
     "id": "inuyama",
@@ -6056,10 +5738,6 @@
       "博物館明治村"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/aichi/inuyama.html",
-    "jalanPath": "/23/LRG_230040/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "清流沿いに建つ国宝天守を持つ城下町。鵜飼いと明治の遺産が、独特の城下文化を今に伝えている。",
     "tags": [
       "城",
@@ -6068,7 +5746,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "犬山"
   },
   {
     "id": "kiso",
@@ -6113,10 +5792,6 @@
       "馬籠宿"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/kiso.html",
-    "jalanPath": "/20/LRG_200060/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "中山道の宿場町が今も残る木曽の山あい。江戸の旅情が漂う宿場町に出会える、静かな街道の旅だ。",
     "tags": [
       "宿場町",
@@ -6127,7 +5802,8 @@
     "hubCity": "南木曽駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "木曽"
   },
   {
     "id": "miyama",
@@ -6171,10 +5847,6 @@
       "由良川"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kyoto/miyama.html",
-    "jalanPath": "/26/LRG_260050/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "茅葺き屋根が50棟以上並ぶ山の集落。京都の奥に残る静かな農村風景が、時間の感覚を変えてくれる。",
     "tags": [
       "古民家",
@@ -6185,7 +5857,8 @@
     "hubCity": "綾部駅",
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "美山"
   },
   {
     "id": "tateyama-kurobe",
@@ -6229,10 +5902,6 @@
       "黒部ダム"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/toyama/tateyama.html",
-    "jalanPath": "/16/LRG_160030/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "3000メートル級の稜線を歩くアルペンルート。切り立つ雪壁と巨大ダムが、山岳観光の頂点を体感させる。",
     "tags": [
       "山岳",
@@ -6241,7 +5910,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "立山黒部"
   },
   {
     "id": "himi",
@@ -6286,10 +5956,6 @@
       "立山連峰展望"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/toyama/himi.html",
-    "jalanPath": "/16/LRG_160010/",
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "立山連峰を望む富山湾の漁師町。寒ぶりと新鮮な海の幸が、冬の日本海を旅する最大の楽しみになる。",
     "tags": [
       "漁港",
@@ -6298,7 +5964,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "氷見"
   },
   {
     "id": "nyuto-onsen",
@@ -6342,10 +6009,6 @@
       "妙乃湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/akita/nyuto.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里。個性豊かな温泉宿が旅の目的地そのものになる。",
     "tags": [
       "秘湯",
@@ -6354,7 +6017,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "乳頭温泉"
   },
   {
     "id": "yuda-onsen",
@@ -6399,10 +6063,6 @@
       "白狐の湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamaguchi/yuda.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白狐伝説が残る山口市街に湧く城下の湯。中原中也ゆかりの地でもあり、文学と温泉の旅ができる街だ。",
     "tags": [
       "温泉",
@@ -6411,7 +6071,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "湯田温泉"
   },
   {
     "id": "ureshino-onsen",
@@ -6455,10 +6116,6 @@
       "不動山温泉"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/saga/ureshino.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本三大美肌の湯として知られる佐賀の重曹泉。とろとろの湯と嬉野茶で体も心も潤う温泉地だ。",
     "tags": [
       "温泉",
@@ -6467,7 +6124,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "嬉野温泉"
   },
   {
     "id": "obuse",
@@ -6512,10 +6170,6 @@
       "小布施堂"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/obuse.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町。善光寺平を見渡す高台に、洗練された街並みが広がる。",
     "tags": [
       "北斎",
@@ -6524,7 +6178,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "小布施"
   },
   {
     "id": "uchiko",
@@ -6569,10 +6224,6 @@
       "木蝋資料館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ehime/uchiko.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "白壁と木蝋の香り漂う四国の商人文化の街。江戸・明治の街並みが保存され、時代を遡る旅ができる。",
     "tags": [
       "町並み保存",
@@ -6581,7 +6232,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "内子"
   },
   {
     "id": "muroto",
@@ -6625,10 +6277,6 @@
       "乱礁遊歩道"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kochi/muroto.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬。弘法大師ゆかりの地でもあり、海と信仰の旅だ。",
     "tags": [
       "岬",
@@ -6637,7 +6285,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "室戸"
   },
   {
     "id": "iya",
@@ -6681,10 +6330,6 @@
       "祖谷温泉"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tokushima/iya.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "日本三大秘境のひとつ、霧が漂う深い谷間の集落。吊り橋と滝と、人里離れた静けさが心に残る場所だ。",
     "tags": [
       "秘境",
@@ -6693,7 +6338,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "祖谷"
   },
   {
     "id": "oku-izumo",
@@ -6738,10 +6384,6 @@
       "おろち湖"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/shimane/okuizumo.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "たたら製鉄の歴史が残る出雲の山あいの里。神話の記憶と険しい渓谷が、古代への旅を導いてくれる。",
     "tags": [
       "たたら製鉄",
@@ -6750,7 +6392,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "奥出雲"
   },
   {
     "id": "ginzan-onsen",
@@ -6794,10 +6437,6 @@
       "銀山川沿い散策"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/yamagata/ginzan.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街。雪景色とレトロな建物が、どこか懐かしい旅情をつくる。",
     "tags": [
       "大正ロマン",
@@ -6806,7 +6445,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "銀山温泉"
   },
   {
     "id": "ouchi-juku",
@@ -6851,10 +6491,6 @@
       "三澤屋"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/fukushima/ouchi.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里。ネギそばで有名な冬の宿場が旅人を温かく迎える。",
     "tags": [
       "宿場町",
@@ -6863,7 +6499,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "大内宿"
   },
   {
     "id": "nozawa-onsen",
@@ -6907,10 +6544,6 @@
       "野沢温泉スキー場"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/nozawa.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "村全体が温泉場になった信州の山里。13の外湯を浴衣で渡り歩く旅が、ここでしか味わえない体験だ。",
     "tags": [
       "温泉",
@@ -6919,7 +6552,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "野沢温泉"
   },
   {
     "id": "takehara",
@@ -6964,10 +6598,6 @@
       "竹鶴酒造"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/hiroshima/takehara.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街。静かな港町の佇まいが、瀬戸内の旅情を深める。",
     "tags": [
       "町並み保存",
@@ -6976,7 +6606,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "竹原"
   },
   {
     "id": "tsumago",
@@ -7022,10 +6653,6 @@
       "妻籠城跡"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/tsumago.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "石畳と茅葺きの宿場が中山道に残る木曽の里。江戸時代の旅人の目線で、宿場の空気を歩いて感じられる。",
     "tags": [
       "宿場町",
@@ -7034,7 +6661,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "妻籠"
   },
   {
     "id": "magome",
@@ -7080,10 +6708,6 @@
       "清水屋資料館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gifu/magome.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "石畳の坂道が続く中山道の峠の宿場町。藤村の文学と山の清冽な空気が、旅人の足を引き止める場所だ。",
     "tags": [
       "宿場町",
@@ -7092,7 +6716,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "馬籠"
   },
   {
     "id": "nagahama",
@@ -7138,10 +6763,6 @@
       "慶雲館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shiga/nagahama.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "琵琶湖畔に広がる黒壁ガラスの文化の街。豊臣秀吉ゆかりの城下と湖の景色が穏やかな旅をつくる。",
     "tags": [
       "城下町",
@@ -7150,7 +6771,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "長浜"
   },
   {
     "id": "hikone",
@@ -7196,10 +6818,6 @@
       "夢京橋キャッスルロード"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/shiga/hikone.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "国宝の天守が琵琶湖を見下ろして立つ城下町。ひこにゃんで有名な城と湖の風景が旅の主役だ。",
     "tags": [
       "国宝",
@@ -7208,7 +6826,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "彦根"
   },
   {
     "id": "koyasan",
@@ -7253,10 +6872,6 @@
       "根本大塔"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/wakayama/koyasan.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "真言密教の聖域として山上に広がる宗教都市。荘厳な杉並木と精進料理が、魂に響く旅を与えてくれる。",
     "tags": [
       "宿坊",
@@ -7265,7 +6880,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高野山"
   },
   {
     "id": "gero-onsen",
@@ -7310,10 +6926,6 @@
       "温泉寺"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gifu/gero.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉。湯の香りと飛騨の食文化が、温泉旅の王道を体感させる。",
     "tags": [
       "温泉",
@@ -7322,7 +6934,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "下呂温泉"
   },
   {
     "id": "naruko-onsen",
@@ -7366,10 +6979,6 @@
       "早稲田桟敷湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/miyagi/naruko.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "こけし発祥の地として知られる東北の温泉の里。奥羽の山深くに湧く多彩な泉質が旅人を迎えてくれる。",
     "tags": [
       "温泉",
@@ -7378,7 +6987,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳴子温泉"
   },
   {
     "id": "shima-onsen",
@@ -7421,10 +7031,6 @@
       "甌穴"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gunma/shima.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "奥利根の山あいに湧く千年の歴史を持つ湯治場。江戸時代から続く古い旅館と山の静けさが、旅に特別感をもたらす。",
     "tags": [
       "温泉",
@@ -7433,7 +7039,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "四万温泉"
   },
   {
     "id": "hirosaki",
@@ -7479,10 +7086,6 @@
       "旧弘前市立図書館"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/aomori/hirosaki.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "津軽の城下町に日本一の桜の名所が広がる街。洋館や禅寺など明治の遺産も点在し、深い旅ができる。",
     "tags": [
       "桜",
@@ -7491,7 +7094,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "弘前"
   },
   {
     "id": "oirase",
@@ -7536,10 +7140,6 @@
       "十和田湖"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/aomori/oirase.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "原生林を縫うように清流が流れる渓谷路。苔と滝と木漏れ日が、徒歩でしか味わえない静寂をつくっている。",
     "tags": [
       "渓流",
@@ -7548,7 +7148,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "奥入瀬"
   },
   {
     "id": "mashiko",
@@ -7592,10 +7193,6 @@
       "益子焼窯元共販センター"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tochigi/mashiko.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "陶土の香りが漂う関東随一の焼き物の里。窯元が並ぶ街を巡りながら、日本の陶芸文化に触れられる。",
     "tags": [
       "陶芸",
@@ -7604,7 +7201,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "益子"
   },
   {
     "id": "bessho-onsen",
@@ -7649,10 +7247,6 @@
       "大師湯"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/bessho.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "信州最古と言われる温泉地、観音様が守る山里。静かな田舎の湯と古い建築が旅に落ち着きを与える。",
     "tags": [
       "温泉",
@@ -7661,7 +7255,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "別所温泉"
   },
   {
     "id": "izushi",
@@ -7707,10 +7302,6 @@
       "永楽館"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/hyogo/izushi.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "但馬の小京都と呼ばれる皿そばの城下町。時計楼が見守る静かな街並みで、但馬の食と歴史を楽しめる。",
     "tags": [
       "皿そば",
@@ -7719,7 +7310,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "出石"
   },
   {
     "id": "wakura-onsen",
@@ -7763,10 +7355,6 @@
       "足湯の宿"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/ishikawa/wakura.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "七尾湾に面した能登半島の名湯。夕日に染まる海と上質な旅館が、加賀屈指の温泉旅を演出している。",
     "tags": [
       "温泉",
@@ -7775,7 +7363,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "和倉温泉"
   },
   {
     "id": "misasa-onsen",
@@ -7820,10 +7409,6 @@
       "三朝橋"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/tottori/misasa.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地。投入堂への険しい参拝と湯治の旅が組み合わさる場所だ。",
     "tags": [
       "ラジウム温泉",
@@ -7832,7 +7417,8 @@
     ],
     "jr_region": "west",
     "image": "https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "三朝温泉"
   },
   {
     "id": "obi",
@@ -7877,10 +7463,6 @@
       "商人通り"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/miyazaki/obi.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "杉の板塀が続く城下町、日南の小京都。伊東氏の城跡と商家の街並みに、南国の歴史の重みが漂っている。",
     "tags": [
       "城下町",
@@ -7889,7 +7471,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "飫肥"
   },
   {
     "id": "hitoyoshi",
@@ -7935,10 +7518,6 @@
       "球磨川くだり"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/kumamoto/hitoyoshi.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "球磨川の清流沿いに栄えた九州の城下町。球磨焼酎と温泉、SL列車が旅の豊かさを三倍にしてくれる。",
     "tags": [
       "温泉",
@@ -7947,7 +7526,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "人吉"
   },
   {
     "id": "kamikochi",
@@ -7993,10 +7573,6 @@
       "明神池"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/nagano/kamikochi.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "北アルプスの玄関口に広がる手つかずの高原。梓川と雪山の絶景が、山岳旅の始まりを特別なものにする。",
     "tags": [
       "アルプス",
@@ -8005,7 +7581,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "上高地"
   },
   {
     "id": "minakami-onsen",
@@ -8048,10 +7625,6 @@
       "湯テルメ谷川"
     ],
     "needsCar": false,
-    "rakutenPath": "/yado/gunma/minakami.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "険しい双耳峰を背に利根川の源流が流れる山の温泉地。清流ラフティングと露天風呂が夏の旅を盛り上げる。",
     "tags": [
       "温泉",
@@ -8060,7 +7633,8 @@
     ],
     "jr_region": "east",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水上温泉"
   },
   {
     "id": "minami-aso",
@@ -8106,10 +7680,6 @@
       "池の川水源"
     ],
     "needsCar": true,
-    "rakutenPath": "/yado/kumamoto/minamiaso.html",
-    "jalanPath": null,
-    "hasHotel": true,
-    "hubHotel": null,
     "description": "阿蘇カルデラの南に広がる湧水と牧草の高原。のどかな景色と澄んだ水が、阿蘇とは異なる静けさをくれる。",
     "tags": [
       "湧水",
@@ -8118,7 +7688,8 @@
     ],
     "jr_region": "kyushu",
     "image": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=70",
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "南阿蘇"
   },
   {
     "id": "spot-aoi-ike",
@@ -8128,7 +7699,8 @@
     "nearCity": "旭川",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "旭川"
   },
   {
     "id": "spot-farm-tomita",
@@ -8138,7 +7710,8 @@
     "nearCity": "富良野",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "旭川"
   },
   {
     "id": "spot-shiretoko-goko",
@@ -8148,7 +7721,8 @@
     "nearCity": "斜里",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "知床"
   },
   {
     "id": "spot-mashuko",
@@ -8158,7 +7732,8 @@
     "nearCity": "弟子屈",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "釧路"
   },
   {
     "id": "spot-akan-ko",
@@ -8168,7 +7743,8 @@
     "nearCity": "釧路",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "釧路"
   },
   {
     "id": "spot-goryokaku",
@@ -8178,7 +7754,8 @@
     "nearCity": "函館",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "函館"
   },
   {
     "id": "spot-asahiyama-zoo",
@@ -8188,7 +7765,8 @@
     "nearCity": "旭川",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "旭川"
   },
   {
     "id": "spot-kamui-misaki",
@@ -8198,7 +7776,8 @@
     "nearCity": "積丹",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "小樽"
   },
   {
     "id": "spot-shakotan-misaki",
@@ -8208,7 +7787,8 @@
     "nearCity": "積丹",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "小樽"
   },
   {
     "id": "spot-sounkyo",
@@ -8218,7 +7798,8 @@
     "nearCity": "上川",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "旭川"
   },
   {
     "id": "spot-chusonji",
@@ -8228,7 +7809,8 @@
     "nearCity": "平泉",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "平泉"
   },
   {
     "id": "spot-motsuji",
@@ -8238,7 +7820,8 @@
     "nearCity": "平泉",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "平泉"
   },
   {
     "id": "spot-geibikei",
@@ -8248,7 +7831,8 @@
     "nearCity": "一関",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "盛岡"
   },
   {
     "id": "spot-ryusendo",
@@ -8258,7 +7842,8 @@
     "nearCity": "宮古",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮古"
   },
   {
     "id": "spot-towada-ko",
@@ -8268,7 +7853,8 @@
     "nearCity": "十和田",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "盛岡"
   },
   {
     "id": "spot-tsutanuma",
@@ -8278,7 +7864,8 @@
     "nearCity": "十和田",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "盛岡"
   },
   {
     "id": "spot-tazawa-ko",
@@ -8288,7 +7875,8 @@
     "nearCity": "角館",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "盛岡"
   },
   {
     "id": "spot-kisakata",
@@ -8298,7 +7886,8 @@
     "nearCity": "酒田",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "酒田"
   },
   {
     "id": "spot-goshikinuma",
@@ -8308,7 +7897,8 @@
     "nearCity": "猪苗代",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "会津若松"
   },
   {
     "id": "spot-tono-hetsu",
@@ -8318,7 +7908,8 @@
     "nearCity": "会津若松",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "会津若松"
   },
   {
     "id": "spot-fukuroda-falls",
@@ -8328,7 +7919,8 @@
     "nearCity": "水戸",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水戸"
   },
   {
     "id": "spot-ryujin-bridge",
@@ -8338,7 +7930,8 @@
     "nearCity": "水戸",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水戸"
   },
   {
     "id": "spot-kairakuen",
@@ -8348,7 +7941,8 @@
     "nearCity": "水戸",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水戸"
   },
   {
     "id": "spot-oze",
@@ -8358,7 +7952,8 @@
     "nearCity": "沼田",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水上温泉"
   },
   {
     "id": "spot-fukiware-falls",
@@ -8368,7 +7963,8 @@
     "nearCity": "沼田",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "水上温泉"
   },
   {
     "id": "spot-shosenkyo",
@@ -8378,7 +7974,8 @@
     "nearCity": "甲府",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "甲府"
   },
   {
     "id": "spot-enoshima",
@@ -8388,7 +7985,8 @@
     "nearCity": "鎌倉",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "横浜"
   },
   {
     "id": "spot-oyama",
@@ -8398,7 +7996,8 @@
     "nearCity": "小田原",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "横浜"
   },
   {
     "id": "spot-okutama-ko",
@@ -8408,7 +8007,8 @@
     "nearCity": "東京",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "東京"
   },
   {
     "id": "spot-takao-san",
@@ -8418,7 +8018,8 @@
     "nearCity": "東京",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高尾山"
   },
   {
     "id": "spot-kenrokuen",
@@ -8428,7 +8029,8 @@
     "nearCity": "金沢",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "金沢"
   },
   {
     "id": "spot-kurobe-dam",
@@ -8438,7 +8040,8 @@
     "nearCity": "立山黒部",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "富山"
   },
   {
     "id": "spot-tateyama-murodo",
@@ -8448,7 +8051,8 @@
     "nearCity": "立山黒部",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "富山"
   },
   {
     "id": "spot-mone-ike",
@@ -8458,7 +8062,8 @@
     "nearCity": "関",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "岐阜"
   },
   {
     "id": "spot-shirakawago",
@@ -8468,7 +8073,8 @@
     "nearCity": "白川郷",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高山"
   },
   {
     "id": "spot-kamikochi-kappa",
@@ -8478,7 +8084,8 @@
     "nearCity": "松本",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "上高地"
   },
   {
     "id": "spot-norikura",
@@ -8488,7 +8095,8 @@
     "nearCity": "松本",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松本"
   },
   {
     "id": "spot-suwa-taisha",
@@ -8498,7 +8106,8 @@
     "nearCity": "諏訪",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松本"
   },
   {
     "id": "spot-oshino-hakkai",
@@ -8508,7 +8117,8 @@
     "nearCity": "富士河口湖",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "富士河口湖"
   },
   {
     "id": "spot-miho-matsubara",
@@ -8518,7 +8128,8 @@
     "nearCity": "静岡",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "静岡"
   },
   {
     "id": "spot-sumatagoro",
@@ -8528,7 +8139,8 @@
     "nearCity": "静岡",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "静岡"
   },
   {
     "id": "spot-korankei",
@@ -8538,7 +8150,8 @@
     "nearCity": "豊田",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "名古屋"
   },
   {
     "id": "spot-irago-misaki",
@@ -8548,7 +8161,8 @@
     "nearCity": "名古屋",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳥羽"
   },
   {
     "id": "spot-tenryu-kyo",
@@ -8558,7 +8172,8 @@
     "nearCity": "飯田",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "飯田"
   },
   {
     "id": "spot-inuyama-jo",
@@ -8568,7 +8183,8 @@
     "nearCity": "名古屋",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "名古屋"
   },
   {
     "id": "spot-byodoin",
@@ -8578,7 +8194,8 @@
     "nearCity": "京都",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "京都"
   },
   {
     "id": "spot-fushimi-inari",
@@ -8588,7 +8205,8 @@
     "nearCity": "京都",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "京都"
   },
   {
     "id": "spot-amanohashidate",
@@ -8598,7 +8216,8 @@
     "nearCity": "宮津",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "天橋立"
   },
   {
     "id": "spot-ine-funaya",
@@ -8608,7 +8227,8 @@
     "nearCity": "宮津",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "伊根"
   },
   {
     "id": "spot-nachi-falls",
@@ -8618,7 +8238,8 @@
     "nearCity": "新宮",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白浜"
   },
   {
     "id": "spot-kumano-hongu",
@@ -8628,7 +8249,8 @@
     "nearCity": "新宮",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "白浜"
   },
   {
     "id": "spot-meoto-iwa",
@@ -8638,7 +8260,8 @@
     "nearCity": "伊勢",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳥羽"
   },
   {
     "id": "spot-akame-falls",
@@ -8648,7 +8271,8 @@
     "nearCity": "伊賀",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "奈良"
   },
   {
     "id": "spot-gozaishodake",
@@ -8658,7 +8282,8 @@
     "nearCity": "三重",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "名古屋"
   },
   {
     "id": "spot-himeji-jo",
@@ -8668,7 +8293,8 @@
     "nearCity": "姫路",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "姫路"
   },
   {
     "id": "spot-takeda-jo",
@@ -8678,7 +8304,8 @@
     "nearCity": "朝来",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "城崎温泉"
   },
   {
     "id": "spot-amarube-bridge",
@@ -8688,7 +8315,8 @@
     "nearCity": "城崎温泉",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "城崎温泉"
   },
   {
     "id": "spot-akashi-bridge",
@@ -8698,7 +8326,8 @@
     "nearCity": "神戸",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "神戸"
   },
   {
     "id": "spot-rokko-san",
@@ -8708,7 +8337,8 @@
     "nearCity": "神戸",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "神戸"
   },
   {
     "id": "spot-minoh-falls",
@@ -8718,7 +8348,8 @@
     "nearCity": "大阪",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "大阪"
   },
   {
     "id": "spot-adachi-museum",
@@ -8728,7 +8359,8 @@
     "nearCity": "松江",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松江"
   },
   {
     "id": "spot-izumo-taisha",
@@ -8738,7 +8370,8 @@
     "nearCity": "松江",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松江"
   },
   {
     "id": "spot-tottori-sand",
@@ -8748,7 +8381,8 @@
     "nearCity": "鳥取",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鳥取"
   },
   {
     "id": "spot-mitokusan",
@@ -8758,7 +8392,8 @@
     "nearCity": "三朝温泉",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "三朝温泉"
   },
   {
     "id": "spot-akiyoshidai",
@@ -8768,7 +8403,8 @@
     "nearCity": "山口",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "萩"
   },
   {
     "id": "spot-kintaikyo",
@@ -8778,7 +8414,8 @@
     "nearCity": "岩国",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "広島"
   },
   {
     "id": "spot-itsukushima",
@@ -8788,7 +8425,8 @@
     "nearCity": "広島",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "広島"
   },
   {
     "id": "spot-taishakukyo",
@@ -8798,7 +8436,8 @@
     "nearCity": "庄原",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "広島"
   },
   {
     "id": "spot-kurashiki-bikan",
@@ -8808,7 +8447,8 @@
     "nearCity": "岡山",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "倉敷"
   },
   {
     "id": "spot-korakuen",
@@ -8818,7 +8458,8 @@
     "nearCity": "岡山",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "岡山"
   },
   {
     "id": "spot-chichihogahama",
@@ -8828,7 +8469,8 @@
     "nearCity": "三豊",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高松"
   },
   {
     "id": "spot-shimonada-eki",
@@ -8838,7 +8480,8 @@
     "nearCity": "松山",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松山"
   },
   {
     "id": "spot-oboke-kyo",
@@ -8848,7 +8491,8 @@
     "nearCity": "大歩危",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "大歩危"
   },
   {
     "id": "spot-dogo-honkan",
@@ -8858,7 +8502,8 @@
     "nearCity": "松山",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "松山"
   },
   {
     "id": "spot-kotohiragu",
@@ -8868,7 +8513,8 @@
     "nearCity": "琴平",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "琴平"
   },
   {
     "id": "spot-shimanto-river",
@@ -8878,7 +8524,8 @@
     "nearCity": "高知",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高知"
   },
   {
     "id": "spot-kochi-jo",
@@ -8888,7 +8535,8 @@
     "nearCity": "高知",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高知"
   },
   {
     "id": "spot-katsurahama",
@@ -8898,7 +8546,8 @@
     "nearCity": "高知",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高知"
   },
   {
     "id": "spot-iya-kazurabashi",
@@ -8908,7 +8557,8 @@
     "nearCity": "大歩危",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "大歩危"
   },
   {
     "id": "spot-naruto-uzushio",
@@ -8918,7 +8568,8 @@
     "nearCity": "徳島",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "徳島"
   },
   {
     "id": "spot-takachiho-gorge",
@@ -8928,7 +8579,8 @@
     "nearCity": "高千穂",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "高千穂"
   },
   {
     "id": "spot-kusasenri",
@@ -8938,7 +8590,8 @@
     "nearCity": "熊本",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "阿蘇"
   },
   {
     "id": "spot-daikanbo",
@@ -8948,7 +8601,8 @@
     "nearCity": "熊本",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "阿蘇"
   },
   {
     "id": "spot-kokonoe-bridge",
@@ -8958,7 +8612,8 @@
     "nearCity": "別府",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "黒川温泉"
   },
   {
     "id": "spot-kirishima-jingu",
@@ -8968,7 +8623,8 @@
     "nearCity": "鹿児島",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鹿児島"
   },
   {
     "id": "spot-sengan-en",
@@ -8978,7 +8634,8 @@
     "nearCity": "鹿児島",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "鹿児島"
   },
   {
     "id": "spot-niji-matsubara",
@@ -8988,7 +8645,8 @@
     "nearCity": "唐津",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "佐賀"
   },
   {
     "id": "spot-yoshinogari",
@@ -8998,7 +8656,8 @@
     "nearCity": "佐賀",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "佐賀"
   },
   {
     "id": "spot-unzen-jigoku",
@@ -9008,7 +8667,8 @@
     "nearCity": "長崎",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "雲仙"
   },
   {
     "id": "spot-gunkanjima",
@@ -9018,7 +8678,8 @@
     "nearCity": "長崎",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "長崎"
   },
   {
     "id": "spot-shurijo",
@@ -9028,7 +8689,8 @@
     "nearCity": "那覇",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-churaumi",
@@ -9038,7 +8700,8 @@
     "nearCity": "沖縄本島",
     "stayMinutes": 120,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-kouri-bridge",
@@ -9048,7 +8711,8 @@
     "nearCity": "沖縄本島",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-manzamo",
@@ -9058,7 +8722,8 @@
     "nearCity": "沖縄本島",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-gyokusendo",
@@ -9068,7 +8733,8 @@
     "nearCity": "那覇",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-zanpa-misaki",
@@ -9078,7 +8744,8 @@
     "nearCity": "沖縄本島",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   },
   {
     "id": "spot-kabira-bay",
@@ -9088,7 +8755,8 @@
     "nearCity": "石垣島",
     "stayMinutes": 60,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "石垣島"
   },
   {
     "id": "spot-kurima-bridge",
@@ -9098,7 +8766,8 @@
     "nearCity": "宮古島",
     "stayMinutes": 30,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "宮古島"
   },
   {
     "id": "spot-taketomijima",
@@ -9108,7 +8777,8 @@
     "nearCity": "石垣島",
     "stayMinutes": 90,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "石垣島"
   },
   {
     "id": "spot-himeyuri",
@@ -9118,6 +8788,7 @@
     "nearCity": "那覇",
     "stayMinutes": 45,
     "stayAllowed": [],
-    "shinkansenAccess": false
+    "shinkansenAccess": false,
+    "hotelHub": "那覇"
   }
 ]

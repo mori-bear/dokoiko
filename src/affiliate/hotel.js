@@ -1,16 +1,13 @@
 /**
  * 宿泊リンク制御モジュール
  *
- * city.hasHotel === true の場合に宿泊ブロックを表示する。
- * city.hubHotel が存在する場合、ハブ都市の宿泊ブロックも追加表示。
+ * city.hotelHub を使用して宿泊検索キーワードを決定する。
+ * hotelHub が未設定の場合は city.name にフォールバック。
  *
- * 実際のリンクURL生成は affiliate.js (applyAffiliateLinks) が担う。
+ * spot 型は自身に宿がないため hotelHub に近隣ハブ都市が設定される。
  */
 
-export function buildHotelLinks(city, destinations) {
-  const hub = city.hubHotel
-    ? destinations.find(d => d.id === city.hubHotel) || null
-    : null;
-
-  return { show: city.hasHotel !== false, hub };
+export function buildHotelLinks(city) {
+  const hotelHub = city.hotelHub ?? city.name;
+  return { hotelHub };
 }
