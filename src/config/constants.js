@@ -11,8 +11,8 @@ export const DEPARTURES = [
 
 export const DISTANCE_LABELS = {
   1: '近場',
-  2: 'ドライブ',
-  3: '日帰り旅行',
+  2: '少し遠出',
+  3: '日帰り旅',
   4: '小旅行',
   5: '遠出',
 };
