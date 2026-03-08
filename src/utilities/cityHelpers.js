@@ -70,7 +70,7 @@ export function createLocal({
   return {
     id,
     name,
-    type:             'local',
+    type:             'destination',
     region,
     mapDestination:   mapDestination || name,
     parentHub:        parentHub || null,
@@ -102,7 +102,8 @@ export function createIsland({
   return {
     id,
     name,
-    type:             'island',
+    type:             'destination',
+    isIsland:         true,
     region,
     mapDestination:   mapDestination || name,
     parentHub:        parentHub || null,

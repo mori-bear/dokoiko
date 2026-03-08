@@ -56,7 +56,7 @@ function buildCityBlock(city, _distanceLabel) {
     ? city.themes.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
     : '';
 
-  const categoryBadge = buildCategoryBadge(city.type);
+  const categoryBadge = buildCategoryBadge(city);
   const spotListHtml  = buildSpotList(city.landmarks ?? city.spots);
 
   return `
@@ -84,8 +84,8 @@ function buildSpotList(spots) {
   `;
 }
 
-function buildCategoryBadge(type) {
-  if (type !== 'island') return '';
+function buildCategoryBadge(city) {
+  if (!city.isIsland) return '';
   return `　<span class="type-badge type-island">島</span>`;
 }
 

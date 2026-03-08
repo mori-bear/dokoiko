@@ -198,7 +198,7 @@ export function calculateDistanceStars(departure, destination) {
   if (isSameMetro(departure, hotelHub)) return 1;
 
   // island は常に ★5（同一都市圏例外を除く）
-  if (destination.type === 'island') return 5;
+  if (destination.isIsland) return 5;
 
   const depReg = DEPARTURE_REGION[departure];
   if (!depReg) return 3;

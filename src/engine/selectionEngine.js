@@ -72,7 +72,7 @@ function isSameCity(destination, departure) {
 
 function isSamePrefectureOvernight(destination, departure, stayType) {
   if (stayType === 'daytrip') return false;
-  if (destination.type === 'island') return false;
+  if (destination.isIsland) return false;
   const destPref = DESTINATION_PREFECTURE_MAP[destination.id];
   if (!destPref) return false;
   return destPref === DEPARTURE_PREFECTURE[departure];
@@ -149,7 +149,7 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
 
   // 出発地・stayType・同一都市・同一都道府県でフィルタ
   const departurePool = withStars.filter(d => {
-    if (d.type === 'island' && normalizedStay !== '1night') return false;
+    if (d.isIsland === true && normalizedStay !== '1night') return false;
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
     if (departure && isSameCity(d, departure)) return false;
     if (departure && isSamePrefectureOvernight(d, departure, normalizedStay)) return false;
@@ -170,7 +170,7 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
 
   // 4. 最終フォールバック: stayType のみ（出発地制約なし）
   const globalPool = withStars.filter(d => {
-    if (d.type === 'island' && normalizedStay !== '1night') return false;
+    if (d.isIsland === true && normalizedStay !== '1night') return false;
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
     return true;
   });
