@@ -14,21 +14,12 @@
 
 /* ── 内部ユーティリティ ── */
 
-function datetimeToUnix(datetimeStr) {
-  if (datetimeStr) {
-    const t = new Date(datetimeStr).getTime();
-    if (!isNaN(t)) return Math.floor(t / 1000);
-  }
-  return Math.floor((Date.now() + 1800000) / 1000);
-}
-
-function mapsUrl(origin, destination, mode, unix) {
+function mapsUrl(origin, destination, mode) {
   return (
     'https://www.google.com/maps/dir/?api=1' +
     `&origin=${encodeURIComponent(origin)}` +
     `&destination=${encodeURIComponent(destination)}` +
-    `&travelmode=${mode}` +
-    `&departure_time=${unix}`
+    `&travelmode=${mode}`
   );
 }
 
@@ -67,12 +58,11 @@ const AIRPORT_IATA = {
 
 /* ── Google Maps（transit / driving 統一） ── */
 
-export function buildGoogleMapsLink(origin, destination, datetime, mode = 'transit') {
-  const unix = datetimeToUnix(datetime);
+export function buildGoogleMapsLink(origin, destination, mode = 'transit') {
   return {
     type: 'google-maps',
     label: 'ルートを見る（Googleマップ）',
-    url: mapsUrl(origin, destination, mode, unix),
+    url: mapsUrl(origin, destination, mode),
   };
 }
 

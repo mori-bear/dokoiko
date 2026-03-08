@@ -28,6 +28,12 @@ export function bindHandlers(state, onGo, onRetry) {
         return;
       }
 
+      if (group === 'stay') {
+        setActive('[data-group="stay"]', selBtn);
+        state.stayType = value;
+        return;
+      }
+
       if (group === 'people') {
         setActive('[data-group="people"]', selBtn);
         state.people = parseInt(value, 10);

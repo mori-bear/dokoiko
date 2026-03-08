@@ -13,7 +13,6 @@ const state = {
   departure:    '東京',
   distance:     null,
   stayType:     '1night',
-  datetime:     buildDefaultDatetime(),
   people:       DEFAULT_GUESTS,
   pool:         [],
   poolIndex:    0,
@@ -72,7 +71,7 @@ function draw() {
   if (!city) return;
 
   const fromCity       = DEPARTURE_CITY_INFO[state.departure];
-  const transportLinks = resolveTransportLinks(city, state.departure, state.datetime);
+  const transportLinks = resolveTransportLinks(city, state.departure);
   const hotelLinks     = buildHotelLinks(city);
 
   renderResult({
@@ -115,13 +114,6 @@ function showFormError(msg) {
 function clearFormError() {
   const el = document.getElementById('form-error');
   if (el) { el.hidden = true; el.textContent = ''; }
-}
-
-function buildDefaultDatetime() {
-  const d = new Date();
-  d.setMinutes(d.getMinutes() + 30);
-  const pad = (n) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
 
 /* ── イントロ演出 ── */

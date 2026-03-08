@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>どこ行こ？ — 距離と滞在で旅先を決める</title>
-  <meta name="description" content="距離と滞在だけで、ちゃんと行ける場所を1つ。迷う時間を減らすためのサイトです。">
+  <title>どこ行こ？ — 距離と日程で旅先を決める</title>
+  <meta name="description" content="距離と日程だけで、ちゃんと行ける場所を1つ。迷う時間を減らすためのサイトです。">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -14,7 +14,6 @@
     <p class="intro-text">知らない街へ、逢いに行こう。</p>
   </div>
   <script>
-    // 再訪問者向けに即座に非表示（フリック防止）
     if (localStorage.getItem('dokoiko-intro-v1')) {
       document.getElementById('intro-overlay').style.display = 'none';
     }
@@ -38,7 +37,7 @@
       </section>
 
       <section class="how-to" id="about">
-        <div class="step"><span class="step-num">1</span><p>出発地・距離・人数を選ぶ</p></div>
+        <div class="step"><span class="step-num">1</span><p>出発地・距離・日程・人数を選ぶ</p></div>
         <div class="step"><span class="step-num">2</span><p>「どこ行こ？」を押す</p></div>
         <div class="step"><span class="step-num">3</span><p>交通・宿リンクから予約</p></div>
       </section>
@@ -100,10 +99,20 @@
           <label class="control-label">どのくらい遠い？</label>
           <div class="btn-group btn-group--distance">
             <button class="sel-btn sel-btn--distance" data-group="distance" data-value="1"><span class="star-val">★1</span><span class="star-desc">近場</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="2"><span class="star-val">★2</span><span class="star-desc">小旅行</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="3"><span class="star-val">★3</span><span class="star-desc">日帰り</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="4"><span class="star-val">★4</span><span class="star-desc">週末</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="2"><span class="star-val">★2</span><span class="star-desc">ドライブ</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="3"><span class="star-val">★3</span><span class="star-desc">日帰り旅行</span></button>
+            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="4"><span class="star-val">★4</span><span class="star-desc">小旅行</span></button>
             <button class="sel-btn sel-btn--distance" data-group="distance" data-value="5"><span class="star-val">★5</span><span class="star-desc">遠出</span></button>
+          </div>
+        </div>
+
+        <!-- 日程 -->
+        <div class="control-group">
+          <label class="control-label">日程</label>
+          <div class="btn-group">
+            <button class="sel-btn" data-group="stay" data-value="daytrip">日帰り</button>
+            <button class="sel-btn active" data-group="stay" data-value="1night">1泊2日</button>
+            <button class="sel-btn" data-group="stay" data-value="2night">2泊3日</button>
           </div>
         </div>
 
