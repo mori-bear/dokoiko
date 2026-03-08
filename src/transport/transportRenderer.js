@@ -15,6 +15,7 @@ import {
  *   bus         → Googleマップ(transit) のみ
  *   air         → Skyscanner + Googleマップ(transit)
  *   ferry       → フェリー予約 + Googleマップ(transit)
+ *                 island の場合は portHubs から最寄り港を選択
  *   car         → Googleマップ(driving)
  *
  * ★1 の場合: Googleマップのみ（JR/航空ボタン非表示）
@@ -63,11 +64,15 @@ export function resolveTransportLinks(city, departure, datetime) {
     }
 
   } else if (main === 'ferry') {
-    const fg = access?.ferryGateway;
-    if (fg) {
-      const ferryLink = buildFerryLink(fg);
+    // island の場合は portHubs から最寄り港を選択、それ以外は ferryGateway
+    const port = city.portHubs
+      ? selectNearestPort(city, departure)
+      : (access?.ferryGateway ?? null);
+
+    if (port) {
+      const ferryLink = buildFerryLink(port);
       if (ferryLink) links.push(ferryLink);
-      links.push(buildGoogleMapsLink(fromCity.rail, fg, datetime, 'transit'));
+      links.push(buildGoogleMapsLink(fromCity.rail, port, datetime, 'transit'));
     } else {
       links.push(buildGoogleMapsLink(fromCity.rail, dest, datetime, 'transit'));
     }
@@ -81,6 +86,44 @@ export function resolveTransportLinks(city, departure, datetime) {
   }
 
   return links.filter(link => link && link.url);
+}
+
+/**
+ * portHubs から出発地に最も近い港を選択する。
+ *
+ * 島ごとに出発地（または出発地方）→港 のマッピングを定義。
+ * マッピングにない場合は portHubs[0]（デフォルト港）を返す。
+ */
+const PORT_SELECT = {
+  'izu-oshima': (dep) => {
+    if (['静岡'].includes(dep)) return '稲取港';
+    if (['名古屋', '大阪', '京都', '神戸', '広島', '福岡'].includes(dep)) return '熱海港';
+    return '竹芝客船ターミナル';  // 東京・東北・関東など
+  },
+  'naoshima': (dep) => {
+    // 四国側 → 高松港、本州側 → 宇野港
+    if (['高松', '松山', '高知', '徳島'].includes(dep)) return '高松港';
+    return '宇野港';
+  },
+  'shodoshima': (dep) => {
+    if (['高松', '松山', '高知', '徳島'].includes(dep)) return '高松港';
+    return '宇野港';
+  },
+  'goto': (dep) => {
+    if (dep === '長崎') return '長崎港';
+    return '博多港';
+  },
+};
+
+function selectNearestPort(city, departure) {
+  const portHubs = city.portHubs;
+  if (!portHubs || portHubs.length === 0) return null;
+  if (portHubs.length === 1) return portHubs[0];
+
+  const selector = PORT_SELECT[city.id];
+  if (selector) return selector(departure);
+
+  return portHubs[0]; // デフォルト
 }
 
 /**

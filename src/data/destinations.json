@@ -2099,7 +2099,10 @@
     "port": null,
     "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "宮島"
+    "hotelHub": "宮島",
+    "portHubs": [
+      "宮島口港"
+    ]
   },
   {
     "id": "onomichi",
@@ -2313,7 +2316,11 @@
     "port": "高松港",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "小豆島"
+    "hotelHub": "小豆島",
+    "portHubs": [
+      "高松港",
+      "宇野港"
+    ]
   },
   {
     "id": "kochi",
@@ -2390,7 +2397,7 @@
       "ferryGateway": null
     },
     "transport": {
-      "main": "jr",
+      "main": "bus",
       "railGateway": "境港駅",
       "airport": "米子空港"
     },
@@ -2574,7 +2581,10 @@
     "airportAccess": "ゆいレール",
     "image": "https://images.unsplash.com/photo-1548693093-439b66679405?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "渡嘉敷島"
+    "hotelHub": "渡嘉敷島",
+    "portHubs": [
+      "那覇港"
+    ]
   },
   {
     "id": "kumejima",
@@ -2744,7 +2754,10 @@
     "port": "竹芝客船ターミナル",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "神津島"
+    "hotelHub": "神津島",
+    "portHubs": [
+      "竹芝客船ターミナル"
+    ]
   },
   {
     "id": "hakone",
@@ -3007,7 +3020,12 @@
     "port": "竹芝客船ターミナル",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "伊豆大島"
+    "hotelHub": "伊豆大島",
+    "portHubs": [
+      "竹芝客船ターミナル",
+      "熱海港",
+      "稲取港"
+    ]
   },
   {
     "id": "shirakawago-t",
@@ -3067,7 +3085,7 @@
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "白川郷"
+    "hotelHub": "高山"
   },
   {
     "id": "arima-onsen",
@@ -4087,7 +4105,11 @@
     "port": "高松港",
     "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "直島"
+    "hotelHub": "直島",
+    "portHubs": [
+      "高松港",
+      "宇野港"
+    ]
   },
   {
     "id": "kotohira",
@@ -5102,7 +5124,7 @@
     "accessFromHub": "バス",
     "image": "https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "五箇山"
+    "hotelHub": "高山"
   },
   {
     "id": "jozankei",
@@ -5126,7 +5148,7 @@
       "ferryGateway": null
     },
     "transport": {
-      "main": "jr",
+      "main": "bus",
       "railGateway": "札幌駅"
     },
     "atmosphere": [
@@ -5427,7 +5449,10 @@
     "port": "鹿児島港",
     "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "奄美大島"
+    "hotelHub": "奄美大島",
+    "portHubs": [
+      "鹿児島港"
+    ]
   },
   {
     "id": "goto",
@@ -5480,7 +5505,11 @@
     "port": "長崎港",
     "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70",
     "shinkansenAccess": false,
-    "hotelHub": "五島列島"
+    "hotelHub": "五島列島",
+    "portHubs": [
+      "博多港",
+      "長崎港"
+    ]
   },
   {
     "id": "unzen",
@@ -6311,7 +6340,7 @@
       "ferryGateway": null
     },
     "transport": {
-      "main": "jr",
+      "main": "bus",
       "railGateway": "大歩危駅"
     },
     "atmosphere": [
