@@ -52,8 +52,8 @@ function buildCityBlock(city, _distanceLabel) {
     : '';
 
   // タグは最大3つ
-  const themesHtml = Array.isArray(city.themes) && city.themes.length
-    ? city.themes.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
+  const themesHtml = Array.isArray(city.tags) && city.tags.length
+    ? city.tags.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
     : '';
 
   const categoryBadge = buildCategoryBadge(city);
