@@ -22,6 +22,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "横浜駅"
+    },
     "atmosphere": [
       "東京駅から電車で30分。横浜駅周辺が観光の起点。",
       "みなとみらい・中華街・山下公園",
@@ -74,6 +78,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "鎌倉駅"
+    },
     "atmosphere": [
       "東京駅から電車で約1時間。鎌倉駅から主要スポットへ歩いて行ける。",
       "鶴岡八幡宮・高徳院（大仏）・長谷寺",
@@ -124,6 +132,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "熱海駅"
     },
     "atmosphere": [
       "東京駅から新幹線で45分。熱海駅から温泉街まで徒歩圏内。",
@@ -177,6 +189,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "日光駅"
+    },
     "atmosphere": [
       "東京から電車で約2時間。日光駅からバスで社寺エリアへ。",
       "日光東照宮・中禅寺湖・華厳ノ滝",
@@ -227,6 +243,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "軽井沢駅"
     },
     "atmosphere": [
       "東京駅から新幹線で1時間20分。軽井沢駅が起点。",
@@ -279,6 +299,13 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "新宿駅"
+      ],
+      "railGateway": "河口湖駅"
+    },
     "atmosphere": [
       "新宿からバスで約2時間。河口湖駅または高速バスが起点。",
       "河口湖・忍野八海・富士山五合目",
@@ -330,6 +357,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "名古屋駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。",
       "名古屋城・熱田神宮・東山動植物園",
@@ -366,7 +397,7 @@
     "region": "東北",
     "mapDestination": "仙台駅",
     "parentHub": null,
-    "distanceStars": 3,
+    "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
       "1night"
@@ -380,6 +411,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "仙台駅"
     },
     "atmosphere": [
       "東京駅から新幹線で1時間40分。仙台駅から地下鉄・バスで各地へ。",
@@ -432,6 +467,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。",
       "兼六園・ひがし茶屋街・近江町市場",
@@ -482,6 +521,10 @@
       "railBookingProvider": "ex",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
@@ -534,6 +577,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "京都駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間15分、大阪駅から電車で15分。",
       "金閣寺・伏見稲荷大社・清水寺",
@@ -584,6 +631,11 @@
       "railBookingProvider": "e5489",
       "airportGateway": "広島空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "広島駅",
+      "airport": "広島空港"
     },
     "atmosphere": [
       "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
@@ -637,6 +689,11 @@
       "airportGateway": "福岡空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅",
+      "airport": "福岡空港"
+    },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
       "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
@@ -688,6 +745,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -743,6 +804,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "奈良駅"
+    },
     "atmosphere": [
       "大阪駅から電車で45分。奈良駅・近鉄奈良駅が観光の起点。",
       "東大寺・春日大社・奈良公園（鹿）",
@@ -794,6 +859,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "三ノ宮駅"
     },
     "atmosphere": [
       "大阪駅から電車で30分。三ノ宮駅が市内交通の中心。",
@@ -847,6 +916,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "京都駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間15分、大阪駅から電車で15分。",
       "金閣寺・伏見稲荷大社・清水寺",
@@ -899,6 +972,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "姫路駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で35分。姫路駅から姫路城まで徒歩15分。",
       "姫路城・好古園・書写山円教寺",
@@ -935,7 +1012,7 @@
     "region": "近畿",
     "mapDestination": "和歌山駅",
     "parentHub": null,
-    "distanceStars": 1,
+    "distanceStars": 2,
     "weight": 0.35,
     "stayAllowed": [
       "1night"
@@ -951,6 +1028,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "和歌山駅"
     },
     "atmosphere": [
       "大阪駅から電車で1時間。和歌山駅が市内の起点。",
@@ -988,7 +1069,7 @@
     "region": "中国",
     "mapDestination": "岡山駅",
     "parentHub": null,
-    "distanceStars": 2,
+    "distanceStars": 1,
     "weight": 0.35,
     "stayAllowed": [
       "daytrip",
@@ -1003,6 +1084,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "岡山駅"
     },
     "atmosphere": [
       "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。",
@@ -1055,6 +1140,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "名古屋駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。",
       "名古屋城・熱田神宮・東山動植物園",
@@ -1106,6 +1195,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。",
       "兼六園・ひがし茶屋街・近江町市場",
@@ -1142,7 +1235,7 @@
     "region": "中国",
     "mapDestination": "広島駅",
     "parentHub": null,
-    "distanceStars": 3,
+    "distanceStars": 2,
     "weight": 0.3,
     "stayAllowed": [
       "1night"
@@ -1156,6 +1249,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "広島駅"
     },
     "atmosphere": [
       "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
@@ -1208,6 +1305,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅"
+    },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
       "浅草・渋谷・東京スカイツリー",
@@ -1259,6 +1360,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
       "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
@@ -1309,6 +1414,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -1364,6 +1473,10 @@
       "railBookingProvider": null,
       "airportGateway": "石垣空港",
       "ferryGateway": "石垣港"
+    },
+    "transport": {
+      "main": "air",
+      "airport": "石垣空港"
     },
     "atmosphere": [
       "那覇から飛行機で1時間。石垣空港から市街まで車で30分。",
@@ -1422,6 +1535,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "岐阜駅"
+    },
     "atmosphere": [
       "名古屋駅から電車で30分。岐阜駅からバスで観光地へ。",
       "岐阜城・川原町・長良川鵜飼",
@@ -1473,6 +1590,10 @@
       "railBookingProvider": "ex",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "京都駅"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間15分、大阪駅から電車で15分。",
@@ -1526,6 +1647,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "伊勢市駅"
+    },
     "atmosphere": [
       "名古屋駅から特急で1時間30分。伊勢市駅が観光の起点。",
       "伊勢神宮（内宮・外宮）・おかげ横丁・二見興玉神社",
@@ -1576,6 +1701,10 @@
       "railBookingProvider": "ex",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
@@ -1628,6 +1757,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。",
       "兼六園・ひがし茶屋街・近江町市場",
@@ -1678,6 +1811,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅"
     },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
@@ -1730,6 +1867,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "広島駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
       "原爆ドーム・厳島神社（宮島）・広島城",
@@ -1780,6 +1921,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "仙台駅"
     },
     "atmosphere": [
       "東京駅から新幹線で1時間40分。仙台駅から地下鉄・バスで各地へ。",
@@ -1832,6 +1977,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
       "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
@@ -1882,6 +2031,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -1936,6 +2089,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "佐賀駅"
+    },
     "atmosphere": [
       "博多駅から特急で35分。佐賀駅からバスで有田・唐津へ。",
       "有田焼（有田）・吉野ヶ里歴史公園・唐津城",
@@ -1988,6 +2145,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "熊本駅"
+    },
     "atmosphere": [
       "博多駅から新幹線で35分。熊本駅から市電で市内へ。",
       "熊本城・水前寺成趣園・黒川温泉（車1時間）",
@@ -2038,6 +2199,10 @@
       "railBookingProvider": "jrkyushu",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "長崎駅"
     },
     "atmosphere": [
       "博多駅から新幹線で約30分。長崎駅から路面電車で観光地へ。",
@@ -2090,6 +2255,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "別府駅"
+    },
     "atmosphere": [
       "博多駅から特急で約2時間。別府駅から温泉街へバスで。",
       "地獄めぐり（海地獄など）・別府温泉・湯布院（車30分）",
@@ -2140,6 +2309,10 @@
       "railBookingProvider": "jrkyushu",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "鹿児島中央駅"
     },
     "atmosphere": [
       "博多駅から新幹線で1時間20分。鹿児島中央駅から市電で市内へ。",
@@ -2192,6 +2365,11 @@
       "airportGateway": "宮崎空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "宮崎駅",
+      "airport": "宮崎空港"
+    },
     "atmosphere": [
       "博多から飛行機で45分または特急で約2時間。宮崎駅が起点。",
       "青島神社・鵜戸神宮・高千穂峡（車2時間）",
@@ -2242,6 +2420,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "広島駅"
     },
     "atmosphere": [
       "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
@@ -2294,6 +2476,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
       "道頓堀・大阪城・新世界",
@@ -2345,6 +2531,11 @@
       "airportGateway": "羽田空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅",
+      "airport": "羽田空港"
+    },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
       "浅草・渋谷・東京スカイツリー",
@@ -2395,6 +2586,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -2449,6 +2644,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "小樽駅"
+    },
     "atmosphere": [
       "札幌駅から電車で40分。小樽駅から運河まで徒歩10分。",
       "小樽運河・小樽オルゴール堂・堺町通り（寿司）",
@@ -2499,6 +2698,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "旭川駅"
     },
     "atmosphere": [
       "札幌駅から特急で1時間30分。旭川駅が道北の拠点。",
@@ -2551,6 +2754,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "富良野駅"
+    },
     "atmosphere": [
       "旭川駅から電車で1時間。富良野駅が観光の起点。",
       "ファーム富田（ラベンダー）・北の国から聖地・富良野チーズ工房",
@@ -2601,6 +2808,11 @@
       "railBookingProvider": "ekinet",
       "airportGateway": "釧路空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "釧路駅",
+      "airport": "釧路空港"
     },
     "atmosphere": [
       "札幌から飛行機で1時間または特急で3時間30分。釧路駅が起点。",
@@ -2653,6 +2865,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "函館駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で4時間。函館駅からトラムで各地へ。",
       "函館山夜景・元町・五稜郭",
@@ -2703,6 +2919,10 @@
       "railBookingProvider": null,
       "airportGateway": "羽田空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "羽田空港"
     },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
@@ -2756,6 +2976,10 @@
       "airportGateway": "関西国際空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "air",
+      "airport": "関西国際空港"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
       "道頓堀・大阪城・新世界",
@@ -2807,6 +3031,10 @@
       "railBookingProvider": null,
       "airportGateway": "福岡空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "福岡空港"
     },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
@@ -2861,6 +3089,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "松島海岸駅"
+    },
     "atmosphere": [
       "仙台駅から電車で30分。松島海岸駅から海岸まで徒歩5分。",
       "松島湾の島々・瑞巌寺・五大堂",
@@ -2913,6 +3145,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "山形駅"
+    },
     "atmosphere": [
       "仙台駅から新幹線で30分。山形駅からバスで各地へ。",
       "山寺（立石寺）・銀山温泉（車1時間）・蔵王（車1時間）",
@@ -2963,6 +3199,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "盛岡駅"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間15分。盛岡駅が東北北部の拠点。",
@@ -3015,6 +3255,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅"
+    },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
       "浅草・渋谷・東京スカイツリー",
@@ -3065,6 +3309,10 @@
       "railBookingProvider": "ekinet",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新潟駅"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間。新潟駅が日本海側の玄関口。",
@@ -3117,6 +3365,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。金沢駅から観光地はバスで10〜15分。",
       "兼六園・ひがし茶屋街・近江町市場",
@@ -3167,6 +3419,11 @@
       "railBookingProvider": "e5489",
       "airportGateway": "大阪国際空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅",
+      "airport": "大阪国際空港"
     },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
@@ -3220,6 +3477,11 @@
       "airportGateway": "福岡空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅",
+      "airport": "福岡空港"
+    },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
       "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
@@ -3270,6 +3532,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "宮島口港"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "広島駅から電車＋フェリーで45分。宮島口駅からフェリーで10分。",
@@ -3325,6 +3590,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "尾道駅"
+    },
     "atmosphere": [
       "広島駅から電車で1時間。尾道駅から坂の街へ徒歩5分。",
       "千光寺・猫の細道・尾道水道の渡船",
@@ -3377,6 +3646,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "岡山駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。",
       "後楽園・岡山城・倉敷美観地区",
@@ -3427,6 +3700,10 @@
       "railBookingProvider": null,
       "airportGateway": "松山空港",
       "ferryGateway": "松山観光港"
+    },
+    "transport": {
+      "main": "air",
+      "airport": "松山空港"
     },
     "atmosphere": [
       "大阪から飛行機で1時間または高松から特急で2時間。",
@@ -3479,6 +3756,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
       "道頓堀・大阪城・新世界",
@@ -3529,6 +3810,10 @@
       "railBookingProvider": "jrkyushu",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅"
     },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
@@ -3581,6 +3866,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "京都駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間15分、大阪駅から電車で15分。",
       "金閣寺・伏見稲荷大社・清水寺",
@@ -3631,6 +3920,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "名古屋駅"
     },
     "atmosphere": [
       "東京駅から新幹線で1時間40分。名古屋駅が中部の玄関口。",
@@ -3683,6 +3976,11 @@
       "airportGateway": "羽田空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅",
+      "airport": "羽田空港"
+    },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
       "浅草・渋谷・東京スカイツリー",
@@ -3734,6 +4032,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -3788,6 +4090,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "徳島駅"
+    },
     "atmosphere": [
       "大阪から高速バスで2時間30分。徳島駅が市内の起点。",
       "大塚国際美術館・鳴門の渦潮・阿波踊り会館",
@@ -3840,6 +4146,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "岡山駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で45分。岡山駅から倉敷まで電車で15分。",
       "後楽園・岡山城・倉敷美観地区",
@@ -3890,6 +4200,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "高松港"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "高松港からフェリーで1時間。土庄港が島の玄関口。",
@@ -3944,6 +4257,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "高知駅"
+    },
     "atmosphere": [
       "大阪から特急で3時間。高知駅から路面電車で市内へ。",
       "高知城・桂浜・ひろめ市場（カツオのたたき）",
@@ -3994,6 +4311,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "松山駅"
     },
     "atmosphere": [
       "大阪から飛行機で1時間または高松から特急で2時間。",
@@ -4046,6 +4367,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "新大阪駅"
+    },
     "atmosphere": [
       "東京駅から新幹線で2時間30分。大阪駅・梅田が交通の拠点。",
       "道頓堀・大阪城・新世界",
@@ -4096,6 +4421,10 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "広島駅"
     },
     "atmosphere": [
       "大阪駅から新幹線で1時間30分。広島駅から路面電車で各地へ。",
@@ -4148,6 +4477,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "博多駅"
+    },
     "atmosphere": [
       "大阪駅から新幹線で2時間20分。博多駅が九州の玄関口。",
       "中洲屋台・太宰府天満宮（電車30分）・福岡城跡",
@@ -4198,6 +4531,11 @@
       "railBookingProvider": "ekinet",
       "airportGateway": "羽田空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "東京駅",
+      "airport": "羽田空港"
     },
     "atmosphere": [
       "各地から新幹線・飛行機でアクセス可能。東京駅が起点。",
@@ -4250,6 +4588,10 @@
       "railBookingProvider": null,
       "airportGateway": "新千歳空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "新千歳空港"
     },
     "atmosphere": [
       "東京から飛行機で1時間30分。新千歳空港から電車で40分。",
@@ -4304,6 +4646,11 @@
       "airportGateway": "米子空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "境港駅",
+      "airport": "米子空港"
+    },
     "atmosphere": [
       "米子空港から車で30分または境港駅から車で30分。",
       "美保神社・美保関灯台・青石畳通り",
@@ -4348,6 +4695,14 @@
       "railBookingProvider": "e5489",
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "御坊駅",
+        "和歌山駅"
+      ],
+      "railGateway": "紀伊田辺駅"
     },
     "atmosphere": [
       "大阪から特急＋龍神バスで約3時間。紀伊田辺駅で乗換え。",
@@ -4400,6 +4755,10 @@
       "railBookingProvider": null,
       "airportGateway": "那覇空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "那覇空港"
     },
     "atmosphere": [
       "東京から飛行機で約3時間。那覇空港からモノレールで市内へ。",
@@ -4457,6 +4816,10 @@
       "airportGateway": "那覇空港",
       "ferryGateway": "那覇港"
     },
+    "transport": {
+      "main": "air",
+      "airport": "那覇空港"
+    },
     "atmosphere": [
       "那覇港から高速フェリーで35分。島内はレンタサイクルで移動。",
       "阿波連ビーチ・渡嘉敷ビーチ・ケラマブルーの海",
@@ -4504,6 +4867,10 @@
       "railBookingProvider": null,
       "airportGateway": "久米島空港",
       "ferryGateway": "那覇港"
+    },
+    "transport": {
+      "main": "air",
+      "airport": "久米島空港"
     },
     "atmosphere": [
       "那覇から飛行機で30分。島内移動はレンタカーが便利。",
@@ -4564,6 +4931,10 @@
       "airportGateway": "宮古空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "air",
+      "airport": "宮古空港"
+    },
     "atmosphere": [
       "那覇から飛行機で1時間。宮古空港から市街まで車で20分。",
       "与那覇前浜・伊良部大橋・池間島",
@@ -4617,6 +4988,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "竹芝客船ターミナル"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "竹芝客船ターミナルから高速船で約2時間30分。",
@@ -4672,6 +5046,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "privateRail",
+      "railGateway": "箱根湯本駅"
+    },
     "atmosphere": [
       "山と湖に抱かれた温泉郷。",
       "芦ノ湖・大涌谷・箱根関所",
@@ -4722,6 +5100,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "privateRail",
+      "railGateway": "修善寺駅"
     },
     "atmosphere": [
       "伊豆最古の温泉、竹林に静まる。",
@@ -4774,6 +5156,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "長野原草津口駅"
+    },
     "atmosphere": [
       "日本三名泉のひとつ、源泉かけ流し。",
       "湯畑・西の河原・熱の湯",
@@ -4825,6 +5211,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "伊豆急下田駅"
+    },
     "atmosphere": [
       "黒船が来た港まち、開国の面影。",
       "了仙寺・白浜海岸・爪木崎",
@@ -4875,6 +5265,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "竹芝客船ターミナル"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "東京から船で行ける火山の島。",
@@ -4928,6 +5321,14 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "新宿駅",
+        "東京駅"
+      ],
+      "railGateway": "金沢駅"
     },
     "atmosphere": [
       "雪に埋もれた合掌造りの集落。",
@@ -4983,6 +5384,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "privateRail",
+      "railGateway": "有馬温泉駅"
+    },
     "atmosphere": [
       "六甲山麓に湧く、千年の湯処。",
       "金の湯・銀の湯・太閤の湯殿館",
@@ -5034,6 +5439,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "城崎温泉駅"
     },
     "atmosphere": [
       "七つの外湯を浴衣で巡る温泉街。",
@@ -5087,6 +5496,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "倉敷駅"
+    },
     "atmosphere": [
       "白壁と柳の美観地区。",
       "大原美術館・倉敷川・阿智神社",
@@ -5138,6 +5551,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "白浜駅"
+    },
     "atmosphere": [
       "南紀の白い砂浜とエメラルドの海。",
       "白良浜・三段壁・千畳敷",
@@ -5188,6 +5605,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "高山駅"
     },
     "atmosphere": [
       "江戸の町割りが残る飛騨の山里。",
@@ -5241,6 +5662,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "高山駅"
+    },
     "atmosphere": [
       "飛騨の山あいに息づく古き街。",
       "三之町・高山陣屋・飛騨の里",
@@ -5292,6 +5717,13 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "名鉄バスセンター"
+      ],
+      "railGateway": "名古屋駅"
     },
     "atmosphere": [
       "雪の重さに耐えた合掌造りの村。",
@@ -5347,6 +5779,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "鳥羽駅"
+    },
     "atmosphere": [
       "真珠と海女の海、伊勢湾に抱かれた港。",
       "鳥羽水族館・ミキモト真珠島・海女小屋",
@@ -5399,6 +5835,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "松本駅"
+    },
     "atmosphere": [
       "アルプスを望む城下町。",
       "松本城・縄手通り・旧開智学校",
@@ -5450,6 +5890,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "由布院駅"
+    },
     "atmosphere": [
       "由布岳を望む霧の温泉郷。",
       "湯の坪街道・金鱗湖・由布院玉の湯",
@@ -5500,6 +5944,14 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "博多駅",
+        "熊本駅"
+      ],
+      "railGateway": "博多駅"
     },
     "atmosphere": [
       "杉林の奥に隠れた秘湯の集落。",
@@ -5555,6 +6007,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "阿蘇駅"
+    },
     "atmosphere": [
       "活火山と広大なカルデラの大地。",
       "草千里・中岳火口・大観峰",
@@ -5605,6 +6061,10 @@
       "railBookingProvider": null,
       "airportGateway": "屋久島空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "air",
+      "airport": "屋久島空港"
     },
     "atmosphere": [
       "樹齢七千年の縄文杉が待つ、森の島。",
@@ -5660,6 +6120,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "熊本駅"
+    },
     "atmosphere": [
       "海と島と橋が連なる天草の原風景。",
       "天草五橋・崎津集落・イルカウォッチング",
@@ -5714,6 +6178,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "平泉駅"
+    },
     "atmosphere": [
       "黄金の平泉、奥州藤原氏の夢の跡。",
       "中尊寺金色堂・毛越寺・達谷窟",
@@ -5764,6 +6232,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "角館駅"
     },
     "atmosphere": [
       "武家屋敷と枝垂れ桜の城下町。",
@@ -5816,6 +6288,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "会津若松駅"
+    },
     "atmosphere": [
       "鶴ヶ城と会津の心意気が残る城下町。",
       "鶴ヶ城・芦ノ牧温泉・大内宿",
@@ -5867,6 +6343,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "蔵王駅"
+    },
     "atmosphere": [
       "蔵王の火口湖、御釜の青緑は別世界。",
       "お釜・蔵王温泉・樹氷",
@@ -5917,6 +6397,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "萩駅"
     },
     "atmosphere": [
       "幕末の志士たちが歩いた城下町。",
@@ -5971,6 +6455,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "下関駅"
+    },
     "atmosphere": [
       "本州最西端、海峡の街。",
       "関門橋・唐戸市場・巌流島",
@@ -6023,6 +6511,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "倉敷駅"
+    },
     "atmosphere": [
       "瀬戸内の白壁の街、倉敷。",
       "美観地区・大原美術館・倉敷川",
@@ -6073,6 +6565,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "高松港"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "現代アートが島ごと美術館になった場所。",
@@ -6128,6 +6623,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "琴電琴平駅"
+    },
     "atmosphere": [
       "讃岐の金刀比羅宮、785段の石段。",
       "こんぴらさん・表書院・旧金毘羅大芝居",
@@ -6180,6 +6679,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "宇和島駅"
+    },
     "atmosphere": [
       "南予の闘牛と鯛めしの海辺の城下町。",
       "宇和島城・道後温泉・じゃこ天",
@@ -6230,6 +6733,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "洞爺駅"
     },
     "atmosphere": [
       "昭和新山と有珠山を望む、静かな湖畔。",
@@ -6282,6 +6789,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "登別駅"
+    },
     "atmosphere": [
       "北海道最大の温泉地、地獄谷へ。",
       "地獄谷・大湯沼・クマ牧場",
@@ -6332,6 +6843,10 @@
       "railBookingProvider": null,
       "airportGateway": "女満別空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "car",
+      "railGateway": "知床斜里駅"
     },
     "atmosphere": [
       "世界自然遺産、手つかずの原生林と海。",
@@ -6384,6 +6899,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
     },
     "atmosphere": [
       "能登の先端、輪島塗と朝市の街。",
@@ -6439,6 +6958,13 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "金沢駅"
+      ],
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "冬の合掌造り、雪に輝く世界遺産。",
       "荻町合掌集落・和田家・展望台",
@@ -6493,6 +7019,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "加賀温泉駅"
+    },
     "atmosphere": [
       "九谷焼と山代・山中・片山津が集まる温泉郷。",
       "山代温泉・山中温泉・片山津温泉",
@@ -6545,6 +7075,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "松本駅"
+    },
     "atmosphere": [
       "松本城を仰ぐ、アルプスの城下町。",
       "松本城・縄手通り・美ヶ原",
@@ -6595,6 +7129,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "白馬駅"
     },
     "atmosphere": [
       "北アルプスの峰々を望む高原リゾート。",
@@ -6649,6 +7187,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "天橋立駅"
+    },
     "atmosphere": [
       "天橋立の砂洲を、股のぞきで。",
       "智恩寺・天橋立ビューランド・傘松公園",
@@ -6699,6 +7241,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "天橋立駅"
     },
     "atmosphere": [
       "舟屋が海に並ぶ、伊根の静かな入り江。",
@@ -6754,6 +7300,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "指宿駅"
+    },
     "atmosphere": [
       "砂に埋まる砂むし温泉、薩摩の南端。",
       "砂むし会館・長崎鼻・池田湖",
@@ -6804,6 +7354,10 @@
       "railBookingProvider": null,
       "airportGateway": "屋久島空港",
       "ferryGateway": "鹿児島港"
+    },
+    "transport": {
+      "main": "air",
+      "airport": "屋久島空港"
     },
     "atmosphere": [
       "世界遺産の森、屋久杉の圧倒的な存在感。",
@@ -6861,6 +7415,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "佐世保駅"
+    },
     "atmosphere": [
       "長崎県北、海と島の入り組む軍港の街。",
       "九十九島・旧海軍鎮守府跡・佐世保バーガー",
@@ -6911,6 +7469,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "平戸口駅"
     },
     "atmosphere": [
       "日本で最初に外国人が訪れた港まち。",
@@ -6964,6 +7526,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "阿蘇駅"
+    },
     "atmosphere": [
       "活火山のふもと、草原と温泉の大地。",
       "草千里・大観峰・阿蘇山上広場",
@@ -7014,6 +7580,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "熊本駅"
     },
     "atmosphere": [
       "熊本から最も近い秘湯の里。",
@@ -7069,6 +7639,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "平泉駅"
+    },
     "atmosphere": [
       "金色堂と中尊寺、岩手の誇る世界遺産。",
       "中尊寺金色堂・毛越寺・無量光院跡",
@@ -7120,6 +7694,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "角館駅"
     },
     "atmosphere": [
       "武家屋敷通りと桜、東北の小京都。",
@@ -7173,6 +7751,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "鳥取駅"
+    },
     "atmosphere": [
       "砂丘と蟹と名探偵の街。",
       "鳥取砂丘・砂の美術館・浦富海岸",
@@ -7224,6 +7806,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "秋田駅"
     },
     "atmosphere": [
       "きりたんぽと竿燈祭り、男鹿の鬼が宿る街。",
@@ -7278,6 +7864,14 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "三ノ宮駅",
+        "大阪駅"
+      ],
+      "railGateway": "三ノ宮駅"
+    },
     "atmosphere": [
       "玉ねぎと鳴門の渦巻く、橋の先の島。",
       "鳴門海峡・淡路夢舞台・伊弉諾神宮",
@@ -7331,6 +7925,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "高尾山口駅"
+    },
     "atmosphere": [
       "都心から一時間、599メートルの霊峰。",
       "ケーブルカー・薬王院・山頂の展望台",
@@ -7382,6 +7980,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "館山駅"
     },
     "atmosphere": [
       "南房総の先端、黒潮が運ぶ温暖な海。",
@@ -7435,6 +8037,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "金沢駅"
+    },
     "atmosphere": [
       "白川郷の隣、より静かな合掌造りの里。",
       "菅沼集落・相倉集落・岩瀬家",
@@ -7487,6 +8093,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "札幌駅"
     },
     "atmosphere": [
       "札幌の奥座敷、豊平川沿いの温泉郷。",
@@ -7542,6 +8152,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "美瑛駅"
+    },
     "atmosphere": [
       "丘と畑が織りなすパッチワークの大地。",
       "パッチワークの路・青い池・四季彩の丘",
@@ -7594,6 +8208,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "宮古駅"
+    },
     "atmosphere": [
       "浄土ヶ浜の白い岩と碧い海。",
       "浄土ヶ浜・北山崎・三陸ジオパーク",
@@ -7644,6 +8262,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "酒田駅"
     },
     "atmosphere": [
       "かつて北前船が行き交った湊町。",
@@ -7696,6 +8318,14 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "延岡駅",
+        "熊本駅"
+      ],
+      "railGateway": "熊本駅"
     },
     "atmosphere": [
       "神話の里、峡谷に響く真名井の滝。",
@@ -7750,6 +8380,9 @@
       "airportGateway": null,
       "ferryGateway": "鹿児島港"
     },
+    "transport": {
+      "main": "ferry"
+    },
     "atmosphere": [
       "亜熱帯の森とサンゴの海、奄美の原風景。",
       "金作原原生林・大浜海浜公園・マングローブ林",
@@ -7802,6 +8435,9 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": "長崎港"
+    },
+    "transport": {
+      "main": "ferry"
     },
     "atmosphere": [
       "教会と海が共存する、キリシタンの島々。",
@@ -7856,6 +8492,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "諫早駅"
+    },
     "atmosphere": [
       "長崎県の山上に湧く、地獄と温泉の街。",
       "雲仙地獄・雲仙温泉・妙見岳",
@@ -7908,6 +8548,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "中村駅"
     },
     "atmosphere": [
       "四国最南端、太平洋に突き出した岬。",
@@ -7963,6 +8607,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "大歩危駅"
+    },
     "atmosphere": [
       "吉野川の峡谷と、かずら橋で揺れる祖谷。",
       "大歩危峡・祖谷のかずら橋・かずら橋夢舞台",
@@ -8014,6 +8662,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "津和野駅"
     },
     "atmosphere": [
       "山陰の小京都、鯉が泳ぐ城下町。",
@@ -8067,6 +8719,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "犬山駅"
+    },
     "atmosphere": [
       "木曽川沿いに建つ、現存する国宝の城。",
       "犬山城・木曽川・博物館明治村",
@@ -8119,6 +8775,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "南木曽駅"
     },
     "atmosphere": [
       "中山道の宿場町が眠る、木曽の山あい。",
@@ -8174,6 +8834,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "園部駅"
+    },
     "atmosphere": [
       "茅葺き屋根が50棟並ぶ、山の集落。",
       "かやぶきの里・美山ふれあい広場・自然文化村",
@@ -8228,6 +8892,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "立山駅"
+    },
     "atmosphere": [
       "3000メートルの稜線を歩く、アルペンルート。",
       "室堂・雪の大谷・黒部ダム",
@@ -8280,6 +8948,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "氷見駅"
     },
     "atmosphere": [
       "立山連峰を望む、漁師町の朝市。",
@@ -8334,6 +9006,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "城崎温泉駅"
+    },
     "atmosphere": [
       "外湯巡りの湯けむり、浴衣で歩く柳の石畳。",
       "城崎温泉・円山川・玄武洞",
@@ -8386,6 +9062,14 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "bus",
+      "busFrom": [
+        "博多駅",
+        "熊本駅"
+      ],
+      "railGateway": "熊本駅"
+    },
     "atmosphere": [
       "深い山里に湧く、苔むした露天の秘湯。",
       "黒川温泉・入湯手形・瀬の本高原",
@@ -8437,6 +9121,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "田沢湖駅"
     },
     "atmosphere": [
       "ブナ林に抱かれた、乳白色の湯が七湯に湧く。",
@@ -8491,6 +9179,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "湯田温泉駅"
+    },
     "atmosphere": [
       "白狐伝説が残る、山口市街に湧く城下の湯。",
       "湯田温泉・瑠璃光寺・山口県立美術館",
@@ -8542,6 +9234,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "嬉野温泉駅"
     },
     "atmosphere": [
       "日本三大美肌の湯、とろとろの重曹泉。",
@@ -8597,6 +9293,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "尾道駅"
+    },
     "atmosphere": [
       "坂と路地と猫、文学と映画が育った港町。",
       "尾道水道・千光寺・しまなみ海道",
@@ -8649,6 +9349,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "角館駅"
     },
     "atmosphere": [
       "武家屋敷が続く、東北の小京都と呼ばれる城下町。",
@@ -8703,6 +9407,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "小布施駅"
+    },
     "atmosphere": [
       "栗と北斎が息づく、善光寺平を見渡す小さな文化の町。",
       "北斎館・栗菓子・岩松院",
@@ -8756,6 +9464,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "内子駅"
+    },
     "atmosphere": [
       "白壁と木蝋の香り、四国の商人文化が残る街並み。",
       "内子座・八日市護国町並み・本芳我家",
@@ -8808,6 +9520,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "高知駅"
+    },
     "atmosphere": [
       "岬の突端に打ち寄せる、太平洋の荒波と奇岩群。",
       "室戸岬・室戸ジオパーク・最御崎寺",
@@ -8859,6 +9575,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "大歩危駅"
     },
     "atmosphere": [
       "日本三大秘境のひとつ、深い谷間に霧が漂う集落。",
@@ -8913,6 +9633,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "木次駅"
+    },
     "atmosphere": [
       "たたら製鉄の記憶が残る、神話の里の山あい。",
       "奥出雲たたら・鬼の舌震・おろち湖",
@@ -8964,6 +9688,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "伊豆急下田駅"
     },
     "atmosphere": [
       "幕末開国の記憶と、エメラルドの入り江が共存する。",
@@ -9018,6 +9746,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "美瑛駅"
+    },
     "atmosphere": [
       "丘の稜線に広がる、パッチワークの農景色。",
       "パッチワークの丘・青い池・白金温泉",
@@ -9069,6 +9801,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "大石田駅"
     },
     "atmosphere": [
       "大正ロマンの洋館が、銀山川の両岸に立ち並ぶ。",
@@ -9123,6 +9859,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "湯野上温泉駅"
+    },
     "atmosphere": [
       "江戸の宿場町が、茅葺きのまま現代に残る。",
       "大内宿・塔のへつり・湯野上温泉",
@@ -9174,6 +9914,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "由布院駅"
     },
     "atmosphere": [
       "由布岳を望む盆地に、朝霧が金鱗湖を包む。",
@@ -9227,6 +9971,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "飯山駅"
+    },
     "atmosphere": [
       "村全体が共同湯、信州の山里に湧く13の外湯。",
       "野沢温泉・大湯・麻釜",
@@ -9279,6 +10027,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "竹原駅"
     },
     "atmosphere": [
       "安芸の小京都と呼ばれる、江戸の商家が連なる街並み。",
@@ -9334,6 +10086,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "南木曽駅"
+    },
     "atmosphere": [
       "石畳の中山道が、宿場の面影をそのまま残す。",
       "妻籠宿・馬籠峠・南木曽岳",
@@ -9387,6 +10143,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "中津川駅"
     },
     "atmosphere": [
       "峠の頂上に立つ宿場、石畳の坂道が山を下る。",
@@ -9442,6 +10202,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "長浜駅"
+    },
     "atmosphere": [
       "琵琶湖畔に広がる、黒壁ガラスの文化の街。",
       "黒壁スクエア・長浜城・豊国神社",
@@ -9496,6 +10260,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "彦根駅"
+    },
     "atmosphere": [
       "国宝の天守が、琵琶湖を見下ろして静かに立つ。",
       "彦根城・玄宮園・夢京橋キャッスルロード",
@@ -9548,6 +10316,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "privateRail",
+      "railGateway": "高野山駅"
     },
     "atmosphere": [
       "真言密教の聖域、標高900mに広がる宗教都市。",
@@ -9602,6 +10374,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "下呂駅"
+    },
     "atmosphere": [
       "飛騨川沿いに湯けむりが立ちのぼる、日本三名泉のひとつ。",
       "下呂温泉・噴泉池・飛騨川",
@@ -9654,6 +10430,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "鳴子温泉駅"
+    },
     "atmosphere": [
       "こけしの故郷、奥羽山脈に囲まれた温泉の里。",
       "鳴子温泉・鳴子峡・こけし館",
@@ -9704,6 +10484,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "中之条駅"
     },
     "atmosphere": [
       "奥利根の山あいに湧く、千年の湯治場。",
@@ -9758,6 +10542,11 @@
       "airportGateway": "青森空港",
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "弘前駅",
+      "airport": "青森空港"
+    },
     "atmosphere": [
       "日本一の桜の名所と言われる、津軽の城下町。",
       "弘前城・弘前公園・明治洋館群",
@@ -9809,6 +10598,11 @@
       "railBookingProvider": null,
       "airportGateway": "青森空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "八戸駅",
+      "airport": "青森空港"
     },
     "atmosphere": [
       "原生林を縫うように流れる、清流の渓谷路。",
@@ -9862,6 +10656,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "益子駅"
+    },
     "atmosphere": [
       "陶土の香りが漂う、関東随一の焼き物の里。",
       "益子焼・濱田庄司記念館・つかもと",
@@ -9914,6 +10712,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "別所温泉駅"
     },
     "atmosphere": [
       "信州最古の温泉と言われる、長野盆地を見渡す静かな湯の里。",
@@ -9969,6 +10771,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "豊岡駅"
+    },
     "atmosphere": [
       "但馬の小京都と呼ばれる、皿そばの城下町。",
       "出石城跡・辰鼓楼・出石皿そば",
@@ -10020,6 +10826,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "和倉温泉駅"
     },
     "atmosphere": [
       "七尾湾を望む能登半島の温泉地、海越しに夕日が沈む。",
@@ -10074,6 +10884,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "倉吉駅"
+    },
     "atmosphere": [
       "世界屈指のラジウム泉が湧く、三徳川沿いの温泉地。",
       "三朝温泉・三朝橋・三徳山投入堂",
@@ -10126,6 +10940,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "飫肥駅"
     },
     "atmosphere": [
       "日南の小京都と呼ばれる、杉の板塀が続く城下町。",
@@ -10181,6 +10999,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "人吉駅"
+    },
     "atmosphere": [
       "球磨川沿いに栄えた、焼酎と温泉と鉄道の城下町。",
       "人吉城跡・青井阿蘇神社・球磨川",
@@ -10235,6 +11057,10 @@
       "airportGateway": null,
       "ferryGateway": null
     },
+    "transport": {
+      "main": "jr",
+      "railGateway": "松本駅"
+    },
     "atmosphere": [
       "日本アルプスの玄関、手つかずの自然が広がる高原。",
       "河童橋・大正池・梓川",
@@ -10285,6 +11111,10 @@
       "railBookingProvider": null,
       "airportGateway": null,
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "水上駅"
     },
     "atmosphere": [
       "谷川岳を背に、利根川の源流が流れる山の温泉地。",
@@ -10338,6 +11168,11 @@
       "railBookingProvider": null,
       "airportGateway": "阿蘇くまもと空港",
       "ferryGateway": null
+    },
+    "transport": {
+      "main": "jr",
+      "railGateway": "熊本駅",
+      "airport": "阿蘇くまもと空港"
     },
     "atmosphere": [
       "阿蘇カルデラの南、湧水と牧草地が広がる静かな高原。",
