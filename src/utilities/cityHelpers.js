@@ -6,8 +6,9 @@
  * 構造の一貫性を維持する。
  *
  * 使用例:
- *   createHub({ id:'nagano', name:'長野', region:'中部', distanceStars:2,
- *               departures:['東京'], access:{ railGateway:'長野駅', railBookingProvider:'ekinet' },
+ *   createHub({ id:'nagano', name:'長野', region:'中部',
+ *               shinkansenAccess: true,
+ *               departures:['東京'], access:{ railGateway:'長野駅' },
  *               atmosphere:[...], themes:[...] })
  */
 
@@ -24,7 +25,8 @@ const DEFAULT_ACCESS = {
  * parentHub は常に null。
  */
 export function createHub({
-  id, name, region, distanceStars,
+  id, name, region,
+  shinkansenAccess = false,
   stayAllowed = ['1night'],
   departures  = [],
   mapDestination,
@@ -35,12 +37,12 @@ export function createHub({
   return {
     id,
     name,
-    type:          'hub',
+    type:             'hub',
     region,
-    mapDestination: mapDestination || name,
-    parentHub:      null,
-    hotelBase:      null,
-    distanceStars,
+    mapDestination:   mapDestination || name,
+    parentHub:        null,
+    hotelBase:        null,
+    shinkansenAccess,
     stayAllowed,
     departures,
     access: { ...DEFAULT_ACCESS, ...access },
@@ -55,7 +57,8 @@ export function createHub({
  * hotelBase は未指定の場合 parentHub と同じになる。
  */
 export function createLocal({
-  id, name, region, parentHub, distanceStars,
+  id, name, region, parentHub,
+  shinkansenAccess = false,
   stayAllowed = ['daytrip', '1night'],
   hotelBase,
   departures  = [],
@@ -67,12 +70,12 @@ export function createLocal({
   return {
     id,
     name,
-    type:          'local',
+    type:             'local',
     region,
-    mapDestination: mapDestination || name,
-    parentHub:      parentHub || null,
-    hotelBase:      hotelBase || parentHub || null,
-    distanceStars,
+    mapDestination:   mapDestination || name,
+    parentHub:        parentHub || null,
+    hotelBase:        hotelBase || parentHub || null,
+    shinkansenAccess,
     stayAllowed,
     departures,
     access: { ...DEFAULT_ACCESS, ...access },
@@ -84,10 +87,11 @@ export function createLocal({
 /**
  * 島都市を作成する。
  * stayAllowed は常に ["1night"]。
+ * island は常に★5 のため shinkansenAccess は常に false。
  * hotelBase に宿泊検索の拠点ハブ ID を指定する。
  */
 export function createIsland({
-  id, name, region, parentHub, distanceStars,
+  id, name, region, parentHub,
   hotelBase,
   departures  = [],
   mapDestination,
@@ -98,13 +102,13 @@ export function createIsland({
   return {
     id,
     name,
-    type:          'island',
+    type:             'island',
     region,
-    mapDestination: mapDestination || name,
-    parentHub:      parentHub || null,
-    hotelBase:      hotelBase || parentHub || null,
-    distanceStars,
-    stayAllowed:    ['1night'],
+    mapDestination:   mapDestination || name,
+    parentHub:        parentHub || null,
+    hotelBase:        hotelBase || parentHub || null,
+    shinkansenAccess: false,
+    stayAllowed:      ['1night'],
     departures,
     access: { ...DEFAULT_ACCESS, ...access },
     atmosphere,
