@@ -183,9 +183,10 @@ function getHubRegion(hotelHub, fallbackRegion) {
 /**
  * 出発地と目的地から distanceStars (★1〜★5) を計算する。
  * 宿拠点 (hotelHub) 基準で距離を測定する。
+ * type:"spot" は呼び出し元で除外済みのため、hub / destination のみを想定。
  *
  * @param {string} departure - 出発都市名
- * @param {{ name:string, region:string, type:string, hotelHub:string, shinkansenAccess:boolean }} destination
+ * @param {{ name:string, region:string, hotelHub:string, isIsland?:boolean }} destination
  * @returns {number} 1〜5
  */
 export function calculateDistanceStars(departure, destination) {

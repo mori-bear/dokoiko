@@ -147,11 +147,14 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
     return false;
   }
 
+  // spot型を完全除外（destinations.json生成時に削除済みだが防衛的に実施）
   // 交通表示用に distanceStars を動的付与
-  const withStars = destinations.map(d => ({
-    ...d,
-    distanceStars: calculateDistanceStars(departure, d),
-  }));
+  const withStars = destinations
+    .filter(d => d.type !== 'spot')
+    .map(d => ({
+      ...d,
+      distanceStars: calculateDistanceStars(departure, d),
+    }));
 
   const departurePool = withStars.filter(d => {
     if (d.isIsland === true && normalizedStay !== '1night') return false;

@@ -4,6 +4,7 @@ import { buildHotelLinks } from './src/affiliate/hotel.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
+import { loadDestinations } from './src/data/index.js';
 
 const DEFAULT_GUESTS = 2;
 
@@ -22,15 +23,15 @@ async function init() {
   bindHandlers(state, go, retry);
 
   try {
-    const res = await fetch('./src/data/destinations.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    state.destinations = await res.json();
+    state.destinations = await loadDestinations();
     initTodaysCity();
-  } catch {
+  } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {
       btn.disabled = true;
-      btn.textContent = 'データ読み込み失敗';
+      btn.textContent = err.message.startsWith('[データ整合性エラー]')
+        ? err.message
+        : 'データ読み込み失敗';
     }
   }
 }

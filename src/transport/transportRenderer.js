@@ -30,14 +30,19 @@ export function resolveTransportLinks(city, departure) {
   const accessHub = city.accessHub ?? null;
   const links     = [];
 
+  // railGateway が存在すれば経路の目的地として優先（より正確なルーティング）
+  const railGateway  = access?.railGateway  ?? null;
+  const railNote     = access?.railNote     ?? null;
+  const airportGateway = access?.airportGateway ?? null;
+  const ferryGateway = access?.ferryGateway ?? null;
+  const target = railGateway ?? dest;
+
   // ★1: Googleマップのみ
   if (stars === 1) {
-    return [buildGoogleMapsLink(fromCity.rail, dest, 'transit')];
+    return [buildGoogleMapsLink(fromCity.rail, target, 'transit')];
   }
 
   if (!access) return [];
-
-  const { railGateway, railNote, airportGateway, ferryGateway } = access;
 
   // 1. 島・portHubs: 出発地に最も近い港を選択
   if (city.portHubs && city.portHubs.length > 0) {
