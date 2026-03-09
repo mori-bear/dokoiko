@@ -33,7 +33,9 @@
       "大山"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "横浜",
+    "jalanArea": "140100"
   },
   {
     "id": "nagoya-t",
@@ -70,7 +72,9 @@
       "御在所岳"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "名古屋",
+    "jalanArea": "230100"
   },
   {
     "id": "sendai-t",
@@ -104,7 +108,9 @@
       "仙台城跡"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "仙台",
+    "jalanArea": "040100"
   },
   {
     "id": "kanazawa-t",
@@ -140,7 +146,9 @@
       "近江町市場"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "金沢",
+    "jalanArea": "170100"
   },
   {
     "id": "osaka-t",
@@ -180,7 +188,9 @@
       "箕面の滝"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "大阪",
+    "jalanArea": "270100"
   },
   {
     "id": "kyoto-t",
@@ -217,7 +227,9 @@
       "平等院鳳凰堂"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "京都",
+    "jalanArea": "260100"
   },
   {
     "id": "hiroshima-t",
@@ -256,7 +268,9 @@
       "帝釈峡"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "広島",
+    "jalanArea": "340100"
   },
   {
     "id": "fukuoka-t",
@@ -295,7 +309,9 @@
       "櫛田神社"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "博多",
+    "jalanArea": "400100"
   },
   {
     "id": "sapporo-t",
@@ -333,7 +349,9 @@
       "円山動物園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "札幌",
+    "jalanArea": "010100"
   },
   {
     "id": "kobe",
@@ -368,7 +386,9 @@
       "明石海峡大橋"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "神戸",
+    "jalanArea": "280100"
   },
   {
     "id": "himeji",
@@ -402,7 +422,9 @@
       "書写山円教寺"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "姫路",
+    "jalanArea": "280200"
   },
   {
     "id": "wakayama",
@@ -437,7 +459,9 @@
       "白浜海岸"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "和歌山",
+    "jalanArea": "300100"
   },
   {
     "id": "okayama-o",
@@ -473,7 +497,9 @@
       "岡山城"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "岡山",
+    "jalanArea": "330100"
   },
   {
     "id": "tokyo-o",
@@ -513,7 +539,9 @@
       "奥多摩湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "東京",
+    "jalanArea": "130100"
   },
   {
     "id": "gifu",
@@ -548,7 +576,9 @@
       "モネの池"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "岐阜",
+    "jalanArea": "210100"
   },
   {
     "id": "saga",
@@ -583,7 +613,9 @@
       "虹ノ松原"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "佐賀",
+    "jalanArea": "410100"
   },
   {
     "id": "kumamoto",
@@ -617,7 +649,9 @@
       "水前寺成趣園"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "熊本",
+    "jalanArea": "430100"
   },
   {
     "id": "nagasaki",
@@ -651,7 +685,9 @@
       "軍艦島"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "長崎",
+    "jalanArea": "420100"
   },
   {
     "id": "kagoshima",
@@ -685,7 +721,9 @@
       "霧島神宮"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "鹿児島",
+    "jalanArea": "460100"
   },
   {
     "id": "miyazaki",
@@ -718,7 +756,9 @@
       "高千穂峡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "宮崎",
+    "jalanArea": "450100"
   },
   {
     "id": "asahikawa",
@@ -752,7 +792,9 @@
       "層雲峡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "旭川",
+    "jalanArea": "010400"
   },
   {
     "id": "kushiro",
@@ -787,7 +829,9 @@
       "阿寒湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "釧路",
+    "jalanArea": "011100"
   },
   {
     "id": "hakodate",
@@ -821,7 +865,9 @@
       "五稜郭"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "函館",
+    "jalanArea": "010300"
   },
   {
     "id": "yamagata",
@@ -855,7 +901,9 @@
       "上杉神社"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "山形",
+    "jalanArea": "060100"
   },
   {
     "id": "morioka",
@@ -889,7 +937,9 @@
       "猊鼻渓"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "盛岡",
+    "jalanArea": "030100"
   },
   {
     "id": "niigata",
@@ -922,7 +972,9 @@
       "佐渡島（日帰り）"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "新潟",
+    "jalanArea": "150100"
   },
   {
     "id": "matsuyama",
@@ -957,7 +1009,9 @@
       "下灘駅"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "松山",
+    "jalanArea": "380100"
   },
   {
     "id": "tokushima",
@@ -991,7 +1045,9 @@
       "阿波踊り会館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "徳島",
+    "jalanArea": "360100"
   },
   {
     "id": "kochi",
@@ -1025,7 +1081,9 @@
       "四万十川"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "高知",
+    "jalanArea": "390100"
   },
   {
     "id": "naha",
@@ -1071,7 +1129,9 @@
       "ひめゆりの塔"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "那覇",
+    "jalanArea": "470100"
   },
   {
     "id": "matsumoto-n",
@@ -1108,7 +1168,9 @@
       "諏訪大社"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "松本",
+    "jalanArea": "200100"
   },
   {
     "id": "mito",
@@ -1143,7 +1205,9 @@
       "竜神大吊橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "水戸",
+    "jalanArea": "080100"
   },
   {
     "id": "kofu",
@@ -1177,7 +1241,9 @@
       "甲州ワイン"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "甲府",
+    "jalanArea": "190100"
   },
   {
     "id": "shizuoka",
@@ -1214,7 +1280,9 @@
       "寸又峡"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "静岡",
+    "jalanArea": "220100"
   },
   {
     "id": "iida",
@@ -1249,7 +1317,9 @@
       "元善光寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "飯田",
+    "jalanArea": "200900"
   },
   {
     "id": "matsue",
@@ -1285,7 +1355,9 @@
       "足立美術館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "松江",
+    "jalanArea": "320100"
   },
   {
     "id": "takamatsu",
@@ -1321,6 +1393,8 @@
       "父母ヶ浜"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "高松",
+    "jalanArea": "370100"
   }
 ]

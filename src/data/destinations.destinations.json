@@ -32,7 +32,9 @@
       "長谷寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "鎌倉",
+    "jalanArea": "140300"
   },
   {
     "id": "atami",
@@ -66,7 +68,9 @@
       "MOA美術館"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "熱海",
+    "jalanArea": "220200"
   },
   {
     "id": "nikko",
@@ -101,7 +105,9 @@
       "竜頭の滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "日光",
+    "jalanArea": "090100"
   },
   {
     "id": "karuizawa",
@@ -135,7 +141,9 @@
       "白糸の滝"
     ],
     "shinkansenAccess": true,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "軽井沢",
+    "jalanArea": "200300"
   },
   {
     "id": "fujikawaguchiko",
@@ -170,7 +178,9 @@
       "忍野八海"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "富士河口湖",
+    "jalanArea": "190200"
   },
   {
     "id": "nara",
@@ -207,7 +217,9 @@
       "赤目四十八滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "奈良",
+    "jalanArea": "290100"
   },
   {
     "id": "ishigaki",
@@ -245,7 +257,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "石垣島",
+    "jalanArea": "470300"
   },
   {
     "id": "ise",
@@ -280,7 +294,9 @@
       "二見浦"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "伊勢",
+    "jalanArea": "240100"
   },
   {
     "id": "beppu",
@@ -314,7 +330,9 @@
       "湯布院"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "別府",
+    "jalanArea": "440100"
   },
   {
     "id": "otaru",
@@ -351,7 +369,9 @@
       "積丹岬"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "小樽",
+    "jalanArea": "010200"
   },
   {
     "id": "furano",
@@ -385,7 +405,9 @@
       "富良野スキー場"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "富良野",
+    "jalanArea": "010600"
   },
   {
     "id": "matsushima",
@@ -420,7 +442,9 @@
       "五大堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "松島",
+    "jalanArea": "040100"
   },
   {
     "id": "miyajima",
@@ -458,7 +482,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "宮島",
+    "jalanArea": "340300"
   },
   {
     "id": "onomichi",
@@ -495,7 +521,9 @@
       "しまなみ海道"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "尾道",
+    "jalanArea": "340200"
   },
   {
     "id": "shodoshima",
@@ -534,7 +562,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "小豆島",
+    "jalanArea": "370300"
   },
   {
     "id": "mihonoseki",
@@ -558,7 +588,11 @@
       "ferryGateway": null
     },
     "description": "島根半島の東端に静かに佇む漁師町。青石畳の路地と白い灯台が醸し出す静謐な雰囲気が魅力だ。",
-    "tags": ["港町", "街歩き", "歴史"],
+    "tags": [
+      "港町",
+      "街歩き",
+      "歴史"
+    ],
     "spots": [
       "美保神社",
       "地蔵崎灯台",
@@ -566,7 +600,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "境港"
+    "accessHub": "境港",
+    "hotelSearch": "米子",
+    "jalanArea": "310100"
   },
   {
     "id": "ryujin-onsen",
@@ -589,7 +625,11 @@
       "ferryGateway": null
     },
     "description": "紀伊山地の奥深くに湧く日本三美人の湯。杉木立と渓流に包まれた秘湯で、日常を忘れて浸かりたい。",
-    "tags": ["温泉", "秘湯", "自然"],
+    "tags": [
+      "温泉",
+      "秘湯",
+      "自然"
+    ],
     "spots": [
       "龍神温泉元湯",
       "護摩壇山",
@@ -597,7 +637,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "田辺"
+    "accessHub": "田辺",
+    "hotelSearch": "白浜",
+    "jalanArea": "300200"
   },
   {
     "id": "tokashiki-jima",
@@ -625,7 +667,11 @@
       "那覇港"
     ],
     "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
-    "tags": ["離島", "海", "ダイビング"],
+    "tags": [
+      "離島",
+      "海",
+      "ダイビング"
+    ],
     "spots": [
       "阿波連ビーチ",
       "渡嘉敷ビーチ",
@@ -633,7 +679,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "渡嘉敷島",
+    "jalanArea": "470100"
   },
   {
     "id": "kumejima",
@@ -670,7 +718,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "久米島",
+    "jalanArea": "470200"
   },
   {
     "id": "miyakojima",
@@ -709,7 +759,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "宮古島",
+    "jalanArea": "470400"
   },
   {
     "id": "kouzushima",
@@ -747,7 +799,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "神津島",
+    "jalanArea": "130800"
   },
   {
     "id": "hakone",
@@ -782,7 +836,9 @@
       "箱根関所"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "箱根",
+    "jalanArea": "140200"
   },
   {
     "id": "shuzenji",
@@ -816,7 +872,9 @@
       "独鈷の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "修善寺",
+    "jalanArea": "220300"
   },
   {
     "id": "kusatsu-onsen",
@@ -850,7 +908,9 @@
       "熱の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "草津温泉",
+    "jalanArea": "100200"
   },
   {
     "id": "shimoda",
@@ -885,7 +945,9 @@
       "爪木崎"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "下田",
+    "jalanArea": "220400"
   },
   {
     "id": "izu-oshima",
@@ -925,7 +987,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "伊豆大島",
+    "jalanArea": "130800"
   },
   {
     "id": "shirakawago-t",
@@ -962,7 +1026,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "金沢"
+    "accessHub": "金沢",
+    "hotelSearch": "高山",
+    "jalanArea": "210500"
   },
   {
     "id": "arima-onsen",
@@ -998,7 +1064,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "三ノ宮"
+    "accessHub": "三ノ宮",
+    "hotelSearch": "有馬温泉",
+    "jalanArea": "280300"
   },
   {
     "id": "kinosaki-onsen",
@@ -1036,7 +1104,9 @@
       "余部橋梁"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "城崎温泉",
+    "jalanArea": "280500"
   },
   {
     "id": "kurashiki-o",
@@ -1073,7 +1143,9 @@
       "倉敷美観地区"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "倉敷",
+    "jalanArea": "330200"
   },
   {
     "id": "shirahama-o",
@@ -1109,7 +1181,9 @@
       "熊野本宮大社"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "白浜",
+    "jalanArea": "300200"
   },
   {
     "id": "takayama-o",
@@ -1145,7 +1219,9 @@
       "白川郷合掌集落"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "高山",
+    "jalanArea": "210500"
   },
   {
     "id": "toba",
@@ -1182,7 +1258,9 @@
       "夫婦岩"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "鳥羽",
+    "jalanArea": "240200"
   },
   {
     "id": "yufuin",
@@ -1217,7 +1295,9 @@
       "由布院玉の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "湯布院",
+    "jalanArea": "440200"
   },
   {
     "id": "kurokawa-k",
@@ -1254,7 +1334,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "博多"
+    "accessHub": "博多",
+    "hotelSearch": "黒川温泉",
+    "jalanArea": "440300"
   },
   {
     "id": "aso",
@@ -1290,7 +1372,9 @@
       "大観峰"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "阿蘇",
+    "jalanArea": "430200"
   },
   {
     "id": "yakushima",
@@ -1326,7 +1410,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "屋久島",
+    "jalanArea": "460500"
   },
   {
     "id": "amakusa",
@@ -1361,7 +1447,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本"
+    "accessHub": "熊本",
+    "hotelSearch": "天草",
+    "jalanArea": "430300"
   },
   {
     "id": "hiraizumi",
@@ -1398,7 +1486,9 @@
       "中尊寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "平泉",
+    "jalanArea": "030200"
   },
   {
     "id": "kakunodate",
@@ -1434,7 +1524,9 @@
       "青柳家"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "角館",
+    "jalanArea": "050200"
   },
   {
     "id": "aizu",
@@ -1470,7 +1562,9 @@
       "塔のへつり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "会津若松",
+    "jalanArea": "070100"
   },
   {
     "id": "zaosan",
@@ -1504,7 +1598,9 @@
       "樹氷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "蔵王",
+    "jalanArea": "060100"
   },
   {
     "id": "hagi",
@@ -1539,7 +1635,9 @@
       "秋吉台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "萩",
+    "jalanArea": "350200"
   },
   {
     "id": "shimonoseki",
@@ -1575,7 +1673,9 @@
       "巌流島"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "下関",
+    "jalanArea": "350100"
   },
   {
     "id": "naoshima",
@@ -1614,7 +1714,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "直島",
+    "jalanArea": "370100"
   },
   {
     "id": "kotohira",
@@ -1650,7 +1752,9 @@
       "金刀比羅宮"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "琴平",
+    "jalanArea": "370200"
   },
   {
     "id": "uwajima",
@@ -1685,7 +1789,9 @@
       "じゃこ天"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "宇和島",
+    "jalanArea": "380400"
   },
   {
     "id": "toyako",
@@ -1719,7 +1825,9 @@
       "サイロ展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "洞爺湖",
+    "jalanArea": "010800"
   },
   {
     "id": "noboribetsu",
@@ -1753,7 +1861,9 @@
       "クマ牧場"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "登別",
+    "jalanArea": "010800"
   },
   {
     "id": "shiretoko",
@@ -1787,7 +1897,9 @@
       "羅臼岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "知床",
+    "jalanArea": "011000"
   },
   {
     "id": "wajima",
@@ -1822,7 +1934,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "金沢"
+    "accessHub": "金沢",
+    "hotelSearch": "輪島",
+    "jalanArea": "170400"
   },
   {
     "id": "kaga-onsen",
@@ -1857,7 +1971,9 @@
       "片山津温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "加賀温泉郷",
+    "jalanArea": "170200"
   },
   {
     "id": "hakuba",
@@ -1891,7 +2007,9 @@
       "岩岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "白馬",
+    "jalanArea": "200600"
   },
   {
     "id": "amanohashidate",
@@ -1927,7 +2045,9 @@
       "傘松公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "天橋立",
+    "jalanArea": "260400"
   },
   {
     "id": "ine",
@@ -1962,7 +2082,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "天橋立"
+    "accessHub": "天橋立",
+    "hotelSearch": "伊根",
+    "jalanArea": "260400"
   },
   {
     "id": "ibusuki",
@@ -1997,7 +2119,9 @@
       "池田湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "指宿",
+    "jalanArea": "460200"
   },
   {
     "id": "sasebo",
@@ -2033,7 +2157,9 @@
       "佐世保バーガー"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "佐世保",
+    "jalanArea": "420200"
   },
   {
     "id": "hirado",
@@ -2067,7 +2193,9 @@
       "川内峠"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "平戸",
+    "jalanArea": "420400"
   },
   {
     "id": "tottori",
@@ -2102,7 +2230,9 @@
       "浦富海岸"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "鳥取",
+    "jalanArea": "310100"
   },
   {
     "id": "akita",
@@ -2137,7 +2267,9 @@
       "男鹿半島"
     ],
     "shinkansenAccess": true,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "秋田",
+    "jalanArea": "050100"
   },
   {
     "id": "awaji",
@@ -2174,7 +2306,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "三ノ宮"
+    "accessHub": "三ノ宮",
+    "hotelSearch": "淡路島",
+    "jalanArea": "280700"
   },
   {
     "id": "takao",
@@ -2208,7 +2342,9 @@
       "もみじ台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "高尾山",
+    "jalanArea": "130200"
   },
   {
     "id": "tateyama-chiba",
@@ -2243,7 +2379,9 @@
       "花畑"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "館山",
+    "jalanArea": "120400"
   },
   {
     "id": "gokayama",
@@ -2279,7 +2417,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "金沢"
+    "accessHub": "金沢",
+    "hotelSearch": "高山",
+    "jalanArea": "210500"
   },
   {
     "id": "jozankei",
@@ -2314,7 +2454,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "札幌"
+    "accessHub": "札幌",
+    "hotelSearch": "定山渓",
+    "jalanArea": "010100"
   },
   {
     "id": "biei",
@@ -2350,7 +2492,9 @@
       "パッチワークの路"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "美瑛",
+    "jalanArea": "010600"
   },
   {
     "id": "miyako-iwate",
@@ -2386,7 +2530,9 @@
       "龍泉洞"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "宮古",
+    "jalanArea": "030400"
   },
   {
     "id": "sakata",
@@ -2421,7 +2567,9 @@
       "象潟"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "酒田",
+    "jalanArea": "060300"
   },
   {
     "id": "takachiho",
@@ -2457,7 +2605,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本"
+    "accessHub": "熊本",
+    "hotelSearch": "高千穂",
+    "jalanArea": "450200"
   },
   {
     "id": "amami",
@@ -2495,7 +2645,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "奄美大島",
+    "jalanArea": "460600"
   },
   {
     "id": "goto",
@@ -2534,7 +2686,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "isIsland": true
+    "isIsland": true,
+    "hotelSearch": "五島列島",
+    "jalanArea": "420500"
   },
   {
     "id": "unzen",
@@ -2569,7 +2723,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "諫早"
+    "accessHub": "諫早",
+    "hotelSearch": "雲仙",
+    "jalanArea": "420300"
   },
   {
     "id": "ashizuri",
@@ -2604,7 +2760,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "中村"
+    "accessHub": "中村",
+    "hotelSearch": "足摺岬",
+    "jalanArea": "390400"
   },
   {
     "id": "oboke",
@@ -2639,7 +2797,9 @@
       "平家屋敷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "大歩危",
+    "jalanArea": "360200"
   },
   {
     "id": "tsuwano",
@@ -2674,7 +2834,9 @@
       "殿町通り"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "津和野",
+    "jalanArea": "350300"
   },
   {
     "id": "inuyama",
@@ -2709,7 +2871,9 @@
       "博物館明治村"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "犬山",
+    "jalanArea": "230200"
   },
   {
     "id": "kiso",
@@ -2746,7 +2910,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "南木曽"
+    "accessHub": "南木曽",
+    "hotelSearch": "木曽",
+    "jalanArea": "200800"
   },
   {
     "id": "miyama",
@@ -2782,7 +2948,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "園部"
+    "accessHub": "園部",
+    "hotelSearch": "美山",
+    "jalanArea": "260300"
   },
   {
     "id": "tateyama-kurobe",
@@ -2818,7 +2986,9 @@
       "立山室堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "立山黒部",
+    "jalanArea": "160300"
   },
   {
     "id": "himi",
@@ -2854,7 +3024,9 @@
       "立山連峰展望"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "氷見",
+    "jalanArea": "160200"
   },
   {
     "id": "nyuto-onsen",
@@ -2891,7 +3063,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "田沢湖"
+    "accessHub": "田沢湖",
+    "hotelSearch": "乳頭温泉",
+    "jalanArea": "050200"
   },
   {
     "id": "yuda-onsen",
@@ -2927,7 +3101,9 @@
       "白狐の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "湯田温泉",
+    "jalanArea": "350100"
   },
   {
     "id": "ureshino-onsen",
@@ -2962,7 +3138,9 @@
       "不動山温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "嬉野温泉",
+    "jalanArea": "410200"
   },
   {
     "id": "obuse",
@@ -2998,7 +3176,9 @@
       "小布施堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "小布施",
+    "jalanArea": "200400"
   },
   {
     "id": "uchiko",
@@ -3034,7 +3214,9 @@
       "木蝋資料館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "内子",
+    "jalanArea": "380300"
   },
   {
     "id": "muroto",
@@ -3070,7 +3252,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "高知"
+    "accessHub": "高知",
+    "hotelSearch": "室戸",
+    "jalanArea": "390300"
   },
   {
     "id": "iya",
@@ -3107,7 +3291,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "阿波池田"
+    "accessHub": "阿波池田",
+    "hotelSearch": "祖谷",
+    "jalanArea": "360200"
   },
   {
     "id": "oku-izumo",
@@ -3143,7 +3329,9 @@
       "おろち湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "奥出雲",
+    "jalanArea": "320300"
   },
   {
     "id": "ginzan-onsen",
@@ -3179,7 +3367,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "大石田"
+    "accessHub": "大石田",
+    "hotelSearch": "銀山温泉",
+    "jalanArea": "060200"
   },
   {
     "id": "ouchi-juku",
@@ -3216,7 +3406,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "会津若松"
+    "accessHub": "会津若松",
+    "hotelSearch": "大内宿",
+    "jalanArea": "070100"
   },
   {
     "id": "nozawa-onsen",
@@ -3252,7 +3444,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "飯山"
+    "accessHub": "飯山",
+    "hotelSearch": "野沢温泉",
+    "jalanArea": "200700"
   },
   {
     "id": "takehara",
@@ -3288,7 +3482,9 @@
       "竹鶴酒造"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "竹原",
+    "jalanArea": "340300"
   },
   {
     "id": "tsumago",
@@ -3326,7 +3522,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "南木曽"
+    "accessHub": "南木曽",
+    "hotelSearch": "妻籠",
+    "jalanArea": "200800"
   },
   {
     "id": "magome",
@@ -3364,7 +3562,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "中津川"
+    "accessHub": "中津川",
+    "hotelSearch": "馬籠",
+    "jalanArea": "210600"
   },
   {
     "id": "nagahama",
@@ -3401,7 +3601,9 @@
       "慶雲館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "長浜",
+    "jalanArea": "250200"
   },
   {
     "id": "hikone",
@@ -3438,7 +3640,9 @@
       "夢京橋キャッスルロード"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "彦根",
+    "jalanArea": "250200"
   },
   {
     "id": "koyasan",
@@ -3474,7 +3678,9 @@
       "根本大塔"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "高野山",
+    "jalanArea": "300400"
   },
   {
     "id": "gero-onsen",
@@ -3510,7 +3716,9 @@
       "温泉寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "下呂温泉",
+    "jalanArea": "210400"
   },
   {
     "id": "naruko-onsen",
@@ -3545,7 +3753,9 @@
       "早稲田桟敷湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "鳴子温泉",
+    "jalanArea": "040300"
   },
   {
     "id": "shima-onsen",
@@ -3580,7 +3790,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "中之条"
+    "accessHub": "中之条",
+    "hotelSearch": "四万温泉",
+    "jalanArea": "100200"
   },
   {
     "id": "hirosaki",
@@ -3616,7 +3828,9 @@
       "旧弘前市立図書館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "弘前",
+    "jalanArea": "020100"
   },
   {
     "id": "oirase",
@@ -3653,7 +3867,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "八戸"
+    "accessHub": "八戸",
+    "hotelSearch": "奥入瀬",
+    "jalanArea": "020200"
   },
   {
     "id": "mashiko",
@@ -3688,7 +3904,9 @@
       "益子焼窯元共販センター"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "hotelSearch": "益子",
+    "jalanArea": "090300"
   },
   {
     "id": "bessho-onsen",
@@ -3724,7 +3942,9 @@
       "大師湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "別所温泉",
+    "jalanArea": "200500"
   },
   {
     "id": "izushi",
@@ -3762,7 +3982,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "豊岡"
+    "accessHub": "豊岡",
+    "hotelSearch": "出石",
+    "jalanArea": "280600"
   },
   {
     "id": "wakura-onsen",
@@ -3797,7 +4019,9 @@
       "足湯の宿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "和倉温泉",
+    "jalanArea": "170300"
   },
   {
     "id": "misasa-onsen",
@@ -3834,7 +4058,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "倉吉"
+    "accessHub": "倉吉",
+    "hotelSearch": "三朝温泉",
+    "jalanArea": "310200"
   },
   {
     "id": "obi",
@@ -3870,7 +4096,9 @@
       "商人通り"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "飫肥",
+    "jalanArea": "450300"
   },
   {
     "id": "hitoyoshi",
@@ -3907,7 +4135,9 @@
       "球磨川くだり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "人吉",
+    "jalanArea": "430400"
   },
   {
     "id": "kamikochi",
@@ -3945,7 +4175,9 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "松本"
+    "accessHub": "松本",
+    "hotelSearch": "上高地",
+    "jalanArea": "200100"
   },
   {
     "id": "minakami-onsen",
@@ -3981,7 +4213,9 @@
       "吹割の滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "hotelSearch": "水上温泉",
+    "jalanArea": "100300"
   },
   {
     "id": "minami-aso",
@@ -4018,6 +4252,8 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本"
+    "accessHub": "熊本",
+    "hotelSearch": "南阿蘇",
+    "jalanArea": "430200"
   }
 ]
