@@ -608,14 +608,14 @@ body {
 
 /* affiliate（楽天） */
 .btn-rakuten {
-  background: #c7001e;
+  background: #e60012;
   color: #fff;
 }
 .btn-rakuten:hover { opacity: 0.9; }
 
 /* affiliate（じゃらん） */
 .btn-jalan {
-  background: #c8792f;
+  background: #f96b00;
   color: #fff;
 }
 .btn-jalan:hover { opacity: 0.9; }

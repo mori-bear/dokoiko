@@ -19,7 +19,7 @@ export function buildHotelLinks(city) {
 }
 
 function buildRakutenHotelLink(city) {
-  const keyword = city.hotelSearch ?? city.hotelHub ?? city.name;
+  const keyword = (city.hotelSearch ?? city.hotelHub ?? city.name) + ' ホテル';
   const target  = 'https://travel.rakuten.co.jp/search/?keyword=' + encodeURIComponent(keyword);
   return {
     type:  'rakuten',
@@ -29,7 +29,7 @@ function buildRakutenHotelLink(city) {
 }
 
 function buildJalanHotelLink(city) {
-  const keyword = city.hotelSearch ?? city.hotelHub ?? city.name;
+  const keyword = (city.hotelSearch ?? city.hotelHub ?? city.name) + ' ホテル';
   const target  = 'https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' + encodeURIComponent(keyword);
   return {
     type:  'jalan',
