@@ -20,8 +20,8 @@ export function renderResult({ city, transportLinks, hotelLinks }) {
   el.innerHTML = `
     <div class="result-card">
       ${buildCityBlock(city)}
-      ${buildTransportBlock(transportLinks)}
       ${buildStayBlock(hub, hotelLinks)}
+      ${buildTransportBlock(transportLinks)}
       ${city.needsCar ? buildCarBlock() : ''}
       ${buildShareBlock(city)}
     </div>

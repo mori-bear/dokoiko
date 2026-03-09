@@ -19,10 +19,10 @@ import { calculateDistanceStars } from './distanceCalculator.js';
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
   '温泉':   ['温泉', '秘湯'],
-  '絶景':   ['絶景', '自然', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス', '離島'],
+  '絶景':   ['絶景', '自然', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス'],
   '海':     ['海', '海の幸', '離島', 'ダイビング', '港町', 'リゾート'],
-  '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都', '港町', '城'],
-  'グルメ': ['グルメ', '海の幸', '牡蠣', '食文化'],
+  '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都'],
+  'グルメ': ['グルメ', '海の幸', '食文化'],
 };
 
 /** 県庁所在地セット — 抽選確率を軽く抑制 */
@@ -83,6 +83,8 @@ function isSamePrefectureOvernight(destination, departure, stayType) {
 /** テーマがタグに一致するか（エイリアス含む） */
 function matchesTheme(city, theme) {
   if (!theme) return true;
+  // 離島は常に「海」テーマに一致
+  if (theme === '海' && city.isIsland) return true;
   const aliases = THEME_TAG_ALIASES[theme] ?? [theme];
   return (city.tags || []).some(t => aliases.includes(t));
 }
@@ -93,7 +95,7 @@ function getWeight(city, theme) {
 
   let themeW = 1;
   if (theme) {
-    themeW = matchesTheme(city, theme) ? 3.0 : 0.4;
+    themeW = matchesTheme(city, theme) ? 3.0 : 0;
   }
 
   return base * capW * themeW;

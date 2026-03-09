@@ -80,7 +80,7 @@ export function resolveTransportLinks(city, departure) {
 
     // 二次交通テキスト（accessHub がある場合）
     if (accessHub) {
-      links.push({ type: 'note', label: `※ ${railGateway}からバス`, url: null });
+      links.push({ type: 'note', label: `${railGateway} → ${dest}（バス）`, url: null });
     }
 
     return links.filter(l => l && (l.url || l.type === 'note'));

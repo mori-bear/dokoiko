@@ -10,7 +10,6 @@
  */
 
 const VC_BASE = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
-const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
 
 export function buildHotelLinks(city) {
   return [
@@ -24,8 +23,8 @@ function buildRakutenHotelLink(city) {
   const target  = 'https://travel.rakuten.co.jp/search/?keyword=' + encodeURIComponent(keyword);
   return {
     type:  'rakuten',
-    label: '宿を探す（楽天トラベル）',
-    url:   RAKUTEN_AFF + encodeURIComponent(target),
+    label: '周辺の宿を見る（楽天トラベル）',
+    url:   VC_BASE + encodeURIComponent(target),
   };
 }
 
@@ -43,7 +42,7 @@ function buildJalanHotelLink(city) {
 
   return {
     type:  'jalan',
-    label: '宿を探す（じゃらん）',
+    label: '周辺の宿を見る（じゃらん）',
     url:   VC_BASE + encodeURIComponent(target),
   };
 }

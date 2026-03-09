@@ -143,6 +143,14 @@ const SHINKANSEN_HUBS = new Set([
 ]);
 
 /**
+ * ★2 クロスリージョンペア（隣接地方だが同一都市圏並みに近いケース）
+ * key: departure、value: Set of hotelHub names
+ */
+const NEAR_CROSS_REGION = {
+  '高松': new Set(['岡山', '倉敷']),   // マリンライナーで30分圏
+};
+
+/**
  * ★1 同一都市圏ペア
  * key: departure、value: Set of hotelHub names in same metro area
  *
@@ -198,6 +206,9 @@ export function calculateDistanceStars(departure, destination) {
   // ★1: hotelHub が departure の同一都市圏内
   if (isSameMetro(departure, hotelHub)) return 1;
 
+  // ★2: クロスリージョンだが近接（例: 高松↔岡山）
+  if (NEAR_CROSS_REGION[departure]?.has(hotelHub)) return 2;
+
   // island は常に ★5（同一都市圏例外を除く）
   if (destination.isIsland) return 5;
 
@@ -221,9 +232,15 @@ export function calculateDistanceStars(departure, destination) {
     stars = 5;
   }
 
-  // 新幹線ボーナス: 1地方跨ぎ限定で ★4→★3（2地方以上は遠出のまま）
+  // 新幹線ボーナス: 1地方跨ぎで ★4→★3
   if (dist === 1 && SHINKANSEN_DEPARTURES.has(departure) && SHINKANSEN_HUBS.has(hotelHub)) {
     stars = 3;
+  }
+
+  // 新幹線長距離ボーナス: 2地方以上跨ぎでも新幹線直通なら ★4 に補正
+  // 例: 東京→広島（★5 相当だが Tokaido/Sanyo 新幹線で直通）
+  if (dist > 1 && stars === 5 && SHINKANSEN_DEPARTURES.has(departure) && SHINKANSEN_HUBS.has(hotelHub)) {
+    stars = 4;
   }
 
   return stars;

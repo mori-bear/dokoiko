@@ -130,9 +130,9 @@ export function buildRentalLink() {
  * 港が不明な場合は null を返す。
  */
 const FERRY_LINKS = {
-  '竹芝客船ターミナル': { label: 'フェリーを予約する（東海汽船）',        url: 'https://www.tokaikisen.co.jp/' },
-  '熱海港':             { label: 'フェリーを予約する（東海汽船）',        url: 'https://www.tokaikisen.co.jp/' },
-  '稲取港':             { label: 'フェリーを予約する（東海汽船）',        url: 'https://www.tokaikisen.co.jp/' },
+  '竹芝客船ターミナル': { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
+  '熱海港':             { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
+  '稲取港':             { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
   '那覇港':             { label: 'フェリーを調べる（マリンライナー）',    url: 'https://www.agui.net/' },
   '鹿児島港':           { label: 'フェリーを調べる（種子屋久高速船）',    url: 'https://www.tykousoku.jp/' },
   '長崎港':             { label: 'フェリーを調べる（九州商船）',          url: 'https://www.kysho.co.jp/' },
