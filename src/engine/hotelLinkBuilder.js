@@ -7,7 +7,7 @@ export function buildHotelLinks(city) {
   const hub = city.hotelHub ?? city.name;
 
   const rakutenSearch =
-    'https://travel.rakuten.co.jp/keyword/Search.do?f_query=' +
+    'https://travel.rakuten.co.jp/search/?keyword=' +
     encodeURIComponent(hub);
 
   const rakuten =
@@ -15,7 +15,7 @@ export function buildHotelLinks(city) {
     encodeURIComponent(rakutenSearch);
 
   const jalanSearch =
-    'https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' +
+    'https://www.jalan.net/keyword/?keyword=' +
     encodeURIComponent(hub);
 
   const jalan =
