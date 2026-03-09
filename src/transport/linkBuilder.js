@@ -58,10 +58,10 @@ const AIRPORT_IATA = {
 
 /* ── Google Maps（transit / driving 統一） ── */
 
-export function buildGoogleMapsLink(origin, destination, mode = 'transit') {
+export function buildGoogleMapsLink(origin, destination, mode = 'transit', label = null) {
   return {
     type: 'google-maps',
-    label: 'ルートを見る（Googleマップ）',
+    label: label ?? 'ルートを見る（Googleマップ）',
     url: mapsUrl(origin, destination, mode),
   };
 }

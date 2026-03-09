@@ -1568,7 +1568,8 @@
       "境港"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "境港"
   },
   {
     "id": "ryujin-onsen",
@@ -1598,7 +1599,8 @@
       "高野龍神スカイライン"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "田辺"
   },
   {
     "id": "naha",
@@ -2001,7 +2003,8 @@
       "明善寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "金沢"
   },
   {
     "id": "arima-onsen",
@@ -2019,7 +2022,7 @@
     ],
     "weight": 1.2,
     "access": {
-      "railGateway": "有馬温泉駅",
+      "railGateway": "三ノ宮駅",
       "railNote": "バスあり",
       "airportGateway": null,
       "ferryGateway": null
@@ -2036,7 +2039,8 @@
       "太閤の湯殿館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "三ノ宮"
   },
   {
     "id": "kinosaki-onsen",
@@ -2317,7 +2321,8 @@
       "山河"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "博多"
   },
   {
     "id": "aso",
@@ -2423,7 +2428,8 @@
       "イルカウォッチング"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "熊本"
   },
   {
     "id": "hiraizumi",
@@ -2878,7 +2884,8 @@
       "白米千枚田"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "金沢"
   },
   {
     "id": "kaga-onsen",
@@ -3017,7 +3024,8 @@
       "浦島神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "天橋立"
   },
   {
     "id": "ibusuki",
@@ -3228,7 +3236,8 @@
       "伊弉諾神宮"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "三ノ宮"
   },
   {
     "id": "takao",
@@ -3332,7 +3341,8 @@
       "岩瀬家"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "金沢"
   },
   {
     "id": "jozankei",
@@ -3366,7 +3376,8 @@
       "豊平峡ダム"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "札幌"
   },
   {
     "id": "biei",
@@ -3506,7 +3517,8 @@
       "高千穂神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "熊本"
   },
   {
     "id": "amami",
@@ -3617,7 +3629,8 @@
       "雲仙温泉街"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "諫早"
   },
   {
     "id": "ashizuri",
@@ -3651,7 +3664,8 @@
       "ジョン万次郎像"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "中村"
   },
   {
     "id": "oboke",
@@ -3792,7 +3806,8 @@
       "馬籠宿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "南木曽"
   },
   {
     "id": "miyama",
@@ -3827,7 +3842,8 @@
       "由良川"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "園部"
   },
   {
     "id": "tateyama-kurobe",
@@ -3933,7 +3949,8 @@
       "妙乃湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "田沢湖"
   },
   {
     "id": "yuda-onsen",
@@ -4111,7 +4128,8 @@
       "乱礁遊歩道"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "高知"
   },
   {
     "id": "iya",
@@ -4129,7 +4147,7 @@
     ],
     "weight": 1.2,
     "access": {
-      "railGateway": "大歩危駅",
+      "railGateway": "阿波池田駅",
       "railNote": "バスあり",
       "airportGateway": null,
       "ferryGateway": null
@@ -4146,7 +4164,8 @@
       "祖谷温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "阿波池田"
   },
   {
     "id": "oku-izumo",
@@ -4217,7 +4236,8 @@
       "銀山川沿い散策"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "大石田"
   },
   {
     "id": "ouchi-juku",
@@ -4236,7 +4256,7 @@
     ],
     "weight": 1.2,
     "access": {
-      "railGateway": "湯野上温泉駅",
+      "railGateway": "会津若松駅",
       "railNote": "バスあり",
       "airportGateway": null,
       "ferryGateway": null
@@ -4253,7 +4273,8 @@
       "三澤屋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "会津若松"
   },
   {
     "id": "nozawa-onsen",
@@ -4288,7 +4309,8 @@
       "野沢温泉スキー場"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "飯山"
   },
   {
     "id": "takehara",
@@ -4361,7 +4383,8 @@
       "妻籠城跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "南木曽"
   },
   {
     "id": "magome",
@@ -4398,7 +4421,8 @@
       "清水屋資料館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "中津川"
   },
   {
     "id": "nagahama",
@@ -4613,7 +4637,8 @@
       "甌穴"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "中之条"
   },
   {
     "id": "hirosaki",
@@ -4684,7 +4709,8 @@
       "十和田湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "八戸"
   },
   {
     "id": "mashiko",
@@ -4792,7 +4818,8 @@
       "永楽館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "豊岡"
   },
   {
     "id": "wakura-onsen",
@@ -4863,7 +4890,8 @@
       "三朝橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "倉吉"
   },
   {
     "id": "obi",
@@ -4973,7 +5001,8 @@
       "明神池"
     ],
     "shinkansenAccess": false,
-    "needsCar": false
+    "needsCar": false,
+    "accessHub": "松本"
   },
   {
     "id": "minakami-onsen",
@@ -5043,7 +5072,8 @@
       "池の川水源"
     ],
     "shinkansenAccess": false,
-    "needsCar": true
+    "needsCar": true,
+    "accessHub": "熊本"
   },
   {
     "id": "spot-aoi-ike",
