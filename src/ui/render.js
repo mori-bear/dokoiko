@@ -85,7 +85,11 @@ function buildCategoryBadge(city) {
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links) {
-  const linksHtml = links.map((link) => buildLinkItem(link)).join('');
+  const linksHtml = links.map((link) =>
+    link.type === 'note'
+      ? `<div class="transport-note">${link.label}</div>`
+      : buildLinkItem(link)
+  ).join('');
   return `
     <div class="card-section">
       <div class="link-list">${linksHtml}</div>
