@@ -13,13 +13,12 @@
 
 import { applyAffiliateLinks } from '../affiliate/affiliate.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, poolIndex, poolTotal }) {
+export function renderResult({ city, transportLinks, hotelLinks }) {
   const { hotelHub } = hotelLinks;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
     <div class="result-card">
-      ${buildCounterBlock(poolIndex, poolTotal)}
       ${buildCityBlock(city)}
       ${buildTransportBlock(transportLinks)}
       ${buildStayBlock(hotelHub)}
@@ -34,16 +33,6 @@ export function renderResult({ city, transportLinks, hotelLinks, poolIndex, pool
 export function clearResult() {
   const el = document.getElementById('result-inner');
   if (el) el.innerHTML = '';
-}
-
-/* ── カウンター ── */
-
-function buildCounterBlock(index, total) {
-  return `
-    <div class="result-counter">
-      <span>${index + 1} / ${total}</span>
-    </div>
-  `;
 }
 
 /* ── 都市ブロック ── */

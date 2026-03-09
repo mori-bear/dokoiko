@@ -116,18 +116,8 @@ function weightedShuffle(arr, theme) {
   return result;
 }
 
-/** 同一名称の都市を1件に絞る */
-function deduplicateByName(arr) {
-  const seen = new Set();
-  return arr.filter(city => {
-    if (seen.has(city.name)) return false;
-    seen.add(city.name);
-    return true;
-  });
-}
-
 /**
- * buildPool — 出発地・日程・テーマでフィルタし重み付きシャッフルを返す。
+ * buildPool — 出発地・日程・テーマでフィルタし重み付きランダム1件を返す。
  *
  * distanceStars は交通表示用に動的計算して各エントリに付与する（UI非表示）。
  *
@@ -136,6 +126,7 @@ function deduplicateByName(arr) {
  * @param {string|null} theme        - '温泉'|'絶景'|'海'|'街歩き'|'グルメ'|null
  * @param {string}      departure    - 出発都市名
  * @param {string|null} nearestHub   - フォールバック出発地
+ * @returns {Object|null} 1件の目的地オブジェクト
  */
 export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null) {
   const normalizedStay = stayType === '2night' ? '1night' : stayType;
@@ -166,7 +157,7 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
   });
 
   if (departurePool.length > 0) {
-    return deduplicateByName(weightedShuffle(departurePool, theme));
+    return weightedShuffle(departurePool, theme)[0];
   }
 
   // 最終フォールバック: stayType のみ（出発地制約なし）
@@ -175,5 +166,5 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
     return true;
   });
-  return deduplicateByName(weightedShuffle(globalPool, theme));
+  return weightedShuffle(globalPool, theme)[0] ?? null;
 }

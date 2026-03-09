@@ -14,8 +14,7 @@ const state = {
   stayType:     '1night',
   theme:        null,
   people:       DEFAULT_GUESTS,
-  pool:         [],
-  poolIndex:    0,
+  currentCity:  null,
 };
 
 async function init() {
@@ -24,7 +23,6 @@ async function init() {
 
   try {
     state.destinations = await loadDestinations();
-    initTodaysCity();
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {
@@ -45,80 +43,27 @@ function go() {
 
   const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.pool      = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
-  state.poolIndex = 0;
+  state.currentCity = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
   draw();
 }
 
 function retry() {
-  if (state.poolIndex >= state.pool.length - 1) {
-    const fromCityInfoR = DEPARTURE_CITY_INFO[state.departure];
-    const nearestHubR   = fromCityInfoR?.nearestHub ?? null;
-    state.pool      = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHubR);
-    state.poolIndex = 0;
-  } else {
-    state.poolIndex++;
-  }
-  draw();
+  go();
   document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function draw() {
-  const city = state.pool[state.poolIndex];
+  const city = state.currentCity;
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure);
   const hotelLinks     = buildHotelLinks(city);
 
-  renderResult({
-    city,
-    transportLinks,
-    hotelLinks,
-    poolIndex: state.poolIndex,
-    poolTotal: state.pool.length,
-  });
-
-  updateRetryBtn();
+  renderResult({ city, transportLinks, hotelLinks });
 
   const resultEl = document.getElementById('result');
   resultEl.hidden = false;
-  if (state.poolIndex === 0) {
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
-function updateRetryBtn() {
-  const btn     = document.getElementById('retry-btn');
-  const countEl = document.getElementById('remaining-count');
-  if (!btn) return;
-  const { pool, poolIndex } = state;
-  const remaining = pool.length - poolIndex - 1;
-  if (remaining <= 0) {
-    btn.textContent = 'もう一度最初から引く';
-    if (countEl) countEl.textContent = '';
-  } else {
-    btn.textContent = 'もう一回引く';
-    if (countEl) countEl.textContent = `あと${remaining}件あります`;
-  }
-}
-
-/* ── 今日の旅先 ── */
-
-function initTodaysCity() {
-  const el = document.getElementById('todays-city');
-  if (!el) return;
-
-  const candidates = state.destinations.filter(d =>
-    d.type !== 'spot' && d.stayAllowed && d.stayAllowed.length > 0
-  );
-  if (candidates.length === 0) return;
-
-  const city = candidates[Math.floor(Math.random() * candidates.length)];
-  const nameEl   = el.querySelector('.todays-city-name');
-  const regionEl = el.querySelector('.todays-city-region');
-  if (nameEl)   nameEl.textContent   = city.name;
-  if (regionEl) regionEl.textContent = city.region;
-  el.hidden = false;
+  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ── フォームエラー ── */
