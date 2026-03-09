@@ -11,23 +11,26 @@
  *     share-block         （Xシェア）
  */
 
-import { applyAffiliateLinks } from '../affiliate/affiliate.js';
+import { getJalanRentUrl } from '../affiliate/affiliate.js';
 
 export function renderResult({ city, transportLinks, hotelLinks }) {
-  const { hotelHub } = hotelLinks;
+  const hub = city.hotelHub ?? city.name;
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
     <div class="result-card">
       ${buildCityBlock(city)}
       ${buildTransportBlock(transportLinks)}
-      ${buildStayBlock(hotelHub)}
+      ${buildStayBlock(hub, hotelLinks)}
       ${city.needsCar ? buildCarBlock() : ''}
       ${buildShareBlock(city)}
     </div>
   `;
 
-  applyAffiliateLinks(hotelHub);
+  if (city.needsCar) {
+    const rentBtn = document.getElementById('jalanRentBtn');
+    if (rentBtn) rentBtn.href = getJalanRentUrl();
+  }
 }
 
 export function clearResult() {
@@ -92,14 +95,15 @@ function buildTransportBlock(links) {
 
 /* ── 宿泊ブロック ── */
 
-function buildStayBlock(hotelHub) {
+function buildStayBlock(hub, links) {
+  const buttonsHtml = links.map(link => `
+    <a href="${link.url}" target="_blank" rel="nofollow sponsored noopener"
+       class="btn ${btnClass(link.type)}">${link.label}</a>
+  `).join('');
   return `
     <div class="stay-block">
-      <p class="stay-label">近くで泊まる（${hotelHub}）</p>
-      <div class="stay-buttons">
-        <a id="jalanHotelBtn" target="_blank" rel="nofollow sponsored noopener">じゃらん</a>
-        <a id="rakutenHotelBtn" target="_blank" rel="nofollow sponsored noopener">楽天トラベル</a>
-      </div>
+      <p class="stay-label">近くで泊まる（${hub}）</p>
+      <div class="stay-buttons">${buttonsHtml}</div>
     </div>
   `;
 }

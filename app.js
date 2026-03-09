@@ -1,6 +1,6 @@
 import { buildPool } from './src/engine/selectionEngine.js';
 import { resolveTransportLinks } from './src/transport/transportRenderer.js';
-import { buildHotelLinks } from './src/affiliate/hotel.js';
+import { buildHotelLinks } from './src/engine/hotelLinkBuilder.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
