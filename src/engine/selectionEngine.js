@@ -1,25 +1,29 @@
 /**
  * 抽選エンジン
  *
- * buildPool: star + stayType + departure でフィルタし重み付きシャッフルを返す。
+ * buildPool: stayType + theme + departure でフィルタし重み付きシャッフルを返す。
  *
  * フォールバック:
- *   1. distanceStars 完全一致
- *   2. distanceStars ±1
- *   3. 出発地一致のみ（star 無視）
- *   4. 全件（stayType のみ） — 最終手段
+ *   1. departure + stayType 完全一致
+ *   2. 全件（stayType のみ） — 最終手段
  *
- * weight: hub=0.3〜0.35（出にくい）, local=1.2（出やすい）, island=1.5, spot=0.15（低確率）
+ * weight: hub=0.3〜0.35（出にくい）, destination=1.2（出やすい）, island=1.5
  *
- * 追加重み:
- *   - ★3,4 を優遇 / ★1,5 を抑制
- *   - 県庁所在地は軽く抑制
+ * theme 選択時:
+ *   - タグ一致（エイリアス含む）: weight × 3.0 で優先
+ *   - タグ不一致: weight × 0.4 で抑制（ランダム性は残す）
  */
 
 import { calculateDistanceStars } from './distanceCalculator.js';
 
-/** ★別の重み乗数 — ★3,4 中心設計 */
-const STAR_MULTIPLIER = { 1: 0.6, 2: 0.85, 3: 1.3, 4: 1.3, 5: 0.7 };
+/** テーマ → 一致させるタグ群（エイリアス） */
+const THEME_TAG_ALIASES = {
+  '温泉':   ['温泉', '秘湯'],
+  '絶景':   ['絶景', '自然', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス', '離島'],
+  '海':     ['海', '海の幸', '離島', 'ダイビング', '港町', 'リゾート'],
+  '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都', '港町', '城'],
+  'グルメ': ['グルメ', '海の幸', '牡蠣', '食文化'],
+};
 
 /** 県庁所在地セット — 抽選確率を軽く抑制 */
 const PREF_CAPITALS = new Set([
@@ -34,7 +38,6 @@ const PREF_CAPITALS = new Set([
 
 /**
  * 出発地の別名マッピング
- * 出発地名と表記が異なる目的地名を同一都市として扱う
  */
 const DEPARTURE_ALIASES = {
   '福岡': ['博多'],
@@ -42,7 +45,6 @@ const DEPARTURE_ALIASES = {
 
 /**
  * 出発地の都道府県
- * 日帰り以外で同一都道府県の目的地を除外するために使用
  */
 const DEPARTURE_PREFECTURE = {
   '札幌': '北海道', '函館': '北海道', '旭川': '北海道',
@@ -56,12 +58,12 @@ const DEPARTURE_PREFECTURE = {
 };
 
 /**
- * 同一都道府県除外対象の目的地マップ（id → 都道府県）
+ * 同一都道府県除外対象（id → 都道府県）
  */
 const DESTINATION_PREFECTURE_MAP = {
-  'matsushima': '宮城',  // 仙台と同一県
-  'onomichi':   '広島',  // 広島と同一県
-  'otaru':      '北海道', // 札幌と同一道
+  'matsushima': '宮城',
+  'onomichi':   '広島',
+  'otaru':      '北海道',
 };
 
 function isSameCity(destination, departure) {
@@ -78,16 +80,28 @@ function isSamePrefectureOvernight(destination, departure, stayType) {
   return destPref === DEPARTURE_PREFECTURE[departure];
 }
 
-function getSelectionWeight(city) {
-  const base  = city.weight ?? 1;
-  const starW = STAR_MULTIPLIER[city.distanceStars] ?? 1;
-  const capW  = PREF_CAPITALS.has(city.name) ? 0.6 : 1;
-  return base * starW * capW;
+/** テーマがタグに一致するか（エイリアス含む） */
+function matchesTheme(city, theme) {
+  if (!theme) return true;
+  const aliases = THEME_TAG_ALIASES[theme] ?? [theme];
+  return (city.tags || []).some(t => aliases.includes(t));
 }
 
-function weightedShuffle(arr) {
+function getWeight(city, theme) {
+  const base = city.weight ?? 1;
+  const capW = PREF_CAPITALS.has(city.name) ? 0.6 : 1;
+
+  let themeW = 1;
+  if (theme) {
+    themeW = matchesTheme(city, theme) ? 3.0 : 0.4;
+  }
+
+  return base * capW * themeW;
+}
+
+function weightedShuffle(arr, theme) {
   const result = [];
-  const pool = arr.map(item => ({ item, w: getSelectionWeight(item) }));
+  const pool = arr.map(item => ({ item, w: getWeight(item, theme) }));
   while (pool.length > 0) {
     const total = pool.reduce((s, e) => s + e.w, 0);
     let r = Math.random() * total;
@@ -102,7 +116,7 @@ function weightedShuffle(arr) {
   return result;
 }
 
-/** 同一名称の都市を1件に絞る（重み付きシャッフル後の順序維持） */
+/** 同一名称の都市を1件に絞る */
 function deduplicateByName(arr) {
   const seen = new Set();
   return arr.filter(city => {
@@ -113,27 +127,19 @@ function deduplicateByName(arr) {
 }
 
 /**
- * buildPool — 出発地・距離・日程でフィルタし重み付きシャッフルを返す。
+ * buildPool — 出発地・日程・テーマでフィルタし重み付きシャッフルを返す。
  *
- * distanceStars を動的計算して各エントリに付与してから選択する。
+ * distanceStars は交通表示用に動的計算して各エントリに付与する（UI非表示）。
  *
  * @param {Array}       destinations - 全目的地配列
- * @param {number}      distanceStars - ユーザー選択の★数
- * @param {string}      stayType      - 'daytrip' | '1night' | '2night'
- * @param {string}      departure     - 出発都市名
- * @param {string|null} nearestHub    - 出発都市のnearestHub（フォールバック用）
- *
- * フォールバック順序:
- *   1. departures + distanceStars 完全一致
- *   2. departures + distanceStars ±1
- *   3. departures 一致のみ（star 無視）
- *   4. 全件（stayType のみ） — 最終手段
+ * @param {string}      stayType     - 'daytrip' | '1night' | '2night'
+ * @param {string|null} theme        - '温泉'|'絶景'|'海'|'街歩き'|'グルメ'|null
+ * @param {string}      departure    - 出発都市名
+ * @param {string|null} nearestHub   - フォールバック出発地
  */
-export function buildPool(destinations, distanceStars, stayType, departure = '', nearestHub = null) {
-  // 2泊3日は1泊2日と同じ目的地セットを使用
+export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null) {
   const normalizedStay = stayType === '2night' ? '1night' : stayType;
 
-  /** departures フィールドで出発地マッチを判定 */
   function matchesDeparture(d) {
     if (!d.departures || d.departures.length === 0) return true;
     if (d.departures.includes(departure)) return true;
@@ -141,13 +147,12 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
     return false;
   }
 
-  // 各エントリに動的 distanceStars を付与
+  // 交通表示用に distanceStars を動的付与
   const withStars = destinations.map(d => ({
     ...d,
     distanceStars: calculateDistanceStars(departure, d),
   }));
 
-  // 出発地・stayType・同一都市・同一都道府県でフィルタ
   const departurePool = withStars.filter(d => {
     if (d.isIsland === true && normalizedStay !== '1night') return false;
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
@@ -157,22 +162,15 @@ export function buildPool(destinations, distanceStars, stayType, departure = '',
     return true;
   });
 
-  // 1. star 完全一致
-  const exact = departurePool.filter(d => d.distanceStars === distanceStars);
-  if (exact.length > 0) return deduplicateByName(weightedShuffle(exact));
+  if (departurePool.length > 0) {
+    return deduplicateByName(weightedShuffle(departurePool, theme));
+  }
 
-  // 2. star ±1 フォールバック
-  const nearStar = departurePool.filter(d => Math.abs(d.distanceStars - distanceStars) <= 1);
-  if (nearStar.length > 0) return deduplicateByName(weightedShuffle(nearStar));
-
-  // 3. 出発地一致のみ（star 無視）
-  if (departurePool.length > 0) return deduplicateByName(weightedShuffle(departurePool));
-
-  // 4. 最終フォールバック: stayType のみ（出発地制約なし）
+  // 最終フォールバック: stayType のみ（出発地制約なし）
   const globalPool = withStars.filter(d => {
     if (d.isIsland === true && normalizedStay !== '1night') return false;
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
     return true;
   });
-  return deduplicateByName(weightedShuffle(globalPool));
+  return deduplicateByName(weightedShuffle(globalPool, theme));
 }

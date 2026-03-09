@@ -50,7 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── イントロ演出（初回のみ） ── */
+/* ── イントロ演出（毎回表示） ── */
 
 .intro-overlay {
   position: fixed;
@@ -60,7 +60,9 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: introFadeOut 1.2s ease-out 0.5s both;
+  /* 1.5秒表示 → 0.6秒でフェードアウト */
+  animation: introFadeOut 0.6s ease-out 1.5s both;
+  pointer-events: none;
 }
 
 .intro-text {
@@ -612,10 +614,17 @@ body {
 }
 .btn-jalan:hover { opacity: 0.9; }
 
-/* リトライボタン */
+/* リトライエリア */
+
+.retry-area {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
 .retry-btn {
-  margin-top: 16px;
   width: 100%;
   background: transparent;
   color: var(--text-sub);
@@ -632,6 +641,35 @@ body {
   background: var(--white);
   color: var(--text);
 }
+
+.remaining-count {
+  font-size: 12px;
+  color: var(--text-sub);
+  min-height: 18px;
+}
+
+/* ── Xシェアボタン ── */
+
+.share-block {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.btn-share {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #000;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.btn-share:hover { opacity: 0.82; }
 
 /* ── フッター ── */
 
@@ -697,40 +735,48 @@ body {
   display: inline-block;
 }
 
-/* 距離★ボタン（縦表示） */
+/* ── 今日の旅先 ── */
 
-.btn-group--distance {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  overflow-x: auto;
+.todays-city {
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
 }
 
-.sel-btn--distance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 10px 6px;
-  border-radius: var(--radius);
-  white-space: nowrap;
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.sel-btn--distance .star-val {
-  font-size: 15px;
+.todays-label {
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.sel-btn--distance .star-desc {
-  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--text-sub);
+  margin-bottom: 8px;
 }
 
-.sel-btn--distance.active .star-desc {
-  color: rgba(255,255,255,0.8);
+.todays-city-name {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.todays-city-region {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+/* ── テーマボタン ── */
+
+.label-optional {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-sub);
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 /* 都市カード画像 */

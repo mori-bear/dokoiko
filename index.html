@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>どこ行こ？ — 距離と日程で旅先を決める</title>
-  <meta name="description" content="距離と日程だけで、ちゃんと行ける場所を1つ。迷う時間を減らすためのサイトです。">
+  <title>どこ行こ？ — 知らない街に出会う旅のきっかけ</title>
+  <meta name="description" content="旅先を決めかねているあなたへ。出発地と日程を選ぶだけで、まだ行ったことのない日本の街と出会えます。">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <!-- イントロ演出（初回のみ表示） -->
+  <!-- イントロ演出（毎回表示） -->
   <div id="intro-overlay" class="intro-overlay" aria-hidden="true">
-    <p class="intro-text">知らない街へ、逢いに行こう。</p>
+    <p class="intro-text">知らない街に、会いに行こう。</p>
   </div>
-  <script>
-    if (localStorage.getItem('dokoiko-intro-v1')) {
-      document.getElementById('intro-overlay').style.display = 'none';
-    }
-  </script>
 
   <header class="site-header">
     <div class="header-inner">
@@ -32,14 +27,21 @@
     <div class="container">
 
       <section class="hero">
-        <h1 class="hero-heading">明日どこ行こ？</h1>
-        <p class="hero-sub">距離を選ぶだけ。<br>次の旅先が1つ出てくる。</p>
+        <h1 class="hero-heading">知らない街へ、行ってみる？</h1>
+        <p class="hero-sub">旅先を選ぶのではなく、旅先に出会う。<br>出発地と日程を選ぶだけ。</p>
+      </section>
+
+      <!-- 今日の旅先 -->
+      <section id="todays-city" class="todays-city" hidden>
+        <p class="todays-label">今日のランダム旅先</p>
+        <p class="todays-city-name"></p>
+        <p class="todays-city-region"></p>
       </section>
 
       <section class="how-to" id="about">
-        <div class="step"><span class="step-num">1</span><p>出発地・距離・日程・人数を選ぶ</p></div>
+        <div class="step"><span class="step-num">1</span><p>出発地・日程・テーマを選ぶ</p></div>
         <div class="step"><span class="step-num">2</span><p>「どこ行こ？」を押す</p></div>
-        <div class="step"><span class="step-num">3</span><p>交通・宿リンクから予約</p></div>
+        <div class="step"><span class="step-num">3</span><p>交通・宿リンクからそのまま予約</p></div>
       </section>
 
       <section class="controls">
@@ -94,25 +96,25 @@
           </select>
         </div>
 
-        <!-- 距離 -->
+        <!-- 旅の長さ -->
         <div class="control-group">
-          <label class="control-label">どのくらい遠い？</label>
-          <div class="btn-group btn-group--distance">
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="1"><span class="star-val">★1</span><span class="star-desc">近場</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="2"><span class="star-val">★2</span><span class="star-desc">少し遠出</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="3"><span class="star-val">★3</span><span class="star-desc">日帰り旅</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="4"><span class="star-val">★4</span><span class="star-desc">小旅行</span></button>
-            <button class="sel-btn sel-btn--distance" data-group="distance" data-value="5"><span class="star-val">★5</span><span class="star-desc">遠出</span></button>
+          <label class="control-label">旅の長さ</label>
+          <div class="btn-group">
+            <button class="sel-btn" data-group="stay" data-value="daytrip">日帰り</button>
+            <button class="sel-btn active" data-group="stay" data-value="1night">1泊</button>
+            <button class="sel-btn" data-group="stay" data-value="2night">2泊</button>
           </div>
         </div>
 
-        <!-- 日程 -->
+        <!-- テーマ（任意） -->
         <div class="control-group">
-          <label class="control-label">日程</label>
+          <label class="control-label">テーマ <span class="label-optional">（任意）</span></label>
           <div class="btn-group">
-            <button class="sel-btn" data-group="stay" data-value="daytrip">日帰り</button>
-            <button class="sel-btn active" data-group="stay" data-value="1night">1泊2日</button>
-            <button class="sel-btn" data-group="stay" data-value="2night">2泊3日</button>
+            <button class="sel-btn" data-group="theme" data-value="温泉">温泉</button>
+            <button class="sel-btn" data-group="theme" data-value="絶景">絶景</button>
+            <button class="sel-btn" data-group="theme" data-value="海">海</button>
+            <button class="sel-btn" data-group="theme" data-value="街歩き">街歩き</button>
+            <button class="sel-btn" data-group="theme" data-value="グルメ">グルメ</button>
           </div>
         </div>
 
@@ -138,7 +140,10 @@
       <!-- 結果 -->
       <section id="result" class="result" hidden>
         <div id="result-inner"></div>
-        <button id="retry-btn" class="retry-btn">引き直す</button>
+        <div class="retry-area">
+          <button id="retry-btn" class="retry-btn">もう一回引く</button>
+          <p id="remaining-count" class="remaining-count"></p>
+        </div>
       </section>
 
     </div>

@@ -21,13 +21,6 @@ export function bindHandlers(state, onGo, onRetry) {
     if (selBtn) {
       const { group, value } = selBtn.dataset;
 
-      if (group === 'distance') {
-        if (selBtn.classList.contains('hidden')) return;
-        setActive('[data-group="distance"]', selBtn);
-        state.distance = parseInt(value, 10);
-        return;
-      }
-
       if (group === 'stay') {
         setActive('[data-group="stay"]', selBtn);
         state.stayType = value;
@@ -37,6 +30,18 @@ export function bindHandlers(state, onGo, onRetry) {
       if (group === 'people') {
         setActive('[data-group="people"]', selBtn);
         state.people = parseInt(value, 10);
+        return;
+      }
+
+      if (group === 'theme') {
+        // 再クリックで解除（任意選択）
+        if (selBtn.classList.contains('active')) {
+          selBtn.classList.remove('active');
+          state.theme = null;
+        } else {
+          setActive('[data-group="theme"]', selBtn);
+          state.theme = value;
+        }
         return;
       }
     }
@@ -59,4 +64,3 @@ function setActive(selector, target) {
   document.querySelectorAll(selector).forEach((b) => b.classList.remove('active'));
   target.classList.add('active');
 }
-

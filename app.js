@@ -3,16 +3,15 @@ import { resolveTransportLinks } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/affiliate/hotel.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
-import { DISTANCE_LABELS, DEPARTURE_CITY_INFO } from './src/config/constants.js';
-import { loadDestinations } from './src/data/loader.js';
+import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
 
 const DEFAULT_GUESTS = 2;
 
 const state = {
   destinations: [],
   departure:    '東京',
-  distance:     null,
   stayType:     '1night',
+  theme:        null,
   people:       DEFAULT_GUESTS,
   pool:         [],
   poolIndex:    0,
@@ -26,6 +25,7 @@ async function init() {
     const res = await fetch('./src/data/destinations.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     state.destinations = await res.json();
+    initTodaysCity();
   } catch {
     const btn = document.getElementById('go-btn');
     if (btn) {
@@ -36,10 +36,6 @@ async function init() {
 }
 
 function go() {
-  if (state.distance === null) {
-    showFormError('距離を選んでください。');
-    return;
-  }
   if (state.destinations.length === 0) {
     showFormError('データを読み込み中です。しばらくお待ちください。');
     return;
@@ -48,7 +44,7 @@ function go() {
 
   const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure, nearestHub);
+  state.pool      = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
   state.poolIndex = 0;
   draw();
 }
@@ -57,7 +53,7 @@ function retry() {
   if (state.poolIndex >= state.pool.length - 1) {
     const fromCityInfoR = DEPARTURE_CITY_INFO[state.departure];
     const nearestHubR   = fromCityInfoR?.nearestHub ?? null;
-    state.pool      = buildPool(state.destinations, state.distance, state.stayType, state.departure, nearestHubR);
+    state.pool      = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHubR);
     state.poolIndex = 0;
   } else {
     state.poolIndex++;
@@ -70,7 +66,6 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  const fromCity       = DEPARTURE_CITY_INFO[state.departure];
   const transportLinks = resolveTransportLinks(city, state.departure);
   const hotelLinks     = buildHotelLinks(city);
 
@@ -78,11 +73,8 @@ function draw() {
     city,
     transportLinks,
     hotelLinks,
-    distanceLabel: DISTANCE_LABELS[state.distance],
-    poolIndex:     state.poolIndex,
-    poolTotal:     state.pool.length,
-    fromCity,
-    departure:     state.departure,
+    poolIndex: state.poolIndex,
+    poolTotal: state.pool.length,
   });
 
   updateRetryBtn();
@@ -95,16 +87,40 @@ function draw() {
 }
 
 function updateRetryBtn() {
-  const btn = document.getElementById('retry-btn');
+  const btn     = document.getElementById('retry-btn');
+  const countEl = document.getElementById('remaining-count');
   if (!btn) return;
   const { pool, poolIndex } = state;
   const remaining = pool.length - poolIndex - 1;
   if (remaining <= 0) {
     btn.textContent = 'もう一度最初から引く';
+    if (countEl) countEl.textContent = '';
   } else {
-    btn.textContent = `引き直す（あと${remaining}件）`;
+    btn.textContent = 'もう一回引く';
+    if (countEl) countEl.textContent = `あと${remaining}件あります`;
   }
 }
+
+/* ── 今日の旅先 ── */
+
+function initTodaysCity() {
+  const el = document.getElementById('todays-city');
+  if (!el) return;
+
+  const candidates = state.destinations.filter(d =>
+    d.type !== 'spot' && d.stayAllowed && d.stayAllowed.length > 0
+  );
+  if (candidates.length === 0) return;
+
+  const city = candidates[Math.floor(Math.random() * candidates.length)];
+  const nameEl   = el.querySelector('.todays-city-name');
+  const regionEl = el.querySelector('.todays-city-region');
+  if (nameEl)   nameEl.textContent   = city.name;
+  if (regionEl) regionEl.textContent = city.region;
+  el.hidden = false;
+}
+
+/* ── フォームエラー ── */
 
 function showFormError(msg) {
   const el = document.getElementById('form-error');
@@ -116,19 +132,14 @@ function clearFormError() {
   if (el) { el.hidden = true; el.textContent = ''; }
 }
 
-/* ── イントロ演出 ── */
+/* ── イントロ演出（毎回表示） ── */
 
 function initIntro() {
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
 
-  // インラインスクリプトで既に非表示になっている場合はスキップ
-  if (overlay.style.display === 'none') return;
-
-  // アニメーション終了後にDOMから除去してlocalStorageに記録
   overlay.addEventListener('animationend', () => {
     overlay.remove();
-    localStorage.setItem('dokoiko-intro-v1', '1');
   }, { once: true });
 }
 
