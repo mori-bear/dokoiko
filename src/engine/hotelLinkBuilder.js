@@ -1,15 +1,15 @@
 /**
  * 宿泊リンクビルダー
  *
- * 楽天トラベル: hotelSearch キーワード検索（アフィリエイト経由）
- * じゃらん:     jalanArea エリアURLを優先、未設定時はキーワード検索にフォールバック
+ * 楽天トラベル: 楽天アフィリエイト直接（hb.afl.rakuten.co.jp）
+ * じゃらん:     ValueCommerce 経由（sid=3764408 / pid=892559858）
  *
- * 100% 成功を保証:
- *   - hotelSearch は常に hotelHub にフォールバックするため空にならない
- *   - jalanArea がない場合もキーワード検索で確実にヒット
+ * フォールバック順: hotelSearch → hotelHub → name
+ * 100% リンク生成を保証
  */
 
-const VC_BASE = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
+const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
+const VC_BASE     = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
 
 export function buildHotelLinks(city) {
   return [
@@ -24,22 +24,13 @@ function buildRakutenHotelLink(city) {
   return {
     type:  'rakuten',
     label: '周辺の宿を見る（楽天トラベル）',
-    url:   VC_BASE + encodeURIComponent(target),
+    url:   RAKUTEN_AFF + encodeURIComponent(target),
   };
 }
 
 function buildJalanHotelLink(city) {
-  const hub = city.hotelSearch ?? city.hotelHub ?? city.name;
-
-  let target;
-  if (city.jalanArea) {
-    const pref = city.jalanArea.substring(0, 2);
-    target = `https://www.jalan.net/${pref}0000/LRG_${city.jalanArea}/`;
-  } else {
-    // フォールバック: キーワード検索（jalanArea 未設定時）
-    target = 'https://www.jalan.net/keyword/?keyword=' + encodeURIComponent(hub);
-  }
-
+  const keyword = city.hotelSearch ?? city.hotelHub ?? city.name;
+  const target  = 'https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' + encodeURIComponent(keyword);
   return {
     type:  'jalan',
     label: '周辺の宿を見る（じゃらん）',
