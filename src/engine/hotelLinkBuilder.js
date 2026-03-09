@@ -6,13 +6,24 @@
 export function buildHotelLinks(city) {
   const hub = city.hotelHub ?? city.name;
 
-  const jalan =
-    'https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' +
+  const rakutenSearch =
+    'https://travel.rakuten.co.jp/keyword/Search.do?f_query=' +
     encodeURIComponent(hub);
 
   const rakuten =
-    'https://travel.rakuten.co.jp/keyword/Search.do?f_query=' +
+    'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=' +
+    encodeURIComponent(rakutenSearch);
+
+  const jalanSearch =
+    'https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' +
     encodeURIComponent(hub);
+
+  const jalan =
+    'https://ck.jp.ap.valuecommerce.com/servlet/referral' +
+    '?sid=3764408' +
+    '&pid=892559858' +
+    '&vc_url=' +
+    encodeURIComponent(jalanSearch);
 
   return [
     { type: 'jalan',   label: '周辺の宿を見る（じゃらん）',     url: jalan   },
