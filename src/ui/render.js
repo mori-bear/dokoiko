@@ -119,7 +119,6 @@ function buildShareBlock(city) {
       <a href="${lineUrl}" target="_blank" rel="noopener noreferrer" class="btn-share btn-share--line">
         LINEでシェア
       </a>
-      <button class="btn-copy" type="button">この旅先をコピー</button>
     </div>
   `;
 }
@@ -133,7 +132,8 @@ function btnClass(type) {
   if (type === 'jr-ex')      return 'btn-jr-ex';
   if (type === 'skyscanner') return 'btn-skyscanner';
   if (type === 'ferry')      return 'btn-ferry';
-  if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
+  if (type === 'rental')     return 'btn-rental';
+  if (type === 'google-maps') return 'btn-secondary';
   return 'btn-primary';
 }
 

@@ -8,100 +8,116 @@ import {
 } from './linkBuilder.js';
 
 /**
- * 交通リンクを組み立てる。
+ * 交通リンクを組み立てる（マルチルート方式）。
  *
- * 優先順位:
- *   1. portHubs あり（島）   → フェリー + Googleマップ transit（港まで）+ レンタカー
- *   2. ferryGateway のみ     → フェリー + Googleマップ transit
- *   3. airportGateway のみ   → Skyscanner + Googleマップ transit（空港→市内）
- *   4. その他（鉄道・バス等）→ JR予約（railNote なし時）+ Googleマップ transit
- *   5. needsCar=true         → Googleマップ driving + レンタカー
+ * 表示順: 飛行機 → フェリー → JR → GoogleMaps → レンタカー
  *
- * ★1 の場合: Googleマップ transit のみ
- * railGateway + railNote あり → Googleマップのみ（バス・私鉄等）
+ * 特例:
+ *   ★1（近場）        → GoogleMaps のみ
+ *   portHubs（島）    → フェリー + GoogleMaps（港まで）+ レンタカー（early return）
+ *   airportGateway    → Skyscanner + GoogleMaps（空港→市内）
+ *   ferryGateway      → フェリーリンク（airportGateway・railGatewayなし時 + GoogleMaps）
+ *   railGateway       → JR予約 + GoogleMaps（出発地→目的地）
+ *   railNote          → 二次交通テキスト（JRリンクと併用）
+ *   shouldShowRental  → レンタカー（needsCar / isIsland / 自然系タグ）
  */
 export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
   if (!fromCity) return [];
 
-  const dest   = city.name;
-  const stars  = city.distanceStars ?? 0;
+  const dest  = city.name;
+  const stars = city.distanceStars ?? 0;
   const access = city.access;
-  const links  = [];
 
-  const railGateway    = access?.railGateway    ?? null;
-  const airportGateway = access?.airportGateway ?? null;
-  const ferryGateway   = access?.ferryGateway   ?? null;
-  const railNote       = access?.railNote        ?? null;
-
-  // ★1: Googleマップのみ（近場）
+  // ★1: 近場 → GoogleMaps のみ
   if (stars === 1) {
-    links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
-    if (city.needsCar) links.push(buildRentalLink());
-    return links.filter(l => l?.url);
+    const ls = [buildGoogleMapsLink(fromCity.rail, dest, 'transit')];
+    if (shouldShowRental(city)) ls.push(buildRentalLink());
+    return ls.filter(l => l?.url);
   }
 
-  if (!access) return [];
+  if (!access) {
+    if (city.needsCar) {
+      return [
+        buildGoogleMapsLink(fromCity.rail, dest, 'driving'),
+        buildRentalLink(),
+      ].filter(l => l?.url);
+    }
+    return [buildGoogleMapsLink(fromCity.rail, dest, 'transit')].filter(l => l?.url);
+  }
 
-  // 1. 島・portHubs: 出発地に最も近い港を選択
+  const railGateway    = access.railGateway    ?? null;
+  const airportGateway = access.airportGateway ?? null;
+  const ferryGateway   = access.ferryGateway   ?? null;
+  const railNote       = access.railNote        ?? null;
+
+  // 島・portHubs（フェリーが主要手段 — 早期リターン）
   if (city.portHubs && city.portHubs.length > 0) {
     const port = selectNearestPort(city, departure);
+    const ls = [];
     if (port) {
       const ferryLink = buildFerryLink(port);
-      if (ferryLink) links.push(ferryLink);
-      links.push(buildGoogleMapsLink(fromCity.rail, port, 'transit'));
-      links.push(buildRentalLink());
-      return links.filter(l => l?.url);
+      if (ferryLink) ls.push(ferryLink);
+      ls.push(buildGoogleMapsLink(fromCity.rail, port, 'transit'));
     }
+    ls.push(buildRentalLink());
+    return ls.filter(l => l?.url);
   }
 
-  // 2. フェリー（ferryGateway あり・railGateway なし）
-  if (ferryGateway && !railGateway) {
-    const ferryLink = buildFerryLink(ferryGateway);
-    if (ferryLink) links.push(ferryLink);
-    links.push(buildGoogleMapsLink(fromCity.rail, ferryGateway, 'transit'));
-    if (city.isIsland || city.needsCar) links.push(buildRentalLink());
-    return links.filter(l => l?.url);
-  }
+  // 非島: 全ルート収集
+  const links = [];
 
-  // 3. 航空（airportGateway あり・railGateway なし）
-  if (airportGateway && !railGateway) {
+  // 飛行機ルート
+  if (airportGateway) {
     const sc = buildSkyscannerLink(fromCity.iata, airportGateway);
     if (sc) links.push(sc);
-    // 空港→市内のGoogle Maps transit
+    // 空港 → 市内
     links.push(buildGoogleMapsLink(airportGateway, dest, 'transit', '空港から市内へ（Googleマップ）'));
-    if (city.needsCar || city.isIsland) links.push(buildRentalLink());
-    return links.filter(l => l?.url);
   }
 
-  // 4. 鉄道・バス等（railGateway あり）
+  // フェリールート（portHubsなし）
+  if (ferryGateway) {
+    const fl = buildFerryLink(ferryGateway);
+    if (fl) links.push(fl);
+    // フェリーのみ（airport・railなし）→ 出発地→港まで GoogleMaps
+    if (!airportGateway && !railGateway) {
+      links.push(buildGoogleMapsLink(fromCity.rail, ferryGateway, 'transit'));
+    }
+  }
+
+  // JRルート（railGateway あれば常に表示）
   if (railGateway) {
-    // railNote がない場合のみ JR予約を表示
-    if (!railNote) {
-      const jrLink = buildJrLink(resolveRailProvider(departure, city));
-      if (jrLink) links.push(jrLink);
+    const jrLink = buildJrLink(resolveRailProvider(departure, city));
+    if (jrLink) links.push(jrLink);
+
+    // airportなし → 出発地→目的地 GoogleMaps
+    if (!airportGateway) {
+      links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
     }
 
-    // Googleマップ: 出発地 → 目的地
-    links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
-
-    // 二次交通テキスト
+    // 二次交通テキスト（バス・私鉄等）
     if (railNote) {
       links.push({ type: 'note', label: `${railGateway} → ${dest}（${railNote}）`, url: null });
     }
-
-    // レンタカー
-    if (city.needsCar || city.isIsland) links.push(buildRentalLink());
-
-    return links.filter(l => l && (l.url || l.type === 'note'));
   }
 
-  // 5. 車（needsCar=true のみ）
-  if (city.needsCar) {
-    links.push(buildGoogleMapsLink(fromCity.rail, dest, 'driving'));
-    links.push(buildRentalLink());
+  // どの手段もない → GoogleMaps のみ
+  if (!airportGateway && !ferryGateway && !railGateway) {
+    links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
   }
-  return links.filter(l => l?.url);
+
+  // レンタカー
+  if (shouldShowRental(city)) links.push(buildRentalLink());
+
+  return links.filter(l => l && (l.url || l.type === 'note'));
+}
+
+/**
+ * レンタカー表示条件
+ * destinations.json で needsCar=true が設定された都市 + 島
+ */
+function shouldShowRental(city) {
+  return city.needsCar === true || city.isIsland === true;
 }
 
 /**
@@ -148,9 +164,6 @@ const EX_CITIES = new Set([
   '岡山', '広島', '小倉', '博多', '熊本', '鹿児島', '長崎',
 ]);
 
-/**
- * JR予約プロバイダを決定する（city名ベース）。
- */
 function resolveRailProviderByName(departure, targetCityName) {
   if (EX_CITIES.has(departure) && EX_CITIES.has(targetCityName)) {
     return 'ex';
@@ -161,9 +174,6 @@ function resolveRailProviderByName(departure, targetCityName) {
   return 'e5489';
 }
 
-/**
- * JR予約プロバイダを決定する（city オブジェクトベース）。
- */
 function resolveRailProvider(departure, city) {
   return resolveRailProviderByName(departure, city.name);
 }

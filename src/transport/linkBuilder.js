@@ -141,10 +141,16 @@ const FERRY_LINKS = {
   '宇野港':             { label: 'フェリーを調べる（宇野港フェリー）',    url: 'https://ferry.co.jp/' },
   '宮島口港':           { label: 'フェリーを調べる（宮島松大フェリー）',  url: 'https://miyajima-matsudai.co.jp/' },
   '石垣港':             { label: 'フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
+  '松山観光港':         { label: 'フェリーを調べる（瀬戸内海汽船）',      url: 'https://www.setonaikaikisen.co.jp/' },
 };
 
 export function buildFerryLink(ferryGateway) {
   const info = FERRY_LINKS[ferryGateway];
-  if (!info) return null;
-  return { type: 'ferry', label: info.label, url: info.url };
+  if (info) return { type: 'ferry', label: info.label, url: info.url };
+  // 未登録港: Googleマップ検索にフォールバック
+  return {
+    type: 'ferry',
+    label: `フェリーを調べる（${ferryGateway}）`,
+    url: `https://www.google.com/maps/search/${encodeURIComponent(ferryGateway + ' フェリー')}`,
+  };
 }
