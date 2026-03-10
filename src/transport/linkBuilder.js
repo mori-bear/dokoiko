@@ -54,6 +54,10 @@ const AIRPORT_IATA = {
   '屋久島空港':   'KUM',
   '奄美空港':     'ASJ',
   '五島福江空港': 'FUJ',
+  '青森空港':     'AOJ',
+  '阿蘇くまもと空港': 'KMJ',
+  '静岡空港':     'FSZ',
+  '出雲空港':     'IZO',
 };
 
 /* ── Google Maps（transit / driving 統一） ── */

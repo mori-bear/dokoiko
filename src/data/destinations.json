@@ -17,7 +17,9 @@
       "railGateway": "横浜駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "港町の異国情緒と近代的な都市が交わる街。海と中華料理と夜景、東京の隣に別の顔がある。",
     "tags": [
@@ -55,7 +57,9 @@
       "railGateway": "鎌倉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "古都の寺社と海が共存する歴史の街。潮の香りとともに、中世の空気を歩いて感じる。",
     "tags": [
@@ -90,7 +94,9 @@
       "railGateway": "熱海駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "昭和レトロと温泉が絡み合う海辺の保養地。海を見ながら温泉でゆっくりと時間を過ごせる。",
     "tags": [
@@ -126,7 +132,9 @@
       "railGateway": "日光駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "山と湖と滝に囲まれた世界遺産の聖地。社寺群と大自然が一体となった歴史ある山岳地。",
     "tags": [
@@ -161,7 +169,9 @@
       "railGateway": "軽井沢駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "高原の空気と別荘文化が溶け合う避暑地。森の中をサイクリングしながら旅の気分を変えたい。",
     "tags": [
@@ -196,7 +206,9 @@
       "railGateway": "河口湖駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "富士山を映す湖と雄大な自然に包まれた高原地。四季ごとに変わる湖面の表情と富士の景色が旅を彩る。",
     "tags": [
@@ -233,7 +245,9 @@
       "railGateway": "名古屋駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "独自の食文化と城下町の歴史が根づく都市。きしめんや味噌煮込みなど名古屋めしで街の個性を体感する。",
     "tags": [
@@ -270,7 +284,9 @@
       "railGateway": "仙台駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "杜の都と呼ばれる緑豊かな城下町。牛タンや海鮮を楽しみながら東北最大の街を歩く。",
     "tags": [
@@ -307,7 +323,9 @@
       "railGateway": "金沢駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北陸の工芸と食文化が凝縮された城下町。日本海の幸と伝統工芸品が街のいたるところで出会える。",
     "tags": [
@@ -347,7 +365,9 @@
       "railGateway": "新大阪駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "食い倒れの街として知られる活気ある商都。笑い声と屋台の香りに包まれた路地が、旅人を飽きさせない。",
     "tags": [
@@ -385,7 +405,9 @@
       "railGateway": "京都駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "古都の寺社仏閣と伝統文化が今も息づく街。四季を通じて移り変わる古都の景色に心を奪われる。",
     "tags": [
@@ -424,7 +446,9 @@
       "railGateway": "広島駅",
       "railNote": null,
       "airportGateway": "広島空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "平和の願いを刻んだ歴史と現代が共存する街。牡蠣や汁なし担担麺など地元の食文化も見どころだ。",
     "tags": [
@@ -466,7 +490,9 @@
       "railGateway": "博多駅",
       "railNote": null,
       "airportGateway": "福岡空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "九州の玄関口として屋台文化と活気が溢れる街。もつ鍋やラーメンなど福岡グルメで夜を楽しみたい。",
     "tags": [
@@ -505,7 +531,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "新千歳空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北海道の中枢として食と自然が充実した大都市。ラーメンや海鮮丼、夜景と雪まつりが旅を引き立てる。",
     "tags": [
@@ -542,7 +570,9 @@
       "railGateway": "奈良駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "鹿と仏教建築が共存する千年の古都。大仏と寺社を巡りながら日本の原風景に出会える。",
     "tags": [
@@ -578,7 +608,9 @@
       "railGateway": "三ノ宮駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "港と異国情緒が溶け合うモダンな港町。山と海の間に広がる夜景と洋風建築が旅情を高める。",
     "tags": [
@@ -614,7 +646,9 @@
       "railGateway": "姫路駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白鷺城と呼ばれる世界遺産の名城を持つ街。圧倒的な存在感の天守閣と和の庭園が旅の目玉だ。",
     "tags": [
@@ -650,7 +684,9 @@
       "railGateway": "和歌山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "紀伊半島に広がる山と海と霊場の豊かな土地。世界遺産の聖地と白砂の海岸が、一度ではとても歩ききれない。",
     "tags": [
@@ -687,7 +723,9 @@
       "railGateway": "岡山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "晴れの国として知られる穏やかな気候の城下町。日本三名園と白壁の美観地区が旅の中心になる。",
     "tags": [
@@ -727,7 +765,9 @@
       "railGateway": "東京駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "多様な文化と最先端が混在する首都。下町から近代的な摩天楼まで、何度訪れても新たな発見がある。",
     "tags": [
@@ -766,7 +806,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "石垣空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "八重山の文化と透明度抜群の珊瑚礁が広がる離島。ダイビングや離島めぐりで唯一無二の海を体感できる。",
     "tags": [
@@ -802,7 +844,9 @@
       "railGateway": "岐阜駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "信長ゆかりの城が山頂に立つ、歴史と清流の街。鵜飼いの伝統と川沿いの風情が独特の旅情をもたらす。",
     "tags": [
@@ -839,7 +883,9 @@
       "railGateway": "伊勢市駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本最古の神宮が鎮座する神聖な参拝の地。参道の食と文化を楽しみながら、心の旅ができる場所だ。",
     "tags": [
@@ -874,7 +920,9 @@
       "railGateway": "佐賀駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "有田焼と弥生遺跡が共存する静かな城下町。陶芸と歴史の奥深さを掘り下げたい人に向いた街だ。",
     "tags": [
@@ -910,7 +958,9 @@
       "railGateway": "熊本駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "加藤清正の名城と火の国の食文化が根づく街。馬刺しや辛子蓮根など九州の個性が詰まっている。",
     "tags": [
@@ -944,7 +994,9 @@
       "railGateway": "長崎駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "異国との交流が紡いだ独特の歴史と文化を持つ港町。坂道と教会と長崎ちゃんぽんが、ここだけの旅をつくる。",
     "tags": [
@@ -980,7 +1032,9 @@
       "railGateway": "別府駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市。個性豊かな源泉と海を望む露天が、旅人を癒す。",
     "tags": [
@@ -1014,7 +1068,9 @@
       "railGateway": "鹿児島中央駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "湾の対岸に活火山がそびえる薩摩の城下町。黒豚や焼酎など薩摩文化の精髄を味わいに行きたい。",
     "tags": [
@@ -1049,7 +1105,9 @@
       "railGateway": "宮崎駅",
       "railNote": null,
       "airportGateway": "宮崎空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "神話の地として知られる太平洋に面した温暖な街。マンゴーや地鶏など南国グルメと海の景色が魅力だ。",
     "tags": [
@@ -1085,7 +1143,9 @@
       "railGateway": "小樽駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北の港町に残る運河と倉庫群が旅情を誘う街。新鮮な海の幸とガラス工芸品が楽しめる観光地だ。",
     "tags": [
@@ -1121,7 +1181,9 @@
       "railGateway": "旭川駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北海道第二の都市として、雄大な自然と動物の王国が広がる街。冬の厳寒と夏の緑が四季の旅を彩る。",
     "tags": [
@@ -1157,7 +1219,9 @@
       "railGateway": "富良野駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "ラベンダー畑と大自然が広がる北海道の高原地帯。紫の絨毯と青空が広がる夏の景色は絵のように美しい。",
     "tags": [
@@ -1191,7 +1255,9 @@
       "railGateway": "釧路駅",
       "railNote": null,
       "airportGateway": "釧路空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本最大の湿原と丹頂鶴が生息する、霧の街。炉端焼きと朝の市場で北の幸をたっぷり堪能できる。",
     "tags": [
@@ -1227,7 +1293,9 @@
       "railGateway": "函館駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "異国情緒と坂道、港が溶け合う北海道南端の港町。夜景と朝市と洋館が三拍子揃った旅先だ。",
     "tags": [
@@ -1264,7 +1332,9 @@
       "railGateway": "松島海岸駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本三景のひとつ、松の島々が浮かぶ美しい海。牡蠣と遊覧船で絶景をゆっくり楽しめる。",
     "tags": [
@@ -1299,7 +1369,9 @@
       "railGateway": "山形駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "奥山に刻まれた句碑と銀山温泉が輝く山の街。芭蕉が詠んだ岩肌と雪の温泉街が今も残っている。",
     "tags": [
@@ -1333,7 +1405,9 @@
       "railGateway": "盛岡駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "わんこそばと冷麺が名物の岩手の城下町。南部鉄器と岩手山を背景にした風景が落ち着いた旅をつくる。",
     "tags": [
@@ -1368,7 +1442,9 @@
       "railGateway": "新潟駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "コシヒカリと日本酒の産地として知られる日本海の街。海の幸と酒蔵巡りで新潟の食文化に浸れる。",
     "tags": [
@@ -1403,11 +1479,12 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "宮島口港"
+      "ferryGateway": "宮島口港",
+      "portHubs": [
+        "宮島口港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "宮島口港"
-    ],
     "description": "海に浮かぶ鳥居が象徴する世界遺産の神の島。干潮と満潮で変わる海と社の表情が旅の記憶に深く刻まれる。",
     "tags": [
       "厳島神社",
@@ -1445,7 +1522,9 @@
       "railGateway": "尾道駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "坂と猫と寺社が点在する瀬戸内の港町。映画の舞台にもなった風景を歩くと物語が生まれそうだ。",
     "tags": [
@@ -1480,7 +1559,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "松山空港",
-      "ferryGateway": "松山観光港"
+      "ferryGateway": "松山観光港",
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "道後温泉を擁する四国最大の都市。夏目漱石ゆかりの地を歩きながら、千年の湯に浸かる旅ができる。",
     "tags": [
@@ -1516,7 +1597,9 @@
       "railGateway": "徳島駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "阿波踊りが夏の夜を染める、四国の玄関口。渦巻く海峡と世界最大規模の陶板美術館が旅を充実させる。",
     "tags": [
@@ -1551,12 +1634,13 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "高松港"
+      "ferryGateway": "高松港",
+      "portHubs": [
+        "高松港",
+        "宇野港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "高松港",
-      "宇野港"
-    ],
     "description": "オリーブと醤油の産地として知られる瀬戸内の島。干潮時に渡れる砂の道と穏やかな島時間が心を癒す。",
     "tags": [
       "オリーブ",
@@ -1590,7 +1674,9 @@
       "railGateway": "高知駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "坂本龍馬ゆかりの自由民権精神が根づく城下町。カツオのたたきとよさこいが土佐の旅を盛り上げる。",
     "tags": [
@@ -1625,9 +1711,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "境港駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": "米子空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "境港"
     },
     "description": "島根半島の東端に静かに佇む漁師町。青石畳の路地と白い灯台が醸し出す静謐な雰囲気が魅力だ。",
     "tags": [],
@@ -1638,7 +1726,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "境港",
     "hotelSearch": "米子"
   },
   {
@@ -1657,9 +1744,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "紀伊田辺駅",
-      "railNote": "龍神バスあり",
+      "railNote": "龍神バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "田辺"
     },
     "description": "紀伊山地の奥深くに湧く日本三美人の湯。杉木立と渓流に包まれた秘湯で、日常を忘れて浸かりたい。",
     "tags": [],
@@ -1670,7 +1759,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "田辺",
     "hotelSearch": "白浜"
   },
   {
@@ -1697,7 +1785,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "那覇空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "琉球王国の歴史と南国の空気が混ざり合う街。沖縄グルメと伝統文化に触れながら海風を感じる旅。",
     "tags": [
@@ -1740,11 +1830,12 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "那覇空港",
-      "ferryGateway": "那覇港"
+      "ferryGateway": "那覇港",
+      "portHubs": [
+        "那覇港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "那覇港"
-    ],
     "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
     "tags": [],
     "spots": [
@@ -1777,7 +1868,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "久米島空港",
-      "ferryGateway": "那覇港"
+      "ferryGateway": "那覇港",
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "手つかずの白砂浜と沖縄の原風景が残る離島。独特の地形と透明度抜群の海で深く自然に浸れる場所だ。",
     "tags": [
@@ -1816,7 +1909,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "宮古空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "宮古ブルーと称される透明度抜群の海を持つ離島。橋で結ばれた島々と無人のビーチで南国の美しさに浸れる。",
     "tags": [
@@ -1853,11 +1948,12 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "竹芝客船ターミナル"
+      "ferryGateway": "竹芝客船ターミナル",
+      "portHubs": [
+        "竹芝客船ターミナル"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "竹芝客船ターミナル"
-    ],
     "description": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島。山と海と集落が凝縮された、ゆっくりとした時間が流れる島だ。",
     "tags": [
       "離島",
@@ -1893,7 +1989,9 @@
       "railGateway": "箱根湯本駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "山と湖と温泉が揃う関東を代表する保養地。富士山を望みながらゆったりと温泉や美術館を楽しめる。",
     "tags": [
@@ -1928,7 +2026,9 @@
       "railGateway": "修善寺駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "竹林に囲まれた伊豆最古の温泉郷。川のせせらぎと湯煙の中で、静かな旅の時間を過ごせる。",
     "tags": [
@@ -1963,7 +2063,9 @@
       "railGateway": "長野原草津口駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯。硫黄の香りと白い湯煙が漂う広場が旅の中心だ。",
     "tags": [
@@ -1999,7 +2101,9 @@
       "railGateway": "伊豆急下田駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "黒船来航の歴史が残る伊豆半島南端の港町。太平洋に開けた青い海と開国の面影が旅情を誘う。",
     "tags": [
@@ -2034,13 +2138,14 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "竹芝客船ターミナル"
+      "ferryGateway": "竹芝客船ターミナル",
+      "portHubs": [
+        "竹芝客船ターミナル",
+        "熱海港",
+        "稲取港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "竹芝客船ターミナル",
-      "熱海港",
-      "稲取港"
-    ],
     "description": "伊豆諸島最大の火山島。荒涼とした山の地形と温かな漁村文化が共存し、島ならではの旅情が広がる。",
     "tags": [
       "島",
@@ -2075,9 +2180,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "金沢駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "金沢"
     },
     "description": "雪に耐える合掌造りの集落が世界遺産に登録された里。季節を通じて日本の原風景と文化が凝縮されている。",
     "tags": [
@@ -2092,7 +2199,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "金沢",
     "hotelSearch": "高山"
   },
   {
@@ -2112,9 +2218,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "三ノ宮駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "三ノ宮"
     },
     "description": "日本書紀にも記された六甲山麓の古湯。金泉と銀泉という二種の湯が、長い歴史と共に旅人を迎える。",
     "tags": [
@@ -2129,7 +2237,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "三ノ宮",
     "hotelSearch": "有馬温泉"
   },
   {
@@ -2152,7 +2259,9 @@
       "railGateway": "城崎温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "浴衣で七つの外湯を巡る情緒ある温泉街。川沿いの柳と下駄の音が昭和の旅情をよみがえらせる。",
     "tags": [
@@ -2191,7 +2300,9 @@
       "railGateway": "倉敷駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白壁の土蔵と柳が並ぶ江戸の面影が残る街。川舟に揺られながら美観地区の静けさと美しさに触れたい。",
     "tags": [
@@ -2227,7 +2338,9 @@
       "railGateway": "白浜駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白い砂浜と透明な海が広がる南紀のリゾート地。温泉と海水浴が同時に楽しめる和歌山を代表する観光地。",
     "tags": [
@@ -2265,7 +2378,9 @@
       "railGateway": "高山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "江戸の町割りが残る飛騨山脈に囲まれた城下町。醤油と味噌の香りが漂う蔵の街で、昔ながらの市が今も続く。",
     "tags": [
@@ -2302,7 +2417,9 @@
       "railGateway": "鳥羽駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "伊勢志摩の海女文化と真珠産業が息づく港町。潮風と海の幸、伊勢湾に面した旅情ある景色が出迎えてくれる。",
     "tags": [
@@ -2340,7 +2457,9 @@
       "railGateway": "松本駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "アルプスを望む黒い天守が象徴する山岳の城下町。城下の路地と明治の遺産が重なり、歩くほどに発見がある。",
     "tags": [
@@ -2378,7 +2497,9 @@
       "railGateway": "由布院駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "霧立つ温泉郷として知られる九州の奥座敷。朝霧の中の旅館で静かな湯と山の自然を楽しめる。",
     "tags": [
@@ -2412,9 +2533,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "博多駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "博多"
     },
     "description": "杉林に隠れた小さな温泉旅館が集まる秘湯の里。手形一枚で複数の露天風呂を渡り歩く体験が独特だ。",
     "tags": [
@@ -2430,7 +2553,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "博多",
     "hotelSearch": "黒川温泉"
   },
   {
@@ -2453,7 +2575,9 @@
       "railGateway": "阿蘇駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "世界最大級のカルデラと活火山が広がる大自然の地。広大な草原と火口の青緑が圧倒的な景色をつくっている。",
     "tags": [
@@ -2489,7 +2613,9 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": "屋久島空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "世界遺産に認定された原始の森が島を覆う、屋久島。樹齢数千年の巨木が立ち並ぶ苔の森に圧倒される。",
     "tags": [
@@ -2523,9 +2649,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "熊本駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "熊本"
     },
     "description": "世界遺産のキリシタン集落と海に囲まれた九州の島。潮風と信仰の歴史が重なる旅が、この島だけのものだ。",
     "tags": [
@@ -2540,7 +2668,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本",
     "hotelSearch": "天草"
   },
   {
@@ -2563,7 +2690,9 @@
       "railGateway": "平泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "奥州藤原氏の黄金文化が栄えた世界遺産の地。金色に輝く堂と庭園が、往時の繁栄をありありと今に伝える。",
     "tags": [
@@ -2601,7 +2730,9 @@
       "railGateway": "角館駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "武家屋敷と枝垂れ桜が残る秋田の城下町。江戸時代の街並みがそのまま残り、静かな旅の舞台になる。",
     "tags": [
@@ -2636,7 +2767,9 @@
       "railGateway": "会津若松駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白虎隊の悲話で知られる東北の誇り高い城下町。会津の歴史と温泉が心に刻まれる深い旅ができる場所だ。",
     "tags": [
@@ -2673,7 +2806,9 @@
       "railGateway": "蔵王駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯。季節ごとに異なる表情を見せる蔵王は、何度でも訪れたくなる。",
     "tags": [
@@ -2708,7 +2843,9 @@
       "railGateway": "萩駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "幕末の志士たちが歩いた山口の城下町。海と山に囲まれた萩には、明治維新の空気が今も漂っている。",
     "tags": [
@@ -2746,7 +2883,9 @@
       "railGateway": "下関駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "本州最西端に位置する関門海峡の街。ふぐ料理と壇ノ浦の歴史が、この街にしかない旅情をつくっている。",
     "tags": [
@@ -2781,12 +2920,13 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "高松港"
+      "ferryGateway": "高松港",
+      "portHubs": [
+        "高松港",
+        "宇野港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "高松港",
-      "宇野港"
-    ],
     "description": "現代アートが島全体を美術館にした瀬戸内の離島。自然と建築と作品が一体となった体験が待っている。",
     "tags": [
       "現代アート",
@@ -2822,7 +2962,9 @@
       "railGateway": "琴電琴平駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "785段の石段で知られる金刀比羅宮の門前町。参道を登り切った先の絶景が、旅の疲れを吹き飛ばしてくれる。",
     "tags": [
@@ -2859,7 +3001,9 @@
       "railGateway": "宇和島駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "南予の海と山に囲まれた闘牛と鯛めしの城下町。穏やかな湾の風情と伊達の文化が独特の旅情をつくっている。",
     "tags": [
@@ -2894,7 +3038,9 @@
       "railGateway": "洞爺駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "活火山と湖が共存する北海道の絶景エリア。湖畔の温泉と自然の造形美が四季を通じて旅人を迎える。",
     "tags": [
@@ -2929,7 +3075,9 @@
       "railGateway": "登別駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北海道有数の温泉地、鉄泉が湧く地獄の景観。豊富な湯量と多彩な泉質が温泉ファンを惹きつける。",
     "tags": [
@@ -2964,7 +3112,9 @@
       "railGateway": "知床斜里駅",
       "railNote": null,
       "airportGateway": "女満別空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "世界自然遺産に認定された原生の大地と海。野生動物が息づく秘境で、手つかずの自然に向き合える。",
     "tags": [
@@ -2997,9 +3147,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "金沢駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "金沢"
     },
     "description": "能登半島の先端、輪島塗の伝統と朝市が息づく街。海産物と漆工芸が深く根づいた漁師の街だ。",
     "tags": [
@@ -3014,7 +3166,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "金沢",
     "hotelSearch": "輪島"
   },
   {
@@ -3036,7 +3187,9 @@
       "railGateway": "加賀温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "九谷焼の産地に広がる北陸の温泉地帯。山代・山中・片山津の三温泉が旅人の疲れを癒してくれる。",
     "tags": [
@@ -3071,7 +3224,9 @@
       "railGateway": "白馬駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北アルプスの峰々を望む高原の山岳リゾート。スキーとトレッキングで一年中アクティブな旅ができる。",
     "tags": [
@@ -3108,7 +3263,9 @@
       "railGateway": "天橋立駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "天に昇る橋のような砂洲が続く日本三景の地。股のぞきで空に浮かぶ景色が、独特の驚きをもたらす。",
     "tags": [
@@ -3141,9 +3298,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "天橋立駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "天橋立"
     },
     "description": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落。静かな入り江と時間の止まった景色が心を落ち着かせる。",
     "tags": [
@@ -3158,7 +3317,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "天橋立",
     "hotelSearch": "伊根"
   },
   {
@@ -3180,7 +3338,9 @@
       "railGateway": "指宿駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "薩摩半島南端に広がる砂むし温泉の街。温かい砂に包まれる独特の体験と開聞岳の絶景が待っている。",
     "tags": [
@@ -3217,7 +3377,9 @@
       "railGateway": "佐世保駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "数えきれない島々が複雑な海岸線を描く長崎県北の街。海軍の歴史と異国情緒ある景観が旅に彩りを添える。",
     "tags": [
@@ -3252,7 +3414,9 @@
       "railGateway": "平戸口駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本で最初に外国貿易が行われた歴史ある港町。教会と城が共存する、異文化交流の痕跡が随所にある。",
     "tags": [
@@ -3288,7 +3452,9 @@
       "railGateway": "鳥取駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "巨大な砂丘と松葉がにが名物の日本海の街。砂漠のような景観と新鮮な海の幸で独特の旅が楽しめる。",
     "tags": [
@@ -3324,7 +3490,9 @@
       "railGateway": "秋田駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "きりたんぽと竿燈祭りで知られる東北の米どころ。男鹿のなまはげなど固有の伝統文化が旅に深みを加える。",
     "tags": [
@@ -3359,9 +3527,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "三ノ宮駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "三ノ宮"
     },
     "description": "玉ねぎと潮風に包まれた明石海峡の先の島。海峡の渦と豊かな海の幸が、淡路の旅の核心をなしている。",
     "tags": [
@@ -3376,7 +3546,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "三ノ宮",
     "hotelSearch": "淡路島"
   },
   {
@@ -3397,7 +3566,9 @@
       "railGateway": "高尾山口駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "都市に隣接しながら深い自然が残る霊峰の山。山岳信仰の歴史と豊かな森が、本格的な山旅を楽しませてくれる。",
     "tags": [
@@ -3433,7 +3604,9 @@
       "railGateway": "館山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総。のどかな漁村の雰囲気と海の幸が旅を充実させる。",
     "tags": [
@@ -3467,9 +3640,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "金沢駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "金沢"
     },
     "description": "白川郷と並ぶ合掌造りの集落が残る山深い里。より静かで素朴な原風景に、じっくりと向き合える場所だ。",
     "tags": [
@@ -3484,7 +3659,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "金沢",
     "hotelSearch": "高山"
   },
   {
@@ -3503,9 +3677,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "札幌駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "札幌"
     },
     "description": "札幌市街に近い豊平川沿いの温泉郷。紅葉と雪の中で、北海道の湯に浸かれる隠れた奥座敷だ。",
     "tags": [
@@ -3520,7 +3696,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "札幌",
     "hotelSearch": "定山渓"
   },
   {
@@ -3543,7 +3718,9 @@
       "railGateway": "美瑛駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "丘と農場が織りなすパッチワークの大地。四季ごとに色を変える丘の景色が、いつまでも旅人の目を離さない。",
     "tags": [
@@ -3579,7 +3756,9 @@
       "railGateway": "宮古駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "三陸の白い岩場と碧い海が広がる港町。リアスの絶景と豊かな海の幸が、東北の旅に深みを与える。",
     "tags": [
@@ -3615,7 +3794,9 @@
       "railGateway": "酒田駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "北前船の交易で栄えた日本海の湊町。出羽の歴史を刻んだ倉庫群と豊かな食文化が今も息づいている。",
     "tags": [
@@ -3650,9 +3831,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "熊本駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "熊本"
     },
     "description": "神話の里として知られる宮崎の峡谷地帯。深い谷と滝が神秘的な雰囲気をつくり、夜神楽が古代へと誘う。",
     "tags": [
@@ -3667,7 +3850,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本",
     "hotelSearch": "高千穂"
   },
   {
@@ -3688,11 +3870,12 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "鹿児島港"
+      "ferryGateway": "鹿児島港",
+      "portHubs": [
+        "鹿児島港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "鹿児島港"
-    ],
     "description": "亜熱帯の原生林とサンゴ礁が広がる離島。固有の動植物と黒糖焼酎が、奄美だけの旅をつくっている。",
     "tags": [
       "離島",
@@ -3727,12 +3910,13 @@
       "railGateway": null,
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": "長崎港"
+      "ferryGateway": "長崎港",
+      "portHubs": [
+        "博多港",
+        "長崎港"
+      ],
+      "accessHub": null
     },
-    "portHubs": [
-      "博多港",
-      "長崎港"
-    ],
     "description": "教会と海が共存するキリシタンゆかりの島々。世界遺産の歴史と透明な海が、特別な旅体験を与えてくれる。",
     "tags": [
       "離島",
@@ -3765,9 +3949,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "諫早駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "諫早"
     },
     "description": "長崎県の山上に湧く地獄と温泉の街。多彩な泉質と高原の涼しさが、九州の温泉旅の選択肢を広げる。",
     "tags": [
@@ -3782,7 +3968,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "諫早",
     "hotelSearch": "雲仙"
   },
   {
@@ -3801,9 +3986,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "中村駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "中村"
     },
     "description": "四国最南端に太平洋へ突き出した断崖の岬。荒波と椿の群落が、土佐の旅に力強い自然を刻みつける。",
     "tags": [
@@ -3818,7 +4005,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "中村",
     "hotelSearch": "足摺岬"
   },
   {
@@ -3840,7 +4026,9 @@
       "railGateway": "大歩危駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街。かずら橋で揺れながら、祖谷の秘境を身近に感じられる。",
     "tags": [
@@ -3876,7 +4064,9 @@
       "railGateway": "津和野駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "山陰の小京都と呼ばれる鯉が泳ぐ城下町。石州瓦の赤と白壁が連なる静かな街で、旅人を落ち着かせる。",
     "tags": [
@@ -3912,7 +4102,9 @@
       "railGateway": "犬山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "清流沿いに建つ国宝天守を持つ城下町。鵜飼いと明治の遺産が、独特の城下文化を今に伝えている。",
     "tags": [
@@ -3947,9 +4139,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "南木曽駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "南木曽"
     },
     "description": "中山道の宿場町が今も残る木曽の山あい。江戸の旅情が漂う宿場町に出会える、静かな街道の旅だ。",
     "tags": [
@@ -3964,7 +4158,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "南木曽",
     "hotelSearch": "木曽"
   },
   {
@@ -3984,9 +4177,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "園部駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "園部"
     },
     "description": "茅葺き屋根が50棟以上並ぶ山の集落。京都の奥に残る静かな農村風景が、時間の感覚を変えてくれる。",
     "tags": [
@@ -4001,7 +4196,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "園部",
     "hotelSearch": "美山"
   },
   {
@@ -4023,7 +4217,9 @@
       "railGateway": "立山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "3000メートル級の稜線を歩くアルペンルート。切り立つ雪壁と巨大ダムが、山岳観光の頂点を体感させる。",
     "tags": [
@@ -4061,7 +4257,9 @@
       "railGateway": "氷見駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "立山連峰を望む富山湾の漁師町。寒ぶりと新鮮な海の幸が、冬の日本海を旅する最大の楽しみになる。",
     "tags": [
@@ -4095,9 +4293,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "田沢湖駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "田沢湖"
     },
     "description": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里。個性豊かな温泉宿が旅の目的地そのものになる。",
     "tags": [
@@ -4113,7 +4313,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "田沢湖",
     "hotelSearch": "乳頭温泉"
   },
   {
@@ -4136,7 +4335,9 @@
       "railGateway": "湯田温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白狐伝説が残る山口市街に湧く城下の湯。中原中也ゆかりの地でもあり、文学と温泉の旅ができる街だ。",
     "tags": [
@@ -4172,7 +4373,9 @@
       "railGateway": "嬉野温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本三大美肌の湯として知られる佐賀の重曹泉。とろとろの湯と嬉野茶で体も心も潤う温泉地だ。",
     "tags": [
@@ -4209,7 +4412,9 @@
       "railGateway": "小布施駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町。善光寺平を見渡す高台に、洗練された街並みが広がる。",
     "tags": [
@@ -4246,7 +4451,9 @@
       "railGateway": "内子駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "白壁と木蝋の香り漂う四国の商人文化の街。江戸・明治の街並みが保存され、時代を遡る旅ができる。",
     "tags": [
@@ -4280,9 +4487,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "高知駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "高知"
     },
     "description": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬。弘法大師ゆかりの地でもあり、海と信仰の旅だ。",
     "tags": [
@@ -4297,7 +4506,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "高知",
     "hotelSearch": "室戸"
   },
   {
@@ -4317,9 +4525,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "阿波池田駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "阿波池田"
     },
     "description": "日本三大秘境のひとつ、霧が漂う深い谷間の集落。吊り橋と滝と、人里離れた静けさが心に残る場所だ。",
     "tags": [
@@ -4335,7 +4545,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "阿波池田",
     "hotelSearch": "祖谷"
   },
   {
@@ -4358,7 +4567,9 @@
       "railGateway": "木次駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "たたら製鉄の歴史が残る出雲の山あいの里。神話の記憶と険しい渓谷が、古代への旅を導いてくれる。",
     "tags": [
@@ -4392,9 +4603,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "大石田駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "大石田"
     },
     "description": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街。雪景色とレトロな建物が、どこか懐かしい旅情をつくる。",
     "tags": [
@@ -4409,7 +4622,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "大石田",
     "hotelSearch": "銀山温泉"
   },
   {
@@ -4430,9 +4642,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "会津若松駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "会津若松"
     },
     "description": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里。ネギそばで有名な冬の宿場が旅人を温かく迎える。",
     "tags": [
@@ -4447,7 +4661,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "会津若松",
     "hotelSearch": "大内宿"
   },
   {
@@ -4467,9 +4680,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "飯山駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "飯山"
     },
     "description": "村全体が温泉場になった信州の山里。13の外湯を浴衣で渡り歩く旅が、ここでしか味わえない体験だ。",
     "tags": [
@@ -4484,7 +4699,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "飯山",
     "hotelSearch": "野沢温泉"
   },
   {
@@ -4507,7 +4721,9 @@
       "railGateway": "竹原駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街。静かな港町の佇まいが、瀬戸内の旅情を深める。",
     "tags": [
@@ -4543,9 +4759,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "南木曽駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "南木曽"
     },
     "description": "石畳と茅葺きの宿場が中山道に残る木曽の里。江戸時代の旅人の目線で、宿場の空気を歩いて感じられる。",
     "tags": [
@@ -4560,7 +4778,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "南木曽",
     "hotelSearch": "妻籠"
   },
   {
@@ -4582,9 +4799,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "中津川駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "中津川"
     },
     "description": "石畳の坂道が続く中山道の峠の宿場町。藤村の文学と山の清冽な空気が、旅人の足を引き止める場所だ。",
     "tags": [
@@ -4599,7 +4818,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "中津川",
     "hotelSearch": "馬籠"
   },
   {
@@ -4623,7 +4841,9 @@
       "railGateway": "長浜駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "琵琶湖畔に広がる黒壁ガラスの文化の街。豊臣秀吉ゆかりの城下と湖の景色が穏やかな旅をつくる。",
     "tags": [
@@ -4661,7 +4881,9 @@
       "railGateway": "彦根駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "国宝の天守が琵琶湖を見下ろして立つ城下町。ひこにゃんで有名な城と湖の風景が旅の主役だ。",
     "tags": [
@@ -4698,7 +4920,9 @@
       "railGateway": "高野山駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "真言密教の聖域として山上に広がる宗教都市。荘厳な杉並木と精進料理が、魂に響く旅を与えてくれる。",
     "tags": [
@@ -4735,7 +4959,9 @@
       "railGateway": "下呂駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉。湯の香りと飛騨の食文化が、温泉旅の王道を体感させる。",
     "tags": [
@@ -4771,7 +4997,9 @@
       "railGateway": "鳴子温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "こけし発祥の地として知られる東北の温泉の里。奥羽の山深くに湧く多彩な泉質が旅人を迎えてくれる。",
     "tags": [
@@ -4804,9 +5032,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "中之条駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "中之条"
     },
     "description": "奥利根の山あいに湧く千年の歴史を持つ湯治場。江戸時代から続く古い旅館と山の静けさが、旅に特別感をもたらす。",
     "tags": [
@@ -4821,7 +5051,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "中之条",
     "hotelSearch": "四万温泉"
   },
   {
@@ -4844,7 +5073,9 @@
       "railGateway": "弘前駅",
       "railNote": null,
       "airportGateway": "青森空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "津軽の城下町に日本一の桜の名所が広がる街。洋館や禅寺など明治の遺産も点在し、深い旅ができる。",
     "tags": [
@@ -4878,9 +5109,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "八戸駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": "青森空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "八戸"
     },
     "description": "原生林を縫うように清流が流れる渓谷路。苔と滝と木漏れ日が、徒歩でしか味わえない静寂をつくっている。",
     "tags": [
@@ -4896,7 +5129,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "八戸",
     "hotelSearch": "奥入瀬"
   },
   {
@@ -4918,7 +5150,9 @@
       "railGateway": "益子駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "陶土の香りが漂う関東随一の焼き物の里。窯元が並ぶ街を巡りながら、日本の陶芸文化に触れられる。",
     "tags": [
@@ -4955,7 +5189,9 @@
       "railGateway": "別所温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "信州最古と言われる温泉地、観音様が守る山里。静かな田舎の湯と古い建築が旅に落ち着きを与える。",
     "tags": [
@@ -4991,9 +5227,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "豊岡駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "豊岡"
     },
     "description": "但馬の小京都と呼ばれる皿そばの城下町。時計楼が見守る静かな街並みで、但馬の食と歴史を楽しめる。",
     "tags": [
@@ -5008,7 +5246,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "豊岡",
     "hotelSearch": "出石"
   },
   {
@@ -5030,7 +5267,9 @@
       "railGateway": "和倉温泉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "七尾湾に面した能登半島の名湯。夕日に染まる海と上質な旅館が、加賀屈指の温泉旅を演出している。",
     "tags": [
@@ -5065,9 +5304,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "倉吉駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "倉吉"
     },
     "description": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地。投入堂への険しい参拝と湯治の旅が組み合わさる場所だ。",
     "tags": [
@@ -5082,7 +5323,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "倉吉",
     "hotelSearch": "三朝温泉"
   },
   {
@@ -5105,7 +5345,9 @@
       "railGateway": "飫肥駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "杉の板塀が続く城下町、日南の小京都。伊東氏の城跡と商家の街並みに、南国の歴史の重みが漂っている。",
     "tags": [
@@ -5143,7 +5385,9 @@
       "railGateway": "人吉駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "球磨川の清流沿いに栄えた九州の城下町。球磨焼酎と温泉、SL列車が旅の豊かさを三倍にしてくれる。",
     "tags": [
@@ -5179,9 +5423,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "松本駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "松本"
     },
     "description": "北アルプスの玄関口に広がる手つかずの高原。梓川と雪山の絶景が、山岳旅の始まりを特別なものにする。",
     "tags": [
@@ -5196,7 +5442,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": false,
-    "accessHub": "松本",
     "hotelSearch": "上高地"
   },
   {
@@ -5217,7 +5462,9 @@
       "railGateway": "水上駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "険しい双耳峰を背に利根川の源流が流れる山の温泉地。清流ラフティングと露天風呂が夏の旅を盛り上げる。",
     "tags": [
@@ -5254,9 +5501,11 @@
     "weight": 1.2,
     "access": {
       "railGateway": "熊本駅",
-      "railNote": "バスあり",
+      "railNote": "バス",
       "airportGateway": "阿蘇くまもと空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": "熊本"
     },
     "description": "阿蘇カルデラの南に広がる湧水と牧草の高原。のどかな景色と澄んだ水が、阿蘇とは異なる静けさをくれる。",
     "tags": [
@@ -5271,7 +5520,6 @@
     ],
     "shinkansenAccess": false,
     "needsCar": true,
-    "accessHub": "熊本",
     "hotelSearch": "南阿蘇"
   },
   {
@@ -5292,7 +5540,9 @@
       "railGateway": "水戸駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "日本三名園の一つ偕楽園と水戸黄門ゆかりの史跡が点在する茨城の中心都市。梅の季節には特に見ごたえがある。",
     "tags": [
@@ -5328,7 +5578,9 @@
       "railGateway": "甲府駅",
       "railNote": null,
       "airportGateway": "甲府空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "武田信玄ゆかりの史跡と甲州ワインが楽しめる盆地の街。花崗岩の奇岩が織りなす昇仙峡は国の特別名勝。",
     "tags": [
@@ -5365,7 +5617,9 @@
       "railGateway": "静岡駅",
       "railNote": null,
       "airportGateway": "静岡空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "富士山を望む駿河湾と茶畑の街。世界遺産の三保の松原と新鮮な桜えびが魅力。",
     "tags": [
@@ -5402,7 +5656,9 @@
       "railGateway": "飯田駅",
       "railNote": null,
       "airportGateway": null,
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "天竜峡の断崖と南アルプスに囲まれた南信州の中心地。りんごや梨の果樹園が広がる山里。",
     "tags": [
@@ -5438,7 +5694,9 @@
       "railGateway": "松江駅",
       "railNote": null,
       "airportGateway": "出雲空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "宍道湖の夕日と国宝松江城が美しい山陰の水都。出雲大社への拠点として、神話の息吹を感じる旅に。",
     "tags": [
@@ -5475,7 +5733,9 @@
       "railGateway": "高松駅",
       "railNote": null,
       "airportGateway": "高松空港",
-      "ferryGateway": null
+      "ferryGateway": null,
+      "portHubs": [],
+      "accessHub": null
     },
     "description": "栗林公園と讃岐うどんで知られる瀬戸内の玄関都市。直島など島めぐりの拠点にもなる。",
     "tags": [

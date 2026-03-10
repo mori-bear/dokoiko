@@ -20,7 +20,7 @@ export function buildHotelLinks(city) {
 
 function buildRakutenHotelLink(city) {
   const keyword = city.hotelSearch ?? city.hotelHub ?? city.name;
-  const target  = 'https://travel.rakuten.co.jp/search/?keyword=' + encodeURIComponent(keyword) + '&f_tab=hotel';
+  const target  = `https://travel.rakuten.co.jp/search/?keyword=${keyword}&f_tab=hotel`;
   return {
     type:  'rakuten',
     label: '周辺の宿を見る（楽天トラベル）',
