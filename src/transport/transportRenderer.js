@@ -114,7 +114,6 @@ function getFerry(city, departure, fromCity, isIsland) {
 function getBus(city) {
   const buses = city.gateways?.bus ?? [];
   if (!buses.length) return [];
-  // バス停情報はノートとして表示
   return [{
     type:  'note',
     label: `バス: ${buses.join(' / ')}`,
@@ -122,11 +121,30 @@ function getBus(city) {
   }];
 }
 
+/* ─── 二次交通 ─── */
+
+function getSecondary(city) {
+  const s = city.secondaryTransport;
+  if (!s) return [];
+  return [buildGoogleMapsLink(s.from, s.to, 'transit', `${s.from}からバス`)];
+}
+
 /* ─── レンタカー ─── */
 
 function getCar(city) {
   if (!city.needsCar && !city.isIsland) return [];
   return [buildRentalLink()];
+}
+
+/**
+ * メインリンク（note・rental 以外）を max 件に絞る。
+ * note と rental は件数カウント外で常に付加する。
+ */
+function limitRoutes(links, max) {
+  const main   = links.filter(l => l.type !== 'note' && l.type !== 'rental');
+  const notes  = links.filter(l => l.type === 'note');
+  const rental = links.filter(l => l.type === 'rental');
+  return [...main.slice(0, max), ...notes, ...rental];
 }
 
 /* ─── メインアセンブラ ─── */
@@ -141,10 +159,11 @@ export function resolveTransportLinks(city, departure) {
 
   // 島フェリー優先（早期リターン）— ★1 より前に判定
   if (isIsland && hasFerry) {
-    return [
+    const links = [
       ...getFerry(city, departure, fromCity, true),
       ...getCar(city),
     ].filter(l => l && (l.url || l.type === 'note'));
+    return limitRoutes(links, 3);
   }
 
   // ★1 近場: GoogleMaps 1本のみ
@@ -156,12 +175,13 @@ export function resolveTransportLinks(city, departure) {
     ].filter(l => l?.url);
   }
 
-  // 通常ルート: JR → 飛行機 → フェリー → (手段なし時のフォールバック) → レンタカー
+  // 通常ルート: JR → 飛行機 → フェリー → 二次交通
   const links = [
     ...getRail(city, departure, fromCity),
     ...getFlight(city, departure, fromCity),
     ...getFerry(city, departure, fromCity, false),
     ...getBus(city),
+    ...getSecondary(city),
   ];
 
   // どの手段もない → GoogleMaps フォールバック
@@ -171,7 +191,8 @@ export function resolveTransportLinks(city, departure) {
 
   links.push(...getCar(city));
 
-  return links.filter(l => l && (l.url || l.type === 'note'));
+  const filtered = links.filter(l => l && (l.url || l.type === 'note'));
+  return limitRoutes(filtered, 3);
 }
 
 /* ─── 最寄り港選択 ─── */

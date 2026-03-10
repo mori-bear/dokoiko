@@ -126,22 +126,32 @@ function buildShareBlock(city) {
 /* ── リンクアイテム ── */
 
 function btnClass(type) {
-  if (type === 'jr-east')    return 'btn-jr-east';
-  if (type === 'jr-west')    return 'btn-jr-west';
-  if (type === 'jr-kyushu')  return 'btn-jr-kyushu';
-  if (type === 'jr-ex')      return 'btn-jr-ex';
-  if (type === 'skyscanner') return 'btn-skyscanner';
-  if (type === 'ferry')      return 'btn-ferry';
-  if (type === 'rental')     return 'btn-rental';
+  if (type === 'jr-east')     return 'btn-jr-east';
+  if (type === 'jr-west')     return 'btn-jr-west';
+  if (type === 'jr-kyushu')   return 'btn-jr-kyushu';
+  if (type === 'jr-ex')       return 'btn-jr-ex';
+  if (type === 'skyscanner')  return 'btn-skyscanner';
+  if (type === 'ferry')       return 'btn-ferry';
+  if (type === 'rental')      return 'btn-rental';
   if (type === 'google-maps') return 'btn-secondary';
   return 'btn-primary';
 }
 
+function transportIcon(type) {
+  if (type === 'skyscanner')  return '✈ ';
+  if (type === 'jr-east' || type === 'jr-west' || type === 'jr-kyushu' || type === 'jr-ex') return '🚅 ';
+  if (type === 'ferry')       return '⛴ ';
+  if (type === 'google-maps') return '🗺 ';
+  if (type === 'rental')      return '🚗 ';
+  return '';
+}
+
 function buildLinkItem(link) {
+  const icon = transportIcon(link.type);
   return `
     <a href="${link.url}" target="_blank" rel="noopener noreferrer"
        class="btn ${btnClass(link.type)}">
-      ${link.label}
+      ${icon}${link.label}
     </a>
   `;
 }

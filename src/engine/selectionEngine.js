@@ -131,8 +131,6 @@ function weightedShuffle(arr, theme) {
  * @returns {Array} 重み付きシャッフル済み目的地配列
  */
 export function buildShuffledPool(destinations, stayType, theme, departure = '', nearestHub = null) {
-  const normalizedStay = stayType === '2night' ? '1night' : stayType;
-
   function matchesDeparture(d) {
     if (!d.departures || d.departures.length === 0) return true;
     if (d.departures.includes(departure)) return true;
@@ -147,11 +145,19 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
       distanceStars: calculateDistanceStars(departure, d),
     }));
 
+  /** distanceStars ベースの日程フィルタ */
+  function matchesStayType(d) {
+    const stars = d.distanceStars;
+    if (stayType === 'daytrip' && stars > 2) return false;
+    if (stayType === '1night' && stars < 2) return false;
+    if (stayType === '2night' && stars < 3) return false;
+    return true;
+  }
+
   const departurePool = withStars.filter(d => {
-    if (d.isIsland === true && normalizedStay !== '1night') return false;
-    if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
+    if (!matchesStayType(d)) return false;
     if (departure && isSameCity(d, departure)) return false;
-    if (departure && isSamePrefectureOvernight(d, departure, normalizedStay)) return false;
+    if (departure && isSamePrefectureOvernight(d, departure, stayType)) return false;
     if (!matchesDeparture(d)) return false;
     return true;
   });
@@ -160,12 +166,8 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     return weightedShuffle(departurePool, theme);
   }
 
-  // 最終フォールバック: stayType のみ（出発地制約なし）
-  const globalPool = withStars.filter(d => {
-    if (d.isIsland === true && normalizedStay !== '1night') return false;
-    if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
-    return true;
-  });
+  // 最終フォールバック: 距離のみ（出発地制約なし）
+  const globalPool = withStars.filter(matchesStayType);
   return weightedShuffle(globalPool, theme);
 }
 

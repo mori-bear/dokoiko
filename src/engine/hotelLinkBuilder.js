@@ -36,7 +36,7 @@ export function buildHotelLinks(city) {
 /** 楽天 target URL（テスト用にも export）*/
 export function buildRakutenTarget(city) {
   const keyword = resolveKeyword(city);
-  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(keyword)}`;
+  return `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(keyword)}`;
 }
 
 function buildRakutenHotelLink(city) {
@@ -52,7 +52,7 @@ function buildRakutenHotelLink(city) {
 /** じゃらん target URL（テスト用にも export）*/
 export function buildJalanTarget(city) {
   const keyword = resolveKeyword(city);
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${keyword}`;
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}`;
 }
 
 function buildJalanHotelLink(city) {

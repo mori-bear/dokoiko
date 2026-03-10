@@ -1826,7 +1826,12 @@
       "ferry": []
     },
     "accessHub": "境港",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "境港駅",
+      "to": "美保関"
+    }
   },
   {
     "id": "ryujin-onsen",
@@ -1861,7 +1866,12 @@
       "ferry": []
     },
     "accessHub": "田辺",
-    "railNote": "龍神バス"
+    "railNote": "龍神バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "紀伊田辺駅",
+      "to": "龍神温泉"
+    }
   },
   {
     "id": "naha",
@@ -2321,7 +2331,12 @@
       "ferry": []
     },
     "accessHub": "金沢",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "金沢駅",
+      "to": "白川郷"
+    }
   },
   {
     "id": "arima-onsen",
@@ -2361,7 +2376,12 @@
       "ferry": []
     },
     "accessHub": "三ノ宮",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "三ノ宮駅",
+      "to": "有馬温泉"
+    }
   },
   {
     "id": "kinosaki-onsen",
@@ -2693,7 +2713,12 @@
       "ferry": []
     },
     "accessHub": "博多",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "博多駅",
+      "to": "黒川温泉"
+    }
   },
   {
     "id": "aso",
@@ -2814,7 +2839,12 @@
       "ferry": []
     },
     "accessHub": "熊本",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "熊本駅",
+      "to": "天草"
+    }
   },
   {
     "id": "hiraizumi",
@@ -3338,7 +3368,12 @@
       "ferry": []
     },
     "accessHub": "金沢",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "金沢駅",
+      "to": "輪島"
+    }
   },
   {
     "id": "kaga-onsen",
@@ -3497,7 +3532,12 @@
       "ferry": []
     },
     "accessHub": "天橋立",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "天橋立駅",
+      "to": "伊根"
+    }
   },
   {
     "id": "ibusuki",
@@ -3738,7 +3778,12 @@
       "ferry": []
     },
     "accessHub": "三ノ宮",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "三ノ宮駅",
+      "to": "淡路島"
+    }
   },
   {
     "id": "takao",
@@ -3857,7 +3902,12 @@
       "ferry": []
     },
     "accessHub": "金沢",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "金沢駅",
+      "to": "五箇山"
+    }
   },
   {
     "id": "jozankei",
@@ -3896,7 +3946,12 @@
       "ferry": []
     },
     "accessHub": "札幌",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "札幌駅",
+      "to": "定山渓"
+    }
   },
   {
     "id": "biei",
@@ -4058,7 +4113,12 @@
       "ferry": []
     },
     "accessHub": "熊本",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "熊本駅",
+      "to": "高千穂"
+    }
   },
   {
     "id": "amami",
@@ -4178,7 +4238,12 @@
       "ferry": []
     },
     "accessHub": "諫早",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "諫早駅",
+      "to": "雲仙"
+    }
   },
   {
     "id": "ashizuri",
@@ -4217,7 +4282,12 @@
       "ferry": []
     },
     "accessHub": "中村",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "中村駅",
+      "to": "足摺岬"
+    }
   },
   {
     "id": "oboke",
@@ -4378,7 +4448,12 @@
       "ferry": []
     },
     "accessHub": "南木曽",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "南木曽駅",
+      "to": "木曽"
+    }
   },
   {
     "id": "miyama",
@@ -4418,7 +4493,12 @@
       "ferry": []
     },
     "accessHub": "園部",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "園部駅",
+      "to": "美山"
+    }
   },
   {
     "id": "tateyama-kurobe",
@@ -4541,7 +4621,12 @@
       "ferry": []
     },
     "accessHub": "田沢湖",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "田沢湖駅",
+      "to": "乳頭温泉"
+    }
   },
   {
     "id": "yuda-onsen",
@@ -4744,7 +4829,12 @@
       "ferry": []
     },
     "accessHub": "高知",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "高知駅",
+      "to": "室戸"
+    }
   },
   {
     "id": "iya",
@@ -4785,7 +4875,12 @@
       "ferry": []
     },
     "accessHub": "阿波池田",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "阿波池田駅",
+      "to": "祖谷"
+    }
   },
   {
     "id": "oku-izumo",
@@ -4866,7 +4961,12 @@
       "ferry": []
     },
     "accessHub": "大石田",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "大石田駅",
+      "to": "銀山温泉"
+    }
   },
   {
     "id": "ouchi-juku",
@@ -4907,7 +5007,12 @@
       "ferry": []
     },
     "accessHub": "会津若松",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "会津若松駅",
+      "to": "大内宿"
+    }
   },
   {
     "id": "nozawa-onsen",
@@ -4947,7 +5052,12 @@
       "ferry": []
     },
     "accessHub": "飯山",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "飯山駅",
+      "to": "野沢温泉"
+    }
   },
   {
     "id": "takehara",
@@ -5030,7 +5140,12 @@
       "ferry": []
     },
     "accessHub": "南木曽",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "南木曽駅",
+      "to": "妻籠"
+    }
   },
   {
     "id": "magome",
@@ -5072,7 +5187,12 @@
       "ferry": []
     },
     "accessHub": "中津川",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "中津川駅",
+      "to": "馬籠"
+    }
   },
   {
     "id": "nagahama",
@@ -5317,7 +5437,12 @@
       "ferry": []
     },
     "accessHub": "中之条",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "中之条駅",
+      "to": "四万温泉"
+    }
   },
   {
     "id": "hirosaki",
@@ -5403,7 +5528,12 @@
       "ferry": []
     },
     "accessHub": "八戸",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "八戸駅",
+      "to": "奥入瀬"
+    }
   },
   {
     "id": "mashiko",
@@ -5526,7 +5656,12 @@
       "ferry": []
     },
     "accessHub": "豊岡",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "豊岡駅",
+      "to": "出石"
+    }
   },
   {
     "id": "wakura-onsen",
@@ -5607,7 +5742,12 @@
       "ferry": []
     },
     "accessHub": "倉吉",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "倉吉駅",
+      "to": "三朝温泉"
+    }
   },
   {
     "id": "obi",
@@ -5732,7 +5872,12 @@
       "ferry": []
     },
     "accessHub": "松本",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "松本駅",
+      "to": "上高地"
+    }
   },
   {
     "id": "minakami-onsen",
@@ -5816,7 +5961,12 @@
       "ferry": []
     },
     "accessHub": "熊本",
-    "railNote": "バス"
+    "railNote": "バス",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "熊本駅",
+      "to": "南阿蘇"
+    }
   },
   {
     "id": "mito",

@@ -217,14 +217,14 @@ function resolveKeyword(city) {
 function buildJalanUrl(city) {
   const kw = resolveKeyword(city);
   const vc = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
-  const target = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${kw}`;
+  const target = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(kw)}`;
   return vc + encodeURIComponent(target);
 }
 
 function buildRakutenUrl(city) {
   const kw  = resolveKeyword(city);
   const aff = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
-  const target = `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(kw)}`;
+  const target = `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(kw)}`;
   return aff + encodeURIComponent(target);
 }
 
@@ -417,10 +417,12 @@ class Scorecard {
 
       const jUrl = buildJalanUrl(city);
       const rUrl = buildRakutenUrl(city);
-      sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),  `${city.id}: じゃらん VC ドメイン欠落`);
-      sc.check(jUrl.includes('uwp2011'),                     `${city.id}: じゃらん uwp2011 URL 欠落`);
-      sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),        `${city.id}: 楽天 aff ドメイン欠落`);
-      sc.check(jUrl.includes(encodeURIComponent(kw)),        `${city.id}: じゃらん keyword エンコード不正`);
+      sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),            `${city.id}: じゃらん VC ドメイン欠落`);
+      sc.check(jUrl.includes('uwp2011'),                               `${city.id}: じゃらん uwp2011 URL 欠落`);
+      sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),                  `${city.id}: 楽天 aff ドメイン欠落`);
+      sc.check(rUrl.includes('travel.rakuten.co.jp'),                  `${city.id}: 楽天 travel URL 欠落`);
+      // じゃらん: keyword を encodeURIComponent した文字列が vc_url 内に存在する（二重エンコードが正）
+      sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))), `${city.id}: じゃらん keyword エンコード不正`);
     });
     sc.print();
     scorecards.push(sc);
@@ -453,13 +455,12 @@ class Scorecard {
 
     const tasks = [];
     targets.forEach(city => {
-      const jUrl = buildJalanUrl(city);
-      const rUrl = buildRakutenUrl(city);
-      // じゃらん: target URL (200)
+      // じゃらん: target URL（直接 HEAD → 200 を期待）
       const jTarget = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(jTarget).then(r => ({ city, svc:'じゃらん', url:jTarget, ...r })));
-      // 楽天: affiliate URL (302 = OK)
-      tasks.push(() => httpsHead(rUrl).then(r => ({ city, svc:'楽天Aff', url:rUrl, ...r })));
+      // 楽天: トップ + keyword → 200
+      const rTarget = `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(resolveKeyword(city))}`;
+      tasks.push(() => httpsHead(rTarget).then(r => ({ city, svc:'楽天', url:rTarget, ...r })));
     });
 
     process.stdout.write(`  送信中 (${tasks.length} req)... `);
@@ -499,6 +500,28 @@ class Scorecard {
     const daytripLogic = (stayType) => stayType !== 'daytrip';
     sc.check(daytripLogic('daytrip') === false, 'daytrip → showHotel = false でない');
     sc.check(daytripLogic('1night')  === true,  '1night  → showHotel = true でない');
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8a] secondaryTransport 整合
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8a] secondaryTransport');
+    const withNote = DESTS.filter(c => c.railNote && c.accessHub);
+    sc.check(withNote.length > 0, 'railNote+accessHub 都市が 0 件');
+    withNote.forEach(city => {
+      sc.check(!!city.secondaryTransport, `${city.id}: secondaryTransport が未設定`);
+      if (city.secondaryTransport) {
+        sc.check(city.secondaryTransport.type === 'bus', `${city.id}: secondaryTransport.type が bus でない`);
+        sc.check(!!city.secondaryTransport.from, `${city.id}: secondaryTransport.from が空`);
+        sc.check(!!city.secondaryTransport.to,   `${city.id}: secondaryTransport.to が空`);
+      }
+    });
+    // secondaryTransport 未設定で railNote あり → 表示されないはず
+    const noSecondary = DESTS.filter(c => c.railNote && c.accessHub && !c.secondaryTransport);
+    sc.check(noSecondary.length === 0, `secondaryTransport 未設定のrailNote都市: ${noSecondary.map(c=>c.id).join(', ')}`);
     sc.print();
     scorecards.push(sc);
   }
@@ -555,10 +578,12 @@ class Scorecard {
   const sc5 = scorecards.find(s => s.name.includes('[5]'));
   const sc6 = scorecards.find(s => s.name.includes('[6]'));
 
-  console.log(`  交通リンク 成功  : ${sc2 ? sc2.pass : '-'} / ${sc2 ? sc2.pass+sc2.fail : '-'}`);
-  console.log(`  宿リンク 成功    : ${sc4 ? sc4.pass : '-'} / ${sc4 ? sc4.pass+sc4.fail : '-'}`);
-  console.log(`  アフィリ 成功    : ${sc5 ? sc5.pass : '-'} / ${sc5 ? sc5.pass+sc5.fail : '-'}`);
-  console.log(`  HTTP 成功        : ${sc6 ? sc6.pass : '-'} / ${sc6 ? sc6.pass+sc6.fail : '-'}`);
+  const sc8a = scorecards.find(s => s.name.includes('[8a]'));
+  console.log(`  交通リンク 成功     : ${sc2  ? sc2.pass  : '-'} / ${sc2  ? sc2.pass+sc2.fail  : '-'}`);
+  console.log(`  宿リンク 成功       : ${sc4  ? sc4.pass  : '-'} / ${sc4  ? sc4.pass+sc4.fail  : '-'}`);
+  console.log(`  アフィリ 成功       : ${sc5  ? sc5.pass  : '-'} / ${sc5  ? sc5.pass+sc5.fail  : '-'}`);
+  console.log(`  HTTP 成功           : ${sc6  ? sc6.pass  : '-'} / ${sc6  ? sc6.pass+sc6.fail  : '-'}`);
+  console.log(`  二次交通 成功       : ${sc8a ? sc8a.pass : '-'} / ${sc8a ? sc8a.pass+sc8a.fail : '-'}`);
 
   const totalFail = scorecards.reduce((s, c) => s + c.fail, 0);
   const totalPass = scorecards.reduce((s, c) => s + c.pass, 0);
