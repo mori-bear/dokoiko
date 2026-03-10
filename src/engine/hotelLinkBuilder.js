@@ -2,13 +2,14 @@
  * 宿泊リンクビルダー
  *
  * 楽天トラベル: 都道府県エリアページ → 楽天アフィリエイト経由
- *   https://travel.rakuten.co.jp/yado/{prefecture}/
- *   prefecture が不明な場合はキーワード検索にフォールバック
+ *   target: https://travel.rakuten.co.jp/yado/{prefecture}/
+ *   (search/?keyword=... は直接アクセスで 404 になるため使用しない)
  *
- * じゃらん: キーワード検索 → ValueCommerce 経由
- *   https://www.jalan.net/yad320000/?screenId=UWW3001&keyword={keyword}
+ * じゃらん: 都市キーワード検索 → ValueCommerce 経由
+ *   target: https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword={keyword}
  *
- * フォールバック順: hotelSearch → hotelHub → name
+ * キーワード優先順: hotelHub → hotelSearch → name
+ * （hotelHub は宿検索に最適な都市名を明示するフィールド）
  */
 
 const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
@@ -27,7 +28,7 @@ const HUB_PREFECTURE = {
   // 岩手
   '盛岡': 'iwate', '平泉': 'iwate',
   // 宮城
-  '仙台': 'miyagi', '松島': 'miyagi',
+  '仙台': 'miyagi', '松島': 'miyagi', '鳴子温泉': 'miyagi',
   // 秋田
   '秋田': 'akita', '角館': 'akita', '乳頭温泉': 'akita',
   // 山形
@@ -118,6 +119,10 @@ const HUB_PREFECTURE = {
   '久米島': 'okinawa', '渡嘉敷島': 'okinawa', '宮古': 'okinawa',
 };
 
+/**
+ * @param {object} city — destinations.json エントリ
+ * @returns {Array<{type, label, url}>}
+ */
 export function buildHotelLinks(city) {
   return [
     buildRakutenHotelLink(city),
@@ -125,19 +130,24 @@ export function buildHotelLinks(city) {
   ].filter(Boolean);
 }
 
-function buildRakutenHotelLink(city) {
-  const hub        = city.hotelSearch ?? city.hotelHub ?? city.name;
-  const prefecture = HUB_PREFECTURE[hub] ?? HUB_PREFECTURE[city.hotelHub] ?? HUB_PREFECTURE[city.name];
+/** キーワード解決: hotelHub → hotelSearch → name */
+function resolveKeyword(city) {
+  return city.hotelHub ?? city.hotelSearch ?? city.name;
+}
 
-  let target;
+/** 楽天: target URL を生成（都道府県エリアページ）*/
+export function buildRakutenTarget(city) {
+  const keyword    = resolveKeyword(city);
+  const prefecture = HUB_PREFECTURE[keyword] ?? HUB_PREFECTURE[city.hotelHub] ?? HUB_PREFECTURE[city.name];
   if (prefecture) {
-    // 都道府県エリアページ（推奨: 404 リスク低）
-    target = `https://travel.rakuten.co.jp/yado/${prefecture}/`;
-  } else {
-    // フォールバック: キーワード検索
-    target = `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(hub)}&f_tab=hotel`;
+    return `https://travel.rakuten.co.jp/yado/${prefecture}/`;
   }
+  // フォールバック（HUB_PREFECTURE 未登録の場合）— 県コード不明
+  return `https://travel.rakuten.co.jp/yado/`;
+}
 
+function buildRakutenHotelLink(city) {
+  const target = buildRakutenTarget(city);
   return {
     type:  'rakuten',
     label: '周辺の宿を見る（楽天トラベル）',
@@ -145,9 +155,14 @@ function buildRakutenHotelLink(city) {
   };
 }
 
+/** じゃらん: target URL を生成（都市キーワード検索）*/
+export function buildJalanTarget(city) {
+  const keyword = resolveKeyword(city);
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}`;
+}
+
 function buildJalanHotelLink(city) {
-  const keyword = city.hotelSearch ?? city.hotelHub ?? city.name;
-  const target  = `https://www.jalan.net/yad320000/?screenId=UWW3001&keyword=${encodeURIComponent(keyword)}`;
+  const target = buildJalanTarget(city);
   return {
     type:  'jalan',
     label: '周辺の宿を見る（じゃらん）',
