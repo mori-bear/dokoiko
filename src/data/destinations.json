@@ -1556,7 +1556,7 @@
     ],
     "weight": 0.35,
     "access": {
-      "railGateway": null,
+      "railGateway": "松山駅",
       "railNote": null,
       "airportGateway": "松山空港",
       "ferryGateway": "松山観光港",
@@ -5577,7 +5577,7 @@
     "access": {
       "railGateway": "甲府駅",
       "railNote": null,
-      "airportGateway": "甲府空港",
+      "airportGateway": null,
       "ferryGateway": null,
       "portHubs": [],
       "accessHub": null

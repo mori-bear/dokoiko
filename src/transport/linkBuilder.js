@@ -31,7 +31,7 @@ function mapsUrl(origin, destination, mode) {
  * 新都市追加時はここにエントリーを追加すること。
  */
 
-const AIRPORT_IATA = {
+export const AIRPORT_IATA = {
   '新千歳空港':   'CTS',
   '那覇空港':     'OKA',
   '石垣空港':     'ISG',

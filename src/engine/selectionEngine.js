@@ -95,7 +95,7 @@ function getWeight(city, theme) {
 
   let themeW = 1;
   if (theme) {
-    themeW = matchesTheme(city, theme) ? 3.0 : 0.4;
+    themeW = matchesTheme(city, theme) ? 3.0 : 0.2;
   }
 
   return base * capW * themeW;

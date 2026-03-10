@@ -1,17 +1,8 @@
-import { DEPARTURE_CITY_INFO } from '../config/constants.js';
-import {
-  buildGoogleMapsLink,
-  buildSkyscannerLink,
-  buildJrLink,
-  buildFerryLink,
-  buildRentalLink,
-} from './linkBuilder.js';
-
 /**
- * 交通リンクを組み立てる（2段階ルーティング）。
+ * 交通リンクアセンブラ（2段階ルーティング）
  *
  * Stage1: 出発地 → accessHub / airportGateway / portHub
- *   鉄道 / 飛行機 / フェリー
+ *   鉄道 / 飛行機（路線実在確認済み）/ フェリー
  *
  * Stage2: accessHub → 目的地（二次交通ノート）
  *   バス / 私鉄 / ローカル
@@ -21,6 +12,36 @@ import {
  * 特例:
  *   ★1（近場）     → GoogleMaps のみ
  *   portHubs（島） → フェリー + GoogleMaps（港まで）+ レンタカー（early return）
+ *
+ * 航空路線フィルタ:
+ *   CITY_AIRPORT + FLIGHT_ROUTES で実在路線のみ Skyscanner 表示。
+ *   路線なし → Skyscanner 非表示。
+ */
+
+import { DEPARTURE_CITY_INFO } from '../config/constants.js';
+import { CITY_AIRPORT } from './airportMap.js';
+import { FLIGHT_ROUTES } from './flightRoutes.js';
+import {
+  AIRPORT_IATA,
+  buildGoogleMapsLink,
+  buildSkyscannerLink,
+  buildJrLink,
+  buildFerryLink,
+  buildRentalLink,
+} from './linkBuilder.js';
+
+/* ── 航空路線実在チェック ── */
+
+function isFlightAvailable(departure, airportGateway) {
+  const fromIata = CITY_AIRPORT[departure];
+  const toIata   = AIRPORT_IATA[airportGateway];
+  if (!fromIata || !toIata) return false;
+  const routes = FLIGHT_ROUTES[fromIata] ?? [];
+  return routes.includes(toIata);
+}
+
+/**
+ * 交通リンクを組み立てる（2段階ルーティング）。
  */
 export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
@@ -31,6 +52,7 @@ export function resolveTransportLinks(city, departure) {
   const access = city.access ?? {};
 
   const railGateway    = access.railGateway    ?? null;
+  const busGateway     = access.busGateway     ?? null;
   const accessHub      = access.accessHub      ?? null;
   const airportGateway = access.airportGateway ?? null;
   const ferryGateway   = access.ferryGateway   ?? null;
@@ -44,6 +66,7 @@ export function resolveTransportLinks(city, departure) {
     if (port) {
       const fl = buildFerryLink(port);
       if (fl) ls.push(fl);
+      // 出発駅 → フェリー乗り場（出発側）
       ls.push(buildGoogleMapsLink(fromCity.rail, port, 'transit'));
     }
     if (city.isIsland || city.needsCar) ls.push(buildRentalLink());
@@ -62,35 +85,60 @@ export function resolveTransportLinks(city, departure) {
 
   // ── JR / 鉄道ルート（Stage 1: 出発地 → railGateway）──
   if (railGateway) {
-    const jrLink = buildJrLink(resolveRailProvider(departure, city));
-    if (jrLink) links.push(jrLink);
+    // railNote があればバス等二次交通 → JR予約ボタン非表示
+    if (!railNote) {
+      const jrLink = buildJrLink(resolveRailProvider(departure, city));
+      if (jrLink) links.push(jrLink);
+    }
 
     // Stage2ノート: accessHub → 目的地（バス等）
     if (accessHub && railNote) {
       links.push({ type: 'note', label: `${accessHub} → ${dest}（${railNote}）`, url: null });
     }
 
-    // GoogleMaps: airportがない場合のみ出発地→目的地
-    if (!airportGateway) {
+    // GoogleMaps: 出発駅 → 目的地の鉄道駅（railGateway を使用）
+    // 飛行機ルートが有効な場合は飛行機側の GoogleMaps を優先するが、
+    // 両方表示して選択肢を提供する
+    const targetGateway = railGateway;
+    links.push(buildGoogleMapsLink(fromCity.rail, targetGateway, 'transit'));
+  }
+
+  // ── 飛行機ルート（路線実在確認 → Skyscanner）──
+  if (airportGateway) {
+    const flightOk = isFlightAvailable(departure, airportGateway);
+    if (flightOk) {
+      // Stage1: 出発駅 → 出発空港（GoogleMaps）
+      links.push(
+        buildGoogleMapsLink(
+          fromCity.rail,
+          fromCity.airport,
+          'transit',
+          `${fromCity.airport}へ（Googleマップ）`,
+        ),
+      );
+      // Skyscanner: 出発空港 → 目的地空港
+      const sc = buildSkyscannerLink(fromCity.iata, airportGateway);
+      if (sc) links.push(sc);
+      // Stage2: 到着空港 → 目的地市内（GoogleMaps）
+      links.push(
+        buildGoogleMapsLink(airportGateway, dest, 'transit', '空港から市内へ（Googleマップ）'),
+      );
+    } else if (!railGateway) {
+      // 飛行機路線なし + 鉄道なし → フォールバック GoogleMaps（transit）
       links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
     }
   }
 
-  // ── 飛行機ルート（Stage 1: 出発地 → airportGateway）──
-  if (airportGateway) {
-    const sc = buildSkyscannerLink(fromCity.iata, airportGateway);
-    if (sc) links.push(sc);
-    // Stage2: 空港 → 目的地市内
-    links.push(buildGoogleMapsLink(airportGateway, dest, 'transit', '空港から市内へ（Googleマップ）'));
-  }
-
-  // ── フェリールート（portHubsなし）──
+  // ── フェリールート（portHubs なし — 追加手段）──
   if (ferryGateway) {
     const fl = buildFerryLink(ferryGateway);
     if (fl) links.push(fl);
-    // フェリーのみ（他手段なし）→ 出発地→港 GoogleMaps
-    if (!railGateway && !airportGateway) {
-      links.push(buildGoogleMapsLink(fromCity.rail, ferryGateway, 'transit'));
+
+    // 他の交通手段（鉄道 or 有効な飛行機）がない場合のみ GoogleMaps 追加
+    const hasOtherTransit = railGateway ||
+      (airportGateway && isFlightAvailable(departure, airportGateway));
+    if (!hasOtherTransit) {
+      links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
     }
   }
 
