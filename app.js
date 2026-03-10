@@ -1,4 +1,4 @@
-import { buildPool } from './src/engine/selectionEngine.js';
+import { buildShuffledPool } from './src/engine/selectionEngine.js';
 import { resolveTransportLinks } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/engine/hotelLinkBuilder.js';
 import { renderResult } from './src/ui/render.js';
@@ -14,7 +14,8 @@ const state = {
   stayType:     '1night',
   theme:        null,
   people:       DEFAULT_GUESTS,
-  currentCity:  null,
+  pool:         [],
+  poolIndex:    0,
 };
 
 async function init() {
@@ -34,32 +35,48 @@ async function init() {
   }
 }
 
+function buildPool() {
+  const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
+  const nearestHub   = fromCityInfo?.nearestHub ?? null;
+  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
+  state.poolIndex = 0;
+}
+
 function go() {
   if (state.destinations.length === 0) {
     showFormError('データを読み込み中です。しばらくお待ちください。');
     return;
   }
   clearFormError();
-
-  const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
-  const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.currentCity = buildPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
+  buildPool();
   draw();
 }
 
 function retry() {
-  go();
+  state.poolIndex++;
+  if (state.poolIndex >= state.pool.length) {
+    buildPool(); // reshuffle
+  }
+  draw();
   document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function draw() {
-  const city = state.currentCity;
+  const city = state.pool[state.poolIndex];
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure);
   const hotelLinks     = buildHotelLinks(city);
 
-  renderResult({ city, transportLinks, hotelLinks });
+  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType });
+
+  const remaining = state.pool.length - state.poolIndex - 1;
+  const retryBtn  = document.getElementById('retry-btn');
+  if (retryBtn) {
+    retryBtn.textContent = remaining > 0
+      ? `引き直す（あと${remaining}件）`
+      : 'もう一度最初から引く';
+  }
 
   const resultEl = document.getElementById('result');
   resultEl.hidden = false;

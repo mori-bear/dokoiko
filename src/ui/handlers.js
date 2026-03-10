@@ -57,6 +57,19 @@ export function bindHandlers(state, onGo, onRetry) {
       onRetry();
       return;
     }
+
+    // コピーボタン
+    const copyBtn = e.target.closest('.btn-copy');
+    if (copyBtn) {
+      const city = state.pool?.[state.poolIndex];
+      if (!city) return;
+      const text = `${city.name}\n${city.description ?? ''}\n\nhttps://tabidokoiko.com`;
+      navigator.clipboard.writeText(text).then(() => {
+        copyBtn.textContent = 'コピーしました！';
+        setTimeout(() => { copyBtn.textContent = 'この旅先をコピー'; }, 2000);
+      }).catch(() => {});
+      return;
+    }
   });
 }
 

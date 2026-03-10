@@ -3,34 +3,25 @@
  *
  * カード表示順:
  *   result-card
- *     result-counter
  *     city-block（都市名/地域/タグ/スポット/説明文）
  *     card-section        （交通リンク）
- *     stay-block          （近くで泊まる — hotelHub）
- *     car-block           （レンタカー — needsCar=true のみ）
- *     share-block         （Xシェア）
+ *     stay-block          （この街に泊まるなら — stayType !== daytrip のみ）
+ *     share-block         （X / LINE シェア + コピー）
  */
 
-import { getJalanRentUrl } from '../affiliate/affiliate.js';
-
-export function renderResult({ city, transportLinks, hotelLinks }) {
-  const hub = city.hotelHub ?? city.name;
+export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
+  const hub       = city.hotelHub ?? city.name;
+  const showHotel = stayType !== 'daytrip';
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
     <div class="result-card">
       ${buildCityBlock(city)}
-      ${buildStayBlock(hub, hotelLinks)}
       ${buildTransportBlock(transportLinks)}
-      ${city.needsCar ? buildCarBlock() : ''}
+      ${showHotel ? buildStayBlock(hub, hotelLinks) : ''}
       ${buildShareBlock(city)}
     </div>
   `;
-
-  if (city.needsCar) {
-    const rentBtn = document.getElementById('jalanRentBtn');
-    if (rentBtn) rentBtn.href = getJalanRentUrl();
-  }
 }
 
 export function clearResult() {
@@ -102,36 +93,33 @@ function buildTransportBlock(links) {
 function buildStayBlock(hub, links) {
   const buttonsHtml = links.map(link => `
     <a href="${link.url}" target="_blank" rel="nofollow sponsored noopener"
-       class="btn ${btnClass(link.type)}">${link.label}</a>
+       class="stay-btn stay-btn--${link.type}">${link.label}</a>
   `).join('');
   return `
     <div class="stay-block">
-      <p class="stay-label">近くで泊まる（${hub}）</p>
+      <p class="stay-label">この街に泊まるなら</p>
       <div class="stay-buttons">${buttonsHtml}</div>
     </div>
   `;
 }
 
-/* ── レンタカーブロック（needsCar=true のみ） ── */
-
-function buildCarBlock() {
-  return `
-    <div class="car-block">
-      <a id="jalanRentBtn" target="_blank" rel="noopener noreferrer">レンタカーを探す</a>
-    </div>
-  `;
-}
-
-/* ── Xシェアブロック ── */
+/* ── SNSシェア＋コピーブロック ── */
 
 function buildShareBlock(city) {
-  const text = `今日の旅先\n\n${city.name}\n\n#どこ行こ`;
-  const url  = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  const xText  = encodeURIComponent(`今日の旅先は${city.name} #どこ行こ`);
+  const siteUrl = encodeURIComponent('https://tabidokoiko.com');
+  const xUrl   = `https://twitter.com/intent/tweet?text=${xText}&url=${siteUrl}`;
+  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${siteUrl}`;
+
   return `
     <div class="share-block">
-      <a href="${url}" target="_blank" rel="noopener noreferrer" class="btn-share">
-        この旅をシェア
+      <a href="${xUrl}" target="_blank" rel="noopener noreferrer" class="btn-share btn-share--x">
+        Xでシェア
       </a>
+      <a href="${lineUrl}" target="_blank" rel="noopener noreferrer" class="btn-share btn-share--line">
+        LINEでシェア
+      </a>
+      <button class="btn-copy" type="button">この旅先をコピー</button>
     </div>
   `;
 }
@@ -144,8 +132,6 @@ function btnClass(type) {
   if (type === 'jr-kyushu')  return 'btn-jr-kyushu';
   if (type === 'jr-ex')      return 'btn-jr-ex';
   if (type === 'skyscanner') return 'btn-skyscanner';
-  if (type === 'rakuten')    return 'btn-rakuten';
-  if (type === 'jalan' || type === 'jalan-rental') return 'btn-jalan';
   if (type === 'ferry')      return 'btn-ferry';
   if (type === 'google-maps' || type === 'rental') return 'btn-secondary';
   return 'btn-primary';

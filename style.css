@@ -615,7 +615,7 @@ body {
 
 /* affiliate（じゃらん） */
 .btn-jalan {
-  background: #f96b00;
+  background: #ff7a32;
   color: #fff;
 }
 .btn-jalan:hover { opacity: 0.9; }
@@ -648,28 +648,58 @@ body {
   color: var(--text);
 }
 
-/* ── Xシェアボタン ── */
+/* ── SNSシェア＋コピーブロック ── */
 
 .share-block {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }
 
 .btn-share {
   display: inline-block;
-  padding: 10px 22px;
-  background: #000;
-  color: #fff;
+  padding: 9px 18px;
   border-radius: 100px;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.15s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-share--x {
+  background: #000;
+  color: #fff;
+}
+
+.btn-share--line {
+  background: #06c755;
+  color: #fff;
 }
 
 .btn-share:hover { opacity: 0.82; }
+
+.btn-copy {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--btn-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-copy:hover { background: var(--btn-hover); }
 
 /* ── フッター ── */
 
@@ -817,6 +847,25 @@ body {
 
 /* ── レスポンシブ ── */
 
+@media (max-width: 480px) {
+  .btn {
+    font-size: 13px;
+    padding: 13px 14px;
+  }
+
+  .share-block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-share,
+  .btn-copy {
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+  }
+}
+
 @media (max-width: 420px) {
   .hero-heading {
     font-size: 26px;
@@ -880,17 +929,17 @@ body {
   transition: opacity 0.18s ease;
 }
 
-.stay-buttons a:first-child {
-  background: #ff6b3d;
-  color: #fff;
-}
+.stay-buttons a:hover { opacity: 0.86; }
 
-.stay-buttons a:last-child {
+.stay-btn--rakuten {
   background: #bf0000;
   color: #fff;
 }
 
-.stay-buttons a:hover { opacity: 0.86; }
+.stay-btn--jalan {
+  background: #ff7a32;
+  color: #fff;
+}
 
 /* ── ハブ都市宿泊ブロック ── */
 

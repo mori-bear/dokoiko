@@ -4,21 +4,21 @@ import {
   buildSkyscannerLink,
   buildJrLink,
   buildFerryLink,
+  buildRentalLink,
 } from './linkBuilder.js';
 
 /**
  * 交通リンクを組み立てる。
  *
  * 優先順位:
- *   1. portHubs あり（島）   → フェリー + Googleマップ transit（港まで）
+ *   1. portHubs あり（島）   → フェリー + Googleマップ transit（港まで）+ レンタカー
  *   2. ferryGateway のみ     → フェリー + Googleマップ transit
- *   3. airportGateway のみ   → Skyscanner
- *   4. その他（鉄道・バス等）→ JR予約（shinkansenAccess=true のみ）+ Googleマップ transit
- *   5. needsCar=true         → Googleマップ driving
+ *   3. airportGateway のみ   → Skyscanner + Googleマップ transit（空港→市内）
+ *   4. その他（鉄道・バス等）→ JR予約（railNote なし時）+ Googleマップ transit
+ *   5. needsCar=true         → Googleマップ driving + レンタカー
  *
  * ★1 の場合: Googleマップ transit のみ
- * Googleマップは常に 出発地 → city.name の1発ルート。
- * accessHub がある場合は二次交通テキストを付加する。
+ * railGateway + railNote あり → Googleマップのみ（バス・私鉄等）
  */
 export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
@@ -32,11 +32,13 @@ export function resolveTransportLinks(city, departure) {
   const railGateway    = access?.railGateway    ?? null;
   const airportGateway = access?.airportGateway ?? null;
   const ferryGateway   = access?.ferryGateway   ?? null;
-  const accessHub      = city.accessHub         ?? null;
+  const railNote       = access?.railNote        ?? null;
 
   // ★1: Googleマップのみ（近場）
   if (stars === 1) {
-    return [buildGoogleMapsLink(fromCity.rail, dest, 'transit')];
+    links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
+    if (city.needsCar) links.push(buildRentalLink());
+    return links.filter(l => l?.url);
   }
 
   if (!access) return [];
@@ -48,7 +50,8 @@ export function resolveTransportLinks(city, departure) {
       const ferryLink = buildFerryLink(port);
       if (ferryLink) links.push(ferryLink);
       links.push(buildGoogleMapsLink(fromCity.rail, port, 'transit'));
-      return links.filter(l => l && l.url);
+      links.push(buildRentalLink());
+      return links.filter(l => l?.url);
     }
   }
 
@@ -57,31 +60,38 @@ export function resolveTransportLinks(city, departure) {
     const ferryLink = buildFerryLink(ferryGateway);
     if (ferryLink) links.push(ferryLink);
     links.push(buildGoogleMapsLink(fromCity.rail, ferryGateway, 'transit'));
-    return links.filter(l => l && l.url);
+    if (city.isIsland || city.needsCar) links.push(buildRentalLink());
+    return links.filter(l => l?.url);
   }
 
   // 3. 航空（airportGateway あり・railGateway なし）
   if (airportGateway && !railGateway) {
     const sc = buildSkyscannerLink(fromCity.iata, airportGateway);
     if (sc) links.push(sc);
-    return links.filter(l => l && l.url);
+    // 空港→市内のGoogle Maps transit
+    links.push(buildGoogleMapsLink(airportGateway, dest, 'transit', '空港から市内へ（Googleマップ）'));
+    if (city.needsCar || city.isIsland) links.push(buildRentalLink());
+    return links.filter(l => l?.url);
   }
 
   // 4. 鉄道・バス等（railGateway あり）
   if (railGateway) {
-    // JR予約: shinkansenAccess=true のみ表示
-    if (city.shinkansenAccess === true) {
+    // railNote がない場合のみ JR予約を表示
+    if (!railNote) {
       const jrLink = buildJrLink(resolveRailProvider(departure, city));
       if (jrLink) links.push(jrLink);
     }
 
-    // Googleマップ: 常に出発地 → city.name
+    // Googleマップ: 出発地 → 目的地
     links.push(buildGoogleMapsLink(fromCity.rail, dest, 'transit'));
 
-    // 二次交通テキスト（accessHub がある場合）
-    if (accessHub) {
-      links.push({ type: 'note', label: `${railGateway} → ${dest}（バス）`, url: null });
+    // 二次交通テキスト
+    if (railNote) {
+      links.push({ type: 'note', label: `${railGateway} → ${dest}（${railNote}）`, url: null });
     }
+
+    // レンタカー
+    if (city.needsCar || city.isIsland) links.push(buildRentalLink());
 
     return links.filter(l => l && (l.url || l.type === 'note'));
   }
@@ -89,8 +99,9 @@ export function resolveTransportLinks(city, departure) {
   // 5. 車（needsCar=true のみ）
   if (city.needsCar) {
     links.push(buildGoogleMapsLink(fromCity.rail, dest, 'driving'));
+    links.push(buildRentalLink());
   }
-  return links.filter(l => l && l.url);
+  return links.filter(l => l?.url);
 }
 
 /**

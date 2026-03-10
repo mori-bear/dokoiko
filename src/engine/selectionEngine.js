@@ -95,7 +95,7 @@ function getWeight(city, theme) {
 
   let themeW = 1;
   if (theme) {
-    themeW = matchesTheme(city, theme) ? 3.0 : 0;
+    themeW = matchesTheme(city, theme) ? 3.0 : 0.4;
   }
 
   return base * capW * themeW;
@@ -119,7 +119,7 @@ function weightedShuffle(arr, theme) {
 }
 
 /**
- * buildPool — 出発地・日程・テーマでフィルタし重み付きランダム1件を返す。
+ * buildShuffledPool — 出発地・日程・テーマでフィルタし重み付きシャッフル済み配列を返す。
  *
  * distanceStars は交通表示用に動的計算して各エントリに付与する（UI非表示）。
  *
@@ -128,9 +128,9 @@ function weightedShuffle(arr, theme) {
  * @param {string|null} theme        - '温泉'|'絶景'|'海'|'街歩き'|'グルメ'|null
  * @param {string}      departure    - 出発都市名
  * @param {string|null} nearestHub   - フォールバック出発地
- * @returns {Object|null} 1件の目的地オブジェクト
+ * @returns {Array} 重み付きシャッフル済み目的地配列
  */
-export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null) {
+export function buildShuffledPool(destinations, stayType, theme, departure = '', nearestHub = null) {
   const normalizedStay = stayType === '2night' ? '1night' : stayType;
 
   function matchesDeparture(d) {
@@ -140,8 +140,6 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
     return false;
   }
 
-  // spot型を完全除外（destinations.json生成時に削除済みだが防衛的に実施）
-  // 交通表示用に distanceStars を動的付与
   const withStars = destinations
     .filter(d => d.type !== 'spot')
     .map(d => ({
@@ -159,7 +157,7 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
   });
 
   if (departurePool.length > 0) {
-    return weightedShuffle(departurePool, theme)[0];
+    return weightedShuffle(departurePool, theme);
   }
 
   // 最終フォールバック: stayType のみ（出発地制約なし）
@@ -168,5 +166,10 @@ export function buildPool(destinations, stayType, theme, departure = '', nearest
     if (!d.stayAllowed || !d.stayAllowed.includes(normalizedStay)) return false;
     return true;
   });
-  return weightedShuffle(globalPool, theme)[0] ?? null;
+  return weightedShuffle(globalPool, theme);
+}
+
+/** 後方互換ラッパー（1件のみ返す） */
+export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null) {
+  return buildShuffledPool(destinations, stayType, theme, departure, nearestHub)[0] ?? null;
 }
