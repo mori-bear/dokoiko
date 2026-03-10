@@ -106,10 +106,10 @@ function buildStayBlock(hub, links) {
 /* ── SNSシェア＋コピーブロック ── */
 
 function buildShareBlock(city) {
-  const xText  = encodeURIComponent(`今日の旅先は${city.name} #どこ行こ`);
-  const siteUrl = encodeURIComponent('https://tabidokoiko.com');
-  const xUrl   = `https://twitter.com/intent/tweet?text=${xText}&url=${siteUrl}`;
-  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${siteUrl}`;
+  const pageUrl = `https://tabidokoiko.com/?d=${encodeURIComponent(city.id)}`;
+  const xText   = encodeURIComponent(`今日の旅先は${city.name} #どこ行こ`);
+  const xUrl    = `https://twitter.com/intent/tweet?text=${xText}&url=${encodeURIComponent(pageUrl)}`;
+  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(pageUrl)}`;
 
   return `
     <div class="share-block">

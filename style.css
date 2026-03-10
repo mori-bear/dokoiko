@@ -35,10 +35,10 @@
   --c-google-maps:   #6b8cba;
   --c-bus:           #5a8a2a;
   --c-ferry:         #1a7a8a;
-  --c-rental:        #7a7a7a;
+  --c-rental:        #ff7a32;
   --c-rakuten:       #bf0000;
-  --c-jalan:         #c85a00;
-  --c-jalan-rental:  #9a4500;
+  --c-jalan:         #ff7a32;
+  --c-jalan-rental:  #ff7a32;
 }
 
 body {
