@@ -37,7 +37,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "鎌倉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "atami",
@@ -76,7 +81,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "熱海駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nikko",
@@ -128,7 +138,12 @@
       "華厳の滝",
       "中禅寺湖",
       "いろは坂"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "日光駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "karuizawa",
@@ -179,7 +194,12 @@
       "白糸の滝",
       "雲場池",
       "鬼押出し園"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "軽井沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "fujikawaguchiko",
@@ -219,7 +239,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "河口湖駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nara",
@@ -261,7 +286,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "奈良駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ishigaki",
@@ -304,7 +334,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "石垣空港"
   },
   {
     "id": "ise",
@@ -356,7 +391,12 @@
       "伊勢神宮内宮",
       "おかげ横丁",
       "二見浦"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "伊勢市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "beppu",
@@ -407,7 +447,12 @@
       "竹瓦温泉",
       "鉄輪温泉",
       "明礬温泉"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "別府駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "otaru",
@@ -449,7 +494,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "小樽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "furano",
@@ -488,7 +538,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "富良野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "matsushima",
@@ -540,7 +595,12 @@
       "瑞巌寺",
       "五大堂",
       "円通院"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "松島海岸駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyajima",
@@ -580,7 +640,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "宮島口港",
+    "airportGateway": null
   },
   {
     "id": "onomichi",
@@ -634,7 +699,12 @@
       "猫の細道",
       "おのみち文学の館",
       "ロープウェイ"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "尾道駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shodoshima",
@@ -675,7 +745,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null
   },
   {
     "id": "mihonoseki",
@@ -718,7 +793,12 @@
       "type": "bus",
       "from": "境港駅",
       "to": "美保関"
-    }
+    },
+    "destType": "city",
+    "railGateway": "境港駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "米子空港"
   },
   {
     "id": "ryujin-onsen",
@@ -758,7 +838,12 @@
       "type": "bus",
       "from": "紀伊田辺駅",
       "to": "龍神温泉"
-    }
+    },
+    "destType": "city",
+    "railGateway": "紀伊田辺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tokashiki-jima",
@@ -798,7 +883,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "那覇港",
+    "airportGateway": "那覇空港"
   },
   {
     "id": "kumejima",
@@ -842,7 +932,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "那覇港",
+    "airportGateway": "久米島空港"
   },
   {
     "id": "miyakojima",
@@ -886,7 +981,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "宮古空港"
   },
   {
     "id": "kouzushima",
@@ -926,7 +1026,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "竹芝客船ターミナル",
+    "airportGateway": null
   },
   {
     "id": "hakone",
@@ -966,7 +1071,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "箱根湯本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shuzenji",
@@ -1005,7 +1115,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "修善寺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kusatsu-onsen",
@@ -1044,7 +1159,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "長野原草津口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimoda",
@@ -1084,7 +1204,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "伊豆急下田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izu-oshima",
@@ -1126,7 +1251,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "竹芝客船ターミナル",
+    "airportGateway": null
   },
   {
     "id": "shirakawago-t",
@@ -1184,7 +1314,12 @@
       "展望台",
       "和田家",
       "明善寺"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "arima-onsen",
@@ -1229,7 +1364,12 @@
       "type": "bus",
       "from": "三ノ宮駅",
       "to": "有馬温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "三ノ宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kinosaki-onsen",
@@ -1284,7 +1424,12 @@
       "山陰海岸",
       "城崎ロープウェイ",
       "じゃじゃのかに鍋"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "城崎温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kurashiki-o",
@@ -1338,7 +1483,12 @@
       "大原美術館",
       "阿智神社",
       "倉敷アイビースクエア"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "倉敷駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shirahama-o",
@@ -1379,7 +1529,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "白浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takayama-o",
@@ -1432,7 +1587,12 @@
       "飛騨民族村",
       "宮川朝市",
       "飛騨の里"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "高山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "toba",
@@ -1474,7 +1634,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "鳥羽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yufuin",
@@ -1526,7 +1691,12 @@
       "由布岳",
       "金鱗湖",
       "辻馬車"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "由布院駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kurokawa-k",
@@ -1572,7 +1742,12 @@
       "type": "bus",
       "from": "博多駅",
       "to": "黒川温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "博多駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "aso",
@@ -1613,7 +1788,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "阿蘇駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yakushima",
@@ -1654,7 +1834,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "屋久島空港"
   },
   {
     "id": "amakusa",
@@ -1698,7 +1883,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "天草"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hiraizumi",
@@ -1740,7 +1930,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "平泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kakunodate",
@@ -1781,7 +1976,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "角館駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "aizu",
@@ -1834,7 +2034,12 @@
       "さざえ堂",
       "飯盛山",
       "大内宿"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "会津若松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "zaosan",
@@ -1873,7 +2078,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "蔵王駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hagi",
@@ -1913,7 +2123,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "萩駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimonoseki",
@@ -1954,7 +2169,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "下関駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "naoshima",
@@ -1995,7 +2215,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null
   },
   {
     "id": "kotohira",
@@ -2036,7 +2261,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "琴電琴平駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "uwajima",
@@ -2076,7 +2306,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "宇和島駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "toyako",
@@ -2115,7 +2350,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "洞爺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "noboribetsu",
@@ -2154,7 +2394,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "登別駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shiretoko",
@@ -2195,7 +2440,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "知床斜里駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "女満別空港"
   },
   {
     "id": "wajima",
@@ -2239,7 +2489,12 @@
       "type": "bus",
       "from": "金沢駅",
       "to": "輪島"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kaga-onsen",
@@ -2279,7 +2534,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "加賀温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hakuba",
@@ -2318,7 +2578,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "白馬駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "amanohashidate",
@@ -2359,7 +2624,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "天橋立駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ine",
@@ -2403,7 +2673,12 @@
       "type": "bus",
       "from": "天橋立駅",
       "to": "伊根"
-    }
+    },
+    "destType": "city",
+    "railGateway": "天橋立駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ibusuki",
@@ -2443,7 +2718,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "指宿駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sasebo",
@@ -2484,7 +2764,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "佐世保駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hirado",
@@ -2523,7 +2808,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "平戸口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tottori",
@@ -2563,7 +2853,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "鳥取駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "akita",
@@ -2603,7 +2898,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "秋田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "awaji",
@@ -2649,7 +2949,12 @@
       "type": "bus",
       "from": "三ノ宮駅",
       "to": "淡路島"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "三ノ宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takao",
@@ -2688,7 +2993,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "高尾山口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tateyama-chiba",
@@ -2728,7 +3038,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "館山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "gokayama",
@@ -2773,7 +3088,12 @@
       "type": "bus",
       "from": "金沢駅",
       "to": "五箇山"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "jozankei",
@@ -2817,7 +3137,12 @@
       "type": "bus",
       "from": "札幌駅",
       "to": "定山渓"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "札幌駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "biei",
@@ -2858,7 +3183,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "美瑛駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyako-iwate",
@@ -2899,7 +3229,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "宮古駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sakata",
@@ -2939,7 +3274,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "酒田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takachiho",
@@ -2984,7 +3324,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "高千穂"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "amami",
@@ -3024,7 +3369,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "鹿児島港",
+    "airportGateway": null
   },
   {
     "id": "goto",
@@ -3065,7 +3415,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "博多港",
+    "airportGateway": null
   },
   {
     "id": "unzen",
@@ -3109,7 +3464,12 @@
       "type": "bus",
       "from": "諫早駅",
       "to": "雲仙"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "諫早駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ashizuri",
@@ -3153,7 +3513,12 @@
       "type": "bus",
       "from": "中村駅",
       "to": "足摺岬"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "中村駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "oboke",
@@ -3193,7 +3558,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "大歩危駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsuwano",
@@ -3233,7 +3603,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "津和野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "inuyama",
@@ -3273,7 +3648,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "犬山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kiso",
@@ -3319,7 +3699,12 @@
       "type": "bus",
       "from": "南木曽駅",
       "to": "木曽"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "南木曽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyama",
@@ -3364,7 +3749,12 @@
       "type": "bus",
       "from": "園部駅",
       "to": "美山"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "園部駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tateyama-kurobe",
@@ -3405,7 +3795,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "立山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "himi",
@@ -3446,7 +3841,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "氷見駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nyuto-onsen",
@@ -3492,7 +3892,12 @@
       "type": "bus",
       "from": "田沢湖駅",
       "to": "乳頭温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "田沢湖駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yuda-onsen",
@@ -3533,7 +3938,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "湯田温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ureshino-onsen",
@@ -3573,7 +3983,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "嬉野温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "obuse",
@@ -3614,7 +4029,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "小布施駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "uchiko",
@@ -3655,7 +4075,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "内子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "muroto",
@@ -3700,7 +4125,12 @@
       "type": "bus",
       "from": "高知駅",
       "to": "室戸"
-    }
+    },
+    "destType": "city",
+    "railGateway": "高知駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "iya",
@@ -3746,7 +4176,12 @@
       "type": "bus",
       "from": "阿波池田駅",
       "to": "祖谷"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "阿波池田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "oku-izumo",
@@ -3787,7 +4222,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "木次駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ginzan-onsen",
@@ -3832,7 +4272,12 @@
       "type": "bus",
       "from": "大石田駅",
       "to": "銀山温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "大石田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ouchi-juku",
@@ -3878,7 +4323,12 @@
       "type": "bus",
       "from": "会津若松駅",
       "to": "大内宿"
-    }
+    },
+    "destType": "city",
+    "railGateway": "会津若松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nozawa-onsen",
@@ -3923,7 +4373,12 @@
       "type": "bus",
       "from": "飯山駅",
       "to": "野沢温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "飯山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takehara",
@@ -3964,7 +4419,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "竹原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsumago",
@@ -4011,7 +4471,12 @@
       "type": "bus",
       "from": "南木曽駅",
       "to": "妻籠"
-    }
+    },
+    "destType": "city",
+    "railGateway": "南木曽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "magome",
@@ -4058,7 +4523,12 @@
       "type": "bus",
       "from": "中津川駅",
       "to": "馬籠"
-    }
+    },
+    "destType": "city",
+    "railGateway": "中津川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nagahama",
@@ -4100,7 +4570,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "長浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hikone",
@@ -4142,7 +4617,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "彦根駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "koyasan",
@@ -4183,7 +4663,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "高野山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "gero-onsen",
@@ -4224,7 +4709,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "下呂駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "naruko-onsen",
@@ -4264,7 +4754,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "鳴子温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shima-onsen",
@@ -4308,7 +4803,12 @@
       "type": "bus",
       "from": "中之条駅",
       "to": "四万温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "中之条駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hirosaki",
@@ -4351,7 +4851,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "弘前駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "青森空港"
   },
   {
     "id": "oirase",
@@ -4399,7 +4904,12 @@
       "type": "bus",
       "from": "八戸駅",
       "to": "奥入瀬"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "八戸駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "青森空港"
   },
   {
     "id": "mashiko",
@@ -4439,7 +4949,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "益子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "bessho-onsen",
@@ -4480,7 +4995,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "別所温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izushi",
@@ -4527,7 +5047,12 @@
       "type": "bus",
       "from": "豊岡駅",
       "to": "出石"
-    }
+    },
+    "destType": "city",
+    "railGateway": "豊岡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "wakura-onsen",
@@ -4567,7 +5092,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "和倉温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "misasa-onsen",
@@ -4613,7 +5143,12 @@
       "type": "bus",
       "from": "倉吉駅",
       "to": "三朝温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "倉吉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "obi",
@@ -4654,7 +5189,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "飫肥駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hitoyoshi",
@@ -4696,7 +5236,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "人吉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kamikochi",
@@ -4743,7 +5288,12 @@
       "type": "bus",
       "from": "松本駅",
       "to": "上高地"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "松本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "minakami-onsen",
@@ -4784,7 +5334,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "水上駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "minami-aso",
@@ -4832,7 +5387,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "南阿蘇"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "阿蘇くまもと空港"
   },
   {
     "id": "imabari",
@@ -4884,7 +5444,12 @@
       "今治城",
       "来島海峡大橋",
       "しまなみ海道サイクリング"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "今治駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ozu",
@@ -4936,7 +5501,12 @@
       "臥龍山荘",
       "おはなはん通り",
       "肱川遊覧"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "伊予大洲駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shakotan",
@@ -4993,7 +5563,12 @@
       "島武意海岸",
       "積丹岬",
       "ウニ料理"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "小樽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izumo",
@@ -5049,7 +5624,12 @@
       "稲佐の浜",
       "古代出雲歴史博物館",
       "出雲そば"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "出雲市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "出雲縁結び空港"
   },
   {
     "id": "noto",
@@ -5109,7 +5689,12 @@
       "輪島朝市",
       "禄剛崎",
       "見附島"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "小松空港"
   },
   {
     "id": "yoshino",
@@ -5163,7 +5748,12 @@
       "金峯山寺",
       "吉水神社",
       "青根ヶ峰"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "吉野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kumano",
@@ -5217,7 +5807,12 @@
       "那智の滝",
       "熊野本宮大社",
       "瀞峡"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "新宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "iriomote",
@@ -5271,7 +5866,12 @@
       "仲間川マングローブ",
       "由布島",
       "星砂の浜"
-    ]
+    ],
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "石垣港",
+    "airportGateway": null
   },
   {
     "id": "takahashi",
@@ -5324,7 +5924,12 @@
       "武家屋敷群",
       "吹屋ふるさと村",
       "頼久寺"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "備中高梁駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hida-furukawa",
@@ -5378,7 +5983,12 @@
       "円光寺",
       "気多若宮神社",
       "飛騨古川まつり会館"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "飛騨古川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "bungo-takada",
@@ -5437,7 +6047,12 @@
       "真玉海岸",
       "富貴寺",
       "熊野磨崖仏"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
   },
   {
     "id": "izu-kogen",
@@ -5491,7 +6106,12 @@
       "城ヶ崎海岸",
       "伊豆シャボテン動物公園",
       "温泉"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "伊豆高原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sanriku",
@@ -5544,7 +6164,12 @@
       "碁石海岸",
       "北山崎",
       "磯料理"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "宮古駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tanabe",
@@ -5552,7 +6177,7 @@
     "type": "destination",
     "region": "近畿",
     "hub": "nara",
-    "hotelHub": "白浜",
+    "hotelHub": "田辺",
     "stayAllowed": [
       "1night"
     ],
@@ -5599,7 +6224,12 @@
       "熊野古道・中辺路",
       "白浜",
       "千畳敷"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "紀伊田辺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "南紀白浜空港"
   },
   {
     "id": "tosa-shimizu",
@@ -5657,7 +6287,12 @@
       "金剛福寺",
       "竜串海岸",
       "ジョン万次郎資料館"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "中村駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nichinan",
@@ -5710,7 +6345,12 @@
       "鵜戸神宮",
       "飫肥城下町",
       "堀切峠"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "日南駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "mojiko",
@@ -5764,7 +6404,12 @@
       "関門海峡展望台",
       "旧大阪商船",
       "焼きカレー"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "門司港駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "itoshima",
@@ -5818,7 +6463,12 @@
       "芥屋の大門",
       "カキ小屋",
       "白糸の滝"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "筑前前原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimabara",
@@ -5871,7 +6521,12 @@
       "湧水庭園四明荘",
       "鯉の泳ぐまち",
       "雲仙地獄"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "島原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsuruga",
@@ -5926,6 +6581,11 @@
       "気比の松原",
       "日本海さかな街",
       "赤レンガ倉庫"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "敦賀駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   }
 ]

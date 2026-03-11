@@ -1,46 +1,5 @@
 [
   {
-    "id": "yokohama",
-    "name": "横浜",
-    "type": "hub",
-    "region": "関東",
-    "hotelHub": "横浜",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "東京"
-    ],
-    "weight": 0.3,
-    "description": "港町の異国情緒と近代的な都市が交わる街。海と中華料理と夜景、東京の隣に別の顔がある。",
-    "tags": [
-      "港町",
-      "中華街",
-      "夜景"
-    ],
-    "spots": [
-      "みなとみらい",
-      "山下公園",
-      "中華街",
-      "江ノ島",
-      "大山"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "横浜",
-    "gateways": {
-      "rail": [
-        "横浜駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
     "id": "kamakura",
     "name": "鎌倉",
     "type": "destination",
@@ -78,7 +37,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "鎌倉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "atami",
@@ -117,7 +81,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "熱海駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nikko",
@@ -169,7 +138,12 @@
       "華厳の滝",
       "中禅寺湖",
       "いろは坂"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "日光駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "karuizawa",
@@ -220,7 +194,12 @@
       "白糸の滝",
       "雲場池",
       "鬼押出し園"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "軽井沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "fujikawaguchiko",
@@ -260,399 +239,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "nagoya-t",
-    "name": "名古屋",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "名古屋",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "広島"
-    ],
-    "weight": 0.3,
-    "description": "独自の食文化と城下町の歴史が根づく都市。きしめんや味噌煮込みなど名古屋めしで街の個性を体感する。",
-    "tags": [
-      "城下町",
-      "グルメ",
-      "ものづくり"
-    ],
-    "spots": [
-      "名古屋城",
-      "熱田神宮",
-      "大須商店街",
-      "香嵐渓",
-      "御在所岳"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "名古屋",
-    "gateways": {
-      "rail": [
-        "名古屋駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "sendai-t",
-    "name": "仙台",
-    "type": "hub",
-    "region": "東北",
-    "hotelHub": "仙台",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "名古屋"
-    ],
-    "weight": 0.3,
-    "description": "杜の都と呼ばれる緑豊かな城下町。牛タンや海鮮を楽しみながら東北最大の街を歩く。",
-    "tags": [
-      "城下町",
-      "海鮮",
-      "杜の都"
-    ],
-    "spots": [
-      "松島",
-      "瑞鳳殿",
-      "仙台城跡"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "仙台",
-    "gateways": {
-      "rail": [
-        "仙台駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kanazawa-t",
-    "name": "金沢",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "金沢",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "名古屋",
-      "仙台"
-    ],
-    "weight": 0.35,
-    "description": "北陸の工芸と食文化が凝縮された城下町。日本海の幸と伝統工芸品が街のいたるところで出会える。",
-    "tags": [
-      "工芸",
-      "兼六園",
-      "海の幸"
-    ],
-    "spots": [
-      "兼六園",
-      "東茶屋街",
-      "近江町市場"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "金沢",
-    "gateways": {
-      "rail": [
-        "金沢駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
     "railNote": null,
-    "nearby": [
-      "能登",
-      "輪島",
-      "加賀温泉郷",
-      "白川郷"
-    ],
-    "itinerary": [
-      "兼六園",
-      "金沢城",
-      "ひがし茶屋街",
-      "近江町市場"
-    ]
-  },
-  {
-    "id": "osaka-t",
-    "name": "大阪",
-    "type": "hub",
-    "region": "近畿",
-    "hotelHub": "大阪",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "名古屋",
-      "福岡",
-      "札幌",
-      "仙台",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "食い倒れの街として知られる活気ある商都。笑い声と屋台の香りに包まれた路地が、旅人を飽きさせない。",
-    "tags": [
-      "グルメ",
-      "エンタメ",
-      "下町"
-    ],
-    "spots": [
-      "道頓堀",
-      "大阪城",
-      "通天閣",
-      "箕面の滝"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "大阪",
-    "gateways": {
-      "rail": [
-        "新大阪駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kyoto-t",
-    "name": "京都",
-    "type": "hub",
-    "region": "近畿",
-    "hotelHub": "京都",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "名古屋",
-      "広島"
-    ],
-    "weight": 0.3,
-    "description": "古都の寺社仏閣と伝統文化が今も息づく街。四季を通じて移り変わる古都の景色に心を奪われる。",
-    "tags": [
-      "寺社",
-      "歴史",
-      "町家"
-    ],
-    "spots": [
-      "金閣寺",
-      "伏見稲荷大社",
-      "嵐山",
-      "平等院鳳凰堂"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "京都",
-    "gateways": {
-      "rail": [
-        "京都駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "奈良",
-      "大阪",
-      "天橋立",
-      "伊根"
-    ],
-    "itinerary": [
-      "伏見稲荷",
-      "嵐山",
-      "清水寺",
-      "金閣寺"
-    ]
-  },
-  {
-    "id": "hiroshima-t",
-    "name": "広島",
-    "type": "hub",
-    "region": "中国",
-    "hotelHub": "広島",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "名古屋",
-      "福岡",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "平和の願いを刻んだ歴史と現代が共存する街。牡蠣や汁なし担担麺など地元の食文化も見どころだ。",
-    "tags": [
-      "平和",
-      "牡蠣",
-      "宮島"
-    ],
-    "spots": [
-      "平和記念公園",
-      "原爆ドーム",
-      "縮景園",
-      "錦帯橋",
-      "帝釈峡"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "広島",
-    "gateways": {
-      "rail": [
-        "広島駅"
-      ],
-      "airport": [
-        "広島空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "宮島",
-      "尾道",
-      "竹原",
-      "岩国"
-    ],
-    "itinerary": [
-      "平和記念公園",
-      "厳島神社",
-      "広島城",
-      "呉"
-    ]
-  },
-  {
-    "id": "fukuoka-t",
-    "name": "博多",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "博多",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "名古屋",
-      "札幌",
-      "仙台",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "九州の玄関口として屋台文化と活気が溢れる街。もつ鍋やラーメンなど福岡グルメで夜を楽しみたい。",
-    "tags": [
-      "ラーメン",
-      "屋台",
-      "活気"
-    ],
-    "spots": [
-      "中洲屋台",
-      "太宰府天満宮",
-      "櫛田神社"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "博多",
-    "gateways": {
-      "rail": [
-        "博多駅"
-      ],
-      "airport": [
-        "福岡空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "sapporo-t",
-    "name": "札幌",
-    "type": "hub",
-    "region": "北海道",
-    "hotelHub": "札幌",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "大阪",
-      "名古屋",
-      "福岡",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "北海道の中枢として食と自然が充実した大都市。ラーメンや海鮮丼、夜景と雪まつりが旅を引き立てる。",
-    "tags": [
-      "グルメ",
-      "自然",
-      "雪まつり"
-    ],
-    "spots": [
-      "大通公園",
-      "北海道庁旧本庁舎",
-      "円山動物園"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "札幌",
-    "gateways": {
-      "rail": [],
-      "airport": [
-        "新千歳空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "小樽",
-      "定山渓",
-      "支笏湖",
-      "富良野"
-    ],
-    "itinerary": [
-      "大通公園",
-      "北海道神宮",
-      "すすきの",
-      "札幌時計台"
-    ]
+    "destType": "onsen",
+    "railGateway": "河口湖駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nara",
@@ -694,212 +286,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kobe",
-    "name": "神戸",
-    "type": "hub",
-    "region": "近畿",
-    "hotelHub": "神戸",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "大阪"
-    ],
-    "weight": 0.35,
-    "description": "港と異国情緒が溶け合うモダンな港町。山と海の間に広がる夜景と洋風建築が旅情を高める。",
-    "tags": [
-      "港町",
-      "異人館",
-      "スイーツ"
-    ],
-    "spots": [
-      "北野異人館",
-      "ハーバーランド",
-      "六甲山",
-      "明石海峡大橋"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "神戸",
-    "gateways": {
-      "rail": [
-        "三ノ宮駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "himeji",
-    "name": "姫路",
-    "type": "hub",
-    "region": "近畿",
-    "hotelHub": "姫路",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "大阪"
-    ],
-    "weight": 0.35,
-    "description": "白鷺城と呼ばれる世界遺産の名城を持つ街。圧倒的な存在感の天守閣と和の庭園が旅の目玉だ。",
-    "tags": [
-      "城",
-      "世界遺産",
-      "播磨"
-    ],
-    "spots": [
-      "姫路城",
-      "好古園",
-      "書写山円教寺"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "姫路",
-    "gateways": {
-      "rail": [
-        "姫路駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "wakayama",
-    "name": "和歌山",
-    "type": "hub",
-    "region": "近畿",
-    "hotelHub": "和歌山",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "大阪",
-      "名古屋",
-      "東京"
-    ],
-    "weight": 0.35,
-    "description": "紀伊半島に広がる山と海と霊場の豊かな土地。世界遺産の聖地と白砂の海岸が、一度ではとても歩ききれない。",
-    "tags": [
-      "高野山",
-      "温泉",
-      "海"
-    ],
-    "spots": [
-      "高野山",
-      "那智大滝",
-      "白浜海岸"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "和歌山",
-    "gateways": {
-      "rail": [
-        "和歌山駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "okayama-o",
-    "name": "岡山",
-    "type": "hub",
-    "region": "中国",
-    "hotelHub": "岡山",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "大阪",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.35,
-    "description": "晴れの国として知られる穏やかな気候の城下町。日本三名園と白壁の美観地区が旅の中心になる。",
-    "tags": [
-      "後楽園",
-      "倉敷",
-      "桃"
-    ],
-    "spots": [
-      "後楽園",
-      "倉敷美観地区",
-      "岡山城"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "岡山",
-    "gateways": {
-      "rail": [
-        "岡山駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "tokyo-o",
-    "name": "東京",
-    "type": "hub",
-    "region": "関東",
-    "hotelHub": "東京",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "大阪",
-      "名古屋",
-      "福岡",
-      "札幌",
-      "仙台",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "多様な文化と最先端が混在する首都。下町から近代的な摩天楼まで、何度訪れても新たな発見がある。",
-    "tags": [
-      "都市",
-      "グルメ",
-      "エンタメ"
-    ],
-    "spots": [
-      "浅草寺",
-      "新宿御苑",
-      "渋谷スクランブル交差点",
-      "奥多摩湖"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "東京",
-    "gateways": {
-      "rail": [
-        "東京駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "奈良駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ishigaki",
@@ -942,47 +334,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "gifu",
-    "name": "岐阜",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "岐阜",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "名古屋"
-    ],
-    "weight": 0.35,
-    "description": "信長ゆかりの城が山頂に立つ、歴史と清流の街。鵜飼いの伝統と川沿いの風情が独特の旅情をもたらす。",
-    "tags": [
-      "城",
-      "長良川",
-      "鵜飼"
-    ],
-    "spots": [
-      "岐阜城",
-      "長良川",
-      "白川郷",
-      "モネの池"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "岐阜",
-    "gateways": {
-      "rail": [
-        "岐阜駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "石垣空港"
   },
   {
     "id": "ise",
@@ -1034,137 +391,12 @@
       "伊勢神宮内宮",
       "おかげ横丁",
       "二見浦"
-    ]
-  },
-  {
-    "id": "saga",
-    "name": "佐賀",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "佐賀",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
     ],
-    "departures": [
-      "福岡"
-    ],
-    "weight": 0.35,
-    "description": "有田焼と弥生遺跡が共存する静かな城下町。陶芸と歴史の奥深さを掘り下げたい人に向いた街だ。",
-    "tags": [
-      "陶芸",
-      "バルーン",
-      "温泉"
-    ],
-    "spots": [
-      "有田陶磁器の里",
-      "吉野ヶ里遺跡",
-      "嬉野温泉",
-      "虹ノ松原"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "佐賀",
-    "gateways": {
-      "rail": [
-        "佐賀駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kumamoto",
-    "name": "熊本",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "熊本",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "福岡"
-    ],
-    "weight": 0.35,
-    "description": "加藤清正の名城と火の国の食文化が根づく街。馬刺しや辛子蓮根など九州の個性が詰まっている。",
-    "tags": [
-      "城",
-      "阿蘇",
-      "グルメ"
-    ],
-    "spots": [
-      "熊本城",
-      "阿蘇草千里",
-      "水前寺成趣園"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "熊本",
-    "gateways": {
-      "rail": [
-        "熊本駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "nagasaki",
-    "name": "長崎",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "長崎",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "福岡"
-    ],
-    "weight": 0.35,
-    "description": "異国との交流が紡いだ独特の歴史と文化を持つ港町。坂道と教会と長崎ちゃんぽんが、ここだけの旅をつくる。",
-    "tags": [
-      "坂の街",
-      "異国情緒",
-      "歴史"
-    ],
-    "spots": [
-      "平和公園",
-      "グラバー園",
-      "出島",
-      "軍艦島"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "長崎",
-    "gateways": {
-      "rail": [
-        "長崎駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "雲仙",
-      "佐世保",
-      "五島列島",
-      "平戸"
-    ],
-    "itinerary": [
-      "平和公園",
-      "グラバー園",
-      "出島",
-      "稲佐山展望台"
-    ]
+    "destType": "city",
+    "railGateway": "伊勢市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "beppu",
@@ -1215,86 +447,12 @@
       "竹瓦温泉",
       "鉄輪温泉",
       "明礬温泉"
-    ]
-  },
-  {
-    "id": "kagoshima",
-    "name": "鹿児島",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "鹿児島",
-    "stayAllowed": [
-      "1night"
     ],
-    "departures": [
-      "福岡"
-    ],
-    "weight": 0.35,
-    "description": "湾の対岸に活火山がそびえる薩摩の城下町。黒豚や焼酎など薩摩文化の精髄を味わいに行きたい。",
-    "tags": [
-      "桜島",
-      "温泉",
-      "薩摩"
-    ],
-    "spots": [
-      "桜島",
-      "仙巌園",
-      "霧島温泉",
-      "霧島神宮"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "鹿児島",
-    "gateways": {
-      "rail": [
-        "鹿児島中央駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "miyazaki",
-    "name": "宮崎",
-    "type": "hub",
-    "region": "九州",
-    "hotelHub": "宮崎",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "福岡"
-    ],
-    "weight": 0.35,
-    "description": "神話の地として知られる太平洋に面した温暖な街。マンゴーや地鶏など南国グルメと海の景色が魅力だ。",
-    "tags": [
-      "海",
-      "神話",
-      "地鶏"
-    ],
-    "spots": [
-      "青島",
-      "日向岬（馬ヶ背）",
-      "高千穂峡"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "宮崎",
-    "gateways": {
-      "rail": [
-        "宮崎駅"
-      ],
-      "airport": [
-        "宮崎空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "destType": "onsen",
+    "railGateway": "別府駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "otaru",
@@ -1336,46 +494,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "asahikawa",
-    "name": "旭川",
-    "type": "hub",
-    "region": "北海道",
-    "hotelHub": "旭川",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "札幌"
-    ],
-    "weight": 0.35,
-    "description": "北海道第二の都市として、雄大な自然と動物の王国が広がる街。冬の厳寒と夏の緑が四季の旅を彩る。",
-    "tags": [
-      "動物園",
-      "ラーメン",
-      "自然"
-    ],
-    "spots": [
-      "旭山動物園",
-      "美瑛（青い池）",
-      "富良野ラベンダー畑",
-      "層雲峡"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "旭川",
-    "gateways": {
-      "rail": [
-        "旭川駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "小樽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "furano",
@@ -1414,99 +538,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kushiro",
-    "name": "釧路",
-    "type": "hub",
-    "region": "北海道",
-    "hotelHub": "釧路",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "札幌"
-    ],
-    "weight": 0.35,
-    "description": "日本最大の湿原と丹頂鶴が生息する、霧の街。炉端焼きと朝の市場で北の幸をたっぷり堪能できる。",
-    "tags": [
-      "湿原",
-      "丹頂鶴",
-      "炉端焼き"
-    ],
-    "spots": [
-      "釧路湿原",
-      "和商市場",
-      "丹頂の里",
-      "摩周湖",
-      "阿寒湖"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "釧路",
-    "gateways": {
-      "rail": [
-        "釧路駅"
-      ],
-      "airport": [
-        "釧路空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "hakodate",
-    "name": "函館",
-    "type": "hub",
-    "region": "北海道",
-    "hotelHub": "函館",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "札幌"
-    ],
-    "weight": 0.35,
-    "description": "異国情緒と坂道、港が溶け合う北海道南端の港町。夜景と朝市と洋館が三拍子揃った旅先だ。",
-    "tags": [
-      "夜景",
-      "朝市",
-      "洋館"
-    ],
-    "spots": [
-      "函館山（夜景）",
-      "元町洋館街",
-      "函館朝市",
-      "五稜郭"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "函館",
-    "gateways": {
-      "rail": [
-        "函館駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
     "railNote": null,
-    "nearby": [
-      "大沼",
-      "洞爺湖",
-      "登別"
-    ],
-    "itinerary": [
-      "函館山夜景",
-      "元町教会群",
-      "朝市",
-      "五稜郭"
-    ]
+    "destType": "city",
+    "railGateway": "富良野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "matsushima",
@@ -1558,123 +595,12 @@
       "瑞巌寺",
       "五大堂",
       "円通院"
-    ]
-  },
-  {
-    "id": "yamagata",
-    "name": "山形",
-    "type": "hub",
-    "region": "東北",
-    "hotelHub": "山形",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
     ],
-    "departures": [
-      "仙台"
-    ],
-    "weight": 0.35,
-    "description": "奥山に刻まれた句碑と銀山温泉が輝く山の街。芭蕉が詠んだ岩肌と雪の温泉街が今も残っている。",
-    "tags": [
-      "山寺",
-      "温泉",
-      "芋煮"
-    ],
-    "spots": [
-      "山寺（立石寺）",
-      "蔵王温泉",
-      "上杉神社"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "山形",
-    "gateways": {
-      "rail": [
-        "山形駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "morioka",
-    "name": "盛岡",
-    "type": "hub",
-    "region": "東北",
-    "hotelHub": "盛岡",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "仙台"
-    ],
-    "weight": 0.35,
-    "description": "わんこそばと冷麺が名物の岩手の城下町。南部鉄器と岩手山を背景にした風景が落ち着いた旅をつくる。",
-    "tags": [
-      "わんこそば",
-      "冷麺",
-      "城跡"
-    ],
-    "spots": [
-      "盛岡城跡",
-      "盛岡八幡宮",
-      "石割桜",
-      "猊鼻渓"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "盛岡",
-    "gateways": {
-      "rail": [
-        "盛岡駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "niigata",
-    "name": "新潟",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "新潟",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "仙台"
-    ],
-    "weight": 0.35,
-    "description": "コシヒカリと日本酒の産地として知られる日本海の街。海の幸と酒蔵巡りで新潟の食文化に浸れる。",
-    "tags": [
-      "コシヒカリ",
-      "日本酒",
-      "海の幸"
-    ],
-    "spots": [
-      "萬代橋",
-      "古町",
-      "佐渡島（日帰り）"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "新潟",
-    "gateways": {
-      "rail": [
-        "新潟駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "destType": "city",
+    "railGateway": "松島海岸駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyajima",
@@ -1714,7 +640,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "宮島口港",
+    "airportGateway": null
   },
   {
     "id": "onomichi",
@@ -1768,101 +699,12 @@
       "猫の細道",
       "おのみち文学の館",
       "ロープウェイ"
-    ]
-  },
-  {
-    "id": "matsuyama",
-    "name": "松山",
-    "type": "hub",
-    "region": "四国",
-    "hotelHub": "松山",
-    "stayAllowed": [
-      "1night"
     ],
-    "departures": [
-      "広島",
-      "高松"
-    ],
-    "weight": 0.35,
-    "description": "道後温泉を擁する四国最大の都市。夏目漱石ゆかりの地を歩きながら、千年の湯に浸かる旅ができる。",
-    "tags": [
-      "道後温泉",
-      "松山城",
-      "坊っちゃん"
-    ],
-    "spots": [
-      "道後温泉本館",
-      "松山城",
-      "坂の上の雲ミュージアム",
-      "下灘駅"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "松山",
-    "gateways": {
-      "rail": [
-        "松山駅"
-      ],
-      "airport": [
-        "松山空港"
-      ],
-      "bus": [],
-      "ferry": [
-        "松山観光港"
-      ]
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "道後温泉",
-      "今治",
-      "大洲",
-      "内子"
-    ],
-    "itinerary": [
-      "松山城",
-      "道後温泉",
-      "坂の上の雲ミュージアム"
-    ]
-  },
-  {
-    "id": "tokushima",
-    "name": "徳島",
-    "type": "hub",
-    "region": "四国",
-    "hotelHub": "徳島",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "高松"
-    ],
-    "weight": 0.35,
-    "description": "阿波踊りが夏の夜を染める、四国の玄関口。渦巻く海峡と世界最大規模の陶板美術館が旅を充実させる。",
-    "tags": [
-      "阿波踊り",
-      "鳴門",
-      "すだち"
-    ],
-    "spots": [
-      "鳴門の渦潮",
-      "大塚国際美術館",
-      "阿波踊り会館"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "徳島",
-    "gateways": {
-      "rail": [
-        "徳島駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "destType": "city",
+    "railGateway": "尾道駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shodoshima",
@@ -1903,46 +745,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kochi",
-    "name": "高知",
-    "type": "hub",
-    "region": "四国",
-    "hotelHub": "高知",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "高松"
-    ],
-    "weight": 0.35,
-    "description": "坂本龍馬ゆかりの自由民権精神が根づく城下町。カツオのたたきとよさこいが土佐の旅を盛り上げる。",
-    "tags": [
-      "カツオ",
-      "よさこい",
-      "坂本龍馬"
-    ],
-    "spots": [
-      "高知城",
-      "桂浜",
-      "ひろめ市場",
-      "四万十川"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "高知",
-    "gateways": {
-      "rail": [
-        "高知駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null
   },
   {
     "id": "mihonoseki",
@@ -1985,7 +793,12 @@
       "type": "bus",
       "from": "境港駅",
       "to": "美保関"
-    }
+    },
+    "destType": "city",
+    "railGateway": "境港駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "米子空港"
   },
   {
     "id": "ryujin-onsen",
@@ -2025,70 +838,12 @@
       "type": "bus",
       "from": "紀伊田辺駅",
       "to": "龍神温泉"
-    }
-  },
-  {
-    "id": "naha",
-    "name": "那覇",
-    "type": "hub",
-    "region": "沖縄",
-    "hotelHub": "那覇",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "福岡",
-      "東京",
-      "大阪",
-      "名古屋",
-      "札幌",
-      "仙台",
-      "広島",
-      "高松"
-    ],
-    "weight": 0.3,
-    "description": "琉球王国の歴史と南国の空気が混ざり合う街。沖縄グルメと伝統文化に触れながら海風を感じる旅。",
-    "tags": [
-      "琉球文化",
-      "海",
-      "グルメ"
-    ],
-    "spots": [
-      "首里城",
-      "国際通り",
-      "牧志公設市場",
-      "美ら海水族館",
-      "古宇利大橋",
-      "万座毛",
-      "玉泉洞",
-      "残波岬",
-      "ひめゆりの塔"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "那覇",
-    "gateways": {
-      "rail": [],
-      "airport": [
-        "那覇空港"
-      ],
-      "bus": [],
-      "ferry": []
     },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "石垣島",
-      "宮古島",
-      "渡嘉敷島",
-      "久米島"
-    ],
-    "itinerary": [
-      "首里城",
-      "国際通り",
-      "守礼門",
-      "識名園"
-    ]
+    "destType": "city",
+    "railGateway": "紀伊田辺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tokashiki-jima",
@@ -2128,7 +883,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "那覇港",
+    "airportGateway": "那覇空港"
   },
   {
     "id": "kumejima",
@@ -2172,7 +932,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "那覇港",
+    "airportGateway": "久米島空港"
   },
   {
     "id": "miyakojima",
@@ -2216,7 +981,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "宮古空港"
   },
   {
     "id": "kouzushima",
@@ -2256,7 +1026,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "竹芝客船ターミナル",
+    "airportGateway": null
   },
   {
     "id": "hakone",
@@ -2296,7 +1071,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "箱根湯本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shuzenji",
@@ -2335,7 +1115,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "修善寺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kusatsu-onsen",
@@ -2374,7 +1159,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "長野原草津口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimoda",
@@ -2414,7 +1204,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "伊豆急下田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izu-oshima",
@@ -2456,7 +1251,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "竹芝客船ターミナル",
+    "airportGateway": null
   },
   {
     "id": "shirakawago-t",
@@ -2514,7 +1314,12 @@
       "展望台",
       "和田家",
       "明善寺"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "arima-onsen",
@@ -2559,7 +1364,12 @@
       "type": "bus",
       "from": "三ノ宮駅",
       "to": "有馬温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "三ノ宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kinosaki-onsen",
@@ -2614,7 +1424,12 @@
       "山陰海岸",
       "城崎ロープウェイ",
       "じゃじゃのかに鍋"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "城崎温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kurashiki-o",
@@ -2668,7 +1483,12 @@
       "大原美術館",
       "阿智神社",
       "倉敷アイビースクエア"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "倉敷駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shirahama-o",
@@ -2709,7 +1529,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "白浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takayama-o",
@@ -2762,7 +1587,12 @@
       "飛騨民族村",
       "宮川朝市",
       "飛騨の里"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "高山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "toba",
@@ -2804,49 +1634,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "matsumoto-n",
-    "name": "松本",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "松本",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "名古屋",
-      "長野"
-    ],
-    "weight": 0.35,
-    "description": "アルプスを望む黒い天守が象徴する山岳の城下町。城下の路地と明治の遺産が重なり、歩くほどに発見がある。",
-    "tags": [
-      "城",
-      "アルプス",
-      "城下町"
-    ],
-    "spots": [
-      "松本城",
-      "縄手通り",
-      "旧開智学校",
-      "乗鞍岳",
-      "諏訪大社"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "松本",
-    "gateways": {
-      "rail": [
-        "松本駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "鳥羽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yufuin",
@@ -2898,7 +1691,12 @@
       "由布岳",
       "金鱗湖",
       "辻馬車"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "由布院駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kurokawa-k",
@@ -2944,7 +1742,12 @@
       "type": "bus",
       "from": "博多駅",
       "to": "黒川温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "博多駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "aso",
@@ -2985,7 +1788,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "阿蘇駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yakushima",
@@ -3026,7 +1834,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "屋久島空港"
   },
   {
     "id": "amakusa",
@@ -3070,7 +1883,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "天草"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hiraizumi",
@@ -3112,7 +1930,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "平泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kakunodate",
@@ -3153,7 +1976,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "角館駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "aizu",
@@ -3206,7 +2034,12 @@
       "さざえ堂",
       "飯盛山",
       "大内宿"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "会津若松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "zaosan",
@@ -3245,7 +2078,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "蔵王駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hagi",
@@ -3285,7 +2123,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "萩駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimonoseki",
@@ -3326,7 +2169,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "下関駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "naoshima",
@@ -3367,7 +2215,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null
   },
   {
     "id": "kotohira",
@@ -3408,7 +2261,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "琴電琴平駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "uwajima",
@@ -3448,7 +2306,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "宇和島駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "toyako",
@@ -3487,7 +2350,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "洞爺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "noboribetsu",
@@ -3526,7 +2394,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "登別駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shiretoko",
@@ -3567,7 +2440,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "知床斜里駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "女満別空港"
   },
   {
     "id": "wajima",
@@ -3611,7 +2489,12 @@
       "type": "bus",
       "from": "金沢駅",
       "to": "輪島"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kaga-onsen",
@@ -3651,7 +2534,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "加賀温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hakuba",
@@ -3690,7 +2578,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "白馬駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "amanohashidate",
@@ -3731,7 +2624,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "天橋立駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ine",
@@ -3775,7 +2673,12 @@
       "type": "bus",
       "from": "天橋立駅",
       "to": "伊根"
-    }
+    },
+    "destType": "city",
+    "railGateway": "天橋立駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ibusuki",
@@ -3815,7 +2718,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "指宿駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sasebo",
@@ -3856,7 +2764,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "佐世保駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hirado",
@@ -3895,7 +2808,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "平戸口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tottori",
@@ -3935,7 +2853,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "鳥取駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "akita",
@@ -3975,7 +2898,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "秋田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "awaji",
@@ -4021,7 +2949,12 @@
       "type": "bus",
       "from": "三ノ宮駅",
       "to": "淡路島"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "三ノ宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takao",
@@ -4060,7 +2993,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "高尾山口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tateyama-chiba",
@@ -4100,7 +3038,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "館山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "gokayama",
@@ -4145,7 +3088,12 @@
       "type": "bus",
       "from": "金沢駅",
       "to": "五箇山"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "jozankei",
@@ -4189,7 +3137,12 @@
       "type": "bus",
       "from": "札幌駅",
       "to": "定山渓"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "札幌駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "biei",
@@ -4230,7 +3183,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "美瑛駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyako-iwate",
@@ -4271,7 +3229,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "宮古駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sakata",
@@ -4311,7 +3274,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "酒田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takachiho",
@@ -4356,7 +3324,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "高千穂"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "amami",
@@ -4396,7 +3369,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "鹿児島港",
+    "airportGateway": null
   },
   {
     "id": "goto",
@@ -4437,7 +3415,12 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "博多港",
+    "airportGateway": null
   },
   {
     "id": "unzen",
@@ -4481,7 +3464,12 @@
       "type": "bus",
       "from": "諫早駅",
       "to": "雲仙"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "諫早駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ashizuri",
@@ -4525,7 +3513,12 @@
       "type": "bus",
       "from": "中村駅",
       "to": "足摺岬"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "中村駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "oboke",
@@ -4565,7 +3558,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "大歩危駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsuwano",
@@ -4605,7 +3603,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "津和野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "inuyama",
@@ -4645,7 +3648,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "犬山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kiso",
@@ -4691,7 +3699,12 @@
       "type": "bus",
       "from": "南木曽駅",
       "to": "木曽"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "南木曽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "miyama",
@@ -4736,7 +3749,12 @@
       "type": "bus",
       "from": "園部駅",
       "to": "美山"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "園部駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tateyama-kurobe",
@@ -4777,7 +3795,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "立山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "himi",
@@ -4818,7 +3841,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "氷見駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nyuto-onsen",
@@ -4864,7 +3892,12 @@
       "type": "bus",
       "from": "田沢湖駅",
       "to": "乳頭温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "田沢湖駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "yuda-onsen",
@@ -4905,7 +3938,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "湯田温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ureshino-onsen",
@@ -4945,7 +3983,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "嬉野温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "obuse",
@@ -4986,7 +4029,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "小布施駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "uchiko",
@@ -5027,7 +4075,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "内子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "muroto",
@@ -5072,7 +4125,12 @@
       "type": "bus",
       "from": "高知駅",
       "to": "室戸"
-    }
+    },
+    "destType": "city",
+    "railGateway": "高知駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "iya",
@@ -5118,7 +4176,12 @@
       "type": "bus",
       "from": "阿波池田駅",
       "to": "祖谷"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "阿波池田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "oku-izumo",
@@ -5159,7 +4222,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "木次駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ginzan-onsen",
@@ -5204,7 +4272,12 @@
       "type": "bus",
       "from": "大石田駅",
       "to": "銀山温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "大石田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ouchi-juku",
@@ -5250,7 +4323,12 @@
       "type": "bus",
       "from": "会津若松駅",
       "to": "大内宿"
-    }
+    },
+    "destType": "city",
+    "railGateway": "会津若松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nozawa-onsen",
@@ -5295,7 +4373,12 @@
       "type": "bus",
       "from": "飯山駅",
       "to": "野沢温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "飯山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "takehara",
@@ -5336,7 +4419,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "竹原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsumago",
@@ -5383,7 +4471,12 @@
       "type": "bus",
       "from": "南木曽駅",
       "to": "妻籠"
-    }
+    },
+    "destType": "city",
+    "railGateway": "南木曽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "magome",
@@ -5430,7 +4523,12 @@
       "type": "bus",
       "from": "中津川駅",
       "to": "馬籠"
-    }
+    },
+    "destType": "city",
+    "railGateway": "中津川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nagahama",
@@ -5472,7 +4570,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "長浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hikone",
@@ -5514,7 +4617,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "彦根駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "koyasan",
@@ -5555,7 +4663,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "高野山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "gero-onsen",
@@ -5596,7 +4709,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "下呂駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "naruko-onsen",
@@ -5636,7 +4754,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "鳴子温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shima-onsen",
@@ -5680,7 +4803,12 @@
       "type": "bus",
       "from": "中之条駅",
       "to": "四万温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "中之条駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hirosaki",
@@ -5723,7 +4851,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "弘前駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "青森空港"
   },
   {
     "id": "oirase",
@@ -5771,7 +4904,12 @@
       "type": "bus",
       "from": "八戸駅",
       "to": "奥入瀬"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "八戸駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "青森空港"
   },
   {
     "id": "mashiko",
@@ -5811,7 +4949,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "益子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "bessho-onsen",
@@ -5852,7 +4995,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "別所温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izushi",
@@ -5899,7 +5047,12 @@
       "type": "bus",
       "from": "豊岡駅",
       "to": "出石"
-    }
+    },
+    "destType": "city",
+    "railGateway": "豊岡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "wakura-onsen",
@@ -5939,7 +5092,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "和倉温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "misasa-onsen",
@@ -5985,7 +5143,12 @@
       "type": "bus",
       "from": "倉吉駅",
       "to": "三朝温泉"
-    }
+    },
+    "destType": "onsen",
+    "railGateway": "倉吉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "obi",
@@ -6026,7 +5189,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "飫肥駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hitoyoshi",
@@ -6068,7 +5236,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "人吉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kamikochi",
@@ -6115,7 +5288,12 @@
       "type": "bus",
       "from": "松本駅",
       "to": "上高地"
-    }
+    },
+    "destType": "sight",
+    "railGateway": "松本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "minakami-onsen",
@@ -6156,7 +5334,12 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "水上駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "minami-aso",
@@ -6204,256 +5387,12 @@
       "type": "bus",
       "from": "熊本駅",
       "to": "南阿蘇"
-    }
-  },
-  {
-    "id": "mito",
-    "name": "水戸",
-    "type": "hub",
-    "region": "関東",
-    "hotelHub": "水戸",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "東京"
-    ],
-    "weight": 0.35,
-    "description": "日本三名園の一つ偕楽園と水戸黄門ゆかりの史跡が点在する茨城の中心都市。梅の季節には特に見ごたえがある。",
-    "tags": [
-      "梅",
-      "庭園",
-      "歴史"
-    ],
-    "spots": [
-      "偕楽園",
-      "袋田の滝",
-      "弘道館",
-      "竜神大吊橋"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "水戸",
-    "gateways": {
-      "rail": [
-        "水戸駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
     },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "kofu",
-    "name": "甲府",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "甲府",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "東京"
-    ],
-    "weight": 0.35,
-    "description": "武田信玄ゆかりの史跡と甲州ワインが楽しめる盆地の街。花崗岩の奇岩が織りなす昇仙峡は国の特別名勝。",
-    "tags": [
-      "渓谷",
-      "武田",
-      "ワイン"
-    ],
-    "spots": [
-      "昇仙峡",
-      "武田神社",
-      "甲州ワイン"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "甲府",
-    "gateways": {
-      "rail": [
-        "甲府駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "shizuoka",
-    "name": "静岡",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "静岡",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "東京",
-      "名古屋",
-      "大阪"
-    ],
-    "weight": 0.35,
-    "description": "富士山を望む駿河湾と茶畑の街。世界遺産の三保の松原と新鮮な桜えびが魅力。",
-    "tags": [
-      "富士山",
-      "海",
-      "お茶"
-    ],
-    "spots": [
-      "三保の松原",
-      "久能山東照宮",
-      "日本平",
-      "寸又峡"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "静岡",
-    "gateways": {
-      "rail": [
-        "静岡駅"
-      ],
-      "airport": [
-        "静岡空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "iida",
-    "name": "飯田",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "飯田",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [
-      "名古屋",
-      "東京"
-    ],
-    "weight": 0.35,
-    "description": "天竜峡の断崖と南アルプスに囲まれた南信州の中心地。りんごや梨の果樹園が広がる山里。",
-    "tags": [
-      "渓谷",
-      "果樹園",
-      "山"
-    ],
-    "spots": [
-      "天竜峡",
-      "りんご並木",
-      "元善光寺"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": true,
-    "hotelSearch": "飯田",
-    "gateways": {
-      "rail": [
-        "飯田駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "matsue",
-    "name": "松江",
-    "type": "hub",
-    "region": "中国",
-    "hotelHub": "松江",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "大阪",
-      "広島",
-      "東京"
-    ],
-    "weight": 0.35,
-    "description": "宍道湖の夕日と国宝松江城が美しい山陰の水都。出雲大社への拠点として、神話の息吹を感じる旅に。",
-    "tags": [
-      "城",
-      "湖",
-      "神社"
-    ],
-    "spots": [
-      "松江城",
-      "宍道湖",
-      "出雲大社",
-      "足立美術館"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "松江",
-    "gateways": {
-      "rail": [
-        "松江駅"
-      ],
-      "airport": [
-        "出雲空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
-  },
-  {
-    "id": "takamatsu",
-    "name": "高松",
-    "type": "hub",
-    "region": "四国",
-    "hotelHub": "高松",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "大阪",
-      "東京",
-      "岡山"
-    ],
-    "weight": 0.35,
-    "description": "栗林公園と讃岐うどんで知られる瀬戸内の玄関都市。直島など島めぐりの拠点にもなる。",
-    "tags": [
-      "庭園",
-      "うどん",
-      "島"
-    ],
-    "spots": [
-      "栗林公園",
-      "讃岐うどん",
-      "瀬戸内アート",
-      "父母ヶ浜"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": false,
-    "hotelSearch": "高松",
-    "gateways": {
-      "rail": [
-        "高松駅"
-      ],
-      "airport": [
-        "高松空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null
+    "destType": "sight",
+    "railGateway": "熊本駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "阿蘇くまもと空港"
   },
   {
     "id": "imabari",
@@ -6505,7 +5444,12 @@
       "今治城",
       "来島海峡大橋",
       "しまなみ海道サイクリング"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "今治駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "ozu",
@@ -6557,7 +5501,12 @@
       "臥龍山荘",
       "おはなはん通り",
       "肱川遊覧"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "伊予大洲駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shakotan",
@@ -6614,7 +5563,12 @@
       "島武意海岸",
       "積丹岬",
       "ウニ料理"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "小樽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "izumo",
@@ -6670,56 +5624,12 @@
       "稲佐の浜",
       "古代出雲歴史博物館",
       "出雲そば"
-    ]
-  },
-  {
-    "id": "fukui",
-    "name": "福井",
-    "type": "hub",
-    "region": "中部",
-    "hotelHub": "福井",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
     ],
-    "departures": [],
-    "weight": 0.3,
-    "description": "恐竜王国・北陸の名城の地。東尋坊の断崖、一乗谷朝倉氏遺跡、越前がにが旅人を迎える。北陸新幹線開業で注目度急上昇。",
-    "tags": [
-      "グルメ",
-      "歴史",
-      "絶景"
-    ],
-    "spots": [
-      "東尋坊",
-      "一乗谷朝倉氏遺跡",
-      "恐竜博物館"
-    ],
-    "shinkansenAccess": true,
-    "needsCar": false,
-    "hotelSearch": "福井",
-    "gateways": {
-      "rail": [
-        "福井駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "金沢",
-      "敦賀",
-      "永平寺",
-      "越前海岸"
-    ],
-    "itinerary": [
-      "東尋坊",
-      "一乗谷朝倉氏遺跡",
-      "恐竜博物館",
-      "越前がに"
-    ]
+    "destType": "city",
+    "railGateway": "出雲市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "出雲縁結び空港"
   },
   {
     "id": "noto",
@@ -6779,7 +5689,12 @@
       "輪島朝市",
       "禄剛崎",
       "見附島"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "小松空港"
   },
   {
     "id": "yoshino",
@@ -6833,7 +5748,12 @@
       "金峯山寺",
       "吉水神社",
       "青根ヶ峰"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "吉野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "kumano",
@@ -6887,7 +5807,12 @@
       "那智の滝",
       "熊野本宮大社",
       "瀞峡"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "新宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "iriomote",
@@ -6941,7 +5866,12 @@
       "仲間川マングローブ",
       "由布島",
       "星砂の浜"
-    ]
+    ],
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "石垣港",
+    "airportGateway": null
   },
   {
     "id": "takahashi",
@@ -6994,7 +5924,12 @@
       "武家屋敷群",
       "吹屋ふるさと村",
       "頼久寺"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "備中高梁駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "hida-furukawa",
@@ -7048,7 +5983,12 @@
       "円光寺",
       "気多若宮神社",
       "飛騨古川まつり会館"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "飛騨古川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "bungo-takada",
@@ -7107,7 +6047,12 @@
       "真玉海岸",
       "富貴寺",
       "熊野磨崖仏"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
   },
   {
     "id": "izu-kogen",
@@ -7161,7 +6106,12 @@
       "城ヶ崎海岸",
       "伊豆シャボテン動物公園",
       "温泉"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "伊豆高原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "sanriku",
@@ -7214,7 +6164,12 @@
       "碁石海岸",
       "北山崎",
       "磯料理"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "宮古駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tanabe",
@@ -7222,7 +6177,7 @@
     "type": "destination",
     "region": "近畿",
     "hub": "nara",
-    "hotelHub": "白浜",
+    "hotelHub": "田辺",
     "stayAllowed": [
       "1night"
     ],
@@ -7269,7 +6224,12 @@
       "熊野古道・中辺路",
       "白浜",
       "千畳敷"
-    ]
+    ],
+    "destType": "onsen",
+    "railGateway": "紀伊田辺駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "南紀白浜空港"
   },
   {
     "id": "tosa-shimizu",
@@ -7327,7 +6287,12 @@
       "金剛福寺",
       "竜串海岸",
       "ジョン万次郎資料館"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "中村駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "nichinan",
@@ -7380,7 +6345,12 @@
       "鵜戸神宮",
       "飫肥城下町",
       "堀切峠"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "日南駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "mojiko",
@@ -7434,7 +6404,12 @@
       "関門海峡展望台",
       "旧大阪商船",
       "焼きカレー"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "門司港駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "itoshima",
@@ -7488,7 +6463,12 @@
       "芥屋の大門",
       "カキ小屋",
       "白糸の滝"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "筑前前原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "shimabara",
@@ -7541,7 +6521,12 @@
       "湧水庭園四明荘",
       "鯉の泳ぐまち",
       "雲仙地獄"
-    ]
+    ],
+    "destType": "sight",
+    "railGateway": "島原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   },
   {
     "id": "tsuruga",
@@ -7596,6 +6581,11 @@
       "気比の松原",
       "日本海さかな街",
       "赤レンガ倉庫"
-    ]
+    ],
+    "destType": "city",
+    "railGateway": "敦賀駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
   }
 ]

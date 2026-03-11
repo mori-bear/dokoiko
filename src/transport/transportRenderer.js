@@ -40,10 +40,10 @@ function isFlightAvailable(departure, airportGateway) {
 /* ─── JR / 鉄道リンク ─── */
 
 function getRail(city, departure, fromCity) {
-  const rails     = city.gateways?.rail ?? [];
-  const railNote  = city.railNote  ?? null;
-  const accessHub = city.accessHub ?? null;
-  if (!rails.length) return [];
+  const railGateway = gw(city, 'railGateway');
+  const railNote    = city.railNote  ?? null;
+  const accessHub   = city.accessHub ?? null;
+  if (!railGateway) return [];
 
   const links = [];
 
@@ -63,7 +63,7 @@ function getRail(city, departure, fromCity) {
   }
 
   // GoogleMaps: 出発駅 → 鉄道ゲートウェイ
-  links.push(buildGoogleMapsLink(fromCity.rail, rails[0], 'transit'));
+  links.push(buildGoogleMapsLink(fromCity.rail, railGateway, 'transit'));
 
   return links;
 }
@@ -71,10 +71,9 @@ function getRail(city, departure, fromCity) {
 /* ─── 飛行機リンク ─── */
 
 function getFlight(city, departure, fromCity) {
-  const airports = city.gateways?.airport ?? [];
-  if (!airports.length) return [];
+  const airport = gw(city, 'airportGateway');
+  if (!airport) return [];
 
-  const airport = airports[0];
   if (!isFlightAvailable(departure, airport)) return [];
 
   return [
@@ -90,7 +89,11 @@ function getFlight(city, departure, fromCity) {
  * @param {boolean} isIsland — true: 出発港選択モード / false: 到着港表示のみ
  */
 function getFerry(city, departure, fromCity, isIsland) {
-  const ferries = city.gateways?.ferry ?? [];
+  // フラットフィールド優先、fallback: gateways.ferry配列
+  const ferryGateway = gw(city, 'ferryGateway');
+  const ferries = ferryGateway
+    ? [ferryGateway]
+    : (city.gateways?.ferry ?? []);
   if (!ferries.length) return [];
 
   if (isIsland) {
@@ -132,7 +135,8 @@ function getSecondary(city) {
 /* ─── レンタカー ─── */
 
 function getCar(city) {
-  if (!city.needsCar && !city.isIsland) return [];
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  if (!city.needsCar && !isIsland) return [];
   return [buildRentalLink()];
 }
 
@@ -149,13 +153,18 @@ function limitRoutes(links, max) {
 
 /* ─── メインアセンブラ ─── */
 
+/** 後方互換: gateways配列 → 先頭要素フォールバック */
+function gw(city, key) {
+  return city[key] || city.gateways?.[key]?.[0] || null;
+}
+
 export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
   if (!fromCity) return [];
 
   const stars    = city.distanceStars ?? 0;
-  const isIsland = !!city.isIsland;
-  const hasFerry = (city.gateways?.ferry ?? []).length > 0;
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  const hasFerry = !!(gw(city, 'ferryGateway') || (city.gateways?.ferry?.length > 0));
 
   // 島フェリー優先（早期リターン）— ★1 より前に判定
   if (isIsland && hasFerry) {
@@ -168,9 +177,9 @@ export function resolveTransportLinks(city, departure) {
 
   // ★1 近場: GoogleMaps 1本のみ
   if (stars === 1) {
-    const rail = (city.gateways?.rail ?? [])[0];
+    const rail = gw(city, 'railGateway') ?? city.name;
     return [
-      buildGoogleMapsLink(fromCity.rail, rail ?? city.name, 'transit'),
+      buildGoogleMapsLink(fromCity.rail, rail, 'transit'),
       ...getCar(city),
     ].filter(l => l?.url);
   }

@@ -1,7 +1,7 @@
 /**
  * データローダー
  *
- * destinations.hubs.json + destinations.destinations.json を並列フェッチして結合。
+ * hubs.json + destinations.json + spots.json を並列フェッチして結合。
  * 起動時に id / name の重複チェックも実行する。
  *
  * 使い方:
@@ -10,19 +10,19 @@
  */
 
 /**
- * フラットな都市配列を返す。
- * spot型エントリは含まない（destinations.json生成時に除去済み）。
+ * フラットな都市配列を返す（hubs + destinations）。
+ * spots は現在 0 件のため除外済み。
  *
  * @returns {Promise<Array>}
  */
 export async function loadDestinations() {
   const [hubsRes, destsRes] = await Promise.all([
-    fetch('./src/data/destinations.hubs.json'),
-    fetch('./src/data/destinations.destinations.json'),
+    fetch('./src/data/hubs.json'),
+    fetch('./src/data/destinations.json'),
   ]);
 
-  if (!hubsRes.ok)  throw new Error(`destinations.hubs.json: HTTP ${hubsRes.status}`);
-  if (!destsRes.ok) throw new Error(`destinations.destinations.json: HTTP ${destsRes.status}`);
+  if (!hubsRes.ok)  throw new Error(`hubs.json: HTTP ${hubsRes.status}`);
+  if (!destsRes.ok) throw new Error(`destinations.json: HTTP ${destsRes.status}`);
 
   const [hubs, destinations] = await Promise.all([hubsRes.json(), destsRes.json()]);
 
@@ -35,7 +35,6 @@ export async function loadDestinations() {
 
 /**
  * id / name の重複を検出する。重複があれば Error を throw。
- * 開発時のデータ品質チェック用。
  */
 function assertNoDuplicates(destinations) {
   const idSeen   = new Map();

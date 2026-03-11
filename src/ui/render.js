@@ -86,8 +86,13 @@ function buildSpotList(spots) {
 }
 
 function buildCategoryBadge(city) {
-  if (!city.isIsland) return '';
-  return `　<span class="type-badge type-island">島</span>`;
+  const isIsland = city.isIsland || city.destType === 'island';
+  const isOnsen  = city.destType === 'onsen';
+  const isSight  = city.destType === 'sight';
+  if (isIsland) return `　<span class="type-badge type-island">島</span>`;
+  if (isOnsen)  return `　<span class="type-badge type-onsen">温泉</span>`;
+  if (isSight)  return `　<span class="type-badge type-sight">自然</span>`;
+  return '';
 }
 
 /* ── 交通ブロック ── */

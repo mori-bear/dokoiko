@@ -3,7 +3,7 @@
  *
  * 楽天トラベル: キーワード検索 → 楽天アフィリエイト経由
  *   https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=
- *   https://travel.rakuten.co.jp/search/?keyword={keyword}
+ *   https://travel.rakuten.co.jp/package/search/?keyword={keyword}
  *
  * じゃらん: 都市キーワード検索 → ValueCommerce 経由
  *   https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858
@@ -36,7 +36,7 @@ export function buildHotelLinks(city) {
 /** 楽天 target URL（テスト用にも export）*/
 export function buildRakutenTarget(city) {
   const keyword = resolveKeyword(city);
-  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(keyword)}`;
+  return `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(keyword)}`;
 }
 
 function buildRakutenHotelLink(city) {

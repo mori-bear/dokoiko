@@ -29,9 +29,11 @@ const FULL_HTTP = process.argv.includes('--http');
    データ読み込み
 ══════════════════════════════════════════ */
 
-const RAW   = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
-const ALL   = Array.isArray(RAW) ? RAW : RAW.destinations;
-const DESTS = ALL.filter(c => c.type !== 'spot');
+// 新ファイル構造: hubs.json + destinations.json を結合
+const HUBS_RAW = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
+const DESTS_RAW = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
+const ALL   = [...HUBS_RAW, ...DESTS_RAW];
+const DESTS = DESTS_RAW; // destinations.json には hub が含まれない
 
 /* ══════════════════════════════════════════
    定数（constants.js と同期）
@@ -164,15 +166,23 @@ function resolveRailProvider(dep, city) {
   return 'jr-west';
 }
 
+/** ゲートウェイ取得（新フラットフィールド → gateways配列 fallback）*/
+function gw(city, key) {
+  return city[key] || city.gateways?.[key]?.[0] || null;
+}
+
 /** transport links を型配列で返す（簡易版）*/
 function getLinks(city, dep) {
   const fromCity = DEPARTURE_CITY_INFO[dep];
   if (!fromCity) return [];
-  const g       = city.gateways || {};
-  const rails   = g.rail    || [];
-  const airports= g.airport || [];
-  const ferries = g.ferry   || [];
-  const isIsland= !!city.isIsland;
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  const railGateway    = gw(city, 'railGateway');
+  const airportGateway = gw(city, 'airportGateway');
+  const ferryGateway   = gw(city, 'ferryGateway');
+  // island: ferry port list（gateways.ferry[]を使うケースも残す）
+  const ferries = ferryGateway
+    ? [ferryGateway]
+    : (city.gateways?.ferry ?? []);
   const links   = [];
 
   // 島フェリー優先
@@ -193,18 +203,18 @@ function getLinks(city, dep) {
   }
 
   // 通常
-  if (rails.length) {
+  if (railGateway) {
     if (!city.railNote) links.push({ type: resolveRailProvider(dep, city) });
     if (city.accessHub && city.railNote) links.push({ type:'note' });
     links.push({ type:'google-maps' });
   }
-  if (airports.length && isFlightAvailable(dep, airports[0])) {
+  if (airportGateway && isFlightAvailable(dep, airportGateway)) {
     links.push({ type:'skyscanner' });
     links.push({ type:'google-maps-arr' });
-  } else if (airports.length && !rails.length) {
+  } else if (airportGateway && !railGateway) {
     links.push({ type:'google-maps' });
   }
-  if (ferries.length && !isIsland) links.push({ type:'ferry' });
+  if (ferryGateway && !isIsland) links.push({ type:'ferry' });
   if (!links.length) links.push({ type:'google-maps' });
   if (city.needsCar || isIsland) links.push({ type:'rental' });
   return links;
@@ -224,8 +234,8 @@ function buildJalanUrl(city) {
 function buildRakutenUrl(city) {
   const kw  = resolveKeyword(city);
   const aff = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
-  const target = `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(kw)}`;
-  return aff + encodeURIComponent(target);
+  const target = `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(kw)}`;
+  return aff + target; // pc パラメータは raw URL（Rakuten affiliate 仕様）
 }
 
 /* ══════════════════════════════════════════
@@ -289,27 +299,31 @@ class Scorecard {
   const scorecards = [];
 
   /* ───────────────────────────────
-     [1] gateway 構造検証
+     [1] データ構造検証
   ─────────────────────────────── */
   {
-    const sc = new Scorecard('[1] gateway 構造');
+    const sc = new Scorecard('[1] データ構造');
     DESTS.forEach(city => {
-      const g = city.gateways;
-      if (!g) { sc.ng(`${city.id}: gateways 欠落`); return; }
-      ['rail','airport','bus','ferry'].forEach(k => {
-        sc.check(Array.isArray(g[k]), `${city.id}: gateways.${k} 配列でない`);
-      });
+      // 最低1つのゲートウェイが必要
+      const hasRail    = !!(city.railGateway    || city.gateways?.rail?.length);
+      const hasAirport = !!(city.airportGateway || city.gateways?.airport?.length);
+      const hasFerry   = !!(city.ferryGateway   || city.gateways?.ferry?.length);
+      const hasAny     = hasRail || hasAirport || hasFerry;
+      sc.check(hasAny, `${city.id}: ゲートウェイなし（rail/airport/ferry すべて空）`);
+
       // island: ferry or airport 必須
-      if (city.isIsland) {
+      const isIsland = !!(city.isIsland || city.destType === 'island');
+      if (isIsland) {
         sc.check(
-          (g.ferry||[]).length > 0 || (g.airport||[]).length > 0,
-          `${city.id}: isIsland だが ferry/airport ゲートウェイなし`
+          hasFerry || hasAirport,
+          `${city.id}: island だが ferry/airport ゲートウェイなし`
         );
       }
-      // stayAllowed 必須
+
+      // destType 必須
       sc.check(
-        Array.isArray(city.stayAllowed) && city.stayAllowed.length > 0,
-        `${city.id}: stayAllowed 欠落`
+        ['city','sight','onsen','island'].includes(city.destType),
+        `${city.id}: destType 未設定または不正（${city.destType}）`
       );
     });
     sc.print();
@@ -374,7 +388,8 @@ class Scorecard {
     ];
 
     CASES.forEach(tc => {
-      const city = DESTS.find(c => c.id === tc.destId);
+      // ALL = hubs + destinations（hubs も交通テスト対象）
+      const city = ALL.find(c => c.id === tc.destId);
       if (!city) { sc.ng(`${tc.name}: destId ${tc.destId} 見つからない`); return; }
 
       const links   = getLinks(city, tc.dep);
@@ -417,12 +432,16 @@ class Scorecard {
 
       const jUrl = buildJalanUrl(city);
       const rUrl = buildRakutenUrl(city);
-      sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),            `${city.id}: じゃらん VC ドメイン欠落`);
-      sc.check(jUrl.includes('uwp2011'),                               `${city.id}: じゃらん uwp2011 URL 欠落`);
-      sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),                  `${city.id}: 楽天 aff ドメイン欠落`);
-      sc.check(rUrl.includes('travel.rakuten.co.jp'),                  `${city.id}: 楽天 travel URL 欠落`);
-      // じゃらん: keyword を encodeURIComponent した文字列が vc_url 内に存在する（二重エンコードが正）
-      sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))), `${city.id}: じゃらん keyword エンコード不正`);
+      sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),     `${city.id}: じゃらん VC ドメイン欠落`);
+      sc.check(jUrl.includes('uwp2011'),                        `${city.id}: じゃらん uwp2011 URL 欠落`);
+      sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),           `${city.id}: 楽天 aff ドメイン欠落`);
+      sc.check(rUrl.includes('travel.rakuten.co.jp/package/search/'), `${city.id}: 楽天 travel package/search URL 欠落`);
+      // じゃらん: keyword → vc_url 内に二重エンコード
+      sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))),
+        `${city.id}: じゃらん keyword エンコード不正`);
+      // 楽天: package/search/?keyword= 形式チェック
+      sc.check(rUrl.includes(`package/search/?keyword=${encodeURIComponent(kw)}`),
+        `${city.id}: 楽天 keyword エンコード不正`);
     });
     sc.print();
     scorecards.push(sc);
@@ -440,6 +459,8 @@ class Scorecard {
         `${city.id}: じゃらん VC URL 形式不正`);
       sc.check(rUrl.startsWith('https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc='),
         `${city.id}: 楽天 Aff URL 形式不正`);
+      sc.check(rUrl.includes('travel.rakuten.co.jp/package/search/?keyword='),
+        `${city.id}: 楽天 /package/search/?keyword= 形式不正`);
     });
     sc.print();
     scorecards.push(sc);
@@ -458,8 +479,8 @@ class Scorecard {
       // じゃらん: target URL（直接 HEAD → 200 を期待）
       const jTarget = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(jTarget).then(r => ({ city, svc:'じゃらん', url:jTarget, ...r })));
-      // 楽天: トップ + keyword → 200
-      const rTarget = `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(resolveKeyword(city))}`;
+      // 楽天: package/search/?keyword= → 200
+      const rTarget = `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(rTarget).then(r => ({ city, svc:'楽天', url:rTarget, ...r })));
     });
 
@@ -483,23 +504,17 @@ class Scorecard {
   ─────────────────────────────── */
   {
     const sc = new Scorecard('[7] UI 整合（daytrip）');
-    DESTS.forEach(city => {
-      const daytripOnly = city.stayAllowed &&
-        city.stayAllowed.every(s => s === 'daytrip') &&
-        city.stayAllowed.includes('daytrip');
-      // daytrip のみの都市では stayAllowed に '1night' が含まれないこと
-      if (daytripOnly) {
-        sc.check(!city.stayAllowed.includes('1night'),
-          `${city.id}: daytrip のみのはずだが 1night も含まれている`);
-      }
-      // stayAllowed=['1night'] の都市は宿表示対象
-      const hasNight = (city.stayAllowed || []).includes('1night');
-      sc.check(typeof hasNight === 'boolean', `${city.id}: stayAllowed チェック失敗`);
-    });
     // UI ロジック確認: stayType=daytrip → showHotel=false
     const daytripLogic = (stayType) => stayType !== 'daytrip';
     sc.check(daytripLogic('daytrip') === false, 'daytrip → showHotel = false でない');
     sc.check(daytripLogic('1night')  === true,  '1night  → showHotel = true でない');
+    sc.check(daytripLogic('2night')  === true,  '2night  → showHotel = true でない');
+    // destType チェック: island は宿表示対象（daytrip不可）
+    const islands = DESTS.filter(c => c.isIsland || c.destType === 'island');
+    sc.check(islands.length > 0, '島 destination が 0 件');
+    islands.forEach(c => {
+      sc.check(c.destType === 'island' || c.isIsland, `${c.id}: island フラグ不整合`);
+    });
     sc.print();
     scorecards.push(sc);
   }
@@ -536,7 +551,7 @@ class Scorecard {
 
     function matchesTheme(city, theme) {
       if (!theme) return true;
-      if (theme === '海' && city.isIsland) return true;
+      if (theme === '海' && (city.isIsland || city.destType === 'island')) return true;
       const aliases = THEME_TAG_ALIASES[theme] || [theme];
       return (city.tags || []).some(t => aliases.includes(t));
     }

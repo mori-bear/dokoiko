@@ -74,7 +74,7 @@ function isSameCity(destination, departure) {
 
 function isSamePrefectureOvernight(destination, departure, stayType) {
   if (stayType === 'daytrip') return false;
-  if (destination.isIsland) return false;
+  if (destination.isIsland || destination.destType === 'island') return false;
   const destPref = DESTINATION_PREFECTURE_MAP[destination.id];
   if (!destPref) return false;
   return destPref === DEPARTURE_PREFECTURE[departure];
@@ -84,7 +84,7 @@ function isSamePrefectureOvernight(destination, departure, stayType) {
 function matchesTheme(city, theme) {
   if (!theme) return true;
   // 離島は常に「海」テーマに一致
-  if (theme === '海' && city.isIsland) return true;
+  if (theme === '海' && (city.isIsland || city.destType === 'island')) return true;
   const aliases = THEME_TAG_ALIASES[theme] ?? [theme];
   return (city.tags || []).some(t => aliases.includes(t));
 }
@@ -145,12 +145,17 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
       distanceStars: calculateDistanceStars(departure, d),
     }));
 
-  /** distanceStars ベースの日程フィルタ */
+  /**
+   * distanceStars (★1〜★3) ベースの日程フィルタ
+   *   ★1 → daytrip のみ
+   *   ★2 → 1night
+   *   ★3 → 1night または 2night
+   */
   function matchesStayType(d) {
     const stars = d.distanceStars;
-    if (stayType === 'daytrip' && stars > 2) return false;
-    if (stayType === '1night' && stars < 2) return false;
-    if (stayType === '2night' && stars < 3) return false;
+    if (stayType === 'daytrip' && stars !== 1) return false;
+    if (stayType === '1night' && stars === 1) return false;
+    if (stayType === '2night' && stars !== 3) return false;
     return true;
   }
 
