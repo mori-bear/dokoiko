@@ -146,6 +146,7 @@ const FERRY_LINKS = {
   '宮島口港':           { label: 'フェリーを調べる（宮島松大フェリー）',  url: 'https://miyajima-matsudai.co.jp/' },
   '石垣港':             { label: 'フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
   '松山観光港':         { label: 'フェリーを調べる（瀬戸内海汽船）',      url: 'https://www.setonaikaikisen.co.jp/' },
+  '詫間港':             { label: 'フェリーを調べる（三豊市営フェリー）',   url: 'https://www.city.mitoyo.lg.jp/' },
 };
 
 export function buildFerryLink(ferryGateway) {

@@ -1,16 +1,19 @@
 /**
  * distanceCalculator.js
  *
- * 出発地と目的地から distanceStars (★1〜★3) を動的計算する。
+ * 出発地と目的地から travelTimeMinutes（移動時間・分）を動的計算する。
  *
- * ★1: 近距離（0〜120km）— 同一都市圏・同一市
- * ★2: 中距離（120〜350km）— 同一地方
- * ★3: 遠距離（350km〜）— 異なる地方・島
+ * 近距離（同一都市圏・同一市）:  60 分未満
+ * 中距離（同一地方）:            180 分（3時間）
+ * 遠距離（異なる地方・島）:      360 分（6時間）
  *
  * stayType との対応:
- *   ★1 → daytrip
- *   ★2 → 1night
- *   ★3 → 1night または 2night
+ *   < 120min → daytrip
+ *   120〜300min → 1night
+ *   300min+ → 1night または 2night
+ *
+ * ※ 旧 distanceStars は travelTimeMinutes に統合。
+ *    後方互換のため calculateDistanceStars もエクスポートする（stars に変換）。
  */
 
 /** 出発都市 → 地方 */
@@ -151,36 +154,47 @@ function getHubRegion(hotelHub, fallbackRegion) {
 }
 
 /**
- * 出発地と目的地から distanceStars (★1〜★3) を計算する。
+ * 出発地と目的地から travelTimeMinutes（推定移動時間・分）を計算する。
  *
  * @param {string} departure - 出発都市名
  * @param {{ hotelHub?:string, name:string, region:string, isIsland?:boolean, destType?:string }} destination
- * @returns {1|2|3}
+ * @returns {number} 推定移動時間（分）
  */
-export function calculateDistanceStars(departure, destination) {
+export function calculateTravelTimeMinutes(departure, destination) {
   const hotelHub = destination.hotelHub ?? destination.name;
   const isIsland = destination.isIsland || destination.destType === 'island';
 
-  // ★1: 出発地と同一都市（宿が出発地 = 近場）
-  if (hotelHub === departure) return 1;
+  // 近距離: 出発地と同一都市または同一都市圏 → 60分
+  if (hotelHub === departure) return 60;
+  if (isSameMetro(departure, hotelHub)) return 60;
 
-  // ★1: 同一都市圏
-  if (isSameMetro(departure, hotelHub)) return 1;
+  // 中距離: 近接クロスリージョン（高松↔岡山等）→ 180分
+  if (NEAR_CROSS_REGION[departure]?.has(hotelHub)) return 180;
 
-  // ★2: 近接クロスリージョン（高松↔岡山等）
-  if (NEAR_CROSS_REGION[departure]?.has(hotelHub)) return 2;
-
-  // 島: 都市圏以外は ★3（遠方扱い）
-  if (isIsland) return 3;
+  // 島: 都市圏以外は遠方扱い → 360分
+  if (isIsland) return 360;
 
   const depReg = DEPARTURE_REGION[departure];
-  if (!depReg) return 2;
+  if (!depReg) return 180;
 
   const rawHubReg = getHubRegion(hotelHub, destination.region);
-  const hubReg = rawHubReg ?? depReg; // 未登録は同一地方と仮定
+  const hubReg = rawHubReg ?? depReg;
 
   const dist = regionDist(depReg, hubReg);
 
-  // 同一地方 → ★2、異なる地方 → ★3
-  return dist === 0 ? 2 : 3;
+  // 同一地方 → 180分、異なる地方 → 360分
+  return dist === 0 ? 180 : 360;
+}
+
+/**
+ * 後方互換: travelTimeMinutes → distanceStars (1〜3) に変換して返す。
+ * @param {string} departure
+ * @param {object} destination
+ * @returns {1|2|3}
+ */
+export function calculateDistanceStars(departure, destination) {
+  const minutes = calculateTravelTimeMinutes(departure, destination);
+  if (minutes < 120) return 1;
+  if (minutes < 300) return 2;
+  return 3;
 }

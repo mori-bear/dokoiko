@@ -385,6 +385,28 @@ class Scorecard {
         expect:    { ferry:true, googleMaps:true },
         notExpect: { skyscanner:true },
       },
+      // Session C 指定テストケース
+      // ※ railNote あり → JR リンク非表示（バス二次交通 + note + GoogleMaps が正）
+      {
+        dep: '大宮', destId: 'nyuto-onsen', name: '大宮→乳頭温泉',
+        expect:    { googleMaps:true },
+        notExpect: { skyscanner:true },
+      },
+      {
+        dep: '名古屋', destId: 'magome', name: '名古屋→馬籠',
+        expect:    { googleMaps:true },
+        notExpect: { skyscanner:true },
+      },
+      {
+        dep: '東京', destId: 'kamikochi', name: '東京→上高地',
+        expect:    { googleMaps:true },
+        notExpect: { skyscanner:true },
+      },
+      {
+        dep: '高松', destId: 'shijishima', name: '高松→志々島',
+        expect:    { ferry:true, googleMaps:true },
+        notExpect: { skyscanner:true },
+      },
     ];
 
     CASES.forEach(tc => {

@@ -6587,5 +6587,53 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null
+  },
+  {
+    "id": "shijishima",
+    "name": "志々島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu-t",
+    "hotelHub": "高松",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "松山",
+      "徳島",
+      "高知"
+    ],
+    "weight": 1.5,
+    "description": "瀬戸内海に浮かぶ小さな花の島。樹齢100年を超えるマーガレットの大木と穏やかな海が迎える離島体験。",
+    "tags": [
+      "離島",
+      "花",
+      "瀬戸内海"
+    ],
+    "spots": [
+      "マーガレットの大木",
+      "見晴らし台",
+      "港の集落"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "高松",
+    "gateways": {
+      "rail": [],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "詫間港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": "詫間駅",
+    "busGateway": null,
+    "ferryGateway": "詫間港",
+    "airportGateway": null
   }
 ]

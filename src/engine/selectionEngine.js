@@ -14,7 +14,7 @@
  *   - タグ不一致: weight × 0.4 で抑制（ランダム性は残す）
  */
 
-import { calculateDistanceStars } from './distanceCalculator.js';
+import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCalculator.js';
 
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
@@ -140,22 +140,26 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   const withStars = destinations
     .filter(d => d.type !== 'spot')
-    .map(d => ({
-      ...d,
-      distanceStars: calculateDistanceStars(departure, d),
-    }));
+    .map(d => {
+      const travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
+      return {
+        ...d,
+        travelTimeMinutes,
+        distanceStars: calculateDistanceStars(departure, d),
+      };
+    });
 
   /**
-   * distanceStars (★1〜★3) ベースの日程フィルタ
-   *   ★1 → daytrip のみ
-   *   ★2 → 1night
-   *   ★3 → 1night または 2night
+   * travelTimeMinutes ベースの日程フィルタ
+   *   < 120min  → daytrip のみ
+   *   120〜300min → 1night
+   *   300min+   → 1night または 2night
    */
   function matchesStayType(d) {
-    const stars = d.distanceStars;
-    if (stayType === 'daytrip' && stars !== 1) return false;
-    if (stayType === '1night' && stars === 1) return false;
-    if (stayType === '2night' && stars !== 3) return false;
+    const t = d.travelTimeMinutes;
+    if (stayType === 'daytrip' && t >= 120) return false;
+    if (stayType === '1night' && t < 120) return false;
+    if (stayType === '2night' && t < 300) return false;
     return true;
   }
 

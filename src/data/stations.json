@@ -1,0 +1,794 @@
+[
+  {
+    "destination": "鎌倉",
+    "station": "鎌倉駅",
+    "line": "JR横須賀線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "熱海",
+    "station": "熱海駅",
+    "line": "JR東海道本線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "日光",
+    "station": "日光駅",
+    "line": "JR日光線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "軽井沢",
+    "station": "軽井沢駅",
+    "line": "JR北陸新幹線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "富士河口湖",
+    "station": "河口湖駅",
+    "line": "富士急行線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "奈良",
+    "station": "奈良駅",
+    "line": "JR大和路線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "石垣島",
+    "station": null,
+    "line": null,
+    "prefecture": "沖縄"
+  },
+  {
+    "destination": "伊勢",
+    "station": "伊勢市駅",
+    "line": "JR参宮線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "別府",
+    "station": "別府駅",
+    "line": "JR日豊本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "小樽",
+    "station": "小樽駅",
+    "line": "JR函館本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "富良野",
+    "station": "富良野駅",
+    "line": "JR根室本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "松島",
+    "station": "松島海岸駅",
+    "line": "JR仙石線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "宮島",
+    "station": null,
+    "line": null,
+    "prefecture": "中国"
+  },
+  {
+    "destination": "尾道",
+    "station": "尾道駅",
+    "line": "JR山陽本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "小豆島",
+    "station": null,
+    "line": null,
+    "prefecture": "四国"
+  },
+  {
+    "destination": "美保関",
+    "station": "境港駅",
+    "line": "JR境線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "龍神温泉",
+    "station": "紀伊田辺駅",
+    "line": "JR紀勢本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "渡嘉敷島",
+    "station": null,
+    "line": null,
+    "prefecture": "沖縄"
+  },
+  {
+    "destination": "久米島",
+    "station": null,
+    "line": null,
+    "prefecture": "沖縄"
+  },
+  {
+    "destination": "宮古島",
+    "station": null,
+    "line": null,
+    "prefecture": "沖縄"
+  },
+  {
+    "destination": "神津島",
+    "station": null,
+    "line": null,
+    "prefecture": "伊豆諸島"
+  },
+  {
+    "destination": "箱根",
+    "station": "箱根湯本駅",
+    "line": "小田急箱根線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "修善寺",
+    "station": "修善寺駅",
+    "line": "伊豆箱根鉄道駿豆線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "草津温泉",
+    "station": "長野原草津口駅",
+    "line": "JR吾妻線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "下田",
+    "station": "伊豆急下田駅",
+    "line": "伊豆急行線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "伊豆大島",
+    "station": null,
+    "line": null,
+    "prefecture": "伊豆諸島"
+  },
+  {
+    "destination": "白川郷",
+    "station": "金沢駅",
+    "line": "JR北陸本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "有馬温泉",
+    "station": "三ノ宮駅",
+    "line": "JR神戸線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "城崎温泉",
+    "station": "城崎温泉駅",
+    "line": "JR山陰本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "倉敷",
+    "station": "倉敷駅",
+    "line": "JR山陽本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "白浜",
+    "station": "白浜駅",
+    "line": "JR紀勢本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "高山",
+    "station": "高山駅",
+    "line": "JR高山本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "鳥羽",
+    "station": "鳥羽駅",
+    "line": "近鉄鳥羽線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "湯布院",
+    "station": "由布院駅",
+    "line": "JR久大本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "黒川温泉",
+    "station": "博多駅",
+    "line": "JR鹿児島本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "阿蘇",
+    "station": "阿蘇駅",
+    "line": "JR",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "屋久島",
+    "station": null,
+    "line": null,
+    "prefecture": "九州"
+  },
+  {
+    "destination": "天草",
+    "station": "熊本駅",
+    "line": "JR鹿児島本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "平泉",
+    "station": "平泉駅",
+    "line": "JR東北本線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "角館",
+    "station": "角館駅",
+    "line": "秋田新幹線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "会津若松",
+    "station": "会津若松駅",
+    "line": "JR磐越西線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "蔵王",
+    "station": "蔵王駅",
+    "line": "JR",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "萩",
+    "station": "萩駅",
+    "line": "JR山陰本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "下関",
+    "station": "下関駅",
+    "line": "JR山陽本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "直島",
+    "station": null,
+    "line": null,
+    "prefecture": "四国"
+  },
+  {
+    "destination": "琴平",
+    "station": "琴電琴平駅",
+    "line": "高松琴平電気鉄道",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "宇和島",
+    "station": "宇和島駅",
+    "line": "JR予讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "洞爺湖",
+    "station": "洞爺駅",
+    "line": "JR室蘭本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "登別",
+    "station": "登別駅",
+    "line": "JR室蘭本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "知床",
+    "station": "知床斜里駅",
+    "line": "JR釧網本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "輪島",
+    "station": "金沢駅",
+    "line": "JR北陸本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "加賀温泉郷",
+    "station": "加賀温泉駅",
+    "line": "JR北陸本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "白馬",
+    "station": "白馬駅",
+    "line": "JR大糸線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "天橋立",
+    "station": "天橋立駅",
+    "line": "京都丹後鉄道",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "伊根",
+    "station": "天橋立駅",
+    "line": "京都丹後鉄道",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "指宿",
+    "station": "指宿駅",
+    "line": "JR指宿枕崎線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "佐世保",
+    "station": "佐世保駅",
+    "line": "JR佐世保線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "平戸",
+    "station": "平戸口駅",
+    "line": "松浦鉄道",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "鳥取",
+    "station": "鳥取駅",
+    "line": "JR山陰本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "秋田",
+    "station": "秋田駅",
+    "line": "JR羽越本線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "淡路島",
+    "station": "三ノ宮駅",
+    "line": "JR神戸線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "高尾山",
+    "station": "高尾山口駅",
+    "line": "京王高尾線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "館山",
+    "station": "館山駅",
+    "line": "JR内房線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "五箇山",
+    "station": "金沢駅",
+    "line": "JR北陸本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "定山渓",
+    "station": "札幌駅",
+    "line": "JR函館本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "美瑛",
+    "station": "美瑛駅",
+    "line": "JR富良野線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "宮古",
+    "station": "宮古駅",
+    "line": "JR山田線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "酒田",
+    "station": "酒田駅",
+    "line": "JR羽越本線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "高千穂",
+    "station": "熊本駅",
+    "line": "JR鹿児島本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "奄美大島",
+    "station": null,
+    "line": null,
+    "prefecture": "九州"
+  },
+  {
+    "destination": "五島列島",
+    "station": null,
+    "line": null,
+    "prefecture": "九州"
+  },
+  {
+    "destination": "雲仙",
+    "station": "諫早駅",
+    "line": "JR長崎本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "足摺岬",
+    "station": "中村駅",
+    "line": "土佐くろしお鉄道ごめん・なはり線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "大歩危",
+    "station": "大歩危駅",
+    "line": "JR土讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "津和野",
+    "station": "津和野駅",
+    "line": "JR山口線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "犬山",
+    "station": "犬山駅",
+    "line": "名鉄犬山線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "木曽",
+    "station": "南木曽駅",
+    "line": "JR中央本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "美山",
+    "station": "園部駅",
+    "line": "JR山陰本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "立山黒部",
+    "station": "立山駅",
+    "line": "富山地方鉄道",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "氷見",
+    "station": "氷見駅",
+    "line": "JR氷見線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "乳頭温泉",
+    "station": "田沢湖駅",
+    "line": "秋田新幹線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "湯田温泉",
+    "station": "湯田温泉駅",
+    "line": "JR山口線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "嬉野温泉",
+    "station": "嬉野温泉駅",
+    "line": "JR西九州新幹線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "小布施",
+    "station": "小布施駅",
+    "line": "長野電鉄",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "内子",
+    "station": "内子駅",
+    "line": "JR予讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "室戸",
+    "station": "高知駅",
+    "line": "JR土讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "祖谷",
+    "station": "阿波池田駅",
+    "line": "JR土讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "奥出雲",
+    "station": "木次駅",
+    "line": "JR木次線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "銀山温泉",
+    "station": "大石田駅",
+    "line": "JR奥羽本線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "大内宿",
+    "station": "会津若松駅",
+    "line": "JR磐越西線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "野沢温泉",
+    "station": "飯山駅",
+    "line": "JR北陸新幹線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "竹原",
+    "station": "竹原駅",
+    "line": "JR呉線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "妻籠",
+    "station": "南木曽駅",
+    "line": "JR中央本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "馬籠",
+    "station": "中津川駅",
+    "line": "JR中央本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "長浜",
+    "station": "長浜駅",
+    "line": "JR北陸本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "彦根",
+    "station": "彦根駅",
+    "line": "JR琵琶湖線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "高野山",
+    "station": "高野山駅",
+    "line": "南海高野線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "下呂温泉",
+    "station": "下呂駅",
+    "line": "JR高山本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "鳴子温泉",
+    "station": "鳴子温泉駅",
+    "line": "JR陸羽東線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "四万温泉",
+    "station": "中之条駅",
+    "line": "JR吾妻線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "弘前",
+    "station": "弘前駅",
+    "line": "JR奥羽本線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "奥入瀬",
+    "station": "八戸駅",
+    "line": "JR東北新幹線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "益子",
+    "station": "益子駅",
+    "line": "真岡鐵道真岡線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "別所温泉",
+    "station": "別所温泉駅",
+    "line": "上田電鉄別所線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "出石",
+    "station": "豊岡駅",
+    "line": "JR山陰本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "和倉温泉",
+    "station": "和倉温泉駅",
+    "line": "JR七尾線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "三朝温泉",
+    "station": "倉吉駅",
+    "line": "JR山陰本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "飫肥",
+    "station": "飫肥駅",
+    "line": "JR日南線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "人吉",
+    "station": "人吉駅",
+    "line": "JR肥薩線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "上高地",
+    "station": "松本駅",
+    "line": "JR篠ノ井線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "水上温泉",
+    "station": "水上駅",
+    "line": "JR上越線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "南阿蘇",
+    "station": "熊本駅",
+    "line": "JR鹿児島本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "今治",
+    "station": "今治駅",
+    "line": "JR予讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "大洲",
+    "station": "伊予大洲駅",
+    "line": "JR予讃線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "積丹",
+    "station": "小樽駅",
+    "line": "JR函館本線",
+    "prefecture": "北海道"
+  },
+  {
+    "destination": "出雲",
+    "station": "出雲市駅",
+    "line": "JR山陰本線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "能登",
+    "station": "金沢駅",
+    "line": "JR北陸本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "吉野",
+    "station": "吉野駅",
+    "line": "近鉄吉野線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "熊野",
+    "station": "新宮駅",
+    "line": "JR紀勢本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "西表島",
+    "station": null,
+    "line": null,
+    "prefecture": "沖縄"
+  },
+  {
+    "destination": "高梁",
+    "station": "備中高梁駅",
+    "line": "JR伯備線",
+    "prefecture": "中国"
+  },
+  {
+    "destination": "飛騨古川",
+    "station": "飛騨古川駅",
+    "line": "JR高山本線",
+    "prefecture": "中部"
+  },
+  {
+    "destination": "豊後高田",
+    "station": null,
+    "line": null,
+    "prefecture": "九州"
+  },
+  {
+    "destination": "伊豆高原",
+    "station": "伊豆高原駅",
+    "line": "伊豆急行線",
+    "prefecture": "関東"
+  },
+  {
+    "destination": "三陸",
+    "station": "宮古駅",
+    "line": "JR山田線",
+    "prefecture": "東北"
+  },
+  {
+    "destination": "田辺",
+    "station": "紀伊田辺駅",
+    "line": "JR紀勢本線",
+    "prefecture": "近畿"
+  },
+  {
+    "destination": "土佐清水",
+    "station": "中村駅",
+    "line": "土佐くろしお鉄道ごめん・なはり線",
+    "prefecture": "四国"
+  },
+  {
+    "destination": "日南",
+    "station": "日南駅",
+    "line": "JR日南線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "門司港",
+    "station": "門司港駅",
+    "line": "JR鹿児島本線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "糸島",
+    "station": "筑前前原駅",
+    "line": "JR筑肥線",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "島原",
+    "station": "島原駅",
+    "line": "島原鉄道",
+    "prefecture": "九州"
+  },
+  {
+    "destination": "敦賀",
+    "station": "敦賀駅",
+    "line": "JR北陸新幹線",
+    "prefecture": "中部"
+  }
+]
