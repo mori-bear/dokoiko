@@ -929,6 +929,7 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.18s ease;
+  white-space: nowrap;
 }
 
 .stay-buttons a:hover { opacity: 0.86; }
@@ -980,3 +981,49 @@ body {
 }
 
 .car-block a:hover { background: #f5f5f5; }
+
+/* ── nearby / itinerary ── */
+
+.nearby-row {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.nearby-label {
+  font-size: 11px;
+  color: #888;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.nearby-tag {
+  font-size: 12px;
+  color: #555;
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.itinerary-row {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.itin-step {
+  background: #f0f4f8;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.itin-arrow {
+  color: #bbb;
+  font-size: 11px;
+}

@@ -6,14 +6,11 @@ import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
 import { loadDestinations } from './src/data/index.js';
 
-const DEFAULT_GUESTS = 2;
-
 const state = {
   destinations: [],
   departure:    '東京',
   stayType:     '1night',
   theme:        null,
-  people:       DEFAULT_GUESTS,
   pool:         [],
   poolIndex:    0,
 };

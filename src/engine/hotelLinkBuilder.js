@@ -36,16 +36,17 @@ export function buildHotelLinks(city) {
 /** 楽天 target URL（テスト用にも export）*/
 export function buildRakutenTarget(city) {
   const keyword = resolveKeyword(city);
-  return `https://travel.rakuten.co.jp/?keyword=${encodeURIComponent(keyword)}`;
+  return `https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(keyword)}`;
 }
 
 function buildRakutenHotelLink(city) {
   const keyword = resolveKeyword(city);
   const target  = buildRakutenTarget(city);
+  // pc パラメータはRakutenの仕様に合わせてそのまま連結（keyword のみ encode 済み）
   return {
     type:  'rakuten',
     label: `${keyword}の宿を見る（楽天）`,
-    url:   RAKUTEN_AFF + encodeURIComponent(target),
+    url:   RAKUTEN_AFF + target,
   };
 }
 

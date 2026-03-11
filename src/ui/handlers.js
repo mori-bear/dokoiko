@@ -27,21 +27,10 @@ export function bindHandlers(state, onGo, onRetry) {
         return;
       }
 
-      if (group === 'people') {
-        setActive('[data-group="people"]', selBtn);
-        state.people = parseInt(value, 10);
-        return;
-      }
-
       if (group === 'theme') {
-        // 再クリックで解除（任意選択）
-        if (selBtn.classList.contains('active')) {
-          selBtn.classList.remove('active');
-          state.theme = null;
-        } else {
-          setActive('[data-group="theme"]', selBtn);
-          state.theme = value;
-        }
+        setActive('[data-group="theme"]', selBtn);
+        // value='' は「こだわらない」= テーマなし
+        state.theme = value || null;
         return;
       }
     }

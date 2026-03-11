@@ -44,6 +44,9 @@ function buildCityBlock(city) {
   const categoryBadge = buildCategoryBadge(city);
   const spotListHtml  = buildSpotList(city.landmarks ?? city.spots);
 
+  const nearbyHtml   = buildNearbyList(city.nearby);
+  const itineraryHtml = buildItineraryList(city.itinerary);
+
   return `
     <div class="city-block">
       <div class="city-header">
@@ -53,8 +56,22 @@ function buildCityBlock(city) {
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       ${spotListHtml}
       <div class="city-appeal">${descriptionHtml}</div>
+      ${nearbyHtml}
+      ${itineraryHtml}
     </div>
   `;
+}
+
+function buildNearbyList(nearby) {
+  if (!Array.isArray(nearby) || nearby.length === 0) return '';
+  const items = nearby.map(n => `<span class="nearby-tag">${n}</span>`).join('');
+  return `<div class="nearby-row"><span class="nearby-label">この旅先の近く</span>${items}</div>`;
+}
+
+function buildItineraryList(itinerary) {
+  if (!Array.isArray(itinerary) || itinerary.length === 0) return '';
+  const items = itinerary.map((s, i) => `<span class="itin-step">${s}</span>${i < itinerary.length - 1 ? '<span class="itin-arrow">→</span>' : ''}`).join('');
+  return `<div class="itinerary-row">${items}</div>`;
 }
 
 function buildSpotList(spots) {
@@ -137,21 +154,11 @@ function btnClass(type) {
   return 'btn-primary';
 }
 
-function transportIcon(type) {
-  if (type === 'skyscanner')  return '✈ ';
-  if (type === 'jr-east' || type === 'jr-west' || type === 'jr-kyushu' || type === 'jr-ex') return '🚅 ';
-  if (type === 'ferry')       return '⛴ ';
-  if (type === 'google-maps') return '🗺 ';
-  if (type === 'rental')      return '🚗 ';
-  return '';
-}
-
 function buildLinkItem(link) {
-  const icon = transportIcon(link.type);
   return `
     <a href="${link.url}" target="_blank" rel="noopener noreferrer"
        class="btn ${btnClass(link.type)}">
-      ${icon}${link.label}
+      ${link.label}
     </a>
   `;
 }
