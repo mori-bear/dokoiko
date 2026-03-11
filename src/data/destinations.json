@@ -157,7 +157,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "那須",
+      "草津温泉",
+      "尾瀬",
+      "水上温泉"
+    ],
+    "itinerary": [
+      "東照宮",
+      "華厳の滝",
+      "中禅寺湖",
+      "いろは坂"
+    ]
   },
   {
     "id": "karuizawa",
@@ -196,7 +208,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "草津温泉",
+      "上田",
+      "長野",
+      "佐久"
+    ],
+    "itinerary": [
+      "旧軽井沢銀座",
+      "白糸の滝",
+      "雲場池",
+      "鬼押出し園"
+    ]
   },
   {
     "id": "fujikawaguchiko",
@@ -358,7 +382,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "能登",
+      "輪島",
+      "加賀温泉郷",
+      "白川郷"
+    ],
+    "itinerary": [
+      "兼六園",
+      "金沢城",
+      "ひがし茶屋街",
+      "近江町市場"
+    ]
   },
   {
     "id": "osaka-t",
@@ -445,7 +481,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "奈良",
+      "大阪",
+      "天橋立",
+      "伊根"
+    ],
+    "itinerary": [
+      "伏見稲荷",
+      "嵐山",
+      "清水寺",
+      "金閣寺"
+    ]
   },
   {
     "id": "hiroshima-t",
@@ -491,7 +539,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "宮島",
+      "尾道",
+      "竹原",
+      "岩国"
+    ],
+    "itinerary": [
+      "平和記念公園",
+      "厳島神社",
+      "広島城",
+      "呉"
+    ]
   },
   {
     "id": "fukuoka-t",
@@ -580,7 +640,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "小樽",
+      "定山渓",
+      "支笏湖",
+      "富良野"
+    ],
+    "itinerary": [
+      "大通公園",
+      "北海道神宮",
+      "すすきの",
+      "札幌時計台"
+    ]
   },
   {
     "id": "nara",
@@ -950,7 +1022,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "鳥羽",
+      "志摩",
+      "松阪",
+      "熊野古道"
+    ],
+    "itinerary": [
+      "伊勢神宮外宮",
+      "伊勢神宮内宮",
+      "おかげ横丁",
+      "二見浦"
+    ]
   },
   {
     "id": "saga",
@@ -1068,7 +1152,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "雲仙",
+      "佐世保",
+      "五島列島",
+      "平戸"
+    ],
+    "itinerary": [
+      "平和公園",
+      "グラバー園",
+      "出島",
+      "稲佐山展望台"
+    ]
   },
   {
     "id": "beppu",
@@ -1107,7 +1203,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "湯布院",
+      "大分",
+      "阿蘇",
+      "臼杵"
+    ],
+    "itinerary": [
+      "地獄めぐり",
+      "竹瓦温泉",
+      "鉄輪温泉",
+      "明礬温泉"
+    ]
   },
   {
     "id": "kagoshima",
@@ -1387,7 +1495,18 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "大沼",
+      "洞爺湖",
+      "登別"
+    ],
+    "itinerary": [
+      "函館山夜景",
+      "元町教会群",
+      "朝市",
+      "五稜郭"
+    ]
   },
   {
     "id": "matsushima",
@@ -1427,7 +1546,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "仙台",
+      "平泉",
+      "鳴子温泉",
+      "塩竈"
+    ],
+    "itinerary": [
+      "松島湾遊覧",
+      "瑞巌寺",
+      "五大堂",
+      "円通院"
+    ]
   },
   {
     "id": "yamagata",
@@ -1625,7 +1756,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "竹原",
+      "しまなみ海道",
+      "因島",
+      "向島"
+    ],
+    "itinerary": [
+      "千光寺",
+      "猫の細道",
+      "おのみち文学の館",
+      "ロープウェイ"
+    ]
   },
   {
     "id": "matsuyama",
@@ -1669,7 +1812,18 @@
       ]
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "道後温泉",
+      "今治",
+      "大洲",
+      "内子"
+    ],
+    "itinerary": [
+      "松山城",
+      "道後温泉",
+      "坂の上の雲ミュージアム"
+    ]
   },
   {
     "id": "tokushima",
@@ -1922,7 +2076,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "石垣島",
+      "宮古島",
+      "渡嘉敷島",
+      "久米島"
+    ],
+    "itinerary": [
+      "首里城",
+      "国際通り",
+      "守礼門",
+      "識名園"
+    ]
   },
   {
     "id": "tokashiki-jima",
@@ -2336,7 +2502,19 @@
       "type": "bus",
       "from": "金沢駅",
       "to": "白川郷"
-    }
+    },
+    "nearby": [
+      "五箇山",
+      "高山",
+      "金沢",
+      "富山"
+    ],
+    "itinerary": [
+      "荻町合掌集落",
+      "展望台",
+      "和田家",
+      "明善寺"
+    ]
   },
   {
     "id": "arima-onsen",
@@ -2424,7 +2602,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "天橋立",
+      "出石",
+      "竹野",
+      "余部橋梁"
+    ],
+    "itinerary": [
+      "外湯めぐり",
+      "山陰海岸",
+      "城崎ロープウェイ",
+      "じゃじゃのかに鍋"
+    ]
   },
   {
     "id": "kurashiki-o",
@@ -2466,7 +2656,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "岡山",
+      "尾道",
+      "鷲羽山",
+      "倉敷美観地区"
+    ],
+    "itinerary": [
+      "倉敷美観地区",
+      "大原美術館",
+      "阿智神社",
+      "倉敷アイビースクエア"
+    ]
   },
   {
     "id": "shirahama-o",
@@ -2548,7 +2750,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "白川郷",
+      "五箇山",
+      "下呂温泉",
+      "飛騨古川"
+    ],
+    "itinerary": [
+      "古い町並み",
+      "飛騨民族村",
+      "宮川朝市",
+      "飛騨の里"
+    ]
   },
   {
     "id": "toba",
@@ -2672,7 +2886,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "別府",
+      "阿蘇",
+      "黒川温泉",
+      "日田"
+    ],
+    "itinerary": [
+      "湯の坪街道",
+      "由布岳",
+      "金鱗湖",
+      "辻馬車"
+    ]
   },
   {
     "id": "kurokawa-k",
@@ -2968,7 +3194,19 @@
       "ferry": []
     },
     "accessHub": null,
-    "railNote": null
+    "railNote": null,
+    "nearby": [
+      "裏磐梯",
+      "大内宿",
+      "喜多方",
+      "猪苗代"
+    ],
+    "itinerary": [
+      "鶴ヶ城",
+      "さざえ堂",
+      "飯盛山",
+      "大内宿"
+    ]
   },
   {
     "id": "zaosan",
@@ -6216,5 +6454,1148 @@
     },
     "accessHub": null,
     "railNote": null
+  },
+  {
+    "id": "imabari",
+    "name": "今治",
+    "type": "destination",
+    "region": "四国",
+    "hub": "matsuyama",
+    "hotelHub": "今治",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "松山",
+      "高松",
+      "広島"
+    ],
+    "weight": 1.2,
+    "description": "しまなみ海道の起点。サイクリストの聖地として名高く、瀬戸内の島々を橋で結ぶ絶景ルートが広がる。今治城も必見。",
+    "tags": [
+      "しまなみ海道",
+      "サイクリング",
+      "城"
+    ],
+    "spots": [
+      "しまなみ海道",
+      "今治城",
+      "来島海峡大橋"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "今治",
+    "gateways": {
+      "rail": [
+        "今治駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "松山",
+      "尾道",
+      "大島",
+      "伯方島"
+    ],
+    "itinerary": [
+      "今治城",
+      "来島海峡大橋",
+      "しまなみ海道サイクリング"
+    ]
+  },
+  {
+    "id": "ozu",
+    "name": "大洲",
+    "type": "destination",
+    "region": "四国",
+    "hub": "matsuyama",
+    "hotelHub": "大洲",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "松山",
+      "高松"
+    ],
+    "weight": 1.2,
+    "description": "伊予の小京都と呼ばれる城下町。肱川に臨む大洲城と、江戸から続く町並みが旅人を迎える。鵜飼の川面も情緒豊か。",
+    "tags": [
+      "城下町",
+      "肱川",
+      "鵜飼"
+    ],
+    "spots": [
+      "大洲城",
+      "臥龍山荘",
+      "おはなはん通り"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "大洲",
+    "gateways": {
+      "rail": [
+        "伊予大洲駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "松山",
+      "内子",
+      "宇和島",
+      "下灘"
+    ],
+    "itinerary": [
+      "大洲城",
+      "臥龍山荘",
+      "おはなはん通り",
+      "肱川遊覧"
+    ]
+  },
+  {
+    "id": "shakotan",
+    "name": "積丹",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "sapporo-t",
+    "hotelHub": "積丹",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "札幌",
+      "旭川"
+    ],
+    "weight": 1.2,
+    "description": "北海道西岸の半島に広がる「積丹ブルー」の絶景。透き通るコバルトブルーの海と断崖絶壁、ウニ料理が旅の醍醐味。",
+    "tags": [
+      "絶景",
+      "海",
+      "グルメ"
+    ],
+    "spots": [
+      "神威岬",
+      "積丹岬",
+      "島武意海岸"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "積丹",
+    "gateways": {
+      "rail": [
+        "小樽駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "小樽",
+    "railNote": "バスあり",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "小樽駅",
+      "to": "積丹"
+    },
+    "nearby": [
+      "小樽",
+      "余市",
+      "ニセコ",
+      "岩内"
+    ],
+    "itinerary": [
+      "神威岬",
+      "島武意海岸",
+      "積丹岬",
+      "ウニ料理"
+    ]
+  },
+  {
+    "id": "izumo",
+    "name": "出雲",
+    "type": "destination",
+    "region": "中国",
+    "hub": "matsue",
+    "hotelHub": "出雲",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "松江",
+      "広島",
+      "岡山"
+    ],
+    "weight": 1.2,
+    "description": "縁結びの神様で名高い出雲大社を擁する古代のまち。神話の舞台として日本最古の歴史を伝え、出雲そばも絶品。",
+    "tags": [
+      "神社",
+      "歴史",
+      "グルメ"
+    ],
+    "spots": [
+      "出雲大社",
+      "稲佐の浜",
+      "古代出雲歴史博物館"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "出雲",
+    "gateways": {
+      "rail": [
+        "出雲市駅"
+      ],
+      "airport": [
+        "出雲縁結び空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "松江",
+      "境港",
+      "美保関",
+      "石見銀山"
+    ],
+    "itinerary": [
+      "出雲大社",
+      "稲佐の浜",
+      "古代出雲歴史博物館",
+      "出雲そば"
+    ]
+  },
+  {
+    "id": "fukui",
+    "name": "福井",
+    "type": "hub",
+    "region": "中部",
+    "hotelHub": "福井",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 0.3,
+    "description": "恐竜王国・北陸の名城の地。東尋坊の断崖、一乗谷朝倉氏遺跡、越前がにが旅人を迎える。北陸新幹線開業で注目度急上昇。",
+    "tags": [
+      "グルメ",
+      "歴史",
+      "絶景"
+    ],
+    "spots": [
+      "東尋坊",
+      "一乗谷朝倉氏遺跡",
+      "恐竜博物館"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "hotelSearch": "福井",
+    "gateways": {
+      "rail": [
+        "福井駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "金沢",
+      "敦賀",
+      "永平寺",
+      "越前海岸"
+    ],
+    "itinerary": [
+      "東尋坊",
+      "一乗谷朝倉氏遺跡",
+      "恐竜博物館",
+      "越前がに"
+    ]
+  },
+  {
+    "id": "noto",
+    "name": "能登",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "hotelHub": "和倉温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "金沢",
+      "富山",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "奥能登の里山里海。千枚田の棚田景観、輪島の朝市、白米千枚田のイルミネーション。日本の原風景が残る半島の旅。",
+    "tags": [
+      "絶景",
+      "自然",
+      "グルメ"
+    ],
+    "spots": [
+      "白米千枚田",
+      "輪島朝市",
+      "御陣乗太鼓"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "能登和倉温泉",
+    "gateways": {
+      "rail": [
+        "金沢駅"
+      ],
+      "airport": [
+        "小松空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "金沢",
+    "railNote": "バスあり",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "金沢駅",
+      "to": "能登"
+    },
+    "nearby": [
+      "輪島",
+      "珠洲",
+      "和倉温泉",
+      "七尾"
+    ],
+    "itinerary": [
+      "白米千枚田",
+      "輪島朝市",
+      "禄剛崎",
+      "見附島"
+    ]
+  },
+  {
+    "id": "yoshino",
+    "name": "吉野",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "nara",
+    "hotelHub": "吉野",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "奈良",
+      "大阪",
+      "京都",
+      "名古屋"
+    ],
+    "weight": 1.2,
+    "description": "日本一の桜の名所として名高い修験道の山。3万本の桜が山肌を染める春の圧倒的な景観は一生の記憶に残る。",
+    "tags": [
+      "絶景",
+      "自然",
+      "歴史"
+    ],
+    "spots": [
+      "吉野山",
+      "金峯山寺",
+      "吉水神社"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "吉野",
+    "gateways": {
+      "rail": [
+        "吉野駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "奈良",
+      "高野山",
+      "熊野古道",
+      "橿原"
+    ],
+    "itinerary": [
+      "吉野山（桜）",
+      "金峯山寺",
+      "吉水神社",
+      "青根ヶ峰"
+    ]
+  },
+  {
+    "id": "kumano",
+    "name": "熊野",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "nara",
+    "hotelHub": "新宮",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "名古屋",
+      "京都",
+      "奈良"
+    ],
+    "weight": 1.2,
+    "description": "世界遺産・熊野古道が走る信仰と癒しの地。那智の滝、熊野本宮大社、瀞峡の秘境が旅人の心を深く揺さぶる。",
+    "tags": [
+      "歴史",
+      "自然",
+      "絶景"
+    ],
+    "spots": [
+      "熊野那智大社",
+      "那智の滝",
+      "瀞峡"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "熊野新宮",
+    "gateways": {
+      "rail": [
+        "新宮駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "那智勝浦",
+      "白浜",
+      "伊勢",
+      "吉野"
+    ],
+    "itinerary": [
+      "熊野那智大社",
+      "那智の滝",
+      "熊野本宮大社",
+      "瀞峡"
+    ]
+  },
+  {
+    "id": "iriomote",
+    "name": "西表島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "ishigaki",
+    "hotelHub": "西表島",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "石垣島",
+      "那覇",
+      "福岡"
+    ],
+    "weight": 1.5,
+    "description": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境。カヤック、マングローブクルーズ、星砂の浜が非日常を演出する。",
+    "tags": [
+      "自然",
+      "海",
+      "離島"
+    ],
+    "spots": [
+      "ピナイサーラの滝",
+      "由布島",
+      "仲間川マングローブ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "西表島",
+    "gateways": {
+      "rail": [],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "石垣港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "石垣島",
+      "波照間島",
+      "与那国島",
+      "竹富島"
+    ],
+    "itinerary": [
+      "ピナイサーラの滝",
+      "仲間川マングローブ",
+      "由布島",
+      "星砂の浜"
+    ]
+  },
+  {
+    "id": "takahashi",
+    "name": "高梁",
+    "type": "destination",
+    "region": "中国",
+    "hub": "okayama-o",
+    "hotelHub": "高梁",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "岡山",
+      "広島",
+      "倉敷"
+    ],
+    "weight": 1.2,
+    "description": "天空の山城・備中松山城で知られる城下町。雲海に浮かぶ天守は日本の絶景百選に選ばれ、武家屋敷の町並みが続く。",
+    "tags": [
+      "城",
+      "歴史",
+      "絶景"
+    ],
+    "spots": [
+      "備中松山城",
+      "武家屋敷群",
+      "吹屋ふるさと村"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "高梁",
+    "gateways": {
+      "rail": [
+        "備中高梁駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "倉敷",
+      "新見",
+      "成羽",
+      "津山"
+    ],
+    "itinerary": [
+      "備中松山城（雲海）",
+      "武家屋敷群",
+      "吹屋ふるさと村",
+      "頼久寺"
+    ]
+  },
+  {
+    "id": "hida-furukawa",
+    "name": "飛騨古川",
+    "type": "destination",
+    "region": "中部",
+    "hub": "takayama-o",
+    "hotelHub": "飛騨古川",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "名古屋",
+      "富山",
+      "金沢",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "映画「君の名は。」の舞台として世界的に有名な小京都。白壁の土蔵と瀬戸川に鯉が泳ぐ風景は高山より静かで趣深い。",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "自然"
+    ],
+    "spots": [
+      "瀬戸川と白壁土蔵街",
+      "三嶋和ろうそく店",
+      "飛騨古川まつり会館"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "飛騨古川",
+    "gateways": {
+      "rail": [
+        "飛騨古川駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "高山",
+      "白川郷",
+      "下呂温泉",
+      "神岡"
+    ],
+    "itinerary": [
+      "瀬戸川と白壁土蔵街",
+      "円光寺",
+      "気多若宮神社",
+      "飛騨古川まつり会館"
+    ]
+  },
+  {
+    "id": "bungo-takada",
+    "name": "豊後高田",
+    "type": "destination",
+    "region": "九州",
+    "hub": "beppu",
+    "hotelHub": "豊後高田",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡",
+      "大分",
+      "別府",
+      "熊本"
+    ],
+    "weight": 1.2,
+    "description": "昭和30年代の町並みが蘇った「昭和の町」。廃れていた商店街を住民が昭和レトロに再生した感動のまちづくりが話題。",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "レトロ"
+    ],
+    "spots": [
+      "昭和の町",
+      "真玉海岸",
+      "富貴寺"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "豊後高田",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "大分空港",
+    "railNote": "バスあり",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "大分空港",
+      "to": "豊後高田"
+    },
+    "nearby": [
+      "宇佐",
+      "中津",
+      "別府",
+      "国東半島"
+    ],
+    "itinerary": [
+      "昭和の町",
+      "真玉海岸",
+      "富貴寺",
+      "熊野磨崖仏"
+    ]
+  },
+  {
+    "id": "izu-kogen",
+    "name": "伊豆高原",
+    "type": "destination",
+    "region": "中部",
+    "hub": "atami",
+    "hotelHub": "伊豆高原",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "横浜",
+      "静岡",
+      "名古屋"
+    ],
+    "weight": 1.2,
+    "description": "伊豆半島の東岸に広がる高原リゾート。桜のトンネル、大室山のお鉢めぐり、富士山を望む海岸線のドライブが楽しめる。",
+    "tags": [
+      "温泉",
+      "絶景",
+      "リゾート"
+    ],
+    "spots": [
+      "大室山",
+      "城ヶ崎海岸",
+      "シャボテン動物公園"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "伊豆高原",
+    "gateways": {
+      "rail": [
+        "伊豆高原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "熱海",
+      "下田",
+      "修善寺",
+      "伊東"
+    ],
+    "itinerary": [
+      "大室山",
+      "城ヶ崎海岸",
+      "伊豆シャボテン動物公園",
+      "温泉"
+    ]
+  },
+  {
+    "id": "sanriku",
+    "name": "三陸",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "hotelHub": "宮古",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台",
+      "盛岡",
+      "東京"
+    ],
+    "weight": 1.2,
+    "description": "リアス式海岸が連なる東北の絶景海岸。浄土ヶ浜の白砂と青い海、新鮮な海の幸。震災を乗り越えた人々の力強さも感じる。",
+    "tags": [
+      "自然",
+      "海",
+      "グルメ"
+    ],
+    "spots": [
+      "浄土ヶ浜",
+      "碁石海岸",
+      "北山崎"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "三陸宮古",
+    "gateways": {
+      "rail": [
+        "宮古駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "宮古",
+      "大船渡",
+      "気仙沼",
+      "盛岡"
+    ],
+    "itinerary": [
+      "浄土ヶ浜",
+      "碁石海岸",
+      "北山崎",
+      "磯料理"
+    ]
+  },
+  {
+    "id": "tanabe",
+    "name": "田辺",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "nara",
+    "hotelHub": "白浜",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "名古屋",
+      "京都"
+    ],
+    "weight": 1.2,
+    "description": "熊野古道の起点・紀伊田辺。弁慶生誕の地として知られ、白浜温泉や熊野詣への玄関口として古くから旅人が集まる。",
+    "tags": [
+      "歴史",
+      "温泉",
+      "自然"
+    ],
+    "spots": [
+      "闘鶏神社",
+      "熊野古道・中辺路",
+      "白浜温泉"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "白浜",
+    "gateways": {
+      "rail": [
+        "紀伊田辺駅"
+      ],
+      "airport": [
+        "南紀白浜空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "白浜",
+      "熊野",
+      "高野山",
+      "那智勝浦"
+    ],
+    "itinerary": [
+      "闘鶏神社",
+      "熊野古道・中辺路",
+      "白浜",
+      "千畳敷"
+    ]
+  },
+  {
+    "id": "tosa-shimizu",
+    "name": "土佐清水",
+    "type": "destination",
+    "region": "四国",
+    "hub": "kochi",
+    "hotelHub": "土佐清水",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "高知",
+      "松山",
+      "徳島"
+    ],
+    "weight": 1.2,
+    "description": "四国最南端の岬・足摺岬を擁する絶景の街。黒潮が洗う断崖の灯台、ジョン万次郎の故郷、竜串の奇岩海岸が旅人を引き寄せる。",
+    "tags": [
+      "絶景",
+      "海",
+      "歴史"
+    ],
+    "spots": [
+      "足摺岬",
+      "竜串海岸",
+      "ジョン万次郎資料館"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "土佐清水",
+    "gateways": {
+      "rail": [
+        "中村駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "中村",
+    "railNote": "バスあり",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "中村駅",
+      "to": "土佐清水"
+    },
+    "nearby": [
+      "高知",
+      "宿毛",
+      "足摺岬",
+      "四万十川"
+    ],
+    "itinerary": [
+      "足摺岬",
+      "金剛福寺",
+      "竜串海岸",
+      "ジョン万次郎資料館"
+    ]
+  },
+  {
+    "id": "nichinan",
+    "name": "日南",
+    "type": "destination",
+    "region": "九州",
+    "hub": "miyazaki",
+    "hotelHub": "日南",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "宮崎",
+      "鹿児島",
+      "福岡"
+    ],
+    "weight": 1.2,
+    "description": "日向灘に面した南国の宮崎を代表する海辺の町。飫肥城下町、青島神社、鵜戸神宮を結ぶ日南フェニックスロードは圧巻。",
+    "tags": [
+      "海",
+      "歴史",
+      "南国"
+    ],
+    "spots": [
+      "鵜戸神宮",
+      "青島神社",
+      "飫肥城下町"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "日南",
+    "gateways": {
+      "rail": [
+        "日南駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "宮崎",
+      "串間",
+      "飫肥",
+      "都城"
+    ],
+    "itinerary": [
+      "青島神社",
+      "鵜戸神宮",
+      "飫肥城下町",
+      "堀切峠"
+    ]
+  },
+  {
+    "id": "mojiko",
+    "name": "門司港",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "hotelHub": "門司港",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡",
+      "熊本",
+      "長崎"
+    ],
+    "weight": 1.2,
+    "description": "明治・大正の洋館が立ち並ぶレトロな港町。関門海峡に臨む赤煉瓦の街並み、焼きカレーの食文化、海峡花火大会が魅力。",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "グルメ"
+    ],
+    "spots": [
+      "門司港レトロ",
+      "関門海峡",
+      "旧大阪商船"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "門司港",
+    "gateways": {
+      "rail": [
+        "門司港駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "下関",
+      "北九州",
+      "小倉",
+      "唐津"
+    ],
+    "itinerary": [
+      "門司港レトロ",
+      "関門海峡展望台",
+      "旧大阪商船",
+      "焼きカレー"
+    ]
+  },
+  {
+    "id": "itoshima",
+    "name": "糸島",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "hotelHub": "糸島",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡",
+      "佐賀",
+      "長崎"
+    ],
+    "weight": 1.2,
+    "description": "福岡市の隣に広がる絶景の半島。二見ヶ浦の夫婦岩、透明な白い砂浜、おしゃれなカフェが並び「九州のハワイ」とも称される。",
+    "tags": [
+      "海",
+      "絶景",
+      "グルメ"
+    ],
+    "spots": [
+      "二見ヶ浦",
+      "芥屋の大門",
+      "マリノアシティ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "糸島",
+    "gateways": {
+      "rail": [
+        "筑前前原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "福岡",
+      "唐津",
+      "佐賀",
+      "平戸"
+    ],
+    "itinerary": [
+      "二見ヶ浦",
+      "芥屋の大門",
+      "カキ小屋",
+      "白糸の滝"
+    ]
+  },
+  {
+    "id": "shimabara",
+    "name": "島原",
+    "type": "destination",
+    "region": "九州",
+    "hub": "nagasaki",
+    "hotelHub": "島原",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "長崎",
+      "熊本",
+      "福岡"
+    ],
+    "weight": 1.2,
+    "description": "島原の乱の舞台となった歴史の城下町。普賢岳の噴火跡と眉山、鯉の泳ぐ湧水の小路、島原城の白亜の天守が印象的。",
+    "tags": [
+      "歴史",
+      "城",
+      "自然"
+    ],
+    "spots": [
+      "島原城",
+      "湧水庭園四明荘",
+      "眉山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "島原",
+    "gateways": {
+      "rail": [
+        "島原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "長崎",
+      "雲仙",
+      "熊本",
+      "天草"
+    ],
+    "itinerary": [
+      "島原城",
+      "湧水庭園四明荘",
+      "鯉の泳ぐまち",
+      "雲仙地獄"
+    ]
+  },
+  {
+    "id": "tsuruga",
+    "name": "敦賀",
+    "type": "destination",
+    "region": "中部",
+    "hub": "fukui",
+    "hotelHub": "敦賀",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "大阪",
+      "京都",
+      "名古屋",
+      "金沢"
+    ],
+    "weight": 1.2,
+    "description": "日本海に面した港町。北陸新幹線の玄関口として注目の地。透明な気比の松原海水浴場、鮮魚市場の海の幸が旅を彩る。",
+    "tags": [
+      "海",
+      "グルメ",
+      "歴史"
+    ],
+    "spots": [
+      "気比神宮",
+      "気比の松原",
+      "敦賀赤レンガ倉庫"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "hotelSearch": "敦賀",
+    "gateways": {
+      "rail": [
+        "敦賀駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "nearby": [
+      "福井",
+      "小浜",
+      "琵琶湖",
+      "近江今津"
+    ],
+    "itinerary": [
+      "気比神宮",
+      "気比の松原",
+      "日本海さかな街",
+      "赤レンガ倉庫"
+    ]
   }
 ]
