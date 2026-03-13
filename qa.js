@@ -91,10 +91,11 @@ const AIRPORT_IATA = {
   '宮古空港':'MMY','米子空港':'YGJ','女満別空港':'MMB','中標津空港':'SHB',
   '屋久島空港':'KUM','奄美空港':'ASJ','五島福江空港':'FUJ','青森空港':'AOJ',
   '阿蘇くまもと空港':'KMJ','静岡空港':'FSZ','出雲空港':'IZO',
+  '出雲縁結び空港':'IZO','小松空港':'KMQ','大分空港':'OIT','南紀白浜空港':'SHM',
 };
 
 const FLIGHT_ROUTES = {
-  'HND':['CTS','MMB','KUH','SHB','AOJ','SDJ','HNA','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','OIT','HIJ','OKJ','MYJ','KCZ','TKS','TAK','YGJ','IZO','FSZ','KUM','ASJ','FUJ'],
+  'HND':['CTS','MMB','KUH','SHB','AOJ','SDJ','HNA','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','OIT','HIJ','OKJ','MYJ','KCZ','TKS','TAK','YGJ','IZO','FSZ','KUM','ASJ','FUJ','KMQ','SHM'],
   'ITM':['CTS','SDJ','AOJ','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','MYJ','KCZ','TKS','KUM','ASJ','FUJ'],
   'NRT':['CTS','OKA','FUK','SDJ'],
   'NGO':['CTS','SDJ','OKA','FUK','KOJ','KMI'],
@@ -115,6 +116,8 @@ const FLIGHT_ROUTES = {
   'YGJ':['HND'],
   'KMQ':['HND'],
   'TOY':['HND'],
+  'OIT':['HND','ITM'],
+  'SHM':['HND'],
   'UKB':['OKA','FUK'],
   'HKD':['HND'],
   'AKJ':['HND','ITM'],
