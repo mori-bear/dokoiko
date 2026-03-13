@@ -92,14 +92,26 @@ const AIRPORT_IATA = {
   '屋久島空港':'KUM','奄美空港':'ASJ','五島福江空港':'FUJ','青森空港':'AOJ',
   '阿蘇くまもと空港':'KMJ','静岡空港':'FSZ','出雲空港':'IZO',
   '出雲縁結び空港':'IZO','小松空港':'KMQ','大分空港':'OIT','南紀白浜空港':'SHM',
+  // 追加（2024〜2025）
+  '対馬空港':'TSJ','種子島空港':'TNE','壱岐空港':'IKI','但馬空港':'TJH',
+  '岩国錦帯橋空港':'IWK','庄内空港':'SYO','徳島空港':'TKS','旭川空港':'AKJ',
+  '松本空港':'MMJ','岡山桃太郎空港':'OKJ','与那国空港':'OGN',
+  '長崎空港':'NGS','高知空港':'KCZ','鹿児島空港':'KOJ',
+};
+
+const AIRPORT_HUB_GATEWAY = {
+  '那覇':   '那覇空港',
+  '石垣':   '石垣空港',
+  '鹿児島': '鹿児島空港',
+  '福岡':   '福岡空港',
 };
 
 const FLIGHT_ROUTES = {
-  'HND':['CTS','MMB','KUH','SHB','AOJ','SDJ','HNA','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','OIT','HIJ','OKJ','MYJ','KCZ','TKS','TAK','YGJ','IZO','FSZ','KUM','ASJ','FUJ','KMQ','SHM'],
-  'ITM':['CTS','SDJ','AOJ','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','MYJ','KCZ','TKS','KUM','ASJ','FUJ'],
+  'HND':['CTS','MMB','KUH','SHB','AOJ','SDJ','HNA','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','OIT','HIJ','OKJ','MYJ','KCZ','TKS','TAK','YGJ','IZO','FSZ','KUM','ASJ','FUJ','KMQ','SHM','SYO','OGN','TNE'],
+  'ITM':['CTS','SDJ','SYO','AOJ','OKA','ISG','MMY','UEO','FUK','KOJ','KMI','KMJ','NGS','MYJ','KCZ','TKS','KUM','ASJ','FUJ'],
   'NRT':['CTS','OKA','FUK','SDJ'],
   'NGO':['CTS','SDJ','OKA','FUK','KOJ','KMI'],
-  'FUK':['HND','ITM','NGO','CTS','SDJ','OKA','ISG','MMY','UEO','KUM','ASJ'],
+  'FUK':['HND','ITM','NGO','CTS','SDJ','OKA','ISG','MMY','UEO','KUM','ASJ','TSJ','IKI'],
   'CTS':['HND','ITM','NGO','FUK','SDJ','OKA'],
   'SDJ':['HND','ITM','FUK','CTS','OKA','HIJ'],
   'HIJ':['HND','SDJ','OKA','FUK'],
@@ -107,10 +119,10 @@ const FLIGHT_ROUTES = {
   'MYJ':['HND','ITM','FUK'],
   'KCZ':['HND','ITM','FUK'],
   'TKS':['HND','ITM','FUK'],
-  'KOJ':['HND','ITM','NGO','OKA'],
+  'KOJ':['HND','ITM','NGO','OKA','TNE'],
   'KMI':['HND','ITM','FUK','OKA'],
   'KMJ':['HND','ITM'],
-  'NGS':['HND','ITM'],
+  'NGS':['HND','ITM','TSJ'],
   'OKJ':['HND','OKA'],
   'IZO':['HND','ITM'],
   'YGJ':['HND'],
@@ -124,6 +136,11 @@ const FLIGHT_ROUTES = {
   'HNA':['HND','ITM'],
   'MMJ':['HND'],
   'FSZ':['HND','FUK'],
+  'TSJ':['FUK','NGS'],
+  'TNE':['KOJ'],
+  'IKI':['FUK'],
+  'SYO':['HND','ITM'],
+  'OGN':['OKA','ISG'],
 };
 
 const THEME_TAG_ALIASES = {
@@ -253,7 +270,7 @@ function calcStarsQA(dep, city) {
   return d===0?2:3;
 }
 
-/** transport links を型配列で返す（簡易版）*/
+/** transport links を型配列で返す（簡易版・transportRenderer.js と同期）*/
 function getLinks(city, dep) {
   const fromCity = DEPARTURE_CITY_INFO[dep];
   if (!fromCity) return [];
@@ -261,14 +278,26 @@ function getLinks(city, dep) {
   const railGateway    = gw(city, 'railGateway');
   const airportGateway = gw(city, 'airportGateway');
   const ferryGateway   = gw(city, 'ferryGateway');
-  // island: ferry port list（gateways.ferry[]を使うケースも残す）
   const ferries = ferryGateway
     ? [ferryGateway]
     : (city.gateways?.ferry ?? []);
   const links   = [];
 
-  // 島フェリー優先
+  // 島: フェリー + 飛行機（airportHub対応）
   if (isIsland && ferries.length) {
+    // 飛行機（直行 or airportHub経由）
+    if (airportGateway && isFlightAvailable(dep, airportGateway)) {
+      links.push({ type:'skyscanner' });
+    } else {
+      const hub = city.airportHub;
+      if (hub) {
+        const hubAirport = AIRPORT_HUB_GATEWAY[hub];
+        if (hubAirport && isFlightAvailable(dep, hubAirport)) {
+          links.push({ type:'skyscanner' });
+        }
+      }
+    }
+    // フェリー
     const port = selectPort(city, dep, ferries);
     if (port) {
       links.push({ type:'ferry', label:'フェリー', port });
@@ -278,23 +307,25 @@ function getLinks(city, dep) {
     return links;
   }
 
-  // ★1 近場（条件4: 動的計算）
+  // ★1 近場（動的計算）
   if (calcStarsQA(dep, city) === 1) {
     links.push({ type:'google-maps' });
     return links;
   }
 
-  // 条件7 の順序: JR → 高速バス → 飛行機 → フェリー
-  // JR ルート（条件9: railGateway 存在時は常にJR表示）
+  // 通常ルート: JR → 高速バス → 飛行機 → フェリー → 二次交通
   if (railGateway) {
-    links.push({ type: resolveRailProvider(dep, city) });
-    links.push({ type:'google-maps' });  // 出発駅 → railGateway
-    // 条件10: バスが必要な場合 google-maps transit
-    if (city.railNote) {
-      links.push({ type:'google-maps' });  // railGateway → destination
+    const provider = city.railProvider
+      ? (city.railProvider === 'ekinet' ? 'jr-east' : city.railProvider === 'jrkyushu' ? 'jr-kyushu' : 'jr-west')
+      : resolveRailProvider(dep, city);
+    links.push({ type: provider });
+    links.push({ type:'google-maps' });
+    // 二次交通（secondaryTransport or railNote）
+    if (city.secondaryTransport || city.railNote) {
+      links.push({ type:'google-maps' });
     }
   }
-  // 高速バス（gateways.bus）
+  // 高速バス
   const buses = city.gateways?.bus ?? [];
   buses.forEach(() => links.push({ type:'google-maps' }));
 
@@ -302,14 +333,14 @@ function getLinks(city, dep) {
   if (airportGateway && isFlightAvailable(dep, airportGateway)) {
     links.push({ type:'skyscanner' });
     links.push({ type:'google-maps-arr' });
-  } else if (airportGateway && !railGateway) {
-    links.push({ type:'google-maps' });
   }
-  // フェリー
+  // フェリー（非島）
   if (ferryGateway && !isIsland) links.push({ type:'ferry' });
 
-  // 二次交通（railGateway なし・空港バス等）
+  // 二次交通（railGateway なし・gatewayHub あり）
   if (!railGateway && city.secondaryTransport) {
+    links.push({ type:'google-maps' });
+  } else if (!railGateway && city.gatewayHub) {
     links.push({ type:'google-maps' });
   }
 
@@ -504,6 +535,18 @@ class Scorecard {
         expect:    { ferry:true, googleMaps:true },
         notExpect: { skyscanner:true },
       },
+      // airportHub 経由: 大阪→那覇経由→与那国（ITM直行なし → OKA経由）
+      {
+        dep: '大阪', destId: 'yonaguni-island', name: '大阪→与那国島',
+        expect:    { skyscanner:true },
+        notExpect: { jr:true },
+      },
+      // 長距離 JR のみ（飛行機なし）
+      {
+        dep: '大阪', destId: 'nasu', name: '大阪→那須',
+        expect:    { jr:true, googleMaps:true },
+        notExpect: { skyscanner:true },
+      },
     ];
 
     CASES.forEach(tc => {
@@ -643,19 +686,26 @@ class Scorecard {
   ─────────────────────────────── */
   {
     const sc = new Scorecard('[8a] secondaryTransport');
-    const withNote = DESTS.filter(c => c.railNote && c.accessHub);
-    sc.check(withNote.length > 0, 'railNote+accessHub 都市が 0 件');
-    withNote.forEach(city => {
-      sc.check(!!city.secondaryTransport, `${city.id}: secondaryTransport が未設定`);
-      if (city.secondaryTransport) {
-        sc.check(city.secondaryTransport.type === 'bus', `${city.id}: secondaryTransport.type が bus でない`);
-        sc.check(!!city.secondaryTransport.from, `${city.id}: secondaryTransport.from が空`);
-        sc.check(!!city.secondaryTransport.to,   `${city.id}: secondaryTransport.to が空`);
-      }
+    const VALID_ST = ['bus', 'ferry', 'car'];
+
+    // secondaryTransport が設定されている都市はすべて文字列形式であること
+    const withST = DESTS.filter(c => c.secondaryTransport);
+    sc.check(withST.length > 0, 'secondaryTransport 設定都市が 0 件');
+    withST.forEach(city => {
+      sc.check(
+        VALID_ST.includes(city.secondaryTransport),
+        `${city.id}: secondaryTransport が bus/ferry/car でない (値: ${city.secondaryTransport})`
+      );
     });
-    // secondaryTransport 未設定で railNote あり → 表示されないはず
-    const noSecondary = DESTS.filter(c => c.railNote && c.accessHub && !c.secondaryTransport);
-    sc.check(noSecondary.length === 0, `secondaryTransport 未設定のrailNote都市: ${noSecondary.map(c=>c.id).join(', ')}`);
+
+    // gatewayHub があるなら secondaryTransport も必須
+    const gwNoST = DESTS.filter(c => c.gatewayHub && !c.secondaryTransport);
+    sc.check(gwNoST.length === 0, `gatewayHub あり・secondaryTransport なし: ${gwNoST.map(c=>c.id).join(', ')}`);
+
+    // オブジェクト形式が残っていないこと
+    const objFormat = DESTS.filter(c => c.secondaryTransport && typeof c.secondaryTransport === 'object');
+    sc.check(objFormat.length === 0, `object形式のsecondaryTransportが残存: ${objFormat.map(c=>c.id).join(', ')}`);
+
     sc.print();
     scorecards.push(sc);
   }

@@ -75,6 +75,19 @@ export const AIRPORT_IATA = {
   '与那国空港':     'OGN',  // 沖縄県・与那国
   '長崎空港':       'NGS',  // 長崎県
   '高知空港':       'KCZ',  // 高知県
+  '鹿児島空港':     'KOJ',  // 鹿児島県
+};
+
+/**
+ * airportHub 都市名 → 空港名マップ
+ * city.airportHub（都市名）から空港名を解決するために使用。
+ * 与那国→那覇経由, 種子島→鹿児島経由, 対馬/壱岐→福岡経由 など。
+ */
+export const AIRPORT_HUB_GATEWAY = {
+  '那覇':   '那覇空港',
+  '石垣':   '石垣空港',
+  '鹿児島': '鹿児島空港',
+  '福岡':   '福岡空港',
 };
 
 /* ── Google Maps（transit / driving 統一） ── */

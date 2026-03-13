@@ -896,11 +896,7 @@
     },
     "accessHub": "境港",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "境港駅",
-      "to": "美保関"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "境港駅",
     "busGateway": null,
@@ -910,7 +906,7 @@
     "lat": 35.5748,
     "lng": 133.3122,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "境港",
     "airportHub": null,
     "railProvider": "e5489"
   },
@@ -948,11 +944,7 @@
     },
     "accessHub": "田辺",
     "railNote": "龍神バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "紀伊田辺駅",
-      "to": "龍神温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "紀伊田辺駅",
     "busGateway": null,
@@ -962,7 +954,7 @@
     "lat": 33.9547,
     "lng": 135.6393,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "田辺",
     "airportHub": null,
     "railProvider": "e5489"
   },
@@ -1340,7 +1332,8 @@
     "stayBias": 1,
     "gatewayHub": "長野原草津口",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "secondaryTransport": "bus"
   },
   {
     "id": "shimoda",
@@ -1489,11 +1482,7 @@
     },
     "accessHub": "金沢",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "金沢駅",
-      "to": "白川郷"
-    },
+    "secondaryTransport": "bus",
     "nearby": [
       "五箇山",
       "高山",
@@ -1558,11 +1547,7 @@
     },
     "accessHub": "三ノ宮",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "三ノ宮駅",
-      "to": "有馬温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "三ノ宮駅",
     "busGateway": null,
@@ -1572,7 +1557,7 @@
     "lat": 34.7988,
     "lng": 135.2466,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "三ノ宮",
     "airportHub": null,
     "railProvider": "e5489"
   },
@@ -1985,11 +1970,7 @@
     },
     "accessHub": "博多",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "博多駅",
-      "to": "黒川温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "博多駅",
     "busGateway": null,
@@ -2148,11 +2129,7 @@
     },
     "accessHub": "熊本",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "熊本駅",
-      "to": "天草"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "熊本駅",
     "busGateway": null,
@@ -2806,7 +2783,8 @@
     "stayBias": 2,
     "gatewayHub": "網走",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "bus"
   },
   {
     "id": "wajima",
@@ -2846,11 +2824,7 @@
     },
     "accessHub": "金沢",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "金沢駅",
-      "to": "輪島"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "金沢駅",
     "busGateway": null,
@@ -2860,7 +2834,7 @@
     "lat": 37.3895,
     "lng": 136.8952,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "金沢",
     "airportHub": null,
     "railProvider": "e5489"
   },
@@ -3058,11 +3032,7 @@
     },
     "accessHub": "天橋立",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "天橋立駅",
-      "to": "伊根"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "天橋立駅",
     "busGateway": null,
@@ -3230,7 +3200,8 @@
     "stayBias": 1,
     "gatewayHub": "佐世保",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "secondaryTransport": "bus"
   },
   {
     "id": "tottori",
@@ -3376,11 +3347,7 @@
     },
     "accessHub": "三ノ宮",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "三ノ宮駅",
-      "to": "淡路島"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "三ノ宮駅",
     "busGateway": null,
@@ -3536,11 +3503,7 @@
     },
     "accessHub": "金沢",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "金沢駅",
-      "to": "五箇山"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "金沢駅",
     "busGateway": null,
@@ -3592,11 +3555,7 @@
     },
     "accessHub": "札幌",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "札幌駅",
-      "to": "定山渓"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "札幌駅",
     "busGateway": null,
@@ -3606,7 +3565,7 @@
     "lat": 42.9775,
     "lng": 141.0938,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "札幌",
     "airportHub": null,
     "railProvider": null
   },
@@ -3807,11 +3766,7 @@
     },
     "accessHub": "熊本",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "熊本駅",
-      "to": "高千穂"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "熊本駅",
     "busGateway": null,
@@ -3968,11 +3923,7 @@
     },
     "accessHub": "諫早",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "諫早駅",
-      "to": "雲仙"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "諫早駅",
     "busGateway": null,
@@ -4024,11 +3975,7 @@
     },
     "accessHub": "中村",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "中村駅",
-      "to": "足摺岬"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "中村駅",
     "busGateway": null,
@@ -4238,11 +4185,7 @@
     },
     "accessHub": "南木曽",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "南木曽駅",
-      "to": "木曽"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "南木曽駅",
     "busGateway": null,
@@ -4252,7 +4195,7 @@
     "lat": 35.7543,
     "lng": 137.7141,
     "stayBias": 1,
-    "gatewayHub": null,
+    "gatewayHub": "南木曽",
     "airportHub": null,
     "railProvider": "ekinet"
   },
@@ -4295,11 +4238,7 @@
     },
     "accessHub": "園部",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "園部駅",
-      "to": "美山"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "園部駅",
     "busGateway": null,
@@ -4364,7 +4303,8 @@
     "stayBias": 2,
     "gatewayHub": "富山",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "bus"
   },
   {
     "id": "himi",
@@ -4459,11 +4399,7 @@
     },
     "accessHub": "田沢湖",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "田沢湖駅",
-      "to": "乳頭温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "田沢湖駅",
     "busGateway": null,
@@ -4727,11 +4663,7 @@
     },
     "accessHub": "高知",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "高知駅",
-      "to": "室戸"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "高知駅",
     "busGateway": null,
@@ -4785,11 +4717,7 @@
     },
     "accessHub": "阿波池田",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "阿波池田駅",
-      "to": "祖谷"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "阿波池田駅",
     "busGateway": null,
@@ -4895,11 +4823,7 @@
     },
     "accessHub": "大石田",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "大石田駅",
-      "to": "銀山温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "大石田駅",
     "busGateway": null,
@@ -4953,11 +4877,7 @@
     },
     "accessHub": "会津若松",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "会津若松駅",
-      "to": "大内宿"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "会津若松駅",
     "busGateway": null,
@@ -5010,11 +4930,7 @@
     },
     "accessHub": "飯山",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "飯山駅",
-      "to": "野沢温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "飯山駅",
     "busGateway": null,
@@ -5122,11 +5038,7 @@
     },
     "accessHub": "南木曽",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "南木曽駅",
-      "to": "妻籠"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "南木曽駅",
     "busGateway": null,
@@ -5181,11 +5093,7 @@
     },
     "accessHub": "中津川",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "中津川駅",
-      "to": "馬籠"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "中津川駅",
     "busGateway": null,
@@ -5358,7 +5266,8 @@
     "stayBias": 1,
     "gatewayHub": "橋本",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "bus"
   },
   {
     "id": "gero-onsen",
@@ -5503,11 +5412,7 @@
     },
     "accessHub": "中之条",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "中之条駅",
-      "to": "四万温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "中之条駅",
     "busGateway": null,
@@ -5618,11 +5523,7 @@
     },
     "accessHub": "八戸",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "八戸駅",
-      "to": "奥入瀬"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "八戸駅",
     "busGateway": null,
@@ -5782,11 +5683,7 @@
     },
     "accessHub": "豊岡",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "豊岡駅",
-      "to": "出石"
-    },
+    "secondaryTransport": "bus",
     "destType": "city",
     "railGateway": "豊岡駅",
     "busGateway": null,
@@ -5893,11 +5790,7 @@
     },
     "accessHub": "倉吉",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "倉吉駅",
-      "to": "三朝温泉"
-    },
+    "secondaryTransport": "bus",
     "destType": "onsen",
     "railGateway": "倉吉駅",
     "busGateway": null,
@@ -6059,11 +5952,7 @@
     },
     "accessHub": "松本",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "松本駅",
-      "to": "上高地"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "松本駅",
     "busGateway": null,
@@ -6172,11 +6061,7 @@
     },
     "accessHub": "熊本",
     "railNote": "バス",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "熊本駅",
-      "to": "南阿蘇"
-    },
+    "secondaryTransport": "bus",
     "destType": "sight",
     "railGateway": "熊本駅",
     "busGateway": null,
@@ -6357,11 +6242,7 @@
     },
     "accessHub": "小樽",
     "railNote": "バスあり",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "小樽駅",
-      "to": "積丹"
-    },
+    "secondaryTransport": "bus",
     "nearby": [
       "小樽",
       "余市",
@@ -6497,11 +6378,7 @@
     },
     "accessHub": "金沢",
     "railNote": "バスあり",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "金沢駅",
-      "to": "能登"
-    },
+    "secondaryTransport": "bus",
     "nearby": [
       "輪島",
       "珠洲",
@@ -6591,7 +6468,8 @@
     "stayBias": 1,
     "gatewayHub": "吉野口",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "bus"
   },
   {
     "id": "kumano",
@@ -6723,7 +6601,8 @@
     "stayBias": 2,
     "gatewayHub": "石垣",
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "takahashi",
@@ -6897,11 +6776,7 @@
     },
     "accessHub": "大分空港",
     "railNote": "バスあり",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "大分空港",
-      "to": "豊後高田"
-    },
+    "secondaryTransport": "bus",
     "nearby": [
       "宇佐",
       "中津",
@@ -7165,11 +7040,7 @@
     },
     "accessHub": "中村",
     "railNote": "バスあり",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "中村駅",
-      "to": "土佐清水"
-    },
+    "secondaryTransport": "bus",
     "nearby": [
       "高知",
       "宿毛",
@@ -7455,7 +7326,8 @@
     "stayBias": 1,
     "gatewayHub": "諫早",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "secondaryTransport": "bus"
   },
   {
     "id": "tsuruga",
@@ -7577,7 +7449,8 @@
     "stayBias": 1,
     "gatewayHub": "三豊",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "sounkyo",
@@ -7625,11 +7498,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "旭川空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "上川駅",
-      "to": "層雲峡"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "北海道",
     "lat": 43.739,
     "lng": 142.8728,
@@ -7689,7 +7558,8 @@
     "stayBias": 2,
     "gatewayHub": "稚内",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "rishiri-island",
@@ -7742,7 +7612,8 @@
     "stayBias": 2,
     "gatewayHub": "稚内",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "akan",
@@ -7789,11 +7660,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "釧路空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "釧路駅",
-      "to": "阿寒湖"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "北海道",
     "lat": 43.4446,
     "lng": 144.0961,
@@ -7899,11 +7766,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "新千歳空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "千歳駅",
-      "to": "支笏湖"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "北海道",
     "lat": 42.7468,
     "lng": 141.3714,
@@ -8110,11 +7973,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "庄内空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "鶴岡駅",
-      "to": "出羽三山"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "山形県",
     "lat": 38.7285,
     "lng": 139.9748,
@@ -8167,11 +8026,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "仙台空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "仙台駅",
-      "to": "秋保温泉"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "宮城県",
     "lat": 38.2532,
     "lng": 140.6548,
@@ -8326,11 +8181,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "那須塩原駅",
-      "to": "那須"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "栃木県",
     "lat": 37.0765,
     "lng": 140.0358,
@@ -8483,11 +8334,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "那須塩原駅",
-      "to": "塩原温泉"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "栃木県",
     "lat": 36.9419,
     "lng": 139.8672,
@@ -8547,7 +8394,8 @@
     "stayBias": 2,
     "gatewayHub": "新潟",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "kiyosato",
@@ -8752,7 +8600,8 @@
     "stayBias": 0,
     "gatewayHub": "永平寺口",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "bus"
   },
   {
     "id": "wakasa-obama",
@@ -8850,11 +8699,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "松本空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "高山駅",
-      "to": "奥飛騨温泉郷"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "岐阜県",
     "lat": 36.3327,
     "lng": 137.5622,
@@ -8907,11 +8752,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "下田駅",
-      "to": "南伊豆"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "静岡県",
     "lat": 34.6155,
     "lng": 138.827,
@@ -8963,11 +8804,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "武生駅",
-      "to": "越前"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "福井県",
     "lat": 35.9971,
     "lng": 136.1819,
@@ -9172,11 +9009,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "五条駅",
-      "to": "十津川"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "奈良県",
     "lat": 34.0542,
     "lng": 135.6702,
@@ -9227,11 +9060,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "新宮駅",
-      "to": "湯の峰温泉"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "和歌山県",
     "lat": 33.7388,
     "lng": 135.8374,
@@ -9388,11 +9217,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "米子空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "米子駅",
-      "to": "大山"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "鳥取県",
     "lat": 35.3804,
     "lng": 133.5453,
@@ -9495,11 +9320,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "大田市駅",
-      "to": "石見銀山"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "島根県",
     "lat": 35.1044,
     "lng": 132.4234,
@@ -9669,7 +9490,8 @@
     "stayBias": 1,
     "gatewayHub": "大畠",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "ferry"
   },
   {
     "id": "shimanto",
@@ -9723,7 +9545,8 @@
     "stayBias": 1,
     "gatewayHub": "窪川",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "car"
   },
   {
     "id": "tobe",
@@ -9770,11 +9593,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "松山空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "松山駅",
-      "to": "砥部"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "愛媛県",
     "lat": 33.742,
     "lng": 132.7943,
@@ -9837,7 +9656,8 @@
     "stayBias": 2,
     "gatewayHub": "宿毛",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "secondaryTransport": "ferry"
   },
   {
     "id": "saijo",
@@ -9938,11 +9758,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "松山空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "宇和島駅",
-      "to": "愛南"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "愛媛県",
     "lat": 32.96,
     "lng": 132.66,
@@ -10155,11 +9971,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "長崎空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "川棚温泉駅",
-      "to": "波佐見"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "長崎県",
     "lat": 33.0981,
     "lng": 129.8888,
@@ -10434,7 +10246,8 @@
     "stayBias": 2,
     "gatewayHub": "鹿児島",
     "airportHub": "鹿児島",
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "kikuchi",
@@ -10480,11 +10293,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "阿蘇くまもと空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "武蔵塚公園駅",
-      "to": "菊池"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "熊本県",
     "lat": 32.9857,
     "lng": 130.8215,
@@ -10546,7 +10355,8 @@
     "stayBias": 2,
     "gatewayHub": "石垣",
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "yonaguni-island",
@@ -10649,11 +10459,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "那覇空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "那覇空港駅",
-      "to": "今帰仁"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "沖縄県",
     "lat": 26.6885,
     "lng": 127.9927,
@@ -10822,7 +10628,8 @@
     "stayBias": 1,
     "gatewayHub": "本部",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "kohama-island",
@@ -10877,7 +10684,8 @@
     "stayBias": 2,
     "gatewayHub": "石垣",
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "secondaryTransport": "ferry"
   },
   {
     "id": "matsushiro",
@@ -10922,11 +10730,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": null,
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "長野駅",
-      "to": "松代"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "長野県",
     "lat": 36.5484,
     "lng": 138.2067,
@@ -11138,11 +10942,7 @@
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "徳島空港",
-    "secondaryTransport": {
-      "type": "bus",
-      "from": "貞光駅",
-      "to": "剣山"
-    },
+    "secondaryTransport": "bus",
     "prefecture": "徳島県",
     "lat": 33.8565,
     "lng": 134.0897,

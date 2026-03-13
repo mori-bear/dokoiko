@@ -59,11 +59,25 @@ hub（宿泊拠点都市）           例: 金沢, 松山, 高山
 - じゃらん: `VC_BASE + encodeURIComponent('https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' + encodeURIComponent(keyword))`
 - stayType=daytrip では宿セクション非表示
 
-### 交通ロジック優先順位（transportRenderer.js）
-portHubs(島) > ferryGateway > airportGateway > railGateway > car
-- 島（isIsland=true）: フェリー + Google Maps + レンタカー自動追加
-- ★1 近場: Google Maps に lat/lng 座標を使用（誤爆防止）
-- 最大3ルート（limitRoutes()）
+### 交通ロジック（transportRenderer.js）
+
+フロー: 出発地 → 長距離交通（新幹線/飛行機/高速バス） → gatewayHub → 二次交通（bus/ferry/car） → destination
+
+優先順位（resolveTransportLinks）:
+1. 島かつフェリーあり: 飛行機（直行 or airportHub経由）+ フェリー + レンタカー
+2. ★1 近場: Google Maps 1本のみ（lat/lng 座標使用）
+3. 通常: JR → 高速バス → 飛行機 → フェリー → 二次交通
+- 最大3ルート（limitRoutes(3)）
+
+### secondaryTransport フィールド
+- 型: 文字列 `'bus'|'ferry'|'car'`（旧object形式は廃止）
+- gatewayHub がある destination は必須
+- transportRenderer は railGateway → destination 間の二次交通として使用
+
+### airportHub フィールド
+- 多ホップ飛行の中継都市名（例: 与那国島→'那覇'）
+- AIRPORT_HUB_GATEWAY（linkBuilder.js）で都市名→空港名を解決
+- 直行便がない場合の fallback として使用
 
 ### Google Maps リンク（linkBuilder.js）
 `buildGoogleMapsLink(origin, destination, mode, label, coords)`:
