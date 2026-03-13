@@ -62,6 +62,19 @@ export const AIRPORT_IATA = {
   '小松空港':     'KMQ',    // 石川県・金沢エリア（能登等）
   '大分空港':     'OIT',    // 大分県（豊後高田等）
   '南紀白浜空港': 'SHM',    // 和歌山県（田辺・白浜等）
+  '対馬空港':     'TSJ',    // 長崎県・対馬
+  '種子島空港':   'TNE',    // 鹿児島県・種子島
+  '壱岐空港':     'IKI',    // 長崎県・壱岐
+  '但馬空港':     'TJH',    // 兵庫県・城崎温泉方面
+  '岩国錦帯橋空港': 'IWK',  // 山口県・岩国
+  '庄内空港':       'SYO',  // 山形県・鶴岡・酒田
+  '徳島空港':       'TKS',  // 徳島県
+  '旭川空港':       'AKJ',  // 北海道・旭川
+  '松本空港':       'MMJ',  // 長野県・松本
+  '岡山桃太郎空港': 'OKJ',  // 岡山県
+  '与那国空港':     'OGN',  // 沖縄県・与那国
+  '長崎空港':       'NGS',  // 長崎県
+  '高知空港':       'KCZ',  // 高知県
 };
 
 /* ── Google Maps（transit / driving 統一） ── */
@@ -151,6 +164,12 @@ const FERRY_LINKS = {
   '石垣港':             { label: 'フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
   '松山観光港':         { label: 'フェリーを調べる（瀬戸内海汽船）',      url: 'https://www.setonaikaikisen.co.jp/' },
   '詫間港':             { label: 'フェリーを調べる（三豊市営フェリー）',   url: 'https://www.city.mitoyo.lg.jp/' },
+  '稚内港':             { label: 'フェリーを調べる（ハートランドフェリー）', url: 'https://www.heartlandferry.jp/' },
+  '新潟港':             { label: 'フェリーを調べる（佐渡汽船）',           url: 'https://www.sadokisen.co.jp/' },
+  '本部港':             { label: 'フェリーを調べる（沖縄県営フェリー）',   url: 'https://okinawa.ferry.co.jp/' },
+  '伊江島港':           { label: 'フェリーを調べる（伊江島フェリー）',     url: 'https://www.iejima.org/' },
+  '座間味港':           { label: 'フェリーを調べる（座間味村営フェリー）', url: 'https://vill.zamami.okinawa.jp/' },
+  '小浜港':             { label: 'フェリーを調べる（安栄観光）',           url: 'https://www.aneikankou.co.jp/' },
 };
 
 export function buildFerryLink(ferryGateway) {

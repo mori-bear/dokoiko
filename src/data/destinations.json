@@ -864,7 +864,13 @@
     ],
     "weight": 1.5,
     "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
-    "tags": ["海", "離島", "ダイビング", "リゾート", "珊瑚礁"],
+    "tags": [
+      "海",
+      "離島",
+      "ダイビング",
+      "リゾート",
+      "珊瑚礁"
+    ],
     "spots": [
       "阿波連ビーチ",
       "渡嘉敷ビーチ",
@@ -6641,5 +6647,3161 @@
     "busGateway": null,
     "ferryGateway": "詫間港",
     "airportGateway": null
+  },
+  {
+    "id": "sounkyo",
+    "name": "層雲峡",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "asahikawa",
+    "hotelHub": "層雲峡温泉",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "大雪山国立公園内の渓谷。断崖絶壁と滝が続く絶景と温泉が魅力。",
+    "tags": [
+      "温泉",
+      "自然",
+      "渓谷",
+      "紅葉",
+      "大雪山"
+    ],
+    "spots": [
+      "流星の滝",
+      "銀河の滝",
+      "黒岳ロープウェイ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "層雲峡",
+    "gateways": {
+      "rail": [
+        "上川駅"
+      ],
+      "airport": [
+        "旭川空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "上川",
+    "railNote": "上川駅からバス約40分",
+    "destType": "onsen",
+    "railGateway": "上川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "旭川空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "上川駅",
+      "to": "層雲峡"
+    }
+  },
+  {
+    "id": "rebun-island",
+    "name": "礼文島",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "sapporo-t",
+    "hotelHub": "礼文島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "日本最北の有人島。高山植物の宝庫で「花の浮島」とも呼ばれる。",
+    "tags": [
+      "離島",
+      "花",
+      "トレッキング",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "桃岩展望台",
+      "スコトン岬",
+      "レブンアツモリソウ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "礼文",
+    "gateways": {
+      "rail": [],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "稚内港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "稚内港",
+    "airportGateway": null
+  },
+  {
+    "id": "rishiri-island",
+    "name": "利尻島",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "sapporo-t",
+    "hotelHub": "利尻島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "利尻富士と呼ばれる円錐形の山がそびえる美しい島。昆布とウニが名産。",
+    "tags": [
+      "離島",
+      "登山",
+      "海",
+      "自然",
+      "ウニ"
+    ],
+    "spots": [
+      "利尻山",
+      "オタトマリ沼",
+      "姫沼"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "利尻",
+    "gateways": {
+      "rail": [],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "稚内港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "稚内港",
+    "airportGateway": null
+  },
+  {
+    "id": "akan",
+    "name": "阿寒湖",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "hotelHub": "阿寒湖温泉",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "カルデラ湖に浮かぶ天然記念物マリモが有名。アイヌコタンでアイヌ文化を体験。",
+    "tags": [
+      "温泉",
+      "湖",
+      "自然",
+      "アイヌ文化"
+    ],
+    "spots": [
+      "マリモ",
+      "阿寒湖アイヌコタン",
+      "双湖台"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "阿寒湖",
+    "gateways": {
+      "rail": [
+        "釧路駅"
+      ],
+      "airport": [
+        "釧路空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "釧路",
+    "railNote": "釧路駅からバス約2時間",
+    "destType": "onsen",
+    "railGateway": "釧路駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "釧路空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "釧路駅",
+      "to": "阿寒湖"
+    }
+  },
+  {
+    "id": "abashiri",
+    "name": "網走",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "hotelHub": "網走",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "流氷が接岸するオホーツク海沿岸の街。砕氷船観光や監獄博物館が有名。",
+    "tags": [
+      "流氷",
+      "自然",
+      "海",
+      "博物館"
+    ],
+    "spots": [
+      "網走監獄博物館",
+      "オーロラ号（砕氷船）",
+      "能取湖"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "網走",
+    "gateways": {
+      "rail": [
+        "網走駅"
+      ],
+      "airport": [
+        "女満別空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "網走駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "女満別空港"
+  },
+  {
+    "id": "shikotsu",
+    "name": "支笏湖",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "sapporo-t",
+    "hotelHub": "支笏湖温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本最北の不凍湖。透明度の高い湖水と温泉が魅力。",
+    "tags": [
+      "温泉",
+      "湖",
+      "自然",
+      "カヌー"
+    ],
+    "spots": [
+      "支笏湖ビジターセンター",
+      "丸駒温泉",
+      "苔の洞門"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "支笏湖",
+    "gateways": {
+      "rail": [
+        "千歳駅"
+      ],
+      "airport": [
+        "新千歳空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "千歳",
+    "railNote": "千歳駅からバス約45分",
+    "destType": "onsen",
+    "railGateway": "千歳駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "新千歳空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "千歳駅",
+      "to": "支笏湖"
+    }
+  },
+  {
+    "id": "tono",
+    "name": "遠野",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "hotelHub": "遠野",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "柳田国男の「遠野物語」の舞台。カッパや座敷わらしの伝説が残る民話の里。",
+    "tags": [
+      "民話",
+      "歴史",
+      "自然",
+      "農村",
+      "文化"
+    ],
+    "spots": [
+      "カッパ淵",
+      "伝承園",
+      "チャグチャグ馬コ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "遠野",
+    "gateways": {
+      "rail": [
+        "遠野駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "遠野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "oga",
+    "name": "男鹿",
+    "type": "destination",
+    "region": "東北",
+    "hub": "sendai-t",
+    "hotelHub": "男鹿温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "ナマハゲで有名な半島。荒々しい海岸線と温泉が楽しめる秋田の景勝地。",
+    "tags": [
+      "温泉",
+      "海",
+      "ナマハゲ",
+      "自然",
+      "民俗"
+    ],
+    "spots": [
+      "ナマハゲ館",
+      "入道崎",
+      "寒風山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "男鹿",
+    "gateways": {
+      "rail": [
+        "男鹿駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "男鹿駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "yonezawa",
+    "name": "米沢",
+    "type": "destination",
+    "region": "東北",
+    "hub": "yamagata",
+    "hotelHub": "米沢",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "上杉謙信ゆかりの城下町。米沢牛が名産で、上杉神社が有名。",
+    "tags": [
+      "歴史",
+      "城下町",
+      "グルメ",
+      "武家文化"
+    ],
+    "spots": [
+      "上杉神社",
+      "松岬城跡",
+      "上杉博物館"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "hotelSearch": "米沢",
+    "gateways": {
+      "rail": [
+        "米沢駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "米沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "dewa-sanzan",
+    "name": "出羽三山",
+    "type": "destination",
+    "region": "東北",
+    "hub": "yamagata",
+    "hotelHub": "羽黒山",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "月山・羽黒山・湯殿山からなる出羽三山。修験道の聖地として古くから信仰される。",
+    "tags": [
+      "神社",
+      "修行",
+      "自然",
+      "パワースポット",
+      "トレッキング"
+    ],
+    "spots": [
+      "羽黒山五重塔",
+      "月山神社",
+      "湯殿山神社"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "羽黒山温泉",
+    "gateways": {
+      "rail": [
+        "鶴岡駅"
+      ],
+      "airport": [
+        "庄内空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "鶴岡",
+    "railNote": "鶴岡駅からバス約50分",
+    "destType": "sight",
+    "railGateway": "鶴岡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "庄内空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "鶴岡駅",
+      "to": "出羽三山"
+    }
+  },
+  {
+    "id": "sakunami-onsen",
+    "name": "秋保温泉",
+    "type": "destination",
+    "region": "東北",
+    "hub": "sendai-t",
+    "hotelHub": "秋保温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "仙台の奥座敷。大型旅館が並ぶ温泉地で、秋保大滝も近い。",
+    "tags": [
+      "温泉",
+      "滝",
+      "自然",
+      "リゾート"
+    ],
+    "spots": [
+      "秋保大滝",
+      "磊々峡",
+      "鷺景の湯"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "秋保温泉",
+    "gateways": {
+      "rail": [
+        "仙台駅"
+      ],
+      "airport": [
+        "仙台空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "仙台",
+    "railNote": "仙台駅からバス約40分",
+    "destType": "onsen",
+    "railGateway": "仙台駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "仙台空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "仙台駅",
+      "to": "秋保温泉"
+    }
+  },
+  {
+    "id": "goshogawara",
+    "name": "五所川原",
+    "type": "destination",
+    "region": "東北",
+    "hub": "sendai-t",
+    "hotelHub": "五所川原",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "立佞武多（たちねぷた）祭りで有名な青森の街。太宰治の故郷も近い。",
+    "tags": [
+      "祭り",
+      "歴史",
+      "太宰治",
+      "文学"
+    ],
+    "spots": [
+      "立佞武多の館",
+      "津軽鉄道",
+      "金木町（太宰治の故郷）"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "五所川原",
+    "gateways": {
+      "rail": [
+        "五所川原駅"
+      ],
+      "airport": [
+        "青森空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "五所川原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "青森空港"
+  },
+  {
+    "id": "kawagoe",
+    "name": "川越",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "hotelHub": "川越",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "江戸時代の蔵造りの街並みが残る「小江戸」。菓子屋横丁も人気。",
+    "tags": [
+      "歴史",
+      "街並み",
+      "蔵造り",
+      "食べ歩き"
+    ],
+    "spots": [
+      "蔵造りの街並み",
+      "菓子屋横丁",
+      "川越城本丸御殿"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "川越",
+    "gateways": {
+      "rail": [
+        "川越駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "川越駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "nasu",
+    "name": "那須",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "hotelHub": "那須温泉",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "栃木県北部の高原リゾート。温泉と自然が豊かで皇室御用邸でも有名。",
+    "tags": [
+      "温泉",
+      "自然",
+      "高原",
+      "リゾート"
+    ],
+    "spots": [
+      "那須岳",
+      "那須温泉",
+      "那須どうぶつ王国"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": true,
+    "hotelSearch": "那須温泉",
+    "gateways": {
+      "rail": [
+        "那須塩原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "那須塩原",
+    "railNote": "那須塩原駅からバス約40分",
+    "destType": "onsen",
+    "railGateway": "那須塩原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "那須塩原駅",
+      "to": "那須"
+    }
+  },
+  {
+    "id": "choshi",
+    "name": "銚子",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "hotelHub": "銚子",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "犬吠埼灯台が有名な太平洋に突き出た岬の街。醤油蔵や海鮮グルメも人気。",
+    "tags": [
+      "海",
+      "灯台",
+      "グルメ",
+      "醤油",
+      "自然"
+    ],
+    "spots": [
+      "犬吠埼灯台",
+      "地球の丸く見える丘展望館",
+      "銚子電鉄"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "銚子",
+    "gateways": {
+      "rail": [
+        "銚子駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "銚子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "ashikaga",
+    "name": "足利",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "hotelHub": "足利",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "足利学校など歴史遺産が豊富。足利フラワーパークの藤の花が有名。",
+    "tags": [
+      "歴史",
+      "花",
+      "学問",
+      "自然"
+    ],
+    "spots": [
+      "足利学校",
+      "鑁阿寺",
+      "足利フラワーパーク"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "足利",
+    "gateways": {
+      "rail": [
+        "足利駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "足利駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "shiobara-onsen",
+    "name": "塩原温泉",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "hotelHub": "塩原温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "栃木県那須塩原市の温泉郷。渓谷沿いに旅館が並び、紅葉の名所としても知られる。",
+    "tags": [
+      "温泉",
+      "渓谷",
+      "紅葉",
+      "自然"
+    ],
+    "spots": [
+      "塩原温泉渓谷",
+      "もみじ谷大吊橋",
+      "箒川"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "塩原温泉",
+    "gateways": {
+      "rail": [
+        "那須塩原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "那須塩原",
+    "railNote": "那須塩原駅からバス約50分",
+    "destType": "onsen",
+    "railGateway": "那須塩原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "那須塩原駅",
+      "to": "塩原温泉"
+    }
+  },
+  {
+    "id": "sado-island",
+    "name": "佐渡島",
+    "type": "destination",
+    "region": "中部",
+    "hub": "niigata",
+    "hotelHub": "佐渡",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "日本海最大の島。金山跡やトキの保護センター、朱鷺色の夕日が見られる自然豊かな島。",
+    "tags": [
+      "離島",
+      "歴史",
+      "金山",
+      "自然",
+      "トキ"
+    ],
+    "spots": [
+      "佐渡金山",
+      "トキの森公園",
+      "北沢浮游選鉱場"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "佐渡",
+    "gateways": {
+      "rail": [],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "新潟港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "新潟港",
+    "airportGateway": null
+  },
+  {
+    "id": "kiyosato",
+    "name": "清里",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kofu",
+    "hotelHub": "清里",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "八ヶ岳南麓の高原リゾート。爽やかな気候と牧場、自然を満喫できる。",
+    "tags": [
+      "高原",
+      "自然",
+      "リゾート",
+      "牧場",
+      "アウトドア"
+    ],
+    "spots": [
+      "清泉寮",
+      "まきば公園",
+      "天女山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "清里",
+    "gateways": {
+      "rail": [
+        "清里駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "清里駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "tenryu-gorge",
+    "name": "天竜峡",
+    "type": "destination",
+    "region": "中部",
+    "hub": "iida",
+    "hotelHub": "天竜峡温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "天竜川が刻んだ渓谷美。舟下りで迫力ある峡谷を体感できる。",
+    "tags": [
+      "渓谷",
+      "舟下り",
+      "自然",
+      "温泉"
+    ],
+    "spots": [
+      "天竜峡舟下り",
+      "龍峡亭",
+      "天竜峡温泉"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "hotelSearch": "天竜峡",
+    "gateways": {
+      "rail": [
+        "天竜峡駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "天竜峡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "suwa",
+    "name": "諏訪",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "hotelHub": "諏訪温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本最古の神社の一つ、諏訪大社を擁する諏訪湖畔の街。花火大会も有名。",
+    "tags": [
+      "神社",
+      "湖",
+      "温泉",
+      "花火",
+      "文化"
+    ],
+    "spots": [
+      "諏訪大社",
+      "諏訪湖",
+      "片倉館"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "諏訪温泉",
+    "gateways": {
+      "rail": [
+        "上諏訪駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "上諏訪駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "eiheiji",
+    "name": "永平寺",
+    "type": "destination",
+    "region": "中部",
+    "hub": "fukui",
+    "hotelHub": "永平寺",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "道元禅師が開いた曹洞宗の大本山。杉の大木に囲まれた厳かな禅の空間。",
+    "tags": [
+      "寺院",
+      "禅",
+      "文化",
+      "精進料理",
+      "パワースポット"
+    ],
+    "spots": [
+      "永平寺",
+      "傘松閣",
+      "山門"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "永平寺",
+    "gateways": {
+      "rail": [
+        "永平寺口駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "永平寺口駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "wakasa-obama",
+    "name": "若狭小浜",
+    "type": "destination",
+    "region": "中部",
+    "hub": "fukui",
+    "hotelHub": "小浜",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "「御食国（みけつくに）」として知られた海の幸の宝庫。鯖街道の起点。",
+    "tags": [
+      "海",
+      "歴史",
+      "グルメ",
+      "鯖",
+      "港町"
+    ],
+    "spots": [
+      "小浜西組（重伝建）",
+      "明通寺",
+      "若狭フィッシャーマンズワーフ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "小浜温泉 若狭",
+    "gateways": {
+      "rail": [
+        "小浜駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "小浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "okuhida-onsen",
+    "name": "奥飛騨温泉郷",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "hotelHub": "奥飛騨温泉郷",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "北アルプスの懐に抱かれた温泉郷。露天風呂の数は日本有数。",
+    "tags": [
+      "温泉",
+      "自然",
+      "露天風呂",
+      "北アルプス"
+    ],
+    "spots": [
+      "新穂高温泉",
+      "平湯温泉",
+      "新穂高ロープウェイ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "奥飛騨温泉",
+    "gateways": {
+      "rail": [
+        "高山駅"
+      ],
+      "airport": [
+        "松本空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "高山",
+    "railNote": "高山駅からバス約2時間",
+    "destType": "onsen",
+    "railGateway": "高山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "松本空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "高山駅",
+      "to": "奥飛騨温泉郷"
+    }
+  },
+  {
+    "id": "minami-izu",
+    "name": "南伊豆",
+    "type": "destination",
+    "region": "中部",
+    "hub": "shizuoka",
+    "hotelHub": "南伊豆",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "伊豆半島最南端。断崖絶壁の海岸線と温泉が魅力。ヒリゾ浜は透明度抜群。",
+    "tags": [
+      "海",
+      "温泉",
+      "自然",
+      "断崖",
+      "ビーチ"
+    ],
+    "spots": [
+      "石廊崎",
+      "ヒリゾ浜",
+      "弓ヶ浜"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "南伊豆",
+    "gateways": {
+      "rail": [
+        "下田駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "下田",
+    "railNote": "下田駅からバス約30分",
+    "destType": "sight",
+    "railGateway": "下田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "下田駅",
+      "to": "南伊豆"
+    }
+  },
+  {
+    "id": "echizen",
+    "name": "越前",
+    "type": "destination",
+    "region": "中部",
+    "hub": "fukui",
+    "hotelHub": "越前温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "越前海岸沿いの水仙や越前蟹が有名。和紙の里として知られる越前市も近い。",
+    "tags": [
+      "海",
+      "花",
+      "蟹",
+      "グルメ",
+      "和紙"
+    ],
+    "spots": [
+      "越前海岸（水仙）",
+      "越前岬",
+      "越前和紙の里"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "越前温泉 越前岬",
+    "gateways": {
+      "rail": [
+        "武生駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "武生",
+    "railNote": "武生駅からバス約40分",
+    "destType": "sight",
+    "railGateway": "武生駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "武生駅",
+      "to": "越前"
+    }
+  },
+  {
+    "id": "ito",
+    "name": "伊東",
+    "type": "destination",
+    "region": "中部",
+    "hub": "shizuoka",
+    "hotelHub": "伊東温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "伊豆半島最大の温泉地。多彩な宿と豊富な源泉が魅力。海鮮も充実。",
+    "tags": [
+      "温泉",
+      "海",
+      "グルメ",
+      "リゾート"
+    ],
+    "spots": [
+      "伊東温泉",
+      "城ヶ崎海岸",
+      "大室山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "伊東温泉",
+    "gateways": {
+      "rail": [
+        "伊東駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "伊東駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "iga",
+    "name": "伊賀",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "hotelHub": "伊賀上野",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "忍者発祥の地。伊賀流忍者博物館や上野城などが有名な城下町。",
+    "tags": [
+      "忍者",
+      "歴史",
+      "城下町",
+      "文化"
+    ],
+    "spots": [
+      "伊賀流忍者博物館",
+      "伊賀上野城",
+      "俳聖殿"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "伊賀上野",
+    "gateways": {
+      "rail": [
+        "上野市駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "上野市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "kashihara",
+    "name": "橿原",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "hotelHub": "橿原",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本建国の地とされる橿原神宮を中心とした古代史の宝庫。飛鳥地域も近い。",
+    "tags": [
+      "歴史",
+      "神社",
+      "古代史",
+      "パワースポット"
+    ],
+    "spots": [
+      "橿原神宮",
+      "橿原考古学研究所附属博物館",
+      "今井町（重伝建）"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "橿原",
+    "gateways": {
+      "rail": [
+        "橿原神宮前駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "橿原神宮前駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "totsukawa",
+    "name": "十津川",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "hotelHub": "十津川温泉",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本最大の村。秘境感あふれる渓谷と温泉が魅力。玉置神社もパワースポットとして人気。",
+    "tags": [
+      "温泉",
+      "渓谷",
+      "自然",
+      "秘境",
+      "神社"
+    ],
+    "spots": [
+      "谷瀬の吊り橋",
+      "十津川温泉",
+      "玉置神社"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "十津川温泉",
+    "gateways": {
+      "rail": [
+        "五条駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "五条",
+    "railNote": "五条駅からバス約2時間",
+    "destType": "onsen",
+    "railGateway": "五条駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "五条駅",
+      "to": "十津川"
+    }
+  },
+  {
+    "id": "yunomineonsen",
+    "name": "湯の峰温泉",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "hotelHub": "湯の峰温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本最古の温泉と言われる熊野古道沿いの秘湯。世界遺産に登録された「つぼ湯」が有名。",
+    "tags": [
+      "温泉",
+      "世界遺産",
+      "熊野古道",
+      "秘湯"
+    ],
+    "spots": [
+      "つぼ湯（世界遺産）",
+      "湯の峰温泉公衆浴場",
+      "熊野古道"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "湯の峰温泉",
+    "gateways": {
+      "rail": [
+        "新宮駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "新宮",
+    "railNote": "新宮駅からバス約1時間30分",
+    "destType": "onsen",
+    "railGateway": "新宮駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "新宮駅",
+      "to": "湯の峰温泉"
+    }
+  },
+  {
+    "id": "maizuru",
+    "name": "舞鶴",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "kyoto-t",
+    "hotelHub": "舞鶴",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本海に面した軍港都市。引揚記念公園と美しい若狭湾の景色が魅力。",
+    "tags": [
+      "歴史",
+      "港町",
+      "海",
+      "引揚げ記念"
+    ],
+    "spots": [
+      "舞鶴引揚記念館",
+      "五老スカイタワー",
+      "赤れんが倉庫群"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "舞鶴",
+    "gateways": {
+      "rail": [
+        "東舞鶴駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "東舞鶴駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "asuka",
+    "name": "飛鳥",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "hotelHub": "飛鳥",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "古代日本の政治・文化の中心地。巨大な石造物や古墳が点在する歴史ロマンの地。",
+    "tags": [
+      "歴史",
+      "古代史",
+      "石舞台",
+      "古墳",
+      "文化財"
+    ],
+    "spots": [
+      "石舞台古墳",
+      "飛鳥大仏",
+      "亀石"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "飛鳥 明日香村",
+    "gateways": {
+      "rail": [
+        "飛鳥駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "飛鳥駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "daisen",
+    "name": "大山",
+    "type": "destination",
+    "region": "中国",
+    "hub": "matsue",
+    "hotelHub": "大山温泉",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "中国地方最高峰。「伯耆富士」とも呼ばれる美しい円錐形の山と大山寺が有名。",
+    "tags": [
+      "登山",
+      "自然",
+      "紅葉",
+      "温泉",
+      "寺院"
+    ],
+    "spots": [
+      "大山頂上",
+      "大山寺",
+      "豪円湯院"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "大山温泉",
+    "gateways": {
+      "rail": [
+        "米子駅"
+      ],
+      "airport": [
+        "米子空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "米子",
+    "railNote": "米子駅からバス約50分",
+    "destType": "sight",
+    "railGateway": "米子駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "米子空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "米子駅",
+      "to": "大山"
+    }
+  },
+  {
+    "id": "yunotsu-onsen",
+    "name": "温泉津",
+    "type": "destination",
+    "region": "中国",
+    "hub": "matsue",
+    "hotelHub": "温泉津温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "世界遺産「石見銀山」の外港として栄えた港町。江戸時代の街並みが残る。",
+    "tags": [
+      "温泉",
+      "世界遺産",
+      "歴史",
+      "港町",
+      "石見銀山"
+    ],
+    "spots": [
+      "薬師湯",
+      "温泉津温泉街",
+      "石見焼"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "温泉津温泉",
+    "gateways": {
+      "rail": [
+        "温泉津駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "温泉津駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "iwami-ginzan",
+    "name": "石見銀山",
+    "type": "destination",
+    "region": "中国",
+    "hub": "matsue",
+    "hotelHub": "大田 石見銀山",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "16〜17世紀に世界最大規模の産銀量を誇った銀山。世界遺産に登録されている。",
+    "tags": [
+      "世界遺産",
+      "歴史",
+      "鉱山",
+      "文化財"
+    ],
+    "spots": [
+      "龍源寺間歩",
+      "大森の街並み",
+      "代官所跡"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "石見銀山",
+    "gateways": {
+      "rail": [
+        "大田市駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "大田市",
+    "railNote": "大田市駅からバス約30分",
+    "destType": "sight",
+    "railGateway": "大田市駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "大田市駅",
+      "to": "石見銀山"
+    }
+  },
+  {
+    "id": "iwakuni",
+    "name": "岩国",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima-t",
+    "hotelHub": "岩国",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "錦帯橋で有名な山口県の城下町。美しいアーチ橋と岩国城が見どころ。",
+    "tags": [
+      "歴史",
+      "橋",
+      "城下町",
+      "桜"
+    ],
+    "spots": [
+      "錦帯橋",
+      "岩国城",
+      "吉香公園"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "岩国",
+    "gateways": {
+      "rail": [
+        "岩国駅"
+      ],
+      "airport": [
+        "岩国錦帯橋空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "岩国駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "岩国錦帯橋空港"
+  },
+  {
+    "id": "kurayoshi",
+    "name": "倉吉",
+    "type": "destination",
+    "region": "中国",
+    "hub": "matsue",
+    "hotelHub": "倉吉",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町。三朝温泉も近い。",
+    "tags": [
+      "歴史",
+      "街並み",
+      "蔵造り",
+      "温泉"
+    ],
+    "spots": [
+      "白壁土蔵群",
+      "大岳院",
+      "倉吉絣"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "倉吉",
+    "gateways": {
+      "rail": [
+        "倉吉駅"
+      ],
+      "airport": [
+        "米子空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "倉吉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "米子空港"
+  },
+  {
+    "id": "suo-oshima",
+    "name": "周防大島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima-t",
+    "hotelHub": "周防大島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "瀬戸内海に浮かぶ柑橘の島。「瀬戸内のハワイ」と呼ばれる穏やかな気候が魅力。",
+    "tags": [
+      "海",
+      "島",
+      "みかん",
+      "自然",
+      "サイクリング"
+    ],
+    "spots": [
+      "片添ヶ浜",
+      "大島大橋",
+      "みかん狩り"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "周防大島",
+    "gateways": {
+      "rail": [
+        "大畠駅"
+      ],
+      "airport": [
+        "岩国錦帯橋空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "柳井港"
+      ]
+    },
+    "accessHub": "大畠",
+    "railNote": null,
+    "destType": "island",
+    "railGateway": "大畠駅",
+    "busGateway": null,
+    "ferryGateway": "柳井港",
+    "airportGateway": "岩国錦帯橋空港"
+  },
+  {
+    "id": "shimanto",
+    "name": "四万十",
+    "type": "destination",
+    "region": "四国",
+    "hub": "kochi",
+    "hotelHub": "四万十川",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "「日本最後の清流」と呼ばれる四万十川。沈下橋が点在する自然豊かな川沿いの風景。",
+    "tags": [
+      "川",
+      "自然",
+      "清流",
+      "サイクリング",
+      "カヌー"
+    ],
+    "spots": [
+      "佐田沈下橋",
+      "四万十川",
+      "岩間沈下橋"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "四万十川",
+    "gateways": {
+      "rail": [
+        "江川崎駅"
+      ],
+      "airport": [
+        "高知空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "江川崎駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "高知空港"
+  },
+  {
+    "id": "tobe",
+    "name": "砥部",
+    "type": "destination",
+    "region": "四国",
+    "hub": "matsuyama",
+    "hotelHub": "砥部",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "砥部焼の産地として有名な愛媛の窯業の街。白磁に藍の絵付けが特徴的。",
+    "tags": [
+      "陶芸",
+      "文化",
+      "工芸",
+      "ものづくり"
+    ],
+    "spots": [
+      "砥部焼伝統産業会館",
+      "とべ動物園",
+      "窯場巡り"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "砥部",
+    "gateways": {
+      "rail": [
+        "松山駅"
+      ],
+      "airport": [
+        "松山空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "松山",
+    "railNote": "松山駅からバス約40分",
+    "destType": "city",
+    "railGateway": "松山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "松山空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "松山駅",
+      "to": "砥部"
+    }
+  },
+  {
+    "id": "kashiwajima",
+    "name": "柏島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "kochi",
+    "hotelHub": "柏島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "透明度抜群の海で知られる高知の秘境離島。ダイビングの聖地。",
+    "tags": [
+      "海",
+      "ダイビング",
+      "シュノーケリング",
+      "透明度",
+      "離島"
+    ],
+    "spots": [
+      "柏島海岸",
+      "ダイビングスポット群"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "柏島",
+    "gateways": {
+      "rail": [
+        "宿毛駅"
+      ],
+      "airport": [
+        "高知空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "宿毛港"
+      ]
+    },
+    "accessHub": "宿毛",
+    "railNote": null,
+    "destType": "island",
+    "railGateway": "宿毛駅",
+    "busGateway": null,
+    "ferryGateway": "宿毛港",
+    "airportGateway": "高知空港"
+  },
+  {
+    "id": "saijo",
+    "name": "西条",
+    "type": "destination",
+    "region": "四国",
+    "hub": "matsuyama",
+    "hotelHub": "西条",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "超軟水の「うちぬき」（自噴水）が湧き出る愛媛の水の都。だんじり祭りも有名。",
+    "tags": [
+      "水",
+      "祭り",
+      "自然",
+      "文化"
+    ],
+    "spots": [
+      "西条うちぬき広場",
+      "西条祭り",
+      "石鎚山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "西条",
+    "gateways": {
+      "rail": [
+        "伊予西条駅"
+      ],
+      "airport": [
+        "松山空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "伊予西条駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "松山空港"
+  },
+  {
+    "id": "ainan",
+    "name": "愛南",
+    "type": "destination",
+    "region": "四国",
+    "hub": "kochi",
+    "hotelHub": "愛南",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "四国最南端に位置する透明度の高い海の町。ゴトランドの名で知られるリアス式海岸が美しい。",
+    "tags": [
+      "海",
+      "自然",
+      "シュノーケリング",
+      "魚介",
+      "ビーチ"
+    ],
+    "spots": [
+      "一本松温泉あけぼの荘",
+      "正木海岸",
+      "内海"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "愛南",
+    "gateways": {
+      "rail": [
+        "宇和島駅"
+      ],
+      "airport": [
+        "松山空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "宇和島",
+    "railNote": "宇和島駅からバス約1時間",
+    "destType": "sight",
+    "railGateway": "宇和島駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "松山空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "宇和島駅",
+      "to": "愛南"
+    }
+  },
+  {
+    "id": "taketa",
+    "name": "竹田",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "hotelHub": "竹田温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "荒城の月の舞台・岡城跡と温泉が有名な大分の城下町。湧き水が豊富。",
+    "tags": [
+      "歴史",
+      "城跡",
+      "温泉",
+      "音楽"
+    ],
+    "spots": [
+      "岡城跡",
+      "竹田温泉",
+      "瀧廉太郎記念館"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "竹田温泉",
+    "gateways": {
+      "rail": [
+        "豊後竹田駅"
+      ],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "豊後竹田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
+  },
+  {
+    "id": "usuki",
+    "name": "臼杵",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "hotelHub": "臼杵",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "国宝の磨崖仏「臼杵石仏」と醤油蔵が有名。白壁の城下町が残る。",
+    "tags": [
+      "歴史",
+      "石仏",
+      "醤油",
+      "城下町",
+      "国宝"
+    ],
+    "spots": [
+      "臼杵石仏（国宝）",
+      "二王座歴史の道",
+      "サーラ・デ・うすき"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "臼杵",
+    "gateways": {
+      "rail": [
+        "臼杵駅"
+      ],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "臼杵駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
+  },
+  {
+    "id": "hita",
+    "name": "日田",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "hotelHub": "日田温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "江戸時代に天領として栄えた商都。豆田町の伝統的街並みと温泉が魅力。",
+    "tags": [
+      "温泉",
+      "歴史",
+      "街並み",
+      "天領",
+      "鵜飼い"
+    ],
+    "spots": [
+      "豆田町（重伝建）",
+      "三隈川鵜飼い",
+      "天領日田おひなまつり"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "日田温泉",
+    "gateways": {
+      "rail": [
+        "日田駅"
+      ],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "日田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
+  },
+  {
+    "id": "hasami",
+    "name": "波佐見",
+    "type": "destination",
+    "region": "九州",
+    "hub": "nagasaki",
+    "hotelHub": "波佐見",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "長崎県の窯業の里。波佐見焼は庶民的でモダンなデザインの磁器として人気。",
+    "tags": [
+      "陶芸",
+      "工芸",
+      "ものづくり",
+      "ショッピング"
+    ],
+    "spots": [
+      "西の原",
+      "陶芸の館",
+      "中尾山"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "波佐見 有田",
+    "gateways": {
+      "rail": [
+        "川棚温泉駅"
+      ],
+      "airport": [
+        "長崎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "川棚",
+    "railNote": "川棚温泉駅からバス約20分",
+    "destType": "city",
+    "railGateway": "川棚温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "長崎空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "川棚温泉駅",
+      "to": "波佐見"
+    }
+  },
+  {
+    "id": "takeo-onsen",
+    "name": "武雄温泉",
+    "type": "destination",
+    "region": "九州",
+    "hub": "saga",
+    "hotelHub": "武雄温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "楼門が国の重要文化財に指定されている温泉地。武雄市図書館でも有名。",
+    "tags": [
+      "温泉",
+      "歴史",
+      "文化財",
+      "図書館"
+    ],
+    "spots": [
+      "武雄温泉楼門",
+      "武雄市図書館",
+      "御船山楽園"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "hotelSearch": "武雄温泉",
+    "gateways": {
+      "rail": [
+        "武雄温泉駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "武雄温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "kitsuki",
+    "name": "杵築",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "hotelHub": "杵築",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "城を挟んで武家屋敷と商家が坂の上下に分かれた「サンドイッチ型城下町」。",
+    "tags": [
+      "歴史",
+      "城下町",
+      "武家屋敷",
+      "坂道"
+    ],
+    "spots": [
+      "杵築城",
+      "勘定場の坂",
+      "大原邸"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "杵築",
+    "gateways": {
+      "rail": [
+        "杵築駅"
+      ],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "杵築駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港"
+  },
+  {
+    "id": "tsushima",
+    "name": "対馬",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "hotelHub": "対馬",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "朝鮮海峡に浮かぶ国境の島。手付かずの自然と対馬固有のツシマヤマネコが生息。",
+    "tags": [
+      "離島",
+      "自然",
+      "歴史",
+      "対馬藩",
+      "ツシマヤマネコ"
+    ],
+    "spots": [
+      "万関橋",
+      "金田城跡",
+      "ツシマヤマネコ保護センター"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "対馬",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "対馬空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "博多港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "博多港",
+    "airportGateway": "対馬空港"
+  },
+  {
+    "id": "iki-island",
+    "name": "壱岐",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "hotelHub": "壱岐",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "壱岐焼酎と美しい海で知られる長崎の島。古代史の遺跡も点在。",
+    "tags": [
+      "離島",
+      "海",
+      "焼酎",
+      "歴史",
+      "ビーチ"
+    ],
+    "spots": [
+      "辰ノ島",
+      "鬼の足跡",
+      "壱岐焼酎蔵"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "壱岐",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "壱岐空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "博多港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "博多港",
+    "airportGateway": "壱岐空港"
+  },
+  {
+    "id": "tanegashima",
+    "name": "種子島",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kagoshima",
+    "hotelHub": "種子島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "鉄砲伝来の地として知られる島。宇宙センターとサーフィンの名所が共存する。",
+    "tags": [
+      "離島",
+      "歴史",
+      "サーフィン",
+      "宇宙",
+      "海"
+    ],
+    "spots": [
+      "種子島宇宙センター",
+      "千座の岩屋",
+      "広田遺跡"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "種子島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "種子島空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "鹿児島港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "鹿児島港",
+    "airportGateway": "種子島空港"
+  },
+  {
+    "id": "kikuchi",
+    "name": "菊池",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "hotelHub": "菊池温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "菊池川沿いの温泉地。菊池渓谷の清流美も見どころで、菊池氏ゆかりの地でもある。",
+    "tags": [
+      "温泉",
+      "渓谷",
+      "自然",
+      "歴史"
+    ],
+    "spots": [
+      "菊池渓谷",
+      "菊池温泉",
+      "菊池神社"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "菊池温泉",
+    "gateways": {
+      "rail": [
+        "武蔵塚公園駅"
+      ],
+      "airport": [
+        "阿蘇くまもと空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "武蔵塚",
+    "railNote": "武蔵塚公園駅からバス約40分",
+    "destType": "onsen",
+    "railGateway": "武蔵塚公園駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "阿蘇くまもと空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "武蔵塚公園駅",
+      "to": "菊池"
+    }
+  },
+  {
+    "id": "taketomi-island",
+    "name": "竹富島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "竹富島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "赤瓦の民家が並ぶ沖縄の原風景が残る離島。水牛車でのんびり巡れる。",
+    "tags": [
+      "離島",
+      "海",
+      "文化",
+      "沖縄",
+      "水牛車"
+    ],
+    "spots": [
+      "星砂の浜",
+      "コンドイ浜",
+      "水牛車観光"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "竹富島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "石垣空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "石垣港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "石垣港",
+    "airportGateway": "石垣空港"
+  },
+  {
+    "id": "yonaguni-island",
+    "name": "与那国島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "与那国島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "日本最西端の島。水中遺跡や馬、壮大な断崖が有名。",
+    "tags": [
+      "離島",
+      "海",
+      "ダイビング",
+      "水中遺跡",
+      "馬"
+    ],
+    "spots": [
+      "西崎灯台（日本最西端）",
+      "海底遺跡",
+      "ヨナグニウマ"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "isIsland": true,
+    "hotelSearch": "与那国島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "与那国空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "石垣港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "石垣港",
+    "airportGateway": "与那国空港"
+  },
+  {
+    "id": "nakijin",
+    "name": "今帰仁",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "今帰仁",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "世界遺産・今帰仁城跡と沖縄本島北部の自然が魅力。ヒカンザクラの名所でもある。",
+    "tags": [
+      "世界遺産",
+      "城跡",
+      "歴史",
+      "桜",
+      "自然"
+    ],
+    "spots": [
+      "今帰仁城跡（世界遺産）",
+      "古宇利島",
+      "ワルミ大橋"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "今帰仁",
+    "gateways": {
+      "rail": [
+        "那覇空港駅"
+      ],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "那覇",
+    "railNote": "那覇空港駅から高速バス＋バスで約2時間",
+    "destType": "sight",
+    "railGateway": "那覇空港駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "那覇空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "那覇空港駅",
+      "to": "今帰仁"
+    }
+  },
+  {
+    "id": "motobu",
+    "name": "本部",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "本部",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "沖縄美ら海水族館がある本部半島。エメラルドグリーンの海が広がるリゾートエリア。",
+    "tags": [
+      "海",
+      "水族館",
+      "リゾート",
+      "自然"
+    ],
+    "spots": [
+      "沖縄美ら海水族館",
+      "備瀬のフクギ並木",
+      "伊江島"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "本部 美ら海",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "本部港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": "那覇空港からレンタカーまたは高速バス約2時間",
+    "destType": "sight",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "本部港",
+    "airportGateway": "那覇空港"
+  },
+  {
+    "id": "zamami-island",
+    "name": "座間味島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "座間味島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "那覇から高速船で約50分。ホエールウォッチングとダイビングで有名な慶良間諸島の島。",
+    "tags": [
+      "離島",
+      "海",
+      "ダイビング",
+      "ホエールウォッチング",
+      "珊瑚礁"
+    ],
+    "spots": [
+      "古座間味ビーチ",
+      "阿真ビーチ",
+      "ホエールウォッチング"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "座間味島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "那覇港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "那覇港",
+    "airportGateway": "那覇空港"
+  },
+  {
+    "id": "ie-island",
+    "name": "伊江島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "伊江島",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "本部港からフェリーで30分。「城山（ぐすくやま）」がそびえる花の島。百合の花が有名。",
+    "tags": [
+      "離島",
+      "海",
+      "花",
+      "自然",
+      "百合"
+    ],
+    "spots": [
+      "城山（タッチュー）",
+      "百合ヶ浜",
+      "伊江島百合の花まつり"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "伊江島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "本部港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "本部港",
+    "airportGateway": "那覇空港"
+  },
+  {
+    "id": "kohama-island",
+    "name": "小浜島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "hotelHub": "小浜島",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.5,
+    "description": "NHKドラマ「ちゅらさん」の舞台。サトウキビ畑と美しい海が広がる静かな島。",
+    "tags": [
+      "離島",
+      "海",
+      "自然",
+      "ドラマ",
+      "サトウキビ"
+    ],
+    "spots": [
+      "はいむるぶし",
+      "大岳",
+      "こはぐら荘（ちゅらさん舞台）"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "isIsland": true,
+    "hotelSearch": "小浜島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "石垣空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "石垣港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "小浜港",
+    "airportGateway": "石垣空港"
+  },
+  {
+    "id": "matsushiro",
+    "name": "松代",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "hotelHub": "松代温泉",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "真田氏の城下町として栄えた長野市郊外の歴史的地区。松代大本営地下壕も見どころ。",
+    "tags": [
+      "歴史",
+      "城下町",
+      "真田氏",
+      "温泉"
+    ],
+    "spots": [
+      "松代城跡",
+      "真田邸",
+      "松代大本営地下壕"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "松代温泉",
+    "gateways": {
+      "rail": [
+        "長野駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "長野",
+    "railNote": "長野駅からバス約30分",
+    "destType": "city",
+    "railGateway": "長野駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "長野駅",
+      "to": "松代"
+    }
+  },
+  {
+    "id": "iiyama",
+    "name": "飯山",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "hotelHub": "飯山温泉",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "千曲川と菜の花が美しい北信濃の小京都。スキーリゾートと温泉も充実。",
+    "tags": [
+      "温泉",
+      "雪",
+      "自然",
+      "花",
+      "農村"
+    ],
+    "spots": [
+      "菜の花公園",
+      "寺の町めぐり",
+      "北竜湖"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": true,
+    "hotelSearch": "飯山温泉",
+    "gateways": {
+      "rail": [
+        "飯山駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "飯山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null
+  },
+  {
+    "id": "yakake",
+    "name": "矢掛",
+    "type": "destination",
+    "region": "中国",
+    "hub": "okayama-o",
+    "hotelHub": "矢掛",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "江戸時代の本陣・脇本陣が現存する山陽道の宿場町。白壁の街並みが美しい。",
+    "tags": [
+      "歴史",
+      "街並み",
+      "宿場町",
+      "白壁"
+    ],
+    "spots": [
+      "矢掛本陣（国指定史跡）",
+      "矢掛脇本陣",
+      "街並み散策"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "矢掛",
+    "gateways": {
+      "rail": [
+        "矢掛駅"
+      ],
+      "airport": [
+        "岡山桃太郎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "矢掛駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "岡山桃太郎空港"
+  },
+  {
+    "id": "tsuyama",
+    "name": "津山",
+    "type": "destination",
+    "region": "中国",
+    "hub": "okayama-o",
+    "hotelHub": "津山",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "美作国の城下町。日本三大城跡の一つ・津山城（鶴山公園）の桜が有名。",
+    "tags": [
+      "歴史",
+      "城跡",
+      "桜",
+      "城下町"
+    ],
+    "spots": [
+      "津山城（鶴山公園）",
+      "衆楽園",
+      "出雲街道"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "津山",
+    "gateways": {
+      "rail": [
+        "津山駅"
+      ],
+      "airport": [
+        "岡山桃太郎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "津山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "岡山桃太郎空港"
+  },
+  {
+    "id": "tsurugi-san",
+    "name": "剣山",
+    "type": "destination",
+    "region": "四国",
+    "hub": "tokushima",
+    "hotelHub": "剣山 貞光",
+    "stayAllowed": [
+      "1night",
+      "2night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "四国第2位の高峰。ゴツゴツした山頂と高山植物、雲海が見られるトレッキングの名山。",
+    "tags": [
+      "登山",
+      "自然",
+      "高山植物",
+      "雲海",
+      "トレッキング"
+    ],
+    "spots": [
+      "剣山山頂",
+      "剣山リフト",
+      "大剣神社"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": true,
+    "hotelSearch": "剣山 貞光",
+    "gateways": {
+      "rail": [
+        "貞光駅"
+      ],
+      "airport": [
+        "徳島空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "貞光",
+    "railNote": "貞光駅からバス約1時間30分",
+    "destType": "sight",
+    "railGateway": "貞光駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "徳島空港",
+    "secondaryTransport": {
+      "type": "bus",
+      "from": "貞光駅",
+      "to": "剣山"
+    }
+  },
+  {
+    "id": "nobeoka",
+    "name": "延岡",
+    "type": "destination",
+    "region": "九州",
+    "hub": "miyazaki",
+    "hotelHub": "延岡",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "宮崎県北部の城下町。五ヶ瀬川沿いの鮎釣りと城山公園が有名。",
+    "tags": [
+      "歴史",
+      "川",
+      "グルメ",
+      "城跡",
+      "自然"
+    ],
+    "spots": [
+      "延岡城跡",
+      "北川渓谷",
+      "道の駅北川はゆま"
+    ],
+    "shinkansenAccess": false,
+    "needsCar": false,
+    "hotelSearch": "延岡",
+    "gateways": {
+      "rail": [
+        "延岡駅"
+      ],
+      "airport": [
+        "宮崎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "延岡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "宮崎空港"
   }
 ]
