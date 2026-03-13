@@ -4,12 +4,14 @@
  * データ構造:
  *   city.gateways.rail[]    — 鉄道ゲートウェイ（駅名）
  *   city.gateways.airport[] — 空港ゲートウェイ
- *   city.gateways.bus[]     — バス・私鉄ターミナル
+ *   city.gateways.bus[]     — 高速バスターミナル
  *   city.gateways.ferry[]   — フェリー港（島=出発港 / 非島=到着港）
  *   city.accessHub          — 二次交通の中継拠点
  *   city.railNote           — 二次交通メモ（バス等）
  *
- * 表示順: JR → 飛行機 → フェリー → GoogleMaps → レンタカー
+ * 表示順: JR → 高速バス → 飛行機 → フェリー → レンタカー
+ *
+ * アクセス構造: 出発都市 → 交通gateway → destination
  *
  * 特例:
  *   ★1（近場）  → GoogleMaps 1本のみ
@@ -17,6 +19,7 @@
  */
 
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
+import { calculateDistanceStars } from '../engine/distanceCalculator.js';
 import { CITY_AIRPORT }        from './airportMap.js';
 import { FLIGHT_ROUTES }       from './flightRoutes.js';
 import {
@@ -41,29 +44,22 @@ function isFlightAvailable(departure, airportGateway) {
 
 function getRail(city, departure, fromCity) {
   const railGateway = gw(city, 'railGateway');
-  const railNote    = city.railNote  ?? null;
-  const accessHub   = city.accessHub ?? null;
+  const railNote    = city.railNote ?? null;
   if (!railGateway) return [];
 
   const links = [];
 
-  // railNote があればバス等二次交通 → JR予約ボタン非表示
-  if (!railNote) {
-    const jr = buildJrLink(resolveRailProvider(departure, city));
-    if (jr) links.push(jr);
-  }
+  // 条件9: railGateway が存在すれば常にJR予約ボタンを表示
+  const jr = buildJrLink(resolveRailProvider(departure, city));
+  if (jr) links.push(jr);
 
-  // 二次交通ノート（accessHub → 目的地）
-  if (accessHub && railNote) {
-    links.push({
-      type:  'note',
-      label: `${accessHub} → ${city.name}（${railNote}）`,
-      url:   null,
-    });
-  }
-
-  // GoogleMaps: 出発駅 → 鉄道ゲートウェイ
+  // 条件8: 出発駅 → 鉄道ゲートウェイ（GoogleMaps transit）
   links.push(buildGoogleMapsLink(fromCity.rail, railGateway, 'transit'));
+
+  // 条件10: バスが必要な場合 GoogleMaps transit（note ではなくリンク）
+  if (railNote) {
+    links.push(buildGoogleMapsLink(railGateway, city.name, 'transit', `バスで${city.name}へ（Googleマップ）`));
+  }
 
   return links;
 }
@@ -112,24 +108,26 @@ function getFerry(city, departure, fromCity, isIsland) {
   }
 }
 
-/* ─── バスリンク ─── */
+/* ─── 高速バスリンク（条件7: JR → 高速バス → 飛行機 順序） ─── */
 
-function getBus(city) {
+function getHighwayBus(city, fromCity) {
   const buses = city.gateways?.bus ?? [];
   if (!buses.length) return [];
-  return [{
-    type:  'note',
-    label: `バス: ${buses.join(' / ')}`,
-    url:   null,
-  }];
+  // 条件10: 高速バスも GoogleMaps transit で案内
+  return buses.map(terminal =>
+    buildGoogleMapsLink(fromCity.rail, terminal, 'transit', `高速バスで${terminal}へ（Googleマップ）`)
+  );
 }
 
-/* ─── 二次交通 ─── */
+/* ─── 二次交通（railGateway なし・空港バス等） ─── */
 
 function getSecondary(city) {
+  // railGateway ありの場合は getRail() 内でバス処理済みのためスキップ
+  if (gw(city, 'railGateway')) return [];
   const s = city.secondaryTransport;
   if (!s) return [];
-  return [buildGoogleMapsLink(s.from, s.to, 'transit', `${s.from}からバス`)];
+  // 条件10: バスが必要な場合 GoogleMaps transit
+  return [buildGoogleMapsLink(s.from, s.to, 'transit', `${s.from}からバス（Googleマップ）`)];
 }
 
 /* ─── レンタカー ─── */
@@ -162,7 +160,8 @@ export function resolveTransportLinks(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
   if (!fromCity) return [];
 
-  const stars    = city.distanceStars ?? 0;
+  // 条件4: 出発地依存の動的距離計算（static distanceStars ではなく departure 別に計算）
+  const stars    = calculateDistanceStars(departure, city);
   const isIsland = !!(city.isIsland || city.destType === 'island');
   const hasFerry = !!(gw(city, 'ferryGateway') || (city.gateways?.ferry?.length > 0));
 
@@ -184,12 +183,12 @@ export function resolveTransportLinks(city, departure) {
     ].filter(l => l?.url);
   }
 
-  // 通常ルート: JR → 飛行機 → フェリー → 二次交通
+  // 通常ルート: 条件7の順序 JR → 高速バス → 飛行機 → フェリー → 二次交通
   const links = [
     ...getRail(city, departure, fromCity),
+    ...getHighwayBus(city, fromCity),
     ...getFlight(city, departure, fromCity),
     ...getFerry(city, departure, fromCity, false),
-    ...getBus(city),
     ...getSecondary(city),
   ];
 
