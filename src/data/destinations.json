@@ -42,7 +42,14 @@
     "railGateway": "鎌倉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "神奈川県",
+    "lat": 35.3197,
+    "lng": 139.5497,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "atami",
@@ -86,7 +93,14 @@
     "railGateway": "熱海駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "静岡県",
+    "lat": 35.0963,
+    "lng": 139.0722,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "nikko",
@@ -143,7 +157,14 @@
     "railGateway": "日光駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "栃木県",
+    "lat": 36.7198,
+    "lng": 139.6981,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "karuizawa",
@@ -199,7 +220,14 @@
     "railGateway": "軽井沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.3491,
+    "lng": 138.5963,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "fujikawaguchiko",
@@ -244,7 +272,14 @@
     "railGateway": "河口湖駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山梨県",
+    "lat": 35.5028,
+    "lng": 138.7536,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "nara",
@@ -291,7 +326,14 @@
     "railGateway": "奈良駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "lat": 34.6851,
+    "lng": 135.8048,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ishigaki",
@@ -339,7 +381,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "石垣空港"
+    "airportGateway": "石垣空港",
+    "prefecture": "沖縄県",
+    "lat": 24.3448,
+    "lng": 124.1572,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "ise",
@@ -396,7 +445,14 @@
     "railGateway": "伊勢市駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "三重県",
+    "lat": 34.4888,
+    "lng": 136.7115,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "beppu",
@@ -452,7 +508,14 @@
     "railGateway": "別府駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "大分県",
+    "lat": 33.2882,
+    "lng": 131.4917,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "otaru",
@@ -499,7 +562,14 @@
     "railGateway": "小樽駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 43.1907,
+    "lng": 140.9946,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "furano",
@@ -543,7 +613,14 @@
     "railGateway": "富良野駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 43.342,
+    "lng": 142.3834,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "matsushima",
@@ -600,7 +677,14 @@
     "railGateway": "松島海岸駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮城県",
+    "lat": 38.368,
+    "lng": 141.0652,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "miyajima",
@@ -646,7 +730,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "宮島口港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.2981,
+    "lng": 132.3194,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "onomichi",
@@ -705,7 +796,14 @@
     "railGateway": "尾道駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.4087,
+    "lng": 133.2028,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shodoshima",
@@ -752,7 +850,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "高松港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.4805,
+    "lng": 134.1677,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "mihonoseki",
@@ -800,7 +905,14 @@
     "railGateway": "境港駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "米子空港"
+    "airportGateway": "米子空港",
+    "prefecture": "島根県",
+    "lat": 35.5748,
+    "lng": 133.3122,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ryujin-onsen",
@@ -845,7 +957,14 @@
     "railGateway": "紀伊田辺駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "和歌山県",
+    "lat": 33.9547,
+    "lng": 135.6393,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tokashiki-jima",
@@ -896,7 +1015,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "那覇港",
-    "airportGateway": "那覇空港"
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.1936,
+    "lng": 127.3551,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "kumejima",
@@ -945,7 +1071,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "那覇港",
-    "airportGateway": "久米島空港"
+    "airportGateway": "久米島空港",
+    "prefecture": "沖縄県",
+    "lat": 26.3394,
+    "lng": 126.8038,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "miyakojima",
@@ -994,7 +1127,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "宮古空港"
+    "airportGateway": "宮古空港",
+    "prefecture": "沖縄県",
+    "lat": 24.8057,
+    "lng": 125.2813,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "kouzushima",
@@ -1039,7 +1179,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "竹芝客船ターミナル",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "東京都",
+    "lat": 34.2073,
+    "lng": 139.1385,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "hakone",
@@ -1084,7 +1231,14 @@
     "railGateway": "箱根湯本駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "神奈川県",
+    "lat": 35.2325,
+    "lng": 139.1067,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "shuzenji",
@@ -1128,7 +1282,14 @@
     "railGateway": "修善寺駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "静岡県",
+    "lat": 34.9735,
+    "lng": 138.9291,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "kusatsu-onsen",
@@ -1172,7 +1333,14 @@
     "railGateway": "長野原草津口駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "群馬県",
+    "lat": 36.6199,
+    "lng": 138.5968,
+    "stayBias": 1,
+    "gatewayHub": "長野原草津口",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "shimoda",
@@ -1217,7 +1385,14 @@
     "railGateway": "伊豆急下田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "静岡県",
+    "lat": 34.6758,
+    "lng": 138.945,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "izu-oshima",
@@ -1265,7 +1440,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "竹芝客船ターミナル",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "東京都",
+    "lat": 34.7248,
+    "lng": 139.3962,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "shirakawago-t",
@@ -1328,7 +1510,14 @@
     "railGateway": "金沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岐阜県",
+    "lat": 36.2577,
+    "lng": 136.9051,
+    "stayBias": 1,
+    "gatewayHub": "高山",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "arima-onsen",
@@ -1378,7 +1567,14 @@
     "railGateway": "三ノ宮駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "兵庫県",
+    "lat": 34.7988,
+    "lng": 135.2466,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kinosaki-onsen",
@@ -1438,7 +1634,14 @@
     "railGateway": "城崎温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "兵庫県",
+    "lat": 35.6283,
+    "lng": 134.8053,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kurashiki-o",
@@ -1497,7 +1700,14 @@
     "railGateway": "倉敷駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岡山県",
+    "lat": 34.5853,
+    "lng": 133.7725,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shirahama-o",
@@ -1543,7 +1753,14 @@
     "railGateway": "白浜駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "和歌山県",
+    "lat": 33.6846,
+    "lng": 135.3568,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "takayama-o",
@@ -1601,7 +1818,14 @@
     "railGateway": "高山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岐阜県",
+    "lat": 36.1461,
+    "lng": 137.2518,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "toba",
@@ -1648,7 +1872,14 @@
     "railGateway": "鳥羽駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "三重県",
+    "lat": 34.4828,
+    "lng": 136.844,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "yufuin",
@@ -1705,7 +1936,14 @@
     "railGateway": "由布院駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "大分県",
+    "lat": 33.2641,
+    "lng": 131.3644,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "kurokawa-k",
@@ -1756,7 +1994,14 @@
     "railGateway": "博多駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "熊本県",
+    "lat": 33.1022,
+    "lng": 131.0543,
+    "stayBias": 1,
+    "gatewayHub": "阿蘇",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "aso",
@@ -1802,7 +2047,14 @@
     "railGateway": "阿蘇駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "熊本県",
+    "lat": 32.8838,
+    "lng": 131.0878,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "yakushima",
@@ -1849,7 +2101,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "屋久島空港"
+    "airportGateway": "屋久島空港",
+    "prefecture": "鹿児島県",
+    "lat": 30.3928,
+    "lng": 130.6576,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "鹿児島",
+    "railProvider": null
   },
   {
     "id": "amakusa",
@@ -1898,7 +2157,14 @@
     "railGateway": "熊本駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "熊本県",
+    "lat": 32.4562,
+    "lng": 130.1906,
+    "stayBias": 1,
+    "gatewayHub": "熊本",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "hiraizumi",
@@ -1945,7 +2211,14 @@
     "railGateway": "平泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岩手県",
+    "lat": 38.9873,
+    "lng": 141.1108,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "kakunodate",
@@ -1991,7 +2264,14 @@
     "railGateway": "角館駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "秋田県",
+    "lat": 39.5986,
+    "lng": 140.5597,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "aizu",
@@ -2049,7 +2329,14 @@
     "railGateway": "会津若松駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福島県",
+    "lat": 37.4936,
+    "lng": 139.9308,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "zaosan",
@@ -2093,7 +2380,14 @@
     "railGateway": "蔵王駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮城県",
+    "lat": 38.1389,
+    "lng": 140.4494,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "hagi",
@@ -2138,7 +2432,14 @@
     "railGateway": "萩駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山口県",
+    "lat": 34.4077,
+    "lng": 131.399,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shimonoseki",
@@ -2184,7 +2485,14 @@
     "railGateway": "下関駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山口県",
+    "lat": 33.9543,
+    "lng": 130.9419,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "naoshima",
@@ -2231,7 +2539,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "高松港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.4611,
+    "lng": 133.9965,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kotohira",
@@ -2277,7 +2592,14 @@
     "railGateway": "琴電琴平駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.1893,
+    "lng": 133.8244,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "uwajima",
@@ -2322,7 +2644,14 @@
     "railGateway": "宇和島駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "愛媛県",
+    "lat": 33.2234,
+    "lng": 132.5641,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "toyako",
@@ -2366,7 +2695,14 @@
     "railGateway": "洞爺駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 42.5966,
+    "lng": 140.8045,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "noboribetsu",
@@ -2410,7 +2746,14 @@
     "railGateway": "登別駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 42.4154,
+    "lng": 141.1063,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "shiretoko",
@@ -2456,7 +2799,14 @@
     "railGateway": "知床斜里駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "女満別空港"
+    "airportGateway": "女満別空港",
+    "prefecture": "北海道",
+    "lat": 44.078,
+    "lng": 144.97,
+    "stayBias": 2,
+    "gatewayHub": "網走",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "wajima",
@@ -2505,7 +2855,14 @@
     "railGateway": "金沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "石川県",
+    "lat": 37.3895,
+    "lng": 136.8952,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kaga-onsen",
@@ -2550,7 +2907,14 @@
     "railGateway": "加賀温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "石川県",
+    "lat": 36.2991,
+    "lng": 136.3102,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "hakuba",
@@ -2594,7 +2958,14 @@
     "railGateway": "白馬駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.6982,
+    "lng": 137.8605,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "amanohashidate",
@@ -2640,7 +3011,14 @@
     "railGateway": "天橋立駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "京都府",
+    "lat": 35.5731,
+    "lng": 135.1836,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ine",
@@ -2689,7 +3067,14 @@
     "railGateway": "天橋立駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "京都府",
+    "lat": 35.6908,
+    "lng": 135.2668,
+    "stayBias": 1,
+    "gatewayHub": "天橋立",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ibusuki",
@@ -2734,7 +3119,14 @@
     "railGateway": "指宿駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "鹿児島県",
+    "lat": 31.2517,
+    "lng": 130.6306,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "sasebo",
@@ -2780,7 +3172,14 @@
     "railGateway": "佐世保駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長崎県",
+    "lat": 33.1603,
+    "lng": 129.715,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "hirado",
@@ -2824,7 +3223,14 @@
     "railGateway": "平戸口駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長崎県",
+    "lat": 33.3696,
+    "lng": 129.5492,
+    "stayBias": 1,
+    "gatewayHub": "佐世保",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "tottori",
@@ -2869,7 +3275,14 @@
     "railGateway": "鳥取駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "鳥取県",
+    "lat": 35.5013,
+    "lng": 134.2351,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "akita",
@@ -2914,7 +3327,14 @@
     "railGateway": "秋田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "秋田県",
+    "lat": 39.7187,
+    "lng": 140.1023,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "awaji",
@@ -2965,7 +3385,14 @@
     "railGateway": "三ノ宮駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "兵庫県",
+    "lat": 34.4289,
+    "lng": 134.87,
+    "stayBias": 1,
+    "gatewayHub": "明石",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "takao",
@@ -3009,7 +3436,14 @@
     "railGateway": "高尾山口駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "東京都",
+    "lat": 35.6251,
+    "lng": 139.2437,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "tateyama-chiba",
@@ -3054,7 +3488,14 @@
     "railGateway": "館山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "千葉県",
+    "lat": 34.996,
+    "lng": 139.8682,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "gokayama",
@@ -3104,7 +3545,14 @@
     "railGateway": "金沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "富山県",
+    "lat": 36.2383,
+    "lng": 136.8899,
+    "stayBias": 1,
+    "gatewayHub": "高山",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "jozankei",
@@ -3153,7 +3601,14 @@
     "railGateway": "札幌駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 42.9775,
+    "lng": 141.0938,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "biei",
@@ -3199,7 +3654,14 @@
     "railGateway": "美瑛駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 43.5859,
+    "lng": 142.4746,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "miyako-iwate",
@@ -3245,7 +3707,14 @@
     "railGateway": "宮古駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岩手県",
+    "lat": 39.6409,
+    "lng": 141.9574,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "sakata",
@@ -3290,7 +3759,14 @@
     "railGateway": "酒田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山形県",
+    "lat": 38.9136,
+    "lng": 139.8368,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "takachiho",
@@ -3340,7 +3816,14 @@
     "railGateway": "熊本駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮崎県",
+    "lat": 32.7081,
+    "lng": 131.3003,
+    "stayBias": 1,
+    "gatewayHub": "延岡",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "amami",
@@ -3385,7 +3868,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "鹿児島港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "鹿児島県",
+    "lat": 28.3769,
+    "lng": 129.4934,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "鹿児島",
+    "railProvider": null
   },
   {
     "id": "goto",
@@ -3431,7 +3921,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "博多港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長崎県",
+    "lat": 32.693,
+    "lng": 128.8356,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "unzen",
@@ -3480,7 +3977,14 @@
     "railGateway": "諫早駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長崎県",
+    "lat": 32.7561,
+    "lng": 130.276,
+    "stayBias": 1,
+    "gatewayHub": "諫早",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "ashizuri",
@@ -3529,7 +4033,14 @@
     "railGateway": "中村駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "高知県",
+    "lat": 32.7281,
+    "lng": 133.0149,
+    "stayBias": 1,
+    "gatewayHub": "中村",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "oboke",
@@ -3574,7 +4085,14 @@
     "railGateway": "大歩危駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "徳島県",
+    "lat": 33.9021,
+    "lng": 133.8939,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tsuwano",
@@ -3619,7 +4137,14 @@
     "railGateway": "津和野駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "島根県",
+    "lat": 34.4657,
+    "lng": 131.775,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "inuyama",
@@ -3664,7 +4189,14 @@
     "railGateway": "犬山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "愛知県",
+    "lat": 35.3836,
+    "lng": 136.9434,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kiso",
@@ -3715,7 +4247,14 @@
     "railGateway": "南木曽駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 35.7543,
+    "lng": 137.7141,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "miyama",
@@ -3765,7 +4304,14 @@
     "railGateway": "園部駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "京都府",
+    "lat": 35.2994,
+    "lng": 135.6126,
+    "stayBias": 1,
+    "gatewayHub": "園部",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tateyama-kurobe",
@@ -3811,7 +4357,14 @@
     "railGateway": "立山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "富山県",
+    "lat": 36.5731,
+    "lng": 137.6221,
+    "stayBias": 2,
+    "gatewayHub": "富山",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "himi",
@@ -3857,7 +4410,14 @@
     "railGateway": "氷見駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "富山県",
+    "lat": 36.8561,
+    "lng": 136.9879,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "nyuto-onsen",
@@ -3908,7 +4468,14 @@
     "railGateway": "田沢湖駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "秋田県",
+    "lat": 39.78,
+    "lng": 140.657,
+    "stayBias": 1,
+    "gatewayHub": "田沢湖",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "yuda-onsen",
@@ -3954,7 +4521,14 @@
     "railGateway": "湯田温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山口県",
+    "lat": 34.1759,
+    "lng": 131.4655,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ureshino-onsen",
@@ -3999,7 +4573,14 @@
     "railGateway": "嬉野温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "佐賀県",
+    "lat": 33.1076,
+    "lng": 129.9943,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "obuse",
@@ -4045,7 +4626,14 @@
     "railGateway": "小布施駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.6965,
+    "lng": 138.3115,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "uchiko",
@@ -4091,7 +4679,14 @@
     "railGateway": "内子駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "愛媛県",
+    "lat": 33.5407,
+    "lng": 132.6593,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "muroto",
@@ -4141,7 +4736,14 @@
     "railGateway": "高知駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "高知県",
+    "lat": 33.2932,
+    "lng": 134.1576,
+    "stayBias": 1,
+    "gatewayHub": "奈半利",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "iya",
@@ -4192,7 +4794,14 @@
     "railGateway": "阿波池田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "徳島県",
+    "lat": 33.87,
+    "lng": 133.95,
+    "stayBias": 2,
+    "gatewayHub": "大歩危",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "oku-izumo",
@@ -4238,7 +4847,14 @@
     "railGateway": "木次駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "島根県",
+    "lat": 35.0048,
+    "lng": 133.0082,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ginzan-onsen",
@@ -4288,7 +4904,14 @@
     "railGateway": "大石田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山形県",
+    "lat": 38.7012,
+    "lng": 140.6427,
+    "stayBias": 1,
+    "gatewayHub": "大石田",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "ouchi-juku",
@@ -4339,7 +4962,14 @@
     "railGateway": "会津若松駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福島県",
+    "lat": 37.0909,
+    "lng": 139.7858,
+    "stayBias": 1,
+    "gatewayHub": "会津若松",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "nozawa-onsen",
@@ -4389,7 +5019,14 @@
     "railGateway": "飯山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.9118,
+    "lng": 138.4484,
+    "stayBias": 1,
+    "gatewayHub": "飯山",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "takehara",
@@ -4435,7 +5072,14 @@
     "railGateway": "竹原駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.3418,
+    "lng": 132.9054,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tsumago",
@@ -4487,7 +5131,14 @@
     "railGateway": "南木曽駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 35.5505,
+    "lng": 137.5905,
+    "stayBias": 1,
+    "gatewayHub": "中津川",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "magome",
@@ -4539,7 +5190,14 @@
     "railGateway": "中津川駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岐阜県",
+    "lat": 35.5278,
+    "lng": 137.5916,
+    "stayBias": 1,
+    "gatewayHub": "中津川",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "nagahama",
@@ -4586,7 +5244,14 @@
     "railGateway": "長浜駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "滋賀県",
+    "lat": 35.3747,
+    "lng": 136.2694,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "hikone",
@@ -4633,7 +5298,14 @@
     "railGateway": "彦根駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "滋賀県",
+    "lat": 35.2762,
+    "lng": 136.2544,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "koyasan",
@@ -4679,7 +5351,14 @@
     "railGateway": "高野山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "和歌山県",
+    "lat": 34.2133,
+    "lng": 135.5848,
+    "stayBias": 1,
+    "gatewayHub": "橋本",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "gero-onsen",
@@ -4725,7 +5404,14 @@
     "railGateway": "下呂駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岐阜県",
+    "lat": 35.8063,
+    "lng": 137.2458,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "naruko-onsen",
@@ -4770,7 +5456,14 @@
     "railGateway": "鳴子温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮城県",
+    "lat": 38.7282,
+    "lng": 140.7286,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "shima-onsen",
@@ -4819,7 +5512,14 @@
     "railGateway": "中之条駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "群馬県",
+    "lat": 36.676,
+    "lng": 138.683,
+    "stayBias": 1,
+    "gatewayHub": "中之条",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "hirosaki",
@@ -4867,7 +5567,14 @@
     "railGateway": "弘前駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "青森空港"
+    "airportGateway": "青森空港",
+    "prefecture": "青森県",
+    "lat": 40.6027,
+    "lng": 140.4641,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "oirase",
@@ -4920,7 +5627,14 @@
     "railGateway": "八戸駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "青森空港"
+    "airportGateway": "青森空港",
+    "prefecture": "青森県",
+    "lat": 40.5393,
+    "lng": 141.3793,
+    "stayBias": 1,
+    "gatewayHub": "八戸",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "mashiko",
@@ -4965,7 +5679,14 @@
     "railGateway": "益子駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "栃木県",
+    "lat": 36.4708,
+    "lng": 140.1047,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "bessho-onsen",
@@ -5011,7 +5732,14 @@
     "railGateway": "別所温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.3451,
+    "lng": 138.1521,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "izushi",
@@ -5063,7 +5791,14 @@
     "railGateway": "豊岡駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "兵庫県",
+    "lat": 35.4862,
+    "lng": 134.8812,
+    "stayBias": 1,
+    "gatewayHub": "豊岡",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "wakura-onsen",
@@ -5108,7 +5843,14 @@
     "railGateway": "和倉温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "石川県",
+    "lat": 37.0509,
+    "lng": 136.9983,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "misasa-onsen",
@@ -5160,7 +5902,14 @@
     "railGateway": "倉吉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "鳥取県",
+    "lat": 35.3779,
+    "lng": 133.83,
+    "stayBias": 1,
+    "gatewayHub": "倉吉",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "obi",
@@ -5206,7 +5955,14 @@
     "railGateway": "飫肥駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮崎県",
+    "lat": 31.6604,
+    "lng": 131.3704,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "hitoyoshi",
@@ -5253,7 +6009,14 @@
     "railGateway": "人吉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "熊本県",
+    "lat": 32.2079,
+    "lng": 130.7645,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "kamikochi",
@@ -5305,7 +6068,14 @@
     "railGateway": "松本駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.238,
+    "lng": 137.6524,
+    "stayBias": 1,
+    "gatewayHub": "松本",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "minakami-onsen",
@@ -5351,7 +6121,14 @@
     "railGateway": "水上駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "群馬県",
+    "lat": 36.9115,
+    "lng": 138.9932,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "minami-aso",
@@ -5404,7 +6181,14 @@
     "railGateway": "熊本駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "阿蘇くまもと空港"
+    "airportGateway": "阿蘇くまもと空港",
+    "prefecture": "熊本県",
+    "lat": 32.8193,
+    "lng": 131.0244,
+    "stayBias": 1,
+    "gatewayHub": "阿蘇",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "imabari",
@@ -5461,7 +6245,14 @@
     "railGateway": "今治駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "愛媛県",
+    "lat": 34.0658,
+    "lng": 132.9978,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ozu",
@@ -5518,7 +6309,14 @@
     "railGateway": "伊予大洲駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "愛媛県",
+    "lat": 33.4982,
+    "lng": 132.5462,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shakotan",
@@ -5580,7 +6378,14 @@
     "railGateway": "小樽駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 43.2428,
+    "lng": 140.4563,
+    "stayBias": 1,
+    "gatewayHub": "小樽",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "izumo",
@@ -5641,7 +6446,14 @@
     "railGateway": "出雲市駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "出雲縁結び空港"
+    "airportGateway": "出雲縁結び空港",
+    "prefecture": "島根県",
+    "lat": 35.3676,
+    "lng": 132.7546,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "noto",
@@ -5706,7 +6518,14 @@
     "railGateway": "金沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "小松空港"
+    "airportGateway": "小松空港",
+    "prefecture": "石川県",
+    "lat": 37.145,
+    "lng": 136.905,
+    "stayBias": 2,
+    "gatewayHub": "和倉温泉",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "yoshino",
@@ -5765,7 +6584,14 @@
     "railGateway": "吉野駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "lat": 34.3699,
+    "lng": 135.8588,
+    "stayBias": 1,
+    "gatewayHub": "吉野口",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kumano",
@@ -5824,7 +6650,14 @@
     "railGateway": "新宮駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "三重県",
+    "lat": 33.72,
+    "lng": 135.9897,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "iriomote",
@@ -5883,7 +6716,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "石垣港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "沖縄県",
+    "lat": 24.3245,
+    "lng": 123.9043,
+    "stayBias": 2,
+    "gatewayHub": "石垣",
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "takahashi",
@@ -5941,7 +6781,14 @@
     "railGateway": "備中高梁駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岡山県",
+    "lat": 34.7953,
+    "lng": 133.5888,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "hida-furukawa",
@@ -6000,7 +6847,14 @@
     "railGateway": "飛騨古川駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岐阜県",
+    "lat": 36.232,
+    "lng": 137.1829,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "bungo-takada",
@@ -6064,7 +6918,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "大分空港"
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 33.5613,
+    "lng": 131.4948,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "izu-kogen",
@@ -6123,7 +6984,14 @@
     "railGateway": "伊豆高原駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "静岡県",
+    "lat": 34.9052,
+    "lng": 139.0914,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "sanriku",
@@ -6181,7 +7049,14 @@
     "railGateway": "宮古駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岩手県",
+    "lat": 39.5,
+    "lng": 141.975,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "tanabe",
@@ -6241,7 +7116,14 @@
     "railGateway": "紀伊田辺駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "南紀白浜空港"
+    "airportGateway": "南紀白浜空港",
+    "prefecture": "和歌山県",
+    "lat": 33.7319,
+    "lng": 135.3753,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tosa-shimizu",
@@ -6304,7 +7186,14 @@
     "railGateway": "中村駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "高知県",
+    "lat": 32.7817,
+    "lng": 132.9573,
+    "stayBias": 1,
+    "gatewayHub": "中村",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "nichinan",
@@ -6362,7 +7251,14 @@
     "railGateway": "日南駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "宮崎県",
+    "lat": 31.6026,
+    "lng": 131.4094,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "mojiko",
@@ -6421,7 +7317,14 @@
     "railGateway": "門司港駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福岡県",
+    "lat": 33.9401,
+    "lng": 130.9695,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "itoshima",
@@ -6480,7 +7383,14 @@
     "railGateway": "筑前前原駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福岡県",
+    "lat": 33.556,
+    "lng": 130.1797,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "shimabara",
@@ -6538,7 +7448,14 @@
     "railGateway": "島原駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長崎県",
+    "lat": 32.7887,
+    "lng": 130.3669,
+    "stayBias": 1,
+    "gatewayHub": "諫早",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "tsuruga",
@@ -6598,7 +7515,14 @@
     "railGateway": "敦賀駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福井県",
+    "lat": 35.6449,
+    "lng": 136.0557,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shijishima",
@@ -6646,7 +7570,14 @@
     "railGateway": "詫間駅",
     "busGateway": null,
     "ferryGateway": "詫間港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.303,
+    "lng": 133.672,
+    "stayBias": 1,
+    "gatewayHub": "三豊",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "sounkyo",
@@ -6698,7 +7629,14 @@
       "type": "bus",
       "from": "上川駅",
       "to": "層雲峡"
-    }
+    },
+    "prefecture": "北海道",
+    "lat": 43.739,
+    "lng": 142.8728,
+    "stayBias": 1,
+    "gatewayHub": "上川",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "rebun-island",
@@ -6744,7 +7682,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "稚内港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 45.349,
+    "lng": 141.0488,
+    "stayBias": 2,
+    "gatewayHub": "稚内",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "rishiri-island",
@@ -6790,7 +7735,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "稚内港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "lat": 45.1672,
+    "lng": 141.2256,
+    "stayBias": 2,
+    "gatewayHub": "稚内",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "akan",
@@ -6841,7 +7793,14 @@
       "type": "bus",
       "from": "釧路駅",
       "to": "阿寒湖"
-    }
+    },
+    "prefecture": "北海道",
+    "lat": 43.4446,
+    "lng": 144.0961,
+    "stayBias": 1,
+    "gatewayHub": "釧路",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "abashiri",
@@ -6887,7 +7846,14 @@
     "railGateway": "網走駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "女満別空港"
+    "airportGateway": "女満別空港",
+    "prefecture": "北海道",
+    "lat": 44.021,
+    "lng": 144.2769,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "shikotsu",
@@ -6937,7 +7903,14 @@
       "type": "bus",
       "from": "千歳駅",
       "to": "支笏湖"
-    }
+    },
+    "prefecture": "北海道",
+    "lat": 42.7468,
+    "lng": 141.3714,
+    "stayBias": 1,
+    "gatewayHub": "千歳",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "tono",
@@ -6981,7 +7954,14 @@
     "railGateway": "遠野駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "岩手県",
+    "lat": 39.3275,
+    "lng": 141.5273,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "oga",
@@ -7025,7 +8005,14 @@
     "railGateway": "男鹿駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "秋田県",
+    "lat": 39.8905,
+    "lng": 139.8428,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "yonezawa",
@@ -7068,7 +8055,14 @@
     "railGateway": "米沢駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山形県",
+    "lat": 37.9121,
+    "lng": 140.1181,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "dewa-sanzan",
@@ -7120,7 +8114,14 @@
       "type": "bus",
       "from": "鶴岡駅",
       "to": "出羽三山"
-    }
+    },
+    "prefecture": "山形県",
+    "lat": 38.7285,
+    "lng": 139.9748,
+    "stayBias": 1,
+    "gatewayHub": "鶴岡",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "sakunami-onsen",
@@ -7170,7 +8171,14 @@
       "type": "bus",
       "from": "仙台駅",
       "to": "秋保温泉"
-    }
+    },
+    "prefecture": "宮城県",
+    "lat": 38.2532,
+    "lng": 140.6548,
+    "stayBias": 1,
+    "gatewayHub": "仙台",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "goshogawara",
@@ -7215,7 +8223,14 @@
     "railGateway": "五所川原駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "青森空港"
+    "airportGateway": "青森空港",
+    "prefecture": "青森県",
+    "lat": 40.807,
+    "lng": 140.4377,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "kawagoe",
@@ -7259,7 +8274,14 @@
     "railGateway": "川越駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "埼玉県",
+    "lat": 35.925,
+    "lng": 139.4853,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "nasu",
@@ -7308,7 +8330,14 @@
       "type": "bus",
       "from": "那須塩原駅",
       "to": "那須"
-    }
+    },
+    "prefecture": "栃木県",
+    "lat": 37.0765,
+    "lng": 140.0358,
+    "stayBias": 1,
+    "gatewayHub": "那須塩原",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "choshi",
@@ -7352,7 +8381,14 @@
     "railGateway": "銚子駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "千葉県",
+    "lat": 35.7356,
+    "lng": 140.8267,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "ashikaga",
@@ -7396,7 +8432,14 @@
     "railGateway": "足利駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "栃木県",
+    "lat": 36.3401,
+    "lng": 139.4496,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "shiobara-onsen",
@@ -7444,7 +8487,14 @@
       "type": "bus",
       "from": "那須塩原駅",
       "to": "塩原温泉"
-    }
+    },
+    "prefecture": "栃木県",
+    "lat": 36.9419,
+    "lng": 139.8672,
+    "stayBias": 1,
+    "gatewayHub": "那須塩原",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "sado-island",
@@ -7490,7 +8540,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "新潟港",
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "新潟県",
+    "lat": 38.0181,
+    "lng": 138.3688,
+    "stayBias": 2,
+    "gatewayHub": "新潟",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "kiyosato",
@@ -7535,7 +8592,14 @@
     "railGateway": "清里駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "山梨県",
+    "lat": 35.9121,
+    "lng": 138.4248,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "tenryu-gorge",
@@ -7578,7 +8642,14 @@
     "railGateway": "天竜峡駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 35.3593,
+    "lng": 137.8163,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "suwa",
@@ -7622,7 +8693,14 @@
     "railGateway": "上諏訪駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.039,
+    "lng": 138.1147,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "eiheiji",
@@ -7667,7 +8745,14 @@
     "railGateway": "永平寺口駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福井県",
+    "lat": 36.091,
+    "lng": 136.482,
+    "stayBias": 0,
+    "gatewayHub": "永平寺口",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "wakasa-obama",
@@ -7711,7 +8796,14 @@
     "railGateway": "小浜駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "福井県",
+    "lat": 35.4979,
+    "lng": 135.7448,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "okuhida-onsen",
@@ -7762,7 +8854,14 @@
       "type": "bus",
       "from": "高山駅",
       "to": "奥飛騨温泉郷"
-    }
+    },
+    "prefecture": "岐阜県",
+    "lat": 36.3327,
+    "lng": 137.5622,
+    "stayBias": 1,
+    "gatewayHub": "高山",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "minami-izu",
@@ -7812,7 +8911,14 @@
       "type": "bus",
       "from": "下田駅",
       "to": "南伊豆"
-    }
+    },
+    "prefecture": "静岡県",
+    "lat": 34.6155,
+    "lng": 138.827,
+    "stayBias": 1,
+    "gatewayHub": "下田",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "echizen",
@@ -7861,7 +8967,14 @@
       "type": "bus",
       "from": "武生駅",
       "to": "越前"
-    }
+    },
+    "prefecture": "福井県",
+    "lat": 35.9971,
+    "lng": 136.1819,
+    "stayBias": 1,
+    "gatewayHub": "武生",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ito",
@@ -7904,7 +9017,14 @@
     "railGateway": "伊東駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "静岡県",
+    "lat": 34.9658,
+    "lng": 139.0984,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "iga",
@@ -7948,7 +9068,14 @@
     "railGateway": "上野市駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "三重県",
+    "lat": 34.7691,
+    "lng": 136.1313,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kashihara",
@@ -7992,7 +9119,14 @@
     "railGateway": "橿原神宮前駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "lat": 34.4844,
+    "lng": 135.7942,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "totsukawa",
@@ -8042,7 +9176,14 @@
       "type": "bus",
       "from": "五条駅",
       "to": "十津川"
-    }
+    },
+    "prefecture": "奈良県",
+    "lat": 34.0542,
+    "lng": 135.6702,
+    "stayBias": 2,
+    "gatewayHub": "五条",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "yunomineonsen",
@@ -8090,7 +9231,14 @@
       "type": "bus",
       "from": "新宮駅",
       "to": "湯の峰温泉"
-    }
+    },
+    "prefecture": "和歌山県",
+    "lat": 33.7388,
+    "lng": 135.8374,
+    "stayBias": 1,
+    "gatewayHub": "新宮",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "maizuru",
@@ -8133,7 +9281,14 @@
     "railGateway": "東舞鶴駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "京都府",
+    "lat": 35.4723,
+    "lng": 135.3763,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "asuka",
@@ -8178,7 +9333,14 @@
     "railGateway": "飛鳥駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "lat": 34.4712,
+    "lng": 135.8277,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "daisen",
@@ -8230,7 +9392,14 @@
       "type": "bus",
       "from": "米子駅",
       "to": "大山"
-    }
+    },
+    "prefecture": "鳥取県",
+    "lat": 35.3804,
+    "lng": 133.5453,
+    "stayBias": 1,
+    "gatewayHub": "米子",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "yunotsu-onsen",
@@ -8274,7 +9443,14 @@
     "railGateway": "温泉津駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "島根県",
+    "lat": 35.0873,
+    "lng": 132.3592,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "iwami-ginzan",
@@ -8323,7 +9499,14 @@
       "type": "bus",
       "from": "大田市駅",
       "to": "石見銀山"
-    }
+    },
+    "prefecture": "島根県",
+    "lat": 35.1044,
+    "lng": 132.4234,
+    "stayBias": 1,
+    "gatewayHub": "大田市",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "iwakuni",
@@ -8369,7 +9552,14 @@
     "railGateway": "岩国駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "岩国錦帯橋空港"
+    "airportGateway": "岩国錦帯橋空港",
+    "prefecture": "山口県",
+    "lat": 34.1673,
+    "lng": 132.223,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kurayoshi",
@@ -8415,7 +9605,14 @@
     "railGateway": "倉吉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "米子空港"
+    "airportGateway": "米子空港",
+    "prefecture": "鳥取県",
+    "lat": 35.4308,
+    "lng": 133.8308,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "suo-oshima",
@@ -8465,7 +9662,14 @@
     "railGateway": "大畠駅",
     "busGateway": null,
     "ferryGateway": "柳井港",
-    "airportGateway": "岩国錦帯橋空港"
+    "airportGateway": "岩国錦帯橋空港",
+    "prefecture": "山口県",
+    "lat": 33.956,
+    "lng": 132.221,
+    "stayBias": 1,
+    "gatewayHub": "大畠",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "shimanto",
@@ -8512,7 +9716,14 @@
     "railGateway": "江川崎駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "高知空港"
+    "airportGateway": "高知空港",
+    "prefecture": "高知県",
+    "lat": 33.005,
+    "lng": 132.951,
+    "stayBias": 1,
+    "gatewayHub": "窪川",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tobe",
@@ -8563,7 +9774,14 @@
       "type": "bus",
       "from": "松山駅",
       "to": "砥部"
-    }
+    },
+    "prefecture": "愛媛県",
+    "lat": 33.742,
+    "lng": 132.7943,
+    "stayBias": 0,
+    "gatewayHub": "松山",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "kashiwajima",
@@ -8612,7 +9830,14 @@
     "railGateway": "宿毛駅",
     "busGateway": null,
     "ferryGateway": "宿毛港",
-    "airportGateway": "高知空港"
+    "airportGateway": "高知空港",
+    "prefecture": "高知県",
+    "lat": 32.778,
+    "lng": 132.745,
+    "stayBias": 2,
+    "gatewayHub": "宿毛",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "saijo",
@@ -8658,7 +9883,14 @@
     "railGateway": "伊予西条駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "松山空港"
+    "airportGateway": "松山空港",
+    "prefecture": "愛媛県",
+    "lat": 33.9193,
+    "lng": 133.1821,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "ainan",
@@ -8710,7 +9942,14 @@
       "type": "bus",
       "from": "宇和島駅",
       "to": "愛南"
-    }
+    },
+    "prefecture": "愛媛県",
+    "lat": 32.96,
+    "lng": 132.66,
+    "stayBias": 1,
+    "gatewayHub": "宇和島",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "taketa",
@@ -8755,7 +9994,14 @@
     "railGateway": "豊後竹田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "大分空港"
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 32.9754,
+    "lng": 131.3963,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "usuki",
@@ -8802,7 +10048,14 @@
     "railGateway": "臼杵駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "大分空港"
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 33.1228,
+    "lng": 131.8019,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "hita",
@@ -8848,7 +10101,14 @@
     "railGateway": "日田駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "大分空港"
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 33.3217,
+    "lng": 130.94,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "hasami",
@@ -8899,7 +10159,14 @@
       "type": "bus",
       "from": "川棚温泉駅",
       "to": "波佐見"
-    }
+    },
+    "prefecture": "長崎県",
+    "lat": 33.0981,
+    "lng": 129.8888,
+    "stayBias": 1,
+    "gatewayHub": "川棚",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "takeo-onsen",
@@ -8942,7 +10209,14 @@
     "railGateway": "武雄温泉駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "佐賀県",
+    "lat": 33.1936,
+    "lng": 130.0162,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "kitsuki",
@@ -8988,7 +10262,14 @@
     "railGateway": "杵築駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "大分空港"
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 33.4169,
+    "lng": 131.6069,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "tsushima",
@@ -9036,7 +10317,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "博多港",
-    "airportGateway": "対馬空港"
+    "airportGateway": "対馬空港",
+    "prefecture": "長崎県",
+    "lat": 34.2017,
+    "lng": 129.2893,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "福岡",
+    "railProvider": null
   },
   {
     "id": "iki-island",
@@ -9084,7 +10372,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "博多港",
-    "airportGateway": "壱岐空港"
+    "airportGateway": "壱岐空港",
+    "prefecture": "長崎県",
+    "lat": 33.7483,
+    "lng": 129.695,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "福岡",
+    "railProvider": null
   },
   {
     "id": "tanegashima",
@@ -9132,7 +10427,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "鹿児島港",
-    "airportGateway": "種子島空港"
+    "airportGateway": "種子島空港",
+    "prefecture": "鹿児島県",
+    "lat": 30.743,
+    "lng": 130.976,
+    "stayBias": 2,
+    "gatewayHub": "鹿児島",
+    "airportHub": "鹿児島",
+    "railProvider": null
   },
   {
     "id": "kikuchi",
@@ -9182,7 +10484,14 @@
       "type": "bus",
       "from": "武蔵塚公園駅",
       "to": "菊池"
-    }
+    },
+    "prefecture": "熊本県",
+    "lat": 32.9857,
+    "lng": 130.8215,
+    "stayBias": 1,
+    "gatewayHub": "武蔵塚",
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   },
   {
     "id": "taketomi-island",
@@ -9230,7 +10539,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "石垣港",
-    "airportGateway": "石垣空港"
+    "airportGateway": "石垣空港",
+    "prefecture": "沖縄県",
+    "lat": 24.3248,
+    "lng": 124.0839,
+    "stayBias": 2,
+    "gatewayHub": "石垣",
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "yonaguni-island",
@@ -9278,7 +10594,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "石垣港",
-    "airportGateway": "与那国空港"
+    "airportGateway": "与那国空港",
+    "prefecture": "沖縄県",
+    "lat": 24.4668,
+    "lng": 122.9887,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "nakijin",
@@ -9330,7 +10653,14 @@
       "type": "bus",
       "from": "那覇空港駅",
       "to": "今帰仁"
-    }
+    },
+    "prefecture": "沖縄県",
+    "lat": 26.6885,
+    "lng": 127.9927,
+    "stayBias": 1,
+    "gatewayHub": "名護",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "motobu",
@@ -9376,7 +10706,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "本部港",
-    "airportGateway": "那覇空港"
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.6608,
+    "lng": 127.8877,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "zamami-island",
@@ -9424,7 +10761,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "那覇港",
-    "airportGateway": "那覇空港"
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.2232,
+    "lng": 127.3003,
+    "stayBias": 2,
+    "gatewayHub": null,
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "ie-island",
@@ -9471,7 +10815,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "本部港",
-    "airportGateway": "那覇空港"
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.7197,
+    "lng": 127.795,
+    "stayBias": 1,
+    "gatewayHub": "本部",
+    "airportHub": null,
+    "railProvider": null
   },
   {
     "id": "kohama-island",
@@ -9519,7 +10870,14 @@
     "railGateway": null,
     "busGateway": null,
     "ferryGateway": "小浜港",
-    "airportGateway": "石垣空港"
+    "airportGateway": "石垣空港",
+    "prefecture": "沖縄県",
+    "lat": 24.3461,
+    "lng": 124.055,
+    "stayBias": 2,
+    "gatewayHub": "石垣",
+    "airportHub": "那覇",
+    "railProvider": null
   },
   {
     "id": "matsushiro",
@@ -9568,7 +10926,14 @@
       "type": "bus",
       "from": "長野駅",
       "to": "松代"
-    }
+    },
+    "prefecture": "長野県",
+    "lat": 36.5484,
+    "lng": 138.2067,
+    "stayBias": 0,
+    "gatewayHub": "長野",
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "iiyama",
@@ -9612,7 +10977,14 @@
     "railGateway": "飯山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": null
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.8577,
+    "lng": 138.3644,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "ekinet"
   },
   {
     "id": "yakake",
@@ -9658,7 +11030,14 @@
     "railGateway": "矢掛駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "岡山桃太郎空港"
+    "airportGateway": "岡山桃太郎空港",
+    "prefecture": "岡山県",
+    "lat": 34.5773,
+    "lng": 133.5769,
+    "stayBias": 0,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tsuyama",
@@ -9704,7 +11083,14 @@
     "railGateway": "津山駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "岡山桃太郎空港"
+    "airportGateway": "岡山桃太郎空港",
+    "prefecture": "岡山県",
+    "lat": 35.0687,
+    "lng": 134.0035,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "tsurugi-san",
@@ -9756,7 +11142,14 @@
       "type": "bus",
       "from": "貞光駅",
       "to": "剣山"
-    }
+    },
+    "prefecture": "徳島県",
+    "lat": 33.8565,
+    "lng": 134.0897,
+    "stayBias": 1,
+    "gatewayHub": "貞光",
+    "airportHub": null,
+    "railProvider": "e5489"
   },
   {
     "id": "nobeoka",
@@ -9802,6 +11195,13 @@
     "railGateway": "延岡駅",
     "busGateway": null,
     "ferryGateway": null,
-    "airportGateway": "宮崎空港"
+    "airportGateway": "宮崎空港",
+    "prefecture": "宮崎県",
+    "lat": 32.5818,
+    "lng": 131.668,
+    "stayBias": 1,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "jrkyushu"
   }
 ]

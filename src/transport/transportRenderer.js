@@ -176,9 +176,10 @@ export function resolveTransportLinks(city, departure) {
 
   // ★1 近場: GoogleMaps 1本のみ
   if (stars === 1) {
-    const rail = gw(city, 'railGateway') ?? city.name;
+    const rail   = gw(city, 'railGateway') ?? city.name;
+    const coords = (city.lat && city.lng && !gw(city, 'railGateway')) ? {lat: city.lat, lng: city.lng} : null;
     return [
-      buildGoogleMapsLink(fromCity.rail, rail, 'transit'),
+      buildGoogleMapsLink(fromCity.rail, rail, 'transit', null, coords),
       ...getCar(city),
     ].filter(l => l?.url);
   }
@@ -194,7 +195,8 @@ export function resolveTransportLinks(city, departure) {
 
   // どの手段もない → GoogleMaps フォールバック
   if (!links.length) {
-    links.push(buildGoogleMapsLink(fromCity.rail, city.name, 'transit'));
+    const coords = (city.lat && city.lng) ? {lat: city.lat, lng: city.lng} : null;
+    links.push(buildGoogleMapsLink(fromCity.rail, city.name, 'transit', null, coords));
   }
 
   links.push(...getCar(city));

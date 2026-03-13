@@ -79,11 +79,12 @@ export const AIRPORT_IATA = {
 
 /* ── Google Maps（transit / driving 統一） ── */
 
-export function buildGoogleMapsLink(origin, destination, mode = 'transit', label = null) {
+export function buildGoogleMapsLink(origin, destination, mode = 'transit', label = null, coords = null) {
+  const dest = coords ? `${coords.lat},${coords.lng}` : destination;
   return {
     type: 'google-maps',
     label: label ?? 'ルートを見る（Googleマップ）',
-    url: mapsUrl(origin, destination, mode),
+    url: mapsUrl(origin, dest, mode),
   };
 }
 

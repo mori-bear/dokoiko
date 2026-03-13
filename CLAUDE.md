@@ -16,12 +16,13 @@
 
 ### ファイル構成
 ```
-src/data/destinations.json              マスターデータ（170件 = 38 hub + 132 destination）
-src/data/destinations.hubs.json         hub のみ（index.js がフェッチ）
+src/data/destinations.json              マスターデータ（200件 destination）
+src/data/hubs.json                      hub のみ（38件）
 src/data/destinations.destinations.json destination のみ（index.js がフェッチ）
+src/data/destinations.hubs.json         hub のみ（index.js がフェッチ）
 ```
 
-destinations.hubs.json と destinations.destinations.json は destinations.json から自動生成する。
+destinations.hubs.json と destinations.destinations.json は destinations.json / hubs.json から自動生成する。
 マスターを編集したら必ず両方を再生成すること。
 
 ### 3階層構造
@@ -39,23 +40,57 @@ hub（宿泊拠点都市）           例: 金沢, 松山, 高山
 | type | "hub" / "destination" / "spot" |
 | prefecture | 都道府県名 |
 | region | 地方名 |
+| lat | 緯度（Google Maps 座標用） |
+| lng | 経度（Google Maps 座標用） |
 | weight | hub=0.3〜0.35 / destination=1.2 / island=1.5 |
 | distanceStars | 1〜5（東京基準） |
 | stayAllowed | ["daytrip","1night","2night"] / spot=[] |
+| stayBias | 0=daytrip推奨 / 1=1night / 2=2night（抽選バイアス） |
 | hotelHub | 宿検索キーワード（destination 必須） |
 | hotelSearch | 宿検索補助キーワード（任意） |
+| gatewayHub | 二次交通起点（バス・ローカル線の乗換駅名） |
+| airportHub | 航空乗継ハブ（多ホップ飛行経由都市名） |
+| railProvider | JR予約先: 'ekinet'|'e5489'|'jrkyushu'|null |
 | access | 交通情報オブジェクト |
 
-### 宿泊リンク生成（hotelLinkBuilder.js）
+### 宿泊リンク生成（src/hotel/hotelLinkBuilder.js）
 - keyword 優先順: hotelHub → hotelSearch → name
-- 楽天: `RAKUTEN_AFF + https://travel.rakuten.co.jp/search/?keyword=${encodeURIComponent(keyword)}`
+- 楽天: `RAKUTEN_AFF + https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(keyword)}`
 - じゃらん: `VC_BASE + encodeURIComponent('https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' + encodeURIComponent(keyword))`
 - stayType=daytrip では宿セクション非表示
 
 ### 交通ロジック優先順位（transportRenderer.js）
 portHubs(島) > ferryGateway > airportGateway > railGateway > car
 - 島（isIsland=true）: フェリー + Google Maps + レンタカー自動追加
+- ★1 近場: Google Maps に lat/lng 座標を使用（誤爆防止）
 - 最大3ルート（limitRoutes()）
+
+### Google Maps リンク（linkBuilder.js）
+`buildGoogleMapsLink(origin, destination, mode, label, coords)`:
+- coords = {lat, lng} を渡すと destination を `{lat},{lng}` 形式にする
+- ★1 近場かつ railGateway なしの場合は city.lat/lng を自動使用
+- フォールバック時も coords を使用
+
+## ディレクトリ構成
+```
+src/config/constants.js          DEPARTURES, DEPARTURE_CITY_INFO
+src/engine/selectionEngine.js    抽選：重み付きシャッフル＋nearestHubフォールバック
+src/engine/distanceCalculator.js 距離計算（★1〜★3）
+src/engine/distanceEngine.js     distanceCalculator.js の再エクスポートラッパー
+src/transport/transportRenderer.js  交通リンクアセンブラ
+src/transport/linkBuilder.js        GoogleMaps/JR/Skyscanner/レンタカーリンク生成
+src/hotel/hotelLinkBuilder.js    宿泊リンク（楽天/じゃらん）← src/engine/ からコピー
+src/engine/hotelLinkBuilder.js   宿泊リンク（後方互換用に残す）
+src/data/hubs.json               38 hub都市
+src/data/destinations.json       200 destination
+src/data/spots.json              空（0件）
+src/data/index.js                hubs.json + destinations.json をフェッチして結合
+src/ui/render.js                 DOM描画
+src/ui/handlers.js               イベントバインド
+pages/about.html / privacy.html / disclaimer.html
+index.html / style.css / app.js / qa.js
+CLAUDE.md                        プロジェクトルール
+```
 
 ## 禁止事項
 - 複数都市同時表示禁止
