@@ -926,6 +926,28 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8e] マップ用 lat/lng カバレッジ
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8e] マップ lat/lng');
+    const noLat  = DESTS.filter(d => d.lat  === undefined || d.lat  === null);
+    const noLng  = DESTS.filter(d => d.lng  === undefined || d.lng  === null);
+    const outRng = DESTS.filter(d =>
+      d.lat && d.lng &&
+      (d.lat < 20 || d.lat > 46 || d.lng < 122 || d.lng > 154)
+    );
+
+    sc.check(noLat.length  === 0, `lat 未設定: ${noLat.map(d => d.name).join(', ') || '—'}`);
+    sc.check(noLng.length  === 0, `lng 未設定: ${noLng.map(d => d.name).join(', ') || '—'}`);
+    sc.check(outRng.length === 0, `日本範囲外の座標: ${outRng.map(d => d.name).join(', ') || '—'}`);
+
+    const withBoth = DESTS.filter(d => d.lat && d.lng).length;
+    console.log(`  lat/lng あり: ${withBoth}/${DESTS.length}, 範囲外: ${outRng.length}`);
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8d] travelTime カバレッジ
   ─────────────────────────────── */
   {
