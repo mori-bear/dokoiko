@@ -49,7 +49,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 80,
+      "osaka": 220,
+      "nagoya": 165,
+      "fukuoka": 370,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "atami",
@@ -100,7 +108,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 85,
+      "osaka": 130,
+      "nagoya": 100,
+      "fukuoka": 280,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "nikko",
@@ -164,7 +180,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 125,
+      "osaka": 265,
+      "nagoya": 210,
+      "fukuoka": 415,
+      "takamatsu": 365
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "karuizawa",
@@ -227,7 +251,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 105,
+      "osaka": 245,
+      "nagoya": 190,
+      "fukuoka": 395,
+      "takamatsu": 345
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "fujikawaguchiko",
@@ -279,7 +311,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 270,
+      "nagoya": 215,
+      "fukuoka": 420,
+      "takamatsu": 370
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nara",
@@ -333,7 +373,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 65,
+      "nagoya": 110,
+      "fukuoka": 215,
+      "takamatsu": 165
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ishigaki",
@@ -388,7 +436,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 120,
+      "nagoya": 155,
+      "fukuoka": 120,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ise",
@@ -452,7 +508,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 165,
+      "nagoya": 110,
+      "fukuoka": 315,
+      "takamatsu": 265
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "beppu",
@@ -515,7 +579,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 440,
+      "osaka": 300,
+      "nagoya": 355,
+      "fukuoka": 150,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "otaru",
@@ -569,7 +641,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 445,
+      "osaka": 585,
+      "nagoya": 530,
+      "fukuoka": 735,
+      "takamatsu": 685
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "furano",
@@ -620,7 +700,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 555,
+      "osaka": 695,
+      "nagoya": 640,
+      "fukuoka": 845,
+      "takamatsu": 795
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "matsushima",
@@ -684,7 +772,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 145,
+      "osaka": 285,
+      "nagoya": 230,
+      "fukuoka": 435,
+      "takamatsu": 385
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "miyajima",
@@ -737,7 +833,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 255,
+      "osaka": 115,
+      "nagoya": 170,
+      "fukuoka": 105,
+      "takamatsu": 125
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "onomichi",
@@ -803,7 +907,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 150,
+      "nagoya": 205,
+      "fukuoka": 140,
+      "takamatsu": 160
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shodoshima",
@@ -857,7 +969,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 245,
+      "osaka": 105,
+      "nagoya": 160,
+      "fukuoka": 165,
+      "takamatsu": 5
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "mihonoseki",
@@ -908,7 +1028,15 @@
     "stayBias": 1,
     "gatewayHub": "境港",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 230,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ryujin-onsen",
@@ -956,7 +1084,15 @@
     "stayBias": 1,
     "gatewayHub": "田辺",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 160,
+      "nagoya": 215,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tokashiki-jima",
@@ -1014,7 +1150,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 155,
+      "osaka": 155,
+      "nagoya": 155,
+      "fukuoka": 155,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kumejima",
@@ -1070,7 +1214,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 155,
+      "osaka": 155,
+      "nagoya": 155,
+      "fukuoka": 155,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "miyakojima",
@@ -1126,7 +1278,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 120,
+      "nagoya": 155,
+      "fukuoka": 120,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kouzushima",
@@ -1178,7 +1338,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 20,
+      "osaka": 160,
+      "nagoya": 105,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "hakone",
@@ -1230,7 +1398,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 260,
+      "nagoya": 205,
+      "fukuoka": 410,
+      "takamatsu": 360
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shuzenji",
@@ -1281,7 +1457,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 300,
+      "nagoya": 245,
+      "fukuoka": 450,
+      "takamatsu": 400
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kusatsu-onsen",
@@ -1333,7 +1517,15 @@
     "gatewayHub": "長野原草津口",
     "airportHub": null,
     "railProvider": "ekinet",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 320,
+      "nagoya": 265,
+      "fukuoka": 470,
+      "takamatsu": 420
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shimoda",
@@ -1385,7 +1577,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 185,
+      "osaka": 325,
+      "nagoya": 270,
+      "fukuoka": 475,
+      "takamatsu": 425
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "izu-oshima",
@@ -1440,7 +1640,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 20,
+      "osaka": 160,
+      "nagoya": 105,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "shirakawago-t",
@@ -1506,7 +1714,15 @@
     "stayBias": 1,
     "gatewayHub": "高山",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 175,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "arima-onsen",
@@ -1559,7 +1775,15 @@
     "stayBias": 1,
     "gatewayHub": "三ノ宮",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 55,
+      "nagoya": 110,
+      "fukuoka": 205,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kinosaki-onsen",
@@ -1626,7 +1850,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 280,
+      "osaka": 175,
+      "nagoya": 195,
+      "fukuoka": 325,
+      "takamatsu": 275
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kurashiki-o",
@@ -1692,7 +1924,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 230,
+      "osaka": 90,
+      "nagoya": 145,
+      "fukuoka": 150,
+      "takamatsu": 100
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shirahama-o",
@@ -1745,7 +1985,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 285,
+      "osaka": 145,
+      "nagoya": 200,
+      "fukuoka": 295,
+      "takamatsu": 245
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "takayama-o",
@@ -1810,7 +2058,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 255,
+      "osaka": 225,
+      "nagoya": 170,
+      "fukuoka": 375,
+      "takamatsu": 325
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "toba",
@@ -1864,7 +2120,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 215,
+      "osaka": 185,
+      "nagoya": 130,
+      "fukuoka": 335,
+      "takamatsu": 285
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yufuin",
@@ -1928,7 +2192,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 420,
+      "osaka": 280,
+      "nagoya": 335,
+      "fukuoka": 130,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kurokawa-k",
@@ -1982,7 +2254,15 @@
     "stayBias": 1,
     "gatewayHub": "阿蘇",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 320,
+      "osaka": 180,
+      "nagoya": 235,
+      "fukuoka": 30,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "aso",
@@ -2035,7 +2315,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 420,
+      "osaka": 280,
+      "nagoya": 335,
+      "fukuoka": 130,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "yakushima",
@@ -2089,7 +2377,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "鹿児島",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 120,
+      "nagoya": 155,
+      "fukuoka": 120,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "amakusa",
@@ -2141,7 +2437,15 @@
     "stayBias": 1,
     "gatewayHub": "熊本",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 220,
+      "nagoya": 275,
+      "fukuoka": 70,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "hiraizumi",
@@ -2195,7 +2499,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 300,
+      "nagoya": 245,
+      "fukuoka": 450,
+      "takamatsu": 400
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kakunodate",
@@ -2248,7 +2560,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 190,
+      "osaka": 330,
+      "nagoya": 275,
+      "fukuoka": 480,
+      "takamatsu": 430
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "aizu",
@@ -2313,7 +2633,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 230,
+      "osaka": 370,
+      "nagoya": 315,
+      "fukuoka": 520,
+      "takamatsu": 470
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "zaosan",
@@ -2364,7 +2692,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 145,
+      "osaka": 285,
+      "nagoya": 230,
+      "fukuoka": 435,
+      "takamatsu": 385
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hagi",
@@ -2416,7 +2752,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 370,
+      "osaka": 230,
+      "nagoya": 285,
+      "fukuoka": 220,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "shimonoseki",
@@ -2469,7 +2813,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 210,
+      "nagoya": 265,
+      "fukuoka": 200,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "naoshima",
@@ -2523,7 +2875,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 245,
+      "osaka": 105,
+      "nagoya": 160,
+      "fukuoka": 165,
+      "takamatsu": 5
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kotohira",
@@ -2576,7 +2936,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 330,
+      "osaka": 190,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 90
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "uwajima",
@@ -2628,7 +2996,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 440,
+      "osaka": 300,
+      "nagoya": 355,
+      "fukuoka": 360,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "toyako",
@@ -2679,7 +3055,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 495,
+      "osaka": 635,
+      "nagoya": 580,
+      "fukuoka": 785,
+      "takamatsu": 735
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "noboribetsu",
@@ -2730,7 +3114,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 480,
+      "osaka": 620,
+      "nagoya": 565,
+      "fukuoka": 770,
+      "takamatsu": 720
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "shiretoko",
@@ -2784,7 +3176,15 @@
     "gatewayHub": "網走",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "wajima",
@@ -2836,7 +3236,15 @@
     "stayBias": 1,
     "gatewayHub": "金沢",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 175,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kaga-onsen",
@@ -2888,7 +3296,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 180,
+      "nagoya": 195,
+      "fukuoka": 330,
+      "takamatsu": 280
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hakuba",
@@ -2939,7 +3355,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 400,
+      "nagoya": 345,
+      "fukuoka": 550,
+      "takamatsu": 500
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "amanohashidate",
@@ -2992,7 +3416,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 245,
+      "osaka": 140,
+      "nagoya": 160,
+      "fukuoka": 290,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ine",
@@ -3044,7 +3476,15 @@
     "stayBias": 1,
     "gatewayHub": "天橋立",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 245,
+      "osaka": 140,
+      "nagoya": 160,
+      "fukuoka": 290,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ibusuki",
@@ -3096,7 +3536,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 455,
+      "osaka": 315,
+      "nagoya": 370,
+      "fukuoka": 165,
+      "takamatsu": 325
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "sasebo",
@@ -3149,7 +3597,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 430,
+      "osaka": 290,
+      "nagoya": 345,
+      "fukuoka": 140,
+      "takamatsu": 300
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "hirado",
@@ -3201,7 +3657,15 @@
     "gatewayHub": "佐世保",
     "airportHub": null,
     "railProvider": "jrkyushu",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 470,
+      "osaka": 330,
+      "nagoya": 385,
+      "fukuoka": 180,
+      "takamatsu": 340
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tottori",
@@ -3253,7 +3717,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 295,
+      "osaka": 190,
+      "nagoya": 210,
+      "fukuoka": 340,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "akita",
@@ -3305,7 +3777,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 350,
+      "nagoya": 295,
+      "fukuoka": 500,
+      "takamatsu": 450
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "awaji",
@@ -3359,7 +3839,15 @@
     "stayBias": 1,
     "gatewayHub": "明石",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 55,
+      "nagoya": 110,
+      "fukuoka": 205,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "takao",
@@ -3410,7 +3898,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 80,
+      "osaka": 220,
+      "nagoya": 165,
+      "fukuoka": 370,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "tateyama-chiba",
@@ -3462,7 +3958,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 270,
+      "nagoya": 215,
+      "fukuoka": 420,
+      "takamatsu": 370
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "gokayama",
@@ -3515,7 +4019,15 @@
     "stayBias": 1,
     "gatewayHub": "高山",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 175,
+      "fukuoka": 310,
+      "takamatsu": 260
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "jozankei",
@@ -3567,7 +4079,15 @@
     "stayBias": 1,
     "gatewayHub": "札幌",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 415,
+      "osaka": 555,
+      "nagoya": 500,
+      "fukuoka": 705,
+      "takamatsu": 655
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "biei",
@@ -3620,7 +4140,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 530,
+      "osaka": 670,
+      "nagoya": 615,
+      "fukuoka": 820,
+      "takamatsu": 770
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "miyako-iwate",
@@ -3673,7 +4201,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 380,
+      "nagoya": 325,
+      "fukuoka": 530,
+      "takamatsu": 480
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "sakata",
@@ -3725,7 +4261,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 265,
+      "osaka": 405,
+      "nagoya": 350,
+      "fukuoka": 555,
+      "takamatsu": 505
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "takachiho",
@@ -3778,7 +4322,15 @@
     "stayBias": 1,
     "gatewayHub": "延岡",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 220,
+      "nagoya": 275,
+      "fukuoka": 70,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "amami",
@@ -3830,7 +4382,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "鹿児島",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 380,
+      "osaka": 240,
+      "nagoya": 295,
+      "fukuoka": 90,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "goto",
@@ -3883,7 +4443,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 20,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "unzen",
@@ -3935,7 +4503,15 @@
     "stayBias": 1,
     "gatewayHub": "諫早",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 410,
+      "osaka": 270,
+      "nagoya": 325,
+      "fukuoka": 120,
+      "takamatsu": 280
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "ashizuri",
@@ -3987,7 +4563,15 @@
     "stayBias": 1,
     "gatewayHub": "中村",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 445,
+      "osaka": 305,
+      "nagoya": 360,
+      "fukuoka": 365,
+      "takamatsu": 315
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "oboke",
@@ -4039,7 +4623,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 340,
+      "osaka": 200,
+      "nagoya": 255,
+      "fukuoka": 260,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tsuwano",
@@ -4091,7 +4683,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 340,
+      "osaka": 200,
+      "nagoya": 255,
+      "fukuoka": 190,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "inuyama",
@@ -4143,7 +4743,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 145,
+      "osaka": 115,
+      "nagoya": 60,
+      "fukuoka": 265,
+      "takamatsu": 215
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kiso",
@@ -4197,7 +4805,15 @@
     "stayBias": 1,
     "gatewayHub": "南木曽",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 185,
+      "osaka": 155,
+      "nagoya": 100,
+      "fukuoka": 305,
+      "takamatsu": 255
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "miyama",
@@ -4250,7 +4866,15 @@
     "stayBias": 1,
     "gatewayHub": "園部",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 90,
+      "nagoya": 110,
+      "fukuoka": 240,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tateyama-kurobe",
@@ -4304,7 +4928,15 @@
     "gatewayHub": "富山",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 245,
+      "nagoya": 260,
+      "fukuoka": 395,
+      "takamatsu": 345
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "himi",
@@ -4357,7 +4989,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 235,
+      "nagoya": 250,
+      "fukuoka": 385,
+      "takamatsu": 335
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nyuto-onsen",
@@ -4411,7 +5051,15 @@
     "stayBias": 1,
     "gatewayHub": "田沢湖",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 320,
+      "nagoya": 265,
+      "fukuoka": 470,
+      "takamatsu": 420
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yuda-onsen",
@@ -4464,7 +5112,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 160,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "ureshino-onsen",
@@ -4516,7 +5172,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 380,
+      "osaka": 240,
+      "nagoya": 295,
+      "fukuoka": 90,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "obuse",
@@ -4569,7 +5233,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 255,
+      "nagoya": 205,
+      "fukuoka": 405,
+      "takamatsu": 355
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "uchiko",
@@ -4622,7 +5294,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 425,
+      "osaka": 285,
+      "nagoya": 340,
+      "fukuoka": 345,
+      "takamatsu": 295
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "muroto",
@@ -4675,7 +5355,15 @@
     "stayBias": 1,
     "gatewayHub": "奈半利",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 355,
+      "osaka": 215,
+      "nagoya": 270,
+      "fukuoka": 275,
+      "takamatsu": 225
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "iya",
@@ -4729,7 +5417,15 @@
     "stayBias": 2,
     "gatewayHub": "大歩危",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 230,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "oku-izumo",
@@ -4782,7 +5478,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 415,
+      "osaka": 275,
+      "nagoya": 330,
+      "fukuoka": 335,
+      "takamatsu": 285
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "ginzan-onsen",
@@ -4835,7 +5539,15 @@
     "stayBias": 1,
     "gatewayHub": "大石田",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 340,
+      "nagoya": 285,
+      "fukuoka": 490,
+      "takamatsu": 440
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ouchi-juku",
@@ -4889,7 +5601,15 @@
     "stayBias": 1,
     "gatewayHub": "会津若松",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 230,
+      "osaka": 370,
+      "nagoya": 315,
+      "fukuoka": 520,
+      "takamatsu": 470
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nozawa-onsen",
@@ -4942,7 +5662,15 @@
     "stayBias": 1,
     "gatewayHub": "飯山",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 115,
+      "osaka": 255,
+      "nagoya": 200,
+      "fukuoka": 405,
+      "takamatsu": 355
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "takehara",
@@ -4995,7 +5723,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 160,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tsumago",
@@ -5050,7 +5786,15 @@
     "stayBias": 1,
     "gatewayHub": "中津川",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 185,
+      "osaka": 155,
+      "nagoya": 100,
+      "fukuoka": 305,
+      "takamatsu": 255
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "magome",
@@ -5105,7 +5849,15 @@
     "stayBias": 1,
     "gatewayHub": "中津川",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 165,
+      "osaka": 135,
+      "nagoya": 80,
+      "fukuoka": 285,
+      "takamatsu": 235
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nagahama",
@@ -5159,7 +5911,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 115,
+      "nagoya": 135,
+      "fukuoka": 265,
+      "takamatsu": 215
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hikone",
@@ -5213,7 +5973,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 90,
+      "nagoya": 110,
+      "fukuoka": 240,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "koyasan",
@@ -5267,7 +6035,15 @@
     "gatewayHub": "橋本",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 120,
+      "nagoya": 175,
+      "fukuoka": 270,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "gero-onsen",
@@ -5320,7 +6096,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 205,
+      "osaka": 175,
+      "nagoya": 120,
+      "fukuoka": 325,
+      "takamatsu": 275
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "naruko-onsen",
@@ -5372,7 +6156,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 340,
+      "nagoya": 285,
+      "fukuoka": 490,
+      "takamatsu": 440
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shima-onsen",
@@ -5424,7 +6216,15 @@
     "stayBias": 1,
     "gatewayHub": "中之条",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 315,
+      "nagoya": 260,
+      "fukuoka": 465,
+      "takamatsu": 415
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hirosaki",
@@ -5479,7 +6279,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "oirase",
@@ -5535,7 +6343,15 @@
     "stayBias": 1,
     "gatewayHub": "八戸",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "mashiko",
@@ -5587,7 +6403,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 300,
+      "nagoya": 245,
+      "fukuoka": 450,
+      "takamatsu": 400
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "bessho-onsen",
@@ -5640,7 +6464,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 290,
+      "nagoya": 235,
+      "fukuoka": 440,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "izushi",
@@ -5695,7 +6527,15 @@
     "stayBias": 1,
     "gatewayHub": "豊岡",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 330,
+      "osaka": 190,
+      "nagoya": 245,
+      "fukuoka": 340,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "wakura-onsen",
@@ -5747,7 +6587,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 235,
+      "osaka": 235,
+      "nagoya": 250,
+      "fukuoka": 385,
+      "takamatsu": 335
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "misasa-onsen",
@@ -5802,7 +6650,15 @@
     "stayBias": 1,
     "gatewayHub": "倉吉",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 370,
+      "osaka": 230,
+      "nagoya": 285,
+      "fukuoka": 380,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "obi",
@@ -5855,7 +6711,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 620,
+      "osaka": 480,
+      "nagoya": 535,
+      "fukuoka": 330,
+      "takamatsu": 490
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "hitoyoshi",
@@ -5909,7 +6773,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 440,
+      "osaka": 300,
+      "nagoya": 355,
+      "fukuoka": 150,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kamikochi",
@@ -5964,7 +6836,15 @@
     "stayBias": 1,
     "gatewayHub": "松本",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 230,
+      "nagoya": 175,
+      "fukuoka": 380,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "minakami-onsen",
@@ -6017,7 +6897,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 290,
+      "nagoya": 235,
+      "fukuoka": 440,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "minami-aso",
@@ -6073,7 +6961,15 @@
     "stayBias": 1,
     "gatewayHub": "阿蘇",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 70,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "imabari",
@@ -6137,7 +7033,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 420,
+      "osaka": 280,
+      "nagoya": 335,
+      "fukuoka": 340,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "ozu",
@@ -6201,7 +7105,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 435,
+      "osaka": 295,
+      "nagoya": 350,
+      "fukuoka": 355,
+      "takamatsu": 305
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "shakotan",
@@ -6266,7 +7178,15 @@
     "stayBias": 1,
     "gatewayHub": "小樽",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 445,
+      "osaka": 585,
+      "nagoya": 530,
+      "fukuoka": 735,
+      "takamatsu": 685
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "izumo",
@@ -6334,7 +7254,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 265,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "noto",
@@ -6402,7 +7330,15 @@
     "stayBias": 2,
     "gatewayHub": "和倉温泉",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 175,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yoshino",
@@ -6469,7 +7405,15 @@
     "gatewayHub": "吉野口",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 270,
+      "osaka": 130,
+      "nagoya": 185,
+      "fukuoka": 280,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kumano",
@@ -6535,7 +7479,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 285,
+      "osaka": 220,
+      "nagoya": 200,
+      "fukuoka": 370,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "iriomote",
@@ -6602,7 +7554,15 @@
     "gatewayHub": "石垣",
     "airportHub": "那覇",
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 150,
+      "nagoya": 185,
+      "fukuoka": 150,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "takahashi",
@@ -6667,7 +7627,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 120,
+      "nagoya": 175,
+      "fukuoka": 180,
+      "takamatsu": 130
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hida-furukawa",
@@ -6733,7 +7701,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 265,
+      "osaka": 235,
+      "nagoya": 180,
+      "fukuoka": 385,
+      "takamatsu": 335
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "bungo-takada",
@@ -6800,7 +7776,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 255,
+      "nagoya": 205,
+      "fukuoka": 210,
+      "takamatsu": 210
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "izu-kogen",
@@ -6866,7 +7850,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 140,
+      "osaka": 280,
+      "nagoya": 225,
+      "fukuoka": 430,
+      "takamatsu": 380
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "sanriku",
@@ -6931,7 +7923,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 380,
+      "nagoya": 325,
+      "fukuoka": 530,
+      "takamatsu": 480
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tanabe",
@@ -6998,7 +7998,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 215,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tosa-shimizu",
@@ -7064,7 +8072,15 @@
     "stayBias": 1,
     "gatewayHub": "中村",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 445,
+      "osaka": 305,
+      "nagoya": 360,
+      "fukuoka": 365,
+      "takamatsu": 315
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "nichinan",
@@ -7129,7 +8145,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 620,
+      "osaka": 480,
+      "nagoya": 535,
+      "fukuoka": 330,
+      "takamatsu": 490
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "mojiko",
@@ -7195,7 +8219,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 370,
+      "osaka": 230,
+      "nagoya": 285,
+      "fukuoka": 110,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "itoshima",
@@ -7261,7 +8293,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 355,
+      "osaka": 215,
+      "nagoya": 270,
+      "fukuoka": 65,
+      "takamatsu": 225
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "shimabara",
@@ -7327,7 +8367,15 @@
     "gatewayHub": "諫早",
     "airportHub": null,
     "railProvider": "jrkyushu",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 460,
+      "osaka": 320,
+      "nagoya": 375,
+      "fukuoka": 170,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tsuruga",
@@ -7394,7 +8442,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 205,
+      "osaka": 105,
+      "nagoya": 120,
+      "fukuoka": 255,
+      "takamatsu": 205
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shijishima",
@@ -7450,7 +8506,15 @@
     "gatewayHub": "三豊",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 230,
+      "takamatsu": 70
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "sounkyo",
@@ -7505,7 +8569,15 @@
     "stayBias": 1,
     "gatewayHub": "上川",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 535,
+      "osaka": 675,
+      "nagoya": 620,
+      "fukuoka": 825,
+      "takamatsu": 775
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "rebun-island",
@@ -7559,7 +8631,15 @@
     "gatewayHub": "稚内",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 750,
+      "osaka": 890,
+      "nagoya": 835,
+      "fukuoka": 1040,
+      "takamatsu": 990
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "rishiri-island",
@@ -7613,7 +8693,15 @@
     "gatewayHub": "稚内",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 750,
+      "osaka": 890,
+      "nagoya": 835,
+      "fukuoka": 1040,
+      "takamatsu": 990
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "akan",
@@ -7667,7 +8755,15 @@
     "stayBias": 1,
     "gatewayHub": "釧路",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "abashiri",
@@ -7720,7 +8816,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shikotsu",
@@ -7773,7 +8877,15 @@
     "stayBias": 1,
     "gatewayHub": "千歳",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 160,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tono",
@@ -7824,7 +8936,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 360,
+      "nagoya": 305,
+      "fukuoka": 510,
+      "takamatsu": 460
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "oga",
@@ -7875,7 +8995,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 400,
+      "nagoya": 345,
+      "fukuoka": 550,
+      "takamatsu": 500
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yonezawa",
@@ -7925,7 +9053,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 315,
+      "nagoya": 260,
+      "fukuoka": 465,
+      "takamatsu": 415
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "dewa-sanzan",
@@ -7980,7 +9116,15 @@
     "stayBias": 1,
     "gatewayHub": "鶴岡",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "sakunami-onsen",
@@ -8033,7 +9177,15 @@
     "stayBias": 1,
     "gatewayHub": "仙台",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 160,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "goshogawara",
@@ -8085,7 +9237,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kawagoe",
@@ -8136,7 +9296,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 65,
+      "osaka": 205,
+      "nagoya": 150,
+      "fukuoka": 355,
+      "takamatsu": 305
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "nasu",
@@ -8188,7 +9356,15 @@
     "stayBias": 1,
     "gatewayHub": "那須塩原",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 95,
+      "osaka": 235,
+      "nagoya": 180,
+      "fukuoka": 385,
+      "takamatsu": 335
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "choshi",
@@ -8239,7 +9415,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 290,
+      "nagoya": 235,
+      "fukuoka": 440,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ashikaga",
@@ -8290,7 +9474,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 290,
+      "nagoya": 235,
+      "fukuoka": 440,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "shiobara-onsen",
@@ -8341,7 +9533,15 @@
     "stayBias": 1,
     "gatewayHub": "那須塩原",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 95,
+      "osaka": 235,
+      "nagoya": 180,
+      "fukuoka": 385,
+      "takamatsu": 335
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "sado-island",
@@ -8395,7 +9595,15 @@
     "gatewayHub": "新潟",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 110,
+      "osaka": 250,
+      "nagoya": 195,
+      "fukuoka": 400,
+      "takamatsu": 350
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "kiyosato",
@@ -8447,7 +9655,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 350,
+      "nagoya": 295,
+      "fukuoka": 500,
+      "takamatsu": 450
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tenryu-gorge",
@@ -8497,7 +9713,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 235,
+      "osaka": 205,
+      "nagoya": 150,
+      "fukuoka": 355,
+      "takamatsu": 305
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "suwa",
@@ -8548,7 +9772,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 290,
+      "nagoya": 235,
+      "fukuoka": 440,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "eiheiji",
@@ -8601,7 +9833,15 @@
     "gatewayHub": "永平寺口",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "bus"
+    "secondaryTransport": "bus",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 215,
+      "nagoya": 230,
+      "fukuoka": 365,
+      "takamatsu": 315
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "wakasa-obama",
@@ -8652,7 +9892,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 250,
+      "osaka": 140,
+      "nagoya": 165,
+      "fukuoka": 290,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "okuhida-onsen",
@@ -8706,7 +9954,15 @@
     "stayBias": 1,
     "gatewayHub": "高山",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 225,
+      "nagoya": 170,
+      "fukuoka": 375,
+      "takamatsu": 325
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "minami-izu",
@@ -8759,7 +10015,15 @@
     "stayBias": 1,
     "gatewayHub": "下田",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 185,
+      "osaka": 325,
+      "nagoya": 270,
+      "fukuoka": 475,
+      "takamatsu": 425
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "echizen",
@@ -8811,7 +10075,15 @@
     "stayBias": 1,
     "gatewayHub": "武生",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 190,
+      "osaka": 190,
+      "nagoya": 150,
+      "fukuoka": 340,
+      "takamatsu": 290
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ito",
@@ -8861,7 +10133,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 260,
+      "nagoya": 205,
+      "fukuoka": 410,
+      "takamatsu": 360
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "iga",
@@ -8912,7 +10192,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 120,
+      "nagoya": 175,
+      "fukuoka": 270,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kashihara",
@@ -8963,7 +10251,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 80,
+      "nagoya": 135,
+      "fukuoka": 230,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "totsukawa",
@@ -9016,7 +10312,15 @@
     "stayBias": 2,
     "gatewayHub": "五条",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 120,
+      "nagoya": 175,
+      "fukuoka": 270,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yunomineonsen",
@@ -9067,7 +10371,15 @@
     "stayBias": 1,
     "gatewayHub": "新宮",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 285,
+      "osaka": 220,
+      "nagoya": 200,
+      "fukuoka": 370,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "maizuru",
@@ -9117,7 +10429,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 260,
+      "osaka": 120,
+      "nagoya": 175,
+      "fukuoka": 270,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "asuka",
@@ -9169,7 +10489,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 225,
+      "osaka": 90,
+      "nagoya": 140,
+      "fukuoka": 240,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "daisen",
@@ -9224,7 +10552,15 @@
     "stayBias": 1,
     "gatewayHub": "米子",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 205,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 215
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yunotsu-onsen",
@@ -9275,7 +10611,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 355,
+      "osaka": 215,
+      "nagoya": 270,
+      "fukuoka": 275,
+      "takamatsu": 225
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "iwami-ginzan",
@@ -9327,7 +10671,15 @@
     "stayBias": 1,
     "gatewayHub": "大田市",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 370,
+      "osaka": 230,
+      "nagoya": 285,
+      "fukuoka": 290,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "iwakuni",
@@ -9380,7 +10732,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 280,
+      "osaka": 140,
+      "nagoya": 195,
+      "fukuoka": 130,
+      "takamatsu": 150
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kurayoshi",
@@ -9433,7 +10793,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 230,
+      "nagoya": 245,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "suo-oshima",
@@ -9491,7 +10859,15 @@
     "gatewayHub": "大畠",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 160,
+      "nagoya": 215,
+      "fukuoka": 150,
+      "takamatsu": 170
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "shimanto",
@@ -9546,7 +10922,15 @@
     "gatewayHub": "窪川",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "car"
+    "secondaryTransport": "car",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tobe",
@@ -9600,7 +10984,15 @@
     "stayBias": 0,
     "gatewayHub": "松山",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kashiwajima",
@@ -9657,7 +11049,15 @@
     "gatewayHub": "宿毛",
     "airportHub": null,
     "railProvider": "e5489",
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "saijo",
@@ -9710,7 +11110,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ainan",
@@ -9765,7 +11173,15 @@
     "stayBias": 1,
     "gatewayHub": "宇和島",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "taketa",
@@ -9817,7 +11233,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 190,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "usuki",
@@ -9871,7 +11295,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 160,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hita",
@@ -9924,7 +11356,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 240,
+      "nagoya": 245,
+      "fukuoka": 90,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hasami",
@@ -9978,7 +11418,15 @@
     "stayBias": 1,
     "gatewayHub": "川棚",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 145,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "takeo-onsen",
@@ -10028,7 +11476,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 375,
+      "osaka": 235,
+      "nagoya": 290,
+      "fukuoka": 85,
+      "takamatsu": 245
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kitsuki",
@@ -10081,7 +11537,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 160,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tsushima",
@@ -10136,7 +11600,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "福岡",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 250,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 20,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "iki-island",
@@ -10191,7 +11663,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "福岡",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 250,
+      "osaka": 170,
+      "nagoya": 225,
+      "fukuoka": 20,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tanegashima",
@@ -10247,7 +11727,15 @@
     "gatewayHub": "鹿児島",
     "airportHub": "鹿児島",
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 240,
+      "nagoya": 245,
+      "fukuoka": 90,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kikuchi",
@@ -10300,7 +11788,15 @@
     "stayBias": 1,
     "gatewayHub": "武蔵塚",
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 110,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "taketomi-island",
@@ -10356,7 +11852,15 @@
     "gatewayHub": "石垣",
     "airportHub": "那覇",
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 150,
+      "nagoya": 185,
+      "fukuoka": 150,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yonaguni-island",
@@ -10411,7 +11915,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 150,
+      "nagoya": 185,
+      "fukuoka": 150,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nakijin",
@@ -10466,7 +11978,15 @@
     "stayBias": 1,
     "gatewayHub": "名護",
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 160,
+      "takamatsu": 160
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "motobu",
@@ -10519,7 +12039,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 160,
+      "takamatsu": 160
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "zamami-island",
@@ -10574,7 +12102,15 @@
     "stayBias": 2,
     "gatewayHub": null,
     "airportHub": "那覇",
-    "railProvider": null
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 155,
+      "osaka": 155,
+      "nagoya": 155,
+      "fukuoka": 155,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "ie-island",
@@ -10629,7 +12165,15 @@
     "gatewayHub": "本部",
     "airportHub": null,
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 160,
+      "takamatsu": 160
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kohama-island",
@@ -10685,7 +12229,15 @@
     "gatewayHub": "石垣",
     "airportHub": "那覇",
     "railProvider": null,
-    "secondaryTransport": "ferry"
+    "secondaryTransport": "ferry",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 160,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "matsushiro",
@@ -10737,7 +12289,15 @@
     "stayBias": 0,
     "gatewayHub": "長野",
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 110,
+      "osaka": 225,
+      "nagoya": 195,
+      "fukuoka": 375,
+      "takamatsu": 325
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "iiyama",
@@ -10788,7 +12348,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet"
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 115,
+      "osaka": 255,
+      "nagoya": 200,
+      "fukuoka": 405,
+      "takamatsu": 355
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "yakake",
@@ -10841,7 +12409,15 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 115,
+      "nagoya": 170,
+      "fukuoka": 175,
+      "takamatsu": 125
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tsuyama",
@@ -10894,7 +12470,15 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 115,
+      "nagoya": 170,
+      "fukuoka": 175,
+      "takamatsu": 125
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tsurugi-san",
@@ -10949,7 +12533,15 @@
     "stayBias": 1,
     "gatewayHub": "貞光",
     "airportHub": null,
-    "railProvider": "e5489"
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 195,
+      "fukuoka": 250,
+      "takamatsu": 135
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "nobeoka",
@@ -11002,6 +12594,14 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "jrkyushu"
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 160,
+      "osaka": 160,
+      "nagoya": 160,
+      "fukuoka": 215,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night"
   }
 ]

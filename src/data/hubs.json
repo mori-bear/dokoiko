@@ -42,7 +42,15 @@
     "railGateway": "横浜駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 75,
+      "osaka": 215,
+      "nagoya": 160,
+      "fukuoka": 365,
+      "takamatsu": 315
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "nagoya-t",
@@ -88,7 +96,15 @@
     "railGateway": "名古屋駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 85,
+      "osaka": 55,
+      "nagoya": 0,
+      "fukuoka": 205,
+      "takamatsu": 155
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "sendai-t",
@@ -131,7 +147,15 @@
     "railGateway": "仙台駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 90,
+      "osaka": 230,
+      "nagoya": 175,
+      "fukuoka": 380,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "kanazawa-t",
@@ -188,7 +212,15 @@
     "railGateway": "金沢駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 130,
+      "nagoya": 145,
+      "fukuoka": 280,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "osaka-t",
@@ -237,7 +269,15 @@
     "railGateway": "新大阪駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 140,
+      "osaka": 0,
+      "nagoya": 55,
+      "fukuoka": 150,
+      "takamatsu": 100
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "kyoto-t",
@@ -295,7 +335,15 @@
     "railGateway": "京都駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 80,
+      "nagoya": 35,
+      "fukuoka": 230,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "hiroshima-t",
@@ -357,7 +405,15 @@
     "railGateway": "広島駅",
     "airportGateway": "広島空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 80,
+      "nagoya": 135,
+      "fukuoka": 70,
+      "takamatsu": 90
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "fukuoka-t",
@@ -407,7 +463,15 @@
     "railGateway": "博多駅",
     "airportGateway": "福岡空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 150,
+      "nagoya": 205,
+      "fukuoka": 0,
+      "takamatsu": 160
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "sapporo-t",
@@ -466,7 +530,15 @@
     "railGateway": null,
     "airportGateway": "新千歳空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 385,
+      "osaka": 525,
+      "nagoya": 470,
+      "fukuoka": 675,
+      "takamatsu": 625
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kobe",
@@ -510,7 +582,15 @@
     "railGateway": "三ノ宮駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 165,
+      "osaka": 25,
+      "nagoya": 80,
+      "fukuoka": 175,
+      "takamatsu": 125
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "himeji",
@@ -553,7 +633,15 @@
     "railGateway": "姫路駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "wakayama",
@@ -597,7 +685,15 @@
     "railGateway": "和歌山駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "okayama-o",
@@ -642,7 +738,15 @@
     "railGateway": "岡山駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 185,
+      "osaka": 45,
+      "nagoya": 100,
+      "fukuoka": 105,
+      "takamatsu": 55
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "tokyo-o",
@@ -691,7 +795,15 @@
     "railGateway": "東京駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 0,
+      "osaka": 140,
+      "nagoya": 85,
+      "fukuoka": 290,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "gifu",
@@ -735,7 +847,15 @@
     "railGateway": "岐阜駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "saga",
@@ -779,7 +899,15 @@
     "railGateway": "佐賀駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kumamoto",
@@ -822,7 +950,15 @@
     "railGateway": "熊本駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 330,
+      "osaka": 190,
+      "nagoya": 245,
+      "fukuoka": 40,
+      "takamatsu": 200
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "nagasaki",
@@ -877,7 +1013,15 @@
     "railGateway": "長崎駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 365,
+      "osaka": 225,
+      "nagoya": 280,
+      "fukuoka": 75,
+      "takamatsu": 235
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kagoshima",
@@ -920,7 +1064,15 @@
     "railGateway": "鹿児島中央駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 370,
+      "osaka": 230,
+      "nagoya": 285,
+      "fukuoka": 80,
+      "takamatsu": 240
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "miyazaki",
@@ -964,7 +1116,15 @@
     "railGateway": "宮崎駅",
     "airportGateway": "宮崎空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 530,
+      "osaka": 390,
+      "nagoya": 445,
+      "fukuoka": 240,
+      "takamatsu": 400
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "asahikawa",
@@ -1007,7 +1167,15 @@
     "railGateway": "旭川駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 465,
+      "osaka": 605,
+      "nagoya": 550,
+      "fukuoka": 755,
+      "takamatsu": 705
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kushiro",
@@ -1053,7 +1221,15 @@
     "railGateway": "釧路駅",
     "airportGateway": "釧路空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 595,
+      "osaka": 735,
+      "nagoya": 680,
+      "fukuoka": 885,
+      "takamatsu": 835
+    },
+    "stayRecommendation": "3night+"
   },
   {
     "id": "hakodate",
@@ -1107,7 +1283,15 @@
     "railGateway": "函館駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 380,
+      "nagoya": 325,
+      "fukuoka": 530,
+      "takamatsu": 480
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "yamagata",
@@ -1150,7 +1334,15 @@
     "railGateway": "山形駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 145,
+      "osaka": 285,
+      "nagoya": 230,
+      "fukuoka": 435,
+      "takamatsu": 385
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "morioka",
@@ -1193,7 +1385,15 @@
     "railGateway": "盛岡駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 270,
+      "nagoya": 215,
+      "fukuoka": 420,
+      "takamatsu": 370
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "niigata",
@@ -1235,7 +1435,15 @@
     "railGateway": "新潟駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 100,
+      "osaka": 240,
+      "nagoya": 185,
+      "fukuoka": 390,
+      "takamatsu": 340
+    },
+    "stayRecommendation": "daytrip"
   },
   {
     "id": "matsuyama",
@@ -1294,7 +1502,15 @@
     "railGateway": "松山駅",
     "airportGateway": "松山空港",
     "busGateway": null,
-    "ferryGateway": "松山観光港"
+    "ferryGateway": "松山観光港",
+    "travelTime": {
+      "tokyo": 355,
+      "osaka": 215,
+      "nagoya": 270,
+      "fukuoka": 275,
+      "takamatsu": 225
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "tokushima",
@@ -1337,7 +1553,15 @@
     "railGateway": "徳島駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 305,
+      "osaka": 165,
+      "nagoya": 220,
+      "fukuoka": 225,
+      "takamatsu": 65
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kochi",
@@ -1380,7 +1604,15 @@
     "railGateway": "高知駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 325,
+      "osaka": 185,
+      "nagoya": 240,
+      "fukuoka": 245,
+      "takamatsu": 195
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "naha",
@@ -1447,7 +1679,15 @@
     "railGateway": null,
     "airportGateway": "那覇空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 135,
+      "osaka": 135,
+      "nagoya": 135,
+      "fukuoka": 135,
+      "takamatsu": 135
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "matsumoto-n",
@@ -1493,7 +1733,15 @@
     "railGateway": "松本駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 200,
+      "nagoya": 145,
+      "fukuoka": 350,
+      "takamatsu": 300
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "mito",
@@ -1537,7 +1785,15 @@
     "railGateway": "水戸駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "kofu",
@@ -1580,7 +1836,15 @@
     "railGateway": "甲府駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "shizuoka",
@@ -1628,7 +1892,15 @@
     "railGateway": "静岡駅",
     "airportGateway": "静岡空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 295,
+      "osaka": 265,
+      "nagoya": 210,
+      "fukuoka": 415,
+      "takamatsu": 365
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "iida",
@@ -1672,7 +1944,15 @@
     "railGateway": "飯田駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": null,
+      "osaka": null,
+      "nagoya": null,
+      "fukuoka": null,
+      "takamatsu": null
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "matsue",
@@ -1719,7 +1999,15 @@
     "railGateway": "松江駅",
     "airportGateway": "出雲空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 350,
+      "osaka": 210,
+      "nagoya": 265,
+      "fukuoka": 270,
+      "takamatsu": 220
+    },
+    "stayRecommendation": "2night"
   },
   {
     "id": "takamatsu",
@@ -1766,7 +2054,15 @@
     "railGateway": "高松駅",
     "airportGateway": "高松空港",
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 100,
+      "nagoya": 155,
+      "fukuoka": 160,
+      "takamatsu": 0
+    },
+    "stayRecommendation": "1night"
   },
   {
     "id": "fukui",
@@ -1819,6 +2115,14 @@
     "railGateway": "福井駅",
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": null
+    "ferryGateway": null,
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 155,
+      "nagoya": 170,
+      "fukuoka": 305,
+      "takamatsu": 255
+    },
+    "stayRecommendation": "1night"
   }
 ]

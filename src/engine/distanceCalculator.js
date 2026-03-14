@@ -154,13 +154,41 @@ function getHubRegion(hotelHub, fallbackRegion) {
 }
 
 /**
+ * 出発地 → 事前計算 travelTime のキー
+ * (Dijkstra 計算済みの参照都市に対応)
+ */
+const DEPARTURE_REF_KEY = {
+  '東京':   'tokyo',   '横浜':  'tokyo',  '千葉':   'tokyo',
+  '大宮':   'tokyo',   '宇都宮':'tokyo',  '仙台':   'tokyo',
+  '盛岡':   'tokyo',   '青森':  'tokyo',
+  '名古屋': 'nagoya',  '静岡':  'nagoya', '長野':   'nagoya',
+  '富山':   'nagoya',  '金沢':  'nagoya',
+  '大阪':   'osaka',   '京都':  'osaka',  '神戸':   'osaka',  '奈良':  'osaka',
+  '広島':   'osaka',   '岡山':  'osaka',  '松江':   'osaka',
+  '高松':   'takamatsu','松山': 'takamatsu','高知':  'takamatsu','徳島': 'takamatsu',
+  '福岡':   'fukuoka', '熊本':  'fukuoka','鹿児島': 'fukuoka',
+  '長崎':   'fukuoka', '宮崎':  'fukuoka',
+};
+
+/**
  * 出発地と目的地から travelTimeMinutes（推定移動時間・分）を計算する。
+ * 事前計算済み travelTime フィールドがあればそれを優先し、
+ * なければ地域ベースの推定にフォールバック。
  *
  * @param {string} departure - 出発都市名
- * @param {{ hotelHub?:string, name:string, region:string, isIsland?:boolean, destType?:string }} destination
+ * @param {{ hotelHub?:string, name:string, region:string, isIsland?:boolean, destType?:string, travelTime?:object }} destination
  * @returns {number} 推定移動時間（分）
  */
 export function calculateTravelTimeMinutes(departure, destination) {
+  // 事前計算済み Dijkstra 移動時間を優先使用
+  if (destination.travelTime) {
+    const refKey = DEPARTURE_REF_KEY[departure];
+    if (refKey !== undefined) {
+      const stored = destination.travelTime[refKey];
+      if (stored !== null && stored !== undefined) return stored;
+    }
+  }
+
   const hotelHub = destination.hotelHub ?? destination.name;
   const isIsland = destination.isIsland || destination.destType === 'island';
 

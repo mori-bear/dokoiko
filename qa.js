@@ -926,6 +926,46 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8d] travelTime カバレッジ
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8d] travelTime カバレッジ');
+    const REF_KEYS = ['tokyo', 'osaka', 'nagoya', 'fukuoka', 'takamatsu'];
+    const VALID_STAY = new Set(['daytrip', '1night', '2night', '3night+']);
+
+    let coveredAll = 0, coveredPartial = 0, coveredNone = 0;
+    const stayDist = { daytrip: 0, '1night': 0, '2night': 0, '3night+': 0, missing: 0 };
+
+    DESTS.forEach(d => {
+      const tt = d.travelTime;
+      if (!tt) {
+        coveredNone++;
+        stayDist.missing++;
+        return;
+      }
+      const nonNullCount = REF_KEYS.filter(k => tt[k] !== null && tt[k] !== undefined).length;
+      if (nonNullCount === REF_KEYS.length) coveredAll++;
+      else if (nonNullCount > 0) coveredPartial++;
+      else coveredNone++;
+
+      if (VALID_STAY.has(d.stayRecommendation)) stayDist[d.stayRecommendation]++;
+      else stayDist.missing++;
+    });
+
+    sc.check(coveredNone === 0, `travelTime 全null/未付与: ${coveredNone} 件`);
+    sc.check(coveredAll + coveredPartial === DESTS.length || coveredNone <= 10,
+      `travelTime 未付与が多すぎる: ${coveredNone} 件`);
+    sc.check(stayDist.missing === 0, `stayRecommendation 未設定: ${stayDist.missing} 件`);
+    sc.check(stayDist['1night'] > 0, 'stayRecommendation=1night が 0 件');
+    sc.check(stayDist['2night'] > 0, 'stayRecommendation=2night が 0 件');
+
+    console.log(`  travelTime 全5都市あり: ${coveredAll} / 部分: ${coveredPartial} / 全null: ${coveredNone}`);
+    console.log(`  stayRecommendation: daytrip=${stayDist.daytrip}, 1night=${stayDist['1night']}, 2night=${stayDist['2night']}, 3night+=${stayDist['3night+']}, missing=${stayDist.missing}`);
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');
