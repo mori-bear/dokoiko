@@ -18,7 +18,7 @@
     "tags": [
       "寺社",
       "海",
-      "古都"
+      "歴史"
     ],
     "spots": [
       "鎌倉大仏",
@@ -57,7 +57,11 @@
       "fukuoka": 370,
       "takamatsu": 320
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "鎌倉市",
+    "hubStation": "東京駅",
+    "accessStation": "鎌倉駅"
   },
   {
     "id": "atami",
@@ -77,7 +81,8 @@
     "tags": [
       "温泉",
       "海",
-      "リゾート"
+      "城",
+      "街歩き"
     ],
     "spots": [
       "熱海城",
@@ -116,7 +121,11 @@
       "fukuoka": 280,
       "takamatsu": 230
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "熱海市",
+    "hubStation": "熱海駅",
+    "accessStation": "熱海駅"
   },
   {
     "id": "nikko",
@@ -135,9 +144,12 @@
     "weight": 1.2,
     "description": "山と湖と滝に囲まれた世界遺産の聖地。社寺群と大自然が一体となった歴史ある山岳地。",
     "tags": [
-      "世界遺産",
+      "温泉",
       "自然",
-      "温泉"
+      "山",
+      "歴史",
+      "寺社",
+      "滝"
     ],
     "spots": [
       "東照宮",
@@ -188,7 +200,11 @@
       "fukuoka": 415,
       "takamatsu": 365
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "日光市",
+    "hubStation": "宇都宮駅",
+    "accessStation": "日光駅"
   },
   {
     "id": "karuizawa",
@@ -206,9 +222,9 @@
     "weight": 1.2,
     "description": "高原の空気と別荘文化が溶け合う避暑地。森の中をサイクリングしながら旅の気分を変えたい。",
     "tags": [
-      "高原",
-      "リゾート",
-      "アウトレット"
+      "山",
+      "自然",
+      "滝"
     ],
     "spots": [
       "旧軽井沢銀座",
@@ -259,7 +275,11 @@
       "fukuoka": 395,
       "takamatsu": 345
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "軽井沢町",
+    "hubStation": "軽井沢駅",
+    "accessStation": "軽井沢駅"
   },
   {
     "id": "fujikawaguchiko",
@@ -277,9 +297,10 @@
     "weight": 1.2,
     "description": "富士山を映す湖と雄大な自然に包まれた高原地。四季ごとに変わる湖面の表情と富士の景色が旅を彩る。",
     "tags": [
-      "富士山",
-      "湖",
-      "温泉"
+      "温泉",
+      "山",
+      "自然",
+      "海"
     ],
     "spots": [
       "河口湖",
@@ -319,7 +340,11 @@
       "fukuoka": 420,
       "takamatsu": 370
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "山梨富士河口湖",
+    "hubStation": "河口湖駅",
+    "accessStation": "河口湖駅"
   },
   {
     "id": "nara",
@@ -339,9 +364,9 @@
     "weight": 1.2,
     "description": "鹿と仏教建築が共存する千年の古都。大仏と寺社を巡りながら日本の原風景に出会える。",
     "tags": [
-      "世界遺産",
-      "鹿",
-      "古都"
+      "歴史",
+      "寺社",
+      "滝"
     ],
     "spots": [
       "東大寺",
@@ -381,7 +406,11 @@
       "fukuoka": 215,
       "takamatsu": 165
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "奈良市",
+    "hubStation": "京都駅",
+    "accessStation": "奈良駅"
   },
   {
     "id": "ishigaki",
@@ -403,8 +432,8 @@
     "description": "八重山の文化と透明度抜群の珊瑚礁が広がる離島。ダイビングや離島めぐりで唯一無二の海を体感できる。",
     "tags": [
       "離島",
-      "サンゴ礁",
-      "星空"
+      "海",
+      "山"
     ],
     "spots": [
       "川平湾",
@@ -444,7 +473,11 @@
       "fukuoka": 120,
       "takamatsu": 210
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "石垣市",
+    "hubStation": "那覇空港",
+    "accessStation": "石垣空港"
   },
   {
     "id": "ise",
@@ -463,9 +496,9 @@
     "weight": 1.2,
     "description": "日本最古の神宮が鎮座する神聖な参拝の地。参道の食と文化を楽しみながら、心の旅ができる場所だ。",
     "tags": [
-      "神宮",
-      "おかげ横丁",
-      "海の幸"
+      "海",
+      "街歩き",
+      "寺社"
     ],
     "spots": [
       "伊勢神宮",
@@ -516,7 +549,11 @@
       "fukuoka": 315,
       "takamatsu": 265
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "伊勢市",
+    "hubStation": "名古屋駅",
+    "accessStation": "伊勢市駅"
   },
   {
     "id": "beppu",
@@ -535,8 +572,7 @@
     "description": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市。個性豊かな源泉と海を望む露天が、旅人を癒す。",
     "tags": [
       "温泉",
-      "地獄めぐり",
-      "海の幸"
+      "海"
     ],
     "spots": [
       "地獄めぐり",
@@ -587,7 +623,11 @@
       "fukuoka": 150,
       "takamatsu": 310
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "別府市",
+    "hubStation": "大分駅",
+    "accessStation": "別府駅"
   },
   {
     "id": "otaru",
@@ -606,9 +646,9 @@
     "weight": 1.2,
     "description": "北の港町に残る運河と倉庫群が旅情を誘う街。新鮮な海の幸とガラス工芸品が楽しめる観光地だ。",
     "tags": [
-      "運河",
-      "海の幸",
-      "ガラス工芸"
+      "海",
+      "歴史",
+      "山"
     ],
     "spots": [
       "小樽運河",
@@ -649,7 +689,11 @@
       "fukuoka": 735,
       "takamatsu": 685
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "小樽市",
+    "hubStation": "新千歳空港",
+    "accessStation": "小樽駅"
   },
   {
     "id": "furano",
@@ -667,9 +711,10 @@
     "weight": 1.2,
     "description": "ラベンダー畑と大自然が広がる北海道の高原地帯。紫の絨毯と青空が広がる夏の景色は絵のように美しい。",
     "tags": [
-      "ラベンダー",
-      "農場",
-      "スキー"
+      "街歩き",
+      "自然",
+      "山",
+      "海"
     ],
     "spots": [
       "ファーム富田",
@@ -708,7 +753,11 @@
       "fukuoka": 845,
       "takamatsu": 795
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "富良野市",
+    "hubStation": "旭川駅",
+    "accessStation": "富良野駅"
   },
   {
     "id": "matsushima",
@@ -727,9 +776,10 @@
     "weight": 1.2,
     "description": "日本三景のひとつ、松の島々が浮かぶ美しい海。牡蠣と遊覧船で絶景をゆっくり楽しめる。",
     "tags": [
-      "日本三景",
+      "街歩き",
       "海",
-      "牡蠣"
+      "寺社",
+      "離島"
     ],
     "spots": [
       "松島湾",
@@ -780,7 +830,11 @@
       "fukuoka": 435,
       "takamatsu": 385
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "松島町",
+    "hubStation": "仙台駅",
+    "accessStation": "松島海岸駅"
   },
   {
     "id": "miyajima",
@@ -798,10 +852,10 @@
     "weight": 1.5,
     "description": "海に浮かぶ鳥居が象徴する世界遺産の神の島。干潮と満潮で変わる海と社の表情が旅の記憶に深く刻まれる。",
     "tags": [
-      "厳島神社",
-      "世界遺産",
-      "鹿",
-      "海"
+      "離島",
+      "寺社",
+      "海",
+      "山"
     ],
     "spots": [
       "厳島神社",
@@ -841,7 +895,11 @@
       "fukuoka": 105,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "廿日市市",
+    "hubStation": "広島駅",
+    "accessStation": "宮島口港"
   },
   {
     "id": "onomichi",
@@ -862,9 +920,9 @@
     "weight": 1.2,
     "description": "坂と猫と寺社が点在する瀬戸内の港町。映画の舞台にもなった風景を歩くと物語が生まれそうだ。",
     "tags": [
-      "坂の街",
-      "映画の街",
-      "瀬戸内"
+      "街歩き",
+      "海",
+      "寺社"
     ],
     "spots": [
       "千光寺",
@@ -915,7 +973,11 @@
       "fukuoka": 140,
       "takamatsu": 160
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "尾道市",
+    "hubStation": "福山駅",
+    "accessStation": "尾道駅"
   },
   {
     "id": "shodoshima",
@@ -933,9 +995,7 @@
     "weight": 1.5,
     "description": "オリーブと醤油の産地として知られる瀬戸内の島。干潮時に渡れる砂の道と穏やかな島時間が心を癒す。",
     "tags": [
-      "オリーブ",
-      "醤油",
-      "映画の舞台",
+      "離島",
       "海"
     ],
     "spots": [
@@ -977,7 +1037,11 @@
       "fukuoka": 165,
       "takamatsu": 5
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "小豆島町",
+    "hubStation": "高松駅",
+    "accessStation": "池田港"
   },
   {
     "id": "mihonoseki",
@@ -995,7 +1059,12 @@
     ],
     "weight": 1.2,
     "description": "島根半島の東端に静かに佇む漁師町。青石畳の路地と白い灯台が醸し出す静謐な雰囲気が魅力だ。",
-    "tags": [],
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社",
+      "離島"
+    ],
     "spots": [
       "美保神社",
       "地蔵崎灯台",
@@ -1036,7 +1105,10 @@
       "fukuoka": 250,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "松江市",
+    "hubStation": "松江駅",
+    "accessStation": "境港駅"
   },
   {
     "id": "ryujin-onsen",
@@ -1053,7 +1125,10 @@
     ],
     "weight": 1.2,
     "description": "紀伊山地の奥深くに湧く日本三美人の湯。杉木立と渓流に包まれた秘湯で、日常を忘れて浸かりたい。",
-    "tags": [],
+    "tags": [
+      "温泉",
+      "山"
+    ],
     "spots": [
       "龍神温泉元湯",
       "護摩壇山",
@@ -1092,7 +1167,10 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "田辺市",
+    "hubStation": "紀伊田辺駅",
+    "accessStation": "紀伊田辺駅"
   },
   {
     "id": "tokashiki-jima",
@@ -1112,11 +1190,8 @@
     "weight": 1.5,
     "description": "ケラマブルーの海が広がる沖縄の離島。那覇から30分という近さで原始の海と珊瑚礁を体感できる。",
     "tags": [
-      "海",
       "離島",
-      "ダイビング",
-      "リゾート",
-      "珊瑚礁"
+      "海"
     ],
     "spots": [
       "阿波連ビーチ",
@@ -1158,7 +1233,11 @@
       "fukuoka": 155,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "沖縄渡嘉敷島",
+    "hubStation": "渡嘉敷島駅",
+    "accessStation": "渡嘉敷島駅"
   },
   {
     "id": "kumejima",
@@ -1179,8 +1258,8 @@
     "description": "手つかずの白砂浜と沖縄の原風景が残る離島。独特の地形と透明度抜群の海で深く自然に浸れる場所だ。",
     "tags": [
       "離島",
-      "砂浜",
-      "ダイビング"
+      "海",
+      "自然"
     ],
     "spots": [
       "はての浜",
@@ -1222,7 +1301,11 @@
       "fukuoka": 155,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "久米島町",
+    "hubStation": "那覇空港",
+    "accessStation": "久米島空港"
   },
   {
     "id": "miyakojima",
@@ -1244,8 +1327,8 @@
     "description": "宮古ブルーと称される透明度抜群の海を持つ離島。橋で結ばれた島々と無人のビーチで南国の美しさに浸れる。",
     "tags": [
       "離島",
-      "ダイビング",
-      "ビーチ"
+      "海",
+      "山"
     ],
     "spots": [
       "与那覇前浜",
@@ -1286,7 +1369,11 @@
       "fukuoka": 120,
       "takamatsu": 210
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "宮古島市",
+    "hubStation": "那覇空港",
+    "accessStation": "宮古空港"
   },
   {
     "id": "kouzushima",
@@ -1305,8 +1392,8 @@
     "description": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島。山と海と集落が凝縮された、ゆっくりとした時間が流れる島だ。",
     "tags": [
       "離島",
-      "ハイキング",
-      "ダイビング"
+      "山",
+      "海"
     ],
     "spots": [
       "前浜",
@@ -1346,7 +1433,11 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "東京神津島",
+    "hubStation": "神津島駅",
+    "accessStation": "神津島駅"
   },
   {
     "id": "hakone",
@@ -1366,7 +1457,7 @@
     "description": "山と湖と温泉が揃う関東を代表する保養地。富士山を望みながらゆったりと温泉や美術館を楽しめる。",
     "tags": [
       "温泉",
-      "富士山",
+      "山",
       "自然"
     ],
     "spots": [
@@ -1406,7 +1497,11 @@
       "fukuoka": 410,
       "takamatsu": 360
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "箱根町",
+    "hubStation": "小田原駅",
+    "accessStation": "箱根湯本駅"
   },
   {
     "id": "shuzenji",
@@ -1425,8 +1520,8 @@
     "description": "竹林に囲まれた伊豆最古の温泉郷。川のせせらぎと湯煙の中で、静かな旅の時間を過ごせる。",
     "tags": [
       "温泉",
-      "竹林",
-      "歴史"
+      "歴史",
+      "寺社"
     ],
     "spots": [
       "修禅寺",
@@ -1465,7 +1560,11 @@
       "fukuoka": 450,
       "takamatsu": 400
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "伊豆市",
+    "hubStation": "三島駅",
+    "accessStation": "修善寺駅"
   },
   {
     "id": "kusatsu-onsen",
@@ -1484,8 +1583,7 @@
     "description": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯。硫黄の香りと白い湯煙が漂う広場が旅の中心だ。",
     "tags": [
       "温泉",
-      "湯畑",
-      "秘湯"
+      "山"
     ],
     "spots": [
       "湯畑",
@@ -1525,7 +1623,10 @@
       "fukuoka": 470,
       "takamatsu": 420
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "草津町",
+    "hubStation": "長野原草津口駅",
+    "accessStation": "草津温泉バスターミナル"
   },
   {
     "id": "shimoda",
@@ -1546,7 +1647,8 @@
     "tags": [
       "歴史",
       "海",
-      "開国"
+      "寺社",
+      "離島"
     ],
     "spots": [
       "了仙寺",
@@ -1585,7 +1687,11 @@
       "fukuoka": 475,
       "takamatsu": 425
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "下田市",
+    "hubStation": "熱海駅",
+    "accessStation": "伊豆急下田駅"
   },
   {
     "id": "izu-oshima",
@@ -1603,8 +1709,8 @@
     "weight": 1.5,
     "description": "伊豆諸島最大の火山島。荒涼とした山の地形と温かな漁村文化が共存し、島ならではの旅情が広がる。",
     "tags": [
-      "島",
-      "火山",
+      "離島",
+      "山",
       "自然",
       "海"
     ],
@@ -1648,7 +1754,11 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "大島町",
+    "hubStation": "東京竹芝",
+    "accessStation": "元町港"
   },
   {
     "id": "shirakawago-t",
@@ -1668,9 +1778,9 @@
     "weight": 1.2,
     "description": "雪に耐える合掌造りの集落が世界遺産に登録された里。季節を通じて日本の原風景と文化が凝縮されている。",
     "tags": [
-      "世界遺産",
-      "合掌造り",
-      "雪景色"
+      "山",
+      "城",
+      "寺社"
     ],
     "spots": [
       "荻町城跡展望台",
@@ -1722,7 +1832,10 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "岐阜白川郷",
+    "hubStation": "金沢駅",
+    "accessStation": "金沢駅"
   },
   {
     "id": "arima-onsen",
@@ -1743,7 +1856,7 @@
     "tags": [
       "温泉",
       "歴史",
-      "古湯"
+      "山"
     ],
     "spots": [
       "金の湯",
@@ -1783,7 +1896,10 @@
       "fukuoka": 205,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "神戸市",
+    "hubStation": "三ノ宮駅",
+    "accessStation": "有馬温泉駅"
   },
   {
     "id": "kinosaki-onsen",
@@ -1804,8 +1920,7 @@
     "description": "浴衣で七つの外湯を巡る情緒ある温泉街。川沿いの柳と下駄の音が昭和の旅情をよみがえらせる。",
     "tags": [
       "温泉",
-      "外湯巡り",
-      "温泉街"
+      "城"
     ],
     "spots": [
       "さとの湯",
@@ -1858,7 +1973,11 @@
       "fukuoka": 325,
       "takamatsu": 275
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "豊岡市",
+    "hubStation": "城崎温泉駅",
+    "accessStation": "城崎温泉駅"
   },
   {
     "id": "kurashiki-o",
@@ -1878,9 +1997,8 @@
     "weight": 1.2,
     "description": "白壁の土蔵と柳が並ぶ江戸の面影が残る街。川舟に揺られながら美観地区の静けさと美しさに触れたい。",
     "tags": [
-      "美観地区",
-      "美術館",
-      "歴史"
+      "歴史",
+      "寺社"
     ],
     "spots": [
       "大原美術館",
@@ -1932,7 +2050,11 @@
       "fukuoka": 150,
       "takamatsu": 100
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "岡山倉敷",
+    "hubStation": "倉敷駅",
+    "accessStation": "倉敷駅"
   },
   {
     "id": "shirahama-o",
@@ -1950,9 +2072,10 @@
     "weight": 1.2,
     "description": "白い砂浜と透明な海が広がる南紀のリゾート地。温泉と海水浴が同時に楽しめる和歌山を代表する観光地。",
     "tags": [
+      "温泉",
       "海",
-      "リゾート",
-      "温泉"
+      "山",
+      "滝"
     ],
     "spots": [
       "白良浜",
@@ -1993,7 +2116,11 @@
       "fukuoka": 295,
       "takamatsu": 245
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "和歌山白浜",
+    "hubStation": "白浜駅",
+    "accessStation": "白浜駅"
   },
   {
     "id": "takayama-o",
@@ -2012,9 +2139,10 @@
     "weight": 1.2,
     "description": "江戸の町割りが残る飛騨山脈に囲まれた城下町。醤油と味噌の香りが漂う蔵の街で、昔ながらの市が今も続く。",
     "tags": [
-      "古い町並",
-      "飛騨",
-      "温泉"
+      "温泉",
+      "山",
+      "歴史",
+      "城"
     ],
     "spots": [
       "古い町並",
@@ -2066,7 +2194,11 @@
       "fukuoka": 375,
       "takamatsu": 325
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "岐阜高山",
+    "hubStation": "高山駅",
+    "accessStation": "高山駅"
   },
   {
     "id": "toba",
@@ -2085,9 +2217,10 @@
     "weight": 1.2,
     "description": "伊勢志摩の海女文化と真珠産業が息づく港町。潮風と海の幸、伊勢湾に面した旅情ある景色が出迎えてくれる。",
     "tags": [
+      "街歩き",
       "海",
-      "真珠",
-      "海女"
+      "自然",
+      "離島"
     ],
     "spots": [
       "鳥羽水族館",
@@ -2128,7 +2261,11 @@
       "fukuoka": 335,
       "takamatsu": 285
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "鳥羽市",
+    "hubStation": "名古屋駅",
+    "accessStation": "鳥羽駅"
   },
   {
     "id": "yufuin",
@@ -2149,7 +2286,7 @@
     "tags": [
       "温泉",
       "自然",
-      "由布岳"
+      "山"
     ],
     "spots": [
       "湯の坪街道",
@@ -2200,7 +2337,11 @@
       "fukuoka": 130,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "由布市",
+    "hubStation": "大分駅",
+    "accessStation": "由布院駅"
   },
   {
     "id": "kurokawa-k",
@@ -2220,8 +2361,9 @@
     "description": "杉林に隠れた小さな温泉旅館が集まる秘湯の里。手形一枚で複数の露天風呂を渡り歩く体験が独特だ。",
     "tags": [
       "温泉",
-      "秘湯",
-      "自然"
+      "自然",
+      "山",
+      "秘境"
     ],
     "spots": [
       "入湯手形",
@@ -2262,7 +2404,10 @@
       "fukuoka": 30,
       "takamatsu": 190
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "熊本黒川温泉",
+    "hubStation": "博多駅",
+    "accessStation": "博多駅"
   },
   {
     "id": "aso",
@@ -2282,9 +2427,8 @@
     "weight": 1.2,
     "description": "世界最大級のカルデラと活火山が広がる大自然の地。広大な草原と火口の青緑が圧倒的な景色をつくっている。",
     "tags": [
-      "火山",
-      "自然",
-      "カルデラ"
+      "山",
+      "自然"
     ],
     "spots": [
       "草千里",
@@ -2323,7 +2467,11 @@
       "fukuoka": 130,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "阿蘇市",
+    "hubStation": "熊本駅",
+    "accessStation": "阿蘇駅"
   },
   {
     "id": "yakushima",
@@ -2342,10 +2490,10 @@
     "weight": 1.5,
     "description": "世界遺産に認定された原始の森が島を覆う、屋久島。樹齢数千年の巨木が立ち並ぶ苔の森に圧倒される。",
     "tags": [
-      "世界遺産",
-      "縄文杉",
+      "離島",
       "自然",
-      "海"
+      "海",
+      "滝"
     ],
     "spots": [
       "縄文杉",
@@ -2385,7 +2533,11 @@
       "fukuoka": 120,
       "takamatsu": 210
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "屋久島町",
+    "hubStation": "鹿児島港",
+    "accessStation": "安房港"
   },
   {
     "id": "amakusa",
@@ -2403,9 +2555,9 @@
     "weight": 1.2,
     "description": "世界遺産のキリシタン集落と海に囲まれた九州の島。潮風と信仰の歴史が重なる旅が、この島だけのものだ。",
     "tags": [
-      "世界遺産",
-      "キリシタン",
-      "海"
+      "海",
+      "歴史",
+      "離島"
     ],
     "spots": [
       "天草五橋",
@@ -2445,7 +2597,10 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "天草市",
+    "hubStation": "熊本駅",
+    "accessStation": "熊本駅"
   },
   {
     "id": "hiraizumi",
@@ -2465,9 +2620,8 @@
     "weight": 1.2,
     "description": "奥州藤原氏の黄金文化が栄えた世界遺産の地。金色に輝く堂と庭園が、往時の繁栄をありありと今に伝える。",
     "tags": [
-      "世界遺産",
-      "金色堂",
-      "歴史"
+      "歴史",
+      "寺社"
     ],
     "spots": [
       "中尊寺金色堂",
@@ -2507,7 +2661,11 @@
       "fukuoka": 450,
       "takamatsu": 400
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "平泉町",
+    "hubStation": "一ノ関駅",
+    "accessStation": "平泉駅"
   },
   {
     "id": "kakunodate",
@@ -2527,9 +2685,8 @@
     "weight": 1.2,
     "description": "武家屋敷と枝垂れ桜が残る秋田の城下町。江戸時代の街並みがそのまま残り、静かな旅の舞台になる。",
     "tags": [
-      "武家屋敷",
-      "桜",
-      "城下町"
+      "歴史",
+      "城"
     ],
     "spots": [
       "武家屋敷通り",
@@ -2568,7 +2725,11 @@
       "fukuoka": 480,
       "takamatsu": 430
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "仙北市",
+    "hubStation": "盛岡駅",
+    "accessStation": "角館駅"
   },
   {
     "id": "aizu",
@@ -2586,9 +2747,9 @@
     "weight": 1.2,
     "description": "白虎隊の悲話で知られる東北の誇り高い城下町。会津の歴史と温泉が心に刻まれる深い旅ができる場所だ。",
     "tags": [
+      "温泉",
       "城",
-      "歴史",
-      "温泉"
+      "歴史"
     ],
     "spots": [
       "鶴ヶ城",
@@ -2641,7 +2802,11 @@
       "fukuoka": 520,
       "takamatsu": 470
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "福島会津若松",
+    "hubStation": "会津若松駅",
+    "accessStation": "会津若松駅"
   },
   {
     "id": "zaosan",
@@ -2659,9 +2824,9 @@
     "weight": 1.2,
     "description": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯。季節ごとに異なる表情を見せる蔵王は、何度でも訪れたくなる。",
     "tags": [
-      "火口湖",
       "温泉",
-      "樹氷"
+      "自然",
+      "山"
     ],
     "spots": [
       "お釜",
@@ -2700,7 +2865,11 @@
       "fukuoka": 435,
       "takamatsu": 385
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "宮城蔵王",
+    "hubStation": "蔵王駅",
+    "accessStation": "蔵王駅"
   },
   {
     "id": "hagi",
@@ -2718,9 +2887,11 @@
     "weight": 1.2,
     "description": "幕末の志士たちが歩いた山口の城下町。海と山に囲まれた萩には、明治維新の空気が今も漂っている。",
     "tags": [
-      "幕末",
-      "城下町",
-      "歴史"
+      "歴史",
+      "海",
+      "山",
+      "城",
+      "寺社"
     ],
     "spots": [
       "萩城跡",
@@ -2760,7 +2931,11 @@
       "fukuoka": 220,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "萩市",
+    "hubStation": "新山口駅",
+    "accessStation": "萩駅"
   },
   {
     "id": "shimonoseki",
@@ -2780,9 +2955,10 @@
     "weight": 1.2,
     "description": "本州最西端に位置する関門海峡の街。ふぐ料理と壇ノ浦の歴史が、この街にしかない旅情をつくっている。",
     "tags": [
-      "海峡",
-      "ふぐ",
-      "歴史"
+      "海",
+      "歴史",
+      "街歩き",
+      "離島"
     ],
     "spots": [
       "関門橋",
@@ -2821,7 +2997,11 @@
       "fukuoka": 200,
       "takamatsu": 220
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "下関市",
+    "hubStation": "博多駅",
+    "accessStation": "下関駅"
   },
   {
     "id": "naoshima",
@@ -2839,10 +3019,9 @@
     "weight": 1.5,
     "description": "現代アートが島全体を美術館にした瀬戸内の離島。自然と建築と作品が一体となった体験が待っている。",
     "tags": [
-      "現代アート",
-      "島",
-      "美術館",
-      "海"
+      "離島",
+      "海",
+      "自然"
     ],
     "spots": [
       "地中美術館",
@@ -2883,7 +3062,11 @@
       "fukuoka": 165,
       "takamatsu": 5
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "直島町",
+    "hubStation": "高松駅",
+    "accessStation": "宮浦港"
   },
   {
     "id": "kotohira",
@@ -2902,9 +3085,8 @@
     "weight": 1.2,
     "description": "785段の石段で知られる金刀比羅宮の門前町。参道を登り切った先の絶景が、旅の疲れを吹き飛ばしてくれる。",
     "tags": [
-      "金刀比羅宮",
-      "石段",
-      "参拝"
+      "街歩き",
+      "寺社"
     ],
     "spots": [
       "こんぴらさん",
@@ -2944,7 +3126,11 @@
       "fukuoka": 250,
       "takamatsu": 90
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "琴平町",
+    "hubStation": "高松駅",
+    "accessStation": "琴電琴平駅"
   },
   {
     "id": "uwajima",
@@ -2964,8 +3150,11 @@
     "description": "南予の海と山に囲まれた闘牛と鯛めしの城下町。穏やかな湾の風情と伊達の文化が独特の旅情をつくっている。",
     "tags": [
       "城",
-      "闘牛",
-      "鯛めし"
+      "温泉",
+      "海",
+      "山",
+      "歴史",
+      "離島"
     ],
     "spots": [
       "宇和島城",
@@ -3004,7 +3193,11 @@
       "fukuoka": 360,
       "takamatsu": 310
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "宇和島市",
+    "hubStation": "松山駅",
+    "accessStation": "宇和島駅"
   },
   {
     "id": "toyako",
@@ -3022,9 +3215,10 @@
     "weight": 1.2,
     "description": "活火山と湖が共存する北海道の絶景エリア。湖畔の温泉と自然の造形美が四季を通じて旅人を迎える。",
     "tags": [
-      "湖",
       "温泉",
-      "火山"
+      "自然",
+      "山",
+      "海"
     ],
     "spots": [
       "洞爺湖",
@@ -3063,7 +3257,11 @@
       "fukuoka": 785,
       "takamatsu": 735
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "洞爺湖町",
+    "hubStation": "洞爺駅",
+    "accessStation": "洞爺駅"
   },
   {
     "id": "noboribetsu",
@@ -3082,8 +3280,8 @@
     "description": "北海道有数の温泉地、鉄泉が湧く地獄の景観。豊富な湯量と多彩な泉質が温泉ファンを惹きつける。",
     "tags": [
       "温泉",
-      "地獄谷",
-      "自然"
+      "自然",
+      "海"
     ],
     "spots": [
       "地獄谷",
@@ -3122,7 +3320,11 @@
       "fukuoka": 770,
       "takamatsu": 720
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "登別市",
+    "hubStation": "登別駅",
+    "accessStation": "登別駅"
   },
   {
     "id": "shiretoko",
@@ -3140,9 +3342,10 @@
     "weight": 1.2,
     "description": "世界自然遺産に認定された原生の大地と海。野生動物が息づく秘境で、手つかずの自然に向き合える。",
     "tags": [
-      "世界遺産",
       "自然",
-      "原生林"
+      "海",
+      "滝",
+      "秘境"
     ],
     "spots": [
       "知床五湖",
@@ -3184,7 +3387,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "斜里町",
+    "hubStation": "知床斜里駅",
+    "accessStation": "知床斜里駅"
   },
   {
     "id": "wajima",
@@ -3202,9 +3408,10 @@
     "weight": 1.2,
     "description": "能登半島の先端、輪島塗の伝統と朝市が息づく街。海産物と漆工芸が深く根づいた漁師の街だ。",
     "tags": [
-      "輪島塗",
-      "朝市",
-      "棚田"
+      "離島",
+      "歴史",
+      "海",
+      "寺社"
     ],
     "spots": [
       "朝市通り",
@@ -3244,7 +3451,10 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "輪島市",
+    "hubStation": "金沢駅",
+    "accessStation": "輪島バスターミナル"
   },
   {
     "id": "kaga-onsen",
@@ -3264,8 +3474,7 @@
     "description": "九谷焼の産地に広がる北陸の温泉地帯。山代・山中・片山津の三温泉が旅人の疲れを癒してくれる。",
     "tags": [
       "温泉",
-      "九谷焼",
-      "加賀"
+      "山"
     ],
     "spots": [
       "山代温泉",
@@ -3304,7 +3513,11 @@
       "fukuoka": 330,
       "takamatsu": 280
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "加賀市",
+    "hubStation": "加賀温泉駅",
+    "accessStation": "加賀温泉駅"
   },
   {
     "id": "hakuba",
@@ -3322,9 +3535,7 @@
     "weight": 1.2,
     "description": "北アルプスの峰々を望む高原の山岳リゾート。スキーとトレッキングで一年中アクティブな旅ができる。",
     "tags": [
-      "スキー",
-      "登山",
-      "アルプス"
+      "山"
     ],
     "spots": [
       "八方尾根",
@@ -3363,7 +3574,11 @@
       "fukuoka": 550,
       "takamatsu": 500
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "白馬村",
+    "hubStation": "長野駅",
+    "accessStation": "白馬駅"
   },
   {
     "id": "amanohashidate",
@@ -3383,9 +3598,7 @@
     "weight": 1.2,
     "description": "天に昇る橋のような砂洲が続く日本三景の地。股のぞきで空に浮かぶ景色が、独特の驚きをもたらす。",
     "tags": [
-      "日本三景",
-      "砂洲",
-      "絶景"
+      "寺社"
     ],
     "spots": [
       "智恩寺",
@@ -3424,7 +3637,11 @@
       "fukuoka": 290,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "宮津市",
+    "hubStation": "福知山駅",
+    "accessStation": "天橋立駅"
   },
   {
     "id": "ine",
@@ -3442,9 +3659,10 @@
     "weight": 1.2,
     "description": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落。静かな入り江と時間の止まった景色が心を落ち着かせる。",
     "tags": [
-      "舟屋",
-      "漁村",
-      "海"
+      "街歩き",
+      "海",
+      "寺社",
+      "離島"
     ],
     "spots": [
       "伊根の舟屋",
@@ -3484,7 +3702,10 @@
       "fukuoka": 290,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "伊根町",
+    "hubStation": "天橋立駅",
+    "accessStation": "伊根港バス停"
   },
   {
     "id": "ibusuki",
@@ -3503,9 +3724,9 @@
     "weight": 1.2,
     "description": "薩摩半島南端に広がる砂むし温泉の街。温かい砂に包まれる独特の体験と開聞岳の絶景が待っている。",
     "tags": [
-      "砂むし温泉",
       "温泉",
-      "自然"
+      "自然",
+      "離島"
     ],
     "spots": [
       "砂むし会館",
@@ -3544,7 +3765,11 @@
       "fukuoka": 165,
       "takamatsu": 325
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "指宿市",
+    "hubStation": "鹿児島中央駅",
+    "accessStation": "指宿駅"
   },
   {
     "id": "sasebo",
@@ -3564,9 +3789,9 @@
     "weight": 1.2,
     "description": "数えきれない島々が複雑な海岸線を描く長崎県北の街。海軍の歴史と異国情緒ある景観が旅に彩りを添える。",
     "tags": [
-      "九十九島",
-      "軍港",
-      "海"
+      "離島",
+      "海",
+      "歴史"
     ],
     "spots": [
       "九十九島",
@@ -3605,7 +3830,11 @@
       "fukuoka": 140,
       "takamatsu": 300
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "佐世保市",
+    "hubStation": "博多駅",
+    "accessStation": "佐世保駅"
   },
   {
     "id": "hirado",
@@ -3624,8 +3853,9 @@
     "description": "日本で最初に外国貿易が行われた歴史ある港町。教会と城が共存する、異文化交流の痕跡が随所にある。",
     "tags": [
       "歴史",
-      "教会",
-      "港"
+      "海",
+      "山",
+      "城"
     ],
     "spots": [
       "平戸城",
@@ -3665,7 +3895,10 @@
       "fukuoka": 180,
       "takamatsu": 340
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "平戸市",
+    "hubStation": "佐世保駅",
+    "accessStation": "佐世保駅"
   },
   {
     "id": "tottori",
@@ -3684,9 +3917,8 @@
     "weight": 1.2,
     "description": "巨大な砂丘と松葉がにが名物の日本海の街。砂漠のような景観と新鮮な海の幸で独特の旅が楽しめる。",
     "tags": [
-      "砂丘",
-      "蟹",
-      "自然"
+      "自然",
+      "海"
     ],
     "spots": [
       "鳥取砂丘",
@@ -3725,7 +3957,11 @@
       "fukuoka": 340,
       "takamatsu": 290
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "鳥取市",
+    "hubStation": "鳥取駅",
+    "accessStation": "鳥取駅"
   },
   {
     "id": "akita",
@@ -3744,9 +3980,9 @@
     "weight": 1.2,
     "description": "きりたんぽと竿燈祭りで知られる東北の米どころ。男鹿のなまはげなど固有の伝統文化が旅に深みを加える。",
     "tags": [
-      "竿燈まつり",
-      "城下町",
-      "食"
+      "歴史",
+      "街歩き",
+      "離島"
     ],
     "spots": [
       "竿燈まつり",
@@ -3785,7 +4021,11 @@
       "fukuoka": 500,
       "takamatsu": 450
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "秋田秋田",
+    "hubStation": "秋田駅",
+    "accessStation": "秋田駅"
   },
   {
     "id": "awaji",
@@ -3806,8 +4046,10 @@
     "description": "玉ねぎと潮風に包まれた明石海峡の先の島。海峡の渦と豊かな海の幸が、淡路の旅の核心をなしている。",
     "tags": [
       "自然",
-      "グルメ",
-      "歴史"
+      "街歩き",
+      "歴史",
+      "海",
+      "離島"
     ],
     "spots": [
       "鳴門の渦潮",
@@ -3847,7 +4089,10 @@
       "fukuoka": 205,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "兵庫淡路島",
+    "hubStation": "三ノ宮駅",
+    "accessStation": "三ノ宮駅"
   },
   {
     "id": "takao",
@@ -3865,9 +4110,10 @@
     "weight": 1.2,
     "description": "都市に隣接しながら深い自然が残る霊峰の山。山岳信仰の歴史と豊かな森が、本格的な山旅を楽しませてくれる。",
     "tags": [
-      "ハイキング",
+      "山",
       "寺社",
-      "自然"
+      "自然",
+      "歴史"
     ],
     "spots": [
       "薬王院",
@@ -3906,7 +4152,11 @@
       "fukuoka": 370,
       "takamatsu": 320
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "東京高尾山",
+    "hubStation": "高尾山口駅",
+    "accessStation": "高尾山口駅"
   },
   {
     "id": "tateyama-chiba",
@@ -3926,8 +4176,10 @@
     "description": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総。のどかな漁村の雰囲気と海の幸が旅を充実させる。",
     "tags": [
       "海",
-      "花",
-      "自然"
+      "自然",
+      "山",
+      "城",
+      "離島"
     ],
     "spots": [
       "沖ノ島",
@@ -3966,7 +4218,11 @@
       "fukuoka": 420,
       "takamatsu": 370
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "千葉館山",
+    "hubStation": "館山駅",
+    "accessStation": "館山駅"
   },
   {
     "id": "gokayama",
@@ -3985,9 +4241,9 @@
     "weight": 1.2,
     "description": "白川郷と並ぶ合掌造りの集落が残る山深い里。より静かで素朴な原風景に、じっくりと向き合える場所だ。",
     "tags": [
-      "世界遺産",
       "歴史",
-      "自然"
+      "自然",
+      "山"
     ],
     "spots": [
       "菅沼集落",
@@ -4027,7 +4283,10 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "南砺市",
+    "hubStation": "金沢駅",
+    "accessStation": "五箇山バス停"
   },
   {
     "id": "jozankei",
@@ -4046,8 +4305,10 @@
     "description": "札幌市街に近い豊平川沿いの温泉郷。紅葉と雪の中で、北海道の湯に浸かれる隠れた奥座敷だ。",
     "tags": [
       "温泉",
-      "紅葉",
-      "自然"
+      "自然",
+      "海",
+      "山",
+      "秘境"
     ],
     "spots": [
       "定山渓温泉街",
@@ -4087,7 +4348,10 @@
       "fukuoka": 705,
       "takamatsu": 655
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "札幌市",
+    "hubStation": "札幌駅",
+    "accessStation": "札幌駅"
   },
   {
     "id": "biei",
@@ -4107,9 +4371,7 @@
     "weight": 1.2,
     "description": "丘と農場が織りなすパッチワークの大地。四季ごとに色を変える丘の景色が、いつまでも旅人の目を離さない。",
     "tags": [
-      "自然",
-      "写真映え",
-      "農村"
+      "自然"
     ],
     "spots": [
       "青い池",
@@ -4148,7 +4410,11 @@
       "fukuoka": 820,
       "takamatsu": 770
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "美瑛町",
+    "hubStation": "旭川駅",
+    "accessStation": "美瑛駅"
   },
   {
     "id": "miyako-iwate",
@@ -4169,7 +4435,7 @@
     "tags": [
       "海",
       "自然",
-      "三陸"
+      "山"
     ],
     "spots": [
       "浄土ヶ浜",
@@ -4209,7 +4475,11 @@
       "fukuoka": 530,
       "takamatsu": 480
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "宮古市",
+    "hubStation": "盛岡駅",
+    "accessStation": "宮古駅"
   },
   {
     "id": "sakata",
@@ -4228,8 +4498,9 @@
     "description": "北前船の交易で栄えた日本海の湊町。出羽の歴史を刻んだ倉庫群と豊かな食文化が今も息づいている。",
     "tags": [
       "歴史",
-      "港町",
-      "文化"
+      "海",
+      "山",
+      "街歩き"
     ],
     "spots": [
       "山居倉庫",
@@ -4269,7 +4540,11 @@
       "fukuoka": 555,
       "takamatsu": 505
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "酒田市",
+    "hubStation": "新庄駅",
+    "accessStation": "酒田駅"
   },
   {
     "id": "takachiho",
@@ -4288,9 +4563,10 @@
     "weight": 1.2,
     "description": "神話の里として知られる宮崎の峡谷地帯。深い谷と滝が神秘的な雰囲気をつくり、夜神楽が古代へと誘う。",
     "tags": [
-      "神話",
       "自然",
-      "渓谷"
+      "渓谷",
+      "寺社",
+      "滝"
     ],
     "spots": [
       "高千穂峡",
@@ -4330,7 +4606,10 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "高千穂町",
+    "hubStation": "熊本駅",
+    "accessStation": "熊本駅"
   },
   {
     "id": "amami",
@@ -4350,7 +4629,7 @@
     "tags": [
       "離島",
       "自然",
-      "ダイビング"
+      "海"
     ],
     "spots": [
       "金作原原生林",
@@ -4390,7 +4669,11 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "鹿児島奄美大島",
+    "hubStation": "奄美大島駅",
+    "accessStation": "奄美大島駅"
   },
   {
     "id": "goto",
@@ -4409,8 +4692,8 @@
     "description": "教会と海が共存するキリシタンゆかりの島々。世界遺産の歴史と透明な海が、特別な旅体験を与えてくれる。",
     "tags": [
       "離島",
-      "世界遺産",
-      "キリシタン"
+      "海",
+      "歴史"
     ],
     "spots": [
       "堂崎天主堂",
@@ -4451,7 +4734,11 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "五島市",
+    "hubStation": "長崎港",
+    "accessStation": "福江港"
   },
   {
     "id": "unzen",
@@ -4471,7 +4758,7 @@
     "tags": [
       "温泉",
       "自然",
-      "火山"
+      "山"
     ],
     "spots": [
       "雲仙地獄",
@@ -4511,7 +4798,10 @@
       "fukuoka": 120,
       "takamatsu": 280
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "雲仙市",
+    "hubStation": "諫早駅",
+    "accessStation": "諫早駅"
   },
   {
     "id": "ashizuri",
@@ -4529,9 +4819,7 @@
     "weight": 1.2,
     "description": "四国最南端に太平洋へ突き出した断崖の岬。荒波と椿の群落が、土佐の旅に力強い自然を刻みつける。",
     "tags": [
-      "絶景",
-      "自然",
-      "岬"
+      "自然"
     ],
     "spots": [
       "足摺岬灯台",
@@ -4571,7 +4859,10 @@
       "fukuoka": 365,
       "takamatsu": 315
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "土佐清水市",
+    "hubStation": "高知駅",
+    "accessStation": "宿毛駅"
   },
   {
     "id": "oboke",
@@ -4631,7 +4922,11 @@
       "fukuoka": 260,
       "takamatsu": 210
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "三好市",
+    "hubStation": "高松駅",
+    "accessStation": "大歩危駅"
   },
   {
     "id": "tsuwano",
@@ -4650,9 +4945,10 @@
     "weight": 1.2,
     "description": "山陰の小京都と呼ばれる鯉が泳ぐ城下町。石州瓦の赤と白壁が連なる静かな街で、旅人を落ち着かせる。",
     "tags": [
-      "城下町",
       "歴史",
-      "神社"
+      "寺社",
+      "山",
+      "城"
     ],
     "spots": [
       "太皷谷稲成神社",
@@ -4691,7 +4987,11 @@
       "fukuoka": 190,
       "takamatsu": 210
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "津和野町",
+    "hubStation": "新山口駅",
+    "accessStation": "津和野駅"
   },
   {
     "id": "inuyama",
@@ -4712,7 +5012,7 @@
     "tags": [
       "城",
       "歴史",
-      "川"
+      "山"
     ],
     "spots": [
       "犬山城",
@@ -4751,7 +5051,11 @@
       "fukuoka": 265,
       "takamatsu": 215
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "犬山市",
+    "hubStation": "名古屋駅",
+    "accessStation": "犬山駅"
   },
   {
     "id": "kiso",
@@ -4771,9 +5075,9 @@
     "weight": 1.2,
     "description": "中山道の宿場町が今も残る木曽の山あい。江戸の旅情が漂う宿場町に出会える、静かな街道の旅だ。",
     "tags": [
-      "宿場町",
       "歴史",
-      "自然"
+      "自然",
+      "山"
     ],
     "spots": [
       "妻籠宿",
@@ -4813,7 +5117,10 @@
       "fukuoka": 305,
       "takamatsu": 255
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "木曽町",
+    "hubStation": "名古屋駅",
+    "accessStation": "南木曽駅"
   },
   {
     "id": "miyama",
@@ -4832,9 +5139,9 @@
     "weight": 1.2,
     "description": "茅葺き屋根が50棟以上並ぶ山の集落。京都の奥に残る静かな農村風景が、時間の感覚を変えてくれる。",
     "tags": [
-      "古民家",
+      "歴史",
       "自然",
-      "田舎"
+      "山"
     ],
     "spots": [
       "かやぶきの里",
@@ -4874,7 +5181,10 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "南丹市",
+    "hubStation": "園部駅",
+    "accessStation": "園部駅"
   },
   {
     "id": "tateyama-kurobe",
@@ -4893,8 +5203,7 @@
     "weight": 1.2,
     "description": "3000メートル級の稜線を歩くアルペンルート。切り立つ雪壁と巨大ダムが、山岳観光の頂点を体感させる。",
     "tags": [
-      "山岳",
-      "絶景",
+      "山",
       "自然"
     ],
     "spots": [
@@ -4936,7 +5245,10 @@
       "fukuoka": 395,
       "takamatsu": 345
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "立山町",
+    "hubStation": "富山駅",
+    "accessStation": "立山駅"
   },
   {
     "id": "himi",
@@ -4956,9 +5268,11 @@
     "weight": 1.2,
     "description": "立山連峰を望む富山湾の漁師町。寒ぶりと新鮮な海の幸が、冬の日本海を旅する最大の楽しみになる。",
     "tags": [
-      "漁港",
       "温泉",
-      "グルメ"
+      "海",
+      "街歩き",
+      "山",
+      "歴史"
     ],
     "spots": [
       "氷見漁港朝市",
@@ -4997,7 +5311,11 @@
       "fukuoka": 385,
       "takamatsu": 335
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "氷見市",
+    "hubStation": "高岡駅",
+    "accessStation": "氷見駅"
   },
   {
     "id": "nyuto-onsen",
@@ -5016,9 +5334,8 @@
     "weight": 1.2,
     "description": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里。個性豊かな温泉宿が旅の目的地そのものになる。",
     "tags": [
-      "秘湯",
       "温泉",
-      "ブナ林"
+      "自然"
     ],
     "spots": [
       "鶴の湯",
@@ -5059,7 +5376,10 @@
       "fukuoka": 470,
       "takamatsu": 420
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "秋田乳頭温泉",
+    "hubStation": "田沢湖駅",
+    "accessStation": "田沢湖駅"
   },
   {
     "id": "yuda-onsen",
@@ -5080,8 +5400,10 @@
     "description": "白狐伝説が残る山口市街に湧く城下の湯。中原中也ゆかりの地でもあり、文学と温泉の旅ができる街だ。",
     "tags": [
       "温泉",
-      "城下町",
-      "文学"
+      "歴史",
+      "山",
+      "城",
+      "寺社"
     ],
     "spots": [
       "瑠璃光寺",
@@ -5120,7 +5442,11 @@
       "fukuoka": 160,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "山口湯田温泉",
+    "hubStation": "湯田温泉駅",
+    "accessStation": "湯田温泉駅"
   },
   {
     "id": "ureshino-onsen",
@@ -5140,8 +5466,7 @@
     "description": "日本三大美肌の湯として知られる佐賀の重曹泉。とろとろの湯と嬉野茶で体も心も潤う温泉地だ。",
     "tags": [
       "温泉",
-      "美肌",
-      "お茶"
+      "山"
     ],
     "spots": [
       "シーボルトの湯",
@@ -5180,7 +5505,11 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "嬉野市",
+    "hubStation": "嬉野温泉駅",
+    "accessStation": "嬉野温泉駅"
   },
   {
     "id": "obuse",
@@ -5200,9 +5529,8 @@
     "weight": 1.2,
     "description": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町。善光寺平を見渡す高台に、洗練された街並みが広がる。",
     "tags": [
-      "北斎",
-      "栗",
-      "街歩き"
+      "街歩き",
+      "寺社"
     ],
     "spots": [
       "北斎館",
@@ -5241,7 +5569,11 @@
       "fukuoka": 405,
       "takamatsu": 355
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "小布施町",
+    "hubStation": "長野駅",
+    "accessStation": "小布施駅"
   },
   {
     "id": "uchiko",
@@ -5261,8 +5593,7 @@
     "weight": 1.2,
     "description": "白壁と木蝋の香り漂う四国の商人文化の街。江戸・明治の街並みが保存され、時代を遡る旅ができる。",
     "tags": [
-      "町並み保存",
-      "伝統芸能",
+      "街歩き",
       "歴史"
     ],
     "spots": [
@@ -5302,7 +5633,11 @@
       "fukuoka": 345,
       "takamatsu": 295
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "内子町",
+    "hubStation": "松山駅",
+    "accessStation": "内子駅"
   },
   {
     "id": "muroto",
@@ -5321,9 +5656,9 @@
     "weight": 1.2,
     "description": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬。弘法大師ゆかりの地でもあり、海と信仰の旅だ。",
     "tags": [
-      "岬",
-      "ジオパーク",
-      "お遍路"
+      "街歩き",
+      "海",
+      "寺社"
     ],
     "spots": [
       "室戸岬",
@@ -5363,7 +5698,10 @@
       "fukuoka": 275,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "室戸市",
+    "hubStation": "高知駅",
+    "accessStation": "高知駅"
   },
   {
     "id": "iya",
@@ -5382,9 +5720,9 @@
     "weight": 1.2,
     "description": "日本三大秘境のひとつ、霧が漂う深い谷間の集落。吊り橋と滝と、人里離れた静けさが心に残る場所だ。",
     "tags": [
+      "温泉",
       "秘境",
-      "かずら橋",
-      "秘湯"
+      "滝"
     ],
     "spots": [
       "かずら橋",
@@ -5425,7 +5763,10 @@
       "fukuoka": 230,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "三好市",
+    "hubStation": "阿波池田駅",
+    "accessStation": "阿波池田駅"
   },
   {
     "id": "oku-izumo",
@@ -5445,9 +5786,10 @@
     "weight": 1.2,
     "description": "たたら製鉄の歴史が残る出雲の山あいの里。神話の記憶と険しい渓谷が、古代への旅を導いてくれる。",
     "tags": [
-      "たたら製鉄",
-      "神話",
-      "渓谷"
+      "渓谷",
+      "山",
+      "自然",
+      "歴史"
     ],
     "spots": [
       "菅谷たたら山内",
@@ -5486,7 +5828,11 @@
       "fukuoka": 335,
       "takamatsu": 285
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "島根奥出雲",
+    "hubStation": "木次駅",
+    "accessStation": "木次駅"
   },
   {
     "id": "ginzan-onsen",
@@ -5505,9 +5851,10 @@
     "weight": 1.2,
     "description": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街。雪景色とレトロな建物が、どこか懐かしい旅情をつくる。",
     "tags": [
-      "大正ロマン",
       "温泉",
-      "雪景色"
+      "山",
+      "街歩き",
+      "滝"
     ],
     "spots": [
       "能登屋旅館",
@@ -5547,7 +5894,10 @@
       "fukuoka": 490,
       "takamatsu": 440
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "尾花沢市",
+    "hubStation": "大石田駅",
+    "accessStation": "大石田駅"
   },
   {
     "id": "ouchi-juku",
@@ -5567,9 +5917,9 @@
     "weight": 1.2,
     "description": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里。ネギそばで有名な冬の宿場が旅人を温かく迎える。",
     "tags": [
-      "宿場町",
-      "茅葺き",
-      "そば"
+      "歴史",
+      "街歩き",
+      "離島"
     ],
     "spots": [
       "大内宿町並み",
@@ -5609,7 +5959,10 @@
       "fukuoka": 520,
       "takamatsu": 470
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "福島大内宿",
+    "hubStation": "会津若松駅",
+    "accessStation": "会津若松駅"
   },
   {
     "id": "nozawa-onsen",
@@ -5629,8 +5982,7 @@
     "description": "村全体が温泉場になった信州の山里。13の外湯を浴衣で渡り歩く旅が、ここでしか味わえない体験だ。",
     "tags": [
       "温泉",
-      "スキー",
-      "外湯めぐり"
+      "山"
     ],
     "spots": [
       "大湯",
@@ -5670,7 +6022,10 @@
       "fukuoka": 405,
       "takamatsu": 355
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "city": "野沢温泉村",
+    "hubStation": "飯山駅",
+    "accessStation": "飯山駅"
   },
   {
     "id": "takehara",
@@ -5690,9 +6045,9 @@
     "weight": 1.2,
     "description": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街。静かな港町の佇まいが、瀬戸内の旅情を深める。",
     "tags": [
-      "町並み保存",
-      "酒蔵",
-      "歴史"
+      "街歩き",
+      "歴史",
+      "海"
     ],
     "spots": [
       "町並み保存地区",
@@ -5731,7 +6086,11 @@
       "fukuoka": 160,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "竹原市",
+    "hubStation": "広島駅",
+    "accessStation": "竹原駅"
   },
   {
     "id": "tsumago",
@@ -5752,9 +6111,9 @@
     "weight": 1.2,
     "description": "石畳と茅葺きの宿場が中山道に残る木曽の里。江戸時代の旅人の目線で、宿場の空気を歩いて感じられる。",
     "tags": [
-      "宿場町",
-      "中山道",
-      "木曽路"
+      "歴史",
+      "山",
+      "城"
     ],
     "spots": [
       "妻籠宿本陣",
@@ -5794,7 +6153,10 @@
       "fukuoka": 305,
       "takamatsu": 255
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "木曽町",
+    "hubStation": "名古屋駅",
+    "accessStation": "南木曽駅"
   },
   {
     "id": "magome",
@@ -5815,9 +6177,9 @@
     "weight": 1.2,
     "description": "石畳の坂道が続く中山道の峠の宿場町。藤村の文学と山の清冽な空気が、旅人の足を引き止める場所だ。",
     "tags": [
-      "宿場町",
-      "文学",
-      "木曽路"
+      "歴史",
+      "山",
+      "離島"
     ],
     "spots": [
       "島崎藤村記念館",
@@ -5857,7 +6219,10 @@
       "fukuoka": 285,
       "takamatsu": 235
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "中津川市",
+    "hubStation": "名古屋駅",
+    "accessStation": "中津川駅"
   },
   {
     "id": "nagahama",
@@ -5878,9 +6243,9 @@
     "weight": 1.2,
     "description": "琵琶湖畔に広がる黒壁ガラスの文化の街。豊臣秀吉ゆかりの城下と湖の景色が穏やかな旅をつくる。",
     "tags": [
-      "城下町",
-      "ガラス工芸",
-      "琵琶湖"
+      "歴史",
+      "自然",
+      "城"
     ],
     "spots": [
       "黒壁スクエア",
@@ -5919,7 +6284,11 @@
       "fukuoka": 265,
       "takamatsu": 215
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "長浜市",
+    "hubStation": "米原駅",
+    "accessStation": "長浜駅"
   },
   {
     "id": "hikone",
@@ -5940,9 +6309,9 @@
     "weight": 1.2,
     "description": "国宝の天守が琵琶湖を見下ろして立つ城下町。ひこにゃんで有名な城と湖の風景が旅の主役だ。",
     "tags": [
-      "国宝",
-      "城下町",
-      "琵琶湖"
+      "歴史",
+      "自然",
+      "城"
     ],
     "spots": [
       "彦根城",
@@ -5981,7 +6350,11 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "彦根市",
+    "hubStation": "米原駅",
+    "accessStation": "彦根駅"
   },
   {
     "id": "koyasan",
@@ -6001,9 +6374,8 @@
     "weight": 1.2,
     "description": "真言密教の聖域として山上に広がる宗教都市。荘厳な杉並木と精進料理が、魂に響く旅を与えてくれる。",
     "tags": [
-      "宿坊",
-      "密教",
-      "世界遺産"
+      "山",
+      "寺社"
     ],
     "spots": [
       "奥之院",
@@ -6043,7 +6415,10 @@
       "fukuoka": 270,
       "takamatsu": 220
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "高野町",
+    "hubStation": "橋本駅",
+    "accessStation": "高野山駅"
   },
   {
     "id": "gero-onsen",
@@ -6064,8 +6439,8 @@
     "description": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉。湯の香りと飛騨の食文化が、温泉旅の王道を体感させる。",
     "tags": [
       "温泉",
-      "三名泉",
-      "足湯"
+      "街歩き",
+      "寺社"
     ],
     "spots": [
       "噴泉池",
@@ -6104,7 +6479,11 @@
       "fukuoka": 325,
       "takamatsu": 275
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "下呂市",
+    "hubStation": "下呂駅",
+    "accessStation": "下呂駅"
   },
   {
     "id": "naruko-onsen",
@@ -6124,8 +6503,7 @@
     "description": "こけし発祥の地として知られる東北の温泉の里。奥羽の山深くに湧く多彩な泉質が旅人を迎えてくれる。",
     "tags": [
       "温泉",
-      "こけし",
-      "紅葉"
+      "山"
     ],
     "spots": [
       "鳴子峡",
@@ -6164,7 +6542,11 @@
       "fukuoka": 490,
       "takamatsu": 440
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "大崎市",
+    "hubStation": "古川駅",
+    "accessStation": "鳴子温泉駅"
   },
   {
     "id": "shima-onsen",
@@ -6183,8 +6565,8 @@
     "description": "奥利根の山あいに湧く千年の歴史を持つ湯治場。江戸時代から続く古い旅館と山の静けさが、旅に特別感をもたらす。",
     "tags": [
       "温泉",
-      "湯治",
-      "大正建築"
+      "山",
+      "歴史"
     ],
     "spots": [
       "積善館",
@@ -6224,7 +6606,10 @@
       "fukuoka": 465,
       "takamatsu": 415
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "群馬四万温泉",
+    "hubStation": "中之条駅",
+    "accessStation": "中之条駅"
   },
   {
     "id": "hirosaki",
@@ -6244,9 +6629,9 @@
     "weight": 1.2,
     "description": "津軽の城下町に日本一の桜の名所が広がる街。洋館や禅寺など明治の遺産も点在し、深い旅ができる。",
     "tags": [
-      "桜",
-      "城下町",
-      "洋館"
+      "歴史",
+      "城",
+      "寺社"
     ],
     "spots": [
       "弘前城",
@@ -6287,7 +6672,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "弘前市",
+    "hubStation": "新青森駅",
+    "accessStation": "弘前駅"
   },
   {
     "id": "oirase",
@@ -6306,9 +6695,9 @@
     "weight": 1.2,
     "description": "原生林を縫うように清流が流れる渓谷路。苔と滝と木漏れ日が、徒歩でしか味わえない静寂をつくっている。",
     "tags": [
-      "渓流",
       "自然",
-      "十和田湖"
+      "渓谷",
+      "滝"
     ],
     "spots": [
       "阿修羅の流れ",
@@ -6351,7 +6740,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "青森奥入瀬",
+    "hubStation": "八戸駅",
+    "accessStation": "八戸駅"
   },
   {
     "id": "mashiko",
@@ -6370,9 +6762,7 @@
     "weight": 1.2,
     "description": "陶土の香りが漂う関東随一の焼き物の里。窯元が並ぶ街を巡りながら、日本の陶芸文化に触れられる。",
     "tags": [
-      "陶芸",
-      "益子焼",
-      "窯元"
+      "街歩き"
     ],
     "spots": [
       "つかもと",
@@ -6411,7 +6801,11 @@
       "fukuoka": 450,
       "takamatsu": 400
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "益子町",
+    "hubStation": "宇都宮駅",
+    "accessStation": "益子駅"
   },
   {
     "id": "bessho-onsen",
@@ -6432,8 +6826,9 @@
     "description": "信州最古と言われる温泉地、観音様が守る山里。静かな田舎の湯と古い建築が旅に落ち着きを与える。",
     "tags": [
       "温泉",
-      "古刹",
-      "外湯"
+      "山",
+      "自然",
+      "寺社"
     ],
     "spots": [
       "北向観音",
@@ -6472,7 +6867,11 @@
       "fukuoka": 440,
       "takamatsu": 390
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "上田市",
+    "hubStation": "上田駅",
+    "accessStation": "別所温泉駅"
   },
   {
     "id": "izushi",
@@ -6493,9 +6892,9 @@
     "weight": 1.2,
     "description": "但馬の小京都と呼ばれる皿そばの城下町。時計楼が見守る静かな街並みで、但馬の食と歴史を楽しめる。",
     "tags": [
-      "皿そば",
-      "城下町",
-      "時計台"
+      "歴史",
+      "城",
+      "街歩き"
     ],
     "spots": [
       "出石城跡",
@@ -6535,7 +6934,10 @@
       "fukuoka": 340,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "豊岡市",
+    "hubStation": "豊岡駅",
+    "accessStation": "豊岡駅"
   },
   {
     "id": "wakura-onsen",
@@ -6555,8 +6957,8 @@
     "description": "七尾湾に面した能登半島の名湯。夕日に染まる海と上質な旅館が、加賀屈指の温泉旅を演出している。",
     "tags": [
       "温泉",
-      "能登",
-      "海"
+      "海",
+      "離島"
     ],
     "spots": [
       "総湯",
@@ -6595,7 +6997,11 @@
       "fukuoka": 385,
       "takamatsu": 335
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "七尾市",
+    "hubStation": "和倉温泉駅",
+    "accessStation": "和倉温泉駅"
   },
   {
     "id": "misasa-onsen",
@@ -6615,10 +7021,8 @@
     "weight": 1.2,
     "description": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地。投入堂への険しい参拝と湯治の旅が組み合わさる場所だ。",
     "tags": [
-      "ラジウム温泉",
       "温泉",
-      "修行",
-      "川床湯"
+      "山"
     ],
     "spots": [
       "三徳山投入堂",
@@ -6658,7 +7062,10 @@
       "fukuoka": 380,
       "takamatsu": 330
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "三朝町",
+    "hubStation": "倉吉駅",
+    "accessStation": "倉吉駅"
   },
   {
     "id": "obi",
@@ -6678,9 +7085,9 @@
     "weight": 1.2,
     "description": "杉の板塀が続く城下町、日南の小京都。伊東氏の城跡と商家の街並みに、南国の歴史の重みが漂っている。",
     "tags": [
-      "城下町",
-      "飫肥杉",
-      "日南海岸"
+      "歴史",
+      "海",
+      "城"
     ],
     "spots": [
       "飫肥城",
@@ -6719,7 +7126,11 @@
       "fukuoka": 330,
       "takamatsu": 490
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "日南市",
+    "hubStation": "宮崎駅",
+    "accessStation": "飫肥駅"
   },
   {
     "id": "hitoyoshi",
@@ -6741,8 +7152,9 @@
     "description": "球磨川の清流沿いに栄えた九州の城下町。球磨焼酎と温泉、SL列車が旅の豊かさを三倍にしてくれる。",
     "tags": [
       "温泉",
-      "球磨焼酎",
-      "川下り"
+      "歴史",
+      "城",
+      "寺社"
     ],
     "spots": [
       "青井阿蘇神社",
@@ -6781,7 +7193,11 @@
       "fukuoka": 150,
       "takamatsu": 310
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "人吉市",
+    "hubStation": "熊本駅",
+    "accessStation": "人吉駅"
   },
   {
     "id": "kamikochi",
@@ -6802,9 +7218,8 @@
     "weight": 1.2,
     "description": "北アルプスの玄関口に広がる手つかずの高原。梓川と雪山の絶景が、山岳旅の始まりを特別なものにする。",
     "tags": [
-      "アルプス",
-      "自然",
-      "トレッキング"
+      "山",
+      "自然"
     ],
     "spots": [
       "河童橋",
@@ -6844,7 +7259,10 @@
       "fukuoka": 380,
       "takamatsu": 330
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "松本市",
+    "hubStation": "松本駅",
+    "accessStation": "上高地バスターミナル"
   },
   {
     "id": "minakami-onsen",
@@ -6863,8 +7281,8 @@
     "description": "険しい双耳峰を背に利根川の源流が流れる山の温泉地。清流ラフティングと露天風呂が夏の旅を盛り上げる。",
     "tags": [
       "温泉",
-      "ラフティング",
-      "谷川岳"
+      "山",
+      "滝"
     ],
     "spots": [
       "諏訪峡",
@@ -6905,7 +7323,11 @@
       "fukuoka": 440,
       "takamatsu": 390
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "群馬水上温泉",
+    "hubStation": "水上駅",
+    "accessStation": "水上駅"
   },
   {
     "id": "minami-aso",
@@ -6925,9 +7347,8 @@
     "weight": 1.2,
     "description": "阿蘇カルデラの南に広がる湧水と牧草の高原。のどかな景色と澄んだ水が、阿蘇とは異なる静けさをくれる。",
     "tags": [
-      "湧水",
-      "牧草地",
-      "高原"
+      "山",
+      "自然"
     ],
     "spots": [
       "白川水源",
@@ -6969,7 +7390,10 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "南阿蘇村",
+    "hubStation": "熊本駅",
+    "accessStation": "熊本駅"
   },
   {
     "id": "imabari",
@@ -6989,9 +7413,10 @@
     "weight": 1.2,
     "description": "しまなみ海道の起点。サイクリストの聖地として名高く、瀬戸内の島々を橋で結ぶ絶景ルートが広がる。今治城も必見。",
     "tags": [
-      "しまなみ海道",
-      "サイクリング",
-      "城"
+      "街歩き",
+      "海",
+      "城",
+      "離島"
     ],
     "spots": [
       "しまなみ海道",
@@ -7041,7 +7466,11 @@
       "fukuoka": 340,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "今治市",
+    "hubStation": "松山駅",
+    "accessStation": "今治駅"
   },
   {
     "id": "ozu",
@@ -7060,9 +7489,10 @@
     "weight": 1.2,
     "description": "伊予の小京都と呼ばれる城下町。肱川に臨む大洲城と、江戸から続く町並みが旅人を迎える。鵜飼の川面も情緒豊か。",
     "tags": [
-      "城下町",
-      "肱川",
-      "鵜飼"
+      "歴史",
+      "山",
+      "城",
+      "街歩き"
     ],
     "spots": [
       "大洲城",
@@ -7113,7 +7543,11 @@
       "fukuoka": 355,
       "takamatsu": 305
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "大洲市",
+    "hubStation": "松山駅",
+    "accessStation": "伊予大洲駅"
   },
   {
     "id": "shakotan",
@@ -7132,9 +7566,9 @@
     "weight": 1.2,
     "description": "北海道西岸の半島に広がる「積丹ブルー」の絶景。透き通るコバルトブルーの海と断崖絶壁、ウニ料理が旅の醍醐味。",
     "tags": [
-      "絶景",
       "海",
-      "グルメ"
+      "街歩き",
+      "離島"
     ],
     "spots": [
       "神威岬",
@@ -7186,7 +7620,10 @@
       "fukuoka": 735,
       "takamatsu": 685
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "積丹町",
+    "hubStation": "小樽駅",
+    "accessStation": "積丹バスターミナル"
   },
   {
     "id": "izumo",
@@ -7207,9 +7644,9 @@
     "weight": 1.2,
     "description": "縁結びの神様で名高い出雲大社を擁する古代のまち。神話の舞台として日本最古の歴史を伝え、出雲そばも絶品。",
     "tags": [
-      "神社",
+      "寺社",
       "歴史",
-      "グルメ"
+      "街歩き"
     ],
     "spots": [
       "出雲大社",
@@ -7262,83 +7699,64 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "出雲市",
+    "hubStation": "松江駅",
+    "accessStation": "出雲市駅"
   },
   {
-    "id": "noto",
-    "name": "能登",
+    "id": "suzu",
+    "name": "珠洲",
     "type": "destination",
     "region": "中部",
+    "prefecture": "石川県",
+    "destType": "sight",
     "hub": "kanazawa-t",
-    "hotelHub": "和倉温泉",
+    "hotelHub": "珠洲",
     "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "金沢",
-      "富山",
-      "大阪"
+      "1night",
+      "2night"
     ],
     "weight": 1.2,
-    "description": "奥能登の里山里海。千枚田の棚田景観、輪島の朝市、白米千枚田のイルミネーション。日本の原風景が残る半島の旅。",
+    "description": "能登半島の最先端。禄剛崎の灯台、塩田、揚げ浜塩など奥能登の原風景が残る秘境の地。",
     "tags": [
-      "絶景",
+      "海",
       "自然",
-      "グルメ"
+      "歴史",
+      "秘境"
     ],
     "spots": [
-      "白米千枚田",
-      "輪島朝市",
-      "御陣乗太鼓"
+      "禄剛崎灯台",
+      "珠洲岬",
+      "揚げ浜式塩田"
     ],
-    "shinkansenAccess": false,
+    "railGateway": "金沢駅",
+    "secondaryTransport": "bus",
     "needsCar": true,
-    "hotelSearch": "能登和倉温泉",
+    "gatewayHub": "金沢",
+    "hubStation": "金沢駅",
+    "accessStation": "珠洲バスターミナル",
+    "city": "珠洲市",
+    "lat": 37.429,
+    "lng": 137.2648,
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 240,
+      "nagoya": 210,
+      "fukuoka": 360,
+      "takamatsu": 300
+    },
+    "stayRecommendation": "1night",
+    "hotelSearch": "珠洲 能登",
     "gateways": {
       "rail": [
         "金沢駅"
       ],
-      "airport": [
-        "小松空港"
-      ],
+      "airport": [],
       "bus": [],
       "ferry": []
-    },
-    "accessHub": "金沢",
-    "railNote": "バスあり",
-    "secondaryTransport": "bus",
-    "nearby": [
-      "輪島",
-      "珠洲",
-      "和倉温泉",
-      "七尾"
-    ],
-    "itinerary": [
-      "白米千枚田",
-      "輪島朝市",
-      "禄剛崎",
-      "見附島"
-    ],
-    "destType": "sight",
-    "railGateway": "金沢駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": "小松空港",
-    "prefecture": "石川県",
-    "lat": 37.145,
-    "lng": 136.905,
-    "stayBias": 2,
-    "gatewayHub": "和倉温泉",
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 160,
-      "osaka": 160,
-      "nagoya": 175,
-      "fukuoka": 250,
-      "takamatsu": 250
-    },
-    "stayRecommendation": "1night"
+    }
   },
   {
     "id": "yoshino",
@@ -7359,9 +7777,10 @@
     "weight": 1.2,
     "description": "日本一の桜の名所として名高い修験道の山。3万本の桜が山肌を染める春の圧倒的な景観は一生の記憶に残る。",
     "tags": [
-      "絶景",
       "自然",
-      "歴史"
+      "歴史",
+      "山",
+      "寺社"
     ],
     "spots": [
       "吉野山",
@@ -7413,7 +7832,10 @@
       "fukuoka": 280,
       "takamatsu": 230
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "吉野町",
+    "hubStation": "橿原神宮前駅",
+    "accessStation": "吉野駅"
   },
   {
     "id": "kumano",
@@ -7436,7 +7858,8 @@
     "tags": [
       "歴史",
       "自然",
-      "絶景"
+      "滝",
+      "秘境"
     ],
     "spots": [
       "熊野那智大社",
@@ -7487,7 +7910,11 @@
       "fukuoka": 370,
       "takamatsu": 320
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "熊野市",
+    "hubStation": "新宮駅",
+    "accessStation": "新宮駅"
   },
   {
     "id": "iriomote",
@@ -7507,9 +7934,11 @@
     "weight": 1.5,
     "description": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境。カヤック、マングローブクルーズ、星砂の浜が非日常を演出する。",
     "tags": [
+      "離島",
       "自然",
       "海",
-      "離島"
+      "滝",
+      "秘境"
     ],
     "spots": [
       "ピナイサーラの滝",
@@ -7562,7 +7991,10 @@
       "fukuoka": 150,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "竹富町",
+    "hubStation": "石垣港",
+    "accessStation": "大原港"
   },
   {
     "id": "takahashi",
@@ -7584,7 +8016,9 @@
     "tags": [
       "城",
       "歴史",
-      "絶景"
+      "海",
+      "山",
+      "街歩き"
     ],
     "spots": [
       "備中松山城",
@@ -7635,7 +8069,11 @@
       "fukuoka": 180,
       "takamatsu": 130
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "高梁市",
+    "hubStation": "岡山駅",
+    "accessStation": "備中高梁駅"
   },
   {
     "id": "hida-furukawa",
@@ -7658,7 +8096,8 @@
     "tags": [
       "街歩き",
       "歴史",
-      "自然"
+      "自然",
+      "山"
     ],
     "spots": [
       "瀬戸川と白壁土蔵街",
@@ -7709,7 +8148,11 @@
       "fukuoka": 385,
       "takamatsu": 335
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "岐阜飛騨古川",
+    "hubStation": "飛騨古川駅",
+    "accessStation": "飛騨古川駅"
   },
   {
     "id": "bungo-takada",
@@ -7732,7 +8175,8 @@
     "tags": [
       "街歩き",
       "歴史",
-      "レトロ"
+      "海",
+      "寺社"
     ],
     "spots": [
       "昭和の町",
@@ -7784,7 +8228,10 @@
       "fukuoka": 210,
       "takamatsu": 210
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "豊後高田市",
+    "hubStation": "宇佐駅",
+    "accessStation": "宇佐駅"
   },
   {
     "id": "izu-kogen",
@@ -7806,8 +8253,10 @@
     "description": "伊豆半島の東岸に広がる高原リゾート。桜のトンネル、大室山のお鉢めぐり、富士山を望む海岸線のドライブが楽しめる。",
     "tags": [
       "温泉",
-      "絶景",
-      "リゾート"
+      "海",
+      "山",
+      "城",
+      "離島"
     ],
     "spots": [
       "大室山",
@@ -7858,80 +8307,11 @@
       "fukuoka": 430,
       "takamatsu": 380
     },
-    "stayRecommendation": "1night"
-  },
-  {
-    "id": "sanriku",
-    "name": "三陸",
-    "type": "destination",
-    "region": "東北",
-    "hub": "morioka",
-    "hotelHub": "宮古",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [
-      "仙台",
-      "盛岡",
-      "東京"
-    ],
-    "weight": 1.2,
-    "description": "リアス式海岸が連なる東北の絶景海岸。浄土ヶ浜の白砂と青い海、新鮮な海の幸。震災を乗り越えた人々の力強さも感じる。",
-    "tags": [
-      "自然",
-      "海",
-      "グルメ"
-    ],
-    "spots": [
-      "浄土ヶ浜",
-      "碁石海岸",
-      "北山崎"
-    ],
-    "shinkansenAccess": false,
-    "needsCar": true,
-    "hotelSearch": "三陸宮古",
-    "gateways": {
-      "rail": [
-        "宮古駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "nearby": [
-      "宮古",
-      "大船渡",
-      "気仙沼",
-      "盛岡"
-    ],
-    "itinerary": [
-      "浄土ヶ浜",
-      "碁石海岸",
-      "北山崎",
-      "磯料理"
-    ],
-    "destType": "sight",
-    "railGateway": "宮古駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "岩手県",
-    "lat": 39.5,
-    "lng": 141.975,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 240,
-      "osaka": 380,
-      "nagoya": 325,
-      "fukuoka": 530,
-      "takamatsu": 480
-    },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "伊東市",
+    "hubStation": "熱海駅",
+    "accessStation": "伊豆高原駅"
   },
   {
     "id": "tanabe",
@@ -7951,9 +8331,10 @@
     "weight": 1.2,
     "description": "熊野古道の起点・紀伊田辺。弁慶生誕の地として知られ、白浜温泉や熊野詣への玄関口として古くから旅人が集まる。",
     "tags": [
-      "歴史",
       "温泉",
-      "自然"
+      "歴史",
+      "自然",
+      "寺社"
     ],
     "spots": [
       "闘鶏神社",
@@ -8006,7 +8387,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "田辺市",
+    "hubStation": "紀伊田辺駅",
+    "accessStation": "紀伊田辺駅"
   },
   {
     "id": "tosa-shimizu",
@@ -8026,7 +8411,6 @@
     "weight": 1.2,
     "description": "四国最南端の岬・足摺岬を擁する絶景の街。黒潮が洗う断崖の灯台、ジョン万次郎の故郷、竜串の奇岩海岸が旅人を引き寄せる。",
     "tags": [
-      "絶景",
       "海",
       "歴史"
     ],
@@ -8080,7 +8464,10 @@
       "fukuoka": 365,
       "takamatsu": 315
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "高知土佐清水",
+    "hubStation": "中村駅",
+    "accessStation": "中村駅"
   },
   {
     "id": "nichinan",
@@ -8102,7 +8489,9 @@
     "tags": [
       "海",
       "歴史",
-      "南国"
+      "城",
+      "寺社",
+      "離島"
     ],
     "spots": [
       "鵜戸神宮",
@@ -8153,7 +8542,11 @@
       "fukuoka": 330,
       "takamatsu": 490
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "secondaryTransport": null,
+    "city": "日南市",
+    "hubStation": "宮崎駅",
+    "accessStation": "日南駅"
   },
   {
     "id": "mojiko",
@@ -8176,7 +8569,8 @@
     "tags": [
       "街歩き",
       "歴史",
-      "グルメ"
+      "海",
+      "自然"
     ],
     "spots": [
       "門司港レトロ",
@@ -8227,7 +8621,11 @@
       "fukuoka": 110,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "福岡門司港",
+    "hubStation": "門司港駅",
+    "accessStation": "門司港駅"
   },
   {
     "id": "itoshima",
@@ -8249,8 +8647,8 @@
     "description": "福岡市の隣に広がる絶景の半島。二見ヶ浦の夫婦岩、透明な白い砂浜、おしゃれなカフェが並び「九州のハワイ」とも称される。",
     "tags": [
       "海",
-      "絶景",
-      "グルメ"
+      "街歩き",
+      "離島"
     ],
     "spots": [
       "二見ヶ浦",
@@ -8301,7 +8699,11 @@
       "fukuoka": 65,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "糸島市",
+    "hubStation": "博多駅",
+    "accessStation": "筑前前原駅"
   },
   {
     "id": "shimabara",
@@ -8323,7 +8725,9 @@
     "tags": [
       "歴史",
       "城",
-      "自然"
+      "自然",
+      "山",
+      "離島"
     ],
     "spots": [
       "島原城",
@@ -8375,7 +8779,10 @@
       "fukuoka": 170,
       "takamatsu": 330
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "島原市",
+    "hubStation": "諫早駅",
+    "accessStation": "島原駅"
   },
   {
     "id": "tsuruga",
@@ -8398,7 +8805,7 @@
     "description": "日本海に面した港町。北陸新幹線の玄関口として注目の地。透明な気比の松原海水浴場、鮮魚市場の海の幸が旅を彩る。",
     "tags": [
       "海",
-      "グルメ",
+      "街歩き",
       "歴史"
     ],
     "spots": [
@@ -8450,7 +8857,11 @@
       "fukuoka": 255,
       "takamatsu": 205
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "敦賀市",
+    "hubStation": "敦賀駅",
+    "accessStation": "敦賀駅"
   },
   {
     "id": "shijishima",
@@ -8472,8 +8883,8 @@
     "description": "瀬戸内海に浮かぶ小さな花の島。樹齢100年を超えるマーガレットの大木と穏やかな海が迎える離島体験。",
     "tags": [
       "離島",
-      "花",
-      "瀬戸内海"
+      "自然",
+      "海"
     ],
     "spots": [
       "マーガレットの大木",
@@ -8514,7 +8925,10 @@
       "fukuoka": 230,
       "takamatsu": 70
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "香川志々島",
+    "hubStation": "詫間駅",
+    "accessStation": "詫間駅"
   },
   {
     "id": "sounkyo",
@@ -8534,8 +8948,8 @@
       "温泉",
       "自然",
       "渓谷",
-      "紅葉",
-      "大雪山"
+      "山",
+      "滝"
     ],
     "spots": [
       "流星の滝",
@@ -8577,7 +8991,10 @@
       "fukuoka": 825,
       "takamatsu": 775
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "city": "上川町",
+    "hubStation": "上川駅",
+    "accessStation": "層雲峡バスターミナル"
   },
   {
     "id": "rebun-island",
@@ -8595,10 +9012,9 @@
     "description": "日本最北の有人島。高山植物の宝庫で「花の浮島」とも呼ばれる。",
     "tags": [
       "離島",
-      "花",
-      "トレッキング",
-      "海",
-      "自然"
+      "自然",
+      "山",
+      "海"
     ],
     "spots": [
       "桃岩展望台",
@@ -8639,7 +9055,10 @@
       "fukuoka": 1040,
       "takamatsu": 990
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "city": "北海礼文島",
+    "hubStation": "礼文島駅",
+    "accessStation": "礼文島駅"
   },
   {
     "id": "rishiri-island",
@@ -8657,10 +9076,9 @@
     "description": "利尻富士と呼ばれる円錐形の山がそびえる美しい島。昆布とウニが名産。",
     "tags": [
       "離島",
-      "登山",
+      "山",
       "海",
-      "自然",
-      "ウニ"
+      "自然"
     ],
     "spots": [
       "利尻山",
@@ -8701,7 +9119,10 @@
       "fukuoka": 1040,
       "takamatsu": 990
     },
-    "stayRecommendation": "3night+"
+    "stayRecommendation": "3night+",
+    "city": "北海利尻島",
+    "hubStation": "利尻島駅",
+    "accessStation": "利尻島駅"
   },
   {
     "id": "akan",
@@ -8719,9 +9140,7 @@
     "description": "カルデラ湖に浮かぶ天然記念物マリモが有名。アイヌコタンでアイヌ文化を体験。",
     "tags": [
       "温泉",
-      "湖",
-      "自然",
-      "アイヌ文化"
+      "自然"
     ],
     "spots": [
       "マリモ",
@@ -8763,7 +9182,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "釧路市",
+    "hubStation": "釧路駅",
+    "accessStation": "釧路駅"
   },
   {
     "id": "abashiri",
@@ -8780,10 +9202,9 @@
     "weight": 1.2,
     "description": "流氷が接岸するオホーツク海沿岸の街。砕氷船観光や監獄博物館が有名。",
     "tags": [
-      "流氷",
+      "街歩き",
       "自然",
-      "海",
-      "博物館"
+      "海"
     ],
     "spots": [
       "網走監獄博物館",
@@ -8824,7 +9245,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "網走市",
+    "hubStation": "網走駅",
+    "accessStation": "網走駅"
   },
   {
     "id": "shikotsu",
@@ -8841,9 +9266,7 @@
     "description": "日本最北の不凍湖。透明度の高い湖水と温泉が魅力。",
     "tags": [
       "温泉",
-      "湖",
-      "自然",
-      "カヌー"
+      "自然"
     ],
     "spots": [
       "支笏湖ビジターセンター",
@@ -8885,7 +9308,10 @@
       "fukuoka": 160,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "千歳市",
+    "hubStation": "千歳駅",
+    "accessStation": "支笏湖バス停"
   },
   {
     "id": "tono",
@@ -8901,11 +9327,8 @@
     "weight": 1.2,
     "description": "柳田国男の「遠野物語」の舞台。カッパや座敷わらしの伝説が残る民話の里。",
     "tags": [
-      "民話",
       "歴史",
-      "自然",
-      "農村",
-      "文化"
+      "自然"
     ],
     "spots": [
       "カッパ淵",
@@ -8944,7 +9367,11 @@
       "fukuoka": 510,
       "takamatsu": 460
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "遠野市",
+    "hubStation": "新花巻駅",
+    "accessStation": "遠野駅"
   },
   {
     "id": "oga",
@@ -8962,9 +9389,9 @@
     "tags": [
       "温泉",
       "海",
-      "ナマハゲ",
       "自然",
-      "民俗"
+      "山",
+      "離島"
     ],
     "spots": [
       "ナマハゲ館",
@@ -9003,7 +9430,11 @@
       "fukuoka": 550,
       "takamatsu": 500
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "男鹿市",
+    "hubStation": "秋田駅",
+    "accessStation": "男鹿駅"
   },
   {
     "id": "yonezawa",
@@ -9020,9 +9451,9 @@
     "description": "上杉謙信ゆかりの城下町。米沢牛が名産で、上杉神社が有名。",
     "tags": [
       "歴史",
-      "城下町",
-      "グルメ",
-      "武家文化"
+      "街歩き",
+      "城",
+      "寺社"
     ],
     "spots": [
       "上杉神社",
@@ -9061,7 +9492,11 @@
       "fukuoka": 465,
       "takamatsu": 415
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "米沢市",
+    "hubStation": "米沢駅",
+    "accessStation": "米沢駅"
   },
   {
     "id": "dewa-sanzan",
@@ -9078,11 +9513,10 @@
     "weight": 1.2,
     "description": "月山・羽黒山・湯殿山からなる出羽三山。修験道の聖地として古くから信仰される。",
     "tags": [
-      "神社",
-      "修行",
+      "寺社",
       "自然",
-      "パワースポット",
-      "トレッキング"
+      "山",
+      "温泉"
     ],
     "spots": [
       "羽黒山五重塔",
@@ -9124,7 +9558,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "鶴岡市",
+    "hubStation": "鶴岡駅",
+    "accessStation": "鶴岡駅"
   },
   {
     "id": "sakunami-onsen",
@@ -9142,8 +9579,7 @@
     "tags": [
       "温泉",
       "滝",
-      "自然",
-      "リゾート"
+      "自然"
     ],
     "spots": [
       "秋保大滝",
@@ -9185,7 +9621,10 @@
       "fukuoka": 160,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "宮城秋保温泉",
+    "hubStation": "仙台駅",
+    "accessStation": "仙台駅"
   },
   {
     "id": "goshogawara",
@@ -9201,10 +9640,8 @@
     "weight": 1.2,
     "description": "立佞武多（たちねぷた）祭りで有名な青森の街。太宰治の故郷も近い。",
     "tags": [
-      "祭り",
       "歴史",
-      "太宰治",
-      "文学"
+      "自然"
     ],
     "spots": [
       "立佞武多の館",
@@ -9245,7 +9682,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "五所川原市",
+    "hubStation": "青森駅",
+    "accessStation": "五所川原駅"
   },
   {
     "id": "kawagoe",
@@ -9263,9 +9704,8 @@
     "description": "江戸時代の蔵造りの街並みが残る「小江戸」。菓子屋横丁も人気。",
     "tags": [
       "歴史",
-      "街並み",
-      "蔵造り",
-      "食べ歩き"
+      "街歩き",
+      "城"
     ],
     "spots": [
       "蔵造りの街並み",
@@ -9304,7 +9744,11 @@
       "fukuoka": 355,
       "takamatsu": 305
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "川越市",
+    "hubStation": "大宮駅",
+    "accessStation": "川越駅"
   },
   {
     "id": "nasu",
@@ -9323,8 +9767,7 @@
     "tags": [
       "温泉",
       "自然",
-      "高原",
-      "リゾート"
+      "山"
     ],
     "spots": [
       "那須岳",
@@ -9364,7 +9807,10 @@
       "fukuoka": 385,
       "takamatsu": 335
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "city": "那須町",
+    "hubStation": "那須塩原駅",
+    "accessStation": "那須塩原駅"
   },
   {
     "id": "choshi",
@@ -9381,9 +9827,7 @@
     "description": "犬吠埼灯台が有名な太平洋に突き出た岬の街。醤油蔵や海鮮グルメも人気。",
     "tags": [
       "海",
-      "灯台",
-      "グルメ",
-      "醤油",
+      "街歩き",
       "自然"
     ],
     "spots": [
@@ -9423,7 +9867,11 @@
       "fukuoka": 440,
       "takamatsu": 390
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "銚子市",
+    "hubStation": "千葉駅",
+    "accessStation": "銚子駅"
   },
   {
     "id": "ashikaga",
@@ -9441,9 +9889,8 @@
     "description": "足利学校など歴史遺産が豊富。足利フラワーパークの藤の花が有名。",
     "tags": [
       "歴史",
-      "花",
-      "学問",
-      "自然"
+      "自然",
+      "寺社"
     ],
     "spots": [
       "足利学校",
@@ -9482,7 +9929,11 @@
       "fukuoka": 440,
       "takamatsu": 390
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "足利市",
+    "hubStation": "小山駅",
+    "accessStation": "足利駅"
   },
   {
     "id": "shiobara-onsen",
@@ -9500,7 +9951,6 @@
     "tags": [
       "温泉",
       "渓谷",
-      "紅葉",
       "自然"
     ],
     "spots": [
@@ -9541,7 +9991,10 @@
       "fukuoka": 385,
       "takamatsu": 335
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "city": "那須塩原市",
+    "hubStation": "那須塩原駅",
+    "accessStation": "那須塩原駅"
   },
   {
     "id": "sado-island",
@@ -9560,9 +10013,9 @@
     "tags": [
       "離島",
       "歴史",
-      "金山",
+      "山",
       "自然",
-      "トキ"
+      "海"
     ],
     "spots": [
       "佐渡金山",
@@ -9603,7 +10056,10 @@
       "fukuoka": 400,
       "takamatsu": 350
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "city": "新潟佐渡島",
+    "hubStation": "佐渡島駅",
+    "accessStation": "佐渡島駅"
   },
   {
     "id": "kiyosato",
@@ -9620,11 +10076,8 @@
     "weight": 1.2,
     "description": "八ヶ岳南麓の高原リゾート。爽やかな気候と牧場、自然を満喫できる。",
     "tags": [
-      "高原",
-      "自然",
-      "リゾート",
-      "牧場",
-      "アウトドア"
+      "山",
+      "自然"
     ],
     "spots": [
       "清泉寮",
@@ -9663,7 +10116,11 @@
       "fukuoka": 500,
       "takamatsu": 450
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "北杜市",
+    "hubStation": "小淵沢駅",
+    "accessStation": "清里駅"
   },
   {
     "id": "tenryu-gorge",
@@ -9680,7 +10137,6 @@
     "description": "天竜川が刻んだ渓谷美。舟下りで迫力ある峡谷を体感できる。",
     "tags": [
       "渓谷",
-      "舟下り",
       "自然",
       "温泉"
     ],
@@ -9721,7 +10177,11 @@
       "fukuoka": 355,
       "takamatsu": 305
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "長野天竜峡",
+    "hubStation": "天竜峡駅",
+    "accessStation": "天竜峡駅"
   },
   {
     "id": "suwa",
@@ -9737,11 +10197,9 @@
     "weight": 1.2,
     "description": "日本最古の神社の一つ、諏訪大社を擁する諏訪湖畔の街。花火大会も有名。",
     "tags": [
-      "神社",
-      "湖",
       "温泉",
-      "花火",
-      "文化"
+      "寺社",
+      "自然"
     ],
     "spots": [
       "諏訪大社",
@@ -9780,7 +10238,11 @@
       "fukuoka": 440,
       "takamatsu": 390
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "諏訪市",
+    "hubStation": "塩尻駅",
+    "accessStation": "上諏訪駅"
   },
   {
     "id": "eiheiji",
@@ -9797,11 +10259,8 @@
     "weight": 1.2,
     "description": "道元禅師が開いた曹洞宗の大本山。杉の大木に囲まれた厳かな禅の空間。",
     "tags": [
-      "寺院",
-      "禅",
-      "文化",
-      "精進料理",
-      "パワースポット"
+      "寺社",
+      "山"
     ],
     "spots": [
       "永平寺",
@@ -9841,7 +10300,10 @@
       "fukuoka": 365,
       "takamatsu": 315
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "永平寺町",
+    "hubStation": "福井駅",
+    "accessStation": "永平寺口駅"
   },
   {
     "id": "wakasa-obama",
@@ -9859,9 +10321,8 @@
     "tags": [
       "海",
       "歴史",
-      "グルメ",
-      "鯖",
-      "港町"
+      "街歩き",
+      "寺社"
     ],
     "spots": [
       "小浜西組（重伝建）",
@@ -9900,7 +10361,11 @@
       "fukuoka": 290,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "小浜市",
+    "hubStation": "敦賀駅",
+    "accessStation": "小浜駅"
   },
   {
     "id": "okuhida-onsen",
@@ -9919,8 +10384,7 @@
     "tags": [
       "温泉",
       "自然",
-      "露天風呂",
-      "北アルプス"
+      "山"
     ],
     "spots": [
       "新穂高温泉",
@@ -9962,7 +10426,10 @@
       "fukuoka": 375,
       "takamatsu": 325
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "高山市",
+    "hubStation": "高山駅",
+    "accessStation": "平湯温泉バスターミナル"
   },
   {
     "id": "minami-izu",
@@ -9982,8 +10449,7 @@
       "海",
       "温泉",
       "自然",
-      "断崖",
-      "ビーチ"
+      "離島"
     ],
     "spots": [
       "石廊崎",
@@ -10023,7 +10489,10 @@
       "fukuoka": 475,
       "takamatsu": 425
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "南伊豆町",
+    "hubStation": "下田駅",
+    "accessStation": "下田駅"
   },
   {
     "id": "echizen",
@@ -10040,10 +10509,8 @@
     "description": "越前海岸沿いの水仙や越前蟹が有名。和紙の里として知られる越前市も近い。",
     "tags": [
       "海",
-      "花",
-      "蟹",
-      "グルメ",
-      "和紙"
+      "自然",
+      "街歩き"
     ],
     "spots": [
       "越前海岸（水仙）",
@@ -10083,7 +10550,10 @@
       "fukuoka": 340,
       "takamatsu": 290
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "越前市",
+    "hubStation": "福井駅",
+    "accessStation": "武生駅"
   },
   {
     "id": "ito",
@@ -10101,8 +10571,10 @@
     "tags": [
       "温泉",
       "海",
-      "グルメ",
-      "リゾート"
+      "街歩き",
+      "山",
+      "城",
+      "離島"
     ],
     "spots": [
       "伊東温泉",
@@ -10141,7 +10613,11 @@
       "fukuoka": 410,
       "takamatsu": 360
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "伊東市",
+    "hubStation": "熱海駅",
+    "accessStation": "伊東駅"
   },
   {
     "id": "iga",
@@ -10158,10 +10634,8 @@
     "weight": 1.2,
     "description": "忍者発祥の地。伊賀流忍者博物館や上野城などが有名な城下町。",
     "tags": [
-      "忍者",
       "歴史",
-      "城下町",
-      "文化"
+      "城"
     ],
     "spots": [
       "伊賀流忍者博物館",
@@ -10200,7 +10674,11 @@
       "fukuoka": 270,
       "takamatsu": 220
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "三重伊賀",
+    "hubStation": "上野市駅",
+    "accessStation": "上野市駅"
   },
   {
     "id": "kashihara",
@@ -10218,9 +10696,7 @@
     "description": "日本建国の地とされる橿原神宮を中心とした古代史の宝庫。飛鳥地域も近い。",
     "tags": [
       "歴史",
-      "神社",
-      "古代史",
-      "パワースポット"
+      "寺社"
     ],
     "spots": [
       "橿原神宮",
@@ -10259,7 +10735,11 @@
       "fukuoka": 230,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "橿原市",
+    "hubStation": "大阪駅",
+    "accessStation": "橿原神宮前駅"
   },
   {
     "id": "totsukawa",
@@ -10280,7 +10760,7 @@
       "渓谷",
       "自然",
       "秘境",
-      "神社"
+      "寺社"
     ],
     "spots": [
       "谷瀬の吊り橋",
@@ -10320,7 +10800,10 @@
       "fukuoka": 270,
       "takamatsu": 220
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "十津川村",
+    "hubStation": "五条駅",
+    "accessStation": "五条駅"
   },
   {
     "id": "yunomineonsen",
@@ -10336,10 +10819,7 @@
     "weight": 1.2,
     "description": "日本最古の温泉と言われる熊野古道沿いの秘湯。世界遺産に登録された「つぼ湯」が有名。",
     "tags": [
-      "温泉",
-      "世界遺産",
-      "熊野古道",
-      "秘湯"
+      "温泉"
     ],
     "spots": [
       "つぼ湯（世界遺産）",
@@ -10379,7 +10859,10 @@
       "fukuoka": 370,
       "takamatsu": 320
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "田辺市",
+    "hubStation": "新宮駅",
+    "accessStation": "新宮駅"
   },
   {
     "id": "maizuru",
@@ -10396,9 +10879,7 @@
     "description": "日本海に面した軍港都市。引揚記念公園と美しい若狭湾の景色が魅力。",
     "tags": [
       "歴史",
-      "港町",
-      "海",
-      "引揚げ記念"
+      "海"
     ],
     "spots": [
       "舞鶴引揚記念館",
@@ -10437,7 +10918,11 @@
       "fukuoka": 270,
       "takamatsu": 220
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "舞鶴市",
+    "hubStation": "東舞鶴駅",
+    "accessStation": "東舞鶴駅"
   },
   {
     "id": "asuka",
@@ -10455,10 +10940,7 @@
     "description": "古代日本の政治・文化の中心地。巨大な石造物や古墳が点在する歴史ロマンの地。",
     "tags": [
       "歴史",
-      "古代史",
-      "石舞台",
-      "古墳",
-      "文化財"
+      "寺社"
     ],
     "spots": [
       "石舞台古墳",
@@ -10497,7 +10979,11 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "明日香村",
+    "hubStation": "橿原神宮前駅",
+    "accessStation": "飛鳥駅"
   },
   {
     "id": "daisen",
@@ -10514,11 +11000,10 @@
     "weight": 1.2,
     "description": "中国地方最高峰。「伯耆富士」とも呼ばれる美しい円錐形の山と大山寺が有名。",
     "tags": [
-      "登山",
+      "山",
       "自然",
-      "紅葉",
       "温泉",
-      "寺院"
+      "寺社"
     ],
     "spots": [
       "大山頂上",
@@ -10560,7 +11045,10 @@
       "fukuoka": 250,
       "takamatsu": 215
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "大山町",
+    "hubStation": "米子駅",
+    "accessStation": "米子駅"
   },
   {
     "id": "yunotsu-onsen",
@@ -10577,10 +11065,9 @@
     "description": "世界遺産「石見銀山」の外港として栄えた港町。江戸時代の街並みが残る。",
     "tags": [
       "温泉",
-      "世界遺産",
       "歴史",
-      "港町",
-      "石見銀山"
+      "海",
+      "山"
     ],
     "spots": [
       "薬師湯",
@@ -10619,7 +11106,11 @@
       "fukuoka": 275,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "大田市",
+    "hubStation": "大田市駅",
+    "accessStation": "温泉津駅"
   },
   {
     "id": "iwami-ginzan",
@@ -10636,10 +11127,10 @@
     "weight": 1.2,
     "description": "16〜17世紀に世界最大規模の産銀量を誇った銀山。世界遺産に登録されている。",
     "tags": [
-      "世界遺産",
       "歴史",
-      "鉱山",
-      "文化財"
+      "山",
+      "自然",
+      "寺社"
     ],
     "spots": [
       "龍源寺間歩",
@@ -10679,7 +11170,10 @@
       "fukuoka": 290,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "大田市",
+    "hubStation": "大田市駅",
+    "accessStation": "大田市駅"
   },
   {
     "id": "iwakuni",
@@ -10697,9 +11191,8 @@
     "description": "錦帯橋で有名な山口県の城下町。美しいアーチ橋と岩国城が見どころ。",
     "tags": [
       "歴史",
-      "橋",
-      "城下町",
-      "桜"
+      "山",
+      "城"
     ],
     "spots": [
       "錦帯橋",
@@ -10740,7 +11233,11 @@
       "fukuoka": 130,
       "takamatsu": 150
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "岩国市",
+    "hubStation": "広島駅",
+    "accessStation": "岩国駅"
   },
   {
     "id": "kurayoshi",
@@ -10758,9 +11255,8 @@
     "description": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町。三朝温泉も近い。",
     "tags": [
       "歴史",
-      "街並み",
-      "蔵造り",
-      "温泉"
+      "温泉",
+      "城"
     ],
     "spots": [
       "白壁土蔵群",
@@ -10801,7 +11297,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "倉吉市",
+    "hubStation": "倉吉駅",
+    "accessStation": "倉吉駅"
   },
   {
     "id": "suo-oshima",
@@ -10818,11 +11318,9 @@
     "weight": 1.2,
     "description": "瀬戸内海に浮かぶ柑橘の島。「瀬戸内のハワイ」と呼ばれる穏やかな気候が魅力。",
     "tags": [
+      "離島",
       "海",
-      "島",
-      "みかん",
-      "自然",
-      "サイクリング"
+      "自然"
     ],
     "spots": [
       "片添ヶ浜",
@@ -10867,7 +11365,10 @@
       "fukuoka": 150,
       "takamatsu": 170
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "city": "周防大島町",
+    "hubStation": "広島駅",
+    "accessStation": "大畠駅"
   },
   {
     "id": "shimanto",
@@ -10884,11 +11385,7 @@
     "weight": 1.2,
     "description": "「日本最後の清流」と呼ばれる四万十川。沈下橋が点在する自然豊かな川沿いの風景。",
     "tags": [
-      "川",
-      "自然",
-      "清流",
-      "サイクリング",
-      "カヌー"
+      "自然"
     ],
     "spots": [
       "佐田沈下橋",
@@ -10930,7 +11427,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "四万十市",
+    "hubStation": "高知駅",
+    "accessStation": "江川崎駅"
   },
   {
     "id": "tobe",
@@ -10947,10 +11447,7 @@
     "weight": 1.2,
     "description": "砥部焼の産地として有名な愛媛の窯業の街。白磁に藍の絵付けが特徴的。",
     "tags": [
-      "陶芸",
-      "文化",
-      "工芸",
-      "ものづくり"
+      "歴史"
     ],
     "spots": [
       "砥部焼伝統産業会館",
@@ -10992,7 +11489,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "砥部町",
+    "hubStation": "松山駅",
+    "accessStation": "松山駅"
   },
   {
     "id": "kashiwajima",
@@ -11009,11 +11509,9 @@
     "weight": 1.5,
     "description": "透明度抜群の海で知られる高知の秘境離島。ダイビングの聖地。",
     "tags": [
+      "離島",
       "海",
-      "ダイビング",
-      "シュノーケリング",
-      "透明度",
-      "離島"
+      "秘境"
     ],
     "spots": [
       "柏島海岸",
@@ -11057,7 +11555,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "大月町",
+    "hubStation": "宿毛駅",
+    "accessStation": "宿毛駅"
   },
   {
     "id": "saijo",
@@ -11074,10 +11575,9 @@
     "weight": 1.2,
     "description": "超軟水の「うちぬき」（自噴水）が湧き出る愛媛の水の都。だんじり祭りも有名。",
     "tags": [
-      "水",
-      "祭り",
+      "街歩き",
       "自然",
-      "文化"
+      "山"
     ],
     "spots": [
       "西条うちぬき広場",
@@ -11118,7 +11618,11 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "西条市",
+    "hubStation": "松山駅",
+    "accessStation": "伊予西条駅"
   },
   {
     "id": "ainan",
@@ -11137,9 +11641,7 @@
     "tags": [
       "海",
       "自然",
-      "シュノーケリング",
-      "魚介",
-      "ビーチ"
+      "温泉"
     ],
     "spots": [
       "一本松温泉あけぼの荘",
@@ -11181,7 +11683,10 @@
       "fukuoka": 250,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "愛媛愛南",
+    "hubStation": "宇和島駅",
+    "accessStation": "宇和島駅"
   },
   {
     "id": "taketa",
@@ -11197,10 +11702,9 @@
     "weight": 1.2,
     "description": "荒城の月の舞台・岡城跡と温泉が有名な大分の城下町。湧き水が豊富。",
     "tags": [
-      "歴史",
-      "城跡",
       "温泉",
-      "音楽"
+      "歴史",
+      "城"
     ],
     "spots": [
       "岡城跡",
@@ -11241,7 +11745,11 @@
       "fukuoka": 190,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "竹田市",
+    "hubStation": "豊後竹田駅",
+    "accessStation": "豊後竹田駅"
   },
   {
     "id": "usuki",
@@ -11259,10 +11767,7 @@
     "description": "国宝の磨崖仏「臼杵石仏」と醤油蔵が有名。白壁の城下町が残る。",
     "tags": [
       "歴史",
-      "石仏",
-      "醤油",
-      "城下町",
-      "国宝"
+      "城"
     ],
     "spots": [
       "臼杵石仏（国宝）",
@@ -11303,7 +11808,11 @@
       "fukuoka": 160,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "臼杵市",
+    "hubStation": "大分駅",
+    "accessStation": "臼杵駅"
   },
   {
     "id": "hita",
@@ -11320,10 +11829,7 @@
     "description": "江戸時代に天領として栄えた商都。豆田町の伝統的街並みと温泉が魅力。",
     "tags": [
       "温泉",
-      "歴史",
-      "街並み",
-      "天領",
-      "鵜飼い"
+      "歴史"
     ],
     "spots": [
       "豆田町（重伝建）",
@@ -11364,7 +11870,11 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "日田市",
+    "hubStation": "久留米駅",
+    "accessStation": "日田駅"
   },
   {
     "id": "hasami",
@@ -11381,10 +11891,8 @@
     "weight": 1.2,
     "description": "長崎県の窯業の里。波佐見焼は庶民的でモダンなデザインの磁器として人気。",
     "tags": [
-      "陶芸",
-      "工芸",
-      "ものづくり",
-      "ショッピング"
+      "歴史",
+      "山"
     ],
     "spots": [
       "西の原",
@@ -11426,7 +11934,10 @@
       "fukuoka": 145,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "波佐見町",
+    "hubStation": "川棚温泉駅",
+    "accessStation": "川棚温泉駅"
   },
   {
     "id": "takeo-onsen",
@@ -11444,8 +11955,7 @@
     "tags": [
       "温泉",
       "歴史",
-      "文化財",
-      "図書館"
+      "山"
     ],
     "spots": [
       "武雄温泉楼門",
@@ -11484,7 +11994,11 @@
       "fukuoka": 85,
       "takamatsu": 245
     },
-    "stayRecommendation": "2night"
+    "stayRecommendation": "2night",
+    "secondaryTransport": null,
+    "city": "武雄市",
+    "hubStation": "武雄温泉駅",
+    "accessStation": "武雄温泉駅"
   },
   {
     "id": "kitsuki",
@@ -11502,9 +12016,7 @@
     "description": "城を挟んで武家屋敷と商家が坂の上下に分かれた「サンドイッチ型城下町」。",
     "tags": [
       "歴史",
-      "城下町",
-      "武家屋敷",
-      "坂道"
+      "城"
     ],
     "spots": [
       "杵築城",
@@ -11545,7 +12057,11 @@
       "fukuoka": 160,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "杵築市",
+    "hubStation": "杵築駅",
+    "accessStation": "杵築駅"
   },
   {
     "id": "tsushima",
@@ -11565,8 +12081,8 @@
       "離島",
       "自然",
       "歴史",
-      "対馬藩",
-      "ツシマヤマネコ"
+      "海",
+      "城"
     ],
     "spots": [
       "万関橋",
@@ -11608,7 +12124,11 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "対馬市",
+    "hubStation": "福岡空港",
+    "accessStation": "対馬空港"
   },
   {
     "id": "iki-island",
@@ -11627,9 +12147,7 @@
     "tags": [
       "離島",
       "海",
-      "焼酎",
-      "歴史",
-      "ビーチ"
+      "歴史"
     ],
     "spots": [
       "辰ノ島",
@@ -11671,7 +12189,11 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "長崎壱岐",
+    "hubStation": "壱岐駅",
+    "accessStation": "壱岐駅"
   },
   {
     "id": "tanegashima",
@@ -11690,8 +12212,6 @@
     "tags": [
       "離島",
       "歴史",
-      "サーフィン",
-      "宇宙",
       "海"
     ],
     "spots": [
@@ -11735,7 +12255,10 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "西之表市",
+    "hubStation": "鹿児島空港",
+    "accessStation": "西之表港"
   },
   {
     "id": "kikuchi",
@@ -11754,7 +12277,8 @@
       "温泉",
       "渓谷",
       "自然",
-      "歴史"
+      "歴史",
+      "寺社"
     ],
     "spots": [
       "菊池渓谷",
@@ -11796,7 +12320,10 @@
       "fukuoka": 110,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "菊池市",
+    "hubStation": "熊本駅",
+    "accessStation": "熊本駅"
   },
   {
     "id": "taketomi-island",
@@ -11814,10 +12341,7 @@
     "description": "赤瓦の民家が並ぶ沖縄の原風景が残る離島。水牛車でのんびり巡れる。",
     "tags": [
       "離島",
-      "海",
-      "文化",
-      "沖縄",
-      "水牛車"
+      "海"
     ],
     "spots": [
       "星砂の浜",
@@ -11860,7 +12384,10 @@
       "fukuoka": 150,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "沖縄竹富島",
+    "hubStation": "竹富島駅",
+    "accessStation": "竹富島駅"
   },
   {
     "id": "yonaguni-island",
@@ -11879,9 +12406,7 @@
     "tags": [
       "離島",
       "海",
-      "ダイビング",
-      "水中遺跡",
-      "馬"
+      "歴史"
     ],
     "spots": [
       "西崎灯台（日本最西端）",
@@ -11923,7 +12448,11 @@
       "fukuoka": 150,
       "takamatsu": 240
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "与那国町",
+    "hubStation": "那覇空港",
+    "accessStation": "与那国空港"
   },
   {
     "id": "nakijin",
@@ -11940,11 +12469,10 @@
     "weight": 1.2,
     "description": "世界遺産・今帰仁城跡と沖縄本島北部の自然が魅力。ヒカンザクラの名所でもある。",
     "tags": [
-      "世界遺産",
-      "城跡",
+      "城",
       "歴史",
-      "桜",
-      "自然"
+      "自然",
+      "離島"
     ],
     "spots": [
       "今帰仁城跡（世界遺産）",
@@ -11986,7 +12514,10 @@
       "fukuoka": 160,
       "takamatsu": 160
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "今帰仁村",
+    "hubStation": "那覇空港",
+    "accessStation": "那覇バスターミナル"
   },
   {
     "id": "motobu",
@@ -12004,9 +12535,8 @@
     "description": "沖縄美ら海水族館がある本部半島。エメラルドグリーンの海が広がるリゾートエリア。",
     "tags": [
       "海",
-      "水族館",
-      "リゾート",
-      "自然"
+      "自然",
+      "離島"
     ],
     "spots": [
       "沖縄美ら海水族館",
@@ -12047,7 +12577,11 @@
       "fukuoka": 160,
       "takamatsu": 160
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "本部町",
+    "hubStation": "那覇空港",
+    "accessStation": "那覇バスターミナル"
   },
   {
     "id": "zamami-island",
@@ -12065,10 +12599,7 @@
     "description": "那覇から高速船で約50分。ホエールウォッチングとダイビングで有名な慶良間諸島の島。",
     "tags": [
       "離島",
-      "海",
-      "ダイビング",
-      "ホエールウォッチング",
-      "珊瑚礁"
+      "海"
     ],
     "spots": [
       "古座間味ビーチ",
@@ -12110,7 +12641,11 @@
       "fukuoka": 155,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "沖縄座間味島",
+    "hubStation": "座間味島駅",
+    "accessStation": "座間味島駅"
   },
   {
     "id": "ie-island",
@@ -12128,9 +12663,9 @@
     "tags": [
       "離島",
       "海",
-      "花",
       "自然",
-      "百合"
+      "山",
+      "城"
     ],
     "spots": [
       "城山（タッチュー）",
@@ -12173,7 +12708,10 @@
       "fukuoka": 160,
       "takamatsu": 160
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "沖縄伊江島",
+    "hubStation": "伊江島駅",
+    "accessStation": "伊江島駅"
   },
   {
     "id": "kohama-island",
@@ -12192,9 +12730,7 @@
     "tags": [
       "離島",
       "海",
-      "自然",
-      "ドラマ",
-      "サトウキビ"
+      "自然"
     ],
     "spots": [
       "はいむるぶし",
@@ -12237,7 +12773,10 @@
       "fukuoka": 160,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "沖縄小浜島",
+    "hubStation": "小浜島駅",
+    "accessStation": "小浜島駅"
   },
   {
     "id": "matsushiro",
@@ -12255,9 +12794,8 @@
     "description": "真田氏の城下町として栄えた長野市郊外の歴史的地区。松代大本営地下壕も見どころ。",
     "tags": [
       "歴史",
-      "城下町",
-      "真田氏",
-      "温泉"
+      "温泉",
+      "城"
     ],
     "spots": [
       "松代城跡",
@@ -12297,7 +12835,10 @@
       "fukuoka": 375,
       "takamatsu": 325
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "city": "長野市",
+    "hubStation": "長野駅",
+    "accessStation": "長野駅"
   },
   {
     "id": "iiyama",
@@ -12314,10 +12855,9 @@
     "description": "千曲川と菜の花が美しい北信濃の小京都。スキーリゾートと温泉も充実。",
     "tags": [
       "温泉",
-      "雪",
+      "山",
       "自然",
-      "花",
-      "農村"
+      "寺社"
     ],
     "spots": [
       "菜の花公園",
@@ -12356,7 +12896,11 @@
       "fukuoka": 405,
       "takamatsu": 355
     },
-    "stayRecommendation": "daytrip"
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "飯山市",
+    "hubStation": "飯山駅",
+    "accessStation": "飯山駅"
   },
   {
     "id": "yakake",
@@ -12374,9 +12918,7 @@
     "description": "江戸時代の本陣・脇本陣が現存する山陽道の宿場町。白壁の街並みが美しい。",
     "tags": [
       "歴史",
-      "街並み",
-      "宿場町",
-      "白壁"
+      "山"
     ],
     "spots": [
       "矢掛本陣（国指定史跡）",
@@ -12417,7 +12959,11 @@
       "fukuoka": 175,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "岡山矢掛",
+    "hubStation": "矢掛駅",
+    "accessStation": "矢掛駅"
   },
   {
     "id": "tsuyama",
@@ -12435,9 +12981,8 @@
     "description": "美作国の城下町。日本三大城跡の一つ・津山城（鶴山公園）の桜が有名。",
     "tags": [
       "歴史",
-      "城跡",
-      "桜",
-      "城下町"
+      "城",
+      "山"
     ],
     "spots": [
       "津山城（鶴山公園）",
@@ -12478,7 +13023,11 @@
       "fukuoka": 175,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "津山市",
+    "hubStation": "岡山駅",
+    "accessStation": "津山駅"
   },
   {
     "id": "tsurugi-san",
@@ -12495,11 +13044,10 @@
     "weight": 1.2,
     "description": "四国第2位の高峰。ゴツゴツした山頂と高山植物、雲海が見られるトレッキングの名山。",
     "tags": [
-      "登山",
+      "山",
       "自然",
-      "高山植物",
-      "雲海",
-      "トレッキング"
+      "海",
+      "寺社"
     ],
     "spots": [
       "剣山山頂",
@@ -12541,7 +13089,10 @@
       "fukuoka": 250,
       "takamatsu": 135
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "city": "徳島剣山",
+    "hubStation": "貞光駅",
+    "accessStation": "貞光駅"
   },
   {
     "id": "nobeoka",
@@ -12558,10 +13109,12 @@
     "description": "宮崎県北部の城下町。五ヶ瀬川沿いの鮎釣りと城山公園が有名。",
     "tags": [
       "歴史",
-      "川",
-      "グルメ",
-      "城跡",
-      "自然"
+      "街歩き",
+      "城",
+      "自然",
+      "海",
+      "山",
+      "渓谷"
     ],
     "spots": [
       "延岡城跡",
@@ -12602,6 +13155,136 @@
       "fukuoka": 215,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night"
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "延岡市",
+    "hubStation": "宮崎駅",
+    "accessStation": "延岡駅"
+  },
+  {
+    "id": "kamaishi",
+    "name": "釜石",
+    "type": "destination",
+    "region": "東北",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "hub": "morioka",
+    "hotelHub": "釜石",
+    "stayAllowed": [
+      "1night"
+    ],
+    "weight": 1.2,
+    "description": "製鉄の街から観光の街へ。根浜海岸と鉄の歴史が共存するリアスの港。",
+    "tags": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "spots": [
+      "根浜海岸",
+      "橋野鉄鉱山",
+      "釜石大観音"
+    ],
+    "railGateway": "釜石駅",
+    "secondaryTransport": null,
+    "needsCar": false,
+    "hubStation": "新花巻駅",
+    "accessStation": "釜石駅",
+    "city": "釜石市",
+    "lat": 39.276,
+    "lng": 141.8859,
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 450,
+      "nagoya": 420,
+      "fukuoka": 510,
+      "takamatsu": 480
+    },
+    "stayRecommendation": "1night",
+    "hotelSearch": "釜石"
+  },
+  {
+    "id": "ofunato",
+    "name": "大船渡",
+    "type": "destination",
+    "region": "東北",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "hub": "ichinoseki",
+    "hotelHub": "大船渡",
+    "stayAllowed": [
+      "1night"
+    ],
+    "weight": 1.2,
+    "description": "穏やかな湾に抱かれた漁師町。三陸さんまと碁石海岸が旅人を迎える。",
+    "tags": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "spots": [
+      "碁石海岸",
+      "大船渡魚市場",
+      "三陸花火"
+    ],
+    "railGateway": "大船渡駅",
+    "secondaryTransport": null,
+    "needsCar": false,
+    "hubStation": "一ノ関駅",
+    "accessStation": "大船渡駅",
+    "city": "大船渡市",
+    "lat": 39.0823,
+    "lng": 141.7147,
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 430,
+      "nagoya": 400,
+      "fukuoka": 490,
+      "takamatsu": 460
+    },
+    "stayRecommendation": "1night",
+    "hotelSearch": "大船渡"
+  },
+  {
+    "id": "kuji",
+    "name": "久慈",
+    "type": "destination",
+    "region": "東北",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "hub": "hachinohe",
+    "hotelHub": "久慈",
+    "stayAllowed": [
+      "1night"
+    ],
+    "weight": 1.2,
+    "description": "琥珀の里として知られる北三陸の玄関口。あまちゃんのロケ地としても有名。",
+    "tags": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "spots": [
+      "久慈琥珀博物館",
+      "小袖海岸",
+      "久慈駅"
+    ],
+    "railGateway": "久慈駅",
+    "secondaryTransport": null,
+    "needsCar": false,
+    "hubStation": "八戸駅",
+    "accessStation": "久慈駅",
+    "city": "久慈市",
+    "lat": 40.1906,
+    "lng": 141.7747,
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 420,
+      "nagoya": 390,
+      "fukuoka": 480,
+      "takamatsu": 450
+    },
+    "stayRecommendation": "1night",
+    "hotelSearch": "久慈"
   }
 ]

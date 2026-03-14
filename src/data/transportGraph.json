@@ -4120,6 +4120,38 @@
       "id": "station:延岡",
       "type": "station",
       "name": "延岡"
+    },
+    "destination:kamaishi": {
+      "id": "destination:kamaishi",
+      "type": "destination",
+      "name": "釜石",
+      "destId": "kamaishi",
+      "lat": 39.276,
+      "lng": 141.8859
+    },
+    "destination:ofunato": {
+      "id": "destination:ofunato",
+      "type": "destination",
+      "name": "大船渡",
+      "destId": "ofunato",
+      "lat": 39.0823,
+      "lng": 141.7147
+    },
+    "destination:kuji": {
+      "id": "destination:kuji",
+      "type": "destination",
+      "name": "久慈",
+      "destId": "kuji",
+      "lat": 40.1906,
+      "lng": 141.7747
+    },
+    "destination:suzu": {
+      "id": "destination:suzu",
+      "type": "destination",
+      "name": "珠洲",
+      "destId": "suzu",
+      "lat": 37.429,
+      "lng": 137.2648
     }
   },
   "edges": [
@@ -14494,6 +14526,40 @@
       "to": "destination:nobeoka",
       "type": "bus",
       "minutes": 40,
+      "local": true
+    },
+    {
+      "id": "e1289",
+      "from": "hub:遠野",
+      "to": "destination:kamaishi",
+      "type": "rail",
+      "minutes": 65,
+      "provider": "ekinet",
+      "service": "JR釜石線"
+    },
+    {
+      "id": "e1290",
+      "from": "hub:仙台",
+      "to": "destination:ofunato",
+      "type": "bus",
+      "minutes": 150,
+      "local": true
+    },
+    {
+      "id": "e1291",
+      "from": "hub:八戸",
+      "to": "destination:kuji",
+      "type": "rail",
+      "minutes": 100,
+      "provider": "ekinet",
+      "service": "JR八戸線"
+    },
+    {
+      "id": "e1292",
+      "from": "station:金沢",
+      "to": "destination:suzu",
+      "type": "bus",
+      "minutes": 150,
       "local": true
     }
   ]

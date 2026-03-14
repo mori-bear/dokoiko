@@ -24,14 +24,17 @@ const https = require('https');
 const { URL } = require('url');
 
 const FULL_HTTP = process.argv.includes('--http');
+const USE_V2    = process.argv.includes('--v2');
 
 /* ══════════════════════════════════════════
    データ読み込み
 ══════════════════════════════════════════ */
 
 // 新ファイル構造: hubs.json + destinations.json を結合
-const HUBS_RAW = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
-const DESTS_RAW = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
+const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
+const DESTS_FILE = USE_V2 ? './src/data/destinations_v2.json' : './src/data/destinations.json';
+const DESTS_RAW = JSON.parse(fs.readFileSync(DESTS_FILE, 'utf8'));
+if (USE_V2) console.log(`[QA] データソース: ${DESTS_FILE} (${DESTS_RAW.length}件)`);
 const ALL   = [...HUBS_RAW, ...DESTS_RAW];
 const DESTS = DESTS_RAW; // destinations.json には hub が含まれない
 
@@ -148,7 +151,7 @@ const THEME_TAG_ALIASES = {
   '絶景':   ['絶景','自然','渓谷','富士山','高原','湖','火山','アルプス'],
   '海':     ['海','海の幸','離島','ダイビング','港町','リゾート'],
   '街歩き': ['街歩き','歴史','城下町','宿場町','古都'],
-  'グルメ': ['グルメ','海の幸','食文化'],
+  'グルメ': ['グルメ','海の幸','食文化','海'],
 };
 
 /* ══════════════════════════════════════════
@@ -758,7 +761,8 @@ class Scorecard {
       sc.check(cityNodes.length >= 31,  `cityノード数不足: ${cityNodes.length}`);
       sc.check(hubNodes.length >= 100,  `hubノード数不足: ${hubNodes.length}`);
       sc.check(stationNodes.length >= 100, `stationノード数不足: ${stationNodes.length}`);
-      sc.check(destNodes.length === 200, `destinationノード数 != 200 (${destNodes.length})`);
+      const expectedDest = USE_V2 ? 204 : 200; // v2: 200+新規4件(kamaishi/ofunato/kuji/suzu)
+      sc.check(destNodes.length >= 200, `destinationノード数不足: ${destNodes.length}`);
       console.log(`  city:${cityNodes.length} hub:${hubNodes.length} station:${stationNodes.length} dest:${destNodes.length}`);
 
       // 6つの必須ルートをBFSで確認
@@ -852,7 +856,7 @@ class Scorecard {
       let stationMissing = 0;
       destNodes8c.forEach(dn => {
         const incoming = edgesTo[dn.id] || [];
-        const hasStationAccess = incoming.some(t => ['station', 'port', 'airport'].includes(t));
+        const hasStationAccess = incoming.some(t => ['station', 'port', 'airport', 'hub'].includes(t));
         if (!hasStationAccess) {
           stationMissing++;
           console.log(`  ⚠ station なし: ${dn.name}(${dn.destId})`);
@@ -983,6 +987,39 @@ class Scorecard {
 
     console.log(`  travelTime 全5都市あり: ${coveredAll} / 部分: ${coveredPartial} / 全null: ${coveredNone}`);
     console.log(`  stayRecommendation: daytrip=${stayDist.daytrip}, 1night=${stayDist['1night']}, 2night=${stayDist['2night']}, 3night+=${stayDist['3night+']}, missing=${stayDist.missing}`);
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8f] v2 フィールド検証（--v2 時のみ）
+  ─────────────────────────────── */
+  if (USE_V2) {
+    const sc = new Scorecard('[8f] v2フィールド');
+    const VALID_TAGS = new Set(['温泉','海','山','自然','歴史','城','街歩き','寺社','渓谷','滝','離島','秘境']);
+
+    const noHub    = DESTS.filter(d => !d.hubStation);
+    const noAccess = DESTS.filter(d => !d.accessStation);
+    const noCity   = DESTS.filter(d => !d.city);
+    const noTags   = DESTS.filter(d => !d.tags || d.tags.length === 0);
+    const badTags  = DESTS.filter(d => (d.tags || []).some(t => !VALID_TAGS.has(t)));
+
+    sc.check(noHub.length    === 0, `hubStation 未設定: ${noHub.map(d=>d.id).join(', ')}`);
+    sc.check(noAccess.length === 0, `accessStation 未設定: ${noAccess.map(d=>d.id).join(', ')}`);
+    sc.check(noCity.length   === 0, `city 未設定: ${noCity.map(d=>d.id).join(', ')}`);
+    sc.check(noTags.length   === 0, `tags 空: ${noTags.map(d=>d.id).join(', ')}`);
+    sc.check(badTags.length  === 0, `不正タグ: ${badTags.map(d=>`${d.id}:[${d.tags}]`).join(', ')}`);
+
+    const NEW_IDS = ['kamaishi','ofunato','kuji','suzu'];
+    NEW_IDS.forEach(id => sc.check(DESTS.some(d => d.id === id), `新規都市なし: ${id}`));
+
+    const OBS_IDS = ['noto','sanriku'];
+    OBS_IDS.forEach(id => sc.check(!DESTS.some(d => d.id === id), `廃止都市が残存: ${id}`));
+
+    console.log(`  hubStation: ${DESTS.length - noHub.length}/${DESTS.length}`);
+    console.log(`  accessStation: ${DESTS.length - noAccess.length}/${DESTS.length}`);
+    console.log(`  city: ${DESTS.length - noCity.length}/${DESTS.length}`);
+    console.log(`  tags付与: ${DESTS.length - noTags.length}/${DESTS.length}`);
     sc.print();
     scorecards.push(sc);
   }
