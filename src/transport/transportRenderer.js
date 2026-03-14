@@ -151,12 +151,13 @@ function pathToLinks(path, city, departure, fromCity) {
 
   // ── 飛行機ルート ──
   if (flightSeg) {
-    const fromIata    = extractIata(flightSeg.from);
-    const toAirNode   = _graph.nodes[flightSeg.to];
-    const toIata      = toAirNode?.iata || extractIata(flightSeg.to);
-    const toAirName   = iataToName(toIata);
+    const fromIata  = fromCity.iata;  // 出発地の実際の空港 IATA
+    const toAirNode = _graph.nodes[flightSeg.to];
+    const toIata    = toAirNode?.iata || extractIata(flightSeg.to);
+    const toAirName = iataToName(toIata);
     const links = [];
-    if (fromIata && toIata) {
+    // 出発地→目的地の路線が実際に存在する場合のみ表示
+    if (fromIata && toIata && (FLIGHT_ROUTES[fromIata] ?? []).includes(toIata)) {
       links.push(buildSkyscannerLink(fromIata, toAirName));
     }
     if (localSeg) {
