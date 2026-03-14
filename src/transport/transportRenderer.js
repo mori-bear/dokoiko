@@ -2,23 +2,17 @@
  * 交通リンクアセンブラ
  *
  * 交通生成構造:
- *   出発地 → 長距離交通（新幹線/飛行機/高速バス） → gatewayHub → 二次交通（バス/フェリー/車） → destination
+ *   出発地 → transportGraph BFS → gatewayHub → 二次交通 → destination
  *
- * データフィールド:
- *   city.railGateway      — 最寄りJR駅
- *   city.airportGateway   — 最寄り空港
- *   city.ferryGateway     — フェリー港
- *   city.gatewayHub       — 二次交通の起点都市
- *   city.airportHub       — 航空乗り継ぎ都市（那覇経由→石垣等）
- *   city.secondaryTransport — 'bus'|'ferry'|'car'
- *   city.railProvider     — 'ekinet'|'e5489'|'jrkyushu'（上書き用）
- *   city.lat / city.lng   — 座標（Google Maps destination に使用）
+ * 優先順位:
+ *   1. transportGraph が初期化済み → BFS ルート探索（AI推測なし）
+ *   2. 未初期化 → フィールドベースフォールバック（旧ロジック）
  *
- * 表示順: JR → 高速バス → 飛行機 → フェリー → レンタカー
+ * 初期化:
+ *   app.js の init() で initTransportGraph(graph) を呼び出すこと。
  *
- * 特例:
- *   ★1（近場） → GoogleMaps 1本のみ
- *   island     → フェリー + 飛行機（airportHub対応）
+ * 表示順: JR → 飛行機 → フェリー → バス → レンタカー
+ * 最大3ルート（limitRoutes()）
  */
 
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
@@ -35,14 +29,232 @@ import {
   buildRentalLink,
 } from './linkBuilder.js';
 
-/* ── 座標ヘルパー ── */
+/* ── モジュールレベル グラフキャッシュ ── */
+let _graph = null;
+let _adj   = null;
 
+/**
+ * app.js の init() から呼び出す。
+ * 以降の resolveTransportLinks() が BFS を使用する。
+ */
+export function initTransportGraph(graph) {
+  _graph = graph;
+  _adj   = buildAdj(graph);
+}
+
+function buildAdj(graph) {
+  const adj = {};
+  for (const edge of graph.edges) {
+    if (!adj[edge.from]) adj[edge.from] = [];
+    adj[edge.from].push(edge);
+  }
+  return adj;
+}
+
+/* ── 座標ヘルパー ── */
 function coords(city) {
   return (city.lat && city.lng) ? { lat: city.lat, lng: city.lng } : null;
 }
 
-/* ─── 航空路線実在チェック ─── */
+/* ─────────────────────────────────────────────────
+   メインエントリ
+───────────────────────────────────────────────── */
+export function resolveTransportLinks(city, departure) {
+  if (_graph && _adj) {
+    return resolveByBFS(city, departure);
+  }
+  return resolveByFields(city, departure);
+}
 
+/* ─────────────────────────────────────────────────
+   BFS ルート探索
+───────────────────────────────────────────────── */
+function resolveByBFS(city, departure) {
+  const fromCity = DEPARTURE_CITY_INFO[departure];
+  if (!fromCity) return [];
+
+  const startId = `city:${departure}`;
+  const goalId  = `destination:${city.id}`;
+
+  if (!_graph.nodes[startId] || !_graph.nodes[goalId]) {
+    // グラフにノードなし → フォールバック
+    return resolveByFields(city, departure);
+  }
+
+  const routes = bfsFindPaths(startId, goalId);
+  if (!routes.length) {
+    return resolveByFields(city, departure);
+  }
+
+  const links    = [];
+  const seenKeys = new Set();
+
+  for (const path of routes) {
+    if (links.length >= 3) break;
+    const pathLinks = pathToLinks(path, city, departure, fromCity);
+    for (const l of pathLinks) {
+      const key = l.type + ':' + (l.url || '');
+      if (l && l.url && !seenKeys.has(key)) {
+        seenKeys.add(key);
+        links.push(l);
+      }
+    }
+  }
+
+  // レンタカー
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  if (city.needsCar || isIsland) links.push(buildRentalLink());
+
+  return limitRoutes(links, 3);
+}
+
+/* BFS: 最大3経路を探す（深さ7ホップ上限）*/
+function bfsFindPaths(startId, goalId) {
+  const found   = [];
+  const queue   = [{ nodeId: startId, path: [], visited: new Set([startId]) }];
+
+  while (queue.length && found.length < 3) {
+    const { nodeId: cur, path, visited } = queue.shift();
+
+    if (cur === goalId) {
+      found.push(path);
+      continue;
+    }
+    if (path.length >= 7) continue;
+
+    for (const edge of (_adj[cur] || [])) {
+      if (!visited.has(edge.to)) {
+        const newVisited = new Set(visited);
+        newVisited.add(edge.to);
+        queue.push({ nodeId: edge.to, path: [...path, edge], visited: newVisited });
+      }
+    }
+  }
+  return found;
+}
+
+/* BFS パス → リンク配列 */
+function pathToLinks(path, city, departure, fromCity) {
+  const co = coords(city);
+
+  const railSeg   = path.find(s => s.type === 'rail');
+  const flightSeg = path.find(s => s.type === 'flight');
+  const ferrySeg  = path.find(s => s.type === 'ferry' && !s.local);
+  const localSeg  = path.find(s => s.to.startsWith('destination:'));
+
+  // ── 飛行機ルート ──
+  if (flightSeg) {
+    const fromIata    = extractIata(flightSeg.from);
+    const toAirNode   = _graph.nodes[flightSeg.to];
+    const toIata      = toAirNode?.iata || extractIata(flightSeg.to);
+    const toAirName   = iataToName(toIata);
+    const links = [];
+    if (fromIata && toIata) {
+      links.push(buildSkyscannerLink(fromIata, toAirName));
+    }
+    if (localSeg) {
+      const gateName = toAirName || '空港';
+      links.push(buildGoogleMapsLink(
+        gateName, city.name, 'transit',
+        `空港から${city.name}へ（Googleマップ）`, co
+      ));
+    }
+    return links.filter(Boolean);
+  }
+
+  // ── フェリールート（港→島）──
+  if (ferrySeg) {
+    const portName = _graph.nodes[ferrySeg.from]?.name || '';
+    const fl = buildFerryLink(portName);
+    const links = fl ? [fl] : [];
+    // 出発地→港 Google Maps
+    const portAccessSeg = path.find(s => s.to === ferrySeg.from);
+    if (portAccessSeg) {
+      const fromName = _graph.nodes[portAccessSeg.from]?.name || departure;
+      links.push(buildGoogleMapsLink(fromName, portName, 'transit'));
+    }
+    return links.filter(l => l?.url);
+  }
+
+  // ── 鉄道ルート ──
+  if (railSeg) {
+    const provider = resolveRailProvider(departure, city);
+    const jrLink   = buildJrLink(provider);
+    const links    = jrLink ? [jrLink] : [];
+
+    const fromName  = _graph.nodes[railSeg.from]?.name || departure;
+    const toName    = _graph.nodes[railSeg.to]?.name || '';
+    links.push(buildGoogleMapsLink(
+      fromName + '駅', toName + '駅', 'transit'
+    ));
+
+    if (localSeg) {
+      const gateName = _graph.nodes[localSeg.from]?.name || toName;
+      links.push(buildGoogleMapsLink(
+        gateName, city.name, 'transit',
+        `${gateName}から${city.name}へ（Googleマップ）`, co
+      ));
+    }
+    return links.filter(Boolean);
+  }
+
+  // ── バス直結 / フォールバック ──
+  if (localSeg) {
+    const fromName = _graph.nodes[localSeg.from]?.name || departure;
+    return [buildGoogleMapsLink(fromName, city.name, 'transit', null, co)].filter(Boolean);
+  }
+
+  return [buildGoogleMapsLink(fromCity.rail, city.name, 'transit', null, co)];
+}
+
+/* ─────────────────────────────────────────────────
+   フィールドベース フォールバック（旧ロジック）
+   ※ graph 未初期化時のみ使用
+───────────────────────────────────────────────── */
+function resolveByFields(city, departure) {
+  const fromCity = DEPARTURE_CITY_INFO[departure];
+  if (!fromCity) return [];
+
+  const stars    = calculateDistanceStars(departure, city);
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  const hasFerry = !!(gw(city, 'ferryGateway') || (city.gateways?.ferry?.length > 0));
+
+  if (isIsland && hasFerry) {
+    const links = [
+      ...getFlightForIsland(city, departure, fromCity),
+      ...getFerry(city, departure, fromCity, true),
+      ...getCar(city),
+    ].filter(l => l && (l.url || l.type === 'note'));
+    return limitRoutes(links, 3);
+  }
+
+  if (stars === 1) {
+    const rail = gw(city, 'railGateway') ?? city.name;
+    const useCoords = !gw(city, 'railGateway') ? coords(city) : null;
+    return [
+      buildGoogleMapsLink(fromCity.rail, rail, 'transit', null, useCoords),
+      ...getCar(city),
+    ].filter(l => l?.url);
+  }
+
+  const links = [
+    ...getRail(city, departure, fromCity),
+    ...getHighwayBus(city, fromCity),
+    ...getFlight(city, departure, fromCity),
+    ...getFerry(city, departure, fromCity, false),
+    ...getSecondary(city),
+  ];
+
+  if (!links.length) {
+    links.push(buildGoogleMapsLink(fromCity.rail, city.name, 'transit', null, coords(city)));
+  }
+  links.push(...getCar(city));
+  return limitRoutes(links.filter(l => l && (l.url || l.type === 'note')), 3);
+}
+
+/* ─────────────────────────────────────────────────
+   フォールバック用サブ関数（旧ロジック）
+───────────────────────────────────────────────── */
 function isFlightAvailable(departure, airportGateway) {
   const fromIata = CITY_AIRPORT[departure];
   const toIata   = AIRPORT_IATA[airportGateway];
@@ -50,41 +262,25 @@ function isFlightAvailable(departure, airportGateway) {
   return (FLIGHT_ROUTES[fromIata] ?? []).includes(toIata);
 }
 
-/* ─── 島向け飛行機リンク（airportHub 対応） ─── */
-
 function getFlightForIsland(city, departure, fromCity) {
   const airport = gw(city, 'airportGateway');
-
-  // 直行便チェック
   if (airport && isFlightAvailable(departure, airport)) {
     return [buildSkyscannerLink(fromCity.iata, airport)].filter(Boolean);
   }
-
-  // airportHub 経由
   const hub = city.airportHub;
   if (!hub) return [];
   const hubAirport = AIRPORT_HUB_GATEWAY[hub];
-  if (!hubAirport) return [];
-  if (!isFlightAvailable(departure, hubAirport)) return [];
+  if (!hubAirport || !isFlightAvailable(departure, hubAirport)) return [];
   return [buildSkyscannerLink(fromCity.iata, hubAirport)].filter(Boolean);
 }
-
-/* ─── JR / 鉄道リンク ─── */
 
 function getRail(city, departure, fromCity) {
   const railGateway = gw(city, 'railGateway');
   if (!railGateway) return [];
-
   const links = [];
-
-  // JR予約ボタン（常に表示）
   const jr = buildJrLink(resolveRailProvider(departure, city));
   if (jr) links.push(jr);
-
-  // 出発駅 → railGateway（GoogleMaps transit）
   links.push(buildGoogleMapsLink(fromCity.rail, railGateway, 'transit'));
-
-  // 二次交通: railGateway → destination
   const hasSecondary = city.secondaryTransport || city.railNote;
   if (hasSecondary) {
     const stType = typeof city.secondaryTransport === 'string'
@@ -95,88 +291,59 @@ function getRail(city, departure, fromCity) {
                 : `バスで${city.name}へ（Googleマップ）`;
     links.push(buildGoogleMapsLink(railGateway, city.name, 'transit', label, coords(city)));
   }
-
   return links;
 }
 
-/* ─── 飛行機リンク（非島） ─── */
-
 function getFlight(city, departure, fromCity) {
   const airport = gw(city, 'airportGateway');
-  if (!airport) return [];
-  if (!isFlightAvailable(departure, airport)) return [];
-
+  if (!airport || !isFlightAvailable(departure, airport)) return [];
   return [
     buildSkyscannerLink(fromCity.iata, airport),
     buildGoogleMapsLink(airport, city.name, 'transit', '空港から市内へ（Googleマップ）', coords(city)),
   ].filter(Boolean);
 }
 
-/* ─── フェリーリンク ─── */
-
 function getFerry(city, departure, fromCity, isIsland) {
   const ferryGateway = gw(city, 'ferryGateway');
-  const ferries = ferryGateway
-    ? [ferryGateway]
-    : (city.gateways?.ferry ?? []);
+  const ferries = ferryGateway ? [ferryGateway] : (city.gateways?.ferry ?? []);
   if (!ferries.length) return [];
-
   if (isIsland) {
     const port = selectNearestPort(city, departure, ferries);
     if (!port) return [];
     const fl = buildFerryLink(port);
-    return [
-      fl,
-      buildGoogleMapsLink(fromCity.rail, port, 'transit'),
-    ].filter(l => l?.url);
-  } else {
-    const fl = buildFerryLink(ferries[0]);
-    return fl ? [fl] : [];
+    return [fl, buildGoogleMapsLink(fromCity.rail, port, 'transit')].filter(l => l?.url);
   }
+  const fl = buildFerryLink(ferries[0]);
+  return fl ? [fl] : [];
 }
-
-/* ─── 高速バスリンク ─── */
 
 function getHighwayBus(city, fromCity) {
   const buses = city.gateways?.bus ?? [];
-  if (!buses.length) return [];
   return buses.map(terminal =>
     buildGoogleMapsLink(fromCity.rail, terminal, 'transit', `高速バスで${terminal}へ（Googleマップ）`)
   );
 }
 
-/* ─── 二次交通（railGateway なし・gatewayHub あり） ─── */
-
 function getSecondary(city) {
-  // railGateway があれば getRail() で処理済み
   if (gw(city, 'railGateway')) return [];
-
-  const st  = city.secondaryTransport;
+  const st    = city.secondaryTransport;
   const gwHub = city.gatewayHub;
-
-  // 旧形式（object）対応
   if (st && typeof st === 'object' && st.from) {
     return [buildGoogleMapsLink(st.from, st.to, 'transit', `${st.from}からバス（Googleマップ）`, coords(city))];
   }
-
   if (!st || !gwHub) return [];
-
-  const stType = st; // 'bus'|'ferry'|'car'
+  const stType = st;
   const label = stType === 'ferry' ? `フェリーで${city.name}へ（Googleマップ）`
               : stType === 'car'   ? `車で${city.name}へ（Googleマップ）`
               : `バスで${city.name}へ（Googleマップ）`;
   return [buildGoogleMapsLink(gwHub, city.name, 'transit', label, coords(city))];
 }
 
-/* ─── レンタカー ─── */
-
 function getCar(city) {
   const isIsland = !!(city.isIsland || city.destType === 'island');
   if (!city.needsCar && !isIsland) return [];
   return [buildRentalLink()];
 }
-
-/* ─── ルート上限 ─── */
 
 function limitRoutes(links, max) {
   const main   = links.filter(l => l.type !== 'note' && l.type !== 'rental');
@@ -185,81 +352,35 @@ function limitRoutes(links, max) {
   return [...main.slice(0, max), ...notes, ...rental];
 }
 
-/* ─── メインアセンブラ ─── */
-
 function gw(city, key) {
   return city[key] || city.gateways?.[key]?.[0] || null;
 }
 
-export function resolveTransportLinks(city, departure) {
-  const fromCity = DEPARTURE_CITY_INFO[departure];
-  if (!fromCity) return [];
-
-  const stars    = calculateDistanceStars(departure, city);
-  const isIsland = !!(city.isIsland || city.destType === 'island');
-  const hasFerry = !!(gw(city, 'ferryGateway') || (city.gateways?.ferry?.length > 0));
-
-  // 島: フェリー + 飛行機（airportHub 対応）
-  if (isIsland && hasFerry) {
-    const links = [
-      ...getFlightForIsland(city, departure, fromCity),
-      ...getFerry(city, departure, fromCity, true),
-      ...getCar(city),
-    ].filter(l => l && (l.url || l.type === 'note'));
-    return limitRoutes(links, 3);
-  }
-
-  // ★1 近場: GoogleMaps 1本のみ
-  if (stars === 1) {
-    const rail = gw(city, 'railGateway') ?? city.name;
-    // railGateway が自分と違うなら座標は使わない（中継駅への案内のため）
-    const useCoords = !gw(city, 'railGateway') ? coords(city) : null;
-    return [
-      buildGoogleMapsLink(fromCity.rail, rail, 'transit', null, useCoords),
-      ...getCar(city),
-    ].filter(l => l?.url);
-  }
-
-  // 通常ルート: JR → 高速バス → 飛行機 → フェリー → 二次交通
-  const links = [
-    ...getRail(city, departure, fromCity),
-    ...getHighwayBus(city, fromCity),
-    ...getFlight(city, departure, fromCity),
-    ...getFerry(city, departure, fromCity, false),
-    ...getSecondary(city),
-  ];
-
-  // どの手段もない → GoogleMaps フォールバック（座標使用）
-  if (!links.length) {
-    links.push(buildGoogleMapsLink(fromCity.rail, city.name, 'transit', null, coords(city)));
-  }
-
-  links.push(...getCar(city));
-
-  const filtered = links.filter(l => l && (l.url || l.type === 'note'));
-  return limitRoutes(filtered, 3);
+/* ─────────────────────────────────────────────────
+   ヘルパー
+───────────────────────────────────────────────── */
+function extractIata(nodeId) {
+  if (nodeId?.startsWith('airport:')) return nodeId.replace('airport:', '');
+  return null;
 }
 
-/* ─── 最寄り港選択 ─── */
+function iataToName(iata) {
+  if (!iata) return null;
+  return Object.keys(AIRPORT_IATA).find(k => AIRPORT_IATA[k] === iata) || null;
+}
 
+/* ─────────────────────────────────────────────────
+   港選択
+───────────────────────────────────────────────── */
 const PORT_SELECT = {
   'izu-oshima': (dep) => {
     if (dep === '静岡') return '稲取港';
     if (['名古屋','大阪','京都','神戸','広島','福岡'].includes(dep)) return '熱海港';
     return '竹芝客船ターミナル';
   },
-  'naoshima': (dep) => {
-    if (['高松','松山','高知','徳島'].includes(dep)) return '高松港';
-    return '宇野港';
-  },
-  'shodoshima': (dep) => {
-    if (['高松','松山','高知','徳島'].includes(dep)) return '高松港';
-    return '宇野港';
-  },
-  'goto': (dep) => {
-    if (dep === '長崎') return '長崎港';
-    return '博多港';
-  },
+  'naoshima': (dep) => (['高松','松山','高知','徳島'].includes(dep) ? '高松港' : '宇野港'),
+  'shodoshima': (dep) => (['高松','松山','高知','徳島'].includes(dep) ? '高松港' : '宇野港'),
+  'goto': (dep) => (dep === '長崎' ? '長崎港' : '博多港'),
 };
 
 function selectNearestPort(city, departure, portHubs) {
@@ -270,8 +391,9 @@ function selectNearestPort(city, departure, portHubs) {
   return portHubs[0];
 }
 
-/* ─── JR 予約先選択 ─── */
-
+/* ─────────────────────────────────────────────────
+   JR 予約先選択
+───────────────────────────────────────────────── */
 const EX_CITIES = new Set([
   '東京','横浜','大宮','品川','名古屋',
   '京都','大阪','神戸','姫路',
@@ -279,7 +401,6 @@ const EX_CITIES = new Set([
 ]);
 
 export function resolveRailProvider(departure, city) {
-  // city.railProvider が設定されている場合は優先
   if (city.railProvider) return city.railProvider;
   if (EX_CITIES.has(departure) && EX_CITIES.has(city.name)) return 'ex';
   const area = DEPARTURE_CITY_INFO[departure]?.jrArea || 'west';

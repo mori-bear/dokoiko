@@ -1,5 +1,5 @@
 import { buildShuffledPool } from './src/engine/selectionEngine.js';
-import { resolveTransportLinks } from './src/transport/transportRenderer.js';
+import { resolveTransportLinks, initTransportGraph } from './src/transport/transportRenderer.js';
 import { buildHotelLinks } from './src/hotel/hotelLinkBuilder.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
@@ -20,12 +20,17 @@ async function init() {
   bindHandlers(state, go, retry);
 
   try {
-    state.destinations = await loadDestinations();
+    const [destinations, graphRes] = await Promise.all([
+      loadDestinations(),
+      fetch('./src/data/transportGraph.json').then(r => r.json()).catch(() => null),
+    ]);
+    state.destinations = destinations;
+    if (graphRes) initTransportGraph(graphRes);
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {
       btn.disabled = true;
-      btn.textContent = err.message.startsWith('[データ整合性エラー]')
+      btn.textContent = err.message?.startsWith('[データ整合性エラー]')
         ? err.message
         : 'データ読み込み失敗';
     }

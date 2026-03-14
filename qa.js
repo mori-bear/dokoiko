@@ -711,6 +711,90 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8b] transportGraph BFS テスト
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8b] transportGraph BFS');
+
+    let graph = null;
+    try {
+      graph = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
+    } catch (e) {
+      sc.ng('transportGraph.json の読み込み失敗: ' + e.message);
+      sc.print(); scorecards.push(sc);
+    }
+
+    if (graph) {
+      // 隣接リスト構築
+      const adj = {};
+      for (const edge of graph.edges) {
+        if (!adj[edge.from]) adj[edge.from] = [];
+        adj[edge.from].push(edge);
+      }
+
+      // BFS: startId → goalId の経路存在チェック
+      function bfsExists(startId, goalId) {
+        if (!graph.nodes[startId] || !graph.nodes[goalId]) return false;
+        const visited = new Set([startId]);
+        const queue   = [startId];
+        while (queue.length) {
+          const cur = queue.shift();
+          if (cur === goalId) return true;
+          for (const e of (adj[cur] || [])) {
+            if (!visited.has(e.to)) { visited.add(e.to); queue.push(e.to); }
+          }
+        }
+        return false;
+      }
+
+      // グラフ基本チェック
+      sc.check(Object.keys(graph.nodes).length > 400, `ノード数不足: ${Object.keys(graph.nodes).length}`);
+      sc.check(graph.edges.length > 800, `エッジ数不足: ${graph.edges.length}`);
+
+      const cityNodes = Object.values(graph.nodes).filter(n => n.type === 'city');
+      const destNodes = Object.values(graph.nodes).filter(n => n.type === 'destination');
+      sc.check(cityNodes.length > 150, `cityノード数不足: ${cityNodes.length}`);
+      sc.check(destNodes.length === 200, `destinationノード数 != 200 (${destNodes.length})`);
+
+      // 6つの必須ルートをBFSで確認
+      const BFS_CASES = [
+        { dep: '東京',   destId: 'kamikochi',        name: '東京→上高地' },
+        { dep: '大宮',   destId: 'nyuto-onsen',      name: '大宮→乳頭温泉' },
+        { dep: '名古屋', destId: 'magome',            name: '名古屋→馬籠' },
+        { dep: '高松',   destId: 'shijishima',       name: '高松→志々島' },
+        { dep: '大阪',   destId: 'yonaguni-island',  name: '大阪→与那国島' },
+        { dep: '大阪',   destId: 'nasu',             name: '大阪→那須' },
+      ];
+
+      BFS_CASES.forEach(tc => {
+        const startId = `city:${tc.dep}`;
+        const goalId  = `destination:${tc.destId}`;
+        const reachable = bfsExists(startId, goalId);
+        sc.check(reachable, `BFS 経路なし: ${tc.name}`);
+        console.log(`  ${reachable ? '✓' : '✗'} BFS ${tc.name}`);
+      });
+
+      // 全destination への到達可能性（全出発地から少なくとも1本）
+      const SAMPLE_DEPS = ['東京', '大阪', '福岡'];
+      let unreachable = 0;
+      destNodes.forEach(dn => {
+        const anyReachable = SAMPLE_DEPS.some(dep =>
+          bfsExists(`city:${dep}`, dn.id)
+        );
+        if (!anyReachable) {
+          unreachable++;
+          console.log(`  ⚠ BFS到達不可: ${dn.name}(${dn.destId})`);
+        }
+      });
+      sc.check(unreachable === 0, `BFS到達不可のdestination: ${unreachable}件`);
+
+      console.log(`  nodes: ${Object.keys(graph.nodes).length}, edges: ${graph.edges.length}`);
+      sc.print();
+      scorecards.push(sc);
+    }
+  }
+
+  /* ───────────────────────────────
      [8] テーマ整合
   ─────────────────────────────── */
   {
