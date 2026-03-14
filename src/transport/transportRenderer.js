@@ -120,7 +120,7 @@ function bfsFindPaths(startId, goalId) {
       found.push(path);
       continue;
     }
-    if (path.length >= 7) continue;
+    if (path.length >= 10) continue;
 
     for (const edge of (_adj[cur] || [])) {
       if (!visited.has(edge.to)) {

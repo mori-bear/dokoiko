@@ -748,13 +748,18 @@ class Scorecard {
       }
 
       // グラフ基本チェック
-      sc.check(Object.keys(graph.nodes).length > 400, `ノード数不足: ${Object.keys(graph.nodes).length}`);
-      sc.check(graph.edges.length > 800, `エッジ数不足: ${graph.edges.length}`);
+      sc.check(Object.keys(graph.nodes).length > 600, `ノード数不足: ${Object.keys(graph.nodes).length}`);
+      sc.check(graph.edges.length > 1000, `エッジ数不足: ${graph.edges.length}`);
 
-      const cityNodes = Object.values(graph.nodes).filter(n => n.type === 'city');
-      const destNodes = Object.values(graph.nodes).filter(n => n.type === 'destination');
-      sc.check(cityNodes.length > 150, `cityノード数不足: ${cityNodes.length}`);
+      const cityNodes    = Object.values(graph.nodes).filter(n => n.type === 'city');
+      const hubNodes     = Object.values(graph.nodes).filter(n => n.type === 'hub');
+      const stationNodes = Object.values(graph.nodes).filter(n => n.type === 'station');
+      const destNodes    = Object.values(graph.nodes).filter(n => n.type === 'destination');
+      sc.check(cityNodes.length >= 31,  `cityノード数不足: ${cityNodes.length}`);
+      sc.check(hubNodes.length >= 100,  `hubノード数不足: ${hubNodes.length}`);
+      sc.check(stationNodes.length >= 100, `stationノード数不足: ${stationNodes.length}`);
       sc.check(destNodes.length === 200, `destinationノード数 != 200 (${destNodes.length})`);
+      console.log(`  city:${cityNodes.length} hub:${hubNodes.length} station:${stationNodes.length} dest:${destNodes.length}`);
 
       // 6つの必須ルートをBFSで確認
       const BFS_CASES = [
@@ -789,6 +794,94 @@ class Scorecard {
       sc.check(unreachable === 0, `BFS到達不可のdestination: ${unreachable}件`);
 
       console.log(`  nodes: ${Object.keys(graph.nodes).length}, edges: ${graph.edges.length}`);
+      sc.print();
+      scorecards.push(sc);
+    }
+  }
+
+  /* ───────────────────────────────
+     [8c] hub/station 構造テスト
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8c] hub/station 構造');
+
+    let graph8c = null;
+    try {
+      graph8c = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
+    } catch (e) {
+      sc.ng('transportGraph.json の読み込み失敗: ' + e.message);
+      sc.print(); scorecards.push(sc);
+    }
+
+    if (graph8c) {
+      const adj8c = {};
+      for (const edge of graph8c.edges) {
+        if (!adj8c[edge.from]) adj8c[edge.from] = [];
+        adj8c[edge.from].push(edge);
+      }
+
+      function bfsFrom(startId) {
+        if (!graph8c.nodes[startId]) return new Set();
+        const visited = new Set([startId]);
+        const queue   = [startId];
+        while (queue.length) {
+          const cur = queue.shift();
+          for (const e of (adj8c[cur] || [])) {
+            if (!visited.has(e.to)) { visited.add(e.to); queue.push(e.to); }
+          }
+        }
+        return visited;
+      }
+
+      // (1) 全 destination が station ノードからのエッジを持つこと
+      const destNodes8c = Object.values(graph8c.nodes).filter(n => n.type === 'destination');
+      const stationNodeIds = new Set(
+        Object.values(graph8c.nodes).filter(n => n.type === 'station').map(n => n.id)
+      );
+      // station または port または airport から直接エッジが来ている destination を検証
+      const edgesTo = {}; // destId → [fromNodeType]
+      for (const e of graph8c.edges) {
+        const toNode = graph8c.nodes[e.to];
+        if (toNode?.type === 'destination') {
+          const fromNode = graph8c.nodes[e.from];
+          if (!edgesTo[e.to]) edgesTo[e.to] = [];
+          edgesTo[e.to].push(fromNode?.type);
+        }
+      }
+
+      let stationMissing = 0;
+      destNodes8c.forEach(dn => {
+        const incoming = edgesTo[dn.id] || [];
+        const hasStationAccess = incoming.some(t => ['station', 'port', 'airport'].includes(t));
+        if (!hasStationAccess) {
+          stationMissing++;
+          console.log(`  ⚠ station なし: ${dn.name}(${dn.destId})`);
+        }
+      });
+      sc.check(stationMissing === 0, `station/port/airport 接続なしのdestination: ${stationMissing}件`);
+
+      // (2) 全 destination が hub から BFS で到達可能であること
+      const HUB_SAMPLE = ['hub:東京', 'hub:大阪', 'hub:福岡'];
+      const reachableFromHubs = new Set();
+      HUB_SAMPLE.forEach(h => {
+        bfsFrom(h).forEach(id => reachableFromHubs.add(id));
+      });
+
+      let hubUnreachable = 0;
+      destNodes8c.forEach(dn => {
+        if (!reachableFromHubs.has(dn.id)) {
+          hubUnreachable++;
+          console.log(`  ⚠ hub到達不可: ${dn.name}(${dn.destId})`);
+        }
+      });
+      sc.check(hubUnreachable === 0, `hub から到達不可のdestination: ${hubUnreachable}件`);
+
+      // (3) hub ノード数チェック
+      const hubCount = Object.values(graph8c.nodes).filter(n => n.type === 'hub').length;
+      sc.check(hubCount >= 100, `hubノード数不足: ${hubCount}`);
+
+      console.log(`  station接続あり: ${destNodes8c.length - stationMissing}/${destNodes8c.length}`);
+      console.log(`  hub到達可能:     ${destNodes8c.length - hubUnreachable}/${destNodes8c.length}`);
       sc.print();
       scorecards.push(sc);
     }

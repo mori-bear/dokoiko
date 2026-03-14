@@ -1,9 +1,11 @@
 /**
- * transportGraph.json 生成スクリプト
+ * transportGraph.json 生成スクリプト（v2: hub/station 階層）
  *
- * 実在する交通ネットワークのみを使用してグラフを構築する。
- * ノード: city / airport / port / destination
- * エッジ: rail / flight / bus / ferry / road
+ * ノード階層:
+ *   city（出発地） → hub（中継ハブ） → station（最寄駅） → destination（目的地）
+ *
+ * ノード種別: city / hub / station / airport / port / destination
+ * エッジ種別: rail / flight / bus / ferry / road / local
  *
  * 使い方: node _buildGraph.js
  */
@@ -12,7 +14,7 @@ const fs = require('fs');
 const dests = require('./src/data/destinations.json');
 
 /* ─────────────────────────────────────────────────
-   鉄道ネットワーク定義
+   鉄道ネットワーク定義（hub→hub）
    [fromCity, toCity, minutes, provider, service]
    provider: 'ex' | 'ekinet' | 'e5489' | 'jrkyushu'
 ───────────────────────────────────────────────── */
@@ -341,11 +343,10 @@ const RAIL_EDGES_RAW = [
   ['松江',   '境港',     40, 'e5489', 'JR境線'],
   ['米子',   '境港',     25, 'e5489', 'JR境線'],
   ['東京',   '下関',     280, 'ex',   '東海道・山陽新幹線'],
-  ['広島',   '岩国',     30, 'e5489', 'JR山陽線'],
 ];
 
 /* ─────────────────────────────────────────────────
-   空港 IATA コード（出発都市用）
+   出発都市 → 空港 IATA（出発都市の所属空港）
 ───────────────────────────────────────────────── */
 const CITY_AIRPORT = {
   '札幌':'CTS','函館':'HKD','旭川':'AKJ',
@@ -446,7 +447,7 @@ const FERRY_ROUTE_EDGES = [
 ];
 
 /* ─────────────────────────────────────────────────
-   港へのアクセス（駅→港）
+   港へのアクセス（hub→港）
 ───────────────────────────────────────────────── */
 const PORT_ACCESS = [
   ['東京',     '竹芝客船ターミナル', 'road', 20],
@@ -500,23 +501,42 @@ function addEdge(from, to, type, meta = {}) {
   edges.push({ id: `e${String(++edgeId).padStart(4,'0')}`, from, to, type, ...meta });
 }
 
-// ── 1. 出発都市ノード ──
-const DEPARTURE_CITIES = Object.keys(CITY_AIRPORT);
-DEPARTURE_CITIES.forEach(c => addNode('city', c));
+// ── 1. ハブ都市の収集 ──
+// RAIL_EDGES_RAW に登場する全都市 + 出発都市 をハブとして登録
+const hubCitiesSet = new Set();
+RAIL_EDGES_RAW.forEach(([from, to]) => {
+  hubCitiesSet.add(from);
+  hubCitiesSet.add(to);
+});
+// 出発都市もハブとして追加
+Object.keys(CITY_AIRPORT).forEach(c => hubCitiesSet.add(c));
+// PORT_ACCESS の都市もハブとして追加
+PORT_ACCESS.forEach(([city]) => hubCitiesSet.add(city));
+// 沖縄バスの都市
+NAHA_BUS.forEach(([from, to]) => { hubCitiesSet.add(from); hubCitiesSet.add(to); });
+// 特殊ハブ（鉄道なし）
+['那覇', '石垣'].forEach(c => hubCitiesSet.add(c));
 
-// ── 2. 出発空港ノード + city→airport エッジ ──
+// ── 2. hub ノード作成 ──
+hubCitiesSet.forEach(c => addNode('hub', c));
+
+// ── 3. city ノード（出発地のみ）+ city→hub エッジ ──
+Object.keys(CITY_AIRPORT).forEach(c => {
+  addNode('city', c);
+  addEdge(nodeId('city', c), nodeId('hub', c), 'local', { minutes: 0 });
+});
+
+// ── 4. 空港ノード + hub→airport エッジ ──
 const doneAirport = new Set();
-DEPARTURE_CITIES.forEach(city => {
-  const iata = CITY_AIRPORT[city];
-  if (!iata) return;
+Object.entries(CITY_AIRPORT).forEach(([city, iata]) => {
   if (!doneAirport.has(iata)) {
     addNode('airport', iata, { iata });
     doneAirport.add(iata);
   }
-  addEdge(nodeId('city', city), nodeId('airport', iata), 'road', { minutes: 30 });
+  addEdge(nodeId('hub', city), nodeId('airport', iata), 'road', { minutes: 30 });
 });
 
-// ── 3. 航空路線エッジ（airport→airport）──
+// ── 5. 航空路線エッジ（airport→airport）──
 Object.entries(FLIGHT_ROUTES).forEach(([from, tos]) => {
   const fromId = nodeId('airport', from);
   if (!nodes[fromId]) addNode('airport', from, { iata: from });
@@ -527,41 +547,45 @@ Object.entries(FLIGHT_ROUTES).forEach(([from, tos]) => {
   });
 });
 
-// ── 4. 空港→最寄り都市（逆アクセス）──
-// destination の airportGateway → destination への道
-// ここでは airport→city ではなく airport→destination を後で直接繋ぐ
-
-// ── 5. 鉄道エッジ（city→city）──
+// ── 6. 鉄道エッジ（hub→hub、双方向）──
 RAIL_EDGES_RAW.forEach(([from, to, minutes, provider, service]) => {
-  const fromId = addNode('city', from);
-  const toId   = addNode('city', to);
+  const fromId = nodeId('hub', from);
+  const toId   = nodeId('hub', to);
   addEdge(fromId, toId, 'rail', { minutes, provider, service });
-  addEdge(toId, fromId, 'rail', { minutes, provider, service }); // 双方向
+  addEdge(toId, fromId, 'rail', { minutes, provider, service });
 });
 
-// ── 6. 港ノード + アクセスエッジ ──
+// ── 7. 港ノード + hub→port エッジ ──
 PORT_ACCESS.forEach(([city, port, type, minutes]) => {
-  addNode('city', city);
   addNode('port', port);
-  addEdge(nodeId('city', city), nodeId('port', port), type, { minutes });
+  addEdge(nodeId('hub', city), nodeId('port', port), type, { minutes });
 });
 
-// 沖縄バス
+// 沖縄バス（hub→hub）
 NAHA_BUS.forEach(([from, to, type, minutes]) => {
-  addNode('city', from);
-  addNode('city', to);
-  addEdge(nodeId('city', from), nodeId('city', to), type, { minutes });
-  addEdge(nodeId('city', to), nodeId('city', from), type, { minutes });
+  addEdge(nodeId('hub', from), nodeId('hub', to), type, { minutes });
+  addEdge(nodeId('hub', to), nodeId('hub', from), type, { minutes });
 });
 
-// ── 7. フェリー路線エッジ（port→port）──
+// ── 8. フェリー路線エッジ（port→port）──
 FERRY_ROUTE_EDGES.forEach(([from, to, type, minutes, operator]) => {
   addNode('port', from);
   addNode('port', to);
   addEdge(nodeId('port', from), nodeId('port', to), type, { minutes, operator });
 });
 
-// ── 8. destination ノード + アクセスエッジ ──
+// ── 9. 沖縄・石垣 空港→ハブ接続 ──
+addNode('hub', '那覇');
+const nahaAirId = nodeId('airport', 'OKA');
+addEdge(nahaAirId, nodeId('hub', '那覇'), 'road', { minutes: 15 });
+addEdge(nodeId('hub', '那覇'), nahaAirId, 'road', { minutes: 15 });
+
+addNode('hub', '石垣');
+const ishiAirId = nodeId('airport', 'ISG');
+addEdge(ishiAirId, nodeId('hub', '石垣'), 'road', { minutes: 20 });
+addEdge(nodeId('hub', '石垣'), ishiAirId, 'road', { minutes: 20 });
+
+// ── 10. destination ノード + station ノード + アクセスエッジ ──
 dests.forEach(d => {
   const destId = addNode('destination', d.id, {
     destId: d.id,
@@ -570,61 +594,66 @@ dests.forEach(d => {
     lng: d.lng,
   });
 
-  // === 8a. railGateway → destination (bus/direct) ===
+  const rg  = d.railGateway ? d.railGateway.replace('駅','').trim() : null;
+  const fg  = d.ferryGateway;
+  const ag  = d.airportGateway;
   const hub = d.gatewayHub;
-  const rg  = d.railGateway ? d.railGateway.replace('駅','').replace(' 駅','') : null;
   const st  = d.secondaryTransport; // 'bus'|'ferry'|'car'|null
 
+  // === 10a. railGateway → station → destination ===
   if (rg) {
-    // railGateway が存在 → city(rg) → destination
-    addNode('city', rg);
+    const stationId = addNode('station', rg, { name: rg });
+    const hubId = addNode('hub', rg); // ハブが未作成なら作成
+    addEdge(hubId, stationId, 'local', { minutes: 0 });
     const edgeType = st === 'car' ? 'road' : st === 'ferry' ? 'ferry' : 'bus';
-    addEdge(nodeId('city', rg), destId, edgeType, { minutes: 30, local: true });
-  } else if (hub) {
-    // gatewayHub のみ → city(hub) → destination
-    addNode('city', hub);
-    const edgeType = st === 'car' ? 'road' : st === 'ferry' ? 'ferry' : 'bus';
-    addEdge(nodeId('city', hub), destId, edgeType, { minutes: 40, local: true });
+    addEdge(stationId, destId, edgeType, { minutes: 30, local: true });
   }
 
-  // === 8b. ferryGateway → destination ===
-  const fg = d.ferryGateway;
+  // === 10b. ferryGateway → destination (direct + station for QA) ===
   if (fg) {
     addNode('port', fg);
+    // BFS ルーティング用の直接エッジ（port→destination）
     addEdge(nodeId('port', fg), destId, 'ferry', { minutes: 60, local: true });
+    // station ノード（QA 用 + BFS 補助）
+    if (!rg) {
+      const stationId = addNode('station', d.id, { name: d.name });
+      addEdge(nodeId('port', fg), stationId, 'local', { minutes: 0 });
+      addEdge(stationId, destId, 'local', { minutes: 0, local: true });
+    }
   }
-  // gateways.ferry 配列にも対応
+
+  // gateways.ferry 配列（複数港対応）
   (d.gateways?.ferry ?? []).forEach(port => {
     if (port === fg) return; // 重複スキップ
     addNode('port', port);
     addEdge(nodeId('port', port), destId, 'ferry', { minutes: 60, local: true });
   });
 
-  // === 8c. airportGateway → destination ===
-  const ag = d.airportGateway;
+  // === 10c. airportGateway → destination (direct + station for QA) ===
   if (ag) {
     const iata = AIRPORT_IATA[ag];
     if (iata) {
       const apId = nodeId('airport', iata);
       if (!nodes[apId]) addNode('airport', iata, { iata });
+      // BFS ルーティング用の直接エッジ
       addEdge(apId, destId, 'bus', { minutes: 40, local: true });
+      // station ノード（QA 用）
+      if (!rg && !fg) {
+        const stationId = addNode('station', d.id, { name: d.name });
+        addEdge(apId, stationId, 'local', { minutes: 0 });
+        addEdge(stationId, destId, 'local', { minutes: 0, local: true });
+      }
     }
   }
 
-  // === 8d. 直結 destination（gatewayHub も railGateway もない → フォールバック）===
-  // 出発地と同地方ならrailで到達可能と仮定（後のBFSが処理）
+  // === 10d. gatewayHub のみ → station → destination ===
+  if (!rg && !fg && !ag && hub) {
+    const stationId = addNode('station', d.id, { name: d.name });
+    const hubId = addNode('hub', hub);
+    addEdge(hubId, stationId, 'bus', { minutes: 40, local: true });
+    addEdge(stationId, destId, 'local', { minutes: 0, local: true });
+  }
 });
-
-// ── 9. 那覇都市ノード補完 ──
-// 沖縄は JR なし、那覇空港が起点
-addNode('city', '那覇');
-const nahaAirId = nodeId('airport', 'OKA');
-addEdge(nahaAirId, nodeId('city', '那覇'), 'road', { minutes: 15 });
-addEdge(nodeId('city', '那覇'), nahaAirId, 'road', { minutes: 15 });
-// 石垣も
-addNode('city', '石垣');
-const ishiAirId = nodeId('airport', 'ISG');
-addEdge(ishiAirId, nodeId('city', '石垣'), 'road', { minutes: 20 });
 
 /* ─────────────────────────────────────────────────
    出力
@@ -637,14 +666,21 @@ fs.writeFileSync(
   'utf8'
 );
 
+const byType = t => Object.values(nodes).filter(n => n.type === t).length;
+const byEdge = t => edges.filter(e => e.type === t).length;
+
 console.log(`nodes: ${Object.keys(nodes).length}`);
+console.log(`  city:        ${byType('city')}`);
+console.log(`  hub:         ${byType('hub')}`);
+console.log(`  station:     ${byType('station')}`);
+console.log(`  airport:     ${byType('airport')}`);
+console.log(`  port:        ${byType('port')}`);
+console.log(`  destination: ${byType('destination')}`);
 console.log(`edges: ${edges.length}`);
-console.log('  city:', Object.values(nodes).filter(n=>n.type==='city').length);
-console.log('  airport:', Object.values(nodes).filter(n=>n.type==='airport').length);
-console.log('  port:', Object.values(nodes).filter(n=>n.type==='port').length);
-console.log('  destination:', Object.values(nodes).filter(n=>n.type==='destination').length);
-console.log('  rail edges:', edges.filter(e=>e.type==='rail').length);
-console.log('  flight edges:', edges.filter(e=>e.type==='flight').length);
-console.log('  ferry edges:', edges.filter(e=>e.type==='ferry').length);
-console.log('  bus edges:', edges.filter(e=>e.type==='bus').length);
+console.log(`  rail:   ${byEdge('rail')}`);
+console.log(`  flight: ${byEdge('flight')}`);
+console.log(`  ferry:  ${byEdge('ferry')}`);
+console.log(`  bus:    ${byEdge('bus')}`);
+console.log(`  road:   ${byEdge('road')}`);
+console.log(`  local:  ${byEdge('local')}`);
 console.log('Done → src/data/transportGraph.json');
