@@ -16,14 +16,9 @@
 
 ### ファイル構成
 ```
-src/data/destinations.json              マスターデータ（200件 destination）
+src/data/destinations.json              マスターデータ（202件 destination）
 src/data/hubs.json                      hub のみ（38件）
-src/data/destinations.destinations.json destination のみ（index.js がフェッチ）
-src/data/destinations.hubs.json         hub のみ（index.js がフェッチ）
 ```
-
-destinations.hubs.json と destinations.destinations.json は destinations.json / hubs.json から自動生成する。
-マスターを編集したら必ず両方を再生成すること。
 
 ### 3階層構造
 ```
@@ -39,6 +34,7 @@ hub（宿泊拠点都市）           例: 金沢, 松山, 高山
 | name | 都市名（ユニーク） |
 | type | "hub" / "destination" / "spot" |
 | prefecture | 都道府県名 |
+| city | 市区町村名（宿検索 fallback 用） |
 | region | 地方名 |
 | lat | 緯度（Google Maps 座標用） |
 | lng | 経度（Google Maps 座標用） |
@@ -46,64 +42,98 @@ hub（宿泊拠点都市）           例: 金沢, 松山, 高山
 | distanceStars | 1〜5（東京基準） |
 | stayAllowed | ["daytrip","1night","2night"] / spot=[] |
 | stayBias | 0=daytrip推奨 / 1=1night / 2=2night（抽選バイアス） |
-| hotelHub | 宿検索キーワード（destination 必須） |
+| hotelHub | 宿検索キーワード（destination 必須。温泉名・エリア名など） |
 | hotelSearch | 宿検索補助キーワード（任意） |
 | gatewayHub | 二次交通起点（バス・ローカル線の乗換駅名） |
 | airportHub | 航空乗継ハブ（多ホップ飛行経由都市名） |
-| railProvider | JR予約先: 'ekinet'|'e5489'|'jrkyushu'|null |
+| railProvider | JR予約先: 'ekinet'\|'e5489'\|'jrkyushu'\|null |
 | access | 交通情報オブジェクト |
 
-### 宿泊リンク生成（src/hotel/hotelLinkBuilder.js）
-- keyword 優先順: hotelHub → hotelSearch → name
-- 楽天: `RAKUTEN_AFF + https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(keyword)}`
-- じゃらん: `VC_BASE + encodeURIComponent('https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=' + encodeURIComponent(keyword))`
-- stayType=daytrip では宿セクション非表示
+## 宿泊リンク生成仕様（唯一の正式仕様）
 
-### 交通ロジック（transportRenderer.js）
+> **この仕様が正式。矛盾する古い仕様が他に存在する場合はこちらが優先。**
+
+### 実装ファイル
+- `src/hotel/hotelLinkBuilder.js` — app.js が import するメインファイル
+- `src/engine/hotelLinkBuilder.js` — qa.js 用（src/hotel/ と完全同期すること）
+
+### 検索キーワード優先順位
+```
+1. hotelHub（温泉名・エリア名など具体的キーワード）
+2. prefecture + " " + city（市区町村名）
+```
+
+例:
+- 草津温泉 → keyword = `草津温泉`
+- 城崎温泉 → keyword = `城崎温泉`
+- 秋保温泉 → keyword = `秋保温泉`
+- 白川郷（hotelHub=高山）→ keyword = `高山`
+- hotelHub なし → keyword = `岩手県 遠野市`
+
+### 楽天トラベル検索 URL（正式）
+```
+https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(keyword)}
+```
+- アフィリエイト経由: `RAKUTEN_AFF + target`（raw URL 連結、target を encode しない）
+- RAKUTEN_AFF: `https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=`
+- パラメータ: `f_query`（旧 `f_keyword` は禁止）
+
+### じゃらん検索 URL（正式）
+```
+https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(keyword)}
+```
+- アフィリエイト経由: `VC_BASE + encodeURIComponent(target)`（二重エンコード正）
+- VC_BASE: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=`
+- **`uwp2011` / `uww2011init.do` は使用禁止**
+
+### stayType=daytrip では宿セクション非表示（render.js 側で制御）
+
+## 交通ロジック（transportRenderer.js）
 
 フロー: 出発地 → 長距離交通（新幹線/飛行機/高速バス） → gatewayHub → 二次交通（bus/ferry/car） → destination
 
 優先順位（resolveTransportLinks）:
-1. 島かつフェリーあり: 飛行機（直行 or airportHub経由）+ フェリー + レンタカー
-2. ★1 近場: Google Maps 1本のみ（lat/lng 座標使用）
-3. 通常: JR → 高速バス → 飛行機 → フェリー → 二次交通
-- 最大3ルート（limitRoutes(3)）
+1. transportGraph BFS ルート探索（初期化済みの場合）
+2. フィールドベース fallback（旧ロジック）
+
+BFS 優先順位: 島フェリー > 鉄道 > 飛行機 > フェリー
+最大3ルート（limitRoutes(3)）
+
+### 航空券リンク（Skyscanner）
+- 出発地の空港: `DEPARTURE_CITY_INFO[departure].iata`
+- 就航路線チェック: `FLIGHT_ROUTES[fromIata].includes(toIata)` で路線存在を必ず確認
+- 路線が存在しない場合は Skyscanner ボタン非表示
+- ラベル例: `航空券を比較する（伊丹 → 那覇）`
+- 最大1ボタン（limitRoutes で skyscanner スライス 1 本）
+
+### Google Maps リンク
+- `buildGoogleMapsLink(originStation, accessStation, 'transit')`
+- 最大1ボタン（limitRoutes で google-maps スライス 1 本）
 
 ### secondaryTransport フィールド
 - 型: 文字列 `'bus'|'ferry'|'car'`（旧object形式は廃止）
 - gatewayHub がある destination は必須
 - transportRenderer は railGateway → destination 間の二次交通として使用
 
-### airportHub フィールド
-- 多ホップ飛行の中継都市名（例: 与那国島→'那覇'）
-- AIRPORT_HUB_GATEWAY（linkBuilder.js）で都市名→空港名を解決
-- 直行便がない場合の fallback として使用
-
-### Google Maps リンク（linkBuilder.js）
-`buildGoogleMapsLink(origin, destination, mode, label, coords)`:
-- coords = {lat, lng} を渡すと destination を `{lat},{lng}` 形式にする
-- ★1 近場かつ railGateway なしの場合は city.lat/lng を自動使用
-- フォールバック時も coords を使用
-
 ## ディレクトリ構成
 ```
 src/config/constants.js          DEPARTURES, DEPARTURE_CITY_INFO
 src/engine/selectionEngine.js    抽選：重み付きシャッフル＋nearestHubフォールバック
 src/engine/distanceCalculator.js 距離計算（★1〜★3）
-src/engine/distanceEngine.js     distanceCalculator.js の再エクスポートラッパー
-src/transport/transportRenderer.js  交通リンクアセンブラ
+src/transport/transportRenderer.js  交通リンクアセンブラ（BFS + フォールバック）
 src/transport/linkBuilder.js        GoogleMaps/JR/Skyscanner/レンタカーリンク生成
-src/hotel/hotelLinkBuilder.js    宿泊リンク（楽天/じゃらん）← src/engine/ からコピー
-src/engine/hotelLinkBuilder.js   宿泊リンク（後方互換用に残す）
+src/transport/airportMap.js         出発都市→IATA マップ
+src/transport/flightRoutes.js       就航路線データ（出発IATA→着IATA配列）
+src/hotel/hotelLinkBuilder.js    宿泊リンク（楽天/じゃらん）← app.js が import
+src/engine/hotelLinkBuilder.js   宿泊リンク（qa.js 用 / src/hotel/ と完全同期）
 src/data/hubs.json               38 hub都市
-src/data/destinations.json       200 destination
-src/data/spots.json              空（0件）
+src/data/destinations.json       202 destination
 src/data/index.js                hubs.json + destinations.json をフェッチして結合
 src/ui/render.js                 DOM描画
 src/ui/handlers.js               イベントバインド
 pages/about.html / privacy.html / disclaimer.html
 index.html / style.css / app.js / qa.js
-CLAUDE.md                        プロジェクトルール
+CLAUDE.md                        プロジェクトルール（唯一の仕様書）
 ```
 
 ## 禁止事項
@@ -112,6 +142,8 @@ CLAUDE.md                        プロジェクトルール
 - console.log 禁止（本番コード）
 - グローバル汚染禁止（ES modules）
 - Yahoo 乗換禁止
+- じゃらん旧 URL `uwp2011` / `uww2011init.do` 禁止
+- 楽天旧パラメータ `f_keyword` 禁止
 
 ## 開発環境
 ```bash

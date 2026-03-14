@@ -13,8 +13,13 @@
 const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
 const VC_BASE     = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
 
+/**
+ * キーワード優先順位:
+ *   1. hotelHub（温泉名・エリア名など具体的キーワード）
+ *   2. prefecture + city（市区町村名）
+ */
 function resolveKeyword(dest) {
-  return `${dest.prefecture} ${dest.city}`;
+  return dest.hotelHub || `${dest.prefecture} ${dest.city}`;
 }
 
 export function buildHotelLinks(dest) {
