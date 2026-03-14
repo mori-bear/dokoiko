@@ -51,7 +51,8 @@ function buildCityBlock(city) {
     <div class="city-block">
       <div class="city-header">
         <h2 class="city-name">${city.name}</h2>
-        <p class="city-sub">${city.prefecture}${city.name}${categoryBadge}</p>
+        <p class="city-sub">${city.prefecture}${city.city || city.name}${categoryBadge}</p>
+        ${city.accessStation ? `<p class="city-station">最寄駅：${city.accessStation}</p>` : ''}
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       ${spotListHtml}

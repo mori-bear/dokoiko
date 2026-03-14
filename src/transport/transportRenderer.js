@@ -64,9 +64,12 @@ export function resolveTransportLinks(city, departure) {
     ? resolveByBFS(city, departure)
     : resolveByFields(city, departure);
 
-  // Google Maps は 1 本のみ: 出発地 → 目的地（都道府県名付き）
+  // Google Maps は 1 本のみ: 出発駅 → accessStation（transit）
   const nonMaps = raw.filter(l => l.type !== 'google-maps');
-  const mapsLink = buildGoogleMapsLink(departure, `${city.name} ${city.prefecture}`, 'transit');
+  const fromCity  = DEPARTURE_CITY_INFO[departure];
+  const originStation = fromCity?.rail || departure;
+  const destStation   = city.accessStation || `${city.name} ${city.prefecture}`;
+  const mapsLink = buildGoogleMapsLink(originStation, destStation, 'transit');
   return limitRoutes([...nonMaps, mapsLink], 3);
 }
 

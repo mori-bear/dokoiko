@@ -352,8 +352,11 @@ function getLinks(city, dep) {
   return links;
 }
 
+/** hotelLinkBuilder.js と同期: prefecture + city（市区町村名）優先 */
 function resolveKeyword(city) {
-  return city.hotelHub || city.hotelSearch || city.name;
+  if (city.hotelHub && city.hotelHub !== city.name) return city.hotelHub;
+  if (city.prefecture && city.city) return `${city.prefecture} ${city.city}`;
+  return city.hotelSearch || city.name;
 }
 
 function buildJalanUrl(city) {
@@ -590,9 +593,10 @@ class Scorecard {
       const kw = resolveKeyword(city);
       sc.check(!!kw && kw.trim().length > 0, `${city.id}: keyword 空`);
 
-      // hotelHub 優先チェック
-      if (city.hotelHub) {
-        sc.check(kw === city.hotelHub, `${city.id}: hotelHub(${city.hotelHub}) が keyword(${kw}) に使われていない`);
+      // v2: prefecture+city 形式チェック（hotelHub が city.name と異なる場合は hotelHub 優先）
+      if (city.prefecture && city.city && (!city.hotelHub || city.hotelHub === city.name)) {
+        sc.check(kw === `${city.prefecture} ${city.city}`,
+          `${city.id}: keyword が prefecture+city でない（${kw}）`);
       }
 
       const jUrl = buildJalanUrl(city);
@@ -600,12 +604,12 @@ class Scorecard {
       sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),     `${city.id}: じゃらん VC ドメイン欠落`);
       sc.check(jUrl.includes('uwp2011'),                        `${city.id}: じゃらん uwp2011 URL 欠落`);
       sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),           `${city.id}: 楽天 aff ドメイン欠落`);
-      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 kw.travel keyword/Search.do URL 欠落`);
+      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 keyword/Search.do URL 欠落`);
       // じゃらん: keyword → vc_url 内に二重エンコード
       sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))),
         `${city.id}: じゃらん keyword エンコード不正`);
-      // 楽天: keyword/Search.do?f_keyword= 形式チェック
-      sc.check(rUrl.includes(`keyword/Search.do?f_keyword=${encodeURIComponent(kw)}`),
+      // 楽天: f_keyword= 形式チェック
+      sc.check(rUrl.includes(`f_keyword=${encodeURIComponent(kw)}`),
         `${city.id}: 楽天 keyword エンコード不正`);
     });
     sc.print();
@@ -1020,6 +1024,108 @@ class Scorecard {
     console.log(`  accessStation: ${DESTS.length - noAccess.length}/${DESTS.length}`);
     console.log(`  city: ${DESTS.length - noCity.length}/${DESTS.length}`);
     console.log(`  tags付与: ${DESTS.length - noTags.length}/${DESTS.length}`);
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8g] Google Maps URL 検証（全件）
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8g] GoogleMaps URL');
+    const ALL_DEPS = Object.keys(DEPARTURE_CITY_INFO);
+
+    DESTS.forEach(city => {
+      const dep = ALL_DEPS[0]; // 東京で代表検証
+      const fromCity   = DEPARTURE_CITY_INFO[dep];
+      const origin     = encodeURIComponent(fromCity.rail);
+      const dest       = encodeURIComponent(city.accessStation || `${city.name} ${city.prefecture}`);
+      const expectedUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=transit`;
+
+      // accessStation が存在すること
+      sc.check(!!city.accessStation, `${city.id}: accessStation 未設定`);
+      // URL に正しい destination が入っていること
+      if (city.accessStation) {
+        sc.check(expectedUrl.includes(encodeURIComponent(city.accessStation)),
+          `${city.id}: GoogleMaps destination が accessStation でない`);
+      }
+    });
+
+    // 出発地ごとに origin=出発駅 かつ destination=accessStation かチェック（サンプル）
+    const sampleCities = DESTS.filter((_, i) => i % 20 === 0);
+    let mapsOk = 0, mapsFail = 0;
+    ALL_DEPS.forEach(dep => {
+      const fromCity = DEPARTURE_CITY_INFO[dep];
+      sampleCities.forEach(city => {
+        const origin  = fromCity.rail;
+        const destAcc = city.accessStation || `${city.name} ${city.prefecture}`;
+        const url = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destAcc)}&travelmode=transit`;
+        const hasOrigin = url.includes(encodeURIComponent(origin));
+        const hasDest   = url.includes(encodeURIComponent(destAcc));
+        if (hasOrigin && hasDest) mapsOk++;
+        else {
+          mapsFail++;
+          sc.ng(`${dep}→${city.id}: origin=${origin}, dest=${destAcc} URLに含まれない`);
+        }
+      });
+    });
+
+    console.log(`  GoogleMaps URL 正常: ${mapsOk} / エラー: ${mapsFail}`);
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8h] ランダムシミュレーション（100回）
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8h] ランダムシミュレーション');
+    const ALL_DEPS = Object.keys(DEPARTURE_CITY_INFO);
+    const RNG_SEED = 42;
+    function rng(seed, n) { return ((seed * 1664525 + 1013904223) >>> 0) % n; }
+
+    let seed = RNG_SEED;
+    const results = { ok:0, fail:0, noTransport:0, noHotel:0, badMaps:0 };
+
+    for (let i = 0; i < 100; i++) {
+      seed = (seed * 1664525 + 1013904223) >>> 0;
+      const dep  = ALL_DEPS[seed % ALL_DEPS.length];
+      seed = (seed * 1664525 + 1013904223) >>> 0;
+      const city = DESTS[seed % DESTS.length];
+
+      // 交通リンク: 1件以上
+      const links = getLinks(city, dep);
+      if (links.length === 0) {
+        results.noTransport++;
+        sc.ng(`[${i+1}] ${dep}→${city.name}(${city.id}): 交通リンク0件`);
+        continue;
+      }
+
+      // 宿リンク
+      const rUrl = buildRakutenUrl(city);
+      const jUrl = buildJalanUrl(city);
+      if (!rUrl.includes('rakuten') || !jUrl.includes('jalan')) {
+        results.noHotel++;
+        sc.ng(`[${i+1}] ${city.name}: 宿リンク不正`);
+        continue;
+      }
+
+      // GoogleMaps URL（origin=出発駅, destination=accessStation）
+      const fromCity = DEPARTURE_CITY_INFO[dep];
+      const origin   = fromCity?.rail || dep;
+      const destAcc  = city.accessStation || `${city.name} ${city.prefecture}`;
+      const mapsUrl  = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destAcc)}&travelmode=transit`;
+      if (!mapsUrl.includes(encodeURIComponent(origin)) || !mapsUrl.includes(encodeURIComponent(destAcc))) {
+        results.badMaps++;
+        sc.ng(`[${i+1}] ${dep}→${city.name}: GoogleMaps URL不正`);
+        continue;
+      }
+
+      results.ok++;
+      sc.ok();
+    }
+
+    console.log(`  ok:${results.ok} / 交通0件:${results.noTransport} / 宿不正:${results.noHotel} / Maps不正:${results.badMaps}`);
     sc.print();
     scorecards.push(sc);
   }

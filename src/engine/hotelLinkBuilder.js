@@ -17,9 +17,16 @@
 const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
 const VC_BASE     = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
 
-/** キーワード解決: hotelHub → hotelSearch → name */
+/**
+ * キーワード解決: prefecture + city（市区町村名）を優先。
+ * 旧フィールド hotelHub / hotelSearch は island 等の例外用に残す。
+ */
 function resolveKeyword(city) {
-  return city.hotelHub ?? city.hotelSearch ?? city.name;
+  // 島・温泉地など特別な検索ワードが指定されている場合はそれを優先
+  if (city.hotelHub && city.hotelHub !== city.name) return city.hotelHub;
+  // v2 フィールドがある場合は prefecture + city（市区町村名）で検索
+  if (city.prefecture && city.city) return `${city.prefecture} ${city.city}`;
+  return city.hotelSearch ?? city.name;
 }
 
 /**
@@ -36,16 +43,15 @@ export function buildHotelLinks(city) {
 /** 楽天 target URL（テスト用にも export）*/
 export function buildRakutenTarget(city) {
   const keyword = resolveKeyword(city);
-  return `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(keyword)}`;
+  return `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword=${encodeURIComponent(keyword)}`;
 }
 
 function buildRakutenHotelLink(city) {
   const keyword = resolveKeyword(city);
   const target  = buildRakutenTarget(city);
-  // pc パラメータはRakutenの仕様に合わせてそのまま連結（keyword のみ encode 済み）
   return {
     type:  'rakuten',
-    label: `${keyword}の宿を見る（楽天）`,
+    label: `${city.name}の宿を見る（楽天）`,
     url:   RAKUTEN_AFF + target,
   };
 }
@@ -57,11 +63,10 @@ export function buildJalanTarget(city) {
 }
 
 function buildJalanHotelLink(city) {
-  const keyword = resolveKeyword(city);
   const target  = buildJalanTarget(city);
   return {
     type:  'jalan',
-    label: `${keyword}の宿を見る（じゃらん）`,
+    label: `${city.name}の宿を見る（じゃらん）`,
     url:   VC_BASE + encodeURIComponent(target),
   };
 }
