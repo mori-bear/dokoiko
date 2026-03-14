@@ -352,12 +352,9 @@ function getLinks(city, dep) {
   return links;
 }
 
-/**
- * hotelLinkBuilder.js と同期
- * 優先順位: 1. hotelHub  2. prefecture + city
- */
+/** hotelLinkBuilder.js と同期: prefecture + " " + city 固定 */
 function resolveKeyword(city) {
-  return city.hotelHub || `${city.prefecture} ${city.city}`;
+  return `${city.prefecture} ${city.city}`;
 }
 
 function buildJalanUrl(city) {
@@ -594,10 +591,9 @@ class Scorecard {
       const kw = resolveKeyword(city);
       sc.check(!!kw && kw.trim().length > 0, `${city.id}: keyword 空`);
 
-      // keyword チェック: hotelHub があればその値、なければ prefecture+city
-      const expectedKw = city.hotelHub || `${city.prefecture} ${city.city}`;
-      sc.check(kw === expectedKw,
-        `${city.id}: keyword 不正（expected=${expectedKw}, actual=${kw})`);
+      // keyword = prefecture + " " + city 固定
+      sc.check(kw === `${city.prefecture} ${city.city}`,
+        `${city.id}: keyword が prefecture+city でない（${kw}）`);
 
       const jUrl = buildJalanUrl(city);
       const rUrl = buildRakutenUrl(city);

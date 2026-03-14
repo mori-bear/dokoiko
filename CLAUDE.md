@@ -57,30 +57,28 @@ hub（宿泊拠点都市）           例: 金沢, 松山, 高山
 - `src/hotel/hotelLinkBuilder.js` — app.js が import するメインファイル
 - `src/engine/hotelLinkBuilder.js` — qa.js 用（src/hotel/ と完全同期すること）
 
-### 検索キーワード優先順位
+### 検索キーワード（固定ルール）
 ```
-1. hotelHub（温泉名・エリア名など具体的キーワード）
-2. prefecture + " " + city（市区町村名）
+keyword = prefecture + " " + city
 ```
 
 例:
-- 草津温泉 → keyword = `草津温泉`
-- 城崎温泉 → keyword = `城崎温泉`
-- 秋保温泉 → keyword = `秋保温泉`
-- 白川郷（hotelHub=高山）→ keyword = `高山`
-- hotelHub なし → keyword = `岩手県 遠野市`
+- 草津温泉 → `群馬県 草津町`
+- 城崎温泉 → `兵庫県 豊岡市`
+- 石垣島  → `沖縄県 石垣市`
+- 遠野    → `岩手県 遠野市`
 
-### 楽天トラベル検索 URL（正式）
+### 楽天トラベル検索 URL（正式・唯一）
 ```
-https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(keyword)}
+https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(prefecture + " " + city)}
 ```
 - アフィリエイト経由: `RAKUTEN_AFF + target`（raw URL 連結、target を encode しない）
 - RAKUTEN_AFF: `https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=`
 - パラメータ: `f_query`（旧 `f_keyword` は禁止）
 
-### じゃらん検索 URL（正式）
+### じゃらん検索 URL（正式・唯一）
 ```
-https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(keyword)}
+https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(prefecture + " " + city)}
 ```
 - アフィリエイト経由: `VC_BASE + encodeURIComponent(target)`（二重エンコード正）
 - VC_BASE: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=`
