@@ -151,15 +151,17 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   /**
    * travelTimeMinutes ベースの日程フィルタ
-   *   < 120min  → daytrip のみ
-   *   120〜300min → 1night
-   *   300min+   → 1night または 2night
+   *   0〜120min  → daytrip
+   *   120〜240min → 1night
+   *   240〜420min → 2night
+   *   420min+    → 3night+
    */
   function matchesStayType(d) {
     const t = d.travelTimeMinutes;
-    if (stayType === 'daytrip' && t >= 120) return false;
-    if (stayType === '1night' && t < 120) return false;
-    if (stayType === '2night' && t < 300) return false;
+    if (stayType === 'daytrip'  && t >= 120) return false;
+    if (stayType === '1night'   && (t < 120 || t >= 240)) return false;
+    if (stayType === '2night'   && (t < 240 || t >= 420)) return false;
+    if (stayType === '3night+'  && t < 420) return false;
     return true;
   }
 

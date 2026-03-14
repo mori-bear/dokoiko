@@ -406,7 +406,7 @@
       "fukuoka": 215,
       "takamatsu": 165
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "奈良市",
     "hubStation": "京都駅",
@@ -549,7 +549,7 @@
       "fukuoka": 315,
       "takamatsu": 265
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "伊勢市",
     "hubStation": "名古屋駅",
@@ -623,7 +623,7 @@
       "fukuoka": 150,
       "takamatsu": 310
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "別府市",
     "hubStation": "大分駅",
@@ -689,7 +689,7 @@
       "fukuoka": 735,
       "takamatsu": 685
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "3night+",
     "secondaryTransport": null,
     "city": "小樽市",
     "hubStation": "新千歳空港",
@@ -895,7 +895,7 @@
       "fukuoka": 105,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "廿日市市",
     "hubStation": "広島駅",
@@ -1037,7 +1037,7 @@
       "fukuoka": 165,
       "takamatsu": 5
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "小豆島町",
     "hubStation": "高松駅",
@@ -1167,7 +1167,7 @@
       "fukuoka": 310,
       "takamatsu": 260
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "田辺市",
     "hubStation": "紀伊田辺駅",
     "accessStation": "紀伊田辺駅"
@@ -1896,7 +1896,7 @@
       "fukuoka": 205,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "神戸市",
     "hubStation": "三ノ宮駅",
     "accessStation": "有馬温泉駅"
@@ -2050,7 +2050,7 @@
       "fukuoka": 150,
       "takamatsu": 100
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "岡山倉敷",
     "hubStation": "倉敷駅",
@@ -2337,7 +2337,7 @@
       "fukuoka": 130,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "由布市",
     "hubStation": "大分駅",
@@ -2404,7 +2404,7 @@
       "fukuoka": 30,
       "takamatsu": 190
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "city": "熊本黒川温泉",
     "hubStation": "博多駅",
     "accessStation": "博多駅"
@@ -2467,7 +2467,7 @@
       "fukuoka": 130,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "阿蘇市",
     "hubStation": "熊本駅",
@@ -2597,7 +2597,7 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "city": "天草市",
     "hubStation": "熊本駅",
     "accessStation": "熊本駅"
@@ -2931,7 +2931,7 @@
       "fukuoka": 220,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "萩市",
     "hubStation": "新山口駅",
@@ -2997,7 +2997,7 @@
       "fukuoka": 200,
       "takamatsu": 220
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "下関市",
     "hubStation": "博多駅",
@@ -3062,7 +3062,7 @@
       "fukuoka": 165,
       "takamatsu": 5
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "直島町",
     "hubStation": "高松駅",
@@ -3126,7 +3126,7 @@
       "fukuoka": 250,
       "takamatsu": 90
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "琴平町",
     "hubStation": "高松駅",
@@ -3574,7 +3574,7 @@
       "fukuoka": 550,
       "takamatsu": 500
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "白馬村",
     "hubStation": "長野駅",
@@ -3765,7 +3765,7 @@
       "fukuoka": 165,
       "takamatsu": 325
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "指宿市",
     "hubStation": "鹿児島中央駅",
@@ -3830,7 +3830,7 @@
       "fukuoka": 140,
       "takamatsu": 300
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "佐世保市",
     "hubStation": "博多駅",
@@ -3895,7 +3895,7 @@
       "fukuoka": 180,
       "takamatsu": 340
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "平戸市",
     "hubStation": "佐世保駅",
     "accessStation": "佐世保駅"
@@ -4089,7 +4089,7 @@
       "fukuoka": 205,
       "takamatsu": 155
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "兵庫淡路島",
     "hubStation": "三ノ宮駅",
     "accessStation": "三ノ宮駅"
@@ -4475,7 +4475,7 @@
       "fukuoka": 530,
       "takamatsu": 480
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "宮古市",
     "hubStation": "盛岡駅",
@@ -4540,7 +4540,7 @@
       "fukuoka": 555,
       "takamatsu": 505
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "酒田市",
     "hubStation": "新庄駅",
@@ -4606,7 +4606,7 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "city": "高千穂町",
     "hubStation": "熊本駅",
     "accessStation": "熊本駅"
@@ -4669,7 +4669,7 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "鹿児島奄美大島",
     "hubStation": "奄美大島駅",
@@ -4734,7 +4734,7 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "五島市",
     "hubStation": "長崎港",
@@ -4798,7 +4798,7 @@
       "fukuoka": 120,
       "takamatsu": 280
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "雲仙市",
     "hubStation": "諫早駅",
     "accessStation": "諫早駅"
@@ -4922,7 +4922,7 @@
       "fukuoka": 260,
       "takamatsu": 210
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "三好市",
     "hubStation": "高松駅",
@@ -4987,7 +4987,7 @@
       "fukuoka": 190,
       "takamatsu": 210
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "津和野町",
     "hubStation": "新山口駅",
@@ -5051,7 +5051,7 @@
       "fukuoka": 265,
       "takamatsu": 215
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "犬山市",
     "hubStation": "名古屋駅",
@@ -5117,7 +5117,7 @@
       "fukuoka": 305,
       "takamatsu": 255
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "木曽町",
     "hubStation": "名古屋駅",
     "accessStation": "南木曽駅"
@@ -5181,7 +5181,7 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "南丹市",
     "hubStation": "園部駅",
     "accessStation": "園部駅"
@@ -5442,7 +5442,7 @@
       "fukuoka": 160,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "山口湯田温泉",
     "hubStation": "湯田温泉駅",
@@ -5505,7 +5505,7 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "嬉野市",
     "hubStation": "嬉野温泉駅",
@@ -5698,7 +5698,7 @@
       "fukuoka": 275,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "室戸市",
     "hubStation": "高知駅",
     "accessStation": "高知駅"
@@ -5763,7 +5763,7 @@
       "fukuoka": 230,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "三好市",
     "hubStation": "阿波池田駅",
     "accessStation": "阿波池田駅"
@@ -6086,7 +6086,7 @@
       "fukuoka": 160,
       "takamatsu": 180
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "竹原市",
     "hubStation": "広島駅",
@@ -6153,7 +6153,7 @@
       "fukuoka": 305,
       "takamatsu": 255
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "木曽町",
     "hubStation": "名古屋駅",
     "accessStation": "南木曽駅"
@@ -6219,7 +6219,7 @@
       "fukuoka": 285,
       "takamatsu": 235
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "中津川市",
     "hubStation": "名古屋駅",
     "accessStation": "中津川駅"
@@ -6284,7 +6284,7 @@
       "fukuoka": 265,
       "takamatsu": 215
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "長浜市",
     "hubStation": "米原駅",
@@ -6350,7 +6350,7 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "彦根市",
     "hubStation": "米原駅",
@@ -6934,7 +6934,7 @@
       "fukuoka": 340,
       "takamatsu": 290
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "豊岡市",
     "hubStation": "豊岡駅",
     "accessStation": "豊岡駅"
@@ -7062,7 +7062,7 @@
       "fukuoka": 380,
       "takamatsu": 330
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "三朝町",
     "hubStation": "倉吉駅",
     "accessStation": "倉吉駅"
@@ -7126,7 +7126,7 @@
       "fukuoka": 330,
       "takamatsu": 490
     },
-    "stayRecommendation": "3night+",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "日南市",
     "hubStation": "宮崎駅",
@@ -7193,7 +7193,7 @@
       "fukuoka": 150,
       "takamatsu": 310
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "人吉市",
     "hubStation": "熊本駅",
@@ -7390,7 +7390,7 @@
       "fukuoka": 70,
       "takamatsu": 230
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "南阿蘇村",
     "hubStation": "熊本駅",
     "accessStation": "熊本駅"
@@ -7620,7 +7620,7 @@
       "fukuoka": 735,
       "takamatsu": 685
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "3night+",
     "city": "積丹町",
     "hubStation": "小樽駅",
     "accessStation": "積丹バスターミナル"
@@ -8542,7 +8542,7 @@
       "fukuoka": 330,
       "takamatsu": 490
     },
-    "stayRecommendation": "3night+",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "日南市",
     "hubStation": "宮崎駅",
@@ -8621,7 +8621,7 @@
       "fukuoka": 110,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "福岡門司港",
     "hubStation": "門司港駅",
@@ -8699,7 +8699,7 @@
       "fukuoka": 65,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "糸島市",
     "hubStation": "博多駅",
@@ -8779,7 +8779,7 @@
       "fukuoka": 170,
       "takamatsu": 330
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "島原市",
     "hubStation": "諫早駅",
     "accessStation": "島原駅"
@@ -8857,7 +8857,7 @@
       "fukuoka": 255,
       "takamatsu": 205
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "敦賀市",
     "hubStation": "敦賀駅",
@@ -8925,7 +8925,7 @@
       "fukuoka": 230,
       "takamatsu": 70
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "city": "香川志々島",
     "hubStation": "詫間駅",
     "accessStation": "詫間駅"
@@ -9430,7 +9430,7 @@
       "fukuoka": 550,
       "takamatsu": 500
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "city": "男鹿市",
     "hubStation": "秋田駅",
@@ -10735,7 +10735,7 @@
       "fukuoka": 230,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "橿原市",
     "hubStation": "大阪駅",
@@ -10979,7 +10979,7 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "明日香村",
     "hubStation": "橿原神宮前駅",
@@ -11106,7 +11106,7 @@
       "fukuoka": 275,
       "takamatsu": 225
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "大田市",
     "hubStation": "大田市駅",
@@ -11170,7 +11170,7 @@
       "fukuoka": 290,
       "takamatsu": 240
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "大田市",
     "hubStation": "大田市駅",
     "accessStation": "大田市駅"
@@ -11365,7 +11365,7 @@
       "fukuoka": 150,
       "takamatsu": 170
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "1night",
     "city": "周防大島町",
     "hubStation": "広島駅",
     "accessStation": "大畠駅"
@@ -11870,7 +11870,7 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "日田市",
     "hubStation": "久留米駅",
@@ -11994,7 +11994,7 @@
       "fukuoka": 85,
       "takamatsu": 245
     },
-    "stayRecommendation": "2night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "武雄市",
     "hubStation": "武雄温泉駅",
@@ -12124,7 +12124,7 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "対馬市",
     "hubStation": "福岡空港",
@@ -12189,7 +12189,7 @@
       "fukuoka": 20,
       "takamatsu": 180
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "長崎壱岐",
     "hubStation": "壱岐駅",
@@ -12255,7 +12255,7 @@
       "fukuoka": 90,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "西之表市",
     "hubStation": "鹿児島空港",
     "accessStation": "西之表港"
@@ -12320,7 +12320,7 @@
       "fukuoka": 110,
       "takamatsu": 250
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "city": "菊池市",
     "hubStation": "熊本駅",
     "accessStation": "熊本駅"
@@ -12959,7 +12959,7 @@
       "fukuoka": 175,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "岡山矢掛",
     "hubStation": "矢掛駅",
@@ -13023,7 +13023,7 @@
       "fukuoka": 175,
       "takamatsu": 125
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "city": "津山市",
     "hubStation": "岡山駅",
@@ -13200,7 +13200,7 @@
       "fukuoka": 510,
       "takamatsu": 480
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "hotelSearch": "釜石"
   },
   {

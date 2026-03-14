@@ -5,8 +5,6 @@ import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
 import { loadDestinations } from './src/data/index.js';
-import { initMap, updateMapDeparture } from './src/ui/mapView.js';
-
 const state = {
   destinations: [],
   departure:    '東京',
@@ -20,11 +18,6 @@ async function init() {
   initIntro();
   bindHandlers(state, go, retry);
 
-  // 出発地変更時にマップを更新
-  document.getElementById('departure-select')?.addEventListener('change', (e) => {
-    updateMapDeparture(e.target.value);
-  });
-
   try {
     const [destinations, graphRes] = await Promise.all([
       loadDestinations(),
@@ -32,7 +25,6 @@ async function init() {
     ]);
     state.destinations = destinations;
     if (graphRes) initTransportGraph(graphRes);
-    initMap(destinations, state.departure);
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {

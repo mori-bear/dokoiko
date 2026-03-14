@@ -6,11 +6,6 @@
   <title>どこ行こ？ — 知らない街に出会う旅のきっかけ</title>
   <meta name="description" content="旅先を決めかねているあなたへ。出発地と日程を選ぶだけで、まだ行ったことのない日本の街と出会えます。">
   <link rel="stylesheet" href="./style.css">
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <!-- Leaflet.MarkerCluster -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin="">
 </head>
 <body>
 
@@ -34,12 +29,6 @@
       <section class="hero">
         <h1 class="hero-heading">知らない街へ、行ってみる？</h1>
         <p class="hero-sub">旅先を選ぶのではなく、旅先に出会う。<br>出発地と日程を選ぶだけ。</p>
-      </section>
-
-      <section class="how-to" id="about">
-        <div class="step"><span class="step-num">1</span><p>出発地・日程・テーマを選ぶ</p></div>
-        <div class="step"><span class="step-num">2</span><p>「どこ行こ？」を押す</p></div>
-        <div class="step"><span class="step-num">3</span><p>交通・宿リンクからそのまま予約</p></div>
       </section>
 
       <section class="controls">
@@ -101,6 +90,7 @@
             <button class="sel-btn" data-group="stay" data-value="daytrip">日帰り</button>
             <button class="sel-btn active" data-group="stay" data-value="1night">1泊</button>
             <button class="sel-btn" data-group="stay" data-value="2night">2泊</button>
+            <button class="sel-btn" data-group="stay" data-value="3night+">3泊以上</button>
           </div>
         </div>
 
@@ -136,16 +126,6 @@
     </div>
   </main>
 
-  <!-- 行ける旅先マップ -->
-  <section class="map-section" id="map-section">
-    <div class="map-section-inner">
-      <h2 class="map-section-title">行ける旅先マップ</h2>
-      <p class="map-section-sub">出発地を変えると、移動時間ごとに色分けして全国の旅先を表示します。</p>
-      <div class="map-legend" id="map-legend"></div>
-      <div id="travel-map" class="travel-map"></div>
-    </div>
-  </section>
-
   <footer class="site-footer">
     <p class="footer-policy">交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。</p>
     <nav class="footer-nav">
@@ -156,10 +136,6 @@
     <p class="footer-copy">© 2025 どこ行こ？</p>
   </footer>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN2GqG4=" crossorigin=""></script>
-  <!-- Leaflet.MarkerCluster JS -->
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>
