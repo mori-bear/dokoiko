@@ -352,24 +352,22 @@ function getLinks(city, dep) {
   return links;
 }
 
-/** hotelLinkBuilder.js と同期: prefecture + city（市区町村名）優先 */
+/** hotelLinkBuilder.js と同期: prefecture + city（市区町村名）固定 */
 function resolveKeyword(city) {
-  if (city.hotelHub && city.hotelHub !== city.name) return city.hotelHub;
-  if (city.prefecture && city.city) return `${city.prefecture} ${city.city}`;
-  return city.hotelSearch || city.name;
+  return `${city.prefecture} ${city.city}`;
 }
 
 function buildJalanUrl(city) {
   const kw = resolveKeyword(city);
   const vc = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
-  const target = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(kw)}`;
+  const target = `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(kw)}`;
   return vc + encodeURIComponent(target);
 }
 
 function buildRakutenUrl(city) {
   const kw  = resolveKeyword(city);
   const aff = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
-  const target = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword=${encodeURIComponent(kw)}`;
+  const target = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(kw)}`;
   return aff + target; // pc パラメータは raw URL（Rakuten affiliate 仕様）
 }
 
@@ -593,23 +591,21 @@ class Scorecard {
       const kw = resolveKeyword(city);
       sc.check(!!kw && kw.trim().length > 0, `${city.id}: keyword 空`);
 
-      // v2: prefecture+city 形式チェック（hotelHub が city.name と異なる場合は hotelHub 優先）
-      if (city.prefecture && city.city && (!city.hotelHub || city.hotelHub === city.name)) {
-        sc.check(kw === `${city.prefecture} ${city.city}`,
-          `${city.id}: keyword が prefecture+city でない（${kw}）`);
-      }
+      // prefecture+city 形式チェック（固定ルール）
+      sc.check(kw === `${city.prefecture} ${city.city}`,
+        `${city.id}: keyword が prefecture+city でない（${kw}）`);
 
       const jUrl = buildJalanUrl(city);
       const rUrl = buildRakutenUrl(city);
       sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),     `${city.id}: じゃらん VC ドメイン欠落`);
-      sc.check(jUrl.includes('uwp2011'),                        `${city.id}: じゃらん uwp2011 URL 欠落`);
+      sc.check(jUrl.includes('uwp1700'),                        `${city.id}: じゃらん uwp1700 URL 欠落`);
       sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),           `${city.id}: 楽天 aff ドメイン欠落`);
       sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 keyword/Search.do URL 欠落`);
       // じゃらん: keyword → vc_url 内に二重エンコード
       sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))),
         `${city.id}: じゃらん keyword エンコード不正`);
-      // 楽天: f_keyword= 形式チェック
-      sc.check(rUrl.includes(`f_keyword=${encodeURIComponent(kw)}`),
+      // 楽天: f_query= 形式チェック
+      sc.check(rUrl.includes(`f_query=${encodeURIComponent(kw)}`),
         `${city.id}: 楽天 keyword エンコード不正`);
     });
     sc.print();
@@ -628,8 +624,8 @@ class Scorecard {
         `${city.id}: じゃらん VC URL 形式不正`);
       sc.check(rUrl.startsWith('https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc='),
         `${city.id}: 楽天 Aff URL 形式不正`);
-      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword='),
-        `${city.id}: 楽天 keyword/Search.do?f_keyword= 形式不正`);
+      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do?f_query='),
+        `${city.id}: 楽天 keyword/Search.do?f_query= 形式不正`);
     });
     sc.print();
     scorecards.push(sc);
@@ -646,10 +642,10 @@ class Scorecard {
     const tasks = [];
     targets.forEach(city => {
       // じゃらん: target URL（直接 HEAD → 200 を期待）
-      const jTarget = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(resolveKeyword(city))}`;
+      const jTarget = `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(jTarget).then(r => ({ city, svc:'じゃらん', url:jTarget, ...r })));
-      // 楽天: keyword/Search.do?f_keyword= → 200
-      const rTarget = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword=${encodeURIComponent(resolveKeyword(city))}`;
+      // 楽天: keyword/Search.do?f_query= → 200
+      const rTarget = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(rTarget).then(r => ({ city, svc:'楽天', url:rTarget, ...r })));
     });
 

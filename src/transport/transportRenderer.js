@@ -333,12 +333,14 @@ function getCar(city) {
 }
 
 function limitRoutes(links, max) {
-  // google-maps は最大1本、主ルートの上限にはカウントしない（補助情報扱い）
-  const maps   = links.filter(l => l.type === 'google-maps').slice(0, 1);
-  const main   = links.filter(l => l.type !== 'note' && l.type !== 'rental' && l.type !== 'google-maps');
+  // google-maps: 最大1本（補助情報扱い、上限カウントなし）
+  // skyscanner:  最大1本
+  const maps = links.filter(l => l.type === 'google-maps').slice(0, 1);
+  const sky  = links.filter(l => l.type === 'skyscanner').slice(0, 1);
+  const other = links.filter(l => l.type !== 'note' && l.type !== 'rental' && l.type !== 'google-maps' && l.type !== 'skyscanner');
   const notes  = links.filter(l => l.type === 'note');
   const rental = links.filter(l => l.type === 'rental');
-  return [...main.slice(0, max), ...maps, ...notes, ...rental];
+  return [...sky, ...other].slice(0, max).concat(maps, notes, rental);
 }
 
 function gw(city, key) {

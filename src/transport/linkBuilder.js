@@ -101,14 +101,35 @@ export function buildGoogleMapsLink(origin, destination, mode = 'transit', label
   };
 }
 
+/* ── IATA 短縮名（出発空港ラベル用）── */
+export const IATA_SHORT_NAME = {
+  'HND': '羽田',  'NRT': '成田',
+  'CTS': '新千歳', 'AKJ': '旭川',  'HKD': '函館',  'MMB': '女満別', 'KUH': '釧路', 'SHB': '中標津',
+  'AOJ': '青森',  'SDJ': '仙台',  'HNA': '花巻',
+  'MMJ': '松本',  'FSZ': '静岡',
+  'NGO': 'セントレア', 'KMQ': '小松',  'TOY': '富山',
+  'ITM': '伊丹',  'KIX': '関西',  'UKB': '神戸',
+  'HIJ': '広島',  'OKJ': '岡山',  'IZO': '出雲',  'YGJ': '米子',
+  'TAK': '高松',  'MYJ': '松山',  'KCZ': '高知',  'TKS': '徳島',
+  'FUK': '福岡',  'KMJ': '熊本',  'KOJ': '鹿児島', 'NGS': '長崎',  'KMI': '宮崎',
+  'OKA': '那覇',  'ISG': '石垣',  'MMY': '宮古',
+};
+
 /* ── Skyscanner ── */
 
+/**
+ * @param {string} fromIata    — 出発空港 IATA
+ * @param {string} toAirportName — 到着空港の日本語名
+ * ラベル例: 航空券を比較する（伊丹 → 那覇）
+ */
 export function buildSkyscannerLink(fromIata, toAirportName) {
   const toIata = AIRPORT_IATA[toAirportName];
   if (!toIata) return null;
+  const fromShort = IATA_SHORT_NAME[fromIata] || fromIata;
+  const toShort   = toAirportName.replace(/空港$/, '');
   return {
     type: 'skyscanner',
-    label: `航空券を比較する（${toAirportName}）`,
+    label: `航空券を比較する（${fromShort} → ${toShort}）`,
     url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
