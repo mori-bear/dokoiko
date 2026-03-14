@@ -60,10 +60,14 @@ function coords(city) {
    メインエントリ
 ───────────────────────────────────────────────── */
 export function resolveTransportLinks(city, departure) {
-  if (_graph && _adj) {
-    return resolveByBFS(city, departure);
-  }
-  return resolveByFields(city, departure);
+  const raw = _graph && _adj
+    ? resolveByBFS(city, departure)
+    : resolveByFields(city, departure);
+
+  // Google Maps は 1 本のみ: 出発地 → 目的地（都道府県名付き）
+  const nonMaps = raw.filter(l => l.type !== 'google-maps');
+  const mapsLink = buildGoogleMapsLink(departure, `${city.name} ${city.prefecture}`, 'transit');
+  return limitRoutes([...nonMaps, mapsLink], 3);
 }
 
 /* ─────────────────────────────────────────────────
@@ -178,23 +182,12 @@ function pathToLinks(path, city, departure, fromCity) {
 
   // ── 鉄道ルート ──
   if (railSeg) {
-    const provider = resolveRailProvider(departure, city);
-    const jrLink   = buildJrLink(provider);
+    const provider  = resolveRailProvider(departure, city);
+    const fromName  = (_graph.nodes[railSeg.from]?.name || departure).replace(/駅$/, '');
+    const toName    = (_graph.nodes[railSeg.to]?.name   || '').replace(/駅$/, '');
+    const jrLink    = buildJrLink(provider, fromName && toName ? { from: fromName, to: toName } : null);
     const links    = jrLink ? [jrLink] : [];
 
-    const fromName  = _graph.nodes[railSeg.from]?.name || departure;
-    const toName    = _graph.nodes[railSeg.to]?.name || '';
-    links.push(buildGoogleMapsLink(
-      fromName + '駅', toName + '駅', 'transit'
-    ));
-
-    if (localSeg) {
-      const gateName = _graph.nodes[localSeg.from]?.name || toName;
-      links.push(buildGoogleMapsLink(
-        gateName, city.name, 'transit',
-        `${gateName}から${city.name}へ（Googleマップ）`, co
-      ));
-    }
     return links.filter(Boolean);
   }
 
@@ -278,19 +271,10 @@ function getRail(city, departure, fromCity) {
   const railGateway = gw(city, 'railGateway');
   if (!railGateway) return [];
   const links = [];
-  const jr = buildJrLink(resolveRailProvider(departure, city));
+  const fromStation = fromCity.rail.replace(/駅$/, '');
+  const toStation   = railGateway.replace(/駅$/, '');
+  const jr = buildJrLink(resolveRailProvider(departure, city), { from: fromStation, to: toStation });
   if (jr) links.push(jr);
-  links.push(buildGoogleMapsLink(fromCity.rail, railGateway, 'transit'));
-  const hasSecondary = city.secondaryTransport || city.railNote;
-  if (hasSecondary) {
-    const stType = typeof city.secondaryTransport === 'string'
-      ? city.secondaryTransport
-      : (city.secondaryTransport?.type ?? 'bus');
-    const label = stType === 'ferry' ? `フェリーで${city.name}へ（Googleマップ）`
-                : stType === 'car'   ? `車で${city.name}へ（Googleマップ）`
-                : `バスで${city.name}へ（Googleマップ）`;
-    links.push(buildGoogleMapsLink(railGateway, city.name, 'transit', label, coords(city)));
-  }
   return links;
 }
 
@@ -346,10 +330,12 @@ function getCar(city) {
 }
 
 function limitRoutes(links, max) {
-  const main   = links.filter(l => l.type !== 'note' && l.type !== 'rental');
+  // google-maps は最大1本、主ルートの上限にはカウントしない（補助情報扱い）
+  const maps   = links.filter(l => l.type === 'google-maps').slice(0, 1);
+  const main   = links.filter(l => l.type !== 'note' && l.type !== 'rental' && l.type !== 'google-maps');
   const notes  = links.filter(l => l.type === 'note');
   const rental = links.filter(l => l.type === 'rental');
-  return [...main.slice(0, max), ...notes, ...rental];
+  return [...main.slice(0, max), ...maps, ...notes, ...rental];
 }
 
 function gw(city, key) {

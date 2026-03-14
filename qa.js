@@ -363,7 +363,7 @@ function buildJalanUrl(city) {
 function buildRakutenUrl(city) {
   const kw  = resolveKeyword(city);
   const aff = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
-  const target = `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(kw)}`;
+  const target = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword=${encodeURIComponent(kw)}`;
   return aff + target; // pc パラメータは raw URL（Rakuten affiliate 仕様）
 }
 
@@ -597,12 +597,12 @@ class Scorecard {
       sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),     `${city.id}: じゃらん VC ドメイン欠落`);
       sc.check(jUrl.includes('uwp2011'),                        `${city.id}: じゃらん uwp2011 URL 欠落`);
       sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),           `${city.id}: 楽天 aff ドメイン欠落`);
-      sc.check(rUrl.includes('travel.rakuten.co.jp/package/search/'), `${city.id}: 楽天 travel package/search URL 欠落`);
+      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 kw.travel keyword/Search.do URL 欠落`);
       // じゃらん: keyword → vc_url 内に二重エンコード
       sc.check(jUrl.includes(encodeURIComponent(encodeURIComponent(kw))),
         `${city.id}: じゃらん keyword エンコード不正`);
-      // 楽天: package/search/?keyword= 形式チェック
-      sc.check(rUrl.includes(`package/search/?keyword=${encodeURIComponent(kw)}`),
+      // 楽天: keyword/Search.do?f_keyword= 形式チェック
+      sc.check(rUrl.includes(`keyword/Search.do?f_keyword=${encodeURIComponent(kw)}`),
         `${city.id}: 楽天 keyword エンコード不正`);
     });
     sc.print();
@@ -621,8 +621,8 @@ class Scorecard {
         `${city.id}: じゃらん VC URL 形式不正`);
       sc.check(rUrl.startsWith('https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc='),
         `${city.id}: 楽天 Aff URL 形式不正`);
-      sc.check(rUrl.includes('travel.rakuten.co.jp/package/search/?keyword='),
-        `${city.id}: 楽天 /package/search/?keyword= 形式不正`);
+      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword='),
+        `${city.id}: 楽天 keyword/Search.do?f_keyword= 形式不正`);
     });
     sc.print();
     scorecards.push(sc);
@@ -641,8 +641,8 @@ class Scorecard {
       // じゃらん: target URL（直接 HEAD → 200 を期待）
       const jTarget = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(jTarget).then(r => ({ city, svc:'じゃらん', url:jTarget, ...r })));
-      // 楽天: package/search/?keyword= → 200
-      const rTarget = `https://travel.rakuten.co.jp/package/search/?keyword=${encodeURIComponent(resolveKeyword(city))}`;
+      // 楽天: keyword/Search.do?f_keyword= → 200
+      const rTarget = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_keyword=${encodeURIComponent(resolveKeyword(city))}`;
       tasks.push(() => httpsHead(rTarget).then(r => ({ city, svc:'楽天', url:rTarget, ...r })));
     });
 

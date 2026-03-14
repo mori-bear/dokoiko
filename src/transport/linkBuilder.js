@@ -115,34 +115,21 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
 
 /* ── JR予約（1ボタン） ── */
 
-export function buildJrLink(bookingProvider) {
+/**
+ * @param {string} bookingProvider
+ * @param {{from:string, to:string}|null} route — 表示する駅間ルート（任意）
+ */
+export function buildJrLink(bookingProvider, route = null) {
+  function lbl(provider) {
+    if (route?.from && route?.to) return `${route.from} → ${route.to}（${provider}）`;
+    return `JRを予約する（${provider}）`;
+  }
   switch (bookingProvider) {
-    case 'ekinet':
-      return {
-        type: 'jr-east',
-        label: 'JRを予約する（えきねっと）',
-        url: 'https://www.eki-net.com/',
-      };
-    case 'e5489':
-      return {
-        type: 'jr-west',
-        label: 'JRを予約する（e5489）',
-        url: 'https://www.jr-odekake.net/goyoyaku/',
-      };
-    case 'ex':
-      return {
-        type: 'jr-ex',
-        label: '新幹線を予約する（EX）',
-        url: 'https://expy.jp/',
-      };
-    case 'jrkyushu':
-      return {
-        type: 'jr-kyushu',
-        label: 'JRを予約する（九州ネット予約）',
-        url: 'https://train.yoyaku.jrkyushu.co.jp/',
-      };
-    default:
-      return null;
+    case 'ekinet':   return { type: 'jr-east',   label: lbl('えきねっと'),     url: 'https://www.eki-net.com/' };
+    case 'e5489':    return { type: 'jr-west',   label: lbl('e5489'),         url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'ex':       return { type: 'jr-ex',     label: lbl('EX'),            url: 'https://expy.jp/' };
+    case 'jrkyushu': return { type: 'jr-kyushu', label: lbl('九州ネット予約'), url: 'https://train.yoyaku.jrkyushu.co.jp/' };
+    default:         return null;
   }
 }
 
