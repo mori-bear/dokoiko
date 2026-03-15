@@ -5,7 +5,9 @@
     "prefCode": "aichi",
     "prefecture": "愛知県",
     "jalanPath": "/23/LRG_230010/",
-    "rakutenPath": "/yado/aichi/nagoya.html"
+    "rakutenPath": "/yado/aichi/nagoya.html",
+    "rakutenKeyword": "愛知県 名古屋市",
+    "jalanCode": "230010"
   },
   {
     "id": "ise",
@@ -13,7 +15,9 @@
     "prefCode": "mie",
     "prefecture": "三重県",
     "jalanPath": "/24/LRG_240020/",
-    "rakutenPath": "/yado/mie/ise.html"
+    "rakutenPath": "/yado/mie/ise.html",
+    "rakutenKeyword": "三重県 伊勢市",
+    "jalanCode": "240020"
   },
   {
     "id": "shirakawago",
@@ -21,7 +25,9 @@
     "prefCode": "gifu",
     "prefecture": "岐阜県",
     "jalanPath": "/21/LRG_210070/",
-    "rakutenPath": "/yado/gifu/shirakawago.html"
+    "rakutenPath": "/yado/gifu/shirakawago.html",
+    "rakutenKeyword": "岐阜県 岐阜白川郷",
+    "jalanCode": "210070"
   },
   {
     "id": "takayama",
@@ -29,7 +35,9 @@
     "prefCode": "gifu",
     "prefecture": "岐阜県",
     "jalanPath": "/21/LRG_210060/",
-    "rakutenPath": "/yado/gifu/takayama.html"
+    "rakutenPath": "/yado/gifu/takayama.html",
+    "rakutenKeyword": "岐阜県 岐阜高山",
+    "jalanCode": "210060"
   },
   {
     "id": "toba",
@@ -37,7 +45,9 @@
     "prefCode": "mie",
     "prefecture": "三重県",
     "jalanPath": "/24/LRG_240040/",
-    "rakutenPath": "/yado/mie/toba.html"
+    "rakutenPath": "/yado/mie/toba.html",
+    "rakutenKeyword": "三重県 鳥羽市",
+    "jalanCode": "240040"
   },
   {
     "id": "inuyama",
@@ -45,7 +55,9 @@
     "prefCode": "aichi",
     "prefecture": "愛知県",
     "jalanPath": "/23/LRG_230040/",
-    "rakutenPath": "/yado/aichi/inuyama.html"
+    "rakutenPath": "/yado/aichi/inuyama.html",
+    "rakutenKeyword": "愛知県 犬山市",
+    "jalanCode": "230040"
   },
   {
     "id": "kiso",
@@ -53,7 +65,9 @@
     "prefCode": "nagano",
     "prefecture": "長野県",
     "jalanPath": "/20/LRG_200060/",
-    "rakutenPath": "/yado/nagano/kiso.html"
+    "rakutenPath": "/yado/nagano/kiso.html",
+    "rakutenKeyword": "長野県 木曽町",
+    "jalanCode": "200060"
   },
   {
     "id": "kanazawa",
@@ -61,7 +75,9 @@
     "prefCode": "ishikawa",
     "prefecture": "石川県",
     "jalanPath": "/17/LRG_170010/",
-    "rakutenPath": "/yado/ishikawa/kanazawa.html"
+    "rakutenPath": "/yado/ishikawa/kanazawa.html",
+    "rakutenKeyword": "石川県 金沢市",
+    "jalanCode": "170010"
   },
   {
     "id": "wajima",
@@ -69,7 +85,9 @@
     "prefCode": "ishikawa",
     "prefecture": "石川県",
     "jalanPath": "/17/LRG_170030/",
-    "rakutenPath": "/yado/ishikawa/wajima.html"
+    "rakutenPath": "/yado/ishikawa/wajima.html",
+    "rakutenKeyword": "石川県 輪島市",
+    "jalanCode": "170030"
   },
   {
     "id": "kaga-onsen",
@@ -77,7 +95,9 @@
     "prefCode": "ishikawa",
     "prefecture": "石川県",
     "jalanPath": "/17/LRG_170020/",
-    "rakutenPath": "/yado/ishikawa/kaga.html"
+    "rakutenPath": "/yado/ishikawa/kaga.html",
+    "rakutenKeyword": "石川県 加賀市",
+    "jalanCode": "170020"
   },
   {
     "id": "gokayama",
@@ -85,7 +105,9 @@
     "prefCode": "toyama",
     "prefecture": "富山県",
     "jalanPath": "/16/LRG_160020/",
-    "rakutenPath": "/yado/toyama/gokayama.html"
+    "rakutenPath": "/yado/toyama/gokayama.html",
+    "rakutenKeyword": "富山県 南砺市",
+    "jalanCode": "160020"
   },
   {
     "id": "himi",
@@ -93,7 +115,9 @@
     "prefCode": "toyama",
     "prefecture": "富山県",
     "jalanPath": "/16/LRG_160010/",
-    "rakutenPath": "/yado/toyama/himi.html"
+    "rakutenPath": "/yado/toyama/himi.html",
+    "rakutenKeyword": "富山県 氷見市",
+    "jalanCode": "160010"
   },
   {
     "id": "gifu",
@@ -101,7 +125,9 @@
     "prefCode": "gifu",
     "prefecture": "岐阜県",
     "jalanPath": "/21/LRG_210010/",
-    "rakutenPath": "/yado/gifu/gifu.html"
+    "rakutenPath": "/yado/gifu/gifu.html",
+    "rakutenKeyword": "岐阜県 岐阜市",
+    "jalanCode": "210010"
   },
   {
     "id": "niigata",
@@ -109,7 +135,9 @@
     "prefCode": "niigata",
     "prefecture": "新潟県",
     "jalanPath": "/15/LRG_150010/",
-    "rakutenPath": "/yado/niigata/niigata.html"
+    "rakutenPath": "/yado/niigata/niigata.html",
+    "rakutenKeyword": "新潟県 新潟市",
+    "jalanCode": "150010"
   },
   {
     "id": "matsumoto",
@@ -117,7 +145,9 @@
     "prefCode": "nagano",
     "prefecture": "長野県",
     "jalanPath": "/20/LRG_200010/",
-    "rakutenPath": "/yado/nagano/matsumoto.html"
+    "rakutenPath": "/yado/nagano/matsumoto.html",
+    "rakutenKeyword": "長野県 松本市",
+    "jalanCode": "200010"
   },
   {
     "id": "atami",
@@ -125,7 +155,9 @@
     "prefCode": "shizuoka",
     "prefecture": "静岡県",
     "jalanPath": "/22/LRG_220010/",
-    "rakutenPath": "/yado/shizuoka/atami.html"
+    "rakutenPath": "/yado/shizuoka/atami.html",
+    "rakutenKeyword": "静岡県 熱海市",
+    "jalanCode": "220010"
   },
   {
     "id": "fujikawaguchiko",
@@ -133,7 +165,9 @@
     "prefCode": "yamanashi",
     "prefecture": "山梨県",
     "jalanPath": "/19/LRG_190010/",
-    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html"
+    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html",
+    "rakutenKeyword": "山梨県 山梨富士河口湖",
+    "jalanCode": "190010"
   },
   {
     "id": "shuzenji",
@@ -141,7 +175,9 @@
     "prefCode": "shizuoka",
     "prefecture": "静岡県",
     "jalanPath": "/22/LRG_220020/",
-    "rakutenPath": "/yado/shizuoka/shuzenji.html"
+    "rakutenPath": "/yado/shizuoka/shuzenji.html",
+    "rakutenKeyword": "静岡県 伊豆市",
+    "jalanCode": "220020"
   },
   {
     "id": "shimoda",
@@ -149,7 +185,9 @@
     "prefCode": "shizuoka",
     "prefecture": "静岡県",
     "jalanPath": "/22/LRG_220060/",
-    "rakutenPath": "/yado/shizuoka/shimoda.html"
+    "rakutenPath": "/yado/shizuoka/shimoda.html",
+    "rakutenKeyword": "静岡県 下田市",
+    "jalanCode": "220060"
   },
   {
     "id": "hakuba",
@@ -157,7 +195,9 @@
     "prefCode": "nagano",
     "prefecture": "長野県",
     "jalanPath": "/20/LRG_200020/",
-    "rakutenPath": "/yado/nagano/hakuba.html"
+    "rakutenPath": "/yado/nagano/hakuba.html",
+    "rakutenKeyword": "長野県 白馬村",
+    "jalanCode": "200020"
   },
   {
     "id": "tateyama-kurobe",
@@ -165,7 +205,9 @@
     "prefCode": "toyama",
     "prefecture": "富山県",
     "jalanPath": "/16/LRG_160030/",
-    "rakutenPath": "/yado/toyama/tateyama.html"
+    "rakutenPath": "/yado/toyama/tateyama.html",
+    "rakutenKeyword": "富山県 立山町",
+    "jalanCode": "160030"
   },
   {
     "id": "hiroshima",
@@ -173,7 +215,9 @@
     "prefCode": "hiroshima",
     "prefecture": "広島県",
     "jalanPath": "/34/LRG_340010/",
-    "rakutenPath": "/yado/hiroshima/hiroshima.html"
+    "rakutenPath": "/yado/hiroshima/hiroshima.html",
+    "rakutenKeyword": "広島県 広島市",
+    "jalanCode": "340010"
   },
   {
     "id": "miyajima",
@@ -181,7 +225,9 @@
     "prefCode": "hiroshima",
     "prefecture": "広島県",
     "jalanPath": "/34/LRG_340060/",
-    "rakutenPath": "/yado/hiroshima/miyajima.html"
+    "rakutenPath": "/yado/hiroshima/miyajima.html",
+    "rakutenKeyword": "広島県 廿日市市",
+    "jalanCode": "340060"
   },
   {
     "id": "onomichi",
@@ -189,7 +235,9 @@
     "prefCode": "hiroshima",
     "prefecture": "広島県",
     "jalanPath": "/34/LRG_340020/",
-    "rakutenPath": "/yado/hiroshima/onomichi.html"
+    "rakutenPath": "/yado/hiroshima/onomichi.html",
+    "rakutenKeyword": "広島県 尾道市",
+    "jalanCode": "340020"
   },
   {
     "id": "kurashiki",
@@ -197,7 +245,9 @@
     "prefCode": "okayama",
     "prefecture": "岡山県",
     "jalanPath": "/33/LRG_330020/",
-    "rakutenPath": "/yado/okayama/kurashiki.html"
+    "rakutenPath": "/yado/okayama/kurashiki.html",
+    "rakutenKeyword": "岡山県 岡山倉敷",
+    "jalanCode": "330020"
   },
   {
     "id": "hagi",
@@ -205,7 +255,9 @@
     "prefCode": "yamaguchi",
     "prefecture": "山口県",
     "jalanPath": "/35/LRG_350020/",
-    "rakutenPath": "/yado/yamaguchi/hagi.html"
+    "rakutenPath": "/yado/yamaguchi/hagi.html",
+    "rakutenKeyword": "山口県 萩市",
+    "jalanCode": "350020"
   },
   {
     "id": "shimonoseki",
@@ -213,7 +265,9 @@
     "prefCode": "yamaguchi",
     "prefecture": "山口県",
     "jalanPath": "/35/LRG_350010/",
-    "rakutenPath": "/yado/yamaguchi/shimonoseki.html"
+    "rakutenPath": "/yado/yamaguchi/shimonoseki.html",
+    "rakutenKeyword": "山口県 下関市",
+    "jalanCode": "350010"
   },
   {
     "id": "tottori",
@@ -221,7 +275,9 @@
     "prefCode": "tottori",
     "prefecture": "鳥取県",
     "jalanPath": "/31/LRG_310010/",
-    "rakutenPath": "/yado/tottori/tottori.html"
+    "rakutenPath": "/yado/tottori/tottori.html",
+    "rakutenKeyword": "鳥取県 鳥取市",
+    "jalanCode": "310010"
   },
   {
     "id": "tsuwano",
@@ -229,7 +285,9 @@
     "prefCode": "shimane",
     "prefecture": "島根県",
     "jalanPath": "/32/LRG_320030/",
-    "rakutenPath": "/yado/shimane/tsuwano.html"
+    "rakutenPath": "/yado/shimane/tsuwano.html",
+    "rakutenKeyword": "島根県 津和野町",
+    "jalanCode": "320030"
   },
   {
     "id": "okayama",
@@ -237,7 +295,9 @@
     "prefCode": "okayama",
     "prefecture": "岡山県",
     "jalanPath": "/33/LRG_330010/",
-    "rakutenPath": "/yado/okayama/okayama.html"
+    "rakutenPath": "/yado/okayama/okayama.html",
+    "rakutenKeyword": "岡山県 岡山市",
+    "jalanCode": "330010"
   },
   {
     "id": "sapporo",
@@ -245,7 +305,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010030/",
-    "rakutenPath": "/yado/hokkaido/sapporo.html"
+    "rakutenPath": "/yado/hokkaido/sapporo.html",
+    "rakutenKeyword": "北海道 札幌市",
+    "jalanCode": "010030"
   },
   {
     "id": "otaru",
@@ -253,7 +315,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010140/",
-    "rakutenPath": "/yado/hokkaido/otaru.html"
+    "rakutenPath": "/yado/hokkaido/otaru.html",
+    "rakutenKeyword": "北海道 小樽市",
+    "jalanCode": "010140"
   },
   {
     "id": "furano",
@@ -261,7 +325,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010170/",
-    "rakutenPath": "/yado/hokkaido/furano.html"
+    "rakutenPath": "/yado/hokkaido/furano.html",
+    "rakutenKeyword": "北海道 富良野市",
+    "jalanCode": "010170"
   },
   {
     "id": "toyako",
@@ -269,7 +335,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010140/",
-    "rakutenPath": "/yado/hokkaido/toyako.html"
+    "rakutenPath": "/yado/hokkaido/toyako.html",
+    "rakutenKeyword": "北海道 洞爺湖町",
+    "jalanCode": "010140"
   },
   {
     "id": "noboribetsu",
@@ -277,7 +345,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010130/",
-    "rakutenPath": "/yado/hokkaido/noboribetsu.html"
+    "rakutenPath": "/yado/hokkaido/noboribetsu.html",
+    "rakutenKeyword": "北海道 登別市",
+    "jalanCode": "010130"
   },
   {
     "id": "shiretoko",
@@ -285,7 +355,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010290/",
-    "rakutenPath": "/yado/hokkaido/shiretoko.html"
+    "rakutenPath": "/yado/hokkaido/shiretoko.html",
+    "rakutenKeyword": "北海道 斜里町",
+    "jalanCode": "010290"
   },
   {
     "id": "jozankei",
@@ -293,7 +365,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010220/",
-    "rakutenPath": "/yado/hokkaido/jozankei.html"
+    "rakutenPath": "/yado/hokkaido/jozankei.html",
+    "rakutenKeyword": "北海道 札幌市",
+    "jalanCode": "010220"
   },
   {
     "id": "biei",
@@ -301,7 +375,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010370/",
-    "rakutenPath": "/yado/hokkaido/biei.html"
+    "rakutenPath": "/yado/hokkaido/biei.html",
+    "rakutenKeyword": "北海道 美瑛町",
+    "jalanCode": "010370"
   },
   {
     "id": "asahikawa",
@@ -309,7 +385,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010060/",
-    "rakutenPath": "/yado/hokkaido/asahikawa.html"
+    "rakutenPath": "/yado/hokkaido/asahikawa.html",
+    "rakutenKeyword": "北海道 旭川市",
+    "jalanCode": "010060"
   },
   {
     "id": "kushiro",
@@ -317,7 +395,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010110/",
-    "rakutenPath": "/yado/hokkaido/kushiro.html"
+    "rakutenPath": "/yado/hokkaido/kushiro.html",
+    "rakutenKeyword": "北海道 釧路市",
+    "jalanCode": "010110"
   },
   {
     "id": "hakodate",
@@ -325,7 +405,9 @@
     "prefCode": "hokkaido",
     "prefecture": "北海道",
     "jalanPath": "/01/LRG_010050/",
-    "rakutenPath": "/yado/hokkaido/hakodate.html"
+    "rakutenPath": "/yado/hokkaido/hakodate.html",
+    "rakutenKeyword": "北海道 函館市",
+    "jalanCode": "010050"
   },
   {
     "id": "osaka",
@@ -333,7 +415,9 @@
     "prefCode": "osaka",
     "prefecture": "大阪府",
     "jalanPath": "/27/LRG_270010/",
-    "rakutenPath": "/yado/osaka/osaka.html"
+    "rakutenPath": "/yado/osaka/osaka.html",
+    "rakutenKeyword": "大阪府 大阪市",
+    "jalanCode": "270010"
   },
   {
     "id": "nara",
@@ -341,7 +425,9 @@
     "prefCode": "nara",
     "prefecture": "奈良県",
     "jalanPath": "/29/LRG_290010/",
-    "rakutenPath": "/yado/nara/nara.html"
+    "rakutenPath": "/yado/nara/nara.html",
+    "rakutenKeyword": "奈良県 奈良市",
+    "jalanCode": "290010"
   },
   {
     "id": "arima-onsen",
@@ -349,7 +435,9 @@
     "prefCode": "hyogo",
     "prefecture": "兵庫県",
     "jalanPath": "/28/LRG_280010/",
-    "rakutenPath": "/yado/hyogo/arima.html"
+    "rakutenPath": "/yado/hyogo/arima.html",
+    "rakutenKeyword": "兵庫県 神戸市",
+    "jalanCode": "280010"
   },
   {
     "id": "kinosaki-onsen",
@@ -357,7 +445,9 @@
     "prefCode": "hyogo",
     "prefecture": "兵庫県",
     "jalanPath": "/28/LRG_280060/",
-    "rakutenPath": "/yado/hyogo/kinosaki.html"
+    "rakutenPath": "/yado/hyogo/kinosaki.html",
+    "rakutenKeyword": "兵庫県 豊岡市",
+    "jalanCode": "280060"
   },
   {
     "id": "shirahama-o",
@@ -365,7 +455,9 @@
     "prefCode": "wakayama",
     "prefecture": "和歌山県",
     "jalanPath": "/30/LRG_300020/",
-    "rakutenPath": "/yado/wakayama/shirahama.html"
+    "rakutenPath": "/yado/wakayama/shirahama.html",
+    "rakutenKeyword": "和歌山県 和歌山白浜",
+    "jalanCode": "300020"
   },
   {
     "id": "amanohashidate",
@@ -373,7 +465,9 @@
     "prefCode": "kyoto",
     "prefecture": "京都府",
     "jalanPath": "/26/LRG_260030/",
-    "rakutenPath": "/yado/kyoto/amanohashidate.html"
+    "rakutenPath": "/yado/kyoto/amanohashidate.html",
+    "rakutenKeyword": "京都府 宮津市",
+    "jalanCode": "260030"
   },
   {
     "id": "awaji",
@@ -381,7 +475,9 @@
     "prefCode": "hyogo",
     "prefecture": "兵庫県",
     "jalanPath": "/28/LRG_280070/",
-    "rakutenPath": "/yado/hyogo/awajishima.html"
+    "rakutenPath": "/yado/hyogo/awajishima.html",
+    "rakutenKeyword": "兵庫県 兵庫淡路島",
+    "jalanCode": "280070"
   },
   {
     "id": "kyoto",
@@ -389,7 +485,9 @@
     "prefCode": "kyoto",
     "prefecture": "京都府",
     "jalanPath": "/26/LRG_260010/",
-    "rakutenPath": "/yado/kyoto/kyoto.html"
+    "rakutenPath": "/yado/kyoto/kyoto.html",
+    "rakutenKeyword": "京都府 京都市",
+    "jalanCode": "260010"
   },
   {
     "id": "ine",
@@ -397,7 +495,9 @@
     "prefCode": "kyoto",
     "prefecture": "京都府",
     "jalanPath": "/26/LRG_260040/",
-    "rakutenPath": "/yado/kyoto/ine.html"
+    "rakutenPath": "/yado/kyoto/ine.html",
+    "rakutenKeyword": "京都府 伊根町",
+    "jalanCode": "260040"
   },
   {
     "id": "miyama",
@@ -405,7 +505,9 @@
     "prefCode": "kyoto",
     "prefecture": "京都府",
     "jalanPath": "/26/LRG_260050/",
-    "rakutenPath": "/yado/kyoto/miyama.html"
+    "rakutenPath": "/yado/kyoto/miyama.html",
+    "rakutenKeyword": "京都府 南丹市",
+    "jalanCode": "260050"
   },
   {
     "id": "kobe",
@@ -413,7 +515,9 @@
     "prefCode": "hyogo",
     "prefecture": "兵庫県",
     "jalanPath": "/28/LRG_280010/",
-    "rakutenPath": "/yado/hyogo/kobe.html"
+    "rakutenPath": "/yado/hyogo/kobe.html",
+    "rakutenKeyword": "兵庫県 神戸市",
+    "jalanCode": "280010"
   },
   {
     "id": "himeji",
@@ -421,7 +525,9 @@
     "prefCode": "hyogo",
     "prefecture": "兵庫県",
     "jalanPath": "/28/LRG_280050/",
-    "rakutenPath": "/yado/hyogo/himeji.html"
+    "rakutenPath": "/yado/hyogo/himeji.html",
+    "rakutenKeyword": "兵庫県 姫路市",
+    "jalanCode": "280050"
   },
   {
     "id": "wakayama",
@@ -429,7 +535,9 @@
     "prefCode": "wakayama",
     "prefecture": "和歌山県",
     "jalanPath": "/30/LRG_300010/",
-    "rakutenPath": "/yado/wakayama/wakayama.html"
+    "rakutenPath": "/yado/wakayama/wakayama.html",
+    "rakutenKeyword": "和歌山県 和歌山市",
+    "jalanCode": "300010"
   },
   {
     "id": "yokohama",
@@ -437,7 +545,9 @@
     "prefCode": "kanagawa",
     "prefecture": "神奈川県",
     "jalanPath": "/14/LRG_140020/",
-    "rakutenPath": "/yado/kanagawa/yokohama.html"
+    "rakutenPath": "/yado/kanagawa/yokohama.html",
+    "rakutenKeyword": "神奈川県 横浜市",
+    "jalanCode": "140020"
   },
   {
     "id": "tokyo",
@@ -445,7 +555,9 @@
     "prefCode": "tokyo",
     "prefecture": "東京都",
     "jalanPath": "/13/LRG_130010/",
-    "rakutenPath": "/yado/tokyo/tokyo.html"
+    "rakutenPath": "/yado/tokyo/tokyo.html",
+    "rakutenKeyword": "東京都 東京都区部",
+    "jalanCode": "130010"
   },
   {
     "id": "kamakura",
@@ -453,7 +565,9 @@
     "prefCode": "kanagawa",
     "prefecture": "神奈川県",
     "jalanPath": "/14/LRG_140050/",
-    "rakutenPath": "/yado/kanagawa/kamakura.html"
+    "rakutenPath": "/yado/kanagawa/kamakura.html",
+    "rakutenKeyword": "神奈川県 鎌倉市",
+    "jalanCode": "140050"
   },
   {
     "id": "nikko",
@@ -461,7 +575,9 @@
     "prefCode": "tochigi",
     "prefecture": "栃木県",
     "jalanPath": "/09/LRG_090020/",
-    "rakutenPath": "/yado/tochigi/nikko.html"
+    "rakutenPath": "/yado/tochigi/nikko.html",
+    "rakutenKeyword": "栃木県 日光市",
+    "jalanCode": "090020"
   },
   {
     "id": "kouzushima",
@@ -469,7 +585,9 @@
     "prefCode": "tokyo",
     "prefecture": "東京都",
     "jalanPath": "/13/LRG_130120/",
-    "rakutenPath": "/yado/tokyo/kouzushima.html"
+    "rakutenPath": "/yado/tokyo/kouzushima.html",
+    "rakutenKeyword": "東京都 神津島村",
+    "jalanCode": "130120"
   },
   {
     "id": "hakone",
@@ -477,7 +595,9 @@
     "prefCode": "kanagawa",
     "prefecture": "神奈川県",
     "jalanPath": "/14/LRG_140060/",
-    "rakutenPath": "/yado/kanagawa/hakone.html"
+    "rakutenPath": "/yado/kanagawa/hakone.html",
+    "rakutenKeyword": "神奈川県 箱根町",
+    "jalanCode": "140060"
   },
   {
     "id": "kusatsu-onsen",
@@ -485,7 +605,9 @@
     "prefCode": "gunma",
     "prefecture": "群馬県",
     "jalanPath": "/10/LRG_100050/",
-    "rakutenPath": "/yado/gunma/kusatsu.html"
+    "rakutenPath": "/yado/gunma/kusatsu.html",
+    "rakutenKeyword": "群馬県 草津町",
+    "jalanCode": "100050"
   },
   {
     "id": "izu-oshima",
@@ -493,7 +615,9 @@
     "prefCode": "tokyo",
     "prefecture": "東京都",
     "jalanPath": "/13/LRG_130100/",
-    "rakutenPath": "/yado/tokyo/oshima.html"
+    "rakutenPath": "/yado/tokyo/oshima.html",
+    "rakutenKeyword": "東京都 大島町",
+    "jalanCode": "130100"
   },
   {
     "id": "takao",
@@ -501,7 +625,9 @@
     "prefCode": "tokyo",
     "prefecture": "東京都",
     "jalanPath": "/13/LRG_130030/",
-    "rakutenPath": "/yado/tokyo/takao.html"
+    "rakutenPath": "/yado/tokyo/takao.html",
+    "rakutenKeyword": "東京都 東京高尾山",
+    "jalanCode": "130030"
   },
   {
     "id": "tateyama-chiba",
@@ -509,7 +635,9 @@
     "prefCode": "chiba",
     "prefecture": "千葉県",
     "jalanPath": "/12/LRG_120110/",
-    "rakutenPath": "/yado/chiba/tateyama.html"
+    "rakutenPath": "/yado/chiba/tateyama.html",
+    "rakutenKeyword": "千葉県 千葉館山",
+    "jalanCode": "120110"
   },
   {
     "id": "fukuoka",
@@ -517,7 +645,9 @@
     "prefCode": "fukuoka",
     "prefecture": "福岡県",
     "jalanPath": "/40/LRG_400010/",
-    "rakutenPath": "/yado/fukuoka/fukuoka.html"
+    "rakutenPath": "/yado/fukuoka/fukuoka.html",
+    "rakutenKeyword": "福岡県 福岡市",
+    "jalanCode": "400010"
   },
   {
     "id": "saga",
@@ -525,7 +655,9 @@
     "prefCode": "saga",
     "prefecture": "佐賀県",
     "jalanPath": "/41/LRG_410010/",
-    "rakutenPath": "/yado/saga/saga.html"
+    "rakutenPath": "/yado/saga/saga.html",
+    "rakutenKeyword": "佐賀県 佐賀市",
+    "jalanCode": "410010"
   },
   {
     "id": "kumamoto",
@@ -533,7 +665,9 @@
     "prefCode": "kumamoto",
     "prefecture": "熊本県",
     "jalanPath": "/43/LRG_430010/",
-    "rakutenPath": "/yado/kumamoto/kumamoto.html"
+    "rakutenPath": "/yado/kumamoto/kumamoto.html",
+    "rakutenKeyword": "熊本県 熊本市",
+    "jalanCode": "430010"
   },
   {
     "id": "yufuin",
@@ -541,7 +675,9 @@
     "prefCode": "oita",
     "prefecture": "大分県",
     "jalanPath": "/44/LRG_440020/",
-    "rakutenPath": "/yado/oita/yufuin.html"
+    "rakutenPath": "/yado/oita/yufuin.html",
+    "rakutenKeyword": "大分県 由布市",
+    "jalanCode": "440020"
   },
   {
     "id": "kurokawa",
@@ -549,7 +685,9 @@
     "prefCode": "kumamoto",
     "prefecture": "熊本県",
     "jalanPath": "/43/LRG_430060/",
-    "rakutenPath": "/yado/kumamoto/kurokawa.html"
+    "rakutenPath": "/yado/kumamoto/kurokawa.html",
+    "rakutenKeyword": "熊本県 熊本黒川温泉",
+    "jalanCode": "430060"
   },
   {
     "id": "aso",
@@ -557,7 +695,9 @@
     "prefCode": "kumamoto",
     "prefecture": "熊本県",
     "jalanPath": "/43/LRG_430020/",
-    "rakutenPath": "/yado/kumamoto/aso.html"
+    "rakutenPath": "/yado/kumamoto/aso.html",
+    "rakutenKeyword": "熊本県 阿蘇市",
+    "jalanCode": "430020"
   },
   {
     "id": "takachiho",
@@ -565,7 +705,9 @@
     "prefCode": "miyazaki",
     "prefecture": "宮崎県",
     "jalanPath": "/45/LRG_450030/",
-    "rakutenPath": "/yado/miyazaki/takachiho.html"
+    "rakutenPath": "/yado/miyazaki/takachiho.html",
+    "rakutenKeyword": "宮崎県 高千穂町",
+    "jalanCode": "450030"
   },
   {
     "id": "nagasaki",
@@ -573,7 +715,9 @@
     "prefCode": "nagasaki",
     "prefecture": "長崎県",
     "jalanPath": "/42/LRG_420010/",
-    "rakutenPath": "/yado/nagasaki/nagasaki.html"
+    "rakutenPath": "/yado/nagasaki/nagasaki.html",
+    "rakutenKeyword": "長崎県 長崎市",
+    "jalanCode": "420010"
   },
   {
     "id": "sasebo",
@@ -581,7 +725,9 @@
     "prefCode": "nagasaki",
     "prefecture": "長崎県",
     "jalanPath": "/42/LRG_420030/",
-    "rakutenPath": "/yado/nagasaki/sasebo.html"
+    "rakutenPath": "/yado/nagasaki/sasebo.html",
+    "rakutenKeyword": "長崎県 佐世保市",
+    "jalanCode": "420030"
   },
   {
     "id": "hirado",
@@ -589,7 +735,9 @@
     "prefCode": "nagasaki",
     "prefecture": "長崎県",
     "jalanPath": "/42/LRG_420040/",
-    "rakutenPath": "/yado/nagasaki/hirado.html"
+    "rakutenPath": "/yado/nagasaki/hirado.html",
+    "rakutenKeyword": "長崎県 平戸市",
+    "jalanCode": "420040"
   },
   {
     "id": "goto",
@@ -597,7 +745,9 @@
     "prefCode": "nagasaki",
     "prefecture": "長崎県",
     "jalanPath": "/42/LRG_420060/",
-    "rakutenPath": "/yado/nagasaki/goto.html"
+    "rakutenPath": "/yado/nagasaki/goto.html",
+    "rakutenKeyword": "長崎県 五島市",
+    "jalanCode": "420060"
   },
   {
     "id": "unzen",
@@ -605,7 +755,9 @@
     "prefCode": "nagasaki",
     "prefecture": "長崎県",
     "jalanPath": "/42/LRG_420050/",
-    "rakutenPath": "/yado/nagasaki/unzen.html"
+    "rakutenPath": "/yado/nagasaki/unzen.html",
+    "rakutenKeyword": "長崎県 雲仙市",
+    "jalanCode": "420050"
   },
   {
     "id": "kagoshima",
@@ -613,7 +765,9 @@
     "prefCode": "kagoshima",
     "prefecture": "鹿児島県",
     "jalanPath": "/46/LRG_460010/",
-    "rakutenPath": "/yado/kagoshima/kagoshima.html"
+    "rakutenPath": "/yado/kagoshima/kagoshima.html",
+    "rakutenKeyword": "鹿児島県 鹿児島市",
+    "jalanCode": "460010"
   },
   {
     "id": "yakushima",
@@ -621,7 +775,9 @@
     "prefCode": "kagoshima",
     "prefecture": "鹿児島県",
     "jalanPath": "/46/LRG_460040/",
-    "rakutenPath": "/yado/kagoshima/yakushima.html"
+    "rakutenPath": "/yado/kagoshima/yakushima.html",
+    "rakutenKeyword": "鹿児島県 屋久島町",
+    "jalanCode": "460040"
   },
   {
     "id": "ibusuki",
@@ -629,7 +785,9 @@
     "prefCode": "kagoshima",
     "prefecture": "鹿児島県",
     "jalanPath": "/46/LRG_460010/",
-    "rakutenPath": "/yado/kagoshima/ibusuki.html"
+    "rakutenPath": "/yado/kagoshima/ibusuki.html",
+    "rakutenKeyword": "鹿児島県 指宿市",
+    "jalanCode": "460010"
   },
   {
     "id": "amami",
@@ -637,7 +795,9 @@
     "prefCode": "kagoshima",
     "prefecture": "鹿児島県",
     "jalanPath": "/46/LRG_460020/",
-    "rakutenPath": "/yado/kagoshima/amami.html"
+    "rakutenPath": "/yado/kagoshima/amami.html",
+    "rakutenKeyword": "鹿児島県 奄美市",
+    "jalanCode": "460020"
   },
   {
     "id": "miyazaki",
@@ -645,7 +805,9 @@
     "prefCode": "miyazaki",
     "prefecture": "宮崎県",
     "jalanPath": "/45/LRG_450010/",
-    "rakutenPath": "/yado/miyazaki/miyazaki.html"
+    "rakutenPath": "/yado/miyazaki/miyazaki.html",
+    "rakutenKeyword": "宮崎県 宮崎市",
+    "jalanCode": "450010"
   },
   {
     "id": "beppu",
@@ -653,7 +815,9 @@
     "prefCode": "oita",
     "prefecture": "大分県",
     "jalanPath": "/44/LRG_440030/",
-    "rakutenPath": "/yado/oita/beppu.html"
+    "rakutenPath": "/yado/oita/beppu.html",
+    "rakutenKeyword": "大分県 別府市",
+    "jalanCode": "440030"
   },
   {
     "id": "amakusa",
@@ -661,7 +825,9 @@
     "prefCode": "kumamoto",
     "prefecture": "熊本県",
     "jalanPath": "/43/LRG_430040/",
-    "rakutenPath": "/yado/kumamoto/amakusa.html"
+    "rakutenPath": "/yado/kumamoto/amakusa.html",
+    "rakutenKeyword": "熊本県 天草市",
+    "jalanCode": "430040"
   },
   {
     "id": "naha",
@@ -669,7 +835,9 @@
     "prefCode": "okinawa",
     "prefecture": "沖縄県",
     "jalanPath": "/47/LRG_470010/",
-    "rakutenPath": "/yado/okinawa/naha.html"
+    "rakutenPath": "/yado/okinawa/naha.html",
+    "rakutenKeyword": "沖縄県 那覇市",
+    "jalanCode": "470010"
   },
   {
     "id": "ishigaki",
@@ -677,7 +845,9 @@
     "prefCode": "okinawa",
     "prefecture": "沖縄県",
     "jalanPath": "/47/LRG_470030/",
-    "rakutenPath": "/yado/okinawa/ishigakijima.html"
+    "rakutenPath": "/yado/okinawa/ishigakijima.html",
+    "rakutenKeyword": "沖縄県 石垣市",
+    "jalanCode": "470030"
   },
   {
     "id": "kumejima",
@@ -685,7 +855,9 @@
     "prefCode": "okinawa",
     "prefecture": "沖縄県",
     "jalanPath": "/47/LRG_470060/",
-    "rakutenPath": "/yado/okinawa/kumejima.html"
+    "rakutenPath": "/yado/okinawa/kumejima.html",
+    "rakutenKeyword": "沖縄県 久米島町",
+    "jalanCode": "470060"
   },
   {
     "id": "miyakojima",
@@ -693,7 +865,9 @@
     "prefCode": "okinawa",
     "prefecture": "沖縄県",
     "jalanPath": "/47/LRG_470040/",
-    "rakutenPath": "/yado/okinawa/miyakojima.html"
+    "rakutenPath": "/yado/okinawa/miyakojima.html",
+    "rakutenKeyword": "沖縄県 宮古島市",
+    "jalanCode": "470040"
   },
   {
     "id": "matsuyama",
@@ -701,7 +875,9 @@
     "prefCode": "ehime",
     "prefecture": "愛媛県",
     "jalanPath": "/38/LRG_380010/",
-    "rakutenPath": "/yado/ehime/matsuyama.html"
+    "rakutenPath": "/yado/ehime/matsuyama.html",
+    "rakutenKeyword": "愛媛県 松山市",
+    "jalanCode": "380010"
   },
   {
     "id": "uwajima",
@@ -709,7 +885,9 @@
     "prefCode": "ehime",
     "prefecture": "愛媛県",
     "jalanPath": "/38/LRG_380020/",
-    "rakutenPath": "/yado/ehime/uwajima.html"
+    "rakutenPath": "/yado/ehime/uwajima.html",
+    "rakutenKeyword": "愛媛県 宇和島市",
+    "jalanCode": "380020"
   },
   {
     "id": "tokushima",
@@ -717,7 +895,9 @@
     "prefCode": "tokushima",
     "prefecture": "徳島県",
     "jalanPath": "/36/LRG_360010/",
-    "rakutenPath": "/yado/tokushima/tokushima.html"
+    "rakutenPath": "/yado/tokushima/tokushima.html",
+    "rakutenKeyword": "徳島県 徳島市",
+    "jalanCode": "360010"
   },
   {
     "id": "kochi",
@@ -725,7 +905,9 @@
     "prefCode": "kochi",
     "prefecture": "高知県",
     "jalanPath": "/39/LRG_390010/",
-    "rakutenPath": "/yado/kochi/kochi.html"
+    "rakutenPath": "/yado/kochi/kochi.html",
+    "rakutenKeyword": "高知県 高知市",
+    "jalanCode": "390010"
   },
   {
     "id": "ashizuri",
@@ -733,7 +915,9 @@
     "prefCode": "kochi",
     "prefecture": "高知県",
     "jalanPath": "/39/LRG_390020/",
-    "rakutenPath": "/yado/kochi/ashizuri.html"
+    "rakutenPath": "/yado/kochi/ashizuri.html",
+    "rakutenKeyword": "高知県 土佐清水市",
+    "jalanCode": "390020"
   },
   {
     "id": "naoshima",
@@ -741,7 +925,9 @@
     "prefCode": "kagawa",
     "prefecture": "香川県",
     "jalanPath": "/37/LRG_370020/",
-    "rakutenPath": "/yado/kagawa/naoshima.html"
+    "rakutenPath": "/yado/kagawa/naoshima.html",
+    "rakutenKeyword": "香川県 直島町",
+    "jalanCode": "370020"
   },
   {
     "id": "kotohira",
@@ -749,7 +935,9 @@
     "prefCode": "kagawa",
     "prefecture": "香川県",
     "jalanPath": "/37/LRG_370030/",
-    "rakutenPath": "/yado/kagawa/kotohira.html"
+    "rakutenPath": "/yado/kagawa/kotohira.html",
+    "rakutenKeyword": "香川県 琴平町",
+    "jalanCode": "370030"
   },
   {
     "id": "oboke",
@@ -757,7 +945,9 @@
     "prefCode": "tokushima",
     "prefecture": "徳島県",
     "jalanPath": "/36/LRG_360030/",
-    "rakutenPath": "/yado/tokushima/iya.html"
+    "rakutenPath": "/yado/tokushima/iya.html",
+    "rakutenKeyword": "徳島県 三好市",
+    "jalanCode": "360030"
   },
   {
     "id": "sendai",
@@ -765,7 +955,9 @@
     "prefCode": "miyagi",
     "prefecture": "宮城県",
     "jalanPath": "/04/LRG_040010/",
-    "rakutenPath": "/yado/miyagi/sendai.html"
+    "rakutenPath": "/yado/miyagi/sendai.html",
+    "rakutenKeyword": "宮城県 仙台市",
+    "jalanCode": "040010"
   },
   {
     "id": "matsushima",
@@ -773,7 +965,9 @@
     "prefCode": "miyagi",
     "prefecture": "宮城県",
     "jalanPath": "/04/LRG_040030/",
-    "rakutenPath": "/yado/miyagi/matsushima.html"
+    "rakutenPath": "/yado/miyagi/matsushima.html",
+    "rakutenKeyword": "宮城県 松島町",
+    "jalanCode": "040030"
   },
   {
     "id": "hiraizumi",
@@ -781,7 +975,9 @@
     "prefCode": "iwate",
     "prefecture": "岩手県",
     "jalanPath": "/03/LRG_030020/",
-    "rakutenPath": "/yado/iwate/hiraizumi.html"
+    "rakutenPath": "/yado/iwate/hiraizumi.html",
+    "rakutenKeyword": "岩手県 平泉町",
+    "jalanCode": "030020"
   },
   {
     "id": "kakunodate",
@@ -789,7 +985,9 @@
     "prefCode": "akita",
     "prefecture": "秋田県",
     "jalanPath": "/05/LRG_050010/",
-    "rakutenPath": "/yado/akita/kakunodate.html"
+    "rakutenPath": "/yado/akita/kakunodate.html",
+    "rakutenKeyword": "秋田県 仙北市",
+    "jalanCode": "050010"
   },
   {
     "id": "aizu",
@@ -797,7 +995,9 @@
     "prefCode": "fukushima",
     "prefecture": "福島県",
     "jalanPath": "/07/LRG_070020/",
-    "rakutenPath": "/yado/fukushima/aizu.html"
+    "rakutenPath": "/yado/fukushima/aizu.html",
+    "rakutenKeyword": "福島県 福島会津若松",
+    "jalanCode": "070020"
   },
   {
     "id": "zaosan",
@@ -805,7 +1005,9 @@
     "prefCode": "yamagata",
     "prefecture": "山形県",
     "jalanPath": "/06/LRG_060010/",
-    "rakutenPath": "/yado/yamagata/zao.html"
+    "rakutenPath": "/yado/yamagata/zao.html",
+    "rakutenKeyword": "宮城県 宮城蔵王",
+    "jalanCode": "060010"
   },
   {
     "id": "akita",
@@ -813,7 +1015,9 @@
     "prefCode": "akita",
     "prefecture": "秋田県",
     "jalanPath": "/05/LRG_050020/",
-    "rakutenPath": "/yado/akita/akita.html"
+    "rakutenPath": "/yado/akita/akita.html",
+    "rakutenKeyword": "秋田県 秋田市",
+    "jalanCode": "050020"
   },
   {
     "id": "sakata",
@@ -821,7 +1025,9 @@
     "prefCode": "yamagata",
     "prefecture": "山形県",
     "jalanPath": "/06/LRG_060040/",
-    "rakutenPath": "/yado/yamagata/sakata.html"
+    "rakutenPath": "/yado/yamagata/sakata.html",
+    "rakutenKeyword": "山形県 酒田市",
+    "jalanCode": "060040"
   },
   {
     "id": "yamagata",
@@ -829,7 +1035,9 @@
     "prefCode": "yamagata",
     "prefecture": "山形県",
     "jalanPath": "/06/LRG_060010/",
-    "rakutenPath": "/yado/yamagata/yamagata.html"
+    "rakutenPath": "/yado/yamagata/yamagata.html",
+    "rakutenKeyword": "山形県 山形市",
+    "jalanCode": "060010"
   },
   {
     "id": "morioka",
@@ -837,7 +1045,9 @@
     "prefCode": "iwate",
     "prefecture": "岩手県",
     "jalanPath": "/03/LRG_030010/",
-    "rakutenPath": "/yado/iwate/morioka.html"
+    "rakutenPath": "/yado/iwate/morioka.html",
+    "rakutenKeyword": "岩手県 盛岡市",
+    "jalanCode": "030010"
   },
   {
     "id": "miyako-iwate",
@@ -845,6 +1055,8 @@
     "prefCode": "iwate",
     "prefecture": "岩手県",
     "jalanPath": "/03/LRG_030050/",
-    "rakutenPath": "/yado/iwate/miyako.html"
+    "rakutenPath": "/yado/iwate/miyako.html",
+    "rakutenKeyword": "岩手県 宮古市",
+    "jalanCode": "030050"
   }
 ]
