@@ -187,8 +187,9 @@ function pathToLinks(path, city, departure, fromCity) {
   // ── 鉄道ルート ──
   if (railSeg) {
     const provider  = resolveRailProvider(departure, city);
-    const fromName  = (_graph.nodes[railSeg.from]?.name || departure).replace(/駅$/, '');
-    const toName    = (_graph.nodes[railSeg.to]?.name   || '').replace(/駅$/, '');
+    // 表示は 出発駅 → destination.accessStation（hub経由地は非表示）
+    const fromName  = fromCity.rail.replace(/駅$/, '');
+    const toName    = (city.accessStation || _graph.nodes[railSeg.to]?.name || '').replace(/駅$/, '');
     const jrLink    = buildJrLink(provider, fromName && toName ? { from: fromName, to: toName } : null);
     const links    = jrLink ? [jrLink] : [];
 

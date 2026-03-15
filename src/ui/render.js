@@ -6,7 +6,7 @@
  *     city-block（都市名/地域/タグ/スポット/説明文）
  *     card-section        （交通リンク）
  *     stay-block          （この街に泊まるなら — stayType !== daytrip のみ）
- *     share-block         （X / LINE シェア + コピー）
+ *     （share-block は削除済み）
  */
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
@@ -19,7 +19,6 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
       ${buildCityBlock(city)}
       ${buildTransportBlock(transportLinks)}
       ${showHotel ? buildStayBlock(hub, hotelLinks) : ''}
-      ${buildShareBlock(city)}
     </div>
   `;
 }
@@ -27,6 +26,16 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
 export function clearResult() {
   const el = document.getElementById('result-inner');
   if (el) el.innerHTML = '';
+}
+
+/* ── アクセス地点ラベル推定 ── */
+
+function accessLabel(station) {
+  if (!station) return '';
+  if (station.endsWith('空港')) return '最寄空港';
+  if (station.endsWith('港'))   return '最寄港';
+  if (station.endsWith('バスターミナル') || station.endsWith('バス停')) return '最寄バスターミナル';
+  return '最寄駅';
 }
 
 /* ── 都市ブロック ── */
@@ -52,7 +61,7 @@ function buildCityBlock(city) {
       <div class="city-header">
         <h2 class="city-name">${city.name}</h2>
         <p class="city-sub">${city.prefecture}${city.city || city.name}${categoryBadge}</p>
-        ${city.accessStation ? `<p class="city-station">最寄駅：${city.accessStation}</p>` : ''}
+        ${city.accessStation ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}</p>` : ''}
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       ${spotListHtml}
@@ -122,26 +131,6 @@ function buildStayBlock(hub, links) {
     <div class="stay-block">
       <p class="stay-label">この街に泊まるなら</p>
       <div class="stay-buttons">${buttonsHtml}</div>
-    </div>
-  `;
-}
-
-/* ── SNSシェア＋コピーブロック ── */
-
-function buildShareBlock(city) {
-  const pageUrl = `https://tabidokoiko.com/?d=${encodeURIComponent(city.id)}`;
-  const xText   = encodeURIComponent(`今日の旅先は${city.name} #どこ行こ`);
-  const xUrl    = `https://twitter.com/intent/tweet?text=${xText}&url=${encodeURIComponent(pageUrl)}`;
-  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(pageUrl)}`;
-
-  return `
-    <div class="share-block">
-      <a href="${xUrl}" target="_blank" rel="noopener noreferrer" class="btn-share btn-share--x">
-        Xでシェア
-      </a>
-      <a href="${lineUrl}" target="_blank" rel="noopener noreferrer" class="btn-share btn-share--line">
-        LINEでシェア
-      </a>
     </div>
   `;
 }

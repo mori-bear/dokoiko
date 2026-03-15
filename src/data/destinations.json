@@ -1235,9 +1235,9 @@
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
-    "city": "沖縄渡嘉敷島",
-    "hubStation": "渡嘉敷島駅",
-    "accessStation": "渡嘉敷島駅"
+    "city": "渡嘉敷村",
+    "hubStation": "那覇港",
+    "accessStation": "渡嘉敷港"
   },
   {
     "id": "kumejima",
@@ -1435,9 +1435,9 @@
     },
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
-    "city": "東京神津島",
-    "hubStation": "神津島駅",
-    "accessStation": "神津島駅"
+    "city": "神津島村",
+    "hubStation": "竹芝客船ターミナル",
+    "accessStation": "神津島港"
   },
   {
     "id": "hakone",
@@ -4023,7 +4023,7 @@
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
-    "city": "秋田秋田",
+    "city": "秋田市",
     "hubStation": "秋田駅",
     "accessStation": "秋田駅"
   },
@@ -4671,9 +4671,9 @@
     },
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
-    "city": "鹿児島奄美大島",
-    "hubStation": "奄美大島駅",
-    "accessStation": "奄美大島駅"
+    "city": "奄美市",
+    "hubStation": "鹿児島港",
+    "accessStation": "名瀬港"
   },
   {
     "id": "goto",
