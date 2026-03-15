@@ -1,0 +1,850 @@
+[
+  {
+    "id": "nagoya",
+    "name": "名古屋",
+    "prefCode": "aichi",
+    "prefecture": "愛知県",
+    "jalanPath": "/23/LRG_230010/",
+    "rakutenPath": "/yado/aichi/nagoya.html"
+  },
+  {
+    "id": "ise",
+    "name": "伊勢",
+    "prefCode": "mie",
+    "prefecture": "三重県",
+    "jalanPath": "/24/LRG_240020/",
+    "rakutenPath": "/yado/mie/ise.html"
+  },
+  {
+    "id": "shirakawago",
+    "name": "白川郷",
+    "prefCode": "gifu",
+    "prefecture": "岐阜県",
+    "jalanPath": "/21/LRG_210070/",
+    "rakutenPath": "/yado/gifu/shirakawago.html"
+  },
+  {
+    "id": "takayama",
+    "name": "高山",
+    "prefCode": "gifu",
+    "prefecture": "岐阜県",
+    "jalanPath": "/21/LRG_210060/",
+    "rakutenPath": "/yado/gifu/takayama.html"
+  },
+  {
+    "id": "toba",
+    "name": "鳥羽",
+    "prefCode": "mie",
+    "prefecture": "三重県",
+    "jalanPath": "/24/LRG_240040/",
+    "rakutenPath": "/yado/mie/toba.html"
+  },
+  {
+    "id": "inuyama",
+    "name": "犬山",
+    "prefCode": "aichi",
+    "prefecture": "愛知県",
+    "jalanPath": "/23/LRG_230040/",
+    "rakutenPath": "/yado/aichi/inuyama.html"
+  },
+  {
+    "id": "kiso",
+    "name": "木曽",
+    "prefCode": "nagano",
+    "prefecture": "長野県",
+    "jalanPath": "/20/LRG_200060/",
+    "rakutenPath": "/yado/nagano/kiso.html"
+  },
+  {
+    "id": "kanazawa",
+    "name": "金沢",
+    "prefCode": "ishikawa",
+    "prefecture": "石川県",
+    "jalanPath": "/17/LRG_170010/",
+    "rakutenPath": "/yado/ishikawa/kanazawa.html"
+  },
+  {
+    "id": "wajima",
+    "name": "輪島",
+    "prefCode": "ishikawa",
+    "prefecture": "石川県",
+    "jalanPath": "/17/LRG_170030/",
+    "rakutenPath": "/yado/ishikawa/wajima.html"
+  },
+  {
+    "id": "kaga-onsen",
+    "name": "加賀温泉郷",
+    "prefCode": "ishikawa",
+    "prefecture": "石川県",
+    "jalanPath": "/17/LRG_170020/",
+    "rakutenPath": "/yado/ishikawa/kaga.html"
+  },
+  {
+    "id": "gokayama",
+    "name": "五箇山",
+    "prefCode": "toyama",
+    "prefecture": "富山県",
+    "jalanPath": "/16/LRG_160020/",
+    "rakutenPath": "/yado/toyama/gokayama.html"
+  },
+  {
+    "id": "himi",
+    "name": "氷見",
+    "prefCode": "toyama",
+    "prefecture": "富山県",
+    "jalanPath": "/16/LRG_160010/",
+    "rakutenPath": "/yado/toyama/himi.html"
+  },
+  {
+    "id": "gifu",
+    "name": "岐阜",
+    "prefCode": "gifu",
+    "prefecture": "岐阜県",
+    "jalanPath": "/21/LRG_210010/",
+    "rakutenPath": "/yado/gifu/gifu.html"
+  },
+  {
+    "id": "niigata",
+    "name": "新潟",
+    "prefCode": "niigata",
+    "prefecture": "新潟県",
+    "jalanPath": "/15/LRG_150010/",
+    "rakutenPath": "/yado/niigata/niigata.html"
+  },
+  {
+    "id": "matsumoto",
+    "name": "松本",
+    "prefCode": "nagano",
+    "prefecture": "長野県",
+    "jalanPath": "/20/LRG_200010/",
+    "rakutenPath": "/yado/nagano/matsumoto.html"
+  },
+  {
+    "id": "atami",
+    "name": "熱海",
+    "prefCode": "shizuoka",
+    "prefecture": "静岡県",
+    "jalanPath": "/22/LRG_220010/",
+    "rakutenPath": "/yado/shizuoka/atami.html"
+  },
+  {
+    "id": "fujikawaguchiko",
+    "name": "富士河口湖",
+    "prefCode": "yamanashi",
+    "prefecture": "山梨県",
+    "jalanPath": "/19/LRG_190010/",
+    "rakutenPath": "/yado/yamanashi/fujikawaguchiko.html"
+  },
+  {
+    "id": "shuzenji",
+    "name": "修善寺",
+    "prefCode": "shizuoka",
+    "prefecture": "静岡県",
+    "jalanPath": "/22/LRG_220020/",
+    "rakutenPath": "/yado/shizuoka/shuzenji.html"
+  },
+  {
+    "id": "shimoda",
+    "name": "下田",
+    "prefCode": "shizuoka",
+    "prefecture": "静岡県",
+    "jalanPath": "/22/LRG_220060/",
+    "rakutenPath": "/yado/shizuoka/shimoda.html"
+  },
+  {
+    "id": "hakuba",
+    "name": "白馬",
+    "prefCode": "nagano",
+    "prefecture": "長野県",
+    "jalanPath": "/20/LRG_200020/",
+    "rakutenPath": "/yado/nagano/hakuba.html"
+  },
+  {
+    "id": "tateyama-kurobe",
+    "name": "立山黒部",
+    "prefCode": "toyama",
+    "prefecture": "富山県",
+    "jalanPath": "/16/LRG_160030/",
+    "rakutenPath": "/yado/toyama/tateyama.html"
+  },
+  {
+    "id": "hiroshima",
+    "name": "広島",
+    "prefCode": "hiroshima",
+    "prefecture": "広島県",
+    "jalanPath": "/34/LRG_340010/",
+    "rakutenPath": "/yado/hiroshima/hiroshima.html"
+  },
+  {
+    "id": "miyajima",
+    "name": "宮島",
+    "prefCode": "hiroshima",
+    "prefecture": "広島県",
+    "jalanPath": "/34/LRG_340060/",
+    "rakutenPath": "/yado/hiroshima/miyajima.html"
+  },
+  {
+    "id": "onomichi",
+    "name": "尾道",
+    "prefCode": "hiroshima",
+    "prefecture": "広島県",
+    "jalanPath": "/34/LRG_340020/",
+    "rakutenPath": "/yado/hiroshima/onomichi.html"
+  },
+  {
+    "id": "kurashiki",
+    "name": "倉敷",
+    "prefCode": "okayama",
+    "prefecture": "岡山県",
+    "jalanPath": "/33/LRG_330020/",
+    "rakutenPath": "/yado/okayama/kurashiki.html"
+  },
+  {
+    "id": "hagi",
+    "name": "萩",
+    "prefCode": "yamaguchi",
+    "prefecture": "山口県",
+    "jalanPath": "/35/LRG_350020/",
+    "rakutenPath": "/yado/yamaguchi/hagi.html"
+  },
+  {
+    "id": "shimonoseki",
+    "name": "下関",
+    "prefCode": "yamaguchi",
+    "prefecture": "山口県",
+    "jalanPath": "/35/LRG_350010/",
+    "rakutenPath": "/yado/yamaguchi/shimonoseki.html"
+  },
+  {
+    "id": "tottori",
+    "name": "鳥取",
+    "prefCode": "tottori",
+    "prefecture": "鳥取県",
+    "jalanPath": "/31/LRG_310010/",
+    "rakutenPath": "/yado/tottori/tottori.html"
+  },
+  {
+    "id": "tsuwano",
+    "name": "津和野",
+    "prefCode": "shimane",
+    "prefecture": "島根県",
+    "jalanPath": "/32/LRG_320030/",
+    "rakutenPath": "/yado/shimane/tsuwano.html"
+  },
+  {
+    "id": "okayama",
+    "name": "岡山",
+    "prefCode": "okayama",
+    "prefecture": "岡山県",
+    "jalanPath": "/33/LRG_330010/",
+    "rakutenPath": "/yado/okayama/okayama.html"
+  },
+  {
+    "id": "sapporo",
+    "name": "札幌",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010030/",
+    "rakutenPath": "/yado/hokkaido/sapporo.html"
+  },
+  {
+    "id": "otaru",
+    "name": "小樽",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010140/",
+    "rakutenPath": "/yado/hokkaido/otaru.html"
+  },
+  {
+    "id": "furano",
+    "name": "富良野",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010170/",
+    "rakutenPath": "/yado/hokkaido/furano.html"
+  },
+  {
+    "id": "toyako",
+    "name": "洞爺湖",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010140/",
+    "rakutenPath": "/yado/hokkaido/toyako.html"
+  },
+  {
+    "id": "noboribetsu",
+    "name": "登別",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010130/",
+    "rakutenPath": "/yado/hokkaido/noboribetsu.html"
+  },
+  {
+    "id": "shiretoko",
+    "name": "知床",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010290/",
+    "rakutenPath": "/yado/hokkaido/shiretoko.html"
+  },
+  {
+    "id": "jozankei",
+    "name": "定山渓",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010220/",
+    "rakutenPath": "/yado/hokkaido/jozankei.html"
+  },
+  {
+    "id": "biei",
+    "name": "美瑛",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010370/",
+    "rakutenPath": "/yado/hokkaido/biei.html"
+  },
+  {
+    "id": "asahikawa",
+    "name": "旭川",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010060/",
+    "rakutenPath": "/yado/hokkaido/asahikawa.html"
+  },
+  {
+    "id": "kushiro",
+    "name": "釧路",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010110/",
+    "rakutenPath": "/yado/hokkaido/kushiro.html"
+  },
+  {
+    "id": "hakodate",
+    "name": "函館",
+    "prefCode": "hokkaido",
+    "prefecture": "北海道",
+    "jalanPath": "/01/LRG_010050/",
+    "rakutenPath": "/yado/hokkaido/hakodate.html"
+  },
+  {
+    "id": "osaka",
+    "name": "大阪",
+    "prefCode": "osaka",
+    "prefecture": "大阪府",
+    "jalanPath": "/27/LRG_270010/",
+    "rakutenPath": "/yado/osaka/osaka.html"
+  },
+  {
+    "id": "nara",
+    "name": "奈良",
+    "prefCode": "nara",
+    "prefecture": "奈良県",
+    "jalanPath": "/29/LRG_290010/",
+    "rakutenPath": "/yado/nara/nara.html"
+  },
+  {
+    "id": "arima-onsen",
+    "name": "有馬温泉",
+    "prefCode": "hyogo",
+    "prefecture": "兵庫県",
+    "jalanPath": "/28/LRG_280010/",
+    "rakutenPath": "/yado/hyogo/arima.html"
+  },
+  {
+    "id": "kinosaki-onsen",
+    "name": "城崎温泉",
+    "prefCode": "hyogo",
+    "prefecture": "兵庫県",
+    "jalanPath": "/28/LRG_280060/",
+    "rakutenPath": "/yado/hyogo/kinosaki.html"
+  },
+  {
+    "id": "shirahama-o",
+    "name": "白浜",
+    "prefCode": "wakayama",
+    "prefecture": "和歌山県",
+    "jalanPath": "/30/LRG_300020/",
+    "rakutenPath": "/yado/wakayama/shirahama.html"
+  },
+  {
+    "id": "amanohashidate",
+    "name": "天橋立",
+    "prefCode": "kyoto",
+    "prefecture": "京都府",
+    "jalanPath": "/26/LRG_260030/",
+    "rakutenPath": "/yado/kyoto/amanohashidate.html"
+  },
+  {
+    "id": "awaji",
+    "name": "淡路島",
+    "prefCode": "hyogo",
+    "prefecture": "兵庫県",
+    "jalanPath": "/28/LRG_280070/",
+    "rakutenPath": "/yado/hyogo/awajishima.html"
+  },
+  {
+    "id": "kyoto",
+    "name": "京都",
+    "prefCode": "kyoto",
+    "prefecture": "京都府",
+    "jalanPath": "/26/LRG_260010/",
+    "rakutenPath": "/yado/kyoto/kyoto.html"
+  },
+  {
+    "id": "ine",
+    "name": "伊根",
+    "prefCode": "kyoto",
+    "prefecture": "京都府",
+    "jalanPath": "/26/LRG_260040/",
+    "rakutenPath": "/yado/kyoto/ine.html"
+  },
+  {
+    "id": "miyama",
+    "name": "美山",
+    "prefCode": "kyoto",
+    "prefecture": "京都府",
+    "jalanPath": "/26/LRG_260050/",
+    "rakutenPath": "/yado/kyoto/miyama.html"
+  },
+  {
+    "id": "kobe",
+    "name": "神戸",
+    "prefCode": "hyogo",
+    "prefecture": "兵庫県",
+    "jalanPath": "/28/LRG_280010/",
+    "rakutenPath": "/yado/hyogo/kobe.html"
+  },
+  {
+    "id": "himeji",
+    "name": "姫路",
+    "prefCode": "hyogo",
+    "prefecture": "兵庫県",
+    "jalanPath": "/28/LRG_280050/",
+    "rakutenPath": "/yado/hyogo/himeji.html"
+  },
+  {
+    "id": "wakayama",
+    "name": "和歌山",
+    "prefCode": "wakayama",
+    "prefecture": "和歌山県",
+    "jalanPath": "/30/LRG_300010/",
+    "rakutenPath": "/yado/wakayama/wakayama.html"
+  },
+  {
+    "id": "yokohama",
+    "name": "横浜",
+    "prefCode": "kanagawa",
+    "prefecture": "神奈川県",
+    "jalanPath": "/14/LRG_140020/",
+    "rakutenPath": "/yado/kanagawa/yokohama.html"
+  },
+  {
+    "id": "tokyo",
+    "name": "東京",
+    "prefCode": "tokyo",
+    "prefecture": "東京都",
+    "jalanPath": "/13/LRG_130010/",
+    "rakutenPath": "/yado/tokyo/tokyo.html"
+  },
+  {
+    "id": "kamakura",
+    "name": "鎌倉",
+    "prefCode": "kanagawa",
+    "prefecture": "神奈川県",
+    "jalanPath": "/14/LRG_140050/",
+    "rakutenPath": "/yado/kanagawa/kamakura.html"
+  },
+  {
+    "id": "nikko",
+    "name": "日光",
+    "prefCode": "tochigi",
+    "prefecture": "栃木県",
+    "jalanPath": "/09/LRG_090020/",
+    "rakutenPath": "/yado/tochigi/nikko.html"
+  },
+  {
+    "id": "kouzushima",
+    "name": "神津島",
+    "prefCode": "tokyo",
+    "prefecture": "東京都",
+    "jalanPath": "/13/LRG_130120/",
+    "rakutenPath": "/yado/tokyo/kouzushima.html"
+  },
+  {
+    "id": "hakone",
+    "name": "箱根",
+    "prefCode": "kanagawa",
+    "prefecture": "神奈川県",
+    "jalanPath": "/14/LRG_140060/",
+    "rakutenPath": "/yado/kanagawa/hakone.html"
+  },
+  {
+    "id": "kusatsu-onsen",
+    "name": "草津温泉",
+    "prefCode": "gunma",
+    "prefecture": "群馬県",
+    "jalanPath": "/10/LRG_100050/",
+    "rakutenPath": "/yado/gunma/kusatsu.html"
+  },
+  {
+    "id": "izu-oshima",
+    "name": "伊豆大島",
+    "prefCode": "tokyo",
+    "prefecture": "東京都",
+    "jalanPath": "/13/LRG_130100/",
+    "rakutenPath": "/yado/tokyo/oshima.html"
+  },
+  {
+    "id": "takao",
+    "name": "高尾山",
+    "prefCode": "tokyo",
+    "prefecture": "東京都",
+    "jalanPath": "/13/LRG_130030/",
+    "rakutenPath": "/yado/tokyo/takao.html"
+  },
+  {
+    "id": "tateyama-chiba",
+    "name": "館山",
+    "prefCode": "chiba",
+    "prefecture": "千葉県",
+    "jalanPath": "/12/LRG_120110/",
+    "rakutenPath": "/yado/chiba/tateyama.html"
+  },
+  {
+    "id": "fukuoka",
+    "name": "博多",
+    "prefCode": "fukuoka",
+    "prefecture": "福岡県",
+    "jalanPath": "/40/LRG_400010/",
+    "rakutenPath": "/yado/fukuoka/fukuoka.html"
+  },
+  {
+    "id": "saga",
+    "name": "佐賀",
+    "prefCode": "saga",
+    "prefecture": "佐賀県",
+    "jalanPath": "/41/LRG_410010/",
+    "rakutenPath": "/yado/saga/saga.html"
+  },
+  {
+    "id": "kumamoto",
+    "name": "熊本",
+    "prefCode": "kumamoto",
+    "prefecture": "熊本県",
+    "jalanPath": "/43/LRG_430010/",
+    "rakutenPath": "/yado/kumamoto/kumamoto.html"
+  },
+  {
+    "id": "yufuin",
+    "name": "湯布院",
+    "prefCode": "oita",
+    "prefecture": "大分県",
+    "jalanPath": "/44/LRG_440020/",
+    "rakutenPath": "/yado/oita/yufuin.html"
+  },
+  {
+    "id": "kurokawa",
+    "name": "黒川温泉",
+    "prefCode": "kumamoto",
+    "prefecture": "熊本県",
+    "jalanPath": "/43/LRG_430060/",
+    "rakutenPath": "/yado/kumamoto/kurokawa.html"
+  },
+  {
+    "id": "aso",
+    "name": "阿蘇",
+    "prefCode": "kumamoto",
+    "prefecture": "熊本県",
+    "jalanPath": "/43/LRG_430020/",
+    "rakutenPath": "/yado/kumamoto/aso.html"
+  },
+  {
+    "id": "takachiho",
+    "name": "高千穂",
+    "prefCode": "miyazaki",
+    "prefecture": "宮崎県",
+    "jalanPath": "/45/LRG_450030/",
+    "rakutenPath": "/yado/miyazaki/takachiho.html"
+  },
+  {
+    "id": "nagasaki",
+    "name": "長崎",
+    "prefCode": "nagasaki",
+    "prefecture": "長崎県",
+    "jalanPath": "/42/LRG_420010/",
+    "rakutenPath": "/yado/nagasaki/nagasaki.html"
+  },
+  {
+    "id": "sasebo",
+    "name": "佐世保",
+    "prefCode": "nagasaki",
+    "prefecture": "長崎県",
+    "jalanPath": "/42/LRG_420030/",
+    "rakutenPath": "/yado/nagasaki/sasebo.html"
+  },
+  {
+    "id": "hirado",
+    "name": "平戸",
+    "prefCode": "nagasaki",
+    "prefecture": "長崎県",
+    "jalanPath": "/42/LRG_420040/",
+    "rakutenPath": "/yado/nagasaki/hirado.html"
+  },
+  {
+    "id": "goto",
+    "name": "五島列島",
+    "prefCode": "nagasaki",
+    "prefecture": "長崎県",
+    "jalanPath": "/42/LRG_420060/",
+    "rakutenPath": "/yado/nagasaki/goto.html"
+  },
+  {
+    "id": "unzen",
+    "name": "雲仙",
+    "prefCode": "nagasaki",
+    "prefecture": "長崎県",
+    "jalanPath": "/42/LRG_420050/",
+    "rakutenPath": "/yado/nagasaki/unzen.html"
+  },
+  {
+    "id": "kagoshima",
+    "name": "鹿児島",
+    "prefCode": "kagoshima",
+    "prefecture": "鹿児島県",
+    "jalanPath": "/46/LRG_460010/",
+    "rakutenPath": "/yado/kagoshima/kagoshima.html"
+  },
+  {
+    "id": "yakushima",
+    "name": "屋久島",
+    "prefCode": "kagoshima",
+    "prefecture": "鹿児島県",
+    "jalanPath": "/46/LRG_460040/",
+    "rakutenPath": "/yado/kagoshima/yakushima.html"
+  },
+  {
+    "id": "ibusuki",
+    "name": "指宿",
+    "prefCode": "kagoshima",
+    "prefecture": "鹿児島県",
+    "jalanPath": "/46/LRG_460010/",
+    "rakutenPath": "/yado/kagoshima/ibusuki.html"
+  },
+  {
+    "id": "amami",
+    "name": "奄美大島",
+    "prefCode": "kagoshima",
+    "prefecture": "鹿児島県",
+    "jalanPath": "/46/LRG_460020/",
+    "rakutenPath": "/yado/kagoshima/amami.html"
+  },
+  {
+    "id": "miyazaki",
+    "name": "宮崎",
+    "prefCode": "miyazaki",
+    "prefecture": "宮崎県",
+    "jalanPath": "/45/LRG_450010/",
+    "rakutenPath": "/yado/miyazaki/miyazaki.html"
+  },
+  {
+    "id": "beppu",
+    "name": "別府",
+    "prefCode": "oita",
+    "prefecture": "大分県",
+    "jalanPath": "/44/LRG_440030/",
+    "rakutenPath": "/yado/oita/beppu.html"
+  },
+  {
+    "id": "amakusa",
+    "name": "天草",
+    "prefCode": "kumamoto",
+    "prefecture": "熊本県",
+    "jalanPath": "/43/LRG_430040/",
+    "rakutenPath": "/yado/kumamoto/amakusa.html"
+  },
+  {
+    "id": "naha",
+    "name": "那覇",
+    "prefCode": "okinawa",
+    "prefecture": "沖縄県",
+    "jalanPath": "/47/LRG_470010/",
+    "rakutenPath": "/yado/okinawa/naha.html"
+  },
+  {
+    "id": "ishigaki",
+    "name": "石垣島",
+    "prefCode": "okinawa",
+    "prefecture": "沖縄県",
+    "jalanPath": "/47/LRG_470030/",
+    "rakutenPath": "/yado/okinawa/ishigakijima.html"
+  },
+  {
+    "id": "kumejima",
+    "name": "久米島",
+    "prefCode": "okinawa",
+    "prefecture": "沖縄県",
+    "jalanPath": "/47/LRG_470060/",
+    "rakutenPath": "/yado/okinawa/kumejima.html"
+  },
+  {
+    "id": "miyakojima",
+    "name": "宮古島",
+    "prefCode": "okinawa",
+    "prefecture": "沖縄県",
+    "jalanPath": "/47/LRG_470040/",
+    "rakutenPath": "/yado/okinawa/miyakojima.html"
+  },
+  {
+    "id": "matsuyama",
+    "name": "松山",
+    "prefCode": "ehime",
+    "prefecture": "愛媛県",
+    "jalanPath": "/38/LRG_380010/",
+    "rakutenPath": "/yado/ehime/matsuyama.html"
+  },
+  {
+    "id": "uwajima",
+    "name": "宇和島",
+    "prefCode": "ehime",
+    "prefecture": "愛媛県",
+    "jalanPath": "/38/LRG_380020/",
+    "rakutenPath": "/yado/ehime/uwajima.html"
+  },
+  {
+    "id": "tokushima",
+    "name": "徳島",
+    "prefCode": "tokushima",
+    "prefecture": "徳島県",
+    "jalanPath": "/36/LRG_360010/",
+    "rakutenPath": "/yado/tokushima/tokushima.html"
+  },
+  {
+    "id": "kochi",
+    "name": "高知",
+    "prefCode": "kochi",
+    "prefecture": "高知県",
+    "jalanPath": "/39/LRG_390010/",
+    "rakutenPath": "/yado/kochi/kochi.html"
+  },
+  {
+    "id": "ashizuri",
+    "name": "足摺岬",
+    "prefCode": "kochi",
+    "prefecture": "高知県",
+    "jalanPath": "/39/LRG_390020/",
+    "rakutenPath": "/yado/kochi/ashizuri.html"
+  },
+  {
+    "id": "naoshima",
+    "name": "直島",
+    "prefCode": "kagawa",
+    "prefecture": "香川県",
+    "jalanPath": "/37/LRG_370020/",
+    "rakutenPath": "/yado/kagawa/naoshima.html"
+  },
+  {
+    "id": "kotohira",
+    "name": "琴平",
+    "prefCode": "kagawa",
+    "prefecture": "香川県",
+    "jalanPath": "/37/LRG_370030/",
+    "rakutenPath": "/yado/kagawa/kotohira.html"
+  },
+  {
+    "id": "oboke",
+    "name": "大歩危",
+    "prefCode": "tokushima",
+    "prefecture": "徳島県",
+    "jalanPath": "/36/LRG_360030/",
+    "rakutenPath": "/yado/tokushima/iya.html"
+  },
+  {
+    "id": "sendai",
+    "name": "仙台",
+    "prefCode": "miyagi",
+    "prefecture": "宮城県",
+    "jalanPath": "/04/LRG_040010/",
+    "rakutenPath": "/yado/miyagi/sendai.html"
+  },
+  {
+    "id": "matsushima",
+    "name": "松島",
+    "prefCode": "miyagi",
+    "prefecture": "宮城県",
+    "jalanPath": "/04/LRG_040030/",
+    "rakutenPath": "/yado/miyagi/matsushima.html"
+  },
+  {
+    "id": "hiraizumi",
+    "name": "平泉",
+    "prefCode": "iwate",
+    "prefecture": "岩手県",
+    "jalanPath": "/03/LRG_030020/",
+    "rakutenPath": "/yado/iwate/hiraizumi.html"
+  },
+  {
+    "id": "kakunodate",
+    "name": "角館",
+    "prefCode": "akita",
+    "prefecture": "秋田県",
+    "jalanPath": "/05/LRG_050010/",
+    "rakutenPath": "/yado/akita/kakunodate.html"
+  },
+  {
+    "id": "aizu",
+    "name": "会津若松",
+    "prefCode": "fukushima",
+    "prefecture": "福島県",
+    "jalanPath": "/07/LRG_070020/",
+    "rakutenPath": "/yado/fukushima/aizu.html"
+  },
+  {
+    "id": "zaosan",
+    "name": "蔵王",
+    "prefCode": "yamagata",
+    "prefecture": "山形県",
+    "jalanPath": "/06/LRG_060010/",
+    "rakutenPath": "/yado/yamagata/zao.html"
+  },
+  {
+    "id": "akita",
+    "name": "秋田",
+    "prefCode": "akita",
+    "prefecture": "秋田県",
+    "jalanPath": "/05/LRG_050020/",
+    "rakutenPath": "/yado/akita/akita.html"
+  },
+  {
+    "id": "sakata",
+    "name": "酒田",
+    "prefCode": "yamagata",
+    "prefecture": "山形県",
+    "jalanPath": "/06/LRG_060040/",
+    "rakutenPath": "/yado/yamagata/sakata.html"
+  },
+  {
+    "id": "yamagata",
+    "name": "山形",
+    "prefCode": "yamagata",
+    "prefecture": "山形県",
+    "jalanPath": "/06/LRG_060010/",
+    "rakutenPath": "/yado/yamagata/yamagata.html"
+  },
+  {
+    "id": "morioka",
+    "name": "盛岡",
+    "prefCode": "iwate",
+    "prefecture": "岩手県",
+    "jalanPath": "/03/LRG_030010/",
+    "rakutenPath": "/yado/iwate/morioka.html"
+  },
+  {
+    "id": "miyako-iwate",
+    "name": "宮古",
+    "prefCode": "iwate",
+    "prefecture": "岩手県",
+    "jalanPath": "/03/LRG_030050/",
+    "rakutenPath": "/yado/iwate/miyako.html"
+  }
+]

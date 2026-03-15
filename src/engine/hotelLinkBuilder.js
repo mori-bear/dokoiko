@@ -4,8 +4,9 @@
  * 楽天トラベル: prefecture + city キーワード検索 → 楽天アフィリエイト経由
  *   https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query={keyword}
  *
- * じゃらん: エリア検索 → ValueCommerce 経由
- *   https://www.jalan.net/uw/uwp1700/uww1701.do?keyword={keyword}
+ * じゃらん: エリアページ（jalanPath あり）または キーワード検索（フォールバック）
+ *   エリアページ: https://www.jalan.net{jalanPath}  例: /47/LRG_470010/
+ *   キーワード:   https://www.jalan.net/uw/uwp1700/uww1701.do?keyword={keyword}
  *
  * keyword = encodeURIComponent(prefecture + " " + city)
  */
@@ -40,6 +41,9 @@ function buildRakutenHotelLink(dest) {
 }
 
 export function buildJalanTarget(dest) {
+  if (dest.jalanPath) {
+    return `https://www.jalan.net${dest.jalanPath}`;
+  }
   const keyword = encodeURIComponent(resolveKeyword(dest));
   return `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${keyword}`;
 }

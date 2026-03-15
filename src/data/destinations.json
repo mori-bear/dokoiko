@@ -61,7 +61,9 @@
     "secondaryTransport": null,
     "city": "鎌倉市",
     "hubStation": "東京駅",
-    "accessStation": "鎌倉駅"
+    "accessStation": "鎌倉駅",
+    "hotelArea": "kamakura",
+    "jalanPath": "/14/LRG_140050/"
   },
   {
     "id": "atami",
@@ -125,7 +127,9 @@
     "secondaryTransport": null,
     "city": "熱海市",
     "hubStation": "熱海駅",
-    "accessStation": "熱海駅"
+    "accessStation": "熱海駅",
+    "hotelArea": "atami",
+    "jalanPath": "/22/LRG_220010/"
   },
   {
     "id": "nikko",
@@ -204,7 +208,9 @@
     "secondaryTransport": null,
     "city": "日光市",
     "hubStation": "宇都宮駅",
-    "accessStation": "日光駅"
+    "accessStation": "日光駅",
+    "hotelArea": "nikko",
+    "jalanPath": "/09/LRG_090020/"
   },
   {
     "id": "karuizawa",
@@ -344,7 +350,9 @@
     "secondaryTransport": null,
     "city": "山梨富士河口湖",
     "hubStation": "河口湖駅",
-    "accessStation": "河口湖駅"
+    "accessStation": "河口湖駅",
+    "hotelArea": "fujikawaguchiko",
+    "jalanPath": "/19/LRG_190010/"
   },
   {
     "id": "nara",
@@ -410,7 +418,9 @@
     "secondaryTransport": null,
     "city": "奈良市",
     "hubStation": "京都駅",
-    "accessStation": "奈良駅"
+    "accessStation": "奈良駅",
+    "hotelArea": "nara",
+    "jalanPath": "/29/LRG_290010/"
   },
   {
     "id": "ishigaki",
@@ -477,7 +487,9 @@
     "secondaryTransport": null,
     "city": "石垣市",
     "hubStation": "那覇空港",
-    "accessStation": "石垣空港"
+    "accessStation": "石垣空港",
+    "hotelArea": "ishigaki",
+    "jalanPath": "/47/LRG_470030/"
   },
   {
     "id": "ise",
@@ -553,7 +565,9 @@
     "secondaryTransport": null,
     "city": "伊勢市",
     "hubStation": "名古屋駅",
-    "accessStation": "伊勢市駅"
+    "accessStation": "伊勢市駅",
+    "hotelArea": "ise",
+    "jalanPath": "/24/LRG_240020/"
   },
   {
     "id": "beppu",
@@ -627,7 +641,9 @@
     "secondaryTransport": null,
     "city": "別府市",
     "hubStation": "大分駅",
-    "accessStation": "別府駅"
+    "accessStation": "別府駅",
+    "hotelArea": "beppu",
+    "jalanPath": "/44/LRG_440030/"
   },
   {
     "id": "otaru",
@@ -693,7 +709,9 @@
     "secondaryTransport": null,
     "city": "小樽市",
     "hubStation": "新千歳空港",
-    "accessStation": "小樽駅"
+    "accessStation": "小樽駅",
+    "hotelArea": "otaru",
+    "jalanPath": "/01/LRG_010140/"
   },
   {
     "id": "furano",
@@ -757,7 +775,9 @@
     "secondaryTransport": null,
     "city": "富良野市",
     "hubStation": "旭川駅",
-    "accessStation": "富良野駅"
+    "accessStation": "富良野駅",
+    "hotelArea": "furano",
+    "jalanPath": "/01/LRG_010170/"
   },
   {
     "id": "matsushima",
@@ -834,7 +854,9 @@
     "secondaryTransport": null,
     "city": "松島町",
     "hubStation": "仙台駅",
-    "accessStation": "松島海岸駅"
+    "accessStation": "松島海岸駅",
+    "hotelArea": "matsushima",
+    "jalanPath": "/04/LRG_040030/"
   },
   {
     "id": "miyajima",
@@ -899,7 +921,9 @@
     "secondaryTransport": null,
     "city": "廿日市市",
     "hubStation": "広島駅",
-    "accessStation": "宮島口港"
+    "accessStation": "宮島口港",
+    "hotelArea": "miyajima",
+    "jalanPath": "/34/LRG_340060/"
   },
   {
     "id": "onomichi",
@@ -977,7 +1001,9 @@
     "secondaryTransport": null,
     "city": "尾道市",
     "hubStation": "福山駅",
-    "accessStation": "尾道駅"
+    "accessStation": "尾道駅",
+    "hotelArea": "onomichi",
+    "jalanPath": "/34/LRG_340020/"
   },
   {
     "id": "shodoshima",
@@ -1305,7 +1331,9 @@
     "secondaryTransport": null,
     "city": "久米島町",
     "hubStation": "那覇空港",
-    "accessStation": "久米島空港"
+    "accessStation": "久米島空港",
+    "hotelArea": "kumejima",
+    "jalanPath": "/47/LRG_470060/"
   },
   {
     "id": "miyakojima",
@@ -1373,7 +1401,9 @@
     "secondaryTransport": null,
     "city": "宮古島市",
     "hubStation": "那覇空港",
-    "accessStation": "宮古空港"
+    "accessStation": "宮古空港",
+    "hotelArea": "miyakojima",
+    "jalanPath": "/47/LRG_470040/"
   },
   {
     "id": "kouzushima",
@@ -1437,7 +1467,9 @@
     "secondaryTransport": null,
     "city": "神津島村",
     "hubStation": "竹芝客船ターミナル",
-    "accessStation": "神津島港"
+    "accessStation": "神津島港",
+    "hotelArea": "kouzushima",
+    "jalanPath": "/13/LRG_130120/"
   },
   {
     "id": "hakone",
@@ -1501,7 +1533,9 @@
     "secondaryTransport": null,
     "city": "箱根町",
     "hubStation": "小田原駅",
-    "accessStation": "箱根湯本駅"
+    "accessStation": "箱根湯本駅",
+    "hotelArea": "hakone",
+    "jalanPath": "/14/LRG_140060/"
   },
   {
     "id": "shuzenji",
@@ -1564,7 +1598,9 @@
     "secondaryTransport": null,
     "city": "伊豆市",
     "hubStation": "三島駅",
-    "accessStation": "修善寺駅"
+    "accessStation": "修善寺駅",
+    "hotelArea": "shuzenji",
+    "jalanPath": "/22/LRG_220020/"
   },
   {
     "id": "kusatsu-onsen",
@@ -1626,7 +1662,9 @@
     "stayRecommendation": "1night",
     "city": "草津町",
     "hubStation": "長野原草津口駅",
-    "accessStation": "草津温泉バスターミナル"
+    "accessStation": "草津温泉バスターミナル",
+    "hotelArea": "kusatsu-onsen",
+    "jalanPath": "/10/LRG_100050/"
   },
   {
     "id": "shimoda",
@@ -1691,7 +1729,9 @@
     "secondaryTransport": null,
     "city": "下田市",
     "hubStation": "熱海駅",
-    "accessStation": "伊豆急下田駅"
+    "accessStation": "伊豆急下田駅",
+    "hotelArea": "shimoda",
+    "jalanPath": "/22/LRG_220060/"
   },
   {
     "id": "izu-oshima",
@@ -1758,7 +1798,9 @@
     "secondaryTransport": null,
     "city": "大島町",
     "hubStation": "東京竹芝",
-    "accessStation": "元町港"
+    "accessStation": "元町港",
+    "hotelArea": "izu-oshima",
+    "jalanPath": "/13/LRG_130100/"
   },
   {
     "id": "shirakawago-t",
@@ -1835,7 +1877,9 @@
     "stayRecommendation": "1night",
     "city": "岐阜白川郷",
     "hubStation": "金沢駅",
-    "accessStation": "金沢駅"
+    "accessStation": "金沢駅",
+    "hotelArea": "shirakawago",
+    "jalanPath": "/21/LRG_210070/"
   },
   {
     "id": "arima-onsen",
@@ -1899,7 +1943,9 @@
     "stayRecommendation": "daytrip",
     "city": "神戸市",
     "hubStation": "三ノ宮駅",
-    "accessStation": "有馬温泉駅"
+    "accessStation": "有馬温泉駅",
+    "hotelArea": "arima-onsen",
+    "jalanPath": "/28/LRG_280010/"
   },
   {
     "id": "kinosaki-onsen",
@@ -1977,7 +2023,9 @@
     "secondaryTransport": null,
     "city": "豊岡市",
     "hubStation": "城崎温泉駅",
-    "accessStation": "城崎温泉駅"
+    "accessStation": "城崎温泉駅",
+    "hotelArea": "kinosaki-onsen",
+    "jalanPath": "/28/LRG_280060/"
   },
   {
     "id": "kurashiki-o",
@@ -2054,7 +2102,9 @@
     "secondaryTransport": null,
     "city": "岡山倉敷",
     "hubStation": "倉敷駅",
-    "accessStation": "倉敷駅"
+    "accessStation": "倉敷駅",
+    "hotelArea": "kurashiki",
+    "jalanPath": "/33/LRG_330020/"
   },
   {
     "id": "shirahama-o",
@@ -2120,7 +2170,9 @@
     "secondaryTransport": null,
     "city": "和歌山白浜",
     "hubStation": "白浜駅",
-    "accessStation": "白浜駅"
+    "accessStation": "白浜駅",
+    "hotelArea": "shirahama-o",
+    "jalanPath": "/30/LRG_300020/"
   },
   {
     "id": "takayama-o",
@@ -2198,7 +2250,9 @@
     "secondaryTransport": null,
     "city": "岐阜高山",
     "hubStation": "高山駅",
-    "accessStation": "高山駅"
+    "accessStation": "高山駅",
+    "hotelArea": "takayama",
+    "jalanPath": "/21/LRG_210060/"
   },
   {
     "id": "toba",
@@ -2265,7 +2319,9 @@
     "secondaryTransport": null,
     "city": "鳥羽市",
     "hubStation": "名古屋駅",
-    "accessStation": "鳥羽駅"
+    "accessStation": "鳥羽駅",
+    "hotelArea": "toba",
+    "jalanPath": "/24/LRG_240040/"
   },
   {
     "id": "yufuin",
@@ -2341,7 +2397,9 @@
     "secondaryTransport": null,
     "city": "由布市",
     "hubStation": "大分駅",
-    "accessStation": "由布院駅"
+    "accessStation": "由布院駅",
+    "hotelArea": "yufuin",
+    "jalanPath": "/44/LRG_440020/"
   },
   {
     "id": "kurokawa-k",
@@ -2407,7 +2465,9 @@
     "stayRecommendation": "daytrip",
     "city": "熊本黒川温泉",
     "hubStation": "博多駅",
-    "accessStation": "博多駅"
+    "accessStation": "博多駅",
+    "hotelArea": "kurokawa",
+    "jalanPath": "/43/LRG_430060/"
   },
   {
     "id": "aso",
@@ -2471,7 +2531,9 @@
     "secondaryTransport": null,
     "city": "阿蘇市",
     "hubStation": "熊本駅",
-    "accessStation": "阿蘇駅"
+    "accessStation": "阿蘇駅",
+    "hotelArea": "aso",
+    "jalanPath": "/43/LRG_430020/"
   },
   {
     "id": "yakushima",
@@ -2537,7 +2599,9 @@
     "secondaryTransport": null,
     "city": "屋久島町",
     "hubStation": "鹿児島港",
-    "accessStation": "安房港"
+    "accessStation": "安房港",
+    "hotelArea": "yakushima",
+    "jalanPath": "/46/LRG_460040/"
   },
   {
     "id": "amakusa",
@@ -2600,7 +2664,9 @@
     "stayRecommendation": "daytrip",
     "city": "天草市",
     "hubStation": "熊本駅",
-    "accessStation": "熊本駅"
+    "accessStation": "熊本駅",
+    "hotelArea": "amakusa",
+    "jalanPath": "/43/LRG_430040/"
   },
   {
     "id": "hiraizumi",
@@ -2665,7 +2731,9 @@
     "secondaryTransport": null,
     "city": "平泉町",
     "hubStation": "一ノ関駅",
-    "accessStation": "平泉駅"
+    "accessStation": "平泉駅",
+    "hotelArea": "hiraizumi",
+    "jalanPath": "/03/LRG_030020/"
   },
   {
     "id": "kakunodate",
@@ -2729,7 +2797,9 @@
     "secondaryTransport": null,
     "city": "仙北市",
     "hubStation": "盛岡駅",
-    "accessStation": "角館駅"
+    "accessStation": "角館駅",
+    "hotelArea": "kakunodate",
+    "jalanPath": "/05/LRG_050010/"
   },
   {
     "id": "aizu",
@@ -2806,7 +2876,9 @@
     "secondaryTransport": null,
     "city": "福島会津若松",
     "hubStation": "会津若松駅",
-    "accessStation": "会津若松駅"
+    "accessStation": "会津若松駅",
+    "hotelArea": "aizu",
+    "jalanPath": "/07/LRG_070020/"
   },
   {
     "id": "zaosan",
@@ -2869,7 +2941,9 @@
     "secondaryTransport": null,
     "city": "宮城蔵王",
     "hubStation": "蔵王駅",
-    "accessStation": "蔵王駅"
+    "accessStation": "蔵王駅",
+    "hotelArea": "zaosan",
+    "jalanPath": "/06/LRG_060010/"
   },
   {
     "id": "hagi",
@@ -2935,7 +3009,9 @@
     "secondaryTransport": null,
     "city": "萩市",
     "hubStation": "新山口駅",
-    "accessStation": "萩駅"
+    "accessStation": "萩駅",
+    "hotelArea": "hagi",
+    "jalanPath": "/35/LRG_350020/"
   },
   {
     "id": "shimonoseki",
@@ -3001,7 +3077,9 @@
     "secondaryTransport": null,
     "city": "下関市",
     "hubStation": "博多駅",
-    "accessStation": "下関駅"
+    "accessStation": "下関駅",
+    "hotelArea": "shimonoseki",
+    "jalanPath": "/35/LRG_350010/"
   },
   {
     "id": "naoshima",
@@ -3066,7 +3144,9 @@
     "secondaryTransport": null,
     "city": "直島町",
     "hubStation": "高松駅",
-    "accessStation": "宮浦港"
+    "accessStation": "宮浦港",
+    "hotelArea": "naoshima",
+    "jalanPath": "/37/LRG_370020/"
   },
   {
     "id": "kotohira",
@@ -3130,7 +3210,9 @@
     "secondaryTransport": null,
     "city": "琴平町",
     "hubStation": "高松駅",
-    "accessStation": "琴電琴平駅"
+    "accessStation": "琴電琴平駅",
+    "hotelArea": "kotohira",
+    "jalanPath": "/37/LRG_370030/"
   },
   {
     "id": "uwajima",
@@ -3197,7 +3279,9 @@
     "secondaryTransport": null,
     "city": "宇和島市",
     "hubStation": "松山駅",
-    "accessStation": "宇和島駅"
+    "accessStation": "宇和島駅",
+    "hotelArea": "uwajima",
+    "jalanPath": "/38/LRG_380020/"
   },
   {
     "id": "toyako",
@@ -3261,7 +3345,9 @@
     "secondaryTransport": null,
     "city": "洞爺湖町",
     "hubStation": "洞爺駅",
-    "accessStation": "洞爺駅"
+    "accessStation": "洞爺駅",
+    "hotelArea": "toyako",
+    "jalanPath": "/01/LRG_010140/"
   },
   {
     "id": "noboribetsu",
@@ -3324,7 +3410,9 @@
     "secondaryTransport": null,
     "city": "登別市",
     "hubStation": "登別駅",
-    "accessStation": "登別駅"
+    "accessStation": "登別駅",
+    "hotelArea": "noboribetsu",
+    "jalanPath": "/01/LRG_010130/"
   },
   {
     "id": "shiretoko",
@@ -3390,7 +3478,9 @@
     "stayRecommendation": "1night",
     "city": "斜里町",
     "hubStation": "知床斜里駅",
-    "accessStation": "知床斜里駅"
+    "accessStation": "知床斜里駅",
+    "hotelArea": "shiretoko",
+    "jalanPath": "/01/LRG_010290/"
   },
   {
     "id": "wajima",
@@ -3454,7 +3544,9 @@
     "stayRecommendation": "1night",
     "city": "輪島市",
     "hubStation": "金沢駅",
-    "accessStation": "輪島バスターミナル"
+    "accessStation": "輪島バスターミナル",
+    "hotelArea": "wajima",
+    "jalanPath": "/17/LRG_170030/"
   },
   {
     "id": "kaga-onsen",
@@ -3517,7 +3609,9 @@
     "secondaryTransport": null,
     "city": "加賀市",
     "hubStation": "加賀温泉駅",
-    "accessStation": "加賀温泉駅"
+    "accessStation": "加賀温泉駅",
+    "hotelArea": "kaga-onsen",
+    "jalanPath": "/17/LRG_170020/"
   },
   {
     "id": "hakuba",
@@ -3578,7 +3672,9 @@
     "secondaryTransport": null,
     "city": "白馬村",
     "hubStation": "長野駅",
-    "accessStation": "白馬駅"
+    "accessStation": "白馬駅",
+    "hotelArea": "hakuba",
+    "jalanPath": "/20/LRG_200020/"
   },
   {
     "id": "amanohashidate",
@@ -3641,7 +3737,9 @@
     "secondaryTransport": null,
     "city": "宮津市",
     "hubStation": "福知山駅",
-    "accessStation": "天橋立駅"
+    "accessStation": "天橋立駅",
+    "hotelArea": "amanohashidate",
+    "jalanPath": "/26/LRG_260030/"
   },
   {
     "id": "ine",
@@ -3705,7 +3803,9 @@
     "stayRecommendation": "1night",
     "city": "伊根町",
     "hubStation": "天橋立駅",
-    "accessStation": "伊根港バス停"
+    "accessStation": "伊根港バス停",
+    "hotelArea": "ine",
+    "jalanPath": "/26/LRG_260040/"
   },
   {
     "id": "ibusuki",
@@ -3769,7 +3869,9 @@
     "secondaryTransport": null,
     "city": "指宿市",
     "hubStation": "鹿児島中央駅",
-    "accessStation": "指宿駅"
+    "accessStation": "指宿駅",
+    "hotelArea": "ibusuki",
+    "jalanPath": "/46/LRG_460010/"
   },
   {
     "id": "sasebo",
@@ -3834,7 +3936,9 @@
     "secondaryTransport": null,
     "city": "佐世保市",
     "hubStation": "博多駅",
-    "accessStation": "佐世保駅"
+    "accessStation": "佐世保駅",
+    "hotelArea": "sasebo",
+    "jalanPath": "/42/LRG_420030/"
   },
   {
     "id": "hirado",
@@ -3898,7 +4002,9 @@
     "stayRecommendation": "1night",
     "city": "平戸市",
     "hubStation": "佐世保駅",
-    "accessStation": "佐世保駅"
+    "accessStation": "佐世保駅",
+    "hotelArea": "hirado",
+    "jalanPath": "/42/LRG_420040/"
   },
   {
     "id": "tottori",
@@ -3961,7 +4067,9 @@
     "secondaryTransport": null,
     "city": "鳥取市",
     "hubStation": "鳥取駅",
-    "accessStation": "鳥取駅"
+    "accessStation": "鳥取駅",
+    "hotelArea": "tottori",
+    "jalanPath": "/31/LRG_310010/"
   },
   {
     "id": "akita",
@@ -4025,7 +4133,9 @@
     "secondaryTransport": null,
     "city": "秋田市",
     "hubStation": "秋田駅",
-    "accessStation": "秋田駅"
+    "accessStation": "秋田駅",
+    "hotelArea": "akita",
+    "jalanPath": "/05/LRG_050020/"
   },
   {
     "id": "awaji",
@@ -4092,7 +4202,9 @@
     "stayRecommendation": "daytrip",
     "city": "兵庫淡路島",
     "hubStation": "三ノ宮駅",
-    "accessStation": "三ノ宮駅"
+    "accessStation": "三ノ宮駅",
+    "hotelArea": "awaji",
+    "jalanPath": "/28/LRG_280070/"
   },
   {
     "id": "takao",
@@ -4156,7 +4268,9 @@
     "secondaryTransport": null,
     "city": "東京高尾山",
     "hubStation": "高尾山口駅",
-    "accessStation": "高尾山口駅"
+    "accessStation": "高尾山口駅",
+    "hotelArea": "takao",
+    "jalanPath": "/13/LRG_130030/"
   },
   {
     "id": "tateyama-chiba",
@@ -4222,7 +4336,9 @@
     "secondaryTransport": null,
     "city": "千葉館山",
     "hubStation": "館山駅",
-    "accessStation": "館山駅"
+    "accessStation": "館山駅",
+    "hotelArea": "tateyama-chiba",
+    "jalanPath": "/12/LRG_120110/"
   },
   {
     "id": "gokayama",
@@ -4286,7 +4402,9 @@
     "stayRecommendation": "1night",
     "city": "南砺市",
     "hubStation": "金沢駅",
-    "accessStation": "五箇山バス停"
+    "accessStation": "五箇山バス停",
+    "hotelArea": "gokayama",
+    "jalanPath": "/16/LRG_160020/"
   },
   {
     "id": "jozankei",
@@ -4351,7 +4469,9 @@
     "stayRecommendation": "2night",
     "city": "札幌市",
     "hubStation": "札幌駅",
-    "accessStation": "札幌駅"
+    "accessStation": "札幌駅",
+    "hotelArea": "jozankei",
+    "jalanPath": "/01/LRG_010220/"
   },
   {
     "id": "biei",
@@ -4414,7 +4534,9 @@
     "secondaryTransport": null,
     "city": "美瑛町",
     "hubStation": "旭川駅",
-    "accessStation": "美瑛駅"
+    "accessStation": "美瑛駅",
+    "hotelArea": "biei",
+    "jalanPath": "/01/LRG_010370/"
   },
   {
     "id": "miyako-iwate",
@@ -4479,7 +4601,9 @@
     "secondaryTransport": null,
     "city": "宮古市",
     "hubStation": "盛岡駅",
-    "accessStation": "宮古駅"
+    "accessStation": "宮古駅",
+    "hotelArea": "miyako-iwate",
+    "jalanPath": "/03/LRG_030050/"
   },
   {
     "id": "sakata",
@@ -4544,7 +4668,9 @@
     "secondaryTransport": null,
     "city": "酒田市",
     "hubStation": "新庄駅",
-    "accessStation": "酒田駅"
+    "accessStation": "酒田駅",
+    "hotelArea": "sakata",
+    "jalanPath": "/06/LRG_060040/"
   },
   {
     "id": "takachiho",
@@ -4609,7 +4735,9 @@
     "stayRecommendation": "daytrip",
     "city": "高千穂町",
     "hubStation": "熊本駅",
-    "accessStation": "熊本駅"
+    "accessStation": "熊本駅",
+    "hotelArea": "takachiho",
+    "jalanPath": "/45/LRG_450030/"
   },
   {
     "id": "amami",
@@ -4673,7 +4801,9 @@
     "secondaryTransport": null,
     "city": "奄美市",
     "hubStation": "鹿児島港",
-    "accessStation": "名瀬港"
+    "accessStation": "名瀬港",
+    "hotelArea": "amami",
+    "jalanPath": "/46/LRG_460020/"
   },
   {
     "id": "goto",
@@ -4738,7 +4868,9 @@
     "secondaryTransport": null,
     "city": "五島市",
     "hubStation": "長崎港",
-    "accessStation": "福江港"
+    "accessStation": "福江港",
+    "hotelArea": "goto",
+    "jalanPath": "/42/LRG_420060/"
   },
   {
     "id": "unzen",
@@ -4801,7 +4933,9 @@
     "stayRecommendation": "1night",
     "city": "雲仙市",
     "hubStation": "諫早駅",
-    "accessStation": "諫早駅"
+    "accessStation": "諫早駅",
+    "hotelArea": "unzen",
+    "jalanPath": "/42/LRG_420050/"
   },
   {
     "id": "ashizuri",
@@ -4862,7 +4996,9 @@
     "stayRecommendation": "2night",
     "city": "土佐清水市",
     "hubStation": "高知駅",
-    "accessStation": "宿毛駅"
+    "accessStation": "宿毛駅",
+    "hotelArea": "ashizuri",
+    "jalanPath": "/39/LRG_390020/"
   },
   {
     "id": "oboke",
@@ -4926,7 +5062,9 @@
     "secondaryTransport": null,
     "city": "三好市",
     "hubStation": "高松駅",
-    "accessStation": "大歩危駅"
+    "accessStation": "大歩危駅",
+    "hotelArea": "oboke",
+    "jalanPath": "/36/LRG_360030/"
   },
   {
     "id": "tsuwano",
@@ -4991,7 +5129,9 @@
     "secondaryTransport": null,
     "city": "津和野町",
     "hubStation": "新山口駅",
-    "accessStation": "津和野駅"
+    "accessStation": "津和野駅",
+    "hotelArea": "tsuwano",
+    "jalanPath": "/32/LRG_320030/"
   },
   {
     "id": "inuyama",
@@ -5055,7 +5195,9 @@
     "secondaryTransport": null,
     "city": "犬山市",
     "hubStation": "名古屋駅",
-    "accessStation": "犬山駅"
+    "accessStation": "犬山駅",
+    "hotelArea": "inuyama",
+    "jalanPath": "/23/LRG_230040/"
   },
   {
     "id": "kiso",
@@ -5120,7 +5262,9 @@
     "stayRecommendation": "daytrip",
     "city": "木曽町",
     "hubStation": "名古屋駅",
-    "accessStation": "南木曽駅"
+    "accessStation": "南木曽駅",
+    "hotelArea": "kiso",
+    "jalanPath": "/20/LRG_200060/"
   },
   {
     "id": "miyama",
@@ -5184,7 +5328,9 @@
     "stayRecommendation": "daytrip",
     "city": "南丹市",
     "hubStation": "園部駅",
-    "accessStation": "園部駅"
+    "accessStation": "園部駅",
+    "hotelArea": "miyama",
+    "jalanPath": "/26/LRG_260050/"
   },
   {
     "id": "tateyama-kurobe",
@@ -5248,7 +5394,9 @@
     "stayRecommendation": "1night",
     "city": "立山町",
     "hubStation": "富山駅",
-    "accessStation": "立山駅"
+    "accessStation": "立山駅",
+    "hotelArea": "tateyama-kurobe",
+    "jalanPath": "/16/LRG_160030/"
   },
   {
     "id": "himi",
@@ -5315,7 +5463,9 @@
     "secondaryTransport": null,
     "city": "氷見市",
     "hubStation": "高岡駅",
-    "accessStation": "氷見駅"
+    "accessStation": "氷見駅",
+    "hotelArea": "himi",
+    "jalanPath": "/16/LRG_160010/"
   },
   {
     "id": "nyuto-onsen",

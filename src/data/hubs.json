@@ -52,7 +52,9 @@
     },
     "stayRecommendation": "daytrip",
     "prefecture": "神奈川県",
-    "city": "横浜市"
+    "city": "横浜市",
+    "hotelArea": "yokohama",
+    "jalanPath": "/14/LRG_140020/"
   },
   {
     "id": "nagoya-t",
@@ -108,7 +110,9 @@
     },
     "stayRecommendation": "daytrip",
     "prefecture": "愛知県",
-    "city": "名古屋市"
+    "city": "名古屋市",
+    "hotelArea": "nagoya",
+    "jalanPath": "/23/LRG_230010/"
   },
   {
     "id": "sendai-t",
@@ -161,7 +165,9 @@
     },
     "stayRecommendation": "daytrip",
     "prefecture": "宮城県",
-    "city": "仙台市"
+    "city": "仙台市",
+    "hotelArea": "sendai",
+    "jalanPath": "/04/LRG_040010/"
   },
   {
     "id": "kanazawa-t",
@@ -228,7 +234,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "石川県",
-    "city": "金沢市"
+    "city": "金沢市",
+    "hotelArea": "kanazawa",
+    "jalanPath": "/17/LRG_170010/"
   },
   {
     "id": "osaka-t",
@@ -287,7 +295,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "大阪府",
-    "city": "大阪市"
+    "city": "大阪市",
+    "hotelArea": "osaka",
+    "jalanPath": "/27/LRG_270010/"
   },
   {
     "id": "kyoto-t",
@@ -355,7 +365,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "京都府",
-    "city": "京都市"
+    "city": "京都市",
+    "hotelArea": "kyoto",
+    "jalanPath": "/26/LRG_260010/"
   },
   {
     "id": "hiroshima-t",
@@ -427,7 +439,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "広島県",
-    "city": "広島市"
+    "city": "広島市",
+    "hotelArea": "hiroshima",
+    "jalanPath": "/34/LRG_340010/"
   },
   {
     "id": "fukuoka-t",
@@ -487,7 +501,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "福岡県",
-    "city": "福岡市"
+    "city": "福岡市",
+    "hotelArea": "fukuoka",
+    "jalanPath": "/40/LRG_400010/"
   },
   {
     "id": "sapporo-t",
@@ -556,7 +572,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "北海道",
-    "city": "札幌市"
+    "city": "札幌市",
+    "hotelArea": "sapporo",
+    "jalanPath": "/01/LRG_010030/"
   },
   {
     "id": "kobe",
@@ -610,7 +628,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "兵庫県",
-    "city": "神戸市"
+    "city": "神戸市",
+    "hotelArea": "kobe",
+    "jalanPath": "/28/LRG_280010/"
   },
   {
     "id": "himeji",
@@ -663,7 +683,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "兵庫県",
-    "city": "姫路市"
+    "city": "姫路市",
+    "hotelArea": "himeji",
+    "jalanPath": "/28/LRG_280050/"
   },
   {
     "id": "wakayama",
@@ -717,7 +739,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "和歌山県",
-    "city": "和歌山市"
+    "city": "和歌山市",
+    "hotelArea": "wakayama",
+    "jalanPath": "/30/LRG_300010/"
   },
   {
     "id": "okayama-o",
@@ -772,7 +796,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "岡山県",
-    "city": "岡山市"
+    "city": "岡山市",
+    "hotelArea": "okayama",
+    "jalanPath": "/33/LRG_330010/"
   },
   {
     "id": "tokyo-o",
@@ -831,7 +857,9 @@
     },
     "stayRecommendation": "daytrip",
     "prefecture": "東京都",
-    "city": "東京都区部"
+    "city": "東京都区部",
+    "hotelArea": "tokyo",
+    "jalanPath": "/13/LRG_130010/"
   },
   {
     "id": "gifu",
@@ -885,7 +913,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "岐阜県",
-    "city": "岐阜市"
+    "city": "岐阜市",
+    "hotelArea": "gifu",
+    "jalanPath": "/21/LRG_210010/"
   },
   {
     "id": "saga",
@@ -939,7 +969,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "佐賀県",
-    "city": "佐賀市"
+    "city": "佐賀市",
+    "hotelArea": "saga",
+    "jalanPath": "/41/LRG_410010/"
   },
   {
     "id": "kumamoto",
@@ -992,7 +1024,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "熊本県",
-    "city": "熊本市"
+    "city": "熊本市",
+    "hotelArea": "kumamoto",
+    "jalanPath": "/43/LRG_430010/"
   },
   {
     "id": "nagasaki",
@@ -1057,7 +1091,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "長崎県",
-    "city": "長崎市"
+    "city": "長崎市",
+    "hotelArea": "nagasaki",
+    "jalanPath": "/42/LRG_420010/"
   },
   {
     "id": "kagoshima",
@@ -1110,7 +1146,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "鹿児島県",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "hotelArea": "kagoshima",
+    "jalanPath": "/46/LRG_460010/"
   },
   {
     "id": "miyazaki",
@@ -1164,7 +1202,9 @@
     },
     "stayRecommendation": "3night+",
     "prefecture": "宮崎県",
-    "city": "宮崎市"
+    "city": "宮崎市",
+    "hotelArea": "miyazaki",
+    "jalanPath": "/45/LRG_450010/"
   },
   {
     "id": "asahikawa",
@@ -1217,7 +1257,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "北海道",
-    "city": "旭川市"
+    "city": "旭川市",
+    "hotelArea": "asahikawa",
+    "jalanPath": "/01/LRG_010060/"
   },
   {
     "id": "kushiro",
@@ -1273,7 +1315,9 @@
     },
     "stayRecommendation": "3night+",
     "prefecture": "北海道",
-    "city": "釧路市"
+    "city": "釧路市",
+    "hotelArea": "kushiro",
+    "jalanPath": "/01/LRG_010110/"
   },
   {
     "id": "hakodate",
@@ -1337,7 +1381,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "北海道",
-    "city": "函館市"
+    "city": "函館市",
+    "hotelArea": "hakodate",
+    "jalanPath": "/01/LRG_010050/"
   },
   {
     "id": "yamagata",
@@ -1390,7 +1436,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "山形県",
-    "city": "山形市"
+    "city": "山形市",
+    "hotelArea": "yamagata",
+    "jalanPath": "/06/LRG_060010/"
   },
   {
     "id": "morioka",
@@ -1443,7 +1491,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "岩手県",
-    "city": "盛岡市"
+    "city": "盛岡市",
+    "hotelArea": "morioka",
+    "jalanPath": "/03/LRG_030010/"
   },
   {
     "id": "niigata",
@@ -1495,7 +1545,9 @@
     },
     "stayRecommendation": "daytrip",
     "prefecture": "新潟県",
-    "city": "新潟市"
+    "city": "新潟市",
+    "hotelArea": "niigata",
+    "jalanPath": "/15/LRG_150010/"
   },
   {
     "id": "matsuyama",
@@ -1564,7 +1616,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "愛媛県",
-    "city": "松山市"
+    "city": "松山市",
+    "hotelArea": "matsuyama",
+    "jalanPath": "/38/LRG_380010/"
   },
   {
     "id": "tokushima",
@@ -1617,7 +1671,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "徳島県",
-    "city": "徳島市"
+    "city": "徳島市",
+    "hotelArea": "tokushima",
+    "jalanPath": "/36/LRG_360010/"
   },
   {
     "id": "kochi",
@@ -1670,7 +1726,9 @@
     },
     "stayRecommendation": "2night",
     "prefecture": "高知県",
-    "city": "高知市"
+    "city": "高知市",
+    "hotelArea": "kochi",
+    "jalanPath": "/39/LRG_390010/"
   },
   {
     "id": "naha",
@@ -1747,7 +1805,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "沖縄県",
-    "city": "那覇市"
+    "city": "那覇市",
+    "hotelArea": "naha",
+    "jalanPath": "/47/LRG_470010/"
   },
   {
     "id": "matsumoto-n",
@@ -1803,7 +1863,9 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "長野県",
-    "city": "松本市"
+    "city": "松本市",
+    "hotelArea": "matsumoto",
+    "jalanPath": "/20/LRG_200010/"
   },
   {
     "id": "mito",
