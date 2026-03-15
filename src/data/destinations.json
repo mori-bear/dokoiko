@@ -7955,7 +7955,7 @@
     "name": "吉野",
     "type": "destination",
     "region": "近畿",
-    "hub": "nara",
+    "hub": "osaka-t",
     "hotelHub": "吉野",
     "stayAllowed": [
       "1night"
@@ -8035,7 +8035,7 @@
     "name": "熊野",
     "type": "destination",
     "region": "近畿",
-    "hub": "nara",
+    "hub": "nagoya-t",
     "hotelHub": "熊野",
     "stayAllowed": [
       "1night"
@@ -8114,7 +8114,7 @@
     "name": "西表島",
     "type": "destination",
     "region": "沖縄",
-    "hub": "ishigaki",
+    "hub": "naha",
     "hotelHub": "西表島",
     "stayAllowed": [
       "1night"
@@ -8275,7 +8275,7 @@
     "name": "飛騨古川",
     "type": "destination",
     "region": "中部",
-    "hub": "takayama-o",
+    "hub": "gifu",
     "hotelHub": "飛騨古川",
     "stayAllowed": [
       "1night"
@@ -8355,7 +8355,7 @@
     "name": "豊後高田",
     "type": "destination",
     "region": "九州",
-    "hub": "beppu",
+    "hub": "fukuoka-t",
     "hotelHub": "豊後高田",
     "stayAllowed": [
       "1night"
@@ -8435,7 +8435,7 @@
     "name": "伊豆高原",
     "type": "destination",
     "region": "中部",
-    "hub": "atami",
+    "hub": "tokyo-o",
     "hotelHub": "伊豆高原",
     "stayAllowed": [
       "1night"
@@ -8516,7 +8516,7 @@
     "name": "田辺",
     "type": "destination",
     "region": "近畿",
-    "hub": "nara",
+    "hub": "osaka-t",
     "hotelHub": "田辺",
     "stayAllowed": [
       "1night"
@@ -9073,7 +9073,7 @@
     "name": "志々島",
     "type": "destination",
     "region": "四国",
-    "hub": "takamatsu-t",
+    "hub": "takamatsu",
     "hotelHub": "高松",
     "stayAllowed": [
       "daytrip"
@@ -13361,7 +13361,7 @@
     "region": "東北",
     "prefecture": "岩手県",
     "destType": "city",
-    "hub": "ichinoseki",
+    "hub": "morioka",
     "hotelHub": "大船渡",
     "stayAllowed": [
       "1night"
@@ -13404,7 +13404,7 @@
     "region": "東北",
     "prefecture": "岩手県",
     "destType": "city",
-    "hub": "hachinohe",
+    "hub": "morioka",
     "hotelHub": "久慈",
     "stayAllowed": [
       "1night"
