@@ -36,6 +36,8 @@ const DESTS_FILE = USE_V2 ? './src/data/destinations_v2.json' : './src/data/dest
 const DESTS_RAW = JSON.parse(fs.readFileSync(DESTS_FILE, 'utf8'));
 if (USE_V2) console.log(`[QA] データソース: ${DESTS_FILE} (${DESTS_RAW.length}件)`);
 const ALL   = [...HUBS_RAW, ...DESTS_RAW];
+const HOTEL_AREAS_RAW = JSON.parse(fs.readFileSync('./src/data/hotelAreas.json', 'utf8'));
+const HOTEL_AREA_MAP  = new Map(HOTEL_AREAS_RAW.map(a => [a.id, a]));
 const DESTS = DESTS_RAW; // destinations.json には hub が含まれない
 
 /* ══════════════════════════════════════════
@@ -352,8 +354,12 @@ function getLinks(city, dep) {
   return links;
 }
 
-/** hotelLinkBuilder.js と同期: prefecture + " " + city 固定 */
+/** hotelLinkBuilder.js と同期: hotelArea → rakutenKeyword → prefecture + city */
 function resolveKeyword(city) {
+  if (city.hotelArea) {
+    const area = HOTEL_AREA_MAP.get(city.hotelArea);
+    if (area?.rakutenKeyword) return area.rakutenKeyword;
+  }
   return `${city.prefecture} ${city.city}`;
 }
 
@@ -591,9 +597,16 @@ class Scorecard {
       const kw = resolveKeyword(city);
       sc.check(!!kw && kw.trim().length > 0, `${city.id}: keyword 空`);
 
-      // keyword = prefecture + " " + city 固定
-      sc.check(kw === `${city.prefecture} ${city.city}`,
-        `${city.id}: keyword が prefecture+city でない（${kw}）`);
+      // keyword = area.rakutenKeyword または prefecture + " " + city
+      const expectedKw = (() => {
+        if (city.hotelArea) {
+          const a = HOTEL_AREA_MAP.get(city.hotelArea);
+          if (a?.rakutenKeyword) return a.rakutenKeyword;
+        }
+        return `${city.prefecture} ${city.city}`;
+      })();
+      sc.check(kw === expectedKw,
+        `${city.id}: keyword 不一致（got:${kw} expected:${expectedKw}）`);
 
       const jUrl = buildJalanUrl(city);
       const rUrl = buildRakutenUrl(city);

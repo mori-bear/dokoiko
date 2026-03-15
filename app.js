@@ -1,6 +1,6 @@
 import { buildShuffledPool } from './src/engine/selectionEngine.js';
 import { resolveTransportLinks, initTransportGraph } from './src/transport/transportRenderer.js';
-import { buildHotelLinks } from './src/hotel/hotelLinkBuilder.js';
+import { buildHotelLinks, initHotelAreas } from './src/hotel/hotelLinkBuilder.js';
 import { renderResult } from './src/ui/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
@@ -19,12 +19,14 @@ async function init() {
   bindHandlers(state, go, retry);
 
   try {
-    const [destinations, graphRes] = await Promise.all([
+    const [destinations, graphRes, hotelAreasRes] = await Promise.all([
       loadDestinations(),
       fetch('./src/data/transportGraph.json').then(r => r.json()).catch(() => null),
+      fetch('./src/data/hotelAreas.json').then(r => r.json()).catch(() => []),
     ]);
     state.destinations = destinations;
     if (graphRes) initTransportGraph(graphRes);
+    initHotelAreas(hotelAreasRes);
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {

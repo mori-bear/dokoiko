@@ -1058,5 +1058,1365 @@
     "rakutenPath": "/yado/iwate/miyako.html",
     "rakutenKeyword": "岩手県 宮古市",
     "jalanCode": "030050"
+  },
+  {
+    "id": "karuizawa",
+    "name": "軽井沢",
+    "prefecture": "長野県",
+    "city": "軽井沢町",
+    "rakutenKeyword": "長野県 軽井沢町",
+    "jalanCode": null
+  },
+  {
+    "id": "shodoshima",
+    "name": "小豆島",
+    "prefecture": "香川県",
+    "city": "小豆島町",
+    "rakutenKeyword": "香川県 小豆島町",
+    "jalanCode": null
+  },
+  {
+    "id": "mihonoseki",
+    "name": "美保関",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "rakutenKeyword": "島根県 松江市",
+    "jalanCode": null
+  },
+  {
+    "id": "ryujin-onsen",
+    "name": "龍神温泉",
+    "prefecture": "和歌山県",
+    "city": "田辺市",
+    "rakutenKeyword": "和歌山県 田辺市",
+    "jalanCode": null
+  },
+  {
+    "id": "tokashiki-jima",
+    "name": "渡嘉敷島",
+    "prefecture": "沖縄県",
+    "city": "渡嘉敷村",
+    "rakutenKeyword": "沖縄県 渡嘉敷村",
+    "jalanCode": null
+  },
+  {
+    "id": "nyuto-onsen",
+    "name": "乳頭温泉",
+    "prefecture": "秋田県",
+    "city": "仙北市",
+    "rakutenKeyword": "秋田県 仙北市",
+    "jalanCode": null
+  },
+  {
+    "id": "yuda-onsen",
+    "name": "湯田温泉",
+    "prefecture": "山口県",
+    "city": "山口市",
+    "rakutenKeyword": "山口県 山口市",
+    "jalanCode": null
+  },
+  {
+    "id": "ureshino-onsen",
+    "name": "嬉野温泉",
+    "prefecture": "佐賀県",
+    "city": "嬉野市",
+    "rakutenKeyword": "佐賀県 嬉野市",
+    "jalanCode": null
+  },
+  {
+    "id": "obuse",
+    "name": "小布施",
+    "prefecture": "長野県",
+    "city": "小布施町",
+    "rakutenKeyword": "長野県 小布施町",
+    "jalanCode": null
+  },
+  {
+    "id": "uchiko",
+    "name": "内子",
+    "prefecture": "愛媛県",
+    "city": "内子町",
+    "rakutenKeyword": "愛媛県 内子町",
+    "jalanCode": null
+  },
+  {
+    "id": "muroto",
+    "name": "室戸",
+    "prefecture": "高知県",
+    "city": "室戸市",
+    "rakutenKeyword": "高知県 室戸市",
+    "jalanCode": null
+  },
+  {
+    "id": "iya",
+    "name": "祖谷",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "rakutenKeyword": "徳島県 三好市",
+    "jalanCode": null
+  },
+  {
+    "id": "oku-izumo",
+    "name": "奥出雲",
+    "prefecture": "島根県",
+    "city": "仁多郡奥出雲町",
+    "rakutenKeyword": "島根県 仁多郡奥出雲町",
+    "jalanCode": null
+  },
+  {
+    "id": "ginzan-onsen",
+    "name": "銀山温泉",
+    "prefecture": "山形県",
+    "city": "尾花沢市",
+    "rakutenKeyword": "山形県 尾花沢市",
+    "jalanCode": null
+  },
+  {
+    "id": "ouchi-juku",
+    "name": "大内宿",
+    "prefecture": "福島県",
+    "city": "南会津郡下郷町",
+    "rakutenKeyword": "福島県 南会津郡下郷町",
+    "jalanCode": null
+  },
+  {
+    "id": "nozawa-onsen",
+    "name": "野沢温泉",
+    "prefecture": "長野県",
+    "city": "下高井郡野沢温泉村",
+    "rakutenKeyword": "長野県 下高井郡野沢温泉村",
+    "jalanCode": null
+  },
+  {
+    "id": "takehara",
+    "name": "竹原",
+    "prefecture": "広島県",
+    "city": "竹原市",
+    "rakutenKeyword": "広島県 竹原市",
+    "jalanCode": null
+  },
+  {
+    "id": "tsumago",
+    "name": "妻籠",
+    "prefecture": "長野県",
+    "city": "木曽町",
+    "rakutenKeyword": "長野県 木曽町",
+    "jalanCode": null
+  },
+  {
+    "id": "magome",
+    "name": "馬籠",
+    "prefecture": "岐阜県",
+    "city": "中津川市",
+    "rakutenKeyword": "岐阜県 中津川市",
+    "jalanCode": null
+  },
+  {
+    "id": "nagahama",
+    "name": "長浜",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "rakutenKeyword": "滋賀県 長浜市",
+    "jalanCode": null
+  },
+  {
+    "id": "hikone",
+    "name": "彦根",
+    "prefecture": "滋賀県",
+    "city": "彦根市",
+    "rakutenKeyword": "滋賀県 彦根市",
+    "jalanCode": null
+  },
+  {
+    "id": "koyasan",
+    "name": "高野山",
+    "prefecture": "和歌山県",
+    "city": "高野町",
+    "rakutenKeyword": "和歌山県 高野町",
+    "jalanCode": null
+  },
+  {
+    "id": "gero-onsen",
+    "name": "下呂温泉",
+    "prefecture": "岐阜県",
+    "city": "下呂市",
+    "rakutenKeyword": "岐阜県 下呂市",
+    "jalanCode": null
+  },
+  {
+    "id": "naruko-onsen",
+    "name": "鳴子温泉",
+    "prefecture": "宮城県",
+    "city": "大崎市",
+    "rakutenKeyword": "宮城県 大崎市",
+    "jalanCode": null
+  },
+  {
+    "id": "shima-onsen",
+    "name": "四万温泉",
+    "prefecture": "群馬県",
+    "city": "吾妻郡中之条町",
+    "rakutenKeyword": "群馬県 吾妻郡中之条町",
+    "jalanCode": null
+  },
+  {
+    "id": "hirosaki",
+    "name": "弘前",
+    "prefecture": "青森県",
+    "city": "弘前市",
+    "rakutenKeyword": "青森県 弘前市",
+    "jalanCode": null
+  },
+  {
+    "id": "oirase",
+    "name": "奥入瀬",
+    "prefecture": "青森県",
+    "city": "十和田市",
+    "rakutenKeyword": "青森県 十和田市",
+    "jalanCode": null
+  },
+  {
+    "id": "mashiko",
+    "name": "益子",
+    "prefecture": "栃木県",
+    "city": "益子町",
+    "rakutenKeyword": "栃木県 益子町",
+    "jalanCode": null
+  },
+  {
+    "id": "bessho-onsen",
+    "name": "別所温泉",
+    "prefecture": "長野県",
+    "city": "上田市",
+    "rakutenKeyword": "長野県 上田市",
+    "jalanCode": null
+  },
+  {
+    "id": "izushi",
+    "name": "出石",
+    "prefecture": "兵庫県",
+    "city": "豊岡市",
+    "rakutenKeyword": "兵庫県 豊岡市",
+    "jalanCode": null
+  },
+  {
+    "id": "wakura-onsen",
+    "name": "和倉温泉",
+    "prefecture": "石川県",
+    "city": "七尾市",
+    "rakutenKeyword": "石川県 七尾市",
+    "jalanCode": null
+  },
+  {
+    "id": "misasa-onsen",
+    "name": "三朝温泉",
+    "prefecture": "鳥取県",
+    "city": "三朝町",
+    "rakutenKeyword": "鳥取県 三朝町",
+    "jalanCode": null
+  },
+  {
+    "id": "obi",
+    "name": "飫肥",
+    "prefecture": "宮崎県",
+    "city": "日南市",
+    "rakutenKeyword": "宮崎県 日南市",
+    "jalanCode": null
+  },
+  {
+    "id": "hitoyoshi",
+    "name": "人吉",
+    "prefecture": "熊本県",
+    "city": "人吉市",
+    "rakutenKeyword": "熊本県 人吉市",
+    "jalanCode": null
+  },
+  {
+    "id": "kamikochi",
+    "name": "上高地",
+    "prefecture": "長野県",
+    "city": "松本市",
+    "rakutenKeyword": "長野県 松本市",
+    "jalanCode": null
+  },
+  {
+    "id": "minakami-onsen",
+    "name": "水上温泉",
+    "prefecture": "群馬県",
+    "city": "みなかみ町",
+    "rakutenKeyword": "群馬県 みなかみ町",
+    "jalanCode": null
+  },
+  {
+    "id": "minami-aso",
+    "name": "南阿蘇",
+    "prefecture": "熊本県",
+    "city": "南阿蘇村",
+    "rakutenKeyword": "熊本県 南阿蘇村",
+    "jalanCode": null
+  },
+  {
+    "id": "imabari",
+    "name": "今治",
+    "prefecture": "愛媛県",
+    "city": "今治市",
+    "rakutenKeyword": "愛媛県 今治市",
+    "jalanCode": null
+  },
+  {
+    "id": "ozu",
+    "name": "大洲",
+    "prefecture": "愛媛県",
+    "city": "大洲市",
+    "rakutenKeyword": "愛媛県 大洲市",
+    "jalanCode": null
+  },
+  {
+    "id": "shakotan",
+    "name": "積丹",
+    "prefecture": "北海道",
+    "city": "積丹町",
+    "rakutenKeyword": "北海道 積丹町",
+    "jalanCode": null
+  },
+  {
+    "id": "izumo",
+    "name": "出雲",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "rakutenKeyword": "島根県 出雲市",
+    "jalanCode": null
+  },
+  {
+    "id": "suzu",
+    "name": "珠洲",
+    "prefecture": "石川県",
+    "city": "珠洲市",
+    "rakutenKeyword": "石川県 珠洲市",
+    "jalanCode": null
+  },
+  {
+    "id": "yoshino",
+    "name": "吉野",
+    "prefecture": "奈良県",
+    "city": "吉野町",
+    "rakutenKeyword": "奈良県 吉野町",
+    "jalanCode": null
+  },
+  {
+    "id": "kumano",
+    "name": "熊野",
+    "prefecture": "三重県",
+    "city": "熊野市",
+    "rakutenKeyword": "三重県 熊野市",
+    "jalanCode": null
+  },
+  {
+    "id": "iriomote",
+    "name": "西表島",
+    "prefecture": "沖縄県",
+    "city": "竹富町",
+    "rakutenKeyword": "沖縄県 竹富町",
+    "jalanCode": null
+  },
+  {
+    "id": "takahashi",
+    "name": "高梁",
+    "prefecture": "岡山県",
+    "city": "高梁市",
+    "rakutenKeyword": "岡山県 高梁市",
+    "jalanCode": null
+  },
+  {
+    "id": "hida-furukawa",
+    "name": "飛騨古川",
+    "prefecture": "岐阜県",
+    "city": "飛騨市",
+    "rakutenKeyword": "岐阜県 飛騨市",
+    "jalanCode": null
+  },
+  {
+    "id": "bungo-takada",
+    "name": "豊後高田",
+    "prefecture": "大分県",
+    "city": "豊後高田市",
+    "rakutenKeyword": "大分県 豊後高田市",
+    "jalanCode": null
+  },
+  {
+    "id": "izu-kogen",
+    "name": "伊豆高原",
+    "prefecture": "静岡県",
+    "city": "伊東市",
+    "rakutenKeyword": "静岡県 伊東市",
+    "jalanCode": null
+  },
+  {
+    "id": "tanabe",
+    "name": "田辺",
+    "prefecture": "和歌山県",
+    "city": "田辺市",
+    "rakutenKeyword": "和歌山県 田辺市",
+    "jalanCode": null
+  },
+  {
+    "id": "tosa-shimizu",
+    "name": "土佐清水",
+    "prefecture": "高知県",
+    "city": "土佐清水市",
+    "rakutenKeyword": "高知県 土佐清水市",
+    "jalanCode": null
+  },
+  {
+    "id": "nichinan",
+    "name": "日南",
+    "prefecture": "宮崎県",
+    "city": "日南市",
+    "rakutenKeyword": "宮崎県 日南市",
+    "jalanCode": null
+  },
+  {
+    "id": "mojiko",
+    "name": "門司港",
+    "prefecture": "福岡県",
+    "city": "北九州市門司区",
+    "rakutenKeyword": "福岡県 北九州市門司区",
+    "jalanCode": null
+  },
+  {
+    "id": "itoshima",
+    "name": "糸島",
+    "prefecture": "福岡県",
+    "city": "糸島市",
+    "rakutenKeyword": "福岡県 糸島市",
+    "jalanCode": null
+  },
+  {
+    "id": "shimabara",
+    "name": "島原",
+    "prefecture": "長崎県",
+    "city": "島原市",
+    "rakutenKeyword": "長崎県 島原市",
+    "jalanCode": null
+  },
+  {
+    "id": "tsuruga",
+    "name": "敦賀",
+    "prefecture": "福井県",
+    "city": "敦賀市",
+    "rakutenKeyword": "福井県 敦賀市",
+    "jalanCode": null
+  },
+  {
+    "id": "shijishima",
+    "name": "志々島",
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "rakutenKeyword": "香川県 三豊市",
+    "jalanCode": null
+  },
+  {
+    "id": "sounkyo",
+    "name": "層雲峡",
+    "prefecture": "北海道",
+    "city": "上川町",
+    "rakutenKeyword": "北海道 上川町",
+    "jalanCode": null
+  },
+  {
+    "id": "rebun-island",
+    "name": "礼文島",
+    "prefecture": "北海道",
+    "city": "礼文町",
+    "rakutenKeyword": "北海道 礼文町",
+    "jalanCode": null
+  },
+  {
+    "id": "rishiri-island",
+    "name": "利尻島",
+    "prefecture": "北海道",
+    "city": "利尻町",
+    "rakutenKeyword": "北海道 利尻町",
+    "jalanCode": null
+  },
+  {
+    "id": "akan",
+    "name": "阿寒湖",
+    "prefecture": "北海道",
+    "city": "釧路市",
+    "rakutenKeyword": "北海道 釧路市",
+    "jalanCode": null
+  },
+  {
+    "id": "abashiri",
+    "name": "網走",
+    "prefecture": "北海道",
+    "city": "網走市",
+    "rakutenKeyword": "北海道 網走市",
+    "jalanCode": null
+  },
+  {
+    "id": "shikotsu",
+    "name": "支笏湖",
+    "prefecture": "北海道",
+    "city": "千歳市",
+    "rakutenKeyword": "北海道 千歳市",
+    "jalanCode": null
+  },
+  {
+    "id": "tono",
+    "name": "遠野",
+    "prefecture": "岩手県",
+    "city": "遠野市",
+    "rakutenKeyword": "岩手県 遠野市",
+    "jalanCode": null
+  },
+  {
+    "id": "oga",
+    "name": "男鹿",
+    "prefecture": "秋田県",
+    "city": "男鹿市",
+    "rakutenKeyword": "秋田県 男鹿市",
+    "jalanCode": null
+  },
+  {
+    "id": "yonezawa",
+    "name": "米沢",
+    "prefecture": "山形県",
+    "city": "米沢市",
+    "rakutenKeyword": "山形県 米沢市",
+    "jalanCode": null
+  },
+  {
+    "id": "dewa-sanzan",
+    "name": "出羽三山",
+    "prefecture": "山形県",
+    "city": "鶴岡市",
+    "rakutenKeyword": "山形県 鶴岡市",
+    "jalanCode": null
+  },
+  {
+    "id": "sakunami-onsen",
+    "name": "秋保温泉",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "rakutenKeyword": "宮城県 仙台市",
+    "jalanCode": null
+  },
+  {
+    "id": "goshogawara",
+    "name": "五所川原",
+    "prefecture": "青森県",
+    "city": "五所川原市",
+    "rakutenKeyword": "青森県 五所川原市",
+    "jalanCode": null
+  },
+  {
+    "id": "kawagoe",
+    "name": "川越",
+    "prefecture": "埼玉県",
+    "city": "川越市",
+    "rakutenKeyword": "埼玉県 川越市",
+    "jalanCode": null
+  },
+  {
+    "id": "nasu",
+    "name": "那須",
+    "prefecture": "栃木県",
+    "city": "那須町",
+    "rakutenKeyword": "栃木県 那須町",
+    "jalanCode": null
+  },
+  {
+    "id": "choshi",
+    "name": "銚子",
+    "prefecture": "千葉県",
+    "city": "銚子市",
+    "rakutenKeyword": "千葉県 銚子市",
+    "jalanCode": null
+  },
+  {
+    "id": "ashikaga",
+    "name": "足利",
+    "prefecture": "栃木県",
+    "city": "足利市",
+    "rakutenKeyword": "栃木県 足利市",
+    "jalanCode": null
+  },
+  {
+    "id": "shiobara-onsen",
+    "name": "塩原温泉",
+    "prefecture": "栃木県",
+    "city": "那須塩原市",
+    "rakutenKeyword": "栃木県 那須塩原市",
+    "jalanCode": null
+  },
+  {
+    "id": "sado-island",
+    "name": "佐渡島",
+    "prefecture": "新潟県",
+    "city": "佐渡市",
+    "rakutenKeyword": "新潟県 佐渡市",
+    "jalanCode": null
+  },
+  {
+    "id": "kiyosato",
+    "name": "清里",
+    "prefecture": "山梨県",
+    "city": "北杜市",
+    "rakutenKeyword": "山梨県 北杜市",
+    "jalanCode": null
+  },
+  {
+    "id": "tenryu-gorge",
+    "name": "天竜峡",
+    "prefecture": "長野県",
+    "city": "飯田市",
+    "rakutenKeyword": "長野県 飯田市",
+    "jalanCode": null
+  },
+  {
+    "id": "suwa",
+    "name": "諏訪",
+    "prefecture": "長野県",
+    "city": "諏訪市",
+    "rakutenKeyword": "長野県 諏訪市",
+    "jalanCode": null
+  },
+  {
+    "id": "eiheiji",
+    "name": "永平寺",
+    "prefecture": "福井県",
+    "city": "永平寺町",
+    "rakutenKeyword": "福井県 永平寺町",
+    "jalanCode": null
+  },
+  {
+    "id": "wakasa-obama",
+    "name": "若狭小浜",
+    "prefecture": "福井県",
+    "city": "小浜市",
+    "rakutenKeyword": "福井県 小浜市",
+    "jalanCode": null
+  },
+  {
+    "id": "okuhida-onsen",
+    "name": "奥飛騨温泉郷",
+    "prefecture": "岐阜県",
+    "city": "高山市",
+    "rakutenKeyword": "岐阜県 高山市",
+    "jalanCode": null
+  },
+  {
+    "id": "minami-izu",
+    "name": "南伊豆",
+    "prefecture": "静岡県",
+    "city": "南伊豆町",
+    "rakutenKeyword": "静岡県 南伊豆町",
+    "jalanCode": null
+  },
+  {
+    "id": "echizen",
+    "name": "越前市",
+    "prefecture": "福井県",
+    "city": "越前市",
+    "rakutenKeyword": "福井県 越前市",
+    "jalanCode": null
+  },
+  {
+    "id": "ito",
+    "name": "伊東",
+    "prefecture": "静岡県",
+    "city": "伊東市",
+    "rakutenKeyword": "静岡県 伊東市",
+    "jalanCode": null
+  },
+  {
+    "id": "iga",
+    "name": "伊賀",
+    "prefecture": "三重県",
+    "city": "三重伊賀",
+    "rakutenKeyword": "三重県 三重伊賀",
+    "jalanCode": null
+  },
+  {
+    "id": "kashihara",
+    "name": "橿原",
+    "prefecture": "奈良県",
+    "city": "橿原市",
+    "rakutenKeyword": "奈良県 橿原市",
+    "jalanCode": null
+  },
+  {
+    "id": "totsukawa",
+    "name": "十津川",
+    "prefecture": "奈良県",
+    "city": "十津川村",
+    "rakutenKeyword": "奈良県 十津川村",
+    "jalanCode": null
+  },
+  {
+    "id": "maizuru",
+    "name": "舞鶴",
+    "prefecture": "京都府",
+    "city": "舞鶴市",
+    "rakutenKeyword": "京都府 舞鶴市",
+    "jalanCode": null
+  },
+  {
+    "id": "asuka",
+    "name": "飛鳥",
+    "prefecture": "奈良県",
+    "city": "明日香村",
+    "rakutenKeyword": "奈良県 明日香村",
+    "jalanCode": null
+  },
+  {
+    "id": "daisen",
+    "name": "大山",
+    "prefecture": "鳥取県",
+    "city": "大山町",
+    "rakutenKeyword": "鳥取県 大山町",
+    "jalanCode": null
+  },
+  {
+    "id": "yunotsu-onsen",
+    "name": "温泉津",
+    "prefecture": "島根県",
+    "city": "大田市",
+    "rakutenKeyword": "島根県 大田市",
+    "jalanCode": null
+  },
+  {
+    "id": "iwami-ginzan",
+    "name": "石見銀山",
+    "prefecture": "島根県",
+    "city": "大田市",
+    "rakutenKeyword": "島根県 大田市",
+    "jalanCode": null
+  },
+  {
+    "id": "iwakuni",
+    "name": "岩国",
+    "prefecture": "山口県",
+    "city": "岩国市",
+    "rakutenKeyword": "山口県 岩国市",
+    "jalanCode": null
+  },
+  {
+    "id": "kurayoshi",
+    "name": "倉吉",
+    "prefecture": "鳥取県",
+    "city": "倉吉市",
+    "rakutenKeyword": "鳥取県 倉吉市",
+    "jalanCode": null
+  },
+  {
+    "id": "suo-oshima",
+    "name": "周防大島",
+    "prefecture": "山口県",
+    "city": "大島郡周防大島町",
+    "rakutenKeyword": "山口県 大島郡周防大島町",
+    "jalanCode": null
+  },
+  {
+    "id": "shimanto",
+    "name": "四万十",
+    "prefecture": "高知県",
+    "city": "四万十市",
+    "rakutenKeyword": "高知県 四万十市",
+    "jalanCode": null
+  },
+  {
+    "id": "kashiwajima",
+    "name": "柏島",
+    "prefecture": "高知県",
+    "city": "大月町",
+    "rakutenKeyword": "高知県 大月町",
+    "jalanCode": null
+  },
+  {
+    "id": "saijo",
+    "name": "西条",
+    "prefecture": "愛媛県",
+    "city": "西条市",
+    "rakutenKeyword": "愛媛県 西条市",
+    "jalanCode": null
+  },
+  {
+    "id": "ainan",
+    "name": "愛南",
+    "prefecture": "愛媛県",
+    "city": "愛媛愛南",
+    "rakutenKeyword": "愛媛県 愛媛愛南",
+    "jalanCode": null
+  },
+  {
+    "id": "taketa",
+    "name": "竹田",
+    "prefecture": "大分県",
+    "city": "竹田市",
+    "rakutenKeyword": "大分県 竹田市",
+    "jalanCode": null
+  },
+  {
+    "id": "usuki",
+    "name": "臼杵",
+    "prefecture": "大分県",
+    "city": "臼杵市",
+    "rakutenKeyword": "大分県 臼杵市",
+    "jalanCode": null
+  },
+  {
+    "id": "hita",
+    "name": "日田",
+    "prefecture": "大分県",
+    "city": "日田市",
+    "rakutenKeyword": "大分県 日田市",
+    "jalanCode": null
+  },
+  {
+    "id": "hasami",
+    "name": "波佐見",
+    "prefecture": "長崎県",
+    "city": "波佐見町",
+    "rakutenKeyword": "長崎県 波佐見町",
+    "jalanCode": null
+  },
+  {
+    "id": "takeo-onsen",
+    "name": "武雄温泉",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "rakutenKeyword": "佐賀県 武雄市",
+    "jalanCode": null
+  },
+  {
+    "id": "kitsuki",
+    "name": "杵築",
+    "prefecture": "大分県",
+    "city": "杵築市",
+    "rakutenKeyword": "大分県 杵築市",
+    "jalanCode": null
+  },
+  {
+    "id": "tsushima",
+    "name": "対馬",
+    "prefecture": "長崎県",
+    "city": "対馬市",
+    "rakutenKeyword": "長崎県 対馬市",
+    "jalanCode": null
+  },
+  {
+    "id": "iki-island",
+    "name": "壱岐",
+    "prefecture": "長崎県",
+    "city": "長崎壱岐",
+    "rakutenKeyword": "長崎県 長崎壱岐",
+    "jalanCode": null
+  },
+  {
+    "id": "tanegashima",
+    "name": "種子島",
+    "prefecture": "鹿児島県",
+    "city": "西之表市",
+    "rakutenKeyword": "鹿児島県 西之表市",
+    "jalanCode": null
+  },
+  {
+    "id": "kikuchi",
+    "name": "菊池",
+    "prefecture": "熊本県",
+    "city": "菊池市",
+    "rakutenKeyword": "熊本県 菊池市",
+    "jalanCode": null
+  },
+  {
+    "id": "taketomi-island",
+    "name": "竹富島",
+    "prefecture": "沖縄県",
+    "city": "竹富町",
+    "rakutenKeyword": "沖縄県 竹富町",
+    "jalanCode": null
+  },
+  {
+    "id": "yonaguni-island",
+    "name": "与那国島",
+    "prefecture": "沖縄県",
+    "city": "与那国町",
+    "rakutenKeyword": "沖縄県 与那国町",
+    "jalanCode": null
+  },
+  {
+    "id": "nakijin",
+    "name": "今帰仁",
+    "prefecture": "沖縄県",
+    "city": "今帰仁村",
+    "rakutenKeyword": "沖縄県 今帰仁村",
+    "jalanCode": null
+  },
+  {
+    "id": "motobu",
+    "name": "本部",
+    "prefecture": "沖縄県",
+    "city": "本部町",
+    "rakutenKeyword": "沖縄県 本部町",
+    "jalanCode": null
+  },
+  {
+    "id": "zamami-island",
+    "name": "座間味島",
+    "prefecture": "沖縄県",
+    "city": "座間味村",
+    "rakutenKeyword": "沖縄県 座間味村",
+    "jalanCode": null
+  },
+  {
+    "id": "ie-island",
+    "name": "伊江島",
+    "prefecture": "沖縄県",
+    "city": "国頭郡伊江村",
+    "rakutenKeyword": "沖縄県 国頭郡伊江村",
+    "jalanCode": null
+  },
+  {
+    "id": "kohama-island",
+    "name": "小浜島",
+    "prefecture": "沖縄県",
+    "city": "八重山郡竹富町",
+    "rakutenKeyword": "沖縄県 八重山郡竹富町",
+    "jalanCode": null
+  },
+  {
+    "id": "matsushiro",
+    "name": "松代",
+    "prefecture": "長野県",
+    "city": "長野市",
+    "rakutenKeyword": "長野県 長野市",
+    "jalanCode": null
+  },
+  {
+    "id": "iiyama",
+    "name": "飯山",
+    "prefecture": "長野県",
+    "city": "飯山市",
+    "rakutenKeyword": "長野県 飯山市",
+    "jalanCode": null
+  },
+  {
+    "id": "yakake",
+    "name": "矢掛",
+    "prefecture": "岡山県",
+    "city": "岡山矢掛",
+    "rakutenKeyword": "岡山県 岡山矢掛",
+    "jalanCode": null
+  },
+  {
+    "id": "tsuyama",
+    "name": "津山",
+    "prefecture": "岡山県",
+    "city": "津山市",
+    "rakutenKeyword": "岡山県 津山市",
+    "jalanCode": null
+  },
+  {
+    "id": "tsurugi-san",
+    "name": "剣山",
+    "prefecture": "徳島県",
+    "city": "徳島剣山",
+    "rakutenKeyword": "徳島県 徳島剣山",
+    "jalanCode": null
+  },
+  {
+    "id": "nobeoka",
+    "name": "延岡",
+    "prefecture": "宮崎県",
+    "city": "延岡市",
+    "rakutenKeyword": "宮崎県 延岡市",
+    "jalanCode": null
+  },
+  {
+    "id": "kamaishi",
+    "name": "釜石",
+    "prefecture": "岩手県",
+    "city": "釜石市",
+    "rakutenKeyword": "岩手県 釜石市",
+    "jalanCode": null
+  },
+  {
+    "id": "ofunato",
+    "name": "大船渡",
+    "prefecture": "岩手県",
+    "city": "大船渡市",
+    "rakutenKeyword": "岩手県 大船渡市",
+    "jalanCode": null
+  },
+  {
+    "id": "kuji",
+    "name": "久慈",
+    "prefecture": "岩手県",
+    "city": "久慈市",
+    "rakutenKeyword": "岩手県 久慈市",
+    "jalanCode": null
+  },
+  {
+    "id": "wakkanai",
+    "name": "稚内",
+    "prefecture": "北海道",
+    "city": "稚内市",
+    "rakutenKeyword": "北海道 稚内市",
+    "jalanCode": null
+  },
+  {
+    "id": "obihiro",
+    "name": "帯広",
+    "prefecture": "北海道",
+    "city": "帯広市",
+    "rakutenKeyword": "北海道 帯広市",
+    "jalanCode": null
+  },
+  {
+    "id": "rausu",
+    "name": "羅臼",
+    "prefecture": "北海道",
+    "city": "羅臼町",
+    "rakutenKeyword": "北海道 羅臼町",
+    "jalanCode": null
+  },
+  {
+    "id": "esashi",
+    "name": "江差",
+    "prefecture": "北海道",
+    "city": "江差町",
+    "rakutenKeyword": "北海道 江差町",
+    "jalanCode": null
+  },
+  {
+    "id": "hanamaki",
+    "name": "花巻",
+    "prefecture": "岩手県",
+    "city": "花巻市",
+    "rakutenKeyword": "岩手県 花巻市",
+    "jalanCode": null
+  },
+  {
+    "id": "hachimantai",
+    "name": "八幡平",
+    "prefecture": "岩手県",
+    "city": "八幡平市",
+    "rakutenKeyword": "岩手県 八幡平市",
+    "jalanCode": null
+  },
+  {
+    "id": "tazawako",
+    "name": "田沢湖",
+    "prefecture": "秋田県",
+    "city": "仙北市",
+    "rakutenKeyword": "秋田県 仙北市",
+    "jalanCode": null
+  },
+  {
+    "id": "yamadera",
+    "name": "山寺",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "rakutenKeyword": "山形県 山形市",
+    "jalanCode": null
+  },
+  {
+    "id": "kesennuma",
+    "name": "気仙沼",
+    "prefecture": "宮城県",
+    "city": "気仙沼市",
+    "rakutenKeyword": "宮城県 気仙沼市",
+    "jalanCode": null
+  },
+  {
+    "id": "ikaho",
+    "name": "伊香保温泉",
+    "prefecture": "群馬県",
+    "city": "渋川市",
+    "rakutenKeyword": "群馬県 渋川市",
+    "jalanCode": null
+  },
+  {
+    "id": "enoshima",
+    "name": "江の島",
+    "prefecture": "神奈川県",
+    "city": "藤沢市",
+    "rakutenKeyword": "神奈川県 藤沢市",
+    "jalanCode": null
+  },
+  {
+    "id": "chichibu",
+    "name": "秩父",
+    "prefecture": "埼玉県",
+    "city": "秩父市",
+    "rakutenKeyword": "埼玉県 秩父市",
+    "jalanCode": null
+  },
+  {
+    "id": "oarai",
+    "name": "大洗",
+    "prefecture": "茨城県",
+    "city": "東茨城郡大洗町",
+    "rakutenKeyword": "茨城県 東茨城郡大洗町",
+    "jalanCode": null
+  },
+  {
+    "id": "sano",
+    "name": "佐野",
+    "prefecture": "栃木県",
+    "city": "佐野市",
+    "rakutenKeyword": "栃木県 佐野市",
+    "jalanCode": null
+  },
+  {
+    "id": "gujo-hachiman",
+    "name": "郡上八幡",
+    "prefecture": "岐阜県",
+    "city": "郡上市",
+    "rakutenKeyword": "岐阜県 郡上市",
+    "jalanCode": null
+  },
+  {
+    "id": "narai-juku",
+    "name": "奈良井宿",
+    "prefecture": "長野県",
+    "city": "塩尻市",
+    "rakutenKeyword": "長野県 塩尻市",
+    "jalanCode": null
+  },
+  {
+    "id": "itoigawa",
+    "name": "糸魚川",
+    "prefecture": "新潟県",
+    "city": "糸魚川市",
+    "rakutenKeyword": "新潟県 糸魚川市",
+    "jalanCode": null
+  },
+  {
+    "id": "kofu",
+    "name": "甲府",
+    "prefecture": "山梨県",
+    "city": "甲府市",
+    "rakutenKeyword": "山梨県 甲府市",
+    "jalanCode": null
+  },
+  {
+    "id": "murakami",
+    "name": "村上",
+    "prefecture": "新潟県",
+    "city": "村上市",
+    "rakutenKeyword": "新潟県 村上市",
+    "jalanCode": null
+  },
+  {
+    "id": "shima",
+    "name": "志摩",
+    "prefecture": "三重県",
+    "city": "志摩市",
+    "rakutenKeyword": "三重県 志摩市",
+    "jalanCode": null
+  },
+  {
+    "id": "ogaki",
+    "name": "大垣",
+    "prefecture": "岐阜県",
+    "city": "大垣市",
+    "rakutenKeyword": "岐阜県 大垣市",
+    "jalanCode": null
+  },
+  {
+    "id": "echizen-kaigan",
+    "name": "越前海岸",
+    "prefecture": "福井県",
+    "city": "越前市",
+    "rakutenKeyword": "福井県 越前市",
+    "jalanCode": null
+  },
+  {
+    "id": "myoko-kogen",
+    "name": "妙高高原",
+    "prefecture": "新潟県",
+    "city": "妙高市",
+    "rakutenKeyword": "新潟県 妙高市",
+    "jalanCode": null
+  },
+  {
+    "id": "nagaoka",
+    "name": "長岡",
+    "prefecture": "新潟県",
+    "city": "長岡市",
+    "rakutenKeyword": "新潟県 長岡市",
+    "jalanCode": null
+  },
+  {
+    "id": "tanba-sasayama",
+    "name": "丹波篠山",
+    "prefecture": "兵庫県",
+    "city": "丹波篠山市",
+    "rakutenKeyword": "兵庫県 丹波篠山市",
+    "jalanCode": null
+  },
+  {
+    "id": "nachikatsuura",
+    "name": "那智勝浦",
+    "prefecture": "和歌山県",
+    "city": "東牟婁郡那智勝浦町",
+    "rakutenKeyword": "和歌山県 東牟婁郡那智勝浦町",
+    "jalanCode": null
+  },
+  {
+    "id": "kumano-hongu",
+    "name": "熊野本宮",
+    "prefecture": "和歌山県",
+    "city": "田辺市",
+    "rakutenKeyword": "和歌山県 田辺市",
+    "jalanCode": null
+  },
+  {
+    "id": "ako",
+    "name": "赤穂",
+    "prefecture": "兵庫県",
+    "city": "赤穂市",
+    "rakutenKeyword": "兵庫県 赤穂市",
+    "jalanCode": null
+  },
+  {
+    "id": "fushimi",
+    "name": "伏見",
+    "prefecture": "京都府",
+    "city": "京都市",
+    "rakutenKeyword": "京都府 京都市",
+    "jalanCode": null
+  },
+  {
+    "id": "tomonoura",
+    "name": "鞆の浦",
+    "prefecture": "広島県",
+    "city": "福山市",
+    "rakutenKeyword": "広島県 福山市",
+    "jalanCode": null
+  },
+  {
+    "id": "sakaiminato",
+    "name": "境港",
+    "prefecture": "鳥取県",
+    "city": "境港市",
+    "rakutenKeyword": "鳥取県 境港市",
+    "jalanCode": null
+  },
+  {
+    "id": "ushimado",
+    "name": "牛窓",
+    "prefecture": "岡山県",
+    "city": "瀬戸内市",
+    "rakutenKeyword": "岡山県 瀬戸内市",
+    "jalanCode": null
+  },
+  {
+    "id": "kasaoka",
+    "name": "笠岡",
+    "prefecture": "岡山県",
+    "city": "笠岡市",
+    "rakutenKeyword": "岡山県 笠岡市",
+    "jalanCode": null
+  },
+  {
+    "id": "tsunoshima",
+    "name": "角島",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "rakutenKeyword": "山口県 下関市",
+    "jalanCode": null
+  },
+  {
+    "id": "dogo-onsen",
+    "name": "道後温泉",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "rakutenKeyword": "愛媛県 松山市",
+    "jalanCode": null
+  },
+  {
+    "id": "marugame",
+    "name": "丸亀",
+    "prefecture": "香川県",
+    "city": "丸亀市",
+    "rakutenKeyword": "香川県 丸亀市",
+    "jalanCode": null
+  },
+  {
+    "id": "misaki-sadamisaki",
+    "name": "三崎（佐田岬）",
+    "prefecture": "愛媛県",
+    "city": "西宇和郡伊方町",
+    "rakutenKeyword": "愛媛県 西宇和郡伊方町",
+    "jalanCode": null
+  },
+  {
+    "id": "yanagawa",
+    "name": "柳川",
+    "prefecture": "福岡県",
+    "city": "柳川市",
+    "rakutenKeyword": "福岡県 柳川市",
+    "jalanCode": null
+  },
+  {
+    "id": "hyuga",
+    "name": "日向",
+    "prefecture": "宮崎県",
+    "city": "日向市",
+    "rakutenKeyword": "宮崎県 日向市",
+    "jalanCode": null
+  },
+  {
+    "id": "koshikijima",
+    "name": "甑島",
+    "prefecture": "鹿児島県",
+    "city": "薩摩川内市",
+    "rakutenKeyword": "鹿児島県 薩摩川内市",
+    "jalanCode": null
+  },
+  {
+    "id": "kirishima",
+    "name": "霧島",
+    "prefecture": "鹿児島県",
+    "city": "霧島市",
+    "rakutenKeyword": "鹿児島県 霧島市",
+    "jalanCode": null
+  },
+  {
+    "id": "ebino-kogen",
+    "name": "えびの高原",
+    "prefecture": "宮崎県",
+    "city": "えびの市",
+    "rakutenKeyword": "宮崎県 えびの市",
+    "jalanCode": null
+  },
+  {
+    "id": "onna",
+    "name": "恩納村",
+    "prefecture": "沖縄県",
+    "city": "国頭郡恩納村",
+    "rakutenKeyword": "沖縄県 国頭郡恩納村",
+    "jalanCode": null
+  },
+  {
+    "id": "nago",
+    "name": "名護",
+    "prefecture": "沖縄県",
+    "city": "名護市",
+    "rakutenKeyword": "沖縄県 名護市",
+    "jalanCode": null
+  },
+  {
+    "id": "yomitanson",
+    "name": "読谷村",
+    "prefecture": "沖縄県",
+    "city": "中頭郡読谷村",
+    "rakutenKeyword": "沖縄県 中頭郡読谷村",
+    "jalanCode": null
   }
 ]
