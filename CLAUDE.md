@@ -78,11 +78,14 @@ https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(p
 
 ### じゃらん検索 URL（正式・唯一）
 ```
-https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${encodeURIComponent(prefecture + " " + city)}
+https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword={Shift-JIS encoded keyword}
 ```
 - アフィリエイト経由: `VC_BASE + encodeURIComponent(target)`（二重エンコード正）
 - VC_BASE: `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=`
-- **`uwp2011` / `uww2011init.do` は使用禁止**
+- **Shift-JIS エンコード必須**: ブラウザ側では不可能なため `hotelAreas.json` の `jalanUrl` に事前計算済みURLを格納
+- `_gen_jalan_urls.js` で hotelAreas.json 全件の jalanUrl を再生成する
+- **`uwp1700` / `uww1701.do` は使用禁止**（観光MAPを表示するため宿一覧にならない）
+- **`uwp2011` / `uww2011init.do` が正式ホテルキーワード検索**（Jalan の検索フォームが使用する）
 
 ### stayType=daytrip では宿セクション非表示（render.js 側で制御）
 
@@ -125,7 +128,8 @@ src/transport/flightRoutes.js       就航路線データ（出発IATA→着IATA
 src/hotel/hotelLinkBuilder.js    宿泊リンク（楽天/じゃらん）← app.js が import
 src/engine/hotelLinkBuilder.js   宿泊リンク（qa.js 用 / src/hotel/ と完全同期）
 src/data/hubs.json               38 hub都市
-src/data/destinations.json       202 destination
+src/data/destinations.json       246 destination
+src/data/hotelAreas.json         276エリア（jalanUrl: Shift-JIS事前エンコード済み）
 src/data/index.js                hubs.json + destinations.json をフェッチして結合
 src/ui/render.js                 DOM描画
 src/ui/handlers.js               イベントバインド

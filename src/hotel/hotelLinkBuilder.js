@@ -9,8 +9,9 @@
  * 楽天トラベル: area.rakutenKeyword キーワード検索 → 楽天アフィリエイト経由
  *   https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query={keyword}
  *
- * じゃらん: キーワード検索（area.rakutenKeyword 流用）
- *   https://www.jalan.net/uw/uwp1700/uww1701.do?keyword={keyword}
+ * じゃらん: area.jalanUrl（Shift-JIS事前エンコード済み）→ VC アフィリエイト経由
+ *   https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword={Shift-JIS encoded keyword}
+ *   ブラウザ側でShift-JISエンコードできないため hotelAreas.json に事前計算済みURLを格納
  *
  * 日帰りルール: render.js 側で stayType=daytrip 時に非表示制御済み
  */
@@ -64,10 +65,18 @@ function buildRakutenHotelLink(dest) {
   };
 }
 
-/** じゃらん target URL（テスト用にも export）*/
+/**
+ * じゃらん target URL（テスト用にも export）
+ * area.jalanUrl が存在すれば使用（Shift-JIS事前エンコード済み）
+ * フォールバック: UTF-8 keyword（Shift-JIS非対応環境向け暫定）
+ */
 export function buildJalanTarget(dest) {
+  if (dest.hotelArea) {
+    const area = areaMap.get(dest.hotelArea);
+    if (area?.jalanUrl) return area.jalanUrl;
+  }
   const keyword = encodeURIComponent(resolveKeyword(dest));
-  return `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${keyword}`;
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${keyword}`;
 }
 
 function buildJalanHotelLink(dest) {

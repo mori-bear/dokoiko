@@ -4,10 +4,8 @@
  * 楽天トラベル: prefecture + city キーワード検索 → 楽天アフィリエイト経由
  *   https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query={keyword}
  *
- * じゃらん: キーワード検索
- *   https://www.jalan.net/uw/uwp1700/uww1701.do?keyword={keyword}
- *
- * keyword = encodeURIComponent(area.rakutenKeyword || prefecture + " " + city)
+ * じゃらん: area.jalanUrl（Shift-JIS事前エンコード済み）→ VC アフィリエイト経由
+ *   https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword={Shift-JIS}
  */
 
 const RAKUTEN_AFF = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
@@ -50,8 +48,12 @@ function buildRakutenHotelLink(dest) {
 }
 
 export function buildJalanTarget(dest) {
+  if (dest.hotelArea) {
+    const area = areaMap.get(dest.hotelArea);
+    if (area?.jalanUrl) return area.jalanUrl;
+  }
   const keyword = encodeURIComponent(resolveKeyword(dest));
-  return `https://www.jalan.net/uw/uwp1700/uww1701.do?keyword=${keyword}`;
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${keyword}`;
 }
 
 function buildJalanHotelLink(dest) {
