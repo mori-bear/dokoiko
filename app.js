@@ -21,8 +21,8 @@ async function init() {
   try {
     const [destinations, graphRes, hotelAreasRes] = await Promise.all([
       loadDestinations(),
-      fetch('./src/data/transportGraph.json').then(r => r.json()).catch(() => null),
-      fetch('./src/data/hotelAreas.json').then(r => r.json()).catch(() => []),
+      fetch('./data/transportGraph.json').then(r => r.json()).catch(() => null),
+      fetch('./data/hotelAreas.json').then(r => r.json()).catch(() => []),
     ]);
     state.destinations = destinations;
     if (graphRes) initTransportGraph(graphRes);

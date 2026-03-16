@@ -24,6 +24,7 @@ import {
   AIRPORT_HUB_GATEWAY,
   buildGoogleMapsLink,
   buildSkyscannerLink,
+  buildGoogleFlightsLink,
   buildJrLink,
   buildFerryLink,
   buildRentalLink,
@@ -64,12 +65,16 @@ export function resolveTransportLinks(city, departure) {
     ? resolveByBFS(city, departure)
     : resolveByFields(city, departure);
 
-  // Google Maps は 1 本のみ: 出発駅 → accessStation（transit）
+  // Google Maps は 1 本のみ: 出発駅 → 港（island）または accessStation
   const nonMaps = raw.filter(l => l.type !== 'google-maps');
   const fromCity  = DEPARTURE_CITY_INFO[departure];
   const originStation = fromCity?.rail || departure;
-  const destStation   = city.accessStation || `${city.name} ${city.prefecture}`;
-  const mapsLink = buildGoogleMapsLink(originStation, destStation, 'transit');
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  // island は港（ferryGateway）へのナビを表示する
+  const ferryPort = isIsland ? (city.ferryGateway || city.gateways?.ferry?.[0] || null) : null;
+  const destStation = ferryPort || city.accessStation || `${city.name} ${city.prefecture}`;
+  const mapsLabel = ferryPort ? `${ferryPort}へのルート（Googleマップ）` : null;
+  const mapsLink = buildGoogleMapsLink(originStation, destStation, 'transit', mapsLabel);
   return limitRoutes([...nonMaps, mapsLink], 3);
 }
 
@@ -151,7 +156,10 @@ function pathToLinks(path, city, departure, fromCity) {
 
   // ── 飛行機ルート ──
   if (flightSeg) {
-    const fromIata  = extractIata(flightSeg.from) || fromCity.iata;  // BFS 空港ノード優先、fallback: 出発地 IATA
+    const fromIata  = extractIata(flightSeg.from) || fromCity.iata;  // BFS 空港ノード優先
+    // 迂回ルート排除: 出発地の実際の空港と一致しない場合はスキップ
+    const depIata = CITY_AIRPORT[departure];
+    if (depIata && fromIata !== depIata) return [];
     const toAirNode = _graph.nodes[flightSeg.to];
     const toIata    = toAirNode?.iata || extractIata(flightSeg.to);
     const toAirName = iataToName(toIata);
@@ -159,6 +167,7 @@ function pathToLinks(path, city, departure, fromCity) {
     // 出発地→目的地の路線が実際に存在する場合のみ表示
     if (fromIata && toIata && (FLIGHT_ROUTES[fromIata] ?? []).includes(toIata)) {
       links.push(buildSkyscannerLink(fromIata, toAirName));
+      links.push(buildGoogleFlightsLink(fromIata, toAirName));
     }
     if (localSeg) {
       const gateName = toAirName || '空港';
@@ -190,9 +199,14 @@ function pathToLinks(path, city, departure, fromCity) {
     // 表示は 出発駅 → destination.accessStation（hub経由地は非表示）
     const fromName  = fromCity.rail.replace(/駅$/, '');
     const toName    = (city.accessStation || _graph.nodes[railSeg.to]?.name || '').replace(/駅$/, '');
-    const jrLink    = buildJrLink(provider, fromName && toName ? { from: fromName, to: toName } : null);
-    const links    = jrLink ? [jrLink] : [];
-
+    const route     = fromName && toName ? { from: fromName, to: toName } : null;
+    const jrLink    = buildJrLink(provider, route);
+    const links     = jrLink ? [jrLink] : [];
+    // スマートEX: 出発地が EX 対象かつ主要予約先が EX でない場合に追加
+    if (provider !== 'ex' && EX_CITIES.has(departure)) {
+      const exLink = buildJrLink('ex', route);
+      if (exLink) links.push(exLink);
+    }
     return links.filter(Boolean);
   }
 
@@ -220,6 +234,7 @@ function resolveByFields(city, departure) {
   if (isIsland && hasFerry) {
     const links = [
       ...getFlightForIsland(city, departure, fromCity),
+      ...getIslandJR(city, departure, fromCity),
       ...getFerry(city, departure, fromCity, true),
       ...getCar(city),
     ].filter(l => l && (l.url || l.type === 'note'));
@@ -263,23 +278,52 @@ function isFlightAvailable(departure, airportGateway) {
 function getFlightForIsland(city, departure, fromCity) {
   const airport = gw(city, 'airportGateway');
   if (airport && isFlightAvailable(departure, airport)) {
-    return [buildSkyscannerLink(fromCity.iata, airport)].filter(Boolean);
+    return [
+      buildSkyscannerLink(fromCity.iata, airport),
+      buildGoogleFlightsLink(fromCity.iata, airport),
+    ].filter(Boolean);
   }
   const hub = city.airportHub;
   if (!hub) return [];
   const hubAirport = AIRPORT_HUB_GATEWAY[hub];
   if (!hubAirport || !isFlightAvailable(departure, hubAirport)) return [];
-  return [buildSkyscannerLink(fromCity.iata, hubAirport)].filter(Boolean);
+  return [
+    buildSkyscannerLink(fromCity.iata, hubAirport),
+    buildGoogleFlightsLink(fromCity.iata, hubAirport),
+  ].filter(Boolean);
+}
+
+/** island の鉄道ゲートウェイ（港付近の駅）への JR リンク */
+function getIslandJR(city, departure, fromCity) {
+  const hubSt = city.hubStation;
+  if (!hubSt) return [];
+  const fromSt = fromCity.rail.replace(/駅$/, '');
+  const toSt   = hubSt.replace(/駅$/, '');
+  if (!fromSt || !toSt || fromSt === toSt) return [];
+  const jr = buildJrLink(resolveRailProvider(departure, city), { from: fromSt, to: toSt });
+  const links = jr ? [jr] : [];
+  // EX 出発地なら追加
+  if (jr && jr.type !== 'jr-ex' && EX_CITIES.has(departure)) {
+    const exLink = buildJrLink('ex', { from: fromSt, to: toSt });
+    if (exLink) links.push(exLink);
+  }
+  return links;
 }
 
 function getRail(city, departure, fromCity) {
   const railGateway = gw(city, 'railGateway');
   if (!railGateway) return [];
-  const links = [];
   const fromStation = fromCity.rail.replace(/駅$/, '');
   const toStation   = railGateway.replace(/駅$/, '');
-  const jr = buildJrLink(resolveRailProvider(departure, city), { from: fromStation, to: toStation });
-  if (jr) links.push(jr);
+  const route = { from: fromStation, to: toStation };
+  const provider = resolveRailProvider(departure, city);
+  const jr = buildJrLink(provider, route);
+  const links = jr ? [jr] : [];
+  // スマートEX 追加
+  if (jr && jr.type !== 'jr-ex' && EX_CITIES.has(departure)) {
+    const exLink = buildJrLink('ex', route);
+    if (exLink) links.push(exLink);
+  }
   return links;
 }
 
@@ -288,6 +332,7 @@ function getFlight(city, departure, fromCity) {
   if (!airport || !isFlightAvailable(departure, airport)) return [];
   return [
     buildSkyscannerLink(fromCity.iata, airport),
+    buildGoogleFlightsLink(fromCity.iata, airport),
     buildGoogleMapsLink(airport, city.name, 'transit', '空港から市内へ（Googleマップ）', coords(city)),
   ].filter(Boolean);
 }
@@ -300,7 +345,9 @@ function getFerry(city, departure, fromCity, isIsland) {
     const port = selectNearestPort(city, departure, ferries);
     if (!port) return [];
     const fl = buildFerryLink(port);
-    return [fl, buildGoogleMapsLink(fromCity.rail, port, 'transit')].filter(l => l?.url);
+    // 港への Google Maps: hubStation（港付近の駅）があればそこから、なければ出発駅から
+    const mapOrigin = city.hubStation || fromCity.rail;
+    return [fl, buildGoogleMapsLink(mapOrigin, port, 'transit', `${port}へのルート（Googleマップ）`)].filter(l => l?.url);
   }
   const fl = buildFerryLink(ferries[0]);
   return fl ? [fl] : [];

@@ -134,6 +134,19 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
   };
 }
 
+/** Google Flights リンク（Skyscanner と並列表示） */
+export function buildGoogleFlightsLink(fromIata, toAirportName) {
+  const toIata = AIRPORT_IATA[toAirportName];
+  if (!toIata) return null;
+  const fromShort = IATA_SHORT_NAME[fromIata] || fromIata;
+  const toShort   = toAirportName.replace(/空港$/, '');
+  return {
+    type: 'google-flights',
+    label: `Google Flightsで比較（${fromShort} → ${toShort}）`,
+    url: `https://www.google.com/flights#search;f=${fromIata};t=${toIata};tt=o`,
+  };
+}
+
 /* ── JR予約（1ボタン） ── */
 
 /**

@@ -172,6 +172,8 @@ export const FLIGHT_ROUTES = {
     'NGO', // 中部
     'OKA', // 那覇
     'TNE', // 種子島
+    'KUM', // 屋久島（JAC）
+    'ASJ', // 奄美（JAC）
   ],
 
   // ── 宮崎（KMI） ─────────────────────────────

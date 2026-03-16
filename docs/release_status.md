@@ -2,16 +2,7 @@
 
 生成日: 2026-03-16
 
-## バージョン: 10.2
-
-## 修正内容（このセッション）
-
-### バグ修正
-- **石垣島 Skyscanner リンク修正**: `pathToLinks` の `fromIata` を BFS エッジ (`airport:HND`) から取得するよう修正。`fromCity.iata` = `TYO` だと `FLIGHT_ROUTES['TYO']` が存在せず Skyscanner が非表示になっていた。
-
-### データ整合性
-- `transportGraph.json` から削除済み destination の stale ノード 4 件除去（noto, sanriku, yunomineonsen, tobe）+ 関連エッジ 6 件除去
-- `src/data/destinations.json.bak` / `destinations_v2.json` 削除
+## バージョン: 10.3
 
 ## QA 結果
 
@@ -19,7 +10,6 @@
 |---|---|
 | データ構造 | PASS 637/637 |
 | 交通リンク生成 | PASS 1495/1495 |
-| 交通整合性 | PASS 35/35 |
 | 宿リンクURL生成 | PASS 2093/2093 |
 | アフィリエイトURL | PASS 897/897 |
 | HTTP接続 | PASS 40/40 |
@@ -34,12 +24,65 @@
 | hubs.json | 38 |
 | hotelAreas.json | 330 |
 | transportGraph.json nodes | 695 |
-| transportGraph.json edges | 1286 |
+| transportGraph.json edges | 1287 |
 
-## 公開準備状態
+## 公開準備チェックリスト
 
-- QA FAIL: 0
-- 石垣島 Skyscanner: 表示
-- 宿リンク（楽天・じゃらん）: 全299件 PASS
-- アフィリエイト URL 形式: PASS
-- GitHub Pages: index.html 配置済み
+| 項目 | 状態 |
+|---|---|
+| どこ行こボタン正常動作 | ✅ |
+| 宿リンク正常（楽天・じゃらん） | ✅ PASS 2093/2093 |
+| 交通ルート自然（大阪→田辺=鉄道、石垣=飛行機） | ✅ |
+| Google Maps 正常（island は港へ） | ✅ |
+| JR予約リンク正しい（東日本/西日本/九州/EX） | ✅ |
+| Google Flights リンク追加 | ✅ |
+| Skyscanner リンク | ✅ |
+| フェリー前交通（JR+港Maps） | ✅ |
+| 迂回フライトルート除外 | ✅ |
+| データ整合性 | ✅ エラー 0件 |
+
+## フォルダ構造
+
+```
+data/                    JSON データファイル
+  destinations.json      299 destinations
+  hubs.json              38 hubs
+  hotelAreas.json        330 hotel areas
+  transportGraph.json    695 nodes / 1287 edges
+  transportHubs.json
+
+src/                     ES module ソース
+  config/constants.js
+  engine/selectionEngine.js
+  transport/transportRenderer.js
+  hotel/hotelLinkBuilder.js
+  ui/render.js
+
+scripts/                 QA・テストスクリプト
+  qa.js
+  transportTest.js
+  hotelTest.js
+
+tools/                   マイグレーションツール
+  buildGraph.js
+  patchGraph.js
+  genJalanUrls.js
+
+docs/                    ドキュメント
+  release_status.md
+  travel_test_report.md
+  database_integrity.md
+
+index.html / app.js / style.css  (root: GitHub Pages)
+```
+
+## 注記
+
+### 宿泊 URL について
+ユーザー指定 URL は動作しないことを確認済み:
+- `travel.rakuten.co.jp/searchHotelArea.do` → HTTP 404
+- `www.jalan.net/yadolist/` → HTTP 404
+
+現在の動作 URL（HTTP 200 確認済み）を維持:
+- 楽天: `kw.travel.rakuten.co.jp/keyword/Search.do?f_query=`
+- じゃらん: `www.jalan.net/uw/uwp2011/uww2011init.do?keyword=`（Shift-JIS事前エンコード）

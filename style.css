@@ -604,15 +604,17 @@ body {
 .btn-jr-west    { background: var(--c-jr-west);    color: #fff; }
 .btn-jr-kyushu  { background: var(--c-jr-kyushu);  color: #fff; }
 .btn-jr-ex      { background: var(--c-jr-ex);      color: #fff; }
-.btn-skyscanner { background: var(--c-skyscanner); color: #fff; }
-.btn-ferry      { background: #1a6fa8;             color: #fff; }
-.btn-rental     { background: #ff7a32;             color: #fff; }
+.btn-skyscanner    { background: var(--c-skyscanner); color: #fff; }
+.btn-google-flights { background: #1a73e8;            color: #fff; }
+.btn-ferry         { background: #1a6fa8;             color: #fff; }
+.btn-rental        { background: #ff7a32;             color: #fff; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,
 .btn-jr-kyushu:hover,
 .btn-jr-ex:hover,
 .btn-skyscanner:hover,
+.btn-google-flights:hover,
 .btn-ferry:hover,
 .btn-rental:hover { opacity: 0.92; }
 

@@ -142,8 +142,9 @@ function btnClass(type) {
   if (type === 'jr-west')     return 'btn-jr-west';
   if (type === 'jr-kyushu')   return 'btn-jr-kyushu';
   if (type === 'jr-ex')       return 'btn-jr-ex';
-  if (type === 'skyscanner')  return 'btn-skyscanner';
-  if (type === 'ferry')       return 'btn-ferry';
+  if (type === 'skyscanner')     return 'btn-skyscanner';
+  if (type === 'google-flights') return 'btn-google-flights';
+  if (type === 'ferry')          return 'btn-ferry';
   if (type === 'rental')      return 'btn-rental';
   if (type === 'google-maps') return 'btn-secondary';
   return 'btn-primary';
