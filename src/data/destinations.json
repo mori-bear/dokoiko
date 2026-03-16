@@ -490,7 +490,8 @@
     "hubStation": "那覇空港",
     "accessStation": "石垣空港",
     "hotelArea": "ishigaki",
-    "jalanPath": "/47/LRG_470030/"
+    "jalanPath": "/47/LRG_470030/",
+    "port": null
   },
   {
     "id": "ise",
@@ -924,7 +925,8 @@
     "hubStation": "広島駅",
     "accessStation": "宮島口港",
     "hotelArea": "miyajima",
-    "jalanPath": "/34/LRG_340060/"
+    "jalanPath": "/34/LRG_340060/",
+    "port": "宮島口港"
   },
   {
     "id": "onomichi",
@@ -1069,7 +1071,8 @@
     "city": "小豆島町",
     "hubStation": "高松駅",
     "accessStation": "池田港",
-    "hotelArea": "shodoshima"
+    "hotelArea": "shodoshima",
+    "port": "高松港"
   },
   {
     "id": "mihonoseki",
@@ -1268,7 +1271,8 @@
     "city": "渡嘉敷村",
     "hubStation": "那覇港",
     "accessStation": "渡嘉敷港",
-    "hotelArea": "tokashiki-jima"
+    "hotelArea": "tokashiki-jima",
+    "port": "那覇港"
   },
   {
     "id": "kumejima",
@@ -1338,7 +1342,8 @@
     "hubStation": "那覇空港",
     "accessStation": "久米島空港",
     "hotelArea": "kumejima",
-    "jalanPath": "/47/LRG_470060/"
+    "jalanPath": "/47/LRG_470060/",
+    "port": "那覇港"
   },
   {
     "id": "miyakojima",
@@ -1408,7 +1413,8 @@
     "hubStation": "那覇空港",
     "accessStation": "宮古空港",
     "hotelArea": "miyakojima",
-    "jalanPath": "/47/LRG_470040/"
+    "jalanPath": "/47/LRG_470040/",
+    "port": null
   },
   {
     "id": "kouzushima",
@@ -1474,7 +1480,8 @@
     "hubStation": "竹芝客船ターミナル",
     "accessStation": "神津島港",
     "hotelArea": "kouzushima",
-    "jalanPath": "/13/LRG_130120/"
+    "jalanPath": "/13/LRG_130120/",
+    "port": "竹芝客船ターミナル"
   },
   {
     "id": "hakone",
@@ -1805,7 +1812,8 @@
     "hubStation": "東京竹芝",
     "accessStation": "元町港",
     "hotelArea": "izu-oshima",
-    "jalanPath": "/13/LRG_130100/"
+    "jalanPath": "/13/LRG_130100/",
+    "port": "竹芝客船ターミナル"
   },
   {
     "id": "shirakawago-t",
@@ -2577,14 +2585,16 @@
         "屋久島空港"
       ],
       "bus": [],
-      "ferry": []
+      "ferry": [
+        "鹿児島港"
+      ]
     },
     "accessHub": null,
     "railNote": null,
     "destType": "island",
     "railGateway": null,
     "busGateway": null,
-    "ferryGateway": null,
+    "ferryGateway": "鹿児島港",
     "airportGateway": "屋久島空港",
     "prefecture": "鹿児島県",
     "lat": 30.3928,
@@ -2603,10 +2613,11 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "屋久島町",
-    "hubStation": "鹿児島港",
+    "hubStation": "鹿児島中央駅",
     "accessStation": "安房港",
     "hotelArea": "yakushima",
-    "jalanPath": "/46/LRG_460040/"
+    "jalanPath": "/46/LRG_460040/",
+    "port": "鹿児島港"
   },
   {
     "id": "amakusa",
@@ -3151,7 +3162,8 @@
     "hubStation": "高松駅",
     "accessStation": "宮浦港",
     "hotelArea": "naoshima",
-    "jalanPath": "/37/LRG_370020/"
+    "jalanPath": "/37/LRG_370020/",
+    "port": "高松港"
   },
   {
     "id": "kotohira",
@@ -4808,7 +4820,8 @@
     "hubStation": "鹿児島港",
     "accessStation": "名瀬港",
     "hotelArea": "amami",
-    "jalanPath": "/46/LRG_460020/"
+    "jalanPath": "/46/LRG_460020/",
+    "port": "鹿児島港"
   },
   {
     "id": "goto",
@@ -4875,7 +4888,8 @@
     "hubStation": "長崎港",
     "accessStation": "福江港",
     "hotelArea": "goto",
-    "jalanPath": "/42/LRG_420060/"
+    "jalanPath": "/42/LRG_420060/",
+    "port": "博多港"
   },
   {
     "id": "unzen",
@@ -8188,7 +8202,8 @@
     "city": "竹富町",
     "hubStation": "石垣港",
     "accessStation": "大原港",
-    "hotelArea": "iriomote"
+    "hotelArea": "iriomote",
+    "port": "石垣港"
   },
   {
     "id": "takahashi",
@@ -8406,7 +8421,7 @@
       "熊野磨崖仏"
     ],
     "destType": "city",
-    "railGateway": null,
+    "railGateway": "宇佐駅",
     "busGateway": null,
     "ferryGateway": null,
     "airportGateway": "大分空港",
@@ -9134,7 +9149,8 @@
     "city": "香川志々島",
     "hubStation": "詫間駅",
     "accessStation": "詫間駅",
-    "hotelArea": "shijishima"
+    "hotelArea": "shijishima",
+    "port": "詫間港"
   },
   {
     "id": "sounkyo",
@@ -9266,7 +9282,8 @@
     "city": "北海礼文島",
     "hubStation": "礼文島駅",
     "accessStation": "礼文島駅",
-    "hotelArea": "rebun-island"
+    "hotelArea": "rebun-island",
+    "port": "稚内港"
   },
   {
     "id": "rishiri-island",
@@ -9331,7 +9348,8 @@
     "city": "北海利尻島",
     "hubStation": "利尻島駅",
     "accessStation": "利尻島駅",
-    "hotelArea": "rishiri-island"
+    "hotelArea": "rishiri-island",
+    "port": "稚内港"
   },
   {
     "id": "akan",
@@ -10283,7 +10301,8 @@
     "city": "新潟佐渡島",
     "hubStation": "佐渡島駅",
     "accessStation": "佐渡島駅",
-    "hotelArea": "sado-island"
+    "hotelArea": "sado-island",
+    "port": "新潟港"
   },
   {
     "id": "kiyosato",
@@ -11553,7 +11572,8 @@
     "city": "周防大島町",
     "hubStation": "広島駅",
     "accessStation": "大畠駅",
-    "hotelArea": "suo-oshima"
+    "hotelArea": "suo-oshima",
+    "port": "柳井港"
   },
   {
     "id": "shimanto",
@@ -11683,7 +11703,8 @@
     "city": "大月町",
     "hubStation": "宿毛駅",
     "accessStation": "宿毛駅",
-    "hotelArea": "kashiwajima"
+    "hotelArea": "kashiwajima",
+    "port": "宿毛港"
   },
   {
     "id": "saijo",
@@ -12262,7 +12283,8 @@
     "city": "対馬市",
     "hubStation": "福岡空港",
     "accessStation": "対馬空港",
-    "hotelArea": "tsushima"
+    "hotelArea": "tsushima",
+    "port": "博多港"
   },
   {
     "id": "iki-island",
@@ -12328,7 +12350,8 @@
     "city": "長崎壱岐",
     "hubStation": "壱岐駅",
     "accessStation": "壱岐駅",
-    "hotelArea": "iki-island"
+    "hotelArea": "iki-island",
+    "port": "博多港"
   },
   {
     "id": "tanegashima",
@@ -12394,7 +12417,8 @@
     "city": "西之表市",
     "hubStation": "鹿児島空港",
     "accessStation": "西之表港",
-    "hotelArea": "tanegashima"
+    "hotelArea": "tanegashima",
+    "port": "鹿児島港"
   },
   {
     "id": "kikuchi",
@@ -12525,7 +12549,8 @@
     "city": "沖縄竹富島",
     "hubStation": "竹富島駅",
     "accessStation": "竹富島駅",
-    "hotelArea": "taketomi-island"
+    "hotelArea": "taketomi-island",
+    "port": "石垣港"
   },
   {
     "id": "yonaguni-island",
@@ -12591,7 +12616,8 @@
     "city": "与那国町",
     "hubStation": "那覇空港",
     "accessStation": "与那国空港",
-    "hotelArea": "yonaguni-island"
+    "hotelArea": "yonaguni-island",
+    "port": "石垣港"
   },
   {
     "id": "nakijin",
@@ -12787,7 +12813,8 @@
     "city": "沖縄座間味島",
     "hubStation": "座間味島駅",
     "accessStation": "座間味島駅",
-    "hotelArea": "zamami-island"
+    "hotelArea": "zamami-island",
+    "port": "那覇港"
   },
   {
     "id": "ie-island",
@@ -12854,7 +12881,8 @@
     "city": "沖縄伊江島",
     "hubStation": "伊江島駅",
     "accessStation": "伊江島駅",
-    "hotelArea": "ie-island"
+    "hotelArea": "ie-island",
+    "port": "本部港"
   },
   {
     "id": "kohama-island",
@@ -12920,7 +12948,8 @@
     "city": "沖縄小浜島",
     "hubStation": "小浜島駅",
     "accessStation": "小浜島駅",
-    "hotelArea": "kohama-island"
+    "hotelArea": "kohama-island",
+    "port": "小浜港"
   },
   {
     "id": "matsushiro",
@@ -16028,7 +16057,8 @@
     "secondaryTransport": "ferry",
     "hubStation": "川内駅",
     "accessStation": "川内港",
-    "hotelArea": "koshikijima"
+    "hotelArea": "koshikijima",
+    "port": "川内港"
   },
   {
     "id": "kirishima",
@@ -18394,7 +18424,8 @@
       "fukuoka": 295,
       "takamatsu": 265
     },
-    "hotelArea": "ama-island"
+    "hotelArea": "ama-island",
+    "port": "七類港"
   },
   {
     "id": "akiyoshidai",
@@ -18596,7 +18627,8 @@
       "fukuoka": 305,
       "takamatsu": 275
     },
-    "hotelArea": "oki-island"
+    "hotelArea": "oki-island",
+    "port": "境港"
   },
   {
     "id": "inujima",
@@ -18664,7 +18696,8 @@
       "fukuoka": 225,
       "takamatsu": 50
     },
-    "hotelArea": "inujima"
+    "hotelArea": "inujima",
+    "port": "宝伝港"
   },
   {
     "id": "teshima",
@@ -18732,7 +18765,8 @@
       "fukuoka": 165,
       "takamatsu": 15
     },
-    "hotelArea": "teshima"
+    "hotelArea": "teshima",
+    "port": "高松港"
   },
   {
     "id": "niyodogawa",
@@ -19394,7 +19428,8 @@
       "fukuoka": 150,
       "takamatsu": 260
     },
-    "hotelArea": "ojika-island"
+    "hotelArea": "ojika-island",
+    "port": "佐世保港"
   },
   {
     "id": "irabu-island",
@@ -19463,7 +19498,8 @@
       "fukuoka": 155,
       "takamatsu": 235
     },
-    "hotelArea": "irabu-island"
+    "hotelArea": "irabu-island",
+    "port": null
   },
   {
     "id": "aguni-island",
@@ -19533,7 +19569,8 @@
       "fukuoka": 185,
       "takamatsu": 235
     },
-    "hotelArea": "aguni-island"
+    "hotelArea": "aguni-island",
+    "port": "泊港"
   },
   {
     "id": "itoman",
@@ -19735,7 +19772,8 @@
       "fukuoka": 650,
       "takamatsu": 600
     },
-    "hotelArea": "miyakejima"
+    "hotelArea": "miyakejima",
+    "port": "竹芝桟橋"
   },
   {
     "id": "hachijojima",
@@ -19804,7 +19842,8 @@
       "fukuoka": 415,
       "takamatsu": 365
     },
-    "hotelArea": "hachijojima"
+    "hotelArea": "hachijojima",
+    "port": "竹芝桟橋"
   },
   {
     "id": "niijima",
@@ -19873,7 +19912,8 @@
       "fukuoka": 530,
       "takamatsu": 480
     },
-    "hotelArea": "niijima"
+    "hotelArea": "niijima",
+    "port": "竹芝桟橋"
   },
   {
     "id": "shikinejima",
@@ -19940,6 +19980,7 @@
       "fukuoka": 560,
       "takamatsu": 510
     },
-    "hotelArea": "shikinejima"
+    "hotelArea": "shikinejima",
+    "port": "竹芝桟橋"
   }
 ]

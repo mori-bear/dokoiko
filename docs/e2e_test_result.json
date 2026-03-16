@@ -1,0 +1,70 @@
+{
+  "date": "2026-03-16T09:19:21.520Z",
+  "pass": 7,
+  "fail": 0,
+  "results": [
+    {
+      "departure": "大阪",
+      "destId": "koshikijima",
+      "label": "大阪 → 甑島（フェリー+鉄道）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "大阪",
+      "destId": "ishigaki",
+      "label": "大阪 → 石垣島（飛行機）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "大阪",
+      "destId": "tanabe",
+      "label": "大阪 → 田辺（鉄道・飛行機禁止）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "高松",
+      "destId": "dogo-onsen",
+      "label": "高松 → 道後温泉（鉄道）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "大阪",
+      "destId": "yakushima",
+      "label": "大阪 → 屋久島（飛行機+フェリー）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "東京",
+      "destId": "ishigaki",
+      "label": "東京 → 石垣島（飛行機）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    },
+    {
+      "departure": "鹿児島",
+      "destId": "yakushima",
+      "label": "鹿児島 → 屋久島（飛行機+フェリー）",
+      "transportOk": true,
+      "hotelOk": true,
+      "mapsOk": true,
+      "issues": []
+    }
+  ]
+}

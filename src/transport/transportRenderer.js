@@ -330,6 +330,12 @@ function getRail(city, departure, fromCity) {
 function getFlight(city, departure, fromCity) {
   const airport = gw(city, 'airportGateway');
   if (!airport || !isFlightAvailable(departure, airport)) return [];
+  // TASK10: 400km 以下・海越えなし（island 以外かつ近距離）は飛行機非表示
+  const isIsland = !!(city.isIsland || city.destType === 'island');
+  if (!isIsland) {
+    const stars = calculateDistanceStars(departure, city);
+    if (stars < 3) return [];
+  }
   return [
     buildSkyscannerLink(fromCity.iata, airport),
     buildGoogleFlightsLink(fromCity.iata, airport),
@@ -382,14 +388,18 @@ function getCar(city) {
 }
 
 function limitRoutes(links, max) {
-  // google-maps: 最大1本（補助情報扱い、上限カウントなし）
-  // skyscanner:  最大1本
-  const maps = links.filter(l => l.type === 'google-maps').slice(0, 1);
-  const sky  = links.filter(l => l.type === 'skyscanner').slice(0, 1);
-  const other = links.filter(l => l.type !== 'note' && l.type !== 'rental' && l.type !== 'google-maps' && l.type !== 'skyscanner');
+  // google-maps:    最大1本（補助扱い、上限カウント外）
+  // skyscanner:     最大1本（航空券比較、上限カウント外）
+  // google-flights: 最大1本（航空券比較、上限カウント外）
+  // other:          最大 max 本（JR/ferry/bus 等のメイン交通手段）
+  const maps   = links.filter(l => l.type === 'google-maps').slice(0, 1);
+  const sky    = links.filter(l => l.type === 'skyscanner').slice(0, 1);
+  const gfl    = links.filter(l => l.type === 'google-flights').slice(0, 1);
+  const FLIGHT_TYPES = new Set(['note', 'rental', 'google-maps', 'skyscanner', 'google-flights']);
+  const other  = links.filter(l => !FLIGHT_TYPES.has(l.type)).slice(0, max);
   const notes  = links.filter(l => l.type === 'note');
   const rental = links.filter(l => l.type === 'rental');
-  return [...sky, ...other].slice(0, max).concat(maps, notes, rental);
+  return [...sky, ...gfl, ...other].concat(maps, notes, rental);
 }
 
 function gw(city, key) {

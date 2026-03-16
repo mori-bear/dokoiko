@@ -14,6 +14,7 @@
 | アフィリエイトURL | PASS 897/897 |
 | HTTP接続 | PASS 40/40 |
 | ランダムシミュレーション | PASS 100/100 |
+| E2E シミュレーション | PASS 7/7 |
 | **総計** | **PASS 6098 / FAIL 0** |
 
 ## データ統計
@@ -39,12 +40,15 @@
 | Skyscanner リンク | ✅ |
 | フェリー前交通（JR+港Maps） | ✅ |
 | 迂回フライトルート除外 | ✅ |
+| 飛行機距離条件（近距離非表示） | ✅ |
+| 離島 port フィールド整備 | ✅ 39件 |
 | データ整合性 | ✅ エラー 0件 |
+| E2E テスト | ✅ PASS 7/7 |
 
 ## フォルダ構造
 
 ```
-data/                    JSON データファイル
+data/                    JSON データファイル（root ミラー）
   destinations.json      299 destinations
   hubs.json              38 hubs
   hotelAreas.json        330 hotel areas
@@ -55,13 +59,18 @@ src/                     ES module ソース
   config/constants.js
   engine/selectionEngine.js
   transport/transportRenderer.js
+  transport/linkBuilder.js
+  transport/flightRoutes.js
+  transport/airportMap.js
   hotel/hotelLinkBuilder.js
   ui/render.js
+  data/                  src ミラー
 
 scripts/                 QA・テストスクリプト
   qa.js
   transportTest.js
   hotelTest.js
+  travelE2E.js           E2E シミュレーションテスト
 
 tools/                   マイグレーションツール
   buildGraph.js
@@ -72,6 +81,7 @@ docs/                    ドキュメント
   release_status.md
   travel_test_report.md
   database_integrity.md
+  e2e_test_result.json   E2E テスト結果
 
 index.html / app.js / style.css  (root: GitHub Pages)
 ```
@@ -86,3 +96,7 @@ index.html / app.js / style.css  (root: GitHub Pages)
 現在の動作 URL（HTTP 200 確認済み）を維持:
 - 楽天: `kw.travel.rakuten.co.jp/keyword/Search.do?f_query=`
 - じゃらん: `www.jalan.net/uw/uwp2011/uww2011init.do?keyword=`（Shift-JIS事前エンコード）
+
+### web/ ディレクトリについて
+- index.html / app.js / style.css は GitHub Pages (CNAME) の制約によりルートに配置
+- web/ ディレクトリへの移動不可（GitHub Pages はルート or /docs ディレクトリのみ）
