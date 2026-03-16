@@ -3058,14 +3058,6 @@
       "type": "station",
       "name": "出雲市"
     },
-    "destination:noto": {
-      "id": "destination:noto",
-      "type": "destination",
-      "name": "能登",
-      "destId": "noto",
-      "lat": 37.145,
-      "lng": 136.905
-    },
     "destination:yoshino": {
       "id": "destination:yoshino",
       "type": "destination",
@@ -3156,14 +3148,6 @@
       "id": "station:伊豆高原",
       "type": "station",
       "name": "伊豆高原"
-    },
-    "destination:sanriku": {
-      "id": "destination:sanriku",
-      "type": "destination",
-      "name": "三陸",
-      "destId": "sanriku",
-      "lat": 39.5,
-      "lng": 141.975
     },
     "destination:tanabe": {
       "id": "destination:tanabe",
@@ -3639,14 +3623,6 @@
       "type": "station",
       "name": "五条"
     },
-    "destination:yunomineonsen": {
-      "id": "destination:yunomineonsen",
-      "type": "destination",
-      "name": "湯の峰温泉",
-      "destId": "yunomineonsen",
-      "lat": 33.7388,
-      "lng": 135.8374
-    },
     "destination:maizuru": {
       "id": "destination:maizuru",
       "type": "destination",
@@ -3764,14 +3740,6 @@
       "id": "station:江川崎",
       "type": "station",
       "name": "江川崎"
-    },
-    "destination:tobe": {
-      "id": "destination:tobe",
-      "type": "destination",
-      "name": "砥部",
-      "destId": "tobe",
-      "lat": 33.742,
-      "lng": 132.7943
     },
     "station:松山": {
       "id": "station:松山",
@@ -12820,22 +12788,6 @@
       "minutes": 0
     },
     {
-      "id": "e1065",
-      "from": "station:金沢",
-      "to": "destination:noto",
-      "type": "bus",
-      "minutes": 30,
-      "local": true
-    },
-    {
-      "id": "e1066",
-      "from": "airport:KMQ",
-      "to": "destination:noto",
-      "type": "bus",
-      "minutes": 40,
-      "local": true
-    },
-    {
       "id": "e1067",
       "from": "hub:吉野",
       "to": "station:吉野",
@@ -12962,14 +12914,6 @@
       "to": "station:宮古",
       "type": "local",
       "minutes": 0
-    },
-    {
-      "id": "e1084",
-      "from": "station:宮古",
-      "to": "destination:sanriku",
-      "type": "bus",
-      "minutes": 30,
-      "local": true
     },
     {
       "id": "e1085",
@@ -13653,14 +13597,6 @@
       "minutes": 0
     },
     {
-      "id": "e1175",
-      "from": "station:新宮",
-      "to": "destination:yunomineonsen",
-      "type": "bus",
-      "minutes": 30,
-      "local": true
-    },
-    {
       "id": "e1176",
       "from": "hub:東舞鶴",
       "to": "station:東舞鶴",
@@ -13849,22 +13785,6 @@
       "to": "station:松山",
       "type": "local",
       "minutes": 0
-    },
-    {
-      "id": "e1201",
-      "from": "station:松山",
-      "to": "destination:tobe",
-      "type": "bus",
-      "minutes": 30,
-      "local": true
-    },
-    {
-      "id": "e1202",
-      "from": "airport:MYJ",
-      "to": "destination:tobe",
-      "type": "bus",
-      "minutes": 40,
-      "local": true
     },
     {
       "id": "e1203",
@@ -14562,5 +14482,9 @@
       "minutes": 150,
       "local": true
     }
-  ]
+  ],
+  "stats": {
+    "nodes": 695,
+    "edges": 1286
+  }
 }

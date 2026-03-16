@@ -151,7 +151,7 @@ function pathToLinks(path, city, departure, fromCity) {
 
   // ── 飛行機ルート ──
   if (flightSeg) {
-    const fromIata  = fromCity.iata;  // 出発地の実際の空港 IATA
+    const fromIata  = extractIata(flightSeg.from) || fromCity.iata;  // BFS 空港ノード優先、fallback: 出発地 IATA
     const toAirNode = _graph.nodes[flightSeg.to];
     const toIata    = toAirNode?.iata || extractIata(flightSeg.to);
     const toAirName = iataToName(toIata);
