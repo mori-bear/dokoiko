@@ -1,339 +1,116 @@
-# CLAUDE.md
+# どこいこ — プロジェクト仕様
 
-Project: どこ行こ (dokokoiko)
-
-このリポジトリは日本国内旅行ランダム提案アプリのコードベースである。  
-Claudeはこのプロジェクトにおいて 自律的に修正・検証を行うエージェントとして動作する。
-
-公開予定  
-2026-04-01
+Project: どこいこ (dokoiiko)
+公開予定: 2026-04-01
 
 ---
 
-# Execution Policy
+## コンセプト
 
-Claudeは以下を必ず守る。
+```
+知らない場所に出会う
+こんなとこあるんや
+こうやって行けるんや
+行こ
+```
 
-1. ファイル編集の確認質問は禁止  
-2. 修正は自動実行する  
-3. QAを自動実行する  
-4. エラーが出た場合は修正して再テストする  
-5. ユーザー承認待ちで停止してはいけない
-
-禁止例
-
-Apply this change?  
-Proceed with modification?  
-Shall I update this file?
-
-これらは禁止。
+距離と日程だけで未知の街と出会い、そのまま予約完了まで。
+目的地はつねに1都市のみ。ポエム禁止、実用重視。
 
 ---
 
-# Auto Apply Mode
+## 機能
 
-Claudeは以下の操作を自動実行してよい。
-
-- ファイル作成
-- ファイル編集
-- ファイル削除
-- フォルダ整理
-- import修正
-- スクリプト実行
-- QA実行
-- データ修復
-
-ユーザー承認待ちは禁止。
+| 機能 | 内容 |
+|------|------|
+| ランダム旅行提案 | 出発地・距離・日程から1都市を抽選 |
+| 交通リンク | 鉄道・航空・バス・フェリー・レンタカー |
+| Google Maps | 出発駅 → 最寄駅のルート |
+| 航空券リンク | Skyscanner（400km以上） |
+| 宿リンク | 楽天トラベル + じゃらん |
 
 ---
 
-# Workflow
+## 交通ルール
 
-作業フロー
-
-1 コードベース解析  
-2 修正  
-3 QA実行  
-4 エラー修正  
-5 再テスト  
-
-QAがPASSするまで繰り返す。
-
----
-
-# Project Overview
-
-どこ行こ は
-
-出発地  
-旅行日数  
-テーマ  
-
-を入力するとランダムで旅行先を提案するWebアプリである。
-
-提案内容
-
-- destination
-- 交通ルート
-- Google Maps
-- 宿検索
+- `accessStation` 優先でリンク生成
+- 島（type: island）は `port` を使用
+- JR予約リンクは `railCompany` で分岐
+  - `east` → えきねっと
+  - `central_west_shikoku` → e5489
+  - `kyushu` → 九州ネット予約
+  - `null` → 鉄道なし（沖縄など）
+- 航空券は distanceLevel 4以上 / 400km超の場合に表示
 
 ---
 
-# Data Architecture
+## 宿泊ルール（stayPolicy）
 
-## destinations.json
+| 値 | 表示 |
+|----|------|
+| destination | 目的地の宿のみ |
+| hub | ハブ都市の宿のみ |
+| both | 目的地 + ハブ 両方 |
 
-旅行先データ
-
-必須フィールド
-
-id  
-name  
-prefecture  
-city  
-region  
-tags  
-accessStation  
-hub  
-hotelArea  
-
-例
-
-{
-"id":"tono",
-"name":"遠野",
-"prefecture":"岩手県",
-"city":"遠野市",
-"region":"東北",
-"accessStation":"遠野駅",
-"hub":"morioka",
-"hotelArea":"tono"
-}
+日帰り（daytrip）時は宿泊リンクを表示しない。
 
 ---
 
-# Hub Architecture
+## データ構造
 
-hub は交通ルーティングの中継点。
+### destinations.json (`src/data/destinations.json`)
 
-例
+必須フィールド:
 
-東京  
-大阪  
-名古屋  
-福岡  
-那覇  
+```
+id / name / prefecture / region
+departures / distanceLevel / type
+stayPolicy / transportHubs / railCompany
+themes / staySupport / appeal / affiliate
+```
 
-hubは以下を満たす。
+### 特殊ルール
 
-- 大都市
-- 空港
-- 主要駅
-
----
-
-# Dual Role Rule
-
-都市は
-
-destination  
-hub
-
-両方になることがある。
-
-例
-
-石垣  
-那覇  
-高松  
-函館  
-
-この場合
-
-destinations.json  
-transportHubs.json
-
-両方に存在してよい。
-
-これは正常。
-
-Claudeは
-
-destinationだからhub禁止
-
-という修正をしてはいけない。
+- 沖縄目的地: `railCompany = null`
+- `type = onsen`: `stayPolicy = destination`
+- `type = island`: `stayPolicy = both`
+- 日帰り時: `distanceLevel 4・5` を除外
 
 ---
 
-# Transport Graph
+## スクリプト
 
-transportGraph.json は
-
-都市間交通ネットワーク。
-
-例
-
-{
-"from":"tokyo",
-"to":"sendai",
-"type":"shinkansen",
-"time":90
-}
+```sh
+node scripts/qa.js               # 総合品質テスト
+node scripts/transportTest.js    # 交通リンク検証
+node scripts/hotelTest.js        # 宿リンク検証
+node scripts/e2eTest.js          # E2Eテスト
+node scripts/buildGraph.js       # transportGraph 再生成
+```
 
 ---
 
-# Route Logic
+## ディレクトリ構成
 
-ルート生成は
+```
+src/
+  config/constants.js        出発地・アフィリエイトID
+  engine/selectionEngine.js  抽選ロジック
+  transport/                 交通リンク生成
+  affiliate/hotel.js         宿泊リンク
+  data/destinations.json     目的地データ
+  ui/                        DOM描画・イベント
 
-hub → hub → destination
-
-で計算する。
-
-例
-
-東京  
-↓  
-仙台  
-↓  
-遠野
-
----
-
-# Google Maps
-
-Google Mapsリンク
-
-origin  
-出発駅
-
-destination  
-最寄駅
-
-例
-
-東京駅 → 遠野駅
+data/                        旧データ（参照用）
+scripts/                     QA・変換スクリプト
+docs/                        設計ドキュメント
+pages/                       about / privacy / disclaimer
+```
 
 ---
 
-# Hotel System
+## リリース条件
 
-宿検索は
-
-楽天  
-じゃらん
-
-両方表示。
-
----
-
-# Rakuten URL
-
-https://travel.rakuten.co.jp/searchHotelArea.do?f_query={prefecture}%20{city}
-
----
-
-# Jalan URL
-
-https://www.jalan.net/yadolist/?keyword={prefecture}%20{city}
-
-必ず
-
-encodeURIComponent
-
-を使う。
-
----
-
-# Hotel Validation
-
-Claudeは以下をテストする。
-
-- URLが開く
-- 404でない
-- 宿一覧が表示される
-
----
-
-# QA Tests
-
-Claudeは以下を自動実行する。
-
-100回ランダム旅行生成
-
-チェック項目
-
-- destination存在
-- hub存在
-- 交通ルート
-- 宿URL
-- MapsURL
-
----
-
-# Data Integrity
-
-Claudeは以下をチェックする。
-
-destination ID重複  
-destination name重複  
-hotelArea参照  
-hub参照  
-transportGraph参照  
-
-問題があれば自動修正。
-
----
-
-# Folder Structure
-
-repo構造
-
-data/
-destinations.json
-hotelAreas.json
-transportGraph.json
-transportHubs.json
-
-scripts/
-qa.js
-hotelTest.js
-transportTest.js
-
-web/
-index.html
-app.js
-style.css
-
----
-
-# Error Handling
-
-Claudeは
-
-エラー発見  
-↓  
-原因特定  
-↓  
-修正  
-↓  
-再テスト
-
-を自動実行する。
-
----
-
-# Release Condition
-
-以下が満たされたら公開可能。
-
-QA PASS  
-宿リンク正常  
-交通ルート正常  
-
----
-
-# Release Date
-
-2026-04-01
+- QA PASS（node scripts/qa.js）
+- 宿リンク正常（node scripts/hotelTest.js）
+- 交通リンク正常（node scripts/transportTest.js）

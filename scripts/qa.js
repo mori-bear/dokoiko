@@ -376,8 +376,13 @@ function buildJalanUrl(city) {
 }
 
 function buildRakutenUrl(city) {
-  const kw  = resolveKeyword(city);
   const aff = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
+  // TASK5: hotelLinkBuilder.js と同期: rakutenPath があればエリアページ直リンク
+  if (city.hotelArea) {
+    const area = HOTEL_AREA_MAP.get(city.hotelArea);
+    if (area?.rakutenPath) return aff + `https://travel.rakuten.co.jp${area.rakutenPath}`;
+  }
+  const kw  = resolveKeyword(city);
   const target = `https://kw.travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(kw)}`;
   return aff + target; // pc パラメータは raw URL（Rakuten affiliate 仕様）
 }
@@ -618,10 +623,15 @@ class Scorecard {
       sc.check(jUrl.includes('ck.jp.ap.valuecommerce.com'),     `${city.id}: じゃらん VC ドメイン欠落`);
       sc.check(jUrl.includes('uwp2011'),                        `${city.id}: じゃらん uwp2011 URL 欠落`);
       sc.check(rUrl.includes('hb.afl.rakuten.co.jp'),           `${city.id}: 楽天 aff ドメイン欠落`);
-      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 keyword/Search.do URL 欠落`);
-      // 楽天: f_query= 形式チェック
-      sc.check(rUrl.includes(`f_query=${encodeURIComponent(kw)}`),
-        `${city.id}: 楽天 keyword エンコード不正`);
+      // TASK5: rakutenPath 使用時はエリアページURL、それ以外は keyword/Search.do
+      const usesRakutenPath = !!(city.hotelArea && HOTEL_AREA_MAP.get(city.hotelArea)?.rakutenPath);
+      if (usesRakutenPath) {
+        sc.check(rUrl.includes('travel.rakuten.co.jp/yado/'), `${city.id}: 楽天 rakutenPath URL 形式不正`);
+      } else {
+        sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do'), `${city.id}: 楽天 keyword/Search.do URL 欠落`);
+        sc.check(rUrl.includes(`f_query=${encodeURIComponent(kw)}`),
+          `${city.id}: 楽天 keyword エンコード不正`);
+      }
     });
     sc.print();
     scorecards.push(sc);
@@ -639,8 +649,13 @@ class Scorecard {
         `${city.id}: じゃらん VC URL 形式不正`);
       sc.check(rUrl.startsWith('https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc='),
         `${city.id}: 楽天 Aff URL 形式不正`);
-      sc.check(rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do?f_query='),
-        `${city.id}: 楽天 keyword/Search.do?f_query= 形式不正`);
+      // TASK5: rakutenPath 使用時はエリアページ URL、それ以外は keyword/Search.do
+      const usesRakutenPathAff = !!(city.hotelArea && HOTEL_AREA_MAP.get(city.hotelArea)?.rakutenPath);
+      sc.check(
+        usesRakutenPathAff
+          ? rUrl.includes('travel.rakuten.co.jp/yado/')
+          : rUrl.includes('kw.travel.rakuten.co.jp/keyword/Search.do?f_query='),
+        `${city.id}: 楽天 URL 形式不正`);
     });
     sc.print();
     scorecards.push(sc);

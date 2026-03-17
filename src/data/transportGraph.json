@@ -4120,6 +4120,22 @@
       "destId": "suzu",
       "lat": 37.429,
       "lng": 137.2648
+    },
+    "destination:dogo-onsen": {
+      "id": "destination:dogo-onsen",
+      "type": "destination",
+      "name": "道後温泉",
+      "destId": "dogo-onsen",
+      "lat": 33.8519,
+      "lng": 132.7855
+    },
+    "destination:ushimado": {
+      "id": "destination:ushimado",
+      "type": "destination",
+      "name": "牛窓",
+      "destId": "ushimado",
+      "lat": 34.6038,
+      "lng": 134.2017
     }
   },
   "edges": [
@@ -14488,6 +14504,32 @@
       "to": "airport:KUM",
       "type": "flight",
       "minutes": 40
+    },
+    {
+      "id": "e1294",
+      "from": "hub:松山",
+      "to": "destination:dogo-onsen",
+      "type": "rail",
+      "minutes": 20,
+      "provider": "e5489",
+      "service": "路面電車"
+    },
+    {
+      "id": "e1295",
+      "from": "airport:MYJ",
+      "to": "destination:dogo-onsen",
+      "type": "bus",
+      "minutes": 30,
+      "local": true
+    },
+    {
+      "id": "e1296",
+      "from": "hub:岡山",
+      "to": "destination:ushimado",
+      "type": "rail",
+      "minutes": 30,
+      "provider": "e5489",
+      "service": "赤穂線"
     }
   ],
   "stats": {

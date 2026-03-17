@@ -159,10 +159,10 @@ export function buildJrLink(bookingProvider, route = null) {
     return `JRを予約する（${provider}）`;
   }
   switch (bookingProvider) {
-    case 'ekinet':   return { type: 'jr-east',   label: lbl('えきねっと'),     url: 'https://www.eki-net.com/' };
-    case 'e5489':    return { type: 'jr-west',   label: lbl('e5489'),         url: 'https://www.jr-odekake.net/goyoyaku/' };
-    case 'ex':       return { type: 'jr-ex',     label: lbl('EX'),            url: 'https://expy.jp/' };
-    case 'jrkyushu': return { type: 'jr-kyushu', label: lbl('九州ネット予約'), url: 'https://train.yoyaku.jrkyushu.co.jp/' };
+    case 'ekinet':   return { type: 'jr-east',   label: lbl('えきねっと'),  url: 'https://www.eki-net.com/' };
+    case 'e5489':    return { type: 'jr-west',   label: lbl('5489'),       url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'ex':       return { type: 'jr-ex',     label: lbl('EX'),         url: 'https://expy.jp/' };
+    case 'jrkyushu': return { type: 'jr-kyushu', label: lbl('JR九州予約'), url: 'https://train.yoyaku.jrkyushu.co.jp/' };
     default:         return null;
   }
 }
@@ -187,8 +187,10 @@ export function buildRentalLink() {
  */
 const FERRY_LINKS = {
   '竹芝客船ターミナル': { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
+  '竹芝桟橋':           { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
   '熱海港':             { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
   '稲取港':             { label: 'フェリーを調べる（東海汽船）',          url: 'https://www.tokaikisen.co.jp/' },
+  '泊港':               { label: 'フェリーを調べる（マリンライナー）',    url: 'https://www.agui.net/' },
   '那覇港':             { label: 'フェリーを調べる（マリンライナー）',    url: 'https://www.agui.net/' },
   '鹿児島港':           { label: 'フェリーを調べる（種子屋久高速船）',    url: 'https://www.tykousoku.jp/' },
   '長崎港':             { label: 'フェリーを調べる（九州商船）',          url: 'https://www.kysho.co.jp/' },
@@ -207,7 +209,14 @@ const FERRY_LINKS = {
   '小浜港':             { label: 'フェリーを調べる（安栄観光）',           url: 'https://www.aneikankou.co.jp/' },
 };
 
-export function buildFerryLink(ferryGateway) {
+export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
+  // TASK3: destination に ferryBookingUrl / ferryOperator が指定されていれば優先
+  if (bookingUrl) {
+    const label = operatorName
+      ? `フェリーを予約する（${operatorName}）`
+      : `フェリーを予約する（${ferryGateway}）`;
+    return { type: 'ferry', label, url: bookingUrl };
+  }
   const info = FERRY_LINKS[ferryGateway];
   if (info) return { type: 'ferry', label: info.label, url: info.url };
   // 未登録港: Googleマップ検索にフォールバック

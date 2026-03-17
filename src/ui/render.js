@@ -1,24 +1,29 @@
 /**
  * DOM描画モジュール
  *
- * カード表示順:
+ * カード表示順 (TASK6):
  *   result-card
  *     city-block（都市名/地域/タグ/スポット/説明文）
- *     card-section        （交通リンク）
+ *     card-section        （交通リンク — rental を除く）
  *     stay-block          （この街に泊まるなら — stayType !== daytrip のみ）
+ *       島の場合: 前泊セクション + 目的地セクション
+ *     rental-block        （レンタカー — stayType !== daytrip のみ）
  *     （share-block は削除済み）
  */
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
-  const hub       = city.hotelHub ?? city.name;
-  const showHotel = stayType !== 'daytrip';
+  const showHotel   = stayType !== 'daytrip';
+  // TASK6: rental を交通ブロックから分離して宿の後に表示
+  const rentalLinks = transportLinks.filter(l => l.type === 'rental');
+  const mainLinks   = transportLinks.filter(l => l.type !== 'rental');
 
   const el = document.getElementById('result-inner');
   el.innerHTML = `
     <div class="result-card">
       ${buildCityBlock(city)}
-      ${buildTransportBlock(transportLinks)}
-      ${showHotel ? buildStayBlock(hub, hotelLinks) : ''}
+      ${buildTransportBlock(mainLinks)}
+      ${showHotel ? buildStayBlock(hotelLinks) : ''}
+      ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
     </div>
   `;
 }
@@ -122,15 +127,32 @@ function buildTransportBlock(links) {
 
 /* ── 宿泊ブロック ── */
 
-function buildStayBlock(hub, links) {
-  const buttonsHtml = links.map(link => `
+function buildStayButtons(links) {
+  return links.map(link => `
     <a href="${link.url}" target="_blank" rel="nofollow sponsored noopener"
        class="stay-btn stay-btn--${link.type}">${link.label}</a>
   `).join('');
+}
+
+// TASK4: hotelLinks は { sections: [{label, links}, ...] } 形式
+function buildStayBlock(hotelLinks) {
+  const sections = hotelLinks?.sections ?? [];
+  const sectionsHtml = sections.map(({ label, links }) => {
+    if (!links || !links.length) return '';
+    const labelHtml = label
+      ? `<p class="stay-label">${label}</p>`
+      : `<p class="stay-label">この街に泊まるなら</p>`;
+    return `${labelHtml}<div class="stay-buttons">${buildStayButtons(links)}</div>`;
+  }).join('');
+  return `<div class="stay-block">${sectionsHtml}</div>`;
+}
+
+// TASK6: レンタカーブロック（宿の後に表示）
+function buildRentalBlock(links) {
+  const linksHtml = links.map(link => buildLinkItem(link)).join('');
   return `
-    <div class="stay-block">
-      <p class="stay-label">この街に泊まるなら</p>
-      <div class="stay-buttons">${buttonsHtml}</div>
+    <div class="card-section">
+      <div class="link-list">${linksHtml}</div>
     </div>
   `;
 }

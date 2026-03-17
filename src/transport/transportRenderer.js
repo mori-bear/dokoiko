@@ -24,7 +24,6 @@ import {
   AIRPORT_HUB_GATEWAY,
   buildGoogleMapsLink,
   buildSkyscannerLink,
-  buildGoogleFlightsLink,
   buildJrLink,
   buildFerryLink,
   buildRentalLink,
@@ -58,6 +57,28 @@ function coords(city) {
 }
 
 /* ─────────────────────────────────────────────────
+   港 → トランジットハブ空港 マッピング
+   「この港に乗るには、どの空港から向かうか」
+   island で airportGateway が島自身の空港である場合でも
+   正しい Maps 起点（港に近いハブ空港）を決定する。
+───────────────────────────────────────────────── */
+const PORT_TRANSIT_AIRPORT = {
+  '那覇港':               '那覇空港',
+  '泊港':                 '那覇空港',  // 慶良間・粟国方面
+  '本部港':               '那覇空港',  // 伊江島
+  '博多港':               '福岡空港',  // 対馬・壱岐・五島
+  '長崎港':               '長崎空港',
+  '鹿児島港':             '鹿児島空港', // 屋久島・奄美・種子島
+  '石垣港':               '石垣空港',  // 竹富島・西表島・与那国
+  '小浜港':               '石垣空港',  // 小浜島
+  '宿毛港':               '高知空港',  // 柏島
+  '柳井港':               '岩国錦帯橋空港', // 周防大島
+  '境港':                 '米子空港',  // 隠岐
+  '竹芝客船ターミナル':   '羽田空港',  // 伊豆諸島
+  '竹芝桟橋':             '羽田空港',  // 伊豆諸島（別名）
+};
+
+/* ─────────────────────────────────────────────────
    メインエントリ
 ───────────────────────────────────────────────── */
 export function resolveTransportLinks(city, departure) {
@@ -65,16 +86,35 @@ export function resolveTransportLinks(city, departure) {
     ? resolveByBFS(city, departure)
     : resolveByFields(city, departure);
 
-  // Google Maps は 1 本のみ: 出発駅 → 港（island）または accessStation
+  // Google Maps は 1 本のみ
   const nonMaps = raw.filter(l => l.type !== 'google-maps');
   const fromCity  = DEPARTURE_CITY_INFO[departure];
   const originStation = fromCity?.rail || departure;
   const isIsland = !!(city.isIsland || city.destType === 'island');
-  // island は港（ferryGateway）へのナビを表示する
-  const ferryPort = isIsland ? (city.ferryGateway || city.gateways?.ferry?.[0] || null) : null;
-  const destStation = ferryPort || city.accessStation || `${city.name} ${city.prefecture}`;
-  const mapsLabel = ferryPort ? `${ferryPort}へのルート（Googleマップ）` : null;
-  const mapsLink = buildGoogleMapsLink(originStation, destStation, 'transit', mapsLabel);
+
+  // 島で ferry port がある場合 → 港に最も近いトランジット空港を起点にした Maps
+  // PORT_TRANSIT_AIRPORT で正しいハブ空港を決定（island 自身の空港が airportGateway の場合も対処）
+  const ferryPort = city.ferryGateway || city.gateways?.ferry?.[0] || city.port || null;
+  const transitAirport = PORT_TRANSIT_AIRPORT[ferryPort]
+    || (ferryPort ? city.airportGateway : null)
+    || null;
+
+  let mapsOrigin, mapsDest, mapsLabel;
+  if (isIsland && transitAirport && ferryPort) {
+    // 空港 → フェリー港 ルート（例: 那覇空港 → 泊港）
+    mapsOrigin = transitAirport;
+    mapsDest   = ferryPort;
+    mapsLabel  = `${transitAirport} → ${ferryPort}（Googleマップ）`;
+  } else {
+    // 通常: 出発駅 → 港/空港/駅
+    const islandGateway = isIsland
+      ? (ferryPort || city.airportGateway || null)
+      : null;
+    mapsOrigin = originStation;
+    mapsDest   = islandGateway || city.accessStation || `${city.name} ${city.prefecture}`;
+    mapsLabel  = islandGateway ? `${islandGateway}へのルート（Googleマップ）` : null;
+  }
+  const mapsLink = buildGoogleMapsLink(mapsOrigin, mapsDest, 'transit', mapsLabel);
   return limitRoutes([...nonMaps, mapsLink], 3);
 }
 
@@ -167,7 +207,6 @@ function pathToLinks(path, city, departure, fromCity) {
     // 出発地→目的地の路線が実際に存在する場合のみ表示
     if (fromIata && toIata && (FLIGHT_ROUTES[fromIata] ?? []).includes(toIata)) {
       links.push(buildSkyscannerLink(fromIata, toAirName));
-      links.push(buildGoogleFlightsLink(fromIata, toAirName));
     }
     if (localSeg) {
       const gateName = toAirName || '空港';
@@ -182,7 +221,8 @@ function pathToLinks(path, city, departure, fromCity) {
   // ── フェリールート（港→島）──
   if (ferrySeg) {
     const portName = _graph.nodes[ferrySeg.from]?.name || '';
-    const fl = buildFerryLink(portName);
+    // TASK3: ferryBookingUrl があればそちらを優先
+    const fl = buildFerryLink(portName, city.ferryBookingUrl || null, city.ferryOperator || null);
     const links = fl ? [fl] : [];
     // 出発地→港 Google Maps
     const portAccessSeg = path.find(s => s.to === ferrySeg.from);
@@ -276,21 +316,17 @@ function isFlightAvailable(departure, airportGateway) {
 }
 
 function getFlightForIsland(city, departure, fromCity) {
+  // CITY_AIRPORT 優先（OSA→ITM 等、具体的な空港名を表示）
+  const fromIata = CITY_AIRPORT[departure] || fromCity.iata;
   const airport = gw(city, 'airportGateway');
   if (airport && isFlightAvailable(departure, airport)) {
-    return [
-      buildSkyscannerLink(fromCity.iata, airport),
-      buildGoogleFlightsLink(fromCity.iata, airport),
-    ].filter(Boolean);
+    return [buildSkyscannerLink(fromIata, airport)].filter(Boolean);
   }
   const hub = city.airportHub;
   if (!hub) return [];
   const hubAirport = AIRPORT_HUB_GATEWAY[hub];
   if (!hubAirport || !isFlightAvailable(departure, hubAirport)) return [];
-  return [
-    buildSkyscannerLink(fromCity.iata, hubAirport),
-    buildGoogleFlightsLink(fromCity.iata, hubAirport),
-  ].filter(Boolean);
+  return [buildSkyscannerLink(fromIata, hubAirport)].filter(Boolean);
 }
 
 /** island の鉄道ゲートウェイ（港付近の駅）への JR リンク */
@@ -330,15 +366,17 @@ function getRail(city, departure, fromCity) {
 function getFlight(city, departure, fromCity) {
   const airport = gw(city, 'airportGateway');
   if (!airport || !isFlightAvailable(departure, airport)) return [];
-  // TASK10: 400km 以下・海越えなし（island 以外かつ近距離）は飛行機非表示
+  // 400km 以下・海越えなし（island 以外かつ近距離）は飛行機非表示
   const isIsland = !!(city.isIsland || city.destType === 'island');
   if (!isIsland) {
     const stars = calculateDistanceStars(departure, city);
     if (stars < 3) return [];
   }
+  // TASK5: CITY_AIRPORT 優先（OSA→ITM 等、具体的な空港名を表示）
+  const fromIata = CITY_AIRPORT[departure] || fromCity.iata;
   return [
-    buildSkyscannerLink(fromCity.iata, airport),
-    buildGoogleFlightsLink(fromCity.iata, airport),
+    buildSkyscannerLink(fromIata, airport),
+    buildGoogleFlightsLink(fromIata, airport),
     buildGoogleMapsLink(airport, city.name, 'transit', '空港から市内へ（Googleマップ）', coords(city)),
   ].filter(Boolean);
 }
@@ -350,12 +388,12 @@ function getFerry(city, departure, fromCity, isIsland) {
   if (isIsland) {
     const port = selectNearestPort(city, departure, ferries);
     if (!port) return [];
-    const fl = buildFerryLink(port);
+    const fl = buildFerryLink(port, city.ferryBookingUrl || null, city.ferryOperator || null);
     // 港への Google Maps: hubStation（港付近の駅）があればそこから、なければ出発駅から
     const mapOrigin = city.hubStation || fromCity.rail;
     return [fl, buildGoogleMapsLink(mapOrigin, port, 'transit', `${port}へのルート（Googleマップ）`)].filter(l => l?.url);
   }
-  const fl = buildFerryLink(ferries[0]);
+  const fl = buildFerryLink(ferries[0], city.ferryBookingUrl || null, city.ferryOperator || null);
   return fl ? [fl] : [];
 }
 
