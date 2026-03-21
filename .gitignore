@@ -23,3 +23,9 @@ Thumbs.db
 # ログ
 *.log
 npm-debug.log*
+
+# 開発用スクリプト（一時修正・QA・テスト）
+scripts/dev/
+
+# ワークツリー
+.claude/worktrees/
