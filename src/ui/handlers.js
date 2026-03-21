@@ -47,6 +47,18 @@ export function bindHandlers(state, onGo, onRetry) {
       return;
     }
 
+    // attr-tab（宿の一人旅/カップル/友達タブ切り替え）
+    const attrTab = e.target.closest('.attr-tab[data-attr]');
+    if (attrTab) {
+      const stayBlock = attrTab.closest('.stay-block');
+      stayBlock.querySelectorAll('.attr-tab').forEach(t => t.classList.remove('active'));
+      attrTab.classList.add('active');
+      stayBlock.querySelectorAll('.attr-panel').forEach(p => {
+        p.hidden = p.dataset.panel !== attrTab.dataset.attr;
+      });
+      return;
+    }
+
   });
 }
 

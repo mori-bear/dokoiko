@@ -12,20 +12,29 @@
  */
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
-  const showHotel   = stayType !== 'daytrip';
-  // TASK6: rental を交通ブロックから分離して宿の後に表示
-  const rentalLinks = transportLinks.filter(l => l.type === 'rental');
-  const mainLinks   = transportLinks.filter(l => l.type !== 'rental');
+  // TASK9: 白画面防止 — レンダリングエラーを catch してフォールバック表示
+  try {
+    const showHotel   = stayType !== 'daytrip';
+    // rental を交通ブロックから分離して宿の後に表示
+    const rentalLinks = transportLinks.filter(l => l.type === 'rental');
+    const mainLinks   = transportLinks.filter(l => l.type !== 'rental');
 
-  const el = document.getElementById('result-inner');
-  el.innerHTML = `
-    <div class="result-card">
-      ${buildCityBlock(city)}
-      ${buildTransportBlock(mainLinks)}
-      ${showHotel ? buildStayBlock(hotelLinks) : ''}
-      ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
-    </div>
-  `;
+    const el = document.getElementById('result-inner');
+    el.innerHTML = `
+      <div class="result-card">
+        ${buildCityBlock(city)}
+        ${buildTransportBlock(mainLinks)}
+        ${showHotel ? buildStayBlock(hotelLinks) : ''}
+        ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
+      </div>
+    `;
+  } catch (err) {
+    console.error('[renderResult] レンダリングエラー:', err);
+    const el = document.getElementById('result-inner');
+    if (el) {
+      el.innerHTML = `<div class="result-card"><p style="padding:1rem;color:#666;">表示中にエラーが発生しました。もう一度お試しください。</p></div>`;
+    }
+  }
 }
 
 export function clearResult() {
@@ -58,23 +67,56 @@ function buildCityBlock(city) {
   const categoryBadge = buildCategoryBadge(city);
   const spotListHtml  = buildSpotList(city.landmarks ?? city.spots);
 
-  const nearbyHtml   = buildNearbyList(city.nearby);
+  const nearbyHtml    = buildNearbyList(city.nearby);
   const itineraryHtml = buildItineraryList(city.itinerary);
+
+  // 乗換ガイド（私鉄など乗換が必要な場合）
+  const transferHtml  = buildTransferNote(city);
+
+  // 所在地（都道府県＋市区町村）
+  const locationStr = city.prefecture && city.city && city.city !== city.name
+    ? `${city.prefecture}${city.city}`
+    : city.prefecture || '';
+
+  // mountain/remote: 最寄り拠点（hub）を表示
+  const isMountainRemote = city.destType === 'mountain' || city.destType === 'remote';
+  const isIslandDest     = !!(city.isIsland || city.destType === 'island');
+  const hubName     = city.gatewayHub || (city.hubStation ? city.hubStation.replace(/駅$/, '') : null);
+  // TASK4: 島の場合は「駅」で終わる accessStation を非表示（港・空港のみ表示）
+  const showAccess  = city.accessStation && !(isIslandDest && city.accessStation.endsWith('駅'));
+  const accessHtml  = isMountainRemote
+    ? (hubName ? `<p class="city-station city-station--hub">最寄り拠点：${hubName}<span class="hub-label">（車でアクセス）</span></p>` : '')
+    : (showAccess ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}${city.operator ? `<span class="operator-badge${city.operatorType === 'private' ? ' operator-badge--private' : ''}">${city.operator}</span>` : ''}</p>` : '');
 
   return `
     <div class="city-block">
       <div class="city-header">
-        <h2 class="city-name">${city.name}</h2>
-        <p class="city-sub">${city.prefecture}${city.city || city.name}${categoryBadge}</p>
-        ${city.accessStation ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}</p>` : ''}
+        <h2 class="city-name">${city.displayName || city.name}</h2>
+        <p class="city-sub">${locationStr}${categoryBadge}</p>
+        ${accessHtml}
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
       ${spotListHtml}
       <div class="city-appeal">${descriptionHtml}</div>
+      ${transferHtml}
       ${nearbyHtml}
       ${itineraryHtml}
     </div>
   `;
+}
+
+/* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */
+function buildTransferNote(city) {
+  if (!city.transferNote) return '';
+  // "→" で分割してステップ表示
+  const steps = city.transferNote.split(/\s*→\s*/).map(s => s.trim()).filter(Boolean);
+  if (steps.length <= 1) {
+    return `<div class="transfer-note"><span class="transfer-step">${city.transferNote}</span></div>`;
+  }
+  const stepsHtml = steps.map((s, i) =>
+    `<span class="transfer-step">${s}</span>${i < steps.length - 1 ? '<span class="transfer-arrow">↓</span>' : ''}`
+  ).join('');
+  return `<div class="transfer-note">${stepsHtml}</div>`;
 }
 
 function buildNearbyList(nearby) {
@@ -101,23 +143,29 @@ function buildSpotList(spots) {
 }
 
 function buildCategoryBadge(city) {
-  const isIsland = city.isIsland || city.destType === 'island';
-  const isOnsen  = city.destType === 'onsen';
-  const isSight  = city.destType === 'sight';
-  if (isIsland) return `　<span class="type-badge type-island">島</span>`;
-  if (isOnsen)  return `　<span class="type-badge type-onsen">温泉</span>`;
-  if (isSight)  return `　<span class="type-badge type-sight">自然</span>`;
+  const isIsland   = city.isIsland || city.destType === 'island';
+  const isOnsen    = city.destType === 'onsen';
+  const isSight    = city.destType === 'sight';
+  const isMountain = city.destType === 'mountain';
+  const isRemote   = city.destType === 'remote';
+  if (isIsland)   return `　<span class="type-badge type-island">島</span>`;
+  if (isOnsen)    return `　<span class="type-badge type-onsen">温泉</span>`;
+  if (isMountain) return `　<span class="type-badge type-mountain">高原・山岳</span>`;
+  if (isRemote)   return `　<span class="type-badge type-remote">秘境</span>`;
+  if (isSight)    return `　<span class="type-badge type-sight">自然</span>`;
   return '';
 }
 
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links) {
-  const linksHtml = links.map((link) =>
-    link.type === 'note'
-      ? `<div class="transport-note">${link.label}</div>`
-      : buildLinkItem(link)
-  ).join('');
+  let firstActionable = true;
+  const linksHtml = links.map((link) => {
+    if (link.type === 'note') return `<div class="transport-note">${link.label}</div>`;
+    const html = buildLinkItem(link, firstActionable);
+    if (firstActionable) firstActionable = false;
+    return html;
+  }).join('');
   return `
     <div class="card-section">
       <div class="link-list">${linksHtml}</div>
@@ -127,24 +175,39 @@ function buildTransportBlock(links) {
 
 /* ── 宿泊ブロック ── */
 
-function buildStayButtons(links) {
-  return links.map(link => `
-    <a href="${link.url}" target="_blank" rel="nofollow sponsored noopener"
-       class="stay-btn stay-btn--${link.type}">${link.label}</a>
-  `).join('');
-}
+const ATTR_LABELS = { solo: '一人旅', couple: 'カップル', friends: '友達' };
+const ATTR_ORDER  = ['solo', 'couple', 'friends'];
 
-// TASK4: hotelLinks は { sections: [{label, links}, ...] } 形式
 function buildStayBlock(hotelLinks) {
-  const sections = hotelLinks?.sections ?? [];
-  const sectionsHtml = sections.map(({ label, links }) => {
-    if (!links || !links.length) return '';
-    const labelHtml = label
-      ? `<p class="stay-label">${label}</p>`
-      : `<p class="stay-label">この街に泊まるなら</p>`;
-    return `${labelHtml}<div class="stay-buttons">${buildStayButtons(links)}</div>`;
+  if (!hotelLinks) return '';
+  // links が空の attr は除外（URL null → ボタン非表示 → そのタブ自体を消す）
+  const attrs = ATTR_ORDER.filter(a => hotelLinks[a]?.links?.length > 0);
+  if (attrs.length === 0) return '';
+
+  const defaultAttr = attrs.includes('couple') ? 'couple' : attrs[0];
+
+  const tabsHtml = attrs.map(a =>
+    `<button class="attr-tab${a === defaultAttr ? ' active' : ''}" data-attr="${a}">${ATTR_LABELS[a]}</button>`
+  ).join('');
+
+  const panelsHtml = attrs.map(a => {
+    const { name, reason, links } = hotelLinks[a];
+    const buttonsHtml = links.map(l =>
+      `<a href="${l.url}" target="_blank" rel="nofollow sponsored noopener" class="stay-btn stay-btn--${l.type}">${l.label}</a>`
+    ).join('');
+    return `
+      <div class="attr-panel" data-panel="${a}"${a !== defaultAttr ? ' hidden' : ''}>
+        <p class="hotel-name">${name}</p>
+        <p class="hotel-reason">${reason}</p>
+        <div class="stay-buttons">${buttonsHtml}</div>
+      </div>`;
   }).join('');
-  return `<div class="stay-block">${sectionsHtml}</div>`;
+
+  return `
+    <div class="stay-block">
+      <div class="attr-tabs">${tabsHtml}</div>
+      ${panelsHtml}
+    </div>`;
 }
 
 // TASK6: レンタカーブロック（宿の後に表示）
@@ -160,22 +223,25 @@ function buildRentalBlock(links) {
 /* ── リンクアイテム ── */
 
 function btnClass(type) {
-  if (type === 'jr-east')     return 'btn-jr-east';
-  if (type === 'jr-west')     return 'btn-jr-west';
-  if (type === 'jr-kyushu')   return 'btn-jr-kyushu';
-  if (type === 'jr-ex')       return 'btn-jr-ex';
+  if (type === 'jr-east')        return 'btn-jr-east';
+  if (type === 'jr-west')        return 'btn-jr-west';
+  if (type === 'jr-kyushu')      return 'btn-jr-kyushu';
+  if (type === 'jr-ex')          return 'btn-jr-ex';
+  if (type === 'jr-window')      return 'btn-jr-window';
   if (type === 'skyscanner')     return 'btn-skyscanner';
   if (type === 'google-flights') return 'btn-google-flights';
   if (type === 'ferry')          return 'btn-ferry';
-  if (type === 'rental')      return 'btn-rental';
-  if (type === 'google-maps') return 'btn-secondary';
+  if (type === 'bus')            return 'btn-bus';
+  if (type === 'rental')         return 'btn-rental';
+  if (type === 'google-maps')    return 'btn-secondary';
   return 'btn-primary';
 }
 
-function buildLinkItem(link) {
+function buildLinkItem(link, isPrimary = false) {
+  const topClass = isPrimary ? ' btn--top' : '';
   return `
     <a href="${link.url}" target="_blank" rel="noopener noreferrer"
-       class="btn ${btnClass(link.type)}">
+       class="btn ${btnClass(link.type)}${topClass}">
       ${link.label}
     </a>
   `;
