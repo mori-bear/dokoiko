@@ -491,7 +491,8 @@
     "accessStation": "石垣空港",
     "hotelArea": "ishigaki",
     "jalanPath": "/47/LRG_470030/",
-    "port": null
+    "port": null,
+    "flightHub": "石垣"
   },
   {
     "id": "ise",
@@ -1274,7 +1275,8 @@
     "hubStation": "那覇港",
     "accessStation": "渡嘉敷港",
     "hotelArea": "tokashiki-jima",
-    "port": "那覇港"
+    "port": "那覇港",
+    "flightHub": "那覇"
   },
   {
     "id": "kumejima",
@@ -1345,7 +1347,8 @@
     "accessStation": "久米島空港",
     "hotelArea": "kumejima",
     "jalanPath": "/47/LRG_470060/",
-    "port": "那覇港"
+    "port": "那覇港",
+    "flightHub": "那覇"
   },
   {
     "id": "miyakojima",
@@ -1416,7 +1419,8 @@
     "accessStation": "宮古空港",
     "hotelArea": "miyakojima",
     "jalanPath": "/47/LRG_470040/",
-    "port": null
+    "port": null,
+    "flightHub": "宮古"
   },
   {
     "id": "kouzushima",
@@ -2458,7 +2462,7 @@
     "accessHub": "博多",
     "railNote": "バス",
     "secondaryTransport": "bus",
-    "destType": "onsen",
+    "destType": "remote",
     "railGateway": "博多駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -2482,7 +2486,8 @@
     "hubStation": "博多駅",
     "accessStation": "博多駅",
     "hotelArea": "kurokawa",
-    "jalanPath": "/43/LRG_430060/"
+    "jalanPath": "/43/LRG_430060/",
+    "accessType": "car"
   },
   {
     "id": "aso",
@@ -2625,7 +2630,8 @@
     "accessStation": "安房港",
     "hotelArea": "yakushima",
     "jalanPath": "/46/LRG_460040/",
-    "port": "鹿児島港"
+    "port": "鹿児島港",
+    "flightHub": "鹿児島"
   },
   {
     "id": "amakusa",
@@ -3480,7 +3486,7 @@
     },
     "accessHub": null,
     "railNote": null,
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "知床斜里駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -3505,7 +3511,8 @@
     "hubStation": "知床斜里駅",
     "accessStation": "知床斜里駅",
     "hotelArea": "shiretoko",
-    "jalanPath": "/01/LRG_010290/"
+    "jalanPath": "/01/LRG_010290/",
+    "accessType": "car"
   },
   {
     "id": "wajima",
@@ -4738,7 +4745,7 @@
     "accessHub": "熊本",
     "railNote": "バス",
     "secondaryTransport": "bus",
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "熊本駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -4762,7 +4769,8 @@
     "hubStation": "熊本駅",
     "accessStation": "熊本駅",
     "hotelArea": "takachiho",
-    "jalanPath": "/45/LRG_450030/"
+    "jalanPath": "/45/LRG_450030/",
+    "accessType": "car"
   },
   {
     "id": "amami",
@@ -4831,7 +4839,8 @@
     "accessStation": "名瀬港",
     "hotelArea": "amami",
     "jalanPath": "/46/LRG_460020/",
-    "port": "鹿児島港"
+    "port": "鹿児島港",
+    "flightHub": "鹿児島"
   },
   {
     "id": "goto",
@@ -5070,7 +5079,7 @@
     },
     "accessHub": null,
     "railNote": null,
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "大歩危駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -5095,7 +5104,8 @@
     "hubStation": "高松駅",
     "accessStation": "大歩危駅",
     "hotelArea": "oboke",
-    "jalanPath": "/36/LRG_360030/"
+    "jalanPath": "/36/LRG_360030/",
+    "accessType": "car"
   },
   {
     "id": "tsuwano",
@@ -5931,7 +5941,7 @@
     "accessHub": "阿波池田",
     "railNote": "バス",
     "secondaryTransport": "bus",
-    "destType": "onsen",
+    "destType": "remote",
     "railGateway": "阿波池田駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -5954,7 +5964,8 @@
     "city": "三好市",
     "hubStation": "阿波池田駅",
     "accessStation": "阿波池田駅",
-    "hotelArea": "iya"
+    "hotelArea": "iya",
+    "accessType": "car"
   },
   {
     "id": "oku-izumo",
@@ -5997,7 +6008,7 @@
     },
     "accessHub": null,
     "railNote": null,
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "木次駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -6021,7 +6032,8 @@
     "city": "島根奥出雲",
     "hubStation": "木次駅",
     "accessStation": "木次駅",
-    "hotelArea": "oku-izumo"
+    "hotelArea": "oku-izumo",
+    "accessType": "car"
   },
   {
     "id": "ginzan-onsen",
@@ -6923,7 +6935,7 @@
     "accessHub": "八戸",
     "railNote": "バス",
     "secondaryTransport": "bus",
-    "destType": "sight",
+    "destType": "mountain",
     "railGateway": "八戸駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -6946,7 +6958,8 @@
     "city": "青森奥入瀬",
     "hubStation": "八戸駅",
     "accessStation": "八戸駅",
-    "hotelArea": "oirase"
+    "hotelArea": "oirase",
+    "accessType": "car"
   },
   {
     "id": "mashiko",
@@ -8109,7 +8122,7 @@
       "熊野本宮大社",
       "瀞峡"
     ],
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "新宮駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -8133,7 +8146,8 @@
     "city": "熊野市",
     "hubStation": "新宮駅",
     "accessStation": "新宮駅",
-    "hotelArea": "kumano"
+    "hotelArea": "kumano",
+    "accessType": "car"
   },
   {
     "id": "iriomote",
@@ -8217,7 +8231,8 @@
     "hubStation": "石垣港",
     "accessStation": "大原港",
     "hotelArea": "iriomote",
-    "port": "石垣港"
+    "port": "石垣港",
+    "flightHub": "石垣"
   },
   {
     "id": "takahashi",
@@ -9105,7 +9120,8 @@
     "hub": "takamatsu",
     "hotelHub": "高松",
     "stayAllowed": [
-      "daytrip"
+      "1night",
+      "2night"
     ],
     "departures": [
       "高松",
@@ -9207,7 +9223,7 @@
     },
     "accessHub": "上川",
     "railNote": "上川駅からバス約40分",
-    "destType": "onsen",
+    "destType": "mountain",
     "railGateway": "上川駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -9231,7 +9247,8 @@
     "city": "上川町",
     "hubStation": "上川駅",
     "accessStation": "層雲峡バスターミナル",
-    "hotelArea": "sounkyo"
+    "hotelArea": "sounkyo",
+    "accessType": "car"
   },
   {
     "id": "rebun-island",
@@ -9241,10 +9258,17 @@
     "hub": "sapporo-t",
     "hotelHub": "礼文島",
     "stayAllowed": [
-      "1night",
-      "2night"
+      "2night",
+      "3night+"
     ],
-    "departures": [],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "福岡",
+      "広島",
+      "仙台"
+    ],
     "weight": 1.5,
     "description": "日本最北の有人島。高山植物の宝庫で「花の浮島」とも呼ばれる。",
     "tags": [
@@ -9297,9 +9321,10 @@
     "stayRecommendation": "3night+",
     "city": "北海礼文島",
     "hubStation": "礼文島駅",
-    "accessStation": "礼文島駅",
+    "accessStation": null,
     "hotelArea": "rebun-island",
-    "port": "稚内港"
+    "port": "稚内港",
+    "flightHub": "稚内"
   },
   {
     "id": "rishiri-island",
@@ -9365,9 +9390,10 @@
     "stayRecommendation": "3night+",
     "city": "北海利尻島",
     "hubStation": "利尻島駅",
-    "accessStation": "利尻島駅",
+    "accessStation": null,
     "hotelArea": "rishiri-island",
-    "port": "稚内港"
+    "port": "稚内港",
+    "flightHub": "稚内"
   },
   {
     "id": "akan",
@@ -10320,7 +10346,7 @@
     "stayRecommendation": "daytrip",
     "city": "新潟佐渡島",
     "hubStation": "佐渡島駅",
-    "accessStation": "佐渡島駅",
+    "accessStation": null,
     "hotelArea": "sado-island",
     "port": "新潟港"
   },
@@ -11054,7 +11080,7 @@
     },
     "accessHub": "五条",
     "railNote": "五条駅からバス約2時間",
-    "destType": "onsen",
+    "destType": "remote",
     "railGateway": "五条駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -11078,7 +11104,8 @@
     "city": "十津川村",
     "hubStation": "五条駅",
     "accessStation": "五条駅",
-    "hotelArea": "totsukawa"
+    "hotelArea": "totsukawa",
+    "accessType": "car"
   },
   {
     "id": "maizuru",
@@ -11152,7 +11179,15 @@
       "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "大阪",
+      "京都",
+      "神戸",
+      "奈良",
+      "名古屋",
+      "東京",
+      "高松"
+    ],
     "weight": 1.2,
     "description": "古代日本の政治・文化の中心地。巨大な石造物や古墳が点在する歴史ロマンの地。",
     "tags": [
@@ -11188,7 +11223,11 @@
     "stayBias": 0,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "e5489",
+    "railProvider": null,
+    "operator": "近鉄",
+    "operatorType": "private",
+    "preferredTransferHub": "鶴橋",
+    "transferNote": "JRで大阪方面へ → 鶴橋で近鉄に乗り換え → 飛鳥へ",
     "travelTime": {
       "tokyo": 225,
       "osaka": 90,
@@ -11196,7 +11235,7 @@
       "fukuoka": 240,
       "takamatsu": 190
     },
-    "stayRecommendation": "daytrip",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "明日香村",
     "hubStation": "橿原神宮前駅",
@@ -12373,7 +12412,7 @@
     "secondaryTransport": null,
     "city": "長崎壱岐",
     "hubStation": "壱岐駅",
-    "accessStation": "壱岐駅",
+    "accessStation": null,
     "hotelArea": "iki-island",
     "port": "博多港"
   },
@@ -12444,7 +12483,8 @@
     "hubStation": "鹿児島空港",
     "accessStation": "西之表港",
     "hotelArea": "tanegashima",
-    "port": "鹿児島港"
+    "port": "鹿児島港",
+    "flightHub": "鹿児島"
   },
   {
     "id": "kikuchi",
@@ -12486,7 +12526,7 @@
     },
     "accessHub": "武蔵塚",
     "railNote": "武蔵塚公園駅からバス約40分",
-    "destType": "onsen",
+    "destType": "remote",
     "railGateway": "武蔵塚公園駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -12510,7 +12550,8 @@
     "city": "菊池市",
     "hubStation": "熊本駅",
     "accessStation": "熊本駅",
-    "hotelArea": "kikuchi"
+    "hotelArea": "kikuchi",
+    "accessType": "car"
   },
   {
     "id": "taketomi-island",
@@ -12576,9 +12617,10 @@
     "stayRecommendation": "1night",
     "city": "沖縄竹富島",
     "hubStation": "竹富島駅",
-    "accessStation": "竹富島駅",
+    "accessStation": null,
     "hotelArea": "taketomi-island",
-    "port": "石垣港"
+    "port": "石垣港",
+    "flightHub": "石垣"
   },
   {
     "id": "yonaguni-island",
@@ -12645,7 +12687,8 @@
     "hubStation": "那覇空港",
     "accessStation": "与那国空港",
     "hotelArea": "yonaguni-island",
-    "port": "石垣港"
+    "port": "石垣港",
+    "flightHub": "石垣"
   },
   {
     "id": "nakijin",
@@ -12711,7 +12754,8 @@
     "city": "今帰仁村",
     "hubStation": "那覇空港",
     "accessStation": "那覇バスターミナル",
-    "hotelArea": "nakijin"
+    "hotelArea": "nakijin",
+    "flightHub": "那覇"
   },
   {
     "id": "motobu",
@@ -12776,7 +12820,8 @@
     "city": "本部町",
     "hubStation": "那覇空港",
     "accessStation": "那覇バスターミナル",
-    "hotelArea": "motobu"
+    "hotelArea": "motobu",
+    "flightHub": "那覇"
   },
   {
     "id": "zamami-island",
@@ -12789,7 +12834,17 @@
       "1night",
       "2night"
     ],
-    "departures": [],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "福岡",
+      "広島",
+      "仙台",
+      "札幌",
+      "神戸",
+      "京都"
+    ],
     "weight": 1.5,
     "description": "那覇から高速船で約50分。ホエールウォッチングとダイビングで有名な慶良間諸島の島。",
     "tags": [
@@ -12842,9 +12897,10 @@
     "secondaryTransport": null,
     "city": "沖縄座間味島",
     "hubStation": "座間味島駅",
-    "accessStation": "座間味島駅",
+    "accessStation": null,
     "hotelArea": "zamami-island",
-    "port": "那覇港"
+    "port": "那覇港",
+    "flightHub": "那覇"
   },
   {
     "id": "ie-island",
@@ -12912,9 +12968,10 @@
     "stayRecommendation": "1night",
     "city": "沖縄伊江島",
     "hubStation": "伊江島駅",
-    "accessStation": "伊江島駅",
+    "accessStation": null,
     "hotelArea": "ie-island",
-    "port": "本部港"
+    "port": "本部港",
+    "flightHub": "那覇"
   },
   {
     "id": "kohama-island",
@@ -12981,9 +13038,10 @@
     "stayRecommendation": "1night",
     "city": "沖縄小浜島",
     "hubStation": "小浜島駅",
-    "accessStation": "小浜島駅",
+    "accessStation": null,
     "hotelArea": "kohama-island",
-    "port": "小浜港"
+    "port": "小浜港",
+    "flightHub": "石垣"
   },
   {
     "id": "matsushiro",
@@ -13673,7 +13731,7 @@
     },
     "accessHub": null,
     "railNote": "知床斜里駅からバス約1時間半",
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "知床斜里駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -13697,7 +13755,8 @@
     "secondaryTransport": "bus",
     "hubStation": "知床斜里駅",
     "accessStation": "羅臼バスターミナル",
-    "hotelArea": "rausu"
+    "hotelArea": "rausu",
+    "accessType": "car"
   },
   {
     "id": "esashi-hokkaido",
@@ -13868,7 +13927,7 @@
     },
     "accessHub": null,
     "railNote": "盛岡駅からバス約75分",
-    "destType": "onsen",
+    "destType": "mountain",
     "railGateway": "盛岡駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -13892,7 +13951,8 @@
     "secondaryTransport": "bus",
     "hubStation": "盛岡駅",
     "accessStation": "八幡平頂上バス停",
-    "hotelArea": "hachimantai"
+    "hotelArea": "hachimantai",
+    "accessType": "car"
   },
   {
     "id": "tazawako",
@@ -14019,7 +14079,7 @@
       "fukuoka": 525,
       "takamatsu": 480
     },
-    "stayRecommendation": "daytrip",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "hubStation": "山形駅",
     "accessStation": "山寺駅",
@@ -14550,10 +14610,17 @@
     "hub": "niigata",
     "hotelHub": "糸魚川",
     "stayAllowed": [
-      "daytrip",
-      "1night"
+      "1night",
+      "2night"
     ],
-    "departures": [],
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "金沢",
+      "富山",
+      "長野"
+    ],
     "weight": 1.2,
     "description": "フォッサマグナの大地に宝石ヒスイが採れる日本海の街。糸魚川ジオパークで大地の歴史に触れる旅。",
     "tags": [
@@ -14592,7 +14659,9 @@
     "stayBias": 1,
     "gatewayHub": null,
     "airportHub": null,
-    "railProvider": "ekinet",
+    "railProvider": "e5489",
+    "operator": "JR西日本",
+    "operatorType": "jr-west",
     "travelTime": {
       "tokyo": 145,
       "osaka": 175,
@@ -14600,7 +14669,7 @@
       "fukuoka": 310,
       "takamatsu": 285
     },
-    "stayRecommendation": "daytrip",
+    "stayRecommendation": "1night",
     "secondaryTransport": null,
     "hubStation": "糸魚川駅",
     "accessStation": "糸魚川駅",
@@ -14743,7 +14812,8 @@
     "hub": "nagoya-t",
     "hotelHub": "大垣",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "departures": [
       "名古屋"
@@ -15226,7 +15296,7 @@
     },
     "accessHub": null,
     "railNote": "新宮駅からバス約1時間半",
-    "destType": "onsen",
+    "destType": "remote",
     "railGateway": "新宮駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -15250,7 +15320,8 @@
     "secondaryTransport": "bus",
     "hubStation": "新宮駅",
     "accessStation": "本宮大社前バス停",
-    "hotelArea": "kumano-hongu"
+    "hotelArea": "kumano-hongu",
+    "accessType": "car"
   },
   {
     "id": "ako",
@@ -15326,7 +15397,8 @@
     "hub": "kyoto-t",
     "hotelHub": "伏見",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "departures": [
       "大阪"
@@ -15682,7 +15754,7 @@
     },
     "accessHub": null,
     "railNote": "特牛駅からタクシーまたはレンタカー",
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "特牛駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -15706,7 +15778,8 @@
     "secondaryTransport": "car",
     "hubStation": "特牛駅",
     "accessStation": "角島大橋",
-    "hotelArea": "tsunoshima"
+    "hotelArea": "tsunoshima",
+    "accessType": "car"
   },
   {
     "id": "dogo-onsen",
@@ -15889,7 +15962,7 @@
     },
     "accessHub": null,
     "railNote": "八幡浜駅からバス約1時間",
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "八幡浜駅",
     "busGateway": null,
     "ferryGateway": "三崎港",
@@ -15913,7 +15986,8 @@
     "secondaryTransport": "bus",
     "hubStation": "八幡浜駅",
     "accessStation": "三崎港",
-    "hotelArea": "misaki-sadamisaki"
+    "hotelArea": "misaki-sadamisaki",
+    "accessType": "car"
   },
   {
     "id": "yanagawa",
@@ -16110,7 +16184,8 @@
     "hubStation": "川内駅",
     "accessStation": "川内港",
     "hotelArea": "koshikijima",
-    "port": "川内港"
+    "port": "川内港",
+    "flightHub": "鹿児島"
   },
   {
     "id": "kirishima",
@@ -16216,7 +16291,7 @@
     },
     "accessHub": null,
     "railNote": "えびの駅からバスまたはタクシー約30分",
-    "destType": "sight",
+    "destType": "mountain",
     "railGateway": "えびの駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -16240,7 +16315,8 @@
     "secondaryTransport": "bus",
     "hubStation": "えびの駅",
     "accessStation": "えびの高原バス停",
-    "hotelArea": "ebino-kogen"
+    "hotelArea": "ebino-kogen",
+    "accessType": "car"
   },
   {
     "id": "onna",
@@ -16303,7 +16379,8 @@
     "secondaryTransport": "bus",
     "hubStation": "那覇バスターミナル",
     "accessStation": "那覇空港",
-    "hotelArea": "onna"
+    "hotelArea": "onna",
+    "flightHub": "那覇"
   },
   {
     "id": "nago",
@@ -16366,7 +16443,8 @@
     "secondaryTransport": "bus",
     "hubStation": "那覇バスターミナル",
     "accessStation": "那覇空港",
-    "hotelArea": "nago"
+    "hotelArea": "nago",
+    "flightHub": "那覇"
   },
   {
     "id": "yomitanson",
@@ -16430,7 +16508,8 @@
     "secondaryTransport": "car",
     "hubStation": "那覇バスターミナル",
     "accessStation": "那覇空港",
-    "hotelArea": "yomitanson"
+    "hotelArea": "yomitanson",
+    "flightHub": "那覇"
   },
   {
     "id": "niseko",
@@ -17892,7 +17971,8 @@
     "hotelHub": "常滑",
     "hotelSearch": "常滑",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "stayBias": 0,
     "weight": 1.2,
@@ -18353,7 +18433,8 @@
     "hotelHub": "堺",
     "hotelSearch": "堺",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "stayBias": 0,
     "weight": 1.2,
@@ -18554,7 +18635,8 @@
     "hotelHub": "柳井",
     "hotelSearch": "柳井",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "stayBias": 0,
     "weight": 1.2,
@@ -18859,7 +18941,7 @@
       "bus": [],
       "ferry": []
     },
-    "destType": "sight",
+    "destType": "remote",
     "railGateway": "高知駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -18884,7 +18966,8 @@
       "fukuoka": 235,
       "takamatsu": 180
     },
-    "hotelArea": "niyodogawa"
+    "hotelArea": "niyodogawa",
+    "accessType": "car"
   },
   {
     "id": "yusuhara",
@@ -18925,7 +19008,7 @@
       "bus": [],
       "ferry": []
     },
-    "destType": "city",
+    "destType": "remote",
     "railGateway": "須崎駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -18950,7 +19033,8 @@
       "fukuoka": 270,
       "takamatsu": 215
     },
-    "hotelArea": "yusuhara"
+    "hotelArea": "yusuhara",
+    "accessType": "car"
   },
   {
     "id": "anan",
@@ -19057,7 +19141,7 @@
       "bus": [],
       "ferry": []
     },
-    "destType": "sight",
+    "destType": "mountain",
     "railGateway": "松山駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -19066,7 +19150,7 @@
     "city": "久万高原町",
     "lat": 33.3722,
     "lng": 132.9506,
-    "stayRecommendation": "daytrip",
+    "stayRecommendation": "1night",
     "secondaryTransport": "car",
     "gatewayHub": "松山",
     "airportHub": null,
@@ -19082,7 +19166,8 @@
       "fukuoka": 260,
       "takamatsu": 190
     },
-    "hotelArea": "shikoku-karst"
+    "hotelArea": "shikoku-karst",
+    "accessType": "car"
   },
   {
     "id": "aoshima",
@@ -19226,7 +19311,8 @@
     "hotelHub": "吉野ヶ里",
     "hotelSearch": "吉野ヶ里",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "stayBias": 0,
     "weight": 1.2,
@@ -19358,7 +19444,8 @@
     "hotelHub": "知覧",
     "hotelSearch": "知覧",
     "stayAllowed": [
-      "daytrip"
+      "daytrip",
+      "1night"
     ],
     "stayBias": 0,
     "weight": 1.2,
@@ -19551,7 +19638,8 @@
       "takamatsu": 235
     },
     "hotelArea": "irabu-island",
-    "port": null
+    "port": null,
+    "flightHub": "宮古"
   },
   {
     "id": "aguni-island",
@@ -19622,7 +19710,8 @@
       "takamatsu": 235
     },
     "hotelArea": "aguni-island",
-    "port": "泊港"
+    "port": "泊港",
+    "flightHub": "那覇"
   },
   {
     "id": "itoman",
@@ -19689,7 +19778,8 @@
       "fukuoka": 155,
       "takamatsu": 205
     },
-    "hotelArea": "itoman"
+    "hotelArea": "itoman",
+    "flightHub": "那覇"
   },
   {
     "id": "kijoka",
@@ -19739,7 +19829,7 @@
     "city": "大宜味村",
     "lat": 26.7123,
     "lng": 128.1456,
-    "stayRecommendation": "daytrip",
+    "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "gatewayHub": "那覇",
     "airportHub": null,
@@ -19755,7 +19845,8 @@
       "fukuoka": 170,
       "takamatsu": 220
     },
-    "hotelArea": "kijoka"
+    "hotelArea": "kijoka",
+    "flightHub": "那覇"
   },
   {
     "id": "miyakejima",

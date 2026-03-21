@@ -10368,10 +10368,11 @@
   },
   {
     "id": "tenryu-gorge",
+    "displayName": "天竜峡",
     "name": "天竜峡",
     "type": "destination",
     "region": "中部",
-    "hub": "iida",
+    "hub": "hamamatsu",
     "hotelHub": "天竜峡温泉",
     "stayAllowed": [
       "1night"
@@ -10424,9 +10425,10 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "長野天竜峡",
-    "hubStation": "天竜峡駅",
+    "hubStation": "浜松駅",
     "accessStation": "天竜峡駅",
-    "hotelArea": "tenryu-gorge"
+    "accessType": "car",
+    "hotelArea": "iida"
   },
   {
     "id": "suwa",
@@ -11709,6 +11711,7 @@
   {
     "id": "saijo",
     "name": "西条",
+    "displayName": "伊予西条",
     "type": "destination",
     "region": "四国",
     "hub": "matsuyama",
@@ -19030,7 +19033,7 @@
       "fukuoka": 260,
       "takamatsu": 190
     },
-    "hotelArea": "shikoku-karst"
+    "hotelArea": "matsuyama"
   },
   {
     "id": "aoshima",

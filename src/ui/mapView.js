@@ -45,10 +45,8 @@ let _map     = null;
 let _cluster = null;
 let _dests   = [];
 
-/* ── ログ ── */
-function mapLog(msg) {
-  console.log(`[MAP] ${msg}`);
-}
+/* ── ログ（本番: no-op）── */
+function mapLog(_msg) {}
 
 /* ── travelTime → カテゴリ ── */
 function getCategory(dest, departure) {

@@ -443,10 +443,70 @@ body {
   gap: 6px;
 }
 
+.operator-badge {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  background: #e8edf8;
+  color: #2d4be0;
+  vertical-align: middle;
+}
+
+.operator-badge--private {
+  background: #fff3e0;
+  color: #b56000;
+}
+
 .city-station {
   margin-top: 3px;
   font-size: 12px;
   color: var(--text-sub);
+}
+
+.city-station--hub {
+  color: #4a6e00;
+  font-weight: 500;
+}
+
+.hub-label {
+  font-size: 10px;
+  margin-left: 4px;
+  color: var(--text-sub);
+  font-weight: normal;
+}
+
+.transfer-note {
+  margin: 8px 0 4px;
+  padding: 8px 12px;
+  background: #f0f4ff;
+  border-left: 3px solid #2d4be0;
+  border-radius: 0 6px 6px 0;
+  font-size: 12px;
+  color: #334;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.transfer-step {
+  background: #fff;
+  border: 1px solid #c8d4f8;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: #2d4be0;
+  font-weight: 500;
+}
+
+.transfer-arrow {
+  padding-left: 10px;
+  color: #7090c0;
+  font-size: 13px;
+  line-height: 1;
 }
 
 .type-badge {
@@ -456,12 +516,14 @@ body {
   font-weight: 600;
 }
 
-.type-onsen  { background: #fff0e8; color: #c05a00; }
-.type-island { background: #e8f4ff; color: #0070b8; }
-.type-sight  { background: #eaf5e8; color: #2d7a20; }
-.type-city   { background: #f0eeff; color: #5a3ab0; }
-.type-rural  { background: #eaf5e8; color: #3a7a20; }
-.type-town   { background: #f0eeff; color: #5a3ab0; }
+.type-onsen    { background: #fff0e8; color: #c05a00; }
+.type-island   { background: #e8f4ff; color: #0070b8; }
+.type-sight    { background: #eaf5e8; color: #2d7a20; }
+.type-city     { background: #f0eeff; color: #5a3ab0; }
+.type-rural    { background: #eaf5e8; color: #3a7a20; }
+.type-town     { background: #f0eeff; color: #5a3ab0; }
+.type-mountain { background: #f0f4e0; color: #4a6e00; }
+.type-remote   { background: #f5f0e8; color: #7a5000; }
 
 .city-meta-row {
   display: flex;
@@ -604,19 +666,30 @@ body {
 .btn-jr-west    { background: var(--c-jr-west);    color: #fff; }
 .btn-jr-kyushu  { background: var(--c-jr-kyushu);  color: #fff; }
 .btn-jr-ex      { background: var(--c-jr-ex);      color: #fff; }
+.btn-jr-window  { background: #7a7a7a;              color: #fff; }
 .btn-skyscanner    { background: var(--c-skyscanner); color: #fff; }
 .btn-google-flights { background: #1a73e8;            color: #fff; }
 .btn-ferry         { background: #1a6fa8;             color: #fff; }
 .btn-rental        { background: #ff7a32;             color: #fff; }
+.btn-bus           { background: #2ea565;             color: #fff; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,
 .btn-jr-kyushu:hover,
 .btn-jr-ex:hover,
+.btn-jr-window:hover,
 .btn-skyscanner:hover,
 .btn-google-flights:hover,
 .btn-ferry:hover,
+.btn-bus:hover,
 .btn-rental:hover { opacity: 0.92; }
+
+/* 最優先ボタン強調（交通ブロックの先頭ボタン） */
+.btn--top {
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-size: 1.04em;
+}
 
 /* affiliate（楽天） */
 .btn-rakuten {

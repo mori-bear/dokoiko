@@ -11,7 +11,7 @@
  */
 
 const fs = require('fs');
-const dests = require('./src/data/destinations.json');
+const dests = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
 
 /* ─────────────────────────────────────────────────
    鉄道ネットワーク定義（hub→hub）
@@ -67,6 +67,8 @@ const RAIL_EDGES_RAW = [
   ['東京',   '金沢',   130, 'ekinet', '北陸新幹線'],
   ['東京',   '福井',   150, 'ekinet', '北陸新幹線'],
   ['大宮',   '長野',    55, 'ekinet', '北陸新幹線'],
+  ['長野',   '糸魚川',  35, 'e5489',  '北陸新幹線'],  // 糸魚川（JR西日本管轄）
+  ['富山',   '糸魚川',  25, 'e5489',  '北陸新幹線'],  // 糸魚川（富山から）
   ['長野',   '富山',    45, 'ekinet', '北陸新幹線'],
   ['長野',   '金沢',    65, 'ekinet', '北陸新幹線'],
   ['金沢',   '富山',    25, 'e5489',  '北陸新幹線'],
