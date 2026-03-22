@@ -278,7 +278,7 @@ test.describe('ケース④：全件フォールバック保証', () => {
 
     // page.evaluate でtransportRendererを直接テスト
     const result = await page.evaluate(async () => {
-      const { resolveTransportLinks } = await import('/src/transport/transportRenderer.js');
+      const { resolveTransportLinks } = await import('/src/features/dokoiko/transportRenderer.js');
       // ROUTES未登録の都市
       const fakeCity = {
         id: '__no_route__',

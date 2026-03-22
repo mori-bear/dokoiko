@@ -24,7 +24,7 @@ function extractExport(src, name) {
   return fn();
 }
 
-const routesRaw = fs.readFileSync(path.join(__dirname, '../data/routes.js'), 'utf8');
+const routesRaw = fs.readFileSync(path.join(__dirname, '../src/features/dokoiko/routes.js'), 'utf8');
 const hotelsRaw = fs.readFileSync(path.join(__dirname, '../data/hotels.js'), 'utf8');
 
 const ROUTES = extractExport(routesRaw, 'ROUTES');

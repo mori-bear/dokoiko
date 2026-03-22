@@ -13,16 +13,16 @@
  *   bus              → Google Maps（transit）
  */
 
-import { ROUTES, CITY_TO_SHINKANSEN } from '../../data/routes.js';
-import { DEPARTURE_CITY_INFO } from '../config/constants.js';
-import { CITY_AIRPORT }        from './airportMap.js';
+import { ROUTES, CITY_TO_SHINKANSEN } from './routes.js';
+import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
+import { CITY_AIRPORT }        from '../../lib/transportCore/airportMap.js';
 import {
   buildGoogleMapsLink,
   buildSkyscannerLink,
   buildJrLink,
   buildFerryLink,
   buildRentalLink,
-} from './linkBuilder.js';
+} from '../../transport/linkBuilder.js';
 
 /* ── JR会社名 → 予約システムID ── */
 const OPERATOR_PROVIDER = {

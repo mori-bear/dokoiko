@@ -1,7 +1,7 @@
 import { buildShuffledPool } from './src/engine/selectionEngine.js';
-import { resolveTransportLinks, initTransportGraph } from './src/transport/transportRenderer.js';
+import { resolveTransportLinks, initTransportGraph } from './src/features/dokoiko/transportRenderer.js';
 import { buildHotelLinks, initHotelAreas } from './src/hotel/hotelLinkBuilder.js';
-import { renderResult } from './src/ui/render.js';
+import { renderResult } from './src/features/dokoiko/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
 import { loadDestinations } from './src/data/index.js';

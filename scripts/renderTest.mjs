@@ -13,10 +13,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 
 /* ── DB 読み込み ── */
-const { ROUTES } = await import(`file://${root}/data/routes.js`);
+const { ROUTES } = await import(`file://${root}/src/features/dokoiko/routes.js`);
 const { HOTELS } = await import(`file://${root}/data/hotels.js`);
 const { DEPARTURE_CITY_INFO } = await import(`file://${root}/src/config/constants.js`);
-const { resolveTransportLinks } = await import(`file://${root}/src/transport/transportRenderer.js`);
+const { resolveTransportLinks } = await import(`file://${root}/src/features/dokoiko/transportRenderer.js`);
 const { buildHotelLinks } = await import(`file://${root}/src/hotel/hotelLinkBuilder.js`);
 
 const TARGETS = [

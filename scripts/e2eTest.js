@@ -31,8 +31,8 @@ const SAMPLE_N       = OPT_ALL ? 999 : OPT_QUICK ? 1 : 5; // per region
 
 /* ── データ読み込み ── */
 const DESTS_RAW = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
-const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
-const GRAPH     = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
+const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/lib/transportCore/hubs.json', 'utf8'));
+const GRAPH     = JSON.parse(fs.readFileSync('./src/lib/transportCore/transportGraph.json', 'utf8'));
 
 /* destinations のみ（hub除外）: BFS・travelTime・ホテルテスト共通 */
 const ALL_ENTRIES = DESTS_RAW; // destinations.json のみ（graph に destination:id ノードあり）
@@ -365,8 +365,8 @@ const AIRPORT_IATA_MAP = {
   '福岡空港': 'FUK', '新千歳空港': 'CTS',
 };
 
-const FLIGHT_ROUTES_MAP = require('../src/transport/flightRoutes.js') &&
-  JSON.parse(require('fs').readFileSync('./src/data/transportGraph.json','utf8'))
+const FLIGHT_ROUTES_MAP = require('../src/lib/transportCore/flightRoutes.js') &&
+  JSON.parse(require('fs').readFileSync('./src/lib/transportCore/transportGraph.json','utf8'))
     .edges.filter(e => e.type === 'flight').reduce((acc, e) => {
       const f = e.from.replace('airport:',''); const t = e.to.replace('airport:','');
       if (!acc[f]) acc[f] = []; if (!acc[f].includes(t)) acc[f].push(t);
