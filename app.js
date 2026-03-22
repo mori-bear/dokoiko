@@ -10,6 +10,7 @@ const state = {
   departure:    '東京',
   stayType:     '1night',
   theme:        null,
+  situation:    'couple',
   pool:         [],
   poolIndex:    0,
 };

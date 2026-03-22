@@ -33,6 +33,12 @@ export function bindHandlers(state, onGo, onRetry) {
         state.theme = value || null;
         return;
       }
+
+      if (group === 'situation') {
+        setActive('[data-group="situation"]', selBtn);
+        state.situation = value;
+        return;
+      }
     }
 
     // GOボタン
