@@ -11,7 +11,7 @@
  *     （share-block は削除済み）
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, situation }) {
   // TASK9: 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel   = stayType !== 'daytrip';
@@ -24,7 +24,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildTransportBlock(mainLinks)}
-        ${showHotel ? buildStayBlock(hotelLinks) : ''}
+        ${showHotel ? buildStayBlock(hotelLinks, situation) : ''}
         ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
     `;
@@ -178,13 +178,14 @@ function buildTransportBlock(links) {
 const ATTR_LABELS = { solo: '一人旅', couple: 'カップル', friends: '友達' };
 const ATTR_ORDER  = ['solo', 'couple', 'friends'];
 
-function buildStayBlock(hotelLinks) {
+function buildStayBlock(hotelLinks, situation) {
   if (!hotelLinks) return '';
   // links が空の attr は除外（URL null → ボタン非表示 → そのタブ自体を消す）
   const attrs = ATTR_ORDER.filter(a => hotelLinks[a]?.links?.length > 0);
   if (attrs.length === 0) return '';
 
-  const defaultAttr = attrs.includes('couple') ? 'couple' : attrs[0];
+  // situation と一致するタブを優先、なければ先頭
+  const defaultAttr = attrs.includes(situation) ? situation : (attrs.includes('couple') ? 'couple' : attrs[0]);
 
   const tabsHtml = attrs.map(a =>
     `<button class="attr-tab${a === defaultAttr ? ' active' : ''}" data-attr="${a}">${ATTR_LABELS[a]}</button>`

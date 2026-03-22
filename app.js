@@ -70,12 +70,13 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  // TASK5: 交通リンク生成失敗 → Google Maps フォールバック
+  // TASK5: 交通リンク生成失敗 or 「準備中」note のみ → Google Maps フォールバック
   let transportLinks;
   try {
     transportLinks = resolveTransportLinks(city, state.departure);
   } catch (_) {}
-  if (!Array.isArray(transportLinks) || !transportLinks.length) {
+  if (!Array.isArray(transportLinks) || !transportLinks.length ||
+      transportLinks.every(l => l.type === 'note')) {
     const enc = encodeURIComponent;
     transportLinks = [{
       type: 'google-maps',
@@ -84,13 +85,13 @@ function draw() {
     }];
   }
 
-  // 宿リンク生成（失敗時は null → render.js 側で「準備中」表示）
+  // 宿リンク生成（フォールバックあり — null を返さない）
   let hotelLinks = null;
   try {
     hotelLinks = buildHotelLinks(city);
   } catch (_) {}
 
-  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType });
+  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, situation: state.situation });
 
   const remaining = state.pool.length - state.poolIndex - 1;
   const retryBtn  = document.getElementById('retry-btn');
