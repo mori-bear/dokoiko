@@ -15844,13 +15844,13 @@
     "airportHub": null,
     "railProvider": null,
     "travelTime": {
-      "tokyo": 100,
-      "osaka": 80,
-      "nagoya": 100,
-      "fukuoka": 55,
-      "takamatsu": 90
+      "tokyo": 430,
+      "osaka": 290,
+      "nagoya": 345,
+      "fukuoka": 350,
+      "takamatsu": 300
     },
-    "stayRecommendation": "1night",
+    "stayRecommendation": "2night",
     "secondaryTransport": null,
     "hubStation": "松山駅",
     "accessStation": "道後温泉駅",
