@@ -16,6 +16,9 @@
  *    後方互換のため calculateDistanceStars もエクスポートする（stars に変換）。
  */
 
+// Haversine 計算は core モジュールに委譲
+import { calcDistance } from '../../../../core/transport/distanceCalculator.js';
+
 /** 出発都市 → 地方 */
 const DEPARTURE_REGION = {
   '東京':   '関東', '横浜':   '関東', '千葉':   '関東',
@@ -246,14 +249,10 @@ const DEP_COORDS = {
 
 /**
  * Haversine 公式で2点間の直線距離（km）を計算する。
+ * 実装は core/transport/distanceCalculator.js の calcDistance に委譲。
  */
 export function haversineKm(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat / 2) ** 2
-    + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return calcDistance(lat1, lng1, lat2, lng2);
 }
 
 /**
