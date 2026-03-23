@@ -15,12 +15,16 @@ const VC_BASE     = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=376
 
 function buildAttr(entry, destName) {
   if (!entry) return null;
+  const enc = encodeURIComponent;
   const links = [];
+  // 固定 /yado/CITY.html は44%が404のため、keyword検索URLに統一
   if (entry.rakutenUrl) {
-    links.push({ type: 'rakuten', label: `${destName}の宿を見る（楽天）`, url: RAKUTEN_AFF + encodeURIComponent(entry.rakutenUrl) });
+    const searchUrl = `https://travel.rakuten.co.jp/package/search/?f_keyword=${enc(destName)}`;
+    links.push({ type: 'rakuten', label: `${destName}の宿を見る（楽天）`, url: RAKUTEN_AFF + enc(searchUrl) });
   }
   if (entry.jalanUrl) {
-    links.push({ type: 'jalan', label: `${destName}の宿を見る（じゃらん）`, url: VC_BASE + encodeURIComponent(entry.jalanUrl) });
+    const searchUrl = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${enc(destName)}`;
+    links.push({ type: 'jalan', label: `${destName}の宿を見る（じゃらん）`, url: VC_BASE + enc(searchUrl) });
   }
   return { name: entry.name, reason: entry.reason, links };
 }
@@ -28,13 +32,15 @@ function buildAttr(entry, destName) {
 /** HOTELS 未登録の都市用フォールバック（検索リンク） */
 function buildFallback(cityName) {
   const enc = encodeURIComponent;
-  const rakutenSearch = `https://travel.rakuten.co.jp/keyword/?f_query=${enc(cityName)}`;
-  const jalanSearch   = `https://www.jalan.net/hotel/search/?keyWord=${enc(cityName)}`;
+  // null / undefined / 非文字列はデフォルト値に差し替えてUIに流さない
+  const name = (typeof cityName === 'string' && cityName.length > 0) ? cityName : '旅先';
+  const rakutenSearch = `https://travel.rakuten.co.jp/package/search/?f_keyword=${enc(name)}`;
+  const jalanSearch   = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${enc(name)}`;
   const links = [
-    { type: 'rakuten', label: `${cityName}の宿を探す（楽天）`, url: RAKUTEN_AFF + enc(rakutenSearch) },
-    { type: 'jalan',   label: `${cityName}の宿を探す（じゃらん）`, url: VC_BASE + enc(jalanSearch) },
+    { type: 'rakuten', label: `${name}の宿を探す（楽天）`, url: RAKUTEN_AFF + enc(rakutenSearch) },
+    { type: 'jalan',   label: `${name}の宿を探す（じゃらん）`, url: VC_BASE + enc(jalanSearch) },
   ];
-  const entry = { name: `${cityName}のおすすめの宿`, reason: '最安値を比較してご予約ください', links };
+  const entry = { name: `${name}のおすすめの宿`, reason: '最安値を比較してご予約ください', links };
   return { solo: entry, couple: entry, friends: entry };
 }
 
