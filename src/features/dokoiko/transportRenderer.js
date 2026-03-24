@@ -1,16 +1,17 @@
 /**
- * 交通リンクアセンブラ — 完全データ駆動
+ * 交通リンクアセンブラ — routes.js 唯一参照
  *
- * データソース: data/routes.js（ROUTES）
- * ロジックによる自動判断なし。
- * ROUTES に登録がない destination は「現在準備中です」を表示。
+ * データソース: routes.js（ROUTES） のみ。自動ロジックなし。
+ * ROUTES に未登録の destination → [{ type:'note', label:'現在準備中です' }] を返す。
+ * null は絶対に返さない。
  *
  * step type:
  *   shinkansen / rail → JR予約リンク
  *   flight           → Skyscanner
  *   car              → Google Maps（driving）+ レンタカー
- *   ferry            → フェリー予約リンク + Google Maps（transit）
+ *   ferry            → フェリー予約リンク（+ Google Maps は noLocalMaps:true で抑制可）
  *   bus              → Google Maps（transit）
+ *   localMove        → Google Maps（transit）中継地点用
  */
 
 import { ROUTES, CITY_TO_SHINKANSEN } from './routes.js';
@@ -167,7 +168,3 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
   return links.filter(Boolean);
 }
 
-/* ─────────────────────────────────────────────────
-   app.js 互換スタブ（no-op）
-───────────────────────────────────────────────── */
-export function initTransportGraph() {}

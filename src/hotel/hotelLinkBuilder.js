@@ -31,5 +31,3 @@ export function buildHotelLinks(dest) {
   };
 }
 
-/* app.js 互換スタブ（no-op） */
-export function initHotelAreas() {}

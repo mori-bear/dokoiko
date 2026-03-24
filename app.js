@@ -1,6 +1,6 @@
 import { buildShuffledPool } from './src/engine/selectionEngine.js';
-import { resolveTransportLinks, initTransportGraph } from './src/features/dokoiko/transportRenderer.js';
-import { buildHotelLinks, initHotelAreas } from './src/hotel/hotelLinkBuilder.js';
+import { resolveTransportLinks } from './src/features/dokoiko/transportRenderer.js';
+import { buildHotelLinks } from './src/hotel/hotelLinkBuilder.js';
 import { renderResult } from './src/features/dokoiko/render.js';
 import { bindHandlers } from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
@@ -21,14 +21,7 @@ async function init() {
   detectDeparture();
 
   try {
-    const [destinations, graphRes, hotelAreasRes] = await Promise.all([
-      loadDestinations(),
-      fetch('./data/transportGraph.json').then(r => r.json()).catch(() => null),
-      fetch('./data/hotelAreas.json').then(r => r.json()).catch(() => []),
-    ]);
-    state.destinations = destinations;
-    if (graphRes) initTransportGraph(graphRes);
-    initHotelAreas(hotelAreasRes);
+    state.destinations = await loadDestinations();
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {
@@ -70,26 +63,9 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  // TASK5: 交通リンク生成失敗 or 「準備中」note のみ → Google Maps フォールバック
-  let transportLinks;
-  try {
-    transportLinks = resolveTransportLinks(city, state.departure);
-  } catch (_) {}
-  if (!Array.isArray(transportLinks) || !transportLinks.length ||
-      transportLinks.every(l => l.type === 'note')) {
-    const enc = encodeURIComponent;
-    transportLinks = [{
-      type: 'google-maps',
-      label: `📍 ${city.name}への行き方（Googleマップ）`,
-      url: `https://www.google.com/maps/dir/?api=1&origin=${enc(state.departure)}&destination=${enc(`${city.name} ${city.prefecture || ''}`.trim())}&travelmode=transit`,
-    }];
-  }
+  const transportLinks = resolveTransportLinks(city, state.departure);
 
-  // 宿リンク生成（フォールバックあり — null を返さない）
-  let hotelLinks = null;
-  try {
-    hotelLinks = buildHotelLinks(city);
-  } catch (_) {}
+  const hotelLinks = buildHotelLinks(city);
 
   renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, situation: state.situation });
 
