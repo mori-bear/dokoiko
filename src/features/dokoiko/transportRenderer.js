@@ -143,11 +143,13 @@ function stepTypeLabel(type) {
   return '';
 }
 
-/** 特急列車名を汎用表記に正規化する（しおかぜ → JR（在来線特急）等） */
-function normalizeStepLabel(label, stepType) {
+/** 特急列車名を汎用表記に正規化する（しおかぜ/能登かがり火 → JR（在来線特急）等） */
+function normalizeStepLabel(label, stepType, operator = '') {
   if (!label || stepType !== 'rail') return label;
-  // "特急XXX"形式の列車名を汎用表記に置換
-  if (label.match(/^特急/)) return 'JR（在来線特急）';
+  // 私鉄はそのまま表示
+  if (operator && !operator.startsWith('JR')) return label;
+  // 「特急」を含む列車名はすべて汎用表記に統一
+  if (label.includes('特急')) return 'JR（在来線特急）';
   return label;
 }
 
@@ -196,7 +198,18 @@ function scoreRouteSteps(steps, departure) {
   const meaningful = steps.filter(s => s.type !== 'localMove' && s.type !== 'transfer');
   let score = Math.max(0, meaningful.length - 1) * 10; // 乗換回数
 
+  // Task3: 高松発で岡山行き新幹線ルートを禁止（マリンライナー=在来線が正解）
+  if (departure === '高松' && steps.some(s => s.type === 'shinkansen' && s.to === '岡山')) {
+    score += 100;
+  }
+
   const depArea = getArea(departure);
+
+  // Task4: 四国発で新幹線あり → 在来線ルート優先（軽ペナルティ）
+  if (depArea === '四国' && steps.some(s => s.type === 'shinkansen')) {
+    score += 20;
+  }
+
   const areasVisited = new Set();
   for (const s of meaningful) {
     const toArea = getArea(s.to);
@@ -551,7 +564,7 @@ function bfsStepsToLinks(steps, departure, city) {
   for (let i = 0; i < steps.length; i++) {
     const s    = steps[i];
     const idx  = stepIdx(i);
-    const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type);
+    const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
     const stepLabel = `${idx} ${s.from} → ${s.to}（${mode}）`;
 
     const { cta, caution } = bfsStepToCta(s, departure);
@@ -594,7 +607,7 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
   let displayIdx = 0;
 
   for (const step of routes) {
-    const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type);
+    const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type, step.operator ?? '');
 
     /* 出発地の解決 */
     const from = step.step === 1

@@ -177,10 +177,10 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
 export function buildJrLink(bookingProvider, route = null) {
   // ステップノートに区間が表示されるため、ボタンは予約アクションのみ簡潔に
   switch (bookingProvider) {
-    case 'ekinet':    return { type: 'jr-east',   label: '最短ルートで予約する（えきねっと）',     url: 'https://www.eki-net.com/' };
-    case 'e5489':     return { type: 'jr-west',   label: '最短ルートで予約する（e5489）',           url: 'https://www.jr-odekake.net/goyoyaku/' };
-    case 'ex':        return { type: 'jr-ex',     label: '最短ルートで予約する（EX）',              url: 'https://smart-ex.jp/' };
-    case 'jrkyushu':  return { type: 'jr-kyushu', label: '最短ルートで予約する（JR九州ネット予約）', url: 'https://train.yoyaku.jrkyushu.co.jp/' };
+    case 'ekinet':    return { type: 'jr-east',   label: '予約する（えきねっと）',     url: 'https://www.eki-net.com/' };
+    case 'e5489':     return { type: 'jr-west',   label: '予約する（e5489）',           url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'ex':        return { type: 'jr-ex',     label: '予約する（EX）',              url: 'https://smart-ex.jp/' };
+    case 'jrkyushu':  return { type: 'jr-kyushu', label: '予約する（JR九州ネット予約）', url: 'https://train.yoyaku.jrkyushu.co.jp/' };
     case 'madoguchi': return { type: 'jr-window', label: '🚃 みどりの窓口で購入',           url: 'https://www.jr-odekake.net/' };
     default:          return null;
   }
