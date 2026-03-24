@@ -24,7 +24,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, situa
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildTransportBlock(mainLinks)}
-        ${showHotel ? buildStayBlock(hotelLinks, situation) : ''}
+        ${showHotel ? buildStayBlock(hotelLinks) : ''}
         ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
     `;
@@ -175,39 +175,15 @@ function buildTransportBlock(links) {
 
 /* ── 宿泊ブロック ── */
 
-const ATTR_LABELS = { solo: '一人旅', couple: 'カップル', friends: '友達' };
-const ATTR_ORDER  = ['solo', 'couple', 'friends'];
-
-function buildStayBlock(hotelLinks, situation) {
-  if (!hotelLinks) return '';
-  // links が空の attr は除外（URL null → ボタン非表示 → そのタブ自体を消す）
-  const attrs = ATTR_ORDER.filter(a => hotelLinks[a]?.links?.length > 0);
-  if (attrs.length === 0) return '';
-
-  // situation と一致するタブを優先、なければ先頭
-  const defaultAttr = attrs.includes(situation) ? situation : (attrs.includes('couple') ? 'couple' : attrs[0]);
-
-  const tabsHtml = attrs.map(a =>
-    `<button class="attr-tab${a === defaultAttr ? ' active' : ''}" data-attr="${a}">${ATTR_LABELS[a]}</button>`
+function buildStayBlock(hotelLinks) {
+  if (!hotelLinks?.links?.length) return '';
+  const buttonsHtml = hotelLinks.links.map(l =>
+    `<a href="${l.url}" target="_blank" rel="nofollow sponsored noopener" class="stay-btn stay-btn--${l.type}">${l.label}</a>`
   ).join('');
-
-  const panelsHtml = attrs.map(a => {
-    const { name, reason, links } = hotelLinks[a];
-    const buttonsHtml = links.map(l =>
-      `<a href="${l.url}" target="_blank" rel="nofollow sponsored noopener" class="stay-btn stay-btn--${l.type}">${l.label}</a>`
-    ).join('');
-    return `
-      <div class="attr-panel" data-panel="${a}"${a !== defaultAttr ? ' hidden' : ''}>
-        <p class="hotel-name">${name}</p>
-        <p class="hotel-reason">${reason}</p>
-        <div class="stay-buttons">${buttonsHtml}</div>
-      </div>`;
-  }).join('');
-
   return `
     <div class="stay-block">
-      <div class="attr-tabs">${tabsHtml}</div>
-      ${panelsHtml}
+      <p class="stay-label">${hotelLinks.heading}</p>
+      <div class="stay-buttons">${buttonsHtml}</div>
     </div>`;
 }
 

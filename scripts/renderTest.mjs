@@ -92,21 +92,17 @@ for (const id of TARGETS) {
     }
   }
 
-  /* 宿リンク（solo/couple/friends形式） */
+  /* 宿リンク（{ heading, links } 形式） */
   const hotel = buildHotelLinks(city);
-  const ATTRS = ['solo', 'couple', 'friends'];
-  const activeAttrs = hotel ? ATTRS.filter(a => hotel[a]?.links?.length > 0) : [];
-  if (activeAttrs.length === 0) {
-    ng(`${name}: 宿リンクなし（HOTELSにデータなし or links空）`);
+  if (!hotel?.links?.length) {
+    ng(`${name}: 宿リンクなし（links空）`);
   } else {
-    for (const attr of activeAttrs) {
-      for (const l of hotel[attr].links) {
-        try { new URL(l.url); ok(); }
-        catch { ng(`${name} 宿.${attr}: 不正URL ${l.url?.slice(0,60)}`); }
-        if (!l.url.startsWith(RAKUTEN_AFF) && !l.url.startsWith(VC_BASE)) {
-          ng(`${name} 宿.${attr}: アフィリエイトラッパー未適用`);
-        } else ok();
-      }
+    for (const l of hotel.links) {
+      try { new URL(l.url); ok(); }
+      catch { ng(`${name} 宿: 不正URL ${l.url?.slice(0,60)}`); }
+      if (!l.url.startsWith(RAKUTEN_AFF) && !l.url.startsWith(VC_BASE)) {
+        ng(`${name} 宿: アフィリエイトラッパー未適用`);
+      } else ok();
     }
   }
 
@@ -114,11 +110,13 @@ for (const id of TARGETS) {
   const tlinks0 = resolveTransportLinks(city, '大阪');
   const note = tlinks0.find(l => l.type === 'note')?.label ?? '（ノートなし）';
   const urls = tlinks0.filter(l => l.url).map(l => `  [${l.type}] ${l.url.slice(0,70)}`);
-  const hAttrLines = activeAttrs.map(a => `  [${a}] ${hotel[a].name} | ${hotel[a].links.map(l=>l.type).join(', ')}`);
+  const hLine = hotel?.links?.length
+    ? `  Hotel [${hotel.heading}] | ${hotel.links.map(l=>l.type).join(', ')}`
+    : '';
 
   console.log(`  Note: ${note}`);
   urls.forEach(u => console.log(u));
-  hAttrLines.forEach(h => console.log(`  Hotel${h}`));
+  if (hLine) console.log(hLine);
   console.log();
 }
 
