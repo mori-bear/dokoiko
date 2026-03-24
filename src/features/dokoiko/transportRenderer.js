@@ -24,6 +24,7 @@ import {
   buildFerryLink,
   buildRentalLink,
 } from '../../transport/linkBuilder.js';
+import { buildRoute } from '../../engine/bfsEngine.js';
 
 /* ── JR会社名 → 予約システムID ── */
 const OPERATOR_PROVIDER = {
@@ -64,6 +65,15 @@ function cityLabel(city) {
    メインエントリ
 ───────────────────────────────────────────────── */
 export function resolveTransportLinks(city, departure) {
+  /* ── BFS優先（destination に gateway が設定されている場合） ── */
+  if (city.gateway) {
+    const rawSteps = buildRoute(departure, city);
+    // fallbackケース: すでにリンクオブジェクト（url あり）
+    if (rawSteps[0]?.url) return rawSteps;
+    return bfsStepsToLinks(rawSteps, departure, city);
+  }
+
+  /* ── routes.js ── */
   const routes   = ROUTES[city.id];
   const fromCity = DEPARTURE_CITY_INFO[departure];
 
@@ -72,6 +82,67 @@ export function resolveTransportLinks(city, departure) {
   }
 
   return buildLinksFromRoutes(routes, city, departure, fromCity);
+}
+
+/* ─────────────────────────────────────────────────
+   BFS ステップ → リンク配列
+───────────────────────────────────────────────── */
+function bfsStepsToLinks(steps, departure, city) {
+  const label = city.displayName || city.name;
+  const links = [];
+
+  /* ステップノート（① ② ③ ...） */
+  const noteLabels = steps.map((s, i) => {
+    const idx  = ['①', '②', '③', '④'][i] ?? `${i + 1}.`;
+    const mode = s.label ?? stepTypeLabel(s.type);
+    return `${idx} ${s.from} → ${s.to}（${mode}）`;
+  });
+  links.push({ type: 'note', label: noteLabels.join('　') });
+
+  /* 各ステップのリンク生成 */
+  for (const step of steps) {
+    if (step.type === 'shinkansen') {
+      const provider = operatorToProvider(step.operator ?? '');
+      const jrLink   = buildJrLink(provider, { from: step.from, to: step.to });
+      if (jrLink) links.push(jrLink);
+
+    } else if (step.type === 'rail') {
+      if (step.operator && step.operator.startsWith('JR')) {
+        const provider = operatorToProvider(step.operator);
+        const jrLink   = buildJrLink(provider, { from: step.from, to: step.to });
+        if (jrLink) links.push(jrLink);
+      } else {
+        /* 私鉄 → Googleマップ transit */
+        links.push(buildGoogleMapsLink(
+          step.from, step.to, 'transit',
+          `${step.from} → ${step.to}（${step.label ?? '電車'}）`,
+        ));
+      }
+
+    } else if (step.type === 'flight') {
+      const fromIata = CITY_AIRPORT[step.from];
+      if (fromIata && step.to) {
+        const skyLink = buildSkyscannerLink(fromIata, step.to);
+        if (skyLink) links.push(skyLink);
+      }
+
+    } else if (step.type === 'local') {
+      links.push(buildGoogleMapsLink(
+        step.from, step.to, 'transit',
+        `${step.from} → ${step.to}（Googleマップ）`,
+      ));
+
+    } else if (step.type === 'ferry') {
+      const ferryLink = buildFerryLink(step.from, step.ferryUrl ?? null, step.ferryOperator ?? null);
+      if (ferryLink) links.push(ferryLink);
+
+    } else if (step.type === 'car') {
+      links.push(buildGoogleMapsLink(step.from, step.to, 'driving', `${step.from} → ${step.to}（ドライブ）`));
+      links.push(buildRentalLink());
+    }
+  }
+
+  return links.filter(Boolean);
 }
 
 /* ─────────────────────────────────────────────────
