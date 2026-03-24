@@ -1,22 +1,15 @@
-import { buildShuffledPool } from './src/engine/selectionEngine.js';
-import { resolveTransportLinks } from './src/features/dokoiko/transportRenderer.js';
-import { buildHotelLinks } from './src/hotel/hotelLinkBuilder.js';
-import { renderResult } from './src/features/dokoiko/render.js';
-import { bindHandlers } from './src/ui/handlers.js';
-import { DEPARTURE_CITY_INFO } from './src/config/constants.js';
-import { loadDestinations } from './src/data/index.js';
-const state = {
-  destinations: [],
-  departure:    '東京',
-  stayType:     '1night',
-  theme:        null,
-  pool:         [],
-  poolIndex:    0,
-};
+import { state }                  from './src/state.js';
+import { buildShuffledPool }       from './src/engine/selectionEngine.js';
+import { resolveTransportLinks }   from './src/features/dokoiko/transportRenderer.js';
+import { buildHotelLinks }         from './src/hotel/hotelLinkBuilder.js';
+import { renderResult }            from './src/features/dokoiko/render.js';
+import { bindHandlers }            from './src/ui/handlers.js';
+import { DEPARTURE_CITY_INFO }     from './src/config/constants.js';
+import { loadDestinations }        from './src/data/index.js';
 
 async function init() {
   initIntro();
-  bindHandlers(state, go, retry);
+  bindHandlers(go, retry);
   detectDeparture();
 
   try {
@@ -40,6 +33,12 @@ function buildPool() {
 }
 
 function go() {
+  console.log('[onGo] state:', JSON.stringify({
+    departure: state.departure,
+    stayType:  state.stayType,
+    theme:     state.theme,
+  }));
+
   if (state.destinations.length === 0) {
     showFormError('データを読み込み中です。しばらくお待ちください。');
     return;
@@ -63,8 +62,7 @@ function draw() {
   if (!city) return;
 
   const transportLinks = resolveTransportLinks(city, state.departure);
-
-  const hotelLinks = buildHotelLinks(city);
+  const hotelLinks     = buildHotelLinks(city);
 
   renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, departure: state.departure });
 
@@ -93,9 +91,8 @@ function clearFormError() {
   if (el) { el.hidden = true; el.textContent = ''; }
 }
 
-/* ── 出発地 自動検出（現在地 → 東京 → 大阪 フォールバック） ── */
+/* ── 出発地 自動検出（現在地 → 東京 フォールバック） ── */
 
-/** 各出発地の代表座標 */
 const DEPARTURE_COORDS = {
   '札幌':  [43.068, 141.351], '函館': [41.773, 140.729], '旭川': [43.770, 142.365],
   '仙台':  [38.260, 140.882], '盛岡': [39.703, 141.153],
@@ -125,7 +122,7 @@ function setDeparture(city) {
   const sel = document.getElementById('departure-select');
   if (!sel) return;
   if ([...sel.options].some(o => o.value === city)) {
-    sel.value = city;
+    sel.value       = city;
     state.departure = city;
   }
 }
@@ -135,25 +132,33 @@ function detectDeparture() {
   navigator.geolocation.getCurrentPosition(
     (pos) => {
       const city = nearestDeparture(pos.coords.latitude, pos.coords.longitude);
-      // ユーザーがまだ操作していない場合のみ上書き（デフォルト東京のまま）
       if (state.departure === '東京') setDeparture(city);
     },
-    () => {
-      // 拒否・エラー → 東京のまま（フォールバック済み）
-    },
-    { timeout: 5000, maximumAge: 60000 }
+    () => { /* 拒否・エラー → 東京のまま */ },
+    { timeout: 5000, maximumAge: 60000 },
   );
 }
 
-/* ── イントロ演出（毎回表示） ── */
+/* ── イントロ演出 ── */
 
 function initIntro() {
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
-
-  overlay.addEventListener('animationend', () => {
-    overlay.remove();
-  }, { once: true });
+  overlay.addEventListener('animationend', () => { overlay.remove(); }, { once: true });
 }
+
+/* ── デバッグオーバーレイ（開発用） ── */
+
+setInterval(() => {
+  const el = document.getElementById('debug');
+  if (el) {
+    el.innerText = JSON.stringify({
+      departure: state.departure,
+      stayType:  state.stayType,
+      theme:     state.theme,
+      pool:      state.pool.length,
+    }, null, 2);
+  }
+}, 500);
 
 init();

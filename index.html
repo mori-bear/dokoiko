@@ -87,10 +87,10 @@
         <div class="control-group">
           <label class="control-label">旅の長さ</label>
           <div class="btn-group">
-            <button class="sel-btn" data-group="stay" data-value="daytrip">日帰り</button>
-            <button class="sel-btn active" data-group="stay" data-value="1night">1泊</button>
-            <button class="sel-btn" data-group="stay" data-value="2night">2泊</button>
-            <button class="sel-btn" data-group="stay" data-value="3night+">3泊以上</button>
+            <button class="sel-btn" data-stay="daytrip">日帰り</button>
+            <button class="sel-btn active" data-stay="1night">1泊</button>
+            <button class="sel-btn" data-stay="2night">2泊</button>
+            <button class="sel-btn" data-stay="3night+">3泊以上</button>
           </div>
         </div>
 
@@ -98,12 +98,12 @@
         <div class="control-group">
           <label class="control-label">テーマ</label>
           <div class="btn-group">
-            <button class="sel-btn active" data-group="theme" data-value="">こだわらない</button>
-            <button class="sel-btn" data-group="theme" data-value="温泉">温泉</button>
-            <button class="sel-btn" data-group="theme" data-value="絶景">絶景</button>
-            <button class="sel-btn" data-group="theme" data-value="海">海</button>
-            <button class="sel-btn" data-group="theme" data-value="街歩き">街歩き</button>
-            <button class="sel-btn" data-group="theme" data-value="グルメ">グルメ</button>
+            <button class="sel-btn active" data-theme="">こだわらない</button>
+            <button class="sel-btn" data-theme="温泉">温泉</button>
+            <button class="sel-btn" data-theme="絶景">絶景</button>
+            <button class="sel-btn" data-theme="海">海</button>
+            <button class="sel-btn" data-theme="街歩き">街歩き</button>
+            <button class="sel-btn" data-theme="グルメ">グルメ</button>
           </div>
         </div>
 
@@ -135,6 +135,9 @@
     </nav>
     <p class="footer-copy">© 2026 どこ行こ？</p>
   </footer>
+
+  <!-- デバッグオーバーレイ（開発中のみ） -->
+  <div id="debug" style="position:fixed;bottom:0;left:0;background:#000;color:#0f0;font-size:11px;padding:6px 10px;z-index:9999;white-space:pre;pointer-events:none;opacity:0.85;"></div>
 
   <script type="module" src="./app.js"></script>
 </body>

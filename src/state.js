@@ -1,0 +1,14 @@
+/**
+ * グローバル State（シングルトン）
+ *
+ * app.js / handlers.js / その他全ファイルはここから import して参照する。
+ * state オブジェクトそのものを再代入しない（プロパティ更新のみ）。
+ */
+export const state = {
+  destinations: [],
+  departure:    '東京',
+  stayType:     '1night',
+  theme:        null,
+  pool:         [],
+  poolIndex:    0,
+};

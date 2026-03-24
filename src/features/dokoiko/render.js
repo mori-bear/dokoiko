@@ -12,7 +12,8 @@
  */
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
-  // TASK9: 白画面防止 — レンダリングエラーを catch してフォールバック表示
+  console.log('[renderResult] params:', { city: city?.name, stayType, departure, transportLinks: transportLinks?.length });
+  // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel   = stayType !== 'daytrip';
     // rental を交通ブロックから分離して宿の後に表示
