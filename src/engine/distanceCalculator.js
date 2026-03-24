@@ -258,7 +258,7 @@ const DEP_COORDS = {
 
 /**
  * Haversine 公式で2点間の直線距離（km）を計算する。
- * 実装は core/transport/distanceCalculator.js の calcDistance に委譲。
+ * Haversine 公式による純粋な距離計算。
  */
 export function haversineKm(lat1, lng1, lat2, lng2) {
   return calcDistance(lat1, lng1, lat2, lng2);
