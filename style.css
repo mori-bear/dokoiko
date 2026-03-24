@@ -625,6 +625,21 @@ body {
   gap: 8px;
 }
 
+/* ── ルートメインCTA（最優先予約先・大ボタン）── */
+
+.btn--route-main {
+  display: block;
+  width: 100%;
+  font-size: 1.12em;
+  font-weight: 700;
+  padding: 16px 20px;
+  margin: 10px 0 14px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.20);
+  letter-spacing: 0.01em;
+}
+
 /* ── ステップカード（区間ごとCTA）── */
 
 .step-card-list {

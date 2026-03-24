@@ -92,8 +92,9 @@ for (const city of DESTS) {
       continue;
     }
 
-    // URLリンク必須 [1]
-    const urlLinks = tlinks.filter(l => l.url);
+    // URLリンク必須 [1] — step-group 方式では URL は l.cta.url にある
+    const effectiveUrl = l => l.url ?? l.cta?.url;
+    const urlLinks = tlinks.filter(l => effectiveUrl(l));
     if (urlLinks.length === 0) {
       ng(`${city.name}(${city.id}) ← ${dep}: URLリンクなし（noteのみ）`);
       continue;
@@ -103,7 +104,7 @@ for (const city of DESTS) {
 
     // URL形式チェック [4]
     for (const l of urlLinks) {
-      checkUrl(l.url, `${city.name} ← ${dep}`);
+      checkUrl(effectiveUrl(l), `${city.name} ← ${dep}`);
     }
   }
 }

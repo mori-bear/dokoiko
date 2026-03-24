@@ -56,7 +56,9 @@ for (const city of DESTS) {
       continue;
     }
 
-    const hasURL = tlinks.some(l => l.url);
+    // step-group 方式では URL は l.cta.url にある
+    const effectiveUrl = l => l.url ?? l.cta?.url;
+    const hasURL = tlinks.some(l => effectiveUrl(l));
     if (!hasURL) {
       ng(`${city.name}(${city.id}) ← ${dep}: URLリンクなし（noteのみ）`);
       continue;
@@ -65,9 +67,10 @@ for (const city of DESTS) {
     ok();
 
     // URL形式チェック
-    for (const l of tlinks.filter(l => l.url)) {
-      try { new URL(l.url); ok(); }
-      catch { ng(`${city.name}(${city.id}) ← ${dep}: 不正URL ${l.url?.slice(0,60)}`); }
+    for (const l of tlinks.filter(l => effectiveUrl(l))) {
+      const u = effectiveUrl(l);
+      try { new URL(u); ok(); }
+      catch { ng(`${city.name}(${city.id}) ← ${dep}: 不正URL ${u?.slice(0,60)}`); }
     }
   }
 

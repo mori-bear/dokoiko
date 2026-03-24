@@ -211,6 +211,7 @@ function buildTransportBlock(links, departure, destLabel) {
 
 function buildTransportBlockStepwise(links, departure, destLabel) {
   const summaryLink = links.find(l => l.type === 'summary');
+  const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
   // サマリー行
@@ -220,6 +221,14 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
     const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
     summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
   }
+
+  // メインCTAボタン（ルート全体で最優先の予約先）
+  const mainCtaHtml = mainCtaLink?.cta
+    ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
+         ${mainCtaLink.cta.label}
+       </a>`
+    : '';
 
   // ステップカード（1区間 = 1カード）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -232,6 +241,7 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
     <div class="card-section">
       ${headingHtml}
       ${summaryHtml}
+      ${mainCtaHtml}
       <div class="step-card-list">${stepsHtml}</div>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>

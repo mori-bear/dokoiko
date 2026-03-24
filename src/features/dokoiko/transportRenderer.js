@@ -1,27 +1,25 @@
 /**
  * 交通リンクアセンブラ — routes.js 唯一参照
  *
- * データソース: routes.js（ROUTES） のみ。自動ロジックなし。
- * ROUTES に未登録の destination → [{ type:'note', label:'現在準備中です' }] を返す。
- * null は絶対に返さない。
- *
  * 出力フォーマット（step-group方式）:
  *   [
  *     { type: 'summary', transfers: N },
- *     { type: 'step-group', stepLabel: '① A→B（新幹線）', cta: {...}, caution: '...' },
- *     { type: 'step-group', stepLabel: '② B→C（バス）',  cta: {...} },
- *     { type: 'rental', ... },   // 車ステップがある場合のみ
+ *     { type: 'main-cta', cta: {...} },          // ルート全体の最重要CTA（shinkansen>flight>ferry>rail）
+ *     { type: 'step-group', stepLabel, cta, caution },  // 区間ごとCTA
+ *     ...
+ *     { type: 'rental', ... },                   // 車ステップがある場合のみ
  *   ]
  *
  * step type と CTA の対応:
- *   shinkansen → EX / えきねっと / JRネット予約
- *   rail(IC可)  → Googleマップ + 「ICカードでそのまま乗車できます」
- *   rail(特急)  → JR予約リンク
- *   flight      → Skyscanner
- *   ferry       → フェリー予約リンク
- *   bus         → Googleマップ（transit）
- *   car         → Googleマップ（driving）+ 別途 rental リンク
- *   localMove   → Googleマップ（transit）
+ *   shinkansen(東海道・山陽) → EXで予約する
+ *   shinkansen(JR東)        → えきねっとで予約する
+ *   rail(IC可)              → Googleマップ + 「ICカードでそのまま改札通れます（予約不要）」
+ *   rail(特急)              → JR予約リンク
+ *   flight                  → Skyscanner
+ *   ferry                   → フェリー予約リンク
+ *   bus                     → Googleマップ（transit）
+ *   car                     → Googleマップ（driving）+ 別途 rental リンク
+ *   localMove               → Googleマップ（transit）
  */
 
 import { readFileSync }          from 'fs';
@@ -117,6 +115,47 @@ function stepIdx(i) {
   return STEP_IDX[i] ?? `${i + 1}.`;
 }
 
+/* ── IC区間の注記テキスト ── */
+const IC_CAUTION = 'ICカードでそのまま改札通れます（予約不要）';
+
+/* ─────────────────────────────────────────────────
+   ルート全体メインCTA導出
+   優先順位: shinkansen > flight > ferry > rail > その他
+───────────────────────────────────────────────── */
+
+const MAIN_CTA_PRIORITY = [
+  // shinkansen 系
+  'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
+  // flight
+  'skyscanner', 'google-flights',
+  // ferry
+  'ferry',
+  // rail / その他
+  'google-maps', 'bus', 'rental',
+];
+
+/**
+ * step-group 配列からルート全体のメインCTAを1つ選ぶ。
+ * @param {Array} stepGroups
+ * @returns {{ type: 'main-cta', cta: object } | null}
+ */
+function deriveMainCta(stepGroups) {
+  let best = null;
+  let bestPriority = Infinity;
+
+  for (const sg of stepGroups) {
+    if (!sg.cta?.url) continue;
+    const idx = MAIN_CTA_PRIORITY.indexOf(sg.cta.type);
+    const pri = idx === -1 ? MAIN_CTA_PRIORITY.length : idx;
+    if (pri < bestPriority) {
+      bestPriority = pri;
+      best = sg.cta;
+    }
+  }
+
+  return best ? { type: 'main-cta', cta: best } : null;
+}
+
 /* ─────────────────────────────────────────────────
    BFS ステップ → CTA（1ステップ分）
 ───────────────────────────────────────────────── */
@@ -142,7 +181,7 @@ function bfsStepToCta(step, departure) {
       if (isIcRail(step)) {
         return {
           cta: buildGoogleMapsLink(step.from, step.to, 'transit', '📍 Googleマップで確認'),
-          caution: 'ICカードでそのまま乗車できます（予約不要）',
+          caution: IC_CAUTION,
         };
       }
       const provider = operatorToProvider(step.operator ?? '');
@@ -178,16 +217,6 @@ function bfsStepToCta(step, departure) {
    routes.js ステップ → CTA（1ステップ分）
 ───────────────────────────────────────────────── */
 
-/**
- * routes.js の step から CTA を生成する。
- * @param {object} step - ROUTES エントリのステップ
- * @param {string} from - 解決済み出発地名
- * @param {string} to   - 解決済み到着地名
- * @param {string} departure - 出発都市名
- * @param {object} fromCity  - DEPARTURE_CITY_INFO エントリ
- * @param {object} city      - destination エントリ
- * @returns {{ cta: object|null, caution: string|null }}
- */
 function routeStepToCta(step, from, to, departure, fromCity, city) {
   switch (step.type) {
     case 'shinkansen': {
@@ -198,7 +227,7 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
       if (isIcRail(step)) {
         return {
           cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認'),
-          caution: 'ICカードでそのまま乗車できます（予約不要）',
+          caution: IC_CAUTION,
         };
       }
       const provider = operatorToProvider(step.operator ?? '');
@@ -238,18 +267,15 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
 export function resolveTransportLinks(city, departure) {
   const links = _resolveTransportLinks(city, departure);
   if (!links || links.length === 0) {
+    const fallbackCta = {
+      type:  'google-maps',
+      label: '📍 Googleマップで確認',
+      url:   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(departure)}&destination=${encodeURIComponent(city.name)}&travelmode=transit`,
+    };
     return [
       { type: 'summary', transfers: 0 },
-      {
-        type: 'step-group',
-        stepLabel: `① ${departure} → ${city.displayName || city.name}`,
-        cta: {
-          type:  'google-maps',
-          label: '📍 Googleマップで確認',
-          url:   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(departure)}&destination=${encodeURIComponent(city.name)}&travelmode=transit`,
-        },
-        caution: null,
-      },
+      { type: 'main-cta', cta: fallbackCta },
+      { type: 'step-group', stepLabel: `① ${departure} → ${city.displayName || city.name}`, cta: fallbackCta, caution: null },
     ];
   }
   return links;
@@ -295,6 +321,7 @@ function bfsStepsToLinks(steps, departure, city) {
   links.push({ type: 'summary', transfers: Math.max(0, meaningfulSteps.length - 1) });
 
   /* 区間ごとCTA */
+  const stepGroups = [];
   for (let i = 0; i < steps.length; i++) {
     const s    = steps[i];
     const idx  = stepIdx(i);
@@ -302,15 +329,19 @@ function bfsStepsToLinks(steps, departure, city) {
     const stepLabel = `${idx} ${s.from} → ${s.to}（${mode}）`;
 
     const { cta, caution } = bfsStepToCta(s, departure);
+    const sg = { type: 'step-group', stepLabel, cta, caution };
+    stepGroups.push(sg);
 
     /* 車ステップ: rental を別途追加 */
     if (s.type === 'car') {
-      links.push({ type: 'step-group', stepLabel, cta, caution });
       links.push(buildRentalLink());
-    } else {
-      links.push({ type: 'step-group', stepLabel, cta, caution });
     }
   }
+
+  /* メインCTA（最重要ボタン）を先頭付近に挿入 */
+  const mainCta = deriveMainCta(stepGroups);
+  if (mainCta) links.push(mainCta);
+  links.push(...stepGroups);
 
   return links.filter(Boolean);
 }
@@ -333,6 +364,7 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
   links.push({ type: 'summary', transfers: Math.max(0, meaningfulSteps.length - 1) });
 
   /* 区間ごとCTA */
+  const stepGroups = [];
   let displayIdx = 0;
 
   for (const step of routes) {
@@ -374,30 +406,30 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     }
 
     const { cta, caution } = routeStepToCta(step, from, to, departure, fromCity, city);
+    const sg = { type: 'step-group', stepLabel, cta, caution };
+    stepGroups.push(sg);
 
     /* 車ステップ: rental を別途追加 */
     if (step.type === 'car') {
-      links.push({ type: 'step-group', stepLabel, cta, caution });
       links.push(buildRentalLink());
-    } else {
-      links.push({ type: 'step-group', stepLabel, cta, caution });
     }
 
     displayIdx++;
   }
 
-  return links.filter(Boolean);
-}
+  /* ステップが1件もなければ GoogleMaps フォールバック */
+  if (stepGroups.length === 0) {
+    const fallbackCta = buildGoogleMapsLink(
+      fromCity.rail.replace(/駅$/, ''), label, 'transit', '📍 Googleマップで確認', coords(city)
+    );
+    const sg = { type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null };
+    stepGroups.push(sg);
+  }
 
-/* ─────────────────────────────────────────────────
-   URL重複排除（同一URLは最初の1件のみ残す）
-───────────────────────────────────────────────── */
-function dedupeByUrl(links) {
-  const seen = new Set();
-  return links.filter(l => {
-    if (!l.url) return true;           // note など URL なし → 常に残す
-    if (seen.has(l.url)) return false;
-    seen.add(l.url);
-    return true;
-  });
+  /* メインCTA（最重要ボタン）を summary の直後に挿入 */
+  const mainCta = deriveMainCta(stepGroups);
+  if (mainCta) links.push(mainCta);
+  links.push(...stepGroups);
+
+  return links.filter(Boolean);
 }
