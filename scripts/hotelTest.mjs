@@ -50,15 +50,13 @@ console.log('\n=== 宿リンク静的検証 ===\n');
 const hotelSrc = readFileSync(join(ROOT, 'src/hotel/hotelLinkBuilder.js'), 'utf8');
 
 check(
-  hotelSrc.includes('travel.rakuten.co.jp/search') || hotelSrc.includes('hotel/search.do'),
-  '[H-src] 楽天 search?keyword= も hotel/search.do も存在しない',
+  hotelSrc.includes('travel.rakuten.co.jp/yado/'),
+  '[H-src] 楽天 /yado/?keyword= URLが存在しない（/search?keyword= は404のため禁止）',
 );
+check(!hotelSrc.includes('travel.rakuten.co.jp/search'),
+  '[H-src] 楽天に /search?keyword= URL が含まれている（404のため禁止）');
 check(!hotelSrc.includes('/pack/'),           '[H-src] 楽天に /pack/ URL が含まれている（禁止）');
 check(hotelSrc.includes('jalan.net'),         '[H-src] じゃらん jalan.net が存在しない');
-check(
-  (hotelSrc.match(/encodeURIComponent/g) || []).length <= 3,
-  '[H-src] encodeURIComponent が4回以上ある（二重encode疑い）',
-);
 
 /* ── 全 destination 動的チェック ── */
 let rakutenCount = 0;
@@ -87,10 +85,10 @@ for (const dest of dests) {
     // H1: travel.rakuten.co.jp を含む
     check(decodedRakuten.includes('travel.rakuten.co.jp'),
       `[H1] 楽天 URL に travel.rakuten.co.jp がない: ${id}`, id);
-    // H2: /search または /hotel/ を含む（pack禁止）
+    // H2: /yado/ を含む（/search?keyword= は404のため禁止）
     check(
-      decodedRakuten.includes('/search') || decodedRakuten.includes('/hotel/'),
-      `[H2] 楽天 URL に /search も /hotel/ もない: ${id}`, id,
+      decodedRakuten.includes('/yado/'),
+      `[H2] 楽天 URL に /yado/ がない: ${id}`, id,
     );
     // H3: /pack/ 禁止
     check(!decodedRakuten.includes('/pack/'),

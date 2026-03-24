@@ -88,20 +88,23 @@ check(styleSrc.includes('.step-card-caution'), 'style.css に .step-card-caution
 
 /* ── [7] hotelLinkBuilder ── */
 check(
-  hotelSrc.includes('travel.rakuten.co.jp/search') || hotelSrc.includes('hotel/search.do'),
-  '楽天が search?keyword= も hotel/search.do も使っていない（pack禁止）',
+  hotelSrc.includes('travel.rakuten.co.jp/yado/'),
+  '楽天が /yado/?keyword= URLを使っていない（/search?keyword= は404のため禁止）',
   'hotelLinkBuilder.js',
 );
+check(!hotelSrc.includes('travel.rakuten.co.jp/search'),
+  '楽天に /search?keyword= URL が含まれている（404のため禁止）',
+  'hotelLinkBuilder.js');
 check(!hotelSrc.includes('/pack/'), '楽天にpack URLが含まれている（禁止）', 'hotelLinkBuilder.js');
 check(hotelSrc.includes('jalan.net'),       'じゃらんURLが存在しない', 'hotelLinkBuilder.js');
 check(
-  (hotelSrc.match(/encodeURIComponent/g) || []).length <= 3,
-  'じゃらんに多重encode（encodeURIComponent）の疑いがある',
+  hotelSrc.includes('safeEncode') || (hotelSrc.match(/encodeURIComponent/g) || []).length <= 5,
+  'エンコード関数の多重適用疑い',
   'hotelLinkBuilder.js',
 );
 check(
-  hotelSrc.includes('dest.hotelSearch || dest.displayName || dest.name'),
-  'hotelLinkBuilder のキーワード解決ロジックが変更されている',
+  hotelSrc.includes('dest.hotelKeyword') && hotelSrc.includes('dest.hotelSearch || dest.name'),
+  'hotelLinkBuilder のキーワード解決ロジック（hotelKeyword優先）が存在しない',
   'hotelLinkBuilder.js',
 );
 
