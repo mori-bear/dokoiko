@@ -638,6 +638,22 @@ body {
   padding: 0 0 4px;
 }
 
+.transport-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sub);
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.transport-disclaimer {
+  font-size: 11px;
+  color: var(--text-sub);
+  opacity: 0.65;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 /* ── ボタン共通 ── */
 
 .btn {

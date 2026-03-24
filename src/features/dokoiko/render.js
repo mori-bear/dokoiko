@@ -11,7 +11,7 @@
  *     （share-block は削除済み）
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // TASK9: 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel   = stayType !== 'daytrip';
@@ -23,7 +23,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${buildTransportBlock(mainLinks)}
+        ${buildTransportBlock(mainLinks, departure)}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
         ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
@@ -158,18 +158,25 @@ function buildCategoryBadge(city) {
 
 /* ── 交通ブロック ── */
 
-function buildTransportBlock(links) {
+function buildTransportBlock(links, departure) {
   let firstActionable = true;
   const linksHtml = links.map((link) => {
-    if (link.type === 'note')        return `<div class="transport-note">${link.label}</div>`;
+    if (link.type === 'note')         return `<div class="transport-note">${link.label}</div>`;
     if (link.type === 'note-caution') return `<div class="transport-note transport-note--caution">${link.label}</div>`;
     const html = buildLinkItem(link, firstActionable);
     if (firstActionable) firstActionable = false;
     return html;
   }).join('');
+
+  const headingHtml = departure
+    ? `<p class="transport-heading">${departure}からの行き方</p>`
+    : '';
+
   return `
     <div class="card-section">
+      ${headingHtml}
       <div class="link-list">${linksHtml}</div>
+      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
   `;
 }

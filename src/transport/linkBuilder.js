@@ -6,7 +6,7 @@
  *   Skyscanner  → 「✈ 飛行機で行く（○○空港 → ○○空港）」
  *   JR予約      → 「🚄 ○○ → ○○（えきねっと）」
  *   レンタカー  → 「🚗 レンタカーを探す」
- *   フェリー    → 「⛴ フェリーを調べる（○○）」
+ *   フェリー    → 「🚢 フェリーを調べる（○○）」
  *   バス        → 「🚌 高速バスを探す」
  *
  * 注意:
@@ -175,17 +175,13 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
  * @param {{from:string, to:string}|null} route — 表示する駅間ルート（任意）
  */
 export function buildJrLink(bookingProvider, route = null) {
-  function lbl(provider) {
-    if (route?.from && route?.to) return `🚄 ${route.from} → ${route.to}（${provider}）`;
-    return `🚄 JRを予約する（${provider}）`;
-  }
+  // ステップノートに区間が表示されるため、ボタンは予約アクションのみ簡潔に
   switch (bookingProvider) {
-    case 'ekinet':    return { type: 'jr-east',   label: lbl('えきねっと'),  url: 'https://www.eki-net.com/' };
-    case 'e5489':     return { type: 'jr-west',   label: lbl('JRネット予約'),     url: 'https://www.jr-odekake.net/goyoyaku/' };
-    case 'ex':        return { type: 'jr-ex',     label: lbl('スマートEX'), url: 'https://smart-ex.jp/' };
-    case 'jrkyushu':  return { type: 'jr-kyushu', label: lbl('JR九州予約'), url: 'https://train.yoyaku.jrkyushu.co.jp/' };
-    // オンライン予約不可ルート — 窓口購入案内
-    case 'madoguchi': return { type: 'jr-window', label: (route?.from && route?.to ? `🚃 ${route.from} → ${route.to}（窓口で購入）` : '🚃 窓口で購入'), url: 'https://www.jr-odekake.net/' };
+    case 'ekinet':    return { type: 'jr-east',   label: '🚄 予約する（えきねっと）',       url: 'https://www.eki-net.com/' };
+    case 'e5489':     return { type: 'jr-west',   label: '🚄 予約する（JRネット予約）',     url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'ex':        return { type: 'jr-ex',     label: '🚄 予約する（スマートEX）',       url: 'https://smart-ex.jp/' };
+    case 'jrkyushu':  return { type: 'jr-kyushu', label: '🚄 予約する（JR九州ネット予約）', url: 'https://train.yoyaku.jrkyushu.co.jp/' };
+    case 'madoguchi': return { type: 'jr-window', label: '🚃 みどりの窓口で購入',           url: 'https://www.jr-odekake.net/' };
     default:          return null;
   }
 }
@@ -222,34 +218,34 @@ export function buildHighwayBusLink(from, to) {
  * フェリー港名からフェリー予約・案内リンクを生成する。
  */
 const FERRY_LINKS = {
-  '竹芝客船ターミナル': { label: '⛴ フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '竹芝桟橋':           { label: '⛴ フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '熱海港':             { label: '⛴ フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '稲取港':             { label: '⛴ フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '泊港':               { label: '⛴ フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
-  '那覇港':             { label: '⛴ フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
-  '鹿児島港':           { label: '⛴ フェリーを調べる（種子屋久高速船）',     url: 'https://www.tykousoku.jp/' },
-  '長崎港':             { label: '⛴ フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
-  '博多港':             { label: '⛴ フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
-  '高松港':             { label: '⛴ フェリーを調べる（小豆島フェリー）',     url: 'https://www.shoudoshima-ferry.co.jp/' },
-  '宇野港':             { label: '⛴ フェリーを調べる（宇野港フェリー）',     url: 'https://ferry.co.jp/' },
-  '宮島口港':           { label: '⛴ フェリーを調べる（宮島松大フェリー）',   url: 'https://miyajima-matsudai.co.jp/' },
-  '石垣港':             { label: '⛴ フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
-  '松山観光港':         { label: '⛴ フェリーを調べる（瀬戸内海汽船）',       url: 'https://www.setonaikaikisen.co.jp/' },
-  '詫間港':             { label: '⛴ フェリーを調べる（三豊市営フェリー）',    url: 'https://www.city.mitoyo.lg.jp/' },
-  '稚内港':             { label: '⛴ フェリーを調べる（ハートランドフェリー）',url: 'https://www.heartlandferry.jp/' },
-  '新潟港':             { label: '⛴ フェリーを調べる（佐渡汽船）',            url: 'https://www.sadokisen.co.jp/' },
-  '本部港':             { label: '⛴ フェリーを調べる（沖縄県営フェリー）',    url: 'https://okinawa.ferry.co.jp/' },
-  '伊江島港':           { label: '⛴ フェリーを調べる（伊江島フェリー）',      url: 'https://www.iejima.org/' },
-  '座間味港':           { label: '⛴ フェリーを調べる（座間味村営フェリー）',  url: 'https://vill.zamami.okinawa.jp/' },
-  '小浜港':             { label: '⛴ フェリーを調べる（安栄観光）',            url: 'https://www.aneikankou.co.jp/' },
+  '竹芝客船ターミナル': { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
+  '竹芝桟橋':           { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
+  '熱海港':             { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
+  '稲取港':             { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
+  '泊港':               { label: '🚢 フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
+  '那覇港':             { label: '🚢 フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
+  '鹿児島港':           { label: '🚢 フェリーを調べる（種子屋久高速船）',     url: 'https://www.tykousoku.jp/' },
+  '長崎港':             { label: '🚢 フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
+  '博多港':             { label: '🚢 フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
+  '高松港':             { label: '🚢 フェリーを調べる（小豆島フェリー）',     url: 'https://www.shoudoshima-ferry.co.jp/' },
+  '宇野港':             { label: '🚢 フェリーを調べる（宇野港フェリー）',     url: 'https://ferry.co.jp/' },
+  '宮島口港':           { label: '🚢 フェリーを調べる（宮島松大フェリー）',   url: 'https://miyajima-matsudai.co.jp/' },
+  '石垣港':             { label: '🚢 フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
+  '松山観光港':         { label: '🚢 フェリーを調べる（瀬戸内海汽船）',       url: 'https://www.setonaikaikisen.co.jp/' },
+  '詫間港':             { label: '🚢 フェリーを調べる（三豊市営フェリー）',    url: 'https://www.city.mitoyo.lg.jp/' },
+  '稚内港':             { label: '🚢 フェリーを調べる（ハートランドフェリー）',url: 'https://www.heartlandferry.jp/' },
+  '新潟港':             { label: '🚢 フェリーを調べる（佐渡汽船）',            url: 'https://www.sadokisen.co.jp/' },
+  '本部港':             { label: '🚢 フェリーを調べる（沖縄県営フェリー）',    url: 'https://okinawa.ferry.co.jp/' },
+  '伊江島港':           { label: '🚢 フェリーを調べる（伊江島フェリー）',      url: 'https://www.iejima.org/' },
+  '座間味港':           { label: '🚢 フェリーを調べる（座間味村営フェリー）',  url: 'https://vill.zamami.okinawa.jp/' },
+  '小浜港':             { label: '🚢 フェリーを調べる（安栄観光）',            url: 'https://www.aneikankou.co.jp/' },
 };
 
 export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
   if (bookingUrl) {
     const label = operatorName
-      ? `⛴ フェリーを予約する（${operatorName}）`
-      : `⛴ フェリーを予約する（${ferryGateway}）`;
+      ? `🚢 フェリーを予約する（${operatorName}）`
+      : `🚢 フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: bookingUrl };
   }
   const info = FERRY_LINKS[ferryGateway];
@@ -257,7 +253,7 @@ export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = n
   // 未登録港: Googleマップ検索にフォールバック
   return {
     type: 'ferry',
-    label: `⛴ フェリーを調べる（${ferryGateway}）`,
+    label: `🚢 フェリーを調べる（${ferryGateway}）`,
     url: `https://www.google.com/maps/search/${encodeURIComponent(ferryGateway + ' フェリー')}`,
   };
 }

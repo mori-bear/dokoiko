@@ -83,7 +83,7 @@ export function resolveTransportLinks(city, departure) {
   if (!links || links.length === 0) {
     return [{
       type:  'google-maps',
-      label: '📍 Googleマップで行き方を見る',
+      label: '📍 この区間を地図で見る',
       url:   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(departure)}&destination=${encodeURIComponent(city.name)}&travelmode=transit`,
     }];
   }
@@ -154,7 +154,7 @@ function bfsStepsToLinks(steps, departure, city) {
     if (jrStep) {
       if (jrStep.operator && !jrStep.operator.startsWith('JR')) {
         /* 私鉄 → Googleマップ */
-        links.push(buildGoogleMapsLink(jrStep.from, jrStep.to, 'transit', `${jrStep.from} → ${jrStep.to}（${jrStep.label ?? '電車'}）`));
+        links.push(buildGoogleMapsLink(jrStep.from, jrStep.to, 'transit', '📍 この区間を地図で見る'));
       } else {
         const provider = operatorToProvider(jrStep.operator ?? '');
         const jrLink   = buildJrLink(provider, { from: jrStep.from, to: jrStep.to });
@@ -167,7 +167,7 @@ function bfsStepsToLinks(steps, departure, city) {
 
   } else if (mainMode === 'car') {
     const carStep = steps.find(s => s.type === 'car');
-    links.push(buildGoogleMapsLink(carStep.from, carStep.to, 'driving', `${carStep.from} → ${carStep.to}（ドライブ）`));
+    links.push(buildGoogleMapsLink(carStep.from, carStep.to, 'driving', '📍 この区間を地図で見る'));
     links.push(buildRentalLink());
   }
 
@@ -273,10 +273,9 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
       /* 有効なJRステップなし（出発地=乗換駅など）→ バス/ローカル移動をGoogle Maps で補完 */
       const busStep = routes.find(s => s.type === 'bus' || s.type === 'localMove');
       if (busStep) {
-        const origin    = busStep.from ?? fromCity.rail;
-        const dest      = busStep.to ?? label;
-        const mapsLabel = `${busStep.from ?? departure} → ${dest}（Googleマップ）`;
-        links.push(buildGoogleMapsLink(origin, dest, 'transit', mapsLabel, co));
+        const origin = busStep.from ?? fromCity.rail;
+        const dest   = busStep.to ?? label;
+        links.push(buildGoogleMapsLink(origin, dest, 'transit', '📍 この区間を地図で見る', co));
       }
     }
     /* 車ステップが含まれる場合はレンタカーも追加 */
@@ -284,17 +283,14 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
 
   } else if (mainMode === 'car') {
     /* 車のみ → Google Maps + レンタカー */
-    const carStep   = routes.find(s => s.type === 'car');
-    const origin    = carStep.from ? `${carStep.from}駅` : fromCity.rail;
-    const mapsLabel = `${carStep.from ?? departure} → ${label}（Googleマップ）`;
-    links.push(buildGoogleMapsLink(origin, label, 'driving', mapsLabel, co));
+    const carStep = routes.find(s => s.type === 'car');
+    const origin  = carStep.from ? `${carStep.from}駅` : fromCity.rail;
+    links.push(buildGoogleMapsLink(origin, label, 'driving', '📍 この区間を地図で見る', co));
     links.push(buildRentalLink());
 
   } else if (mainMode === 'bus') {
     /* バス → Google Maps transit */
-    const origin    = fromCity.rail;
-    const mapsLabel = `${departure} → ${label}（Googleマップ）`;
-    links.push(buildGoogleMapsLink(origin, label, 'transit', mapsLabel, co));
+    links.push(buildGoogleMapsLink(fromCity.rail, label, 'transit', '📍 この区間を地図で見る', co));
   }
 
   return links.filter(Boolean);

@@ -66,7 +66,7 @@ function draw() {
 
   const hotelLinks = buildHotelLinks(city);
 
-  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType });
+  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, departure: state.departure });
 
   const remaining = state.pool.length - state.poolIndex - 1;
   const retryBtn  = document.getElementById('retry-btn');
