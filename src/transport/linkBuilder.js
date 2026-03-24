@@ -178,7 +178,7 @@ export function buildJrLink(bookingProvider, route = null) {
   // ステップノートに区間が表示されるため、ボタンは予約アクションのみ簡潔に
   switch (bookingProvider) {
     case 'ekinet':    return { type: 'jr-east',   label: '🚄 えきねっとで予約する',         url: 'https://www.eki-net.com/' };
-    case 'e5489':     return { type: 'jr-west',   label: '🚄 e5489（JR西日本）で予約する', url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'e5489':     return { type: 'jr-west',   label: '🚄 e5489で予約する（JR西日本）', url: 'https://www.jr-odekake.net/goyoyaku/' };
     case 'ex':        return { type: 'jr-ex',     label: '🚄 EXで予約する',                 url: 'https://smart-ex.jp/' };
     case 'jrkyushu':  return { type: 'jr-kyushu', label: '🚄 JR九州ネット予約で予約する',   url: 'https://train.yoyaku.jrkyushu.co.jp/' };
     case 'madoguchi': return { type: 'jr-window', label: '🚃 みどりの窓口で購入',           url: 'https://www.jr-odekake.net/' };

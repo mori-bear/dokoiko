@@ -277,15 +277,23 @@ function buildStepCard(sg) {
 
 /* ── 宿泊ブロック ── */
 
-function buildStayBlock(hotelLinks) {
-  if (!hotelLinks?.links?.length) return '';
-  const buttonsHtml = hotelLinks.links.map(l =>
+function buildHotelSection(section) {
+  const buttonsHtml = section.links.map(l =>
     `<a href="${l.url}" target="_blank" rel="nofollow sponsored noopener" class="stay-btn stay-btn--${l.type}">${l.label}</a>`
   ).join('');
+  return `<p class="stay-label">${section.heading}</p><div class="stay-buttons">${buttonsHtml}</div>`;
+}
+
+function buildStayBlock(hotelLinks) {
+  if (!hotelLinks?.links?.length) return '';
+  // ハブ宿（拠点）を先に表示（needsCar+gatewayHub がある場合のみ）
+  const hubHtml = hotelLinks.hubLinks?.links?.length
+    ? buildHotelSection(hotelLinks.hubLinks)
+    : '';
   return `
     <div class="stay-block">
-      <p class="stay-label">${hotelLinks.heading}</p>
-      <div class="stay-buttons">${buttonsHtml}</div>
+      ${hubHtml}
+      ${buildHotelSection(hotelLinks)}
     </div>`;
 }
 

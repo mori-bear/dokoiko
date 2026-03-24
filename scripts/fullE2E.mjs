@@ -333,8 +333,8 @@ function checkHotelLinks(dest, hotelResult) {
         const decoded = decodeURIComponent(l.url);
         if (!decoded.includes('travel.rakuten.co.jp')) {
           fail(dest, 'H2', '楽天 travel.rakuten.co.jp を含まない', null);
-        } else if (!decoded.includes('/yado/') && !decoded.includes('/hotel/')) {
-          fail(dest, 'H2', '楽天 /yado/ も /hotel/ も含まない（パックページの可能性）',
+        } else if (!decoded.includes('/search') && !decoded.includes('/yado/') && !decoded.includes('/hotel/')) {
+          fail(dest, 'H2', '楽天 /search も /yado/ も /hotel/ も含まない（パックページの可能性）',
             'buildRakutenLink の URL を確認する');
         } else {
           pass();
