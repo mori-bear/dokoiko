@@ -47,8 +47,11 @@ const DEPARTURES = ['東京', '大阪', '福岡', '名古屋', '仙台', '高松
 /* ── JR provider 正当性ルール ── */
 // ステップラベルに含まれる文字列 → 期待する CTA type
 const SHINKANSEN_PROVIDER_RULES = [
-  { labelIncludes: '東海道新幹線', expected: 'jr-ex',   name: '東海道新幹線' },
-  { labelIncludes: '山陽新幹線',   expected: 'jr-ex',   name: '山陽新幹線'   },
+  { labelIncludes: '東海道新幹線', expected: 'jr-ex',     name: '東海道新幹線' },
+  { labelIncludes: '山陽新幹線',   expected: 'jr-ex',     name: '山陽新幹線'   },
+  { labelIncludes: '東北新幹線',   expected: 'jr-east',   name: '東北新幹線'   },
+  { labelIncludes: '北陸新幹線',   expected: 'jr-east',   name: '北陸新幹線'   },
+  { labelIncludes: '九州新幹線',   expected: 'jr-kyushu', name: '九州新幹線'   },
 ];
 
 /* ═══════════════════════════════════════════════
@@ -264,6 +267,14 @@ function checkTransportLinks(dest, departure, links) {
         pass();
       }
     }
+  }
+
+  /* T5: メインCTAが1つだけ存在（summary-CTA統一確認） */
+  const mainCtaLinks = links.filter(l => l.type === 'main-cta');
+  if (mainCtaLinks.length > 1) {
+    fail(dest, 'T5', `メインCTAが複数(${departure}): ${mainCtaLinks.length}件`, 'deriveMainCtaを確認');
+  } else {
+    pass();
   }
 
   const mainCta = extractMainCta(links);

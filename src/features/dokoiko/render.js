@@ -222,7 +222,7 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
     summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
   }
 
-  // メインCTAボタン（ルート全体で最優先の予約先）
+  // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）
   const mainCtaHtml = mainCtaLink?.cta
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
@@ -230,8 +230,15 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
        </a>`
     : '';
 
-  // ステップカード（1区間 = 1カード）
+  // ステップカード（説明のみ・CTAなし）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
+
+  // JR予約が必要なステップがある場合のみ「みどりの窓口」補足を表示
+  const hasJrBooking = mainCtaLink?.cta?.type &&
+    ['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window'].includes(mainCtaLink.cta.type);
+  const jrNoteHtml = hasJrBooking
+    ? `<p class="transport-note">※オンライン予約不可の場合はみどりの窓口をご利用ください</p>`
+    : '';
 
   const headingHtml = departure
     ? `<p class="transport-heading">${departure}からの行き方</p>`
@@ -244,22 +251,15 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
       ${mainCtaHtml}
       <div class="step-card-list">${stepsHtml}</div>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
+      ${jrNoteHtml}
     </div>
   `;
 }
 
-/* ── ステップカード（1区間） ── */
+/* ── ステップカード（説明のみ・CTAなし） ── */
 
 function buildStepCard(sg) {
-  // メインCTAボタン（大）
-  const ctaHtml = sg.cta
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${btnClass(sg.cta.type)} btn--step-main">
-         ${sg.cta.label}
-       </a>`
-    : '';
-
-  // 注意・補足（小）
+  // 注意・補足（ICカード案内など）
   const cautionHtml = sg.caution
     ? `<div class="step-card-caution">${sg.caution}</div>`
     : '';
@@ -267,7 +267,6 @@ function buildStepCard(sg) {
   return `
     <div class="step-card">
       <div class="step-card-header">${sg.stepLabel}</div>
-      ${ctaHtml}
       ${cautionHtml}
     </div>
   `;

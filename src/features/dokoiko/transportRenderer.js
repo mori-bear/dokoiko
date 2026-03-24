@@ -68,11 +68,30 @@ function operatorToProvider(operator) {
   return OPERATOR_PROVIDER[operator] || 'e5489';
 }
 
-/* ── 新幹線ラインDB（路線名 → 予約システム） ── */
+/* ── 新幹線ラインDB ── */
+/** 新幹線として扱う路線名の正規DB（マリンライナー等の誤判定防止） */
+const SHINKANSEN_LINES = [
+  '東海道新幹線', '山陽新幹線', '東北新幹線', '北陸新幹線', '九州新幹線',
+  '山形新幹線', '秋田新幹線', '上越新幹線', '北海道新幹線',
+];
+
+/** 路線名 → 予約システムID マップ */
 const SHINKANSEN_LINE_PROVIDER = {
   '東海道新幹線': 'ex',
   '山陽新幹線':   'ex',
+  '東北新幹線':   'ekinet',
+  '北陸新幹線':   'ekinet',
+  '山形新幹線':   'ekinet',
+  '秋田新幹線':   'ekinet',
+  '上越新幹線':   'ekinet',
+  '北海道新幹線': 'ekinet',
+  '九州新幹線':   'jrkyushu',
 };
+
+/** step.label が正規新幹線路線名かどうかを判定する */
+function isShinkansenLine(label) {
+  return SHINKANSEN_LINES.some(line => label.includes(line));
+}
 
 /**
  * 新幹線ステップの予約プロバイダを路線ラベル優先で判定する。
@@ -80,16 +99,22 @@ const SHINKANSEN_LINE_PROVIDER = {
  */
 function detectShinkansenProvider(step) {
   const label = step.label ?? '';
+  // 路線名完全一致を優先
   if (SHINKANSEN_LINE_PROVIDER[label]) return SHINKANSEN_LINE_PROVIDER[label];
-  if (label.includes('東海道') || label.includes('山陽')) return 'ex';
+  // 複合ラベル（"山陽・九州新幹線" 等）を部分一致で解決
+  for (const [line, provider] of Object.entries(SHINKANSEN_LINE_PROVIDER)) {
+    if (label.includes(line)) return provider;
+  }
   return operatorToProvider(step.operator ?? '');
 }
 
 /**
  * IC乗車可能な在来線かどうか判定する（特急・急行・ライナー系は予約必要）。
+ * マリンライナーはICカード乗車可能なので IC扱いにする。
  */
 function isIcRail(step) {
   const label = step.label ?? '';
+  if (label.includes('マリンライナー')) return true;  // マリンライナーはIC可
   return !label.match(/特急|急行|エクスプレス|ライナー/);
 }
 
@@ -103,6 +128,89 @@ function stepTypeLabel(type) {
   if (type === 'bus')        return 'バス';
   if (type === 'localMove')  return 'ローカル移動';
   return '';
+}
+
+/** 特急列車名を汎用表記に正規化する（しおかぜ → JR（在来線特急）等） */
+function normalizeStepLabel(label, stepType) {
+  if (!label || stepType !== 'rail') return label;
+  // "特急XXX"形式の列車名を汎用表記に置換
+  if (label.match(/^特急/)) return 'JR（在来線特急）';
+  return label;
+}
+
+/* ─────────────────────────────────────────────────
+   ルートスコアリング（自然さ優先選択）
+   スコア低 = より自然なルート
+   ─ 乗換回数 × 10
+   ─ エリア跨ぎ（本州↔四国など）+50
+   ─ 不自然な遠回り（同エリアを中間経由）+30
+───────────────────────────────────────────────── */
+
+const AREA_REGION = {
+  // 北海道
+  '札幌':'北海道','函館':'北海道','旭川':'北海道','小樽':'北海道','新千歳空港':'北海道',
+  // 東北
+  '仙台':'東北','盛岡':'東北','八戸':'東北','青森':'東北','秋田':'東北','山形':'東北','福島':'東北',
+  // 関東
+  '東京':'関東','横浜':'関東','大宮':'関東','千葉':'関東','宇都宮':'関東','水戸':'関東',
+  // 中部
+  '長野':'中部','静岡':'中部','名古屋':'中部','金沢':'中部','富山':'中部','新潟':'中部',
+  '岐阜':'中部','浜松':'中部','松本':'中部','甲府':'中部','敦賀':'中部',
+  // 近畿
+  '大阪':'近畿','京都':'近畿','神戸':'近畿','奈良':'近畿','和歌山':'近畿','津':'近畿',
+  '新大阪':'近畿','三ノ宮':'近畿',
+  // 中国
+  '広島':'中国','岡山':'中国','松江':'中国','鳥取':'中国','山口':'中国','新山口':'中国',
+  // 四国
+  '高松':'四国','松山':'四国','高知':'四国','徳島':'四国',
+  // 九州
+  '福岡':'九州','博多':'九州','熊本':'九州','鹿児島':'九州','長崎':'九州','宮崎':'九州',
+  '大分':'九州','佐賀':'九州','小倉':'九州',
+};
+
+function getArea(nameOrStation) {
+  return AREA_REGION[nameOrStation?.replace(/駅$/, '')] ?? null;
+}
+
+/**
+ * ルートステップ配列の「不自然さスコア」を返す。
+ * 低いほどユーザーにとって自然なルート。
+ * @param {Array} steps - routes.js ステップ配列
+ * @param {string} departure - 出発都市名
+ * @returns {number}
+ */
+function scoreRouteSteps(steps, departure) {
+  const meaningful = steps.filter(s => s.type !== 'localMove' && s.type !== 'transfer');
+  let score = Math.max(0, meaningful.length - 1) * 10; // 乗換回数
+
+  const depArea = getArea(departure);
+  const areasVisited = new Set();
+  for (const s of meaningful) {
+    const toArea = getArea(s.to);
+    if (toArea) areasVisited.add(toArea);
+  }
+
+  // エリア跨ぎ検出：出発地エリアと同じエリアを中間に「迂回」している場合 +50
+  // 例: 四国→中国→四国 のような非効率な経路
+  if (depArea && areasVisited.size > 1 && areasVisited.has(depArea)) {
+    score += 50;
+  }
+
+  // 直前のエリアを逆戻りしていない場合も簡易チェック（同エリア2回通過 +30）
+  let prevArea = depArea;
+  let visitedInOrder = [];
+  for (const s of meaningful) {
+    const toArea = getArea(s.to);
+    if (toArea && toArea !== prevArea) {
+      if (visitedInOrder.includes(toArea)) {
+        score += 30; // 不自然な遠回り
+      }
+      visitedInOrder.push(toArea);
+      prevArea = toArea;
+    }
+  }
+
+  return score;
 }
 
 /* ── 座標ヘルパー ── */
@@ -230,6 +338,13 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
+      // 私鉄・第三セクター → Googleマップのみ（JR予約リンク不要）
+      if (step.operator && !step.operator.startsWith('JR')) {
+        return {
+          cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認'),
+          caution: null,
+        };
+      }
       if (isIcRail(step)) {
         return {
           cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認'),
@@ -373,25 +488,39 @@ function _resolveTransportLinks(city, departure) {
     return bfsStepsToLinks(rawSteps, departure, city);
   }
 
-  /* ── routes.js ── */
-  const rawRoutes = ROUTES[city.id];
-  const fromCity  = DEPARTURE_CITY_INFO[departure];
+  /* ── routes.js（出発地別 → 汎用の順で参照） ── */
+  const departureRoute = ROUTES[`${city.id}@${departure}`]; // 出発地特例ルート（最優先）
+  const defaultRoute   = ROUTES[city.id];
+  const fromCity       = DEPARTURE_CITY_INFO[departure];
 
-  /* ROUTES 未定義、または出発地未登録の場合: metadata から自動生成（「準備中」禁止） */
-  if (!rawRoutes || !fromCity) {
-    return buildAutoLinks(city, departure, fromCity);
+  // 出発地特例ルートがあれば無条件採用（スコアリング不要）
+  if (departureRoute && fromCity) {
+    const routes = departureRoute.filter(step => {
+      if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+      if (step.type === 'rail' && step.duration !== undefined && step.duration < 40) return false;
+      return true;
+    });
+    return buildLinksFromRoutes(routes, city, departure, fromCity);
   }
 
-  /* ── 前処理: 無効 step の除去 ── */
-  const routes = rawRoutes.filter(step => {
-    // flight: 就航路線DBに存在しない場合は除外（次ステップで代替）
-    if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
-    // rail: duration < 40分 の短距離在来線はリンク不要
-    if (step.type === 'rail' && step.duration !== undefined && step.duration < 40) return false;
-    return true;
-  });
+  // 汎用ルートがある場合: スコアリングで「不自然さ」を評価
+  // スコアが高い（エリア跨ぎ等）場合は buildAutoLinks を優先
+  if (defaultRoute && fromCity) {
+    const routeScore = scoreRouteSteps(defaultRoute, departure);
+    const SCORE_THRESHOLD = 45; // エリア跨ぎ1回（+50）を超えたら自動生成優先
+    if (routeScore > SCORE_THRESHOLD) {
+      return buildAutoLinks(city, departure, fromCity);
+    }
+    const routes = defaultRoute.filter(step => {
+      if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+      if (step.type === 'rail' && step.duration !== undefined && step.duration < 40) return false;
+      return true;
+    });
+    return buildLinksFromRoutes(routes, city, departure, fromCity);
+  }
 
-  return buildLinksFromRoutes(routes, city, departure, fromCity);
+  /* ROUTES 未定義 または 出発地未登録: metadata から自動生成（「準備中」禁止） */
+  return buildAutoLinks(city, departure, fromCity);
 }
 
 /* ─────────────────────────────────────────────────
@@ -409,7 +538,7 @@ function bfsStepsToLinks(steps, departure, city) {
   for (let i = 0; i < steps.length; i++) {
     const s    = steps[i];
     const idx  = stepIdx(i);
-    const mode = s.label ?? stepTypeLabel(s.type);
+    const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type);
     const stepLabel = `${idx} ${s.from} → ${s.to}（${mode}）`;
 
     const { cta, caution } = bfsStepToCta(s, departure);
@@ -452,7 +581,7 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
   let displayIdx = 0;
 
   for (const step of routes) {
-    const mode = step.label ?? stepTypeLabel(step.type);
+    const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type);
 
     /* 出発地の解決 */
     const from = step.step === 1

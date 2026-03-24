@@ -1689,7 +1689,7 @@ export const ROUTES = {
       "step": 2,
       "from": "武雄温泉",
       "to": "嬉野温泉",
-      "type": "rail",
+      "type": "shinkansen",
       "operator": "JR九州",
       "label": "西九州新幹線"
     }
@@ -1839,6 +1839,44 @@ export const ROUTES = {
     },
     {
       "step": 3,
+      "from": "松山",
+      "to": "四国カルスト",
+      "type": "car"
+    }
+  ],
+  "shikoku-karst@高松": [
+    {
+      "step": 1,
+      "to": "松山",
+      "type": "rail",
+      "operator": "JR四国",
+      "label": "特急いしづち"
+    },
+    {
+      "step": 2,
+      "from": "松山",
+      "to": "四国カルスト",
+      "type": "car"
+    }
+  ],
+  "shikoku-karst@松山": [
+    {
+      "step": 1,
+      "from": "松山",
+      "to": "四国カルスト",
+      "type": "car"
+    }
+  ],
+  "shikoku-karst@高知": [
+    {
+      "step": 1,
+      "to": "松山",
+      "type": "rail",
+      "operator": "JR四国",
+      "label": "特急あしずり・宿毛線経由"
+    },
+    {
+      "step": 2,
       "from": "松山",
       "to": "四国カルスト",
       "type": "car"
