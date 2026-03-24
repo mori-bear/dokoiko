@@ -6,7 +6,7 @@
  *   [2] 宿リンクが必ず2件（楽天・じゃらん）出る
  *   [3] 「準備中」が出ない
  *   [4] URLが有効な形式
- *   [5] 楽天URLが /hotel/ を含む（パック検索禁止）
+ *   [5] 楽天URLが /yado/ を含む（エリアページ方式）
  *   [6] じゃらんURLがアフィリエイトラッパー済み
  *
  * 実行: node scripts/e2eTest.mjs
@@ -65,9 +65,9 @@ for (const city of DESTS) {
       if (l.type === 'rakuten') {
         if (!l.url.startsWith(RAKUTEN_AFF)) { ng(`${city.name} 楽天: アフィリエイトラッパー未適用`); }
         else {
-          // ?pc= 内はURLエンコード済みのため、デコード後に /hotel/ を確認
+          // ?pc= 内はURLエンコード済みのため、デコード後に /yado/ を確認
           const decoded = decodeURIComponent(l.url);
-          if (!decoded.includes('/hotel/')) { ng(`${city.name} 楽天: /hotel/ を含まない（パック検索の可能性）`); }
+          if (!decoded.includes('/yado/')) { ng(`${city.name} 楽天: /yado/ を含まない`); }
           else ok();
         }
       } else if (l.type === 'jalan') {

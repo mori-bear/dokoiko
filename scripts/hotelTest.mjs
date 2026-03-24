@@ -51,7 +51,7 @@ const hotelSrc = readFileSync(join(ROOT, 'src/hotel/hotelLinkBuilder.js'), 'utf8
 
 check(
   hotelSrc.includes('travel.rakuten.co.jp/yado/'),
-  '[H-src] 楽天 /yado/?keyword= URLが存在しない（/search?keyword= は404のため禁止）',
+  '[H-src] 楽天 travel.rakuten.co.jp/yado/{area}/ URLが存在しない',
 );
 check(!hotelSrc.includes('travel.rakuten.co.jp/search'),
   '[H-src] 楽天に /search?keyword= URL が含まれている（404のため禁止）');
@@ -85,10 +85,10 @@ for (const dest of dests) {
     // H1: travel.rakuten.co.jp を含む
     check(decodedRakuten.includes('travel.rakuten.co.jp'),
       `[H1] 楽天 URL に travel.rakuten.co.jp がない: ${id}`, id);
-    // H2: /yado/ を含む（/search?keyword= は404のため禁止）
+    // H2: travel.rakuten.co.jp/yado/{area}/ 形式（都道府県エリアページ）
     check(
-      decodedRakuten.includes('/yado/'),
-      `[H2] 楽天 URL に /yado/ がない: ${id}`, id,
+      decodedRakuten.includes('travel.rakuten.co.jp/yado/'),
+      `[H2] 楽天 URL に travel.rakuten.co.jp/yado/ がない: ${id}`, id,
     );
     // H3: /pack/ 禁止
     check(!decodedRakuten.includes('/pack/'),
