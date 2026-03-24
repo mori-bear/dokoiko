@@ -2,9 +2,13 @@
  * イベントハンドラ
  *
  * state は src/state.js から直接 import して参照する（引数受け取り禁止）。
- * UI 操作のたびに console.log で state を記録する。
+ * stayType / theme 変更時、結果表示中であれば onGo() を呼んで即時再描画する。
  */
 import { state } from '../state.js';
+
+function isResultVisible() {
+  return !document.getElementById('result')?.hidden;
+}
 
 export function bindHandlers(onGo, onRetry) {
 
@@ -19,7 +23,7 @@ export function bindHandlers(onGo, onRetry) {
       document.querySelectorAll('[data-stay]').forEach(b => b.classList.remove('active'));
       el.classList.add('active');
 
-      console.log('[UI] stayType:', state.stayType);
+      if (isResultVisible()) onGo();
     });
   });
 
@@ -35,7 +39,7 @@ export function bindHandlers(onGo, onRetry) {
       document.querySelectorAll('[data-theme]').forEach(b => b.classList.remove('active'));
       el.classList.add('active');
 
-      console.log('[UI] theme:', state.theme);
+      if (isResultVisible()) onGo();
     });
   });
 
@@ -44,7 +48,7 @@ export function bindHandlers(onGo, onRetry) {
   if (departureSelect) {
     departureSelect.addEventListener('change', (e) => {
       state.departure = e.target.value;
-      console.log('[UI] departure:', state.departure);
+      if (isResultVisible()) onGo();
     });
   }
 
@@ -57,27 +61,6 @@ export function bindHandlers(onGo, onRetry) {
   document.addEventListener('click', (e) => {
     if (e.target.closest('#retry-btn')) {
       onRetry();
-    }
-  });
-
-  /* ── Task7: 委任フォールバック（直接バインド失敗時の保険） ── */
-  document.addEventListener('click', (e) => {
-    const stayBtn = e.target.closest('[data-stay]');
-    if (stayBtn && stayBtn.dataset.stay !== undefined) {
-      // 直接バインドが動いていれば state は既に更新済み（二重更新だが同値なので無害）
-      if (state.stayType !== stayBtn.dataset.stay) {
-        state.stayType = stayBtn.dataset.stay;
-        console.log('[UI fallback] stayType:', state.stayType);
-      }
-    }
-
-    const themeBtn = e.target.closest('[data-theme]');
-    if (themeBtn && 'theme' in themeBtn.dataset) {
-      const val = themeBtn.dataset.theme || null;
-      if (state.theme !== val) {
-        state.theme = val;
-        console.log('[UI fallback] theme:', state.theme);
-      }
     }
   });
 }

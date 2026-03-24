@@ -295,7 +295,9 @@ export function resolveTransportLinks(city, departure) {
 function buildAutoLinks(city, departure, fromCity) {
   const label  = cityLabel(city);
   const origin = fromCity?.rail?.replace(/駅$/, '') ?? departure;
-  const destSt = (city.accessStation ?? city.railGateway ?? label).replace(/駅$/, '');
+  const baseStation = (city.accessStation ?? city.railGateway ?? label).replace(/駅$/, '');
+  // 新幹線降車駅が設定されている場合はそちらを優先（例: 下関 → 新下関）
+  const destSt = city.shinkansenStation ?? baseStation;
 
   const stepGroups = [];
 

@@ -33,12 +33,6 @@ function buildPool() {
 }
 
 function go() {
-  console.log('[onGo] state:', JSON.stringify({
-    departure: state.departure,
-    stayType:  state.stayType,
-    theme:     state.theme,
-  }));
-
   if (state.destinations.length === 0) {
     showFormError('データを読み込み中です。しばらくお待ちください。');
     return;
@@ -146,19 +140,5 @@ function initIntro() {
   if (!overlay) return;
   overlay.addEventListener('animationend', () => { overlay.remove(); }, { once: true });
 }
-
-/* ── デバッグオーバーレイ（開発用） ── */
-
-setInterval(() => {
-  const el = document.getElementById('debug');
-  if (el) {
-    el.innerText = JSON.stringify({
-      departure: state.departure,
-      stayType:  state.stayType,
-      theme:     state.theme,
-      pool:      state.pool.length,
-    }, null, 2);
-  }
-}, 500);
 
 init();
