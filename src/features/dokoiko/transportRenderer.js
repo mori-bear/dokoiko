@@ -14,6 +14,9 @@
  *   localMove        → Google Maps（transit）中継地点用
  */
 
+import { readFileSync }          from 'fs';
+import { fileURLToPath }         from 'url';
+import { dirname, join }         from 'path';
 import { ROUTES, CITY_TO_SHINKANSEN } from './routes.js';
 import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
 import { CITY_AIRPORT }        from '../../lib/transportCore/airportMap.js';
@@ -25,6 +28,17 @@ import {
   buildRentalLink,
 } from '../../transport/linkBuilder.js';
 import { buildRoute } from '../../engine/bfsEngine.js';
+
+/* ── 就航路線DB（出発地 × 到着空港） ── */
+const _root = join(dirname(fileURLToPath(import.meta.url)), '../../../');
+const FLIGHT_ROUTES = JSON.parse(
+  readFileSync(join(_root, 'data/flightRoutes.json'), 'utf8'),
+);
+
+/** 出発地 → 到着空港名 の就航路線が存在するか */
+function hasFlightRoute(departure, airportName) {
+  return FLIGHT_ROUTES.some(r => r.from === departure && r.to === airportName);
+}
 
 /* ── JR会社名 → 予約システムID ── */
 const OPERATOR_PROVIDER = {
@@ -86,12 +100,21 @@ function _resolveTransportLinks(city, departure) {
   }
 
   /* ── routes.js ── */
-  const routes   = ROUTES[city.id];
-  const fromCity = DEPARTURE_CITY_INFO[departure];
+  const rawRoutes = ROUTES[city.id];
+  const fromCity  = DEPARTURE_CITY_INFO[departure];
 
-  if (!routes || !fromCity) {
+  if (!rawRoutes || !fromCity) {
     return [{ type: 'note', label: '現在準備中です' }];
   }
+
+  /* ── 前処理: 無効 step の除去 ── */
+  const routes = rawRoutes.filter(step => {
+    // flight: 就航路線DBに存在しない場合は除外（次ステップで代替）
+    if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+    // rail: duration < 40分 の短距離在来線はリンク不要
+    if (step.type === 'rail' && step.duration !== undefined && step.duration < 40) return false;
+    return true;
+  });
 
   return buildLinksFromRoutes(routes, city, departure, fromCity);
 }
