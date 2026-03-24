@@ -154,7 +154,7 @@ function bfsStepsToLinks(steps, departure, city) {
     }
   }
 
-  return links.filter(Boolean);
+  return dedupeByUrl(links.filter(Boolean));
 }
 
 /* ─────────────────────────────────────────────────
@@ -248,6 +248,19 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     }
   }
 
-  return links.filter(Boolean);
+  return dedupeByUrl(links.filter(Boolean));
+}
+
+/* ─────────────────────────────────────────────────
+   URL重複排除（同一URLは最初の1件のみ残す）
+───────────────────────────────────────────────── */
+function dedupeByUrl(links) {
+  const seen = new Set();
+  return links.filter(l => {
+    if (!l.url) return true;           // note など URL なし → 常に残す
+    if (seen.has(l.url)) return false;
+    seen.add(l.url);
+    return true;
+  });
 }
 

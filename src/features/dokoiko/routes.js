@@ -1824,12 +1824,21 @@ export const ROUTES = {
   "shikoku-karst": [
     {
       "step": 1,
-      "to": "松山空港",
-      "type": "flight",
-      "label": "飛行機"
+      "to": "岡山",
+      "type": "shinkansen",
+      "operator": "JR西日本",
+      "label": "山陽新幹線"
     },
     {
       "step": 2,
+      "from": "岡山",
+      "to": "松山",
+      "type": "rail",
+      "operator": "JR四国",
+      "label": "特急しおかぜ"
+    },
+    {
+      "step": 3,
       "from": "松山",
       "to": "四国カルスト",
       "type": "car"
