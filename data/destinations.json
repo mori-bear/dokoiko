@@ -2550,7 +2550,6 @@
   },
   {
     "id": "yakushima",
-    "gateway": "屋久島",
     "name": "屋久島",
     "type": "destination",
     "region": "九州",
@@ -12292,7 +12291,6 @@
   },
   {
     "id": "iki-island",
-    "gateway": "壱岐",
     "name": "壱岐",
     "type": "destination",
     "region": "九州",
@@ -12757,7 +12755,6 @@
   },
   {
     "id": "zamami-island",
-    "gateway": "座間味",
     "name": "座間味島",
     "type": "destination",
     "region": "沖縄",

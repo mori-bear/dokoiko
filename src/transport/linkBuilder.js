@@ -181,7 +181,7 @@ export function buildJrLink(bookingProvider, route = null) {
   }
   switch (bookingProvider) {
     case 'ekinet':    return { type: 'jr-east',   label: lbl('えきねっと'),  url: 'https://www.eki-net.com/' };
-    case 'e5489':     return { type: 'jr-west',   label: lbl('e5489'),      url: 'https://www.jr-odekake.net/goyoyaku/' };
+    case 'e5489':     return { type: 'jr-west',   label: lbl('JRネット予約'),     url: 'https://www.jr-odekake.net/goyoyaku/' };
     case 'ex':        return { type: 'jr-ex',     label: lbl('スマートEX'), url: 'https://smart-ex.jp/' };
     case 'jrkyushu':  return { type: 'jr-kyushu', label: lbl('JR九州予約'), url: 'https://train.yoyaku.jrkyushu.co.jp/' };
     // オンライン予約不可ルート — 窓口購入案内
