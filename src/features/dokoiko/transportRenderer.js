@@ -54,6 +54,31 @@ function operatorToProvider(operator) {
   return OPERATOR_PROVIDER[operator] || 'e5489';
 }
 
+/* ── 新幹線ラインDB（路線名 → 予約システム） ── */
+const SHINKANSEN_LINE_PROVIDER = {
+  '東海道新幹線': 'ex',
+  '山陽新幹線':   'ex',
+};
+
+/**
+ * 新幹線ステップの予約プロバイダを路線ラベル優先で判定する。
+ * 東海道・山陽 → スマートEX、JR東日本系 → えきねっと、その他 → operatorToProvider
+ */
+function detectShinkansenProvider(step) {
+  const label = step.label ?? '';
+  if (SHINKANSEN_LINE_PROVIDER[label]) return SHINKANSEN_LINE_PROVIDER[label];
+  if (label.includes('東海道') || label.includes('山陽')) return 'ex';
+  return operatorToProvider(step.operator ?? '');
+}
+
+/**
+ * IC乗車可能な在来線かどうか判定する（特急・急行・ライナー系は予約必要）。
+ */
+function isIcRail(step) {
+  const label = step.label ?? '';
+  return !label.match(/特急|急行|エクスプレス|ライナー/);
+}
+
 /* ── step.type → 日本語モード名 ── */
 function stepTypeLabel(type) {
   if (type === 'shinkansen') return '新幹線';
@@ -155,9 +180,15 @@ function bfsStepsToLinks(steps, departure, city) {
       if (jrStep.operator && !jrStep.operator.startsWith('JR')) {
         /* 私鉄 → Googleマップ */
         links.push(buildGoogleMapsLink(jrStep.from, jrStep.to, 'transit', '📍 この区間を地図で見る'));
+      } else if (jrStep.type === 'rail' && isIcRail(jrStep)) {
+        /* IC対応路線 → 地図リンク + ICノート */
+        links.push(buildGoogleMapsLink(jrStep.from, jrStep.to, 'transit', '📍 乗り方を確認する（Googleマップ）'));
+        links.push({ type: 'note-caution', label: '※ICカード・切符でご乗車いただけます（予約不要）' });
       } else {
-        const provider = operatorToProvider(jrStep.operator ?? '');
-        const jrLink   = buildJrLink(provider, { from: jrStep.from, to: jrStep.to });
+        const provider = jrStep.type === 'shinkansen'
+          ? detectShinkansenProvider(jrStep)
+          : operatorToProvider(jrStep.operator ?? '');
+        const jrLink = buildJrLink(provider, { from: jrStep.from, to: jrStep.to });
         if (jrLink) {
           links.push(jrLink);
           links.push({ type: 'note-caution', label: '※オンライン予約不可の場合はみどりの窓口をご利用ください' });
@@ -263,11 +294,19 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     }
     if (found) {
       const { step: jrStep, from } = found;
-      const provider = operatorToProvider(jrStep.operator ?? '');
-      const jrLink   = buildJrLink(provider, { from, to: jrStep.to });
-      if (jrLink) {
-        links.push(jrLink);
-        links.push({ type: 'note-caution', label: '※オンライン予約不可の場合はみどりの窓口をご利用ください' });
+      if (jrStep.type === 'rail' && isIcRail(jrStep)) {
+        /* IC対応路線（快速・普通等）→ 地図リンク + ICノート */
+        links.push(buildGoogleMapsLink(from, jrStep.to, 'transit', '📍 乗り方を確認する（Googleマップ）'));
+        links.push({ type: 'note-caution', label: '※ICカード・切符でご乗車いただけます（予約不要）' });
+      } else {
+        const provider = jrStep.type === 'shinkansen'
+          ? detectShinkansenProvider(jrStep)
+          : operatorToProvider(jrStep.operator ?? '');
+        const jrLink = buildJrLink(provider, { from, to: jrStep.to });
+        if (jrLink) {
+          links.push(jrLink);
+          links.push({ type: 'note-caution', label: '※オンライン予約不可の場合はみどりの窓口をご利用ください' });
+        }
       }
     } else {
       /* 有効なJRステップなし（出発地=乗換駅など）→ バス/ローカル移動をGoogle Maps で補完 */
