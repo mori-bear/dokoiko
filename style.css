@@ -625,6 +625,41 @@ body {
   gap: 8px;
 }
 
+/* ── ステップカード（区間ごとCTA）── */
+
+.step-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-card {
+  background: var(--bg-card, #f7f7f7);
+  border-radius: 12px;
+  padding: 12px 14px 10px;
+}
+
+.step-card-header {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.btn--step-main {
+  font-size: 1.04em;
+  font-weight: 700;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+.step-card-caution {
+  font-size: 11px;
+  color: var(--text-sub);
+  margin-top: 7px;
+  line-height: 1.5;
+}
+
 .route-summary {
   font-size: 15px;
   font-weight: 700;

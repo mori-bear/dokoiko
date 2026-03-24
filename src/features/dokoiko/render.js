@@ -159,11 +159,16 @@ function buildCategoryBadge(city) {
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links, departure, destLabel) {
+  /* step-group 方式（新方式）*/
+  if (links.some(l => l.type === 'step-group')) {
+    return buildTransportBlockStepwise(links, departure, destLabel);
+  }
+
+  /* フォールバック: 旧方式（note + action links） */
   const noteLink    = links.find(l => l.type === 'note');
   const cautionLinks = links.filter(l => l.type === 'note-caution');
   const actionLinks  = links.filter(l => l.type !== 'note' && l.type !== 'note-caution');
 
-  // サマリー行（出発地 → 目的地 + 乗換回数）
   let summaryHtml = '';
   if (departure && destLabel && noteLink) {
     const transfers = noteLink.transfers ?? 0;
@@ -171,7 +176,6 @@ function buildTransportBlock(links, departure, destLabel) {
     summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
   }
 
-  // メインCTA
   let firstActionable = true;
   const buttonsHtml = actionLinks.map(link => {
     const html = buildLinkItem(link, firstActionable);
@@ -179,12 +183,10 @@ function buildTransportBlock(links, departure, destLabel) {
     return html;
   }).join('');
 
-  // 注意書き
   const cautionsHtml = cautionLinks.map(l =>
     `<div class="transport-note transport-note--caution">${l.label}</div>`
   ).join('');
 
-  // 詳細ステップ（CTAの下に移動）
   const stepHtml = noteLink
     ? `<div class="transport-note transport-note--steps">${noteLink.label}</div>`
     : '';
@@ -201,6 +203,62 @@ function buildTransportBlock(links, departure, destLabel) {
       ${cautionsHtml}
       ${stepHtml}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
+    </div>
+  `;
+}
+
+/* ── 交通ブロック（step-group 新方式） ── */
+
+function buildTransportBlockStepwise(links, departure, destLabel) {
+  const summaryLink = links.find(l => l.type === 'summary');
+  const stepGroups  = links.filter(l => l.type === 'step-group');
+
+  // サマリー行
+  let summaryHtml = '';
+  if (departure && destLabel) {
+    const transfers = summaryLink?.transfers ?? 0;
+    const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
+    summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
+  }
+
+  // ステップカード（1区間 = 1カード）
+  const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
+
+  const headingHtml = departure
+    ? `<p class="transport-heading">${departure}からの行き方</p>`
+    : '';
+
+  return `
+    <div class="card-section">
+      ${headingHtml}
+      ${summaryHtml}
+      <div class="step-card-list">${stepsHtml}</div>
+      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
+    </div>
+  `;
+}
+
+/* ── ステップカード（1区間） ── */
+
+function buildStepCard(sg) {
+  // メインCTAボタン（大）
+  const ctaHtml = sg.cta
+    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${btnClass(sg.cta.type)} btn--step-main">
+         ${sg.cta.label}
+       </a>`
+    : '';
+
+  // 注意・補足（小）
+  const cautionHtml = sg.caution
+    ? `<div class="step-card-caution">${sg.caution}</div>`
+    : '';
+
+  return `
+    <div class="step-card">
+      <div class="step-card-header">${sg.stepLabel}</div>
+      ${ctaHtml}
+      ${cautionHtml}
     </div>
   `;
 }
