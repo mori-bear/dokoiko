@@ -179,7 +179,9 @@ export const ROUTES = {
     { step: 2, from: '宇都宮', to: '日光', type: 'rail', operator: 'JR東日本', label: 'JR日光線' },
   ],
   'kouzushima': [
-    { step: 1, from: '竹芝桟橋', to: '神津島港', type: 'ferry', ferryUrl: 'https://www.tokaikisen.co.jp/', ferryOperator: '東海汽船' },
+    { step: 1, to: '東京', type: 'shinkansen', operator: 'JR東海', label: '東海道新幹線' },
+    { step: 2, from: '東京', to: '竹芝客船ターミナル', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '竹芝桟橋', to: '神津島港', type: 'ferry', ferryUrl: 'https://www.tokaikisen.co.jp/', ferryOperator: '東海汽船', noLocalMaps: true },
   ],
   'hakone': [
     { step: 1, to: '小田原', type: 'shinkansen', operator: 'JR東海', label: '東海道新幹線' },
@@ -191,7 +193,8 @@ export const ROUTES = {
   ],
   'izu-oshima': [
     { step: 1, to: '熱海', type: 'shinkansen', operator: 'JR東海', label: '東海道新幹線' },
-    { step: 2, from: '熱海港', to: '大島', type: 'ferry', ferryUrl: 'https://www.tokaikisen.co.jp/', ferryOperator: '東海汽船' },
+    { step: 2, from: '熱海駅', to: '熱海港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '熱海港', to: '大島', type: 'ferry', ferryUrl: 'https://www.tokaikisen.co.jp/', ferryOperator: '東海汽船', noLocalMaps: true },
   ],
   'takao': [
     { step: 1, to: '高尾', type: 'rail', operator: 'JR東日本', label: 'JR中央本線' },
@@ -435,7 +438,8 @@ export const ROUTES = {
   ],
   'miyajima': [
     { step: 1, to: '広島', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
-    { step: 2, from: '宮島口', to: '宮島', type: 'ferry', ferryUrl: 'https://miyajima-matsudai.co.jp/', ferryOperator: '宮島松大フェリー' },
+    { step: 2, from: '広島', to: '宮島口', type: 'rail', operator: 'JR西日本', label: 'JR山陽本線' },
+    { step: 3, from: '宮島口', to: '宮島', type: 'ferry', ferryUrl: 'https://miyajima-matsudai.co.jp/', ferryOperator: '宮島松大フェリー', noLocalMaps: true },
   ],
   'onomichi': [
     { step: 1, to: '福山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
@@ -540,11 +544,13 @@ export const ROUTES = {
   ],
   'shodoshima': [
     { step: 1, to: '岡山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
-    { step: 2, from: '高松港', to: '小豆島', type: 'ferry', ferryUrl: 'https://www.shoudoshima-ferry.co.jp/', ferryOperator: '小豆島フェリー' },
+    { step: 2, from: '岡山', to: '高松港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '高松港', to: '小豆島', type: 'ferry', ferryUrl: 'https://www.shoudoshima-ferry.co.jp/', ferryOperator: '小豆島フェリー', noLocalMaps: true },
   ],
   'naoshima': [
     { step: 1, to: '岡山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
-    { step: 2, from: '宇野港', to: '直島', type: 'ferry', ferryUrl: 'https://ferry.co.jp/', ferryOperator: '四国汽船' },
+    { step: 2, from: '岡山', to: '宇野港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '宇野港', to: '直島', type: 'ferry', ferryUrl: 'https://ferry.co.jp/', ferryOperator: '四国汽船', noLocalMaps: true },
   ],
   'kotohira': [
     { step: 1, to: '岡山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
@@ -585,7 +591,8 @@ export const ROUTES = {
   ],
   'tokashiki-jima': [
     { step: 1, to: '那覇空港', type: 'flight', label: '飛行機' },
-    { step: 2, from: '那覇港', to: '渡嘉敷島', type: 'ferry', ferryUrl: 'https://vill.tokashiki.okinawa.jp/', ferryOperator: '渡嘉敷村営フェリー' },
+    { step: 2, from: '那覇空港', to: '那覇港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '那覇港', to: '渡嘉敷島', type: 'ferry', ferryUrl: 'https://vill.tokashiki.okinawa.jp/', ferryOperator: '渡嘉敷村営フェリー', noLocalMaps: true },
   ],
   'kumejima': [
     { step: 1, to: '久米島空港', type: 'flight', label: '飛行機' },
@@ -648,7 +655,8 @@ export const ROUTES = {
   ],
   'goto': [
     { step: 1, to: '博多', type: 'shinkansen', operator: 'JR九州', label: '山陽・九州新幹線' },
-    { step: 2, from: '博多港', to: '五島', type: 'ferry', ferryUrl: 'https://www.kyusho.co.jp/', ferryOperator: '九州商船' },
+    { step: 2, from: '博多駅', to: '博多港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '博多港', to: '五島', type: 'ferry', ferryUrl: 'https://www.kyusho.co.jp/', ferryOperator: '九州商船', noLocalMaps: true },
   ],
   'unzen': [
     { step: 1, to: '博多', type: 'shinkansen', operator: 'JR九州', label: '山陽・九州新幹線' },
@@ -663,7 +671,8 @@ export const ROUTES = {
   ],
   'yakushima': [
     { step: 1, to: '鹿児島空港', type: 'flight', label: '飛行機' },
-    { step: 2, from: '鹿児島港', to: '屋久島', type: 'ferry', ferryUrl: 'https://www.tykousoku.jp/', ferryOperator: '種子屋久高速船' },
+    { step: 2, from: '鹿児島空港', to: '鹿児島港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '鹿児島港', to: '屋久島', type: 'ferry', ferryUrl: 'https://www.tykousoku.jp/', ferryOperator: '種子屋久高速船', noLocalMaps: true },
   ],
   'ibusuki': [
     { step: 1, to: '鹿児島中央', type: 'shinkansen', operator: 'JR九州', label: '九州新幹線' },
@@ -678,7 +687,8 @@ export const ROUTES = {
   ],
   'sakurajima': [
     { step: 1, to: '鹿児島中央', type: 'shinkansen', operator: 'JR九州', label: '九州新幹線' },
-    { step: 2, from: '鹿児島港', to: '桜島', type: 'ferry', ferryUrl: 'https://www.city.kagoshima.lg.jp/sangyo-keizai/kanko/ferry/sakurajimaferry.html', ferryOperator: '鹿児島市営フェリー' },
+    { step: 2, from: '鹿児島中央駅', to: '鹿児島港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '鹿児島港', to: '桜島', type: 'ferry', ferryUrl: 'https://www.city.kagoshima.lg.jp/sangyo-keizai/kanko/ferry/sakurajimaferry.html', ferryOperator: '鹿児島市営フェリー', noLocalMaps: true },
   ],
   'kirishima': [
     { step: 1, to: '鹿児島中央', type: 'shinkansen', operator: 'JR九州', label: '九州新幹線' },
@@ -708,11 +718,13 @@ export const ROUTES = {
   ],
   'zamami-island': [
     { step: 1, to: '那覇空港', type: 'flight', label: '飛行機' },
-    { step: 2, from: '泊港', to: '座間味島', type: 'ferry', ferryUrl: 'https://vill.zamami.okinawa.jp/', ferryOperator: 'フェリーざまみ' },
+    { step: 2, from: '那覇空港', to: '泊港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '泊港', to: '座間味島', type: 'ferry', ferryUrl: 'https://vill.zamami.okinawa.jp/', ferryOperator: 'フェリーざまみ', noLocalMaps: true },
   ],
   'iki-island': [
     { step: 1, to: '博多', type: 'shinkansen', operator: 'JR九州', label: '山陽・九州新幹線' },
-    { step: 2, from: '博多港', to: '壱岐', type: 'ferry', ferryUrl: 'https://www.kyu-you.co.jp/', ferryOperator: '九州郵船' },
+    { step: 2, from: '博多駅', to: '博多港', type: 'localMove', label: 'Googleマップ' },
+    { step: 3, from: '博多港', to: '壱岐', type: 'ferry', ferryUrl: 'https://www.kyu-you.co.jp/', ferryOperator: '九州郵船', noLocalMaps: true },
   ],
   'suzu': [
     { step: 1, to: '金沢', type: 'shinkansen', operator: 'JR西日本', label: '北陸新幹線' },
@@ -725,5 +737,20 @@ export const ROUTES = {
   'ushimado': [
     { step: 1, to: '岡山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
     { step: 2, from: '岡山', to: '牛窓', type: 'car' },
+  ],
+
+  // ─── 沖縄（追加） ───────────────────────────────────────────────
+
+  'onna': [
+    { step: 1, to: '那覇空港', type: 'flight', label: '飛行機' },
+    { step: 2, from: '那覇空港', to: '恩納村', type: 'localMove', label: 'Googleマップ' },
+  ],
+
+  // ─── 中国（追加） ───────────────────────────────────────────────
+
+  'yunotsu-onsen': [
+    { step: 1, to: '岡山', type: 'shinkansen', operator: 'JR西日本', label: '山陽新幹線' },
+    { step: 2, from: '岡山', to: '出雲市', type: 'rail', operator: 'JR西日本', label: '特急やくも' },
+    { step: 3, from: '出雲市', to: '温泉津', type: 'car' },
   ],
 };

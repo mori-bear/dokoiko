@@ -108,6 +108,8 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
       stepLabels.push(`${idx} ${step.from ?? ''} → ${label}（${mode}）`);
     } else if (step.type === 'bus') {
       stepLabels.push(`${idx} ${from} → ${label}（${mode}）`);
+    } else if (step.type === 'localMove') {
+      stepLabels.push(`${idx} ${step.from ?? ''} → ${step.to ?? label}（Googleマップ）`);
     }
   }
 
@@ -144,8 +146,16 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
       const fromPort  = step.from ?? '';
       const ferryLink = buildFerryLink(fromPort, step.ferryUrl ?? null, step.ferryOperator ?? null);
       if (ferryLink) links.push(ferryLink);
-      const mapsLabel = `${fromPort} → ${label}（Googleマップ）`;
-      links.push(buildGoogleMapsLink(fromPort, label, 'transit', mapsLabel, co));
+      if (!step.noLocalMaps) {
+        const mapsLabel = `${fromPort} → ${label}（Googleマップ）`;
+        links.push(buildGoogleMapsLink(fromPort, label, 'transit', mapsLabel, co));
+      }
+
+    } else if (step.type === 'localMove') {
+      const from      = step.from ?? '';
+      const to        = step.to ?? label;
+      const mapsLabel = `${from} → ${to}（Googleマップ）`;
+      links.push(buildGoogleMapsLink(from, to, 'transit', mapsLabel));
 
     } else if (step.type === 'bus') {
       const origin    = step.from ? `${step.from}駅` : fromCity.rail;

@@ -40,7 +40,7 @@ function buildFallback(cityName) {
     { type: 'rakuten', label: `${name}の宿を探す（楽天）`, url: RAKUTEN_AFF + enc(rakutenSearch) },
     { type: 'jalan',   label: `${name}の宿を探す（じゃらん）`, url: VC_BASE + enc(jalanSearch) },
   ];
-  const entry = { name: `${name}のおすすめの宿`, reason: '最安値を比較してご予約ください', links };
+  const entry = { name: `${name}の宿`, reason: '最安値を比較してご予約ください', links };
   return { solo: entry, couple: entry, friends: entry };
 }
 
