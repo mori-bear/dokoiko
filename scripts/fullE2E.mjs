@@ -45,13 +45,17 @@ const DESTS    = Array.isArray(allDests) ? allDests : allDests.destinations;
 const DEPARTURES = ['東京', '大阪', '福岡', '名古屋', '仙台', '高松', '広島', '熊本'];
 
 /* ── JR provider 正当性ルール ── */
-// ステップラベルに含まれる文字列 → 期待する CTA type
+// expected は単一文字列または文字列配列（出発地依存で複数providerが有効な路線はarray）
 const SHINKANSEN_PROVIDER_RULES = [
-  { labelIncludes: '東海道新幹線', expected: 'jr-ex',     name: '東海道新幹線' },
-  { labelIncludes: '山陽新幹線',   expected: 'jr-ex',     name: '山陽新幹線'   },
-  { labelIncludes: '東北新幹線',   expected: 'jr-east',   name: '東北新幹線'   },
-  { labelIncludes: '北陸新幹線',   expected: 'jr-east',   name: '北陸新幹線'   },
-  { labelIncludes: '九州新幹線',   expected: 'jr-kyushu', name: '九州新幹線'   },
+  { labelIncludes: '東海道新幹線', expected: ['jr-ex'],                   name: '東海道新幹線' },
+  { labelIncludes: '山陽新幹線',   expected: ['jr-ex'],                   name: '山陽新幹線'   },
+  { labelIncludes: '東北新幹線',   expected: ['jr-east'],                 name: '東北新幹線'   },
+  // 北陸新幹線: 東日本出発→えきねっと(jr-east), 西日本出発→e5489(jr-west) どちらも有効
+  { labelIncludes: '北陸新幹線',   expected: ['jr-east', 'jr-west'],      name: '北陸新幹線'   },
+  // 九州新幹線: 東日本出発→jr-kyushu, 西日本出発→e5489(jr-west) どちらも有効
+  { labelIncludes: '九州新幹線',   expected: ['jr-kyushu', 'jr-west'],    name: '九州新幹線'   },
+  // 西九州新幹線: 常に e5489(jr-west)
+  { labelIncludes: '西九州新幹線', expected: ['jr-west'],                 name: '西九州新幹線' },
 ];
 
 /* ═══════════════════════════════════════════════
@@ -244,10 +248,11 @@ function checkTransportLinks(dest, departure, links) {
     for (const rule of SHINKANSEN_PROVIDER_RULES) {
       if (stepLabel.includes(rule.labelIncludes)) {
         const ctaType = l.cta?.type ?? '';
-        if (ctaType !== rule.expected) {
+        const accepted = Array.isArray(rule.expected) ? rule.expected : [rule.expected];
+        if (!accepted.includes(ctaType)) {
           fail(dest, 'T3',
-            `provider 不正: ${rule.name}→${ctaType}(期待: ${rule.expected})`,
-            `detectShinkansenProvider で ${rule.name} を 'ex' に返すよう修正`);
+            `provider 不正: ${rule.name}→${ctaType}(期待: ${accepted.join('/')}) [${departure}]`,
+            `detectShinkansenProvider で ${rule.name} を正しいproviderに返すよう修正`);
         } else {
           pass();
         }

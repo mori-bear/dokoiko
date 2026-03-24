@@ -94,14 +94,27 @@ function isShinkansenLine(label) {
 }
 
 /**
- * 新幹線ステップの予約プロバイダを路線ラベル優先で判定する。
- * 東海道・山陽 → スマートEX、JR東日本系 → えきねっと、その他 → operatorToProvider
+ * 新幹線ステップの予約プロバイダを判定する。
+ * ① 東海道・山陽 → EX（出発地問わず）
+ * ② 出発エリアが西日本圏（四国/関西/中国/九州）→ e5489
+ * ③ 路線名マップ優先（東北/上越/北陸/九州 等）
+ * ④ オペレーター → provider フォールバック
+ * @param {object} step - ルートステップ
+ * @param {string} [departure] - 出発都市名
  */
-function detectShinkansenProvider(step) {
+function detectShinkansenProvider(step, departure) {
   const label = step.label ?? '';
-  // 路線名完全一致を優先
+  // EX: 東海道・山陽 は出発地問わず常に EX
+  // ただし "山陽・九州新幹線" のような複合ラベルは除外（九州側の booking が必要）
+  if ((label.includes('東海道') || label.includes('山陽')) && !label.includes('九州')) return 'ex';
+  // JR東日本系線路は出発地問わず常に ekinet
+  const JR_EAST_ONLY = ['東北新幹線', '上越新幹線', '北海道新幹線', '山形新幹線', '秋田新幹線'];
+  if (JR_EAST_ONLY.some(l => label.includes(l))) return 'ekinet';
+  // 出発エリアが西日本圏（四国/関西/中国/九州）→ e5489（北陸・九州・西九州新幹線等）
+  const depArea = departure ? getArea(departure) : null;
+  if (['四国', '関西', '中国', '九州'].includes(depArea)) return 'e5489';
+  // 路線名マップ（完全一致 → 部分一致）
   if (SHINKANSEN_LINE_PROVIDER[label]) return SHINKANSEN_LINE_PROVIDER[label];
-  // 複合ラベル（"山陽・九州新幹線" 等）を部分一致で解決
   for (const [line, provider] of Object.entries(SHINKANSEN_LINE_PROVIDER)) {
     if (label.includes(line)) return provider;
   }
@@ -281,7 +294,7 @@ function deriveMainCta(stepGroups) {
 function bfsStepToCta(step, departure) {
   switch (step.type) {
     case 'shinkansen': {
-      const provider = detectShinkansenProvider(step);
+      const provider = detectShinkansenProvider(step, departure);
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
@@ -334,7 +347,7 @@ function bfsStepToCta(step, departure) {
 function routeStepToCta(step, from, to, departure, fromCity, city) {
   switch (step.type) {
     case 'shinkansen': {
-      const provider = detectShinkansenProvider(step);
+      const provider = detectShinkansenProvider(step, departure);
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
