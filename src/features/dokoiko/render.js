@@ -23,7 +23,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${buildTransportBlock(mainLinks, departure)}
+        ${buildTransportBlock(mainLinks, departure, city.displayName || city.name)}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
         ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
@@ -158,15 +158,36 @@ function buildCategoryBadge(city) {
 
 /* ── 交通ブロック ── */
 
-function buildTransportBlock(links, departure) {
+function buildTransportBlock(links, departure, destLabel) {
+  const noteLink    = links.find(l => l.type === 'note');
+  const cautionLinks = links.filter(l => l.type === 'note-caution');
+  const actionLinks  = links.filter(l => l.type !== 'note' && l.type !== 'note-caution');
+
+  // サマリー行（出発地 → 目的地 + 乗換回数）
+  let summaryHtml = '';
+  if (departure && destLabel && noteLink) {
+    const transfers = noteLink.transfers ?? 0;
+    const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
+    summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
+  }
+
+  // メインCTA
   let firstActionable = true;
-  const linksHtml = links.map((link) => {
-    if (link.type === 'note')         return `<div class="transport-note">${link.label}</div>`;
-    if (link.type === 'note-caution') return `<div class="transport-note transport-note--caution">${link.label}</div>`;
+  const buttonsHtml = actionLinks.map(link => {
     const html = buildLinkItem(link, firstActionable);
     if (firstActionable) firstActionable = false;
     return html;
   }).join('');
+
+  // 注意書き
+  const cautionsHtml = cautionLinks.map(l =>
+    `<div class="transport-note transport-note--caution">${l.label}</div>`
+  ).join('');
+
+  // 詳細ステップ（CTAの下に移動）
+  const stepHtml = noteLink
+    ? `<div class="transport-note transport-note--steps">${noteLink.label}</div>`
+    : '';
 
   const headingHtml = departure
     ? `<p class="transport-heading">${departure}からの行き方</p>`
@@ -175,7 +196,10 @@ function buildTransportBlock(links, departure) {
   return `
     <div class="card-section">
       ${headingHtml}
-      <div class="link-list">${linksHtml}</div>
+      ${summaryHtml}
+      <div class="link-list">${buttonsHtml}</div>
+      ${cautionsHtml}
+      ${stepHtml}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
   `;

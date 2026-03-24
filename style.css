@@ -625,10 +625,26 @@ body {
   gap: 8px;
 }
 
+.route-summary {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
 .transport-note {
   font-size: 12px;
   color: var(--text-sub);
   padding: 4px 0 2px;
+}
+
+.transport-note--steps {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: var(--bg-card, #f7f7f7);
+  border-radius: 8px;
+  line-height: 1.7;
 }
 
 .transport-note--caution {

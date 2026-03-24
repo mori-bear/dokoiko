@@ -131,7 +131,7 @@ function bfsStepsToLinks(steps, departure, city) {
     const mode = s.label ?? stepTypeLabel(s.type);
     return `${idx} ${s.from} → ${s.to}（${mode}）`;
   });
-  links.push({ type: 'note', label: noteLabels.join('　') });
+  links.push({ type: 'note', label: noteLabels.join('　'), transfers: noteLabels.length - 1 });
 
   /* 主要1リンク */
   const mainMode = detectMainMode(steps);
@@ -227,7 +227,7 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     }
   }
   if (stepLabels.length >= 1) {
-    links.push({ type: 'note', label: stepLabels.join('　') });
+    links.push({ type: 'note', label: stepLabels.join('　'), transfers: stepLabels.length - 1 });
   }
 
   /* ── 主要1リンク生成 ── */
