@@ -15,6 +15,7 @@
  */
 
 import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCalculator.js';
+import { ROUTES } from '../features/dokoiko/routes.js';
 
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
@@ -140,6 +141,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   const withStars = destinations
     .filter(d => d.type !== 'spot')
+    .filter(d => ROUTES[d.id] || d.gateway)
     .map(d => {
       const travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
       return {

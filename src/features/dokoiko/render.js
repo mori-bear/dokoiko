@@ -11,7 +11,7 @@
  *     （share-block は削除済み）
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, situation }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType }) {
   // TASK9: 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel   = stayType !== 'daytrip';

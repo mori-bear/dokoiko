@@ -10,7 +10,6 @@ const state = {
   departure:    '東京',
   stayType:     '1night',
   theme:        null,
-  situation:    'couple',
   pool:         [],
   poolIndex:    0,
 };
@@ -67,7 +66,7 @@ function draw() {
 
   const hotelLinks = buildHotelLinks(city);
 
-  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, situation: state.situation });
+  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType });
 
   const remaining = state.pool.length - state.poolIndex - 1;
   const retryBtn  = document.getElementById('retry-btn');

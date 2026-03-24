@@ -65,6 +65,18 @@ function cityLabel(city) {
    メインエントリ
 ───────────────────────────────────────────────── */
 export function resolveTransportLinks(city, departure) {
+  const links = _resolveTransportLinks(city, departure);
+  if (!links || links.length === 0) {
+    return [{
+      type:  'google-maps',
+      label: '📍 Googleマップで行き方を見る',
+      url:   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(departure)}&destination=${encodeURIComponent(city.name)}&travelmode=transit`,
+    }];
+  }
+  return links;
+}
+
+function _resolveTransportLinks(city, departure) {
   /* ── BFS優先（destination に gateway が設定されている場合） ── */
   if (city.gateway) {
     const rawSteps = buildRoute(departure, city);
