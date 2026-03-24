@@ -325,19 +325,17 @@ function checkHotelLinks(dest, hotelResult) {
     }
 
     if (l.type === 'rakuten') {
-      /* H2: 楽天 アフィラッパー + /hotel/ */
+      /* H2: 楽天 アフィラッパー + travel.rakuten.co.jp/yado/ または /hotel/ */
       if (!l.url.startsWith(RAKUTEN_AFF_PREFIX)) {
         fail(dest, 'H2', `楽天アフィラッパー未適用: ${l.url.slice(0, 60)}`,
-          'RAKUTEN_BASE にアフィリエイト URL を設定する');
+          'RAKUTEN_AFFILIATE にアフィリエイト URL を設定する');
       } else {
         const decoded = decodeURIComponent(l.url);
         if (!decoded.includes('travel.rakuten.co.jp')) {
           fail(dest, 'H2', '楽天 travel.rakuten.co.jp を含まない', null);
-        } else if (!decoded.includes('/hotel/')) {
-          fail(dest, 'H2', '楽天 /hotel/ を含まない（パック検索の可能性）',
-            'search.do?f_keyword= の URL を使用しているか確認');
-        } else if (!decoded.includes('scid=') && !decoded.includes('hb.afl.')) {
-          fail(dest, 'H2', '楽天 scid パラメータなし（アフィ無効）', null);
+        } else if (!decoded.includes('/yado/') && !decoded.includes('/hotel/')) {
+          fail(dest, 'H2', '楽天 /yado/ も /hotel/ も含まない（パックページの可能性）',
+            'buildRakutenLink の URL を確認する');
         } else {
           pass();
         }

@@ -1,7 +1,7 @@
 /**
  * 宿泊リンクビルダー
  *
- * 楽天: エリアコード検索（f_cid）— キーワード検索より確実に宿一覧に到達する
+ * 楽天: エリアページ方式（/yado/hotelArea）— 宿一覧に直接到達
  * じゃらん: キーワード検索（keyword=）— 単一encodeのみ
  */
 
@@ -13,13 +13,13 @@ const JALAN_BASE = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764
   encodeURIComponent('https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=');
 
 /**
- * 楽天トラベル URL（エリアコード方式）
+ * 楽天トラベル URL（エリアページ方式）
  * @param {object} dest
  * @returns {string|null}
  */
 function buildRakutenLink(dest) {
   if (!dest.hotelArea) return null;
-  const inner = `https://hotel.travel.rakuten.co.jp/hotel/search.do?f_flg=0&f_cid=${dest.hotelArea}`;
+  const inner = `https://travel.rakuten.co.jp/yado/${dest.hotelArea}`;
   return RAKUTEN_AFFILIATE + encodeURIComponent(inner);
 }
 

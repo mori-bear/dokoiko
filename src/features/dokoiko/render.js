@@ -223,11 +223,14 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
   }
 
   // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）
+  const bookingTargetHtml = mainCtaLink?.bookingTarget
+    ? `<p class="booking-target">${mainCtaLink.bookingTarget}</p>`
+    : '';
   const mainCtaHtml = mainCtaLink?.cta
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
          ${mainCtaLink.cta.label}
-       </a>`
+       </a>${bookingTargetHtml}`
     : '';
 
   // ステップカード（説明のみ・CTAなし）

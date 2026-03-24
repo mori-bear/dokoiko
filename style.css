@@ -675,6 +675,13 @@ body {
   line-height: 1.5;
 }
 
+.booking-target {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
 .route-summary {
   font-size: 15px;
   font-weight: 700;

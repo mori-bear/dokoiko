@@ -654,7 +654,18 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
 
   /* メインCTA（最重要ボタン）を summary の直後に挿入 */
   const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) links.push(mainCta);
+  if (mainCta) {
+    /* 予約到達駅：最初の JR 予約ステップの to 駅を付与 */
+    const firstJrStep = routes.find(s => s.type === 'shinkansen' || s.type === 'rail');
+    if (firstJrStep?.to) {
+      const stepTo = firstJrStep.to;
+      const destName = city.displayName || city.name;
+      mainCta.bookingTarget = stepTo !== destName
+        ? `${stepTo}まで予約（そこから移動）`
+        : `${stepTo}まで予約`;
+    }
+    links.push(mainCta);
+  }
   links.push(...stepGroups);
 
   return links.filter(Boolean);

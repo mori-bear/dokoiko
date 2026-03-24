@@ -49,8 +49,10 @@ console.log('\n=== 宿リンク静的検証 ===\n');
 /* ── hotelLinkBuilder ソース静的チェック ── */
 const hotelSrc = readFileSync(join(ROOT, 'src/hotel/hotelLinkBuilder.js'), 'utf8');
 
-check(hotelSrc.includes('hotel/search.do'),   '[H-src] 楽天 hotel/search.do が存在しない');
-check(hotelSrc.includes('f_cid='),            '[H-src] 楽天 f_cid= が存在しない');
+check(
+  hotelSrc.includes('travel.rakuten.co.jp/yado/') || hotelSrc.includes('hotel/search.do'),
+  '[H-src] 楽天 /yado/ も hotel/search.do も存在しない',
+);
 check(!hotelSrc.includes('/pack/'),           '[H-src] 楽天に /pack/ URL が含まれている（禁止）');
 check(hotelSrc.includes('jalan.net'),         '[H-src] じゃらん jalan.net が存在しない');
 check(
@@ -82,12 +84,14 @@ for (const dest of dests) {
     rakutenCount++;
     // アフィリエイトURLはpc=以降がencodeURIComponent済み — デコードして検査
     const decodedRakuten = decodeURIComponent(rakuten.url);
-    // H1: /hotel/search.do
-    check(decodedRakuten.includes('/hotel/search.do'),
-      `[H1] 楽天 URL に hotel/search.do がない: ${id}`, id);
-    // H2: f_cid=
-    check(decodedRakuten.includes('f_cid='),
-      `[H2] 楽天 URL に f_cid= がない: ${id}`, id);
+    // H1: /yado/ または /hotel/search.do
+    check(
+      decodedRakuten.includes('/yado/') || decodedRakuten.includes('/hotel/search.do'),
+      `[H1] 楽天 URL に /yado/ も /hotel/search.do もない: ${id}`, id,
+    );
+    // H2: travel.rakuten.co.jp を含む
+    check(decodedRakuten.includes('travel.rakuten.co.jp'),
+      `[H2] 楽天 URL に travel.rakuten.co.jp がない: ${id}`, id);
     // H3: /pack/ 禁止
     check(!decodedRakuten.includes('/pack/'),
       `[H3] 楽天 URL に /pack/ が含まれている: ${id}`, id);
