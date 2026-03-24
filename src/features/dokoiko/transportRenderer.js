@@ -22,9 +22,6 @@
  *   localMove               → Googleマップ（transit）
  */
 
-import { readFileSync }          from 'fs';
-import { fileURLToPath }         from 'url';
-import { dirname, join }         from 'path';
 import { ROUTES, CITY_TO_SHINKANSEN } from './routes.js';
 import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
 import { CITY_AIRPORT }        from '../../lib/transportCore/airportMap.js';
@@ -37,11 +34,20 @@ import {
 } from '../../transport/linkBuilder.js';
 import { buildRoute } from '../../engine/bfsEngine.js';
 
-/* ── 就航路線DB（出発地 × 到着空港） ── */
-const _root = join(dirname(fileURLToPath(import.meta.url)), '../../../');
-const FLIGHT_ROUTES = JSON.parse(
-  readFileSync(join(_root, 'data/flightRoutes.json'), 'utf8'),
-);
+/* ── 就航路線DB（Node.js / ブラウザ 両対応） ── */
+let FLIGHT_ROUTES = [];
+if (typeof process !== 'undefined' && process.versions?.node) {
+  // Node.js（テストスクリプト）
+  const { readFileSync }  = await import('fs');
+  const { fileURLToPath } = await import('url');
+  const { dirname, join } = await import('path');
+  const _root = join(dirname(fileURLToPath(import.meta.url)), '../../../');
+  FLIGHT_ROUTES = JSON.parse(readFileSync(join(_root, 'data/flightRoutes.json'), 'utf8'));
+} else {
+  // ブラウザ — import.meta.url を基点にフェッチ
+  const _url = new URL('../../../data/flightRoutes.json', import.meta.url);
+  FLIGHT_ROUTES = await fetch(_url).then(r => r.json());
+}
 
 /** 出発地 → 到着空港名 の就航路線が存在するか */
 function hasFlightRoute(departure, airportName) {
