@@ -63,16 +63,13 @@ for (const city of DESTS) {
     for (const l of hotel.links) {
       if (!checkUrl(l.url, `${city.name} 宿`)) continue;
       if (l.type === 'rakuten') {
-        if (!l.url.startsWith(RAKUTEN_AFF)) { ng(`${city.name} 楽天: アフィリエイトラッパー未適用`); }
-        else {
-          // ?pc= 内はURLエンコード済みのため、デコード後に /yado/ を確認
-          const decoded = decodeURIComponent(l.url);
-          if (!decoded.includes('/yado/')) { ng(`${city.name} 楽天: /yado/ を含まない`); }
-          else ok();
-        }
+        if (!l.url.includes('travel.rakuten.co.jp/yado/')) {
+          ng(`${city.name} 楽天: travel.rakuten.co.jp/yado/ を含まない`);
+        } else ok();
       } else if (l.type === 'jalan') {
-        if (!l.url.startsWith(JALAN_AFF)) ng(`${city.name} じゃらん: アフィリエイトラッパー未適用`);
-        else ok();
+        if (!l.url.includes('jalan.net')) {
+          ng(`${city.name} じゃらん: jalan.net を含まない`);
+        } else ok();
       }
     }
   }

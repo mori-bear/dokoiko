@@ -38,7 +38,7 @@ const { resolveTransportLinks } = await import(`file://${root}/src/features/doko
 const { buildHotelLinks }       = await import(`file://${root}/src/hotel/hotelLinkBuilder.js`);
 
 /* ── データ読み込み ── */
-const allDests = JSON.parse(readFileSync(join(root, 'data/destinations.json'), 'utf8'));
+const allDests = JSON.parse(readFileSync(join(root, 'src/data/destinations.json'), 'utf8'));
 const DESTS    = Array.isArray(allDests) ? allDests : allDests.destinations;
 
 /* ── 出発地（最低3、全主要都市） ── */
@@ -290,8 +290,8 @@ function checkTransportLinks(dest, departure, links) {
    宿リンク検証
 ═══════════════════════════════════════════════ */
 
-const RAKUTEN_AFF_PREFIX = 'https://hb.afl.rakuten.co.jp/';
-const JALAN_AFF_PREFIX   = 'https://ck.jp.ap.valuecommerce.com/';
+const RAKUTEN_PREFIX = 'https://travel.rakuten.co.jp/';
+const JALAN_PREFIX   = 'https://www.jalan.net/';
 
 function checkHotelLinks(dest, hotelResult) {
   const links = hotelResult?.links ?? [];
@@ -325,26 +325,18 @@ function checkHotelLinks(dest, hotelResult) {
     }
 
     if (l.type === 'rakuten') {
-      /* H2: 楽天 アフィラッパー + travel.rakuten.co.jp/yado/ または /hotel/ */
-      if (!l.url.startsWith(RAKUTEN_AFF_PREFIX)) {
-        fail(dest, 'H2', `楽天アフィラッパー未適用: ${l.url.slice(0, 60)}`,
-          'RAKUTEN_AFFILIATE にアフィリエイト URL を設定する');
+      /* H2: travel.rakuten.co.jp/yado/{area}/ 直リンク */
+      if (!l.url.startsWith(RAKUTEN_PREFIX) || !l.url.includes('/yado/')) {
+        fail(dest, 'H2', `楽天 travel.rakuten.co.jp/yado/ を含まない: ${l.url.slice(0, 60)}`,
+          'buildRakutenUrl の hotelArea を確認する');
       } else {
-        const decoded = decodeURIComponent(l.url);
-        if (!decoded.includes('travel.rakuten.co.jp')) {
-          fail(dest, 'H2', '楽天 travel.rakuten.co.jp を含まない', null);
-        } else if (!decoded.includes('/search') && !decoded.includes('/yado/') && !decoded.includes('/hotel/')) {
-          fail(dest, 'H2', '楽天 /search も /yado/ も /hotel/ も含まない（パックページの可能性）',
-            'buildRakutenLink の URL を確認する');
-        } else {
-          pass();
-        }
+        pass();
       }
     } else if (l.type === 'jalan') {
-      /* H3: じゃらん アフィラッパー */
-      if (!l.url.startsWith(JALAN_AFF_PREFIX)) {
-        fail(dest, 'H3', `じゃらんアフィラッパー未適用: ${l.url.slice(0, 60)}`,
-          'JALAN_BASE にアフィリエイト URL を設定する');
+      /* H3: jalan.net 直リンク */
+      if (!l.url.startsWith(JALAN_PREFIX) || !l.url.includes('keyword=')) {
+        fail(dest, 'H3', `じゃらん jalan.net?keyword= を含まない: ${l.url.slice(0, 60)}`,
+          'buildJalanUrl の keyword を確認する');
       } else {
         pass();
       }
@@ -382,13 +374,12 @@ function checkFinalUrl(dest, type, finalUrl, status) {
         'RAKUTEN_BASE の URL を確認する');
     }
   } else if (type === 'jalan') {
-    const ok = finalUrl.includes('jalan.net')
-            || finalUrl.includes('valuecommerce.com');  // リダイレクト途中も許容
+    const ok = finalUrl.includes('jalan.net');
     if (ok) {
       pass();
     } else {
       fail(dest, 'H6', `じゃらんリダイレクト先が jalan.net でない: ${finalUrl.slice(0, 80)}`,
-        'JALAN_BASE の URL を確認する');
+        'buildJalanUrl の URL を確認する');
     }
   } else {
     pass();

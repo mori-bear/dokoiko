@@ -97,14 +97,16 @@ check(!hotelSrc.includes('travel.rakuten.co.jp/search'),
   'hotelLinkBuilder.js');
 check(!hotelSrc.includes('/pack/'), '楽天にpack URLが含まれている（禁止）', 'hotelLinkBuilder.js');
 check(hotelSrc.includes('jalan.net'),       'じゃらんURLが存在しない', 'hotelLinkBuilder.js');
+// アフィリエイトURLが実際にコードとして使われていないことを確認（コメントは除外）
+const hotelNonComment = hotelSrc.split('\n').filter(l => !l.trimStart().startsWith('*') && !l.trimStart().startsWith('//')).join('\n');
 check(
-  hotelSrc.includes('safeEncode'),
-  'safeEncode 関数が存在しない',
+  !hotelNonComment.includes('hb.afl.rakuten') && !hotelNonComment.includes('valuecommerce'),
+  'アフィリエイトラッパーが実コードに残存している（hb.afl.rakuten / valuecommerce）',
   'hotelLinkBuilder.js',
 );
 check(
-  hotelSrc.includes('dest.hotelKeyword') || hotelSrc.includes('dest.name'),
-  'hotelLinkBuilder のキーワード解決ロジック（hotelKeyword/name）が存在しない',
+  hotelSrc.includes('dest.name'),
+  'hotelLinkBuilder が dest.name を使用していない',
   'hotelLinkBuilder.js',
 );
 check(

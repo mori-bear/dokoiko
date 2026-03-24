@@ -80,19 +80,21 @@ for (const dest of dests) {
 
   if (rakuten) {
     rakutenCount++;
-    // アフィリエイトURLはpc=以降がencodeURIComponent済み — デコードして検査
-    const decodedRakuten = decodeURIComponent(rakuten.url);
+    // 直リンク（アフィリエイトなし）— そのまま検査
     // H1: travel.rakuten.co.jp を含む
-    check(decodedRakuten.includes('travel.rakuten.co.jp'),
+    check(rakuten.url.includes('travel.rakuten.co.jp'),
       `[H1] 楽天 URL に travel.rakuten.co.jp がない: ${id}`, id);
     // H2: travel.rakuten.co.jp/yado/{area}/ 形式（都道府県エリアページ）
     check(
-      decodedRakuten.includes('travel.rakuten.co.jp/yado/'),
+      rakuten.url.includes('travel.rakuten.co.jp/yado/'),
       `[H2] 楽天 URL に travel.rakuten.co.jp/yado/ がない: ${id}`, id,
     );
     // H3: /pack/ 禁止
-    check(!decodedRakuten.includes('/pack/'),
+    check(!rakuten.url.includes('/pack/'),
       `[H3] 楽天 URL に /pack/ が含まれている: ${id}`, id);
+    // アフィリエイトラッパー禁止
+    check(!rakuten.url.includes('hb.afl.rakuten'),
+      `[H-aff] 楽天 URL にアフィリエイトラッパーが残存: ${id}`, id);
     // https チェック
     check(rakuten.url.startsWith('https://'),
       `[H-tls] 楽天 URL が https でない: ${id}`, id);
