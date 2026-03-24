@@ -682,6 +682,13 @@ body {
   margin-bottom: 4px;
 }
 
+.access-station-hint {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
 .cta-ok-note {
   font-size: 12px;
   color: var(--accent);

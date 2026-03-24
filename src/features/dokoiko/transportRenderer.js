@@ -95,25 +95,28 @@ function isShinkansenLine(label) {
 
 /**
  * 新幹線ステップの予約プロバイダを判定する。
- * ① 東海道・山陽 → EX（出発地問わず）
- * ② 出発エリアが西日本圏（四国/関西/中国/九州）→ e5489
- * ③ 路線名マップ優先（東北/上越/北陸/九州 等）
- * ④ オペレーター → provider フォールバック
+ * ① 出発エリアが西日本圏（四国/関西/中国/九州）→ e5489（最優先・EX誤爆防止）
+ * ② JR東日本系路線（東北/上越/北海道/山形/秋田）→ ekinet
+ * ③ 東海道・山陽（関東/東北/北海道/中部発）→ EX
+ * ④ 路線名マップ → オペレーター フォールバック
  * @param {object} step - ルートステップ
  * @param {string} [departure] - 出発都市名
  */
 function detectShinkansenProvider(step, departure) {
   const label = step.label ?? '';
-  // EX: 東海道・山陽 は出発地問わず常に EX
-  // ただし "山陽・九州新幹線" のような複合ラベルは除外（九州側の booking が必要）
-  if ((label.includes('東海道') || label.includes('山陽')) && !label.includes('九州')) return 'ex';
-  // JR東日本系線路は出発地問わず常に ekinet
+  const depArea = departure ? getArea(departure) : null;
+
+  // ① 出発エリアが西日本圏 → 常に e5489（高松/大阪/広島/福岡発など）
+  if (['四国', '関西', '中国', '九州'].includes(depArea)) return 'e5489';
+
+  // ② JR東日本系路線 → 常に ekinet（出発地問わず）
   const JR_EAST_ONLY = ['東北新幹線', '上越新幹線', '北海道新幹線', '山形新幹線', '秋田新幹線'];
   if (JR_EAST_ONLY.some(l => label.includes(l))) return 'ekinet';
-  // 出発エリアが西日本圏（四国/関西/中国/九州）→ e5489（北陸・九州・西九州新幹線等）
-  const depArea = departure ? getArea(departure) : null;
-  if (['四国', '関西', '中国', '九州'].includes(depArea)) return 'e5489';
-  // 路線名マップ（完全一致 → 部分一致）
+
+  // ③ 東海道・山陽（非西日本出発）→ EX
+  if ((label.includes('東海道') || label.includes('山陽')) && !label.includes('九州')) return 'ex';
+
+  // ④ 路線名マップ（完全一致 → 部分一致）
   if (SHINKANSEN_LINE_PROVIDER[label]) return SHINKANSEN_LINE_PROVIDER[label];
   for (const [line, provider] of Object.entries(SHINKANSEN_LINE_PROVIDER)) {
     if (label.includes(line)) return provider;
@@ -196,16 +199,24 @@ function getArea(nameOrStation) {
  */
 function scoreRouteSteps(steps, departure) {
   const meaningful = steps.filter(s => s.type !== 'localMove' && s.type !== 'transfer');
-  let score = Math.max(0, meaningful.length - 1) * 10; // 乗換回数
+  const transfers = Math.max(0, meaningful.length - 1);
+  let score = transfers * 10; // 乗換回数ペナルティ
 
-  // Task3: 高松発で岡山行き新幹線ルートを禁止（マリンライナー=在来線が正解）
+  // 直通ボーナス
+  if (transfers === 0) score -= 20;
+
+  // 総移動時間による調整（duration があるステップのみ）
+  const totalMinutes = steps.reduce((sum, s) => sum + (s.duration ?? 0), 0);
+  if (totalMinutes > 0) score += Math.floor(totalMinutes / 30); // 30分ごと +1
+
+  // 高松発で岡山行き新幹線ルートを禁止（マリンライナー=在来線が正解）
   if (departure === '高松' && steps.some(s => s.type === 'shinkansen' && s.to === '岡山')) {
     score += 100;
   }
 
   const depArea = getArea(departure);
 
-  // Task4: 四国発で新幹線あり → 在来線ルート優先（軽ペナルティ）
+  // 四国発で新幹線あり → 在来線ルート優先（軽ペナルティ）
   if (depArea === '四国' && steps.some(s => s.type === 'shinkansen')) {
     score += 20;
   }
@@ -217,19 +228,18 @@ function scoreRouteSteps(steps, departure) {
   }
 
   // エリア跨ぎ検出：出発地エリアと同じエリアを中間に「迂回」している場合 +50
-  // 例: 四国→中国→四国 のような非効率な経路
   if (depArea && areasVisited.size > 1 && areasVisited.has(depArea)) {
     score += 50;
   }
 
-  // 直前のエリアを逆戻りしていない場合も簡易チェック（同エリア2回通過 +30）
+  // エリアを逆戻り（同エリア2回通過 +30）
   let prevArea = depArea;
-  let visitedInOrder = [];
+  const visitedInOrder = [];
   for (const s of meaningful) {
     const toArea = getArea(s.to);
     if (toArea && toArea !== prevArea) {
       if (visitedInOrder.includes(toArea)) {
-        score += 30; // 不自然な遠回り
+        score += 30;
       }
       visitedInOrder.push(toArea);
       prevArea = toArea;

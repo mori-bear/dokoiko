@@ -40,8 +40,9 @@ export function buildHotelLinks(dest) {
     ],
   };
 
-  // ハブ宿: 車必須 + gatewayHub が設定されている場合のみ表示（珠洲→金沢 など）
-  if (dest.needsCar && dest.gatewayHub && dest.gatewayHub !== dest.name) {
+  // ハブ宿: 車必須 or remote/mountain + gatewayHub が設定されている場合（珠洲→金沢 など）
+  const needsHub = dest.needsCar || dest.destType === 'remote' || dest.destType === 'mountain';
+  if (needsHub && dest.gatewayHub && dest.gatewayHub !== dest.name) {
     const hubDest = { name: dest.gatewayHub, hotelArea: null };
     result.hubLinks = {
       heading: `${dest.gatewayHub}の宿（拠点として）`,

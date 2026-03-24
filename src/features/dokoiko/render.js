@@ -23,7 +23,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${buildTransportBlock(mainLinks, departure, city.displayName || city.name)}
+        ${buildTransportBlock(mainLinks, departure, city.displayName || city.name, city)}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
         ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
@@ -158,10 +158,10 @@ function buildCategoryBadge(city) {
 
 /* ── 交通ブロック ── */
 
-function buildTransportBlock(links, departure, destLabel) {
+function buildTransportBlock(links, departure, destLabel, city = null) {
   /* step-group 方式（新方式）*/
   if (links.some(l => l.type === 'step-group')) {
-    return buildTransportBlockStepwise(links, departure, destLabel);
+    return buildTransportBlockStepwise(links, departure, destLabel, city);
   }
 
   /* フォールバック: 旧方式（note + action links） */
@@ -207,9 +207,25 @@ function buildTransportBlock(links, departure, destLabel) {
   `;
 }
 
+/* ── accessStation ガイドテキスト生成 ── */
+
+function buildAccessStationHint(city) {
+  if (!city?.accessStation) return '';
+  const station = city.accessStation;
+  let moveMethod = 'そこから移動';
+  if (city.needsCar || city.destType === 'remote' || city.destType === 'mountain') {
+    moveMethod = 'レンタカーで移動';
+  } else if (station.endsWith('港')) {
+    moveMethod = 'フェリーで移動';
+  } else if (station.endsWith('空港')) {
+    moveMethod = 'そこから移動';
+  }
+  return `<p class="access-station-hint">${station.replace(/駅$/, '')}まで予約 → ${moveMethod}</p>`;
+}
+
 /* ── 交通ブロック（step-group 新方式） ── */
 
-function buildTransportBlockStepwise(links, departure, destLabel) {
+function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const summaryLink = links.find(l => l.type === 'summary');
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
@@ -226,11 +242,12 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
   const bookingTargetHtml = mainCtaLink?.bookingTarget
     ? `<p class="booking-target">${mainCtaLink.bookingTarget}</p>`
     : '';
+  const accessHintHtml = (mainCtaLink?.cta && city) ? buildAccessStationHint(city) : '';
   const mainCtaHtml = mainCtaLink?.cta
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
          ${mainCtaLink.cta.label}
-       </a>${bookingTargetHtml}`
+       </a>${bookingTargetHtml}${accessHintHtml}`
     : '';
 
   // ステップカード（説明のみ・CTAなし）
