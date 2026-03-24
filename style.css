@@ -631,6 +631,13 @@ body {
   padding: 4px 0 2px;
 }
 
+.transport-note--caution {
+  font-size: 11px;
+  color: var(--text-sub);
+  opacity: 0.75;
+  padding: 0 0 4px;
+}
+
 /* ── ボタン共通 ── */
 
 .btn {

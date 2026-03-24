@@ -97,13 +97,12 @@ function _resolveTransportLinks(city, departure) {
 }
 
 /* ─────────────────────────────────────────────────
-   BFS ステップ → リンク配列
+   BFS ステップ → リンク配列（主要1リンク方式）
 ───────────────────────────────────────────────── */
 function bfsStepsToLinks(steps, departure, city) {
-  const label = city.displayName || city.name;
   const links = [];
 
-  /* ステップノート（① ② ③ ...） */
+  /* ステップノート（全行程） */
   const noteLabels = steps.map((s, i) => {
     const idx  = ['①', '②', '③', '④'][i] ?? `${i + 1}.`;
     const mode = s.label ?? stepTypeLabel(s.type);
@@ -111,54 +110,62 @@ function bfsStepsToLinks(steps, departure, city) {
   });
   links.push({ type: 'note', label: noteLabels.join('　') });
 
-  /* 各ステップのリンク生成 */
-  for (const step of steps) {
-    if (step.type === 'shinkansen') {
-      const provider = operatorToProvider(step.operator ?? '');
-      const jrLink   = buildJrLink(provider, { from: step.from, to: step.to });
-      if (jrLink) links.push(jrLink);
+  /* 主要1リンク */
+  const mainMode = detectMainMode(steps);
 
-    } else if (step.type === 'rail') {
-      if (step.operator && step.operator.startsWith('JR')) {
-        const provider = operatorToProvider(step.operator);
-        const jrLink   = buildJrLink(provider, { from: step.from, to: step.to });
-        if (jrLink) links.push(jrLink);
-      } else {
-        /* 私鉄 → Googleマップ transit */
-        links.push(buildGoogleMapsLink(
-          step.from, step.to, 'transit',
-          `${step.from} → ${step.to}（${step.label ?? '電車'}）`,
-        ));
-      }
+  if (mainMode === 'ferry') {
+    const ferryStep = steps.find(s => s.type === 'ferry');
+    const ferryLink = buildFerryLink(ferryStep.from, ferryStep.ferryUrl ?? null, ferryStep.ferryOperator ?? null);
+    if (ferryLink) links.push(ferryLink);
 
-    } else if (step.type === 'flight') {
-      const fromIata = CITY_AIRPORT[step.from];
-      if (fromIata && step.to) {
-        const skyLink = buildSkyscannerLink(fromIata, step.to);
-        if (skyLink) links.push(skyLink);
-      }
-
-    } else if (step.type === 'local') {
-      links.push(buildGoogleMapsLink(
-        step.from, step.to, 'transit',
-        `${step.from} → ${step.to}（Googleマップ）`,
-      ));
-
-    } else if (step.type === 'ferry') {
-      const ferryLink = buildFerryLink(step.from, step.ferryUrl ?? null, step.ferryOperator ?? null);
-      if (ferryLink) links.push(ferryLink);
-
-    } else if (step.type === 'car') {
-      links.push(buildGoogleMapsLink(step.from, step.to, 'driving', `${step.from} → ${step.to}（ドライブ）`));
-      links.push(buildRentalLink());
+  } else if (mainMode === 'flight') {
+    const flightStep = steps.find(s => s.type === 'flight');
+    const fromIata   = CITY_AIRPORT[flightStep.from];
+    if (fromIata && flightStep.to) {
+      const skyLink = buildSkyscannerLink(fromIata, flightStep.to);
+      if (skyLink) links.push(skyLink);
     }
+
+  } else if (mainMode === 'shinkansen' || mainMode === 'rail') {
+    const jrStep = steps.find(s => s.type === 'shinkansen') ?? steps.find(s => s.type === 'rail');
+    if (jrStep) {
+      if (jrStep.operator && !jrStep.operator.startsWith('JR')) {
+        /* 私鉄 → Googleマップ */
+        links.push(buildGoogleMapsLink(jrStep.from, jrStep.to, 'transit', `${jrStep.from} → ${jrStep.to}（${jrStep.label ?? '電車'}）`));
+      } else {
+        const provider = operatorToProvider(jrStep.operator ?? '');
+        const jrLink   = buildJrLink(provider, { from: jrStep.from, to: jrStep.to });
+        if (jrLink) {
+          links.push(jrLink);
+          links.push({ type: 'note-caution', label: '※オンライン予約不可の場合はみどりの窓口をご利用ください' });
+        }
+      }
+    }
+
+  } else if (mainMode === 'car') {
+    const carStep = steps.find(s => s.type === 'car');
+    links.push(buildGoogleMapsLink(carStep.from, carStep.to, 'driving', `${carStep.from} → ${carStep.to}（ドライブ）`));
+    links.push(buildRentalLink());
   }
 
-  return dedupeByUrl(links.filter(Boolean));
+  return links.filter(Boolean);
 }
 
 /* ─────────────────────────────────────────────────
-   ルートステップ → リンク配列
+   主要モード判定（ルート全体から最重要モードを1つ選ぶ）
+───────────────────────────────────────────────── */
+function detectMainMode(steps) {
+  if (steps.some(s => s.type === 'ferry'))      return 'ferry';
+  if (steps.some(s => s.type === 'flight'))     return 'flight';
+  if (steps.some(s => s.type === 'shinkansen')) return 'shinkansen';
+  if (steps.some(s => s.type === 'rail'))       return 'rail';
+  if (steps.some(s => s.type === 'bus'))        return 'bus';
+  if (steps.some(s => s.type === 'car'))        return 'car';
+  return 'unknown';
+}
+
+/* ─────────────────────────────────────────────────
+   ルートステップ → リンク配列（主要1リンク方式）
 ───────────────────────────────────────────────── */
 function buildLinksFromRoutes(routes, city, departure, fromCity) {
   const co    = coords(city);
@@ -171,7 +178,7 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     return CITY_TO_SHINKANSEN[railName] ?? CITY_TO_SHINKANSEN[departure] ?? railName;
   }
 
-  /* ── ステップノート ① ② を先頭に ── */
+  /* ── ステップノート（全行程を1行で） ── */
   const stepLabels = [];
   for (let i = 0; i < routes.length; i++) {
     const step = routes[i];
@@ -187,68 +194,87 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
     } else if (step.type === 'flight') {
       stepLabels.push(`${idx} ${departure} → ${step.to}（${mode}）`);
     } else if (step.type === 'car') {
-      stepLabels.push(`${idx} ${from} → ${label}（${mode}）`);
+      stepLabels.push(`${idx} ${from} → ${label}（レンタカー）`);
     } else if (step.type === 'ferry') {
-      stepLabels.push(`${idx} ${step.from ?? ''} → ${label}（${mode}）`);
+      stepLabels.push(`${idx} ${step.from ?? ''} → ${label}（フェリー）`);
     } else if (step.type === 'bus') {
       stepLabels.push(`${idx} ${from} → ${label}（${mode}）`);
     } else if (step.type === 'localMove') {
       stepLabels.push(`${idx} ${step.from ?? ''} → ${step.to ?? label}（Googleマップ）`);
     }
   }
-
   if (stepLabels.length >= 1) {
     links.push({ type: 'note', label: stepLabels.join('　') });
   }
 
-  /* ── 各ステップのリンク生成 ── */
-  for (const step of routes) {
-    if (step.type === 'shinkansen' || step.type === 'rail') {
-      const from     = step.step === 1
+  /* ── 主要1リンク生成 ── */
+  const mainMode = detectMainMode(routes);
+
+  if (mainMode === 'ferry') {
+    /* フェリー → フェリー予約1本のみ */
+    const ferryStep = routes.find(s => s.type === 'ferry');
+    const ferryLink = buildFerryLink(ferryStep.from ?? '', ferryStep.ferryUrl ?? null, ferryStep.ferryOperator ?? null);
+    if (ferryLink) links.push(ferryLink);
+
+  } else if (mainMode === 'flight') {
+    /* 飛行機 → Skyscanner 1本のみ */
+    const flightStep = routes.find(s => s.type === 'flight');
+    const fromIata   = CITY_AIRPORT[departure] || fromCity.iata;
+    if (fromIata && flightStep.to) {
+      const skyLink = buildSkyscannerLink(fromIata, flightStep.to);
+      if (skyLink) links.push(skyLink);
+    }
+
+  } else if (mainMode === 'shinkansen' || mainMode === 'rail') {
+    /* 鉄道 → 有効な最初のステップ1本のみ + 注意書き
+       ※ 出発地と to が同じ（大阪→新大阪スキップ等）は飛ばして次のstepを使う */
+    let found = null;
+    for (const step of routes) {
+      if (step.type !== 'shinkansen' && step.type !== 'rail') continue;
+      const from = step.step === 1
         ? ((step.type === 'shinkansen') ? shinkansenFrom() : fromCity.rail.replace(/駅$/, ''))
         : step.from ?? '';
       if (from === step.to) continue;
-      const provider = operatorToProvider(step.operator ?? '');
-      const jrLink   = buildJrLink(provider, { from, to: step.to });
-      if (jrLink) links.push(jrLink);
-
-    } else if (step.type === 'flight') {
-      const fromIata = CITY_AIRPORT[departure] || fromCity.iata;
-      // 飛行機不可（fromIata/to 未解決）なら出さない
-      if (fromIata && step.to) {
-        const skyLink = buildSkyscannerLink(fromIata, step.to);
-        if (skyLink) links.push(skyLink);
-      }
-
-    } else if (step.type === 'car') {
-      const origin    = step.from ? `${step.from}駅` : fromCity.rail;
-      const mapsLabel = `${step.from ?? departure} → ${label}（Googleマップ）`;
-      links.push(buildGoogleMapsLink(origin, label, 'driving', mapsLabel, co));
-      links.push(buildRentalLink());
-
-    } else if (step.type === 'ferry') {
-      const fromPort  = step.from ?? '';
-      const ferryLink = buildFerryLink(fromPort, step.ferryUrl ?? null, step.ferryOperator ?? null);
-      if (ferryLink) links.push(ferryLink);
-      if (!step.noLocalMaps) {
-        const mapsLabel = `${fromPort} → ${label}（Googleマップ）`;
-        links.push(buildGoogleMapsLink(fromPort, label, 'transit', mapsLabel, co));
-      }
-
-    } else if (step.type === 'localMove') {
-      const from      = step.from ?? '';
-      const to        = step.to ?? label;
-      const mapsLabel = `${from} → ${to}（Googleマップ）`;
-      links.push(buildGoogleMapsLink(from, to, 'transit', mapsLabel));
-
-    } else if (step.type === 'bus') {
-      const origin    = step.from ? `${step.from}駅` : fromCity.rail;
-      const mapsLabel = `${step.from ?? departure} → ${label}（Googleマップ）`;
-      links.push(buildGoogleMapsLink(origin, label, 'transit', mapsLabel, co));
+      found = { step, from };
+      break;
     }
+    if (found) {
+      const { step: jrStep, from } = found;
+      const provider = operatorToProvider(jrStep.operator ?? '');
+      const jrLink   = buildJrLink(provider, { from, to: jrStep.to });
+      if (jrLink) {
+        links.push(jrLink);
+        links.push({ type: 'note-caution', label: '※オンライン予約不可の場合はみどりの窓口をご利用ください' });
+      }
+    } else {
+      /* 有効なJRステップなし（出発地=乗換駅など）→ バス/ローカル移動をGoogle Maps で補完 */
+      const busStep = routes.find(s => s.type === 'bus' || s.type === 'localMove');
+      if (busStep) {
+        const origin    = busStep.from ?? fromCity.rail;
+        const dest      = busStep.to ?? label;
+        const mapsLabel = `${busStep.from ?? departure} → ${dest}（Googleマップ）`;
+        links.push(buildGoogleMapsLink(origin, dest, 'transit', mapsLabel, co));
+      }
+    }
+    /* 車ステップが含まれる場合はレンタカーも追加 */
+    if (routes.some(s => s.type === 'car')) links.push(buildRentalLink());
+
+  } else if (mainMode === 'car') {
+    /* 車のみ → Google Maps + レンタカー */
+    const carStep   = routes.find(s => s.type === 'car');
+    const origin    = carStep.from ? `${carStep.from}駅` : fromCity.rail;
+    const mapsLabel = `${carStep.from ?? departure} → ${label}（Googleマップ）`;
+    links.push(buildGoogleMapsLink(origin, label, 'driving', mapsLabel, co));
+    links.push(buildRentalLink());
+
+  } else if (mainMode === 'bus') {
+    /* バス → Google Maps transit */
+    const origin    = fromCity.rail;
+    const mapsLabel = `${departure} → ${label}（Googleマップ）`;
+    links.push(buildGoogleMapsLink(origin, label, 'transit', mapsLabel, co));
   }
 
-  return dedupeByUrl(links.filter(Boolean));
+  return links.filter(Boolean);
 }
 
 /* ─────────────────────────────────────────────────

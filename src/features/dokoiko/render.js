@@ -161,7 +161,8 @@ function buildCategoryBadge(city) {
 function buildTransportBlock(links) {
   let firstActionable = true;
   const linksHtml = links.map((link) => {
-    if (link.type === 'note') return `<div class="transport-note">${link.label}</div>`;
+    if (link.type === 'note')        return `<div class="transport-note">${link.label}</div>`;
+    if (link.type === 'note-caution') return `<div class="transport-note transport-note--caution">${link.label}</div>`;
     const html = buildLinkItem(link, firstActionable);
     if (firstActionable) firstActionable = false;
     return html;

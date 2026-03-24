@@ -17,7 +17,7 @@ const JALAN_BASE = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764
  * @returns {{ heading: string, links: Array }} — null を返さない
  */
 export function buildHotelLinks(dest) {
-  const keyword = dest.hotelSearch || dest.name || '旅先';
+  const keyword = dest.hotelSearch || dest.displayName || dest.name || '旅先';
   const enc     = encodeURIComponent;
 
   return {
