@@ -24,7 +24,7 @@
 
 import { ROUTES, CITY_TO_SHINKANSEN } from './routes.js';
 import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
-import { CITY_AIRPORT }        from '../../lib/transportCore/airportMap.js';
+import { CITY_AIRPORT }        from '../../utilities/airportMap.js';
 import {
   buildGoogleMapsLink,
   buildSkyscannerLink,
@@ -287,6 +287,81 @@ export function resolveTransportLinks(city, departure) {
   return links;
 }
 
+/* ─────────────────────────────────────────────────
+   destination metadata から自動リンク生成
+   ROUTES 未定義・gateway 未設定の destination 用
+   「準備中」は絶対に返さない
+───────────────────────────────────────────────── */
+function buildAutoLinks(city, departure, fromCity) {
+  const label  = cityLabel(city);
+  const origin = fromCity?.rail?.replace(/駅$/, '') ?? departure;
+  const destSt = (city.accessStation ?? city.railGateway ?? label).replace(/駅$/, '');
+
+  const stepGroups = [];
+
+  /* ── 飛行機（airportGateway あり + 就航路線DB 一致） ── */
+  if (city.airportGateway) {
+    const fromIata = CITY_AIRPORT[departure] ?? null;
+    if (fromIata && hasFlightRoute(departure, city.airportGateway)) {
+      const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
+      if (flightCta) {
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `① ${departure} → ${city.airportGateway}（飛行機）`,
+          cta: flightCta,
+          caution: null,
+        });
+      }
+    }
+  }
+
+  /* ── JR 予約（railProvider 設定あり） ── */
+  if (city.railProvider) {
+    const jrCta = buildJrLink(city.railProvider);
+    if (jrCta) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `① ${origin} → ${destSt}（鉄道）`,
+        cta: jrCta,
+        caution: null,
+      });
+    }
+  }
+
+  /* ── フェリー（ferryGateway あり） ── */
+  if (city.ferryGateway) {
+    const ferryCta = buildFerryLink(city.ferryGateway);
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `② ${city.ferryGateway} → ${label}（フェリー）`,
+      cta: ferryCta,
+      caution: null,
+    });
+  }
+
+  /* ── Google Maps（常時保証） ── */
+  const gmapCta = buildGoogleMapsLink(
+    fromCity?.rail ?? departure,
+    destSt,
+    'transit',
+    '📍 行き方を見る（Googleマップ）',
+    city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null,
+  );
+  stepGroups.push({
+    type: 'step-group',
+    stepLabel: `① ${departure} → ${label}（Googleマップ）`,
+    cta: gmapCta,
+    caution: null,
+  });
+
+  const links = [];
+  links.push({ type: 'summary', transfers: Math.max(0, stepGroups.length - 1) });
+  const mainCta = deriveMainCta(stepGroups);
+  if (mainCta) links.push(mainCta);
+  links.push(...stepGroups);
+  return links;
+}
+
 function _resolveTransportLinks(city, departure) {
   /* ── BFS優先（destination に gateway が設定されている場合） ── */
   if (city.gateway) {
@@ -300,8 +375,9 @@ function _resolveTransportLinks(city, departure) {
   const rawRoutes = ROUTES[city.id];
   const fromCity  = DEPARTURE_CITY_INFO[departure];
 
+  /* ROUTES 未定義、または出発地未登録の場合: metadata から自動生成（「準備中」禁止） */
   if (!rawRoutes || !fromCity) {
-    return [{ type: 'note', label: '現在準備中です' }];
+    return buildAutoLinks(city, departure, fromCity);
   }
 
   /* ── 前処理: 無効 step の除去 ── */
