@@ -35,7 +35,8 @@ function buildLinkPair(keyword) {
  * @returns {{ heading: string, links: Array, hubLinks?: {heading, links} }}
  */
 export function buildHotelLinks(dest) {
-  const keyword = dest.hotelSearch || dest.displayName || dest.name || '旅先';
+  const base    = dest.hotelSearch || dest.displayName || dest.name || '旅先';
+  const keyword = `${base} ホテル`;
 
   const result = {
     heading: `${dest.name || keyword}の宿を探す`,

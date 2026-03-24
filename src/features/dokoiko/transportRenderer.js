@@ -656,13 +656,28 @@ function buildLinksFromRoutes(routes, city, departure, fromCity) {
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
     /* 予約到達駅：最初の JR 予約ステップの to 駅を付与 */
-    const firstJrStep = routes.find(s => s.type === 'shinkansen' || s.type === 'rail');
-    if (firstJrStep?.to) {
+    const firstJrIdx = routes.findIndex(s => s.type === 'shinkansen' || s.type === 'rail');
+    if (firstJrIdx !== -1) {
+      const firstJrStep = routes[firstJrIdx];
       const stepTo = firstJrStep.to;
       const destName = city.displayName || city.name;
-      mainCta.bookingTarget = stepTo !== destName
-        ? `${stepTo}まで予約（そこから移動）`
-        : `${stepTo}まで予約`;
+      if (stepTo !== destName) {
+        /* 次ステップの移動手段をラベル化 */
+        const nextStep = routes[firstJrIdx + 1];
+        const nextModeLabel = nextStep
+          ? (nextStep.type === 'car'        ? 'レンタカー'
+           : nextStep.type === 'bus'        ? 'バス'
+           : nextStep.type === 'ferry'      ? 'フェリー'
+           : nextStep.type === 'flight'     ? '飛行機'
+           : nextStep.type === 'rail'       ? '在来線'
+           : nextStep.type === 'shinkansen' ? '新幹線'
+           : '移動')
+          : '移動';
+        const firstModeLabel = firstJrStep.type === 'shinkansen' ? '新幹線' : '電車';
+        mainCta.bookingTarget = `${stepTo}まで${firstModeLabel} → ${nextModeLabel}で${destName}へ`;
+      } else {
+        mainCta.bookingTarget = `${stepTo}まで予約`;
+      }
     }
     links.push(mainCta);
   }

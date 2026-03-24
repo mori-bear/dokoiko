@@ -223,6 +223,11 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
   }
 
   // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）
+  const bookingCtaTypes = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'skyscanner', 'ferry'];
+  const isBookingCta = mainCtaLink?.cta && bookingCtaTypes.includes(mainCtaLink.cta.type);
+  const okNoteHtml = isBookingCta
+    ? `<p class="cta-ok-note">※このボタンだけ押せばOKです</p>`
+    : '';
   const bookingTargetHtml = mainCtaLink?.bookingTarget
     ? `<p class="booking-target">${mainCtaLink.bookingTarget}</p>`
     : '';
@@ -230,7 +235,7 @@ function buildTransportBlockStepwise(links, departure, destLabel) {
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
          ${mainCtaLink.cta.label}
-       </a>${bookingTargetHtml}`
+       </a>${okNoteHtml}${bookingTargetHtml}`
     : '';
 
   // ステップカード（説明のみ・CTAなし）
@@ -287,9 +292,12 @@ function buildHotelSection(section) {
 function buildStayBlock(hotelLinks) {
   if (!hotelLinks?.links?.length) return '';
   // ハブ宿（拠点）を先に表示（needsCar+gatewayHub がある場合のみ）
-  const hubHtml = hotelLinks.hubLinks?.links?.length
-    ? buildHotelSection(hotelLinks.hubLinks)
-    : '';
+  let hubHtml = '';
+  if (hotelLinks.hubLinks?.links?.length) {
+    const hubName = hotelLinks.hubLinks.heading.replace('の宿（拠点として）', '');
+    hubHtml = `<p class="hub-note">※このエリアは宿が少ないため、拠点都市（${hubName}）の宿もおすすめしています</p>` +
+              buildHotelSection(hotelLinks.hubLinks);
+  }
   return `
     <div class="stay-block">
       ${hubHtml}
