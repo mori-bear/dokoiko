@@ -106,7 +106,10 @@ function detectShinkansenProvider(step, departure) {
   const label = step.label ?? '';
   const depArea = departure ? getArea(departure) : null;
 
-  // ① 出発エリアが西日本圏 → 常に e5489（高松/大阪/広島/福岡発など）
+  // ① 高松発は強制ロック（EX誤爆ゼロ保証）
+  if (departure === '高松') return 'e5489';
+
+  // ② 出発エリアが西日本圏 → 常に e5489（大阪/広島/福岡発など）
   if (['四国', '関西', '中国', '九州'].includes(depArea)) return 'e5489';
 
   // ② JR東日本系路線 → 常に ekinet（出発地問わず）
@@ -595,15 +598,34 @@ function bfsStepsToLinks(steps, departure, city) {
   return links.filter(Boolean);
 }
 
+/* ── 四国出発 + 本州行きルートの自動補完 ──
+   高松/高知/徳島/松山 発で新幹線ステップがある場合、
+   マリンライナー（→岡山）を先頭に自動挿入する。
+   routes.js に明示的に from:'岡山' があるステップは挿入不要。
+*/
+const SHIKOKU_DEPARTURES_SET = new Set(['高松', '高知', '徳島', '松山']);
+function injectMarinerStep(steps, dep) {
+  if (!SHIKOKU_DEPARTURES_SET.has(dep)) return steps;
+  const hasShinkansenWithOkayama = steps.some(s => s.type === 'shinkansen' && s.from === '岡山');
+  if (hasShinkansenWithOkayama) return steps; // 既に岡山起点として定義済み
+  if (!steps.some(s => s.type === 'shinkansen')) return steps; // 新幹線なしは挿入不要
+  // マリンライナーステップを先頭に挿入
+  const mariner = { step: 0, from: dep, to: '岡山', type: 'rail', operator: 'JR四国', label: 'マリンライナー' };
+  return [mariner, ...steps];
+}
+
 /* ─────────────────────────────────────────────────
    ルートステップ → リンク配列（区間ごとCTA方式）
 ───────────────────────────────────────────────── */
-function buildLinksFromRoutes(routes, city, departure, fromCity) {
+function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
+  const routes = injectMarinerStep(routesInput, departure);
   const label = cityLabel(city);
   const links = [];
 
   /* ── 新幹線乗車駅を解決（大阪→新大阪 等） ── */
   function shinkansenFrom() {
+    // 四国出発の場合は岡山が新幹線乗車駅
+    if (SHIKOKU_DEPARTURES_SET.has(departure)) return '岡山';
     const railName = fromCity.rail.replace(/駅$/, '');
     return CITY_TO_SHINKANSEN[railName] ?? CITY_TO_SHINKANSEN[departure] ?? railName;
   }
