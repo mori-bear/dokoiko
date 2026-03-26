@@ -210,7 +210,8 @@ function deriveMainCta(stepGroups) {
 function bfsStepToCta(step, departure) {
   switch (step.type) {
     case 'shinkansen': {
-      const provider = detectShinkansenProvider(step, departure);
+      // グラフ由来のステップは provider が直接設定されている
+      const provider = step.provider ?? detectShinkansenProvider(step, departure);
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
@@ -220,15 +221,23 @@ function bfsStepToCta(step, departure) {
       if (isIcRail(step)) {
         return { cta: buildGoogleMapsLink(step.from, step.to, 'transit', '📍 Googleマップで確認'), caution: IC_CAUTION };
       }
-      return { cta: buildJrLink(operatorToProvider(step.operator ?? '')), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
+      // 特急など予約が必要なJR在来線: グラフ由来の provider を直接使用
+      const provider = step.provider ?? operatorToProvider(step.operator ?? '');
+      return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'flight': {
-      const fromIata = CITY_AIRPORT[step.from] ?? CITY_AIRPORT[departure] ?? null;
+      // グラフ由来: step.fromIata が直接設定される
+      const fromIata = step.fromIata ?? CITY_AIRPORT[step.from] ?? CITY_AIRPORT[departure] ?? null;
       if (fromIata && step.to) return { cta: buildSkyscannerLink(fromIata, step.to) ?? null, caution: null };
       return { cta: null, caution: null };
     }
-    case 'ferry':
+    case 'ferry': {
+      // グラフ由来: step.destId がある場合は目的地IDベースの正確なフェリーリンク
+      if (step.destId) {
+        return { cta: buildFerryLinkForDest(step.destId, step.from ?? '', step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
+      }
       return { cta: buildFerryLink(step.from ?? '', step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
+    }
     case 'bus':
     case 'localMove':
       return { cta: buildGoogleMapsLink(step.from ?? '', step.to ?? '', 'transit', '📍 Googleマップで確認'), caution: null };
@@ -604,13 +613,41 @@ function buildAutoLinks(city, departure, fromCity) {
    内部ルーター（優先順位: BFS > 出発地特例 > 汎用+スコア > 自動生成）
 ══════════════════════════════════════════════════════ */
 
+/**
+ * BFS ルートの妥当性チェック。
+ * グラフの構造的欠落（ferry省略・陸路目的地への飛行機ルートなど）を検出し、
+ * 不適切なルートを fallback に戻す。
+ *
+ * @param {Array} steps  — BFS step 配列
+ * @param {object} city  — destination エントリ
+ * @returns {boolean}    — true = BFS を採用, false = fallback を使う
+ */
+function isBfsRouteValid(steps, city) {
+  const hasFlight = steps.some(s => s.type === 'flight');
+  const hasFerry  = steps.some(s => s.type === 'ferry');
+
+  // 飛行機ルートだが airportGateway がない → 陸路目的地への飛行機は不適切
+  if (hasFlight && !city.airportGateway) return false;
+
+  // railProvider がある（鉄道でアクセス可能）のに飛行機ルートが選ばれた
+  // → ホップ数優先 BFS の誤選択。routes.js / buildAutoLinks の鉄道ルートを使う
+  if (hasFlight && city.railProvider) return false;
+
+  // ferryGateway がある（島や港目的地）のに ferry step がない
+  // → グラフが ferry 経路を bus/localMove で省略している → 詳細 fallback を使う
+  if (city.ferryGateway && !hasFerry) return false;
+
+  return true;
+}
+
 function _resolve(city, departure) {
-  if (city.gateway) {
-    const rawSteps = buildRoute(departure, city);
-    if (rawSteps[0]?.url) return rawSteps; // fallback リンクオブジェクト
-    return bfsStepsToLinks(rawSteps, departure, city);
+  /* ── Phase 1: transportGraph.json BFS を最優先で試みる ── */
+  const bfsSteps = buildRoute(departure, city);
+  if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city)) {
+    return bfsStepsToLinks(bfsSteps, departure, city);
   }
 
+  /* ── Fallback: routes.js 手動定義 or metadata 自動生成 ── */
   const departureRoute = ROUTES[`${city.id}@${departure}`];
   const defaultRoute   = ROUTES[city.id];
   const fromCity       = DEPARTURE_CITY_INFO[departure];
