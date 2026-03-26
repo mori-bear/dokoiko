@@ -233,7 +233,7 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // サマリー行（Phase 2: ウェイポイント付き経路表示）
+  // サマリー行（Phase 3: ウェイポイント + 日帰り/宿泊バッジ）
   let summaryHtml = '';
   if (departure && destLabel) {
     const transfers   = summaryLink?.transfers ?? 0;
@@ -242,7 +242,13 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
     const routeStr    = (waypoints && waypoints.length >= 2)
       ? waypoints.join(' → ')
       : `${departure} → ${destLabel}`;
-    summaryHtml = `<div class="route-summary">${routeStr}（${transferStr}）</div>`;
+    const sr = summaryLink?.stayRecommend;
+    const stayBadge = sr === 'daytrip-ok'
+      ? `<span class="stay-badge stay-badge--ok">日帰りOK</span>`
+      : sr === 'overnight'
+        ? `<span class="stay-badge stay-badge--overnight">1泊以上推奨</span>`
+        : '';
+    summaryHtml = `<div class="route-summary">${routeStr}（${transferStr}）${stayBadge}</div>`;
   }
 
   // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）

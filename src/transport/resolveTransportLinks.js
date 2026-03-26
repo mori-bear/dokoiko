@@ -61,6 +61,26 @@ const BUS_HUB_STATION = {
   '那覇': '那覇バスターミナル',
 };
 
+/* ── Phase 3: 空港の表示名正規化 ── */
+const AIRPORT_LABEL_MAP = {
+  '大阪国際空港': '伊丹空港',
+  '関西国際空港': '関西空港',
+  '新千歳空港':   '新千歳空港',
+};
+
+function formatAirportLabel(airport) {
+  if (!airport) return null;
+  const base = airport.replace(/\s*(国内線|国際線)?ターミナル.*$/, '').trim();
+  return AIRPORT_LABEL_MAP[base] ?? base;
+}
+
+/* ── Phase 3: 移動時間 → 日帰り/宿泊推奨 ── */
+function getStayRecommend(city) {
+  const t = city.travelTimeMinutes ?? 999;
+  if (t < 180) return 'daytrip-ok';
+  return 'overnight';
+}
+
 /* ── Phase 2: 交通モードアイコン ── */
 function stepTypeIcon(type) {
   const M = {
@@ -77,18 +97,21 @@ function stepTypeIcon(type) {
  * - その他: DEPARTURE_CITY_INFO の rail 駅名
  */
 function getDepartureLabel(departure, stepType) {
+  if (stepType === 'flight') {
+    return formatAirportLabel(DEPARTURE_CITY_INFO[departure]?.airport) ?? departure;
+  }
   if (stepType === 'shinkansen') {
     return SHINKANSEN_HUB_STATION[departure] ?? departure;
   }
   if (stepType === 'bus') {
     return BUS_HUB_STATION[departure] ?? (DEPARTURE_CITY_INFO[departure]?.rail?.replace(/駅$/, '') + '駅') ?? departure;
   }
-  // rail / flight / ferry / localMove
+  // rail / ferry / localMove / car
   const station = DEPARTURE_CITY_INFO[departure]?.rail;
   return station ? station.replace(/駅$/, '') : departure;
 }
 
-/* ── Phase 2: ルートのウェイポイント配列を構築 ── */
+/* ── Phase 2: ルートのウェイポイント配列を構築（BFS steps 用）── */
 function buildWaypoints(steps, departure, city) {
   const label = cityLabel(city);
   const pts   = [getDepartureLabel(departure, steps[0]?.type ?? 'rail')];
@@ -98,7 +121,20 @@ function buildWaypoints(steps, departure, city) {
     if (to && to !== label && to !== pts[pts.length - 1]) pts.push(to);
   }
   if (pts[pts.length - 1] !== label) pts.push(label);
-  // 連続重複除去
+  return pts.filter((v, i) => i === 0 || v !== pts[i - 1]);
+}
+
+/* ── Phase 3: ルートのウェイポイント配列を構築（routes.js steps 用）── */
+function buildWaypointsFromRouteSteps(routes, departure, city) {
+  const label = cityLabel(city);
+  const firstMeaningful = routes.find(s => s.type !== 'localMove');
+  const pts = [getDepartureLabel(departure, firstMeaningful?.type ?? 'rail')];
+  for (const step of routes) {
+    if (step.type === 'localMove') continue;
+    const to = step.to ?? label;
+    if (to && to !== pts[pts.length - 1]) pts.push(to);
+  }
+  if (pts[pts.length - 1] !== label) pts.push(label);
   return pts.filter((v, i) => i === 0 || v !== pts[i - 1]);
 }
 
@@ -414,13 +450,14 @@ function injectMarinerStep(steps, dep) {
 function bfsStepsToLinks(steps, departure, city) {
   const links = [];
 
-  /* ── summary（乗換回数 + ウェイポイント）── */
+  /* ── summary（乗換回数 + ウェイポイント + 日帰り判定）── */
   const meaningfulSteps = steps.filter(s => s.type !== 'localMove');
   const waypoints       = buildWaypoints(steps, departure, city);
   links.push({
     type: 'summary',
     transfers: Math.max(0, meaningfulSteps.length - 1),
     waypoints,
+    stayRecommend: getStayRecommend(city),
   });
 
   /* ── step-group 生成 ── */
@@ -497,7 +534,13 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
   }
 
   const meaningfulSteps = routes.filter(s => s.type !== 'localMove');
-  links.push({ type: 'summary', transfers: Math.max(0, meaningfulSteps.length - 1) });
+  const routeWaypoints  = buildWaypointsFromRouteSteps(routes, departure, city);
+  links.push({
+    type: 'summary',
+    transfers: Math.max(0, meaningfulSteps.length - 1),
+    waypoints: routeWaypoints,
+    stayRecommend: getStayRecommend(city),
+  });
 
   const stepGroups = [];
   let displayIdx   = 0;
@@ -506,29 +549,36 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type, step.operator ?? '');
 
     const from = step.step === 1
-      ? ((step.type === 'shinkansen') ? shinkansenFrom() : fromCity.rail.replace(/駅$/, ''))
+      ? (step.type === 'shinkansen'
+          ? shinkansenFrom()
+          : step.type === 'flight'
+            ? (formatAirportLabel(fromCity.airport) ?? departure)
+            : fromCity.rail.replace(/駅$/, ''))
       : step.from ?? '';
     const to   = step.to ?? label;
 
     if ((step.type === 'shinkansen' || step.type === 'rail') && from === to) continue;
 
+    const icon = stepTypeIcon(step.type);
     let stepLabel;
     switch (step.type) {
       case 'shinkansen':
       case 'rail':
-        stepLabel = `${stepIdx(displayIdx)} ${from} → ${to}（${mode}）`; break;
-      case 'flight':
-        stepLabel = `${stepIdx(displayIdx)} ${departure} → ${to}（飛行機）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${to}（${mode}）`; break;
+      case 'flight': {
+        const airportFrom = formatAirportLabel(fromCity.airport) ?? departure;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${airportFrom} → ${to}（飛行機）`; break;
+      }
       case 'ferry':
-        stepLabel = `${stepIdx(displayIdx)} ${step.from ?? from} → ${label}（フェリー）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${step.from ?? from} → ${label}（フェリー）`; break;
       case 'car':
-        stepLabel = `${stepIdx(displayIdx)} ${from} → ${label}（レンタカー）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${label}（レンタカー）`; break;
       case 'bus':
-        stepLabel = `${stepIdx(displayIdx)} ${from} → ${label}（${mode}）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${label}（${mode}）`; break;
       case 'localMove':
-        stepLabel = `${stepIdx(displayIdx)} ${step.from ?? from} → ${step.to ?? label}（Googleマップ）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${step.from ?? from} → ${step.to ?? label}（Googleマップ）`; break;
       default:
-        stepLabel = `${stepIdx(displayIdx)} ${from} → ${to}（${mode}）`;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${to}（${mode}）`;
     }
 
     const { cta, caution } = routeStepToCta(step, from, to, departure, fromCity, city);
@@ -606,9 +656,10 @@ function buildAutoLinks(city, departure, fromCity) {
   if (hasFlight) {
     const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
     if (flightCta) {
+      const flightFrom = formatAirportLabel(fromCity?.airport) ?? departure;
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${city.airportGateway}（飛行機）`,
+        stepLabel: `${stepIdx(stepGroups.length)} ✈ ${flightFrom} → ${city.airportGateway}（飛行機）`,
         cta: flightCta, caution: null,
       });
 
@@ -718,7 +769,24 @@ function buildAutoLinks(city, departure, fromCity) {
   }
 
   const links = [];
-  links.push({ type: 'summary', transfers: Math.max(0, stepGroups.length - 1) });
+  /* Phase 3: waypoints を stepGroups から復元 */
+  const autoWaypoints = (() => {
+    const pts = [];
+    for (const sg of stepGroups) {
+      const m = sg.stepLabel?.match(/^[①②③④⑤\d\.]+\s*[✈🚄🚃🚢🚌🚗📍]*\s*(.+?)\s*→\s*(.+?)（/u);
+      if (!m) continue;
+      if (pts.length === 0) pts.push(m[1]);
+      const to = m[2];
+      if (to !== pts[pts.length - 1]) pts.push(to);
+    }
+    return pts.length >= 2 ? pts : null;
+  })();
+  links.push({
+    type: 'summary',
+    transfers: Math.max(0, stepGroups.length - 1),
+    waypoints: autoWaypoints,
+    stayRecommend: getStayRecommend(city),
+  });
 
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {

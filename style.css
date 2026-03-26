@@ -715,7 +715,23 @@ body {
   color: var(--text-main);
   letter-spacing: 0.01em;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
+
+/* Phase 3: 日帰り / 宿泊推奨バッジ */
+.stay-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.stay-badge--ok      { background: #e8f5e9; color: #2e7d32; }
+.stay-badge--overnight { background: #fff3e0; color: #e65100; }
 
 .transport-note {
   font-size: 12px;
