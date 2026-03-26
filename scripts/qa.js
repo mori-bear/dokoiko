@@ -471,7 +471,7 @@ class Scorecard {
 
       // destType 必須
       sc.check(
-        ['city','sight','onsen','island'].includes(city.destType),
+        ['city','sight','onsen','island','remote','mountain'].includes(city.destType),
         `${city.id}: destType 未設定または不正（${city.destType}）`
       );
     });

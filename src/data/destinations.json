@@ -9322,7 +9322,7 @@
     "stayRecommendation": "3night+",
     "city": "北海礼文島",
     "hubStation": "礼文島駅",
-    "accessStation": null,
+    "accessStation": "香深港",
     "hotelArea": "hokkaido",
     "port": "稚内港",
     "flightHub": "稚内"
@@ -9391,7 +9391,7 @@
     "stayRecommendation": "3night+",
     "city": "北海利尻島",
     "hubStation": "利尻島駅",
-    "accessStation": null,
+    "accessStation": "鴛泊港",
     "hotelArea": "hokkaido",
     "port": "稚内港",
     "flightHub": "稚内"
@@ -10347,7 +10347,7 @@
     "stayRecommendation": "daytrip",
     "city": "新潟佐渡島",
     "hubStation": "佐渡島駅",
-    "accessStation": null,
+    "accessStation": "両津港",
     "hotelArea": "niigata",
     "port": "新潟港"
   },
@@ -12413,7 +12413,7 @@
     "secondaryTransport": null,
     "city": "長崎壱岐",
     "hubStation": "壱岐駅",
-    "accessStation": null,
+    "accessStation": "郷ノ浦港",
     "hotelArea": "nagasaki",
     "port": "博多港"
   },
@@ -12618,7 +12618,7 @@
     "stayRecommendation": "1night",
     "city": "沖縄竹富島",
     "hubStation": "竹富島駅",
-    "accessStation": null,
+    "accessStation": "竹富港",
     "hotelArea": "okinawa",
     "port": "石垣港",
     "flightHub": "石垣"
@@ -12898,7 +12898,7 @@
     "secondaryTransport": null,
     "city": "沖縄座間味島",
     "hubStation": "座間味島駅",
-    "accessStation": null,
+    "accessStation": "座間味港",
     "hotelArea": "okinawa",
     "port": "那覇港",
     "flightHub": "那覇"
@@ -12969,7 +12969,7 @@
     "stayRecommendation": "1night",
     "city": "沖縄伊江島",
     "hubStation": "伊江島駅",
-    "accessStation": null,
+    "accessStation": "伊江港",
     "hotelArea": "okinawa",
     "port": "本部港",
     "flightHub": "那覇"
@@ -13039,7 +13039,7 @@
     "stayRecommendation": "1night",
     "city": "沖縄小浜島",
     "hubStation": "小浜島駅",
-    "accessStation": null,
+    "accessStation": "小浜港",
     "hotelArea": "okinawa",
     "port": "小浜港",
     "flightHub": "石垣"

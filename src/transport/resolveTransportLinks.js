@@ -39,6 +39,69 @@ for (const p of PORTS_DATA) {
   PORT_CITY_MAP[p.port] = p.city;
 }
 
+/* ── Phase 2: 出発地 → 新幹線乗車駅マップ ──
+ * hub city 名はグラフでは '大阪' だが、新幹線乗車は '新大阪' など
+ * ここに登録した都市は shinkansen step の from に補正される。
+ */
+const SHINKANSEN_HUB_STATION = {
+  '大阪': '新大阪',
+  '神戸': '新神戸',
+  // 東京・名古屋・京都・広島・博多 等は hub 名=新幹線駅名なので不要
+};
+
+/* ── Phase 2: hub → バス起点（路線バス・高速バス）── */
+const BUS_HUB_STATION = {
+  '大阪': '大阪駅（梅田）',
+  '神戸': '三ノ宮バスターミナル',
+  '京都': '京都駅',
+  '名古屋': '名古屋駅',
+  '東京': '新宿バスタ',
+  '横浜': '横浜駅',
+  '福岡': '博多駅',
+  '那覇': '那覇バスターミナル',
+};
+
+/* ── Phase 2: 交通モードアイコン ── */
+function stepTypeIcon(type) {
+  const M = {
+    shinkansen: '🚄', rail: '🚃', flight: '✈',
+    ferry: '🚢', bus: '🚌', car: '🚗', localMove: '📍',
+  };
+  return M[type] ?? '';
+}
+
+/**
+ * Phase 2: 出発地ハブ名 → 表示用乗車点名
+ * - 新幹線: 新大阪 / 新神戸 など
+ * - バス: 梅田バスターミナル など
+ * - その他: DEPARTURE_CITY_INFO の rail 駅名
+ */
+function getDepartureLabel(departure, stepType) {
+  if (stepType === 'shinkansen') {
+    return SHINKANSEN_HUB_STATION[departure] ?? departure;
+  }
+  if (stepType === 'bus') {
+    return BUS_HUB_STATION[departure] ?? (DEPARTURE_CITY_INFO[departure]?.rail?.replace(/駅$/, '') + '駅') ?? departure;
+  }
+  // rail / flight / ferry / localMove
+  const station = DEPARTURE_CITY_INFO[departure]?.rail;
+  return station ? station.replace(/駅$/, '') : departure;
+}
+
+/* ── Phase 2: ルートのウェイポイント配列を構築 ── */
+function buildWaypoints(steps, departure, city) {
+  const label = cityLabel(city);
+  const pts   = [getDepartureLabel(departure, steps[0]?.type ?? 'rail')];
+  for (const s of steps) {
+    if (s.type === 'localMove') continue;
+    const to = s.to;
+    if (to && to !== label && to !== pts[pts.length - 1]) pts.push(to);
+  }
+  if (pts[pts.length - 1] !== label) pts.push(label);
+  // 連続重複除去
+  return pts.filter((v, i) => i === 0 || v !== pts[i - 1]);
+}
+
 /* ── 就航路線 DB（Node.js / ブラウザ 両対応） ── */
 let FLIGHT_ROUTES = [];
 if (typeof process !== 'undefined' && process.versions?.node) {
@@ -350,21 +413,70 @@ function injectMarinerStep(steps, dep) {
 
 function bfsStepsToLinks(steps, departure, city) {
   const links = [];
-  const meaningfulSteps = steps.filter(s => s.type !== 'localMove');
-  links.push({ type: 'summary', transfers: Math.max(0, meaningfulSteps.length - 1) });
 
+  /* ── summary（乗換回数 + ウェイポイント）── */
+  const meaningfulSteps = steps.filter(s => s.type !== 'localMove');
+  const waypoints       = buildWaypoints(steps, departure, city);
+  links.push({
+    type: 'summary',
+    transfers: Math.max(0, meaningfulSteps.length - 1),
+    waypoints,
+  });
+
+  /* ── step-group 生成 ── */
   const stepGroups = [];
+  let displayIdx   = 0;
   for (let i = 0; i < steps.length; i++) {
-    const s         = steps[i];
-    const mode      = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
-    const stepLabel = `${stepIdx(i)} ${s.from} → ${s.to}（${mode}）`;
+    const s    = steps[i];
+    const icon = stepTypeIcon(s.type);
+    const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
+
+    /* Phase 2: 出発点ラベル最適化（最初のステップのみ補正） */
+    const fromLabel = i === 0
+      ? getDepartureLabel(departure, s.type)
+      : s.from ?? '';
+
+    const stepLabel = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}）`;
     const { cta, caution } = bfsStepToCta(s, departure);
     stepGroups.push({ type: 'step-group', stepLabel, cta, caution });
     if (s.type === 'car') links.push(buildRentalLink());
+    displayIdx++;
   }
 
+  /* ── メインCTA 決定 ── */
   const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) links.push(mainCta);
+  if (mainCta) {
+    /* Phase 2: 重複CTA排除 — mainCta と同じ URL の step CTA を非表示 */
+    for (const sg of stepGroups) {
+      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) {
+        sg.cta = null;
+      }
+    }
+
+    /* Phase 2: bookingTarget（「○○まで予約して○○で○○へ」説明文）*/
+    const firstMeaningful = meaningfulSteps[0];
+    if (firstMeaningful && firstMeaningful.to !== cityLabel(city)) {
+      const nextStep        = meaningfulSteps[1];
+      const nextModeLabel   = nextStep
+        ? { shinkansen: '新幹線', rail: '在来線', bus: 'バス',
+            ferry: 'フェリー', flight: '飛行機', car: 'レンタカー', localMove: 'Googleマップ'
+          }[nextStep.type] ?? '移動'
+        : '移動';
+      const firstModeLabel  = firstMeaningful.type === 'shinkansen' ? '新幹線'
+                            : firstMeaningful.type === 'flight'     ? '飛行機'
+                            : firstMeaningful.type === 'ferry'      ? 'フェリー'
+                            : '電車';
+      mainCta.bookingTarget = `${firstMeaningful.to}まで${firstModeLabel} → ${nextModeLabel}で${cityLabel(city)}へ`;
+    }
+    links.push(mainCta);
+  }
+
+  /* Phase 2: レンタカー補完（car step がなく needsCar/mountain/remote の場合のみ）*/
+  const hasCar = steps.some(s => s.type === 'car');
+  if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) {
+    links.push(buildRentalLink());
+  }
+
   links.push(...stepGroups);
   return links.filter(Boolean);
 }
@@ -432,11 +544,15 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     stepGroups.push({ type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null });
   }
 
-  /* needsCar フラグによるレンタカー追加（localMove ステップでも対応） */
-  if (city.needsCar) links.push(buildRentalLink());
+  /* Phase 2: needsCar / mountain / remote のみレンタカー表示 */
+  if (city.needsCar || ['remote', 'mountain'].includes(city.destType)) links.push(buildRentalLink());
 
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
+    /* Phase 2: 重複CTA排除 */
+    for (const sg of stepGroups) {
+      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
+    }
     const firstJrIdx = routes.findIndex(s => s.type === 'shinkansen' || s.type === 'rail');
     if (firstJrIdx !== -1) {
       const firstJrStep  = routes[firstJrIdx];
@@ -584,8 +700,9 @@ function buildAutoLinks(city, departure, fromCity) {
     });
   }
 
-  /* ── レンタカー（needsCar フラグ）── */
-  const rentalLinks = city.needsCar ? [buildRentalLink()] : [];
+  /* ── レンタカー（Phase 2: needsCar / mountain / remote のみ）── */
+  const rentalLinks = (city.needsCar || ['remote', 'mountain'].includes(city.destType))
+    ? [buildRentalLink()] : [];
 
   /* ── Google Maps（フォールバック / 何もない場合）── */
   if (stepGroups.length === 0) {
@@ -602,8 +719,15 @@ function buildAutoLinks(city, departure, fromCity) {
 
   const links = [];
   links.push({ type: 'summary', transfers: Math.max(0, stepGroups.length - 1) });
+
   const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) links.push(mainCta);
+  if (mainCta) {
+    /* Phase 2: 重複CTA排除 */
+    for (const sg of stepGroups) {
+      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
+    }
+    links.push(mainCta);
+  }
   links.push(...stepGroups);
   links.push(...rentalLinks);
   return links;
