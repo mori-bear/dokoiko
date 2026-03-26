@@ -1,0 +1,23 @@
+[
+  { "port": "竹芝客船ターミナル", "city": "東京",   "prefecture": "東京"   },
+  { "port": "熱海港",             "city": "熱海",   "prefecture": "静岡"   },
+  { "port": "稲取港",             "city": "東伊豆", "prefecture": "静岡"   },
+  { "port": "下田港",             "city": "下田",   "prefecture": "静岡"   },
+  { "port": "宇野港",             "city": "玉野",   "prefecture": "岡山"   },
+  { "port": "高松港",             "city": "高松",   "prefecture": "香川"   },
+  { "port": "詫間港",             "city": "三豊",   "prefecture": "香川"   },
+  { "port": "宮島口港",           "city": "廿日市", "prefecture": "広島"   },
+  { "port": "松山観光港",         "city": "松山",   "prefecture": "愛媛"   },
+  { "port": "那覇港",             "city": "那覇",   "prefecture": "沖縄"   },
+  { "port": "石垣港",             "city": "石垣島", "prefecture": "沖縄"   },
+  { "port": "鹿児島港",           "city": "鹿児島", "prefecture": "鹿児島" },
+  { "port": "長崎港",             "city": "長崎",   "prefecture": "長崎"   },
+  { "port": "博多港",             "city": "福岡",   "prefecture": "福岡"   },
+  { "port": "泊港",               "city": "那覇",   "prefecture": "沖縄"   },
+  { "port": "川内港",             "city": "薩摩川内","prefecture": "鹿児島" },
+  { "port": "七類港",             "city": "松江",   "prefecture": "島根"   },
+  { "port": "境港",               "city": "境港",   "prefecture": "鳥取"   },
+  { "port": "新潟港",             "city": "新潟",   "prefecture": "新潟"   },
+  { "port": "稚内港",             "city": "稚内",   "prefecture": "北海道" },
+  { "port": "佐世保港",           "city": "佐世保", "prefecture": "長崎"   }
+]

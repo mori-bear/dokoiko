@@ -1,0 +1,13 @@
+{
+  "rakuten": {
+    "baseUrl": "https://travel.rakuten.co.jp/yado/{area}/",
+    "params": {
+      "scid": "af_sp_etc",
+      "sc2id": "af_101_0_0"
+    }
+  },
+  "jalan": {
+    "baseUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do",
+    "paramKey": "keyword"
+  }
+}

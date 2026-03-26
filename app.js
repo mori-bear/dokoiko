@@ -1,7 +1,6 @@
 import { state }                  from './src/state.js';
 import { buildShuffledPool }       from './src/engine/selectionEngine.js';
-import { resolveTransportLinks }   from './src/features/dokoiko/transportRenderer.js';
-import { buildHotelLinks }         from './src/hotel/hotelLinkBuilder.js';
+import { buildTravelPlan }         from './src/features/dokoiko/travelPlan.js';
 import { renderResult }            from './src/features/dokoiko/render.js';
 import { bindHandlers }            from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO }     from './src/config/constants.js';
@@ -55,10 +54,15 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  const transportLinks = resolveTransportLinks(city, state.departure);
-  const hotelLinks     = buildHotelLinks(city);
+  const plan = buildTravelPlan(city, state.departure);
 
-  renderResult({ city, transportLinks, hotelLinks, stayType: state.stayType, departure: state.departure });
+  renderResult({
+    city,
+    transportLinks: plan.transportLinks,
+    hotelLinks:     plan.hotelLinks,
+    stayType:       state.stayType,
+    departure:      state.departure,
+  });
 
   const remaining = state.pool.length - state.poolIndex - 1;
   const retryBtn  = document.getElementById('retry-btn');

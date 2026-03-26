@@ -31,7 +31,7 @@ const SAMPLE_N       = OPT_ALL ? 999 : OPT_QUICK ? 1 : 5; // per region
 
 /* ── データ読み込み ── */
 const DESTS_RAW = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
-const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/lib/transportCore/hubs.json', 'utf8'));
+const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
 const GRAPH     = JSON.parse(fs.readFileSync('./src/lib/transportCore/transportGraph.json', 'utf8'));
 
 /* destinations のみ（hub除外）: BFS・travelTime・ホテルテスト共通 */

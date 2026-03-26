@@ -15,8 +15,8 @@
 
 const fs = require('fs');
 
-const graph = JSON.parse(fs.readFileSync('./src/lib/transportCore/transportGraph.json', 'utf8'));
-const hubs  = JSON.parse(fs.readFileSync('./src/lib/transportCore/hubs.json', 'utf8'));
+const graph = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
+const hubs  = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
 const dests = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
 
 /* ── 隣接リスト ── */
@@ -117,7 +117,7 @@ if (unreachable.length > 0) {
 }
 
 /* ── 書き込み ── */
-fs.writeFileSync('./src/lib/transportCore/hubs.json', JSON.stringify(hubsUpdated,  null, 2), 'utf8');
+fs.writeFileSync('./src/data/hubs.json', JSON.stringify(hubsUpdated,  null, 2), 'utf8');
 fs.writeFileSync('./src/data/destinations.json', JSON.stringify(destsUpdated, null, 2), 'utf8');
 
 /* ── サマリ ── */

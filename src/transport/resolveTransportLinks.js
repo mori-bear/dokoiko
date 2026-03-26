@@ -27,9 +27,17 @@ import {
   buildSkyscannerLink,
   buildJrLink,
   buildFerryLink,
+  buildFerryLinkForDest,
   buildRentalLink,
 } from './linkBuilder.js';
 import { buildRoute } from '../engine/bfsEngine.js';
+import PORTS_DATA    from '../data/ports.json'    with { type: 'json' };
+
+/* ── 港名 → ハブ都市マップ（step補完用） ── */
+const PORT_CITY_MAP = {};
+for (const p of PORTS_DATA) {
+  PORT_CITY_MAP[p.port] = p.city;
+}
 
 /* ── 就航路線 DB（Node.js / ブラウザ 両対応） ── */
 let FLIGHT_ROUTES = [];
@@ -415,6 +423,9 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     stepGroups.push({ type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null });
   }
 
+  /* needsCar フラグによるレンタカー追加（localMove ステップでも対応） */
+  if (city.needsCar) links.push(buildRentalLink());
+
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
     const firstJrIdx = routes.findIndex(s => s.type === 'shinkansen' || s.type === 'rail');
@@ -447,65 +458,124 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
 
 /* ══════════════════════════════════════════════════════
    metadata 自動生成（ROUTES 未定義 / gateway 未設定）
+
+   step補完ルール:
+     flight → ferry  : 空港 → 港 のGoogle Maps step を自動挿入
+     ferry のみ      : 港のハブ都市経由step を自動挿入
+                       （departure→ハブ Google Maps + ハブ→港 Google Maps）
 ══════════════════════════════════════════════════════ */
 
 function buildAutoLinks(city, departure, fromCity) {
-  const label      = cityLabel(city);
-  const origin     = fromCity?.rail?.replace(/駅$/, '') ?? departure;
+  const label       = cityLabel(city);
+  const origin      = fromCity?.rail?.replace(/駅$/, '') ?? departure;
   const baseStation = (city.accessStation ?? city.railGateway ?? label).replace(/駅$/, '');
-  const destSt     = city.shinkansenStation ?? baseStation;
+  const destSt      = city.shinkansenStation ?? baseStation;
 
   const stepGroups = [];
 
-  if (city.airportGateway) {
-    const fromIata = CITY_AIRPORT[departure] ?? null;
-    if (fromIata && hasFlightRoute(departure, city.airportGateway)) {
-      const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
-      if (flightCta) {
+  /* ── 飛行機 ── */
+  const fromIata   = CITY_AIRPORT[departure] ?? null;
+  const hasFlight  = !!(city.airportGateway && fromIata &&
+                        hasFlightRoute(departure, city.airportGateway));
+
+  if (hasFlight) {
+    const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
+    if (flightCta) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${city.airportGateway}（飛行機）`,
+        cta: flightCta, caution: null,
+      });
+
+      /* ── step補完: flight → ferry（空港 → 港）── */
+      if (city.ferryGateway) {
         stepGroups.push({
           type: 'step-group',
-          stepLabel: `① ${departure} → ${city.airportGateway}（飛行機）`,
-          cta: flightCta, caution: null,
+          stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${city.ferryGateway}（Googleマップ）`,
+          cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, 'transit', '📍 空港から港へ（Googleマップ）'),
+          caution: null,
         });
       }
     }
   }
 
+  /* ── JR予約 ── */
   if (city.railProvider) {
     const jrCta = buildJrLink(city.railProvider);
     if (jrCta) {
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `① ${origin} → ${destSt}（鉄道）`,
+        stepLabel: `${stepIdx(stepGroups.length)} ${origin} → ${destSt}（鉄道）`,
         cta: jrCta, caution: null,
       });
     }
   }
 
+  /* ── フェリー ── */
   if (city.ferryGateway) {
-    const ferryCta = buildFerryLink(city.ferryGateway);
+    /* ── step補完: ferry のみ（飛行機なし）→ 港ハブ都市への経路を追加 ── */
+    if (!hasFlight) {
+      const hubCity = PORT_CITY_MAP[city.ferryGateway] ?? null;
+      if (hubCity && hubCity !== departure) {
+        /* departure → ハブ都市（Google Maps transit） */
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${hubCity}（交通手段で移動）`,
+          cta: buildGoogleMapsLink(origin, hubCity, 'transit',
+                 `📍 ${hubCity}への行き方（Googleマップ）`),
+          caution: null,
+        });
+        /* ハブ都市 → 港（Google Maps） */
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${hubCity} → ${city.ferryGateway}（Googleマップ）`,
+          cta: buildGoogleMapsLink(hubCity, city.ferryGateway, 'transit',
+                 `📍 ${city.ferryGateway}（Googleマップ）`),
+          caution: null,
+        });
+      } else if (!hubCity) {
+        /* 未登録港 → 目的地まで Google Maps で */
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${city.ferryGateway}（Googleマップ）`,
+          cta: buildGoogleMapsLink(origin, city.ferryGateway, 'transit',
+                 `📍 ${city.ferryGateway}（Googleマップ）`),
+          caution: null,
+        });
+      }
+      /* departure = hubCity の場合は直接フェリーへ（追加ステップ不要） */
+    }
+
+    const ferryCta = buildFerryLinkForDest(city.id, city.ferryGateway);
     stepGroups.push({
       type: 'step-group',
-      stepLabel: `② ${city.ferryGateway} → ${label}（フェリー）`,
+      stepLabel: `${stepIdx(stepGroups.length)} ${city.ferryGateway} → ${label}（フェリー）`,
       cta: ferryCta, caution: null,
     });
   }
 
-  const gmapCta = buildGoogleMapsLink(
-    fromCity?.rail ?? departure, destSt, 'transit', '📍 行き方を見る（Googleマップ）',
-    city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null,
-  );
-  stepGroups.push({
-    type: 'step-group',
-    stepLabel: `① ${departure} → ${label}（Googleマップ）`,
-    cta: gmapCta, caution: null,
-  });
+  /* ── レンタカー（needsCar フラグ）── */
+  const rentalLinks = city.needsCar ? [buildRentalLink()] : [];
+
+  /* ── Google Maps（フォールバック / 何もない場合）── */
+  if (stepGroups.length === 0) {
+    const gmapCta = buildGoogleMapsLink(
+      fromCity?.rail ?? departure, destSt, 'transit', '📍 行き方を見る（Googleマップ）',
+      city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null,
+    );
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `① ${departure} → ${label}（Googleマップ）`,
+      cta: gmapCta, caution: null,
+    });
+  }
 
   const links = [];
   links.push({ type: 'summary', transfers: Math.max(0, stepGroups.length - 1) });
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) links.push(mainCta);
   links.push(...stepGroups);
+  links.push(...rentalLinks);
   return links;
 }
 

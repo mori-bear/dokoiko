@@ -33,6 +33,17 @@ for (const entry of FERRY_DATA) {
   }
 }
 
+/**
+ * ferries.json から 目的地ID（destId） → { operator, url, from } のマップを構築する。
+ * 同一港から複数の目的地がある場合（泊港→渡嘉敷/座間味）に正確なリンクを返す。
+ */
+const DEST_FERRY_MAP = {};
+for (const entry of FERRY_DATA) {
+  if (entry.destId && entry.url) {
+    DEST_FERRY_MAP[entry.destId] = { operator: entry.operator, url: entry.url, from: entry.from };
+  }
+}
+
 /* ── 内部ユーティリティ ── */
 
 function mapsUrl(origin, destination, mode) {
@@ -228,7 +239,7 @@ export function buildHighwayBusLink(from, to) {
 /* ── フェリー（ferries.json DB参照） ── */
 
 /**
- * フェリーリンクを生成する。
+ * フェリーリンクを生成する（港名ベース）。
  * 優先順位: bookingUrl（直接指定）→ PORT_FERRY_MAP（ferries.json DB）→ null
  * Google Maps へのフォールバックは行わない。
  *
@@ -253,4 +264,30 @@ export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = n
   }
   // 未登録港・URLなし → null（Google Maps フォールバックなし）
   return null;
+}
+
+/**
+ * フェリーリンクを生成する（目的地IDベース）。
+ * 同一港から複数目的地が出る場合（泊港→渡嘉敷/座間味など）に正確なリンクを返す。
+ * DEST_FERRY_MAP にない場合は buildFerryLink（港名ベース）にフォールバック。
+ *
+ * @param {string}      destId        — destinations.json の id
+ * @param {string}      ferryGateway  — 出発港名（フォールバック用）
+ * @param {string|null} bookingUrl    — step に直接指定された予約URL
+ * @param {string|null} operatorName  — step に直接指定された事業者名
+ * @returns {{ type: 'ferry', label: string, url: string } | null}
+ */
+export function buildFerryLinkForDest(destId, ferryGateway, bookingUrl = null, operatorName = null) {
+  if (bookingUrl) {
+    return buildFerryLink(ferryGateway, bookingUrl, operatorName);
+  }
+  const destInfo = DEST_FERRY_MAP[destId];
+  if (destInfo) {
+    const label = destInfo.operator
+      ? `🚢 フェリーを調べる（${destInfo.operator}）`
+      : `🚢 フェリーを調べる（${ferryGateway}）`;
+    return { type: 'ferry', label, url: destInfo.url };
+  }
+  // DEST_FERRY_MAP にない → 港名ベースにフォールバック
+  return buildFerryLink(ferryGateway);
 }
