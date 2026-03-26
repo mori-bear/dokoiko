@@ -4,16 +4,16 @@
     "destName": "宮島",
     "from": "宮島口港",
     "to": "宮島",
-    "operator": null,
-    "url": null
+    "operator": "宮島松大フェリー",
+    "url": "https://miyajima-matsudai.co.jp/"
   },
   {
     "destId": "shodoshima",
     "destName": "小豆島",
     "from": "高松港",
     "to": "小豆島",
-    "operator": null,
-    "url": null
+    "operator": "小豆島フェリー",
+    "url": "https://www.shoudoshima-ferry.co.jp/"
   },
   {
     "destId": "tokashiki-jima",
@@ -28,24 +28,24 @@
     "destName": "久米島",
     "from": "那覇港",
     "to": "久米島",
-    "operator": null,
-    "url": null
+    "operator": "マリンライナー",
+    "url": "https://www.agui.net/"
   },
   {
     "destId": "kouzushima",
     "destName": "神津島",
     "from": "竹芝客船ターミナル",
     "to": "神津島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   },
   {
     "destId": "izu-oshima",
     "destName": "伊豆大島",
     "from": "竹芝客船ターミナル",
     "to": "伊豆大島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   },
   {
     "destId": "yakushima",
@@ -60,8 +60,8 @@
     "destName": "直島",
     "from": "高松港",
     "to": "直島",
-    "operator": null,
-    "url": null
+    "operator": "四国フェリー",
+    "url": "https://www.shikokuferry.com/"
   },
   {
     "destId": "amami",
@@ -92,8 +92,8 @@
     "destName": "志々島",
     "from": "詫間港",
     "to": "志々島",
-    "operator": null,
-    "url": null
+    "operator": "三豊市営フェリー",
+    "url": "https://www.city.mitoyo.lg.jp/"
   },
   {
     "destId": "rebun-island",
@@ -172,16 +172,16 @@
     "destName": "与那国島",
     "from": "石垣港",
     "to": "与那国島",
-    "operator": null,
-    "url": null
+    "operator": "八重山観光フェリー",
+    "url": "https://www.yaeyama.co.jp/"
   },
   {
     "destId": "motobu",
     "destName": "本部",
     "from": "本部港",
     "to": "本部",
-    "operator": null,
-    "url": null
+    "operator": "沖縄県営フェリー",
+    "url": "https://okinawa.ferry.co.jp/"
   },
   {
     "destId": "zamami-island",
@@ -236,16 +236,16 @@
     "destName": "海士町",
     "from": "七類港",
     "to": "海士町",
-    "operator": null,
-    "url": null
+    "operator": "隠岐汽船",
+    "url": "https://www.oki-kisen.co.jp/"
   },
   {
     "destId": "oki-island",
     "destName": "隠岐の島",
     "from": "境港",
     "to": "隠岐の島",
-    "operator": null,
-    "url": null
+    "operator": "隠岐汽船",
+    "url": "https://www.oki-kisen.co.jp/"
   },
   {
     "destId": "inujima",
@@ -260,55 +260,55 @@
     "destName": "豊島",
     "from": "高松港",
     "to": "豊島",
-    "operator": null,
-    "url": null
+    "operator": "豊島フェリー",
+    "url": "https://www.t-ferry.com/"
   },
   {
     "destId": "ojika-island",
     "destName": "小値賀島",
     "from": "佐世保港",
     "to": "小値賀島",
-    "operator": null,
-    "url": null
+    "operator": "九州商船",
+    "url": "https://www.kysho.co.jp/"
   },
   {
     "destId": "aguni-island",
     "destName": "粟国島",
     "from": "泊港",
     "to": "粟国島",
-    "operator": null,
-    "url": null
+    "operator": "マリンライナー",
+    "url": "https://www.agui.net/"
   },
   {
     "destId": "miyakejima",
     "destName": "三宅島",
     "from": "竹芝桟橋",
     "to": "三宅島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   },
   {
     "destId": "hachijojima",
     "destName": "八丈島",
     "from": "竹芝桟橋",
     "to": "八丈島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   },
   {
     "destId": "niijima",
     "destName": "新島",
     "from": "竹芝桟橋",
     "to": "新島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   },
   {
     "destId": "shikinejima",
     "destName": "式根島",
     "from": "竹芝桟橋",
     "to": "式根島",
-    "operator": null,
-    "url": null
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
   }
 ]

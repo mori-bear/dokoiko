@@ -12,10 +12,26 @@
  * 注意:
  *   - 飛行機経路の Google Maps（driving）は使用しない
  *   - 詳細な所要時間はすべて外部サービスへ委ねる
+ *   - URL生成はこのファイルのみ（他ファイルへのインライン記述禁止）
  */
 
-/* ── JR予約プロバイダDB（trainProviders.json から静的 import） ── */
+/* ── JR予約プロバイダDB ── */
 import TRAIN_PROVIDERS from '../data/trainProviders.json' with { type: 'json' };
+
+/* ── フェリーDB（ferries.json → 港名→事業者マップ） ── */
+import FERRY_DATA from '../data/ferries.json' with { type: 'json' };
+
+/**
+ * ferries.json から 港名（from） → { operator, url } のマップを構築する。
+ * 同一港に複数の目的地がある場合は最初のエントリを使用する。
+ * url が null のエントリは除外する（CTA なし扱い）。
+ */
+const PORT_FERRY_MAP = {};
+for (const entry of FERRY_DATA) {
+  if (entry.from && entry.url && !PORT_FERRY_MAP[entry.from]) {
+    PORT_FERRY_MAP[entry.from] = { operator: entry.operator, url: entry.url };
+  }
+}
 
 /* ── 内部ユーティリティ ── */
 
@@ -171,10 +187,10 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
   };
 }
 
-/* ── JR予約（1ボタン） ── */
+/* ── JR予約（trainProviders.json DB参照） ── */
 
 /**
- * @param {string} bookingProvider
+ * @param {string} bookingProvider — 'ekinet'|'e5489'|'ex'|'jrkyushu'|'madoguchi'
  * @param {{from:string, to:string}|null} route — 表示する駅間ルート（任意）
  */
 export function buildJrLink(bookingProvider, route = null) {
@@ -209,35 +225,18 @@ export function buildHighwayBusLink(from, to) {
   };
 }
 
-/* ── フェリー（島アクセス） ── */
+/* ── フェリー（ferries.json DB参照） ── */
 
 /**
- * フェリー港名からフェリー予約・案内リンクを生成する。
+ * フェリーリンクを生成する。
+ * 優先順位: bookingUrl（直接指定）→ PORT_FERRY_MAP（ferries.json DB）→ null
+ * Google Maps へのフォールバックは行わない。
+ *
+ * @param {string}      ferryGateway  — 出発港名
+ * @param {string|null} bookingUrl    — step に直接指定された予約URL
+ * @param {string|null} operatorName  — step に直接指定された事業者名
+ * @returns {{ type: 'ferry', label: string, url: string } | null}
  */
-const FERRY_LINKS = {
-  '竹芝客船ターミナル': { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '竹芝桟橋':           { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '熱海港':             { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '稲取港':             { label: '🚢 フェリーを調べる（東海汽船）',           url: 'https://www.tokaikisen.co.jp/' },
-  '泊港':               { label: '🚢 フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
-  '那覇港':             { label: '🚢 フェリーを調べる（マリンライナー）',     url: 'https://www.agui.net/' },
-  '鹿児島港':           { label: '🚢 フェリーを調べる（種子屋久高速船）',     url: 'https://www.tykousoku.jp/' },
-  '長崎港':             { label: '🚢 フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
-  '博多港':             { label: '🚢 フェリーを調べる（九州商船）',           url: 'https://www.kysho.co.jp/' },
-  '高松港':             { label: '🚢 フェリーを調べる（小豆島フェリー）',     url: 'https://www.shoudoshima-ferry.co.jp/' },
-  '宇野港':             { label: '🚢 フェリーを調べる（宇野港フェリー）',     url: 'https://ferry.co.jp/' },
-  '宮島口港':           { label: '🚢 フェリーを調べる（宮島松大フェリー）',   url: 'https://miyajima-matsudai.co.jp/' },
-  '石垣港':             { label: '🚢 フェリーを調べる（八重山観光フェリー）', url: 'https://www.yaeyama.co.jp/' },
-  '松山観光港':         { label: '🚢 フェリーを調べる（瀬戸内海汽船）',       url: 'https://www.setonaikaikisen.co.jp/' },
-  '詫間港':             { label: '🚢 フェリーを調べる（三豊市営フェリー）',    url: 'https://www.city.mitoyo.lg.jp/' },
-  '稚内港':             { label: '🚢 フェリーを調べる（ハートランドフェリー）',url: 'https://www.heartlandferry.jp/' },
-  '新潟港':             { label: '🚢 フェリーを調べる（佐渡汽船）',            url: 'https://www.sadokisen.co.jp/' },
-  '本部港':             { label: '🚢 フェリーを調べる（沖縄県営フェリー）',    url: 'https://okinawa.ferry.co.jp/' },
-  '伊江島港':           { label: '🚢 フェリーを調べる（伊江島フェリー）',      url: 'https://www.iejima.org/' },
-  '座間味港':           { label: '🚢 フェリーを調べる（座間味村営フェリー）',  url: 'https://vill.zamami.okinawa.jp/' },
-  '小浜港':             { label: '🚢 フェリーを調べる（安栄観光）',            url: 'https://www.aneikankou.co.jp/' },
-};
-
 export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
   if (bookingUrl) {
     const label = operatorName
@@ -245,12 +244,13 @@ export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = n
       : `🚢 フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: bookingUrl };
   }
-  const info = FERRY_LINKS[ferryGateway];
-  if (info) return { type: 'ferry', label: info.label, url: info.url };
-  // 未登録港: Googleマップ検索にフォールバック
-  return {
-    type: 'ferry',
-    label: `🚢 フェリーを調べる（${ferryGateway}）`,
-    url: `https://www.google.com/maps/search/${encodeURIComponent(ferryGateway + ' フェリー')}`,
-  };
+  const info = PORT_FERRY_MAP[ferryGateway];
+  if (info) {
+    const label = info.operator
+      ? `🚢 フェリーを調べる（${info.operator}）`
+      : `🚢 フェリーを調べる（${ferryGateway}）`;
+    return { type: 'ferry', label, url: info.url };
+  }
+  // 未登録港・URLなし → null（Google Maps フォールバックなし）
+  return null;
 }

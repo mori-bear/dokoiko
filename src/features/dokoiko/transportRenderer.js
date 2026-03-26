@@ -427,11 +427,7 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
 export function resolveTransportLinks(city, departure) {
   const links = _resolveTransportLinks(city, departure);
   if (!links || links.length === 0) {
-    const fallbackCta = {
-      type:  'google-maps',
-      label: '📍 Googleマップで確認',
-      url:   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(departure)}&destination=${encodeURIComponent(city.name)}&travelmode=transit`,
-    };
+    const fallbackCta = buildGoogleMapsLink(departure, city.name, 'transit', '📍 Googleマップで確認');
     return [
       { type: 'summary', transfers: 0 },
       { type: 'main-cta', cta: fallbackCta },
