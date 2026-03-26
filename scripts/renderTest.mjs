@@ -21,7 +21,7 @@ const { resolveTransportLinks } = await import(`file://${root}/src/features/doko
 const { buildHotelLinks }       = await import(`file://${root}/src/hotel/hotelLinkBuilder.js`);
 
 import { readFileSync } from 'fs';
-const allDests = JSON.parse(readFileSync(join(root, 'data/destinations.json'), 'utf8'));
+const allDests = JSON.parse(readFileSync(join(root, 'src/data/destinations.json'), 'utf8'));
 
 // Task1 と同じフィルタ: ROUTESあり or gateway設定済み
 const DESTS = allDests.filter(d => ROUTES[d.id] || d.gateway);

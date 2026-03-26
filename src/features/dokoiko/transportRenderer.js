@@ -42,10 +42,10 @@ if (typeof process !== 'undefined' && process.versions?.node) {
   const { fileURLToPath } = await import('url');
   const { dirname, join } = await import('path');
   const _root = join(dirname(fileURLToPath(import.meta.url)), '../../../');
-  FLIGHT_ROUTES = JSON.parse(readFileSync(join(_root, 'data/flightRoutes.json'), 'utf8'));
+  FLIGHT_ROUTES = JSON.parse(readFileSync(join(_root, 'src/data/flightRoutes.json'), 'utf8'));
 } else {
   // ブラウザ — import.meta.url を基点にフェッチ
-  const _url = new URL('../../../data/flightRoutes.json', import.meta.url);
+  const _url = new URL('../../../src/data/flightRoutes.json', import.meta.url);
   FLIGHT_ROUTES = await fetch(_url).then(r => r.json());
 }
 

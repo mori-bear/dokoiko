@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 
 const { ROUTES, CITY_TO_SHINKANSEN } = await import(`file://${root}/src/features/dokoiko/routes.js`);
-const dests = JSON.parse(readFileSync(join(root, 'data/destinations.json'), 'utf8'));
+const dests = JSON.parse(readFileSync(join(root, 'src/data/destinations.json'), 'utf8'));
 const validIds = new Set(dests.map(d => d.id));
 
 const before = Object.keys(ROUTES).length;

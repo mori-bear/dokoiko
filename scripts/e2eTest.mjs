@@ -23,7 +23,7 @@ const { resolveTransportLinks } = await import(`file://${root}/src/features/doko
 const { buildHotelLinks }       = await import(`file://${root}/src/hotel/hotelLinkBuilder.js`);
 const { ROUTES }                = await import(`file://${root}/src/features/dokoiko/routes.js`);
 
-const allDests = JSON.parse(readFileSync(join(root, 'data/destinations.json'), 'utf8'));
+const allDests = JSON.parse(readFileSync(join(root, 'src/data/destinations.json'), 'utf8'));
 const DESTS    = allDests.filter(d => ROUTES[d.id] || d.gateway);
 
 const DEPARTURES = [

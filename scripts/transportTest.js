@@ -19,7 +19,7 @@ const fs = require('fs');
 /* ── データ読み込み ── */
 
 const destinations = JSON.parse(
-  fs.readFileSync('./data/destinations.json', 'utf8'),
+  fs.readFileSync('./src/data/destinations.json', 'utf8'),
 );
 const cities = Array.isArray(destinations) ? destinations : destinations.destinations;
 

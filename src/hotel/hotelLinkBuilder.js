@@ -12,9 +12,12 @@
  * @param {object} dest — destination エントリ
  * @returns {string} URL
  */
+// 楽天リファラルパラメータ（アフィリエイトラッパーなし・URLパラメータのみ）
+const RAKUTEN_PARAMS = '?scid=af_sp_etc&sc2id=af_101_0_0';
+
 function buildRakutenUrl(dest) {
-  if (!dest.hotelArea) return 'https://travel.rakuten.co.jp/';
-  return `https://travel.rakuten.co.jp/yado/${dest.hotelArea}/`;
+  if (!dest.hotelArea) return `https://travel.rakuten.co.jp/${RAKUTEN_PARAMS}`;
+  return `https://travel.rakuten.co.jp/yado/${dest.hotelArea}/${RAKUTEN_PARAMS}`;
 }
 
 /**

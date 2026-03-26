@@ -9,10 +9,10 @@
 
 const fs = require('fs');
 
-const dests       = JSON.parse(fs.readFileSync('./data/destinations.json', 'utf8'));
-const hubs        = JSON.parse(fs.readFileSync('./data/hubs.json', 'utf8'));
-const hotelAreas  = JSON.parse(fs.readFileSync('./data/hotelAreas.json', 'utf8'));
-const graph       = JSON.parse(fs.readFileSync('./data/transportGraph.json', 'utf8'));
+const dests       = JSON.parse(fs.readFileSync('./src/data/destinations.json', 'utf8'));
+const hubs        = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
+const hotelAreas  = JSON.parse(fs.readFileSync('./src/data/hotelAreas.json', 'utf8'));
+const graph       = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
 
 const destMap    = new Map(dests.map(d => [d.id, d]));
 const areaMap    = new Map(hotelAreas.map(a => [a.id, a]));

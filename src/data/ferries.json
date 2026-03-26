@@ -1,0 +1,314 @@
+[
+  {
+    "destId": "miyajima",
+    "destName": "宮島",
+    "from": "宮島口港",
+    "to": "宮島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "shodoshima",
+    "destName": "小豆島",
+    "from": "高松港",
+    "to": "小豆島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "tokashiki-jima",
+    "destName": "渡嘉敷島",
+    "from": "泊港",
+    "to": "渡嘉敷島",
+    "operator": "渡嘉敷村営フェリー",
+    "url": "https://www.vill.tokashiki.okinawa.jp/ferry/"
+  },
+  {
+    "destId": "kumejima",
+    "destName": "久米島",
+    "from": "那覇港",
+    "to": "久米島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "kouzushima",
+    "destName": "神津島",
+    "from": "竹芝客船ターミナル",
+    "to": "神津島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "izu-oshima",
+    "destName": "伊豆大島",
+    "from": "竹芝客船ターミナル",
+    "to": "伊豆大島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "yakushima",
+    "destName": "屋久島",
+    "from": "鹿児島港",
+    "to": "屋久島",
+    "operator": "種子屋久高速船",
+    "url": "https://www.tykousoku.jp/"
+  },
+  {
+    "destId": "naoshima",
+    "destName": "直島",
+    "from": "高松港",
+    "to": "直島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "amami",
+    "destName": "奄美大島",
+    "from": "鹿児島港",
+    "to": "奄美大島",
+    "operator": "マリックスライン",
+    "url": "https://www.marix.co.jp/"
+  },
+  {
+    "destId": "goto",
+    "destName": "五島列島",
+    "from": "博多港",
+    "to": "五島列島",
+    "operator": "九州商船",
+    "url": "https://www.kysho.co.jp/"
+  },
+  {
+    "destId": "iriomote",
+    "destName": "西表島",
+    "from": "石垣港",
+    "to": "西表島",
+    "operator": "八重山観光フェリー",
+    "url": "https://www.yaeyama.co.jp/"
+  },
+  {
+    "destId": "shijishima",
+    "destName": "志々島",
+    "from": "詫間港",
+    "to": "志々島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "rebun-island",
+    "destName": "礼文島",
+    "from": "稚内港",
+    "to": "礼文島",
+    "operator": "ハートランドフェリー",
+    "url": "https://www.heartlandferry.jp/"
+  },
+  {
+    "destId": "rishiri-island",
+    "destName": "利尻島",
+    "from": "稚内港",
+    "to": "利尻島",
+    "operator": "ハートランドフェリー",
+    "url": "https://www.heartlandferry.jp/"
+  },
+  {
+    "destId": "sado-island",
+    "destName": "佐渡島",
+    "from": "新潟港",
+    "to": "佐渡島",
+    "operator": "佐渡汽船",
+    "url": "https://www.sadokisen.co.jp/"
+  },
+  {
+    "destId": "suo-oshima",
+    "destName": "周防大島",
+    "from": "柳井港",
+    "to": "周防大島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "kashiwajima",
+    "destName": "柏島",
+    "from": "宿毛港",
+    "to": "柏島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "tsushima",
+    "destName": "対馬",
+    "from": "博多港",
+    "to": "対馬",
+    "operator": "九州商船",
+    "url": "https://www.kysho.co.jp/"
+  },
+  {
+    "destId": "iki-island",
+    "destName": "壱岐",
+    "from": "博多港",
+    "to": "壱岐",
+    "operator": "九州商船",
+    "url": "https://www.kysho.co.jp/"
+  },
+  {
+    "destId": "tanegashima",
+    "destName": "種子島",
+    "from": "鹿児島港",
+    "to": "種子島",
+    "operator": "種子屋久高速船",
+    "url": "https://www.tykousoku.jp/"
+  },
+  {
+    "destId": "taketomi-island",
+    "destName": "竹富島",
+    "from": "石垣港",
+    "to": "竹富島",
+    "operator": "八重山観光フェリー",
+    "url": "https://www.yaeyama.co.jp/"
+  },
+  {
+    "destId": "yonaguni-island",
+    "destName": "与那国島",
+    "from": "石垣港",
+    "to": "与那国島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "motobu",
+    "destName": "本部",
+    "from": "本部港",
+    "to": "本部",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "zamami-island",
+    "destName": "座間味島",
+    "from": "泊港",
+    "to": "座間味島",
+    "operator": "座間味村営フェリー",
+    "url": "https://yoyaku.vill.zamami.okinawa.jp/"
+  },
+  {
+    "destId": "ie-island",
+    "destName": "伊江島",
+    "from": "本部港",
+    "to": "伊江島",
+    "operator": "伊江島フェリー",
+    "url": "https://www.iejima.org/"
+  },
+  {
+    "destId": "kohama-island",
+    "destName": "小浜島",
+    "from": "小浜港",
+    "to": "小浜島",
+    "operator": "安栄観光",
+    "url": "https://www.aneikankou.co.jp/"
+  },
+  {
+    "destId": "kasaoka",
+    "destName": "笠岡",
+    "from": "笠岡港",
+    "to": "笠岡",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "misaki-sadamisaki",
+    "destName": "三崎（佐田岬）",
+    "from": "三崎港",
+    "to": "三崎（佐田岬）",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "koshikijima",
+    "destName": "甑島",
+    "from": "川内港",
+    "to": "甑島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "ama-island",
+    "destName": "海士町",
+    "from": "七類港",
+    "to": "海士町",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "oki-island",
+    "destName": "隠岐の島",
+    "from": "境港",
+    "to": "隠岐の島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "inujima",
+    "destName": "犬島",
+    "from": "宝伝港",
+    "to": "犬島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "teshima",
+    "destName": "豊島",
+    "from": "高松港",
+    "to": "豊島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "ojika-island",
+    "destName": "小値賀島",
+    "from": "佐世保港",
+    "to": "小値賀島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "aguni-island",
+    "destName": "粟国島",
+    "from": "泊港",
+    "to": "粟国島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "miyakejima",
+    "destName": "三宅島",
+    "from": "竹芝桟橋",
+    "to": "三宅島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "hachijojima",
+    "destName": "八丈島",
+    "from": "竹芝桟橋",
+    "to": "八丈島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "niijima",
+    "destName": "新島",
+    "from": "竹芝桟橋",
+    "to": "新島",
+    "operator": null,
+    "url": null
+  },
+  {
+    "destId": "shikinejima",
+    "destName": "式根島",
+    "from": "竹芝桟橋",
+    "to": "式根島",
+    "operator": null,
+    "url": null
+  }
+]

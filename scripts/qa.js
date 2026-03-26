@@ -31,12 +31,12 @@ const USE_V2    = process.argv.includes('--v2');
 ══════════════════════════════════════════ */
 
 // 新ファイル構造: hubs.json + destinations.json を結合
-const HUBS_RAW  = JSON.parse(fs.readFileSync('./data/hubs.json', 'utf8'));
-const DESTS_FILE = USE_V2 ? './data/destinations_v2.json' : './data/destinations.json';
+const HUBS_RAW  = JSON.parse(fs.readFileSync('./src/data/hubs.json', 'utf8'));
+const DESTS_FILE = USE_V2 ? './data/destinations_v2.json' : './src/data/destinations.json';
 const DESTS_RAW = JSON.parse(fs.readFileSync(DESTS_FILE, 'utf8'));
 if (USE_V2) console.log(`[QA] データソース: ${DESTS_FILE} (${DESTS_RAW.length}件)`);
 const ALL   = [...HUBS_RAW, ...DESTS_RAW];
-const HOTEL_AREAS_RAW = JSON.parse(fs.readFileSync('./data/hotelAreas.json', 'utf8'));
+const HOTEL_AREAS_RAW = JSON.parse(fs.readFileSync('./src/data/hotelAreas.json', 'utf8'));
 const HOTEL_AREA_MAP  = new Map(HOTEL_AREAS_RAW.map(a => [a.id, a]));
 const DESTS = DESTS_RAW; // destinations.json には hub が含まれない
 
@@ -752,7 +752,7 @@ class Scorecard {
 
     let graph = null;
     try {
-      graph = JSON.parse(fs.readFileSync('./data/transportGraph.json', 'utf8'));
+      graph = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
     } catch (e) {
       sc.ng('transportGraph.json の読み込み失敗: ' + e.message);
       sc.print(); scorecards.push(sc);
@@ -842,7 +842,7 @@ class Scorecard {
 
     let graph8c = null;
     try {
-      graph8c = JSON.parse(fs.readFileSync('./data/transportGraph.json', 'utf8'));
+      graph8c = JSON.parse(fs.readFileSync('./src/data/transportGraph.json', 'utf8'));
     } catch (e) {
       sc.ng('transportGraph.json の読み込み失敗: ' + e.message);
       sc.print(); scorecards.push(sc);

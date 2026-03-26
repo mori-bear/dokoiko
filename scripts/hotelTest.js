@@ -32,7 +32,7 @@ const PARALLEL = 6;
 /* ── データ読み込み ── */
 
 const rawData = JSON.parse(
-  fs.readFileSync('./data/destinations.json', 'utf8'),
+  fs.readFileSync('./src/data/destinations.json', 'utf8'),
 );
 const allCities = (Array.isArray(rawData) ? rawData : rawData.destinations)
   .filter(c => c.type !== 'spot');

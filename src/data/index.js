@@ -17,8 +17,8 @@
  */
 export async function loadDestinations() {
   const [hubsRes, destsRes] = await Promise.all([
-    fetch('./data/hubs.json'),
-    fetch('./data/destinations.json'),
+    fetch('./src/data/hubs.json'),
+    fetch('./src/data/destinations.json'),
   ]);
 
   if (!hubsRes.ok)  throw new Error(`hubs.json: HTTP ${hubsRes.status}`);

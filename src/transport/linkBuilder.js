@@ -14,6 +14,9 @@
  *   - 詳細な所要時間はすべて外部サービスへ委ねる
  */
 
+/* ── JR予約プロバイダDB（trainProviders.json から静的 import） ── */
+import TRAIN_PROVIDERS from '../data/trainProviders.json' with { type: 'json' };
+
 /* ── 内部ユーティリティ ── */
 
 function mapsUrl(origin, destination, mode) {
@@ -175,15 +178,9 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
  * @param {{from:string, to:string}|null} route — 表示する駅間ルート（任意）
  */
 export function buildJrLink(bookingProvider, route = null) {
-  // ステップノートに区間が表示されるため、ボタンは予約アクションのみ簡潔に
-  switch (bookingProvider) {
-    case 'ekinet':    return { type: 'jr-east',   label: '予約する（えきねっと）',     url: 'https://www.eki-net.com/' };
-    case 'e5489':     return { type: 'jr-west',   label: '予約する（e5489）',           url: 'https://www.jr-odekake.net/goyoyaku/' };
-    case 'ex':        return { type: 'jr-ex',     label: '予約する（EX）',              url: 'https://smart-ex.jp/' };
-    case 'jrkyushu':  return { type: 'jr-kyushu', label: '予約する（JR九州ネット予約）', url: 'https://train.yoyaku.jrkyushu.co.jp/' };
-    case 'madoguchi': return { type: 'jr-window', label: '🚃 みどりの窓口で購入',           url: 'https://www.jr-odekake.net/' };
-    default:          return null;
-  }
+  const p = TRAIN_PROVIDERS[bookingProvider];
+  if (!p) return null;
+  return { type: p.type, label: p.ctaLabel, url: p.url };
 }
 
 /* ── レンタカー ── */

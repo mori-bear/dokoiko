@@ -21,7 +21,7 @@ const root      = join(__dirname, '..');
 
 const { buildHotelLinks } = await import(`file://${root}/src/hotel/hotelLinkBuilder.js`);
 
-const allDests = JSON.parse(readFileSync(join(root, 'data/destinations.json'), 'utf8'));
+const allDests = JSON.parse(readFileSync(join(root, 'src/data/destinations.json'), 'utf8'));
 
 const RAKUTEN_WRAPPER = 'https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=';
 const JALAN_WRAPPER   = 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=';
