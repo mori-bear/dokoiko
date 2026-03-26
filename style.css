@@ -675,6 +675,13 @@ body {
   line-height: 1.5;
 }
 
+.step-card-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  padding: 7px 14px;
+}
+
 .booking-target {
   font-size: 12px;
   color: var(--text-sub);

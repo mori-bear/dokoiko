@@ -27,7 +27,7 @@ function buildJalanUrl(keyword) {
  */
 export function buildHotelLinks(dest) {
   const result = {
-    heading: `${dest.name}の宿を探す`,
+    heading: 'この近くで泊まる',
     links: [
       { type: 'rakuten', label: '楽天トラベルで探す', url: buildRakutenUrl(dest.hotelArea) },
       { type: 'jalan',   label: 'じゃらんで探す',     url: buildJalanUrl(dest.name) },

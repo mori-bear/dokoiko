@@ -4,7 +4,7 @@
  * 責務:
  *   - ルート生成（routes.js 手動定義 / BFS エンジン / metadata 自動生成）
  *   - provider 判定（e5489 / ekinet / EX / jrkyushu）
- *   - 交通モード判定（detectMainMode 相当）
+ *   - 交通モード判定（deriveMainCta で1つに統一）
  *   - step-group 配列への変換（UI はこれを受け取るだけ）
  *
  * 出力フォーマット（step-group 方式）:
@@ -487,12 +487,22 @@ function buildAutoLinks(city, departure, fromCity) {
         cta: flightCta, caution: null,
       });
 
-      /* ── step補完: flight → ferry（空港 → 港）── */
       if (city.ferryGateway) {
+        /* ── step補完: flight → ferry（空港 → 港）── */
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${city.ferryGateway}（Googleマップ）`,
           cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, 'transit', '📍 空港から港へ（Googleマップ）'),
+          caution: null,
+        });
+      } else {
+        /* ── step補完: flight → 観光地（空港 → 目的地）── */
+        const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${label}（Googleマップ）`,
+          cta: buildGoogleMapsLink(city.airportGateway, label, 'transit',
+                 `📍 ${label}への行き方（Googleマップ）`, co),
           caution: null,
         });
       }
@@ -508,6 +518,17 @@ function buildAutoLinks(city, departure, fromCity) {
         stepLabel: `${stepIdx(stepGroups.length)} ${origin} → ${destSt}（鉄道）`,
         cta: jrCta, caution: null,
       });
+      /* ── step補完: 駅 → 観光地（ferryGateway がない場合のみ）── */
+      if (!city.ferryGateway && destSt !== label) {
+        const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${destSt} → ${label}（Googleマップ）`,
+          cta: buildGoogleMapsLink(destSt, label, 'transit',
+                 `📍 ${label}への行き方（Googleマップ）`, co),
+          caution: null,
+        });
+      }
     }
   }
 

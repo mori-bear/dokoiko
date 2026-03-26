@@ -14,7 +14,10 @@
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
-    const showHotel   = stayType !== 'daytrip';
+    const showHotel  = stayType !== 'daytrip';
+    // 島・needsCar はdaytrip でもレンタカー表示
+    const forceRental = !!(city?.isIsland || city?.destType === 'island' || city?.needsCar);
+    const showRental  = showHotel || forceRental;
     // rental を交通ブロックから分離して宿の後に表示
     const rentalLinks = transportLinks.filter(l => l.type === 'rental');
     const mainLinks   = transportLinks.filter(l => l.type !== 'rental');
@@ -25,7 +28,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
         ${buildCityBlock(city)}
         ${buildTransportBlock(mainLinks, departure, city.displayName || city.name, city)}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
-        ${showHotel && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
+        ${showRental && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
     `;
   } catch (err) {
@@ -276,7 +279,7 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   `;
 }
 
-/* ── ステップカード（説明のみ・CTAなし） ── */
+/* ── ステップカード（各ステップのCTA付き） ── */
 
 function buildStepCard(sg) {
   // 注意・補足（ICカード案内など）
@@ -284,9 +287,16 @@ function buildStepCard(sg) {
     ? `<div class="step-card-caution">${sg.caution}</div>`
     : '';
 
+  // 各ステップのCTAボタン（サブアクション）
+  const ctaHtml = sg.cta?.url
+    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+          class="btn ${btnClass(sg.cta.type)} step-card-cta">${sg.cta.label}</a>`
+    : '';
+
   return `
     <div class="step-card">
       <div class="step-card-header">${sg.stepLabel}</div>
+      ${ctaHtml}
       ${cautionHtml}
     </div>
   `;
