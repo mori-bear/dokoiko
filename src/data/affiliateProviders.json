@@ -9,5 +9,19 @@
   "jalan": {
     "baseUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do",
     "paramKey": "keyword"
+  },
+  "transport": {
+    "shinkansen": {
+      "jr-east":    { "label": "えきねっとで予約",   "url": "https://www.eki-net.com/" },
+      "jr-central": { "label": "EX予約",             "url": "https://smart-ex.jp/" },
+      "jr-west":    { "label": "e5489で予約",         "url": "https://www.jr-odekake.net/" },
+      "jr-kyushu":  { "label": "JR九州で予約",        "url": "https://www.jrkyushu.co.jp/" }
+    },
+    "bus": {
+      "default": { "label": "高速バスを探す", "url": "https://www.bushikaku.net/" }
+    },
+    "car": {
+      "default": { "label": "レンタカーを探す", "url": "https://www.jalan.net/rentacar/" }
+    }
   }
 }

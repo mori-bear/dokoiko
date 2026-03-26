@@ -29,6 +29,7 @@ import {
   buildFerryLink,
   buildFerryLinkForDest,
   buildRentalLink,
+  buildHighwayBusLink,
 } from './linkBuilder.js';
 import { buildRoute } from '../engine/bfsEngine.js';
 import PORTS_DATA       from '../data/ports.json'       with { type: 'json' };
@@ -322,10 +323,12 @@ function getRouteLabel(transfers, city) {
 ══════════════════════════════════════════════════════ */
 
 /* Phase 5: google-maps を除外 — Google Maps は各 step の補助リンクとしてのみ使用 */
+/* Phase 6: bus / rental を追加 */
 const MAIN_CTA_PRIORITY = [
   'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
   'skyscanner', 'google-flights',
   'ferry',
+  'bus', 'rental',
 ];
 
 function deriveMainCta(stepGroups) {
@@ -377,6 +380,8 @@ function bfsStepToCta(step, departure) {
       return { cta: buildFerryLink(step.from ?? '', step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
     }
     case 'bus':
+      // Phase 6: 高速バスは bushikaku.net へ
+      return { cta: buildHighwayBusLink(step.from ?? departure, step.to ?? ''), caution: null };
     case 'localMove':
       return { cta: buildGoogleMapsLink(step.from ?? '', step.to ?? '', 'transit', '📍 Googleマップで確認'), caution: null };
     case 'car':
@@ -414,9 +419,11 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
     case 'ferry':
       return { cta: buildFerryLink(step.from ?? from, step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
     case 'bus':
+      // Phase 6: 高速バスは bushikaku.net へ
+      return { cta: buildHighwayBusLink(from, to), caution: null };
     case 'localMove': {
       const co = coords(city);
-      return { cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認', step.type === 'localMove' ? co : null), caution: null };
+      return { cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認', co), caution: null };
     }
     case 'car': {
       return { cta: buildGoogleMapsLink(from, to, 'driving', '📍 Googleマップで確認', coords(city)), caution: null };
