@@ -233,12 +233,12 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // サマリー行（Phase 3: ウェイポイント + 日帰り/宿泊バッジ）
+  // サマリー行（Phase 5: ウェイポイント + バッジ群）
+  const waypoints = summaryLink?.waypoints;
   let summaryHtml = '';
   if (departure && destLabel) {
     const transfers   = summaryLink?.transfers ?? 0;
     const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
-    const waypoints   = summaryLink?.waypoints;
     const routeStr    = (waypoints && waypoints.length >= 2)
       ? waypoints.join(' → ')
       : `${departure} → ${destLabel}`;
@@ -248,7 +248,9 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
       : sr === 'overnight'
         ? `<span class="stay-badge stay-badge--overnight">1泊以上推奨</span>`
         : '';
-    summaryHtml = `<div class="route-summary">${routeStr}（${transferStr}）${stayBadge}</div>`;
+    const rl = summaryLink?.routeLabel;
+    const routeLabelBadge = rl ? `<span class="route-label">${rl}</span>` : '';
+    summaryHtml = `<div class="route-summary">${routeStr}（${transferStr}）${stayBadge}${routeLabelBadge}</div>`;
   }
 
   // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）
@@ -273,15 +275,22 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
     ? `<p class="transport-note">※オンライン予約不可の場合はみどりの窓口をご利用ください</p>`
     : '';
 
+  // Phase 5: 出発駅の明示（waypoints[0] が都市名と異なる場合は "(駅名)" を付与）
+  const firstStation = waypoints?.[0];
+  const departureWithStation = (firstStation && firstStation !== departure)
+    ? `${departure}（${firstStation}）`
+    : departure;
   const headingHtml = departure
-    ? `<p class="transport-heading">${departure}からの行き方</p>`
+    ? `<p class="transport-heading">${departureWithStation}からの行き方</p>`
     : '';
 
   return `
     <div class="card-section">
       ${headingHtml}
+      <p class="section-label">ルート概要</p>
       ${summaryHtml}
       ${mainCtaHtml}
+      <p class="section-label">詳細ステップ</p>
       <div class="step-card-list">${stepsHtml}</div>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
       ${jrNoteHtml}

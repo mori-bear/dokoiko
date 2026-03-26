@@ -18,7 +18,8 @@ function renderLinks(links, departure) {
       const route = (l.waypoints?.length >= 2) ? l.waypoints.join(' → ') : departure;
       const tr    = l.transfers === 0 ? '直通' : `乗換${l.transfers}回`;
       const badge = l.stayRecommend === 'daytrip-ok' ? ' ✅日帰りOK' : ' 🌙1泊以上推奨';
-      console.log(`  📍 ${route}（${tr}）${badge}`);
+      const rl    = l.routeLabel ? ` [${l.routeLabel}]` : '';
+      console.log(`  📍 ${route}（${tr}）${badge}${rl}`);
     } else if (l.type === 'main-cta') {
       if (l.cta?.label) {
         console.log(`  ▶ [予約ボタン] ${l.cta.label}`);

@@ -305,16 +305,27 @@ function appendSpotAccessSteps(links, city) {
   return links;
 }
 
+/* ── Phase 5: ルート特性ラベル ── */
+function getRouteLabel(transfers, city) {
+  const t = city.travelTimeMinutes ?? 999;
+  const isShortest     = t < 120;       // 片道2時間未満
+  const isFewTransfers = transfers <= 1; // 直通 or 乗換1回
+  if (isShortest && isFewTransfers) return '最短・乗換少';
+  if (isShortest)      return '最短';
+  if (isFewTransfers)  return '乗換少';
+  return null;
+}
+
 /* ══════════════════════════════════════════════════════
    メイン CTA 導出
    優先順位: shinkansen > flight > ferry > rail > その他
 ══════════════════════════════════════════════════════ */
 
+/* Phase 5: google-maps を除外 — Google Maps は各 step の補助リンクとしてのみ使用 */
 const MAIN_CTA_PRIORITY = [
   'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
   'skyscanner', 'google-flights',
   'ferry',
-  'google-maps', 'bus', 'rental',
 ];
 
 function deriveMainCta(stepGroups) {
@@ -323,8 +334,8 @@ function deriveMainCta(stepGroups) {
   for (const sg of stepGroups) {
     if (!sg.cta?.url) continue;
     const idx = MAIN_CTA_PRIORITY.indexOf(sg.cta.type);
-    const pri = idx === -1 ? MAIN_CTA_PRIORITY.length : idx;
-    if (pri < bestPriority) { bestPriority = pri; best = sg.cta; }
+    if (idx === -1) continue;  // Phase 5: リストにない型（google-maps等）はmainCtaに昇格しない
+    if (idx < bestPriority) { bestPriority = idx; best = sg.cta; }
   }
   return best ? { type: 'main-cta', cta: best } : null;
 }
@@ -341,13 +352,14 @@ function bfsStepToCta(step, departure) {
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
+      // Phase 5: 在来線（私鉄・IC普通列車）はボタン不要
       if (step.operator && !step.operator.startsWith('JR')) {
-        return { cta: buildGoogleMapsLink(step.from, step.to, 'transit', '📍 Googleマップで確認'), caution: null };
+        return { cta: null, caution: IC_CAUTION };
       }
       if (isIcRail(step)) {
-        return { cta: buildGoogleMapsLink(step.from, step.to, 'transit', '📍 Googleマップで確認'), caution: IC_CAUTION };
+        return { cta: null, caution: IC_CAUTION };
       }
-      // 特急など予約が必要なJR在来線: グラフ由来の provider を直接使用
+      // JR特急など予約が必要な路線: buildJrLink を維持
       const provider = step.provider ?? operatorToProvider(step.operator ?? '');
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
@@ -385,11 +397,12 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
       return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
     case 'rail': {
+      // Phase 5: 在来線（私鉄・IC普通列車）はボタン不要
       if (step.operator && !step.operator.startsWith('JR')) {
-        return { cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認'), caution: null };
+        return { cta: null, caution: IC_CAUTION };
       }
       if (isIcRail(step)) {
-        return { cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認'), caution: IC_CAUTION };
+        return { cta: null, caution: IC_CAUTION };
       }
       return { cta: buildJrLink(operatorToProvider(step.operator ?? '')), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
     }
@@ -477,14 +490,16 @@ function injectMarinerStep(steps, dep) {
 function bfsStepsToLinks(steps, departure, city) {
   const links = [];
 
-  /* ── summary（乗換回数 + ウェイポイント + 日帰り判定）── */
+  /* ── summary（乗換回数 + ウェイポイント + 日帰り判定 + ルートラベル）── */
   const meaningfulSteps = steps.filter(s => s.type !== 'localMove');
+  const transfers       = Math.max(0, meaningfulSteps.length - 1);
   const waypoints       = buildWaypoints(steps, departure, city);
   links.push({
     type: 'summary',
-    transfers: Math.max(0, meaningfulSteps.length - 1),
+    transfers,
     waypoints,
     stayRecommend: getStayRecommend(city),
+    routeLabel:    getRouteLabel(transfers, city),
   });
 
   /* ── step-group 生成 ── */
@@ -560,13 +575,15 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     return CITY_TO_SHINKANSEN[railName] ?? CITY_TO_SHINKANSEN[departure] ?? railName;
   }
 
-  const meaningfulSteps = routes.filter(s => s.type !== 'localMove');
-  const routeWaypoints  = buildWaypointsFromRouteSteps(routes, departure, city);
+  const meaningfulSteps   = routes.filter(s => s.type !== 'localMove');
+  const routeTransfers    = Math.max(0, meaningfulSteps.length - 1);
+  const routeWaypoints    = buildWaypointsFromRouteSteps(routes, departure, city);
   links.push({
     type: 'summary',
-    transfers: Math.max(0, meaningfulSteps.length - 1),
-    waypoints: routeWaypoints,
+    transfers:    routeTransfers,
+    waypoints:    routeWaypoints,
     stayRecommend: getStayRecommend(city),
+    routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
   const stepGroups = [];
@@ -808,11 +825,13 @@ function buildAutoLinks(city, departure, fromCity) {
     }
     return pts.length >= 2 ? pts : null;
   })();
+  const autoTransfers = Math.max(0, stepGroups.length - 1);
   links.push({
     type: 'summary',
-    transfers: Math.max(0, stepGroups.length - 1),
-    waypoints: autoWaypoints,
+    transfers:    autoTransfers,
+    waypoints:    autoWaypoints,
     stayRecommend: getStayRecommend(city),
+    routeLabel:    getRouteLabel(autoTransfers, city),
   });
 
   const mainCta = deriveMainCta(stepGroups);
