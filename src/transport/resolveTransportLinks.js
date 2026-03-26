@@ -31,7 +31,8 @@ import {
   buildRentalLink,
 } from './linkBuilder.js';
 import { buildRoute } from '../engine/bfsEngine.js';
-import PORTS_DATA    from '../data/ports.json'    with { type: 'json' };
+import PORTS_DATA       from '../data/ports.json'       with { type: 'json' };
+import SPOT_ACCESS_DATA from '../data/spotAccess.json' with { type: 'json' };
 
 /* ── 港名 → ハブ都市マップ（step補完用） ── */
 const PORT_CITY_MAP = {};
@@ -271,12 +272,38 @@ function cityLabel(city) {
   return city.displayName || city.name;
 }
 
-const STEP_IDX = ['①', '②', '③', '④', '⑤'];
+const STEP_IDX = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧'];
 function stepIdx(i) {
   return STEP_IDX[i] ?? `${i + 1}.`;
 }
 
 const IC_CAUTION = 'ICカードでそのまま改札通れます（予約不要）';
+
+/* ── Phase 4: spotAccess アイコン / ラベル ── */
+const SPOT_TYPE_ICON  = { walk: '🚶', bus: '🚌', taxi: '🚕' };
+const SPOT_TYPE_LABEL = { walk: '徒歩', bus: 'バス', taxi: 'タクシー' };
+
+/**
+ * Phase 4: spotAccess.json のエントリを step-group として links に追加する。
+ * 既存 step-group のカウントを継続してインデックスを振る。
+ */
+function appendSpotAccessSteps(links, city) {
+  const entries = SPOT_ACCESS_DATA[city.id];
+  if (!entries?.length) return links;
+  const baseIdx = links.filter(l => l.type === 'step-group').length;
+  for (let i = 0; i < entries.length; i++) {
+    const sa    = entries[i];
+    const icon  = SPOT_TYPE_ICON[sa.type]  ?? '📍';
+    const label = SPOT_TYPE_LABEL[sa.type] ?? sa.type;
+    links.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(baseIdx + i)} ${icon} ${sa.from} → ${sa.to}（${label} ${sa.minutes}分）`,
+      cta: null,
+      caution: null,
+    });
+  }
+  return links;
+}
 
 /* ══════════════════════════════════════════════════════
    メイン CTA 導出
@@ -884,11 +911,11 @@ export function resolveTransportLinks(city, departure) {
   const links = _resolve(city, departure);
   if (!links || links.length === 0) {
     const fallbackCta = buildGoogleMapsLink(departure, city.name, 'transit', '📍 Googleマップで確認');
-    return [
+    return appendSpotAccessSteps([
       { type: 'summary',    transfers: 0 },
       { type: 'main-cta',  cta: fallbackCta },
       { type: 'step-group', stepLabel: `① ${departure} → ${cityLabel(city)}`, cta: fallbackCta, caution: null },
-    ];
+    ], city);
   }
-  return links;
+  return appendSpotAccessSteps(links, city);  // Phase 4: ラストマイル追加
 }

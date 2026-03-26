@@ -1,0 +1,30 @@
+{
+  "nara": [
+    { "from": "奈良駅", "to": "東大寺",   "type": "bus",  "minutes": 10 },
+    { "from": "奈良駅", "to": "東大寺",   "type": "walk", "minutes": 25 },
+    { "from": "奈良駅", "to": "春日大社", "type": "bus",  "minutes": 15 },
+    { "from": "奈良駅", "to": "奈良公園", "type": "walk", "minutes": 15 }
+  ],
+  "kamakura": [
+    { "from": "鎌倉駅", "to": "鶴岡八幡宮", "type": "walk", "minutes": 10 },
+    { "from": "鎌倉駅", "to": "鎌倉大仏",   "type": "bus",  "minutes": 15 },
+    { "from": "鎌倉駅", "to": "長谷寺",     "type": "bus",  "minutes": 15 }
+  ],
+  "nikko": [
+    { "from": "日光駅", "to": "東照宮",   "type": "bus",  "minutes": 8  },
+    { "from": "日光駅", "to": "東照宮",   "type": "walk", "minutes": 30 },
+    { "from": "日光駅", "to": "中禅寺湖", "type": "bus",  "minutes": 40 }
+  ],
+  "matsushima": [
+    { "from": "松島海岸駅", "to": "五大堂", "type": "walk", "minutes": 5 },
+    { "from": "松島海岸駅", "to": "瑞巌寺", "type": "walk", "minutes": 7 }
+  ],
+  "arashiyama": [
+    { "from": "嵐山駅", "to": "竹林の道", "type": "walk", "minutes": 5 },
+    { "from": "嵐山駅", "to": "渡月橋",   "type": "walk", "minutes": 3 },
+    { "from": "嵐山駅", "to": "天龍寺",   "type": "walk", "minutes": 5 }
+  ],
+  "fushimi": [
+    { "from": "伏見稲荷駅", "to": "伏見稲荷大社", "type": "walk", "minutes": 5 }
+  ]
+}
