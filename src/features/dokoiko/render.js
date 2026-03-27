@@ -261,13 +261,10 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  // Phase 5③: 詳細ステップ — デフォルト折りたたみ
+  // Phase 5①: 詳細ステップ — 常時表示（折りたたみなし）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
-  const detailsHtml = stepsHtml
-    ? `<details class="step-details">
-        <summary class="step-details-toggle">詳細ステップを確認する ▼</summary>
-        <div class="step-card-list">${stepsHtml}</div>
-       </details>`
+  const stepsBlockHtml = stepsHtml
+    ? `<div class="step-card-list">${stepsHtml}</div>`
     : '';
 
   const hasJrBooking = mainCtaLink?.cta?.type &&
@@ -280,13 +277,14 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
     ? `<p class="transport-heading">${departure}からの行き方</p>`
     : '';
 
+  // Phase 5②: 表示順 — Googleマップ → CTA → 詳細ステップ
   return `
     <div class="card-section">
       ${headingHtml}
       ${summaryHtml}
       ${overallMapsHtml}
       ${mainCtaHtml}
-      ${detailsHtml}
+      ${stepsBlockHtml}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
       ${jrNoteHtml}
     </div>
