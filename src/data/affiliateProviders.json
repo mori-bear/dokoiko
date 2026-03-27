@@ -1,14 +1,14 @@
 {
   "rakuten": {
-    "baseUrl": "https://travel.rakuten.co.jp/yado/{area}/",
-    "params": {
-      "scid": "af_sp_etc",
-      "sc2id": "af_101_0_0"
-    }
+    "affiliateBaseUrl": "https://hb.afl.rakuten.co.jp/hgc/",
+    "affiliateId": "5113ee4b.8662cfc5.5113ee4c.119de89a",
+    "hotelBaseUrl": "https://travel.rakuten.co.jp/yado/{area}/"
   },
   "jalan": {
-    "baseUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do",
-    "paramKey": "keyword"
+    "hotelBaseUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do",
+    "hotelParamKey": "keyword",
+    "vcSid": "3764408",
+    "vcPid": "892559858"
   },
   "transport": {
     "shinkansen": {

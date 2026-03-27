@@ -473,6 +473,10 @@ function scoreRouteSteps(steps, departure) {
     }
   }
 
+  /* Phase 4④: 陸路3区間以上は遠回りの可能性 → ペナルティ */
+  const landStepCount = meaningful.filter(s => ['shinkansen', 'rail'].includes(s.type)).length;
+  if (landStepCount >= 3) score += 50;
+
   return score;
 }
 
@@ -536,6 +540,14 @@ function bfsStepsToLinks(steps, departure, city) {
     for (const sg of stepGroups) {
       if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) {
         sg.cta = null;
+      }
+    }
+
+    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
+    const JR_TYPES = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
+    if (JR_TYPES.includes(mainCta.cta?.type)) {
+      for (const sg of stepGroups) {
+        if (JR_TYPES.includes(sg.cta?.type)) sg.cta = null;
       }
     }
 
@@ -654,6 +666,15 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     for (const sg of stepGroups) {
       if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
     }
+
+    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
+    const JR_TYPES_R = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
+    if (JR_TYPES_R.includes(mainCta.cta?.type)) {
+      for (const sg of stepGroups) {
+        if (JR_TYPES_R.includes(sg.cta?.type)) sg.cta = null;
+      }
+    }
+
     const firstJrIdx = routes.findIndex(s => s.type === 'shinkansen' || s.type === 'rail');
     if (firstJrIdx !== -1) {
       const firstJrStep  = routes[firstJrIdx];
@@ -847,6 +868,13 @@ function buildAutoLinks(city, departure, fromCity) {
     for (const sg of stepGroups) {
       if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
     }
+    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
+    const JR_TYPES_A = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
+    if (JR_TYPES_A.includes(mainCta.cta?.type)) {
+      for (const sg of stepGroups) {
+        if (JR_TYPES_A.includes(sg.cta?.type)) sg.cta = null;
+      }
+    }
     links.push(mainCta);
   }
   links.push(...stepGroups);
@@ -881,6 +909,10 @@ function isBfsRouteValid(steps, city) {
   // ferryGateway がある（島や港目的地）のに ferry step がない
   // → グラフが ferry 経路を bus/localMove で省略している → 詳細 fallback を使う
   if (city.ferryGateway && !hasFerry) return false;
+
+  /* Phase 4④: 全陸路4区間以上は遠回りの疑い → fallback を使う */
+  const landHops = steps.filter(s => ['shinkansen', 'rail'].includes(s.type));
+  if (landHops.length >= 4) return false;
 
   return true;
 }

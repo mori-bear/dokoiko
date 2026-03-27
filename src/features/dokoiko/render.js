@@ -233,65 +233,60 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // サマリー行（Phase 5: ウェイポイント + バッジ群）
-  const waypoints = summaryLink?.waypoints;
-  let summaryHtml = '';
-  if (departure && destLabel) {
-    const transfers   = summaryLink?.transfers ?? 0;
-    const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
-    const routeStr    = (waypoints && waypoints.length >= 2)
-      ? waypoints.join(' → ')
-      : `${departure} → ${destLabel}`;
-    const sr = summaryLink?.stayRecommend;
-    const stayBadge = sr === 'daytrip-ok'
-      ? `<span class="stay-badge stay-badge--ok">日帰りOK</span>`
-      : sr === 'overnight'
-        ? `<span class="stay-badge stay-badge--overnight">1泊以上推奨</span>`
-        : '';
-    const rl = summaryLink?.routeLabel;
-    const routeLabelBadge = rl ? `<span class="route-label">${rl}</span>` : '';
-    summaryHtml = `<div class="route-summary">${routeStr}（${transferStr}）${stayBadge}${routeLabelBadge}</div>`;
-  }
+  // Phase 4②: 全体Googleマップ（最上部）— 出発点 → 目的地
+  const departurePoint = summaryLink?.waypoints?.[0] ?? departure;
+  const destTarget = (city?.lat && city?.lng)
+    ? `${city.lat},${city.lng}`
+    : destLabel;
+  const overallMapsUrl =
+    'https://www.google.com/maps/dir/?api=1' +
+    `&origin=${encodeURIComponent(departurePoint)}` +
+    `&destination=${encodeURIComponent(destTarget)}` +
+    `&travelmode=transit`;
+  const overallMapsHtml = `<a href="${overallMapsUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn-secondary btn--route-main">
+       🌍 Googleマップで全体ルートを見る
+     </a>`;
 
-  // メインCTAボタン（ルート全体で最優先の予約先 — summaryに1つだけ）
-  const bookingTargetHtml = mainCtaLink?.bookingTarget
-    ? `<p class="booking-target">${mainCtaLink.bookingTarget}</p>`
+  // Phase 5⑤: ルート概要 — 出発地 → 目的地のみ（シンプル）
+  const summaryHtml = (departure && destLabel)
+    ? `<div class="route-summary">${departure} → ${destLabel}</div>`
     : '';
-  const accessHintHtml = (mainCtaLink?.cta && city) ? buildAccessStationHint(city) : '';
+
+  // メインCTAボタン（JR / 航空券 / フェリー）
   const mainCtaHtml = mainCtaLink?.cta
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
          ${mainCtaLink.cta.label}
-       </a>${bookingTargetHtml}${accessHintHtml}`
+       </a>`
     : '';
 
-  // ステップカード（説明のみ・CTAなし）
+  // Phase 5③: 詳細ステップ — デフォルト折りたたみ
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
+  const detailsHtml = stepsHtml
+    ? `<details class="step-details">
+        <summary class="step-details-toggle">詳細ステップを確認する ▼</summary>
+        <div class="step-card-list">${stepsHtml}</div>
+       </details>`
+    : '';
 
-  // JR予約が必要なステップがある場合のみ「みどりの窓口」補足を表示
   const hasJrBooking = mainCtaLink?.cta?.type &&
     ['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window'].includes(mainCtaLink.cta.type);
   const jrNoteHtml = hasJrBooking
     ? `<p class="transport-note">※オンライン予約不可の場合はみどりの窓口をご利用ください</p>`
     : '';
 
-  // Phase 5: 出発駅の明示（waypoints[0] が都市名と異なる場合は "(駅名)" を付与）
-  const firstStation = waypoints?.[0];
-  const departureWithStation = (firstStation && firstStation !== departure)
-    ? `${departure}（${firstStation}）`
-    : departure;
   const headingHtml = departure
-    ? `<p class="transport-heading">${departureWithStation}からの行き方</p>`
+    ? `<p class="transport-heading">${departure}からの行き方</p>`
     : '';
 
   return `
     <div class="card-section">
       ${headingHtml}
-      <p class="section-label">ルート概要</p>
       ${summaryHtml}
+      ${overallMapsHtml}
       ${mainCtaHtml}
-      <p class="section-label">詳細ステップ</p>
-      <div class="step-card-list">${stepsHtml}</div>
+      ${detailsHtml}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
       ${jrNoteHtml}
     </div>

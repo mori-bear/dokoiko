@@ -10,15 +10,17 @@
 import AFFILIATE_DB from '../data/affiliateProviders.json' with { type: 'json' };
 
 function buildRakutenUrl(area) {
-  const base   = area
-    ? AFFILIATE_DB.rakuten.baseUrl.replace('{area}', area)
+  const targetUrl = area
+    ? AFFILIATE_DB.rakuten.hotelBaseUrl.replace('{area}', area)
     : 'https://travel.rakuten.co.jp/';
-  const params = new URLSearchParams(AFFILIATE_DB.rakuten.params);
-  return `${base}?${params.toString()}`;
+  const { affiliateBaseUrl, affiliateId } = AFFILIATE_DB.rakuten;
+  return `${affiliateBaseUrl}${affiliateId}/?pc=${encodeURIComponent(targetUrl)}&link_type=text`;
 }
 
 function buildJalanUrl(keyword) {
-  return `${AFFILIATE_DB.jalan.baseUrl}?${AFFILIATE_DB.jalan.paramKey}=${encodeURIComponent(keyword)}`;
+  const targetUrl = `${AFFILIATE_DB.jalan.hotelBaseUrl}?${AFFILIATE_DB.jalan.hotelParamKey}=${encodeURIComponent(keyword)}`;
+  const { vcSid, vcPid } = AFFILIATE_DB.jalan;
+  return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${vcSid}&pid=${vcPid}&vc_url=${encodeURIComponent(targetUrl)}`;
 }
 
 /**

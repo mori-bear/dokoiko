@@ -784,6 +784,34 @@ body {
   margin-bottom: 8px;
 }
 
+/* Phase 5③: 詳細ステップ折りたたみ */
+.step-details {
+  margin-top: 12px;
+}
+
+.step-details-toggle {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0.7;
+}
+
+.step-details-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.step-details[open] .step-details-toggle {
+  opacity: 1;
+}
+
+.step-details .step-card-list {
+  margin-top: 6px;
+}
+
 .transport-disclaimer {
   font-size: 11px;
   color: var(--text-sub);
