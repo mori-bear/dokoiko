@@ -726,16 +726,19 @@ function buildAutoLinks(city, departure, fromCity) {
   const hasFlight  = !!(city.airportGateway && fromIata &&
                         hasFlightRoute(departure, city.airportGateway));
 
+  /* Phase 4③: flightHub 経由かどうか（ferry セクションのスキップ判定にも使用）*/
+  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+  const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
+  /* 実際に乗り継ぎ飛行機ルートを表示した場合のみ true（ferry セクションのスキップ判定）*/
+  let usedViahubFlight = false;
+
   if (hasFlight) {
     const flightFrom = formatAirportLabel(fromCity?.airport) ?? departure;
 
-    /* Phase 4③: flightHub 経由（乗り継ぎ）か直行かを判定 */
-    const hubAirportName = city.flightHub
-      ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null)
-      : null;
-    const isViaHub = hubAirportName && hubAirportName !== city.airportGateway;
+    const hubAirportName = _hubAirportName;
 
     if (isViaHub) {
+      usedViahubFlight = true;
       /* ── 乗り継ぎルート: departure → hub → airportGateway ── */
       const hubFlightCta = buildSkyscannerLink(fromIata, hubAirportName);
       stepGroups.push({
@@ -747,19 +750,12 @@ function buildAutoLinks(city, departure, fromCity) {
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)} ✈ ${hubAirportName} → ${city.airportGateway}（乗り継ぎ）`,
-        cta: null, caution: '※ 那覇などでの乗り継ぎ便が必要です',
+        cta: null, caution: '※乗り継ぎ便が必要です（ハブ空港で乗り換え）',
       });
-      /* hub/destination → 目的地 */
+      /* 到着空港 → 目的地（Googleマップ）— ferryGatewayがあっても空港到着後はGoogle Mapsで移動 */
       const arrivalAirport = city.airportGateway;
       const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
-      if (city.ferryGateway) {
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${city.ferryGateway}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, city.ferryGateway, 'transit', '📍 空港から港へ（Googleマップ）'),
-          caution: null,
-        });
-      } else if (arrivalAirport !== label) {
+      if (arrivalAirport !== label) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
@@ -822,7 +818,8 @@ function buildAutoLinks(city, departure, fromCity) {
   }
 
   /* ── フェリー ── */
-  if (city.ferryGateway) {
+  /* 乗り継ぎ飛行機ルートを表示済みの場合: 空港到着後ルートで完結 → ferryセクション不要 */
+  if (city.ferryGateway && !usedViahubFlight) {
     /* ── step補完: ferry のみ（飛行機なし）→ 港ハブ都市への経路を追加 ── */
     if (!hasFlight) {
       const hubCity = PORT_CITY_MAP[city.ferryGateway] ?? null;
