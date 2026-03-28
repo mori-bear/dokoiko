@@ -332,11 +332,16 @@ function getRouteLabel(transfers, city) {
    優先順位: shinkansen > flight > ferry > rail > その他
 ══════════════════════════════════════════════════════ */
 
-/* Phase 5: google-maps を除外 — Google Maps は各 step の補助リンクとしてのみ使用 */
-/* Phase 6: bus / rental を追加 */
+/* メイン CTA 優先順位:
+ *   フライト > JR > フェリー > バス/レンタカー
+ *
+ *   フライトルートでは Skyscanner が最優先（JR の在来線は step 内で補助表示）。
+ *   JR のみのルートでは JR 予約が最優先。
+ *   google-maps は各 step の補助リンク専用（main-cta に昇格しない）。
+ */
 const MAIN_CTA_PRIORITY = [
-  'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
   'skyscanner', 'google-flights',
+  'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
   'ferry',
   'bus', 'rental',
 ];
@@ -362,19 +367,17 @@ function bfsStepToCta(step, departure) {
     case 'shinkansen': {
       // グラフ由来のステップは provider が直接設定されている
       const provider = step.provider ?? detectShinkansenProvider(step, departure);
-      return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
+      return { cta: buildJrLink(provider), caution: null };
     }
     case 'rail': {
-      // Phase 5: 在来線（私鉄・IC普通列車）はボタン不要
+      // 私鉄（JR以外の operator が明示されている）: IC乗車のみ・予約CTA不要
       if (step.operator && !step.operator.startsWith('JR')) {
         return { cta: null, caution: IC_CAUTION };
       }
-      if (isIcRail(step)) {
-        return { cta: null, caution: IC_CAUTION };
-      }
-      // JR特急など予約が必要な路線: buildJrLink を維持
+      // JR（operator が JR で始まる / label に JR|新幹線|特急 を含む / operator 未設定）:
+      // IC乗車可能な路線でも予約・購入ページへの導線として必ず CTA を表示する
       const provider = step.provider ?? operatorToProvider(step.operator ?? '');
-      return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
+      return { cta: buildJrLink(provider), caution: null };
     }
     case 'flight': {
       // グラフ由来: step.fromIata が直接設定される
@@ -416,17 +419,15 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
   switch (step.type) {
     case 'shinkansen': {
       const provider = detectShinkansenProvider(step, departure);
-      return { cta: buildJrLink(provider), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
+      return { cta: buildJrLink(provider), caution: null };
     }
     case 'rail': {
-      // Phase 5: 在来線（私鉄・IC普通列車）はボタン不要
+      // 私鉄（JR以外の operator が明示されている）: IC乗車のみ・予約CTA不要
       if (step.operator && !step.operator.startsWith('JR')) {
         return { cta: null, caution: IC_CAUTION };
       }
-      if (isIcRail(step)) {
-        return { cta: null, caution: IC_CAUTION };
-      }
-      return { cta: buildJrLink(operatorToProvider(step.operator ?? '')), caution: '※オンライン予約不可の場合はみどりの窓口をご利用ください' };
+      // JR: IC乗車可能な路線でも予約・購入ページへの導線として必ず CTA を表示する
+      return { cta: buildJrLink(operatorToProvider(step.operator ?? '')), caution: null };
     }
     case 'flight': {
       const fromIata = CITY_AIRPORT[departure] || fromCity.iata;
