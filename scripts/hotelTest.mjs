@@ -6,11 +6,13 @@
  * 検証項目:
  *   [H1]  楽天: アフィリエイトURL (hb.afl.rakuten.co.jp) を使用
  *   [H2]  楽天: pc= デコード後に travel.rakuten.co.jp/yado/list/ + keyword= を含む
+ *   [H-kw-r] 楽天: keyword に「宿」または「ホテル」を含む
  *   [H3]  楽天: /pack/ を含まない（パックページ禁止）
  *   [H-enc-r] 楽天: pc= に二重エンコード（%25）がない
  *   [H4]  じゃらん: ValueCommerce ラッパー (ck.jp.ap.valuecommerce.com) を使用
  *   [H5]  じゃらん: vc_url デコード後に jalan.net を含む
  *   [H6]  じゃらん: vc_url デコード後に keyword= が含まれる
+ *   [H-kw-j] じゃらん: keyword に「宿」または「ホテル」を含む
  *   [H-enc-j] じゃらん: vc_url に二重エンコード（%25）がない
  *   [H7]  全 destination: リンクが最低1件返る
  *   [H8]  全 destination: heading が存在する
@@ -94,6 +96,10 @@ for (const dest of dests) {
       pcDecoded.includes('travel.rakuten.co.jp/yado/list/') && pcDecoded.includes('keyword='),
       `[H2] 楽天 pc= が yado/list/?keyword= 形式でない: ${id}`, id,
     );
+    // H-kw-r: keyword に「宿」または「ホテル」が含まれる
+    const pcKw = new URL(pcDecoded).searchParams.get('keyword') ?? '';
+    check(pcKw.includes('宿') || pcKw.includes('ホテル'),
+      `[H-kw-r] 楽天 keyword に「宿」「ホテル」がない: ${id} (keyword="${pcKw}")`, id);
     // H3: /pack/ 禁止
     check(!rakuten.url.includes('/pack/'),
       `[H3] 楽天 URL に /pack/ が含まれている: ${id}`, id);
@@ -120,6 +126,10 @@ for (const dest of dests) {
         `[H5] じゃらん vc_url に jalan.net がない: ${id}`, id);
       check(vcDecoded.includes('keyword='),
         `[H6] じゃらん vc_url に keyword= がない: ${id}`, id);
+      // H-kw-j: keyword に「宿」または「ホテル」が含まれる
+      const vcKw = new URL(vcDecoded).searchParams.get('keyword') ?? '';
+      check(vcKw.includes('宿') || vcKw.includes('ホテル'),
+        `[H-kw-j] じゃらん keyword に「宿」「ホテル」がない: ${id} (keyword="${vcKw}")`, id);
       // H-enc-j: 二重エンコード禁止（vc_url 内に %25 があれば二重）
       check(!vcEncoded.includes('%25'),
         `[H-enc-j] じゃらん vc_url に二重エンコード(%25)がある: ${id}`, id);
