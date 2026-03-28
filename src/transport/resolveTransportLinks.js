@@ -435,7 +435,7 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
       return { cta: null, caution: null };
     }
     case 'ferry':
-      return { cta: buildFerryLink(step.from ?? from, step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
+      return { cta: buildFerryLink(from, step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
     case 'bus':
       // Phase 6: 高速バスは bushikaku.net へ
       return { cta: buildHighwayBusLink(from, to), caution: null };
@@ -643,6 +643,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
 
   const stepGroups = [];
   let displayIdx   = 0;
+  let prevStepTo   = null; // Problem 2: step[i].from は常に step[i-1].to を使う
 
   for (const step of routes) {
     const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type, step.operator ?? '');
@@ -653,7 +654,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
           : step.type === 'flight'
             ? (formatAirportLabel(fromCity.airport) ?? departure)
             : fromCity.rail.replace(/駅$/, ''))
-      : step.from ?? '';
+      : step.from ?? prevStepTo ?? '';
     const to   = step.to ?? label;
 
     if ((step.type === 'shinkansen' || step.type === 'rail') && from === to) continue;
@@ -669,13 +670,13 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
         stepLabel = `${stepIdx(displayIdx)} ${icon} ${airportFrom} → ${to}（飛行機）`; break;
       }
       case 'ferry':
-        stepLabel = `${stepIdx(displayIdx)} ${icon} ${step.from ?? from} → ${label}（フェリー）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${label}（フェリー）`; break;
       case 'car':
         stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${label}（レンタカー）`; break;
       case 'bus':
         stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${label}（${mode}）`; break;
       case 'localMove':
-        stepLabel = `${stepIdx(displayIdx)} ${icon} ${step.from ?? from} → ${step.to ?? label}（Googleマップ）`; break;
+        stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${step.to ?? label}（Googleマップ）`; break;
       default:
         stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${to}（${mode}）`;
     }
@@ -683,6 +684,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     const { cta, caution } = routeStepToCta(step, from, to, departure, fromCity, city);
     stepGroups.push({ type: 'step-group', stepLabel, cta, caution });
     if (step.type === 'car') links.push(buildRentalLink());
+    prevStepTo = to;
     displayIdx++;
   }
 

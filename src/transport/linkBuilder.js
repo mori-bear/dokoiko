@@ -131,7 +131,9 @@ export const AIRPORT_HUB_GATEWAY = {
 export function buildGoogleMapsLink(origin, destination, mode = 'transit', label = null, coords = null) {
   // null/undefined/空文字ガード — 「指定した地点」表示を防ぐ
   if (!origin?.trim() || (!coords && !destination?.trim())) return null;
-  const dest = coords ? `${coords.lat},${coords.lng}` : destination;
+  // テキスト名を優先（座標をそのまま使うと「指定した地点」になる）
+  const dest = destination?.trim() ? destination : (coords ? `${coords.lat},${coords.lng}` : null);
+  if (!dest) return null;
   let lbl = label ?? '行き方を見る（Googleマップ）';
   // 📍 プレフィックスをまだ持っていない場合に付与
   if (!lbl.startsWith('📍') && !lbl.startsWith('🚗') && !lbl.startsWith('🚌')) {
