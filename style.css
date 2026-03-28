@@ -625,6 +625,38 @@ body {
   gap: 8px;
 }
 
+/* ── 全体マップボタン（俯瞰用・サブ表示）── */
+
+.btn--route-overall {
+  display: block;
+  width: 100%;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 12px 16px;
+  margin: 10px 0 4px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* ── 全体所要時間 ── */
+
+.route-duration {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 2px 0 12px;
+  padding-left: 2px;
+}
+
+/* ── 区間所要時間（ステップカード内）── */
+
+.step-duration {
+  display: block;
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
 /* ── ルートメインCTA（最優先予約先・大ボタン）── */
 
 .btn--route-main {
