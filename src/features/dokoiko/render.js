@@ -262,8 +262,9 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  // ③ 区間ステップ（区間マップ含む）
-  const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
+  // ③ ローカル移動ステップのみ表示（乗換ステップ一覧は非表示）
+  const localSteps = stepGroups.filter(sg => sg.cta?.type === 'google-maps');
+  const stepsHtml = localSteps.map(sg => buildStepCard(sg)).join('');
   const stepsBlockHtml = stepsHtml
     ? `<div class="step-card-list">${stepsHtml}</div>`
     : '';

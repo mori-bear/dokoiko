@@ -576,20 +576,13 @@ function bfsStepsToLinks(steps, departure, city) {
       }
     }
 
-    /* Phase 2: bookingTarget（「○○まで予約して○○で○○へ」説明文）*/
-    const firstMeaningful = meaningfulSteps[0];
-    if (firstMeaningful && firstMeaningful.to !== cityLabel(city)) {
-      const nextStep        = meaningfulSteps[1];
-      const nextModeLabel   = nextStep
-        ? { shinkansen: '新幹線', rail: '在来線', bus: 'バス',
-            ferry: 'フェリー', flight: '飛行機', car: 'レンタカー', localMove: 'Googleマップ'
-          }[nextStep.type] ?? '移動'
-        : '移動';
-      const firstModeLabel  = firstMeaningful.type === 'shinkansen' ? '新幹線'
-                            : firstMeaningful.type === 'flight'     ? '飛行機'
-                            : firstMeaningful.type === 'ferry'      ? 'フェリー'
-                            : '電車';
-      mainCta.bookingTarget = `${firstMeaningful.to}まで${firstModeLabel} → ${nextModeLabel}で${cityLabel(city)}へ`;
+    /* ② CTA label: 🚄 origin → lastStation を予約する */
+    if (JR_TYPES.includes(mainCta.cta?.type)) {
+      const lastRail = [...steps].filter(s => s.type === 'shinkansen' || s.type === 'rail').pop();
+      if (lastRail?.to) {
+        const origin = getDepartureLabel(departure, meaningfulSteps[0]?.type ?? 'shinkansen');
+        mainCta.cta = { ...mainCta.cta, label: `🚄 ${origin} → ${lastRail.to} を予約する` };
+      }
     }
     links.push(mainCta);
   }
@@ -718,26 +711,14 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
       }
     }
 
-    const firstJrIdx = routes.findIndex(s => s.type === 'shinkansen' || s.type === 'rail');
-    if (firstJrIdx !== -1) {
-      const firstJrStep  = routes[firstJrIdx];
-      const stepTo       = firstJrStep.to;
-      const destName     = cityLabel(city);
-      if (stepTo !== destName) {
-        const nextStep      = routes[firstJrIdx + 1];
-        const nextModeLabel = nextStep
-          ? (nextStep.type === 'car'        ? 'レンタカー'
-           : nextStep.type === 'bus'        ? 'バス'
-           : nextStep.type === 'ferry'      ? 'フェリー'
-           : nextStep.type === 'flight'     ? '飛行機'
-           : nextStep.type === 'rail'       ? '在来線'
-           : nextStep.type === 'shinkansen' ? '新幹線'
-           : '移動')
-          : '移動';
-        const firstModeLabel = firstJrStep.type === 'shinkansen' ? '新幹線' : '電車';
-        mainCta.bookingTarget = `${stepTo}まで${firstModeLabel} → ${nextModeLabel}で${destName}へ`;
-      } else {
-        mainCta.bookingTarget = `${stepTo}まで予約`;
+    /* ② CTA label: 🚄 origin → lastStation を予約する */
+    if (JR_TYPES_R.includes(mainCta.cta?.type)) {
+      const firstJrStep = routes.find(s => s.type === 'shinkansen' || s.type === 'rail');
+      const lastRail    = [...routes].filter(s => s.type === 'shinkansen' || s.type === 'rail').pop();
+      if (firstJrStep && lastRail?.to) {
+        const origin = firstJrStep.type === 'shinkansen' ? shinkansenFrom()
+                     : fromCity.rail.replace(/駅$/, '');
+        mainCta.cta = { ...mainCta.cta, label: `🚄 ${origin} → ${lastRail.to} を予約する` };
       }
     }
     links.push(mainCta);
