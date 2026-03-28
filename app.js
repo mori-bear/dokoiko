@@ -142,7 +142,10 @@ function detectDeparture() {
 function initIntro() {
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
+  // アニメーション終了時に確実に削除
   overlay.addEventListener('animationend', () => { overlay.remove(); }, { once: true });
+  // フォールバック: animationend が発火しない場合（バックグラウンドタブ等）も 3 秒後に強制削除
+  setTimeout(() => { overlay.isConnected && overlay.remove(); }, 3000);
 }
 
 init();

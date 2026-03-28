@@ -74,8 +74,8 @@ body {
 }
 
 @keyframes introFadeOut {
-  from { opacity: 1; }
-  to   { opacity: 0; visibility: hidden; }
+  from { opacity: 1; pointer-events: none; }
+  to   { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
 /* ── ヘッダー ── */
@@ -325,6 +325,9 @@ body {
   transition: background .1s;
   white-space: nowrap;
   user-select: none;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .sel-btn:hover {
@@ -374,6 +377,9 @@ body {
   letter-spacing: .3px;
   margin-top: 4px;
   transition: opacity .1s;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .go-btn:hover {
@@ -807,6 +813,13 @@ body {
   line-height: 1.5;
 }
 
+/* ── インタラクティブ要素の確実なクリック保証 ── */
+
+button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
+  position: relative;
+  pointer-events: auto;
+}
+
 /* ── ボタン共通 ── */
 
 .btn {
@@ -821,6 +834,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  pointer-events: auto;
 }
 
 /* primary（JR・航空・バス・フェリー） */
