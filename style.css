@@ -52,6 +52,11 @@ body {
 
 /* ── イントロ演出（毎回表示） ── */
 
+/*
+ * pointer-events は @keyframes に書かない（アニメーション不可プロパティ）。
+ * animation-fill-mode: both との組み合わせで Safari が intermediate state を
+ * auto に戻す実装があるため、CSS animation は使わず JS transition に切り替える。
+ */
 .intro-overlay {
   position: fixed;
   inset: 0;
@@ -60,9 +65,14 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  /* 1.5秒表示 → 0.6秒でフェードアウト */
-  animation: introFadeOut 0.6s ease-out 1.5s both;
-  pointer-events: none;
+  pointer-events: none;        /* 常に none — JS/CSS ともに一切上書きしない */
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+.intro-overlay--hiding {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .intro-text {
@@ -71,11 +81,6 @@ body {
   letter-spacing: -0.5px;
   color: var(--text);
   line-height: 1.4;
-}
-
-@keyframes introFadeOut {
-  from { opacity: 1; pointer-events: none; }
-  to   { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
 /* ── ヘッダー ── */
