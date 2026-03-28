@@ -240,8 +240,8 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
 
   // ① 全体マップ（driving 固定・俯瞰）
   const departurePoint = summaryLink?.waypoints?.[0] ?? departure;
-  // 常に地名を使う（座標を渡すと「指定した地点」になる）
-  const destTarget = destLabel;
+  // mapPoint優先（温泉郷など抽象地名は駅名・具体地点に置換）、なければ表示名
+  const destTarget = city?.mapPoint ?? destLabel;
   const overallMapsHtml = (departurePoint && destTarget)
     ? `<a href="${
         'https://www.google.com/maps/dir/?api=1' +

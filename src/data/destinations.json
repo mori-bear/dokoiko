@@ -3584,6 +3584,8 @@
   {
     "id": "kaga-onsen",
     "name": "加賀温泉郷",
+    "displayName": "加賀温泉",
+    "mapPoint": "加賀温泉駅",
     "type": "destination",
     "region": "中部",
     "hub": "kanazawa-t",
@@ -10665,6 +10667,8 @@
   {
     "id": "okuhida-onsen",
     "name": "奥飛騨温泉郷",
+    "displayName": "奥飛騨温泉",
+    "mapPoint": "新穂高温泉",
     "type": "destination",
     "region": "中部",
     "hub": "matsumoto-n",

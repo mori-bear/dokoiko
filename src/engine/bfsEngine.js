@@ -1,12 +1,13 @@
 /**
- * bfsEngine.js — transportGraph.json ベースの BFS ルートエンジン
+ * dijkstraEngine.js — transportGraph.json ベースのダイクストラ法ルートエンジン
  *
  * グラフ構造:
  *   ノード種別: hub / station / airport / port / city / destination
  *   エッジ種別: rail / bus / ferry / flight / road / local
  *
  * 探索:
- *   hub:{departure} → destination:{city.id} の最短経路（ホップ数）
+ *   hub:{departure} → destination:{city.id} の最短時間経路（ダイクストラ法）
+ *   同時間ならホップ数が少ない方を優先
  *
  * ステップ変換ルール:
  *   local       → スキップ（0分の名前エイリアス）
@@ -61,27 +62,62 @@ function toStepType(edge) {
   return 'localMove';
 }
 
-/* ── BFS（ホップ最小経路） ── */
+/* ── ダイクストラ法（所要時間最短経路 / 同値ならホップ最小） ── */
 function findPath(fromId, toId) {
-  const queue   = [[fromId]];
-  const visited = new Set();
+  // dist: nodeId → { minutes: number, hops: number }
+  const dist = new Map();
+  // prev: nodeId → nodeId（経路復元用）
+  const prev = new Map();
 
-  while (queue.length) {
-    const path = queue.shift();
-    const node = path[path.length - 1];
+  dist.set(fromId, { minutes: 0, hops: 0 });
 
-    if (node === toId) return path;
+  // 優先度付きキュー（小さいグラフ ~1000ノードなので線形探索で十分）
+  const pq = [{ node: fromId, minutes: 0, hops: 0 }];
 
-    if (!visited.has(node)) {
-      visited.add(node);
-      for (const edge of (ADJ[node] ?? [])) {
-        if (!visited.has(edge.to)) {
-          queue.push([...path, edge.to]);
-        }
+  while (pq.length > 0) {
+    // 最小コスト要素を取り出す（一次: minutes 昇順、二次: hops 昇順）
+    let minIdx = 0;
+    for (let i = 1; i < pq.length; i++) {
+      const a = pq[i], b = pq[minIdx];
+      if (a.minutes < b.minutes || (a.minutes === b.minutes && a.hops < b.hops)) {
+        minIdx = i;
+      }
+    }
+    const { node, minutes, hops } = pq.splice(minIdx, 1)[0];
+
+    if (node === toId) break;
+
+    // すでにより良い経路が見つかっていたらスキップ
+    const d = dist.get(node);
+    if (!d || minutes > d.minutes || (minutes === d.minutes && hops > d.hops)) continue;
+
+    for (const edge of (ADJ[node] ?? [])) {
+      const edgeMin  = edge.minutes ?? 0;
+      const newMin   = minutes + edgeMin;
+      const newHops  = hops + 1;
+      const existing = dist.get(edge.to);
+
+      if (!existing ||
+          newMin < existing.minutes ||
+          (newMin === existing.minutes && newHops < existing.hops)) {
+        dist.set(edge.to, { minutes: newMin, hops: newHops });
+        prev.set(edge.to, node);
+        pq.push({ node: edge.to, minutes: newMin, hops: newHops });
       }
     }
   }
-  return null;
+
+  if (!dist.has(toId)) return null;
+
+  // 経路を復元（終点から逆順に辿る）
+  const path = [];
+  let node = toId;
+  while (node !== undefined) {
+    path.unshift(node);
+    node = prev.get(node);
+  }
+
+  return path[0] === fromId ? path : null;
 }
 
 /* ── path → step 配列 ── */

@@ -21,12 +21,22 @@ import { loadJson } from '../lib/loadJson.js';
 const AFFILIATE_DB = await loadJson('../data/affiliateProviders.json', import.meta.url);
 
 /**
+ * 地名を検索用に正規化する。
+ * 「温泉郷」は宿検索で結果が少ないため「温泉」に置換する。
+ */
+function normalizeKeyword(name) {
+  return name.replace(/温泉郷$/, '温泉');
+}
+
+/**
  * destType に応じた検索キーワードを生成する。
  * onsen → "{name} 宿"、それ以外 → "{name} ホテル"
+ * 「温泉郷」は「温泉」に正規化して検索精度を上げる。
  */
 function getKeyword(name, destType) {
+  const normalized = normalizeKeyword(name);
   const suffix = (destType === 'onsen') ? '宿' : 'ホテル';
-  return `${name} ${suffix}`;
+  return `${normalized} ${suffix}`;
 }
 
 /**
@@ -54,12 +64,14 @@ function buildJalanUrl(keyword) {
  * @returns {{ heading: string, links: Array, hubLinks?: {heading, links} }}
  */
 export function buildHotelLinks(dest) {
+  // UI表示はdisplayName優先（例: 加賀温泉郷→加賀温泉）、検索はname正規化
+  const uiName  = dest.displayName || dest.name;
   const keyword = getKeyword(dest.name, dest.destType);
   const result = {
-    heading: `${dest.name}で泊まる`,
+    heading: `${uiName}で泊まる`,
     links: [
-      { type: 'rakuten', label: `${dest.name}の宿を探す（楽天）`, url: buildRakutenUrl(keyword) },
-      { type: 'jalan',   label: `${dest.name}の宿を見る（じゃらん）`, url: buildJalanUrl(keyword) },
+      { type: 'rakuten', label: `${uiName}の宿を探す（楽天）`, url: buildRakutenUrl(keyword) },
+      { type: 'jalan',   label: `${uiName}の宿を見る（じゃらん）`, url: buildJalanUrl(keyword) },
     ],
   };
 

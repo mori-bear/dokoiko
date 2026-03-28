@@ -282,6 +282,11 @@ function cityLabel(city) {
   return city.displayName || city.name;
 }
 
+/** Google Maps 宛先: mapPoint優先（温泉郷など抽象地名は駅名・具体地点に置換） */
+function mapTarget(city) {
+  return city.mapPoint ?? cityLabel(city);
+}
+
 const STEP_IDX = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧'];
 function stepIdx(i) {
   return STEP_IDX[i] ?? `${i + 1}.`;
@@ -599,14 +604,13 @@ function bfsStepsToLinks(steps, departure, city) {
   const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || mainCta;
   if (!hasAnyCta && stepGroups.length > 0) {
     const label  = cityLabel(city);
-    const co     = coords(city);
+    const mTo    = mapTarget(city);
     const lastSg = stepGroups[stepGroups.length - 1];
-    // stepLabel 形式: "① 🚃 {from} → {to}（{mode}）" → from を抽出
     const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
     if (gFrom !== label) {
       lastSg.cta = buildGoogleMapsLink(
-        gFrom, label, resolveMapMode(gFrom, label),
-        `📍 ${gFrom} → ${label} の行き方を見る`, co,
+        gFrom, mTo, resolveMapMode(gFrom, mTo),
+        `📍 ${gFrom} → ${label} の行き方を見る`,
       );
     }
   }
@@ -742,12 +746,13 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
   /* no-CTA fallback: 全ステップにCTAがない場合（IC在来線のみ等）最終ステップにGoogle Maps追加 */
   const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || links.some(l => l.type === 'main-cta' && l.cta?.url);
   if (!hasAnyCta && stepGroups.length > 0) {
+    const mTo    = mapTarget(city);
     const lastSg = stepGroups[stepGroups.length - 1];
     const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
     if (gFrom !== label) {
       lastSg.cta = buildGoogleMapsLink(
-        gFrom, label, resolveMapMode(gFrom, label),
-        `📍 ${gFrom} → ${label} の行き方を見る`, coords(city),
+        gFrom, mTo, resolveMapMode(gFrom, mTo),
+        `📍 ${gFrom} → ${label} の行き方を見る`,
       );
     }
   }
@@ -808,10 +813,11 @@ function buildAutoLinks(city, departure, fromCity) {
       const arrivalAirport = city.airportGateway;
       const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
       if (arrivalAirport !== label) {
+        const mTo = mapTarget(city);
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, label, resolveMapMode(arrivalAirport, label), `📍 ${arrivalAirport} → ${label} の行き方を見る`, co),
+          cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo), `📍 ${arrivalAirport} → ${label} の行き方を見る`),
           caution: null,
         });
       }
@@ -833,12 +839,12 @@ function buildAutoLinks(city, departure, fromCity) {
             caution: null,
           });
         } else {
-          const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
+          const mTo = mapTarget(city);
           stepGroups.push({
             type: 'step-group',
             stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${label}（Googleマップ）`,
-            cta: buildGoogleMapsLink(city.airportGateway, label, resolveMapMode(city.airportGateway, label),
-                   `📍 ${city.airportGateway} → ${label} の行き方を見る`, co),
+            cta: buildGoogleMapsLink(city.airportGateway, mTo, resolveMapMode(city.airportGateway, mTo),
+                   `📍 ${city.airportGateway} → ${label} の行き方を見る`),
             caution: null,
           });
         }
@@ -857,12 +863,12 @@ function buildAutoLinks(city, departure, fromCity) {
       });
       /* ── step補完: 駅 → 観光地（ferryGateway がない場合のみ）── */
       if (!city.ferryGateway && destSt !== label) {
-        const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
+        const mTo = mapTarget(city);
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${destSt} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(destSt, label, resolveMapMode(destSt, label),
-                 `📍 ${destSt} → ${label} の行き方を見る`, co),
+          cta: buildGoogleMapsLink(destSt, mTo, resolveMapMode(destSt, mTo),
+                 `📍 ${destSt} → ${label} の行き方を見る`),
           caution: null,
         });
       }
