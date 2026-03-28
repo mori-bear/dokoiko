@@ -5,11 +5,13 @@
  *
  * 検証項目:
  *   [H1]  楽天: アフィリエイトURL (hb.afl.rakuten.co.jp) を使用
- *   [H2]  楽天: pc= パラメータ内に travel.rakuten.co.jp/yado/ を含む
+ *   [H2]  楽天: pc= デコード後に travel.rakuten.co.jp/yado/list/ + keyword= を含む
  *   [H3]  楽天: /pack/ を含まない（パックページ禁止）
+ *   [H-enc-r] 楽天: pc= に二重エンコード（%25）がない
  *   [H4]  じゃらん: ValueCommerce ラッパー (ck.jp.ap.valuecommerce.com) を使用
- *   [H5]  じゃらん: vc_url 内に jalan.net を含む
- *   [H6]  じゃらん: vc_url デコード後の URL に keyword= が含まれる
+ *   [H5]  じゃらん: vc_url デコード後に jalan.net を含む
+ *   [H6]  じゃらん: vc_url デコード後に keyword= が含まれる
+ *   [H-enc-j] じゃらん: vc_url に二重エンコード（%25）がない
  *   [H7]  全 destination: リンクが最低1件返る
  *   [H8]  全 destination: heading が存在する
  *   [H-tls] 全URL: https で始まる
@@ -23,7 +25,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
 const dests = JSON.parse(readFileSync(join(ROOT, 'src/data/destinations.json'), 'utf8'));
-const { buildHotelLinks } = await import(join(ROOT, 'src/hotel/hotelLinkBuilder.js'));
+const { buildHotelLinks } = await import(`file://${ROOT}/src/hotel/hotelLinkBuilder.js`);
 
 let pass = 0;
 let fail = 0;
@@ -42,18 +44,18 @@ function check(condition, msg, context = '') {
 
 console.log('\n=== 宿リンク静的検証 ===\n');
 
-/* ── hotelLinkBuilder ソース静的チェック ── */
-const hotelSrc     = readFileSync(join(ROOT, 'src/hotel/hotelLinkBuilder.js'), 'utf8');
-const affiliateDb  = JSON.parse(readFileSync(join(ROOT, 'src/data/affiliateProviders.json'), 'utf8'));
+/* ── affiliateProviders.json 静的チェック ── */
+const affiliateDb = JSON.parse(readFileSync(join(ROOT, 'src/data/affiliateProviders.json'), 'utf8'));
+const hotelSrc    = readFileSync(join(ROOT, 'src/hotel/hotelLinkBuilder.js'), 'utf8');
 
 check(affiliateDb.rakuten.affiliateBaseUrl.includes('hb.afl.rakuten.co.jp'),
   '[H-src] 楽天アフィリエイトURL hb.afl.rakuten.co.jp が存在しない');
-check(affiliateDb.rakuten.hotelBaseUrl.includes('travel.rakuten.co.jp/yado/'),
-  '[H-src] 楽天 travel.rakuten.co.jp/yado/{area}/ URLが存在しない');
+check(affiliateDb.rakuten.hotelSearchUrl.includes('travel.rakuten.co.jp/yado/list/'),
+  '[H-src] 楽天 hotelSearchUrl が travel.rakuten.co.jp/yado/list/ でない');
 check(!hotelSrc.includes('/pack/'),
   '[H-src] 楽天に /pack/ URL が含まれている（禁止）');
-check(hotelSrc.includes('jalan.net'),
-  '[H-src] じゃらん jalan.net が存在しない');
+check(affiliateDb.jalan.hotelSearchUrl.includes('jalan.net'),
+  '[H-src] じゃらん hotelSearchUrl に jalan.net が存在しない');
 check(hotelSrc.includes('valuecommerce.com'),
   '[H-src] じゃらん ValueCommerce ラッパーが存在しない');
 
@@ -85,16 +87,19 @@ for (const dest of dests) {
     // H1: アフィリエイトラッパー使用
     check(rakuten.url.includes('hb.afl.rakuten.co.jp'),
       `[H1] 楽天 URL にアフィリエイトラッパーがない: ${id}`, id);
-    // H2: pc= パラメータ内に /yado/ を含む（エンコード済みでも可）
+    // H2: pc= デコード後に yado/list/ + keyword= を含む
     const pcEncoded = new URL(rakuten.url).searchParams.get('pc') ?? '';
     const pcDecoded = decodeURIComponent(pcEncoded);
     check(
-      pcDecoded.includes('travel.rakuten.co.jp/yado/') || pcDecoded.includes('travel.rakuten.co.jp/'),
-      `[H2] 楽天 pc= に travel.rakuten.co.jp が含まれない: ${id}`, id,
+      pcDecoded.includes('travel.rakuten.co.jp/yado/list/') && pcDecoded.includes('keyword='),
+      `[H2] 楽天 pc= が yado/list/?keyword= 形式でない: ${id}`, id,
     );
     // H3: /pack/ 禁止
     check(!rakuten.url.includes('/pack/'),
       `[H3] 楽天 URL に /pack/ が含まれている: ${id}`, id);
+    // H-enc-r: 二重エンコード禁止（pc= 内に %25 があれば二重）
+    check(!pcEncoded.includes('%25'),
+      `[H-enc-r] 楽天 pc= に二重エンコード(%25)がある: ${id}`, id);
   } else {
     noRakuten++;
   }
@@ -107,15 +112,17 @@ for (const dest of dests) {
     // H4: ValueCommerce ラッパー使用
     check(jalan.url.includes('valuecommerce.com'),
       `[H4] じゃらん URL に ValueCommerce ラッパーがない: ${id}`, id);
-    // H5: vc_url パラメータ内に jalan.net を含む
+    // H5 / H6 / H-enc-j
     try {
       const vcEncoded = new URL(jalan.url).searchParams.get('vc_url') ?? '';
       const vcDecoded = decodeURIComponent(vcEncoded);
       check(vcDecoded.includes('jalan.net'),
         `[H5] じゃらん vc_url に jalan.net がない: ${id}`, id);
-      // H6: vc_url デコード後に keyword= が含まれる
-      check(vcDecoded.includes('keyword=') || vcDecoded.includes('keyword%3D'),
+      check(vcDecoded.includes('keyword='),
         `[H6] じゃらん vc_url に keyword= がない: ${id}`, id);
+      // H-enc-j: 二重エンコード禁止（vc_url 内に %25 があれば二重）
+      check(!vcEncoded.includes('%25'),
+        `[H-enc-j] じゃらん vc_url に二重エンコード(%25)がある: ${id}`, id);
     } catch (e) {
       check(false, `[H-parse] じゃらん URL パースエラー: ${id} — ${e.message}`, id);
     }

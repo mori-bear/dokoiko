@@ -2,10 +2,10 @@
   "rakuten": {
     "affiliateBaseUrl": "https://hb.afl.rakuten.co.jp/hgc/",
     "affiliateId": "5113ee4b.8662cfc5.5113ee4c.119de89a",
-    "hotelBaseUrl": "https://travel.rakuten.co.jp/yado/{area}/"
+    "hotelSearchUrl": "https://travel.rakuten.co.jp/yado/list/"
   },
   "jalan": {
-    "hotelBaseUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do",
+    "hotelSearchUrl": "https://www.jalan.net/search/",
     "hotelParamKey": "keyword",
     "vcSid": "3764408",
     "vcPid": "892559858"
