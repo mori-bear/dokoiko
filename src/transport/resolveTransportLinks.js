@@ -34,8 +34,13 @@ import {
   resolveMapMode,
 } from './linkBuilder.js';
 import { buildRoute } from '../engine/bfsEngine.js';
-import PORTS_DATA       from '../data/ports.json'       with { type: 'json' };
-import SPOT_ACCESS_DATA from '../data/spotAccess.json' with { type: 'json' };
+import { loadJson } from '../lib/loadJson.js';
+
+/* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
+const [PORTS_DATA, SPOT_ACCESS_DATA] = await Promise.all([
+  loadJson('../data/ports.json',       import.meta.url),
+  loadJson('../data/spotAccess.json', import.meta.url),
+]);
 
 /* ── 港名 → ハブ都市マップ（step補完用） ── */
 const PORT_CITY_MAP = {};

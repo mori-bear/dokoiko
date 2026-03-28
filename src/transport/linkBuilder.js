@@ -15,11 +15,14 @@
  *   - URL生成はこのファイルのみ（他ファイルへのインライン記述禁止）
  */
 
-/* ── JR予約プロバイダDB ── */
-import TRAIN_PROVIDERS from '../data/trainProviders.json' with { type: 'json' };
+import { loadJson } from '../lib/loadJson.js';
 
-/* ── フェリーDB（ferries.json → 港名→事業者マップ） ── */
-import FERRY_DATA from '../data/ferries.json' with { type: 'json' };
+/* ── JR予約プロバイダDB / フェリーDB ── */
+/* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
+const [TRAIN_PROVIDERS, FERRY_DATA] = await Promise.all([
+  loadJson('../data/trainProviders.json', import.meta.url),
+  loadJson('../data/ferries.json',        import.meta.url),
+]);
 
 /**
  * ferries.json から 港名（from） → { operator, url } のマップを構築する。
@@ -126,6 +129,8 @@ export const AIRPORT_HUB_GATEWAY = {
 /* ── Google Maps（transit / driving 統一） ── */
 
 export function buildGoogleMapsLink(origin, destination, mode = 'transit', label = null, coords = null) {
+  // null/undefined/空文字ガード — 「指定した地点」表示を防ぐ
+  if (!origin?.trim() || (!coords && !destination?.trim())) return null;
   const dest = coords ? `${coords.lat},${coords.lng}` : destination;
   let lbl = label ?? '行き方を見る（Googleマップ）';
   // 📍 プレフィックスをまだ持っていない場合に付与
@@ -137,6 +142,16 @@ export function buildGoogleMapsLink(origin, destination, mode = 'transit', label
     label: lbl,
     url: mapsUrl(origin, dest, mode),
   };
+}
+
+/**
+ * 空港・港が絡む区間マップのモードを自動選択する。
+ * 空港/港 → どこか、どこか → 空港/港 の場合は driving で海越えを防ぐ。
+ * それ以外は transit（電車・バスを優先）。
+ */
+export function resolveMapMode(from, to) {
+  const isAirportOrPort = s => s?.endsWith('空港') || s?.endsWith('港');
+  return (isAirportOrPort(from) || isAirportOrPort(to)) ? 'driving' : 'transit';
 }
 
 /* ── IATA 短縮名（出発空港ラベル用）── */

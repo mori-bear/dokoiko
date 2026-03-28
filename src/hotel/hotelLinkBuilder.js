@@ -7,7 +7,10 @@
  * アフィリエイトパラメータは affiliateProviders.json から読み込む。
  */
 
-import AFFILIATE_DB from '../data/affiliateProviders.json' with { type: 'json' };
+import { loadJson } from '../lib/loadJson.js';
+
+/* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
+const AFFILIATE_DB = await loadJson('../data/affiliateProviders.json', import.meta.url);
 
 function buildRakutenUrl(area) {
   const targetUrl = area
