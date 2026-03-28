@@ -259,11 +259,13 @@ function stepTypeLabel(type) {
   return MAP[type] ?? '';
 }
 
-/** 特急列車名を汎用表記に正規化（私鉄はそのまま） */
+/** 交通種別を表示用に正規化（列車名・路線名は非表示） */
 function normalizeStepLabel(label, stepType, operator = '') {
-  if (!label || stepType !== 'rail') return label;
-  if (operator && !operator.startsWith('JR')) return label;
-  if (label.includes('特急')) return 'JR（在来線特急）';
+  if (stepType === 'shinkansen') return '新幹線';
+  if (stepType === 'rail') {
+    if (operator && !operator.startsWith('JR')) return operator;
+    return '電車';
+  }
   return label;
 }
 
@@ -663,8 +665,9 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
   }
 
   if (stepGroups.length === 0) {
+    const _fbFromSt = fromCity.rail.replace(/駅$/, '');
     const fallbackCta = buildGoogleMapsLink(
-      fromCity.rail.replace(/駅$/, ''), label, 'transit', '📍 Googleマップで確認', coords(city)
+      _fbFromSt, label, resolveMapMode(_fbFromSt, label), `📍 ${_fbFromSt} → ${label} の行き方を見る`, coords(city)
     );
     stepGroups.push({ type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null });
   }

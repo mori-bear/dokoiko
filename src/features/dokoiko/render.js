@@ -228,33 +228,17 @@ function buildAccessStationHint(city) {
 
 /* ── 交通ブロック（step-group 新方式） ── */
 
-/* ── 所要時間フォーマット ── */
-function formatDuration(mins) {
-  if (!mins || mins <= 0) return null;
-  const h = Math.floor(mins / 60);
-  const m = mins % 60;
-  if (h === 0) return `${m}分`;
-  if (m === 0) return `${h}時間`;
-  return `${h}時間${m}分`;
-}
-
 function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const summaryLink = links.find(l => l.type === 'summary');
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // Phase 5⑤: ルート概要 — 出発地 → 目的地のみ（シンプル）
+  // 概要: 出発地 → 目的地
   const summaryHtml = (departure && destLabel)
     ? `<div class="route-summary">${departure} → ${destLabel}</div>`
     : '';
 
-  // Phase 5①: 詳細ステップ（区間マップ含む） — 常時表示・最優先
-  const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
-  const stepsBlockHtml = stepsHtml
-    ? `<div class="step-card-list">${stepsHtml}</div>`
-    : '';
-
-  // 全体Googleマップ（俯瞰用 driving 固定）— 区間マップの下
+  // ① 全体マップ（driving 固定・俯瞰）
   const departurePoint = summaryLink?.waypoints?.[0] ?? departure;
   const destTarget = (city?.lat && city?.lng)
     ? `${city.lat},${city.lng}`
@@ -271,13 +255,7 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  // 全体所要時間（city.travelTimeMinutes から）
-  const totalDuration = formatDuration(city?.travelTimeMinutes);
-  const totalDurationHtml = totalDuration
-    ? `<p class="route-duration">🕐 約${totalDuration}</p>`
-    : '';
-
-  // メインCTAボタン（JR / 航空券 / フェリー）— 最後
+  // ② 予約CTA（JR / 航空券 / フェリー）
   const mainCtaHtml = mainCtaLink?.cta
     ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
@@ -285,27 +263,19 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  const hasJrBooking = mainCtaLink?.cta?.type &&
-    ['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window'].includes(mainCtaLink.cta.type);
-  const jrNoteHtml = hasJrBooking
-    ? `<p class="transport-note">※オンライン予約不可の場合はみどりの窓口をご利用ください</p>`
+  // ③ 区間ステップ（区間マップ含む）
+  const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
+  const stepsBlockHtml = stepsHtml
+    ? `<div class="step-card-list">${stepsHtml}</div>`
     : '';
 
-  const headingHtml = departure
-    ? `<p class="transport-heading">${departure}からの行き方</p>`
-    : '';
-
-  // 表示順: 概要 → 区間マップ（ステップ）→ 全体マップ → 所要時間 → CTA（予約）
+  // 表示順: 概要 → ① 全体マップ → ② 予約CTA → ③ 区間ステップ
   return `
     <div class="card-section">
-      ${headingHtml}
       ${summaryHtml}
-      ${stepsBlockHtml}
       ${overallMapsHtml}
-      ${totalDurationHtml}
       ${mainCtaHtml}
-      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
-      ${jrNoteHtml}
+      ${stepsBlockHtml}
     </div>
   `;
 }
@@ -313,27 +283,15 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
 /* ── ステップカード（各ステップのCTA付き） ── */
 
 function buildStepCard(sg) {
-  // 注意・補足（ICカード案内など）
-  const cautionHtml = sg.caution
-    ? `<div class="step-card-caution">${sg.caution}</div>`
-    : '';
-
-  // 各ステップのCTAボタン（サブアクション）
   const ctaHtml = sg.cta?.url
     ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
           class="btn ${btnClass(sg.cta.type)} step-card-cta">${sg.cta.label}</a>`
     : '';
 
-  // 所要時間（duration があるときのみ表示）
-  const dur = formatDuration(sg.duration);
-  const durationHtml = dur ? `<span class="step-duration">🕐 約${dur}</span>` : '';
-
   return `
     <div class="step-card">
       <div class="step-card-header">${sg.stepLabel}</div>
       ${ctaHtml}
-      ${durationHtml}
-      ${cautionHtml}
     </div>
   `;
 }
