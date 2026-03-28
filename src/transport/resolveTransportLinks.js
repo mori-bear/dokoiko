@@ -589,6 +589,22 @@ function bfsStepsToLinks(steps, departure, city) {
     links.push(buildRentalLink());
   }
 
+  /* フォールバック: 全ステップに CTA がない（IC在来線のみ等）→ 最終ステップに Google Maps を付与 */
+  const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || mainCta;
+  if (!hasAnyCta && stepGroups.length > 0) {
+    const label  = cityLabel(city);
+    const co     = coords(city);
+    const lastSg = stepGroups[stepGroups.length - 1];
+    // stepLabel 形式: "① 🚃 {from} → {to}（{mode}）" → from を抽出
+    const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
+    if (gFrom !== label) {
+      lastSg.cta = buildGoogleMapsLink(
+        gFrom, label, resolveMapMode(gFrom, label),
+        `📍 ${gFrom} → ${label} の行き方を見る`, co,
+      );
+    }
+  }
+
   links.push(...stepGroups);
   return links.filter(Boolean);
 }
@@ -714,6 +730,20 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     }
     links.push(mainCta);
   }
+
+  /* no-CTA fallback: 全ステップにCTAがない場合（IC在来線のみ等）最終ステップにGoogle Maps追加 */
+  const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || links.some(l => l.type === 'main-cta' && l.cta?.url);
+  if (!hasAnyCta && stepGroups.length > 0) {
+    const lastSg = stepGroups[stepGroups.length - 1];
+    const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
+    if (gFrom !== label) {
+      lastSg.cta = buildGoogleMapsLink(
+        gFrom, label, resolveMapMode(gFrom, label),
+        `📍 ${gFrom} → ${label} の行き方を見る`, coords(city),
+      );
+    }
+  }
+
   links.push(...stepGroups);
   return links.filter(Boolean);
 }
