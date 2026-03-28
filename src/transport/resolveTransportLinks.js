@@ -31,6 +31,7 @@ import {
   buildRentalLink,
   buildHighwayBusLink,
   AIRPORT_HUB_GATEWAY,
+  resolveMapMode,
 } from './linkBuilder.js';
 import { buildRoute } from '../engine/bfsEngine.js';
 import PORTS_DATA       from '../data/ports.json'       with { type: 'json' };
@@ -383,10 +384,14 @@ function bfsStepToCta(step, departure) {
     case 'bus':
       // Phase 6: 高速バスは bushikaku.net へ
       return { cta: buildHighwayBusLink(step.from ?? departure, step.to ?? ''), caution: null };
-    case 'localMove':
-      return { cta: buildGoogleMapsLink(step.from ?? '', step.to ?? '', 'transit', '📍 Googleマップで確認'), caution: null };
+    case 'localMove': {
+      const from = step.from || '';
+      const to   = step.to   || '';
+      const mode = resolveMapMode(from, to);
+      return { cta: buildGoogleMapsLink(from, to, mode, '📍 Googleマップで確認'), caution: null };
+    }
     case 'car':
-      return { cta: buildGoogleMapsLink(step.from ?? '', step.to ?? '', 'driving', '📍 Googleマップで確認'), caution: null };
+      return { cta: buildGoogleMapsLink(step.from || '', step.to || '', 'driving', '📍 Googleマップで確認'), caution: null };
     default:
       return { cta: null, caution: null };
   }
@@ -423,8 +428,9 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
       // Phase 6: 高速バスは bushikaku.net へ
       return { cta: buildHighwayBusLink(from, to), caution: null };
     case 'localMove': {
-      const co = coords(city);
-      return { cta: buildGoogleMapsLink(from, to, 'transit', '📍 Googleマップで確認', co), caution: null };
+      const co   = coords(city);
+      const mode = resolveMapMode(from, to);
+      return { cta: buildGoogleMapsLink(from, to, mode, '📍 Googleマップで確認', co), caution: null };
     }
     case 'car': {
       return { cta: buildGoogleMapsLink(from, to, 'driving', '📍 Googleマップで確認', coords(city)), caution: null };
@@ -759,7 +765,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, label, 'transit', `📍 ${label}への行き方（Googleマップ）`, co),
+          cta: buildGoogleMapsLink(arrivalAirport, label, resolveMapMode(arrivalAirport, label), `📍 ${label}への行き方（Googleマップ）`, co),
           caution: null,
         });
       }
@@ -777,7 +783,7 @@ function buildAutoLinks(city, departure, fromCity) {
           stepGroups.push({
             type: 'step-group',
             stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${city.ferryGateway}（Googleマップ）`,
-            cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, 'transit', '📍 空港から港へ（Googleマップ）'),
+            cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, resolveMapMode(city.airportGateway, city.ferryGateway), '📍 空港から港へ（Googleマップ）'),
             caution: null,
           });
         } else {
@@ -785,7 +791,7 @@ function buildAutoLinks(city, departure, fromCity) {
           stepGroups.push({
             type: 'step-group',
             stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${label}（Googleマップ）`,
-            cta: buildGoogleMapsLink(city.airportGateway, label, 'transit',
+            cta: buildGoogleMapsLink(city.airportGateway, label, resolveMapMode(city.airportGateway, label),
                    `📍 ${label}への行き方（Googleマップ）`, co),
             caution: null,
           });
@@ -809,7 +815,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${destSt} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(destSt, label, 'transit',
+          cta: buildGoogleMapsLink(destSt, label, resolveMapMode(destSt, label),
                  `📍 ${label}への行き方（Googleマップ）`, co),
           caution: null,
         });
@@ -828,7 +834,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${hubCity}（交通手段で移動）`,
-          cta: buildGoogleMapsLink(origin, hubCity, 'transit',
+          cta: buildGoogleMapsLink(origin, hubCity, resolveMapMode(origin, hubCity),
                  `📍 ${hubCity}への行き方（Googleマップ）`),
           caution: null,
         });
@@ -836,7 +842,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${hubCity} → ${city.ferryGateway}（Googleマップ）`,
-          cta: buildGoogleMapsLink(hubCity, city.ferryGateway, 'transit',
+          cta: buildGoogleMapsLink(hubCity, city.ferryGateway, resolveMapMode(hubCity, city.ferryGateway),
                  `📍 ${city.ferryGateway}（Googleマップ）`),
           caution: null,
         });
@@ -845,7 +851,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${city.ferryGateway}（Googleマップ）`,
-          cta: buildGoogleMapsLink(origin, city.ferryGateway, 'transit',
+          cta: buildGoogleMapsLink(origin, city.ferryGateway, resolveMapMode(origin, city.ferryGateway),
                  `📍 ${city.ferryGateway}（Googleマップ）`),
           caution: null,
         });
@@ -867,8 +873,9 @@ function buildAutoLinks(city, departure, fromCity) {
 
   /* ── Google Maps（フォールバック / 何もない場合）── */
   if (stepGroups.length === 0) {
+    const _fbFrom = fromCity?.rail ?? departure;
     const gmapCta = buildGoogleMapsLink(
-      fromCity?.rail ?? departure, destSt, 'transit', '📍 行き方を見る（Googleマップ）',
+      _fbFrom, destSt, resolveMapMode(_fbFrom, destSt), '📍 行き方を見る（Googleマップ）',
       city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null,
     );
     stepGroups.push({

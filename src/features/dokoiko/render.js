@@ -233,20 +233,22 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // Phase 4②: 全体Googleマップ（最上部）— 出発点 → 目的地
+  // Phase 4②: 全体Googleマップ（最上部）— 出発点 → 目的地（driving 固定: 俯瞰用）
   const departurePoint = summaryLink?.waypoints?.[0] ?? departure;
   const destTarget = (city?.lat && city?.lng)
     ? `${city.lat},${city.lng}`
     : destLabel;
-  const overallMapsUrl =
-    'https://www.google.com/maps/dir/?api=1' +
-    `&origin=${encodeURIComponent(departurePoint)}` +
-    `&destination=${encodeURIComponent(destTarget)}` +
-    `&travelmode=transit`;
-  const overallMapsHtml = `<a href="${overallMapsUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn-secondary btn--route-main">
-       🌍 Googleマップで全体ルートを見る
-     </a>`;
+  const overallMapsHtml = (departurePoint && destTarget)
+    ? `<a href="${
+        'https://www.google.com/maps/dir/?api=1' +
+        `&origin=${encodeURIComponent(departurePoint)}` +
+        `&destination=${encodeURIComponent(destTarget)}` +
+        `&travelmode=driving`
+      }" target="_blank" rel="noopener noreferrer"
+         class="btn btn-secondary btn--route-main">
+         🌍 全体の位置を見る
+       </a>`
+    : '';
 
   // Phase 5⑤: ルート概要 — 出発地 → 目的地のみ（シンプル）
   const summaryHtml = (departure && destLabel)
