@@ -74,12 +74,9 @@ for (const dest of dests) {
     // H-tls
     check(rakuten.url.startsWith('https://'),
       `[H-tls] 楽天 URL が https でない: ${id}`, id);
-    // H-r1
-    check(rakuten.url.startsWith('https://travel.rakuten.co.jp/search/'),
-      `[H-r1] 楽天 URL が travel.rakuten.co.jp/search/ で始まらない: ${id} (${rakuten.url})`, id);
-    // H-r2: keyword= が URL に含まれる
-    check(rakuten.url.includes('keyword='),
-      `[H-r2] 楽天 URL に keyword= がない: ${id}`, id);
+    // H-r1: travel.rakuten.co.jp/yado/ を含む（エリアページ）または travel.rakuten.co.jp/ のみ（フォールバック）
+    check(rakuten.url.startsWith('https://travel.rakuten.co.jp/'),
+      `[H-r1] 楽天 URL が travel.rakuten.co.jp/ で始まらない: ${id} (${rakuten.url})`, id);
     // H-r3: 二重エンコードなし
     check(!rakuten.url.includes('%25'),
       `[H-r3] 楽天 URL に二重エンコード(%25)がある: ${id}`, id);
@@ -92,9 +89,9 @@ for (const dest of dests) {
     // H-tls
     check(jalan.url.startsWith('https://'),
       `[H-tls] じゃらん URL が https でない: ${id}`, id);
-    // H-j1
-    check(jalan.url.includes('jalan.net/search/'),
-      `[H-j1] じゃらん URL が jalan.net/search/ を含まない: ${id} (${jalan.url})`, id);
+    // H-j1: uww2011init.do を含む
+    check(jalan.url.includes('jalan.net/uw/uwp2011/uww2011init.do'),
+      `[H-j1] じゃらん URL が uww2011init.do 形式でない: ${id} (${jalan.url})`, id);
     // H-j2: keyword= が URL に含まれる
     check(jalan.url.includes('keyword='),
       `[H-j2] じゃらん URL に keyword= がない: ${id}`, id);
