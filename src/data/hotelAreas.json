@@ -1393,7 +1393,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%93%E0%8E%71%92%AC",
     "jalanKeyword": "愛媛県 内子町",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "muroto",
@@ -1707,7 +1707,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%82%DD%82%C8%82%A9%82%DD%92%AC",
     "jalanKeyword": "群馬県 みなかみ町",
     "prefCode": "gunma",
-    "rakutenFallback": "/yado/gunma/minakami.html"
+    "rakutenFallback": "/yado/gunma/"
   },
   {
     "id": "minami-aso",
@@ -1731,7 +1731,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8D%A1%8E%A1%8E%73",
     "jalanKeyword": "愛媛県 今治市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "ozu",
@@ -1743,7 +1743,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%91%E5%8F%46%8E%73",
     "jalanKeyword": "愛媛県 大洲市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "shakotan",
@@ -2331,7 +2331,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%95%91%92%DF%8E%73",
     "jalanKeyword": "京都府 舞鶴市",
     "prefCode": "kyoto",
-    "rakutenFallback": "/yado/kyoto/kyoto.html"
+    "rakutenFallback": "/yado/kyoto/"
   },
   {
     "id": "asuka",
@@ -2463,7 +2463,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%88%A4%95%51%88%A4%93%EC",
     "jalanKeyword": "愛媛県 愛媛愛南",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "taketa",
@@ -3123,7 +3123,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%8B%9E%93%73%8E%73",
     "jalanKeyword": "京都府 京都市",
     "prefCode": "kyoto",
-    "rakutenFallback": "/yado/kyoto/kyoto.html"
+    "rakutenFallback": "/yado/kyoto/"
   },
   {
     "id": "tomonoura",
@@ -3195,7 +3195,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8F%BC%8E%52%8E%73",
     "jalanKeyword": "愛媛県 松山市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "marugame",
@@ -3219,7 +3219,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%90%BC%89%46%98%61%8C%53%88%C9%95%FB%92%AC",
     "jalanKeyword": "愛媛県 西宇和郡伊方町",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "yanagawa",
@@ -3279,7 +3279,7 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%82%A6%82%D1%82%CC%8E%73",
     "jalanKeyword": "宮崎県 えびの市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/takachiho.html"
+    "rakutenFallback": "/yado/miyazaki/"
   },
   {
     "id": "onna",
@@ -3607,7 +3607,7 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%8F%ED%8A%8A%8E%73",
     "jalanKeyword": "愛知県 常滑市",
-    "rakutenFallback": "/yado/aichi/nagoya.html"
+    "rakutenFallback": "/yado/aichi/"
   },
   {
     "id": "korankei",
@@ -3620,7 +3620,7 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%96%4C%93%63%8E%73",
     "jalanKeyword": "愛知県 豊田市",
-    "rakutenFallback": "/yado/aichi/nagoya.html"
+    "rakutenFallback": "/yado/aichi/"
   },
   {
     "id": "minamichita",
@@ -3645,7 +3645,7 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%8B%9E%93%73%8E%73",
     "jalanKeyword": "京都府 京都市",
-    "rakutenFallback": "/yado/kyoto/kyoto.html"
+    "rakutenFallback": "/yado/kyoto/"
   },
   {
     "id": "shigaraki",
@@ -3695,7 +3695,7 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%8D%E3%95%7B%20%8D%E4%8E%73",
     "jalanKeyword": "大阪府 堺市",
-    "rakutenFallback": "/yado/osaka/osaka.html"
+    "rakutenFallback": "/yado/osaka/"
   },
   {
     "id": "ama-island",
@@ -3825,7 +3825,7 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8B%76%96%9C%8D%82%8C%B4%92%AC",
     "jalanKeyword": "愛媛県 久万高原町",
-    "rakutenFallback": "/yado/ehime/matsuyama.html"
+    "rakutenFallback": "/yado/ehime/"
   },
   {
     "id": "aoshima",
@@ -4210,5 +4210,12 @@
     "rakutenKeyword": "長野県 飯田市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%94%D3%93c%8E%73",
     "jalanKeyword": "長野県 飯田市"
+  },
+  {
+    "id": "shimanto-cho",
+    "name": "四万十町",
+    "prefecture": "高知県",
+    "prefCode": "kochi",
+    "rakutenFallback": "/yado/kochi/"
   }
 ]
