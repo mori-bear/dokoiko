@@ -9984,7 +9984,7 @@
     "hubStation": "鶴岡駅",
     "accessStation": "鶴岡駅",
     "hotelArea": "yamagata",
-    "hotelKeyword": "出羽三山"
+    "hotelKeyword": "鶴岡"
   },
   {
     "id": "sakunami-onsen",
@@ -13563,7 +13563,7 @@
     "hubStation": "貞光駅",
     "accessStation": "貞光駅",
     "hotelArea": "tokushima",
-    "hotelKeyword": "剣山"
+    "hotelKeyword": "美馬"
   },
   {
     "id": "nobeoka",
@@ -15351,7 +15351,7 @@
     "hubStation": "土佐大正駅",
     "accessStation": "土佐大正駅",
     "hotelArea": "kochi",
-    "hotelKeyword": "四万十町"
+    "hotelKeyword": "窪川"
   },
   {
     "id": "tanba-sasayama",
@@ -16628,7 +16628,7 @@
     "accessStation": "那覇空港",
     "hotelArea": "okinawa",
     "flightHub": "那覇",
-    "hotelKeyword": "恩納村"
+    "hotelKeyword": "恩納"
   },
   {
     "id": "nago",
@@ -16759,7 +16759,7 @@
     "accessStation": "那覇空港",
     "hotelArea": "okinawa",
     "flightHub": "那覇",
-    "hotelKeyword": "読谷村"
+    "hotelKeyword": "読谷"
   },
   {
     "id": "niseko",
@@ -16895,7 +16895,7 @@
       "takamatsu": 560
     },
     "hotelArea": "hokkaido",
-    "hotelKeyword": "大雪山"
+    "hotelKeyword": "旭岳"
   },
   {
     "id": "shiraoi",
@@ -18839,7 +18839,7 @@
     },
     "hotelArea": "shimane",
     "port": "七類港",
-    "hotelKeyword": "海士町"
+    "hotelKeyword": "海士"
   },
   {
     "id": "akiyoshidai",
@@ -18906,7 +18906,7 @@
       "takamatsu": 155
     },
     "hotelArea": "yamaguchi",
-    "hotelKeyword": "秋吉台"
+    "hotelKeyword": "美祢"
   },
   {
     "id": "yanai",
@@ -19457,7 +19457,7 @@
     },
     "hotelArea": "ehime",
     "accessType": "car",
-    "hotelKeyword": "四国カルスト"
+    "hotelKeyword": "久万高原"
   },
   {
     "id": "aoshima",
@@ -19658,7 +19658,7 @@
       "takamatsu": 180
     },
     "hotelArea": "saga",
-    "hotelKeyword": "吉野ヶ里"
+    "hotelKeyword": "神埼"
   },
   {
     "id": "kunisaki",
