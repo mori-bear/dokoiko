@@ -1,21 +1,29 @@
 /**
  * 宿泊リンクビルダー
  *
- * 楽天: hotelAreas.json の rakutenPath → travel.rakuten.co.jp エリアページ
- *   (/yado/{pref}/{area}.html または /yado/{pref}/)
+ * 楽天: hb.afl.rakuten.co.jp アフィリエイト経由
+ *   → travel.rakuten.co.jp/yado/{pref}/{area}.html に飛ぶ
+ *   エリアは hotelAreas.json の rakutenPath / rakutenFallback を使用
  *
- * じゃらん: uww2011init.do?keyword={hotelKeyword}&screenId=UWW1402
+ * じゃらん: ValueCommerce 経由
+ *   → jalan.net/uw/uwp2011/uww2011init.do?keyword={keyword} に飛ぶ
  *
  * エンコードルール:
  *   じゃらん keyword: encodeURIComponent 1回のみ（UTF-8）
- *   楽天: パスを直接使用（URLエンコード不要）
+ *   楽天リンク先URL: encodeURIComponent 1回のみ
  */
 
 import { loadJson } from '../lib/loadJson.js';
 
-/* hotelAreas.json を起動時に1回ロード */
-const HOTEL_AREAS = await loadJson('../data/hotelAreas.json', import.meta.url);
-const AREAS_BY_ID = new Map(HOTEL_AREAS.map(a => [a.id, a]));
+/* hotelAreas.json / affiliateProviders.json を起動時に1回ロード */
+const HOTEL_AREAS  = await loadJson('../data/hotelAreas.json',        import.meta.url);
+const AFFILIATE    = await loadJson('../data/affiliateProviders.json', import.meta.url);
+const AREAS_BY_ID  = new Map(HOTEL_AREAS.map(a => [a.id, a]));
+
+/* アフィリエイト設定 */
+const RAKUTEN_AFID = AFFILIATE.rakuten.affiliateId;   // 5113ee4b.8662cfc5.5113ee4c.119de89a
+const JALAN_VC_SID = AFFILIATE.jalan.vcSid;           // 3764408
+const JALAN_VC_PID = AFFILIATE.jalan.vcPid;           // 892559858
 
 /**
  * destinations.json の ID と hotelAreas.json の ID が異なるケースの対応
@@ -35,29 +43,48 @@ function lookupArea(destId) {
 }
 
 /**
- * 楽天トラベル: hotelAreas.json の rakutenPath または rakutenFallback を使用
+ * 楽天エリアページ URL（アフィリエイトなし）
+ * hotelAreas.json の rakutenPath → rakutenFallback → /（トップ）の優先順
  */
-function buildRakutenUrl(dest) {
+function buildRakutenDestUrl(dest) {
   const area = lookupArea(dest.id);
   const path = area?.rakutenPath || area?.rakutenFallback || null;
   return `https://travel.rakuten.co.jp${path ?? '/'}`;
 }
 
 /**
- * 楽天トラベル: 拠点都市名からエリアを検索（name 一致）
- * 見つかった場合のみ URL を返す（見つからない場合 null）
+ * 楽天トラベル: 拠点都市名からエリアURLを取得（name 一致）
  */
-function buildRakutenUrlByName(cityName) {
+function buildRakutenDestUrlByName(cityName) {
   const area = HOTEL_AREAS.find(a => a.name === cityName);
   const path = area?.rakutenPath || area?.rakutenFallback || null;
   return path ? `https://travel.rakuten.co.jp${path}` : null;
 }
 
 /**
- * じゃらん: uww2011init.do キーワード検索（UTF-8）
+ * 楽天アフィリエイトリンク
+ * https://hb.afl.rakuten.co.jp/hgc/{affiliateId}/?pc={encodedDestUrl}
+ */
+function buildRakutenUrl(dest) {
+  const destUrl = buildRakutenDestUrl(dest);
+  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`;
+}
+
+function buildRakutenUrlByName(cityName) {
+  const destUrl = buildRakutenDestUrlByName(cityName);
+  if (!destUrl) return null;
+  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`;
+}
+
+/**
+ * じゃらん ValueCommerce アフィリエイトリンク
+ * https://ck.jp.ap.valuecommerce.com/servlet/referral?sid={sid}&pid={pid}&vc_url={encodedJalanUrl}
+ *
+ * リンク先: uww2011init.do?keyword={keyword}&screenId=UWW1402
  */
 function buildJalanUrl(keyword) {
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}&screenId=UWW1402`;
+  const jalanUrl = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}&screenId=UWW1402`;
+  return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(jalanUrl)}`;
 }
 
 /**

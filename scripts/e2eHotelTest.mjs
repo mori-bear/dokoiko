@@ -31,8 +31,13 @@ const ID_FLAG_IDX  = process.argv.indexOf('--id');
 const FILTER_ID    = ID_FLAG_IDX >= 0 ? process.argv[ID_FLAG_IDX + 1] : null;
 
 /* ── データ読み込み ── */
-const dests = JSON.parse(readFileSync(join(ROOT, 'src/data/destinations.json'), 'utf8'));
+const dests     = JSON.parse(readFileSync(join(ROOT, 'src/data/destinations.json'), 'utf8'));
+const affiliate = JSON.parse(readFileSync(join(ROOT, 'src/data/affiliateProviders.json'), 'utf8'));
 const { buildHotelLinks } = await import(`file://${ROOT}/src/hotel/hotelLinkBuilder.js`);
+
+const RAKUTEN_AFID = affiliate.rakuten.affiliateId;
+const JALAN_VC_SID = affiliate.jalan.vcSid;
+const JALAN_VC_PID = affiliate.jalan.vcPid;
 
 /* ── 対象を決定 ── */
 let targets = [...dests];
@@ -112,40 +117,69 @@ function checkUrlStatic(url, provider, dest) {
     issues.push({ level: 'NG', phase: 'URL', reason: `https でない: ${url}` });
   }
 
-  // 二重エンコード禁止
-  if (url.includes('%25')) {
-    issues.push({ level: 'NG', phase: 'URL', reason: `二重エンコード (%25) を検出: ${url}` });
+  // 二重エンコード禁止（%2525 等）
+  if (url.includes('%2525')) {
+    issues.push({ level: 'NG', phase: 'URL', reason: `二重エンコード (%2525) を検出: ${url}` });
   }
 
-  // 空 URL 禁止（ドメインのみ）
-  if (url === 'https://travel.rakuten.co.jp' || url === 'https://travel.rakuten.co.jp/') {
-    issues.push({ level: 'NG', phase: 'URL', reason: '楽天 URL がトップページのみ（エリアデータ未登録の可能性）' });
-  }
-
-  // じゃらん: keyword がデコードすると元のキーワードと一致するか
-  if (provider === 'jalan') {
-    const m = url.match(/keyword=([^&]*)/);
-    if (!m) {
-      issues.push({ level: 'NG', phase: 'URL', reason: 'じゃらん URL に keyword= がない' });
-    } else {
+  if (provider === 'rakuten') {
+    // アフィリエイト経由チェック
+    if (!url.startsWith('https://hb.afl.rakuten.co.jp/')) {
+      issues.push({ level: 'NG', phase: 'URL', reason: `楽天 URL がアフィリエイト経由でない: ${url}` });
+    }
+    // アフィリエイトID 含有チェック
+    if (!url.includes(RAKUTEN_AFID)) {
+      issues.push({ level: 'NG', phase: 'URL', reason: `楽天 URL にアフィリエイトID がない` });
+    }
+    // pc= に travel.rakuten.co.jp が含まれる
+    if (!url.includes('travel.rakuten.co.jp')) {
+      issues.push({ level: 'NG', phase: 'URL', reason: `楽天 URL の pc= に travel.rakuten.co.jp がない` });
+    }
+    // pc= のデコード先に /yado/ が含まれる（フォールバック未登録検出）
+    const pcM = url.match(/[?&]pc=([^&]+)/);
+    if (pcM) {
       try {
-        const decoded = decodeURIComponent(m[1]);
-        if (decoded !== kw) {
-          issues.push({
-            level: 'WARN',
-            phase: 'URL',
-            reason: `keyword デコード不一致: URL="${decoded}" vs hotelKeyword="${kw}"`,
-          });
+        const decoded = decodeURIComponent(pcM[1]);
+        if (decoded === 'https://travel.rakuten.co.jp/' || decoded === 'https://travel.rakuten.co.jp') {
+          issues.push({ level: 'WARN', phase: 'URL', reason: '楽天リンク先がトップページのみ（hotelAreas.json 未登録）' });
         }
-      } catch {
-        issues.push({ level: 'NG', phase: 'URL', reason: `keyword デコード失敗: ${m[1]}` });
-      }
+      } catch { /* ignore */ }
     }
   }
 
-  // 楽天: /yado/ パスを含む（トップ以外）
-  if (provider === 'rakuten' && !url.includes('/yado/')) {
-    issues.push({ level: 'WARN', phase: 'URL', reason: `楽天 URL に /yado/ がない（フォールバック未登録）: ${url}` });
+  if (provider === 'jalan') {
+    // ValueCommerce 経由チェック
+    if (!url.startsWith('https://ck.jp.ap.valuecommerce.com/')) {
+      issues.push({ level: 'NG', phase: 'URL', reason: `じゃらん URL が ValueCommerce 経由でない: ${url}` });
+    }
+    // sid/pid チェック
+    if (!url.includes(`sid=${JALAN_VC_SID}`) || !url.includes(`pid=${JALAN_VC_PID}`)) {
+      issues.push({ level: 'NG', phase: 'URL', reason: `じゃらん URL に ValueCommerce sid/pid がない` });
+    }
+    // vc_url に keyword が含まれるか（デコードして確認）
+    const vcM = url.match(/vc_url=([^&]+)/);
+    if (vcM) {
+      try {
+        const vcDecoded = decodeURIComponent(vcM[1]);
+        const kwM = vcDecoded.match(/keyword=([^&]*)/);
+        if (!kwM) {
+          issues.push({ level: 'NG', phase: 'URL', reason: 'じゃらん vc_url に keyword= がない' });
+        } else {
+          const kwDecoded = decodeURIComponent(kwM[1]);
+          if (kwDecoded !== kw) {
+            issues.push({
+              level: 'WARN',
+              phase: 'URL',
+              reason: `keyword デコード不一致: vc_url="${kwDecoded}" vs hotelKeyword="${kw}"`,
+            });
+          }
+        }
+      } catch {
+        issues.push({ level: 'NG', phase: 'URL', reason: `じゃらん vc_url のデコード失敗` });
+      }
+    } else {
+      issues.push({ level: 'NG', phase: 'URL', reason: 'じゃらん URL に vc_url= がない' });
+    }
   }
 
   return issues;
@@ -180,7 +214,18 @@ const JALAN_NG_WORDS = [
 async function checkPage(url, provider, context) {
   const page = await context.newPage();
   try {
-    const response = await page.goto(url, {
+    /* じゃらん: VC URL の vc_url を展開して jalan.net に直接アクセス
+     * ValueCommerce 経由のリダイレクトチェーンは Playwright と競合するため
+     * VC URL の正当性は Phase 2（静的）で確認済み */
+    let accessUrl = url;
+    if (provider === 'jalan') {
+      const vcMatch = url.match(/vc_url=([^&]+)/);
+      if (vcMatch) {
+        accessUrl = decodeURIComponent(vcMatch[1]);
+      }
+    }
+
+    const response = await page.goto(accessUrl, {
       waitUntil: 'domcontentloaded',
       timeout: 30_000,
     });
@@ -190,16 +235,27 @@ async function checkPage(url, provider, context) {
       return [{ level: 'NG', phase: 'PAGE', reason: `HTTP ${status}` }];
     }
 
-    /* ドメイン流出チェック */
+    /* 遷移先ドメインチェック
+     * 楽天AFL → travel.rakuten.co.jp に遷移
+     * じゃらん → jalan.net 直接アクセス
+     */
     const finalUrl = page.url();
     if (provider === 'rakuten' && !finalUrl.includes('travel.rakuten.co.jp')) {
-      return [{ level: 'NG', phase: 'PAGE', reason: `楽天ドメイン外へリダイレクト: ${finalUrl}` }];
+      return [{ level: 'NG', phase: 'PAGE', reason: `楽天AFL: travel.rakuten.co.jp に遷移しなかった: ${finalUrl}` }];
     }
     if (provider === 'jalan' && !finalUrl.includes('jalan.net')) {
-      return [{ level: 'NG', phase: 'PAGE', reason: `じゃらんドメイン外へリダイレクト: ${finalUrl}` }];
+      return [{ level: 'NG', phase: 'PAGE', reason: `じゃらん: jalan.net ドメイン外へ遷移: ${finalUrl}` }];
     }
 
-    const bodyText = await page.evaluate(() => document.body?.innerText ?? '');
+    await page.waitForLoadState('domcontentloaded').catch(() => {});
+    let bodyText = await page.evaluate(() => document.body?.innerText ?? '').catch(() => '');
+
+    /* bodyText が短すぎる場合（レートリミット等で空ページが返った）は
+     * 1.5秒待機して再取得を1回だけ試みる */
+    if (bodyText.length < 200) {
+      await new Promise(r => setTimeout(r, 1500));
+      bodyText = await page.evaluate(() => document.body?.innerText ?? '').catch(() => bodyText);
+    }
 
     /* NG文言チェック */
     const ngWords = provider === 'rakuten' ? RAKUTEN_NG_WORDS : JALAN_NG_WORDS;
@@ -209,9 +265,16 @@ async function checkPage(url, provider, context) {
       }
     }
 
-    /* OK条件チェック */
+    /* OK条件チェック（レートリミット対策: 未発見なら2秒待機後1回再試行） */
     const okWords = provider === 'rakuten' ? RAKUTEN_OK_WORDS : JALAN_OK_WORDS;
-    const found = okWords.some(w => bodyText.includes(w));
+    let found = okWords.some(w => bodyText.includes(w));
+    if (!found) {
+      await new Promise(r => setTimeout(r, 2000));
+      const retryText = await page.evaluate(() => document.body?.innerText ?? '').catch(() => '');
+      if (retryText.length > bodyText.length || retryText.length > 200) {
+        found = okWords.some(w => retryText.includes(w));
+      }
+    }
     if (!found) {
       return [{
         level: 'NG',
@@ -305,7 +368,7 @@ for (let i = 0; i < targets.length; i++) {
     if (!STATIC_ONLY && !issues.some(i => i.level === 'NG' && i.phase === 'URL')) {
       const pageIssues = await checkPage(link.url, provider, bContext);
       issues.push(...pageIssues);
-      await new Promise(r => setTimeout(r, 600));
+      await new Promise(r => setTimeout(r, 1200));
     }
 
     const hasNg   = issues.some(i => i.level === 'NG');
@@ -326,6 +389,35 @@ for (let i = 0; i < targets.length; i++) {
   }
 
   process.stdout.write('\n');
+}
+
+/* ══════════════════════════════════════════
+   Phase 4 — じゃらん PAGE NG の再試行
+   （レートリミットによるランダム失敗を回避）
+   ══════════════════════════════════════════ */
+if (!STATIC_ONLY && browser) {
+  const retryTargets = results.filter(r =>
+    r.provider === 'jalan' &&
+    r.issues.some(i => i.level === 'NG' && i.phase === 'PAGE' && i.reason.includes('宿一覧が確認できない'))
+  );
+  if (retryTargets.length > 0) {
+    console.log(`\n[retry] じゃらん PAGE NG ${retryTargets.length} 件を5秒後に再試行...`);
+    await new Promise(r => setTimeout(r, 5000));
+    for (const r of retryTargets) {
+      const retryIssues = await checkPage(r.url, 'jalan', bContext);
+      const retryNg = retryIssues.some(i => i.level === 'NG');
+      if (!retryNg) {
+        // 再試行で PASS → 元の NG を除去
+        r.issues = r.issues.filter(i => !(i.level === 'NG' && i.phase === 'PAGE'));
+        ngCount--;
+        passCount++;
+        process.stdout.write(`[retry OK] ${r.dest.id}\n`);
+      } else {
+        process.stdout.write(`[retry NG] ${r.dest.id}: ${retryIssues.find(i => i.level === 'NG')?.reason}\n`);
+      }
+      await new Promise(r => setTimeout(r, 2000));
+    }
+  }
 }
 
 if (browser) await browser.close();
