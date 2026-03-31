@@ -77,6 +77,13 @@ function buildRakutenUrlByName(cityName) {
 }
 
 /**
+ * Booking.com キーワード検索リンク（比較導線）
+ */
+function buildBookingUrl(keyword) {
+  return `https://www.booking.com/searchresults.ja.html?ss=${encodeURIComponent(keyword)}&lang=ja`;
+}
+
+/**
  * じゃらん ValueCommerce アフィリエイトリンク
  * https://ck.jp.ap.valuecommerce.com/servlet/referral?sid={sid}&pid={pid}&vc_url={encodedJalanUrl}
  *
@@ -98,8 +105,9 @@ export function buildHotelLinks(dest) {
   const result = {
     heading: `${uiName}で泊まる`,
     links: [
-      { type: 'rakuten', label: `${uiName}の宿を探す（楽天）`, url: buildRakutenUrl(dest) },
-      { type: 'jalan',   label: `${uiName}の宿を見る（じゃらん）`, url: buildJalanUrl(keyword) },
+      { type: 'rakuten',  label: `${uiName}の宿を探す（楽天）`,       url: buildRakutenUrl(dest) },
+      { type: 'jalan',    label: `${uiName}の宿を見る（じゃらん）`,    url: buildJalanUrl(keyword) },
+      { type: 'booking',  label: `${uiName}の宿を比較（Booking.com）`, url: buildBookingUrl(keyword) },
     ],
   };
 

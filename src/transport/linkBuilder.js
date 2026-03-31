@@ -134,11 +134,7 @@ export function buildGoogleMapsLink(origin, destination, mode = 'transit', label
   // テキスト名を優先（座標をそのまま使うと「指定した地点」になる）
   const dest = destination?.trim() ? destination : (coords ? `${coords.lat},${coords.lng}` : null);
   if (!dest) return null;
-  let lbl = label ?? '行き方を見る（Googleマップ）';
-  // 📍 プレフィックスをまだ持っていない場合に付与
-  if (!lbl.startsWith('📍') && !lbl.startsWith('🚗') && !lbl.startsWith('🚌')) {
-    lbl = '📍 ' + lbl;
-  }
+  const lbl = label ?? '行き方を見る（Googleマップ）';
   return {
     type: 'google-maps',
     label: lbl,
@@ -197,7 +193,7 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
   if (!fromAirportName) return null; // IATAコード露出防止
   return {
     type: 'skyscanner',
-    label: `✈ 飛行機で行く（${fromAirportName} → ${toAirportName}）`,
+    label: `飛行機で行く（${fromAirportName} → ${toAirportName}）`,
     url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
@@ -210,7 +206,7 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
   if (!fromAirportName) return null; // IATAコード露出防止
   return {
     type: 'google-flights',
-    label: `✈ Google Flightsで比較（${fromAirportName} → ${toAirportName}）`,
+    label: `Google Flightsで比較（${fromAirportName} → ${toAirportName}）`,
     url: `https://www.google.com/flights#search;f=${fromIata};t=${toIata};tt=o`,
   };
 }
@@ -234,7 +230,7 @@ export function buildRentalLink() {
   const vc = `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=${encodeURIComponent(target)}`;
   return {
     type: 'rental',
-    label: '🚗 レンタカーを探す',
+    label: 'レンタカーを探す',
     url: vc,
   };
 }
@@ -248,7 +244,7 @@ export function buildRentalLink() {
 export function buildHighwayBusLink(from, to) {
   return {
     type: 'bus',
-    label: `🚌 高速バスを探す（${from} → ${to}）`,
+    label: `高速バスを探す（${from} → ${to}）`,
     url: `https://www.bushikaku.net/`,
   };
 }
@@ -268,15 +264,15 @@ export function buildHighwayBusLink(from, to) {
 export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
   if (bookingUrl) {
     const label = operatorName
-      ? `🚢 フェリーを予約する（${operatorName}）`
-      : `🚢 フェリーを予約する（${ferryGateway}）`;
+      ? `フェリーを予約する（${operatorName}）`
+      : `フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: bookingUrl };
   }
   const info = PORT_FERRY_MAP[ferryGateway];
   if (info) {
     const label = info.operator
-      ? `🚢 フェリーを調べる（${info.operator}）`
-      : `🚢 フェリーを調べる（${ferryGateway}）`;
+      ? `フェリーを調べる（${info.operator}）`
+      : `フェリーを調べる（${ferryGateway}）`;
     return { type: 'ferry', label, url: info.url };
   }
   // 未登録港・URLなし → null（Google Maps フォールバックなし）
@@ -301,8 +297,8 @@ export function buildFerryLinkForDest(destId, ferryGateway, bookingUrl = null, o
   const destInfo = DEST_FERRY_MAP[destId];
   if (destInfo) {
     const label = destInfo.operator
-      ? `🚢 フェリーを調べる（${destInfo.operator}）`
-      : `🚢 フェリーを調べる（${ferryGateway}）`;
+      ? `フェリーを調べる（${destInfo.operator}）`
+      : `フェリーを調べる（${ferryGateway}）`;
     return { type: 'ferry', label, url: destInfo.url };
   }
   // DEST_FERRY_MAP にない → 港名ベースにフォールバック

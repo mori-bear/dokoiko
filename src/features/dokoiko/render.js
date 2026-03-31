@@ -250,7 +250,7 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
         `&travelmode=driving`
       }" target="_blank" rel="noopener noreferrer"
          class="btn btn-secondary btn--route-overall">
-         🌍 どこに行くか地図で見る
+         どこに行くか地図で見る
        </a>`
     : '';
 
