@@ -20429,5 +20429,78 @@
     "hotelArea": "tokyo",
     "port": "竹芝桟橋",
     "hotelKeyword": "式根島"
+  },
+  {
+    "id": "hiroshima",
+    "name": "広島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima-t",
+    "hotelHub": "広島",
+    "hotelSearch": "広島",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "stayBias": 1,
+    "weight": 1.2,
+    "departures": [
+      "東京",
+      "大阪",
+      "名古屋",
+      "福岡",
+      "高松"
+    ],
+    "description": "平和記念公園と原爆ドームが語る歴史と、牡蠣・お好み焼きの食文化が息づく西日本を代表する都市。宮島への玄関口でもある。",
+    "tags": [
+      "歴史",
+      "平和",
+      "グルメ",
+      "文化"
+    ],
+    "spots": [
+      "平和記念公園",
+      "原爆ドーム",
+      "縮景園"
+    ],
+    "shinkansenAccess": true,
+    "needsCar": false,
+    "gateways": {
+      "rail": [
+        "広島駅"
+      ],
+      "airport": [
+        "広島空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "destType": "city",
+    "railGateway": "広島駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "広島空港",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "lat": 34.3853,
+    "lng": 132.4553,
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "gatewayHub": null,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "hubStation": "広島駅",
+    "accessStation": "広島駅",
+    "accessHub": null,
+    "railNote": null,
+    "travelTime": {
+      "tokyo": 230,
+      "osaka": 80,
+      "nagoya": 135,
+      "fukuoka": 70,
+      "takamatsu": 90
+    },
+    "hotelArea": "hiroshima",
+    "hotelKeyword": "広島"
   }
 ]
