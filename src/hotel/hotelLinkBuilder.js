@@ -77,17 +77,11 @@ function buildRakutenUrlByName(cityName) {
 }
 
 /**
- * Booking.com キーワード検索リンク（比較導線）
- */
-function buildBookingUrl(keyword) {
-  return `https://www.booking.com/searchresults.ja.html?ss=${encodeURIComponent(keyword)}&lang=ja`;
-}
-
-/**
  * じゃらん ValueCommerce アフィリエイトリンク
  * https://ck.jp.ap.valuecommerce.com/servlet/referral?sid={sid}&pid={pid}&vc_url={encodedJalanUrl}
  *
  * リンク先: uww2011init.do?keyword={keyword}&screenId=UWW1402
+ * エンコード: keyword は encodeURIComponent 1回のみ
  */
 function buildJalanUrl(keyword) {
   const jalanUrl = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}&screenId=UWW1402`;
@@ -102,26 +96,28 @@ export function buildHotelLinks(dest) {
   const keyword = dest.hotelKeyword ?? dest.name;
   const uiName  = dest.displayName || dest.name;
 
+  /* ── 現地宿（必須） ── */
   const result = {
-    heading: `${uiName}で泊まる`,
+    heading: `現地で泊まる`,
     links: [
-      { type: 'rakuten',  label: `${uiName}の宿を探す（楽天）`,       url: buildRakutenUrl(dest) },
-      { type: 'jalan',    label: `${uiName}の宿を見る（じゃらん）`,    url: buildJalanUrl(keyword) },
-      { type: 'booking',  label: `${uiName}の宿を比較（Booking.com）`, url: buildBookingUrl(keyword) },
+      { type: 'rakuten', label: `このまま${uiName}で泊まる（楽天）`,  url: buildRakutenUrl(dest) },
+      { type: 'jalan',   label: `空室を確認する（じゃらん）`,          url: buildJalanUrl(keyword) },
     ],
   };
 
-  // ハブ宿: 車必須 or remote/mountain + gatewayHub が設定されている場合
+  /* ── ハブ宿（条件付き）── */
+  /* 車必須 / remote / mountain で gatewayHub が設定されている場合のみ */
   const needsHub = dest.needsCar || dest.destType === 'remote' || dest.destType === 'mountain';
   if (needsHub && dest.gatewayHub && dest.gatewayHub !== dest.name) {
-    const hubRakutenUrl = buildRakutenUrlByName(dest.gatewayHub);
+    const hub = dest.gatewayHub;
+    const hubRakutenUrl = buildRakutenUrlByName(hub);
     result.hubLinks = {
-      heading: `${dest.gatewayHub}で泊まる（拠点）`,
+      heading: `アクセスの良い場所で泊まる（${hub}）`,
       links: [
         ...(hubRakutenUrl
-          ? [{ type: 'rakuten', label: `${dest.gatewayHub}の宿を探す（楽天）`, url: hubRakutenUrl }]
+          ? [{ type: 'rakuten', label: `${hub}で泊まる（楽天）`,          url: hubRakutenUrl }]
           : []),
-        { type: 'jalan', label: `${dest.gatewayHub}の宿を見る（じゃらん）`, url: buildJalanUrl(dest.gatewayHub) },
+        { type: 'jalan',   label: `アクセス重視で宿を見る（じゃらん）`, url: buildJalanUrl(hub) },
       ],
     };
   }

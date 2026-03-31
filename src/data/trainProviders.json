@@ -2,31 +2,31 @@
   "ekinet": {
     "type": "jr-east",
     "label": "えきねっと",
-    "ctaLabel": "🚄 新幹線・JRを予約する（えきねっと）",
+    "ctaLabel": "このルートで進む（えきねっと）",
     "url": "https://www.eki-net.com/"
   },
   "e5489": {
     "type": "jr-west",
     "label": "e5489",
-    "ctaLabel": "🚄 新幹線・JRを予約する（e5489）",
+    "ctaLabel": "このルートで進む（e5489）",
     "url": "https://www.jr-odekake.net/goyoyaku/"
   },
   "ex": {
     "type": "jr-ex",
     "label": "EX",
-    "ctaLabel": "🚄 新幹線・JRを予約する（EX予約）",
+    "ctaLabel": "このルートで進む（EX予約）",
     "url": "https://smart-ex.jp/"
   },
   "jrkyushu": {
     "type": "jr-kyushu",
     "label": "JR九州ネット予約",
-    "ctaLabel": "🚄 新幹線・JRを予約する（JR九州）",
+    "ctaLabel": "このルートで進む（JR九州）",
     "url": "https://train.yoyaku.jrkyushu.co.jp/"
   },
   "madoguchi": {
     "type": "jr-window",
     "label": "みどりの窓口",
-    "ctaLabel": "🚃 みどりの窓口で購入",
+    "ctaLabel": "みどりの窓口で購入",
     "url": "https://www.jr-odekake.net/"
   }
 }

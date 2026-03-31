@@ -1223,11 +1223,6 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   color: #fff;
 }
 
-.stay-btn--booking {
-  background: #003580;
-  color: #fff;
-}
-
 /* ── ハブ都市宿泊ブロック ── */
 
 .stay-block--hub {

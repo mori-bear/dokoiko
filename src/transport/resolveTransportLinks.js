@@ -581,7 +581,7 @@ function bfsStepsToLinks(steps, departure, city) {
       const lastRail = [...steps].filter(s => s.type === 'shinkansen' || s.type === 'rail').pop();
       if (lastRail?.to) {
         const origin = getDepartureLabel(departure, meaningfulSteps[0]?.type ?? 'shinkansen');
-        mainCta.cta = { ...mainCta.cta, label: `${origin} → ${lastRail.to} を予約する` };
+        mainCta.cta = { ...mainCta.cta, label: `このルートで進む（${origin} → ${lastRail.to}）` };
       }
     }
     links.push(mainCta);
@@ -719,7 +719,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
       if (firstJrStep && lastRail?.to) {
         const origin = firstJrStep.type === 'shinkansen' ? shinkansenFrom()
                      : fromCity.rail.replace(/駅$/, '');
-        mainCta.cta = { ...mainCta.cta, label: `${origin} → ${lastRail.to} を予約する` };
+        mainCta.cta = { ...mainCta.cta, label: `このルートで進む（${origin} → ${lastRail.to}）` };
       }
     }
     links.push(mainCta);

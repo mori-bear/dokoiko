@@ -262,8 +262,11 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  // ③ ローカル移動ステップのみ表示（乗換ステップ一覧は非表示）
-  const localSteps = stepGroups.filter(sg => sg.cta?.type === 'google-maps');
+  // ③ ローカル移動ステップ — JR/新幹線で完結するルートは非表示
+  const JR_TYPES_RENDER = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
+  const mainCtaType = mainCtaLink?.cta?.type;
+  const isJrComplete = JR_TYPES_RENDER.includes(mainCtaType);
+  const localSteps = isJrComplete ? [] : stepGroups.filter(sg => sg.cta?.type === 'google-maps');
   const stepsHtml = localSteps.map(sg => buildStepCard(sg)).join('');
   const stepsBlockHtml = stepsHtml
     ? `<div class="step-card-list">${stepsHtml}</div>`
@@ -307,15 +310,15 @@ function buildHotelSection(section) {
 
 function buildStayBlock(hotelLinks) {
   if (!hotelLinks?.links?.length) return '';
-  // ハブ宿（拠点）を先に表示（needsCar+gatewayHub がある場合のみ）
+  // 表示順: 現地 → ハブ
   let hubHtml = '';
   if (hotelLinks.hubLinks?.links?.length) {
     hubHtml = buildHotelSection(hotelLinks.hubLinks);
   }
   return `
     <div class="stay-block">
-      ${hubHtml}
       ${buildHotelSection(hotelLinks)}
+      ${hubHtml}
     </div>`;
 }
 
