@@ -295,7 +295,7 @@ function stepIdx(i) {
 const IC_CAUTION = 'ICカードでそのまま改札通れます（予約不要）';
 
 /* ── Phase 4: spotAccess アイコン / ラベル ── */
-const SPOT_TYPE_ICON  = { walk: '🚶', bus: '🚌', taxi: '🚕' };
+const SPOT_TYPE_ICON  = { walk: '', bus: '', taxi: '' };
 const SPOT_TYPE_LABEL = { walk: '徒歩', bus: 'バス', taxi: 'タクシー' };
 
 /**
@@ -308,7 +308,7 @@ function appendSpotAccessSteps(links, city) {
   const baseIdx = links.filter(l => l.type === 'step-group').length;
   for (let i = 0; i < entries.length; i++) {
     const sa    = entries[i];
-    const icon  = SPOT_TYPE_ICON[sa.type]  ?? '📍';
+    const icon  = SPOT_TYPE_ICON[sa.type]  ?? '';
     const label = SPOT_TYPE_LABEL[sa.type] ?? sa.type;
     links.push({
       type: 'step-group',
@@ -404,12 +404,12 @@ function bfsStepToCta(step, departure) {
       const from = step.from || '';
       const to   = step.to   || '';
       const mode = resolveMapMode(from, to);
-      return { cta: buildGoogleMapsLink(from, to, mode, `📍 ${from} → ${to} の行き方を見る`), caution: null };
+      return { cta: buildGoogleMapsLink(from, to, mode, `${from} → ${to} の行き方を見る`), caution: null };
     }
     case 'car': {
       const from = step.from || '';
       const to   = step.to   || '';
-      return { cta: buildGoogleMapsLink(from, to, 'driving', `📍 ${from} → ${to} の行き方を見る`), caution: null };
+      return { cta: buildGoogleMapsLink(from, to, 'driving', `${from} → ${to} の行き方を見る`), caution: null };
     }
     default:
       return { cta: null, caution: null };
@@ -447,10 +447,10 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
     case 'localMove': {
       const co   = coords(city);
       const mode = resolveMapMode(from, to);
-      return { cta: buildGoogleMapsLink(from, to, mode, `📍 ${from} → ${to} の行き方を見る`, co), caution: null };
+      return { cta: buildGoogleMapsLink(from, to, mode, `${from} → ${to} の行き方を見る`, co), caution: null };
     }
     case 'car': {
-      return { cta: buildGoogleMapsLink(from, to, 'driving', `📍 ${from} → ${to} の行き方を見る`, coords(city)), caution: null };
+      return { cta: buildGoogleMapsLink(from, to, 'driving', `${from} → ${to} の行き方を見る`, coords(city)), caution: null };
     }
     default:
       return { cta: null, caution: null };
@@ -603,7 +603,7 @@ function bfsStepsToLinks(steps, departure, city) {
     if (gFrom !== label) {
       lastSg.cta = buildGoogleMapsLink(
         gFrom, mTo, resolveMapMode(gFrom, mTo),
-        `📍 ${gFrom} → ${label} の行き方を見る`,
+        `${gFrom} → ${label} の行き方を見る`,
       );
     }
   }
@@ -688,7 +688,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
   if (stepGroups.length === 0) {
     const _fbFromSt = fromCity.rail.replace(/駅$/, '');
     const fallbackCta = buildGoogleMapsLink(
-      _fbFromSt, label, resolveMapMode(_fbFromSt, label), `📍 ${_fbFromSt} → ${label} の行き方を見る`, coords(city)
+      _fbFromSt, label, resolveMapMode(_fbFromSt, label), `${_fbFromSt} → ${label} の行き方を見る`, coords(city)
     );
     stepGroups.push({ type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null });
   }
@@ -734,7 +734,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     if (gFrom !== label) {
       lastSg.cta = buildGoogleMapsLink(
         gFrom, mTo, resolveMapMode(gFrom, mTo),
-        `📍 ${gFrom} → ${label} の行き方を見る`,
+        `${gFrom} → ${label} の行き方を見る`,
       );
     }
   }
@@ -799,7 +799,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo), `📍 ${arrivalAirport} → ${label} の行き方を見る`),
+          cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo), `${arrivalAirport} → ${label} の行き方を見る`),
           caution: null,
         });
       }
@@ -817,7 +817,7 @@ function buildAutoLinks(city, departure, fromCity) {
           stepGroups.push({
             type: 'step-group',
             stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${city.ferryGateway}（Googleマップ）`,
-            cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, resolveMapMode(city.airportGateway, city.ferryGateway), `📍 ${city.airportGateway} → ${city.ferryGateway} の行き方を見る`),
+            cta: buildGoogleMapsLink(city.airportGateway, city.ferryGateway, resolveMapMode(city.airportGateway, city.ferryGateway), `${city.airportGateway} → ${city.ferryGateway} の行き方を見る`),
             caution: null,
           });
         } else {
@@ -826,7 +826,7 @@ function buildAutoLinks(city, departure, fromCity) {
             type: 'step-group',
             stepLabel: `${stepIdx(stepGroups.length)} ${city.airportGateway} → ${label}（Googleマップ）`,
             cta: buildGoogleMapsLink(city.airportGateway, mTo, resolveMapMode(city.airportGateway, mTo),
-                   `📍 ${city.airportGateway} → ${label} の行き方を見る`),
+                   `${city.airportGateway} → ${label} の行き方を見る`),
             caution: null,
           });
         }
@@ -850,7 +850,7 @@ function buildAutoLinks(city, departure, fromCity) {
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${destSt} → ${label}（Googleマップ）`,
           cta: buildGoogleMapsLink(destSt, mTo, resolveMapMode(destSt, mTo),
-                 `📍 ${destSt} → ${label} の行き方を見る`),
+                 `${destSt} → ${label} の行き方を見る`),
           caution: null,
         });
       }
@@ -869,7 +869,7 @@ function buildAutoLinks(city, departure, fromCity) {
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${hubCity}（交通手段で移動）`,
           cta: buildGoogleMapsLink(origin, hubCity, resolveMapMode(origin, hubCity),
-                 `📍 ${origin} → ${hubCity} の行き方を見る`),
+                 `${origin} → ${hubCity} の行き方を見る`),
           caution: null,
         });
         /* ハブ都市 → 港（Google Maps） */
@@ -877,7 +877,7 @@ function buildAutoLinks(city, departure, fromCity) {
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${hubCity} → ${city.ferryGateway}（Googleマップ）`,
           cta: buildGoogleMapsLink(hubCity, city.ferryGateway, resolveMapMode(hubCity, city.ferryGateway),
-                 `📍 ${hubCity} → ${city.ferryGateway} の行き方を見る`),
+                 `${hubCity} → ${city.ferryGateway} の行き方を見る`),
           caution: null,
         });
       } else if (!hubCity) {
@@ -886,7 +886,7 @@ function buildAutoLinks(city, departure, fromCity) {
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${departure} → ${city.ferryGateway}（Googleマップ）`,
           cta: buildGoogleMapsLink(origin, city.ferryGateway, resolveMapMode(origin, city.ferryGateway),
-                 `📍 ${origin} → ${city.ferryGateway} の行き方を見る`),
+                 `${origin} → ${city.ferryGateway} の行き方を見る`),
           caution: null,
         });
       }
@@ -909,7 +909,7 @@ function buildAutoLinks(city, departure, fromCity) {
   if (stepGroups.length === 0) {
     const _fbFrom = fromCity?.rail ?? departure;
     const gmapCta = buildGoogleMapsLink(
-      _fbFrom, destSt, resolveMapMode(_fbFrom, destSt), `📍 ${_fbFrom} → ${destSt} の行き方を見る`,
+      _fbFrom, destSt, resolveMapMode(_fbFrom, destSt), `${_fbFrom} → ${destSt} の行き方を見る`,
       city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null,
     );
     stepGroups.push({
@@ -1066,7 +1066,7 @@ function _resolve(city, departure) {
 export function resolveTransportLinks(city, departure) {
   const links = _resolve(city, departure);
   if (!links || links.length === 0) {
-    const fallbackCta = buildGoogleMapsLink(departure, city.name, 'transit', '📍 Googleマップで確認');
+    const fallbackCta = buildGoogleMapsLink(departure, city.name, 'transit', 'Googleマップで確認');
     return appendSpotAccessSteps([
       { type: 'summary',    transfers: 0 },
       { type: 'main-cta',  cta: fallbackCta },
