@@ -208,40 +208,49 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const stepGroups  = links.filter(l => l.type === 'step-group');
   const rentalLinks = links.filter(l => l.type === 'rental');
 
-  // ① 目的地地図
+  // ① 目的地地図（変更なし）
   const mapUrl  = buildDestMapUrl(city);
   const mapHtml = mapUrl
     ? `<div class="dest-map-row"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${destLabel || '目的地'}の場所を地図で見る</a></div>`
     : '';
 
-  // ② ルート概要（乗換ポイント・到着後ヒントをプレビュー）
-  const transfers   = summaryLink?.transfers ?? Math.max(0, stepGroups.length - 1);
+  // ② ルート概要
+  const transfers   = summaryLink?.transfers ?? 0;
   const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
   const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, transferStr, stepGroups, city)}</div>`
+    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, transferStr, city)}</div>`
     : '';
 
-  // ③ ステップ分類
-  const { main, transfer, local } = classifyStepGroups(stepGroups);
+  // ③ 番号付きフロー表示（Googleマップが先頭に来る構造を維持）
+  // 最初の booking CTA（JR / 飛行機 / フェリー / バス）に isPrimary=true
+  const BOOKING_TYPES = new Set(['skyscanner','google-flights','jr-east','jr-west','jr-kyushu','jr-ex','jr-window','ferry','bus']);
+  let foundPrimary = false;
+  const stepsHtml = stepGroups.map(sg => {
+    const isBooking  = BOOKING_TYPES.has(sg.cta?.type ?? '');
+    const isPrimary  = isBooking && !foundPrimary;
+    if (isPrimary) foundPrimary = true;
+    return buildStepCard(sg, isPrimary);
+  }).join('');
 
-  // main が空（純在来線ルート）の場合は transfer を full card で表示
-  const primarySteps   = main.length > 0 ? main : transfer;
-  const secondarySteps = main.length > 0 ? transfer : [];
-
-  // ④ main セクション（先頭を強調 isPrimary=true）
-  const primaryHtml  = primarySteps.map((sg, i) => buildStepCard(sg, i === 0)).join('');
-  // ⑤ 乗換セクション
-  const transferHtml = buildTransferSection(secondarySteps, stepGroups);
-  // ⑥ 到着後セクション（city を渡してヒント表示）
-  const localHtml    = buildLocalSection(local, rentalLinks, city);
+  // ④ 到着後ヒント（ローカル交通情報）
+  const hint        = buildLocalTransportHint(city);
+  const rentalHtml  = rentalLinks.map(l =>
+    l.url ? `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="btn btn-rental">${l.label}</a>` : ''
+  ).join('');
+  const localSection = (hint || rentalHtml)
+    ? `<div class="local-section">
+         <div class="local-header">到着後の移動</div>
+         ${hint}
+         ${rentalHtml ? `<div class="link-list">${rentalHtml}</div>` : ''}
+       </div>`
+    : '';
 
   return `
     <div class="card-section">
       ${mapHtml}
       ${summaryHtml}
-      <div class="step-list">${primaryHtml}</div>
-      ${transferHtml}
-      ${localHtml}
+      <div class="step-list">${stepsHtml}</div>
+      ${localSection}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
   `;
@@ -299,6 +308,9 @@ function buildStepCtaLabel(sg) {
   const cta = sg.cta;
   if (!cta?.url) return null;
 
+  // buildRouteByPattern が明示的ラベルを設定している場合はそれを使用
+  if (sg.ctaLabel) return sg.ctaLabel;
+
   // stepLabel から "from → to" を抽出
   // アイコンが空文字のケースに対応: CJK文字起点で from を特定
   const fromTo = (() => {
@@ -340,27 +352,12 @@ function buildStepCtaLabel(sg) {
 /* ── ルート要約（Phase 5）── */
 
 /**
- * "高松 → 神戸（乗換1回）" の下に
- * 乗換ポイント・到着後ヒントをプレビュー表示する。
+ * "高松 → 神戸（乗換1回）" 形式のルート概要テキストを生成する。
+ * 到着後ヒント（レンタカー推奨 / バスあり）を添える。
  */
-function buildRouteSummary(departure, destLabel, transferStr, stepGroups, city) {
+function buildRouteSummary(departure, destLabel, transferStr, city) {
   const headline = `${departure} → ${destLabel}（${transferStr}）`;
 
-  // 乗換ポイント: 最初の transfer step の "到着地" を抽出
-  const { transfer } = classifyStepGroups(stepGroups);
-  const firstTransfer = transfer[0];
-  let transferPreview = '';
-  if (firstTransfer) {
-    const to = extractStepTo(firstTransfer).replace(/駅$/, '');
-    const idx = stepGroups.indexOf(firstTransfer);
-    const nextSg = stepGroups[idx + 1];
-    const nextMode = nextSg?.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
-    transferPreview = to
-      ? (nextMode ? `・${to}で${nextMode}に乗り換え` : `・${to}で乗り換え`)
-      : '';
-  }
-
-  // 到着後ヒント
   let localPreview = '';
   if (city) {
     const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote' || city.secondaryTransport === 'car';
@@ -369,13 +366,11 @@ function buildRouteSummary(departure, destLabel, transferStr, stepGroups, city) 
     if (!isIsland) {
       if (needsCar) localPreview = '・到着後 レンタカー推奨';
       else if (hasBus) localPreview = '・到着後 バスあり';
-      else if (city.accessStation?.endsWith('駅')) localPreview = '・到着後 徒歩・バスで移動';
     }
   }
 
-  const details = [transferPreview, localPreview].filter(Boolean).join('\n');
-  return details
-    ? `<span class="route-headline">${headline}</span><span class="route-detail">${details}</span>`
+  return localPreview
+    ? `<span class="route-headline">${headline}</span><span class="route-detail">${localPreview}</span>`
     : headline;
 }
 
