@@ -670,8 +670,16 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* ── ステップカード（区間ごとCTA）── */
+/* ── ステップカード（連続移動 ①②③ 表示）── */
 
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* 旧 step-card-list との互換 */
 .step-card-list {
   display: flex;
   flex-direction: column;

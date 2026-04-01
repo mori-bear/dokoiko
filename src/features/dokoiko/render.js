@@ -10,7 +10,7 @@
  *     stay-block（この街に泊まるなら — stayType !== daytrip のみ）
  */
 
-export function renderResult({ city, transportLinks, altTransportLinks, hotelLinks, stayType, departure }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -20,7 +20,6 @@ export function renderResult({ city, transportLinks, altTransportLinks, hotelLin
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildTransportBlock(transportLinks, departure, city.displayName || city.name, city)}
-        ${altTransportLinks ? buildAltRouteBlock(altTransportLinks, departure) : ''}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
       </div>
     `;
@@ -155,9 +154,9 @@ function buildCategoryBadge(city) {
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links, departure, destLabel, city = null) {
-  /* step-group 方式（新方式）*/
+  /* step-group 方式: 統合シーケンシャル表示 */
   if (links.some(l => l.type === 'step-group')) {
-    return buildTransportBlockStepwise(links, departure, destLabel, city);
+    return buildStepsBlock(links, departure, destLabel, city);
   }
 
   /* フォールバック: 旧方式（note + action links） */
@@ -187,13 +186,8 @@ function buildTransportBlock(links, departure, destLabel, city = null) {
     ? `<div class="transport-note transport-note--steps">${noteLink.label}</div>`
     : '';
 
-  const headingHtml = departure
-    ? `<p class="transport-heading">${departure}からの行き方</p>`
-    : '';
-
   return `
     <div class="card-section">
-      ${headingHtml}
       ${summaryHtml}
       <div class="link-list">${buttonsHtml}</div>
       ${cautionsHtml}
@@ -203,132 +197,103 @@ function buildTransportBlock(links, departure, destLabel, city = null) {
   `;
 }
 
-/* ── accessStation ガイドテキスト生成 ── */
+/* ── 統合ステップ表示（すべての移動を連続カードで表示）── */
 
-function buildAccessStationHint(city) {
-  if (!city?.accessStation) return '';
-  const station = city.accessStation;
-  let moveMethod = 'そこから移動';
-  if (city.needsCar || city.destType === 'remote' || city.destType === 'mountain') {
-    moveMethod = 'レンタカーで移動';
-  } else if (station.endsWith('港')) {
-    moveMethod = 'フェリーで移動';
-  } else if (station.endsWith('空港')) {
-    moveMethod = 'そこから移動';
-  }
-  return `<p class="access-station-hint">${station.replace(/駅$/, '')}まで予約 → ${moveMethod}</p>`;
-}
-
-/* ── 交通ブロック（step-group 新方式） ── */
-
-function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
+/**
+ * すべての step-group を ①②③ の順に並べ、
+ * 各ステップに type 別の CTA ボタンを表示する。
+ * main/local の分離なし。
+ */
+function buildStepsBlock(links, departure, destLabel, city = null) {
   const summaryLink = links.find(l => l.type === 'summary');
-  const mainCtaLink = links.find(l => l.type === 'main-cta');
   const stepGroups  = links.filter(l => l.type === 'step-group');
 
-  // 概要: 出発地 → 目的地
+  // 概要: 出発地 → 目的地（乗換N回）
+  const transfers = summaryLink?.transfers ?? Math.max(0, stepGroups.length - 1);
+  const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
   const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${departure} → ${destLabel}</div>`
+    ? `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`
     : '';
 
-  // ① 全体マップ（driving 固定・俯瞰）
-  const departurePoint = summaryLink?.waypoints?.[0] ?? departure;
-  // mapPoint優先（温泉郷など抽象地名は駅名・具体地点に置換）、なければ表示名
-  const destTarget = city?.mapPoint ?? destLabel;
-  const overallMapsHtml = (departurePoint && destTarget)
-    ? `<a href="${
-        'https://www.google.com/maps/dir/?api=1' +
-        `&origin=${encodeURIComponent(departurePoint)}` +
-        `&destination=${encodeURIComponent(destTarget)}` +
-        `&travelmode=driving`
-      }" target="_blank" rel="noopener noreferrer"
-         class="btn btn-secondary btn--route-overall">
-         どこに行くか地図で見る
-       </a>`
-    : '';
+  // 全ステップをシーケンシャルに表示（type 問わず）
+  const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
 
-  // ② 予約CTA（JR / 航空券 / フェリー）
-  const mainCtaHtml = mainCtaLink?.cta
-    ? `<a href="${mainCtaLink.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${btnClass(mainCtaLink.cta.type)} btn--route-main">
-         ${mainCtaLink.cta.label}
-       </a>`
-    : '';
-
-  // ③ ローカル移動セクション — JR/新幹線で完結するルートは非表示
-  const JR_TYPES_RENDER = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
-  const mainCtaType = mainCtaLink?.cta?.type;
-  const isJrComplete = JR_TYPES_RENDER.includes(mainCtaType);
-
-  // standalone rental（needsCar 補完分 — car step に紐付かないもの）
-  const standaloneRentals = links.filter(l => l.type === 'rental');
-
-  const localBlockHtml = (() => {
-    if (isJrComplete) return '';
-    // google-maps CTA を持つ step-group がローカル移動候補
-    const localSteps = stepGroups.filter(sg => sg.cta?.type === 'google-maps');
-    if (localSteps.length === 0 && standaloneRentals.length === 0) return '';
-
-    const stepHtml = localSteps.map(sg => buildLocalStep(sg)).join('');
-    const standaloneRentalHtml = standaloneRentals.map(r =>
-      `<a href="${r.url}" target="_blank" rel="noopener noreferrer"
-          class="btn btn-rental">${r.label}</a>`
-    ).join('');
-
-    return `
-      <div class="card-section">
-        <p class="section-label">到着後の移動</p>
-        ${stepHtml}
-        ${standaloneRentalHtml ? `<div class="link-list">${standaloneRentalHtml}</div>` : ''}
-      </div>
-    `;
-  })();
-
-  // 表示順: 概要 → ① 全体マップ → ② 予約CTA | ③ ローカル移動（別セクション）
   return `
     <div class="card-section">
       ${summaryHtml}
-      ${overallMapsHtml}
-      ${mainCtaHtml}
+      <div class="step-list">
+        ${stepsHtml}
+      </div>
+      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
-    ${localBlockHtml}
   `;
 }
 
-/* ── ローカル移動カード（到着後の移動セクション用） ── */
-
 /**
- * 1件のローカル移動ステップを描画する。
- * stepLabel から "from → to（mode）" を抽出してルートラベルとして表示。
- * rentalLink があればレンタカーCTA（primary）、google-maps CTA は「行き方を確認する」（secondary）。
+ * 1ステップ分のカードを描画する。
+ * stepLabel（"① ✈ 高松空港 → 福岡空港（飛行機）"）をヘッダーに表示し、
+ * type 別にオーバーライドした CTA ボタンと、car step の rentalLink を配置する。
  */
-function buildLocalStep(sg) {
-  // stepLabel 例: "① 🚗 鹿児島中央駅 → 霧島（レンタカー）"
-  // → ステップ番号とアイコンを除去、駅 suffix を削除してルートラベルに
-  const raw = sg.stepLabel?.replace(/^[①-⑨\d\.]+\s+\S+\s+/u, '') ?? '';
-  const routeLabel = raw.replace(/駅\s*→/, ' →');  // "鹿児島中央駅 →" → "鹿児島中央 →"
+function buildStepCard(sg) {
+  const ctaLabel  = buildStepCtaLabel(sg);
+  const ctaHtml   = (sg.cta?.url && ctaLabel)
+    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+           class="btn ${btnClass(sg.cta.type)}">${ctaLabel}</a>`
+    : '';
 
   const rentalHtml = sg.rentalLink?.url
     ? `<a href="${sg.rentalLink.url}" target="_blank" rel="noopener noreferrer"
            class="btn btn-rental">${sg.rentalLink.label}</a>`
     : '';
 
-  const mapsHtml = sg.cta?.url
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-           class="btn btn-secondary">行き方を確認する</a>`
+  const cautionHtml = sg.caution
+    ? `<p class="step-card-caution">${sg.caution}</p>`
     : '';
 
-  if (!rentalHtml && !mapsHtml) return '';
+  if (!ctaHtml && !rentalHtml && !cautionHtml) return '';
 
   return `
-    <div class="local-step">
-      <div class="local-step-route">${routeLabel}</div>
+    <div class="step-card">
+      <div class="step-card-header">${sg.stepLabel ?? ''}</div>
       <div class="link-list">
+        ${ctaHtml}
         ${rentalHtml}
-        ${mapsHtml}
       </div>
+      ${cautionHtml}
     </div>
   `;
+}
+
+/**
+ * ステップの type に応じて CTA ボタンラベルを生成する。
+ *   flight   → 「飛行機で行く（A → B）」
+ *   train/JR → 「このルートで進む（A → B）」  ← 既存ラベルを維持
+ *   ferry    → 「フェリーを予約する（A → B）」
+ *   map      → 「Googleマップで確認（A → B）」
+ *   car/rental → 既存ラベル（「○○でレンタカーを借りる」）
+ */
+function buildStepCtaLabel(sg) {
+  const cta = sg.cta;
+  if (!cta?.url) return null;
+
+  // stepLabel から "from → to" を抽出（番号・アイコン・モードを除去）
+  const fromTo = (() => {
+    const raw = sg.stepLabel?.replace(/^[①-⑨\d\.]+\s+\S+\s+/u, '') ?? '';
+    const m   = raw.match(/^(.+?)（[^）]+）$/u);
+    return (m ? m[1].trim() : raw.trim()).replace(/駅\s*→/, ' →');
+  })();
+
+  switch (cta.type) {
+    case 'google-maps':
+      return fromTo ? `Googleマップで確認（${fromTo}）` : 'Googleマップで確認';
+    case 'skyscanner':
+    case 'google-flights':
+      return fromTo ? `飛行機で行く（${fromTo}）` : cta.label;
+    case 'ferry':
+      return fromTo ? `フェリーを予約する（${fromTo}）` : cta.label;
+    default:
+      return cta.label ?? '';
+  }
 }
 
 /* ── 宿泊ブロック ── */
@@ -352,27 +317,6 @@ function buildStayBlock(hotelLinks) {
       ${buildHotelSection(hotelLinks)}
       ${hubHtml}
     </div>`;
-}
-
-/* ── 代替ルート（直行レンタカー）ブロック ── */
-
-function buildAltRouteBlock(altLinks, departure) {
-  const mainCta    = altLinks.find(l => l.type === 'main-cta')?.cta;
-  const rentalLink = altLinks.find(l => l.type === 'rental');
-  if (!mainCta) return '';
-  const rentalHtml = rentalLink ? buildLinkItem(rentalLink) : '';
-  return `
-    <div class="card-section card-section--alt-route">
-      <p class="transport-heading">または：レンタカーで直行する</p>
-      <div class="link-list">
-        <a href="${mainCta.url}" target="_blank" rel="noopener noreferrer"
-           class="btn btn-secondary btn--top">
-          ${mainCta.label}
-        </a>
-        ${rentalHtml}
-      </div>
-    </div>
-  `;
 }
 
 /* ── リンクアイテム ── */

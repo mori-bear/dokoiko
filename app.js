@@ -58,11 +58,10 @@ function draw() {
 
   renderResult({
     city,
-    transportLinks:    plan.transportLinks,
-    altTransportLinks: plan.altTransportLinks,
-    hotelLinks:        plan.hotelLinks,
-    stayType:          state.stayType,
-    departure:         state.departure,
+    transportLinks: plan.transportLinks,
+    hotelLinks:     plan.hotelLinks,
+    stayType:       state.stayType,
+    departure:      state.departure,
   });
 
   const remaining = state.pool.length - state.poolIndex - 1;

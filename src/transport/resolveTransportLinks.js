@@ -559,32 +559,10 @@ function bfsStepsToLinks(steps, departure, city) {
     displayIdx++;
   }
 
-  /* ── メインCTA 決定 ── */
+  /* ── メインCTA（summary 用に保持、render.js では各 step-group CTA を使用）── */
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
-    /* Phase 2: 重複CTA排除 — mainCta と同じ URL の step CTA を非表示 */
-    for (const sg of stepGroups) {
-      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) {
-        sg.cta = null;
-      }
-    }
-
-    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
-    const JR_TYPES = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
-    if (JR_TYPES.includes(mainCta.cta?.type)) {
-      for (const sg of stepGroups) {
-        if (JR_TYPES.includes(sg.cta?.type)) sg.cta = null;
-      }
-    }
-
-    /* ② CTA label: 🚄 origin → lastStation を予約する */
-    if (JR_TYPES.includes(mainCta.cta?.type)) {
-      const lastRail = [...steps].filter(s => s.type === 'shinkansen' || s.type === 'rail').pop();
-      if (lastRail?.to) {
-        const origin = getDepartureLabel(departure, meaningfulSteps[0]?.type ?? 'shinkansen');
-        mainCta.cta = { ...mainCta.cta, label: `このルートで進む（${origin} → ${lastRail.to}）` };
-      }
-    }
+    /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
     links.push(mainCta);
   }
 
@@ -708,29 +686,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
 
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
-    /* Phase 2: 重複CTA排除 */
-    for (const sg of stepGroups) {
-      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
-    }
-
-    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
-    const JR_TYPES_R = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
-    if (JR_TYPES_R.includes(mainCta.cta?.type)) {
-      for (const sg of stepGroups) {
-        if (JR_TYPES_R.includes(sg.cta?.type)) sg.cta = null;
-      }
-    }
-
-    /* ② CTA label: 🚄 origin → lastStation を予約する */
-    if (JR_TYPES_R.includes(mainCta.cta?.type)) {
-      const firstJrStep = routes.find(s => s.type === 'shinkansen' || s.type === 'rail');
-      const lastRail    = [...routes].filter(s => s.type === 'shinkansen' || s.type === 'rail').pop();
-      if (firstJrStep && lastRail?.to) {
-        const origin = firstJrStep.type === 'shinkansen' ? shinkansenFrom()
-                     : fromCity.rail.replace(/駅$/, '');
-        mainCta.cta = { ...mainCta.cta, label: `このルートで進む（${origin} → ${lastRail.to}）` };
-      }
-    }
+    /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
     links.push(mainCta);
   }
 
@@ -952,17 +908,7 @@ function buildAutoLinks(city, departure, fromCity) {
 
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
-    /* Phase 2: 重複CTA排除 */
-    for (const sg of stepGroups) {
-      if (sg.cta?.url && mainCta.cta?.url && sg.cta.url === mainCta.cta.url) sg.cta = null;
-    }
-    /* Phase 4③: JRまとめ — 鉄道CTAは1つに集約 */
-    const JR_TYPES_A = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
-    if (JR_TYPES_A.includes(mainCta.cta?.type)) {
-      for (const sg of stepGroups) {
-        if (JR_TYPES_A.includes(sg.cta?.type)) sg.cta = null;
-      }
-    }
+    /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
     links.push(mainCta);
   }
   links.push(...stepGroups);

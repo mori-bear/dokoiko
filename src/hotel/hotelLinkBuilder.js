@@ -105,8 +105,8 @@ export function buildHotelLinks(dest) {
   const result = {
     heading: `現地で泊まる`,
     links: [
-      { type: 'rakuten', label: `このまま${uiName}で泊まる（楽天）`,  url: buildRakutenUrl(dest) },
-      { type: 'jalan',   label: `空室を確認する（じゃらん）`,          url: buildJalanUrl(keyword, area) },
+      { type: 'rakuten', label: '楽天で宿を見る',  url: buildRakutenUrl(dest) },
+      { type: 'jalan',   label: 'じゃらんで宿を見る', url: buildJalanUrl(keyword, area) },
     ],
   };
 
@@ -121,9 +121,9 @@ export function buildHotelLinks(dest) {
       heading: `アクセスの良い場所で泊まる（${hub}）`,
       links: [
         ...(hubRakutenUrl
-          ? [{ type: 'rakuten', label: `${hub}で泊まる（楽天）`,          url: hubRakutenUrl }]
+          ? [{ type: 'rakuten', label: '楽天で宿を見る', url: hubRakutenUrl }]
           : []),
-        { type: 'jalan',   label: `アクセス重視で宿を見る（じゃらん）`, url: buildJalanUrl(hub, hubArea) },
+        { type: 'jalan', label: 'じゃらんで宿を見る', url: buildJalanUrl(hub, hubArea) },
       ],
     };
   }
