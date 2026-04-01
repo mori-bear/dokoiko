@@ -200,39 +200,47 @@ function buildTransportBlock(links, departure, destLabel, city = null) {
 /* ── 統合ステップ表示（main → 乗換 → 到着後）── */
 
 /**
- * ステップを main / transfer / local に分類し、
- * 目的地地図 → ルート概要 → main（CTA付き）→ 乗換まとめ → 到着後 の順で描画。
+ * Phase 6-9: ルート要約 → メインCTA → 番号付きフロー → 代替ルート の順で描画。
  */
 function buildStepsBlock(links, departure, destLabel, city = null) {
   const summaryLink = links.find(l => l.type === 'summary');
   const stepGroups  = links.filter(l => l.type === 'step-group');
+  const altRoutes   = links.filter(l => l.type === 'alt-route');
   const rentalLinks = links.filter(l => l.type === 'rental');
 
-  // ① 目的地地図（変更なし）
+  // ① 目的地地図
   const mapUrl  = buildDestMapUrl(city);
   const mapHtml = mapUrl
     ? `<div class="dest-map-row"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${destLabel || '目的地'}の場所を地図で見る</a></div>`
     : '';
 
-  // ② ルート概要
-  const transfers   = summaryLink?.transfers ?? 0;
-  const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
-  const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, transferStr, city)}</div>`
+  // ② ルート概要（Phase 6: totalMinutes + reasonLabel）
+  const transfers    = summaryLink?.transfers ?? 0;
+  const transferStr  = transfers === 0 ? '直通' : `乗換${transfers}回`;
+  const totalMinutes = summaryLink?.totalMinutes ?? null;
+  const reasonLabel  = summaryLink?.reasonLabel ?? null;
+  const summaryHtml  = (departure && destLabel)
+    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, transferStr, city, totalMinutes, reasonLabel)}</div>`
     : '';
 
-  // ③ 番号付きフロー表示（Googleマップが先頭に来る構造を維持）
-  // 最初の booking CTA（JR / 飛行機 / フェリー / バス）に isPrimary=true
+  // ③ メインCTA（Phase 9: 最初の booking ステップを上部に大きく表示）
   const BOOKING_TYPES = new Set(['skyscanner','google-flights','jr-east','jr-west','jr-kyushu','jr-ex','jr-window','ferry','bus']);
+  const mainCtaSg    = stepGroups.find(sg => BOOKING_TYPES.has(sg.cta?.type ?? ''));
+  const mainCtaHtml  = mainCtaSg ? buildMainCtaBlock(mainCtaSg) : '';
+
+  // ④ 番号付きフロー（_overview は番号なし先頭表示、それ以外は順番に）
   let foundPrimary = false;
   const stepsHtml = stepGroups.map(sg => {
-    const isBooking  = BOOKING_TYPES.has(sg.cta?.type ?? '');
-    const isPrimary  = isBooking && !foundPrimary;
+    const isBooking = BOOKING_TYPES.has(sg.cta?.type ?? '');
+    const isPrimary = isBooking && !foundPrimary;
     if (isPrimary) foundPrimary = true;
     return buildStepCard(sg, isPrimary);
   }).join('');
 
-  // ④ 到着後ヒント（ローカル交通情報）
+  // ⑤ 代替ルート（Phase 7: 「他の行き方」折りたたみ）
+  const altRoutesHtml = altRoutes.map(ar => buildAltRouteSection(ar)).join('');
+
+  // ⑥ 到着後ヒント
   const hint        = buildLocalTransportHint(city);
   const rentalHtml  = rentalLinks.map(l =>
     l.url ? `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="btn btn-rental">${l.label}</a>` : ''
@@ -249,10 +257,42 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
     <div class="card-section">
       ${mapHtml}
       ${summaryHtml}
+      ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
+      ${altRoutesHtml}
       ${localSection}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
+  `;
+}
+
+/**
+ * Phase 9: メインCTAを中央に大きく表示するブロック。
+ * 最初のbookingステップのCTAを抜き出し、`.main-cta-row` で目立たせる。
+ */
+function buildMainCtaBlock(sg) {
+  const label = buildStepCtaLabel(sg);
+  if (!label || !sg.cta?.url) return '';
+  return `
+    <div class="main-cta-row">
+      <a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${btnClass(sg.cta.type)} btn--route-main">${label}</a>
+    </div>
+  `;
+}
+
+/**
+ * Phase 7: 代替ルート（「他の行き方」）を折りたたみで表示。
+ * alt-route: { type: 'alt-route', label: '鉄道で行く', stepGroups: [...] }
+ */
+function buildAltRouteSection(altRoute) {
+  if (!altRoute?.stepGroups?.length) return '';
+  const innerHtml = altRoute.stepGroups.map(sg => buildStepCard(sg, false)).join('');
+  return `
+    <details class="alt-route-section">
+      <summary class="alt-route-summary">他の行き方：${altRoute.label ?? '代替ルート'}</summary>
+      <div class="alt-route-inner step-list">${innerHtml}</div>
+    </details>
   `;
 }
 
@@ -352,11 +392,13 @@ function buildStepCtaLabel(sg) {
 /* ── ルート要約（Phase 5）── */
 
 /**
- * "高松 → 神戸（乗換1回）" 形式のルート概要テキストを生成する。
- * 到着後ヒント（レンタカー推奨 / バスあり）を添える。
+ * Phase 6: ルート概要テキストを生成する。
+ *   "高松 → 神戸（直通　約150分）" + 到着後ヒント
  */
-function buildRouteSummary(departure, destLabel, transferStr, city) {
-  const headline = `${departure} → ${destLabel}（${transferStr}）`;
+function buildRouteSummary(departure, destLabel, transferStr, city, totalMinutes, reasonLabel) {
+  const timeStr   = totalMinutes ? `　約${totalMinutes}分` : '';
+  const modeStr   = reasonLabel ?? transferStr;
+  const headline  = `${departure} → ${destLabel}（${modeStr}${timeStr}）`;
 
   let localPreview = '';
   if (city) {

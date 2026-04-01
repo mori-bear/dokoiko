@@ -848,6 +848,50 @@ body {
 }
 
 
+/* ── Phase 9: メインCTA行 ── */
+
+.main-cta-row {
+  margin: 4px 0 8px;
+}
+
+/* ── Phase 6: ルート概要ヘッドライン + 補足 ── */
+
+.route-headline {
+  font-weight: 700;
+}
+
+.route-detail {
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 400;
+}
+
+/* ── Phase 7: 代替ルート折りたたみ ── */
+
+.alt-route-section {
+  border-top: 1px dashed var(--border);
+  margin-top: 12px;
+  padding-top: 10px;
+}
+
+.alt-route-summary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.alt-route-summary::-webkit-details-marker { display: none; }
+.alt-route-summary::before { content: '▶ '; font-size: 10px; }
+.alt-route-section[open] .alt-route-summary::before { content: '▼ '; }
+
+.alt-route-inner {
+  margin-top: 8px;
+}
+
 .transport-disclaimer {
   font-size: 11px;
   color: var(--text-sub);
