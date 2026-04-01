@@ -487,6 +487,38 @@ function isFlightAllowed(city, departure) {
 }
 
 /* ══════════════════════════════════════════════════════
+   ルートパターン分類
+   island       → 離島（フェリー必須）
+   longDistance → 遠距離（240分以上 / 飛行機選択肢あり）
+   local        → 近距離同一地域（鉄道のみで完結）
+   city         → 標準都市間（新幹線・特急）
+══════════════════════════════════════════════════════ */
+
+/**
+ * 目的地・出発地の組み合わせからルートパターンを分類する。
+ *
+ * @param {object} city      — 目的地エントリ（travelTimeMinutes 付きが望ましい）
+ * @param {string} departure — 出発地名
+ * @returns {'island'|'longDistance'|'local'|'city'}
+ */
+function classifyRoute(city, departure) {
+  // 離島・ferryGateway があるものはフェリー経由が前提
+  if (city.isIsland || city.destType === 'island' || city.ferryGateway) return 'island';
+
+  const travelMin = city.travelTimeMinutes ?? 999;
+  const depArea   = getArea(departure);
+  const destArea  = city.region ?? null;
+
+  // 同一地域かつ移動時間が短い → ローカル（BFS が得意）
+  if (depArea && destArea && depArea === destArea && travelMin < 240) return 'local';
+
+  // 240分以上 or flightHub 経由 → 遠距離
+  if (travelMin >= 240 || city.flightHub) return 'longDistance';
+
+  return 'city';
+}
+
+/* ══════════════════════════════════════════════════════
    スコアリング（不自然なルートを自動生成に差し替え）
    スコア低 = より自然なルート
 ══════════════════════════════════════════════════════ */
@@ -1023,11 +1055,36 @@ function isBfsRouteValid(steps, city, departure = '') {
   return true;
 }
 
-function _resolve(city, departure) {
-  const fromCity = DEPARTURE_CITY_INFO[departure];
+/* routes.js ステップをフィルタして buildLinksFromRoutes に渡す共通ヘルパー */
+function _resolveFromRoutes(city, departure, fromCity) {
+  const departureRoute = ROUTES[`${city.id}@${departure}`];
+  const defaultRoute   = ROUTES[city.id];
 
-  /* Phase 4③: flightHub 経由が必要な目的地は buildAutoLinks を強制使用
-   * BFS / routes.js は直行便扱いになるため、乗り継ぎ表示できる buildAutoLinks に任せる */
+  function filterSteps(steps) {
+    return steps.filter(step => {
+      if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+      if (step.type === 'flight' && !isFlightAllowed(city, departure))   return false;
+      if (step.type === 'rail'   && step.duration !== undefined && step.duration < 40) return false;
+      return true;
+    });
+  }
+
+  if (departureRoute && fromCity) {
+    return buildLinksFromRoutes(filterSteps(departureRoute), city, departure, fromCity);
+  }
+  if (defaultRoute && fromCity) {
+    if (scoreRouteSteps(defaultRoute, departure, city) > 45) return null;
+    return buildLinksFromRoutes(filterSteps(defaultRoute), city, departure, fromCity);
+  }
+  return null;
+}
+
+function _resolve(city, departure) {
+  const fromCity  = DEPARTURE_CITY_INFO[departure];
+  const pattern   = classifyRoute(city, departure);
+
+  /* flightHub 経由が必要な目的地は buildAutoLinks を強制使用
+   * BFS / routes.js は乗り継ぎ表示できないため buildAutoLinks に任せる */
   if (city.flightHub) {
     const hubAirportName = AIRPORT_HUB_GATEWAY[city.flightHub];
     if (hubAirportName && hubAirportName !== city.airportGateway) {
@@ -1035,37 +1092,30 @@ function _resolve(city, departure) {
     }
   }
 
-  /* ── Phase 1: transportGraph.json BFS を最優先で試みる ── */
+  /* ── island: フェリー必須 → buildAutoLinks（BFS は ferry の乗り継ぎ表示が不完全）── */
+  if (pattern === 'island') {
+    return buildAutoLinks(city, departure, fromCity);
+  }
+
+  /* ── local: 同一地域の近距離 → BFS 優先（ローカル鉄道に強い）── */
+  if (pattern === 'local') {
+    const bfsSteps = buildRoute(departure, city);
+    if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city, departure)) {
+      return bfsStepsToLinks(bfsSteps, departure, city);
+    }
+    const routesResult = _resolveFromRoutes(city, departure, fromCity);
+    if (routesResult) return routesResult;
+    return buildAutoLinks(city, departure, fromCity);
+  }
+
+  /* ── city / longDistance: routes.js 手動定義を優先（最も正確）── */
+  const routesResult = _resolveFromRoutes(city, departure, fromCity);
+  if (routesResult) return routesResult;
+
+  /* routes.js にない場合は BFS フォールバック */
   const bfsSteps = buildRoute(departure, city);
   if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city, departure)) {
     return bfsStepsToLinks(bfsSteps, departure, city);
-  }
-
-  /* ── Fallback: routes.js 手動定義 or metadata 自動生成 ── */
-  const departureRoute = ROUTES[`${city.id}@${departure}`];
-  const defaultRoute   = ROUTES[city.id];
-
-  if (departureRoute && fromCity) {
-    const routes = departureRoute.filter(step => {
-      if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
-      if (step.type === 'flight' && !isFlightAllowed(city, departure)) return false;
-      if (step.type === 'rail'   && step.duration !== undefined && step.duration < 40) return false;
-      return true;
-    });
-    return buildLinksFromRoutes(routes, city, departure, fromCity);
-  }
-
-  if (defaultRoute && fromCity) {
-    if (scoreRouteSteps(defaultRoute, departure, city) > 45) {
-      return buildAutoLinks(city, departure, fromCity);
-    }
-    const routes = defaultRoute.filter(step => {
-      if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
-      if (step.type === 'flight' && !isFlightAllowed(city, departure)) return false;
-      if (step.type === 'rail'   && step.duration !== undefined && step.duration < 40) return false;
-      return true;
-    });
-    return buildLinksFromRoutes(routes, city, departure, fromCity);
   }
 
   return buildAutoLinks(city, departure, fromCity);
