@@ -462,7 +462,7 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
    スコア低 = より自然なルート
 ══════════════════════════════════════════════════════ */
 
-function scoreRouteSteps(steps, departure) {
+function scoreRouteSteps(steps, departure, city = null) {
   const meaningful = steps.filter(s => s.type !== 'localMove' && s.type !== 'transfer');
   const transfers  = Math.max(0, meaningful.length - 1);
   let score = transfers * 10;
@@ -476,15 +476,20 @@ function scoreRouteSteps(steps, departure) {
     score += 100; // 高松発で岡山行き新幹線は禁止
   }
 
-  const depArea = getArea(departure);
-  if (depArea === '四国' && steps.some(s => s.type === 'shinkansen')) score += 20;
+  const depArea  = getArea(departure);
+  // 目的地エリア（ループ判定の除外に使用）
+  const destArea = city ? (city.region ?? getArea(city.name) ?? null) : null;
 
   const areasVisited = new Set();
   for (const s of meaningful) {
     const toArea = getArea(s.to);
     if (toArea) areasVisited.add(toArea);
   }
-  if (depArea && areasVisited.size > 1 && areasVisited.has(depArea)) score += 50;
+  // 出発地エリアを再訪するルートはループの疑い。
+  // ただし目的地が出発地と同一エリア（例: 四国→中国→四国内目的地）は自然なルートなのでスキップ。
+  if (depArea && areasVisited.size > 1 && areasVisited.has(depArea) && depArea !== destArea) {
+    score += 50;
+  }
 
   let prevArea = depArea;
   const visitedInOrder = [];
@@ -497,9 +502,9 @@ function scoreRouteSteps(steps, departure) {
     }
   }
 
-  /* Phase 4④: 陸路3区間以上は遠回りの可能性 → ペナルティ */
+  /* Phase 4④: 陸路4区間以上は遠回りの可能性 → ペナルティ（3→4 に緩和: 四国3区間ルートは正常）*/
   const landStepCount = meaningful.filter(s => ['shinkansen', 'rail'].includes(s.type)).length;
-  if (landStepCount >= 3) score += 50;
+  if (landStepCount >= 4) score += 50;
 
   return score;
 }
@@ -1011,7 +1016,7 @@ function _resolve(city, departure) {
   }
 
   if (defaultRoute && fromCity) {
-    if (scoreRouteSteps(defaultRoute, departure) > 45) {
+    if (scoreRouteSteps(defaultRoute, departure, city) > 45) {
       return buildAutoLinks(city, departure, fromCity);
     }
     const routes = defaultRoute.filter(step => {
