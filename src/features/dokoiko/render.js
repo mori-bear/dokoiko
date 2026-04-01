@@ -268,7 +268,7 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
   const mainCtaType = mainCtaLink?.cta?.type;
   const isJrComplete = JR_TYPES_RENDER.includes(mainCtaType);
   const localSteps = isJrComplete ? [] : stepGroups.filter(sg => sg.cta?.type === 'google-maps');
-  const stepsHtml = localSteps.map(sg => buildStepCard(sg)).join('');
+  const stepsHtml = localSteps.map((sg, i) => buildStepCard(sg, i === 0)).join('');
   const stepsBlockHtml = stepsHtml
     ? `<div class="step-card-list">${stepsHtml}</div>`
     : '';
@@ -286,14 +286,19 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
 
 /* ── ステップカード（各ステップのCTA付き） ── */
 
-function buildStepCard(sg) {
+function buildStepCard(sg, isFirst = false) {
+  // google-maps ステップは「ルートを確認する」に統一（stepLabel に詳細あり）
+  const ctaLabel = sg.cta?.type === 'google-maps' ? 'ルートを確認する' : sg.cta?.label;
   const ctaHtml = sg.cta?.url
     ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-          class="btn ${btnClass(sg.cta.type)} step-card-cta">${sg.cta.label}</a>`
+          class="btn ${btnClass(sg.cta.type)} step-card-cta">${ctaLabel}</a>`
     : '';
+  // 最初のローカル移動ステップに「到着後の移動」ラベルを表示
+  const arrivalHtml = isFirst ? `<p class="arrival-label">到着後の移動</p>` : '';
 
   return `
     <div class="step-card">
+      ${arrivalHtml}
       <div class="step-card-header">${sg.stepLabel}</div>
       ${ctaHtml}
     </div>

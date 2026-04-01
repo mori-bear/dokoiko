@@ -193,7 +193,7 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
   if (!fromAirportName) return null; // IATAコード露出防止
   return {
     type: 'skyscanner',
-    label: `飛行機で行く（${fromAirportName} → ${toAirportName}）`,
+    label: `空席を確認する（${fromAirportName} → ${toAirportName}）`,
     url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
@@ -264,15 +264,15 @@ export function buildHighwayBusLink(from, to) {
 export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
   if (bookingUrl) {
     const label = operatorName
-      ? `フェリーを予約する（${operatorName}）`
-      : `フェリーを予約する（${ferryGateway}）`;
+      ? `時刻・料金を見る（${operatorName}）`
+      : `時刻・料金を見る（${ferryGateway}）`;
     return { type: 'ferry', label, url: bookingUrl };
   }
   const info = PORT_FERRY_MAP[ferryGateway];
   if (info) {
     const label = info.operator
-      ? `フェリーを調べる（${info.operator}）`
-      : `フェリーを調べる（${ferryGateway}）`;
+      ? `時刻・料金を見る（${info.operator}）`
+      : `時刻・料金を見る（${ferryGateway}）`;
     return { type: 'ferry', label, url: info.url };
   }
   // 未登録港・URLなし → null（Google Maps フォールバックなし）
@@ -297,8 +297,8 @@ export function buildFerryLinkForDest(destId, ferryGateway, bookingUrl = null, o
   const destInfo = DEST_FERRY_MAP[destId];
   if (destInfo) {
     const label = destInfo.operator
-      ? `フェリーを調べる（${destInfo.operator}）`
-      : `フェリーを調べる（${ferryGateway}）`;
+      ? `時刻・料金を見る（${destInfo.operator}）`
+      : `時刻・料金を見る（${ferryGateway}）`;
     return { type: 'ferry', label, url: destInfo.url };
   }
   // DEST_FERRY_MAP にない → 港名ベースにフォールバック

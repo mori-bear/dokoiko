@@ -705,6 +705,15 @@ body {
   line-height: 1.5;
 }
 
+.arrival-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sub);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
 .step-card-cta {
   display: inline-block;
   margin-top: 8px;
