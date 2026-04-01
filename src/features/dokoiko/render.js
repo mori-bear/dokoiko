@@ -363,8 +363,8 @@ function buildRouteSummary(departure, destLabel, transferStr, stepGroups, city) 
   // 到着後ヒント
   let localPreview = '';
   if (city) {
-    const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote';
-    const hasBus   = city.railNote === 'バス' || city.busGateway != null;
+    const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote' || city.secondaryTransport === 'car';
+    const hasBus   = city.railNote === 'バス' || city.busGateway != null || city.secondaryTransport === 'bus';
     const isIsland = city.isIsland || city.destType === 'island';
     if (!isIsland) {
       if (needsCar) localPreview = '・到着後 レンタカー推奨';
@@ -540,8 +540,12 @@ function buildLocalTransportHint(city) {
 
   const needsCar = city.needsCar === true
     || city.destType === 'mountain'
-    || city.destType === 'remote';
-  const hasBus   = city.railNote === 'バス' || city.busGateway != null;
+    || city.destType === 'remote'
+    || city.secondaryTransport === 'car';
+  // secondaryTransport='bus' (91件) も hasBus として扱う
+  const hasBus   = city.railNote === 'バス'
+    || city.busGateway != null
+    || city.secondaryTransport === 'bus';
 
   if (needsCar) {
     return `<p class="local-hint local-hint--car">⚠ レンタカー推奨エリアです</p>`;
