@@ -12,9 +12,7 @@
  *   6. 全 149 都市で transportLinks.length >= 1
  */
 
-'use strict';
-
-const fs = require('fs');
+import fs from 'fs';
 
 /* ── データ読み込み ── */
 

@@ -636,7 +636,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
       : step.from ?? prevStepTo ?? '';
     const to   = step.to ?? label;
 
-    if ((step.type === 'shinkansen' || step.type === 'rail') && from === to) continue;
+    if ((step.type === 'shinkansen' || step.type === 'rail') && from.replace(/駅$/, '') === to.replace(/駅$/, '')) continue;
 
     const icon = stepTypeIcon(step.type);
     let stepLabel;
@@ -727,12 +727,16 @@ function buildAutoLinks(city, departure, fromCity) {
 
   /* ── 飛行機 ── */
   const fromIata   = CITY_AIRPORT[departure] ?? null;
-  const hasFlight  = !!(city.airportGateway && fromIata &&
-                        hasFlightRoute(departure, city.airportGateway));
 
   /* Phase 4③: flightHub 経由かどうか（ferry セクションのスキップ判定にも使用）*/
   const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
   const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
+
+  /* isViaHub のとき: hub 空港への就航も hasFlight の判定に含める */
+  const hasFlight  = !!(fromIata && (
+    (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||
+    (isViaHub && _hubAirportName && hasFlightRoute(departure, _hubAirportName))
+  ));
   /* 実際に乗り継ぎ飛行機ルートを表示した場合のみ true（ferry セクションのスキップ判定）*/
   let usedViahubFlight = false;
 
@@ -743,30 +747,45 @@ function buildAutoLinks(city, departure, fromCity) {
 
     if (isViaHub) {
       usedViahubFlight = true;
-      /* ── 乗り継ぎルート: departure → hub → airportGateway ── */
       const hubFlightCta = buildSkyscannerLink(fromIata, hubAirportName);
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)} ${flightFrom} → ${hubAirportName}（飛行機）`,
         cta: hubFlightCta, caution: null,
       });
-      /* hub → 最終空港（乗り継ぎ便・CTA無し）*/
-      stepGroups.push({
-        type: 'step-group',
-        stepLabel: `${stepIdx(stepGroups.length)} ${hubAirportName} → ${city.airportGateway}（乗り継ぎ）`,
-        cta: null, caution: '※乗り継ぎ便が必要です（ハブ空港で乗り換え）',
-      });
-      /* 到着空港 → 目的地（Googleマップ）— ferryGatewayがあっても空港到着後はGoogle Mapsで移動 */
-      const arrivalAirport = city.airportGateway;
-      const co = city.lat && city.lng ? { lat: city.lat, lng: city.lng } : null;
-      if (arrivalAirport !== label) {
-        const mTo = mapTarget(city);
+
+      if (city.ferryGateway) {
+        /* hub空港 → フェリー乗り場（Googleマップ）→ ferry は直後に追加 */
         stepGroups.push({
           type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo), `${arrivalAirport} → ${label} の行き方を見る`),
+          stepLabel: `${stepIdx(stepGroups.length)} ${hubAirportName} → ${city.ferryGateway}（Googleマップ）`,
+          cta: buildGoogleMapsLink(hubAirportName, city.ferryGateway, resolveMapMode(hubAirportName, city.ferryGateway), `${hubAirportName} → ${city.ferryGateway} の行き方を見る`),
           caution: null,
         });
+        const ferryCta = buildFerryLinkForDest(city.id, city.ferryGateway);
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${city.ferryGateway} → ${label}（フェリー）`,
+          cta: ferryCta, caution: null,
+        });
+      } else {
+        /* hub → 最終空港（乗り継ぎ便・CTA無し）*/
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(stepGroups.length)} ${hubAirportName} → ${city.airportGateway}（乗り継ぎ）`,
+          cta: null, caution: '※乗り継ぎ便が必要です（ハブ空港で乗り換え）',
+        });
+        /* 到着空港 → 目的地（Googleマップ）*/
+        const arrivalAirport = city.airportGateway;
+        if (arrivalAirport !== label) {
+          const mTo = mapTarget(city);
+          stepGroups.push({
+            type: 'step-group',
+            stepLabel: `${stepIdx(stepGroups.length)} ${arrivalAirport} → ${label}（Googleマップ）`,
+            cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo), `${arrivalAirport} → ${label} の行き方を見る`),
+            caution: null,
+          });
+        }
       }
     } else {
       /* ── 直行便ルート（従来通り）── */

@@ -17,11 +17,9 @@
  *   [9] 結果サマリ出力
  */
 
-'use strict';
-
-const fs    = require('fs');
-const https = require('https');
-const { URL } = require('url');
+import fs    from 'fs';
+import https from 'https';
+import { URL } from 'url';
 
 const FULL_HTTP = process.argv.includes('--http');
 const USE_V2    = process.argv.includes('--v2');
