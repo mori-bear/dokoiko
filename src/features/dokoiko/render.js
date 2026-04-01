@@ -11,7 +11,7 @@
  *     （share-block は削除済み）
  */
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
+export function renderResult({ city, transportLinks, altTransportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel  = stayType !== 'daytrip';
@@ -27,6 +27,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildTransportBlock(mainLinks, departure, city.displayName || city.name, city)}
+        ${altTransportLinks ? buildAltRouteBlock(altTransportLinks, departure) : ''}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
         ${showRental && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
@@ -320,6 +321,27 @@ function buildStayBlock(hotelLinks) {
       ${buildHotelSection(hotelLinks)}
       ${hubHtml}
     </div>`;
+}
+
+/* ── 代替ルート（直行レンタカー）ブロック ── */
+
+function buildAltRouteBlock(altLinks, departure) {
+  const mainCta    = altLinks.find(l => l.type === 'main-cta')?.cta;
+  const rentalLink = altLinks.find(l => l.type === 'rental');
+  if (!mainCta) return '';
+  const rentalHtml = rentalLink ? buildLinkItem(rentalLink) : '';
+  return `
+    <div class="card-section card-section--alt-route">
+      <p class="transport-heading">または：レンタカーで直行する</p>
+      <div class="link-list">
+        <a href="${mainCta.url}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-secondary btn--top">
+          ${mainCta.label}
+        </a>
+        ${rentalHtml}
+      </div>
+    </div>
+  `;
 }
 
 // TASK6: レンタカーブロック（宿の後に表示）

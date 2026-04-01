@@ -53,8 +53,8 @@ for (const p of PORTS_DATA) {
  * ここに登録した都市は shinkansen step の from に補正される。
  */
 const SHINKANSEN_HUB_STATION = {
-  '大阪': '新大阪',
-  '神戸': '新神戸',
+  '大阪': '新大阪駅',
+  '神戸': '新神戸駅',
   // 東京・名古屋・京都・広島・博多 等は hub 名=新幹線駅名なので不要
 };
 
@@ -115,9 +115,9 @@ function getDepartureLabel(departure, stepType) {
   if (stepType === 'bus') {
     return BUS_HUB_STATION[departure] ?? (DEPARTURE_CITY_INFO[departure]?.rail?.replace(/駅$/, '') + '駅') ?? departure;
   }
-  // rail / ferry / localMove / car
+  // rail / ferry / localMove / car — 「駅」を保持して Maps URL の精度を上げる
   const station = DEPARTURE_CITY_INFO[departure]?.rail;
-  return station ? station.replace(/駅$/, '') : departure;
+  return station ?? departure;
 }
 
 /* ── Phase 2: ルートのウェイポイント配列を構築（BFS steps 用）── */
@@ -622,9 +622,10 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
   const links  = [];
 
   function shinkansenFrom() {
-    if (SHIKOKU_DEPARTURES_SET.has(departure)) return '岡山';
+    if (SHIKOKU_DEPARTURES_SET.has(departure)) return '岡山駅';
     const railName = fromCity.rail.replace(/駅$/, '');
-    return CITY_TO_SHINKANSEN[railName] ?? CITY_TO_SHINKANSEN[departure] ?? railName;
+    const st = CITY_TO_SHINKANSEN[railName] ?? CITY_TO_SHINKANSEN[departure] ?? railName;
+    return st.endsWith('駅') ? st : st + '駅';
   }
 
   const meaningfulSteps   = routes.filter(s => s.type !== 'localMove');
@@ -650,7 +651,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
           ? shinkansenFrom()
           : step.type === 'flight'
             ? (formatAirportLabel(fromCity.airport) ?? departure)
-            : fromCity.rail.replace(/駅$/, ''))
+            : fromCity.rail)
       : step.from ?? prevStepTo ?? '';
     const to   = step.to ?? label;
 
@@ -754,8 +755,8 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
 
 function buildAutoLinks(city, departure, fromCity) {
   const label       = cityLabel(city);
-  const origin      = fromCity?.rail?.replace(/駅$/, '') ?? departure;
-  const baseStation = (city.accessStation ?? city.railGateway ?? label).replace(/駅$/, '');
+  const origin      = fromCity?.rail ?? departure;
+  const baseStation = city.accessStation ?? city.railGateway ?? label;
   const destSt      = city.shinkansenStation ?? baseStation;
 
   const stepGroups = [];

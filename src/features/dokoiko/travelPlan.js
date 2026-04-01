@@ -16,6 +16,8 @@
 
 import { resolveTransportLinks } from '../../transport/resolveTransportLinks.js';
 import { buildHotelLinks }       from '../../hotel/hotelLinkBuilder.js';
+import { buildRentalLink }       from '../../transport/linkBuilder.js';
+import { DEPARTURE_CITY_INFO }   from '../../config/constants.js';
 
 export function buildTravelPlan(destination, departure) {
   const transportLinks = resolveTransportLinks(destination, departure);
@@ -27,7 +29,39 @@ export function buildTravelPlan(destination, departure) {
   const hotelLinks = buildHotelLinks(destination);
   const hasRental  = transportLinks.some(l => l.type === 'rental');
 
-  return { transportLinks, hotelLinks, mainCtaType, hasRental };
+  /* レンタカー必須 / mountain / remote で既存ルートが公共交通を含む場合、
+   * 「直行レンタカー」代替ルートを生成する */
+  const isCarRequired = destination.needsCar
+    || destination.destType === 'remote'
+    || destination.destType === 'mountain';
+  const hasTransitInMain = transportLinks.some(
+    l => l.type === 'main-cta' && ['jr-east','jr-west','jr-ex','jr-kyushu','jr-window','skyscanner','google-flights'].includes(l.cta?.type)
+  );
+  const altTransportLinks = (isCarRequired && hasTransitInMain)
+    ? _buildDirectCarLinks(destination, departure)
+    : null;
+
+  return { transportLinks, altTransportLinks, hotelLinks, mainCtaType, hasRental };
+}
+
+/** レンタカー直行ルート（Pattern B）を生成する */
+function _buildDirectCarLinks(destination, departure) {
+  const destLabel  = destination.displayName || destination.name;
+  const destTarget = destination.mapPoint ?? destLabel;
+  const fromStation = DEPARTURE_CITY_INFO[departure]?.rail ?? departure;
+  const url = (
+    'https://www.google.com/maps/dir/?api=1' +
+    `&origin=${encodeURIComponent(fromStation)}` +
+    `&destination=${encodeURIComponent(destTarget)}` +
+    `&travelmode=driving`
+  );
+  const cta = { type: 'google-maps', label: `${departure}からそのまま車で行く（Googleマップ）`, url };
+  return [
+    { type: 'summary', transfers: 0 },
+    { type: 'main-cta', cta },
+    { type: 'step-group', stepLabel: `① ${fromStation} → ${destLabel}（レンタカー直行）`, cta, caution: null },
+    buildRentalLink(),
+  ];
 }
 
 function _ctaTypeToCategory(ctaType) {

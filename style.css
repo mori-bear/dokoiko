@@ -630,6 +630,11 @@ body {
   border-top: 2px solid var(--bg);
 }
 
+.card-section--alt-route {
+  border-top: 1px dashed var(--border);
+  opacity: 0.9;
+}
+
 .link-list {
   display: flex;
   flex-direction: column;
