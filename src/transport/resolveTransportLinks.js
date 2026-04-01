@@ -553,8 +553,9 @@ function bfsStepsToLinks(steps, departure, city) {
     const stepLabel = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}）`;
     const { cta, caution } = bfsStepToCta(s, departure);
     const duration = (s.minutes && s.minutes > 0) ? s.minutes : null;
-    stepGroups.push({ type: 'step-group', stepLabel, cta, caution, duration });
-    if (s.type === 'car') links.push(buildRentalLink());
+    // car ステップの rentalLink は step-group に埋め込む（ローカル移動セクション内で表示）
+    const rentalLink = (s.type === 'car') ? buildRentalLink(fromLabel.replace(/駅$/, '')) : null;
+    stepGroups.push({ type: 'step-group', stepLabel, cta, caution, duration, rentalLink });
     displayIdx++;
   }
 
@@ -590,7 +591,9 @@ function bfsStepsToLinks(steps, departure, city) {
   /* Phase 2: レンタカー補完（car step がなく needsCar/mountain/remote の場合のみ）*/
   const hasCar = steps.some(s => s.type === 'car');
   if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) {
-    links.push(buildRentalLink());
+    // 到着点（最終ステップの to）でレンタカー受取
+    const lastHub = steps[steps.length - 1]?.to?.replace(/駅$/, '') ?? departure;
+    links.push(buildRentalLink(lastHub));
   }
 
   /* フォールバック: 全ステップに CTA がない（IC在来線のみ等）→ 最終ステップに Google Maps を付与 */
@@ -680,8 +683,9 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     }
 
     const { cta, caution } = routeStepToCta(step, from, to, departure, fromCity, city);
-    stepGroups.push({ type: 'step-group', stepLabel, cta, caution });
-    if (step.type === 'car') links.push(buildRentalLink());
+    // car ステップの rentalLink は step-group に埋め込む（ローカル移動セクション内で表示）
+    const rentalLink = (step.type === 'car') ? buildRentalLink(from.replace(/駅$/, '')) : null;
+    stepGroups.push({ type: 'step-group', stepLabel, cta, caution, rentalLink });
     prevStepTo = to;
     displayIdx++;
   }
@@ -696,7 +700,11 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
 
   /* Phase 2: needsCar / mountain / remote のみレンタカー表示（car step が既にある場合は追加しない） */
   const hasCar = routes.some(s => s.type === 'car');
-  if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) links.push(buildRentalLink());
+  if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) {
+    // 到着点（最終ルートステップの to）でレンタカー受取
+    const lastHub = prevStepTo?.replace(/駅$/, '') ?? departure;
+    links.push(buildRentalLink(lastHub));
+  }
 
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) {
@@ -904,7 +912,7 @@ function buildAutoLinks(city, departure, fromCity) {
 
   /* ── レンタカー（Phase 2: needsCar / mountain / remote のみ）── */
   const rentalLinks = (city.needsCar || ['remote', 'mountain'].includes(city.destType))
-    ? [buildRentalLink()] : [];
+    ? [buildRentalLink(fromCity?.rail?.replace(/駅$/, '') ?? departure)] : [];
 
   /* ── Google Maps（フォールバック / 何もない場合）── */
   if (stepGroups.length === 0) {

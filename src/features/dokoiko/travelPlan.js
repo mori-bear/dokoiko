@@ -60,7 +60,7 @@ function _buildDirectCarLinks(destination, departure) {
     { type: 'summary', transfers: 0 },
     { type: 'main-cta', cta },
     { type: 'step-group', stepLabel: `① ${fromStation} → ${destLabel}（レンタカー直行）`, cta, caution: null },
-    buildRentalLink(),
+    buildRentalLink(fromStation.replace(/駅$/, '')),
   ];
 }
 

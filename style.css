@@ -714,6 +714,22 @@ body {
   opacity: 0.7;
 }
 
+/* ── ローカル移動カード（到着後の移動セクション）── */
+
+.local-step {
+  background: var(--bg-card, #f5f5f3);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.local-step-route {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
 .step-card-cta {
   display: inline-block;
   margin-top: 8px;

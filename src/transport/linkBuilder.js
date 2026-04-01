@@ -225,14 +225,14 @@ export function buildJrLink(bookingProvider, route = null) {
 
 /* ── レンタカー ── */
 
-export function buildRentalLink() {
+/**
+ * @param {string|null} gatewayCity — レンタカー受取拠点（「○○でレンタカーを借りる」に使用）
+ */
+export function buildRentalLink(gatewayCity = null) {
   const target = 'https://www.jalan.net/rentacar/';
   const vc = `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=${encodeURIComponent(target)}`;
-  return {
-    type: 'rental',
-    label: 'レンタカーを探す',
-    url: vc,
-  };
+  const label = gatewayCity ? `${gatewayCity}でレンタカーを借りる` : 'レンタカーを探す';
+  return { type: 'rental', label, url: vc, gatewayCity };
 }
 
 /* ── 高速バス ── */

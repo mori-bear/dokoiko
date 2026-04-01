@@ -1,35 +1,27 @@
 /**
  * DOM描画モジュール
  *
- * カード表示順 (TASK6):
+ * カード表示順:
  *   result-card
  *     city-block（都市名/地域/タグ/スポット/説明文）
- *     card-section        （交通リンク — rental を除く）
- *     stay-block          （この街に泊まるなら — stayType !== daytrip のみ）
- *       島の場合: 前泊セクション + 目的地セクション
- *     rental-block        （レンタカー — stayType !== daytrip のみ）
- *     （share-block は削除済み）
+ *     card-section（交通リンク：概要 + 全体マップ + 予約CTA）
+ *     card-section（到着後の移動：レンタカー + Googleマップ）← ローカル移動がある場合のみ
+ *     alt-route-block（レンタカー直行代替案）
+ *     stay-block（この街に泊まるなら — stayType !== daytrip のみ）
  */
 
 export function renderResult({ city, transportLinks, altTransportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
-    const showHotel  = stayType !== 'daytrip';
-    // 島・needsCar はdaytrip でもレンタカー表示
-    const forceRental = !!(city?.isIsland || city?.destType === 'island' || city?.needsCar);
-    const showRental  = showHotel || forceRental;
-    // rental を交通ブロックから分離して宿の後に表示
-    const rentalLinks = transportLinks.filter(l => l.type === 'rental');
-    const mainLinks   = transportLinks.filter(l => l.type !== 'rental');
+    const showHotel = stayType !== 'daytrip';
 
     const el = document.getElementById('result-inner');
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${buildTransportBlock(mainLinks, departure, city.displayName || city.name, city)}
+        ${buildTransportBlock(transportLinks, departure, city.displayName || city.name, city)}
         ${altTransportLinks ? buildAltRouteBlock(altTransportLinks, departure) : ''}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
-        ${showRental && rentalLinks.length ? buildRentalBlock(rentalLinks) : ''}
       </div>
     `;
   } catch (err) {
@@ -263,44 +255,78 @@ function buildTransportBlockStepwise(links, departure, destLabel, city = null) {
        </a>`
     : '';
 
-  // ③ ローカル移動ステップ — JR/新幹線で完結するルートは非表示
+  // ③ ローカル移動セクション — JR/新幹線で完結するルートは非表示
   const JR_TYPES_RENDER = ['jr-east', 'jr-west', 'jr-ex', 'jr-kyushu', 'jr-window'];
   const mainCtaType = mainCtaLink?.cta?.type;
   const isJrComplete = JR_TYPES_RENDER.includes(mainCtaType);
-  const localSteps = isJrComplete ? [] : stepGroups.filter(sg => sg.cta?.type === 'google-maps');
-  const stepsHtml = localSteps.map((sg, i) => buildStepCard(sg, i === 0)).join('');
-  const stepsBlockHtml = stepsHtml
-    ? `<div class="step-card-list">${stepsHtml}</div>`
-    : '';
 
-  // 表示順: 概要 → ① 全体マップ → ② 予約CTA → ③ 区間ステップ
+  // standalone rental（needsCar 補完分 — car step に紐付かないもの）
+  const standaloneRentals = links.filter(l => l.type === 'rental');
+
+  const localBlockHtml = (() => {
+    if (isJrComplete) return '';
+    // google-maps CTA を持つ step-group がローカル移動候補
+    const localSteps = stepGroups.filter(sg => sg.cta?.type === 'google-maps');
+    if (localSteps.length === 0 && standaloneRentals.length === 0) return '';
+
+    const stepHtml = localSteps.map(sg => buildLocalStep(sg)).join('');
+    const standaloneRentalHtml = standaloneRentals.map(r =>
+      `<a href="${r.url}" target="_blank" rel="noopener noreferrer"
+          class="btn btn-rental">${r.label}</a>`
+    ).join('');
+
+    return `
+      <div class="card-section">
+        <p class="section-label">到着後の移動</p>
+        ${stepHtml}
+        ${standaloneRentalHtml ? `<div class="link-list">${standaloneRentalHtml}</div>` : ''}
+      </div>
+    `;
+  })();
+
+  // 表示順: 概要 → ① 全体マップ → ② 予約CTA | ③ ローカル移動（別セクション）
   return `
     <div class="card-section">
       ${summaryHtml}
       ${overallMapsHtml}
       ${mainCtaHtml}
-      ${stepsBlockHtml}
     </div>
+    ${localBlockHtml}
   `;
 }
 
-/* ── ステップカード（各ステップのCTA付き） ── */
+/* ── ローカル移動カード（到着後の移動セクション用） ── */
 
-function buildStepCard(sg, isFirst = false) {
-  // google-maps ステップは「ルートを確認する」に統一（stepLabel に詳細あり）
-  const ctaLabel = sg.cta?.type === 'google-maps' ? 'ルートを確認する' : sg.cta?.label;
-  const ctaHtml = sg.cta?.url
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-          class="btn ${btnClass(sg.cta.type)} step-card-cta">${ctaLabel}</a>`
+/**
+ * 1件のローカル移動ステップを描画する。
+ * stepLabel から "from → to（mode）" を抽出してルートラベルとして表示。
+ * rentalLink があればレンタカーCTA（primary）、google-maps CTA は「行き方を確認する」（secondary）。
+ */
+function buildLocalStep(sg) {
+  // stepLabel 例: "① 🚗 鹿児島中央駅 → 霧島（レンタカー）"
+  // → ステップ番号とアイコンを除去、駅 suffix を削除してルートラベルに
+  const raw = sg.stepLabel?.replace(/^[①-⑨\d\.]+\s+\S+\s+/u, '') ?? '';
+  const routeLabel = raw.replace(/駅\s*→/, ' →');  // "鹿児島中央駅 →" → "鹿児島中央 →"
+
+  const rentalHtml = sg.rentalLink?.url
+    ? `<a href="${sg.rentalLink.url}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-rental">${sg.rentalLink.label}</a>`
     : '';
-  // 最初のローカル移動ステップに「到着後の移動」ラベルを表示
-  const arrivalHtml = isFirst ? `<p class="arrival-label">到着後の移動</p>` : '';
+
+  const mapsHtml = sg.cta?.url
+    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-secondary">行き方を確認する</a>`
+    : '';
+
+  if (!rentalHtml && !mapsHtml) return '';
 
   return `
-    <div class="step-card">
-      ${arrivalHtml}
-      <div class="step-card-header">${sg.stepLabel}</div>
-      ${ctaHtml}
+    <div class="local-step">
+      <div class="local-step-route">${routeLabel}</div>
+      <div class="link-list">
+        ${rentalHtml}
+        ${mapsHtml}
+      </div>
     </div>
   `;
 }
@@ -345,16 +371,6 @@ function buildAltRouteBlock(altLinks, departure) {
         </a>
         ${rentalHtml}
       </div>
-    </div>
-  `;
-}
-
-// TASK6: レンタカーブロック（宿の後に表示）
-function buildRentalBlock(links) {
-  const linksHtml = links.map(link => buildLinkItem(link)).join('');
-  return `
-    <div class="card-section">
-      <div class="link-list">${linksHtml}</div>
     </div>
   `;
 }
