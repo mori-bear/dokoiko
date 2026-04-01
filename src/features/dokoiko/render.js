@@ -228,12 +228,12 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const primarySteps   = main.length > 0 ? main : transfer;
   const secondarySteps = main.length > 0 ? transfer : [];
 
-  // ④ main セクション（新幹線/飛行機/フェリー/バス）
-  const primaryHtml  = primarySteps.map(sg => buildStepCard(sg)).join('');
+  // ④ main セクション（先頭を強調 isPrimary=true）
+  const primaryHtml  = primarySteps.map((sg, i) => buildStepCard(sg, i === 0)).join('');
   // ⑤ 乗換セクション
   const transferHtml = buildTransferSection(secondarySteps, stepGroups);
-  // ⑥ 到着後セクション
-  const localHtml    = buildLocalSection(local, rentalLinks);
+  // ⑥ 到着後セクション（city を渡してヒント表示）
+  const localHtml    = buildLocalSection(local, rentalLinks, city);
 
   return `
     <div class="card-section">
@@ -252,11 +252,12 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
  * stepLabel（"① ✈ 高松空港 → 福岡空港（飛行機）"）をヘッダーに表示し、
  * type 別にオーバーライドした CTA ボタンと、car step の rentalLink を配置する。
  */
-function buildStepCard(sg) {
+function buildStepCard(sg, isPrimary = false) {
   const ctaLabel  = buildStepCtaLabel(sg);
+  const btnExtra  = isPrimary ? ' btn--primary' : '';
   const ctaHtml   = (sg.cta?.url && ctaLabel)
     ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-           class="btn ${btnClass(sg.cta.type)}">${ctaLabel}</a>`
+           class="btn ${btnClass(sg.cta.type)}${btnExtra}">${ctaLabel}</a>`
     : '';
 
   const rentalHtml = sg.rentalLink?.url
@@ -276,8 +277,9 @@ function buildStepCard(sg) {
     ? `<div class="link-list">${ctaHtml}${rentalHtml}</div>`
     : '';
 
+  const cardClass = `step-card${isPrimary ? ' step-card--primary' : ''}`;
   return `
-    <div class="step-card">
+    <div class="${cardClass}">
       <div class="step-card-header">${sg.stepLabel ?? ''}</div>
       ${linksBlock}
       ${cautionHtml}
@@ -384,24 +386,93 @@ function classifyStepGroups(stepGroups) {
 
 /* ── 乗換セクション ── */
 
+/** stepLabel から出発地を抽出（CJK起点で from を特定・駅 suffix 除去） */
+function extractStepFrom(sg) {
+  const withoutMode = sg.stepLabel?.replace(/（[^）]+）$/, '') ?? '';
+  const arrowIdx    = withoutMode.indexOf('→');
+  if (arrowIdx < 0) return '';
+  const rawFrom = withoutMode.slice(0, arrowIdx);
+  return (rawFrom.match(/([\u3040-\u9FFF].*)/)?.[1] ?? '').trim().replace(/駅$/, '');
+}
+
+/** stepLabel から目的地を抽出（駅 suffix 除去） */
+function extractStepTo(sg) {
+  const withoutMode = sg.stepLabel?.replace(/（[^）]+）$/, '') ?? '';
+  const arrowIdx    = withoutMode.indexOf('→');
+  if (arrowIdx < 0) return '';
+  return withoutMode.slice(arrowIdx + 1).trim().replace(/駅$/, '');
+}
+
 /**
- * 乗換ステップを "○○で新幹線に乗換" 形式でまとめて表示する。
+ * 連続する同一交通手段ステップをまとめる。
+ * 例: 大阪→天王寺（JR）+ 天王寺→伊賀上野（JR）→ 大阪→伊賀上野（JR・乗換1回）
+ * 返り値: 通常のstep-group または { _mergedRoute, routeLabel } のミックス配列
+ */
+function mergeConsecutiveTransfers(transferSteps) {
+  const result = [];
+  let i = 0;
+  while (i < transferSteps.length) {
+    const sg      = transferSteps[i];
+    const mode    = sg.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
+    const ctaType = sg.cta?.type ?? '';
+
+    // 同一 ctaType・mode の連続ステップを探す（ctaType 未設定は個別扱い）
+    let j = i + 1;
+    if (ctaType !== '') {
+      while (j < transferSteps.length) {
+        const next     = transferSteps[j];
+        const nextMode = next.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
+        if (mode === nextMode && ctaType === (next.cta?.type ?? '')) j++;
+        else break;
+      }
+    }
+
+    if (j - i >= 2) {
+      const first   = transferSteps[i];
+      const last    = transferSteps[j - 1];
+      const hops    = j - i - 1;
+      const from    = extractStepFrom(first);
+      const to      = extractStepTo(last);
+      result.push({ _mergedRoute: true, routeLabel: `${from} → ${to}（${mode}・乗換${hops}回）` });
+    } else {
+      result.push(transferSteps[i]);
+    }
+    i = j;
+  }
+  return result;
+}
+
+/**
+ * 乗換ステップを "○○で乗り換え（電車 → 新幹線）" 形式でまとめて表示する。
+ * 連続する同一手段ステップは1行にまとめる。
  * CTA なし。
  */
 function buildTransferSection(transferSteps, allStepGroups) {
   if (!transferSteps.length) return '';
-  const items = transferSteps.map(sg => {
-    const withoutMode = sg.stepLabel?.replace(/（[^）]+）$/, '') ?? '';
-    const arrowIdx    = withoutMode.indexOf('→');
-    const rawTo       = arrowIdx >= 0 ? withoutMode.slice(arrowIdx + 1).trim() : '';
-    const to          = rawTo.replace(/駅$/, '');
+
+  const merged = mergeConsecutiveTransfers(transferSteps);
+
+  const items = merged.map(entry => {
+    if (entry._mergedRoute) {
+      return `<li class="transfer-item">・${entry.routeLabel}</li>`;
+    }
+
+    const sg          = entry;
+    const currentMode = sg.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
+    const to          = extractStepTo(sg);
 
     const idx      = allStepGroups.indexOf(sg);
     const nextSg   = allStepGroups[idx + 1];
     const nextMode = nextSg?.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
 
+    // "○○で乗り換え（電車 → 新幹線）" 形式
+    const modeChange = (currentMode && nextMode && currentMode !== nextMode)
+      ? `（${currentMode} → ${nextMode}）`
+      : '';
     const label = to
-      ? (nextMode ? `${to}で${nextMode}に乗換` : `${to}で乗換`)
+      ? (nextMode
+          ? `${to}で乗り換え${modeChange}`
+          : `${to}で乗り換え`)
       : (sg.stepLabel ?? '');
     return `<li class="transfer-item">・${label}</li>`;
   }).join('');
@@ -417,10 +488,40 @@ function buildTransferSection(transferSteps, allStepGroups) {
 /* ── 到着後セクション ── */
 
 /**
- * 到着後のローカル移動（Googleマップ・レンタカー）をまとめて表示する。
+ * city フィールドからローカル交通のヒントを生成。
+ * 既存フィールド（needsCar / destType / railNote / busGateway / accessStation）を活用。
  */
-function buildLocalSection(localSteps, rentalLinks = []) {
-  if (!localSteps.length && !rentalLinks.length) return '';
+function buildLocalTransportHint(city) {
+  if (!city) return '';
+  // 島・フェリー目的地は ferry step で完結しているのでヒント不要
+  if (city.isIsland || city.destType === 'island') return '';
+
+  const needsCar = city.needsCar === true
+    || city.destType === 'mountain'
+    || city.destType === 'remote';
+  const hasBus   = city.railNote === 'バス' || city.busGateway != null;
+
+  if (needsCar) {
+    return `<p class="local-hint local-hint--car">⚠ レンタカー推奨エリアです</p>`;
+  }
+  if (hasBus) {
+    const station = (city.accessStation ?? '').replace(/駅$/, '') || '最寄り駅';
+    return `<p class="local-hint">バスでアクセスできます（${station}から）</p>`;
+  }
+  if (city.accessStation?.endsWith('駅')) {
+    const station = city.accessStation.replace(/駅$/, '');
+    return `<p class="local-hint">${station}駅から徒歩・バスで移動</p>`;
+  }
+  return '';
+}
+
+/**
+ * 到着後のローカル移動（Googleマップ・レンタカー）をまとめて表示する。
+ * city を受け取ってローカル交通ヒントも表示する。
+ */
+function buildLocalSection(localSteps, rentalLinks = [], city = null) {
+  const hint = buildLocalTransportHint(city);
+  if (!localSteps.length && !rentalLinks.length && !hint) return '';
 
   const stepItems = localSteps.map(sg => {
     const label      = buildStepCtaLabel(sg) ?? 'Googleマップで確認';
@@ -442,11 +543,12 @@ function buildLocalSection(localSteps, rentalLinks = []) {
     : '';
 
   const content = stepItems + standaloneHtml;
-  if (!content.trim()) return '';
+  if (!content.trim() && !hint) return '';
 
   return `
     <div class="local-section">
-      <div class="local-header">到着後</div>
+      <div class="local-header">到着後の移動</div>
+      ${hint}
       ${content}
     </div>
   `;
