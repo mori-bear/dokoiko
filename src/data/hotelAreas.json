@@ -4217,5 +4217,15 @@
     "prefecture": "高知県",
     "prefCode": "kochi",
     "rakutenFallback": "/yado/kochi/"
+  },
+  {
+    "id": "kazurabashi",
+    "name": "祖谷のかずら橋",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "prefCode": "tokushima",
+    "rakutenFallback": "/yado/tokushima/",
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%8E%4F%8D%44%8E%73",
+    "jalanKeyword": "徳島県 三好市"
   }
 ]
