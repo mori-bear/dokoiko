@@ -276,12 +276,21 @@ function buildStepCtaLabel(sg) {
   const cta = sg.cta;
   if (!cta?.url) return null;
 
-  // stepLabel から "from → to" を抽出（番号・アイコン・モードを除去）
+  // stepLabel から "from → to" を抽出
+  // アイコンが空文字のケースに対応: CJK文字起点で from を特定
   const fromTo = (() => {
-    const raw = sg.stepLabel?.replace(/^[①-⑨\d\.]+\s+\S+\s+/u, '') ?? '';
-    const m   = raw.match(/^(.+?)（[^）]+）$/u);
-    return (m ? m[1].trim() : raw.trim()).replace(/駅\s*→/, ' →');
+    if (!sg.stepLabel) return '';
+    const withoutMode = sg.stepLabel.replace(/（[^）]+）$/, '');
+    const arrowIdx = withoutMode.indexOf('→');
+    if (arrowIdx < 0) return '';
+    const rawFrom = withoutMode.slice(0, arrowIdx);
+    const from = (rawFrom.match(/([\u3040-\u9FFF].*)/)?.[1] ?? '').trim().replace(/駅$/, '');
+    const to   = withoutMode.slice(arrowIdx + 1).trim();
+    return `${from} → ${to}`;
   })();
+
+  // stepLabel 末尾の（モード）を抽出
+  const stepMode = sg.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
 
   switch (cta.type) {
     case 'google-maps':
@@ -291,6 +300,15 @@ function buildStepCtaLabel(sg) {
       return fromTo ? `飛行機で行く（${fromTo}）` : cta.label;
     case 'ferry':
       return fromTo ? `フェリーを予約する（${fromTo}）` : cta.label;
+    case 'bus':
+      return fromTo ? `バスで行く（${fromTo}）` : cta.label;
+    case 'jr-east':
+    case 'jr-west':
+    case 'jr-kyushu':
+    case 'jr-ex':
+    case 'jr-window':
+      if (stepMode === '新幹線') return fromTo ? `新幹線で行く（${fromTo}）` : '新幹線で行く';
+      return fromTo ? `電車で行く（${fromTo}）` : '電車で行く';
     default:
       return cta.label ?? '';
   }

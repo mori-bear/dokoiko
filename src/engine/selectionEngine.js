@@ -15,7 +15,6 @@
  */
 
 import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCalculator.js';
-import { ROUTES } from '../features/dokoiko/routes.js';
 
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
@@ -141,7 +140,6 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   const withStars = destinations
     .filter(d => d.type !== 'spot')
-    .filter(d => ROUTES[d.id] || d.gateway)
     .map(d => {
       const travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
       return {
@@ -176,12 +174,15 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   });
 
   if (departurePool.length > 0) {
-    return weightedShuffle(departurePool, theme);
+    // ハードフィルタ: テーマ選択時は完全一致の候補を優先、0件の場合のみ全件にフォールバック
+    const themed = theme ? departurePool.filter(d => matchesTheme(d, theme)) : departurePool;
+    return weightedShuffle(themed.length > 0 ? themed : departurePool, theme);
   }
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
   const globalPool = withStars.filter(matchesStayType);
-  return weightedShuffle(globalPool, theme);
+  const themedGlobal = theme ? globalPool.filter(d => matchesTheme(d, theme)) : globalPool;
+  return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : globalPool, theme);
 }
 
 /** 後方互換ラッパー（1件のみ返す） */
