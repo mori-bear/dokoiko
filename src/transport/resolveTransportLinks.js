@@ -473,9 +473,10 @@ function isFlightAllowed(city, departure) {
   if (city.isIsland || city.destType === 'island') return true;
   if (city.flightHub) return true;
 
-  // 移動時間 180分未満（目安 〜400km）は飛行機不要
+  // 移動時間 200分未満（目安 〜300km）は飛行機不要
+  // 200min = 在来線・新幹線で概ね300km相当
   const travelMin = city.travelTimeMinutes ?? 999;
-  if (travelMin > 0 && travelMin < 180) return false;
+  if (travelMin > 0 && travelMin < 200) return false;
 
   // 同一地方は飛行機不要（例: 九州 → 九州, 関東 → 関東）
   const depArea  = getArea(departure);
@@ -529,6 +530,9 @@ function scoreRouteSteps(steps, departure, city = null) {
       prevArea = toArea;
     }
   }
+
+  /* 乗換3回以上は自然なルートではない → buildAutoLinks に差し替え */
+  if (transfers >= 3) score += 100;
 
   /* Phase 4④: 陸路4区間以上は遠回りの可能性 → ペナルティ（3→4 に緩和: 四国3区間ルートは正常）*/
   const landStepCount = meaningful.filter(s => ['shinkansen', 'rail'].includes(s.type)).length;

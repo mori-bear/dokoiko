@@ -62,6 +62,16 @@ function toStepType(edge) {
   return 'localMove';
 }
 
+/**
+ * 交通種別ペナルティ（分）
+ * 同程度の距離なら鉄道を優先するため、飛行機・バスに下駄を履かせる。
+ * 飛行機しか選択肢がない区間（離島・遠距離）では依然として飛行機が選ばれる。
+ */
+const EDGE_TYPE_PENALTY = {
+  flight: 45, // 飛行機: 鉄道より45分不利に（空港アクセス・保安検査等の体感時間を反映）
+  bus:    10, // バス: わずかに不利（鉄道が同程度なら鉄道を優先）
+};
+
 /* ── ダイクストラ法（所要時間最短経路 / 同値ならホップ最小） ── */
 function findPath(fromId, toId) {
   // dist: nodeId → { minutes: number, hops: number }
@@ -92,7 +102,7 @@ function findPath(fromId, toId) {
     if (!d || minutes > d.minutes || (minutes === d.minutes && hops > d.hops)) continue;
 
     for (const edge of (ADJ[node] ?? [])) {
-      const edgeMin  = edge.minutes ?? 0;
+      const edgeMin  = (edge.minutes ?? 0) + (EDGE_TYPE_PENALTY[edge.type] ?? 0);
       const newMin   = minutes + edgeMin;
       const newHops  = hops + 1;
       const existing = dist.get(edge.to);
