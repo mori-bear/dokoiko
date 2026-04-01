@@ -458,6 +458,34 @@ function routeStepToCta(step, from, to, departure, fromCity, city) {
 }
 
 /* ══════════════════════════════════════════════════════
+   飛行機可否判定
+   短距離 / 同一地方への飛行機ルートを禁止する。
+   ただし離島（isIsland / island）・flightHub 経由目的地は常に許可。
+══════════════════════════════════════════════════════ */
+
+/**
+ * @param {object} city      — 目的地エントリ（travelTimeMinutes 付きが望ましい）
+ * @param {string} departure — 出発地名
+ * @returns {boolean}        — true = 飛行機ルートを使用可
+ */
+function isFlightAllowed(city, departure) {
+  // 離島・flightHub 経由（屋久島など）は飛行機必須なので常に許可
+  if (city.isIsland || city.destType === 'island') return true;
+  if (city.flightHub) return true;
+
+  // 移動時間 180分未満（目安 〜400km）は飛行機不要
+  const travelMin = city.travelTimeMinutes ?? 999;
+  if (travelMin > 0 && travelMin < 180) return false;
+
+  // 同一地方は飛行機不要（例: 九州 → 九州, 関東 → 関東）
+  const depArea  = getArea(departure);
+  const destArea = city.region ?? null;
+  if (depArea && destArea && depArea === destArea) return false;
+
+  return true;
+}
+
+/* ══════════════════════════════════════════════════════
    スコアリング（不自然なルートを自動生成に差し替え）
    スコア低 = より自然なルート
 ══════════════════════════════════════════════════════ */
@@ -737,8 +765,8 @@ function buildAutoLinks(city, departure, fromCity) {
   const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
   const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
 
-  /* isViaHub のとき: hub 空港への就航も hasFlight の判定に含める */
-  const hasFlight  = !!(fromIata && (
+  /* 短距離 / 同一地方への飛行機は禁止 */
+  const hasFlight  = isFlightAllowed(city, departure) && !!(fromIata && (
     (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||
     (isViaHub && _hubAirportName && hasFlightRoute(departure, _hubAirportName))
   ));
@@ -953,9 +981,9 @@ function buildAutoLinks(city, departure, fromCity) {
  * @param {object} city  — destination エントリ
  * @returns {boolean}    — true = BFS を採用, false = fallback を使う
  */
-function isBfsRouteValid(steps, city) {
-  const hasFlight = steps.some(s => s.type === 'flight');
-  const hasFerry  = steps.some(s => s.type === 'ferry');
+function isBfsRouteValid(steps, city, departure = '') {
+  const hasFlight  = steps.some(s => s.type === 'flight');
+  const hasFerry   = steps.some(s => s.type === 'ferry');
 
   // 飛行機ルートだが airportGateway がない → 陸路目的地への飛行機は不適切
   if (hasFlight && !city.airportGateway) return false;
@@ -963,6 +991,13 @@ function isBfsRouteValid(steps, city) {
   // railProvider がある（鉄道でアクセス可能）のに飛行機ルートが選ばれた
   // → ホップ数優先 BFS の誤選択。routes.js / buildAutoLinks の鉄道ルートを使う
   if (hasFlight && city.railProvider) return false;
+
+  // 短距離 or 同一地方への飛行機は禁止
+  if (hasFlight && !isFlightAllowed(city, departure)) return false;
+
+  // 飛行機2回以上のルートは不自然（乗り継ぎ便は flightHub ルートで表示）
+  const flightCount = steps.filter(s => s.type === 'flight').length;
+  if (flightCount >= 2) return false;
 
   // ferryGateway がある（島や港目的地）のに ferry step がない
   // → グラフが ferry 経路を bus/localMove で省略している → 詳細 fallback を使う
@@ -998,7 +1033,7 @@ function _resolve(city, departure) {
 
   /* ── Phase 1: transportGraph.json BFS を最優先で試みる ── */
   const bfsSteps = buildRoute(departure, city);
-  if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city)) {
+  if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city, departure)) {
     return bfsStepsToLinks(bfsSteps, departure, city);
   }
 
@@ -1009,6 +1044,7 @@ function _resolve(city, departure) {
   if (departureRoute && fromCity) {
     const routes = departureRoute.filter(step => {
       if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+      if (step.type === 'flight' && !isFlightAllowed(city, departure)) return false;
       if (step.type === 'rail'   && step.duration !== undefined && step.duration < 40) return false;
       return true;
     });
@@ -1021,6 +1057,7 @@ function _resolve(city, departure) {
     }
     const routes = defaultRoute.filter(step => {
       if (step.type === 'flight' && !hasFlightRoute(departure, step.to)) return false;
+      if (step.type === 'flight' && !isFlightAllowed(city, departure)) return false;
       if (step.type === 'rail'   && step.duration !== undefined && step.duration < 40) return false;
       return true;
     });

@@ -214,11 +214,11 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
     ? `<div class="dest-map-row"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${destLabel || '目的地'}の場所を地図で見る</a></div>`
     : '';
 
-  // ② ルート概要
+  // ② ルート概要（乗換ポイント・到着後ヒントをプレビュー）
   const transfers   = summaryLink?.transfers ?? Math.max(0, stepGroups.length - 1);
   const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
   const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`
+    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, transferStr, stepGroups, city)}</div>`
     : '';
 
   // ③ ステップ分類
@@ -335,6 +335,48 @@ function buildStepCtaLabel(sg) {
     default:
       return cta.label ?? '';
   }
+}
+
+/* ── ルート要約（Phase 5）── */
+
+/**
+ * "高松 → 神戸（乗換1回）" の下に
+ * 乗換ポイント・到着後ヒントをプレビュー表示する。
+ */
+function buildRouteSummary(departure, destLabel, transferStr, stepGroups, city) {
+  const headline = `${departure} → ${destLabel}（${transferStr}）`;
+
+  // 乗換ポイント: 最初の transfer step の "到着地" を抽出
+  const { transfer } = classifyStepGroups(stepGroups);
+  const firstTransfer = transfer[0];
+  let transferPreview = '';
+  if (firstTransfer) {
+    const to = extractStepTo(firstTransfer).replace(/駅$/, '');
+    const idx = stepGroups.indexOf(firstTransfer);
+    const nextSg = stepGroups[idx + 1];
+    const nextMode = nextSg?.stepLabel?.match(/（([^）]+)）$/)?.[1] ?? '';
+    transferPreview = to
+      ? (nextMode ? `・${to}で${nextMode}に乗り換え` : `・${to}で乗り換え`)
+      : '';
+  }
+
+  // 到着後ヒント
+  let localPreview = '';
+  if (city) {
+    const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote';
+    const hasBus   = city.railNote === 'バス' || city.busGateway != null;
+    const isIsland = city.isIsland || city.destType === 'island';
+    if (!isIsland) {
+      if (needsCar) localPreview = '・到着後 レンタカー推奨';
+      else if (hasBus) localPreview = '・到着後 バスあり';
+      else if (city.accessStation?.endsWith('駅')) localPreview = '・到着後 徒歩・バスで移動';
+    }
+  }
+
+  const details = [transferPreview, localPreview].filter(Boolean).join('\n');
+  return details
+    ? `<span class="route-headline">${headline}</span><span class="route-detail">${details}</span>`
+    : headline;
 }
 
 /* ── 目的地地図URL ── */
@@ -521,7 +563,20 @@ function buildLocalTransportHint(city) {
  */
 function buildLocalSection(localSteps, rentalLinks = [], city = null) {
   const hint = buildLocalTransportHint(city);
-  if (!localSteps.length && !rentalLinks.length && !hint) return '';
+
+  // Google Maps フォールバック: local ステップに Maps がない場合も必ず1つ表示
+  const hasGoogleMaps = localSteps.some(sg => sg.cta?.type === 'google-maps');
+  const fallbackMapHtml = (!hasGoogleMaps && city)
+    ? (() => {
+        const mapUrl = buildDestMapUrl(city);
+        const label  = city.displayName || city.name || '目的地';
+        return mapUrl
+          ? `<div class="link-list"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Googleマップで${label}を確認</a></div>`
+          : '';
+      })()
+    : '';
+
+  if (!localSteps.length && !rentalLinks.length && !hint && !fallbackMapHtml) return '';
 
   const stepItems = localSteps.map(sg => {
     const label      = buildStepCtaLabel(sg) ?? 'Googleマップで確認';
@@ -542,7 +597,7 @@ function buildLocalSection(localSteps, rentalLinks = [], city = null) {
     ? `<div class="link-list">${standaloneRental}</div>`
     : '';
 
-  const content = stepItems + standaloneHtml;
+  const content = stepItems + standaloneHtml + fallbackMapHtml;
   if (!content.trim() && !hint) return '';
 
   return `
