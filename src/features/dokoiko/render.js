@@ -208,10 +208,10 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const altRoutes   = links.filter(l => l.type === 'alt-route');
   const rentalLinks = links.filter(l => l.type === 'rental');
 
-  // ① 目的地地図
-  const mapUrl  = buildDestMapUrl(city);
-  const mapHtml = mapUrl
-    ? `<div class="dest-map-row"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${destLabel || '目的地'}の場所を地図で見る</a></div>`
+  // ① 全体ルートマップ（出発地 → 目的地、ステップと分離）
+  const routeMapUrl = buildRouteMapUrl(departure, destLabel);
+  const mapHtml = routeMapUrl
+    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="route-map-link">🗺 ${departure} → ${destLabel ?? '目的地'} のルートを確認</a></div>`
     : '';
 
   // ② ルート概要（Phase 6: totalMinutes + reasonLabel）
@@ -302,11 +302,15 @@ function buildAltRouteSection(altRoute) {
  * type 別にオーバーライドした CTA ボタンと、car step の rentalLink を配置する。
  */
 function buildStepCard(sg, isPrimary = false) {
-  const ctaLabel  = buildStepCtaLabel(sg);
-  const btnExtra  = isPrimary ? ' btn--primary' : '';
-  const ctaHtml   = (sg.cta?.url && ctaLabel)
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-           class="btn ${btnClass(sg.cta.type)}${btnExtra}">${ctaLabel}</a>`
+  const ctaLabel      = buildStepCtaLabel(sg);
+  const btnExtra      = isPrimary ? ' btn--primary' : '';
+  const isGoogleMaps  = sg.cta?.type === 'google-maps';
+  // Google Maps は補助リンク（小サイズ・CTA扱いしない）、それ以外は通常ボタン
+  const ctaHtml = (sg.cta?.url && ctaLabel)
+    ? (isGoogleMaps
+        ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer" class="step-sublink">📍 ${ctaLabel}</a>`
+        : `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
+               class="btn ${btnClass(sg.cta.type)}${btnExtra}">${ctaLabel}</a>`)
     : '';
 
   const rentalHtml = sg.rentalLink?.url
@@ -321,16 +325,20 @@ function buildStepCard(sg, isPrimary = false) {
   // stepLabel も表示要素も何もない場合のみスキップ
   if (!sg.stepLabel && !ctaHtml && !rentalHtml && !cautionHtml) return '';
 
-  // CTA/rentalがある場合のみ link-list ブロックを表示
-  const linksBlock = (ctaHtml || rentalHtml)
-    ? `<div class="link-list">${ctaHtml}${rentalHtml}</div>`
+  // Google Maps サブリンクはlink-listに入れない（補助テキスト扱い）
+  const hasBookingCta = ctaHtml && !isGoogleMaps;
+  const linksBlock = (hasBookingCta || rentalHtml)
+    ? `<div class="link-list">${hasBookingCta ? ctaHtml : ''}${rentalHtml}</div>`
     : '';
+  // Google Maps は step-card-header の直下に小さく表示
+  const subLinkHtml = (ctaHtml && isGoogleMaps) ? ctaHtml : '';
 
   const cardClass = `step-card${isPrimary ? ' step-card--primary' : ''}`;
   return `
     <div class="${cardClass}">
       <div class="step-card-header">${sg.stepLabel ?? ''}</div>
       ${linksBlock}
+      ${subLinkHtml}
       ${cautionHtml}
     </div>
   `;
@@ -416,7 +424,7 @@ function buildRouteSummary(departure, destLabel, transferStr, city, totalMinutes
     : headline;
 }
 
-/* ── 目的地地図URL ── */
+/* ── 地図URL ── */
 
 function buildDestMapUrl(city) {
   if (!city) return null;
@@ -425,6 +433,12 @@ function buildDestMapUrl(city) {
   }
   const name = city.displayName || city.name || '';
   return name ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}` : null;
+}
+
+/** 出発地 → 目的地 のルート全体マップURL（最上部に表示） */
+function buildRouteMapUrl(departure, destLabel) {
+  if (!departure || !destLabel) return null;
+  return `https://www.google.com/maps/dir/${encodeURIComponent(departure)}/${encodeURIComponent(destLabel)}`;
 }
 
 /* ── ステップ分類（main / transfer / local）── */
