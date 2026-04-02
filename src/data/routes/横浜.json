@@ -1,0 +1,8120 @@
+{
+  "横浜": {
+    "鎌倉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "鎌倉",
+          "line": "JR横須賀線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鎌倉",
+        "final": "鎌倉"
+      }
+    },
+    "熱海": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "熱海",
+          "line": "JR東海道線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "熱海",
+        "final": "熱海"
+      }
+    },
+    "日光": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "日光",
+          "line": "東武日光線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "日光",
+        "final": "日光"
+      }
+    },
+    "軽井沢": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "軽井沢",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "軽井沢",
+        "final": "軽井沢"
+      }
+    },
+    "富士河口湖": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "大月",
+          "line": "JR中央本線"
+        },
+        {
+          "type": "rail",
+          "from": "大月",
+          "to": "河口湖",
+          "line": "富士急行"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "大月",
+        "final": "河口湖"
+      }
+    },
+    "奈良": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "奈良",
+          "line": "JR大和路線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "奈良"
+      }
+    },
+    "石垣島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "石垣空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "石垣空港",
+          "to": "石垣港",
+          "line": "路線バス"
+        }
+      ],
+      "gateway": {
+        "main": "石垣空港",
+        "final": "石垣港"
+      }
+    },
+    "伊勢": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "伊勢市",
+          "line": "近鉄特急"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "伊勢市"
+      }
+    },
+    "別府": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "別府",
+          "line": "特急ソニック"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "別府"
+      }
+    },
+    "小樽": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "小樽",
+          "line": "JR快速エアポート"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "小樽"
+      }
+    },
+    "富良野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "旭川空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "旭川",
+          "to": "富良野",
+          "line": "JR富良野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "旭川空港",
+        "final": "富良野"
+      }
+    },
+    "松島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "仙台",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "仙台",
+          "to": "松島海岸",
+          "line": "JR仙石線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "仙台",
+        "final": "松島海岸"
+      }
+    },
+    "宮島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "広島",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "広島",
+          "to": "宮島口",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "ferry",
+          "from": "宮島口港",
+          "to": "宮島",
+          "line": "JR西日本フェリー"
+        }
+      ],
+      "gateway": {
+        "main": "宮島口",
+        "final": "宮島"
+      }
+    },
+    "尾道": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "尾道",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "尾道"
+      }
+    },
+    "小豆島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "池田港",
+          "line": "小豆島フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "小豆島"
+      }
+    },
+    "美保関": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鳥取",
+          "line": "特急スーパーはくと前後/JR"
+        },
+        {
+          "type": "rail",
+          "from": "鳥取",
+          "to": "境港",
+          "line": "JR境線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "境港",
+        "final": "境港"
+      }
+    },
+    "龍神温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "紀伊田辺",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "紀伊田辺",
+          "to": "龍神温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "新大阪",
+        "final": "龍神温泉"
+      }
+    },
+    "渡嘉敷島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "渡嘉敷港",
+          "line": "フェリーとかしき"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "渡嘉敷港"
+      }
+    },
+    "久米島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "久米島空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "久米島空港",
+        "final": "久米島"
+      }
+    },
+    "宮古島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "宮古空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宮古空港",
+        "final": "宮古島"
+      }
+    },
+    "神津島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝客船ターミナル",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝客船ターミナル",
+          "to": "神津島港",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "神津島港"
+      }
+    },
+    "箱根": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "箱根湯本",
+          "line": "小田急ロマンスカー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "箱根湯本",
+        "final": "箱根湯本"
+      }
+    },
+    "修善寺": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "修善寺",
+          "line": "特急踊り子"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "修善寺",
+        "final": "修善寺"
+      }
+    },
+    "草津温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野原草津口",
+          "line": "JR吾妻線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "長野原草津口",
+          "to": "草津温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "長野原草津口",
+        "final": "草津温泉"
+      }
+    },
+    "下田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "伊豆急下田",
+          "line": "特急踊り子"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "伊豆急下田",
+        "final": "伊豆急下田"
+      }
+    },
+    "伊豆大島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝客船ターミナル",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝客船ターミナル",
+          "to": "元町港",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "元町港"
+      }
+    },
+    "白川郷": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "金沢",
+          "to": "白川郷",
+          "line": "高速バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "白川郷"
+      }
+    },
+    "有馬温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "三宮",
+          "line": "JR"
+        },
+        {
+          "type": "rail",
+          "from": "三宮",
+          "to": "有馬温泉",
+          "line": "神戸電鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "三宮",
+        "final": "有馬温泉"
+      }
+    },
+    "城崎温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "城崎温泉",
+          "line": "特急こうのとり"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "城崎温泉"
+      }
+    },
+    "倉敷": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "倉敷",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "倉敷"
+      }
+    },
+    "白浜": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "白浜",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "白浜"
+      }
+    },
+    "高山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "高山",
+          "line": "特急ひだ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "高山"
+      }
+    },
+    "鳥羽": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "鳥羽",
+          "line": "近鉄特急"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "鳥羽"
+      }
+    },
+    "湯布院": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "由布院",
+          "line": "特急ゆふいんの森"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "由布院"
+      }
+    },
+    "黒川温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "黒川温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "黒川温泉"
+      }
+    },
+    "阿蘇": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "熊本",
+          "to": "阿蘇",
+          "line": "JR豊肥本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "熊本",
+        "final": "阿蘇"
+      }
+    },
+    "屋久島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "屋久島",
+          "line": "種子島・屋久島フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "屋久島"
+      }
+    },
+    "天草": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "天草",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "天草"
+      }
+    },
+    "平泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "一ノ関",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "一ノ関",
+          "to": "平泉",
+          "line": "JR東北本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "一ノ関",
+        "final": "平泉"
+      }
+    },
+    "角館": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "角館",
+          "line": "秋田新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "角館",
+        "final": "角館"
+      }
+    },
+    "会津若松": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "郡山",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "郡山",
+          "to": "会津若松",
+          "line": "JR磐越西線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "郡山",
+        "final": "会津若松"
+      }
+    },
+    "蔵王": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "山形",
+          "line": "山形新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "山形",
+          "to": "蔵王",
+          "line": "JR奥羽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "山形",
+        "final": "蔵王"
+      }
+    },
+    "萩": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新山口",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "新山口",
+          "to": "萩",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新山口",
+        "final": "萩"
+      }
+    },
+    "下関": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "下関",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "下関"
+      }
+    },
+    "直島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "宇野",
+          "line": "JR宇野線"
+        },
+        {
+          "type": "ferry",
+          "from": "宇野港",
+          "to": "宮浦港",
+          "line": "直島フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宇野",
+        "final": "直島"
+      }
+    },
+    "琴平": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "琴電琴平",
+          "line": "琴電琴平線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "琴電琴平"
+      }
+    },
+    "宇和島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "宇和島",
+          "line": "特急宇和海"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "宇和島"
+      }
+    },
+    "洞爺湖": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "洞爺",
+          "line": "JR室蘭本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "洞爺",
+          "to": "洞爺湖温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "洞爺湖温泉"
+      }
+    },
+    "登別": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "登別",
+          "line": "JR室蘭本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "登別"
+      }
+    },
+    "知床": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "女満別空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "網走",
+          "to": "知床斜里",
+          "line": "JR釧網本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "知床斜里",
+          "to": "知床",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "女満別空港",
+        "final": "知床"
+      }
+    },
+    "輪島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "金沢",
+          "to": "輪島",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "輪島バスターミナル"
+      }
+    },
+    "加賀温泉郷": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "金沢",
+          "to": "加賀温泉",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "加賀温泉"
+      }
+    },
+    "白馬": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "長野",
+          "to": "白馬",
+          "line": "JR大糸線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "長野",
+        "final": "白馬"
+      }
+    },
+    "天橋立": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "天橋立",
+          "line": "特急はしだて"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "天橋立"
+      }
+    },
+    "伊根": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "天橋立",
+          "line": "特急はしだて"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "天橋立",
+          "to": "伊根港",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "天橋立",
+        "final": "伊根港"
+      }
+    },
+    "指宿": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "鹿児島中央",
+          "to": "指宿",
+          "line": "JR指宿枕崎線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "指宿"
+      }
+    },
+    "佐世保": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "佐世保",
+          "line": "特急みどり"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "佐世保"
+      }
+    },
+    "平戸": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "佐世保",
+          "line": "特急みどり"
+        },
+        {
+          "type": "rail",
+          "from": "佐世保",
+          "to": "平戸口",
+          "line": "JR松浦鉄道"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "平戸口",
+          "to": "平戸",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "佐世保",
+        "final": "平戸"
+      }
+    },
+    "鳥取": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "鳥取",
+          "line": "特急スーパーいなば"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "鳥取"
+      }
+    },
+    "秋田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "秋田",
+          "line": "秋田新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "秋田",
+        "final": "秋田"
+      }
+    },
+    "淡路島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "三宮",
+          "line": "JR"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "三宮",
+          "to": "淡路島",
+          "line": "高速バス"
+        }
+      ],
+      "gateway": {
+        "main": "三宮",
+        "final": "淡路島"
+      }
+    },
+    "高尾山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "高尾山口",
+          "line": "京王高尾線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高尾山口",
+        "final": "高尾山口"
+      }
+    },
+    "館山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "館山",
+          "line": "JR内房線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "館山",
+        "final": "館山"
+      }
+    },
+    "五箇山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "金沢",
+          "to": "五箇山",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "五箇山"
+      }
+    },
+    "定山渓": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "札幌",
+          "line": "JR快速エアポート"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "札幌",
+          "to": "定山渓",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "札幌",
+        "final": "定山渓"
+      }
+    },
+    "美瑛": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "旭川空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "旭川",
+          "to": "美瑛",
+          "line": "JR富良野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "旭川空港",
+        "final": "美瑛"
+      }
+    },
+    "宮古": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "盛岡",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "盛岡",
+          "to": "宮古",
+          "line": "JR山田線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "盛岡",
+        "final": "宮古"
+      }
+    },
+    "酒田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新潟",
+          "line": "上越新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新潟",
+          "to": "酒田",
+          "line": "特急いなほ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新潟",
+        "final": "酒田"
+      }
+    },
+    "高千穂": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "高千穂",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "高千穂"
+      }
+    },
+    "奄美大島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "名瀬港",
+          "line": "マルエーフェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "名瀬港"
+      }
+    },
+    "五島列島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "福江港",
+          "line": "野母商船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "福江港"
+      }
+    },
+    "雲仙": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "諫早",
+          "line": "JR長崎本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "諫早",
+          "to": "雲仙",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "諫早",
+        "final": "雲仙"
+      }
+    },
+    "足摺岬": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "高知",
+          "to": "足摺岬",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高知",
+        "final": "足摺岬"
+      }
+    },
+    "大歩危": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "大歩危",
+          "line": "特急南風"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "大歩危",
+        "final": "大歩危"
+      }
+    },
+    "津和野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新山口",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新山口",
+          "to": "津和野",
+          "line": "JR山口線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新山口",
+        "final": "津和野"
+      }
+    },
+    "犬山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "犬山",
+          "line": "名鉄犬山線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "犬山"
+      }
+    },
+    "木曽": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "南木曽",
+          "line": "JR中央本線特急しなの"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "南木曽",
+        "final": "南木曽"
+      }
+    },
+    "美山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "園部",
+          "line": "JR嵯峨野線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "園部",
+          "to": "美山",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "園部",
+        "final": "美山"
+      }
+    },
+    "立山黒部": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "富山",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "富山",
+          "to": "立山",
+          "line": "富山地方鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "富山",
+        "final": "立山"
+      }
+    },
+    "氷見": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "富山",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "富山",
+          "to": "氷見",
+          "line": "JR氷見線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "富山",
+        "final": "氷見"
+      }
+    },
+    "乳頭温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "角館",
+          "line": "秋田新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "角館",
+          "to": "乳頭温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "角館",
+        "final": "乳頭温泉"
+      }
+    },
+    "湯田温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新山口",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新山口",
+          "to": "湯田温泉",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新山口",
+        "final": "湯田温泉"
+      }
+    },
+    "嬉野温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "嬉野温泉",
+          "line": "西九州新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "嬉野温泉",
+        "final": "嬉野温泉"
+      }
+    },
+    "小布施": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "長野",
+          "to": "小布施",
+          "line": "長野電鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "長野",
+        "final": "小布施"
+      }
+    },
+    "内子": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "松山",
+          "line": "特急しおかぜ"
+        },
+        {
+          "type": "rail",
+          "from": "松山",
+          "to": "内子",
+          "line": "JR予讃線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "松山",
+        "final": "内子"
+      }
+    },
+    "室戸": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "高知",
+          "to": "室戸",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高知",
+        "final": "室戸"
+      }
+    },
+    "祖谷": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "阿波池田",
+          "line": "特急南風"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "阿波池田",
+          "to": "祖谷",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "阿波池田",
+        "final": "祖谷"
+      }
+    },
+    "奥出雲": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "出雲市",
+          "line": "特急やくも"
+        },
+        {
+          "type": "rail",
+          "from": "出雲市",
+          "to": "木次",
+          "line": "JR木次線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "出雲市",
+        "final": "木次"
+      }
+    },
+    "銀山温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "大石田",
+          "line": "山形新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "大石田",
+          "to": "銀山温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "大石田",
+        "final": "銀山温泉"
+      }
+    },
+    "大内宿": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "郡山",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "郡山",
+          "to": "会津若松",
+          "line": "JR磐越西線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "会津若松",
+          "to": "大内宿",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "会津若松",
+        "final": "大内宿"
+      }
+    },
+    "野沢温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "飯山",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "飯山",
+          "to": "野沢温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "飯山",
+        "final": "野沢温泉"
+      }
+    },
+    "竹原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "広島",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "広島",
+          "to": "竹原",
+          "line": "JR呉線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "広島",
+        "final": "竹原"
+      }
+    },
+    "妻籠": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "南木曽",
+          "line": "JR中央本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "南木曽",
+        "final": "南木曽"
+      }
+    },
+    "馬籠": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "中津川",
+          "line": "JR中央本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "中津川",
+          "to": "馬籠",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "中津川",
+        "final": "馬籠"
+      }
+    },
+    "長浜": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "長浜",
+          "line": "JR琵琶湖線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "長浜"
+      }
+    },
+    "彦根": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "彦根",
+          "line": "JR琵琶湖線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "彦根"
+      }
+    },
+    "高野山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "高野山",
+          "line": "南海高野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "高野山"
+      }
+    },
+    "下呂温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "下呂",
+          "line": "特急ひだ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "下呂"
+      }
+    },
+    "鳴子温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "仙台",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "仙台",
+          "to": "鳴子温泉",
+          "line": "JR陸羽東線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "仙台",
+        "final": "鳴子温泉"
+      }
+    },
+    "四万温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "中之条",
+          "line": "JR吾妻線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "中之条",
+          "to": "四万温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "中之条",
+        "final": "四万温泉"
+      }
+    },
+    "弘前": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新青森",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新青森",
+          "to": "弘前",
+          "line": "JR奥羽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新青森",
+        "final": "弘前"
+      }
+    },
+    "奥入瀬": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "八戸",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "八戸",
+          "to": "奥入瀬渓流",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "八戸",
+        "final": "奥入瀬渓流"
+      }
+    },
+    "益子": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "益子",
+          "line": "真岡鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "益子",
+        "final": "益子"
+      }
+    },
+    "別所温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "上田",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "上田",
+          "to": "別所温泉",
+          "line": "上田電鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "上田",
+        "final": "別所温泉"
+      }
+    },
+    "出石": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "豊岡",
+          "line": "特急こうのとり"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "豊岡",
+          "to": "出石",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "豊岡",
+        "final": "出石"
+      }
+    },
+    "和倉温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "金沢",
+          "to": "和倉温泉",
+          "line": "JR七尾線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "和倉温泉"
+      }
+    },
+    "三朝温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "倉吉",
+          "line": "特急スーパーいなば"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "倉吉",
+          "to": "三朝温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "倉吉",
+        "final": "三朝温泉"
+      }
+    },
+    "飫肥": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "延岡",
+          "line": "JR日豊本線特急にちりん"
+        },
+        {
+          "type": "rail",
+          "from": "延岡",
+          "to": "飫肥",
+          "line": "JR日南線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "延岡",
+        "final": "飫肥"
+      }
+    },
+    "人吉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "熊本",
+          "to": "人吉",
+          "line": "JR肥薩線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "熊本",
+        "final": "人吉"
+      }
+    },
+    "上高地": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "松本",
+          "line": "特急あずさ"
+        },
+        {
+          "type": "bus",
+          "from": "松本",
+          "to": "上高地",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "松本",
+        "final": "上高地バスターミナル"
+      }
+    },
+    "水上温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "水上",
+          "line": "JR上越線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "水上",
+        "final": "水上"
+      }
+    },
+    "南阿蘇": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "南阿蘇",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "南阿蘇"
+      }
+    },
+    "今治": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "今治",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "今治"
+      }
+    },
+    "大洲": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "伊予大洲",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "伊予大洲"
+      }
+    },
+    "積丹": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "小樽",
+          "line": "JR快速エアポート"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "小樽",
+          "to": "積丹",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "小樽",
+        "final": "積丹"
+      }
+    },
+    "出雲": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "出雲市",
+          "line": "特急やくも"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "出雲市"
+      }
+    },
+    "珠洲": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "金沢",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "金沢",
+          "to": "珠洲",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "金沢",
+        "final": "珠洲バスターミナル"
+      }
+    },
+    "吉野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "吉野",
+          "line": "近鉄吉野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "吉野"
+      }
+    },
+    "熊野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "新宮",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "新宮"
+      }
+    },
+    "西表島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "石垣空港",
+          "line": "直行便"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "大原港",
+          "line": "安栄観光"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "石垣空港",
+        "final": "大原港"
+      }
+    },
+    "高梁": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "備中高梁",
+          "line": "JR伯備線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "備中高梁"
+      }
+    },
+    "飛騨古川": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "飛騨古川",
+          "line": "特急ひだ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "飛騨古川"
+      }
+    },
+    "豊後高田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "宇佐",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "宇佐",
+          "to": "豊後高田",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "宇佐",
+        "final": "豊後高田"
+      }
+    },
+    "伊豆高原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "伊豆高原",
+          "line": "特急踊り子"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "伊豆高原",
+        "final": "伊豆高原"
+      }
+    },
+    "田辺": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "紀伊田辺",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "紀伊田辺"
+      }
+    },
+    "土佐清水": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        },
+        {
+          "type": "rail",
+          "from": "高知",
+          "to": "中村",
+          "line": "特急あしずり"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "中村",
+          "to": "土佐清水",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高知",
+        "final": "土佐清水"
+      }
+    },
+    "日南": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "宮崎",
+          "line": "JR日豊本線特急にちりん"
+        },
+        {
+          "type": "rail",
+          "from": "宮崎",
+          "to": "日南",
+          "line": "JR日南線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宮崎",
+        "final": "日南"
+      }
+    },
+    "門司港": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "門司港",
+          "line": "JR鹿児島本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "門司港"
+      }
+    },
+    "糸島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "筑前前原",
+          "line": "JR筑肥線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "筑前前原"
+      }
+    },
+    "島原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "諫早",
+          "line": "JR長崎本線"
+        },
+        {
+          "type": "rail",
+          "from": "諫早",
+          "to": "島原",
+          "line": "島原鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "諫早",
+        "final": "島原"
+      }
+    },
+    "敦賀": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "敦賀",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "敦賀",
+        "final": "敦賀"
+      }
+    },
+    "志々島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "詫間",
+          "line": "JR予讃線"
+        },
+        {
+          "type": "ferry",
+          "from": "詫間港",
+          "to": "志々島",
+          "line": "フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "詫間",
+        "final": "志々島"
+      }
+    },
+    "層雲峡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "旭川空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "旭川",
+          "to": "上川",
+          "line": "JR石北本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "上川",
+          "to": "層雲峡",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "旭川空港",
+        "final": "層雲峡"
+      }
+    },
+    "礼文島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "稚内",
+          "line": "JR宗谷本線"
+        },
+        {
+          "type": "ferry",
+          "from": "稚内港",
+          "to": "香深港",
+          "line": "ハートランドフェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "稚内",
+        "final": "香深港"
+      }
+    },
+    "利尻島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "稚内",
+          "line": "JR宗谷本線"
+        },
+        {
+          "type": "ferry",
+          "from": "稚内港",
+          "to": "鴛泊港",
+          "line": "ハートランドフェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "稚内",
+        "final": "鴛泊港"
+      }
+    },
+    "阿寒湖": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "釧路空港",
+          "line": "直行便"
+        },
+        {
+          "type": "bus",
+          "from": "釧路空港",
+          "to": "阿寒湖",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "釧路空港",
+        "final": "阿寒湖"
+      }
+    },
+    "網走": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "女満別空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "網走",
+          "to": "網走",
+          "line": "JR釧網本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "女満別空港",
+        "final": "網走"
+      }
+    },
+    "支笏湖": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "新千歳空港",
+          "to": "支笏湖",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "支笏湖"
+      }
+    },
+    "遠野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新花巻",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新花巻",
+          "to": "遠野",
+          "line": "JR釜石線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新花巻",
+        "final": "遠野"
+      }
+    },
+    "男鹿": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "秋田",
+          "line": "秋田新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "秋田",
+          "to": "男鹿",
+          "line": "JR男鹿線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "秋田",
+        "final": "男鹿"
+      }
+    },
+    "米沢": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "米沢",
+          "line": "山形新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "米沢",
+        "final": "米沢"
+      }
+    },
+    "出羽三山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新潟",
+          "line": "上越新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新潟",
+          "to": "鶴岡",
+          "line": "特急いなほ"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "鶴岡",
+          "to": "羽黒山",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "鶴岡",
+        "final": "羽黒山"
+      }
+    },
+    "秋保温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "仙台",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "仙台",
+          "to": "秋保温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "仙台",
+        "final": "秋保温泉"
+      }
+    },
+    "五所川原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新青森",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新青森",
+          "to": "五所川原",
+          "line": "JR五能線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新青森",
+        "final": "五所川原"
+      }
+    },
+    "川越": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "川越",
+          "line": "JR川越線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "川越",
+        "final": "川越"
+      }
+    },
+    "那須": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "那須塩原",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那須塩原",
+          "to": "那須",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那須塩原",
+        "final": "那須"
+      }
+    },
+    "銚子": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "銚子",
+          "line": "JR総武本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "銚子",
+        "final": "銚子"
+      }
+    },
+    "足利": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "足利",
+          "line": "JR両毛線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "足利",
+        "final": "足利"
+      }
+    },
+    "塩原温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "那須塩原",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那須塩原",
+          "to": "塩原温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那須塩原",
+        "final": "塩原温泉"
+      }
+    },
+    "佐渡島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新潟",
+          "line": "上越新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "新潟港",
+          "to": "両津港",
+          "line": "佐渡汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新潟",
+        "final": "両津港"
+      }
+    },
+    "清里": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "小淵沢",
+          "line": "JR中央本線"
+        },
+        {
+          "type": "rail",
+          "from": "小淵沢",
+          "to": "清里",
+          "line": "JR小海線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "小淵沢",
+        "final": "清里"
+      }
+    },
+    "天竜峡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "天竜峡",
+          "line": "JR飯田線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "天竜峡"
+      }
+    },
+    "諏訪": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "上諏訪",
+          "line": "JR中央本線特急あずさ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "上諏訪",
+        "final": "上諏訪"
+      }
+    },
+    "永平寺": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "福井",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "福井",
+          "to": "永平寺口",
+          "line": "えちぜん鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "福井",
+        "final": "永平寺口"
+      }
+    },
+    "若狭小浜": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "敦賀",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "敦賀",
+          "to": "小浜",
+          "line": "JR小浜線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "敦賀",
+        "final": "小浜"
+      }
+    },
+    "奥飛騨温泉郷": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "高山",
+          "line": "特急ひだ"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "高山",
+          "to": "平湯温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高山",
+        "final": "平湯温泉"
+      }
+    },
+    "南伊豆": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "伊豆急下田",
+          "line": "特急踊り子"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "伊豆急下田",
+        "final": "伊豆急下田"
+      }
+    },
+    "越前市": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "敦賀",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "敦賀",
+          "to": "武生",
+          "line": "JR北陸本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "敦賀",
+        "final": "武生"
+      }
+    },
+    "伊東": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "伊東",
+          "line": "JR伊東線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "伊東",
+        "final": "伊東"
+      }
+    },
+    "伊賀": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "上野市",
+          "line": "近鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "上野市"
+      }
+    },
+    "橿原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "橿原神宮前",
+          "line": "近鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "橿原神宮前"
+      }
+    },
+    "十津川": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "五条",
+          "line": "近鉄"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "五条",
+          "to": "十津川",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "五条",
+        "final": "十津川"
+      }
+    },
+    "舞鶴": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "東舞鶴",
+          "line": "特急まいづる"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "東舞鶴"
+      }
+    },
+    "飛鳥": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "飛鳥",
+          "line": "近鉄"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "飛鳥"
+      }
+    },
+    "大山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "米子",
+          "line": "特急やくも"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "米子",
+          "to": "大山",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "米子",
+        "final": "大山"
+      }
+    },
+    "温泉津": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "温泉津",
+          "line": "特急やくも＋山陰本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "温泉津"
+      }
+    },
+    "石見銀山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "大田市",
+          "line": "特急やくも＋山陰本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "大田市"
+      }
+    },
+    "岩国": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "広島",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "広島",
+          "to": "岩国",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "広島",
+        "final": "岩国"
+      }
+    },
+    "倉吉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "倉吉",
+          "line": "特急スーパーいなば"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "倉吉"
+      }
+    },
+    "周防大島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "広島",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "広島",
+          "to": "大畠",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "大畠",
+          "to": "周防大島",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "広島",
+        "final": "周防大島"
+      }
+    },
+    "四万十": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        },
+        {
+          "type": "rail",
+          "from": "高知",
+          "to": "江川崎",
+          "line": "JR予土線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高知",
+        "final": "江川崎"
+      }
+    },
+    "柏島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "宿毛",
+          "line": "特急南風＋土佐くろしお鉄道"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "宿毛",
+          "to": "柏島",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "宿毛",
+        "final": "柏島"
+      }
+    },
+    "西条": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "伊予西条",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "伊予西条"
+      }
+    },
+    "愛南": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "宇和島",
+          "line": "特急宇和海"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "宇和島",
+          "to": "愛南",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "宇和島",
+        "final": "愛南"
+      }
+    },
+    "竹田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "熊本",
+          "to": "豊後竹田",
+          "line": "JR豊肥本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "熊本",
+        "final": "豊後竹田"
+      }
+    },
+    "臼杵": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "臼杵",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "臼杵"
+      }
+    },
+    "日田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "日田",
+          "line": "特急ゆふ"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "日田"
+      }
+    },
+    "波佐見": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "川棚温泉",
+          "line": "JR大村線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "川棚温泉",
+          "to": "波佐見",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "川棚温泉",
+        "final": "波佐見"
+      }
+    },
+    "武雄温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "武雄温泉",
+          "line": "西九州新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "武雄温泉",
+        "final": "武雄温泉"
+      }
+    },
+    "杵築": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "杵築",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "杵築"
+      }
+    },
+    "対馬": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "対馬",
+          "line": "九州郵船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "対馬港"
+      }
+    },
+    "壱岐": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "郷ノ浦港",
+          "line": "九州郵船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "郷ノ浦港"
+      }
+    },
+    "種子島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "西之表港",
+          "line": "種子島・屋久島フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "西之表港"
+      }
+    },
+    "菊池": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "菊池温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "菊池温泉"
+      }
+    },
+    "竹富島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "石垣空港",
+          "line": "直行便"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "竹富港",
+          "line": "安栄観光"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "石垣空港",
+        "final": "竹富港"
+      }
+    },
+    "与那国島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "石垣空港",
+          "line": "直行便"
+        },
+        {
+          "type": "flight",
+          "from": "石垣空港",
+          "to": "与那国空港",
+          "line": "RAC"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "石垣空港",
+        "final": "与那国空港"
+      }
+    },
+    "今帰仁": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇バスターミナル",
+          "to": "今帰仁",
+          "line": "高速バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "今帰仁"
+      }
+    },
+    "本部": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        },
+        {
+          "type": "bus",
+          "from": "那覇空港",
+          "to": "本部港",
+          "line": "バス"
+        }
+      ],
+      "last": [
+        {
+          "type": "ferry",
+          "from": "本部港",
+          "to": "伊江港",
+          "line": "伊江島フェリー"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "本部港"
+      }
+    },
+    "座間味島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        },
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "座間味港",
+          "line": "マリンライナーとまりん"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "座間味港"
+      }
+    },
+    "伊江島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        },
+        {
+          "type": "bus",
+          "from": "那覇空港",
+          "to": "本部港",
+          "line": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "本部港",
+          "to": "伊江港",
+          "line": "伊江村営フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "伊江港"
+      }
+    },
+    "小浜島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "石垣空港",
+          "line": "直行便"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "小浜港",
+          "line": "安栄観光"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "石垣空港",
+        "final": "小浜港"
+      }
+    },
+    "松代": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "長野",
+        "final": "長野"
+      }
+    },
+    "飯山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "飯山",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "飯山",
+        "final": "飯山"
+      }
+    },
+    "矢掛": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "矢掛",
+          "line": "JR伯備線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "矢掛"
+      }
+    },
+    "津山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "津山",
+          "line": "JR津山線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "津山"
+      }
+    },
+    "剣山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "貞光",
+          "line": "高徳線＋徳島線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "貞光",
+          "to": "剣山",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高松",
+        "final": "剣山"
+      }
+    },
+    "延岡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "延岡",
+          "line": "JR日豊本線特急にちりん"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "延岡"
+      }
+    },
+    "釜石": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新花巻",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新花巻",
+          "to": "釜石",
+          "line": "JR釜石線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新花巻",
+        "final": "釜石"
+      }
+    },
+    "大船渡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "一ノ関",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "一ノ関",
+          "to": "大船渡",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "一ノ関",
+        "final": "大船渡"
+      }
+    },
+    "久慈": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "八戸",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "八戸",
+          "to": "久慈",
+          "line": "JR八戸線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "八戸",
+        "final": "久慈"
+      }
+    },
+    "稚内": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "稚内",
+          "line": "JR宗谷本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "稚内"
+      }
+    },
+    "帯広": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "帯広空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "帯広空港",
+        "final": "帯広"
+      }
+    },
+    "羅臼": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "女満別空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "網走",
+          "to": "知床斜里",
+          "line": "JR釧網本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "知床斜里",
+          "to": "羅臼",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "女満別空港",
+        "final": "羅臼"
+      }
+    },
+    "江差": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "函館空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "函館空港",
+          "to": "江差",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "函館空港",
+        "final": "江差"
+      }
+    },
+    "花巻": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新花巻",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新花巻",
+        "final": "新花巻"
+      }
+    },
+    "八幡平": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "盛岡",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "盛岡",
+          "to": "八幡平頂上",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "盛岡",
+        "final": "八幡平"
+      }
+    },
+    "田沢湖": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "田沢湖",
+          "line": "秋田新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "田沢湖",
+        "final": "田沢湖"
+      }
+    },
+    "山寺": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "山寺",
+          "line": "山形新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "山寺",
+        "final": "山寺"
+      }
+    },
+    "気仙沼": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "一ノ関",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "一ノ関",
+          "to": "気仙沼",
+          "line": "BRT"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "一ノ関",
+        "final": "気仙沼"
+      }
+    },
+    "伊香保温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "渋川",
+          "line": "JR上越線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "渋川",
+          "to": "伊香保温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "渋川",
+        "final": "伊香保温泉"
+      }
+    },
+    "江の島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "片瀬江ノ島",
+          "line": "小田急江ノ島線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "片瀬江ノ島",
+        "final": "片瀬江ノ島"
+      }
+    },
+    "秩父": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "秩父",
+          "line": "西武秩父線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "秩父",
+        "final": "秩父"
+      }
+    },
+    "大洗": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "大洗",
+          "line": "鹿島臨海鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "大洗",
+        "final": "大洗"
+      }
+    },
+    "佐野": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "佐野",
+          "line": "JR両毛線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "佐野",
+        "final": "佐野"
+      }
+    },
+    "郡上八幡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "郡上八幡",
+          "line": "長良川鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "郡上八幡"
+      }
+    },
+    "奈良井宿": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "奈良井",
+          "line": "JR中央本線特急しなの"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "奈良井",
+        "final": "奈良井"
+      }
+    },
+    "糸魚川": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "糸魚川",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "糸魚川",
+        "final": "糸魚川"
+      }
+    },
+    "村上": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新潟",
+          "line": "上越新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新潟",
+          "to": "村上",
+          "line": "JR羽越本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新潟",
+        "final": "村上"
+      }
+    },
+    "志摩": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "賢島",
+          "line": "近鉄特急"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "賢島"
+      }
+    },
+    "大垣": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "大垣",
+          "line": "JR東海道線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "大垣"
+      }
+    },
+    "越前海岸": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "福井",
+          "line": "北陸新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "福井",
+          "to": "越前海岸",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "福井",
+        "final": "越前海岸"
+      }
+    },
+    "妙高高原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "長野",
+          "to": "妙高高原",
+          "line": "えちごトキめき鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "長野",
+        "final": "妙高高原"
+      }
+    },
+    "長岡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長岡",
+          "line": "上越新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "長岡",
+        "final": "長岡"
+      }
+    },
+    "四万十町": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        },
+        {
+          "type": "rail",
+          "from": "高知",
+          "to": "土佐大正",
+          "line": "JR予土線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高知",
+        "final": "土佐大正"
+      }
+    },
+    "丹波篠山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "篠山口",
+          "line": "JR福知山線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "篠山口"
+      }
+    },
+    "那智勝浦": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "紀伊勝浦",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "紀伊勝浦"
+      }
+    },
+    "熊野本宮": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "新宮",
+          "line": "特急くろしお"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "新宮",
+          "to": "本宮大社前",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "新宮",
+        "final": "本宮大社前"
+      }
+    },
+    "赤穂": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "赤穂",
+          "line": "JR赤穂線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "赤穂"
+      }
+    },
+    "伏見": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "伏見稲荷",
+          "line": "JR奈良線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "伏見稲荷"
+      }
+    },
+    "鞆の浦": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "福山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "福山",
+          "to": "鞆の浦",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "福山",
+        "final": "鞆の浦"
+      }
+    },
+    "境港": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "境港",
+          "line": "特急やくも＋境線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "境港"
+      }
+    },
+    "牛窓": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "邑久",
+          "line": "JR赤穂線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "邑久",
+          "to": "牛窓",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "邑久",
+        "final": "牛窓"
+      }
+    },
+    "笠岡": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "笠岡",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "岡山",
+        "final": "笠岡"
+      }
+    },
+    "角島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新山口",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新山口",
+          "to": "特牛",
+          "line": "JR山陰本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "特牛",
+          "to": "角島大橋",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "新山口",
+        "final": "角島大橋"
+      }
+    },
+    "道後温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "松山",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [
+        {
+          "type": "rail",
+          "from": "松山",
+          "to": "道後温泉",
+          "line": "伊予鉄道"
+        }
+      ],
+      "gateway": {
+        "main": "松山",
+        "final": "道後温泉"
+      }
+    },
+    "丸亀": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "丸亀",
+          "line": "JR予讃線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "高松",
+        "final": "丸亀"
+      }
+    },
+    "三崎（佐田岬）": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "八幡浜",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [
+        {
+          "type": "ferry",
+          "from": "三崎港",
+          "to": "臼杵港",
+          "line": "フェリー"
+        }
+      ],
+      "gateway": {
+        "main": "八幡浜",
+        "final": "三崎港"
+      }
+    },
+    "柳川": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "西鉄柳川",
+          "line": "西鉄天神大牟田線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "西鉄柳川"
+      }
+    },
+    "日向": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "宮崎",
+          "line": "JR日豊本線特急にちりん"
+        },
+        {
+          "type": "rail",
+          "from": "宮崎",
+          "to": "日向市",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宮崎",
+        "final": "日向市"
+      }
+    },
+    "甑島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "鹿児島中央",
+          "to": "川内",
+          "line": "JR鹿児島本線"
+        },
+        {
+          "type": "ferry",
+          "from": "川内港",
+          "to": "里港",
+          "line": "甑島商船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "川内",
+        "final": "里港"
+      }
+    },
+    "霧島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "鹿児島中央",
+          "to": "霧島神宮",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "霧島神宮"
+      }
+    },
+    "えびの高原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "鹿児島中央",
+          "to": "えびの高原",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "えびの高原"
+      }
+    },
+    "恩納村": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇空港",
+          "to": "恩納村",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "恩納村"
+      }
+    },
+    "名護": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇バスターミナル",
+          "to": "名護",
+          "line": "高速バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "名護"
+      }
+    },
+    "読谷村": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇空港",
+          "to": "読谷村",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "読谷村"
+      }
+    },
+    "ニセコ": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "倶知安",
+          "line": "JR函館本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "倶知安"
+      }
+    },
+    "大雪山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "旭川空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "旭川空港",
+          "to": "旭岳温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "旭川空港",
+        "final": "旭岳温泉"
+      }
+    },
+    "白老": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "白老",
+          "line": "JR室蘭本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "白老"
+      }
+    },
+    "トマム": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "新千歳空港",
+          "line": "直行便"
+        },
+        {
+          "type": "rail",
+          "from": "新千歳空港",
+          "to": "トマム",
+          "line": "JR石勝線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新千歳空港",
+        "final": "トマム"
+      }
+    },
+    "十和田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "八戸",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "八戸",
+          "to": "十和田湖",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "八戸",
+        "final": "十和田湖"
+      }
+    },
+    "恐山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新青森",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新青森",
+          "to": "下北",
+          "line": "JR大湊線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "下北",
+          "to": "恐山",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "下北",
+        "final": "恐山"
+      }
+    },
+    "裏磐梯": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "郡山",
+          "line": "東北新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "郡山",
+          "to": "猪苗代",
+          "line": "JR磐越西線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "猪苗代",
+          "to": "五色沼",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "猪苗代",
+        "final": "五色沼"
+      }
+    },
+    "南三陸": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "気仙沼",
+          "line": "東北新幹線＋BRT"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "気仙沼",
+        "final": "南三陸"
+      }
+    },
+    "北上": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "北上",
+          "line": "東北新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "北上",
+        "final": "北上"
+      }
+    },
+    "鬼怒川温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鬼怒川温泉",
+          "line": "東武鬼怒川線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "鬼怒川温泉",
+        "final": "鬼怒川温泉"
+      }
+    },
+    "尾瀬": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "沼田",
+          "line": "JR上越線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "沼田",
+          "to": "鳩待峠",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "沼田",
+        "final": "鳩待峠"
+      }
+    },
+    "筑波": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "つくば",
+          "line": "つくばエクスプレス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "つくば",
+        "final": "つくば"
+      }
+    },
+    "笠間": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "笠間",
+          "line": "JR水戸線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "笠間",
+        "final": "笠間"
+      }
+    },
+    "成田": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "成田",
+          "line": "JR成田線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "成田",
+        "final": "成田"
+      }
+    },
+    "九十九里": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "東金",
+          "line": "JR東金線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "東金",
+          "to": "九十九里海岸",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "東金",
+        "final": "九十九里海岸"
+      }
+    },
+    "三浦": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "三崎口",
+          "line": "京急"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "三崎口",
+        "final": "三崎口"
+      }
+    },
+    "奥多摩": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "奥多摩",
+          "line": "JR横浜線＋青梅線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "奥多摩",
+        "final": "奥多摩"
+      }
+    },
+    "地獄谷野猿公苑": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "長野",
+          "line": "北陸新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "長野",
+          "to": "湯田中",
+          "line": "長野電鉄"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "湯田中",
+          "to": "地獄谷野猿公苑",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "湯田中",
+        "final": "地獄谷野猿公苑"
+      }
+    },
+    "蓼科": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "茅野",
+          "line": "JR中央本線特急あずさ"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "茅野",
+          "to": "蓼科",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "茅野",
+        "final": "蓼科"
+      }
+    },
+    "越後湯沢": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "越後湯沢",
+          "line": "上越新幹線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "越後湯沢",
+        "final": "越後湯沢"
+      }
+    },
+    "富士宮": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "富士宮",
+          "line": "JR身延線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "富士宮",
+        "final": "富士宮"
+      }
+    },
+    "乗鞍": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "松本",
+          "line": "特急あずさ"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "松本",
+          "to": "畳平",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "松本",
+        "final": "畳平"
+      }
+    },
+    "常滑": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "常滑",
+          "line": "名鉄常滑線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "常滑"
+      }
+    },
+    "香嵐渓": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "豊田市",
+          "line": "名鉄"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "豊田市",
+          "to": "香嵐渓",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "豊田市",
+        "final": "香嵐渓"
+      }
+    },
+    "南知多": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "内海",
+          "line": "名鉄知多新線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "内海"
+      }
+    },
+    "嵐山": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "嵐山",
+          "line": "JR嵯峨野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "嵐山"
+      }
+    },
+    "信楽": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "貴生川",
+          "line": "JR"
+        },
+        {
+          "type": "rail",
+          "from": "貴生川",
+          "to": "信楽",
+          "line": "信楽高原鉄道"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "貴生川",
+        "final": "信楽"
+      }
+    },
+    "洞川温泉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "下市口",
+          "line": "近鉄"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "下市口",
+          "to": "洞川温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "下市口",
+        "final": "洞川温泉"
+      }
+    },
+    "松阪": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "名古屋",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "名古屋",
+          "to": "松阪",
+          "line": "近鉄特急"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "名古屋",
+        "final": "松阪"
+      }
+    },
+    "堺": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新大阪",
+          "line": "東海道新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "新大阪",
+          "to": "堺東",
+          "line": "南海高野線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新大阪",
+        "final": "堺東"
+      }
+    },
+    "海士町": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "松江",
+          "line": "特急やくも"
+        },
+        {
+          "type": "bus",
+          "from": "松江",
+          "to": "七類港",
+          "line": "一畑バス"
+        }
+      ],
+      "last": [
+        {
+          "type": "ferry",
+          "from": "七類港",
+          "to": "菱浦港",
+          "line": "隠岐汽船"
+        }
+      ],
+      "gateway": {
+        "main": "松江",
+        "final": "菱浦港"
+      }
+    },
+    "秋吉台": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "新山口",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "新山口",
+          "to": "秋吉台",
+          "line": "バス"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "新山口",
+        "final": "秋吉台"
+      }
+    },
+    "柳井": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "広島",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "広島",
+          "to": "柳井",
+          "line": "JR山陽本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "広島",
+        "final": "柳井"
+      }
+    },
+    "隠岐の島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "境港",
+          "line": "特急やくも＋境線"
+        },
+        {
+          "type": "ferry",
+          "from": "境港",
+          "to": "西郷港",
+          "line": "隠岐汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "境港",
+        "final": "西郷港"
+      }
+    },
+    "犬島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "bus",
+          "from": "岡山",
+          "to": "宝伝",
+          "line": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "宝伝港",
+          "to": "犬島港",
+          "line": "犬島行き船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宝伝",
+        "final": "犬島港"
+      }
+    },
+    "豊島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "宇野",
+          "line": "JR宇野線"
+        },
+        {
+          "type": "ferry",
+          "from": "宇野港",
+          "to": "家浦港",
+          "line": "豊島フェリー"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宇野",
+        "final": "家浦港"
+      }
+    },
+    "仁淀川": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "高知",
+          "line": "特急南風"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "高知",
+          "to": "仁淀川",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "高知",
+        "final": "仁淀川"
+      }
+    },
+    "梼原": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "須崎",
+          "line": "特急南風"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "須崎",
+          "to": "梼原",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "須崎",
+        "final": "梼原"
+      }
+    },
+    "阿南": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "徳島",
+          "line": "特急うずしお"
+        },
+        {
+          "type": "rail",
+          "from": "徳島",
+          "to": "阿南",
+          "line": "JR牟岐線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "徳島",
+        "final": "阿南"
+      }
+    },
+    "四国カルスト": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "岡山",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "岡山",
+          "to": "高松",
+          "line": "快速マリンライナー"
+        },
+        {
+          "type": "rail",
+          "from": "高松",
+          "to": "松山",
+          "line": "特急しおかぜ"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "松山",
+          "to": "四国カルスト",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "松山",
+        "final": "四国カルスト"
+      }
+    },
+    "青島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "宮崎",
+          "line": "JR日豊本線特急にちりん"
+        },
+        {
+          "type": "rail",
+          "from": "宮崎",
+          "to": "青島",
+          "line": "JR日南線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "宮崎",
+        "final": "青島"
+      }
+    },
+    "山鹿": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "熊本",
+          "line": "九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "熊本",
+          "to": "山鹿温泉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "熊本",
+        "final": "山鹿温泉"
+      }
+    },
+    "吉野ヶ里": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "吉野ヶ里公園",
+          "line": "JR長崎本線"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "博多",
+        "final": "吉野ヶ里公園"
+      }
+    },
+    "国東": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "宇佐",
+          "line": "JR日豊本線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "宇佐",
+          "to": "国東",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "宇佐",
+        "final": "国東"
+      }
+    },
+    "知覧": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "鹿児島中央",
+          "line": "東海道・山陽・九州新幹線"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "鹿児島中央",
+          "to": "知覧",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "鹿児島中央",
+        "final": "知覧"
+      }
+    },
+    "小値賀島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "新横浜",
+          "line": "JR横浜線"
+        },
+        {
+          "type": "rail",
+          "from": "東京",
+          "to": "博多",
+          "line": "東海道・山陽新幹線"
+        },
+        {
+          "type": "rail",
+          "from": "博多",
+          "to": "佐世保",
+          "line": "特急みどり"
+        },
+        {
+          "type": "ferry",
+          "from": "佐世保港",
+          "to": "小値賀港",
+          "line": "九州商船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "佐世保",
+        "final": "小値賀港"
+      }
+    },
+    "伊良部島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "宮古空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "宮古空港",
+          "to": "伊良部島",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "宮古空港",
+        "final": "伊良部島"
+      }
+    },
+    "粟国島": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        },
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "粟国港",
+          "line": "琉球海運"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "粟国港"
+      }
+    },
+    "糸満": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇空港",
+          "to": "糸満",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "糸満"
+      }
+    },
+    "喜如嘉": {
+      "main": [
+        {
+          "type": "rail",
+          "from": "横浜",
+          "to": "羽田空港",
+          "line": "京急"
+        },
+        {
+          "type": "flight",
+          "from": "羽田空港",
+          "to": "那覇空港",
+          "line": "直行便"
+        }
+      ],
+      "last": [
+        {
+          "type": "bus",
+          "from": "那覇バスターミナル",
+          "to": "喜如嘉",
+          "line": "バス"
+        }
+      ],
+      "gateway": {
+        "main": "那覇空港",
+        "final": "喜如嘉"
+      }
+    },
+    "三宅島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝桟橋",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "三宅島港",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "三宅島港"
+      }
+    },
+    "八丈島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝桟橋",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "八丈島",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "八丈島"
+      }
+    },
+    "新島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝桟橋",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "新島港",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "新島港"
+      }
+    },
+    "式根島": {
+      "main": [
+        {
+          "type": "bus",
+          "from": "東京",
+          "to": "竹芝桟橋",
+          "line": "徒歩・バス"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "式根島港",
+          "line": "東海汽船"
+        }
+      ],
+      "last": [],
+      "gateway": {
+        "main": "竹芝",
+        "final": "式根島港"
+      }
+    }
+  }
+}
