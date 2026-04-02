@@ -1289,7 +1289,8 @@ function buildCityTypeRoute(city, departure, fromCity) {
     if (jrCta) {
       const fromDisp = origin.replace(/駅$/, '');
       const toDisp   = accessSt.replace(/駅$/, '');
-      const hasLocal = !isAccessSameAsDest(accessSt, label);
+      // mapPoint あり（観光地スポット）の場合は駅 → 観光地のローカルステップを常に追加
+      const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
@@ -1298,11 +1299,12 @@ function buildCityTypeRoute(city, departure, fromCity) {
         ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
       });
       if (hasLocal) {
+        const localTo = mTo !== label ? mTo : label;
         stepGroups.push({
           type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${label}（Googleマップ）`,
+          stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${localTo}（Googleマップ）`,
           cta: buildGoogleMapsLink(accessSt, mTo, resolveMapMode(accessSt, mTo),
-                 `${accessSt} → ${label} の行き方を見る`),
+                 `${accessSt} → ${localTo} の行き方を見る`),
           caution: null,
         });
       }
@@ -1350,8 +1352,9 @@ function buildSuburbanRoute(city, departure, fromCity) {
   }
   // railProvider = null: JRステップはスキップ（「最寄駅」は cityBlock に表示）
 
-  // ② 現地アクセス（accessStation → 目的地）— localのみ Googleマップ使用
-  if (!isAccessSameAsDest(accessSt, label)) {
+  // ② 現地アクセス（accessStation → 目的地 or mapPoint）— localのみ Googleマップ使用
+  // mapPoint あり（観光地スポット）の場合は駅が同名でも常にローカルステップを追加
+  if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
     stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
   }
 
@@ -1401,11 +1404,12 @@ function buildRuralRoute(city, departure, fromCity) {
               caution: null,
             });
           }
-          if (!isAccessSameAsDest(accessSt, label)) {
+          // mapPoint あり（観光地）の場合は常にローカルステップを追加
+          if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
             stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
           }
         }
-      } else if (!isAccessSameAsDest(accessSt, label)) {
+      } else if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
         // railGateway なし → local ステップのみ
         stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
       }
@@ -1419,7 +1423,7 @@ function buildRuralRoute(city, departure, fromCity) {
   if (jrCta) {
     const fromDisp = origin.replace(/駅$/, '');
     const toDisp   = gateway.replace(/駅$/, '');
-    const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label);
+    const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（鉄道）`,
@@ -1440,8 +1444,8 @@ function buildRuralRoute(city, departure, fromCity) {
     });
   }
 
-  // ③ ラストマイル（accessStation と目的地が実質異なる場合のみ）
-  if (!isAccessSameAsDest(accessSt, label)) {
+  // ③ ラストマイル（accessStation と目的地が実質異なる場合、またはmapPointあり）
+  if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
     stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
   }
 
