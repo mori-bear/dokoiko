@@ -579,7 +579,8 @@ function buildLastSteps(gateway, city, startIdx) {
      *   - finalPoint が明示設定されている → バス（距離不明な場合は安全側）
      *   - finalPoint 未設定（市街地到着）→ Googleマップ（駅近前提）
      */
-    if (isAccessSameAsDest(gateway, finalPt)) return steps;
+    // finalPoint 明示がある場合はスキップしない（駅名 = 地名でも別地点）
+    if (!city.finalPoint && isAccessSameAsDest(gateway, finalPt)) return steps;
 
     if (transport === 'walk') {
       steps.push({
