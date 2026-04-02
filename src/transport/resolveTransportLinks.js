@@ -339,121 +339,64 @@ function getRouteLabel(transfers, city) {
 
 
 /**
- * step-group 配列から「最初の予約 CTA」を抜き出し、
- * step-group 側の予約 CTA を null にクリアして返す。
- *
- * ルール:
- *   - CTA は route 単位で 1 つだけ（main-cta として links 先頭に配置）
- *   - step-group には予約 CTA を持たせない（label のみ）
- *   - google-maps / rentalLink はローカル移動用なので step-group に残す
+ * 目的地メタデータから mainCTA を生成する（auto ルート用）。
+ * step-group を経由しない — city の固定フィールドのみで決定する。
  */
-function extractMainCtaAndClean(stepGroups) {
-  const BOOKING = new Set([
-    'skyscanner', 'google-flights',
-    'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
-    'ferry', 'bus',
-  ]);
-  const first = stepGroups.find(sg => BOOKING.has(sg.cta?.type ?? ''));
-  const cta = first?.cta ?? null;
-  for (const sg of stepGroups) {
-    if (BOOKING.has(sg.cta?.type ?? '')) sg.cta = null;
+function buildMainCtaFromCity(city, departure, fromCity = null) {
+  const fromIata = CITY_AIRPORT[departure] ?? fromCity?.iata ?? null;
+
+  // 飛行機優先（離島・mountain/remote も含む）
+  if (fromIata && isFlightAllowed(city, departure)) {
+    const hubName      = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+    const airportTarget = hubName ?? city.airportGateway ?? null;
+    if (airportTarget && hasFlightRoute(departure, airportTarget)) {
+      return buildSkyscannerLink(fromIata, airportTarget) ?? null;
+    }
   }
-  return cta;
+
+  // フェリー（島・港目的地）
+  if (city.ferryGateway) {
+    return buildFerryLinkForDest(city.id, city.ferryGateway);
+  }
+
+  // 鉄道
+  const provider = city.railProvider ?? _deriveJrProvider(departure, city.region);
+  return buildJrLink(provider);
 }
 
-/* ══════════════════════════════════════════════════════
-   step → CTA 変換（BFS ステップ用）
-══════════════════════════════════════════════════════ */
+/**
+ * routes.js の step 配列から mainCTA を生成する（手動定義ルート・BFS ルート用）。
+ * step-group を経由しない — routes の最初の予約可能ステップのみで決定する。
+ */
+function buildMainCtaFromSteps(steps, departure, fromCity = null) {
+  const BOOKABLE = ['shinkansen', 'rail', 'flight', 'ferry', 'bus'];
+  const first = steps.find(s => BOOKABLE.includes(s.type));
+  if (!first) return null;
 
-function bfsStepToCta(step, departure) {
-  switch (step.type) {
+  switch (first.type) {
     case 'shinkansen': {
-      // グラフ由来のステップは provider が直接設定されている
-      const provider = step.provider ?? detectShinkansenProvider(step, departure);
-      return { cta: buildJrLink(provider), caution: null };
+      const provider = first.provider ?? detectShinkansenProvider(first, departure);
+      return buildJrLink(provider);
     }
     case 'rail': {
-      // 私鉄（JR以外の operator が明示されている）: IC乗車のみ・予約CTA不要
-      if (step.operator && !step.operator.startsWith('JR')) {
-        return { cta: null, caution: IC_CAUTION };
-      }
-      // JR（operator が JR で始まる / label に JR|新幹線|特急 を含む / operator 未設定）:
-      // IC乗車可能な路線でも予約・購入ページへの導線として必ず CTA を表示する
-      const provider = step.provider ?? operatorToProvider(step.operator ?? '');
-      return { cta: buildJrLink(provider), caution: null };
+      if (first.operator && !first.operator.startsWith('JR')) return null;
+      return buildJrLink(first.provider ?? operatorToProvider(first.operator ?? ''));
     }
     case 'flight': {
-      // グラフ由来: step.fromIata が直接設定される
-      const fromIata = step.fromIata ?? CITY_AIRPORT[step.from] ?? CITY_AIRPORT[departure] ?? null;
-      if (fromIata && step.to) return { cta: buildSkyscannerLink(fromIata, step.to) ?? null, caution: null };
-      return { cta: null, caution: null };
-    }
-    case 'ferry': {
-      // グラフ由来: step.destId がある場合は目的地IDベースの正確なフェリーリンク
-      if (step.destId) {
-        return { cta: buildFerryLinkForDest(step.destId, step.from ?? '', step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
-      }
-      return { cta: buildFerryLink(step.from ?? '', step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
-    }
-    case 'bus':
-      // Phase 6: 高速バスは bushikaku.net へ
-      return { cta: buildHighwayBusLink(step.from ?? departure, step.to ?? ''), caution: null };
-    case 'localMove': {
-      const from = step.from || '';
-      const to   = step.to   || '';
-      const mode = resolveMapMode(from, to);
-      return { cta: buildGoogleMapsLink(from, to, mode, `${from} → ${to} の行き方を見る`), caution: null };
-    }
-    case 'car': {
-      const from = step.from || '';
-      const to   = step.to   || '';
-      return { cta: buildGoogleMapsLink(from, to, 'driving', `${from} → ${to} の行き方を見る`), caution: null };
-    }
-    default:
-      return { cta: null, caution: null };
-  }
-}
-
-/* ══════════════════════════════════════════════════════
-   step → CTA 変換（routes.js 手動定義ステップ用）
-══════════════════════════════════════════════════════ */
-
-function routeStepToCta(step, from, to, departure, fromCity, city) {
-  switch (step.type) {
-    case 'shinkansen': {
-      const provider = detectShinkansenProvider(step, departure);
-      return { cta: buildJrLink(provider), caution: null };
-    }
-    case 'rail': {
-      // 私鉄（JR以外の operator が明示されている）: IC乗車のみ・予約CTA不要
-      if (step.operator && !step.operator.startsWith('JR')) {
-        return { cta: null, caution: IC_CAUTION };
-      }
-      // JR: IC乗車可能な路線でも予約・購入ページへの導線として必ず CTA を表示する
-      return { cta: buildJrLink(operatorToProvider(step.operator ?? '')), caution: null };
-    }
-    case 'flight': {
-      const fromIata = CITY_AIRPORT[departure] || fromCity.iata;
-      if (fromIata && step.to) return { cta: buildSkyscannerLink(fromIata, step.to) ?? null, caution: null };
-      return { cta: null, caution: null };
+      const iata = first.fromIata ?? CITY_AIRPORT[departure] ?? fromCity?.iata ?? null;
+      return (iata && first.to) ? (buildSkyscannerLink(iata, first.to) ?? null) : null;
     }
     case 'ferry':
-      return { cta: buildFerryLink(from, step.ferryUrl ?? null, step.ferryOperator ?? null), caution: null };
+      return first.destId
+        ? buildFerryLinkForDest(first.destId, first.from ?? '', first.ferryUrl ?? null, first.ferryOperator ?? null)
+        : buildFerryLink(first.from ?? '', first.ferryUrl ?? null, first.ferryOperator ?? null);
     case 'bus':
-      // Phase 6: 高速バスは bushikaku.net へ
-      return { cta: buildHighwayBusLink(from, to), caution: null };
-    case 'localMove': {
-      const co   = coords(city);
-      const mode = resolveMapMode(from, to);
-      return { cta: buildGoogleMapsLink(from, to, mode, `${from} → ${to} の行き方を見る`, co), caution: null };
-    }
-    case 'car': {
-      return { cta: buildGoogleMapsLink(from, to, 'driving', `${from} → ${to} の行き方を見る`, coords(city)), caution: null };
-    }
+      return buildHighwayBusLink(first.from ?? departure, first.to ?? '');
     default:
-      return { cta: null, caution: null };
+      return null;
   }
 }
+
 
 /* ══════════════════════════════════════════════════════
    飛行機可否判定
@@ -667,33 +610,23 @@ function bfsStepsToLinks(steps, departure, city) {
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── step-group 生成 ── */
-  const stepGroups = [];
-  let displayIdx   = 0;
+  /* ── main-cta: step 配列から直接生成（step-group を経由しない）── */
+  const mainCta = buildMainCtaFromSteps(steps, departure);
+  if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+
+  /* ── step-group 生成（label のみ、booking CTA なし）── */
+  let displayIdx = 0;
   for (let i = 0; i < steps.length; i++) {
     const s    = steps[i];
     const icon = stepTypeIcon(s.type);
     const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
-
-    /* Phase 2: 出発点ラベル最適化（最初のステップのみ補正） */
-    const fromLabel = i === 0
-      ? getDepartureLabel(departure, s.type)
-      : s.from ?? '';
-
+    const fromLabel = i === 0 ? getDepartureLabel(departure, s.type) : s.from ?? '';
     const stepLabel = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}）`;
-    const { cta, caution } = bfsStepToCta(s, departure);
-    const duration = (s.minutes && s.minutes > 0) ? s.minutes : null;
-    // car ステップの rentalLink は step-group に埋め込む（ローカル移動セクション内で表示）
+    const duration   = (s.minutes && s.minutes > 0) ? s.minutes : null;
     const rentalLink = (s.type === 'car') ? buildRentalLink(fromLabel.replace(/駅$/, '')) : null;
-    stepGroups.push({ type: 'step-group', stepLabel, cta, caution, duration, rentalLink });
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration, rentalLink });
     displayIdx++;
   }
-
-  /* ── main-cta（route 単位で 1 つ）── */
-  const mainCtaObj = extractMainCtaAndClean(stepGroups);
-  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
-
-  links.push(...stepGroups);
   return links.filter(Boolean);
 }
 
@@ -724,9 +657,12 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
-  const stepGroups = [];
-  let displayIdx   = 0;
-  let prevStepTo   = null; // Problem 2: step[i].from は常に step[i-1].to を使う
+  /* ── main-cta: route の step 配列から直接生成（step-group を経由しない）── */
+  const mainCta = buildMainCtaFromSteps(routes, departure, fromCity);
+  if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+
+  let displayIdx = 0;
+  let prevStepTo = null;
 
   for (const step of routes) {
     const mode = normalizeStepLabel(step.label ?? stepTypeLabel(step.type), step.type, step.operator ?? '');
@@ -764,35 +700,20 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
         stepLabel = `${stepIdx(displayIdx)} ${icon} ${from} → ${to}（${mode}）`;
     }
 
-    const { cta, caution } = routeStepToCta(step, from, to, departure, fromCity, city);
-    // car ステップの rentalLink は step-group に埋め込む（ローカル移動セクション内で表示）
+    // step-group: label のみ。booking CTA は main-cta として別途配置する
     const rentalLink = (step.type === 'car') ? buildRentalLink(from.replace(/駅$/, '')) : null;
-    stepGroups.push({ type: 'step-group', stepLabel, cta, caution, rentalLink });
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, rentalLink });
     prevStepTo = to;
     displayIdx++;
-  }
-
-  if (stepGroups.length === 0) {
-    const _fbFromSt = fromCity.rail.replace(/駅$/, '');
-    const fallbackCta = buildGoogleMapsLink(
-      _fbFromSt, label, resolveMapMode(_fbFromSt, label), `${_fbFromSt} → ${label} の行き方を見る`, coords(city)
-    );
-    stepGroups.push({ type: 'step-group', stepLabel: `① ${departure} → ${label}`, cta: fallbackCta, caution: null });
   }
 
   /* Phase 2: needsCar / mountain / remote のみレンタカー表示（car step が既にある場合は追加しない） */
   const hasCar = routes.some(s => s.type === 'car');
   if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) {
-    // 到着点（最終ルートステップの to）でレンタカー受取
     const lastHub = prevStepTo?.replace(/駅$/, '') ?? departure;
     links.push(buildRentalLink(lastHub));
   }
 
-  /* ── main-cta（route 単位で 1 つ）── */
-  const mainCtaObj = extractMainCtaAndClean(stepGroups);
-  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
-
-  links.push(...stepGroups);
   return links.filter(Boolean);
 }
 
@@ -1088,11 +1009,11 @@ function isBfsRouteValid(steps, city, departure = '') {
 
 /**
  * ルート種別に応じた「最適な理由」ラベル。
- * summary.reasonLabel として渡す。
+ * city メタデータのみで判定（step-group の CTA を参照しない）。
  */
-function buildReasonLabel(transfers, city, stepGroups) {
-  const hasFlight = stepGroups.some(sg => ['skyscanner','google-flights'].includes(sg.cta?.type ?? ''));
-  const hasFerry  = stepGroups.some(sg => sg.cta?.type === 'ferry');
+function buildReasonLabel(transfers, city) {
+  const hasFerry  = !!(city.ferryGateway);
+  const hasFlight = !!(city.airportGateway || city.flightHub);
   if (hasFerry && (city.isIsland || city.destType === 'island' || city.ferryGateway)) return '島へのルート';
   if (hasFerry)   return 'フェリー経由';
   if (hasFlight)  return transfers === 0 ? '飛行機で直行' : '飛行機経由';
@@ -1102,41 +1023,38 @@ function buildReasonLabel(transfers, city, stepGroups) {
 
 /**
  * step-group 配列 → links 配列（summary + main-cta + step-groups）。
- * buildAutoLinks / bfsStepsToLinks と同じ形式を返す。
- * Phase 10: レンタカーリンクは追加しない（公共交通のみ）。
+ * mainCTA は city メタデータから直接生成する（step-group の CTA フィールドは使用しない）。
  */
-function buildLinksFromStepGroups(stepGroups, city) {
+function buildLinksFromStepGroups(stepGroups, city, departure = null, fromCity = null) {
   const pts = [];
   for (const sg of stepGroups) {
-    if (sg._overview) continue; // 概要ステップは waypoints に含めない
+    if (sg._overview) continue;
     const m = sg.stepLabel?.match(/[①-⑧\d+.]+\s*\S*\s*(.+?)\s*→\s*(.+?)（/u);
     if (!m) continue;
     const from = m[1].trim(), to = m[2].trim();
     if (pts.length === 0) pts.push(from);
     if (to && to !== pts[pts.length - 1]) pts.push(to);
   }
-  const waypoints = pts.length >= 2 ? pts : null;
-
-  // 乗換回数: Google Maps / 概要 を除いた主要 CTA の数 - 1
-  const mainSteps = stepGroups.filter(sg => {
-    const ct = sg.cta?.type ?? '';
-    return ['skyscanner','google-flights','jr-east','jr-west','jr-kyushu','jr-ex','jr-window','ferry','bus'].includes(ct);
-  });
-  const transfers = Math.max(0, mainSteps.length - 1);
+  const waypoints  = pts.length >= 2 ? pts : null;
+  const transfers  = Math.max(0, stepGroups.filter(sg => !sg._overview).length - 1);
 
   const links = [];
   links.push({
     type: 'summary',
     transfers,
     waypoints,
-    totalMinutes:  city.travelTimeMinutes ?? null,   // Phase 6: 所要時間
-    reasonLabel:   buildReasonLabel(transfers, city, stepGroups), // Phase 6: 最適な理由
+    totalMinutes:  city.travelTimeMinutes ?? null,
+    reasonLabel:   buildReasonLabel(transfers, city),
     stayRecommend: getStayRecommend(city),
     routeLabel:    getRouteLabel(transfers, city),
   });
-  /* ── main-cta（route 単位で 1 つ）── */
-  const mainCtaObj = extractMainCtaAndClean(stepGroups);
-  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
+
+  /* ── main-cta: city メタデータから直接生成（step-group を経由しない）── */
+  if (departure && fromCity) {
+    const mainCta = buildMainCtaFromCity(city, departure, fromCity);
+    if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+  }
+
   links.push(...stepGroups);
   return links;
 }
@@ -1194,7 +1112,7 @@ function _appendFlightSteps(stepGroups, city, departure, fromCity) {
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${_hubAirportName}（飛行機）`,
-      cta: buildSkyscannerLink(fromIata, _hubAirportName), caution: null,
+      cta: null, caution: null,
     });
     const arrivalAirport = city.airportGateway ?? _hubAirportName;
     if (arrivalAirport !== _hubAirportName) {
@@ -1214,8 +1132,7 @@ function _appendFlightSteps(stepGroups, city, departure, fromCity) {
       });
     }
   } else if (city.airportGateway) {
-    const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
-    if (!flightCta) return false;
+    if (!buildSkyscannerLink(fromIata, city.airportGateway)) return false;
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
@@ -1252,34 +1169,26 @@ function buildCityTypeRoute(city, departure, fromCity) {
   const usedFlight = _appendFlightSteps(stepGroups, city, departure, fromCity);
 
   if (!usedFlight) {
-    // 鉄道ルート（railProvider がない場合は地域から派生して必ず表示）
-    const jrProvider = city.railProvider ?? _deriveJrProvider(departure, city.region);
-    const jrCta = buildJrLink(jrProvider);
-    if (jrCta) {
-      const fromDisp = origin.replace(/駅$/, '');
-      // mapPoint あり（観光地スポット）の場合は駅 → 観光地のローカルステップを常に追加
-      const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
+    const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+      cta: null,
+      caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
+    });
+    if (hasLocal) {
+      const localTo = mTo !== label ? mTo : label;
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-        cta: jrCta,
-        caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
-        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
+        stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${localTo}（Googleマップ）`,
+        cta: buildGoogleMapsLink(accessSt, mTo, resolveMapMode(accessSt, mTo),
+               `${accessSt} → ${localTo} の行き方を見る`),
+        caution: null,
       });
-      if (hasLocal) {
-        const localTo = mTo !== label ? mTo : label;
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${localTo}（Googleマップ）`,
-          cta: buildGoogleMapsLink(accessSt, mTo, resolveMapMode(accessSt, mTo),
-                 `${accessSt} → ${localTo} の行き方を見る`),
-          caution: null,
-        });
-      }
     }
   }
 
-  const links = buildLinksFromStepGroups(stepGroups, city);
+  const links = buildLinksFromStepGroups(stepGroups, city, departure, fromCity);
   // 飛行機がメインのとき鉄道を代替候補として提示
   if (usedFlight && city.railProvider) {
     const altSteps = _buildRailOnlySteps(city, departure, fromCity);
@@ -1303,27 +1212,20 @@ function buildSuburbanRoute(city, departure, fromCity) {
 
   const stepGroups = [];
 
-  // ① 鉄道 → accessStation（railProvider がない場合は地域から派生して必ず表示）
-  const jrProvider = city.railProvider ?? _deriveJrProvider(departure, city.region);
-  const jrCta = buildJrLink(jrProvider);
-  if (jrCta) {
-    const fromDisp = origin.replace(/駅$/, '');
-    stepGroups.push({
-      type: 'step-group',
-      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-      cta: jrCta,
-      caution: '▼ 電車はここまで。この先は現地移動',
-      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
-    });
-  }
+  // ① 鉄道 → accessStation
+  stepGroups.push({
+    type: 'step-group',
+    stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+    cta: null,
+    caution: '▼ 電車はここまで。この先は現地移動',
+  });
 
-  // ② 現地アクセス（accessStation → 目的地 or mapPoint）— localのみ Googleマップ使用
-  // mapPoint あり（観光地スポット）の場合は駅が同名でも常にローカルステップを追加
+  // ② 現地アクセス（accessStation → 目的地 or mapPoint）
   if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
     stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
   }
 
-  return buildLinksFromStepGroups(stepGroups, city);
+  return buildLinksFromStepGroups(stepGroups, city, departure, fromCity);
 }
 
 /**
@@ -1347,52 +1249,40 @@ function buildRuralRoute(city, departure, fromCity) {
     const usedFlight = _appendFlightSteps(stepGroups, city, departure, fromCity);
     if (!usedFlight) {
       if (city.railGateway) {
-        // railGateway あり・railProvider なし → 出発地/目的地地方から JR provider を派生
-        const jrCta = buildJrLink(_deriveJrProvider(departure, city.region));
-        if (jrCta) {
-          const fromDisp = origin.replace(/駅$/, '');
-          const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label);
+        const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label);
+        stepGroups.push({
+          type: 'step-group',
+          stepLabel: `${stepIdx(0)}  ${origin} → ${gateway}（鉄道）`,
+          cta: null,
+          caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
+        });
+        if (gateway !== accessSt) {
           stepGroups.push({
             type: 'step-group',
-            stepLabel: `${stepIdx(0)}  ${origin} → ${gateway}（鉄道）`,
-            cta: jrCta,
-            caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-            ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${gateway.replace(/駅$/, '')}）`,
+            stepLabel: `${stepIdx(stepGroups.length)}  ${gateway} → ${accessSt}（バス・タクシー）`,
+            cta: buildGoogleMapsLink(gateway, accessSt, 'transit',
+                   `${gateway} → ${accessSt} の行き方を見る`),
+            caution: null,
           });
-          if (gateway !== accessSt) {
-            stepGroups.push({
-              type: 'step-group',
-              stepLabel: `${stepIdx(stepGroups.length)}  ${gateway} → ${accessSt}（バス・タクシー）`,
-              cta: buildGoogleMapsLink(gateway, accessSt, 'transit',
-                     `${gateway} → ${accessSt} の行き方を見る`),
-              caution: null,
-            });
-          }
-          // mapPoint あり（観光地）の場合は常にローカルステップを追加
-          if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
-            stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
-          }
+        }
+        if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
+          stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
         }
       } else if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint) {
-        // railGateway なし → local ステップのみ
         stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
       }
     }
-    // usedFlight=true: _appendFlightSteps が 空港→目的地 Maps を含む
-    return buildLinksFromStepGroups(stepGroups, city);
+    return buildLinksFromStepGroups(stepGroups, city, departure, fromCity);
   }
 
   // ① 鉄道 → railGateway（primary gateway 強制経由）
-  const jrCta = buildJrLink(city.railProvider);
-  if (jrCta) {
-    const fromDisp = origin.replace(/駅$/, '');
+  {
     const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（鉄道）`,
-      cta: jrCta,
+      cta: null,
       caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${gateway.replace(/駅$/, '')}）`,
     });
   }
 
@@ -1412,7 +1302,7 @@ function buildRuralRoute(city, departure, fromCity) {
     stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
   }
 
-  return buildLinksFromStepGroups(stepGroups, city);
+  return buildLinksFromStepGroups(stepGroups, city, departure, fromCity);
 }
 
 /**
@@ -1443,7 +1333,7 @@ function buildIslandRoute(city, departure, fromCity) {
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${_hubAirportName}（飛行機）`,
-        cta: buildSkyscannerLink(fromIata, _hubAirportName),
+        cta: null,
         caution: city.ferryGateway ? `▼ 到着後、フェリー乗り場へ` : null,
       });
       if (city.ferryGateway) {
@@ -1457,13 +1347,12 @@ function buildIslandRoute(city, departure, fromCity) {
         });
       }
     } else if (city.airportGateway) {
-      const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
-      if (flightCta) {
+      if (buildSkyscannerLink(fromIata, city.airportGateway)) {
         usedFlight = true;
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
-          cta: flightCta,
+          cta: null,
           caution: city.ferryGateway ? `▼ 到着後、フェリー乗り場へ` : null,
         });
         if (city.ferryGateway && city.airportGateway !== city.ferryGateway) {
@@ -1481,46 +1370,15 @@ function buildIslandRoute(city, departure, fromCity) {
   }
 
   // 飛行機なし → フェリー港へのアクセスを補完
-  // railProvider があるハブ都市経由のルート or 直接 Maps
   if (!usedFlight && city.ferryGateway) {
     const hubCity = PORT_CITY_MAP[city.ferryGateway] ?? null;
     if (hubCity && hubCity !== departure) {
-      // ハブ都市への鉄道 CTA（railProvider があれば）
-      const hubRailProvider = city.railProvider ?? null;
-      if (hubRailProvider) {
-        const hubJrCta = buildJrLink(hubRailProvider);
-        if (hubJrCta) {
-          const fromDisp = origin.replace(/駅$/, '');
-          stepGroups.push({
-            type: 'step-group',
-            stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（鉄道）`,
-            cta: hubJrCta,
-            caution: `▼ 到着後、${city.ferryGateway}へ移動`,
-            ctaLabel: `${hubJrCta.label}で予約する（${fromDisp} → ${hubCity}）`,
-          });
-        }
-      } else {
-        // railProvider なし → 出発地/目的地地方から JR provider を派生
-        const derivedJrCta = buildJrLink(_deriveJrProvider(departure, city.region));
-        if (derivedJrCta) {
-          const fromDisp = origin.replace(/駅$/, '');
-          stepGroups.push({
-            type: 'step-group',
-            stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（鉄道）`,
-            cta: derivedJrCta,
-            caution: `▼ 到着後、${city.ferryGateway}へ移動`,
-            ctaLabel: `${derivedJrCta.label}で予約する（${fromDisp} → ${hubCity}）`,
-          });
-        } else {
-          stepGroups.push({
-            type: 'step-group',
-            stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（Googleマップ）`,
-            cta: buildGoogleMapsLink(origin, hubCity, resolveMapMode(origin, hubCity),
-                   `${origin} → ${hubCity} の行き方を見る`),
-            caution: `▼ 到着後、${city.ferryGateway}へ移動`,
-          });
-        }
-      }
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（鉄道）`,
+        cta: null,
+        caution: `▼ 到着後、${city.ferryGateway}へ移動`,
+      });
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)}  ${hubCity} → ${city.ferryGateway}（Googleマップ）`,
@@ -1539,20 +1397,18 @@ function buildIslandRoute(city, departure, fromCity) {
         caution: null,
       });
     }
-    // departure === hubCity → 直接フェリーへ（追加ステップ不要）
   }
 
-  // フェリーステップ（常に最後）
+  // フェリーステップ（booking CTA は main-cta として配置）
   if (city.ferryGateway) {
-    const ferryCta = buildFerryLinkForDest(city.id, city.ferryGateway);
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${city.ferryGateway} → ${label}（フェリー）`,
-      cta: ferryCta, caution: null,
+      cta: null, caution: null,
     });
   }
 
-  return buildLinksFromStepGroups(stepGroups, city);
+  return buildLinksFromStepGroups(stepGroups, city, departure, fromCity);
 }
 
 /**
@@ -1566,16 +1422,12 @@ function _buildRailOnlySteps(city, departure, fromCity) {
   const accessSt = city.accessStation ?? city.railGateway ?? label;
 
   if (!city.railProvider) return null;
-  const jrCta = buildJrLink(city.railProvider);
-  if (!jrCta) return null;
 
   const steps = [];
-  const fromDisp = origin.replace(/駅$/, '');
   steps.push({
     type: 'step-group',
     stepLabel: `${STEP_IDX[0]}  ${origin} → ${accessSt}（鉄道）`,
-    cta: jrCta, caution: null,
-    ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
+    cta: null, caution: null,
   });
   if (accessSt !== label) {
     steps.push({
