@@ -27,7 +27,7 @@ async function init() {
 function buildPool() {
   const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub);
+  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar);
   state.poolIndex = 0;
 }
 

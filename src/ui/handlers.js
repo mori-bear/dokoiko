@@ -43,6 +43,16 @@ export function bindHandlers(onGo, onRetry) {
     });
   });
 
+  /* ── レンタカー除外（data-exclude-car） ── */
+  const excludeCarBtn = document.querySelector('[data-exclude-car]');
+  if (excludeCarBtn) {
+    excludeCarBtn.addEventListener('click', () => {
+      state.excludeCar = !state.excludeCar;
+      excludeCarBtn.classList.toggle('active', state.excludeCar);
+      if (isResultVisible()) onGo();
+    });
+  }
+
   /* ── 出発地 ── */
   const departureSelect = document.getElementById('departure-select');
   if (departureSelect) {

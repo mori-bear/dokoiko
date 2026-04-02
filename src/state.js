@@ -9,6 +9,7 @@ export const state = {
   departure:    '東京',
   stayType:     '1night',
   theme:        null,
+  excludeCar:   false,
   pool:         [],
   poolIndex:    0,
 };

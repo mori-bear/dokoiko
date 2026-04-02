@@ -19,10 +19,10 @@ import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCa
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
   '温泉':   ['温泉', '秘湯'],
-  '絶景':   ['絶景', '自然', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス'],
-  '海':     ['海', '海の幸', '離島', 'ダイビング', '港町', 'リゾート'],
-  '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都'],
-  'グルメ': ['グルメ', '海の幸', '食文化'],
+  '絶景':   ['絶景', '自然', '山', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス', '秘境', '滝', '高山'],
+  '海':     ['海', '海の幸', '離島', 'ダイビング', '港町', 'リゾート', 'サーフィン'],
+  '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都', '寺社', '城', '文化', '武家屋敷', '陶芸', '世界遺産'],
+  'グルメ': ['グルメ', '海の幸', '食文化', '食'],
 };
 
 /** 県庁所在地セット — 抽選確率を軽く抑制 */
@@ -128,9 +128,10 @@ function weightedShuffle(arr, theme) {
  * @param {string|null} theme        - '温泉'|'絶景'|'海'|'街歩き'|'グルメ'|null
  * @param {string}      departure    - 出発都市名
  * @param {string|null} nearestHub   - フォールバック出発地
+ * @param {boolean}     excludeCar   - trueのときrequiresCar=trueの目的地を除外
  * @returns {Array} 重み付きシャッフル済み目的地配列
  */
-export function buildShuffledPool(destinations, stayType, theme, departure = '', nearestHub = null) {
+export function buildShuffledPool(destinations, stayType, theme, departure = '', nearestHub = null, excludeCar = false) {
   function matchesDeparture(d) {
     if (!d.departures || d.departures.length === 0) return true;
     if (d.departures.includes(departure)) return true;
@@ -170,6 +171,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     if (departure && isSameCity(d, departure)) return false;
     if (departure && isSamePrefectureOvernight(d, departure, stayType)) return false;
     if (!matchesDeparture(d)) return false;
+    if (excludeCar && d.requiresCar) return false;
     return true;
   });
 
@@ -180,12 +182,16 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   }
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
-  const globalPool = withStars.filter(matchesStayType);
+  const globalPool = withStars.filter(d => {
+    if (!matchesStayType(d)) return false;
+    if (excludeCar && d.requiresCar) return false;
+    return true;
+  });
   const themedGlobal = theme ? globalPool.filter(d => matchesTheme(d, theme)) : globalPool;
   return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : globalPool, theme);
 }
 
 /** 後方互換ラッパー（1件のみ返す） */
-export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null) {
-  return buildShuffledPool(destinations, stayType, theme, departure, nearestHub)[0] ?? null;
+export function buildPool(destinations, stayType, theme, departure = '', nearestHub = null, excludeCar = false) {
+  return buildShuffledPool(destinations, stayType, theme, departure, nearestHub, excludeCar)[0] ?? null;
 }
