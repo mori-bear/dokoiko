@@ -398,7 +398,7 @@ function buildMapCtaLink(mapCTA, departure, fromCity) {
   const origin = fromCity?.rail ?? DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
   const dest   = mapCTA.to;
   const mode   = resolveMapMode(origin, dest);
-  return buildGoogleMapsLink(origin, dest, mode, `${dest}の地図を見る`);
+  return buildGoogleMapsLink(origin, dest, mode, `📍 地図で確認（${dest}）`);
 }
 
 
