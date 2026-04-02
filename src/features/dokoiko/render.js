@@ -727,10 +727,14 @@ export function resolveAccessUI(steps, departure, city) {
   });
   const mainCTA     = mainRawStep ? _buildAccessMainCTA(mainRawStep, depIata) : null;
 
-  /* mapMain: 全体ルート（出発 → 最終目的地） */
+  /* mapMain: 全体ルート（出発 → 到着先）
+   * 優先順: mapPoint → ferryGateway → railGateway → steps[last].to */
   const lastStep = filledSteps[filledSteps.length - 1];
   const mapFrom  = filledSteps[0].from;
-  const mapTo    = city?.mapPoint ?? lastStep.to;
+  const mapTo    = city?.mapPoint
+    ?? city?.ferryGateway
+    ?? city?.railGateway
+    ?? lastStep.to;
   /* 飛行機起点の場合は driving。それ以外は transit */
   const mapMode  = filledSteps[0].type === 'flight' ? 'driving' : 'transit';
   const mapMain  = {
@@ -739,17 +743,31 @@ export function resolveAccessUI(steps, departure, city) {
     url:  _accessMapsUrl(mapFrom, mapTo, mapMode),
   };
 
-  /* mapLocal: 最後の local ステップ */
+  /* mapLocal: 最後の local ステップ
+   * requiresLocalMove=true の場合は local ステップがなくても出力する */
   const locals    = filledSteps.filter(s => s.type === 'local');
   const lastLocal = locals[locals.length - 1] ?? null;
-  const mapLocal  = lastLocal
-    ? {
-        from:   lastLocal.from,
-        to:     lastLocal.to,
-        method: lastLocal.method ?? null,
-        url:    _accessMapsUrl(lastLocal.from, lastLocal.to, 'driving'),
-      }
-    : null;
+  let mapLocal = null;
+  if (lastLocal) {
+    mapLocal = {
+      from:   lastLocal.from,
+      to:     lastLocal.to,
+      method: lastLocal.method ?? null,
+      url:    _accessMapsUrl(lastLocal.from, lastLocal.to, 'driving'),
+    };
+  } else if (city?.requiresLocalMove) {
+    /* steps に local がなくても要ローカル移動 → 最終ステップ到着地 → 目的地 */
+    const localFrom = lastStep.to;
+    const localTo   = city.mapPoint ?? city.name;
+    if (localFrom && localTo && localFrom !== localTo) {
+      mapLocal = {
+        from:   localFrom,
+        to:     localTo,
+        method: null,
+        url:    _accessMapsUrl(localFrom, localTo, 'driving'),
+      };
+    }
+  }
 
   return {
     mainCTA,
@@ -772,20 +790,21 @@ function _accessMapsUrl(from, to, mode = 'transit') {
 }
 
 function _buildAccessMainCTA(step, depIata) {
-  const fromDisp = step.from?.replace(/駅$/, '').replace(/空港$/, '').replace(/港$/, '') ?? '';
-  const toDisp   = step.to?.replace(/駅$/, '').replace(/空港$/, '').replace(/港$/, '') ?? '';
+  /* CTA ラベルは step.from / step.to をそのまま使用（city 単位への置換禁止） */
+  const from = step.from ?? '';
+  const to   = step.to   ?? '';
 
   if (step.type === 'rail') {
     const booking = RAIL_PROVIDER_BOOKING[step.provider];
     if (!booking) return null;
     return {
-      type:    'rail',
-      from:    step.from,
-      to:      step.to,
+      type:     'rail',
+      from,
+      to,
       provider: step.provider,
-      btnType: booking.btnType,
-      url:     booking.url,
-      label:   `${step.provider}で予約する（${fromDisp} → ${toDisp}）`,
+      btnType:  booking.btnType,
+      url:      booking.url,
+      label:    `${step.provider}で予約する（${from} → ${to}）`,
     };
   }
 
@@ -793,26 +812,26 @@ function _buildAccessMainCTA(step, depIata) {
     const toIata = AIRPORT_IATA[step.to];
     if (!toIata || !depIata) return null;
     return {
-      type:    'flight',
-      from:    step.from,
-      to:      step.to,
+      type:     'flight',
+      from,
+      to,
       provider: '航空会社',
-      btnType: 'skyscanner',
-      url:     `https://www.skyscanner.jp/transport/flights/${depIata.toLowerCase()}/${toIata.toLowerCase()}/`,
-      label:   `航空券を予約する（${step.from} → ${step.to}）`,
+      btnType:  'skyscanner',
+      url:      `https://www.skyscanner.jp/transport/flights/${depIata.toLowerCase()}/${toIata.toLowerCase()}/`,
+      label:    `航空券を予約する（${from} → ${to}）`,
     };
   }
 
   if (step.type === 'ferry') {
     const url = step.bookingUrl ?? 'https://www.jalan.net/ship/';
     return {
-      type:    'ferry',
-      from:    step.from,
-      to:      step.to,
+      type:     'ferry',
+      from,
+      to,
       provider: step.operator ?? 'フェリー',
-      btnType: 'ferry',
+      btnType:  'ferry',
       url,
-      label:   `フェリーを予約する（${fromDisp} → ${toDisp}）`,
+      label:    `フェリーを予約する（${from} → ${to}）`,
     };
   }
 
