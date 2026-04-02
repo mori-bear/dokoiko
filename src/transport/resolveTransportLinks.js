@@ -370,6 +370,21 @@ function buildCtaUrl(mainCTA, departure) {
   }
 }
 
+/**
+ * routes.json の subCTA データから URL オブジェクトを返す。
+ * 現在は rental のみ対応。
+ *
+ * @param {object} subCTA — routes.json の subCTA フィールド
+ * @returns {object|null}
+ */
+function buildSubCtaUrl(subCTA) {
+  if (!subCTA) return null;
+  if (subCTA.type === 'rental') {
+    return buildRentalLink(subCTA.from ?? '');
+  }
+  return null;
+}
+
 
 /* ══════════════════════════════════════════════════════
    飛行機可否判定
@@ -503,25 +518,21 @@ function buildLastSteps(gateway, city, startIdx) {
              `${gateway} → ${hub} の行き方を見る`),
       caution: null,
     });
-    const hubDisp = hub.replace(/駅$/, '').replace(/バスターミナル$/, '');
     steps.push({
       type: 'step-group',
       stepLabel: `${STEP_IDX[startIdx + 1]}  ${hub} → ${finalPt}（レンタカー）`,
       cta: buildGoogleMapsLink(hub, finalPt, 'driving',
              `${hub} → ${label} の行き方を見る`, coords(city)),
-      rentalLink: buildRentalLink(hubDisp),
-      caution: `${hubDisp}でレンタカーを借りて向かいます`,
+      caution: null,
     });
   } else if (requiresCar) {
     /* 1ステップ: レンタカー */
-    const fromDisp = gateway.replace(/駅$/, '');
     steps.push({
       type: 'step-group',
       stepLabel: `${STEP_IDX[startIdx]}  ${gateway} → ${finalPt}（レンタカー）`,
       cta: buildGoogleMapsLink(gateway, finalPt, 'driving',
              `${gateway} → ${label} の行き方を見る`, coords(city)),
-      rentalLink: buildRentalLink(fromDisp),
-      caution: `${fromDisp}でレンタカーを借りて向かいます`,
+      caution: null,
     });
   } else if (hasBus || (fromIsGateway && transport !== 'walk')) {
     /* バス/Transit（空港・港からのデフォルト） */
@@ -649,9 +660,14 @@ function bfsStepsToLinks(steps, departure, city) {
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta: routes.json のデータをそのまま使う ── */
-  const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
-  if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
+  {
+    const routeEntry = ROUTES_DATA[city.id];
+    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
+    if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
+    if (subCta) links.push({ type: 'sub-cta', cta: subCta });
+  }
 
   /* ── step-group 生成（label のみ、booking CTA なし）── */
   let displayIdx = 0;
@@ -661,9 +677,8 @@ function bfsStepsToLinks(steps, departure, city) {
     const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
     const fromLabel = i === 0 ? getDepartureLabel(departure, s.type) : s.from ?? '';
     const stepLabel = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}）`;
-    const duration   = (s.minutes && s.minutes > 0) ? s.minutes : null;
-    const rentalLink = (s.type === 'car') ? buildRentalLink(fromLabel.replace(/駅$/, '')) : null;
-    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration, rentalLink });
+    const duration = (s.minutes && s.minutes > 0) ? s.minutes : null;
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration });
     displayIdx++;
   }
   return links.filter(Boolean);
@@ -696,9 +711,14 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
-  /* ── main-cta: routes.json のデータをそのまま使う ── */
-  const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
-  if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
+  {
+    const routeEntry = ROUTES_DATA[city.id];
+    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
+    if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
+    if (subCta) links.push({ type: 'sub-cta', cta: subCta });
+  }
 
   let displayIdx = 0;
   let prevStepTo = null;
@@ -740,17 +760,9 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     }
 
     // step-group: label のみ。booking CTA は main-cta として別途配置する
-    const rentalLink = (step.type === 'car') ? buildRentalLink(from.replace(/駅$/, '')) : null;
-    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, rentalLink });
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null });
     prevStepTo = to;
     displayIdx++;
-  }
-
-  /* Phase 2: needsCar / mountain / remote のみレンタカー表示（car step が既にある場合は追加しない） */
-  const hasCar = routes.some(s => s.type === 'car');
-  if (!hasCar && (!!(city.requiresCar ?? city.needsCar) || ['remote', 'mountain'].includes(city.destType))) {
-    const lastHub = prevStepTo?.replace(/駅$/, '') ?? departure;
-    links.push(buildRentalLink(lastHub));
   }
 
   return links.filter(Boolean);
@@ -842,7 +854,7 @@ function buildAutoLinks(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)} ${flightFrom} → ${city.airportGateway}（飛行機）`,
-          cta: flightCta, caution: null,
+          cta: null, caution: null,
         });
 
         if (city.ferryGateway) {
@@ -934,8 +946,7 @@ function buildAutoLinks(city, departure, fromCity) {
   }
 
   /* ── レンタカー（Phase 2: needsCar / mountain / remote のみ）── */
-  const rentalLinks = (!!(city.requiresCar ?? city.needsCar) || ['remote', 'mountain'].includes(city.destType))
-    ? [buildRentalLink(fromCity?.rail?.replace(/駅$/, '') ?? departure)] : [];
+  /* rentalLinks は sub-cta（routes.json）に移行済み。buildAutoLinks では生成しない。 */
 
   /* ── Google Maps（フォールバック / 何もない場合）── */
   if (stepGroups.length === 0) {
@@ -975,7 +986,6 @@ function buildAutoLinks(city, departure, fromCity) {
 
   /* main-cta: routes.json のデータをそのまま使う（buildAutoLinks は departure を持たないのでスキップ）*/
   links.push(...stepGroups);
-  links.push(...rentalLinks);
   return links;
 }
 
@@ -1084,10 +1094,13 @@ function buildLinksFromStepGroups(stepGroups, city, departure = null, fromCity =
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
   if (departure) {
-    const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
+    const routeEntry = ROUTES_DATA[city.id];
+    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
+    if (subCta) links.push({ type: 'sub-cta', cta: subCta });
   }
 
   links.push(...stepGroups);
@@ -1167,7 +1180,7 @@ function _appendFlightSteps(stepGroups, city, departure, fromCity) {
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
-      cta: flightCta, caution: null,
+      cta: null, caution: null,
     });
     return city.airportGateway;
   }
@@ -1388,7 +1401,7 @@ function buildIslandRoute(city, departure, fromCity) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
-          cta: flightCta,
+          cta: null,
           caution: city.ferryGateway ? `▼ 到着後、フェリー乗り場へ` : null,
         });
         if (city.ferryGateway && city.airportGateway !== city.ferryGateway) {
