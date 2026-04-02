@@ -220,7 +220,9 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
 export function buildJrLink(bookingProvider, route = null) {
   const p = TRAIN_PROVIDERS[bookingProvider];
   if (!p) return null;
-  return { type: p.type, label: p.ctaLabel, url: p.url };
+  // label は短縮名（"e5489" / "えきねっと" など）を返す
+  // ctaLabel（"このルートで進む（e5489）"）は使わない
+  return { type: p.type, label: p.label, url: p.url };
 }
 
 /* ── レンタカー ── */
@@ -275,8 +277,8 @@ export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = n
       : `時刻・料金を見る（${ferryGateway}）`;
     return { type: 'ferry', label, url: info.url };
   }
-  // 未登録港・URLなし → null（Google Maps フォールバックなし）
-  return null;
+  // 未登録港・URLなし → じゃらん 船・フェリー検索へフォールバック（フェリーCTAを必ず出す）
+  return { type: 'ferry', label: `フェリーを探す（${ferryGateway}）`, url: 'https://www.jalan.net/ship/' };
 }
 
 /**
