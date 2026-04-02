@@ -718,7 +718,7 @@ class Scorecard {
   ─────────────────────────────── */
   {
     const sc = new Scorecard('[8a] secondaryTransport');
-    const VALID_ST = ['bus', 'ferry', 'car'];
+    const VALID_ST = ['bus', 'ferry', 'car', 'walk'];
 
     // secondaryTransport が設定されている都市はすべて文字列形式であること
     const withST = DESTS.filter(c => c.secondaryTransport);

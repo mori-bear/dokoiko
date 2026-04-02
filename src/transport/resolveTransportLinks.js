@@ -515,9 +515,12 @@ function buildLastSteps(gateway, city, startIdx) {
   const label       = cityLabel(city);
   const finalPt     = city.finalPoint ?? mapTarget(city);
   const transport   = city.secondaryTransport ?? null;
-  const requiresCar = !!(city.requiresCar ?? city.needsCar)
-    || ['mountain', 'remote'].includes(city.destType)
-    || transport === 'car';
+  /* secondaryTransport に bus/walk が明示されている場合は mountain/remote でもカー禁止 */
+  const requiresCar = (transport === 'bus' || transport === 'walk')
+    ? false
+    : (!!(city.requiresCar ?? city.needsCar)
+        || ['mountain', 'remote'].includes(city.destType)
+        || transport === 'car');
   const hasBus      = transport === 'bus' || city.busGateway || city.railNote === 'バス';
   /* 空港・港からは常に 2km 超 → 徒歩禁止 */
   const fromIsGateway = /空港|港$/.test(gateway);
@@ -568,16 +571,44 @@ function buildLastSteps(gateway, city, startIdx) {
       caution: null,
     });
   } else {
-    /* 徒歩 or Googleマップ（駅近・短距離） */
-    const mapMode   = resolveMapMode(gateway, finalPt);
-    const modeLabel = transport === 'walk' ? '徒歩' : 'Googleマップ';
-    steps.push({
-      type: 'step-group',
-      stepLabel: `${STEP_IDX[startIdx]}  ${gateway} → ${finalPt}（${modeLabel}）`,
-      cta: buildGoogleMapsLink(gateway, finalPt, mapMode,
-             `${gateway} → ${label} の行き方を見る`, coords(city)),
-      caution: null,
-    });
+    /* 徒歩 / バス / Googleマップ（ラストマイル）
+     *
+     * ルール:
+     *   - gateway === finalPt（実質同一）→ step 不要
+     *   - secondaryTransport='walk' → 徒歩（明示的な2km以下）
+     *   - finalPoint が明示設定されている → バス（距離不明な場合は安全側）
+     *   - finalPoint 未設定（市街地到着）→ Googleマップ（駅近前提）
+     */
+    if (isAccessSameAsDest(gateway, finalPt)) return steps;
+
+    if (transport === 'walk') {
+      steps.push({
+        type: 'step-group',
+        stepLabel: `${STEP_IDX[startIdx]}  ${gateway} → ${finalPt}（徒歩）`,
+        cta: buildGoogleMapsLink(gateway, finalPt, 'walking',
+               `${gateway} → ${label} の行き方を見る`, coords(city)),
+        caution: null,
+      });
+    } else if (city.finalPoint) {
+      /* finalPoint 明示 = 駅から別の観光地点まで移動 → バス */
+      steps.push({
+        type: 'step-group',
+        stepLabel: `${STEP_IDX[startIdx]}  ${gateway} → ${finalPt}（バス）`,
+        cta: buildGoogleMapsLink(gateway, finalPt, 'transit',
+               `${gateway} → ${label} の行き方を見る`),
+        caution: null,
+      });
+    } else {
+      /* finalPoint 未設定 = 市街地 or 駅近 → Googleマップ */
+      const mapMode = resolveMapMode(gateway, finalPt);
+      steps.push({
+        type: 'step-group',
+        stepLabel: `${STEP_IDX[startIdx]}  ${gateway} → ${finalPt}（Googleマップ）`,
+        cta: buildGoogleMapsLink(gateway, finalPt, mapMode,
+               `${gateway} → ${label} の行き方を見る`, coords(city)),
+        caution: null,
+      });
+    }
   }
 
   return steps;
