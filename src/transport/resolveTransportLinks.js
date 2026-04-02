@@ -473,6 +473,10 @@ function isFlightAllowed(city, departure) {
   if (city.isIsland || city.destType === 'island') return true;
   if (city.flightHub) return true;
 
+  // remote/mountain は距離計算が過小評価されがちなため常に飛行機を許可
+  // （知床・大雪山など：陸路では数時間かかるが直線距離は短い）
+  if (city.destType === 'remote' || city.destType === 'mountain') return true;
+
   // 移動時間 200分未満（目安 〜300km）は飛行機不要
   // 200min = 在来線・新幹線で概ね300km相当
   const travelMin = city.travelTimeMinutes ?? 999;
@@ -487,35 +491,67 @@ function isFlightAllowed(city, departure) {
 }
 
 /* ══════════════════════════════════════════════════════
-   ルートパターン分類
-   island       → 離島（フェリー必須）
-   longDistance → 遠距離（240分以上 / 飛行機選択肢あり）
-   local        → 近距離同一地域（鉄道のみで完結）
-   city         → 標準都市間（新幹線・特急）
+   ルートタイプ分類（構造生成ベース）
+
+   city     → 鉄道直通（accessStation ≈ 目的地名）
+   suburban → 鉄道 + ラストマイル（accessStation ≠ 目的地名）
+   rural    → gateway経由（railGateway ≠ accessStation / mountain / remote）
+   island   → フェリー・飛行機必須（離島・半島離島）
+
+   BFS・最短経路探索は使用しない。
+   目的地メタデータの固定フィールドのみでルート構造を決定する。
 ══════════════════════════════════════════════════════ */
 
 /**
- * 目的地・出発地の組み合わせからルートパターンを分類する。
+ * 目的地メタデータからルートタイプを分類する。
+ * 探索ではなく、destination の固定フィールドに基づく構造決定。
  *
- * @param {object} city      — 目的地エントリ（travelTimeMinutes 付きが望ましい）
- * @param {string} departure — 出発地名
- * @returns {'island'|'longDistance'|'local'|'city'}
+ * @param {object} city — 目的地エントリ
+ * @returns {'city'|'suburban'|'rural'|'island'}
  */
-function classifyRoute(city, departure) {
-  // 離島・ferryGateway があるものはフェリー経由が前提
+function classifyDestRouteType(city) {
+  // island: フェリー必須（小島・半島離島）
   if (city.isIsland || city.destType === 'island' || city.ferryGateway) return 'island';
 
-  const travelMin = city.travelTimeMinutes ?? 999;
-  const depArea   = getArea(departure);
-  const destArea  = city.region ?? null;
+  // rural: 多段経路（mountain/remote / railGateway ≠ accessStation）
+  if (city.destType === 'mountain' || city.destType === 'remote') return 'rural';
+  if (city.railGateway && city.accessStation && city.railGateway !== city.accessStation) return 'rural';
 
-  // 同一地域かつ移動時間が短い → ローカル（BFS が得意）
-  if (depArea && destArea && depArea === destArea && travelMin < 240) return 'local';
+  // suburban: accessStation が目的地名と異なる（ラストマイル必要）
+  const label = cityLabel(city);
+  if (city.accessStation && city.accessStation.replace(/駅$/, '') !== label) return 'suburban';
 
-  // 240分以上 or flightHub 経由 → 遠距離
-  if (travelMin >= 240 || city.flightHub) return 'longDistance';
-
+  // city: 鉄道直通（または飛行機直行）
   return 'city';
+}
+
+/* ── Helper: accessStation が目的地と実質同一か判定 ── */
+function isAccessSameAsDest(accessStation, label) {
+  if (!accessStation || !label) return true;
+  const normalized = accessStation
+    .replace(/駅$/, '')
+    .replace(/バスターミナル$/, '')
+    .replace(/バス停$/, '')
+    .replace(/港$/, '')
+    .trim();
+  return normalized === label;
+}
+
+/* ── Helper: ラストマイル step（accessStation → 目的地）── */
+function buildLocalStep(fromStation, city, stepIndex) {
+  const label    = cityLabel(city);
+  const mTo      = mapTarget(city);
+  const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote';
+  const hasBus   = city.busGateway || city.railNote === 'バス' || city.secondaryTransport === 'bus';
+  const modeLabel = needsCar ? 'レンタカー' : (hasBus ? 'バス・タクシー' : '徒歩・バス');
+  const mapMode   = needsCar ? 'driving' : resolveMapMode(fromStation, mTo);
+  return {
+    type: 'step-group',
+    stepLabel: `${STEP_IDX[stepIndex]}  ${fromStation} → ${label}（${modeLabel}）`,
+    cta: buildGoogleMapsLink(fromStation, mTo, mapMode,
+           `${fromStation} → ${label} の行き方を見る`, coords(city)),
+    caution: null,
+  };
 }
 
 /* ══════════════════════════════════════════════════════
@@ -633,14 +669,6 @@ function bfsStepsToLinks(steps, departure, city) {
   if (mainCta) {
     /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
     links.push(mainCta);
-  }
-
-  /* Phase 2: レンタカー補完（car step がなく needsCar/mountain/remote の場合のみ）*/
-  const hasCar = steps.some(s => s.type === 'car');
-  if (!hasCar && (city.needsCar || ['remote', 'mountain'].includes(city.destType))) {
-    // 到着点（最終ステップの to）でレンタカー受取
-    const lastHub = steps[steps.length - 1]?.to?.replace(/駅$/, '') ?? departure;
-    links.push(buildRentalLink(lastHub));
   }
 
   /* フォールバック: 全ステップに CTA がない（IC在来線のみ等）→ 最終ステップに Google Maps を付与 */
@@ -1068,10 +1096,25 @@ function isBfsRouteValid(steps, city, departure = '') {
 ══════════════════════════════════════════════════════ */
 
 /**
- * step-group 配列 → links 配列（summary + main-cta + step-groups + rentals）。
- * buildAutoLinks / bfsStepsToLinks と同じ形式を返す。
+ * ルート種別に応じた「最適な理由」ラベル。
+ * summary.reasonLabel として渡す。
  */
-function buildLinksFromStepGroups(stepGroups, city, rentalLinks = []) {
+function buildReasonLabel(transfers, city, stepGroups) {
+  const hasFlight = stepGroups.some(sg => ['skyscanner','google-flights'].includes(sg.cta?.type ?? ''));
+  const hasFerry  = stepGroups.some(sg => sg.cta?.type === 'ferry');
+  if (hasFerry && (city.isIsland || city.destType === 'island' || city.ferryGateway)) return '島へのルート';
+  if (hasFerry)   return 'フェリー経由';
+  if (hasFlight)  return transfers === 0 ? '飛行機で直行' : '飛行機経由';
+  if (transfers === 0) return '直通';
+  return `乗換${transfers}回`;
+}
+
+/**
+ * step-group 配列 → links 配列（summary + main-cta + step-groups）。
+ * buildAutoLinks / bfsStepsToLinks と同じ形式を返す。
+ * Phase 10: レンタカーリンクは追加しない（公共交通のみ）。
+ */
+function buildLinksFromStepGroups(stepGroups, city) {
   const pts = [];
   for (const sg of stepGroups) {
     if (sg._overview) continue; // 概要ステップは waypoints に含めない
@@ -1095,13 +1138,14 @@ function buildLinksFromStepGroups(stepGroups, city, rentalLinks = []) {
     type: 'summary',
     transfers,
     waypoints,
+    totalMinutes:  city.travelTimeMinutes ?? null,   // Phase 6: 所要時間
+    reasonLabel:   buildReasonLabel(transfers, city, stepGroups), // Phase 6: 最適な理由
     stayRecommend: getStayRecommend(city),
     routeLabel:    getRouteLabel(transfers, city),
   });
   const mainCta = deriveMainCta(stepGroups);
   if (mainCta) links.push(mainCta);
   links.push(...stepGroups);
-  links.push(...rentalLinks);
   return links;
 }
 
@@ -1123,13 +1167,84 @@ function buildOverviewStep(departure, city, fromCity) {
   };
 }
 
+/* ══════════════════════════════════════════════════════
+   パターン別ルートビルダー（固定構造生成・BFS不使用）
+
+   4タイプの固定ステップ構造:
+     city     : ① Maps → ② 鉄道（or 飛行機）
+     suburban : ① Maps → ② 鉄道 → ③ ラストマイル
+     rural    : ① Maps → ② 鉄道(gateway) → ③ バス(gateway→access) → ④ ラストマイル
+     island   : ① Maps → [② 飛行機] → ③ 港アクセス → ④ フェリー
+══════════════════════════════════════════════════════ */
+
+/* ── 飛行機ステップ群を stepGroups に追加（city / suburban 共通）── */
+function _appendFlightSteps(stepGroups, city, departure, fromCity) {
+  const label    = cityLabel(city);
+  const mTo      = mapTarget(city);
+  const fromIata = CITY_AIRPORT[departure] ?? null;
+
+  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+  const isViaHub  = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
+  const hasFlight = isFlightAllowed(city, departure) && !!(fromIata && (
+    (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||
+    (isViaHub && _hubAirportName && hasFlightRoute(departure, _hubAirportName))
+  ));
+
+  if (!hasFlight) return false;
+
+  const flightFrom = formatAirportLabel(fromCity?.airport) ?? departure;
+
+  if (isViaHub && _hubAirportName) {
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${_hubAirportName}（飛行機）`,
+      cta: buildSkyscannerLink(fromIata, _hubAirportName), caution: null,
+    });
+    const arrivalAirport = city.airportGateway ?? _hubAirportName;
+    if (arrivalAirport !== _hubAirportName) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${_hubAirportName} → ${arrivalAirport}（乗り継ぎ）`,
+        cta: null, caution: '※乗り継ぎ便が必要です（ハブ空港で乗り換え）',
+      });
+    }
+    if (arrivalAirport !== label) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${arrivalAirport} → ${label}（Googleマップ）`,
+        cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo),
+               `${arrivalAirport} → ${label} の行き方を見る`),
+        caution: null,
+      });
+    }
+  } else if (city.airportGateway) {
+    const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
+    if (!flightCta) return false;
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
+      cta: flightCta, caution: null,
+    });
+    if (city.airportGateway !== label) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${city.airportGateway} → ${label}（Googleマップ）`,
+        cta: buildGoogleMapsLink(city.airportGateway, mTo,
+               resolveMapMode(city.airportGateway, mTo),
+               `${city.airportGateway} → ${label} の行き方を見る`),
+        caution: null,
+      });
+    }
+  }
+  return true;
+}
+
 /**
- * city パターン: 新幹線 / 特急で到達できる標準距離目的地。
+ * city タイプ: 鉄道直通（または飛行機直行）。
  *   ① Google Maps 概要
- *   ② JR 予約（accessStation まで）
- *   ③ accessStation → 目的地（Google Maps、駅≠目的地の場合のみ）
+ *   ② 鉄道 or 飛行機
  */
-function buildCityRoute(city, departure, fromCity) {
+function buildCityTypeRoute(city, departure, fromCity) {
   const label    = cityLabel(city);
   const mTo      = mapTarget(city);
   const origin   = fromCity?.rail ?? departure;
@@ -1137,7 +1252,11 @@ function buildCityRoute(city, departure, fromCity) {
 
   const stepGroups = [buildOverviewStep(departure, city, fromCity)];
 
-  if (city.railProvider) {
+  // 飛行機ルートを優先チェック
+  const usedFlight = _appendFlightSteps(stepGroups, city, departure, fromCity);
+
+  if (!usedFlight && city.railProvider) {
+    // 鉄道ルート
     const jrCta = buildJrLink(city.railProvider);
     if (jrCta) {
       const fromDisp = origin.replace(/駅$/, '');
@@ -1145,12 +1264,10 @@ function buildCityRoute(city, departure, fromCity) {
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-        cta: jrCta,
-        caution: null,
+        cta: jrCta, caution: null,
         ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
       });
-      // Phase 5: accessStation と目的地が異なる場合のみラストマイルを追加
-      if (accessSt !== label) {
+      if (!isAccessSameAsDest(accessSt, label)) {
         stepGroups.push({
           type: 'step-group',
           stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${label}（Googleマップ）`,
@@ -1162,112 +1279,128 @@ function buildCityRoute(city, departure, fromCity) {
     }
   }
 
-  const rentalLinks = (city.needsCar || ['remote', 'mountain'].includes(city.destType))
-    ? [buildRentalLink(accessSt.replace(/駅$/, ''))]
-    : [];
-  return buildLinksFromStepGroups(stepGroups, city, rentalLinks);
+  const links = buildLinksFromStepGroups(stepGroups, city);
+  // 飛行機がメインのとき鉄道を代替候補として提示
+  if (usedFlight && city.railProvider) {
+    const altSteps = _buildRailOnlySteps(city, departure, fromCity);
+    if (altSteps) links.push({ type: 'alt-route', label: '鉄道で行く', stepGroups: altSteps });
+  }
+  return links;
 }
 
 /**
- * longDistance パターン: 飛行機 or 新幹線の長距離移動。
- *   飛行機優先: ① Maps概要 → ② Skyscanner → ③ 空港 → 目的地
- *   飛行機不可: city パターンと同等（鉄道）
+ * suburban タイプ: 鉄道でaccessStationへ、その後ラストマイル。
+ *   ① Google Maps 概要
+ *   ② 鉄道（departure → accessStation）
+ *   ③ ラストマイル（accessStation → 目的地）
  */
-function buildLongDistanceRoute(city, departure, fromCity) {
+function buildSuburbanRoute(city, departure, fromCity) {
   const label    = cityLabel(city);
-  const mTo      = mapTarget(city);
   const origin   = fromCity?.rail ?? departure;
-  const fromIata = CITY_AIRPORT[departure] ?? null;
-
-  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
-  const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
-  const hasFlight = isFlightAllowed(city, departure) && !!(fromIata && (
-    (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||
-    (isViaHub && _hubAirportName && hasFlightRoute(departure, _hubAirportName))
-  ));
+  const accessSt = city.accessStation ?? city.railGateway ?? label;
 
   const stepGroups = [buildOverviewStep(departure, city, fromCity)];
 
-  if (hasFlight) {
-    const flightFrom = formatAirportLabel(fromCity?.airport) ?? departure;
-
-    if (isViaHub && _hubAirportName) {
-      // ハブ経由乗り継ぎ
+  // ② 鉄道 → accessStation
+  if (city.railProvider) {
+    const jrCta = buildJrLink(city.railProvider);
+    if (jrCta) {
+      const fromDisp = origin.replace(/駅$/, '');
+      const toDisp   = accessSt.replace(/駅$/, '');
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${_hubAirportName}（飛行機）`,
-        cta: buildSkyscannerLink(fromIata, _hubAirportName),
-        caution: null,
+        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+        cta: jrCta, caution: null,
+        ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
       });
-      const arrivalAirport = city.airportGateway ?? _hubAirportName;
-      if (arrivalAirport !== _hubAirportName) {
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${_hubAirportName} → ${arrivalAirport}（乗り継ぎ）`,
-          cta: null,
-          caution: '※乗り継ぎ便が必要です（ハブ空港で乗り換え）',
-        });
-      }
-      if (arrivalAirport !== label) {
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${arrivalAirport} → ${label}（Googleマップ）`,
-          cta: buildGoogleMapsLink(arrivalAirport, mTo, resolveMapMode(arrivalAirport, mTo),
-                 `${arrivalAirport} → ${label} の行き方を見る`),
-          caution: null,
-        });
-      }
-    } else if (city.airportGateway) {
-      // 直行便
-      const flightCta = buildSkyscannerLink(fromIata, city.airportGateway);
-      if (flightCta) {
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${flightFrom} → ${city.airportGateway}（飛行機）`,
-          cta: flightCta, caution: null,
-        });
-        if (city.airportGateway !== label) {
-          stepGroups.push({
-            type: 'step-group',
-            stepLabel: `${stepIdx(stepGroups.length)}  ${city.airportGateway} → ${label}（Googleマップ）`,
-            cta: buildGoogleMapsLink(city.airportGateway, mTo, resolveMapMode(city.airportGateway, mTo),
-                   `${city.airportGateway} → ${label} の行き方を見る`),
-            caution: null,
-          });
-        }
-      }
     }
   } else {
-    // 鉄道ルート（city パターンと同等）
-    const accessSt = city.accessStation ?? city.railGateway ?? label;
-    if (city.railProvider) {
-      const jrCta = buildJrLink(city.railProvider);
-      if (jrCta) {
-        const fromDisp = origin.replace(/駅$/, '');
-        const toDisp   = accessSt.replace(/駅$/, '');
-        stepGroups.push({
-          type: 'step-group',
-          stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-          cta: jrCta, caution: null,
-          ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
-        });
-        if (accessSt !== label) {
-          stepGroups.push({
-            type: 'step-group',
-            stepLabel: `${stepIdx(stepGroups.length)}  ${accessSt} → ${label}（Googleマップ）`,
-            cta: buildGoogleMapsLink(accessSt, mTo, resolveMapMode(accessSt, mTo),
-                   `${accessSt} → ${label} の行き方を見る`),
-            caution: null,
-          });
-        }
-      }
-    }
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（Googleマップ）`,
+      cta: buildGoogleMapsLink(origin, accessSt, 'transit',
+             `${origin} → ${accessSt} の行き方を見る`),
+      caution: null,
+    });
   }
 
-  const rentalLinks = (city.needsCar || ['remote', 'mountain'].includes(city.destType))
-    ? [buildRentalLink((city.accessStation ?? label).replace(/駅$/, ''))]
-    : [];
-  return buildLinksFromStepGroups(stepGroups, city, rentalLinks);
+  // ③ ラストマイル（accessStation と目的地が実質異なる場合のみ）
+  if (!isAccessSameAsDest(accessSt, label)) {
+    stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
+  }
+
+  return buildLinksFromStepGroups(stepGroups, city);
+}
+
+/**
+ * rural タイプ: gateway経由の多段移動。
+ *   ① Google Maps 概要
+ *   ② 鉄道（departure → railGateway）— 必ず gateway を通る
+ *   ③ バス/Maps（railGateway → accessStation）— gateway ≠ accessStation の場合のみ
+ *   ④ ラストマイル（accessStation → 目的地）
+ *
+ *   railProvider が null の場合: 飛行機 → ラストマイル の構造で代替（飛行機がなければ Maps のみ）
+ */
+function buildRuralRoute(city, departure, fromCity) {
+  const label    = cityLabel(city);
+  const mTo      = mapTarget(city);
+  const origin   = fromCity?.rail ?? departure;
+  const gateway  = city.railGateway ?? city.accessStation ?? label;  // primary gateway（必須経由）
+  const accessSt = city.accessStation ?? gateway;
+
+  const stepGroups = [buildOverviewStep(departure, city, fromCity)];
+
+  // railProvider がない場合: 飛行機ルート優先（離島以外で空港がある山岳・秘境）
+  if (!city.railProvider) {
+    const usedFlight = _appendFlightSteps(stepGroups, city, departure, fromCity);
+    if (!usedFlight) {
+      // 飛行機もなし → Maps で gateway まで
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（Googleマップ）`,
+        cta: buildGoogleMapsLink(origin, gateway, 'transit',
+               `${origin} → ${gateway} の行き方を見る`),
+        caution: null,
+      });
+      // ラストマイル（飛行機なし時のみ: gateway → 目的地）
+      if (!isAccessSameAsDest(accessSt, label)) {
+        stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
+      }
+    }
+    // usedFlight=true の場合: _appendFlightSteps が 空港→目的地 Maps を含むため追加不要
+    return buildLinksFromStepGroups(stepGroups, city);
+  }
+
+  // ② 鉄道 → railGateway（primary gateway 強制経由）
+  const jrCta = buildJrLink(city.railProvider);
+  if (jrCta) {
+    const fromDisp = origin.replace(/駅$/, '');
+    const toDisp   = gateway.replace(/駅$/, '');
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（鉄道）`,
+      cta: jrCta, caution: null,
+      ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+    });
+  }
+
+  // ③ gateway → accessStation（異なる場合のみ：バス区間）
+  if (gateway !== accessSt) {
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${gateway} → ${accessSt}（バス・タクシー）`,
+      cta: buildGoogleMapsLink(gateway, accessSt, 'transit',
+             `${gateway} → ${accessSt} の行き方を見る`),
+      caution: null,
+    });
+  }
+
+  // ④ ラストマイル（accessStation と目的地が実質異なる場合のみ）
+  if (!isAccessSameAsDest(accessSt, label)) {
+    stepGroups.push(buildLocalStep(accessSt, city, stepGroups.length));
+  }
+
+  return buildLinksFromStepGroups(stepGroups, city);
 }
 
 /**
@@ -1378,39 +1511,59 @@ function buildIslandRoute(city, departure, fromCity) {
 }
 
 /**
- * local パターン: 同一地域の近距離移動。
- *   BFS 優先（ローカル鉄道に強い）。失敗時は gateway フォールバック。
+ * Phase 7: 鉄道のみのステップ配列を生成するヘルパー（longDistance 代替ルート用）。
+ * buildLinksFromStepGroups に渡す前の stepGroups を返す。
  */
-function buildLocalRoute(city, departure, fromCity) {
-  // BFS を試みる（local のみ BFS 使用）
-  const bfsSteps = buildRoute(departure, city);
-  if (bfsSteps.length > 0 && isBfsRouteValid(bfsSteps, city, departure)) {
-    return bfsStepsToLinks(bfsSteps, departure, city);
-  }
+function _buildRailOnlySteps(city, departure, fromCity) {
+  const label    = cityLabel(city);
+  const mTo      = mapTarget(city);
+  const origin   = fromCity?.rail ?? departure;
+  const accessSt = city.accessStation ?? city.railGateway ?? label;
 
-  // BFS 失敗 → gateway フォールバック（city と同等）
-  return buildCityRoute(city, departure, fromCity);
+  if (!city.railProvider) return null;
+  const jrCta = buildJrLink(city.railProvider);
+  if (!jrCta) return null;
+
+  const steps = [];
+  const fromDisp = origin.replace(/駅$/, '');
+  const toDisp   = accessSt.replace(/駅$/, '');
+  steps.push({
+    type: 'step-group',
+    stepLabel: `${STEP_IDX[0]}  ${origin} → ${accessSt}（鉄道）`,
+    cta: jrCta, caution: null,
+    ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+  });
+  if (accessSt !== label) {
+    steps.push({
+      type: 'step-group',
+      stepLabel: `${STEP_IDX[1]}  ${accessSt} → ${label}（Googleマップ）`,
+      cta: buildGoogleMapsLink(accessSt, mTo, resolveMapMode(accessSt, mTo),
+             `${accessSt} → ${label} の行き方を見る`),
+      caution: null,
+    });
+  }
+  return steps;
 }
 
 /**
- * buildRouteByPattern — パターン分類に基づく gateway 主導ルート生成。
+ * buildRouteByPattern — destination メタデータの固定構造からルートを生成する。
  *
- * routes.js / BFS（local 以外）を使わず、目的地メタデータのみからルートを生成する。
- * 全パターンで ① Google Maps 概要 が先頭に配置される（Phase 4）。
+ * BFS・全探索・最短経路は一切使用しない。
+ * 各 destination の gateway / accessStation フィールドのみで構造を決定する。
  *
- * @param {object} city     — 目的地エントリ（classifyRoute 済みが望ましい）
+ * @param {object} city     — 目的地エントリ
  * @param {string} departure — 出発都市名
  * @param {object} fromCity  — DEPARTURE_CITY_INFO エントリ
  * @returns {Array}          — links 配列（summary + step-groups）
  */
 function buildRouteByPattern(city, departure, fromCity) {
-  const pattern = classifyRoute(city, departure);
-  switch (pattern) {
-    case 'island':       return buildIslandRoute(city, departure, fromCity);
-    case 'local':        return buildLocalRoute(city, departure, fromCity);
-    case 'longDistance': return buildLongDistanceRoute(city, departure, fromCity);
+  const routeType = classifyDestRouteType(city);
+  switch (routeType) {
+    case 'island':   return buildIslandRoute(city, departure, fromCity);
+    case 'rural':    return buildRuralRoute(city, departure, fromCity);
+    case 'suburban': return buildSuburbanRoute(city, departure, fromCity);
     case 'city':
-    default:             return buildCityRoute(city, departure, fromCity);
+    default:         return buildCityTypeRoute(city, departure, fromCity);
   }
 }
 
