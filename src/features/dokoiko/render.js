@@ -770,11 +770,17 @@ export function resolveAccessUI(steps, departure, city) {
   }
 
   /* mapMainSecondary: 最後のステップが ferry または local の場合、その区間を補助表示 */
+  const _secLabel = lastStep.type === 'ferry'
+    ? 'フェリー区間'
+    : (lastStep.method === 'バス' ? '最後の移動（バス）'
+      : lastStep.method === 'タクシー' ? '最後の移動（タクシー）'
+      : '最後の移動（バス・徒歩）');
   const mapMainSecondary = (lastStep.type === 'ferry' || lastStep.type === 'local')
     ? {
-        from: lastStep.from,
-        to:   lastStep.to,
-        url:  _accessMapsUrl(lastStep.from, lastStep.to, lastStep.type === 'ferry' ? 'driving' : 'driving'),
+        from:         lastStep.from,
+        to:           lastStep.to,
+        sectionLabel: _secLabel,
+        url:          _accessMapsUrl(lastStep.from, lastStep.to, 'driving'),
       }
     : null;
 
@@ -869,11 +875,10 @@ function buildAccessBlock(city, departure) {
        </div>`
     : '';
 
-  const mapSecFromLabel = mapMainSecondary?.from?.replace(/駅$/, '').replace(/港$/, '') ?? '';
-  const mapSecToLabel   = mapMainSecondary?.to?.replace(/駅$/, '').replace(/港$/, '') ?? '';
   const mapSecondaryHtml = mapMainSecondary?.url
     ? `<div class="route-map-secondary">
-         <a href="${mapMainSecondary.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps btn-maps--secondary">${mapSecFromLabel} → ${mapSecToLabel}（現地移動）</a>
+         <span class="route-map-secondary__label">${mapMainSecondary.sectionLabel}</span>
+         <a href="${mapMainSecondary.url}" target="_blank" rel="noopener noreferrer" class="route-map-secondary__link">${mapMainSecondary.from} → ${mapMainSecondary.to}の地図を見る</a>
        </div>`
     : '';
 

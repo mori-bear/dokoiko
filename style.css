@@ -987,10 +987,31 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 .btn-rental        { background: #ff7a32;             color: #fff; }
 .btn-bus           { background: #2ea565;             color: #fff; }
 /* Googleマップボタン（地図で行き方を見る）*/
-.btn-maps              { background: #34a853; color: #fff; }
-.btn-maps:hover        { background: #2d9044; }
-.btn-maps--secondary   { background: transparent; color: #34a853; border: 1.5px solid #34a853; font-size: .85em; padding: .35em .9em; }
-.btn-maps--secondary:hover { background: #f0faf3; }
+.btn-maps          { background: #34a853; color: #fff; }
+.btn-maps:hover    { background: #2d9044; }
+
+/* secondary マップ補助表示（ボタンではなくテキストリンク扱い） */
+.route-map-secondary {
+  display: flex;
+  align-items: baseline;
+  gap: .5em;
+  opacity: .65;
+  margin-top: .25rem;
+  padding: 0 .25rem;
+}
+.route-map-secondary__label {
+  font-size: .75em;
+  color: #888;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.route-map-secondary__link {
+  font-size: .8em;
+  color: #34a853;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.route-map-secondary__link:hover { opacity: .8; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,
