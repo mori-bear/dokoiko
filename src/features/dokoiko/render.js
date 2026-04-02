@@ -10,7 +10,8 @@
  *     stay-block（この街に泊まるなら — stayType !== daytrip のみ）
  */
 
-import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
+import { DEPARTURE_CITY_INFO }                   from '../../config/constants.js';
+import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuilder.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
@@ -156,6 +157,11 @@ function buildCategoryBadge(city) {
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links, departure, destLabel, city = null) {
+  /* access.steps 方式（優先）: destinations.json の steps[] を直接使用 */
+  if (city?.access?.steps) {
+    return buildAccessBlock(city, departure);
+  }
+
   /* step-group 方式: 統合シーケンシャル表示 */
   if (links.some(l => l.type === 'step-group')) {
     return buildStepsBlock(links, departure, destLabel, city);
@@ -662,6 +668,259 @@ function buildLocalSection(localSteps, rentalLinks = [], city = null) {
       <div class="local-header">到着後の移動</div>
       ${hint}
       ${content}
+    </div>
+  `;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * access.steps ベース レンダリング
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/**
+ * rail provider 表示名 → 予約情報
+ * access.steps の provider フィールドはすでに表示名（"e5489", "えきねっと" など）
+ */
+const RAIL_PROVIDER_BOOKING = {
+  'e5489':       { btnType: 'jr-west',   url: 'https://www.e5489.net/' },
+  'えきねっと':   { btnType: 'jr-east',   url: 'https://www.eki-net.com/' },
+  'JR九州':      { btnType: 'jr-kyushu', url: 'https://www.jrkyushu-kippu.jp/' },
+  'EX予約':      { btnType: 'jr-ex',     url: 'https://expy.jp/' },
+  'みどりの窓口': { btnType: 'jr-window', url: 'https://www.jr-odekake.net/' },
+};
+
+const ACCESS_STEP_NUMS = ['①', '②', '③', '④', '⑤', '⑥'];
+
+/**
+ * access.steps[] + 出発地 → UI表示用データを生成する（純粋変換）。
+ *
+ *  mainCTA  : 最初の予約可能ステップ（rail / flight / ferry）の予約情報
+ *  mapMain  : 全体ルート（出発 → 最終目的地）の Google Maps データ
+ *  mapLocal : 最後の local ステップの Google Maps データ（なければ null）
+ *  steps    : 出発地 from を埋めた steps 配列
+ *
+ * @param {Array}  steps     - city.access.steps
+ * @param {string} departure - 出発都市名（'高松' など）
+ * @param {object} city      - 目的地オブジェクト
+ */
+export function resolveAccessUI(steps, departure, city) {
+  if (!steps?.length) return null;
+
+  const depInfo    = DEPARTURE_CITY_INFO[departure] ?? {};
+  const depStation = depInfo.rail     ?? `${departure}駅`;
+  const depAirport = depInfo.airport  ?? null;
+  const depIata    = depInfo.iata     ?? null;
+
+  /* steps[0].from（null）を出発地の駅/空港で埋める */
+  const filledSteps = steps.map((s, i) => {
+    if (i > 0 || s.from != null) return s;
+    const from = s.type === 'flight' ? (depAirport ?? depStation) : depStation;
+    return { ...s, from };
+  });
+
+  /* mainCTA: 最初の予約可能ステップ
+   *   from === to（出発地がハブ駅と一致）のケースはno-opなのでスキップ */
+  const mainRawStep = filledSteps.find(s => {
+    if (!['rail', 'flight', 'ferry'].includes(s.type)) return false;
+    const f = s.from?.replace(/駅$/, '');
+    const t = s.to?.replace(/駅$/, '');
+    return f !== t;
+  });
+  const mainCTA     = mainRawStep ? _buildAccessMainCTA(mainRawStep, depIata) : null;
+
+  /* mapMain: 全体ルート（出発 → 最終目的地） */
+  const lastStep = filledSteps[filledSteps.length - 1];
+  const mapFrom  = filledSteps[0].from;
+  const mapTo    = city?.mapPoint ?? lastStep.to;
+  /* 飛行機起点の場合は driving。それ以外は transit */
+  const mapMode  = filledSteps[0].type === 'flight' ? 'driving' : 'transit';
+  const mapMain  = {
+    from: mapFrom,
+    to:   mapTo,
+    url:  _accessMapsUrl(mapFrom, mapTo, mapMode),
+  };
+
+  /* mapLocal: 最後の local ステップ */
+  const locals    = filledSteps.filter(s => s.type === 'local');
+  const lastLocal = locals[locals.length - 1] ?? null;
+  const mapLocal  = lastLocal
+    ? {
+        from:   lastLocal.from,
+        to:     lastLocal.to,
+        method: lastLocal.method ?? null,
+        url:    _accessMapsUrl(lastLocal.from, lastLocal.to, 'driving'),
+      }
+    : null;
+
+  return {
+    mainCTA,
+    mapMain,
+    ...(mapLocal ? { mapLocal } : {}),
+    steps: filledSteps,
+  };
+}
+
+/* ── 内部ヘルパー（access.steps 専用） ── */
+
+function _accessMapsUrl(from, to, mode = 'transit') {
+  if (!from || !to) return null;
+  return (
+    'https://www.google.com/maps/dir/?api=1' +
+    `&origin=${encodeURIComponent(from)}` +
+    `&destination=${encodeURIComponent(to)}` +
+    `&travelmode=${mode}`
+  );
+}
+
+function _buildAccessMainCTA(step, depIata) {
+  const fromDisp = step.from?.replace(/駅$/, '').replace(/空港$/, '').replace(/港$/, '') ?? '';
+  const toDisp   = step.to?.replace(/駅$/, '').replace(/空港$/, '').replace(/港$/, '') ?? '';
+
+  if (step.type === 'rail') {
+    const booking = RAIL_PROVIDER_BOOKING[step.provider];
+    if (!booking) return null;
+    return {
+      type:    'rail',
+      from:    step.from,
+      to:      step.to,
+      provider: step.provider,
+      btnType: booking.btnType,
+      url:     booking.url,
+      label:   `${step.provider}で予約する（${fromDisp} → ${toDisp}）`,
+    };
+  }
+
+  if (step.type === 'flight') {
+    const toIata = AIRPORT_IATA[step.to];
+    if (!toIata || !depIata) return null;
+    return {
+      type:    'flight',
+      from:    step.from,
+      to:      step.to,
+      provider: '航空会社',
+      btnType: 'skyscanner',
+      url:     `https://www.skyscanner.jp/transport/flights/${depIata.toLowerCase()}/${toIata.toLowerCase()}/`,
+      label:   `航空券を予約する（${step.from} → ${step.to}）`,
+    };
+  }
+
+  if (step.type === 'ferry') {
+    const url = step.bookingUrl ?? 'https://www.jalan.net/ship/';
+    return {
+      type:    'ferry',
+      from:    step.from,
+      to:      step.to,
+      provider: step.operator ?? 'フェリー',
+      btnType: 'ferry',
+      url,
+      label:   `フェリーを予約する（${fromDisp} → ${toDisp}）`,
+    };
+  }
+
+  return null;
+}
+
+/**
+ * access.steps[] から card-section を組み立てて返す。
+ */
+function buildAccessBlock(city, departure) {
+  const steps = city?.access?.steps;
+  if (!steps?.length) return '';
+
+  const uiData = resolveAccessUI(steps, departure, city);
+  if (!uiData) return '';
+
+  const { mainCTA, mapMain, mapLocal } = uiData;
+  const destLabel = city.displayName ?? city.name;
+
+  /* ① 全体ルートマップボタン */
+  const mapFromLabel = mapMain.from?.replace(/駅$/, '') ?? '';
+  const mapMainHtml  = mapMain.url
+    ? `<div class="route-map-row">
+         <a href="${mapMain.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${mapFromLabel} → ${mapMain.to}の行き方を地図で見る</a>
+       </div>`
+    : '';
+
+  /* ② ルート概要 */
+  const summaryHtml = `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`;
+
+  /* ③ メインCTA（1つのみ） */
+  const mainCtaHtml = mainCTA?.url
+    ? `<div class="main-cta-row">
+         <a href="${mainCTA.url}" target="_blank" rel="noopener noreferrer"
+            class="btn ${btnClass(mainCTA.btnType)} btn--route-main">${mainCTA.label}</a>
+       </div>`
+    : '';
+
+  /* ④ 番号付きステップリスト */
+  const stepsHtml = uiData.steps
+    .map((s, i) => _buildAccessStepCard(s, i))
+    .join('');
+
+  /* ⑤ 到着後の移動（mapLocal がある場合のみ） */
+  const localHtml = _buildAccessLocalSection(mapLocal, uiData.steps, city);
+
+  return `
+    <div class="card-section">
+      ${mapMainHtml}
+      ${summaryHtml}
+      ${mainCtaHtml}
+      <div class="step-list">${stepsHtml}</div>
+      ${localHtml}
+      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
+    </div>
+  `;
+}
+
+function _buildAccessStepCard(step, index) {
+  const num      = ACCESS_STEP_NUMS[index] ?? `(${index + 1})`;
+  const fromDisp = step.from?.replace(/駅$/, '') ?? '';
+  const toDisp   = step.to?.replace(/駅$/, '') ?? '';
+  const mode     = step.type === 'local'
+    ? (step.method ?? '現地移動')
+    : ({ rail: '鉄道', flight: '飛行機', ferry: 'フェリー' }[step.type] ?? step.type);
+
+  const subNote = step.type === 'ferry' && step.operator
+    ? `<p class="step-card-caution">${step.operator}</p>`
+    : '';
+
+  return `
+    <div class="step-card">
+      <div class="step-card-header">${num}  ${fromDisp} → ${toDisp}（${mode}）</div>
+      ${subNote}
+    </div>
+  `;
+}
+
+function _buildAccessLocalSection(mapLocal, filledSteps, city) {
+  if (!mapLocal) return '';
+
+  /* レンタカー判定: 最後の local の method が「レンタカー」なら rental リンクを表示 */
+  const needsRental = mapLocal.method === 'レンタカー';
+  const gatewayCity = needsRental
+    ? (mapLocal.from?.replace(/駅$/, '') ?? null)
+    : null;
+  const rentalLink  = needsRental ? buildRentalLink(gatewayCity) : null;
+
+  const mapLabel   = mapLocal.from?.replace(/駅$/, '').replace(/港$/, '') ?? '';
+  const mapBtnHtml = mapLocal.url
+    ? `<div class="link-list">
+         <a href="${mapLocal.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${mapLabel} → ${mapLocal.to}の行き方を地図で見る</a>
+       </div>`
+    : '';
+
+  const rentalHtml = rentalLink?.url
+    ? `<div class="link-list">
+         <a href="${rentalLink.url}" target="_blank" rel="noopener noreferrer" class="btn btn-rental">${rentalLink.label}</a>
+       </div>`
+    : '';
+
+  if (!mapBtnHtml && !rentalHtml) return '';
+
+  return `
+    <div class="local-section">
+      <div class="local-header">到着後の移動</div>
+      ${mapBtnHtml}
+      ${rentalHtml}
     </div>
   `;
 }
