@@ -100,12 +100,16 @@ for (const city of destinations) {
     };
   }
 
+  /* mapCTA: 全都市に生成（finalPoint → accessStation → name の優先順位） */
+  const mapTo = city.finalPoint ?? city.accessStation ?? city.name;
+  const mapCTA = { to: mapTo };
+
   /* subCTA: requiresCar の場合のみ生成 */
   if (city.requiresCar) {
     const subCTA = deriveSubCta(city);
-    routes[city.id] = { mainCTA, subCTA };
+    routes[city.id] = { mainCTA, subCTA, mapCTA };
   } else {
-    routes[city.id] = { mainCTA };
+    routes[city.id] = { mainCTA, mapCTA };
   }
 }
 

@@ -214,46 +214,42 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
   const altRoutes  = links.filter(l => l.type === 'alt-route');
 
-  // ① 全体ルートマップ（出発駅 → 観光地 or 最寄り駅）
-  const departureStation = DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
-  const routeMapUrl  = city ? buildRouteMapUrl(departureStation, city) : null;
-  const routeMapTo   = city?.mapPoint ?? city?.accessStation ?? destLabel;
-  const mapHtml = routeMapUrl
-    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${departureStation} → ${routeMapTo}の行き方を地図で見る</a></div>`
-    : '';
-
-  // ② ルート概要
+  // ① ルート概要
   const summaryHtml = (departure && destLabel)
     ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`
     : '';
 
-  // ③ メインCTA（routes.json の main-cta を直接使用 — 推測・生成しない）
+  // ② メインCTA（routes.json の main-cta を直接使用 — 推測・生成しない）
   const mainCtaItem = links.find(l => l.type === 'main-cta');
   const mainCtaHtml = mainCtaItem ? buildMainCtaBlock(mainCtaItem) : '';
 
-  // ④ 番号付きフロー（Google Maps サブリンクのみ表示）
+  // ③ 番号付きフロー（Google Maps サブリンクのみ表示）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
 
-  // ⑤ 代替ルート
+  // ④ 代替ルート
   const altRoutesHtml = altRoutes.map(ar => buildAltRouteSection(ar)).join('');
 
-  // ⑥ subCTA（routes.json の sub-cta を直接使用 — requiresCar のときレンタカー）
+  // ⑤ subCTA（routes.json の sub-cta を直接使用 — requiresCar のときレンタカー）
   const subCtaItem = links.find(l => l.type === 'sub-cta');
   const subCtaHtml = subCtaItem ? buildSubCtaBlock(subCtaItem) : '';
 
+  // ⑥ mapCTA（routes.json の map-cta を直接使用 — finalPointまでのルート）
+  const mapCtaItem = links.find(l => l.type === 'map-cta');
+  const mapCtaHtml = mapCtaItem ? buildMapCtaBlock(mapCtaItem) : '';
+
   // ⑦ 到着後ヒント（railNote など）
   const hint = buildLocalTransportHint(city);
-  const localSection = (hint || subCtaHtml)
+  const localSection = (hint || subCtaHtml || mapCtaHtml)
     ? `<div class="local-section">
          <div class="local-header">到着後の移動</div>
          ${hint}
          ${subCtaHtml}
+         ${mapCtaHtml}
        </div>`
     : '';
 
   return `
     <div class="card-section">
-      ${mapHtml}
       ${summaryHtml}
       ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
@@ -294,6 +290,22 @@ function buildSubCtaBlock(item) {
     <div class="sub-cta-row">
       <a href="${cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn btn-rental">${label}</a>
+    </div>
+  `;
+}
+
+/**
+ * mapCTA ブロック。
+ * { type: 'map-cta', cta: { type: 'google-maps', url, label } } を受け取り `.map-cta-row` で表示。
+ */
+function buildMapCtaBlock(item) {
+  const cta = item.cta;
+  if (!cta?.url) return '';
+  const label = cta.label ?? '地図で行き方を見る';
+  return `
+    <div class="map-cta-row">
+      <a href="${cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn btn-maps">${label}</a>
     </div>
   `;
 }

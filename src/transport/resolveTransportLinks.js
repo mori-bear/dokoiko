@@ -385,6 +385,22 @@ function buildSubCtaUrl(subCTA) {
   return null;
 }
 
+/**
+ * routes.json の mapCTA データから Google Maps URL オブジェクトを返す。
+ *
+ * @param {object} mapCTA   — routes.json の mapCTA フィールド（{ to: "名護市街" }）
+ * @param {string} departure — 出発地名（"東京" など）
+ * @param {object} fromCity  — DEPARTURE_CITY_INFO エントリ（省略可）
+ * @returns {object|null}
+ */
+function buildMapCtaLink(mapCTA, departure, fromCity) {
+  if (!mapCTA?.to) return null;
+  const origin = fromCity?.rail ?? DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
+  const dest   = mapCTA.to;
+  const mode   = resolveMapMode(origin, dest);
+  return buildGoogleMapsLink(origin, dest, mode, `${dest}の地図を見る`);
+}
+
 
 /* ══════════════════════════════════════════════════════
    飛行機可否判定
@@ -660,13 +676,15 @@ function bfsStepsToLinks(steps, departure, city) {
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
   {
     const routeEntry = ROUTES_DATA[city.id];
     const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
     const subCta = buildSubCtaUrl(routeEntry?.subCTA);
     if (subCta) links.push({ type: 'sub-cta', cta: subCta });
+    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure);
+    if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
   /* ── step-group 生成（label のみ、booking CTA なし）── */
@@ -711,13 +729,15 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
-  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
   {
     const routeEntry = ROUTES_DATA[city.id];
     const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
     const subCta = buildSubCtaUrl(routeEntry?.subCTA);
     if (subCta) links.push({ type: 'sub-cta', cta: subCta });
+    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure, fromCity);
+    if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
   let displayIdx = 0;
@@ -1094,13 +1114,15 @@ function buildLinksFromStepGroups(stepGroups, city, departure = null, fromCity =
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta / sub-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
   if (departure) {
     const routeEntry = ROUTES_DATA[city.id];
     const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
     const subCta = buildSubCtaUrl(routeEntry?.subCTA);
     if (subCta) links.push({ type: 'sub-cta', cta: subCta });
+    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure, fromCity);
+    if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
   links.push(...stepGroups);
