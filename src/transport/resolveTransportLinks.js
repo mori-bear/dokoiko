@@ -37,9 +37,10 @@ import { buildRoute } from '../engine/bfsEngine.js';
 import { loadJson } from '../lib/loadJson.js';
 
 /* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
-const [PORTS_DATA, SPOT_ACCESS_DATA] = await Promise.all([
+const [PORTS_DATA, SPOT_ACCESS_DATA, ROUTES_DATA] = await Promise.all([
   loadJson('../data/ports.json',       import.meta.url),
   loadJson('../data/spotAccess.json', import.meta.url),
+  loadJson('../data/routes.json',     import.meta.url),
 ]);
 
 /* ── 港名 → ハブ都市マップ（step補完用） ── */
@@ -333,65 +334,37 @@ function getRouteLabel(transfers, city) {
 }
 
 /* ══════════════════════════════════════════════════════
-   メイン CTA 導出
-   優先順位: shinkansen > flight > ferry > rail > その他
+   CTA URL 構築
+   mainCTA は routes.json のデータ。ここでは URL を組み立てるだけ。
 ══════════════════════════════════════════════════════ */
 
-
 /**
- * 目的地メタデータから mainCTA を生成する（auto ルート用）。
- * step-group を経由しない — city の固定フィールドのみで決定する。
+ * routes.json の mainCTA データから URL オブジェクトを返す。
+ * 「何の CTA か」はデータが持つ。ここでは URL 文字列の組み立てのみ行う。
+ *
+ * @param {object} mainCTA   — routes.json の mainCTA フィールド
+ * @param {string} departure — 出発都市名（飛行機 URL に必要）
+ * @returns {object|null}    — { type, url, label } または null
  */
-function buildMainCtaFromCity(city, departure, fromCity = null) {
-  const fromIata = CITY_AIRPORT[departure] ?? fromCity?.iata ?? null;
+function buildCtaUrl(mainCTA, departure) {
+  if (!mainCTA) return null;
 
-  // 飛行機優先（離島・mountain/remote も含む）
-  if (fromIata && isFlightAllowed(city, departure)) {
-    const hubName      = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
-    const airportTarget = hubName ?? city.airportGateway ?? null;
-    if (airportTarget && hasFlightRoute(departure, airportTarget)) {
-      return buildSkyscannerLink(fromIata, airportTarget) ?? null;
-    }
-  }
-
-  // フェリー（島・港目的地）
-  if (city.ferryGateway) {
-    return buildFerryLinkForDest(city.id, city.ferryGateway);
-  }
-
-  // 鉄道
-  const provider = city.railProvider ?? _deriveJrProvider(departure, city.region);
-  return buildJrLink(provider);
-}
-
-/**
- * routes.js の step 配列から mainCTA を生成する（手動定義ルート・BFS ルート用）。
- * step-group を経由しない — routes の最初の予約可能ステップのみで決定する。
- */
-function buildMainCtaFromSteps(steps, departure, fromCity = null) {
-  const BOOKABLE = ['shinkansen', 'rail', 'flight', 'ferry', 'bus'];
-  const first = steps.find(s => BOOKABLE.includes(s.type));
-  if (!first) return null;
-
-  switch (first.type) {
-    case 'shinkansen': {
-      const provider = first.provider ?? detectShinkansenProvider(first, departure);
-      return buildJrLink(provider);
-    }
-    case 'rail': {
-      if (first.operator && !first.operator.startsWith('JR')) return null;
-      return buildJrLink(first.provider ?? operatorToProvider(first.operator ?? ''));
-    }
+  switch (mainCTA.type) {
     case 'flight': {
-      const iata = first.fromIata ?? CITY_AIRPORT[departure] ?? fromCity?.iata ?? null;
-      return (iata && first.to) ? (buildSkyscannerLink(iata, first.to) ?? null) : null;
+      const fromIata = CITY_AIRPORT[departure] ?? null;
+      if (!fromIata || !mainCTA.to) return null;
+      const target = mainCTA.hub ? (AIRPORT_HUB_GATEWAY[mainCTA.hub] ?? mainCTA.to) : mainCTA.to;
+      return buildSkyscannerLink(fromIata, target) ?? null;
     }
     case 'ferry':
-      return first.destId
-        ? buildFerryLinkForDest(first.destId, first.from ?? '', first.ferryUrl ?? null, first.ferryOperator ?? null)
-        : buildFerryLink(first.from ?? '', first.ferryUrl ?? null, first.ferryOperator ?? null);
+      return buildFerryLink(mainCTA.from ?? '', mainCTA.url ?? null, mainCTA.provider ?? null);
+    case 'rail':
+    case 'shinkansen': {
+      const provider = mainCTA.provider ?? 'e5489';
+      return buildJrLink(provider);
+    }
     case 'bus':
-      return buildHighwayBusLink(first.from ?? departure, first.to ?? '');
+      return buildHighwayBusLink(mainCTA.from ?? departure, mainCTA.to ?? '');
     default:
       return null;
   }
@@ -610,8 +583,8 @@ function bfsStepsToLinks(steps, departure, city) {
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta: step 配列から直接生成（step-group を経由しない）── */
-  const mainCta = buildMainCtaFromSteps(steps, departure);
+  /* ── main-cta: routes.json のデータをそのまま使う ── */
+  const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
   if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
 
   /* ── step-group 生成（label のみ、booking CTA なし）── */
@@ -657,8 +630,8 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
-  /* ── main-cta: route の step 配列から直接生成（step-group を経由しない）── */
-  const mainCta = buildMainCtaFromSteps(routes, departure, fromCity);
+  /* ── main-cta: routes.json のデータをそのまま使う ── */
+  const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
   if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
 
   let displayIdx = 0;
@@ -1049,9 +1022,9 @@ function buildLinksFromStepGroups(stepGroups, city, departure = null, fromCity =
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta: city メタデータから直接生成（step-group を経由しない）── */
-  if (departure && fromCity) {
-    const mainCta = buildMainCtaFromCity(city, departure, fromCity);
+  /* ── main-cta: routes.json のデータをそのまま使う ── */
+  if (departure) {
+    const mainCta = buildCtaUrl(ROUTES_DATA[city.id]?.mainCTA, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
   }
 

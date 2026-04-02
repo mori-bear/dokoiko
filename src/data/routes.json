@@ -1,0 +1,1828 @@
+{
+  "kamakura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "atami": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nikko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "karuizawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "fujikawaguchiko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ishigaki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "石垣空港",
+      "hub": "石垣"
+    }
+  },
+  "ise": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "beppu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "otaru": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "furano": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "matsushima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "miyajima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "宮島口港"
+    }
+  },
+  "onomichi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shodoshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "高松港"
+    }
+  },
+  "mihonoseki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "米子空港"
+    }
+  },
+  "ryujin-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "tokashiki-jima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "kumejima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "久米島空港",
+      "hub": "那覇"
+    }
+  },
+  "miyakojima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "宮古空港",
+      "hub": "宮古"
+    }
+  },
+  "kouzushima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "竹芝客船ターミナル"
+    }
+  },
+  "hakone": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shuzenji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kusatsu-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shimoda": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "izu-oshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "竹芝客船ターミナル"
+    }
+  },
+  "shirakawago-t": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "arima-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kinosaki-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kurashiki-o": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shirahama-o": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "takayama-o": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "toba": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "yufuin": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "kurokawa-k": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "aso": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "yakushima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "屋久島空港",
+      "hub": "鹿児島"
+    }
+  },
+  "amakusa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "hiraizumi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kakunodate": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "aizu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "zaosan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "hagi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shimonoseki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "naoshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "高松港"
+    }
+  },
+  "kotohira": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "uwajima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "toyako": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "noboribetsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shiretoko": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "女満別空港"
+    }
+  },
+  "wajima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kaga-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "hakuba": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "amanohashidate": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ine": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ibusuki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "sasebo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "hirado": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "tottori": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "akita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "awaji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "takao": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tateyama-chiba": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "gokayama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "jozankei": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "biei": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "miyako-iwate": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "sakata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "takachiho": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "amami": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "鹿児島港",
+      "provider": "マリックスライン",
+      "url": "https://www.marix.co.jp/"
+    }
+  },
+  "goto": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "博多港",
+      "provider": "九州商船",
+      "url": "https://www.kysho.co.jp/"
+    }
+  },
+  "unzen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "ashizuri": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "oboke": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "tsuwano": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "inuyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kiso": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "miyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "tateyama-kurobe": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "himi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "nyuto-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "yuda-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ureshino-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "obuse": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "uchiko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "muroto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "iya": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "oku-izumo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ginzan-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "ouchi-juku": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nozawa-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "takehara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "tsumago": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "magome": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "nagahama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "hikone": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "koyasan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "gero-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "naruko-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shima-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "hirosaki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "青森空港"
+    }
+  },
+  "oirase": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "青森空港"
+    }
+  },
+  "mashiko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "bessho-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "izushi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "wakura-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "misasa-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "obi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "hitoyoshi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "kamikochi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "minakami-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "minami-aso": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "阿蘇くまもと空港"
+    }
+  },
+  "imabari": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ozu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shakotan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "izumo": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "出雲縁結び空港"
+    }
+  },
+  "suzu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "yoshino": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kumano": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "iriomote": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "石垣港",
+      "provider": "八重山観光フェリー",
+      "url": "https://www.yaeyama.co.jp/"
+    }
+  },
+  "takahashi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "hida-furukawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "bungo-takada": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "izu-kogen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tanabe": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "南紀白浜空港"
+    }
+  },
+  "tosa-shimizu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "nichinan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "mojiko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "itoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "shimabara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "tsuruga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shijishima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "詫間港"
+    }
+  },
+  "sounkyo": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "旭川空港"
+    }
+  },
+  "rebun-island": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "稚内港",
+      "provider": "ハートランドフェリー",
+      "url": "https://www.heartlandferry.jp/"
+    }
+  },
+  "rishiri-island": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "稚内港",
+      "provider": "ハートランドフェリー",
+      "url": "https://www.heartlandferry.jp/"
+    }
+  },
+  "akan": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "釧路空港"
+    }
+  },
+  "abashiri": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "女満別空港"
+    }
+  },
+  "shikotsu": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "新千歳空港"
+    }
+  },
+  "tono": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "oga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "yonezawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "dewa-sanzan": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "庄内空港"
+    }
+  },
+  "sakunami-onsen": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "仙台空港"
+    }
+  },
+  "goshogawara": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "青森空港"
+    }
+  },
+  "kawagoe": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nasu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "choshi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "ashikaga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shiobara-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "sado-island": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "新潟港",
+      "provider": "佐渡汽船",
+      "url": "https://www.sadokisen.co.jp/"
+    }
+  },
+  "kiyosato": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tenryu-gorge": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "suwa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "eiheiji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "wakasa-obama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "okuhida-onsen": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "松本空港"
+    }
+  },
+  "minami-izu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "echizen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ito": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "iga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kashihara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "totsukawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "maizuru": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "asuka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "daisen": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "米子空港"
+    }
+  },
+  "yunotsu-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "iwami-ginzan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "iwakuni": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "岩国錦帯橋空港"
+    }
+  },
+  "kurayoshi": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "米子空港"
+    }
+  },
+  "suo-oshima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "岩国錦帯橋空港"
+    }
+  },
+  "shimanto": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "高知空港"
+    }
+  },
+  "kashiwajima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "高知空港"
+    }
+  },
+  "saijo": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "松山空港"
+    }
+  },
+  "ainan": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "松山空港"
+    }
+  },
+  "taketa": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "usuki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "hita": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "hasami": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "長崎空港"
+    }
+  },
+  "takeo-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "kitsuki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "tsushima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "対馬空港"
+    }
+  },
+  "iki-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "壱岐空港"
+    }
+  },
+  "tanegashima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "種子島空港",
+      "hub": "鹿児島"
+    }
+  },
+  "kikuchi": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "阿蘇くまもと空港"
+    }
+  },
+  "taketomi-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "石垣空港",
+      "hub": "石垣"
+    }
+  },
+  "yonaguni-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "与那国空港",
+      "hub": "石垣"
+    }
+  },
+  "nakijin": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "motobu": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "zamami-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "ie-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "kohama-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "石垣空港",
+      "hub": "石垣"
+    }
+  },
+  "matsushiro": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "iiyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "yakake": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "岡山桃太郎空港"
+    }
+  },
+  "tsuyama": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "岡山桃太郎空港"
+    }
+  },
+  "tsurugi-san": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "徳島空港"
+    }
+  },
+  "nobeoka": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "宮崎空港"
+    }
+  },
+  "kamaishi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "ofunato": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kuji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "wakkanai": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "稚内空港"
+    }
+  },
+  "obihiro": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "帯広空港"
+    }
+  },
+  "rausu": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "女満別空港"
+    }
+  },
+  "esashi-hokkaido": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "函館空港"
+    }
+  },
+  "hanamaki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "花巻空港"
+    }
+  },
+  "hachimantai": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "花巻空港"
+    }
+  },
+  "tazawako": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "秋田空港"
+    }
+  },
+  "yamadera": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "山形空港"
+    }
+  },
+  "kesennuma": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "仙台空港"
+    }
+  },
+  "ikaho": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "enoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "chichibu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "oarai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "sano": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "gujo-hachiman": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "narai-juku": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "itoigawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "murakami": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ogaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "echizen-kaigan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "myoko-kogen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nagaoka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shimanto-cho": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "高知龍馬空港"
+    }
+  },
+  "tanba-sasayama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "nachikatsuura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kumano-hongu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "ako": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "fushimi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tomonoura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "sakaiminato": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "米子空港"
+    }
+  },
+  "ushimado": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "kasaoka": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "笠岡港"
+    }
+  },
+  "tsunoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "dogo-onsen": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "松山空港"
+    }
+  },
+  "marugame": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "高松空港"
+    }
+  },
+  "misaki-sadamisaki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "松山空港"
+    }
+  },
+  "yanagawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "hyuga": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "宮崎空港"
+    }
+  },
+  "koshikijima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "川内港"
+    }
+  },
+  "kirishima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "鹿児島空港"
+    }
+  },
+  "ebino-kogen": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "宮崎空港"
+    }
+  },
+  "onna": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "nago": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "yomitanson": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "niseko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "daisetsuzan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "shiraoi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tomamu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "towada": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "osorezan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "urabandai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "minami-sanriku": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kitakami": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kinugawa-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "oze": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tsukuba": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kasama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "naritasan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "kujukuri": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "miura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "oku-tama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "jigokudani": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "tateshina": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "echigo-yuzawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "fujinomiya": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "norikura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "tokoname": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "korankei": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "minamichita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "arashiyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shigaraki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "dorogawa-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "matsusaka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "sakai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "ama-island": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "七類港"
+    }
+  },
+  "akiyoshidai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "yanai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    }
+  },
+  "oki-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "隠岐空港"
+    }
+  },
+  "inujima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "宝伝港"
+    }
+  },
+  "teshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "高松港"
+    }
+  },
+  "niyodogawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "yusuhara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "anan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "shikoku-karst": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    }
+  },
+  "aoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "yamaga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "yoshinogari": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "kunisaki": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "大分空港"
+    }
+  },
+  "chiran": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    }
+  },
+  "ojika-island": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "佐世保港"
+    }
+  },
+  "irabu-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "宮古空港",
+      "hub": "宮古"
+    }
+  },
+  "aguni-island": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "粟国空港",
+      "hub": "那覇"
+    }
+  },
+  "itoman": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "kijoka": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港",
+      "hub": "那覇"
+    }
+  },
+  "miyakejima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "三宅島空港"
+    }
+  },
+  "hachijojima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "八丈島空港"
+    }
+  },
+  "niijima": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "新島空港"
+    }
+  },
+  "shikinejima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "竹芝桟橋"
+    }
+  }
+}
