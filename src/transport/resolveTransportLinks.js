@@ -569,12 +569,15 @@ function buildLocalStep(fromStation, city, stepIndex) {
     : hasBus                ? 'バス'
     : '徒歩';
   const mapMode   = needsCar ? 'driving' : resolveMapMode(fromStation, mTo);
+  const fromDisp  = fromStation.replace(/駅$/, '');
+  const rentalLink = needsCar ? buildRentalLink(fromDisp) : null;
   return {
     type: 'step-group',
     stepLabel: `${STEP_IDX[stepIndex]}  ${fromStation} → ${label}（${modeLabel}）`,
     cta: buildGoogleMapsLink(fromStation, mTo, mapMode,
            `${fromStation} → ${label} の行き方を見る`, coords(city)),
-    caution: null,
+    rentalLink,
+    caution: needsCar ? `${fromDisp}でレンタカーを借りて向かいます` : null,
   };
 }
 
@@ -1283,9 +1286,10 @@ function buildCityTypeRoute(city, departure, fromCity) {
   // 飛行機ルートを優先チェック
   const usedFlight = _appendFlightSteps(stepGroups, city, departure, fromCity);
 
-  if (!usedFlight && city.railProvider) {
-    // 鉄道ルート
-    const jrCta = buildJrLink(city.railProvider);
+  if (!usedFlight) {
+    // 鉄道ルート（railProvider がない場合は地域から派生して必ず表示）
+    const jrProvider = city.railProvider ?? _deriveJrProvider(departure, city.region);
+    const jrCta = buildJrLink(jrProvider);
     if (jrCta) {
       const fromDisp = origin.replace(/駅$/, '');
       // mapPoint あり（観光地スポット）の場合は駅 → 観光地のローカルステップを常に追加
@@ -1334,21 +1338,19 @@ function buildSuburbanRoute(city, departure, fromCity) {
 
   const stepGroups = [];
 
-  // ① 鉄道 → accessStation（JR終点）
-  if (city.railProvider) {
-    const jrCta = buildJrLink(city.railProvider);
-    if (jrCta) {
-      const fromDisp = origin.replace(/駅$/, '');
-      stepGroups.push({
-        type: 'step-group',
-        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-        cta: jrCta,
-        caution: '▼ 電車はここまで。この先は現地移動',
-        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
-      });
-    }
+  // ① 鉄道 → accessStation（railProvider がない場合は地域から派生して必ず表示）
+  const jrProvider = city.railProvider ?? _deriveJrProvider(departure, city.region);
+  const jrCta = buildJrLink(jrProvider);
+  if (jrCta) {
+    const fromDisp = origin.replace(/駅$/, '');
+    stepGroups.push({
+      type: 'step-group',
+      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+      cta: jrCta,
+      caution: '▼ 電車はここまで。この先は現地移動',
+      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+    });
   }
-  // railProvider = null: JRステップはスキップ（「最寄駅」は cityBlock に表示）
 
   // ② 現地アクセス（accessStation → 目的地 or mapPoint）— localのみ Googleマップ使用
   // mapPoint あり（観光地スポット）の場合は駅が同名でも常にローカルステップを追加

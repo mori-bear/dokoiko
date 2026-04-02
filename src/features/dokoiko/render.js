@@ -10,6 +10,8 @@
  *     stay-block（この街に泊まるなら — stayType !== daytrip のみ）
  */
 
+import { DEPARTURE_CITY_INFO } from '../../config/constants.js';
+
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
@@ -209,11 +211,12 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const rentalLinks = links.filter(l => l.type === 'rental');
 
   // ① 全体ルートマップ（出発駅 → 観光地 or 最寄り駅）
-  // mapPoint あり（観光地タイプ）→ 観光地まで、なければ accessStation まで
-  const routeMapUrl  = city ? buildRouteMapUrl(departure, city) : null;
+  // departureStation: DEPARTURE_CITY_INFO の実際の駅名を使用
+  const departureStation = DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
+  const routeMapUrl  = city ? buildRouteMapUrl(departureStation, city) : null;
   const routeMapTo   = city?.mapPoint ?? city?.accessStation ?? destLabel;
   const mapHtml = routeMapUrl
-    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="route-map-link">${departure}駅 → ${routeMapTo}</a></div>`
+    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="route-map-link">${departureStation} → ${routeMapTo}</a></div>`
     : '';
 
   // ② ルート概要（dep → dest + ローカル補足）
@@ -436,9 +439,9 @@ function buildDestMapUrl(city) {
  * @param {string} departure — 出発都市名（例: '高松'）
  * @param {object} city     — 目的地エントリ
  */
-function buildRouteMapUrl(departure, city) {
-  if (!departure || !city) return null;
-  const from = `${departure}駅`;
+function buildRouteMapUrl(departureStation, city) {
+  if (!departureStation || !city) return null;
+  const from = departureStation;
   const to   = city.mapPoint ?? city.accessStation ?? city.displayName ?? city.name;
   if (!to) return null;
   return `https://www.google.com/maps/dir/${encodeURIComponent(from)}/${encodeURIComponent(to)}`;
