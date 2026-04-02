@@ -557,11 +557,17 @@ function isAccessSameAsDest(accessStation, label) {
 
 /* ── Helper: ラストマイル step（accessStation → 目的地）── */
 function buildLocalStep(fromStation, city, stepIndex) {
-  const label    = cityLabel(city);
-  const mTo      = mapTarget(city);
-  const needsCar = city.needsCar || city.destType === 'mountain' || city.destType === 'remote';
-  const hasBus   = city.busGateway || city.railNote === 'バス' || city.secondaryTransport === 'bus';
-  const modeLabel = needsCar ? 'レンタカー' : (hasBus ? 'バス・タクシー' : '徒歩・バス');
+  const label     = cityLabel(city);
+  const mTo       = mapTarget(city);
+  const transport = city.secondaryTransport ?? null;
+  const needsCar  = city.needsCar || city.destType === 'mountain' || city.destType === 'remote' || transport === 'car';
+  const hasBus    = city.busGateway || city.railNote === 'バス' || transport === 'bus';
+  const modeLabel = needsCar   ? 'レンタカー'
+    : transport === 'bus'   ? 'バス'
+    : transport === 'taxi'  ? 'タクシー'
+    : transport === 'walk'  ? '徒歩'
+    : hasBus                ? 'バス'
+    : '徒歩';
   const mapMode   = needsCar ? 'driving' : resolveMapMode(fromStation, mTo);
   return {
     type: 'step-group',
