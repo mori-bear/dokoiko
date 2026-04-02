@@ -769,10 +769,20 @@ export function resolveAccessUI(steps, departure, city) {
     }
   }
 
+  /* mapMainSecondary: 最後のステップが ferry または local の場合、その区間を補助表示 */
+  const mapMainSecondary = (lastStep.type === 'ferry' || lastStep.type === 'local')
+    ? {
+        from: lastStep.from,
+        to:   lastStep.to,
+        url:  _accessMapsUrl(lastStep.from, lastStep.to, lastStep.type === 'ferry' ? 'driving' : 'driving'),
+      }
+    : null;
+
   return {
     mainCTA,
     mapMain,
-    ...(mapLocal ? { mapLocal } : {}),
+    ...(mapMainSecondary ? { mapMainSecondary } : {}),
+    ...(mapLocal         ? { mapLocal }         : {}),
     steps: filledSteps,
   };
 }
@@ -804,7 +814,7 @@ function _buildAccessMainCTA(step, depIata) {
       provider: step.provider,
       btnType:  booking.btnType,
       url:      booking.url,
-      label:    `${step.provider}で予約する（${from} → ${to}）`,
+      label:    `${step.provider}で予約する（${from} → ${to}まで）`,
     };
   }
 
@@ -818,7 +828,7 @@ function _buildAccessMainCTA(step, depIata) {
       provider: '航空会社',
       btnType:  'skyscanner',
       url:      `https://www.skyscanner.jp/transport/flights/${depIata.toLowerCase()}/${toIata.toLowerCase()}/`,
-      label:    `航空券を予約する（${from} → ${to}）`,
+      label:    `航空券を予約する（${from} → ${to}まで）`,
     };
   }
 
@@ -831,7 +841,7 @@ function _buildAccessMainCTA(step, depIata) {
       provider: step.operator ?? 'フェリー',
       btnType:  'ferry',
       url,
-      label:    `フェリーを予約する（${from} → ${to}）`,
+      label:    `フェリーを予約する（${from} → ${to}まで）`,
     };
   }
 
@@ -848,14 +858,22 @@ function buildAccessBlock(city, departure) {
   const uiData = resolveAccessUI(steps, departure, city);
   if (!uiData) return '';
 
-  const { mainCTA, mapMain, mapLocal } = uiData;
+  const { mainCTA, mapMain, mapMainSecondary, mapLocal } = uiData;
   const destLabel = city.displayName ?? city.name;
 
-  /* ① 全体ルートマップボタン */
+  /* ① 全体ルートマップボタン（primary + secondary） */
   const mapFromLabel = mapMain.from?.replace(/駅$/, '') ?? '';
   const mapMainHtml  = mapMain.url
     ? `<div class="route-map-row">
          <a href="${mapMain.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${mapFromLabel} → ${mapMain.to}の行き方を地図で見る</a>
+       </div>`
+    : '';
+
+  const mapSecFromLabel = mapMainSecondary?.from?.replace(/駅$/, '').replace(/港$/, '') ?? '';
+  const mapSecToLabel   = mapMainSecondary?.to?.replace(/駅$/, '').replace(/港$/, '') ?? '';
+  const mapSecondaryHtml = mapMainSecondary?.url
+    ? `<div class="route-map-secondary">
+         <a href="${mapMainSecondary.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps btn-maps--secondary">${mapSecFromLabel} → ${mapSecToLabel}（現地移動）</a>
        </div>`
     : '';
 
@@ -881,6 +899,7 @@ function buildAccessBlock(city, departure) {
   return `
     <div class="card-section">
       ${mapMainHtml}
+      ${mapSecondaryHtml}
       ${summaryHtml}
       ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
