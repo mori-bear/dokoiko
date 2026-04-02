@@ -1,0 +1,22 @@
+[
+  { "station": "浜松町駅",      "lat": 35.6554, "lng": 139.7568, "provider": "ekinet",   "isHub": true },
+  { "station": "新潟駅",        "lat": 37.9118, "lng": 139.0592, "provider": "ekinet",   "isHub": true },
+  { "station": "稚内駅",        "lat": 45.4080, "lng": 141.6767, "provider": "ekinet",   "isHub": true },
+  { "station": "熱海駅",        "lat": 35.1025, "lng": 139.0729, "provider": "ekinet",   "isHub": false },
+  { "station": "岡山駅",        "lat": 34.6627, "lng": 133.9181, "provider": "e5489",    "isHub": true },
+  { "station": "笠岡駅",        "lat": 34.5009, "lng": 133.5087, "provider": "e5489",    "isHub": false },
+  { "station": "宝伝",          "lat": 34.7254, "lng": 134.0907, "provider": "e5489",    "isHub": false },
+  { "station": "高松駅",        "lat": 34.3502, "lng": 134.0463, "provider": "e5489",    "isHub": true },
+  { "station": "詫間駅",        "lat": 34.2398, "lng": 133.6561, "provider": "e5489",    "isHub": false },
+  { "station": "宮島口駅",      "lat": 34.3536, "lng": 132.3073, "provider": "e5489",    "isHub": false },
+  { "station": "柳井駅",        "lat": 33.9656, "lng": 132.1010, "provider": "e5489",    "isHub": false },
+  { "station": "八幡浜駅",      "lat": 33.4648, "lng": 132.4234, "provider": "e5489",    "isHub": false },
+  { "station": "宿毛駅",        "lat": 32.9380, "lng": 132.7253, "provider": "e5489",    "isHub": false },
+  { "station": "松江駅",        "lat": 35.4685, "lng": 133.0498, "provider": "e5489",    "isHub": true },
+  { "station": "境港駅",        "lat": 35.5398, "lng": 133.2318, "provider": "e5489",    "isHub": false },
+  { "station": "鹿児島中央駅",  "lat": 31.5741, "lng": 130.5406, "provider": "jrkyushu", "isHub": true },
+  { "station": "博多駅",        "lat": 33.5904, "lng": 130.4213, "provider": "jrkyushu", "isHub": true },
+  { "station": "佐世保駅",      "lat": 33.1578, "lng": 129.7194, "provider": "jrkyushu", "isHub": false },
+  { "station": "川内駅",        "lat": 31.8276, "lng": 130.3019, "provider": "jrkyushu", "isHub": false },
+  { "station": "長崎駅",        "lat": 32.7550, "lng": 129.8731, "provider": "jrkyushu", "isHub": true }
+]
