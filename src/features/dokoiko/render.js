@@ -216,7 +216,7 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const routeMapUrl  = city ? buildRouteMapUrl(departureStation, city) : null;
   const routeMapTo   = city?.mapPoint ?? city?.accessStation ?? destLabel;
   const mapHtml = routeMapUrl
-    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="route-map-link">${departureStation} → ${routeMapTo}</a></div>`
+    ? `<div class="route-map-row"><a href="${routeMapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${departureStation} → ${routeMapTo}の行き方を地図で見る</a></div>`
     : '';
 
   // ② ルート概要（dep → dest + ローカル補足）
@@ -307,7 +307,7 @@ function buildStepCard(sg) {
   // booking CTA はメインCTAブロックで表示済み → ステップ内には出さない
   // Google Maps のみ補助サブリンクとして表示
   const ctaHtml = (sg.cta?.url && ctaLabel && isGoogleMaps)
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer" class="step-sublink">${ctaLabel}</a>`
+    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${ctaLabel}</a>`
     : '';
 
   const rentalHtml = sg.rentalLink?.url
@@ -370,7 +370,7 @@ function buildStepCtaLabel(sg) {
 
   switch (cta.type) {
     case 'google-maps':
-      return fromTo ? `Googleマップで確認（${fromTo}）` : 'Googleマップで確認';
+      return fromTo ? `${fromTo}の行き方を地図で見る` : '地図で行き方を見る';
     case 'skyscanner':
     case 'google-flights':
       return fromTo ? `航空券を予約する（${fromTo}）` : cta.label;
@@ -628,7 +628,7 @@ function buildLocalSection(localSteps, rentalLinks = [], city = null) {
         const mapUrl = buildDestMapUrl(city);
         const label  = city.displayName || city.name || '目的地';
         return mapUrl
-          ? `<div class="link-list"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Googleマップで${label}を確認</a></div>`
+          ? `<div class="link-list"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${label}の行き方を地図で見る</a></div>`
           : '';
       })()
     : '';
@@ -636,7 +636,7 @@ function buildLocalSection(localSteps, rentalLinks = [], city = null) {
   if (!localSteps.length && !rentalLinks.length && !hint && !fallbackMapHtml) return '';
 
   const stepItems = localSteps.map(sg => {
-    const label      = buildStepCtaLabel(sg) ?? 'Googleマップで確認';
+    const label      = buildStepCtaLabel(sg) ?? '地図で行き方を見る';
     const ctaHtml    = sg.cta?.url
       ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${label}</a>`
       : '';

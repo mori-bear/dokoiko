@@ -1299,7 +1299,7 @@ function buildCityTypeRoute(city, departure, fromCity) {
         stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
         cta: jrCta,
         caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
-        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
       });
       if (hasLocal) {
         const localTo = mTo !== label ? mTo : label;
@@ -1348,7 +1348,7 @@ function buildSuburbanRoute(city, departure, fromCity) {
       stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
       cta: jrCta,
       caution: '▼ 電車はここまで。この先は現地移動',
-      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
     });
   }
 
@@ -1392,7 +1392,7 @@ function buildRuralRoute(city, departure, fromCity) {
             stepLabel: `${stepIdx(0)}  ${origin} → ${gateway}（鉄道）`,
             cta: jrCta,
             caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-            ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+            ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${gateway.replace(/駅$/, '')}）`,
           });
           if (gateway !== accessSt) {
             stepGroups.push({
@@ -1427,7 +1427,7 @@ function buildRuralRoute(city, departure, fromCity) {
       stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（鉄道）`,
       cta: jrCta,
       caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${gateway.replace(/駅$/, '')}）`,
     });
   }
 
@@ -1610,7 +1610,7 @@ function _buildRailOnlySteps(city, departure, fromCity) {
     type: 'step-group',
     stepLabel: `${STEP_IDX[0]}  ${origin} → ${accessSt}（鉄道）`,
     cta: jrCta, caution: null,
-    ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
+    ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${accessSt.replace(/駅$/, '')}）`,
   });
   if (accessSt !== label) {
     steps.push({

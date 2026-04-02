@@ -986,6 +986,9 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 .btn-ferry         { background: #1a6fa8;             color: #fff; }
 .btn-rental        { background: #ff7a32;             color: #fff; }
 .btn-bus           { background: #2ea565;             color: #fff; }
+/* Googleマップボタン（地図で行き方を見る）*/
+.btn-maps          { background: #34a853;             color: #fff; }
+.btn-maps:hover    { background: #2d9044; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,
