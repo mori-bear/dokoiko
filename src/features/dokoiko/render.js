@@ -230,10 +230,9 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
     ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`
     : '';
 
-  // ③ メインCTA（最初の booking ステップを1つのみ大きく表示）
-  const BOOKING_TYPES = new Set(['skyscanner','google-flights','jr-east','jr-west','jr-kyushu','jr-ex','jr-window','ferry','bus']);
-  const mainCtaSg   = stepGroups.find(sg => BOOKING_TYPES.has(sg.cta?.type ?? ''));
-  const mainCtaHtml = mainCtaSg ? buildMainCtaBlock(mainCtaSg) : '';
+  // ③ メインCTA（links 配列の main-cta を直接使用 — step-group からは導出しない）
+  const mainCtaItem = links.find(l => l.type === 'main-cta');
+  const mainCtaHtml = mainCtaItem ? buildMainCtaBlock(mainCtaItem) : '';
 
   // ④ 番号付きフロー（CTAはメインCTAブロックのみ。ステップカードにはCTAボタン不要）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -268,18 +267,35 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
 }
 
 /**
- * Phase 9: メインCTAを中央に大きく表示するブロック。
- * 最初のbookingステップのCTAを抜き出し、`.main-cta-row` で目立たせる。
+ * メインCTAブロック。
+ * { type: 'main-cta', cta: { type, url, label? } } を受け取り `.main-cta-row` で表示。
+ * CTA は route 単位で 1 つだけ（step-group からは導出しない）。
  */
-function buildMainCtaBlock(sg) {
-  const label = buildStepCtaLabel(sg);
-  if (!label || !sg.cta?.url) return '';
+function buildMainCtaBlock(item) {
+  const cta = item.cta;
+  if (!cta?.url) return '';
+  const label = cta.label ?? buildMainCtaLabel(cta.type);
   return `
     <div class="main-cta-row">
-      <a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${btnClass(sg.cta.type)} btn--route-main">${label}</a>
+      <a href="${cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${btnClass(cta.type)} btn--route-main">${label}</a>
     </div>
   `;
+}
+
+function buildMainCtaLabel(type) {
+  const LABELS = {
+    'skyscanner':    '航空券を検索する',
+    'google-flights':'航空券を検索する',
+    'jr-east':       'えきねっとで予約する',
+    'jr-west':       'e5489で予約する',
+    'jr-kyushu':     'JR九州ネット予約で予約する',
+    'jr-ex':         'EXで予約する',
+    'jr-window':     'みどりの窓口で購入',
+    'ferry':         'フェリーを予約する',
+    'bus':           'バスを予約する',
+  };
+  return LABELS[type] ?? 'チケットを予約する';
 }
 
 /**

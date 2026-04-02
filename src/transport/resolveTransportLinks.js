@@ -337,30 +337,28 @@ function getRouteLabel(transfers, city) {
    優先順位: shinkansen > flight > ferry > rail > その他
 ══════════════════════════════════════════════════════ */
 
-/* メイン CTA 優先順位:
- *   フライト > JR > フェリー > バス/レンタカー
- *
- *   フライトルートでは Skyscanner が最優先（JR の在来線は step 内で補助表示）。
- *   JR のみのルートでは JR 予約が最優先。
- *   google-maps は各 step の補助リンク専用（main-cta に昇格しない）。
- */
-const MAIN_CTA_PRIORITY = [
-  'skyscanner', 'google-flights',
-  'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
-  'ferry',
-  'bus', 'rental',
-];
 
-function deriveMainCta(stepGroups) {
-  let best = null;
-  let bestPriority = Infinity;
+/**
+ * step-group 配列から「最初の予約 CTA」を抜き出し、
+ * step-group 側の予約 CTA を null にクリアして返す。
+ *
+ * ルール:
+ *   - CTA は route 単位で 1 つだけ（main-cta として links 先頭に配置）
+ *   - step-group には予約 CTA を持たせない（label のみ）
+ *   - google-maps / rentalLink はローカル移動用なので step-group に残す
+ */
+function extractMainCtaAndClean(stepGroups) {
+  const BOOKING = new Set([
+    'skyscanner', 'google-flights',
+    'jr-ex', 'jr-east', 'jr-west', 'jr-kyushu', 'jr-window',
+    'ferry', 'bus',
+  ]);
+  const first = stepGroups.find(sg => BOOKING.has(sg.cta?.type ?? ''));
+  const cta = first?.cta ?? null;
   for (const sg of stepGroups) {
-    if (!sg.cta?.url) continue;
-    const idx = MAIN_CTA_PRIORITY.indexOf(sg.cta.type);
-    if (idx === -1) continue;  // Phase 5: リストにない型（google-maps等）はmainCtaに昇格しない
-    if (idx < bestPriority) { bestPriority = idx; best = sg.cta; }
+    if (BOOKING.has(sg.cta?.type ?? '')) sg.cta = null;
   }
-  return best ? { type: 'main-cta', cta: best } : null;
+  return cta;
 }
 
 /* ══════════════════════════════════════════════════════
@@ -691,27 +689,9 @@ function bfsStepsToLinks(steps, departure, city) {
     displayIdx++;
   }
 
-  /* ── メインCTA（summary 用に保持、render.js では各 step-group CTA を使用）── */
-  const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) {
-    /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
-    links.push(mainCta);
-  }
-
-  /* フォールバック: 全ステップに CTA がない（IC在来線のみ等）→ 最終ステップに Google Maps を付与 */
-  const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || mainCta;
-  if (!hasAnyCta && stepGroups.length > 0) {
-    const label  = cityLabel(city);
-    const mTo    = mapTarget(city);
-    const lastSg = stepGroups[stepGroups.length - 1];
-    const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
-    if (gFrom !== label) {
-      lastSg.cta = buildGoogleMapsLink(
-        gFrom, mTo, resolveMapMode(gFrom, mTo),
-        `${gFrom} → ${label} の行き方を見る`,
-      );
-    }
-  }
+  /* ── main-cta（route 単位で 1 つ）── */
+  const mainCtaObj = extractMainCtaAndClean(stepGroups);
+  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
 
   links.push(...stepGroups);
   return links.filter(Boolean);
@@ -808,25 +788,9 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     links.push(buildRentalLink(lastHub));
   }
 
-  const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) {
-    /* 統合ステップ表示: 各ステップが個別CTAを保持（重複除去なし）*/
-    links.push(mainCta);
-  }
-
-  /* no-CTA fallback: 全ステップにCTAがない場合（IC在来線のみ等）最終ステップにGoogle Maps追加 */
-  const hasAnyCta = stepGroups.some(sg => sg.cta?.url) || links.some(l => l.type === 'main-cta' && l.cta?.url);
-  if (!hasAnyCta && stepGroups.length > 0) {
-    const mTo    = mapTarget(city);
-    const lastSg = stepGroups[stepGroups.length - 1];
-    const gFrom  = lastSg.stepLabel?.match(/[①-⑧\d+.]\s+\S+\s+(.+?) →/)?.[1] ?? departure;
-    if (gFrom !== label) {
-      lastSg.cta = buildGoogleMapsLink(
-        gFrom, mTo, resolveMapMode(gFrom, mTo),
-        `${gFrom} → ${label} の行き方を見る`,
-      );
-    }
-  }
+  /* ── main-cta（route 単位で 1 つ）── */
+  const mainCtaObj = extractMainCtaAndClean(stepGroups);
+  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
 
   links.push(...stepGroups);
   return links.filter(Boolean);
@@ -1170,8 +1134,9 @@ function buildLinksFromStepGroups(stepGroups, city) {
     stayRecommend: getStayRecommend(city),
     routeLabel:    getRouteLabel(transfers, city),
   });
-  const mainCta = deriveMainCta(stepGroups);
-  if (mainCta) links.push(mainCta);
+  /* ── main-cta（route 単位で 1 つ）── */
+  const mainCtaObj = extractMainCtaAndClean(stepGroups);
+  if (mainCtaObj) links.push({ type: 'main-cta', cta: mainCtaObj });
   links.push(...stepGroups);
   return links;
 }
