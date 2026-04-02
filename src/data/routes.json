@@ -3217,5 +3217,2158 @@
     "mapCTA": {
       "to": "式根島港"
     }
+  },
+  "shirakawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "白河駅"
+    }
+  },
+  "kitakata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "喜多方駅"
+    }
+  },
+  "koriyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "郡山駅"
+    }
+  },
+  "ryusendo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "龍泉洞"
+    },
+    "mapCTA": {
+      "to": "龍泉洞"
+    }
+  },
+  "ichinoseki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "一ノ関駅"
+    }
+  },
+  "akita-oga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "男鹿"
+    },
+    "mapCTA": {
+      "to": "男鹿温泉郷"
+    }
+  },
+  "kisakata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "象潟駅"
+    }
+  },
+  "gassan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "月山"
+    },
+    "mapCTA": {
+      "to": "志津温泉"
+    }
+  },
+  "higashine": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "さくらんぼ東根駅"
+    }
+  },
+  "akakura-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "赤倉温泉"
+    },
+    "mapCTA": {
+      "to": "赤倉温泉"
+    }
+  },
+  "narita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "成田駅"
+    }
+  },
+  "matsumoto-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "松本駅"
+    }
+  },
+  "fukui-eiheiji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "永平寺"
+    }
+  },
+  "gujo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "郡上八幡駅"
+    }
+  },
+  "ojika": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "佐世保港"
+    },
+    "mapCTA": {
+      "to": "小値賀島"
+    }
+  },
+  "zamami": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "那覇港"
+    },
+    "mapCTA": {
+      "to": "座間味島"
+    }
+  },
+  "yugawara-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "湯河原駅"
+    }
+  },
+  "yokosuka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "横須賀駅"
+    }
+  },
+  "mishima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "三島駅"
+    }
+  },
+  "numazu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "沼津駅"
+    }
+  },
+  "hamamatsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "浜松駅"
+    }
+  },
+  "kakegawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "掛川駅"
+    }
+  },
+  "okazaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "岡崎駅"
+    }
+  },
+  "toyohashi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "豊橋駅"
+    }
+  },
+  "tajimi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "多治見駅"
+    }
+  },
+  "togakushi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "戸隠"
+    },
+    "mapCTA": {
+      "to": "戸隠神社"
+    }
+  },
+  "omihachiman": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "近江八幡駅"
+    }
+  },
+  "takarazuka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "宝塚駅"
+    }
+  },
+  "akashi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "明石駅"
+    }
+  },
+  "naruto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "鳴門駅"
+    }
+  },
+  "innoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "因島"
+    },
+    "mapCTA": {
+      "to": "因島市街"
+    }
+  },
+  "mihara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "三原駅"
+    }
+  },
+  "hofu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "防府駅"
+    }
+  },
+  "karatsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "唐津駅"
+    }
+  },
+  "dazaifu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "太宰府駅"
+    }
+  },
+  "nakatsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "中津駅"
+    }
+  },
+  "nemuro": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "根室"
+    },
+    "mapCTA": {
+      "to": "根室市街"
+    }
+  },
+  "muroran": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "東室蘭駅"
+    }
+  },
+  "tomakomai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "苫小牧駅"
+    }
+  },
+  "ishinomaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "石巻駅"
+    }
+  },
+  "hitachi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "日立駅"
+    }
+  },
+  "kashima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "鹿島神宮駅"
+    }
+  },
+  "shiraoishi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "白石蔵王駅"
+    }
+  },
+  "noshiro": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "能代駅"
+    }
+  },
+  "tendou": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "天童駅"
+    }
+  },
+  "shonai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "鶴岡駅"
+    }
+  },
+  "ogata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "八郎潟"
+    },
+    "mapCTA": {
+      "to": "大潟村"
+    }
+  },
+  "rikuzentakata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "陸前高田駅"
+    }
+  },
+  "sanriku-miyako": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "浄土ヶ浜"
+    }
+  },
+  "kubota-akita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "秋田駅"
+    }
+  },
+  "motomiya": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "本宮駅"
+    }
+  },
+  "mizusawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "水沢江刺駅"
+    }
+  },
+  "ichinoseki-geibikei": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "猊鼻渓"
+    }
+  },
+  "akita-semboku": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "角館駅"
+    }
+  },
+  "tendo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "寒河江駅"
+    }
+  },
+  "nyuzen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "入善駅"
+    }
+  },
+  "nanao": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "七尾駅"
+    }
+  },
+  "fukuchiyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "福知山駅"
+    }
+  },
+  "koka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "甲賀駅"
+    }
+  },
+  "tondabayashi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "富田林駅"
+    }
+  },
+  "kishiwada": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "岸和田駅"
+    }
+  },
+  "amagasaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "尼崎駅"
+    }
+  },
+  "nishiwaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "西脇市駅"
+    }
+  },
+  "nagi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "奈義"
+    },
+    "mapCTA": {
+      "to": "奈義町"
+    }
+  },
+  "higashihiroshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "西条駅"
+    }
+  },
+  "fukuyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "福山駅"
+    }
+  },
+  "otoyo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "大杉駅"
+    }
+  },
+  "sukumo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "宿毛駅"
+    }
+  },
+  "kochi-hirome": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "高知駅"
+    }
+  },
+  "miyoshi-tokushima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "阿波池田駅"
+    }
+  },
+  "tokushima-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "徳島駅"
+    }
+  },
+  "kumamoto-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "熊本駅"
+    }
+  },
+  "nagasaki-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "長崎駅"
+    }
+  },
+  "miyazaki-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "宮崎駅"
+    }
+  },
+  "kagoshima-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "鹿児島中央駅"
+    }
+  },
+  "saga-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "佐賀駅"
+    }
+  },
+  "oita-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "大分駅"
+    }
+  },
+  "matsuyama-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "松山駅"
+    }
+  },
+  "ball-game": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "高知駅"
+    }
+  },
+  "yuwaku-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "湯涌温泉"
+    },
+    "mapCTA": {
+      "to": "湯涌温泉"
+    }
+  },
+  "noto-peninsula": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "珠洲"
+    },
+    "mapCTA": {
+      "to": "珠洲市街"
+    }
+  },
+  "yura-wakayama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "由良"
+    },
+    "mapCTA": {
+      "to": "白崎海洋公園"
+    }
+  },
+  "misaki-osaka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "みさき公園駅"
+    }
+  },
+  "kitakyushu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "小倉駅"
+    }
+  },
+  "asakura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "甘木駅"
+    }
+  },
+  "ebino": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "えびの"
+    },
+    "mapCTA": {
+      "to": "えびの高原"
+    }
+  },
+  "hitoyoshi-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "人吉駅"
+    }
+  },
+  "minamikyushu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "南九州"
+    },
+    "mapCTA": {
+      "to": "南九州市街"
+    }
+  },
+  "minamiosumi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "南大隅"
+    },
+    "mapCTA": {
+      "to": "佐多岬"
+    }
+  },
+  "chatan": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "那覇空港"
+    },
+    "mapCTA": {
+      "to": "北谷町"
+    }
+  },
+  "uruma": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "那覇空港"
+    },
+    "mapCTA": {
+      "to": "うるま市街"
+    }
+  },
+  "nanto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "南砺"
+    },
+    "mapCTA": {
+      "to": "相倉合掌集落"
+    }
+  },
+  "hakusan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "白山"
+    },
+    "mapCTA": {
+      "to": "白山市街"
+    }
+  },
+  "kamo-kyoto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "月ヶ瀬口"
+    },
+    "mapCTA": {
+      "to": "南山城村"
+    }
+  },
+  "shingu-wakayama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "新宮駅"
+    }
+  },
+  "yunotsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "温泉津駅"
+    }
+  },
+  "himeshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "伊美港"
+    },
+    "mapCTA": {
+      "to": "姫島"
+    }
+  },
+  "toshima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "竹芝客船ターミナル"
+    },
+    "mapCTA": {
+      "to": "利島"
+    }
+  },
+  "joetsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "上越妙高駅"
+    }
+  },
+  "myoko": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "妙高高原"
+    }
+  },
+  "hakodate": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "函館駅"
+    }
+  },
+  "asahikawa": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "旭川空港"
+    },
+    "mapCTA": {
+      "to": "旭川駅"
+    }
+  },
+  "kushiro": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "釧路空港"
+    },
+    "mapCTA": {
+      "to": "釧路駅"
+    }
+  },
+  "yoichi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "余市駅"
+    }
+  },
+  "akkeshi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "厚岸"
+    },
+    "mapCTA": {
+      "to": "厚岸駅"
+    }
+  },
+  "kitami": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "女満別空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "北見"
+    },
+    "mapCTA": {
+      "to": "北見駅"
+    }
+  },
+  "monbetsu": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "紋別空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "紋別市街"
+    },
+    "mapCTA": {
+      "to": "紋別市街"
+    }
+  },
+  "mashike": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "留萌"
+    },
+    "mapCTA": {
+      "to": "増毛港"
+    }
+  },
+  "sendai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "仙台駅"
+    }
+  },
+  "yamagata-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "山形駅"
+    }
+  },
+  "fukushima-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "福島駅"
+    }
+  },
+  "omagari": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "大曲駅"
+    }
+  },
+  "shinjou": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "新庄駅"
+    }
+  },
+  "nagai": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "長井市街"
+    }
+  },
+  "yokohama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "横浜駅"
+    }
+  },
+  "mito": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "水戸駅"
+    }
+  },
+  "utsunomiya": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "宇都宮駅"
+    }
+  },
+  "takasaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "高崎駅"
+    }
+  },
+  "odawara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "小田原駅"
+    }
+  },
+  "sawara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "佐原駅"
+    }
+  },
+  "nokogiriyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "鋸山山頂"
+    }
+  },
+  "katsuura-chiba": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "勝浦駅"
+    }
+  },
+  "azumino": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "安曇野市街"
+    }
+  },
+  "iida": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "飯田駅"
+    }
+  },
+  "nakatsugawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "中津川駅"
+    }
+  },
+  "shizuoka-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "静岡駅"
+    }
+  },
+  "yaizu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "焼津駅"
+    }
+  },
+  "hamanako": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "浜名湖弁天島"
+    }
+  },
+  "gamagori": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "蒲郡駅"
+    }
+  },
+  "toyota-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "豊田市駅"
+    }
+  },
+  "otsu-shiga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "大津駅"
+    }
+  },
+  "kusatsu-shiga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "草津駅"
+    }
+  },
+  "takashima-shiga": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "マキノ高原"
+    }
+  },
+  "tango-kyoto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "天橋立"
+    },
+    "mapCTA": {
+      "to": "京丹後市街"
+    }
+  },
+  "owase": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "尾鷲駅"
+    }
+  },
+  "gobo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "御坊駅"
+    }
+  },
+  "kushimoto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "潮岬"
+    }
+  },
+  "matsue": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "出雲空港"
+    },
+    "mapCTA": {
+      "to": "松江駅"
+    }
+  },
+  "hamada-shimane": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "石見空港"
+    },
+    "mapCTA": {
+      "to": "浜田駅"
+    }
+  },
+  "kure": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "呉駅"
+    }
+  },
+  "miyoshi-hiroshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "三次駅"
+    }
+  },
+  "nagato-yamaguchi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "長門市"
+    },
+    "mapCTA": {
+      "to": "元乃隅稲荷神社"
+    }
+  },
+  "mine-yamaguchi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "美祢"
+    },
+    "mapCTA": {
+      "to": "秋芳洞"
+    }
+  },
+  "takamatsu": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "高松空港"
+    },
+    "mapCTA": {
+      "to": "高松駅"
+    }
+  },
+  "sakaide": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "坂出駅"
+    }
+  },
+  "tosa-city": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "波介川口"
+    },
+    "mapCTA": {
+      "to": "宇佐大橋"
+    }
+  },
+  "kanonji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "観音寺駅"
+    }
+  },
+  "fukuoka-city": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "福岡空港"
+    },
+    "mapCTA": {
+      "to": "博多駅"
+    }
+  },
+  "kurume": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "久留米駅"
+    }
+  },
+  "yatsushiro": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "八代駅"
+    }
+  },
+  "oguni-kumamoto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "杖立温泉"
+    },
+    "mapCTA": {
+      "to": "杖立温泉"
+    }
+  },
+  "izumi-kagoshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "出水駅"
+    }
+  },
+  "makurazaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "枕崎駅"
+    }
+  },
+  "miyakonojo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "都城駅"
+    }
+  },
+  "nanjo-okinawa": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "南城市役所"
+    },
+    "mapCTA": {
+      "to": "斎場御嶽"
+    }
+  },
+  "aogashima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "八丈島港"
+    },
+    "mapCTA": {
+      "to": "青ヶ島港"
+    }
+  },
+  "kugashima": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "福江港"
+    },
+    "mapCTA": {
+      "to": "旧五輪教会堂"
+    }
+  },
+  "nakatosa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "土佐久礼駅"
+    }
+  },
+  "ikata": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "三崎港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "八幡浜"
+    },
+    "mapCTA": {
+      "to": "佐田岬"
+    }
+  },
+  "muroto-cape": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "奈半利"
+    },
+    "mapCTA": {
+      "to": "室戸岬"
+    }
+  },
+  "oshima-yamaguchi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "大島大橋"
+    },
+    "mapCTA": {
+      "to": "片添ヶ浜"
+    }
+  },
+  "ibara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "井原駅"
+    }
+  },
+  "niimi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "新見駅"
+    }
+  },
+  "uda-nara": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "榛原"
+    },
+    "mapCTA": {
+      "to": "室生寺"
+    }
+  },
+  "mimasaka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "湯郷温泉"
+    }
+  },
+  "kochi-shimanto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "佐田沈下橋"
+    }
+  },
+  "yonago": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "米子鬼太郎空港"
+    },
+    "mapCTA": {
+      "to": "米子駅"
+    }
+  },
+  "kaga-onsen2": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "山代温泉街"
+    }
+  },
+  "takayama-kogen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "高山"
+    },
+    "mapCTA": {
+      "to": "新穂高ロープウェイ"
+    }
+  },
+  "iga-ueno": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "上野市駅"
+    }
+  },
+  "miyanoshita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "宮ノ下駅"
+    }
+  },
+  "shibu-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "渋温泉"
+    }
+  },
+  "togatta-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "白石蔵王"
+    },
+    "mapCTA": {
+      "to": "遠刈田温泉"
+    }
+  },
+  "hachimantai-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "鹿角花輪"
+    },
+    "mapCTA": {
+      "to": "後生掛温泉"
+    }
+  },
+  "iiyama-onsen": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "野沢温泉村"
+    }
+  },
+  "ono-fukui": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "越前大野駅"
+    }
+  },
+  "katsuyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "勝山駅"
+    }
+  },
+  "nomaike": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "串木野新港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "野間池"
+    },
+    "mapCTA": {
+      "to": "野間池港"
+    }
+  },
+  "hioki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "伊集院"
+    },
+    "mapCTA": {
+      "to": "美山陶芸村"
+    }
+  },
+  "shimokitazawa-nyuto": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "鶴の湯温泉"
+    }
+  },
+  "hirakawa": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "碇ヶ関"
+    },
+    "mapCTA": {
+      "to": "碇ヶ関温泉"
+    }
+  },
+  "kurikoma": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "くりこま高原"
+    },
+    "mapCTA": {
+      "to": "栗駒山"
+    }
+  },
+  "namioka": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "浪岡"
+    },
+    "mapCTA": {
+      "to": "浪岡城跡"
+    }
+  },
+  "shimokita": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "下北"
+    },
+    "mapCTA": {
+      "to": "仏ヶ浦"
+    }
+  },
+  "towada-lake": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "八戸"
+    },
+    "mapCTA": {
+      "to": "十和田湖"
+    }
+  },
+  "rikuchu-coast": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "大槌駅"
+    }
+  },
+  "ichinoseki-hiraizumi2": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "平泉駅"
+    }
+  },
+  "numata": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "沼田駅"
+    }
+  },
+  "tsuchiura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "土浦駅"
+    }
+  },
+  "oshika": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "石巻"
+    },
+    "mapCTA": {
+      "to": "鮎川港"
+    }
+  },
+  "kujukuri-icho": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "上総一ノ宮駅"
+    }
+  },
+  "miyota": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "御代田駅"
+    }
+  },
+  "saijo-hiroshima": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "西条駅"
+    }
+  },
+  "ryoishi": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "綾里駅"
+    }
+  },
+  "noheji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "野辺地駅"
+    }
+  },
+  "tobetsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "石狩当別駅"
+    }
+  },
+  "fukaura": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "不老不死温泉"
+    }
+  },
+  "isesaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "伊勢崎駅"
+    }
+  },
+  "matsumoto-kaido": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "塩尻駅"
+    }
+  },
+  "aizu-misato": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "会津本郷駅"
+    }
+  },
+  "tateyama-toyama": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "室堂"
+    }
+  },
+  "suo-sanbe": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "大田市"
+    },
+    "mapCTA": {
+      "to": "三瓶温泉"
+    }
+  },
+  "takachihogo-shishiku": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "椎葉村役場"
+    },
+    "mapCTA": {
+      "to": "鶴富屋敷"
+    }
+  },
+  "kamishihoro": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "帯広"
+    },
+    "mapCTA": {
+      "to": "ナイタイ高原牧場"
+    }
+  },
+  "yakumo": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "八雲駅"
+    }
+  },
+  "susaki": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "須崎駅"
+    }
+  },
+  "ube": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "山口宇部空港"
+    },
+    "mapCTA": {
+      "to": "宇部新川駅"
+    }
+  },
+  "itoigawa2": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "糸魚川駅"
+    }
+  },
+  "agematsu": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "上松駅"
+    }
+  },
+  "unzen2": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "諫早"
+    },
+    "mapCTA": {
+      "to": "雲仙温泉"
+    }
+  },
+  "kochi-ino": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "e5489"
+    },
+    "mapCTA": {
+      "to": "伊野駅"
+    }
+  },
+  "hiji": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "jrkyushu"
+    },
+    "mapCTA": {
+      "to": "日出駅"
+    }
+  },
+  "tsunan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "津南駅"
+    }
+  },
+  "kurobe": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "黒部駅"
+    }
+  },
+  "tsuruoka-kinzan": {
+    "mainCTA": {
+      "type": "rail",
+      "provider": "ekinet"
+    },
+    "mapCTA": {
+      "to": "金山駅"
+    }
+  },
+  "tomari-okinawa": {
+    "mainCTA": {
+      "type": "ferry",
+      "from": "運天港"
+    },
+    "mapCTA": {
+      "to": "伊平屋島港"
+    }
+  },
+  "ogimi": {
+    "mainCTA": {
+      "type": "flight",
+      "to": "那覇空港"
+    },
+    "subCTA": {
+      "type": "rental",
+      "from": "大宜味村"
+    },
+    "mapCTA": {
+      "to": "大宜味村役場"
+    }
   }
 }
