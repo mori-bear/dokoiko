@@ -990,28 +990,26 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 .btn-maps          { background: #34a853; color: #fff; }
 .btn-maps:hover    { background: #2d9044; }
 
-/* secondary マップ補助表示（ボタンではなくテキストリンク扱い） */
-.route-map-secondary {
-  display: flex;
-  align-items: baseline;
-  gap: .5em;
-  opacity: .65;
-  margin-top: .25rem;
-  padding: 0 .25rem;
+/* 最後の移動ブロック（steps の後） */
+.local-section {
+  margin-top: 1rem;
+  padding: 12px 14px;
+  background: var(--bg-card, #f5f5f3);
+  border-radius: 12px;
 }
-.route-map-secondary__label {
+.local-header {
   font-size: .75em;
-  color: #888;
-  white-space: nowrap;
-  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--text-sub, #888);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .4rem;
 }
-.route-map-secondary__link {
-  font-size: .8em;
-  color: #34a853;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.local-route {
+  font-size: .95em;
+  color: var(--text-main, #333);
+  margin: 0 0 .7rem;
 }
-.route-map-secondary__link:hover { opacity: .8; }
 
 .btn-jr-east:hover,
 .btn-jr-west:hover,

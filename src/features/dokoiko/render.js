@@ -864,21 +864,14 @@ function buildAccessBlock(city, departure) {
   const uiData = resolveAccessUI(steps, departure, city);
   if (!uiData) return '';
 
-  const { mainCTA, mapMain, mapMainSecondary, mapLocal } = uiData;
+  const { mainCTA, mapMain, mapLocal } = uiData;
   const destLabel = city.displayName ?? city.name;
 
-  /* ① 全体ルートマップボタン（primary + secondary） */
+  /* ① 全体ルートマップボタン */
   const mapFromLabel = mapMain.from?.replace(/駅$/, '') ?? '';
   const mapMainHtml  = mapMain.url
     ? `<div class="route-map-row">
          <a href="${mapMain.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${mapFromLabel} → ${mapMain.to}の行き方を地図で見る</a>
-       </div>`
-    : '';
-
-  const mapSecondaryHtml = mapMainSecondary?.url
-    ? `<div class="route-map-secondary">
-         <span class="route-map-secondary__label">${mapMainSecondary.sectionLabel}</span>
-         <a href="${mapMainSecondary.url}" target="_blank" rel="noopener noreferrer" class="route-map-secondary__link">${mapMainSecondary.from} → ${mapMainSecondary.to}の地図を見る</a>
        </div>`
     : '';
 
@@ -898,13 +891,12 @@ function buildAccessBlock(city, departure) {
     .map((s, i) => _buildAccessStepCard(s, i))
     .join('');
 
-  /* ⑤ 到着後の移動（mapLocal がある場合のみ） */
+  /* ⑤ 最後の移動ブロック（steps の後） */
   const localHtml = _buildAccessLocalSection(mapLocal, uiData.steps, city);
 
   return `
     <div class="card-section">
       ${mapMainHtml}
-      ${mapSecondaryHtml}
       ${summaryHtml}
       ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
@@ -937,33 +929,27 @@ function _buildAccessStepCard(step, index) {
 function _buildAccessLocalSection(mapLocal, filledSteps, city) {
   if (!mapLocal) return '';
 
-  /* レンタカー判定: 最後の local の method が「レンタカー」なら rental リンクを表示 */
   const needsRental = mapLocal.method === 'レンタカー';
-  const gatewayCity = needsRental
-    ? (mapLocal.from?.replace(/駅$/, '') ?? null)
-    : null;
+  const gatewayCity = needsRental ? (mapLocal.from?.replace(/駅$/, '') ?? null) : null;
   const rentalLink  = needsRental ? buildRentalLink(gatewayCity) : null;
 
-  const mapLabel   = mapLocal.from?.replace(/駅$/, '').replace(/港$/, '') ?? '';
-  const mapBtnHtml = mapLocal.url
-    ? `<div class="link-list">
-         <a href="${mapLocal.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${mapLabel} → ${mapLocal.to}の行き方を地図で見る</a>
-       </div>`
-    : '';
+  const fromDisp = mapLocal.from?.replace(/駅$/, '').replace(/港$/, '') ?? '';
+  const toDisp   = mapLocal.to?.replace(/駅$/, '').replace(/港$/, '') ?? '';
 
+  const mapBtnHtml = mapLocal.url
+    ? `<a href="${mapLocal.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">地図で見る</a>`
+    : '';
   const rentalHtml = rentalLink?.url
-    ? `<div class="link-list">
-         <a href="${rentalLink.url}" target="_blank" rel="noopener noreferrer" class="btn btn-rental">${rentalLink.label}</a>
-       </div>`
+    ? `<a href="${rentalLink.url}" target="_blank" rel="noopener noreferrer" class="btn btn-rental">${rentalLink.label}</a>`
     : '';
 
   if (!mapBtnHtml && !rentalHtml) return '';
 
   return `
     <div class="local-section">
-      <div class="local-header">到着後の移動</div>
-      ${mapBtnHtml}
-      ${rentalHtml}
+      <div class="local-header">最後の移動</div>
+      <p class="local-route">${fromDisp} → ${toDisp}</p>
+      <div class="link-list">${mapBtnHtml}${rentalHtml}</div>
     </div>
   `;
 }
