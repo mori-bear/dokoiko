@@ -370,7 +370,7 @@ function buildStepCtaLabel(sg) {
       return fromTo ? `Googleマップで確認（${fromTo}）` : 'Googleマップで確認';
     case 'skyscanner':
     case 'google-flights':
-      return fromTo ? `飛行機で行く（${fromTo}）` : cta.label;
+      return fromTo ? `航空券を予約する（${fromTo}）` : cta.label;
     case 'ferry':
       return fromTo ? `フェリーを予約する（${fromTo}）` : cta.label;
     case 'bus':
@@ -379,9 +379,16 @@ function buildStepCtaLabel(sg) {
     case 'jr-west':
     case 'jr-kyushu':
     case 'jr-ex':
-    case 'jr-window':
-      if (stepMode === '新幹線') return fromTo ? `新幹線で行く（${fromTo}）` : '新幹線で行く';
-      return null; // JR在来線・私鉄はCTAなし（ステップラベルのみ表示）
+    case 'jr-window': {
+      const providerLabel = {
+        'jr-east':   'えきねっと',
+        'jr-west':   'e5489',
+        'jr-kyushu': 'JR九州ネット予約',
+        'jr-ex':     'EX',
+        'jr-window': 'みどりの窓口',
+      }[cta.type] ?? '鉄道';
+      return fromTo ? `${providerLabel}で予約する（${fromTo}）` : `${providerLabel}で予約する`;
+    }
     default:
       return cta.label ?? '';
   }

@@ -1288,7 +1288,6 @@ function buildCityTypeRoute(city, departure, fromCity) {
     const jrCta = buildJrLink(city.railProvider);
     if (jrCta) {
       const fromDisp = origin.replace(/駅$/, '');
-      const toDisp   = accessSt.replace(/駅$/, '');
       // mapPoint あり（観光地スポット）の場合は駅 → 観光地のローカルステップを常に追加
       const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
       stepGroups.push({
@@ -1296,7 +1295,7 @@ function buildCityTypeRoute(city, departure, fromCity) {
         stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
         cta: jrCta,
         caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
-        ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
       });
       if (hasLocal) {
         const localTo = mTo !== label ? mTo : label;
@@ -1340,13 +1339,12 @@ function buildSuburbanRoute(city, departure, fromCity) {
     const jrCta = buildJrLink(city.railProvider);
     if (jrCta) {
       const fromDisp = origin.replace(/駅$/, '');
-      const toDisp   = accessSt.replace(/駅$/, '');
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
         cta: jrCta,
         caution: '▼ 電車はここまで。この先は現地移動',
-        ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+        ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
       });
     }
   }
@@ -1386,14 +1384,13 @@ function buildRuralRoute(city, departure, fromCity) {
         const jrCta = buildJrLink(_deriveJrProvider(departure, city.region));
         if (jrCta) {
           const fromDisp = origin.replace(/駅$/, '');
-          const toDisp   = gateway.replace(/駅$/, '');
           const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label);
           stepGroups.push({
             type: 'step-group',
             stepLabel: `${stepIdx(0)}  ${origin} → ${gateway}（鉄道）`,
             cta: jrCta,
             caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-            ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+            ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
           });
           if (gateway !== accessSt) {
             stepGroups.push({
@@ -1422,14 +1419,13 @@ function buildRuralRoute(city, departure, fromCity) {
   const jrCta = buildJrLink(city.railProvider);
   if (jrCta) {
     const fromDisp = origin.replace(/駅$/, '');
-    const toDisp   = gateway.replace(/駅$/, '');
     const hasNextStep = (gateway !== accessSt) || !isAccessSameAsDest(accessSt, label) || !!city.mapPoint;
     stepGroups.push({
       type: 'step-group',
       stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${gateway}（鉄道）`,
       cta: jrCta,
       caution: hasNextStep ? `▼ 電車はここまで。この先はバスに乗り換え` : null,
-      ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+      ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
     });
   }
 
@@ -1533,7 +1529,7 @@ function buildIslandRoute(city, departure, fromCity) {
             stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（鉄道）`,
             cta: hubJrCta,
             caution: `▼ 到着後、${city.ferryGateway}へ移動`,
-            ctaLabel: `鉄道を予約する（${fromDisp} → ${hubCity}）`,
+            ctaLabel: `${hubJrCta.label}で予約する（${fromDisp} → ${hubCity}）`,
           });
         }
       } else {
@@ -1546,7 +1542,7 @@ function buildIslandRoute(city, departure, fromCity) {
             stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${hubCity}（鉄道）`,
             cta: derivedJrCta,
             caution: `▼ 到着後、${city.ferryGateway}へ移動`,
-            ctaLabel: `鉄道を予約する（${fromDisp} → ${hubCity}）`,
+            ctaLabel: `${derivedJrCta.label}で予約する（${fromDisp} → ${hubCity}）`,
           });
         } else {
           stepGroups.push({
@@ -1608,12 +1604,11 @@ function _buildRailOnlySteps(city, departure, fromCity) {
 
   const steps = [];
   const fromDisp = origin.replace(/駅$/, '');
-  const toDisp   = accessSt.replace(/駅$/, '');
   steps.push({
     type: 'step-group',
     stepLabel: `${STEP_IDX[0]}  ${origin} → ${accessSt}（鉄道）`,
     cta: jrCta, caution: null,
-    ctaLabel: `鉄道を予約する（${fromDisp} → ${toDisp}）`,
+    ctaLabel: `${jrCta.label}で予約する（${fromDisp} → ${label}）`,
   });
   if (accessSt !== label) {
     steps.push({
