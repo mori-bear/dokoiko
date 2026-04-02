@@ -717,15 +717,22 @@ export function resolveAccessUI(steps, departure, city) {
     return { ...s, from };
   });
 
-  /* mainCTA: 最初の予約可能ステップ
-   *   from === to（出発地がハブ駅と一致）のケースはno-opなのでスキップ */
-  const mainRawStep = filledSteps.find(s => {
-    if (!['rail', 'flight', 'ferry'].includes(s.type)) return false;
-    const f = s.from?.replace(/駅$/, '');
-    const t = s.to?.replace(/駅$/, '');
-    return f !== t;
-  });
-  const mainCTA     = mainRawStep ? _buildAccessMainCTA(mainRawStep, depIata) : null;
+  /* mainCTA: 最初の長距離移動（rail または flight）
+   *   from === to（出発地がハブ駅と一致）のケースはno-opなのでスキップ
+   *   rail/flight がなければ ferry を mainCTA に昇格 */
+  const _isNoOp = s => s.from?.replace(/駅$/, '') === s.to?.replace(/駅$/, '');
+  const mainRailFlight = filledSteps.find(s =>
+    ['rail', 'flight'].includes(s.type) && !_isNoOp(s)
+  );
+  const mainRawStep = mainRailFlight
+    ?? filledSteps.find(s => s.type === 'ferry' && !_isNoOp(s));
+  const mainCTA = mainRawStep ? _buildAccessMainCTA(mainRawStep, depIata) : null;
+
+  /* subCTA: ferry のみ（mainCTA が rail/flight のときのみ表示） */
+  const ferryRawStep = mainRailFlight
+    ? filledSteps.find(s => s.type === 'ferry')
+    : null;
+  const subCTA = ferryRawStep ? _buildAccessMainCTA(ferryRawStep, depIata) : null;
 
   /* mapMain: 全体ルート（出発 → 到着先）
    * 優先順: mapPoint → ferryGateway → railGateway → steps[last].to */
@@ -769,26 +776,11 @@ export function resolveAccessUI(steps, departure, city) {
     }
   }
 
-  /* mapMainSecondary: 最後のステップが ferry または local の場合、その区間を補助表示 */
-  const _secLabel = lastStep.type === 'ferry'
-    ? 'フェリー区間'
-    : (lastStep.method === 'バス' ? '最後の移動（バス）'
-      : lastStep.method === 'タクシー' ? '最後の移動（タクシー）'
-      : '最後の移動（バス・徒歩）');
-  const mapMainSecondary = (lastStep.type === 'ferry' || lastStep.type === 'local')
-    ? {
-        from:         lastStep.from,
-        to:           lastStep.to,
-        sectionLabel: _secLabel,
-        url:          _accessMapsUrl(lastStep.from, lastStep.to, 'driving'),
-      }
-    : null;
-
   return {
     mainCTA,
+    ...(subCTA   ? { subCTA }   : {}),
     mapMain,
-    ...(mapMainSecondary ? { mapMainSecondary } : {}),
-    ...(mapLocal         ? { mapLocal }         : {}),
+    ...(mapLocal ? { mapLocal } : {}),
     steps: filledSteps,
   };
 }
@@ -864,10 +856,10 @@ function buildAccessBlock(city, departure) {
   const uiData = resolveAccessUI(steps, departure, city);
   if (!uiData) return '';
 
-  const { mainCTA, mapMain, mapLocal } = uiData;
+  const { mainCTA, subCTA, mapMain } = uiData;
   const destLabel = city.displayName ?? city.name;
 
-  /* ① 全体ルートマップボタン */
+  /* ① mapMain — 全体ルートマップ（最上部） */
   const mapFromLabel = mapMain.from?.replace(/駅$/, '') ?? '';
   const mapMainHtml  = mapMain.url
     ? `<div class="route-map-row">
@@ -875,10 +867,7 @@ function buildAccessBlock(city, departure) {
        </div>`
     : '';
 
-  /* ② ルート概要 */
-  const summaryHtml = `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`;
-
-  /* ③ メインCTA（1つのみ） */
+  /* ② mainCTA — rail または flight の予約ボタン（1つのみ） */
   const mainCtaHtml = mainCTA?.url
     ? `<div class="main-cta-row">
          <a href="${mainCTA.url}" target="_blank" rel="noopener noreferrer"
@@ -886,21 +875,26 @@ function buildAccessBlock(city, departure) {
        </div>`
     : '';
 
-  /* ④ 番号付きステップリスト */
+  /* ③ steps — 説明のみ（ボタンなし） */
   const stepsHtml = uiData.steps
     .map((s, i) => _buildAccessStepCard(s, i))
     .join('');
 
-  /* ⑤ 最後の移動ブロック（steps の後） */
-  const localHtml = _buildAccessLocalSection(mapLocal, uiData.steps, city);
+  /* ④ subCTA — ferry のみ（steps の後） */
+  const subCtaHtml = subCTA?.url
+    ? `<div class="sub-cta-row">
+         <a href="${subCTA.url}" target="_blank" rel="noopener noreferrer"
+            class="btn ${btnClass(subCTA.btnType)}">${subCTA.label}</a>
+       </div>`
+    : '';
 
   return `
     <div class="card-section">
       ${mapMainHtml}
-      ${summaryHtml}
+      <div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>
       ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
-      ${localHtml}
+      ${subCtaHtml}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
   `;
