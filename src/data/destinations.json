@@ -26,7 +26,7 @@
       "長谷寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "鎌倉",
     "gateways": {
       "rail": [
@@ -102,7 +102,7 @@
       "MOA美術館"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "熱海",
     "gateways": {
       "rail": [
@@ -181,7 +181,7 @@
       "竜頭の滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "日光",
     "gateways": {
       "rail": [
@@ -274,7 +274,7 @@
       "白糸の滝"
     ],
     "shinkansenAccess": true,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "軽井沢",
     "gateways": {
       "rail": [
@@ -368,7 +368,7 @@
       "忍野八海"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "富士河口湖",
     "gateways": {
       "rail": [
@@ -452,7 +452,7 @@
       "赤目四十八滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "奈良",
     "gateways": {
       "rail": [
@@ -530,7 +530,7 @@
       "白保サンゴ礁"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "石垣島",
     "gateways": {
@@ -579,7 +579,8 @@
           "to": "石垣空港"
         }
       ]
-    }
+    },
+    "finalPoint": "石垣市街"
   },
   {
     "id": "ise",
@@ -608,7 +609,7 @@
       "二見浦"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伊勢",
     "gateways": {
       "rail": [
@@ -700,7 +701,7 @@
       "湯布院"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "別府",
     "gateways": {
       "rail": [
@@ -790,7 +791,7 @@
       "積丹岬"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "小樽",
     "gateways": {
       "rail": [
@@ -866,7 +867,7 @@
       "富良野スキー場"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "富良野",
     "gateways": {
       "rail": [
@@ -949,7 +950,7 @@
       "五大堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "松島",
     "gateways": {
       "rail": [
@@ -1043,7 +1044,7 @@
       "弥山"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "宮島",
     "gateways": {
@@ -1105,7 +1106,8 @@
           "bookingUrl": "https://miyajima-matsudai.co.jp/"
         }
       ]
-    }
+    },
+    "finalPoint": "厳島神社"
   },
   {
     "id": "onomichi",
@@ -1136,7 +1138,7 @@
       "しまなみ海道"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "尾道",
     "gateways": {
       "rail": [
@@ -1222,7 +1224,7 @@
       "オリーブ公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "小豆島",
     "gateways": {
@@ -1320,7 +1322,7 @@
       "境港"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "米子",
     "gateways": {
       "rail": [
@@ -1400,7 +1402,7 @@
       "高野龍神スカイライン"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "白浜",
     "gateways": {
       "rail": [
@@ -1481,7 +1483,7 @@
       "展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "渡嘉敷島",
     "gateways": {
@@ -1582,7 +1584,7 @@
       "久米島ウミガメ館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "久米島",
     "gateways": {
@@ -1652,7 +1654,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "久米島"
   },
   {
     "id": "miyakojima",
@@ -1684,7 +1687,7 @@
       "来間大橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "宮古島",
     "gateways": {
@@ -1733,7 +1736,8 @@
           "to": "宮古空港"
         }
       ]
-    }
+    },
+    "finalPoint": "宮古島"
   },
   {
     "id": "kouzushima",
@@ -1761,7 +1765,7 @@
       "多幸湾"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "神津島",
     "gateways": {
@@ -1852,7 +1856,7 @@
       "箱根関所"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "箱根",
     "gateways": {
       "rail": [
@@ -1933,7 +1937,7 @@
       "独鈷の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "修善寺",
     "gateways": {
       "rail": [
@@ -2007,7 +2011,7 @@
       "熱の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "草津温泉",
     "gateways": {
       "rail": [
@@ -2090,7 +2094,7 @@
       "爪木崎"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "下田",
     "gateways": {
       "rail": [
@@ -2172,7 +2176,7 @@
       "砂漠"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "伊豆大島",
     "gateways": {
@@ -2272,7 +2276,7 @@
       "明善寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "高山",
     "gateways": {
       "rail": [
@@ -2366,7 +2370,7 @@
       "太閤の湯殿館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "有馬温泉",
     "gateways": {
       "rail": [
@@ -2450,7 +2454,7 @@
       "余部橋梁"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "城崎温泉",
     "gateways": {
       "rail": [
@@ -2539,7 +2543,7 @@
       "倉敷美観地区"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "倉敷",
     "gateways": {
       "rail": [
@@ -2629,7 +2633,7 @@
       "熊野本宮大社"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "白浜",
     "gateways": {
       "rail": [
@@ -2707,7 +2711,7 @@
       "白川郷合掌集落"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "高山",
     "gateways": {
       "rail": [
@@ -2798,7 +2802,7 @@
       "夫婦岩"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "鳥羽",
     "gateways": {
       "rail": [
@@ -2874,7 +2878,7 @@
       "由布院玉の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "湯布院",
     "gateways": {
       "rail": [
@@ -2970,7 +2974,7 @@
       "九重夢大吊橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "黒川温泉",
     "gateways": {
       "rail": [
@@ -3053,7 +3057,7 @@
       "大観峰"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "阿蘇",
     "gateways": {
       "rail": [
@@ -3140,7 +3144,7 @@
       "千尋の滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "屋久島",
     "gateways": {
@@ -3241,7 +3245,7 @@
       "イルカウォッチング"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "天草",
     "gateways": {
       "rail": [
@@ -3324,7 +3328,7 @@
       "中尊寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "平泉",
     "gateways": {
       "rail": [
@@ -3400,7 +3404,7 @@
       "青柳家"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "角館",
     "gateways": {
       "rail": [
@@ -3477,7 +3481,7 @@
       "塔のへつり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "会津若松",
     "gateways": {
       "rail": [
@@ -3564,7 +3568,7 @@
       "樹氷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "蔵王",
     "gateways": {
       "rail": [
@@ -3648,7 +3652,7 @@
       "秋吉台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "萩",
     "gateways": {
       "rail": [
@@ -3726,7 +3730,7 @@
       "巌流島"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "下関",
     "gateways": {
       "rail": [
@@ -3802,7 +3806,7 @@
       "ANDO MUSEUM"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "直島",
     "gateways": {
@@ -3900,7 +3904,7 @@
       "金刀比羅宮"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "琴平",
     "gateways": {
       "rail": [
@@ -3985,7 +3989,7 @@
       "じゃこ天"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "宇和島",
     "gateways": {
       "rail": [
@@ -4061,7 +4065,7 @@
       "サイロ展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "洞爺湖",
     "gateways": {
       "rail": [
@@ -4142,7 +4146,7 @@
       "クマ牧場"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "登別",
     "gateways": {
       "rail": [
@@ -4218,7 +4222,7 @@
       "羅臼岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "知床",
     "gateways": {
       "rail": [
@@ -4302,7 +4306,7 @@
       "白米千枚田"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "輪島",
     "gateways": {
       "rail": [
@@ -4385,7 +4389,7 @@
       "片山津温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "加賀温泉郷",
     "gateways": {
       "rail": [
@@ -4464,7 +4468,7 @@
       "岩岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "白馬",
     "gateways": {
       "rail": [
@@ -4545,7 +4549,7 @@
       "傘松公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "天橋立",
     "gateways": {
       "rail": [
@@ -4621,7 +4625,7 @@
       "浦島神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "伊根",
     "gateways": {
       "rail": [
@@ -4703,7 +4707,7 @@
       "池田湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "指宿",
     "gateways": {
       "rail": [
@@ -4780,7 +4784,7 @@
       "佐世保バーガー"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "佐世保",
     "gateways": {
       "rail": [
@@ -4856,7 +4860,7 @@
       "川内峠"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "平戸",
     "gateways": {
       "rail": [
@@ -4937,7 +4941,7 @@
       "浦富海岸"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "鳥取",
     "gateways": {
       "rail": [
@@ -5013,7 +5017,7 @@
       "男鹿半島"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "秋田",
     "gateways": {
       "rail": [
@@ -5092,7 +5096,7 @@
       "伊弉諾神宮"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "淡路島",
     "gateways": {
       "rail": [
@@ -5174,7 +5178,7 @@
       "もみじ台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "高尾山",
     "gateways": {
       "rail": [
@@ -5258,7 +5262,7 @@
       "花畑"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "館山",
     "gateways": {
       "rail": [
@@ -5340,7 +5344,7 @@
       "岩瀬家"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "高山",
     "gateways": {
       "rail": [
@@ -5423,7 +5427,7 @@
       "豊平峡ダム"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "定山渓",
     "gateways": {
       "rail": [
@@ -5504,7 +5508,7 @@
       "パッチワークの路"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "美瑛",
     "gateways": {
       "rail": [
@@ -5587,7 +5591,7 @@
       "龍泉洞"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "宮古",
     "gateways": {
       "rail": [
@@ -5670,7 +5674,7 @@
       "象潟"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "酒田",
     "gateways": {
       "rail": [
@@ -5747,7 +5751,7 @@
       "高千穂神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "高千穂",
     "gateways": {
       "rail": [
@@ -5829,7 +5833,7 @@
       "マングローブカヌー"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "奄美大島",
     "gateways": {
@@ -5928,7 +5932,7 @@
       "高浜海水浴場"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "五島列島",
     "gateways": {
@@ -6027,7 +6031,7 @@
       "雲仙温泉街"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "雲仙",
     "gateways": {
       "rail": [
@@ -6106,7 +6110,7 @@
       "ジョン万次郎像"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "足摺岬",
     "gateways": {
       "rail": [
@@ -6188,7 +6192,7 @@
       "平家屋敷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "大歩危",
     "gateways": {
       "rail": [
@@ -6272,7 +6276,7 @@
       "殿町通り"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "津和野",
     "gateways": {
       "rail": [
@@ -6348,7 +6352,7 @@
       "博物館明治村"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "犬山",
     "gateways": {
       "rail": [
@@ -6425,7 +6429,7 @@
       "馬籠宿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "木曽",
     "gateways": {
       "rail": [
@@ -6507,7 +6511,7 @@
       "由良川"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "美山",
     "gateways": {
       "rail": [
@@ -6589,7 +6593,7 @@
       "立山室堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "立山黒部",
     "gateways": {
       "rail": [
@@ -6674,7 +6678,7 @@
       "立山連峰展望"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "氷見",
     "gateways": {
       "rail": [
@@ -6750,7 +6754,7 @@
       "田沢湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "乳頭温泉",
     "gateways": {
       "rail": [
@@ -6834,7 +6838,7 @@
       "白狐の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "湯田温泉",
     "gateways": {
       "rail": [
@@ -6908,7 +6912,7 @@
       "不動山温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "嬉野温泉",
     "gateways": {
       "rail": [
@@ -6983,7 +6987,7 @@
       "小布施堂"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "小布施",
     "gateways": {
       "rail": [
@@ -7058,7 +7062,7 @@
       "木蝋資料館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "内子",
     "gateways": {
       "rail": [
@@ -7133,7 +7137,7 @@
       "乱礁遊歩道"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "室戸",
     "gateways": {
       "rail": [
@@ -7215,7 +7219,7 @@
       "祖谷かずら橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "祖谷",
     "gateways": {
       "rail": [
@@ -7299,7 +7303,7 @@
       "おろち湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "奥出雲",
     "gateways": {
       "rail": [
@@ -7382,7 +7386,7 @@
       "銀山川沿い散策"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "銀山温泉",
     "gateways": {
       "rail": [
@@ -7464,7 +7468,7 @@
       "三澤屋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "大内宿",
     "gateways": {
       "rail": [
@@ -7544,7 +7548,7 @@
       "野沢温泉スキー場"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "野沢温泉",
     "gateways": {
       "rail": [
@@ -7626,7 +7630,7 @@
       "竹鶴酒造"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "竹原",
     "gateways": {
       "rail": [
@@ -7703,7 +7707,7 @@
       "妻籠城跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "妻籠",
     "gateways": {
       "rail": [
@@ -7786,7 +7790,7 @@
       "清水屋資料館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "馬籠",
     "gateways": {
       "rail": [
@@ -7869,7 +7873,7 @@
       "慶雲館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "長浜",
     "gateways": {
       "rail": [
@@ -7946,7 +7950,7 @@
       "夢京橋キャッスルロード"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "彦根",
     "gateways": {
       "rail": [
@@ -8021,7 +8025,7 @@
       "根本大塔"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "高野山",
     "gateways": {
       "rail": [
@@ -8103,7 +8107,7 @@
       "温泉寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "下呂温泉",
     "gateways": {
       "rail": [
@@ -8183,7 +8187,7 @@
       "早稲田桟敷湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "鳴子温泉",
     "gateways": {
       "rail": [
@@ -8257,7 +8261,7 @@
       "甌穴"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "四万温泉",
     "gateways": {
       "rail": [
@@ -8339,7 +8343,7 @@
       "旧弘前市立図書館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "弘前",
     "gateways": {
       "rail": [
@@ -8422,7 +8426,7 @@
       "蔦沼"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "奥入瀬",
     "gateways": {
       "rail": [
@@ -8503,7 +8507,7 @@
       "益子焼窯元共販センター"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "益子",
     "gateways": {
       "rail": [
@@ -8586,7 +8590,7 @@
       "大師湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "別所温泉",
     "gateways": {
       "rail": [
@@ -8663,7 +8667,7 @@
       "永楽館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "出石",
     "gateways": {
       "rail": [
@@ -8744,7 +8748,7 @@
       "足湯の宿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "和倉温泉",
     "gateways": {
       "rail": [
@@ -8819,7 +8823,7 @@
       "三朝橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "三朝温泉",
     "gateways": {
       "rail": [
@@ -8901,7 +8905,7 @@
       "商人通り"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "飫肥",
     "gateways": {
       "rail": [
@@ -8979,7 +8983,7 @@
       "球磨川くだり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "人吉",
     "gateways": {
       "rail": [
@@ -9055,7 +9059,7 @@
       "明神池"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "上高地",
     "gateways": {
       "rail": [
@@ -9137,7 +9141,7 @@
       "吹割の滝"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "水上温泉",
     "gateways": {
       "rail": [
@@ -9218,7 +9222,7 @@
       "池の川水源"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "南阿蘇",
     "gateways": {
       "rail": [
@@ -9302,7 +9306,7 @@
       "来島海峡大橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "今治",
     "gateways": {
       "rail": [
@@ -9389,7 +9393,7 @@
       "おはなはん通り"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "大洲",
     "gateways": {
       "rail": [
@@ -9482,7 +9486,7 @@
       "島武意海岸"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "積丹",
     "gateways": {
       "rail": [
@@ -9577,7 +9581,7 @@
       "古代出雲歴史博物館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "出雲",
     "gateways": {
       "rail": [
@@ -9672,7 +9676,7 @@
     ],
     "railGateway": "金沢駅",
     "secondaryTransport": "bus",
-    "needsCar": true,
+    "requiresCar": true,
     "gatewayHub": "金沢",
     "hubStation": "金沢駅",
     "accessStation": "珠洲バスターミナル",
@@ -9744,7 +9748,7 @@
       "吉水神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "吉野",
     "gateways": {
       "rail": [
@@ -9839,7 +9843,7 @@
       "瀞峡"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "熊野新宮",
     "gateways": {
       "rail": [
@@ -9936,7 +9940,7 @@
       "仲間川マングローブ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "西表島",
     "gateways": {
@@ -10049,7 +10053,7 @@
       "吹屋ふるさと村"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "高梁",
     "gateways": {
       "rail": [
@@ -10145,7 +10149,7 @@
       "飛騨古川まつり会館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "飛騨古川",
     "gateways": {
       "rail": [
@@ -10235,7 +10239,7 @@
       "富貴寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "豊後高田",
     "gateways": {
       "rail": [],
@@ -10331,7 +10335,7 @@
       "シャボテン動物公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伊豆高原",
     "gateways": {
       "rail": [
@@ -10420,7 +10424,7 @@
       "白浜温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "白浜",
     "gateways": {
       "rail": [
@@ -10514,7 +10518,7 @@
       "ジョン万次郎資料館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "土佐清水",
     "gateways": {
       "rail": [
@@ -10610,7 +10614,7 @@
       "飫肥城下町"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "日南",
     "gateways": {
       "rail": [
@@ -10706,7 +10710,7 @@
       "旧大阪商船"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "門司港",
     "gateways": {
       "rail": [
@@ -10795,7 +10799,7 @@
       "マリノアシティ"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "糸島",
     "gateways": {
       "rail": [
@@ -10891,7 +10895,7 @@
       "眉山"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "島原",
     "gateways": {
       "rail": [
@@ -10987,7 +10991,7 @@
       "敦賀赤レンガ倉庫"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "敦賀",
     "gateways": {
       "rail": [
@@ -11077,7 +11081,7 @@
       "港の集落"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "高松",
     "gateways": {
@@ -11167,7 +11171,7 @@
       "黒岳ロープウェイ"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "層雲峡",
     "gateways": {
       "rail": [
@@ -11256,7 +11260,7 @@
       "レブンアツモリソウ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "礼文",
     "gateways": {
@@ -11354,7 +11358,7 @@
       "姫沼"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "利尻",
     "gateways": {
@@ -11450,7 +11454,7 @@
       "双湖台"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "阿寒湖",
     "gateways": {
       "rail": [
@@ -11530,7 +11534,7 @@
       "能取湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "網走",
     "gateways": {
       "rail": [
@@ -11608,7 +11612,7 @@
       "苔の洞門"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "支笏湖",
     "gateways": {
       "rail": [
@@ -11686,7 +11690,7 @@
       "チャグチャグ馬コ"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "遠野",
     "gateways": {
       "rail": [
@@ -11766,7 +11770,7 @@
       "寒風山"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "男鹿",
     "gateways": {
       "rail": [
@@ -11845,7 +11849,7 @@
       "上杉博物館"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "米沢",
     "gateways": {
       "rail": [
@@ -11919,7 +11923,7 @@
       "湯殿山神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "羽黒山温泉",
     "gateways": {
       "rail": [
@@ -11998,7 +12002,7 @@
       "鷺景の湯"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "秋保温泉",
     "gateways": {
       "rail": [
@@ -12076,7 +12080,7 @@
       "金木町（太宰治の故郷）"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "五所川原",
     "gateways": {
       "rail": [
@@ -12156,7 +12160,7 @@
       "川越城本丸御殿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "川越",
     "gateways": {
       "rail": [
@@ -12229,7 +12233,7 @@
       "那須どうぶつ王国"
     ],
     "shinkansenAccess": true,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "那須温泉",
     "gateways": {
       "rail": [
@@ -12307,7 +12311,7 @@
       "銚子電鉄"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "銚子",
     "gateways": {
       "rail": [
@@ -12380,7 +12384,7 @@
       "足利フラワーパーク"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "足利",
     "gateways": {
       "rail": [
@@ -12452,7 +12456,7 @@
       "箒川"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "塩原温泉",
     "gateways": {
       "rail": [
@@ -12533,7 +12537,7 @@
       "北沢浮游選鉱場"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "佐渡",
     "gateways": {
@@ -12628,7 +12632,7 @@
       "天女山"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "清里",
     "gateways": {
       "rail": [
@@ -12706,7 +12710,7 @@
       "天竜峡温泉"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "天竜峡",
     "gateways": {
       "rail": [
@@ -12778,7 +12782,7 @@
       "片倉館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "諏訪温泉",
     "gateways": {
       "rail": [
@@ -12856,7 +12860,7 @@
       "山門"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "永平寺",
     "gateways": {
       "rail": [
@@ -12935,7 +12939,7 @@
       "若狭フィッシャーマンズワーフ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "小浜温泉 若狭",
     "gateways": {
       "rail": [
@@ -13016,7 +13020,7 @@
       "新穂高ロープウェイ"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "奥飛騨温泉",
     "gateways": {
       "rail": [
@@ -13097,7 +13101,7 @@
       "弓ヶ浜"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "南伊豆",
     "gateways": {
       "rail": [
@@ -13175,7 +13179,7 @@
       "越前和紙の里"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "越前温泉 越前岬",
     "gateways": {
       "rail": [
@@ -13256,7 +13260,7 @@
       "大室山"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伊東温泉",
     "gateways": {
       "rail": [
@@ -13328,7 +13332,7 @@
       "俳聖殿"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伊賀上野",
     "gateways": {
       "rail": [
@@ -13406,7 +13410,7 @@
       "今井町（重伝建）"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "橿原",
     "gateways": {
       "rail": [
@@ -13487,7 +13491,7 @@
       "玉置神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "十津川温泉",
     "gateways": {
       "rail": [
@@ -13565,7 +13569,7 @@
       "赤れんが倉庫群"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "舞鶴",
     "gateways": {
       "rail": [
@@ -13651,7 +13655,7 @@
       "亀石"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "飛鳥 明日香村",
     "gateways": {
       "rail": [
@@ -13735,7 +13739,7 @@
       "豪円湯院"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "大山温泉",
     "gateways": {
       "rail": [
@@ -13815,7 +13819,7 @@
       "石見焼"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "温泉津温泉",
     "gateways": {
       "rail": [
@@ -13895,7 +13899,7 @@
       "代官所跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "石見銀山",
     "gateways": {
       "rail": [
@@ -13974,7 +13978,7 @@
       "吉香公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "岩国",
     "gateways": {
       "rail": [
@@ -14054,7 +14058,7 @@
       "倉吉絣"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "倉吉",
     "gateways": {
       "rail": [
@@ -14134,7 +14138,7 @@
       "みかん狩り"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "周防大島",
     "gateways": {
@@ -14222,7 +14226,7 @@
       "岩間沈下橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "四万十川",
     "gateways": {
       "rail": [
@@ -14301,7 +14305,7 @@
       "ダイビングスポット群"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "柏島",
     "gateways": {
@@ -14391,7 +14395,7 @@
       "石鎚山"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "西条",
     "gateways": {
       "rail": [
@@ -14471,7 +14475,7 @@
       "内海"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "愛南",
     "gateways": {
       "rail": [
@@ -14550,7 +14554,7 @@
       "瀧廉太郎記念館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "竹田温泉",
     "gateways": {
       "rail": [
@@ -14629,7 +14633,7 @@
       "サーラ・デ・うすき"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "臼杵",
     "gateways": {
       "rail": [
@@ -14707,7 +14711,7 @@
       "天領日田おひなまつり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "日田温泉",
     "gateways": {
       "rail": [
@@ -14786,7 +14790,7 @@
       "中尾山"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "波佐見 有田",
     "gateways": {
       "rail": [
@@ -14865,7 +14869,7 @@
       "御船山楽園"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "武雄温泉",
     "gateways": {
       "rail": [
@@ -14937,7 +14941,7 @@
       "大原邸"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "杵築",
     "gateways": {
       "rail": [
@@ -15019,7 +15023,7 @@
       "ツシマヤマネコ保護センター"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "対馬",
     "gateways": {
@@ -15090,7 +15094,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "厳原市街"
   },
   {
     "id": "iki-island",
@@ -15117,7 +15122,7 @@
       "壱岐焼酎蔵"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "壱岐",
     "gateways": {
@@ -15215,7 +15220,7 @@
       "広田遺跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "種子島",
     "gateways": {
@@ -15315,7 +15320,7 @@
       "菊池神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "菊池温泉",
     "gateways": {
       "rail": [
@@ -15395,7 +15400,7 @@
       "水牛車観光"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "竹富島",
     "gateways": {
@@ -15493,7 +15498,7 @@
       "ヨナグニウマ"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "与那国島",
     "gateways": {
@@ -15562,7 +15567,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "与那国島"
   },
   {
     "id": "nakijin",
@@ -15590,7 +15596,7 @@
       "ワルミ大橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "今帰仁",
     "gateways": {
       "rail": [
@@ -15671,7 +15677,7 @@
       "伊江島"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "本部 美ら海",
     "gateways": {
       "rail": [],
@@ -15761,7 +15767,7 @@
       "ホエールウォッチング"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "座間味島",
     "gateways": {
@@ -15860,7 +15866,7 @@
       "伊江島百合の花まつり"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "伊江島",
     "gateways": {
@@ -15958,7 +15964,7 @@
       "こはぐら荘（ちゅらさん舞台）"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "hotelSearch": "小浜島",
     "gateways": {
@@ -16040,7 +16046,7 @@
       "松代大本営地下壕"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "松代温泉",
     "gateways": {
       "rail": [
@@ -16119,7 +16125,7 @@
       "北竜湖"
     ],
     "shinkansenAccess": true,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "飯山温泉",
     "gateways": {
       "rail": [
@@ -16197,7 +16203,7 @@
       "街並み散策"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "矢掛",
     "gateways": {
       "rail": [
@@ -16277,7 +16283,7 @@
       "出雲街道"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "津山",
     "gateways": {
       "rail": [
@@ -16358,7 +16364,7 @@
       "大剣神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "剣山 貞光",
     "gateways": {
       "rail": [
@@ -16441,7 +16447,7 @@
       "道の駅北川はゆま"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "延岡",
     "gateways": {
       "rail": [
@@ -16522,7 +16528,7 @@
     ],
     "railGateway": "釜石駅",
     "secondaryTransport": null,
-    "needsCar": false,
+    "requiresCar": false,
     "hubStation": "新花巻駅",
     "accessStation": "釜石駅",
     "city": "釜石市",
@@ -16575,7 +16581,7 @@
     ],
     "railGateway": "大船渡駅",
     "secondaryTransport": null,
-    "needsCar": false,
+    "requiresCar": false,
     "hubStation": "一ノ関駅",
     "accessStation": "大船渡駅",
     "city": "大船渡市",
@@ -16628,7 +16634,7 @@
     ],
     "railGateway": "久慈駅",
     "secondaryTransport": null,
-    "needsCar": false,
+    "requiresCar": false,
     "hubStation": "八戸駅",
     "accessStation": "久慈駅",
     "city": "久慈市",
@@ -16680,7 +16686,7 @@
       "宗谷丘陵"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "稚内",
     "gateways": {
       "rail": [
@@ -16727,7 +16733,8 @@
           "to": "稚内空港"
         }
       ]
-    }
+    },
+    "finalPoint": "稚内市街"
   },
   {
     "id": "obihiro",
@@ -16754,7 +16761,7 @@
       "帯広競馬場（ばんえい競馬）"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "帯広",
     "gateways": {
       "rail": [
@@ -16801,7 +16808,8 @@
           "to": "帯広空港"
         }
       ]
-    }
+    },
+    "finalPoint": "帯広市街"
   },
   {
     "id": "rausu",
@@ -16829,7 +16837,7 @@
       "ホエールウォッチング"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "羅臼",
     "gateways": {
       "rail": [
@@ -16909,7 +16917,7 @@
       "開陽丸記念館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "江差",
     "gateways": {
       "rail": [
@@ -16989,7 +16997,7 @@
       "台温泉"
     ],
     "shinkansenAccess": true,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "花巻温泉",
     "gateways": {
       "rail": [
@@ -17070,7 +17078,7 @@
       "松川温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "八幡平",
     "gateways": {
       "rail": [
@@ -17151,7 +17159,7 @@
       "たつこ像"
     ],
     "shinkansenAccess": true,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "田沢湖",
     "gateways": {
       "rail": [
@@ -17232,7 +17240,7 @@
       "五大堂展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "山寺",
     "gateways": {
       "rail": [
@@ -17311,7 +17319,7 @@
       "安波山展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "気仙沼",
     "gateways": {
       "rail": [
@@ -17392,7 +17400,7 @@
       "河鹿橋"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伊香保",
     "gateways": {
       "rail": [
@@ -17473,7 +17481,7 @@
       "江の島展望灯台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "江の島",
     "gateways": {
       "rail": [
@@ -17555,7 +17563,7 @@
       "長瀞渓谷"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "秩父",
     "gateways": {
       "rail": [
@@ -17630,7 +17638,7 @@
       "大洗サンビーチ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "大洗",
     "gateways": {
       "rail": [
@@ -17704,7 +17712,7 @@
       "唐沢山城跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "佐野",
     "gateways": {
       "rail": [
@@ -17780,7 +17788,7 @@
       "郡上踊り"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "郡上八幡",
     "gateways": {
       "rail": [
@@ -17853,7 +17861,7 @@
       "鍵の手"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "奈良井宿",
     "gateways": {
       "rail": [
@@ -17940,7 +17948,7 @@
       "糸魚川ジオパーク"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "糸魚川",
     "gateways": {
       "rail": [
@@ -18016,7 +18024,7 @@
       "千年鮭きっかわ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "村上",
     "gateways": {
       "rail": [
@@ -18091,7 +18099,7 @@
       "海女小屋体験"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "志摩",
     "gateways": {
       "rail": [
@@ -18172,7 +18180,7 @@
       "船町湊跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "大垣",
     "gateways": {
       "rail": [
@@ -18245,7 +18253,7 @@
       "越前松島"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "越前海岸",
     "gateways": {
       "rail": [
@@ -18325,7 +18333,7 @@
       "燕温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "妙高高原",
     "gateways": {
       "rail": [
@@ -18404,7 +18412,7 @@
       "越後丘陵公園"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "長岡",
     "gateways": {
       "rail": [
@@ -18477,7 +18485,7 @@
       "中村城跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "四万十",
     "gateways": {
       "rail": [
@@ -18560,7 +18568,7 @@
       "丹波立杭陶の里"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "丹波篠山",
     "gateways": {
       "rail": [
@@ -18642,7 +18650,7 @@
       "那智黒砂"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "那智勝浦",
     "gateways": {
       "rail": [
@@ -18724,7 +18732,7 @@
       "川湯温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "熊野本宮",
     "gateways": {
       "rail": [
@@ -18807,7 +18815,7 @@
       "赤穂御崎"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "赤穂",
     "gateways": {
       "rail": [
@@ -18882,7 +18890,7 @@
       "寺田屋"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "伏見",
     "gateways": {
       "rail": [
@@ -18961,7 +18969,7 @@
       "福禅寺対潮楼"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "鞆の浦",
     "gateways": {
       "rail": [
@@ -19040,7 +19048,7 @@
       "境港水産物直売センター"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "境港",
     "gateways": {
       "rail": [
@@ -19128,7 +19136,7 @@
       "前島"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "牛窓",
     "gateways": {
       "rail": [
@@ -19207,7 +19215,7 @@
       "カブトガニ博物館"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "笠岡",
     "gateways": {
       "rail": [
@@ -19281,7 +19289,7 @@
       "夢崎波の公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "角島",
     "gateways": {
       "rail": [
@@ -19371,7 +19379,7 @@
       "道後商店街"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "道後温泉",
     "gateways": {
       "rail": [
@@ -19452,7 +19460,7 @@
       "猪熊弦一郎現代美術館"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "丸亀",
     "gateways": {
       "rail": [
@@ -19531,7 +19539,7 @@
       "伊方原子力発電所展示館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "三崎",
     "gateways": {
       "rail": [
@@ -19617,7 +19625,7 @@
       "沖端水天宮"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "hotelSearch": "柳川",
     "gateways": {
       "rail": [
@@ -19696,7 +19704,7 @@
       "日向岬"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "日向",
     "gateways": {
       "rail": [
@@ -19743,7 +19751,8 @@
           "to": "宮崎空港"
         }
       ]
-    }
+    },
+    "finalPoint": "日向市街"
   },
   {
     "id": "koshikijima",
@@ -19771,7 +19780,7 @@
       "甑大明神磐境"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "hotelSearch": "甑島",
     "gateways": {
@@ -19859,7 +19868,7 @@
       "高千穂峰"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "霧島温泉",
     "gateways": {
       "rail": [
@@ -19906,7 +19915,8 @@
           "to": "鹿児島空港"
         }
       ]
-    }
+    },
+    "finalPoint": "霧島温泉郷"
   },
   {
     "id": "ebino-kogen",
@@ -19932,7 +19942,7 @@
       "甑岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "えびの高原",
     "gateways": {
       "rail": [
@@ -20013,7 +20023,7 @@
       "残波岬"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "恩納村",
     "gateways": {
       "rail": [],
@@ -20059,7 +20069,8 @@
           "to": "那覇空港"
         }
       ]
-    }
+    },
+    "finalPoint": "恩納村リゾートエリア"
   },
   {
     "id": "nago",
@@ -20086,7 +20097,7 @@
       "名護湾"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "名護",
     "gateways": {
       "rail": [],
@@ -20132,7 +20143,8 @@
           "to": "那覇空港"
         }
       ]
-    }
+    },
+    "finalPoint": "名護市街"
   },
   {
     "id": "yomitanson",
@@ -20160,7 +20172,7 @@
       "座喜味城跡"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "hotelSearch": "読谷村",
     "gateways": {
       "rail": [],
@@ -20206,7 +20218,8 @@
           "to": "那覇空港"
         }
       ]
-    }
+    },
+    "finalPoint": "読谷村"
   },
   {
     "id": "niseko",
@@ -20239,7 +20252,7 @@
       "昆布温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "倶知安駅"
@@ -20322,7 +20335,7 @@
       "大雪山旭岳ロープウェイ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "旭川駅"
@@ -20403,7 +20416,7 @@
       "クッタラ湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "白老駅"
@@ -20479,7 +20492,7 @@
       "水の教会"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "トマム駅"
@@ -20554,7 +20567,7 @@
       "発荷峠展望台"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "八戸駅"
@@ -20635,7 +20648,7 @@
       "カルデラ湖"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "下北駅"
@@ -20718,7 +20731,7 @@
       "磐梯山"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "猪苗代駅"
@@ -20799,7 +20812,7 @@
       "志津川湾"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "気仙沼駅"
@@ -20882,7 +20895,7 @@
       "夏油高原"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "北上駅"
@@ -20958,7 +20971,7 @@
       "日光江戸村"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "鬼怒川温泉駅"
@@ -21034,7 +21047,7 @@
       "燧ヶ岳"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "沼田駅"
@@ -21115,7 +21128,7 @@
       "つくばエクスプレス"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "つくば駅"
@@ -21197,7 +21210,7 @@
       "陶炎祭"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "笠間駅"
@@ -21273,7 +21286,7 @@
       "成田山公園"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "成田駅"
@@ -21348,7 +21361,7 @@
       "いわし丸干し"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "東金駅"
@@ -21429,7 +21442,7 @@
       "三浦海岸"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "三崎口駅"
@@ -21511,7 +21524,7 @@
       "日原鍾乳洞"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "奥多摩駅"
@@ -21586,7 +21599,7 @@
       "渋温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "湯田中駅"
@@ -21669,7 +21682,7 @@
       "親湯温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "茅野駅"
@@ -21751,7 +21764,7 @@
       "河鹿荘"
     ],
     "shinkansenAccess": true,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "越後湯沢駅"
@@ -21828,7 +21841,7 @@
       "富士宮やきそば"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "富士宮駅"
@@ -21905,7 +21918,7 @@
       "コロナ観測所"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "松本駅"
@@ -21987,7 +22000,7 @@
       "INAX ライブミュージアム"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "常滑駅"
@@ -22062,7 +22075,7 @@
       "三州足助屋敷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "豊田市駅"
@@ -22143,7 +22156,7 @@
       "篠島"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "内海駅"
@@ -22227,7 +22240,7 @@
       "天龍寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "嵐山駅"
@@ -22303,7 +22316,7 @@
       "MIHO MUSEUM"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "信楽駅"
@@ -22378,7 +22391,7 @@
       "面不動鍾乳洞"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "下市口駅"
@@ -22461,7 +22474,7 @@
       "松阪牛"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "松阪駅"
@@ -22537,7 +22550,7 @@
       "南宗寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "堺東駅"
@@ -22620,7 +22633,7 @@
       "海士の塩"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -22718,7 +22731,7 @@
       "秋吉台サファリランド"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "新山口駅"
@@ -22800,7 +22813,7 @@
       "国森家住宅"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "柳井駅"
@@ -22877,7 +22890,7 @@
       "西ノ島焼火神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -22978,7 +22991,7 @@
       "犬島港"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -23067,7 +23080,7 @@
       "唐檜の棚田"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -23165,7 +23178,7 @@
       "中津渓谷"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "高知駅"
@@ -23248,7 +23261,7 @@
       "雲の上の図書館"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "須崎駅"
@@ -23331,7 +23344,7 @@
       "薬王寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "阿南駅"
@@ -23407,7 +23420,7 @@
       "五段高原"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "松山駅"
@@ -23490,7 +23503,7 @@
       "青島ビーチ"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": false,
     "gateways": {
       "rail": [
@@ -23567,7 +23580,7 @@
       "八千代座"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "玉名駅"
@@ -23648,7 +23661,7 @@
       "物見やぐら"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "吉野ヶ里公園駅"
@@ -23730,7 +23743,7 @@
       "富貴寺"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [
         "宇佐駅"
@@ -23814,7 +23827,7 @@
       "知覧茶"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "gateways": {
       "rail": [
         "鹿児島中央駅"
@@ -23896,7 +23909,7 @@
       "大島神社"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -23995,7 +24008,7 @@
       "三角点"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -24080,7 +24093,7 @@
       "南集落"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -24180,7 +24193,7 @@
       "魂魄の塔"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [],
       "airport": [
@@ -24262,7 +24275,7 @@
       "大宜味の長寿食"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "gateways": {
       "rail": [],
       "airport": [
@@ -24344,7 +24357,7 @@
       "三宅島野鳥センター"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -24437,7 +24450,7 @@
       "洞輪沢温泉"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -24504,7 +24517,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "八丈島"
   },
   {
     "id": "niijima",
@@ -24536,7 +24550,7 @@
       "新島ガラス工芸"
     ],
     "shinkansenAccess": false,
-    "needsCar": true,
+    "requiresCar": true,
     "isIsland": true,
     "gateways": {
       "rail": [],
@@ -24629,7 +24643,7 @@
       "泊海水浴場"
     ],
     "shinkansenAccess": false,
-    "needsCar": false,
+    "requiresCar": false,
     "isIsland": true,
     "gateways": {
       "rail": [],
