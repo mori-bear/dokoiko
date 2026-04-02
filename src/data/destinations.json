@@ -66,10 +66,13 @@
     "jalanPath": "/14/LRG_140050/",
     "hotelKeyword": "鎌倉",
     "access": {
-      "rail": {
-        "to": "鎌倉駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鎌倉駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -139,10 +142,13 @@
     "jalanPath": "/22/LRG_220010/",
     "hotelKeyword": "熱海",
     "access": {
-      "rail": {
-        "to": "熱海駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "熱海駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -227,15 +233,19 @@
     "jalanPath": "/09/LRG_090020/",
     "hotelKeyword": "日光",
     "access": {
-      "rail": {
-        "to": "日光駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "日光駅",
-        "to": "日光",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "日光駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "日光駅",
+          "to": "日光",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -315,15 +325,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "軽井沢",
     "access": {
-      "rail": {
-        "to": "軽井沢駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "軽井沢駅",
-        "to": "軽井沢",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "軽井沢駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "軽井沢駅",
+          "to": "軽井沢",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -394,15 +408,19 @@
     "jalanPath": "/19/LRG_190010/",
     "hotelKeyword": "富士河口湖",
     "access": {
-      "rail": {
-        "to": "河口湖駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "河口湖駅",
-        "to": "富士河口湖",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "河口湖駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "河口湖駅",
+          "to": "富士河口湖",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -474,10 +492,13 @@
     "jalanPath": "/29/LRG_290010/",
     "hotelKeyword": "奈良",
     "access": {
-      "rail": {
-        "to": "奈良駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "奈良駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -552,10 +573,12 @@
     "flightHub": "石垣",
     "hotelKeyword": "石垣島",
     "access": {
-      "rail": {
-        "to": "石垣空港",
-        "provider": null
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "石垣空港"
+        }
+      ]
     }
   },
   {
@@ -637,15 +660,19 @@
     "jalanPath": "/24/LRG_240020/",
     "hotelKeyword": "伊勢",
     "access": {
-      "rail": {
-        "to": "伊勢市駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "伊勢市駅",
-        "to": "伊勢",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伊勢市駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "伊勢市駅",
+          "to": "伊勢",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -725,10 +752,13 @@
     "jalanPath": "/44/LRG_440030/",
     "hotelKeyword": "別府",
     "access": {
-      "rail": {
-        "to": "別府駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "別府駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -800,10 +830,13 @@
     "jalanPath": "/01/LRG_010140/",
     "hotelKeyword": "小樽",
     "access": {
-      "rail": {
-        "to": "小樽駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "小樽駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -873,15 +906,19 @@
     "jalanPath": "/01/LRG_010170/",
     "hotelKeyword": "富良野",
     "access": {
-      "rail": {
-        "to": "富良野駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "富良野駅",
-        "to": "富良野",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "富良野駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "富良野駅",
+          "to": "富良野",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -964,15 +1001,19 @@
     "jalanPath": "/04/LRG_040030/",
     "hotelKeyword": "松島",
     "access": {
-      "rail": {
-        "to": "松島海岸駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "松島海岸駅",
-        "to": "松島",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松島海岸駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "松島海岸駅",
+          "to": "松島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -1044,16 +1085,26 @@
     "port": "宮島口港",
     "hotelKeyword": "宮島",
     "access": {
-      "rail": {
-        "to": "宮島口港",
-        "provider": "e5489"
-      },
-      "ferry": {
-        "from": "宮島口港",
-        "to": "宮島",
-        "operator": "宮島松大フェリー",
-        "bookingUrl": "https://miyajima-matsudai.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "宮島口駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "宮島口駅",
+          "to": "宮島口港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "宮島口港",
+          "to": "宮島",
+          "operator": "宮島松大フェリー",
+          "bookingUrl": "https://miyajima-matsudai.co.jp/"
+        }
+      ]
     }
   },
   {
@@ -1137,10 +1188,13 @@
     "jalanPath": "/34/LRG_340020/",
     "hotelKeyword": "尾道",
     "access": {
-      "rail": {
-        "to": "尾道駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "尾道駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -1210,21 +1264,32 @@
     "port": "高松港",
     "hotelKeyword": "小豆島",
     "access": {
-      "rail": {
-        "to": "高松港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "池田港",
-        "to": "小豆島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "高松港",
-        "to": "小豆島",
-        "operator": "小豆島フェリー",
-        "bookingUrl": "https://www.shoudoshima-ferry.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "高松港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "池田港",
+          "operator": "小豆島フェリー",
+          "bookingUrl": "https://www.shoudoshima-ferry.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "池田港",
+          "to": "小豆島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -1296,15 +1361,18 @@
     "hotelArea": "tottori",
     "hotelKeyword": "美保関",
     "access": {
-      "rail": {
-        "to": "境港駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "境港駅",
-        "to": "美保関",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "米子空港"
+        },
+        {
+          "type": "local",
+          "from": "米子空港",
+          "to": "境港駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -1371,15 +1439,19 @@
     "hotelArea": "wakayama",
     "hotelKeyword": "龍神温泉",
     "access": {
-      "rail": {
-        "to": "紀伊田辺駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "紀伊田辺駅",
-        "to": "龍神温泉",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "紀伊田辺駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "紀伊田辺駅",
+          "to": "龍神温泉",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -1455,21 +1527,31 @@
     "flightHub": "那覇",
     "hotelKeyword": "渡嘉敷島",
     "access": {
-      "rail": {
-        "to": "泊港",
-        "provider": null
-      },
-      "local": {
-        "from": "渡嘉敷港",
-        "to": "渡嘉敷島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "泊港",
-        "to": "渡嘉敷島",
-        "operator": "渡嘉敷村営フェリー",
-        "bookingUrl": "https://www.vill.tokashiki.okinawa.jp/ferry/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "泊港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "渡嘉敷港",
+          "operator": "渡嘉敷村営フェリー",
+          "bookingUrl": "https://www.vill.tokashiki.okinawa.jp/ferry/"
+        },
+        {
+          "type": "local",
+          "from": "渡嘉敷港",
+          "to": "渡嘉敷島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -1545,21 +1627,31 @@
     "flightHub": "那覇",
     "hotelKeyword": "久米島",
     "access": {
-      "rail": {
-        "to": "那覇港",
-        "provider": null
-      },
-      "local": {
-        "from": "久米島空港",
-        "to": "久米島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "那覇港",
-        "to": "久米島",
-        "operator": "マリンライナー",
-        "bookingUrl": "https://www.agui.net/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "那覇港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "那覇港",
+          "to": "久米島空港",
+          "operator": "マリンライナー",
+          "bookingUrl": "https://www.agui.net/"
+        },
+        {
+          "type": "local",
+          "from": "久米島空港",
+          "to": "久米島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -1635,10 +1727,12 @@
     "flightHub": "宮古",
     "hotelKeyword": "宮古島",
     "access": {
-      "rail": {
-        "to": "宮古空港",
-        "provider": null
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮古空港"
+        }
+      ]
     }
   },
   {
@@ -1709,16 +1803,26 @@
     "port": "竹芝客船ターミナル",
     "hotelKeyword": "神津島",
     "access": {
-      "rail": {
-        "to": "竹芝客船ターミナル",
-        "provider": "えきねっと"
-      },
-      "ferry": {
-        "from": "竹芝客船ターミナル",
-        "to": "神津島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝客船ターミナル",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝客船ターミナル",
+          "to": "神津島港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        }
+      ]
     }
   },
   {
@@ -1788,15 +1892,19 @@
     "jalanPath": "/14/LRG_140060/",
     "hotelKeyword": "箱根",
     "access": {
-      "rail": {
-        "to": "箱根湯本駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "箱根湯本駅",
-        "to": "箱根",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "箱根湯本駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "箱根湯本駅",
+          "to": "箱根",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -1865,10 +1973,13 @@
     "jalanPath": "/22/LRG_220020/",
     "hotelKeyword": "修善寺",
     "access": {
-      "rail": {
-        "to": "修善寺駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "修善寺駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -1936,15 +2047,19 @@
     "jalanPath": "/10/LRG_100050/",
     "hotelKeyword": "草津温泉",
     "access": {
-      "rail": {
-        "to": "長野原草津口駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "長野原草津口駅",
-        "to": "草津温泉バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長野原草津口駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "長野原草津口駅",
+          "to": "草津温泉バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -2015,15 +2130,19 @@
     "jalanPath": "/22/LRG_220060/",
     "hotelKeyword": "下田",
     "access": {
-      "rail": {
-        "to": "伊豆急下田駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "伊豆急下田駅",
-        "to": "下田",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伊豆急下田駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "伊豆急下田駅",
+          "to": "下田",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -2097,21 +2216,32 @@
     "port": "竹芝客船ターミナル",
     "hotelKeyword": "伊豆大島",
     "access": {
-      "rail": {
-        "to": "竹芝客船ターミナル",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "元町港",
-        "to": "伊豆大島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "竹芝客船ターミナル",
-        "to": "伊豆大島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝客船ターミナル",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝客船ターミナル",
+          "to": "元町港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "元町港",
+          "to": "伊豆大島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -2194,15 +2324,19 @@
     "jalanPath": "/21/LRG_210070/",
     "hotelKeyword": "白川郷",
     "access": {
-      "rail": {
-        "to": "金沢駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "金沢駅",
-        "to": "白川郷",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "白川郷",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -2272,15 +2406,19 @@
     "jalanPath": "/28/LRG_280010/",
     "hotelKeyword": "有馬温泉",
     "access": {
-      "rail": {
-        "to": "三ノ宮駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "三ノ宮駅",
-        "to": "有馬温泉駅",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "三ノ宮駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "三ノ宮駅",
+          "to": "有馬温泉駅",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -2364,10 +2502,13 @@
     "jalanPath": "/28/LRG_280060/",
     "hotelKeyword": "城崎温泉",
     "access": {
-      "rail": {
-        "to": "城崎温泉駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "城崎温泉駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -2450,10 +2591,13 @@
     "jalanPath": "/33/LRG_330020/",
     "hotelKeyword": "倉敷",
     "access": {
-      "rail": {
-        "to": "倉敷駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "倉敷駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -2525,10 +2669,13 @@
     "jalanPath": "/30/LRG_300020/",
     "hotelKeyword": "白浜",
     "access": {
-      "rail": {
-        "to": "白浜駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "白浜駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -2612,10 +2759,13 @@
     "jalanPath": "/21/LRG_210060/",
     "hotelKeyword": "高山",
     "access": {
-      "rail": {
-        "to": "高山駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高山駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -2688,10 +2838,13 @@
     "jalanPath": "/24/LRG_240040/",
     "hotelKeyword": "鳥羽",
     "access": {
-      "rail": {
-        "to": "鳥羽駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鳥羽駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -2773,15 +2926,19 @@
     "jalanPath": "/44/LRG_440020/",
     "hotelKeyword": "由布院",
     "access": {
-      "rail": {
-        "to": "由布院駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "由布院駅",
-        "to": "湯布院",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "由布院駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "由布院駅",
+          "to": "湯布院",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -2854,15 +3011,19 @@
     "accessType": "car",
     "hotelKeyword": "黒川温泉",
     "access": {
-      "rail": {
-        "to": "博多駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "博多駅",
-        "to": "黒川温泉",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "博多駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "博多駅",
+          "to": "黒川温泉",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -2932,15 +3093,19 @@
     "jalanPath": "/43/LRG_430020/",
     "hotelKeyword": "阿蘇",
     "access": {
-      "rail": {
-        "to": "阿蘇駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "阿蘇駅",
-        "to": "阿蘇",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "阿蘇駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "阿蘇駅",
+          "to": "阿蘇",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -3022,21 +3187,32 @@
     "flightHub": "鹿児島",
     "hotelKeyword": "屋久島",
     "access": {
-      "rail": {
-        "to": "鹿児島港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "安房港",
-        "to": "屋久島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "鹿児島港",
-        "to": "屋久島",
-        "operator": "種子屋久高速船",
-        "bookingUrl": "https://www.tykousoku.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鹿児島中央駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "鹿児島中央駅",
+          "to": "鹿児島港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "安房港",
+          "operator": "種子屋久高速船",
+          "bookingUrl": "https://www.tykousoku.jp/"
+        },
+        {
+          "type": "local",
+          "from": "安房港",
+          "to": "屋久島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -3105,15 +3281,19 @@
     "jalanPath": "/43/LRG_430040/",
     "hotelKeyword": "天草",
     "access": {
-      "rail": {
-        "to": "熊本駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "熊本駅",
-        "to": "天草",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "熊本駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "熊本駅",
+          "to": "天草",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -3184,10 +3364,13 @@
     "jalanPath": "/03/LRG_030020/",
     "hotelKeyword": "平泉",
     "access": {
-      "rail": {
-        "to": "平泉駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "平泉駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -3257,10 +3440,13 @@
     "jalanPath": "/05/LRG_050010/",
     "hotelKeyword": "角館",
     "access": {
-      "rail": {
-        "to": "角館駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "角館駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -3343,10 +3529,13 @@
     "jalanPath": "/07/LRG_070020/",
     "hotelKeyword": "会津若松",
     "access": {
-      "rail": {
-        "to": "会津若松駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "会津若松駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -3415,15 +3604,19 @@
     "jalanPath": "/06/LRG_060010/",
     "hotelKeyword": "蔵王",
     "access": {
-      "rail": {
-        "to": "蔵王駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "蔵王駅",
-        "to": "蔵王",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "蔵王駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "蔵王駅",
+          "to": "蔵王",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -3495,10 +3688,13 @@
     "jalanPath": "/35/LRG_350020/",
     "hotelKeyword": "萩",
     "access": {
-      "rail": {
-        "to": "萩駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "萩駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -3571,10 +3767,13 @@
     "jalanPath": "/35/LRG_350010/",
     "hotelKeyword": "下関",
     "access": {
-      "rail": {
-        "to": "下関駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下関駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -3646,21 +3845,32 @@
     "port": "高松港",
     "hotelKeyword": "直島",
     "access": {
-      "rail": {
-        "to": "高松港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "宮浦港",
-        "to": "直島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "高松港",
-        "to": "直島",
-        "operator": "四国フェリー",
-        "bookingUrl": "https://www.shikokuferry.com/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "高松港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "宮浦港",
+          "operator": "四国フェリー",
+          "bookingUrl": "https://www.shikokuferry.com/"
+        },
+        {
+          "type": "local",
+          "from": "宮浦港",
+          "to": "直島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -3730,15 +3940,19 @@
     "jalanPath": "/37/LRG_370030/",
     "hotelKeyword": "琴平",
     "access": {
-      "rail": {
-        "to": "琴電琴平駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "琴電琴平駅",
-        "to": "琴平",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "琴電琴平駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "琴電琴平駅",
+          "to": "琴平",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -3811,10 +4025,13 @@
     "jalanPath": "/38/LRG_380020/",
     "hotelKeyword": "宇和島",
     "access": {
-      "rail": {
-        "to": "宇和島駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "宇和島駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -3884,15 +4101,19 @@
     "jalanPath": "/01/LRG_010140/",
     "hotelKeyword": "洞爺湖",
     "access": {
-      "rail": {
-        "to": "洞爺駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "洞爺駅",
-        "to": "洞爺湖",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "洞爺駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "洞爺駅",
+          "to": "洞爺湖",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -3961,10 +4182,13 @@
     "jalanPath": "/01/LRG_010130/",
     "hotelKeyword": "登別",
     "access": {
-      "rail": {
-        "to": "登別駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "登別駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -4037,15 +4261,18 @@
     "accessType": "car",
     "hotelKeyword": "知床",
     "access": {
-      "rail": {
-        "to": "知床斜里駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "知床斜里駅",
-        "to": "知床",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "女満別空港"
+        },
+        {
+          "type": "local",
+          "from": "女満別空港",
+          "to": "知床斜里駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4115,15 +4342,19 @@
     "jalanPath": "/17/LRG_170030/",
     "hotelKeyword": "輪島",
     "access": {
-      "rail": {
-        "to": "金沢駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "金沢駅",
-        "to": "輪島バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "輪島バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4194,15 +4425,19 @@
     "jalanPath": "/17/LRG_170020/",
     "hotelKeyword": "加賀温泉",
     "access": {
-      "rail": {
-        "to": "加賀温泉駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "加賀温泉駅",
-        "to": "加賀温泉駅",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "加賀温泉駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "加賀温泉駅",
+          "to": "加賀温泉駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -4269,15 +4504,19 @@
     "jalanPath": "/20/LRG_200020/",
     "hotelKeyword": "白馬",
     "access": {
-      "rail": {
-        "to": "白馬駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "白馬駅",
-        "to": "白馬",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "白馬駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "白馬駅",
+          "to": "白馬",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4346,10 +4585,13 @@
     "jalanPath": "/26/LRG_260030/",
     "hotelKeyword": "天橋立",
     "access": {
-      "rail": {
-        "to": "天橋立駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "天橋立駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -4419,15 +4661,19 @@
     "jalanPath": "/26/LRG_260040/",
     "hotelKeyword": "伊根",
     "access": {
-      "rail": {
-        "to": "天橋立駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "天橋立駅",
-        "to": "伊根港バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "天橋立駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "天橋立駅",
+          "to": "伊根港バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4497,10 +4743,13 @@
     "jalanPath": "/46/LRG_460010/",
     "hotelKeyword": "指宿",
     "access": {
-      "rail": {
-        "to": "指宿駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "指宿駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -4571,10 +4820,13 @@
     "jalanPath": "/42/LRG_420030/",
     "hotelKeyword": "佐世保",
     "access": {
-      "rail": {
-        "to": "佐世保駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "佐世保駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -4644,15 +4896,19 @@
     "jalanPath": "/42/LRG_420040/",
     "hotelKeyword": "平戸",
     "access": {
-      "rail": {
-        "to": "平戸口駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "平戸口駅",
-        "to": "佐世保駅",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "平戸口駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "平戸口駅",
+          "to": "佐世保駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4721,10 +4977,13 @@
     "jalanPath": "/31/LRG_310010/",
     "hotelKeyword": "鳥取",
     "access": {
-      "rail": {
-        "to": "鳥取駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鳥取駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -4794,10 +5053,13 @@
     "jalanPath": "/05/LRG_050020/",
     "hotelKeyword": "秋田",
     "access": {
-      "rail": {
-        "to": "秋田駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "秋田駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -4870,15 +5132,19 @@
     "jalanPath": "/28/LRG_280070/",
     "hotelKeyword": "淡路島",
     "access": {
-      "rail": {
-        "to": "三ノ宮駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "三ノ宮駅",
-        "to": "淡路島",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "三ノ宮駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "三ノ宮駅",
+          "to": "淡路島",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -4948,15 +5214,19 @@
     "jalanPath": "/13/LRG_130030/",
     "hotelKeyword": "高尾山",
     "access": {
-      "rail": {
-        "to": "高尾山口駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "高尾山口駅",
-        "to": "高尾山",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高尾山口駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "高尾山口駅",
+          "to": "高尾山",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -5028,15 +5298,19 @@
     "jalanPath": "/12/LRG_120110/",
     "hotelKeyword": "館山",
     "access": {
-      "rail": {
-        "to": "館山駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "館山駅",
-        "to": "館山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "館山駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "館山駅",
+          "to": "館山",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5106,15 +5380,19 @@
     "jalanPath": "/16/LRG_160020/",
     "hotelKeyword": "五箇山",
     "access": {
-      "rail": {
-        "to": "金沢駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "金沢駅",
-        "to": "五箇山バス停",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "五箇山バス停",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -5185,15 +5463,19 @@
     "jalanPath": "/01/LRG_010220/",
     "hotelKeyword": "定山渓",
     "access": {
-      "rail": {
-        "to": "札幌駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "札幌駅",
-        "to": "定山渓",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "札幌駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "札幌駅",
+          "to": "定山渓",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -5262,15 +5544,19 @@
     "jalanPath": "/01/LRG_010370/",
     "hotelKeyword": "美瑛",
     "access": {
-      "rail": {
-        "to": "美瑛駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "美瑛駅",
-        "to": "美瑛",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "美瑛駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "美瑛駅",
+          "to": "美瑛",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5341,15 +5627,19 @@
     "jalanPath": "/03/LRG_030050/",
     "hotelKeyword": "宮古",
     "access": {
-      "rail": {
-        "to": "宮古駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "宮古駅",
-        "to": "宮古",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "宮古駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "宮古駅",
+          "to": "宮古",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5420,10 +5710,13 @@
     "jalanPath": "/06/LRG_060040/",
     "hotelKeyword": "酒田",
     "access": {
-      "rail": {
-        "to": "酒田駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "酒田駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -5495,15 +5788,19 @@
     "accessType": "car",
     "hotelKeyword": "高千穂",
     "access": {
-      "rail": {
-        "to": "熊本駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "熊本駅",
-        "to": "高千穂",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "熊本駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "熊本駅",
+          "to": "高千穂",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5577,21 +5874,32 @@
     "flightHub": "鹿児島",
     "hotelKeyword": "奄美大島",
     "access": {
-      "rail": {
-        "to": "鹿児島港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "名瀬港",
-        "to": "奄美大島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "鹿児島港",
-        "to": "奄美大島",
-        "operator": "マリックスライン",
-        "bookingUrl": "https://www.marix.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鹿児島中央駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "鹿児島中央駅",
+          "to": "鹿児島港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "名瀬港",
+          "operator": "マリックスライン",
+          "bookingUrl": "https://www.marix.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "名瀬港",
+          "to": "奄美大島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -5665,21 +5973,32 @@
     "port": "博多港",
     "hotelKeyword": "五島列島",
     "access": {
-      "rail": {
-        "to": "博多港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "福江港",
-        "to": "五島列島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "博多港",
-        "to": "五島列島",
-        "operator": "九州商船",
-        "bookingUrl": "https://www.kysho.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "博多駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "博多駅",
+          "to": "博多港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "福江港",
+          "operator": "九州商船",
+          "bookingUrl": "https://www.kysho.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "福江港",
+          "to": "五島列島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -5748,15 +6067,19 @@
     "jalanPath": "/42/LRG_420050/",
     "hotelKeyword": "雲仙",
     "access": {
-      "rail": {
-        "to": "諫早駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "諫早駅",
-        "to": "雲仙",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "諫早駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "諫早駅",
+          "to": "雲仙",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -5823,15 +6146,19 @@
     "jalanPath": "/39/LRG_390020/",
     "hotelKeyword": "足摺岬",
     "access": {
-      "rail": {
-        "to": "中村駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "中村駅",
-        "to": "宿毛駅",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "中村駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "中村駅",
+          "to": "宿毛駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5902,15 +6229,19 @@
     "accessType": "car",
     "hotelKeyword": "大歩危",
     "access": {
-      "rail": {
-        "to": "大歩危駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "大歩危駅",
-        "to": "大歩危",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大歩危駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "大歩危駅",
+          "to": "大歩危",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -5981,10 +6312,13 @@
     "jalanPath": "/32/LRG_320030/",
     "hotelKeyword": "津和野",
     "access": {
-      "rail": {
-        "to": "津和野駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "津和野駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -6054,10 +6388,13 @@
     "jalanPath": "/23/LRG_230040/",
     "hotelKeyword": "犬山",
     "access": {
-      "rail": {
-        "to": "犬山駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "犬山駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -6128,15 +6465,19 @@
     "jalanPath": "/20/LRG_200060/",
     "hotelKeyword": "木曽",
     "access": {
-      "rail": {
-        "to": "南木曽駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "南木曽駅",
-        "to": "木曽",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "南木曽駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "南木曽駅",
+          "to": "木曽",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -6206,15 +6547,19 @@
     "jalanPath": "/26/LRG_260050/",
     "hotelKeyword": "美山",
     "access": {
-      "rail": {
-        "to": "園部駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "園部駅",
-        "to": "美山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "園部駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "園部駅",
+          "to": "美山",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -6284,15 +6629,19 @@
     "jalanPath": "/16/LRG_160030/",
     "hotelKeyword": "立山黒部",
     "access": {
-      "rail": {
-        "to": "立山駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "立山駅",
-        "to": "立山黒部",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "立山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "立山駅",
+          "to": "立山黒部",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -6365,10 +6714,13 @@
     "jalanPath": "/16/LRG_160010/",
     "hotelKeyword": "氷見",
     "access": {
-      "rail": {
-        "to": "氷見駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "氷見駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -6437,15 +6789,19 @@
     "hotelArea": "akita",
     "hotelKeyword": "乳頭温泉",
     "access": {
-      "rail": {
-        "to": "田沢湖駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "田沢湖駅",
-        "to": "乳頭温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "田沢湖駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "田沢湖駅",
+          "to": "乳頭温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -6517,10 +6873,13 @@
     "hotelArea": "yamaguchi",
     "hotelKeyword": "湯田温泉",
     "access": {
-      "rail": {
-        "to": "湯田温泉駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "湯田温泉駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -6588,10 +6947,13 @@
     "hotelArea": "saga",
     "hotelKeyword": "嬉野温泉",
     "access": {
-      "rail": {
-        "to": "嬉野温泉駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "嬉野温泉駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -6660,10 +7022,13 @@
     "hotelArea": "nagano",
     "hotelKeyword": "小布施",
     "access": {
-      "rail": {
-        "to": "小布施駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "小布施駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -6732,10 +7097,13 @@
     "hotelArea": "ehime",
     "hotelKeyword": "内子",
     "access": {
-      "rail": {
-        "to": "内子駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "内子駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -6804,15 +7172,19 @@
     "hotelArea": "kochi",
     "hotelKeyword": "室戸",
     "access": {
-      "rail": {
-        "to": "高知駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "高知駅",
-        "to": "室戸",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高知駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高知駅",
+          "to": "室戸",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -6883,15 +7255,19 @@
     "accessType": "car",
     "hotelKeyword": "祖谷",
     "access": {
-      "rail": {
-        "to": "阿波池田駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "阿波池田駅",
-        "to": "祖谷",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "阿波池田駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "阿波池田駅",
+          "to": "祖谷",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -6963,15 +7339,19 @@
     "accessType": "car",
     "hotelKeyword": "奥出雲",
     "access": {
-      "rail": {
-        "to": "木次駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "木次駅",
-        "to": "奥出雲",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "木次駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "木次駅",
+          "to": "奥出雲",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -7041,15 +7421,19 @@
     "hotelArea": "yamagata",
     "hotelKeyword": "銀山温泉",
     "access": {
-      "rail": {
-        "to": "大石田駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "大石田駅",
-        "to": "銀山温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大石田駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "大石田駅",
+          "to": "銀山温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7119,15 +7503,19 @@
     "hotelArea": "fukushima",
     "hotelKeyword": "大内宿",
     "access": {
-      "rail": {
-        "to": "会津若松駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "会津若松駅",
-        "to": "大内宿",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "会津若松駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "会津若松駅",
+          "to": "大内宿",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -7195,15 +7583,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "野沢温泉",
     "access": {
-      "rail": {
-        "to": "飯山駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "飯山駅",
-        "to": "野沢温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飯山駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "飯山駅",
+          "to": "野沢温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7273,10 +7665,13 @@
     "hotelArea": "hiroshima",
     "hotelKeyword": "竹原",
     "access": {
-      "rail": {
-        "to": "竹原駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "竹原駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -7347,15 +7742,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "妻籠",
     "access": {
-      "rail": {
-        "to": "南木曽駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "南木曽駅",
-        "to": "妻籠",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "南木曽駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "南木曽駅",
+          "to": "妻籠",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7426,15 +7825,19 @@
     "hotelArea": "gifu",
     "hotelKeyword": "馬籠",
     "access": {
-      "rail": {
-        "to": "中津川駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "中津川駅",
-        "to": "馬籠",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "中津川駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "中津川駅",
+          "to": "馬籠",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7505,10 +7908,13 @@
     "hotelArea": "shiga",
     "hotelKeyword": "長浜",
     "access": {
-      "rail": {
-        "to": "長浜駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長浜駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -7579,10 +7985,13 @@
     "hotelArea": "shiga",
     "hotelKeyword": "彦根",
     "access": {
-      "rail": {
-        "to": "彦根駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "彦根駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -7651,15 +8060,19 @@
     "hotelArea": "wakayama",
     "hotelKeyword": "高野山",
     "access": {
-      "rail": {
-        "to": "高野山駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "高野山駅",
-        "to": "高野山",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高野山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高野山駅",
+          "to": "高野山",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7729,15 +8142,19 @@
     "hotelArea": "gifu",
     "hotelKeyword": "下呂温泉",
     "access": {
-      "rail": {
-        "to": "下呂駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "下呂駅",
-        "to": "下呂温泉",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下呂駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "下呂駅",
+          "to": "下呂温泉",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -7805,10 +8222,13 @@
     "hotelArea": "miyagi",
     "hotelKeyword": "鳴子温泉",
     "access": {
-      "rail": {
-        "to": "鳴子温泉駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鳴子温泉駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -7876,15 +8296,19 @@
     "hotelArea": "gunma",
     "hotelKeyword": "四万温泉",
     "access": {
-      "rail": {
-        "to": "中之条駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "中之条駅",
-        "to": "四万温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "中之条駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "中之条駅",
+          "to": "四万温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -7956,10 +8380,18 @@
     "hotelArea": "aomori",
     "hotelKeyword": "弘前",
     "access": {
-      "rail": {
-        "to": "弘前駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "青森空港"
+        },
+        {
+          "type": "local",
+          "from": "青森空港",
+          "to": "弘前駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -8032,15 +8464,18 @@
     "accessType": "car",
     "hotelKeyword": "奥入瀬",
     "access": {
-      "rail": {
-        "to": "八戸駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "八戸駅",
-        "to": "奥入瀬",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "青森空港"
+        },
+        {
+          "type": "local",
+          "from": "青森空港",
+          "to": "八戸駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -8107,15 +8542,19 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "益子",
     "access": {
-      "rail": {
-        "to": "益子駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "益子駅",
-        "to": "益子",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "益子駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "益子駅",
+          "to": "益子",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -8186,10 +8625,13 @@
     "hotelArea": "nagano",
     "hotelKeyword": "別所温泉",
     "access": {
-      "rail": {
-        "to": "別所温泉駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "別所温泉駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -8260,15 +8702,19 @@
     "hotelArea": "hyogo",
     "hotelKeyword": "出石",
     "access": {
-      "rail": {
-        "to": "豊岡駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "豊岡駅",
-        "to": "出石",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "豊岡駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "豊岡駅",
+          "to": "出石",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -8337,10 +8783,13 @@
     "hotelArea": "ishikawa",
     "hotelKeyword": "和倉温泉",
     "access": {
-      "rail": {
-        "to": "和倉温泉駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "和倉温泉駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -8409,15 +8858,19 @@
     "hotelArea": "tottori",
     "hotelKeyword": "三朝温泉",
     "access": {
-      "rail": {
-        "to": "倉吉駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "倉吉駅",
-        "to": "三朝温泉",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "倉吉駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "倉吉駅",
+          "to": "三朝温泉",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -8487,10 +8940,13 @@
     "hotelArea": "miyazaki",
     "hotelKeyword": "飫肥",
     "access": {
-      "rail": {
-        "to": "飫肥駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飫肥駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -8562,10 +9018,13 @@
     "hotelArea": "kumamoto",
     "hotelKeyword": "人吉",
     "access": {
-      "rail": {
-        "to": "人吉駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "人吉駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -8635,15 +9094,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "上高地",
     "access": {
-      "rail": {
-        "to": "松本駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "松本駅",
-        "to": "上高地バスターミナル",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松本駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "松本駅",
+          "to": "上高地バスターミナル",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -8713,15 +9176,19 @@
     "hotelArea": "gunma",
     "hotelKeyword": "水上温泉",
     "access": {
-      "rail": {
-        "to": "水上駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "水上駅",
-        "to": "水上温泉",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "水上駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "水上駅",
+          "to": "水上温泉",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -8792,15 +9259,18 @@
     "hotelArea": "kumamoto",
     "hotelKeyword": "南阿蘇",
     "access": {
-      "rail": {
-        "to": "熊本駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "熊本駅",
-        "to": "南阿蘇",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "阿蘇くまもと空港"
+        },
+        {
+          "type": "local",
+          "from": "阿蘇くまもと空港",
+          "to": "熊本駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -8882,10 +9352,13 @@
     "hotelArea": "ehime",
     "hotelKeyword": "今治",
     "access": {
-      "rail": {
-        "to": "今治駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "今治駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -8967,15 +9440,19 @@
     "hotelArea": "ehime",
     "hotelKeyword": "大洲",
     "access": {
-      "rail": {
-        "to": "伊予大洲駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "伊予大洲駅",
-        "to": "大洲",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伊予大洲駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "伊予大洲駅",
+          "to": "大洲",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9056,15 +9533,19 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "積丹",
     "access": {
-      "rail": {
-        "to": "小樽駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "小樽駅",
-        "to": "積丹バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "小樽駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "小樽駅",
+          "to": "積丹バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9149,15 +9630,18 @@
     "hotelArea": "shimane",
     "hotelKeyword": "出雲",
     "access": {
-      "rail": {
-        "to": "出雲市駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "出雲市駅",
-        "to": "出雲",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "出雲縁結び空港"
+        },
+        {
+          "type": "local",
+          "from": "出雲縁結び空港",
+          "to": "出雲市駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -9215,15 +9699,19 @@
     "hotelArea": "ishikawa",
     "hotelKeyword": "珠洲",
     "access": {
-      "rail": {
-        "to": "金沢駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "金沢駅",
-        "to": "珠洲バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "珠洲バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9307,15 +9795,19 @@
     "hotelArea": "nara",
     "hotelKeyword": "吉野",
     "access": {
-      "rail": {
-        "to": "吉野駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "吉野駅",
-        "to": "吉野",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "吉野駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "吉野駅",
+          "to": "吉野",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -9399,15 +9891,19 @@
     "accessType": "car",
     "hotelKeyword": "熊野市",
     "access": {
-      "rail": {
-        "to": "新宮駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "新宮駅",
-        "to": "熊野",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "新宮駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "新宮駅",
+          "to": "熊野",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9496,21 +9992,31 @@
     "flightHub": "石垣",
     "hotelKeyword": "西表島",
     "access": {
-      "rail": {
-        "to": "石垣港",
-        "provider": null
-      },
-      "local": {
-        "from": "大原港",
-        "to": "西表島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "石垣港",
-        "to": "西表島",
-        "operator": "八重山観光フェリー",
-        "bookingUrl": "https://www.yaeyama.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "石垣空港"
+        },
+        {
+          "type": "local",
+          "from": "石垣空港",
+          "to": "石垣港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "大原港",
+          "operator": "八重山観光フェリー",
+          "bookingUrl": "https://www.yaeyama.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "大原港",
+          "to": "西表島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -9594,15 +10100,19 @@
     "hotelArea": "okayama",
     "hotelKeyword": "高梁",
     "access": {
-      "rail": {
-        "to": "備中高梁駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "備中高梁駅",
-        "to": "高梁",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "備中高梁駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "備中高梁駅",
+          "to": "高梁",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9686,10 +10196,13 @@
     "hotelArea": "gifu",
     "hotelKeyword": "飛騨古川",
     "access": {
-      "rail": {
-        "to": "飛騨古川駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飛騨古川駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -9773,15 +10286,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "豊後高田",
     "access": {
-      "rail": {
-        "to": "宇佐駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "宇佐駅",
-        "to": "豊後高田",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "宇佐駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -9866,10 +10382,13 @@
     "hotelArea": "shizuoka",
     "hotelKeyword": "伊豆高原",
     "access": {
-      "rail": {
-        "to": "伊豆高原駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伊豆高原駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -9954,15 +10473,18 @@
     "hotelArea": "wakayama",
     "hotelKeyword": "田辺",
     "access": {
-      "rail": {
-        "to": "紀伊田辺駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "紀伊田辺駅",
-        "to": "田辺",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "南紀白浜空港"
+        },
+        {
+          "type": "local",
+          "from": "南紀白浜空港",
+          "to": "紀伊田辺駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -10043,15 +10565,19 @@
     "hotelArea": "kochi",
     "hotelKeyword": "土佐清水",
     "access": {
-      "rail": {
-        "to": "中村駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "中村駅",
-        "to": "土佐清水",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "中村駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "中村駅",
+          "to": "土佐清水",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -10135,15 +10661,19 @@
     "hotelArea": "miyazaki",
     "hotelKeyword": "日南",
     "access": {
-      "rail": {
-        "to": "日南駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "日南駅",
-        "to": "日南",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "日南駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "日南駅",
+          "to": "日南",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -10227,10 +10757,13 @@
     "hotelArea": "fukuoka",
     "hotelKeyword": "門司港",
     "access": {
-      "rail": {
-        "to": "門司港駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "門司港駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -10313,15 +10846,19 @@
     "hotelArea": "fukuoka",
     "hotelKeyword": "糸島",
     "access": {
-      "rail": {
-        "to": "筑前前原駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "筑前前原駅",
-        "to": "糸島",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "筑前前原駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "筑前前原駅",
+          "to": "糸島",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -10405,15 +10942,19 @@
     "hotelArea": "nagasaki",
     "hotelKeyword": "島原",
     "access": {
-      "rail": {
-        "to": "島原駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "島原駅",
-        "to": "島原",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "島原駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "島原駅",
+          "to": "島原",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -10497,10 +11038,13 @@
     "hotelArea": "fukui",
     "hotelKeyword": "敦賀",
     "access": {
-      "rail": {
-        "to": "敦賀駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "敦賀駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -10574,21 +11118,26 @@
     "port": "詫間港",
     "hotelKeyword": "志々島",
     "access": {
-      "rail": {
-        "to": "詫間港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "詫間駅",
-        "to": "志々島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "詫間港",
-        "to": "志々島",
-        "operator": "三豊市営フェリー",
-        "bookingUrl": "https://www.city.mitoyo.lg.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "詫間駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "詫間駅",
+          "to": "詫間港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "詫間港",
+          "to": "志々島",
+          "operator": "三豊市営フェリー",
+          "bookingUrl": "https://www.city.mitoyo.lg.jp/"
+        }
+      ]
     }
   },
   {
@@ -10660,15 +11209,18 @@
     "accessType": "car",
     "hotelKeyword": "層雲峡",
     "access": {
-      "rail": {
-        "to": "上川駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "上川駅",
-        "to": "層雲峡バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "旭川空港"
+        },
+        {
+          "type": "local",
+          "from": "旭川空港",
+          "to": "層雲峡バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -10748,21 +11300,32 @@
     "flightHub": "稚内",
     "hotelKeyword": "礼文島",
     "access": {
-      "rail": {
-        "to": "稚内港",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "香深港",
-        "to": "礼文島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "稚内港",
-        "to": "礼文島",
-        "operator": "ハートランドフェリー",
-        "bookingUrl": "https://www.heartlandferry.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "稚内駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "稚内駅",
+          "to": "稚内港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "稚内港",
+          "to": "香深港",
+          "operator": "ハートランドフェリー",
+          "bookingUrl": "https://www.heartlandferry.jp/"
+        },
+        {
+          "type": "local",
+          "from": "香深港",
+          "to": "礼文島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -10835,21 +11398,32 @@
     "flightHub": "稚内",
     "hotelKeyword": "利尻島",
     "access": {
-      "rail": {
-        "to": "稚内港",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "鴛泊港",
-        "to": "利尻島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "稚内港",
-        "to": "利尻島",
-        "operator": "ハートランドフェリー",
-        "bookingUrl": "https://www.heartlandferry.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "稚内駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "稚内駅",
+          "to": "稚内港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "稚内港",
+          "to": "鴛泊港",
+          "operator": "ハートランドフェリー",
+          "bookingUrl": "https://www.heartlandferry.jp/"
+        },
+        {
+          "type": "local",
+          "from": "鴛泊港",
+          "to": "利尻島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -10917,15 +11491,18 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "阿寒湖",
     "access": {
-      "rail": {
-        "to": "釧路駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "釧路駅",
-        "to": "阿寒湖",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "釧路空港"
+        },
+        {
+          "type": "local",
+          "from": "釧路空港",
+          "to": "釧路駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -10994,15 +11571,18 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "網走",
     "access": {
-      "rail": {
-        "to": "網走駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "網走駅",
-        "to": "網走",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "女満別空港"
+        },
+        {
+          "type": "local",
+          "from": "女満別空港",
+          "to": "網走駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11069,15 +11649,18 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "支笏湖",
     "access": {
-      "rail": {
-        "to": "千歳駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "千歳駅",
-        "to": "支笏湖バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "新千歳空港"
+        },
+        {
+          "type": "local",
+          "from": "新千歳空港",
+          "to": "支笏湖バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11142,15 +11725,19 @@
     "hotelArea": "iwate",
     "hotelKeyword": "遠野",
     "access": {
-      "rail": {
-        "to": "遠野駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "遠野駅",
-        "to": "遠野",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "遠野駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "遠野駅",
+          "to": "遠野",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11218,15 +11805,19 @@
     "hotelArea": "akita",
     "hotelKeyword": "男鹿",
     "access": {
-      "rail": {
-        "to": "男鹿駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "男鹿駅",
-        "to": "男鹿",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "男鹿駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "男鹿駅",
+          "to": "男鹿",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11293,10 +11884,13 @@
     "hotelArea": "yamagata",
     "hotelKeyword": "米沢",
     "access": {
-      "rail": {
-        "to": "米沢駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "米沢駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -11366,15 +11960,18 @@
     "hotelArea": "yamagata",
     "hotelKeyword": "鶴岡",
     "access": {
-      "rail": {
-        "to": "鶴岡駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "鶴岡駅",
-        "to": "出羽三山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "庄内空港"
+        },
+        {
+          "type": "local",
+          "from": "庄内空港",
+          "to": "鶴岡駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11442,15 +12039,18 @@
     "hotelArea": "miyagi",
     "hotelKeyword": "秋保温泉",
     "access": {
-      "rail": {
-        "to": "仙台駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "仙台駅",
-        "to": "秋保温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "仙台空港"
+        },
+        {
+          "type": "local",
+          "from": "仙台空港",
+          "to": "仙台駅",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -11517,10 +12117,18 @@
     "hotelArea": "aomori",
     "hotelKeyword": "五所川原",
     "access": {
-      "rail": {
-        "to": "五所川原駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "青森空港"
+        },
+        {
+          "type": "local",
+          "from": "青森空港",
+          "to": "五所川原駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -11587,10 +12195,13 @@
     "hotelArea": "saitama",
     "hotelKeyword": "川越",
     "access": {
-      "rail": {
-        "to": "川越駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "川越駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -11657,15 +12268,19 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "那須",
     "access": {
-      "rail": {
-        "to": "那須塩原駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "那須塩原駅",
-        "to": "那須",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "那須塩原駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "那須塩原駅",
+          "to": "那須",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -11731,10 +12346,13 @@
     "hotelArea": "chiba",
     "hotelKeyword": "銚子",
     "access": {
-      "rail": {
-        "to": "銚子駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "銚子駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -11801,10 +12419,13 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "足利",
     "access": {
-      "rail": {
-        "to": "足利駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "足利駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -11870,15 +12491,19 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "塩原温泉",
     "access": {
-      "rail": {
-        "to": "那須塩原駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "那須塩原駅",
-        "to": "塩原温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "那須塩原駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "那須塩原駅",
+          "to": "塩原温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -11951,21 +12576,32 @@
     "port": "新潟港",
     "hotelKeyword": "佐渡島",
     "access": {
-      "rail": {
-        "to": "新潟港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "両津港",
-        "to": "佐渡島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "新潟港",
-        "to": "佐渡島",
-        "operator": "佐渡汽船",
-        "bookingUrl": "https://www.sadokisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "新潟駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "新潟駅",
+          "to": "新潟港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "新潟港",
+          "to": "両津港",
+          "operator": "佐渡汽船",
+          "bookingUrl": "https://www.sadokisen.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "両津港",
+          "to": "佐渡島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -12031,15 +12667,19 @@
     "hotelArea": "yamanashi",
     "hotelKeyword": "清里",
     "access": {
-      "rail": {
-        "to": "清里駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "清里駅",
-        "to": "清里",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "清里駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "清里駅",
+          "to": "清里",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -12105,10 +12745,13 @@
     "hotelArea": "nagano",
     "hotelKeyword": "天竜峡",
     "access": {
-      "rail": {
-        "to": "天竜峡駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "天竜峡駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -12174,15 +12817,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "諏訪",
     "access": {
-      "rail": {
-        "to": "上諏訪駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "上諏訪駅",
-        "to": "諏訪",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "上諏訪駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "上諏訪駅",
+          "to": "諏訪",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -12248,15 +12895,19 @@
     "hotelArea": "fukui",
     "hotelKeyword": "永平寺",
     "access": {
-      "rail": {
-        "to": "永平寺口駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "永平寺口駅",
-        "to": "永平寺",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "永平寺口駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "永平寺口駅",
+          "to": "永平寺",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -12323,15 +12974,19 @@
     "hotelArea": "fukui",
     "hotelKeyword": "若狭小浜",
     "access": {
-      "rail": {
-        "to": "小浜駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "小浜駅",
-        "to": "若狭小浜",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "小浜駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "小浜駅",
+          "to": "若狭小浜",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -12402,15 +13057,18 @@
     "hotelArea": "gifu",
     "hotelKeyword": "奥飛騨温泉",
     "access": {
-      "rail": {
-        "to": "高山駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "高山駅",
-        "to": "新穂高温泉",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "松本空港"
+        },
+        {
+          "type": "local",
+          "from": "松本空港",
+          "to": "新穂高温泉",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -12478,15 +13136,19 @@
     "hotelArea": "shizuoka",
     "hotelKeyword": "南伊豆",
     "access": {
-      "rail": {
-        "to": "下田駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "下田駅",
-        "to": "南伊豆",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下田駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "下田駅",
+          "to": "南伊豆",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -12552,15 +13214,19 @@
     "hotelArea": "fukui",
     "hotelKeyword": "越前市",
     "access": {
-      "rail": {
-        "to": "武生駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "武生駅",
-        "to": "越前市",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "武生駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "武生駅",
+          "to": "越前市",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -12629,10 +13295,13 @@
     "hotelArea": "shizuoka",
     "hotelKeyword": "伊東",
     "access": {
-      "rail": {
-        "to": "伊東駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伊東駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -12698,15 +13367,19 @@
     "hotelArea": "mie",
     "hotelKeyword": "伊賀",
     "access": {
-      "rail": {
-        "to": "上野市駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "上野市駅",
-        "to": "伊賀",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "上野市駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "上野市駅",
+          "to": "伊賀",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -12772,15 +13445,19 @@
     "hotelArea": "nara",
     "hotelKeyword": "橿原",
     "access": {
-      "rail": {
-        "to": "橿原神宮前駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "橿原神宮前駅",
-        "to": "橿原",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "橿原神宮前駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "橿原神宮前駅",
+          "to": "橿原",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -12850,15 +13527,19 @@
     "accessType": "car",
     "hotelKeyword": "十津川",
     "access": {
-      "rail": {
-        "to": "五条駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "五条駅",
-        "to": "十津川",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "五条駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "五条駅",
+          "to": "十津川",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -12923,15 +13604,19 @@
     "hotelArea": "kyoto",
     "hotelKeyword": "舞鶴",
     "access": {
-      "rail": {
-        "to": "東舞鶴駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "東舞鶴駅",
-        "to": "舞鶴",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "東舞鶴駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "東舞鶴駅",
+          "to": "舞鶴",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -13009,15 +13694,19 @@
     "hotelArea": "nara",
     "hotelKeyword": "飛鳥",
     "access": {
-      "rail": {
-        "to": "飛鳥駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "飛鳥駅",
-        "to": "飛鳥",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飛鳥駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "飛鳥駅",
+          "to": "飛鳥",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13087,15 +13776,18 @@
     "hotelArea": "tottori",
     "hotelKeyword": "大山",
     "access": {
-      "rail": {
-        "to": "米子駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "米子駅",
-        "to": "大山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "米子空港"
+        },
+        {
+          "type": "local",
+          "from": "米子空港",
+          "to": "米子駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13162,15 +13854,19 @@
     "hotelArea": "shimane",
     "hotelKeyword": "温泉津",
     "access": {
-      "rail": {
-        "to": "温泉津駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "温泉津駅",
-        "to": "温泉津",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "温泉津駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "温泉津駅",
+          "to": "温泉津",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13238,15 +13934,19 @@
     "hotelArea": "shimane",
     "hotelKeyword": "石見銀山",
     "access": {
-      "rail": {
-        "to": "大田市駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "大田市駅",
-        "to": "石見銀山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大田市駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "大田市駅",
+          "to": "石見銀山",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13315,10 +14015,18 @@
     "hotelArea": "yamaguchi",
     "hotelKeyword": "岩国",
     "access": {
-      "rail": {
-        "to": "岩国駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "岩国錦帯橋空港"
+        },
+        {
+          "type": "local",
+          "from": "岩国錦帯橋空港",
+          "to": "岩国駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -13387,10 +14095,18 @@
     "hotelArea": "tottori",
     "hotelKeyword": "倉吉",
     "access": {
-      "rail": {
-        "to": "倉吉駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "米子空港"
+        },
+        {
+          "type": "local",
+          "from": "米子空港",
+          "to": "倉吉駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -13463,21 +14179,24 @@
     "port": "柳井港",
     "hotelKeyword": "周防大島",
     "access": {
-      "rail": {
-        "to": "柳井港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "大畠駅",
-        "to": "周防大島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "柳井港",
-        "to": "周防大島",
-        "operator": null,
-        "bookingUrl": null
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大畠駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "大畠駅",
+          "to": "柳井港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "柳井港",
+          "to": "周防大島"
+        }
+      ]
     }
   },
   {
@@ -13544,15 +14263,18 @@
     "hotelArea": "kochi",
     "hotelKeyword": "四万十",
     "access": {
-      "rail": {
-        "to": "江川崎駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "江川崎駅",
-        "to": "四万十",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "高知空港"
+        },
+        {
+          "type": "local",
+          "from": "高知空港",
+          "to": "江川崎駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13624,21 +14346,24 @@
     "port": "宿毛港",
     "hotelKeyword": "柏島",
     "access": {
-      "rail": {
-        "to": "宿毛港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "宿毛駅",
-        "to": "柏島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "宿毛港",
-        "to": "柏島",
-        "operator": null,
-        "bookingUrl": null
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "宿毛駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "宿毛駅",
+          "to": "宿毛港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "宿毛港",
+          "to": "柏島"
+        }
+      ]
     }
   },
   {
@@ -13707,15 +14432,18 @@
     "hotelArea": "ehime",
     "hotelKeyword": "西条",
     "access": {
-      "rail": {
-        "to": "伊予西条駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "伊予西条駅",
-        "to": "西条",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "松山空港"
+        },
+        {
+          "type": "local",
+          "from": "松山空港",
+          "to": "伊予西条駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -13784,15 +14512,18 @@
     "hotelArea": "ehime",
     "hotelKeyword": "愛南",
     "access": {
-      "rail": {
-        "to": "宇和島駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "宇和島駅",
-        "to": "愛南",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "松山空港"
+        },
+        {
+          "type": "local",
+          "from": "松山空港",
+          "to": "宇和島駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13860,15 +14591,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "竹田",
     "access": {
-      "rail": {
-        "to": "豊後竹田駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "豊後竹田駅",
-        "to": "竹田",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "豊後竹田駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -13936,10 +14670,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "臼杵",
     "access": {
-      "rail": {
-        "to": "臼杵駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "臼杵駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14006,10 +14748,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "日田",
     "access": {
-      "rail": {
-        "to": "日田駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "日田駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14077,15 +14827,18 @@
     "hotelArea": "nagasaki",
     "hotelKeyword": "波佐見",
     "access": {
-      "rail": {
-        "to": "川棚温泉駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "川棚温泉駅",
-        "to": "波佐見",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "長崎空港"
+        },
+        {
+          "type": "local",
+          "from": "長崎空港",
+          "to": "川棚温泉駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -14151,10 +14904,13 @@
     "hotelArea": "saga",
     "hotelKeyword": "武雄温泉",
     "access": {
-      "rail": {
-        "to": "武雄温泉駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "武雄温泉駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -14222,10 +14978,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "杵築",
     "access": {
-      "rail": {
-        "to": "杵築駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "杵築駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14300,21 +15064,32 @@
     "port": "博多港",
     "hotelKeyword": "対馬",
     "access": {
-      "rail": {
-        "to": "博多港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "対馬空港",
-        "to": "対馬",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "博多港",
-        "to": "対馬",
-        "operator": "九州商船",
-        "bookingUrl": "https://www.kysho.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "博多駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "博多駅",
+          "to": "博多港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "対馬空港",
+          "operator": "九州商船",
+          "bookingUrl": "https://www.kysho.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "対馬空港",
+          "to": "対馬",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14387,21 +15162,32 @@
     "port": "博多港",
     "hotelKeyword": "壱岐",
     "access": {
-      "rail": {
-        "to": "博多港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "郷ノ浦港",
-        "to": "壱岐",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "博多港",
-        "to": "壱岐",
-        "operator": "九州商船",
-        "bookingUrl": "https://www.kysho.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "博多駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "博多駅",
+          "to": "博多港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "博多港",
+          "to": "郷ノ浦港",
+          "operator": "九州商船",
+          "bookingUrl": "https://www.kysho.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "郷ノ浦港",
+          "to": "壱岐",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14475,21 +15261,32 @@
     "flightHub": "鹿児島",
     "hotelKeyword": "種子島",
     "access": {
-      "rail": {
-        "to": "鹿児島港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "西之表港",
-        "to": "種子島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "鹿児島港",
-        "to": "種子島",
-        "operator": "種子屋久高速船",
-        "bookingUrl": "https://www.tykousoku.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鹿児島中央駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "鹿児島中央駅",
+          "to": "鹿児島港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "鹿児島港",
+          "to": "西之表港",
+          "operator": "種子屋久高速船",
+          "bookingUrl": "https://www.tykousoku.jp/"
+        },
+        {
+          "type": "local",
+          "from": "西之表港",
+          "to": "種子島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14560,15 +15357,18 @@
     "accessType": "car",
     "hotelKeyword": "菊池",
     "access": {
-      "rail": {
-        "to": "武蔵塚公園駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "武蔵塚公園駅",
-        "to": "熊本駅",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "阿蘇くまもと空港"
+        },
+        {
+          "type": "local",
+          "from": "阿蘇くまもと空港",
+          "to": "熊本駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -14641,21 +15441,31 @@
     "flightHub": "石垣",
     "hotelKeyword": "竹富島",
     "access": {
-      "rail": {
-        "to": "石垣港",
-        "provider": null
-      },
-      "local": {
-        "from": "竹富港",
-        "to": "竹富島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "石垣港",
-        "to": "竹富島",
-        "operator": "八重山観光フェリー",
-        "bookingUrl": "https://www.yaeyama.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "石垣空港"
+        },
+        {
+          "type": "local",
+          "from": "石垣空港",
+          "to": "石垣港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "竹富港",
+          "operator": "八重山観光フェリー",
+          "bookingUrl": "https://www.yaeyama.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "竹富港",
+          "to": "竹富島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14727,21 +15537,31 @@
     "flightHub": "石垣",
     "hotelKeyword": "与那国島",
     "access": {
-      "rail": {
-        "to": "石垣港",
-        "provider": null
-      },
-      "local": {
-        "from": "与那国空港",
-        "to": "与那国島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "石垣港",
-        "to": "与那国島",
-        "operator": "八重山観光フェリー",
-        "bookingUrl": "https://www.yaeyama.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "石垣空港"
+        },
+        {
+          "type": "local",
+          "from": "石垣空港",
+          "to": "石垣港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "石垣港",
+          "to": "与那国空港",
+          "operator": "八重山観光フェリー",
+          "bookingUrl": "https://www.yaeyama.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "与那国空港",
+          "to": "与那国島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -14812,15 +15632,18 @@
     "flightHub": "那覇",
     "hotelKeyword": "今帰仁",
     "access": {
-      "rail": {
-        "to": "那覇空港駅",
-        "provider": null
-      },
-      "local": {
-        "from": "那覇空港駅",
-        "to": "那覇バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "那覇バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -14890,15 +15713,18 @@
     "flightHub": "那覇",
     "hotelKeyword": "本部",
     "access": {
-      "rail": {
-        "to": "那覇バスターミナル",
-        "provider": null
-      },
-      "local": {
-        "from": "那覇バスターミナル",
-        "to": "那覇バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "那覇バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -14981,21 +15807,31 @@
     "flightHub": "那覇",
     "hotelKeyword": "座間味島",
     "access": {
-      "rail": {
-        "to": "泊港",
-        "provider": null
-      },
-      "local": {
-        "from": "座間味港",
-        "to": "座間味島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "泊港",
-        "to": "座間味島",
-        "operator": "座間味村営フェリー",
-        "bookingUrl": "https://yoyaku.vill.zamami.okinawa.jp/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "泊港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "座間味港",
+          "operator": "座間味村営フェリー",
+          "bookingUrl": "https://yoyaku.vill.zamami.okinawa.jp/"
+        },
+        {
+          "type": "local",
+          "from": "座間味港",
+          "to": "座間味島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -15070,21 +15906,31 @@
     "flightHub": "那覇",
     "hotelKeyword": "伊江島",
     "access": {
-      "rail": {
-        "to": "本部港",
-        "provider": null
-      },
-      "local": {
-        "from": "伊江港",
-        "to": "伊江島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "本部港",
-        "to": "伊江島",
-        "operator": "伊江島フェリー",
-        "bookingUrl": "https://www.iejima.org/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "本部港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "本部港",
+          "to": "伊江港",
+          "operator": "伊江島フェリー",
+          "bookingUrl": "https://www.iejima.org/"
+        },
+        {
+          "type": "local",
+          "from": "伊江港",
+          "to": "伊江島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -15158,16 +16004,15 @@
     "flightHub": "石垣",
     "hotelKeyword": "小浜島",
     "access": {
-      "rail": {
-        "to": "小浜港",
-        "provider": null
-      },
-      "ferry": {
-        "from": "小浜港",
-        "to": "小浜島",
-        "operator": "安栄観光",
-        "bookingUrl": "https://www.aneikankou.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "ferry",
+          "from": "小浜港",
+          "to": "小浜島",
+          "operator": "安栄観光",
+          "bookingUrl": "https://www.aneikankou.co.jp/"
+        }
+      ]
     }
   },
   {
@@ -15234,15 +16079,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "松代",
     "access": {
-      "rail": {
-        "to": "長野駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "長野駅",
-        "to": "松代",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長野駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "長野駅",
+          "to": "松代",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -15309,15 +16158,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "飯山",
     "access": {
-      "rail": {
-        "to": "飯山駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "飯山駅",
-        "to": "飯山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飯山駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "飯山駅",
+          "to": "飯山",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -15385,10 +16238,18 @@
     "hotelArea": "okayama",
     "hotelKeyword": "矢掛",
     "access": {
-      "rail": {
-        "to": "矢掛駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "岡山桃太郎空港"
+        },
+        {
+          "type": "local",
+          "from": "岡山桃太郎空港",
+          "to": "矢掛駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -15457,10 +16318,18 @@
     "hotelArea": "okayama",
     "hotelKeyword": "津山",
     "access": {
-      "rail": {
-        "to": "津山駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "岡山桃太郎空港"
+        },
+        {
+          "type": "local",
+          "from": "岡山桃太郎空港",
+          "to": "津山駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -15530,15 +16399,18 @@
     "hotelArea": "tokushima",
     "hotelKeyword": "美馬",
     "access": {
-      "rail": {
-        "to": "貞光駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "貞光駅",
-        "to": "剣山",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "徳島空港"
+        },
+        {
+          "type": "local",
+          "from": "徳島空港",
+          "to": "貞光駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -15610,10 +16482,18 @@
     "hotelArea": "miyazaki",
     "hotelKeyword": "延岡",
     "access": {
-      "rail": {
-        "to": "延岡駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮崎空港"
+        },
+        {
+          "type": "local",
+          "from": "宮崎空港",
+          "to": "延岡駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -15660,10 +16540,13 @@
     "hotelArea": "iwate",
     "hotelKeyword": "釜石市",
     "access": {
-      "rail": {
-        "to": "釜石駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "釜石駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -15710,10 +16593,13 @@
     "hotelArea": "iwate",
     "hotelKeyword": "大船渡",
     "access": {
-      "rail": {
-        "to": "大船渡駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大船渡駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -15760,10 +16646,13 @@
     "hotelArea": "iwate",
     "hotelKeyword": "久慈",
     "access": {
-      "rail": {
-        "to": "久慈駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "久慈駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -15832,15 +16721,12 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "稚内",
     "access": {
-      "rail": {
-        "to": "稚内駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "稚内駅",
-        "to": "稚内空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "稚内空港"
+        }
+      ]
     }
   },
   {
@@ -15909,15 +16795,12 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "帯広",
     "access": {
-      "rail": {
-        "to": "帯広駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "帯広駅",
-        "to": "帯広空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "帯広空港"
+        }
+      ]
     }
   },
   {
@@ -15988,15 +16871,18 @@
     "accessType": "car",
     "hotelKeyword": "羅臼",
     "access": {
-      "rail": {
-        "to": "知床斜里駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "知床斜里駅",
-        "to": "羅臼バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "女満別空港"
+        },
+        {
+          "type": "local",
+          "from": "女満別空港",
+          "to": "羅臼バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -16064,15 +16950,18 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "江差",
     "access": {
-      "rail": {
-        "to": "木古内駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "木古内駅",
-        "to": "江差バスターミナル",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "函館空港"
+        },
+        {
+          "type": "local",
+          "from": "函館空港",
+          "to": "江差バスターミナル",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -16141,15 +17030,18 @@
     "hotelArea": "iwate",
     "hotelKeyword": "花巻",
     "access": {
-      "rail": {
-        "to": "新花巻駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "新花巻駅",
-        "to": "花巻",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "花巻空港"
+        },
+        {
+          "type": "local",
+          "from": "花巻空港",
+          "to": "新花巻駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -16220,15 +17112,18 @@
     "accessType": "car",
     "hotelKeyword": "八幡平",
     "access": {
-      "rail": {
-        "to": "盛岡駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "盛岡駅",
-        "to": "八幡平頂上バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "花巻空港"
+        },
+        {
+          "type": "local",
+          "from": "花巻空港",
+          "to": "八幡平頂上バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -16297,15 +17192,18 @@
     "hotelArea": "akita",
     "hotelKeyword": "田沢湖",
     "access": {
-      "rail": {
-        "to": "田沢湖駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "田沢湖駅",
-        "to": "田沢湖",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "秋田空港"
+        },
+        {
+          "type": "local",
+          "from": "秋田空港",
+          "to": "田沢湖駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -16375,10 +17273,18 @@
     "hotelArea": "yamagata",
     "hotelKeyword": "山寺",
     "access": {
-      "rail": {
-        "to": "山寺駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "山形空港"
+        },
+        {
+          "type": "local",
+          "from": "山形空港",
+          "to": "山寺駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -16446,10 +17352,18 @@
     "hotelArea": "miyagi",
     "hotelKeyword": "気仙沼",
     "access": {
-      "rail": {
-        "to": "気仙沼駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "仙台空港"
+        },
+        {
+          "type": "local",
+          "from": "仙台空港",
+          "to": "気仙沼駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -16517,15 +17431,19 @@
     "hotelArea": "gunma",
     "hotelKeyword": "伊香保温泉",
     "access": {
-      "rail": {
-        "to": "渋川駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "渋川駅",
-        "to": "伊香保温泉バス停",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "渋川駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "渋川駅",
+          "to": "伊香保温泉バス停",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -16594,15 +17512,19 @@
     "hotelArea": "kanagawa",
     "hotelKeyword": "江の島",
     "access": {
-      "rail": {
-        "to": "片瀬江ノ島駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "片瀬江ノ島駅",
-        "to": "江の島",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "片瀬江ノ島駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "片瀬江ノ島駅",
+          "to": "江の島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -16672,10 +17594,13 @@
     "hotelArea": "saitama",
     "hotelKeyword": "秩父",
     "access": {
-      "rail": {
-        "to": "秩父駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "秩父駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -16744,10 +17669,13 @@
     "hotelArea": "ibaraki",
     "hotelKeyword": "大洗",
     "access": {
-      "rail": {
-        "to": "大洗駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大洗駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -16815,10 +17743,13 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "佐野",
     "access": {
-      "rail": {
-        "to": "佐野駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "佐野駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -16888,10 +17819,13 @@
     "hotelArea": "gifu",
     "hotelKeyword": "郡上八幡",
     "access": {
-      "rail": {
-        "to": "郡上八幡駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "郡上八幡駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -16958,15 +17892,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "奈良井",
     "access": {
-      "rail": {
-        "to": "奈良井駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "奈良井駅",
-        "to": "奈良井宿",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "奈良井駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "奈良井駅",
+          "to": "奈良井宿",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -17043,10 +17981,13 @@
     "hotelArea": "niigata",
     "hotelKeyword": "糸魚川",
     "access": {
-      "rail": {
-        "to": "糸魚川駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "糸魚川駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -17114,10 +18055,13 @@
     "hotelArea": "niigata",
     "hotelKeyword": "村上",
     "access": {
-      "rail": {
-        "to": "村上駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "村上駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -17186,15 +18130,19 @@
     "hotelArea": "mie",
     "hotelKeyword": "志摩",
     "access": {
-      "rail": {
-        "to": "賢島駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "賢島駅",
-        "to": "志摩",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "賢島駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "賢島駅",
+          "to": "志摩",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17263,10 +18211,13 @@
     "hotelArea": "gifu",
     "hotelKeyword": "大垣",
     "access": {
-      "rail": {
-        "to": "大垣駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大垣駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -17333,15 +18284,19 @@
     "hotelArea": "fukui",
     "hotelKeyword": "越前海岸",
     "access": {
-      "rail": {
-        "to": "武生駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "武生駅",
-        "to": "越前海岸",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "武生駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "武生駅",
+          "to": "越前海岸",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17409,15 +18364,19 @@
     "hotelArea": "niigata",
     "hotelKeyword": "妙高高原",
     "access": {
-      "rail": {
-        "to": "妙高高原駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "妙高高原駅",
-        "to": "妙高高原",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "妙高高原駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "妙高高原駅",
+          "to": "妙高高原",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17484,10 +18443,13 @@
     "hotelArea": "niigata",
     "hotelKeyword": "長岡",
     "access": {
-      "rail": {
-        "to": "長岡駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長岡駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -17556,15 +18518,18 @@
     "hotelArea": "kochi",
     "hotelKeyword": "窪川",
     "access": {
-      "rail": {
-        "to": "土佐大正駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "土佐大正駅",
-        "to": "四万十町",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "高知龍馬空港"
+        },
+        {
+          "type": "local",
+          "from": "高知龍馬空港",
+          "to": "土佐大正駅",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17634,15 +18599,19 @@
     "hotelArea": "hyogo",
     "hotelKeyword": "丹波篠山",
     "access": {
-      "rail": {
-        "to": "篠山口駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "篠山口駅",
-        "to": "丹波篠山",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "篠山口駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "篠山口駅",
+          "to": "丹波篠山",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -17712,15 +18681,19 @@
     "hotelArea": "wakayama",
     "hotelKeyword": "那智勝浦",
     "access": {
-      "rail": {
-        "to": "紀伊勝浦駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "紀伊勝浦駅",
-        "to": "那智勝浦",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "紀伊勝浦駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "紀伊勝浦駅",
+          "to": "那智勝浦",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17791,15 +18764,19 @@
     "accessType": "car",
     "hotelKeyword": "熊野本宮",
     "access": {
-      "rail": {
-        "to": "新宮駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "新宮駅",
-        "to": "本宮大社前バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "新宮駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "新宮駅",
+          "to": "本宮大社前バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -17869,10 +18846,13 @@
     "hotelArea": "hyogo",
     "hotelKeyword": "赤穂",
     "access": {
-      "rail": {
-        "to": "赤穂駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "赤穂駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -17941,15 +18921,19 @@
     "hotelArea": "kyoto",
     "hotelKeyword": "伏見",
     "access": {
-      "rail": {
-        "to": "伏見稲荷駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "伏見稲荷駅",
-        "to": "伏見",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "伏見稲荷駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "伏見稲荷駅",
+          "to": "伏見",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -18016,15 +19000,19 @@
     "hotelArea": "hiroshima",
     "hotelKeyword": "鞆の浦",
     "access": {
-      "rail": {
-        "to": "福山駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "福山駅",
-        "to": "鞆の浦バス停",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "福山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "福山駅",
+          "to": "鞆の浦バス停",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -18093,10 +19081,18 @@
     "hotelArea": "tottori",
     "hotelKeyword": "境港",
     "access": {
-      "rail": {
-        "to": "境港駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "米子空港"
+        },
+        {
+          "type": "local",
+          "from": "米子空港",
+          "to": "境港駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -18171,15 +19167,19 @@
     "hotelArea": "okayama",
     "hotelKeyword": "牛窓",
     "access": {
-      "rail": {
-        "to": "邑久駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "邑久駅",
-        "to": "牛窓バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "邑久駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "邑久駅",
+          "to": "牛窓バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -18248,10 +19248,13 @@
     "hotelArea": "okayama",
     "hotelKeyword": "笠岡",
     "access": {
-      "rail": {
-        "to": "笠岡駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "笠岡駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -18318,15 +19321,19 @@
     "accessType": "car",
     "hotelKeyword": "角島",
     "access": {
-      "rail": {
-        "to": "特牛駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "特牛駅",
-        "to": "角島大橋",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "特牛駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "特牛駅",
+          "to": "角島大橋",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -18405,10 +19412,18 @@
     "hotelArea": "ehime",
     "hotelKeyword": "道後温泉",
     "access": {
-      "rail": {
-        "to": "道後温泉駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "松山空港"
+        },
+        {
+          "type": "local",
+          "from": "松山空港",
+          "to": "道後温泉駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -18478,10 +19493,18 @@
     "hotelArea": "kagawa",
     "hotelKeyword": "丸亀",
     "access": {
-      "rail": {
-        "to": "丸亀駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "高松空港"
+        },
+        {
+          "type": "local",
+          "from": "高松空港",
+          "to": "丸亀駅",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -18552,15 +19575,18 @@
     "accessType": "car",
     "hotelKeyword": "三崎",
     "access": {
-      "rail": {
-        "to": "八幡浜駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "八幡浜駅",
-        "to": "三崎港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "松山空港"
+        },
+        {
+          "type": "local",
+          "from": "松山空港",
+          "to": "三崎港",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -18630,15 +19656,19 @@
     "hotelArea": "fukuoka",
     "hotelKeyword": "柳川",
     "access": {
-      "rail": {
-        "to": "西鉄柳川駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "西鉄柳川駅",
-        "to": "柳川",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "西鉄柳川駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "西鉄柳川駅",
+          "to": "柳川",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -18707,15 +19737,12 @@
     "hotelArea": "miyazaki",
     "hotelKeyword": "日向",
     "access": {
-      "rail": {
-        "to": "日向市駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "日向市駅",
-        "to": "宮崎空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮崎空港"
+        }
+      ]
     }
   },
   {
@@ -18786,16 +19813,24 @@
     "flightHub": "鹿児島",
     "hotelKeyword": "甑島",
     "access": {
-      "rail": {
-        "to": "川内港",
-        "provider": "JR九州"
-      },
-      "ferry": {
-        "from": "川内港",
-        "to": "甑島",
-        "operator": null,
-        "bookingUrl": null
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "川内駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "川内駅",
+          "to": "川内港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "川内港",
+          "to": "甑島"
+        }
+      ]
     }
   },
   {
@@ -18865,15 +19900,12 @@
     "hotelArea": "kagoshima",
     "hotelKeyword": "霧島",
     "access": {
-      "rail": {
-        "to": "霧島神宮駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "霧島神宮駅",
-        "to": "鹿児島空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "鹿児島空港"
+        }
+      ]
     }
   },
   {
@@ -18942,15 +19974,18 @@
     "accessType": "car",
     "hotelKeyword": "えびの高原",
     "access": {
-      "rail": {
-        "to": "えびの駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "えびの駅",
-        "to": "えびの高原バス停",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮崎空港"
+        },
+        {
+          "type": "local",
+          "from": "宮崎空港",
+          "to": "えびの高原バス停",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -19018,15 +20053,12 @@
     "flightHub": "那覇",
     "hotelKeyword": "恩納",
     "access": {
-      "rail": {
-        "to": "那覇空港",
-        "provider": null
-      },
-      "local": {
-        "from": "那覇空港",
-        "to": "那覇空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
     }
   },
   {
@@ -19094,15 +20126,12 @@
     "flightHub": "那覇",
     "hotelKeyword": "名護",
     "access": {
-      "rail": {
-        "to": "那覇空港",
-        "provider": null
-      },
-      "local": {
-        "from": "那覇空港",
-        "to": "那覇空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
     }
   },
   {
@@ -19171,15 +20200,12 @@
     "flightHub": "那覇",
     "hotelKeyword": "読谷",
     "access": {
-      "rail": {
-        "to": "那覇空港",
-        "provider": null
-      },
-      "local": {
-        "from": "那覇空港",
-        "to": "那覇空港",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
     }
   },
   {
@@ -19250,15 +20276,19 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "ニセコ",
     "access": {
-      "rail": {
-        "to": "倶知安駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "倶知安駅",
-        "to": "ニセコ",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "倶知安駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "倶知安駅",
+          "to": "ニセコ",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -19329,15 +20359,19 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "旭岳",
     "access": {
-      "rail": {
-        "to": "旭川駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "旭川駅",
-        "to": "旭岳温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "旭川駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "旭川駅",
+          "to": "旭岳温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -19406,10 +20440,13 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "白老",
     "access": {
-      "rail": {
-        "to": "白老駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "白老駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -19479,10 +20516,13 @@
     "hotelArea": "hokkaido",
     "hotelKeyword": "トマム",
     "access": {
-      "rail": {
-        "to": "トマム駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "トマム駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -19551,15 +20591,19 @@
     "hotelArea": "aomori",
     "hotelKeyword": "十和田",
     "access": {
-      "rail": {
-        "to": "八戸駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "八戸駅",
-        "to": "十和田湖",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "八戸駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "八戸駅",
+          "to": "十和田湖",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -19628,15 +20672,19 @@
     "hotelArea": "aomori",
     "hotelKeyword": "むつ",
     "access": {
-      "rail": {
-        "to": "下北駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "下北駅",
-        "to": "恐山",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下北駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "下北駅",
+          "to": "恐山",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -19707,15 +20755,19 @@
     "hotelArea": "fukushima",
     "hotelKeyword": "裏磐梯",
     "access": {
-      "rail": {
-        "to": "猪苗代駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "猪苗代駅",
-        "to": "五色沼入口",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "猪苗代駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "猪苗代駅",
+          "to": "五色沼入口",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -19784,15 +20836,19 @@
     "hotelArea": "miyagi",
     "hotelKeyword": "南三陸",
     "access": {
-      "rail": {
-        "to": "気仙沼駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "気仙沼駅",
-        "to": "南三陸",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "気仙沼駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "気仙沼駅",
+          "to": "南三陸",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -19863,10 +20919,13 @@
     "hotelArea": "iwate",
     "hotelKeyword": "北上",
     "access": {
-      "rail": {
-        "to": "北上駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "北上駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -19936,10 +20995,13 @@
     "hotelArea": "tochigi",
     "hotelKeyword": "鬼怒川温泉",
     "access": {
-      "rail": {
-        "to": "鬼怒川温泉駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鬼怒川温泉駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20009,15 +21071,19 @@
     "hotelArea": "gunma",
     "hotelKeyword": "尾瀬",
     "access": {
-      "rail": {
-        "to": "沼田駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "沼田駅",
-        "to": "鳩待峠",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "沼田駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "沼田駅",
+          "to": "鳩待峠",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -20086,15 +21152,19 @@
     "hotelArea": "ibaraki",
     "hotelKeyword": "筑波",
     "access": {
-      "rail": {
-        "to": "つくば駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "つくば駅",
-        "to": "筑波",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "つくば駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "つくば駅",
+          "to": "筑波",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -20164,10 +21234,13 @@
     "hotelArea": "ibaraki",
     "hotelKeyword": "笠間",
     "access": {
-      "rail": {
-        "to": "笠間駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "笠間駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20237,10 +21310,13 @@
     "hotelArea": "chiba",
     "hotelKeyword": "成田",
     "access": {
-      "rail": {
-        "to": "成田駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "成田駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20309,15 +21385,19 @@
     "hotelArea": "chiba",
     "hotelKeyword": "九十九里",
     "access": {
-      "rail": {
-        "to": "東金駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "東金駅",
-        "to": "九十九里海岸",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "東金駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "東金駅",
+          "to": "九十九里海岸",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -20386,15 +21466,19 @@
     "hotelArea": "kanagawa",
     "hotelKeyword": "三浦",
     "access": {
-      "rail": {
-        "to": "三崎口駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "三崎口駅",
-        "to": "三浦",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "三崎口駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "三崎口駅",
+          "to": "三浦",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -20464,10 +21548,13 @@
     "hotelArea": "tokyo",
     "hotelKeyword": "奥多摩",
     "access": {
-      "rail": {
-        "to": "奥多摩駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "奥多摩駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20536,15 +21623,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "湯田中",
     "access": {
-      "rail": {
-        "to": "湯田中駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "湯田中駅",
-        "to": "地獄谷野猿公苑",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "湯田中駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "湯田中駅",
+          "to": "地獄谷野猿公苑",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -20615,15 +21706,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "蓼科",
     "access": {
-      "rail": {
-        "to": "茅野駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "茅野駅",
-        "to": "蓼科",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "茅野駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "茅野駅",
+          "to": "蓼科",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -20693,10 +21788,13 @@
     "hotelArea": "niigata",
     "hotelKeyword": "越後湯沢",
     "access": {
-      "rail": {
-        "to": "越後湯沢駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "越後湯沢駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20767,10 +21865,13 @@
     "hotelArea": "shizuoka",
     "hotelKeyword": "富士宮",
     "access": {
-      "rail": {
-        "to": "富士宮駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "富士宮駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -20841,15 +21942,19 @@
     "hotelArea": "nagano",
     "hotelKeyword": "乗鞍",
     "access": {
-      "rail": {
-        "to": "松本駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "松本駅",
-        "to": "畳平",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松本駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "松本駅",
+          "to": "畳平",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -20919,10 +22024,13 @@
     "hotelArea": "aichi",
     "hotelKeyword": "常滑",
     "access": {
-      "rail": {
-        "to": "常滑駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "常滑駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -20991,15 +22099,19 @@
     "hotelArea": "aichi",
     "hotelKeyword": "香嵐渓",
     "access": {
-      "rail": {
-        "to": "豊田市駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "豊田市駅",
-        "to": "香嵐渓",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "豊田市駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "豊田市駅",
+          "to": "香嵐渓",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -21068,15 +22180,19 @@
     "hotelArea": "aichi",
     "hotelKeyword": "南知多",
     "access": {
-      "rail": {
-        "to": "内海駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "内海駅",
-        "to": "南知多",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "内海駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "内海駅",
+          "to": "南知多",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -21148,10 +22264,13 @@
     "hotelArea": "kyoto",
     "hotelKeyword": "嵐山",
     "access": {
-      "rail": {
-        "to": "嵐山駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "嵐山駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -21221,10 +22340,13 @@
     "hotelArea": "shiga",
     "hotelKeyword": "信楽",
     "access": {
-      "rail": {
-        "to": "信楽駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "信楽駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -21293,15 +22415,19 @@
     "hotelArea": "nara",
     "hotelKeyword": "洞川温泉",
     "access": {
-      "rail": {
-        "to": "下市口駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "下市口駅",
-        "to": "洞川温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下市口駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "下市口駅",
+          "to": "洞川温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -21372,10 +22498,13 @@
     "hotelArea": "mie",
     "hotelKeyword": "松阪",
     "access": {
-      "rail": {
-        "to": "松阪駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松阪駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -21445,15 +22574,19 @@
     "hotelArea": "osaka",
     "hotelKeyword": "堺",
     "access": {
-      "rail": {
-        "to": "堺東駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "堺東駅",
-        "to": "堺",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "堺東駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "堺東駅",
+          "to": "堺",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -21527,21 +22660,32 @@
     "port": "七類港",
     "hotelKeyword": "海士",
     "access": {
-      "rail": {
-        "to": "七類港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "菱浦港",
-        "to": "海士町",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "七類港",
-        "to": "海士町",
-        "operator": "隠岐汽船",
-        "bookingUrl": "https://www.oki-kisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松江駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "松江駅",
+          "to": "七類港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "七類港",
+          "to": "菱浦港",
+          "operator": "隠岐汽船",
+          "bookingUrl": "https://www.oki-kisen.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "菱浦港",
+          "to": "海士町",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -21611,15 +22755,19 @@
     "hotelArea": "yamaguchi",
     "hotelKeyword": "美祢",
     "access": {
-      "rail": {
-        "to": "新山口駅",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "新山口駅",
-        "to": "秋吉台",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "新山口駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "新山口駅",
+          "to": "秋吉台",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -21689,10 +22837,13 @@
     "hotelArea": "yamaguchi",
     "hotelKeyword": "柳井",
     "access": {
-      "rail": {
-        "to": "柳井駅",
-        "provider": "えきねっと"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "柳井駅",
+          "provider": "えきねっと"
+        }
+      ]
     }
   },
   {
@@ -21768,21 +22919,32 @@
     "port": "境港",
     "hotelKeyword": "隠岐の島",
     "access": {
-      "rail": {
-        "to": "境港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "西郷港",
-        "to": "隠岐の島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "境港",
-        "to": "隠岐の島",
-        "operator": "隠岐汽船",
-        "bookingUrl": "https://www.oki-kisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "境港駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "境港駅",
+          "to": "境港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "境港",
+          "to": "西郷港",
+          "operator": "隠岐汽船",
+          "bookingUrl": "https://www.oki-kisen.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "西郷港",
+          "to": "隠岐の島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -21855,16 +23017,24 @@
     "port": "宝伝港",
     "hotelKeyword": "犬島",
     "access": {
-      "rail": {
-        "to": "宝伝港",
-        "provider": "e5489"
-      },
-      "ferry": {
-        "from": "宝伝港",
-        "to": "犬島",
-        "operator": null,
-        "bookingUrl": null
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "岡山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "岡山駅",
+          "to": "宝伝港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "宝伝港",
+          "to": "犬島港"
+        }
+      ]
     }
   },
   {
@@ -21937,21 +23107,32 @@
     "port": "高松港",
     "hotelKeyword": "豊島",
     "access": {
-      "rail": {
-        "to": "高松港",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "家浦港",
-        "to": "豊島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "高松港",
-        "to": "豊島",
-        "operator": "豊島フェリー",
-        "bookingUrl": "https://www.t-ferry.com/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "高松港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "家浦港",
+          "operator": "豊島フェリー",
+          "bookingUrl": "https://www.t-ferry.com/"
+        },
+        {
+          "type": "local",
+          "from": "家浦港",
+          "to": "豊島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -22022,15 +23203,19 @@
     "accessType": "car",
     "hotelKeyword": "仁淀川",
     "access": {
-      "rail": {
-        "to": "高知駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "高知駅",
-        "to": "仁淀川",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高知駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高知駅",
+          "to": "仁淀川",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -22101,15 +23286,19 @@
     "accessType": "car",
     "hotelKeyword": "梼原",
     "access": {
-      "rail": {
-        "to": "須崎駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "須崎駅",
-        "to": "梼原",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "須崎駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "須崎駅",
+          "to": "梼原",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -22179,10 +23368,13 @@
     "hotelArea": "tokushima",
     "hotelKeyword": "阿南",
     "access": {
-      "rail": {
-        "to": "阿南駅",
-        "provider": "e5489"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "阿南駅",
+          "provider": "e5489"
+        }
+      ]
     }
   },
   {
@@ -22253,15 +23445,19 @@
     "accessType": "car",
     "hotelKeyword": "久万高原",
     "access": {
-      "rail": {
-        "to": "松山駅",
-        "provider": "e5489"
-      },
-      "local": {
-        "from": "松山駅",
-        "to": "四国カルスト",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "松山駅",
+          "to": "四国カルスト",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -22332,10 +23528,13 @@
     "hotelArea": "miyazaki",
     "hotelKeyword": "青島",
     "access": {
-      "rail": {
-        "to": "青島駅",
-        "provider": "JR九州"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "青島駅",
+          "provider": "JR九州"
+        }
+      ]
     }
   },
   {
@@ -22405,15 +23604,19 @@
     "hotelArea": "kumamoto",
     "hotelKeyword": "山鹿",
     "access": {
-      "rail": {
-        "to": "玉名駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "玉名駅",
-        "to": "山鹿温泉",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "玉名駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "玉名駅",
+          "to": "山鹿温泉",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -22482,15 +23685,19 @@
     "hotelArea": "saga",
     "hotelKeyword": "神埼",
     "access": {
-      "rail": {
-        "to": "吉野ヶ里公園駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "吉野ヶ里公園駅",
-        "to": "吉野ヶ里",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "吉野ヶ里公園駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "吉野ヶ里公園駅",
+          "to": "吉野ヶ里",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -22562,15 +23769,18 @@
     "hotelArea": "oita",
     "hotelKeyword": "国東",
     "access": {
-      "rail": {
-        "to": "宇佐駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "宇佐駅",
-        "to": "国東",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "大分空港"
+        },
+        {
+          "type": "local",
+          "from": "大分空港",
+          "to": "国東",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -22641,15 +23851,19 @@
     "hotelArea": "kagoshima",
     "hotelKeyword": "知覧",
     "access": {
-      "rail": {
-        "to": "鹿児島中央駅",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "鹿児島中央駅",
-        "to": "知覧",
-        "method": "バス"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鹿児島中央駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "鹿児島中央駅",
+          "to": "知覧",
+          "method": "バス"
+        }
+      ]
     }
   },
   {
@@ -22721,21 +23935,32 @@
     "port": "佐世保港",
     "hotelKeyword": "小値賀島",
     "access": {
-      "rail": {
-        "to": "佐世保港",
-        "provider": "JR九州"
-      },
-      "local": {
-        "from": "小値賀港",
-        "to": "小値賀島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "佐世保港",
-        "to": "小値賀島",
-        "operator": "九州商船",
-        "bookingUrl": "https://www.kysho.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "佐世保駅",
+          "provider": "JR九州"
+        },
+        {
+          "type": "local",
+          "from": "佐世保駅",
+          "to": "佐世保港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "佐世保港",
+          "to": "小値賀港",
+          "operator": "九州商船",
+          "bookingUrl": "https://www.kysho.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "小値賀港",
+          "to": "小値賀島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -22810,15 +24035,18 @@
     "flightHub": "宮古",
     "hotelKeyword": "伊良部島",
     "access": {
-      "rail": {
-        "to": "宮古空港",
-        "provider": null
-      },
-      "local": {
-        "from": "宮古空港",
-        "to": "伊良部島",
-        "method": "徒歩"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮古空港"
+        },
+        {
+          "type": "local",
+          "from": "宮古空港",
+          "to": "伊良部島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -22894,21 +24122,31 @@
     "flightHub": "那覇",
     "hotelKeyword": "粟国島",
     "access": {
-      "rail": {
-        "to": "泊港",
-        "provider": null
-      },
-      "local": {
-        "from": "粟国港",
-        "to": "粟国島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "泊港",
-        "to": "粟国島",
-        "operator": "マリンライナー",
-        "bookingUrl": "https://www.agui.net/"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "泊港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "泊港",
+          "to": "粟国港",
+          "operator": "マリンライナー",
+          "bookingUrl": "https://www.agui.net/"
+        },
+        {
+          "type": "local",
+          "from": "粟国港",
+          "to": "粟国島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -22980,15 +24218,18 @@
     "flightHub": "那覇",
     "hotelKeyword": "糸満",
     "access": {
-      "rail": {
-        "to": "糸満",
-        "provider": null
-      },
-      "local": {
-        "from": "糸満",
-        "to": "糸満",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "糸満",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -23059,15 +24300,18 @@
     "flightHub": "那覇",
     "hotelKeyword": "名護",
     "access": {
-      "rail": {
-        "to": "喜如嘉",
-        "provider": null
-      },
-      "local": {
-        "from": "喜如嘉",
-        "to": "喜如嘉",
-        "method": "レンタカー"
-      }
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "喜如嘉",
+          "method": "レンタカー"
+        }
+      ]
     }
   },
   {
@@ -23141,16 +24385,26 @@
     "port": "竹芝桟橋",
     "hotelKeyword": "三宅島",
     "access": {
-      "rail": {
-        "to": "竹芝桟橋",
-        "provider": "えきねっと"
-      },
-      "ferry": {
-        "from": "竹芝桟橋",
-        "to": "三宅島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝桟橋",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "三宅島港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        }
+      ]
     }
   },
   {
@@ -23224,21 +24478,32 @@
     "port": "竹芝桟橋",
     "hotelKeyword": "八丈島",
     "access": {
-      "rail": {
-        "to": "竹芝桟橋",
-        "provider": "えきねっと"
-      },
-      "local": {
-        "from": "八丈島空港",
-        "to": "八丈島",
-        "method": "徒歩"
-      },
-      "ferry": {
-        "from": "竹芝桟橋",
-        "to": "八丈島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝桟橋",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "八丈島空港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        },
+        {
+          "type": "local",
+          "from": "八丈島空港",
+          "to": "八丈島",
+          "method": "徒歩"
+        }
+      ]
     }
   },
   {
@@ -23312,16 +24577,26 @@
     "port": "竹芝桟橋",
     "hotelKeyword": "新島",
     "access": {
-      "rail": {
-        "to": "竹芝桟橋",
-        "provider": "えきねっと"
-      },
-      "ferry": {
-        "from": "竹芝桟橋",
-        "to": "新島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝桟橋",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "新島港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        }
+      ]
     }
   },
   {
@@ -23393,16 +24668,26 @@
     "port": "竹芝桟橋",
     "hotelKeyword": "式根島",
     "access": {
-      "rail": {
-        "to": "竹芝桟橋",
-        "provider": "えきねっと"
-      },
-      "ferry": {
-        "from": "竹芝桟橋",
-        "to": "式根島",
-        "operator": "東海汽船",
-        "bookingUrl": "https://www.tokaikisen.co.jp/"
-      }
+      "steps": [
+        {
+          "type": "rail",
+          "to": "浜松町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "浜松町駅",
+          "to": "竹芝桟橋",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹芝桟橋",
+          "to": "式根島港",
+          "operator": "東海汽船",
+          "bookingUrl": "https://www.tokaikisen.co.jp/"
+        }
+      ]
     }
   }
 ]
