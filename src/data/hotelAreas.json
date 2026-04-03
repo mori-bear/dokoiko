@@ -4227,5 +4227,45 @@
     "rakutenFallback": "/yado/tokushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%8E%4F%8D%44%8E%73",
     "jalanKeyword": "徳島県 三好市"
+  },
+  {
+    "id": "otsu-shiga",
+    "name": "大津",
+    "prefCode": "shiga",
+    "prefecture": "滋賀県",
+    "rakutenPath": "/yado/shiga/otsu.html",
+    "jalanKeyword": "滋賀県 大津市"
+  },
+  {
+    "id": "kusatsu-shiga",
+    "name": "草津（滋賀）",
+    "prefCode": "shiga",
+    "prefecture": "滋賀県",
+    "rakutenPath": "/yado/shiga/",
+    "jalanKeyword": "滋賀県 草津市"
+  },
+  {
+    "id": "takashima-shiga",
+    "name": "高島",
+    "prefCode": "shiga",
+    "prefecture": "滋賀県",
+    "rakutenPath": "/yado/shiga/takashima.html",
+    "jalanKeyword": "滋賀県 高島市"
+  },
+  {
+    "id": "omihachiman",
+    "name": "近江八幡",
+    "prefCode": "shiga",
+    "prefecture": "滋賀県",
+    "rakutenPath": "/yado/shiga/omihachiman.html",
+    "jalanKeyword": "滋賀県 近江八幡市"
+  },
+  {
+    "id": "koka",
+    "name": "甲賀",
+    "prefCode": "shiga",
+    "prefecture": "滋賀県",
+    "rakutenPath": "/yado/shiga/",
+    "jalanKeyword": "滋賀県 甲賀市"
   }
 ]

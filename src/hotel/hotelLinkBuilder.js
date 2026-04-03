@@ -44,11 +44,13 @@ function lookupArea(destId) {
 
 /**
  * 楽天エリアページ URL（アフィリエイトなし）
- * hotelAreas.json の rakutenPath → rakutenFallback → /（トップ）の優先順
+ * 優先順: hotelAreas エリアパス → エリアfallback → hotelArea（都道府県）→ トップ
  */
 function buildRakutenDestUrl(dest) {
   const area = lookupArea(dest.id);
-  const path = area?.rakutenPath || area?.rakutenFallback || null;
+  const path = area?.rakutenPath
+    || area?.rakutenFallback
+    || (dest.hotelArea ? `/yado/${dest.hotelArea}/` : null);
   return `https://travel.rakuten.co.jp${path ?? '/'}`;
 }
 
@@ -97,9 +99,12 @@ function buildJalanUrl(keyword, area = null) {
  * @returns {{ heading: string, links: Array, hubLinks?: {heading, links} }}
  */
 export function buildHotelLinks(dest) {
-  const keyword = dest.hotelKeyword ?? dest.name;
-  const uiName  = dest.displayName || dest.name;
   const area    = lookupArea(dest.id); // Shift-JIS jalanUrl 取得のため
+  // じゃらん: area.jalanUrl がない場合は「都道府県 地名」でキーワード精度を上げる
+  const baseKeyword = dest.hotelKeyword ?? dest.name;
+  const keyword = area?.jalanUrl
+    ? baseKeyword
+    : (dest.prefecture ? `${dest.prefecture} ${baseKeyword}` : baseKeyword);
 
   /* ── 現地宿（必須） ── */
   const result = {
