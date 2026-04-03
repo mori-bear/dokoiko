@@ -74,7 +74,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": "東京駅"
   },
   {
     "id": "atami",
@@ -151,7 +152,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "nikko",
@@ -250,7 +252,8 @@
       ]
     },
     "fallbackCity": "日光",
-    "finalPoint": "日光東照宮"
+    "finalPoint": "日光東照宮",
+    "gateway": "宇都宮駅"
   },
   {
     "id": "karuizawa",
@@ -344,7 +347,8 @@
       ]
     },
     "fallbackCity": "松本",
-    "finalPoint": "旧軽井沢銀座"
+    "finalPoint": "旧軽井沢銀座",
+    "gateway": null
   },
   {
     "id": "fujikawaguchiko",
@@ -428,7 +432,8 @@
         }
       ]
     },
-    "fallbackCity": "富士河口湖"
+    "fallbackCity": "富士河口湖",
+    "gateway": null
   },
   {
     "id": "nara",
@@ -507,7 +512,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": "京都駅"
   },
   {
     "id": "ishigaki",
@@ -589,7 +595,8 @@
       ]
     },
     "finalPoint": "石垣市街",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇空港"
   },
   {
     "id": "ise",
@@ -684,7 +691,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": "名古屋駅"
   },
   {
     "id": "beppu",
@@ -771,7 +779,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "大分駅"
   },
   {
     "id": "otaru",
@@ -850,7 +859,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": "新千歳空港"
   },
   {
     "id": "furano",
@@ -934,7 +944,8 @@
       ]
     },
     "fallbackCity": "札幌",
-    "finalPoint": "ファーム富田"
+    "finalPoint": "ファーム富田",
+    "gateway": "旭川駅"
   },
   {
     "id": "matsushima",
@@ -1030,7 +1041,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": "仙台駅"
   },
   {
     "id": "miyajima",
@@ -1123,7 +1135,8 @@
       ]
     },
     "finalPoint": "厳島神社",
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": "広島駅"
   },
   {
     "id": "onomichi",
@@ -1214,7 +1227,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": "福山駅"
   },
   {
     "id": "shodoshima",
@@ -1310,7 +1324,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": "高松駅"
   },
   {
     "id": "mihonoseki",
@@ -1394,7 +1409,8 @@
         }
       ]
     },
-    "fallbackCity": "境港"
+    "fallbackCity": "境港",
+    "gateway": "松江駅"
   },
   {
     "id": "ryujin-onsen",
@@ -1474,7 +1490,8 @@
         }
       ]
     },
-    "fallbackCity": "田辺"
+    "fallbackCity": "田辺",
+    "gateway": null
   },
   {
     "id": "tokashiki-jima",
@@ -1575,7 +1592,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇港"
   },
   {
     "id": "kumejima",
@@ -1677,7 +1695,8 @@
       ]
     },
     "finalPoint": "久米島",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇空港"
   },
   {
     "id": "miyakojima",
@@ -1760,7 +1779,8 @@
       ]
     },
     "finalPoint": "宮古島",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇空港"
   },
   {
     "id": "kouzushima",
@@ -1852,7 +1872,8 @@
       ]
     },
     "fallbackCity": "東京",
-    "finalPoint": "長浜海水浴場"
+    "finalPoint": "長浜海水浴場",
+    "gateway": "竹芝客船ターミナル"
   },
   {
     "id": "hakone",
@@ -1935,7 +1956,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": "小田原駅"
   },
   {
     "id": "shuzenji",
@@ -2011,7 +2033,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": "三島駅"
   },
   {
     "id": "kusatsu-onsen",
@@ -2092,7 +2115,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": "長野原草津口駅"
   },
   {
     "id": "shimoda",
@@ -2176,7 +2200,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": "熱海駅"
   },
   {
     "id": "izu-oshima",
@@ -2276,7 +2301,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": "東京竹芝"
   },
   {
     "id": "shirakawago-t",
@@ -2372,7 +2398,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "arima-onsen",
@@ -2455,7 +2482,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": "三ノ宮駅"
   },
   {
     "id": "kinosaki-onsen",
@@ -2546,7 +2574,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "kurashiki-o",
@@ -2636,7 +2665,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "shirahama-o",
@@ -2715,7 +2745,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "takayama-o",
@@ -2806,7 +2837,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "toba",
@@ -2886,7 +2918,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": "名古屋駅"
   },
   {
     "id": "yufuin",
@@ -2981,7 +3014,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "大分駅"
   },
   {
     "id": "kurokawa-k",
@@ -3067,7 +3101,8 @@
         }
       ]
     },
-    "fallbackCity": "阿蘇"
+    "fallbackCity": "阿蘇",
+    "gateway": null
   },
   {
     "id": "aso",
@@ -3151,7 +3186,8 @@
       ]
     },
     "fallbackCity": "熊本",
-    "finalPoint": "阿蘇火口"
+    "finalPoint": "阿蘇火口",
+    "gateway": "熊本駅"
   },
   {
     "id": "yakushima",
@@ -3259,7 +3295,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島中央駅"
   },
   {
     "id": "amakusa",
@@ -3341,7 +3378,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": null
   },
   {
     "id": "hiraizumi",
@@ -3419,7 +3457,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "一ノ関駅"
   },
   {
     "id": "kakunodate",
@@ -3496,7 +3535,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": "盛岡駅"
   },
   {
     "id": "aizu",
@@ -3586,7 +3626,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "zaosan",
@@ -3669,7 +3710,8 @@
       ]
     },
     "fallbackCity": "仙台",
-    "finalPoint": "御釜"
+    "finalPoint": "御釜",
+    "gateway": null
   },
   {
     "id": "hagi",
@@ -3748,7 +3790,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "新山口駅"
   },
   {
     "id": "shimonoseki",
@@ -3828,7 +3871,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "博多駅"
   },
   {
     "id": "naoshima",
@@ -3926,7 +3970,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": "高松駅"
   },
   {
     "id": "kotohira",
@@ -4009,7 +4054,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": "高松駅"
   },
   {
     "id": "uwajima",
@@ -4089,7 +4135,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "toyako",
@@ -4172,7 +4219,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "noboribetsu",
@@ -4248,7 +4296,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "shiretoko",
@@ -4333,7 +4382,8 @@
         }
       ]
     },
-    "fallbackCity": "網走"
+    "fallbackCity": "網走",
+    "gateway": null
   },
   {
     "id": "wajima",
@@ -4416,7 +4466,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": "金沢駅"
   },
   {
     "id": "kaga-onsen",
@@ -4500,7 +4551,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "hakuba",
@@ -4581,7 +4633,8 @@
       ]
     },
     "fallbackCity": "松本",
-    "finalPoint": "白馬八方尾根"
+    "finalPoint": "白馬八方尾根",
+    "gateway": "長野駅"
   },
   {
     "id": "amanohashidate",
@@ -4657,7 +4710,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": "福知山駅"
   },
   {
     "id": "ine",
@@ -4740,7 +4794,8 @@
         }
       ]
     },
-    "fallbackCity": "天橋立"
+    "fallbackCity": "天橋立",
+    "gateway": "天橋立駅"
   },
   {
     "id": "ibusuki",
@@ -4817,7 +4872,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島中央駅"
   },
   {
     "id": "sasebo",
@@ -4895,7 +4951,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": "博多駅"
   },
   {
     "id": "hirado",
@@ -4978,7 +5035,8 @@
         }
       ]
     },
-    "fallbackCity": "佐世保"
+    "fallbackCity": "佐世保",
+    "gateway": null
   },
   {
     "id": "tottori",
@@ -5054,7 +5112,8 @@
         }
       ]
     },
-    "fallbackCity": "鳥取"
+    "fallbackCity": "鳥取",
+    "gateway": null
   },
   {
     "id": "akita",
@@ -5131,7 +5190,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "awaji",
@@ -5217,7 +5277,8 @@
         }
       ]
     },
-    "fallbackCity": "明石"
+    "fallbackCity": "明石",
+    "gateway": null
   },
   {
     "id": "takao",
@@ -5300,7 +5361,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": null
   },
   {
     "id": "tateyama-chiba",
@@ -5386,7 +5448,8 @@
       ]
     },
     "fallbackCity": "館山",
-    "finalPoint": "館山城"
+    "finalPoint": "館山城",
+    "gateway": null
   },
   {
     "id": "gokayama",
@@ -5469,7 +5532,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": "金沢駅"
   },
   {
     "id": "jozankei",
@@ -5553,7 +5617,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "biei",
@@ -5636,7 +5701,8 @@
       ]
     },
     "fallbackCity": "札幌",
-    "finalPoint": "青い池"
+    "finalPoint": "青い池",
+    "gateway": "旭川駅"
   },
   {
     "id": "miyako-iwate",
@@ -5721,7 +5787,8 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "finalPoint": "浄土ヶ浜"
+    "finalPoint": "浄土ヶ浜",
+    "gateway": "盛岡駅"
   },
   {
     "id": "sakata",
@@ -5799,7 +5866,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": "新庄駅"
   },
   {
     "id": "takachiho",
@@ -5884,7 +5952,8 @@
         }
       ]
     },
-    "fallbackCity": "延岡"
+    "fallbackCity": "延岡",
+    "gateway": null
   },
   {
     "id": "amami",
@@ -5984,7 +6053,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島港"
   },
   {
     "id": "goto",
@@ -6084,7 +6154,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": "長崎港"
   },
   {
     "id": "unzen",
@@ -6166,7 +6237,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": null
   },
   {
     "id": "ashizuri",
@@ -6246,7 +6318,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": "高知駅"
   },
   {
     "id": "oboke",
@@ -6331,7 +6404,8 @@
       ]
     },
     "fallbackCity": "徳島",
-    "finalPoint": "大歩危峡"
+    "finalPoint": "大歩危峡",
+    "gateway": "高松駅"
   },
   {
     "id": "tsuwano",
@@ -6409,7 +6483,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": "新山口駅"
   },
   {
     "id": "inuyama",
@@ -6486,7 +6561,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": "名古屋駅"
   },
   {
     "id": "kiso",
@@ -6570,7 +6646,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "名古屋駅"
   },
   {
     "id": "miyama",
@@ -6653,7 +6730,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": null
   },
   {
     "id": "tateyama-kurobe",
@@ -6736,7 +6814,8 @@
         }
       ]
     },
-    "fallbackCity": "氷見"
+    "fallbackCity": "氷見",
+    "gateway": "富山駅"
   },
   {
     "id": "himi",
@@ -6816,7 +6895,8 @@
         }
       ]
     },
-    "fallbackCity": "氷見"
+    "fallbackCity": "氷見",
+    "gateway": "高岡駅"
   },
   {
     "id": "nyuto-onsen",
@@ -6898,7 +6978,8 @@
         }
       ]
     },
-    "fallbackCity": "田沢湖"
+    "fallbackCity": "田沢湖",
+    "gateway": null
   },
   {
     "id": "yuda-onsen",
@@ -6977,7 +7058,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "ureshino-onsen",
@@ -7052,7 +7134,8 @@
         }
       ]
     },
-    "fallbackCity": "嬉野温泉"
+    "fallbackCity": "嬉野温泉",
+    "gateway": null
   },
   {
     "id": "obuse",
@@ -7128,7 +7211,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "長野駅"
   },
   {
     "id": "uchiko",
@@ -7204,7 +7288,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "muroto",
@@ -7286,7 +7371,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "iya",
@@ -7370,7 +7456,8 @@
         }
       ]
     },
-    "fallbackCity": "大歩危"
+    "fallbackCity": "大歩危",
+    "gateway": null
   },
   {
     "id": "oku-izumo",
@@ -7455,7 +7542,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": null
   },
   {
     "id": "ginzan-onsen",
@@ -7538,7 +7626,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "ouchi-juku",
@@ -7621,7 +7710,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "nozawa-onsen",
@@ -7702,7 +7792,8 @@
         }
       ]
     },
-    "fallbackCity": "飯山"
+    "fallbackCity": "飯山",
+    "gateway": null
   },
   {
     "id": "takehara",
@@ -7779,7 +7870,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": "広島駅"
   },
   {
     "id": "tsumago",
@@ -7863,7 +7955,8 @@
         }
       ]
     },
-    "fallbackCity": "中津川"
+    "fallbackCity": "中津川",
+    "gateway": "名古屋駅"
   },
   {
     "id": "magome",
@@ -7947,7 +8040,8 @@
         }
       ]
     },
-    "fallbackCity": "中津川"
+    "fallbackCity": "中津川",
+    "gateway": "名古屋駅"
   },
   {
     "id": "nagahama",
@@ -8025,7 +8119,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": "米原駅"
   },
   {
     "id": "hikone",
@@ -8103,7 +8198,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": "米原駅"
   },
   {
     "id": "koyasan",
@@ -8185,7 +8281,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": "橋本駅"
   },
   {
     "id": "gero-onsen",
@@ -8249,7 +8346,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "下呂市",
-    "hubStation": "下呂駅",
+    "hubStation": "名古屋駅",
     "accessStation": "下呂駅",
     "hotelArea": "gifu",
     "hotelKeyword": "下呂温泉",
@@ -8268,7 +8365,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": "名古屋駅"
   },
   {
     "id": "naruko-onsen",
@@ -8343,7 +8441,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": "古川駅"
   },
   {
     "id": "shima-onsen",
@@ -8424,7 +8523,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": null
   },
   {
     "id": "hirosaki",
@@ -8508,7 +8608,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": "新青森駅"
   },
   {
     "id": "oirase",
@@ -8593,7 +8694,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": null
   },
   {
     "id": "mashiko",
@@ -8674,7 +8776,8 @@
       ]
     },
     "fallbackCity": "日光",
-    "finalPoint": "益子焼共販センター"
+    "finalPoint": "益子焼共販センター",
+    "gateway": "宇都宮駅"
   },
   {
     "id": "bessho-onsen",
@@ -8752,7 +8855,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "上田駅"
   },
   {
     "id": "izushi",
@@ -8836,7 +8940,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "wakura-onsen",
@@ -8912,7 +9017,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "misasa-onsen",
@@ -8994,7 +9100,8 @@
         }
       ]
     },
-    "fallbackCity": "倉吉"
+    "fallbackCity": "倉吉",
+    "gateway": null
   },
   {
     "id": "obi",
@@ -9071,7 +9178,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": "宮崎駅"
   },
   {
     "id": "hitoyoshi",
@@ -9150,7 +9258,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": "熊本駅"
   },
   {
     "id": "kamikochi",
@@ -9233,7 +9342,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "松本駅"
   },
   {
     "id": "minakami-onsen",
@@ -9316,7 +9426,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": null
   },
   {
     "id": "minami-aso",
@@ -9399,7 +9510,8 @@
         }
       ]
     },
-    "fallbackCity": "阿蘇"
+    "fallbackCity": "阿蘇",
+    "gateway": null
   },
   {
     "id": "imabari",
@@ -9488,7 +9600,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "ozu",
@@ -9583,7 +9696,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "shakotan",
@@ -9677,7 +9791,8 @@
         }
       ]
     },
-    "fallbackCity": "小樽"
+    "fallbackCity": "小樽",
+    "gateway": "小樽駅"
   },
   {
     "id": "izumo",
@@ -9774,7 +9889,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": "松江駅"
   },
   {
     "id": "suzu",
@@ -9846,7 +9962,8 @@
       ]
     },
     "finalPoint": "珠洲市街",
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": "金沢駅"
   },
   {
     "id": "yoshino",
@@ -9943,7 +10060,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": "橿原神宮前駅"
   },
   {
     "id": "kumano",
@@ -10040,7 +10158,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": null
   },
   {
     "id": "iriomote",
@@ -10154,7 +10273,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "石垣港"
   },
   {
     "id": "takahashi",
@@ -10251,7 +10371,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": "岡山駅"
   },
   {
     "id": "hida-furukawa",
@@ -10329,7 +10450,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "city": "岐阜飛騨古川",
-    "hubStation": "飛騨古川駅",
+    "hubStation": "高山駅",
     "accessStation": "飛騨古川駅",
     "hotelArea": "gifu",
     "hotelKeyword": "飛騨古川",
@@ -10342,7 +10463,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": "高山駅"
   },
   {
     "id": "bungo-takada",
@@ -10438,7 +10560,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "izu-kogen",
@@ -10530,7 +10653,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": "熱海駅"
   },
   {
     "id": "tanabe",
@@ -10627,7 +10751,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "tosa-shimizu",
@@ -10721,7 +10846,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "nichinan",
@@ -10819,7 +10945,8 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "finalPoint": "鵜戸神宮"
+    "finalPoint": "鵜戸神宮",
+    "gateway": "宮崎駅"
   },
   {
     "id": "mojiko",
@@ -10910,7 +11037,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "itoshima",
@@ -11006,7 +11134,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": "博多駅"
   },
   {
     "id": "shimabara",
@@ -11103,7 +11232,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": "諫早駅"
   },
   {
     "id": "tsuruga",
@@ -11194,7 +11324,8 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "gateway": null
   },
   {
     "id": "shijishima",
@@ -11288,7 +11419,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": null
   },
   {
     "id": "sounkyo",
@@ -11372,7 +11504,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": "上川駅"
   },
   {
     "id": "rebun-island",
@@ -11478,7 +11611,8 @@
         }
       ]
     },
-    "fallbackCity": "稚内"
+    "fallbackCity": "稚内",
+    "gateway": "礼文島駅"
   },
   {
     "id": "rishiri-island",
@@ -11577,7 +11711,8 @@
         }
       ]
     },
-    "fallbackCity": "稚内"
+    "fallbackCity": "稚内",
+    "gateway": "利尻島駅"
   },
   {
     "id": "akan",
@@ -11657,7 +11792,8 @@
         }
       ]
     },
-    "fallbackCity": "釧路"
+    "fallbackCity": "釧路",
+    "gateway": null
   },
   {
     "id": "abashiri",
@@ -11739,7 +11875,8 @@
       ]
     },
     "fallbackCity": "札幌",
-    "finalPoint": "オホーツク流氷館"
+    "finalPoint": "オホーツク流氷館",
+    "gateway": null
   },
   {
     "id": "shikotsu",
@@ -11818,7 +11955,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": "千歳駅"
   },
   {
     "id": "tono",
@@ -11897,7 +12035,8 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "finalPoint": "カッパ淵"
+    "finalPoint": "カッパ淵",
+    "gateway": "新花巻駅"
   },
   {
     "id": "oga",
@@ -11979,7 +12118,8 @@
       ]
     },
     "fallbackCity": "角館",
-    "finalPoint": "入道崎"
+    "finalPoint": "入道崎",
+    "gateway": "秋田駅"
   },
   {
     "id": "yonezawa",
@@ -12053,7 +12193,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "dewa-sanzan",
@@ -12135,7 +12276,8 @@
         }
       ]
     },
-    "fallbackCity": "鶴岡"
+    "fallbackCity": "鶴岡",
+    "gateway": null
   },
   {
     "id": "sakunami-onsen",
@@ -12215,7 +12357,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "goshogawara",
@@ -12294,7 +12437,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": "青森駅"
   },
   {
     "id": "kawagoe",
@@ -12368,7 +12512,8 @@
         }
       ]
     },
-    "fallbackCity": "川越"
+    "fallbackCity": "川越",
+    "gateway": "大宮駅"
   },
   {
     "id": "nasu",
@@ -12448,7 +12593,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": null
   },
   {
     "id": "choshi",
@@ -12521,7 +12667,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": "千葉駅"
   },
   {
     "id": "ashikaga",
@@ -12595,7 +12742,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": "小山駅"
   },
   {
     "id": "shiobara-onsen",
@@ -12674,7 +12822,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": null
   },
   {
     "id": "sado-island",
@@ -12773,7 +12922,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": "佐渡島駅"
   },
   {
     "id": "kiyosato",
@@ -12853,7 +13003,8 @@
       ]
     },
     "fallbackCity": "富士河口湖",
-    "finalPoint": "清泉寮"
+    "finalPoint": "清泉寮",
+    "gateway": "小淵沢駅"
   },
   {
     "id": "tenryu-gorge",
@@ -12926,7 +13077,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "suwa",
@@ -13005,7 +13157,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "塩尻駅"
   },
   {
     "id": "eiheiji",
@@ -13085,7 +13238,8 @@
       ]
     },
     "finalPoint": "永平寺",
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "gateway": "福井駅"
   },
   {
     "id": "wakasa-obama",
@@ -13165,7 +13319,8 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "gateway": "敦賀駅"
   },
   {
     "id": "okuhida-onsen",
@@ -13248,7 +13403,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": "高山駅"
   },
   {
     "id": "minami-izu",
@@ -13329,7 +13485,8 @@
         }
       ]
     },
-    "fallbackCity": "下田"
+    "fallbackCity": "下田",
+    "gateway": null
   },
   {
     "id": "echizen",
@@ -13408,7 +13565,8 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "gateway": "福井駅"
   },
   {
     "id": "ito",
@@ -13484,7 +13642,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": "熱海駅"
   },
   {
     "id": "iga",
@@ -13563,7 +13722,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": null
   },
   {
     "id": "kashihara",
@@ -13642,7 +13802,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": "大阪駅"
   },
   {
     "id": "totsukawa",
@@ -13725,7 +13886,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": null
   },
   {
     "id": "maizuru",
@@ -13803,7 +13965,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": null
   },
   {
     "id": "asuka",
@@ -13895,7 +14058,8 @@
       ]
     },
     "fallbackCity": "奈良",
-    "finalPoint": "石舞台古墳"
+    "finalPoint": "石舞台古墳",
+    "gateway": "橿原神宮前駅"
   },
   {
     "id": "daisen",
@@ -13977,7 +14141,8 @@
         }
       ]
     },
-    "fallbackCity": "米子"
+    "fallbackCity": "米子",
+    "gateway": null
   },
   {
     "id": "yunotsu-onsen",
@@ -14058,7 +14223,8 @@
       ]
     },
     "fallbackCity": "松江",
-    "finalPoint": "温泉津温泉街"
+    "finalPoint": "温泉津温泉街",
+    "gateway": "大田市駅"
   },
   {
     "id": "iwami-ginzan",
@@ -14139,7 +14305,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": null
   },
   {
     "id": "iwakuni",
@@ -14220,7 +14387,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "広島駅"
   },
   {
     "id": "kurayoshi",
@@ -14301,7 +14469,8 @@
         }
       ]
     },
-    "fallbackCity": "鳥取"
+    "fallbackCity": "鳥取",
+    "gateway": null
   },
   {
     "id": "suo-oshima",
@@ -14392,7 +14561,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "広島駅"
   },
   {
     "id": "shimanto",
@@ -14472,7 +14642,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": "高知駅"
   },
   {
     "id": "kashiwajima",
@@ -14562,7 +14733,8 @@
         }
       ]
     },
-    "fallbackCity": "宿毛"
+    "fallbackCity": "宿毛",
+    "gateway": null
   },
   {
     "id": "saijo",
@@ -14643,7 +14815,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "ainan",
@@ -14724,7 +14897,8 @@
         }
       ]
     },
-    "fallbackCity": "宇和島"
+    "fallbackCity": "宇和島",
+    "gateway": null
   },
   {
     "id": "taketa",
@@ -14804,7 +14978,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "usuki",
@@ -14884,7 +15059,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "大分駅"
   },
   {
     "id": "hita",
@@ -14963,7 +15139,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "久留米駅"
   },
   {
     "id": "hasami",
@@ -15043,7 +15220,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": null
   },
   {
     "id": "takeo-onsen",
@@ -15116,7 +15294,8 @@
         }
       ]
     },
-    "fallbackCity": "嬉野温泉"
+    "fallbackCity": "嬉野温泉",
+    "gateway": null
   },
   {
     "id": "kitsuki",
@@ -15196,7 +15375,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "tsushima",
@@ -15298,7 +15478,8 @@
       ]
     },
     "finalPoint": "厳原市街",
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": "福岡空港"
   },
   {
     "id": "iki-island",
@@ -15397,7 +15578,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": "壱岐駅"
   },
   {
     "id": "tanegashima",
@@ -15497,7 +15679,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島空港"
   },
   {
     "id": "kikuchi",
@@ -15580,7 +15763,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": null
   },
   {
     "id": "taketomi-island",
@@ -15678,7 +15862,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "竹富島駅"
   },
   {
     "id": "yonaguni-island",
@@ -15776,7 +15961,8 @@
       ]
     },
     "finalPoint": "与那国島",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇空港"
   },
   {
     "id": "nakijin",
@@ -15859,7 +16045,8 @@
         }
       ]
     },
-    "fallbackCity": "名護"
+    "fallbackCity": "名護",
+    "gateway": "那覇空港"
   },
   {
     "id": "motobu",
@@ -15941,7 +16128,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇空港"
   },
   {
     "id": "zamami-island",
@@ -16050,7 +16238,8 @@
       ]
     },
     "finalPoint": "座間味島",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "座間味島駅"
   },
   {
     "id": "ie-island",
@@ -16150,7 +16339,8 @@
         }
       ]
     },
-    "fallbackCity": "本部"
+    "fallbackCity": "本部",
+    "gateway": "伊江島駅"
   },
   {
     "id": "kohama-island",
@@ -16233,7 +16423,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "小浜島駅"
   },
   {
     "id": "matsushiro",
@@ -16313,7 +16504,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "iiyama",
@@ -16394,7 +16586,8 @@
       ]
     },
     "fallbackCity": "松本",
-    "finalPoint": "菜の花公園"
+    "finalPoint": "菜の花公園",
+    "gateway": null
   },
   {
     "id": "yakake",
@@ -16474,7 +16667,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "tsuyama",
@@ -16555,7 +16749,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": "岡山駅"
   },
   {
     "id": "tsurugi-san",
@@ -16637,7 +16832,8 @@
         }
       ]
     },
-    "fallbackCity": "徳島"
+    "fallbackCity": "徳島",
+    "gateway": null
   },
   {
     "id": "nobeoka",
@@ -16721,7 +16917,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": "宮崎駅"
   },
   {
     "id": "kamaishi",
@@ -16775,7 +16972,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "新花巻駅"
   },
   {
     "id": "ofunato",
@@ -16829,7 +17027,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "一ノ関駅"
   },
   {
     "id": "kuji",
@@ -16883,7 +17082,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "八戸駅"
   },
   {
     "id": "wakkanai",
@@ -16959,7 +17159,8 @@
       ]
     },
     "finalPoint": "稚内市街",
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": "稚内駅"
   },
   {
     "id": "obihiro",
@@ -17035,7 +17236,8 @@
       ]
     },
     "finalPoint": "帯広市街",
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": "帯広駅"
   },
   {
     "id": "rausu",
@@ -17118,7 +17320,8 @@
         }
       ]
     },
-    "fallbackCity": "網走"
+    "fallbackCity": "網走",
+    "gateway": "知床斜里駅"
   },
   {
     "id": "esashi-hokkaido",
@@ -17198,7 +17401,8 @@
         }
       ]
     },
-    "fallbackCity": "函館"
+    "fallbackCity": "函館",
+    "gateway": "木古内駅"
   },
   {
     "id": "hanamaki",
@@ -17279,7 +17483,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "hachimantai",
@@ -17362,7 +17567,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "盛岡駅"
   },
   {
     "id": "tazawako",
@@ -17444,7 +17650,8 @@
       ]
     },
     "fallbackCity": "角館",
-    "finalPoint": "田沢湖畔"
+    "finalPoint": "田沢湖畔",
+    "gateway": null
   },
   {
     "id": "yamadera",
@@ -17526,7 +17733,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": "山形駅"
   },
   {
     "id": "kesennuma",
@@ -17606,7 +17814,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "ikaho",
@@ -17687,7 +17896,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": "渋川駅"
   },
   {
     "id": "enoshima",
@@ -17769,7 +17979,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": "藤沢駅"
   },
   {
     "id": "chichibu",
@@ -17846,7 +18057,8 @@
         }
       ]
     },
-    "fallbackCity": "川越"
+    "fallbackCity": "川越",
+    "gateway": "池袋駅"
   },
   {
     "id": "oarai",
@@ -17922,7 +18134,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": "水戸駅"
   },
   {
     "id": "sano",
@@ -17997,7 +18210,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": "小山駅"
   },
   {
     "id": "gujo-hachiman",
@@ -18074,7 +18288,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": "美濃市駅"
   },
   {
     "id": "narai-juku",
@@ -18154,7 +18369,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "塩尻駅"
   },
   {
     "id": "itoigawa",
@@ -18238,7 +18454,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "murakami",
@@ -18313,7 +18530,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": "新潟駅"
   },
   {
     "id": "shima",
@@ -18395,7 +18613,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": null
   },
   {
     "id": "ogaki",
@@ -18471,7 +18690,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "echizen-kaigan",
@@ -18552,7 +18772,8 @@
       ]
     },
     "fallbackCity": "敦賀",
-    "finalPoint": "越前岬"
+    "finalPoint": "越前岬",
+    "gateway": "武生駅"
   },
   {
     "id": "myoko-kogen",
@@ -18634,7 +18855,8 @@
       ]
     },
     "fallbackCity": "新潟",
-    "finalPoint": "赤倉観光リゾート"
+    "finalPoint": "赤倉観光リゾート",
+    "gateway": null
   },
   {
     "id": "nagaoka",
@@ -18708,7 +18930,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "tanba-sasayama",
@@ -18791,7 +19014,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "nachikatsuura",
@@ -18874,7 +19098,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "kumano-hongu",
@@ -18958,7 +19183,8 @@
         }
       ]
     },
-    "fallbackCity": "新宮"
+    "fallbackCity": "新宮",
+    "gateway": "新宮駅"
   },
   {
     "id": "ako",
@@ -19035,7 +19261,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": "相生駅"
   },
   {
     "id": "fushimi",
@@ -19117,7 +19344,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": "京都駅"
   },
   {
     "id": "tomonoura",
@@ -19197,7 +19425,8 @@
         }
       ]
     },
-    "fallbackCity": "福山"
+    "fallbackCity": "福山",
+    "gateway": "福山駅"
   },
   {
     "id": "sakaiminato",
@@ -19278,7 +19507,8 @@
         }
       ]
     },
-    "fallbackCity": "鳥取"
+    "fallbackCity": "鳥取",
+    "gateway": "米子駅"
   },
   {
     "id": "ushimado",
@@ -19366,7 +19596,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": "邑久駅"
   },
   {
     "id": "kasaoka",
@@ -19442,7 +19673,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "tsunoshima",
@@ -19522,7 +19754,8 @@
         }
       ]
     },
-    "fallbackCity": "下関"
+    "fallbackCity": "下関",
+    "gateway": "特牛駅"
   },
   {
     "id": "dogo-onsen",
@@ -19613,7 +19846,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "松山駅"
   },
   {
     "id": "marugame",
@@ -19695,7 +19929,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": null
   },
   {
     "id": "misaki-sadamisaki",
@@ -19778,7 +20013,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": "八幡浜駅"
   },
   {
     "id": "yanagawa",
@@ -19861,7 +20097,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": "西鉄福岡駅"
   },
   {
     "id": "hyuga",
@@ -19937,7 +20174,8 @@
       ]
     },
     "finalPoint": "日向市街",
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": "日向市駅"
   },
   {
     "id": "koshikijima",
@@ -20026,7 +20264,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "川内駅"
   },
   {
     "id": "kirishima",
@@ -20103,7 +20342,8 @@
       ]
     },
     "finalPoint": "霧島温泉郷",
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "霧島神宮駅"
   },
   {
     "id": "ebino-kogen",
@@ -20184,7 +20424,8 @@
         }
       ]
     },
-    "fallbackCity": "えびの"
+    "fallbackCity": "えびの",
+    "gateway": "えびの駅"
   },
   {
     "id": "onna",
@@ -20259,7 +20500,8 @@
       ]
     },
     "finalPoint": "恩納村リゾートエリア",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル"
   },
   {
     "id": "nago",
@@ -20334,7 +20576,8 @@
       ]
     },
     "finalPoint": "名護市街",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル"
   },
   {
     "id": "yomitanson",
@@ -20410,7 +20653,8 @@
       ]
     },
     "finalPoint": "読谷村",
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル"
   },
   {
     "id": "niseko",
@@ -20494,7 +20738,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "daisetsuzan",
@@ -20578,7 +20823,8 @@
         }
       ]
     },
-    "fallbackCity": "旭川"
+    "fallbackCity": "旭川",
+    "gateway": "旭川駅"
   },
   {
     "id": "shiraoi",
@@ -20654,7 +20900,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "tomamu",
@@ -20731,7 +20978,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "towada",
@@ -20813,7 +21061,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": "八戸駅"
   },
   {
     "id": "osorezan",
@@ -20895,7 +21144,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": "下北駅"
   },
   {
     "id": "urabandai",
@@ -20979,7 +21229,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": "猪苗代駅"
   },
   {
     "id": "minami-sanriku",
@@ -21061,7 +21312,8 @@
         }
       ]
     },
-    "fallbackCity": "気仙沼"
+    "fallbackCity": "気仙沼",
+    "gateway": "気仙沼駅"
   },
   {
     "id": "kitakami",
@@ -21139,7 +21391,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "kinugawa-onsen",
@@ -21216,7 +21469,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": null
   },
   {
     "id": "oze",
@@ -21299,7 +21553,8 @@
         }
       ]
     },
-    "fallbackCity": "沼田"
+    "fallbackCity": "沼田",
+    "gateway": "沼田駅"
   },
   {
     "id": "tsukuba",
@@ -21381,7 +21636,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": null
   },
   {
     "id": "kasama",
@@ -21458,7 +21714,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": null
   },
   {
     "id": "naritasan",
@@ -21535,7 +21792,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": null
   },
   {
     "id": "kujukuri",
@@ -21617,7 +21875,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": "東金駅"
   },
   {
     "id": "miura",
@@ -21699,7 +21958,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": null
   },
   {
     "id": "oku-tama",
@@ -21776,7 +22036,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": null
   },
   {
     "id": "jigokudani",
@@ -21858,7 +22119,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "tateshina",
@@ -21942,7 +22204,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "茅野駅"
   },
   {
     "id": "echigo-yuzawa",
@@ -22019,7 +22282,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "fujinomiya",
@@ -22097,7 +22361,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "norikura",
@@ -22181,7 +22446,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": "松本駅"
   },
   {
     "id": "tokoname",
@@ -22258,7 +22524,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "korankei",
@@ -22340,7 +22607,8 @@
         }
       ]
     },
-    "fallbackCity": "豊田"
+    "fallbackCity": "豊田",
+    "gateway": "豊田市駅"
   },
   {
     "id": "minamichita",
@@ -22422,7 +22690,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "arashiyama",
@@ -22501,7 +22770,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": null
   },
   {
     "id": "shigaraki",
@@ -22578,7 +22848,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "dorogawa-onsen",
@@ -22660,7 +22931,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": "下市口駅"
   },
   {
     "id": "matsusaka",
@@ -22738,7 +23010,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": null
   },
   {
     "id": "sakai",
@@ -22821,7 +23094,8 @@
         }
       ]
     },
-    "fallbackCity": "大阪"
+    "fallbackCity": "大阪",
+    "gateway": null
   },
   {
     "id": "ama-island",
@@ -22921,7 +23195,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": "七類港"
   },
   {
     "id": "akiyoshidai",
@@ -23004,7 +23279,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "新山口駅"
   },
   {
     "id": "yanai",
@@ -23081,7 +23357,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "oki-island",
@@ -23183,7 +23460,8 @@
         }
       ]
     },
-    "fallbackCity": "境港"
+    "fallbackCity": "境港",
+    "gateway": "境港"
   },
   {
     "id": "inujima",
@@ -23274,7 +23552,8 @@
         }
       ]
     },
-    "fallbackCity": "岡山"
+    "fallbackCity": "岡山",
+    "gateway": "宝伝港"
   },
   {
     "id": "teshima",
@@ -23373,7 +23652,8 @@
         }
       ]
     },
-    "fallbackCity": "高松"
+    "fallbackCity": "高松",
+    "gateway": "高松港"
   },
   {
     "id": "niyodogawa",
@@ -23457,7 +23737,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": "高知駅"
   },
   {
     "id": "yusuhara",
@@ -23541,7 +23822,8 @@
         }
       ]
     },
-    "fallbackCity": "須崎"
+    "fallbackCity": "須崎",
+    "gateway": "須崎駅"
   },
   {
     "id": "anan",
@@ -23618,7 +23900,8 @@
         }
       ]
     },
-    "fallbackCity": "徳島"
+    "fallbackCity": "徳島",
+    "gateway": null
   },
   {
     "id": "shikoku-karst",
@@ -23703,7 +23986,8 @@
       ]
     },
     "fallbackCity": "松山",
-    "finalPoint": "姫鶴平"
+    "finalPoint": "姫鶴平",
+    "gateway": "松山駅"
   },
   {
     "id": "aoshima",
@@ -23781,7 +24065,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": null
   },
   {
     "id": "yamaga",
@@ -23864,7 +24149,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": "玉名駅"
   },
   {
     "id": "yoshinogari",
@@ -23946,7 +24232,8 @@
         }
       ]
     },
-    "fallbackCity": "嬉野温泉"
+    "fallbackCity": "嬉野温泉",
+    "gateway": null
   },
   {
     "id": "kunisaki",
@@ -24030,7 +24317,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "宇佐駅"
   },
   {
     "id": "chiran",
@@ -24114,7 +24402,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島中央駅"
   },
   {
     "id": "ojika-island",
@@ -24213,7 +24502,8 @@
       ]
     },
     "finalPoint": "小値賀島",
-    "fallbackCity": "佐世保"
+    "fallbackCity": "佐世保",
+    "gateway": "佐世保港"
   },
   {
     "id": "irabu-island",
@@ -24301,7 +24591,8 @@
       ]
     },
     "fallbackCity": "那覇",
-    "finalPoint": "佐和田の浜"
+    "finalPoint": "佐和田の浜",
+    "gateway": "宮古空港"
   },
   {
     "id": "aguni-island",
@@ -24402,7 +24693,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "泊港"
   },
   {
     "id": "itoman",
@@ -24486,7 +24778,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル"
   },
   {
     "id": "kijoka",
@@ -24569,7 +24862,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル"
   },
   {
     "id": "miyakejima",
@@ -24663,7 +24957,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": "竹芝桟橋"
   },
   {
     "id": "hachijojima",
@@ -24764,7 +25059,8 @@
       ]
     },
     "finalPoint": "八丈島",
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": "羽田空港"
   },
   {
     "id": "niijima",
@@ -24859,7 +25155,8 @@
       ]
     },
     "fallbackCity": "東京",
-    "finalPoint": "羽伏浦海岸"
+    "finalPoint": "羽伏浦海岸",
+    "gateway": "竹芝桟橋"
   },
   {
     "id": "shikinejima",
@@ -24951,7 +25248,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": "竹芝桟橋"
   },
   {
     "id": "shirakawa",
@@ -25024,7 +25322,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "kitakata",
@@ -25096,7 +25395,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "koriyama",
@@ -25169,7 +25469,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "ryusendo",
@@ -25243,7 +25544,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "ichinoseki",
@@ -25315,7 +25617,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "akita-oga",
@@ -25389,7 +25692,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "kisakata",
@@ -25462,7 +25766,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "gassan",
@@ -25536,7 +25841,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "higashine",
@@ -25608,7 +25914,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "akakura-onsen",
@@ -25681,7 +25988,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "yugawara-onsen",
@@ -25753,7 +26061,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": null
   },
   {
     "id": "yokosuka",
@@ -25826,7 +26135,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": null
   },
   {
     "id": "mishima",
@@ -25899,7 +26209,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "numazu",
@@ -25972,7 +26283,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "hamamatsu",
@@ -26045,7 +26357,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "kakegawa",
@@ -26118,7 +26431,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "okazaki",
@@ -26191,7 +26505,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "toyohashi",
@@ -26264,7 +26579,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "tajimi",
@@ -26337,7 +26653,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "togakushi",
@@ -26410,7 +26727,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "omihachiman",
@@ -26483,7 +26801,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "takarazuka",
@@ -26556,7 +26875,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "akashi",
@@ -26629,7 +26949,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "naruto",
@@ -26702,7 +27023,8 @@
         }
       ]
     },
-    "fallbackCity": "徳島"
+    "fallbackCity": "徳島",
+    "gateway": null
   },
   {
     "id": "innoshima",
@@ -26776,7 +27098,8 @@
         }
       ]
     },
-    "fallbackCity": "尾道"
+    "fallbackCity": "尾道",
+    "gateway": null
   },
   {
     "id": "mihara",
@@ -26849,7 +27172,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "hofu",
@@ -26921,7 +27245,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "karatsu",
@@ -26994,7 +27319,8 @@
         }
       ]
     },
-    "fallbackCity": "嬉野温泉"
+    "fallbackCity": "嬉野温泉",
+    "gateway": null
   },
   {
     "id": "dazaifu",
@@ -27066,7 +27392,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "nakatsu",
@@ -27139,7 +27466,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "nemuro",
@@ -27212,7 +27540,8 @@
         }
       ]
     },
-    "fallbackCity": "釧路"
+    "fallbackCity": "釧路",
+    "gateway": null
   },
   {
     "id": "muroran",
@@ -27285,7 +27614,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "tomakomai",
@@ -27358,7 +27688,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "ishinomaki",
@@ -27430,7 +27761,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "hitachi",
@@ -27502,7 +27834,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": null
   },
   {
     "id": "kashima",
@@ -27573,7 +27906,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": null
   },
   {
     "id": "shiraoishi",
@@ -27645,7 +27979,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "noshiro",
@@ -27718,7 +28053,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "tendou",
@@ -27790,7 +28126,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "shonai",
@@ -27863,7 +28200,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "ogata",
@@ -27937,7 +28275,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "rikuzentakata",
@@ -28010,7 +28349,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "sanriku-miyako",
@@ -28084,7 +28424,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "motomiya",
@@ -28155,7 +28496,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "mizusawa",
@@ -28227,7 +28569,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "ichinoseki-geibikei",
@@ -28300,7 +28643,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "akita-semboku",
@@ -28372,7 +28716,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "tendo",
@@ -28444,7 +28789,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "nyuzen",
@@ -28516,7 +28862,8 @@
         }
       ]
     },
-    "fallbackCity": "氷見"
+    "fallbackCity": "氷見",
+    "gateway": null
   },
   {
     "id": "nanao",
@@ -28588,7 +28935,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "fukuchiyama",
@@ -28660,7 +29008,8 @@
         }
       ]
     },
-    "fallbackCity": "京都"
+    "fallbackCity": "京都",
+    "gateway": null
   },
   {
     "id": "koka",
@@ -28732,7 +29081,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "tondabayashi",
@@ -28804,7 +29154,8 @@
         }
       ]
     },
-    "fallbackCity": "大阪"
+    "fallbackCity": "大阪",
+    "gateway": null
   },
   {
     "id": "kishiwada",
@@ -28877,7 +29228,8 @@
         }
       ]
     },
-    "fallbackCity": "大阪"
+    "fallbackCity": "大阪",
+    "gateway": null
   },
   {
     "id": "amagasaki",
@@ -28950,7 +29302,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "nishiwaki",
@@ -29023,7 +29376,8 @@
         }
       ]
     },
-    "fallbackCity": "城崎温泉"
+    "fallbackCity": "城崎温泉",
+    "gateway": null
   },
   {
     "id": "nagi",
@@ -29096,7 +29450,8 @@
         }
       ]
     },
-    "fallbackCity": "岡山"
+    "fallbackCity": "岡山",
+    "gateway": null
   },
   {
     "id": "higashihiroshima",
@@ -29168,7 +29523,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "fukuyama",
@@ -29241,7 +29597,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "otoyo",
@@ -29312,7 +29669,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "sukumo",
@@ -29384,7 +29742,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "miyoshi-tokushima",
@@ -29457,7 +29816,8 @@
         }
       ]
     },
-    "fallbackCity": "徳島"
+    "fallbackCity": "徳島",
+    "gateway": null
   },
   {
     "id": "oita-city",
@@ -29530,7 +29890,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "yuwaku-onsen",
@@ -29603,7 +29964,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "yura-wakayama",
@@ -29676,7 +30038,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "misaki-osaka",
@@ -29749,7 +30112,8 @@
         }
       ]
     },
-    "fallbackCity": "大阪"
+    "fallbackCity": "大阪",
+    "gateway": null
   },
   {
     "id": "kitakyushu",
@@ -29822,7 +30186,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "asakura",
@@ -29895,7 +30260,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "ebino",
@@ -29968,7 +30334,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": null
   },
   {
     "id": "hitoyoshi-city",
@@ -30040,7 +30407,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": null
   },
   {
     "id": "minamikyushu",
@@ -30113,7 +30481,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "鹿児島中央駅"
   },
   {
     "id": "minamiosumi",
@@ -30186,7 +30555,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": "垂水港"
   },
   {
     "id": "chatan",
@@ -30262,7 +30632,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": null
   },
   {
     "id": "uruma",
@@ -30338,7 +30709,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": null
   },
   {
     "id": "nanto",
@@ -30411,7 +30783,8 @@
         }
       ]
     },
-    "fallbackCity": "立山黒部"
+    "fallbackCity": "立山黒部",
+    "gateway": null
   },
   {
     "id": "hakusan",
@@ -30484,7 +30857,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "kamo-kyoto",
@@ -30558,7 +30932,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": null
   },
   {
     "id": "shingu-wakayama",
@@ -30630,7 +31005,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "himeshima",
@@ -30706,7 +31082,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": "杵築駅"
   },
   {
     "id": "toshima",
@@ -30782,7 +31159,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": null
   },
   {
     "id": "joetsu",
@@ -30854,7 +31232,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "myoko",
@@ -30927,7 +31306,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": "関山駅"
   },
   {
     "id": "hokkaido-hakodate",
@@ -31004,7 +31384,8 @@
     "fallbackCity": "札幌",
     "aliases": [
       "函館市"
-    ]
+    ],
+    "gateway": "新函館北斗駅"
   },
   {
     "id": "hokkaido-asahikawa",
@@ -31081,7 +31462,8 @@
     "fallbackCity": "札幌",
     "aliases": [
       "旭川市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "hokkaido-kushiro",
@@ -31158,7 +31540,8 @@
     "fallbackCity": "札幌",
     "aliases": [
       "釧路市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "yoichi",
@@ -31230,7 +31613,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "akkeshi",
@@ -31304,7 +31688,8 @@
       ]
     },
     "fallbackCity": "釧路",
-    "finalPoint": "厚岸グルメパーク"
+    "finalPoint": "厚岸グルメパーク",
+    "gateway": null
   },
   {
     "id": "kitami",
@@ -31379,7 +31764,8 @@
       ]
     },
     "fallbackCity": "旭川",
-    "finalPoint": "ハッカ記念館"
+    "finalPoint": "ハッカ記念館",
+    "gateway": null
   },
   {
     "id": "monbetsu",
@@ -31444,7 +31830,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "旭川"
+    "fallbackCity": "旭川",
+    "gateway": null
   },
   {
     "id": "mashike",
@@ -31518,7 +31905,8 @@
         }
       ]
     },
-    "fallbackCity": "旭川"
+    "fallbackCity": "旭川",
+    "gateway": null
   },
   {
     "id": "fukushima-city",
@@ -31591,7 +31979,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "omagari",
@@ -31663,7 +32052,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "shinjou",
@@ -31735,7 +32125,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "nagai",
@@ -31793,7 +32184,7 @@
     },
     "stayRecommendation": "1night",
     "city": "長井市",
-    "hubStation": "長井駅",
+    "hubStation": "米沢駅",
     "accessStation": "長井駅",
     "hotelArea": "yamagata",
     "hotelKeyword": "長井",
@@ -31807,7 +32198,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": "米沢駅"
   },
   {
     "id": "kanagawa-yokohama",
@@ -31884,7 +32276,8 @@
     "fallbackCity": "横浜",
     "aliases": [
       "横浜市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "ibaraki-mito",
@@ -31960,7 +32353,8 @@
     "fallbackCity": "水戸",
     "aliases": [
       "水戸市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "utsunomiya",
@@ -32033,7 +32427,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "gateway": null
   },
   {
     "id": "takasaki",
@@ -32106,7 +32501,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": null
   },
   {
     "id": "odawara",
@@ -32179,7 +32575,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": null
   },
   {
     "id": "sawara",
@@ -32252,7 +32649,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": null
   },
   {
     "id": "nokogiriyama",
@@ -32326,7 +32724,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": null
   },
   {
     "id": "katsuura-chiba",
@@ -32399,7 +32798,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": null
   },
   {
     "id": "azumino",
@@ -32471,7 +32871,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "nagano-iida",
@@ -32546,7 +32947,8 @@
     "fallbackCity": "松本",
     "aliases": [
       "飯田市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "nakatsugawa",
@@ -32619,7 +33021,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "yaizu",
@@ -32692,7 +33095,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "hamanako",
@@ -32766,7 +33170,8 @@
         }
       ]
     },
-    "fallbackCity": "熱海"
+    "fallbackCity": "熱海",
+    "gateway": null
   },
   {
     "id": "gamagori",
@@ -32839,7 +33244,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "toyota-city",
@@ -32912,7 +33318,8 @@
         }
       ]
     },
-    "fallbackCity": "名古屋"
+    "fallbackCity": "名古屋",
+    "gateway": null
   },
   {
     "id": "otsu-shiga",
@@ -32985,7 +33392,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "kusatsu-shiga",
@@ -33058,7 +33466,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "takashima-shiga",
@@ -33132,7 +33541,8 @@
         }
       ]
     },
-    "fallbackCity": "長浜"
+    "fallbackCity": "長浜",
+    "gateway": null
   },
   {
     "id": "tango-kyoto",
@@ -33205,7 +33615,8 @@
         }
       ]
     },
-    "fallbackCity": "天橋立"
+    "fallbackCity": "天橋立",
+    "gateway": null
   },
   {
     "id": "owase",
@@ -33264,7 +33675,7 @@
     },
     "stayRecommendation": "1night",
     "city": "尾鷲市",
-    "hubStation": "尾鷲駅",
+    "hubStation": "名古屋駅",
     "accessStation": "尾鷲駅",
     "hotelArea": "mie",
     "hotelKeyword": "尾鷲",
@@ -33277,7 +33688,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": "名古屋駅"
   },
   {
     "id": "gobo",
@@ -33350,7 +33762,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "kushimoto",
@@ -33423,7 +33836,8 @@
         }
       ]
     },
-    "fallbackCity": "白浜"
+    "fallbackCity": "白浜",
+    "gateway": null
   },
   {
     "id": "shimane-matsue",
@@ -33500,7 +33914,8 @@
     "fallbackCity": "松江",
     "aliases": [
       "松江市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "hamada-shimane",
@@ -33574,7 +33989,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": null
   },
   {
     "id": "kure",
@@ -33646,7 +34062,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "miyoshi-hiroshima",
@@ -33718,7 +34135,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "nagato-yamaguchi",
@@ -33791,7 +34209,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "mine-yamaguchi",
@@ -33863,7 +34282,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "kagawa-takamatsu",
@@ -33941,7 +34361,8 @@
     "fallbackCity": "琴平",
     "aliases": [
       "高松市"
-    ]
+    ],
+    "gateway": null
   },
   {
     "id": "sakaide",
@@ -34014,7 +34435,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": null
   },
   {
     "id": "tosa-city",
@@ -34088,7 +34510,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "kanonji",
@@ -34161,7 +34584,8 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "gateway": null
   },
   {
     "id": "fukuoka-city",
@@ -34236,7 +34660,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "kurume",
@@ -34309,7 +34734,8 @@
         }
       ]
     },
-    "fallbackCity": "博多"
+    "fallbackCity": "博多",
+    "gateway": null
   },
   {
     "id": "yatsushiro",
@@ -34382,7 +34808,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "gateway": null
   },
   {
     "id": "oguni-kumamoto",
@@ -34449,7 +34876,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "黒川温泉"
+    "fallbackCity": "黒川温泉",
+    "gateway": "熊本駅"
   },
   {
     "id": "izumi-kagoshima",
@@ -34521,7 +34949,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": null
   },
   {
     "id": "makurazaki",
@@ -34593,7 +35022,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": null
   },
   {
     "id": "miyakonojo",
@@ -34665,7 +35095,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "gateway": null
   },
   {
     "id": "nanjo-okinawa",
@@ -34732,7 +35163,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": null
   },
   {
     "id": "aogashima",
@@ -34799,7 +35231,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "gateway": null
   },
   {
     "id": "kugashima",
@@ -34867,7 +35300,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": null
   },
   {
     "id": "nakatosa",
@@ -34939,7 +35373,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "ikata",
@@ -35014,7 +35449,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "gateway": null
   },
   {
     "id": "muroto-cape",
@@ -35087,7 +35523,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "oshima-yamaguchi",
@@ -35160,7 +35597,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": "大畠駅"
   },
   {
     "id": "ibara",
@@ -35232,7 +35670,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "niimi",
@@ -35304,7 +35743,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "uda-nara",
@@ -35378,7 +35818,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "gateway": null
   },
   {
     "id": "mimasaka",
@@ -35451,7 +35892,8 @@
         }
       ]
     },
-    "fallbackCity": "倉敷"
+    "fallbackCity": "倉敷",
+    "gateway": null
   },
   {
     "id": "kochi-shimanto",
@@ -35523,7 +35965,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "yonago",
@@ -35597,7 +36040,8 @@
         }
       ]
     },
-    "fallbackCity": "鳥取"
+    "fallbackCity": "鳥取",
+    "gateway": null
   },
   {
     "id": "kaga-onsen2",
@@ -35669,7 +36113,8 @@
         }
       ]
     },
-    "fallbackCity": "金沢"
+    "fallbackCity": "金沢",
+    "gateway": null
   },
   {
     "id": "takayama-kogen",
@@ -35742,7 +36187,8 @@
         }
       ]
     },
-    "fallbackCity": "高山"
+    "fallbackCity": "高山",
+    "gateway": null
   },
   {
     "id": "iga-ueno",
@@ -35814,7 +36260,8 @@
         }
       ]
     },
-    "fallbackCity": "伊勢"
+    "fallbackCity": "伊勢",
+    "gateway": null
   },
   {
     "id": "miyanoshita",
@@ -35887,7 +36334,8 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "gateway": null
   },
   {
     "id": "shibu-onsen",
@@ -35959,7 +36407,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "togatta-onsen",
@@ -36032,7 +36481,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "hachimantai-onsen",
@@ -36106,7 +36556,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "iiyama-onsen",
@@ -36179,7 +36630,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "ono-fukui",
@@ -36238,7 +36690,7 @@
     },
     "stayRecommendation": "1night",
     "city": "大野市",
-    "hubStation": "越前大野駅",
+    "hubStation": "福井駅",
     "accessStation": "越前大野駅",
     "hotelArea": "fukui",
     "hotelKeyword": "大野",
@@ -36254,7 +36706,8 @@
     "fallbackCity": "敦賀",
     "aliases": [
       "大野"
-    ]
+    ],
+    "gateway": "福井駅"
   },
   {
     "id": "katsuyama",
@@ -36313,7 +36766,7 @@
     },
     "stayRecommendation": "1night",
     "city": "勝山市",
-    "hubStation": "勝山駅",
+    "hubStation": "福井駅",
     "accessStation": "勝山駅",
     "hotelArea": "fukui",
     "hotelKeyword": "勝山",
@@ -36326,7 +36779,8 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "gateway": "福井駅"
   },
   {
     "id": "nomaike",
@@ -36393,7 +36847,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": null
   },
   {
     "id": "hioki",
@@ -36466,7 +36921,8 @@
         }
       ]
     },
-    "fallbackCity": "鹿児島"
+    "fallbackCity": "鹿児島",
+    "gateway": null
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -36539,7 +36995,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "gateway": null
   },
   {
     "id": "hirakawa",
@@ -36612,7 +37069,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": null
   },
   {
     "id": "kurikoma",
@@ -36685,7 +37143,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "namioka",
@@ -36758,7 +37217,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": null
   },
   {
     "id": "shimokita",
@@ -36832,7 +37292,8 @@
         }
       ]
     },
-    "fallbackCity": "奥入瀬"
+    "fallbackCity": "奥入瀬",
+    "gateway": null
   },
   {
     "id": "towada-lake",
@@ -36904,7 +37365,8 @@
         }
       ]
     },
-    "fallbackCity": "奥入瀬"
+    "fallbackCity": "奥入瀬",
+    "gateway": null
   },
   {
     "id": "rikuchu-coast",
@@ -36977,7 +37439,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -37048,7 +37511,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": null
   },
   {
     "id": "numata",
@@ -37121,7 +37585,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": null
   },
   {
     "id": "tsuchiura",
@@ -37194,7 +37659,8 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "gateway": null
   },
   {
     "id": "oshika",
@@ -37267,7 +37733,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "gateway": null
   },
   {
     "id": "kujukuri-icho",
@@ -37340,7 +37807,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "gateway": null
   },
   {
     "id": "miyota",
@@ -37412,7 +37880,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "saijo-hiroshima",
@@ -37484,7 +37953,8 @@
         }
       ]
     },
-    "fallbackCity": "広島"
+    "fallbackCity": "広島",
+    "gateway": null
   },
   {
     "id": "ryoishi",
@@ -37544,7 +38014,7 @@
     },
     "stayRecommendation": "2night",
     "city": "大船渡市",
-    "hubStation": "綾里駅",
+    "hubStation": "釜石駅",
     "accessStation": "綾里駅",
     "hotelArea": "iwate",
     "hotelKeyword": "綾里",
@@ -37557,7 +38027,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "gateway": "釜石駅"
   },
   {
     "id": "noheji",
@@ -37630,7 +38101,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": null
   },
   {
     "id": "tobetsu",
@@ -37702,7 +38174,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "fukaura",
@@ -37776,7 +38249,8 @@
         }
       ]
     },
-    "fallbackCity": "弘前"
+    "fallbackCity": "弘前",
+    "gateway": null
   },
   {
     "id": "isesaki",
@@ -37849,7 +38323,8 @@
         }
       ]
     },
-    "fallbackCity": "草津温泉"
+    "fallbackCity": "草津温泉",
+    "gateway": null
   },
   {
     "id": "matsumoto-kaido",
@@ -37921,7 +38396,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "aizu-misato",
@@ -37993,7 +38469,8 @@
         }
       ]
     },
-    "fallbackCity": "会津若松"
+    "fallbackCity": "会津若松",
+    "gateway": null
   },
   {
     "id": "tateyama-toyama",
@@ -38065,7 +38542,8 @@
         }
       ]
     },
-    "fallbackCity": "立山黒部"
+    "fallbackCity": "立山黒部",
+    "gateway": null
   },
   {
     "id": "suo-sanbe",
@@ -38137,7 +38615,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "gateway": null
   },
   {
     "id": "takachihogo-shishiku",
@@ -38204,7 +38683,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "高千穂"
+    "fallbackCity": "高千穂",
+    "gateway": "延岡駅"
   },
   {
     "id": "kamishihoro",
@@ -38276,7 +38756,8 @@
         }
       ]
     },
-    "fallbackCity": "帯広"
+    "fallbackCity": "帯広",
+    "gateway": null
   },
   {
     "id": "yakumo",
@@ -38349,7 +38830,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "gateway": null
   },
   {
     "id": "susaki",
@@ -38421,7 +38903,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "ube",
@@ -38496,7 +38979,8 @@
         }
       ]
     },
-    "fallbackCity": "萩"
+    "fallbackCity": "萩",
+    "gateway": null
   },
   {
     "id": "itoigawa2",
@@ -38568,7 +39052,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "agematsu",
@@ -38641,7 +39126,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "gateway": null
   },
   {
     "id": "unzen2",
@@ -38714,7 +39200,8 @@
         }
       ]
     },
-    "fallbackCity": "長崎"
+    "fallbackCity": "長崎",
+    "gateway": null
   },
   {
     "id": "kochi-ino",
@@ -38787,7 +39274,8 @@
         }
       ]
     },
-    "fallbackCity": "高知"
+    "fallbackCity": "高知",
+    "gateway": null
   },
   {
     "id": "hiji",
@@ -38860,7 +39348,8 @@
         }
       ]
     },
-    "fallbackCity": "湯布院"
+    "fallbackCity": "湯布院",
+    "gateway": null
   },
   {
     "id": "tsunan",
@@ -38931,7 +39420,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "gateway": null
   },
   {
     "id": "kurobe",
@@ -39003,7 +39493,8 @@
         }
       ]
     },
-    "fallbackCity": "氷見"
+    "fallbackCity": "氷見",
+    "gateway": null
   },
   {
     "id": "tsuruoka-kinzan",
@@ -39076,7 +39567,8 @@
         }
       ]
     },
-    "fallbackCity": "蔵王"
+    "fallbackCity": "蔵王",
+    "gateway": null
   },
   {
     "id": "tomari-okinawa",
@@ -39143,7 +39635,8 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": null
   },
   {
     "id": "ogimi",
@@ -39210,6 +39703,7 @@
     "access": {
       "steps": []
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "gateway": null
   }
 ]

@@ -295,6 +295,51 @@ function stepIdx(i) {
 
 const IC_CAUTION = 'ICカードでそのまま改札通れます（予約不要）';
 
+/* ── 新幹線停車駅セット（gateway step1 ラベル判定用） ── */
+const SHINKANSEN_STATIONS = new Set([
+  // 東海道・山陽新幹線
+  '東京駅','品川駅','新横浜駅','小田原駅','熱海駅','三島駅','新富士駅',
+  '静岡駅','掛川駅','浜松駅','豊橋駅','三河安城駅','名古屋駅','岐阜羽島駅',
+  '米原駅','京都駅','新大阪駅','新神戸駅','西明石駅','姫路駅','相生駅',
+  '岡山駅','新倉敷駅','福山駅','新尾道駅','三原駅','東広島駅','広島駅',
+  '新岩国駅','徳山駅','新山口駅','厚狭駅','新下関駅','小倉駅','博多駅',
+  // 東北・秋田・山形新幹線
+  '上野駅','大宮駅','小山駅','宇都宮駅','那須塩原駅','新白河駅',
+  '郡山駅','福島駅','白石蔵王駅','仙台駅','古川駅','くりこま高原駅',
+  '一ノ関駅','水沢江刺駅','北上駅','新花巻駅','盛岡駅','二戸駅',
+  '八戸駅','七戸十和田駅','新青森駅',
+  '大曲駅','秋田駅',                          // 秋田新幹線
+  '山形駅','天童駅','さくらんぼ東根駅','村山駅','大石田駅','新庄駅', // 山形新幹線
+  // 北陸新幹線
+  '長野駅','飯山駅','上越妙高駅','糸魚川駅','黒部宇奈月温泉駅',
+  '富山駅','新高岡駅','金沢駅','小松駅','加賀温泉駅','芦原温泉駅',
+  '福井駅','越前たけふ駅','敦賀駅',
+  // 九州新幹線
+  '新鳥栖駅','久留米駅','筑後船小屋駅','新大牟田駅','新玉名駅',
+  '熊本駅','新八代駅','新水俣駅','出水駅','川内駅','鹿児島中央駅',
+  '長崎駅','諫早駅','嬉野温泉駅','武雄温泉駅',
+  // 北海道新幹線
+  '新函館北斗駅',
+]);
+
+/**
+ * gateway → accessStation 間のローカル交通ラベルを導出。
+ *   city.busGateway や access.steps[1] の method から判定。
+ */
+function _localSegmentMode(city) {
+  if (city.busGateway || city.secondaryTransport === 'bus') return 'バス';
+  // access.steps に local step がある場合
+  const steps = city.access?.steps;
+  if (steps && steps.length >= 2) {
+    const local = steps.find(s => s.type === 'local' || s.type === 'bus' || s.type === 'ferry');
+    if (local) {
+      if (local.method === 'バス')      return 'バス';
+      if (local.method === 'フェリー')  return 'フェリー';
+    }
+  }
+  return 'ローカル線';
+}
+
 /* ── Phase 4: spotAccess アイコン / ラベル ── */
 const SPOT_TYPE_ICON  = { walk: '', bus: '', taxi: '' };
 const SPOT_TYPE_LABEL = { walk: '徒歩', bus: 'バス', taxi: 'タクシー' };
@@ -1271,20 +1316,24 @@ function buildCityTypeRoute(city, departure, fromCity) {
   } else {
     const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint || !!city.finalPoint;
 
-    // hubStation が出発地駅・到着駅と異なる場合は 2 ステップに分割（乗換表示）
-    const hubSt = city.hubStation ?? null;
-    const useHubSplit = hubSt && hubSt !== origin && hubSt !== accessSt;
+    // gateway（または hubStation）が出発地駅・到着駅と異なる場合は 2 ステップに分割
+    const gatewaySt = city.gateway ?? city.hubStation ?? null;
+    const useGatewaySplit = gatewaySt && gatewaySt !== origin && gatewaySt !== accessSt;
 
-    if (useHubSplit) {
+    if (useGatewaySplit) {
+      // step 1 は新幹線経由か確認してラベルを決定
+      const step1Mode = SHINKANSEN_STATIONS.has(gatewaySt) ? '新幹線' : '鉄道';
+      // step 2 はローカル線・バスなど
+      const step2Mode = _localSegmentMode(city);
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `${stepIdx(0)}  ${origin} → ${hubSt}（鉄道）`,
+        stepLabel: `${stepIdx(0)}  ${origin} → ${gatewaySt}（${step1Mode}）`,
         cta: null,
-        caution: '▼ 乗り換え',
+        caution: '▼ ここで乗り換え',
       });
       stepGroups.push({
         type: 'step-group',
-        stepLabel: `${stepIdx(1)}  ${hubSt} → ${accessSt}（鉄道）`,
+        stepLabel: `${stepIdx(1)}  ${gatewaySt} → ${accessSt}（${step2Mode}）`,
         cta: null,
         caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
       });
@@ -1331,15 +1380,38 @@ function buildSuburbanRoute(city, departure, fromCity) {
       stepGroups.push(...buildLastSteps(flightGateway, city, stepGroups.length));
     }
   } else {
-    // ① 鉄道 → accessStation
-    stepGroups.push({
-      type: 'step-group',
-      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-      cta: null,
-      caution: '▼ 電車はここまで。この先は現地移動',
-    });
+    // gateway 経由の乗り換えが必要な場合は 2 ステップ
+    const gatewaySt = city.gateway ?? city.hubStation ?? null;
+    const useGatewaySplit = gatewaySt && gatewaySt !== origin && gatewaySt !== accessSt;
 
-    // ② 現地アクセス（accessStation → 目的地 or finalPoint）
+    if (useGatewaySplit) {
+      const step1Mode = SHINKANSEN_STATIONS.has(gatewaySt) ? '新幹線' : '鉄道';
+      const step2Mode = _localSegmentMode(city);
+      // ① departure → gateway
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(0)}  ${origin} → ${gatewaySt}（${step1Mode}）`,
+        cta: null,
+        caution: '▼ ここで乗り換え',
+      });
+      // ② gateway → accessStation
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(1)}  ${gatewaySt} → ${accessSt}（${step2Mode}）`,
+        cta: null,
+        caution: '▼ 電車はここまで。この先は現地移動',
+      });
+    } else {
+      // ① 直接鉄道 → accessStation
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+        cta: null,
+        caution: '▼ 電車はここまで。この先は現地移動',
+      });
+    }
+
+    // ② or ③ 現地アクセス（accessStation → 目的地 or finalPoint）
     if (!isAccessSameAsDest(accessSt, label) || !!city.mapPoint || !!city.finalPoint) {
       stepGroups.push(...buildLastSteps(accessSt, city, stepGroups.length));
     }

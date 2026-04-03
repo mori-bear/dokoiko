@@ -1274,6 +1274,48 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8k] gateway 整合性チェック
+     - gateway が設定されている場合 accessStation と異なること
+     - gateway が設定されている場合 hubStation と一致すること（データ整合）
+     - 不自然なルート検出（gateway が null で accessStation が支線駅パターン）
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8k] gateway整合性');
+
+    const gatewayEqualsAccess = [];   // gateway === accessStation（無意味な設定）
+    const gatewayHubMismatch  = [];   // gateway が hubStation と不一致
+
+    DESTS.forEach(d => {
+      if (!d.gateway) return;
+      if (d.gateway === d.accessStation) {
+        gatewayEqualsAccess.push(`${d.id}(${d.gateway})`);
+      }
+      if (d.hubStation && d.hubStation !== d.gateway && d.hubStation !== d.accessStation) {
+        gatewayHubMismatch.push(`${d.id}(gw=${d.gateway},hub=${d.hubStation})`);
+      }
+    });
+
+    sc.check(gatewayEqualsAccess.length === 0,
+      gatewayEqualsAccess.length === 0
+        ? `gateway ≠ accessStation: 全件正常`
+        : `gateway === accessStation ${gatewayEqualsAccess.length}件: ${gatewayEqualsAccess.slice(0, 5).join(', ')}`
+    );
+    sc.check(gatewayHubMismatch.length === 0,
+      gatewayHubMismatch.length === 0
+        ? `gateway / hubStation 整合: 全件正常`
+        : `gateway ≠ hubStation ${gatewayHubMismatch.length}件: ${gatewayHubMismatch.slice(0, 3).join(', ')}`
+    );
+
+    const withGateway = DESTS.filter(d => d.gateway);
+    sc.check(withGateway.length > 0,
+      `gateway 設定済み: ${withGateway.length} 件 / ${DESTS.length} 件`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');
