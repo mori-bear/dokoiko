@@ -35,23 +35,34 @@ export async function loadDestinations() {
 
 /**
  * id / name の重複を検出する。重複があれば Error を throw。
+ *
+ * チェックルール:
+ *   - id: hubs + destinations 全体でユニーク（型関係なく）
+ *   - name: 同じ type 内でユニーク
+ *     → hub と destination が同じ名前を持つのは許容
+ *       （横浜はアクセス拠点（hub）にも旅先（destination）にも存在できる）
  */
-function assertNoDuplicates(destinations) {
-  const idSeen   = new Map();
-  const nameSeen = new Map();
-  const dupIds   = [];
-  const dupNames = [];
+function assertNoDuplicates(all) {
+  const idSeen    = new Map();
+  const nameSeen  = {};   // type → Set<name>
+  const dupIds    = [];
+  const dupNames  = [];
 
-  for (const d of destinations) {
-    if (idSeen.has(d.id))     dupIds.push(d.id);
-    if (nameSeen.has(d.name)) dupNames.push(d.name);
+  for (const d of all) {
+    // id は全体でユニーク
+    if (idSeen.has(d.id)) dupIds.push(d.id);
     idSeen.set(d.id, true);
-    nameSeen.set(d.name, true);
+
+    // name は同じ type 内でユニーク
+    const t = d.type ?? 'unknown';
+    if (!nameSeen[t]) nameSeen[t] = new Map();
+    if (nameSeen[t].has(d.name)) dupNames.push(`${d.name}(type=${t})`);
+    nameSeen[t].set(d.name, true);
   }
 
   if (dupIds.length > 0 || dupNames.length > 0) {
     const msg = [
-      dupIds.length   ? `重複ID: ${[...new Set(dupIds)].join(', ')}`   : '',
+      dupIds.length   ? `重複ID: ${[...new Set(dupIds)].join(', ')}`    : '',
       dupNames.length ? `重複名: ${[...new Set(dupNames)].join(', ')}` : '',
     ].filter(Boolean).join(' / ');
     throw new Error(`[データ整合性エラー] ${msg}`);

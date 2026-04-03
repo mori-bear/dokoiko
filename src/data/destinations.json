@@ -25658,78 +25658,6 @@
     "fallbackCity": "新潟"
   },
   {
-    "id": "matsumoto-city",
-    "name": "松本",
-    "type": "destination",
-    "region": "中部",
-    "hub": null,
-    "hotelHub": "松本",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "国宝松本城を中心に発展した城下町。アルプスの山並みを背景に文化・食・自然が豊か。",
-    "tags": [
-      "歴史",
-      "自然"
-    ],
-    "spots": [
-      "松本城",
-      "縄手通り",
-      "松本市美術館"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "松本",
-    "gateways": {
-      "rail": [
-        "松本駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "松本駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "長野県",
-    "lat": 36.2381,
-    "lng": 137.9719,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 130,
-      "osaka": 260,
-      "nagoya": 170,
-      "fukuoka": 450,
-      "takamatsu": 380
-    },
-    "stayRecommendation": "1night",
-    "city": "松本市",
-    "hubStation": "松本駅",
-    "accessStation": "松本駅",
-    "hotelArea": "nagano",
-    "hotelKeyword": "松本",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "松本駅",
-          "provider": "えきねっと"
-        }
-      ]
-    },
-    "fallbackCity": "松本"
-  },
-  {
     "id": "yugawara-onsen",
     "name": "湯河原温泉",
     "type": "destination",
@@ -29433,79 +29361,6 @@
     "fallbackCity": "高知"
   },
   {
-    "id": "kochi-hirome",
-    "name": "高知",
-    "type": "destination",
-    "region": "四国",
-    "hub": null,
-    "hotelHub": "高知",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "坂本龍馬の故郷でひろめ市場のカツオのたたきが絶品。日曜市と高知城がある土佐の拠点都市。",
-    "tags": [
-      "グルメ",
-      "歴史"
-    ],
-    "spots": [
-      "高知城",
-      "ひろめ市場",
-      "桂浜"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "高知",
-    "gateways": {
-      "rail": [
-        "高知駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "高知駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "高知県",
-    "lat": 33.5597,
-    "lng": 133.5311,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 380,
-      "osaka": 220,
-      "nagoya": 295,
-      "fukuoka": 260,
-      "takamatsu": 80
-    },
-    "stayRecommendation": "daytrip",
-    "city": "高知市",
-    "hubStation": "高知駅",
-    "accessStation": "高知駅",
-    "hotelArea": "kochi",
-    "hotelKeyword": "高知",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "高知駅",
-          "provider": "e5489"
-        }
-      ]
-    },
-    "fallbackCity": "高知"
-  },
-  {
     "id": "miyoshi-tokushima",
     "name": "三好",
     "type": "destination",
@@ -29579,441 +29434,6 @@
     "fallbackCity": "徳島"
   },
   {
-    "id": "tokushima-city",
-    "name": "徳島",
-    "type": "destination",
-    "region": "四国",
-    "hub": null,
-    "hotelHub": "徳島",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "阿波踊りの本場。眉山から見る街と吉野川の景観、そして阿波牛・なると金時・鳴門わかめが絶品。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "眉山ロープウェイ",
-      "阿波踊り会館",
-      "鳴門公園（近郊）"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "徳島",
-    "gateways": {
-      "rail": [
-        "徳島駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "徳島駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "徳島県",
-    "lat": 34.0657,
-    "lng": 134.5594,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 340,
-      "osaka": 130,
-      "nagoya": 200,
-      "fukuoka": 270,
-      "takamatsu": 60
-    },
-    "stayRecommendation": "daytrip",
-    "city": "徳島市",
-    "hubStation": "徳島駅",
-    "accessStation": "徳島駅",
-    "hotelArea": "tokushima",
-    "hotelKeyword": "徳島",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "徳島駅",
-          "provider": "e5489"
-        }
-      ]
-    },
-    "fallbackCity": "徳島"
-  },
-  {
-    "id": "kumamoto-city",
-    "name": "熊本",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "熊本",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "加藤清正が築いた熊本城は難攻不落の名城。馬刺し・辛子蓮根・太平燕と熊本ラーメンが名物の城下町。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "熊本城",
-      "水前寺成趣園",
-      "新市街・上通周辺"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "熊本",
-    "gateways": {
-      "rail": [
-        "熊本駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "熊本駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "熊本県",
-    "lat": 32.7898,
-    "lng": 130.7417,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 400,
-      "osaka": 300,
-      "nagoya": 370,
-      "fukuoka": 80,
-      "takamatsu": 320
-    },
-    "stayRecommendation": "daytrip",
-    "city": "熊本市",
-    "hubStation": "熊本駅",
-    "accessStation": "熊本駅",
-    "hotelArea": "kumamoto",
-    "hotelKeyword": "熊本",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "熊本駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    },
-    "fallbackCity": "熊本"
-  },
-  {
-    "id": "nagasaki-city",
-    "name": "長崎",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "長崎",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "出島と原爆ドームが語る日本近代史の交差点。ちゃんぽん・皿うどんと夜景で知られる異国情緒の港。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "平和公園",
-      "出島",
-      "稲佐山展望台"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "長崎",
-    "gateways": {
-      "rail": [
-        "長崎駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "長崎駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "長崎県",
-    "lat": 32.745,
-    "lng": 129.8736,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 430,
-      "osaka": 330,
-      "nagoya": 400,
-      "fukuoka": 120,
-      "takamatsu": 355
-    },
-    "stayRecommendation": "1night",
-    "city": "長崎市",
-    "hubStation": "長崎駅",
-    "accessStation": "長崎駅",
-    "hotelArea": "nagasaki",
-    "hotelKeyword": "長崎",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "長崎駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    },
-    "fallbackCity": "長崎"
-  },
-  {
-    "id": "miyazaki-city",
-    "name": "宮崎",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "宮崎",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "南国のリゾート都市。宮崎マンゴーと地鶏の炭火焼き、フェニックスが並ぶ大淀川沿いの太平洋の玄関。",
-    "tags": [
-      "海",
-      "グルメ"
-    ],
-    "spots": [
-      "青島神社",
-      "宮崎神宮",
-      "サンメッセ日南"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "宮崎",
-    "gateways": {
-      "rail": [
-        "宮崎駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "宮崎駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "宮崎県",
-    "lat": 31.9111,
-    "lng": 131.4239,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 450,
-      "osaka": 370,
-      "nagoya": 440,
-      "fukuoka": 140,
-      "takamatsu": 365
-    },
-    "stayRecommendation": "1night",
-    "city": "宮崎市",
-    "hubStation": "宮崎駅",
-    "accessStation": "宮崎駅",
-    "hotelArea": "miyazaki",
-    "hotelKeyword": "宮崎",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "宮崎駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    },
-    "fallbackCity": "宮崎"
-  },
-  {
-    "id": "kagoshima-city",
-    "name": "鹿児島",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "鹿児島",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "桜島が間近に見える城下町。薩摩藩の歴史と黒豚・薩摩揚げ、焼酎文化が凝縮した九州南端の都市。",
-    "tags": [
-      "歴史",
-      "自然"
-    ],
-    "spots": [
-      "桜島",
-      "仙巌園",
-      "鹿児島市立美術館"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "鹿児島",
-    "gateways": {
-      "rail": [
-        "鹿児島中央駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "鹿児島中央駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "鹿児島県",
-    "lat": 31.5966,
-    "lng": 130.5571,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 420,
-      "osaka": 360,
-      "nagoya": 430,
-      "fukuoka": 140,
-      "takamatsu": 365
-    },
-    "stayRecommendation": "1night",
-    "city": "鹿児島市",
-    "hubStation": "鹿児島中央駅",
-    "accessStation": "鹿児島中央駅",
-    "hotelArea": "kagoshima",
-    "hotelKeyword": "鹿児島",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "鹿児島中央駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    },
-    "fallbackCity": "鹿児島"
-  },
-  {
-    "id": "saga-city",
-    "name": "佐賀",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "佐賀",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "有田焼・伊万里焼の産地に囲まれ、吉野ヶ里遺跡が近い古代・近世の歴史の宝庫。呼子のイカも名物。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "佐賀城跡",
-      "佐賀バルーンミュージアム",
-      "徴古館"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "佐賀",
-    "gateways": {
-      "rail": [
-        "佐賀駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "佐賀駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "佐賀県",
-    "lat": 33.2635,
-    "lng": 130.3009,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 390,
-      "osaka": 290,
-      "nagoya": 360,
-      "fukuoka": 40,
-      "takamatsu": 320
-    },
-    "stayRecommendation": "daytrip",
-    "city": "佐賀市",
-    "hubStation": "佐賀駅",
-    "accessStation": "佐賀駅",
-    "hotelArea": "saga",
-    "hotelKeyword": "佐賀",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "佐賀駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    },
-    "fallbackCity": "嬉野温泉"
-  },
-  {
     "id": "oita-city",
     "name": "大分",
     "type": "destination",
@@ -30085,79 +29505,6 @@
       ]
     },
     "fallbackCity": "湯布院"
-  },
-  {
-    "id": "matsuyama-city",
-    "name": "松山",
-    "type": "destination",
-    "region": "四国",
-    "hub": null,
-    "hotelHub": "松山",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "現存十二天守の松山城と日本最古の道後温泉。夏目漱石『坊っちゃん』の舞台でもある四国最大の都市。",
-    "tags": [
-      "歴史",
-      "温泉"
-    ],
-    "spots": [
-      "松山城",
-      "道後温泉本館",
-      "坊っちゃんスタジアム"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "松山",
-    "gateways": {
-      "rail": [
-        "松山駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "松山駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "愛媛県",
-    "lat": 33.8395,
-    "lng": 132.7658,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 340,
-      "osaka": 190,
-      "nagoya": 270,
-      "fukuoka": 220,
-      "takamatsu": 80
-    },
-    "stayRecommendation": "daytrip",
-    "city": "松山市",
-    "hubStation": "松山駅",
-    "accessStation": "松山駅",
-    "hotelArea": "ehime",
-    "hotelKeyword": "松山",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "松山駅",
-          "provider": "e5489"
-        }
-      ]
-    },
-    "fallbackCity": "松山"
   },
   {
     "id": "yuwaku-onsen",
@@ -31557,7 +30904,7 @@
     "fallbackCity": "新潟"
   },
   {
-    "id": "hakodate",
+    "id": "hokkaido-hakodate",
     "name": "函館",
     "type": "destination",
     "region": "北海道",
@@ -31631,7 +30978,7 @@
     "fallbackCity": "札幌"
   },
   {
-    "id": "asahikawa",
+    "id": "hokkaido-asahikawa",
     "name": "旭川",
     "type": "destination",
     "region": "北海道",
@@ -31705,7 +31052,7 @@
     "fallbackCity": "札幌"
   },
   {
-    "id": "kushiro",
+    "id": "hokkaido-kushiro",
     "name": "釧路",
     "type": "destination",
     "region": "北海道",
@@ -32137,152 +31484,6 @@
     "fallbackCity": "旭川"
   },
   {
-    "id": "sendai",
-    "name": "仙台",
-    "type": "destination",
-    "region": "東北",
-    "hub": null,
-    "hotelHub": "仙台",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "ずんだ・牛タン・仙台牛。東北最大の都市で、伊達政宗の城下町の面影が残る杜の都。",
-    "tags": [
-      "街",
-      "グルメ"
-    ],
-    "spots": [
-      "青葉城跡",
-      "仙台朝市",
-      "瑞鳳殿",
-      "定禅寺通り"
-    ],
-    "shinkansenAccess": true,
-    "requiresCar": false,
-    "hotelSearch": "仙台",
-    "gateways": {
-      "rail": [
-        "仙台駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "仙台駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "宮城県",
-    "lat": 38.2682,
-    "lng": 140.8694,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 90,
-      "osaka": 180,
-      "nagoya": 150,
-      "fukuoka": 300,
-      "takamatsu": 240
-    },
-    "stayRecommendation": "daytrip",
-    "city": "仙台市",
-    "hubStation": "仙台駅",
-    "accessStation": "仙台駅",
-    "hotelArea": "miyagi",
-    "hotelKeyword": "仙台",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "仙台駅",
-          "provider": "えきねっと"
-        }
-      ]
-    },
-    "fallbackCity": "仙台"
-  },
-  {
-    "id": "yamagata-city",
-    "name": "山形",
-    "type": "destination",
-    "region": "東北",
-    "hub": null,
-    "hotelHub": "山形",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "さくらんぼ・芋煮・山形牛。山形城跡・霞城公園を中心に、東北の米沢牛・蔵王も控える盆地の中心地。",
-    "tags": [
-      "グルメ",
-      "歴史"
-    ],
-    "spots": [
-      "霞城公園",
-      "山形花笠まつり",
-      "文翔館"
-    ],
-    "shinkansenAccess": true,
-    "requiresCar": false,
-    "hotelSearch": "山形",
-    "gateways": {
-      "rail": [
-        "山形駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "山形駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "山形県",
-    "lat": 38.2404,
-    "lng": 140.3633,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 150,
-      "osaka": 330,
-      "nagoya": 280,
-      "fukuoka": 470,
-      "takamatsu": 405
-    },
-    "stayRecommendation": "1night",
-    "city": "山形市",
-    "hubStation": "山形駅",
-    "accessStation": "山形駅",
-    "hotelArea": "yamagata",
-    "hotelKeyword": "山形",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "山形駅",
-          "provider": "えきねっと"
-        }
-      ]
-    },
-    "fallbackCity": "蔵王"
-  },
-  {
     "id": "fukushima-city",
     "name": "福島",
     "type": "destination",
@@ -32572,7 +31773,7 @@
     "fallbackCity": "蔵王"
   },
   {
-    "id": "yokohama",
+    "id": "kanagawa-yokohama",
     "name": "横浜",
     "type": "destination",
     "region": "関東",
@@ -32646,7 +31847,7 @@
     "fallbackCity": "横浜"
   },
   {
-    "id": "mito",
+    "id": "ibaraki-mito",
     "name": "水戸",
     "type": "destination",
     "region": "関東",
@@ -33230,7 +32431,7 @@
     "fallbackCity": "松本"
   },
   {
-    "id": "iida",
+    "id": "nagano-iida",
     "name": "飯田",
     "type": "destination",
     "region": "中部",
@@ -33373,79 +32574,6 @@
       ]
     },
     "fallbackCity": "高山"
-  },
-  {
-    "id": "shizuoka-city",
-    "name": "静岡",
-    "type": "destination",
-    "region": "中部",
-    "hub": null,
-    "hotelHub": "静岡",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "徳川家康が晩年を過ごした駿府城下町。お茶・桜えび・しらすが三大グルメで、富士山の絶景も拝める。",
-    "tags": [
-      "グルメ",
-      "歴史"
-    ],
-    "spots": [
-      "駿府城公園",
-      "久能山東照宮",
-      "登呂遺跡"
-    ],
-    "shinkansenAccess": true,
-    "requiresCar": false,
-    "hotelSearch": "静岡",
-    "gateways": {
-      "rail": [
-        "静岡駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "静岡駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "静岡県",
-    "lat": 34.9769,
-    "lng": 138.3831,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 70,
-      "osaka": 140,
-      "nagoya": 55,
-      "fukuoka": 330,
-      "takamatsu": 250
-    },
-    "stayRecommendation": "daytrip",
-    "city": "静岡市",
-    "hubStation": "静岡駅",
-    "accessStation": "静岡駅",
-    "hotelArea": "shizuoka",
-    "hotelKeyword": "静岡",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "静岡駅",
-          "provider": "えきねっと"
-        }
-      ]
-    },
-    "fallbackCity": "熱海"
   },
   {
     "id": "yaizu",
@@ -34252,7 +33380,7 @@
     "fallbackCity": "白浜"
   },
   {
-    "id": "matsue",
+    "id": "shimane-matsue",
     "name": "松江",
     "type": "destination",
     "region": "中国",
@@ -34689,7 +33817,7 @@
     "fallbackCity": "萩"
   },
   {
-    "id": "takamatsu",
+    "id": "kagawa-takamatsu",
     "name": "高松",
     "type": "destination",
     "region": "四国",

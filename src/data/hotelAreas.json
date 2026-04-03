@@ -457,7 +457,7 @@
     "jalanKeyword": "北海道 美瑛町"
   },
   {
-    "id": "asahikawa",
+    "id": "hokkaido-asahikawa",
     "name": "旭川",
     "prefCode": "hokkaido",
     "prefecture": "北海道",
@@ -469,7 +469,7 @@
     "jalanKeyword": "北海道 旭川市"
   },
   {
-    "id": "kushiro",
+    "id": "hokkaido-kushiro",
     "name": "釧路",
     "prefCode": "hokkaido",
     "prefecture": "北海道",
@@ -481,7 +481,7 @@
     "jalanKeyword": "北海道 釧路市"
   },
   {
-    "id": "hakodate",
+    "id": "hokkaido-hakodate",
     "name": "函館",
     "prefCode": "hokkaido",
     "prefecture": "北海道",
@@ -649,7 +649,7 @@
     "jalanKeyword": "和歌山県 和歌山市"
   },
   {
-    "id": "yokohama",
+    "id": "kanagawa-yokohama",
     "name": "横浜",
     "prefCode": "kanagawa",
     "prefecture": "神奈川県",
@@ -4140,7 +4140,7 @@
     "jalanKeyword": "長野県 松本市"
   },
   {
-    "id": "takamatsu",
+    "id": "kagawa-takamatsu",
     "name": "高松",
     "prefCode": "kagawa",
     "prefecture": "香川県",
@@ -4150,7 +4150,7 @@
     "jalanKeyword": "香川県 高松市"
   },
   {
-    "id": "matsue",
+    "id": "shimane-matsue",
     "name": "松江",
     "prefCode": "shimane",
     "prefecture": "島根県",
@@ -4191,7 +4191,7 @@
     "jalanKeyword": "静岡県 浜松市"
   },
   {
-    "id": "mito",
+    "id": "ibaraki-mito",
     "name": "水戸",
     "prefCode": "ibaraki",
     "prefecture": "茨城県",
@@ -4201,7 +4201,7 @@
     "jalanKeyword": "茨城県 水戸市"
   },
   {
-    "id": "iida",
+    "id": "nagano-iida",
     "name": "飯田",
     "prefCode": "nagano",
     "prefecture": "長野県",
@@ -4373,16 +4373,6 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%90%D4%91%71%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "新潟県 赤倉温泉",
-    "_generated": true
-  },
-  {
-    "id": "matsumoto-city",
-    "name": "松本",
-    "prefCode": "nagano",
-    "prefecture": "長野県",
-    "rakutenPath": "/yado/nagano/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%BC%96%7B&screenId=UWW1402",
-    "jalanKeyword": "長野県 松本",
     "_generated": true
   },
   {
@@ -4866,16 +4856,6 @@
     "_generated": true
   },
   {
-    "id": "kochi-hirome",
-    "name": "高知",
-    "prefCode": "kochi",
-    "prefecture": "高知県",
-    "rakutenPath": "/yado/kochi/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8D%82%92%6D&screenId=UWW1402",
-    "jalanKeyword": "高知県 高知",
-    "_generated": true
-  },
-  {
     "id": "miyoshi-tokushima",
     "name": "三好",
     "prefCode": "tokushima",
@@ -4886,66 +4866,6 @@
     "_generated": true
   },
   {
-    "id": "tokushima-city",
-    "name": "徳島",
-    "prefCode": "tokushima",
-    "prefecture": "徳島県",
-    "rakutenPath": "/yado/tokushima/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%93%BF%93%87&screenId=UWW1402",
-    "jalanKeyword": "徳島県 徳島",
-    "_generated": true
-  },
-  {
-    "id": "kumamoto-city",
-    "name": "熊本",
-    "prefCode": "kumamoto",
-    "prefecture": "熊本県",
-    "rakutenPath": "/yado/kumamoto/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%8C%46%96%7B&screenId=UWW1402",
-    "jalanKeyword": "熊本県 熊本",
-    "_generated": true
-  },
-  {
-    "id": "nagasaki-city",
-    "name": "長崎",
-    "prefCode": "nagasaki",
-    "prefecture": "長崎県",
-    "rakutenPath": "/yado/nagasaki/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%92%B7%8D%E8&screenId=UWW1402",
-    "jalanKeyword": "長崎県 長崎",
-    "_generated": true
-  },
-  {
-    "id": "miyazaki-city",
-    "name": "宮崎",
-    "prefCode": "miyazaki",
-    "prefecture": "宮崎県",
-    "rakutenPath": "/yado/miyazaki/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%8B%7B%8D%E8&screenId=UWW1402",
-    "jalanKeyword": "宮崎県 宮崎",
-    "_generated": true
-  },
-  {
-    "id": "kagoshima-city",
-    "name": "鹿児島",
-    "prefCode": "kagoshima",
-    "prefecture": "鹿児島県",
-    "rakutenPath": "/yado/kagoshima/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%8E%AD%8E%99%93%87&screenId=UWW1402",
-    "jalanKeyword": "鹿児島県 鹿児島",
-    "_generated": true
-  },
-  {
-    "id": "saga-city",
-    "name": "佐賀",
-    "prefCode": "saga",
-    "prefecture": "佐賀県",
-    "rakutenPath": "/yado/saga/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%B2%89%EA%8C%A7%20%8D%B2%89%EA&screenId=UWW1402",
-    "jalanKeyword": "佐賀県 佐賀",
-    "_generated": true
-  },
-  {
     "id": "oita-city",
     "name": "大分",
     "prefCode": "oita",
@@ -4953,16 +4873,6 @@
     "rakutenPath": "/yado/oita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%91%E5%95%AA&screenId=UWW1402",
     "jalanKeyword": "大分県 大分",
-    "_generated": true
-  },
-  {
-    "id": "matsuyama-city",
-    "name": "松山",
-    "prefCode": "ehime",
-    "prefecture": "愛媛県",
-    "rakutenPath": "/yado/ehime/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8F%BC%8E%52&screenId=UWW1402",
-    "jalanKeyword": "愛媛県 松山",
     "_generated": true
   },
   {
@@ -5206,16 +5116,6 @@
     "_generated": true
   },
   {
-    "id": "yamagata-city",
-    "name": "山形",
-    "prefCode": "yamagata",
-    "prefecture": "山形県",
-    "rakutenPath": "/yado/yamagata/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8E%52%8C%60&screenId=UWW1402",
-    "jalanKeyword": "山形県 山形",
-    "_generated": true
-  },
-  {
     "id": "fukushima-city",
     "name": "福島",
     "prefCode": "fukushima",
@@ -5333,16 +5233,6 @@
     "rakutenPath": "/yado/gifu/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%92%86%92%C3%90%EC&screenId=UWW1402",
     "jalanKeyword": "岐阜県 中津川",
-    "_generated": true
-  },
-  {
-    "id": "shizuoka-city",
-    "name": "静岡",
-    "prefCode": "shizuoka",
-    "prefecture": "静岡県",
-    "rakutenPath": "/yado/shizuoka/",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%90%C3%89%AA&screenId=UWW1402",
-    "jalanKeyword": "静岡県 静岡",
     "_generated": true
   },
   {

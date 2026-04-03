@@ -1157,6 +1157,64 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8i] 重複チェック（hubs + destinations 合算）
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8i] 重複チェック');
+
+    // id は全体でユニーク
+    const idMap = {};
+    ALL.forEach(d => { idMap[d.id] = (idMap[d.id] || 0) + 1; });
+    const dupIds = Object.entries(idMap).filter(([, c]) => c > 1).map(([id]) => id);
+
+    // name は同タイプ内でユニーク
+    const nameMap = {};
+    ALL.forEach(d => {
+      const t = d.type || 'unknown';
+      if (!nameMap[t]) nameMap[t] = {};
+      nameMap[t][d.name] = (nameMap[t][d.name] || 0) + 1;
+    });
+    const dupNames = [];
+    Object.entries(nameMap).forEach(([t, nm]) => {
+      Object.entries(nm).filter(([, c]) => c > 1).forEach(([n]) => dupNames.push(`${n}(type=${t})`));
+    });
+
+    // normalize 重複チェック（全角→半角・スペース除去）
+    function normalize(s) {
+      return s
+        .replace(/[Ａ-Ｚａ-ｚ０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0))
+        .replace(/[\s　・（）()【】「」]/g, '')
+        .toLowerCase();
+    }
+    const normMap = {};
+    DESTS.forEach(d => {
+      const k = normalize(d.name);
+      if (!normMap[k]) normMap[k] = [];
+      normMap[k].push(d.id);
+    });
+    const normDups = Object.entries(normMap).filter(([, v]) => v.length > 1);
+
+    sc.check(dupIds.length === 0,
+      dupIds.length === 0
+        ? `id重複ゼロ (hubs+dests ${ALL.length}件)`
+        : `id重複 ${dupIds.length}件: ${dupIds.join(', ')}`
+    );
+    sc.check(dupNames.length === 0,
+      dupNames.length === 0
+        ? `name重複ゼロ（同type内）`
+        : `name重複 ${dupNames.length}件: ${dupNames.slice(0, 5).join(', ')}`
+    );
+    sc.check(normDups.length === 0,
+      normDups.length === 0
+        ? `正規化name重複ゼロ`
+        : `正規化name重複 ${normDups.length}件: ${normDups.slice(0, 3).map(([k, v]) => k+'='+v.join('/')).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');

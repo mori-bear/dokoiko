@@ -3311,15 +3311,6 @@
       "to": "赤倉温泉"
     }
   },
-  "matsumoto-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "松本駅"
-    }
-  },
   "yugawara-onsen": {
     "mainCTA": {
       "type": "rail",
@@ -3799,15 +3790,6 @@
       "to": "宿毛駅"
     }
   },
-  "kochi-hirome": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "高知駅"
-    }
-  },
   "miyoshi-tokushima": {
     "mainCTA": {
       "type": "rail",
@@ -3817,60 +3799,6 @@
       "to": "阿波池田駅"
     }
   },
-  "tokushima-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "徳島駅"
-    }
-  },
-  "kumamoto-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "jrkyushu"
-    },
-    "mapCTA": {
-      "to": "熊本駅"
-    }
-  },
-  "nagasaki-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "jrkyushu"
-    },
-    "mapCTA": {
-      "to": "長崎駅"
-    }
-  },
-  "miyazaki-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "jrkyushu"
-    },
-    "mapCTA": {
-      "to": "宮崎駅"
-    }
-  },
-  "kagoshima-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "jrkyushu"
-    },
-    "mapCTA": {
-      "to": "鹿児島中央駅"
-    }
-  },
-  "saga-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "jrkyushu"
-    },
-    "mapCTA": {
-      "to": "佐賀駅"
-    }
-  },
   "oita-city": {
     "mainCTA": {
       "type": "rail",
@@ -3878,15 +3806,6 @@
     },
     "mapCTA": {
       "to": "大分駅"
-    }
-  },
-  "matsuyama-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "松山駅"
     }
   },
   "yuwaku-onsen": {
@@ -4100,7 +4019,7 @@
       "to": "妙高高原"
     }
   },
-  "hakodate": {
+  "hokkaido-hakodate": {
     "mainCTA": {
       "type": "rail",
       "provider": "ekinet"
@@ -4109,7 +4028,7 @@
       "to": "函館駅"
     }
   },
-  "asahikawa": {
+  "hokkaido-asahikawa": {
     "mainCTA": {
       "type": "flight",
       "to": "旭川空港"
@@ -4118,7 +4037,7 @@
       "to": "旭川駅"
     }
   },
-  "kushiro": {
+  "hokkaido-kushiro": {
     "mainCTA": {
       "type": "flight",
       "to": "釧路空港"
@@ -4188,24 +4107,6 @@
       "to": "増毛港"
     }
   },
-  "sendai": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "仙台駅"
-    }
-  },
-  "yamagata-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "山形駅"
-    }
-  },
   "fukushima-city": {
     "mainCTA": {
       "type": "rail",
@@ -4242,7 +4143,7 @@
       "to": "長井市街"
     }
   },
-  "yokohama": {
+  "kanagawa-yokohama": {
     "mainCTA": {
       "type": "rail",
       "provider": "ekinet"
@@ -4251,7 +4152,7 @@
       "to": "横浜駅"
     }
   },
-  "mito": {
+  "ibaraki-mito": {
     "mainCTA": {
       "type": "rail",
       "provider": "ekinet"
@@ -4323,7 +4224,7 @@
       "to": "安曇野市街"
     }
   },
-  "iida": {
+  "nagano-iida": {
     "mainCTA": {
       "type": "rail",
       "provider": "ekinet"
@@ -4339,15 +4240,6 @@
     },
     "mapCTA": {
       "to": "中津川駅"
-    }
-  },
-  "shizuoka-city": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "静岡駅"
     }
   },
   "yaizu": {
@@ -4453,7 +4345,7 @@
       "to": "潮岬"
     }
   },
-  "matsue": {
+  "shimane-matsue": {
     "mainCTA": {
       "type": "flight",
       "to": "出雲空港"
@@ -4515,7 +4407,7 @@
       "to": "秋芳洞"
     }
   },
-  "takamatsu": {
+  "kagawa-takamatsu": {
     "mainCTA": {
       "type": "flight",
       "to": "高松空港"
