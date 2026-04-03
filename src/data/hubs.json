@@ -167,7 +167,10 @@
     "prefecture": "宮城県",
     "city": "仙台市",
     "hotelArea": "sendai",
-    "jalanPath": "/04/LRG_040010/"
+    "jalanPath": "/04/LRG_040010/",
+    "aliases": [
+      "仙台市"
+    ]
   },
   {
     "id": "kanazawa-t",
@@ -971,7 +974,10 @@
     "prefecture": "佐賀県",
     "city": "佐賀市",
     "hotelArea": "saga",
-    "jalanPath": "/41/LRG_410010/"
+    "jalanPath": "/41/LRG_410010/",
+    "aliases": [
+      "佐賀市"
+    ]
   },
   {
     "id": "kumamoto",
@@ -1026,7 +1032,10 @@
     "prefecture": "熊本県",
     "city": "熊本市",
     "hotelArea": "kumamoto",
-    "jalanPath": "/43/LRG_430010/"
+    "jalanPath": "/43/LRG_430010/",
+    "aliases": [
+      "熊本市"
+    ]
   },
   {
     "id": "nagasaki",
@@ -1093,7 +1102,10 @@
     "prefecture": "長崎県",
     "city": "長崎市",
     "hotelArea": "nagasaki",
-    "jalanPath": "/42/LRG_420010/"
+    "jalanPath": "/42/LRG_420010/",
+    "aliases": [
+      "長崎市"
+    ]
   },
   {
     "id": "kagoshima",
@@ -1148,7 +1160,10 @@
     "prefecture": "鹿児島県",
     "city": "鹿児島市",
     "hotelArea": "kagoshima",
-    "jalanPath": "/46/LRG_460010/"
+    "jalanPath": "/46/LRG_460010/",
+    "aliases": [
+      "鹿児島市"
+    ]
   },
   {
     "id": "miyazaki",
@@ -1204,7 +1219,10 @@
     "prefecture": "宮崎県",
     "city": "宮崎市",
     "hotelArea": "miyazaki",
-    "jalanPath": "/45/LRG_450010/"
+    "jalanPath": "/45/LRG_450010/",
+    "aliases": [
+      "宮崎市"
+    ]
   },
   {
     "id": "asahikawa",
@@ -1438,7 +1456,10 @@
     "prefecture": "山形県",
     "city": "山形市",
     "hotelArea": "yamagata",
-    "jalanPath": "/06/LRG_060010/"
+    "jalanPath": "/06/LRG_060010/",
+    "aliases": [
+      "山形市"
+    ]
   },
   {
     "id": "morioka",
@@ -1618,7 +1639,10 @@
     "prefecture": "愛媛県",
     "city": "松山市",
     "hotelArea": "matsuyama",
-    "jalanPath": "/38/LRG_380010/"
+    "jalanPath": "/38/LRG_380010/",
+    "aliases": [
+      "松山市"
+    ]
   },
   {
     "id": "tokushima",
@@ -1673,7 +1697,10 @@
     "prefecture": "徳島県",
     "city": "徳島市",
     "hotelArea": "tokushima",
-    "jalanPath": "/36/LRG_360010/"
+    "jalanPath": "/36/LRG_360010/",
+    "aliases": [
+      "徳島市"
+    ]
   },
   {
     "id": "kochi",
@@ -1728,7 +1755,11 @@
     "prefecture": "高知県",
     "city": "高知市",
     "hotelArea": "kochi",
-    "jalanPath": "/39/LRG_390010/"
+    "jalanPath": "/39/LRG_390010/",
+    "aliases": [
+      "高知市",
+      "ひろめ市場"
+    ]
   },
   {
     "id": "naha",
@@ -1865,7 +1896,10 @@
     "prefecture": "長野県",
     "city": "松本市",
     "hotelArea": "matsumoto",
-    "jalanPath": "/20/LRG_200010/"
+    "jalanPath": "/20/LRG_200010/",
+    "aliases": [
+      "松本市"
+    ]
   },
   {
     "id": "mito",
@@ -2030,7 +2064,10 @@
     },
     "stayRecommendation": "1night",
     "prefecture": "静岡県",
-    "city": "静岡市"
+    "city": "静岡市",
+    "aliases": [
+      "静岡市"
+    ]
   },
   {
     "id": "iida",

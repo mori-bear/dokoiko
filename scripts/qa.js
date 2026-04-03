@@ -1157,7 +1157,7 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
-     [8i] 重複チェック（hubs + destinations 合算）
+     [8i] 重複チェック（hubs + destinations 合算、alias含む）
   ─────────────────────────────── */
   {
     const sc = new Scorecard('[8i] 重複チェック');
@@ -1167,15 +1167,28 @@ class Scorecard {
     ALL.forEach(d => { idMap[d.id] = (idMap[d.id] || 0) + 1; });
     const dupIds = Object.entries(idMap).filter(([, c]) => c > 1).map(([id]) => id);
 
-    // name は同タイプ内でユニーク
+    // name + aliases は同タイプ内でユニーク
     const nameMap = {};
+    const aliasConflicts = [];
     ALL.forEach(d => {
       const t = d.type || 'unknown';
       if (!nameMap[t]) nameMap[t] = {};
-      nameMap[t][d.name] = (nameMap[t][d.name] || 0) + 1;
+      const allNames = [d.name, ...(d.aliases || [])];
+      for (const n of allNames) {
+        if (nameMap[t][n]) aliasConflicts.push(`"${n}"(${nameMap[t][n]} vs ${d.id})`);
+        nameMap[t][n] = d.id;
+      }
+    });
+
+    // name は同タイプ内でユニーク（シンプル集計）
+    const nameOnlyMap = {};
+    ALL.forEach(d => {
+      const t = d.type || 'unknown';
+      if (!nameOnlyMap[t]) nameOnlyMap[t] = {};
+      nameOnlyMap[t][d.name] = (nameOnlyMap[t][d.name] || 0) + 1;
     });
     const dupNames = [];
-    Object.entries(nameMap).forEach(([t, nm]) => {
+    Object.entries(nameOnlyMap).forEach(([t, nm]) => {
       Object.entries(nm).filter(([, c]) => c > 1).forEach(([n]) => dupNames.push(`${n}(type=${t})`));
     });
 
@@ -1194,6 +1207,9 @@ class Scorecard {
     });
     const normDups = Object.entries(normMap).filter(([, v]) => v.length > 1);
 
+    // aliasの件数
+    const withAlias = ALL.filter(d => d.aliases && d.aliases.length > 0);
+
     sc.check(dupIds.length === 0,
       dupIds.length === 0
         ? `id重複ゼロ (hubs+dests ${ALL.length}件)`
@@ -1203,6 +1219,11 @@ class Scorecard {
       dupNames.length === 0
         ? `name重複ゼロ（同type内）`
         : `name重複 ${dupNames.length}件: ${dupNames.slice(0, 5).join(', ')}`
+    );
+    sc.check(aliasConflicts.length === 0,
+      aliasConflicts.length === 0
+        ? `alias衝突ゼロ（${withAlias.length}件がalias保持）`
+        : `alias衝突 ${aliasConflicts.length}件: ${aliasConflicts.slice(0, 3).join(', ')}`
     );
     sc.check(normDups.length === 0,
       normDups.length === 0

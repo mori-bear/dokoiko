@@ -68,8 +68,13 @@ const DESTINATION_PREFECTURE_MAP = {
 
 function isSameCity(destination, departure) {
   if (destination.name === departure) return true;
-  const aliases = DEPARTURE_ALIASES[departure] ?? [];
-  return aliases.includes(destination.name);
+  // 出発地の別名（博多=福岡 など）
+  const departureAliases = DEPARTURE_ALIASES[departure] ?? [];
+  if (departureAliases.includes(destination.name)) return true;
+  // 目的地の別名（"横浜市" で横浜が除外される など）
+  const destAliases = destination.aliases ?? [];
+  if (destAliases.includes(departure)) return true;
+  return false;
 }
 
 function isSamePrefectureOvernight(destination, departure, stayType) {

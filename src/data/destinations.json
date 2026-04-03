@@ -30975,7 +30975,10 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "aliases": [
+      "函館市"
+    ]
   },
   {
     "id": "hokkaido-asahikawa",
@@ -31049,7 +31052,10 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "aliases": [
+      "旭川市"
+    ]
   },
   {
     "id": "hokkaido-kushiro",
@@ -31123,7 +31129,10 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "aliases": [
+      "釧路市"
+    ]
   },
   {
     "id": "yoichi",
@@ -31844,7 +31853,10 @@
         }
       ]
     },
-    "fallbackCity": "横浜"
+    "fallbackCity": "横浜",
+    "aliases": [
+      "横浜市"
+    ]
   },
   {
     "id": "ibaraki-mito",
@@ -31917,7 +31929,10 @@
         }
       ]
     },
-    "fallbackCity": "水戸"
+    "fallbackCity": "水戸",
+    "aliases": [
+      "水戸市"
+    ]
   },
   {
     "id": "utsunomiya",
@@ -32500,7 +32515,10 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "aliases": [
+      "飯田市"
+    ]
   },
   {
     "id": "nakatsugawa",
@@ -33451,7 +33469,10 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "aliases": [
+      "松江市"
+    ]
   },
   {
     "id": "hamada-shimane",
@@ -33889,7 +33910,10 @@
         }
       ]
     },
-    "fallbackCity": "琴平"
+    "fallbackCity": "琴平",
+    "aliases": [
+      "高松市"
+    ]
   },
   {
     "id": "sakaide",
