@@ -44,19 +44,19 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
   history.replaceState(null, '', newUrl);
 }
 
-/** シェア用テキスト生成（絵文字なし・簡潔） */
+/** シェア用テキスト生成（口語調・シェアしたくなる） */
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
   const url  = location.href;
-  return `どこ行こ？でここ出た\n\n${departure} → ${name}\n${url}`;
+  return `これ出たんやけど当たり？笑\n\n${departure} → ${name}\n${url}`;
 }
 
 /** Xシェアウィンドウを開く */
 export function openXShare(city, departure) {
-  const name    = city.displayName || city.name;
-  const url     = location.href;
-  const tweetText = `どこ行こ？でここ出た\n\n${departure} → ${name}`;
-  const params  = new URLSearchParams({ text: tweetText, url });
+  const name      = city.displayName || city.name;
+  const url       = location.href;
+  const tweetText = `これ出たんやけど当たり？笑\n\n${departure} → ${name}`;
+  const params    = new URLSearchParams({ text: tweetText, url });
   window.open(
     `https://twitter.com/intent/tweet?${params.toString()}`,
     '_blank',

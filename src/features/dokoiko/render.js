@@ -87,10 +87,15 @@ function buildCityBlock(city) {
     ? (hubName ? `<p class="city-station city-station--hub">最寄り拠点：${hubName}<span class="hub-label">（車でアクセス）</span></p>` : '')
     : (showAccess ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}${city.operator ? `<span class="operator-badge${city.operatorType === 'private' ? ' operator-badge--private' : ''}">${city.operator}</span>` : ''}</p>` : '');
 
+  const catchHtml = city.catch
+    ? `<p class="city-catch">${city.catch}</p>`
+    : '';
+
   return `
     <div class="city-block">
       <div class="city-header">
         <h2 class="city-name">${city.displayName || city.name}</h2>
+        ${catchHtml}
         <p class="city-sub">${locationStr}${categoryBadge}</p>
         ${accessHtml}
       </div>

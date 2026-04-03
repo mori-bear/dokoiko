@@ -147,6 +147,14 @@ body {
   padding: 24px 0 28px;
 }
 
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
 .hero-heading {
   font-size: 32px;
   font-weight: 800;
@@ -1530,4 +1538,15 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   .travel-map {
     height: 380px;
   }
+}
+
+/* ── キャッチコピー（city-name 直下） ── */
+.city-catch {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }

@@ -75,7 +75,25 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": "東京駅"
+    "gateway": "東京駅",
+    "gatewayStations": [
+      {
+        "name": "東京駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "東京から鎌倉駅へ",
+      "to": "鎌倉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "古都の寺社と海が共存する歴史の街"
   },
   {
     "id": "atami",
@@ -153,7 +171,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "昭和レトロと温泉が絡み合う海辺の保養地"
   },
   {
     "id": "nikko",
@@ -253,7 +277,25 @@
     },
     "fallbackCity": "日光",
     "finalPoint": "日光東照宮",
-    "gateway": "宇都宮駅"
+    "gateway": "宇都宮駅",
+    "gatewayStations": [
+      {
+        "name": "宇都宮駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "宇都宮から日光駅へ",
+      "to": "日光駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山と湖と滝に囲まれた世界遺産の聖地"
   },
   {
     "id": "karuizawa",
@@ -348,7 +390,13 @@
     },
     "fallbackCity": "松本",
     "finalPoint": "旧軽井沢銀座",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "高原の空気と別荘文化が溶け合う避暑地"
   },
   {
     "id": "fujikawaguchiko",
@@ -433,7 +481,13 @@
       ]
     },
     "fallbackCity": "富士河口湖",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "富士山を映す湖と雄大な自然に包まれた高原地"
   },
   {
     "id": "nara",
@@ -513,7 +567,25 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": "京都駅"
+    "gateway": "京都駅",
+    "gatewayStations": [
+      {
+        "name": "京都駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "京都から奈良駅へ",
+      "to": "奈良駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鹿と仏教建築が共存する千年の古都"
   },
   {
     "id": "ishigaki",
@@ -596,7 +668,30 @@
     },
     "finalPoint": "石垣市街",
     "fallbackCity": "那覇",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "石垣空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から石垣空港へ",
+      "to": "石垣空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "八重山の文化と透明度抜群の珊瑚礁が広がる離島"
   },
   {
     "id": "ise",
@@ -692,7 +787,25 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "名古屋から伊勢市駅へ",
+      "to": "伊勢市駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最古の神宮が鎮座する神聖な参拝の地"
   },
   {
     "id": "beppu",
@@ -780,7 +893,25 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "大分駅"
+    "gateway": "大分駅",
+    "gatewayStations": [
+      {
+        "name": "大分駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大分から別府駅へ",
+      "to": "別府駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市"
   },
   {
     "id": "otaru",
@@ -860,7 +991,25 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": "新千歳空港"
+    "gateway": "新千歳空港",
+    "gatewayStations": [
+      {
+        "name": "新千歳空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新千歳空港から小樽駅へ",
+      "to": "小樽駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北の港町に残る運河と倉庫群が旅情を誘う街"
   },
   {
     "id": "furano",
@@ -945,7 +1094,25 @@
     },
     "fallbackCity": "札幌",
     "finalPoint": "ファーム富田",
-    "gateway": "旭川駅"
+    "gateway": "旭川駅",
+    "gatewayStations": [
+      {
+        "name": "旭川駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "旭川から富良野駅へ",
+      "to": "富良野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ラベンダー畑と大自然が広がる北海道の高原地帯"
   },
   {
     "id": "matsushima",
@@ -1042,7 +1209,25 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": "仙台駅"
+    "gateway": "仙台駅",
+    "gatewayStations": [
+      {
+        "name": "仙台駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "仙台から松島海岸駅へ",
+      "to": "松島海岸駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三景のひとつ、松の島々が浮かぶ美しい海"
   },
   {
     "id": "miyajima",
@@ -1136,7 +1321,25 @@
     },
     "finalPoint": "厳島神社",
     "fallbackCity": "広島",
-    "gateway": "広島駅"
+    "gateway": "広島駅",
+    "gatewayStations": [
+      {
+        "name": "広島駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "広島から宮島口港へ",
+      "to": "宮島口港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海に浮かぶ鳥居が象徴する世界遺産の神の島"
   },
   {
     "id": "onomichi",
@@ -1228,7 +1431,25 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": "福山駅"
+    "gateway": "福山駅",
+    "gatewayStations": [
+      {
+        "name": "福山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "福山から尾道駅へ",
+      "to": "尾道駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "坂と猫と寺社が点在する瀬戸内の港町"
   },
   {
     "id": "shodoshima",
@@ -1325,7 +1546,25 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": "高松駅"
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高松から池田港へ",
+      "to": "池田港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "オリーブと醤油の産地として知られる瀬戸内の島"
   },
   {
     "id": "mihonoseki",
@@ -1410,7 +1649,30 @@
       ]
     },
     "fallbackCity": "境港",
-    "gateway": "松江駅"
+    "gateway": "松江駅",
+    "gatewayStations": [
+      {
+        "name": "松江駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "米子空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "松江から境港駅へ",
+      "to": "境港駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "島根半島の東端に静かに佇む漁師町"
   },
   {
     "id": "ryujin-onsen",
@@ -1491,7 +1753,13 @@
       ]
     },
     "fallbackCity": "田辺",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "紀伊山地の奥深くに湧く日本三美人の湯"
   },
   {
     "id": "tokashiki-jima",
@@ -1593,7 +1861,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "那覇港"
+    "gateway": "那覇港",
+    "gatewayStations": [
+      {
+        "name": "那覇港",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇港から渡嘉敷港へ",
+      "to": "渡嘉敷港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ケラマブルーの海が広がる沖縄の離島"
   },
   {
     "id": "kumejima",
@@ -1696,7 +1987,30 @@
     },
     "finalPoint": "久米島",
     "fallbackCity": "那覇",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "久米島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から久米島空港へ",
+      "to": "久米島空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "手つかずの白砂浜と沖縄の原風景が残る離島"
   },
   {
     "id": "miyakojima",
@@ -1780,7 +2094,30 @@
     },
     "finalPoint": "宮古島",
     "fallbackCity": "那覇",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "宮古空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から宮古空港へ",
+      "to": "宮古空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "宮古ブルーと称される透明度抜群の海を持つ離島"
   },
   {
     "id": "kouzushima",
@@ -1873,7 +2210,25 @@
     },
     "fallbackCity": "東京",
     "finalPoint": "長浜海水浴場",
-    "gateway": "竹芝客船ターミナル"
+    "gateway": "竹芝客船ターミナル",
+    "gatewayStations": [
+      {
+        "name": "竹芝客船ターミナル",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "竹芝客船ターミナルから神津島港へ",
+      "to": "神津島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島"
   },
   {
     "id": "hakone",
@@ -1957,7 +2312,25 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": "小田原駅"
+    "gateway": "小田原駅",
+    "gatewayStations": [
+      {
+        "name": "小田原駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "小田原から箱根湯本駅へ",
+      "to": "箱根湯本駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山と湖と温泉が揃う関東を代表する保養地"
   },
   {
     "id": "shuzenji",
@@ -2034,7 +2407,25 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": "三島駅"
+    "gateway": "三島駅",
+    "gatewayStations": [
+      {
+        "name": "三島駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "三島から修善寺駅へ",
+      "to": "修善寺駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "竹林に囲まれた伊豆最古の温泉郷"
   },
   {
     "id": "kusatsu-onsen",
@@ -2116,7 +2507,25 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": "長野原草津口駅"
+    "gateway": "長野原草津口駅",
+    "gatewayStations": [
+      {
+        "name": "長野原草津口駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "長野原草津口から草津温泉バスターミナルへ",
+      "to": "草津温泉バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯"
   },
   {
     "id": "shimoda",
@@ -2201,7 +2610,25 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": "熱海駅"
+    "gateway": "熱海駅",
+    "gatewayStations": [
+      {
+        "name": "熱海駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "熱海から伊豆急下田駅へ",
+      "to": "伊豆急下田駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "黒船来航の歴史が残る伊豆半島南端の港町"
   },
   {
     "id": "izu-oshima",
@@ -2302,7 +2729,25 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": "東京竹芝"
+    "gateway": "東京竹芝",
+    "gatewayStations": [
+      {
+        "name": "東京竹芝",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "東京竹芝から元町港へ",
+      "to": "元町港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海と自然に囲まれた離島の旅"
   },
   {
     "id": "shirakawago-t",
@@ -2399,7 +2844,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "雪に耐える合掌造りの集落が世界遺産に登録された里"
   },
   {
     "id": "arima-onsen",
@@ -2483,7 +2934,25 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": "三ノ宮駅"
+    "gateway": "三ノ宮駅",
+    "gatewayStations": [
+      {
+        "name": "三ノ宮駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "三ノ宮から有馬温泉駅へ",
+      "to": "有馬温泉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本書紀にも記された六甲山麓の古湯"
   },
   {
     "id": "kinosaki-onsen",
@@ -2575,7 +3044,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "浴衣で七つの外湯を巡る情緒ある温泉街"
   },
   {
     "id": "kurashiki-o",
@@ -2666,7 +3141,13 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白壁の土蔵と柳が並ぶ江戸の面影が残る街"
   },
   {
     "id": "shirahama-o",
@@ -2746,7 +3227,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白い砂浜と透明な海が広がる南紀のリゾート地"
   },
   {
     "id": "takayama-o",
@@ -2838,7 +3325,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸の町割りが残る飛騨山脈に囲まれた城下町"
   },
   {
     "id": "toba",
@@ -2919,7 +3412,25 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "名古屋から鳥羽駅へ",
+      "to": "鳥羽駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伊勢志摩の海女文化と真珠産業が息づく港町"
   },
   {
     "id": "yufuin",
@@ -3015,7 +3526,25 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "大分駅"
+    "gateway": "大分駅",
+    "gatewayStations": [
+      {
+        "name": "大分駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大分から由布院駅へ",
+      "to": "由布院駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霧立つ温泉郷として知られる九州の奥座敷"
   },
   {
     "id": "kurokawa-k",
@@ -3102,7 +3631,13 @@
       ]
     },
     "fallbackCity": "阿蘇",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "杉林に隠れた小さな温泉旅館が集まる秘湯の里"
   },
   {
     "id": "aso",
@@ -3187,7 +3722,25 @@
     },
     "fallbackCity": "熊本",
     "finalPoint": "阿蘇火口",
-    "gateway": "熊本駅"
+    "gateway": "熊本駅",
+    "gatewayStations": [
+      {
+        "name": "熊本駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "熊本から阿蘇駅へ",
+      "to": "阿蘇駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界最大級のカルデラと活火山が広がる大自然の地"
   },
   {
     "id": "yakushima",
@@ -3296,7 +3849,30 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島中央駅"
+    "gateway": "鹿児島中央駅",
+    "gatewayStations": [
+      {
+        "name": "鹿児島中央駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "屋久島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "鹿児島中央から安房港へ",
+      "to": "安房港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産に認定された原始の森が島を覆う、屋久島"
   },
   {
     "id": "amakusa",
@@ -3379,7 +3955,13 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産のキリシタン集落と海に囲まれた九州の島"
   },
   {
     "id": "hiraizumi",
@@ -3458,7 +4040,25 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "一ノ関駅"
+    "gateway": "一ノ関駅",
+    "gatewayStations": [
+      {
+        "name": "一ノ関駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "一ノ関から平泉駅へ",
+      "to": "平泉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "奥州藤原氏の黄金文化が栄えた世界遺産の地"
   },
   {
     "id": "kakunodate",
@@ -3536,7 +4136,25 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": "盛岡駅"
+    "gateway": "盛岡駅",
+    "gatewayStations": [
+      {
+        "name": "盛岡駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "盛岡から角館駅へ",
+      "to": "角館駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "武家屋敷と枝垂れ桜が残る秋田の城下町"
   },
   {
     "id": "aizu",
@@ -3627,7 +4245,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白虎隊の悲話で知られる東北の誇り高い城下町"
   },
   {
     "id": "zaosan",
@@ -3711,7 +4335,13 @@
     },
     "fallbackCity": "仙台",
     "finalPoint": "御釜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯"
   },
   {
     "id": "hagi",
@@ -3791,7 +4421,25 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "新山口駅"
+    "gateway": "新山口駅",
+    "gatewayStations": [
+      {
+        "name": "新山口駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新山口から萩駅へ",
+      "to": "萩駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "幕末の志士たちが歩いた山口の城下町"
   },
   {
     "id": "shimonoseki",
@@ -3872,7 +4520,25 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "博多駅"
+    "gateway": "博多駅",
+    "gatewayStations": [
+      {
+        "name": "博多駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "博多から下関駅へ",
+      "to": "下関駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "本州最西端に位置する関門海峡の街"
   },
   {
     "id": "naoshima",
@@ -3971,7 +4637,25 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": "高松駅"
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "高松から宮浦港へ",
+      "to": "宮浦港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "現代アートが島全体を美術館にした瀬戸内の離島"
   },
   {
     "id": "kotohira",
@@ -4055,7 +4739,25 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": "高松駅"
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "高松から琴電琴平駅へ",
+      "to": "琴電琴平駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "785段の石段で知られる金刀比羅宮の門前町"
   },
   {
     "id": "uwajima",
@@ -4136,7 +4838,25 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山から宇和島駅へ",
+      "to": "宇和島駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "南予の海と山に囲まれた闘牛と鯛めしの城下町"
   },
   {
     "id": "toyako",
@@ -4220,7 +4940,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "活火山と湖が共存する北海道の絶景エリア"
   },
   {
     "id": "noboribetsu",
@@ -4297,7 +5023,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北海道有数の温泉地、鉄泉が湧く地獄の景観"
   },
   {
     "id": "shiretoko",
@@ -4383,7 +5115,20 @@
       ]
     },
     "fallbackCity": "網走",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界自然遺産に認定された原生の大地と海"
   },
   {
     "id": "wajima",
@@ -4467,7 +5212,25 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": "金沢駅"
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "金沢から輪島バスターミナルへ",
+      "to": "輪島バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "能登半島の先端、輪島塗の伝統と朝市が息づく街"
   },
   {
     "id": "kaga-onsen",
@@ -4552,7 +5315,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "九谷焼の産地に広がる北陸の温泉地帯"
   },
   {
     "id": "hakuba",
@@ -4634,7 +5403,25 @@
     },
     "fallbackCity": "松本",
     "finalPoint": "白馬八方尾根",
-    "gateway": "長野駅"
+    "gateway": "長野駅",
+    "gatewayStations": [
+      {
+        "name": "長野駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "長野から白馬駅へ",
+      "to": "白馬駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北アルプスの峰々を望む高原の山岳リゾート"
   },
   {
     "id": "amanohashidate",
@@ -4711,7 +5498,25 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": "福知山駅"
+    "gateway": "福知山駅",
+    "gatewayStations": [
+      {
+        "name": "福知山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "福知山から天橋立駅へ",
+      "to": "天橋立駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天に昇る橋のような砂洲が続く日本三景の地"
   },
   {
     "id": "ine",
@@ -4795,7 +5600,25 @@
       ]
     },
     "fallbackCity": "天橋立",
-    "gateway": "天橋立駅"
+    "gateway": "天橋立駅",
+    "gatewayStations": [
+      {
+        "name": "天橋立駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "天橋立から伊根港バス停へ",
+      "to": "伊根港バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落"
   },
   {
     "id": "ibusuki",
@@ -4873,7 +5696,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島中央駅"
+    "gateway": "鹿児島中央駅",
+    "gatewayStations": [
+      {
+        "name": "鹿児島中央駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "鹿児島中央から指宿駅へ",
+      "to": "指宿駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "薩摩半島南端に広がる砂むし温泉の街"
   },
   {
     "id": "sasebo",
@@ -4952,7 +5793,25 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": "博多駅"
+    "gateway": "博多駅",
+    "gatewayStations": [
+      {
+        "name": "博多駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "博多から佐世保駅へ",
+      "to": "佐世保駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "数えきれない島々が複雑な海岸線を描く長崎県北の街"
   },
   {
     "id": "hirado",
@@ -5036,7 +5895,13 @@
       ]
     },
     "fallbackCity": "佐世保",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本で最初に外国貿易が行われた歴史ある港町"
   },
   {
     "id": "tottori",
@@ -5113,7 +5978,13 @@
       ]
     },
     "fallbackCity": "鳥取",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "巨大な砂丘と松葉がにが名物の日本海の街"
   },
   {
     "id": "akita",
@@ -5191,7 +6062,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "竿燈まつりときりたんぽ鍋が有名な東北の雄都"
   },
   {
     "id": "awaji",
@@ -5278,7 +6155,13 @@
       ]
     },
     "fallbackCity": "明石",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "玉ねぎと潮風に包まれた明石海峡の先の島"
   },
   {
     "id": "takao",
@@ -5362,7 +6245,13 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "都市に隣接しながら深い自然が残る霊峰の山"
   },
   {
     "id": "tateyama-chiba",
@@ -5449,7 +6338,13 @@
     },
     "fallbackCity": "館山",
     "finalPoint": "館山城",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総"
   },
   {
     "id": "gokayama",
@@ -5533,7 +6428,25 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": "金沢駅"
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "金沢から五箇山バス停へ",
+      "to": "五箇山バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白川郷と並ぶ合掌造りの集落が残る山深い里"
   },
   {
     "id": "jozankei",
@@ -5618,7 +6531,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "札幌市街に近い豊平川沿いの温泉郷"
   },
   {
     "id": "biei",
@@ -5702,7 +6621,25 @@
     },
     "fallbackCity": "札幌",
     "finalPoint": "青い池",
-    "gateway": "旭川駅"
+    "gateway": "旭川駅",
+    "gatewayStations": [
+      {
+        "name": "旭川駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "旭川から美瑛駅へ",
+      "to": "美瑛駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "丘と農場が織りなすパッチワークの大地"
   },
   {
     "id": "miyako-iwate",
@@ -5788,7 +6725,25 @@
     },
     "fallbackCity": "盛岡",
     "finalPoint": "浄土ヶ浜",
-    "gateway": "盛岡駅"
+    "gateway": "盛岡駅",
+    "gatewayStations": [
+      {
+        "name": "盛岡駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "盛岡から宮古駅へ",
+      "to": "宮古駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "三陸の白い岩場と碧い海が広がる港町"
   },
   {
     "id": "sakata",
@@ -5867,7 +6822,25 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": "新庄駅"
+    "gateway": "新庄駅",
+    "gatewayStations": [
+      {
+        "name": "新庄駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新庄から酒田駅へ",
+      "to": "酒田駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北前船の交易で栄えた日本海の湊町"
   },
   {
     "id": "takachiho",
@@ -5953,7 +6926,13 @@
       ]
     },
     "fallbackCity": "延岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "神話の里として知られる宮崎の峡谷地帯"
   },
   {
     "id": "amami",
@@ -6054,7 +7033,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島港"
+    "gateway": "鹿児島港",
+    "gatewayStations": [
+      {
+        "name": "鹿児島港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "鹿児島港から名瀬港へ",
+      "to": "名瀬港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "亜熱帯の原生林とサンゴ礁が広がる離島"
   },
   {
     "id": "goto",
@@ -6155,7 +7152,25 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": "長崎港"
+    "gateway": "長崎港",
+    "gatewayStations": [
+      {
+        "name": "長崎港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "長崎港から福江港へ",
+      "to": "福江港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "教会と海が共存するキリシタンゆかりの島々"
   },
   {
     "id": "unzen",
@@ -6238,7 +7253,13 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "長崎県の山上に湧く地獄と温泉の街"
   },
   {
     "id": "ashizuri",
@@ -6319,7 +7340,25 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": "高知駅"
+    "gateway": "高知駅",
+    "gatewayStations": [
+      {
+        "name": "高知駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高知から宿毛駅へ",
+      "to": "宿毛駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "四国最南端に太平洋へ突き出した断崖の岬"
   },
   {
     "id": "oboke",
@@ -6405,7 +7444,25 @@
     },
     "fallbackCity": "徳島",
     "finalPoint": "大歩危峡",
-    "gateway": "高松駅"
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高松から大歩危駅へ",
+      "to": "大歩危駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街"
   },
   {
     "id": "tsuwano",
@@ -6484,7 +7541,25 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": "新山口駅"
+    "gateway": "新山口駅",
+    "gatewayStations": [
+      {
+        "name": "新山口駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新山口から津和野駅へ",
+      "to": "津和野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山陰の小京都と呼ばれる鯉が泳ぐ城下町"
   },
   {
     "id": "inuyama",
@@ -6562,7 +7637,25 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "名古屋から犬山駅へ",
+      "to": "犬山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "清流沿いに建つ国宝天守を持つ城下町"
   },
   {
     "id": "kiso",
@@ -6647,7 +7740,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "名古屋から南木曽駅へ",
+      "to": "南木曽駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "中山道の宿場町が今も残る木曽の山あい"
   },
   {
     "id": "miyama",
@@ -6731,7 +7842,13 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "茅葺き屋根が50棟以上並ぶ山の集落"
   },
   {
     "id": "tateyama-kurobe",
@@ -6815,7 +7932,25 @@
       ]
     },
     "fallbackCity": "氷見",
-    "gateway": "富山駅"
+    "gateway": "富山駅",
+    "gatewayStations": [
+      {
+        "name": "富山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "富山から立山駅へ",
+      "to": "立山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "3000メートル級の稜線を歩くアルペンルート"
   },
   {
     "id": "himi",
@@ -6896,7 +8031,25 @@
       ]
     },
     "fallbackCity": "氷見",
-    "gateway": "高岡駅"
+    "gateway": "高岡駅",
+    "gatewayStations": [
+      {
+        "name": "高岡駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "高岡から氷見駅へ",
+      "to": "氷見駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "立山連峰を望む富山湾の漁師町"
   },
   {
     "id": "nyuto-onsen",
@@ -6979,7 +8132,13 @@
       ]
     },
     "fallbackCity": "田沢湖",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里"
   },
   {
     "id": "yuda-onsen",
@@ -7059,7 +8218,13 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白狐伝説が残る山口市街に湧く城下の湯"
   },
   {
     "id": "ureshino-onsen",
@@ -7135,7 +8300,13 @@
       ]
     },
     "fallbackCity": "嬉野温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大美肌の湯として知られる佐賀の重曹泉"
   },
   {
     "id": "obuse",
@@ -7212,7 +8383,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "長野駅"
+    "gateway": "長野駅",
+    "gatewayStations": [
+      {
+        "name": "長野駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "長野から小布施駅へ",
+      "to": "小布施駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町"
   },
   {
     "id": "uchiko",
@@ -7289,7 +8478,25 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山から内子駅へ",
+      "to": "内子駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白壁と木蝋の香り漂う四国の商人文化の街"
   },
   {
     "id": "muroto",
@@ -7372,7 +8579,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬"
   },
   {
     "id": "iya",
@@ -7457,7 +8670,13 @@
       ]
     },
     "fallbackCity": "大歩危",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大秘境のひとつ、霧が漂う深い谷間の集落"
   },
   {
     "id": "oku-izumo",
@@ -7543,7 +8762,13 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "たたら製鉄の歴史が残る出雲の山あいの里"
   },
   {
     "id": "ginzan-onsen",
@@ -7627,7 +8852,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街"
   },
   {
     "id": "ouchi-juku",
@@ -7711,7 +8942,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里"
   },
   {
     "id": "nozawa-onsen",
@@ -7793,7 +9030,13 @@
       ]
     },
     "fallbackCity": "飯山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "村全体が温泉場になった信州の山里"
   },
   {
     "id": "takehara",
@@ -7871,7 +9114,25 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": "広島駅"
+    "gateway": "広島駅",
+    "gatewayStations": [
+      {
+        "name": "広島駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "広島から竹原駅へ",
+      "to": "竹原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街"
   },
   {
     "id": "tsumago",
@@ -7956,7 +9217,25 @@
       ]
     },
     "fallbackCity": "中津川",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "名古屋から南木曽駅へ",
+      "to": "南木曽駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "石畳と茅葺きの宿場が中山道に残る木曽の里"
   },
   {
     "id": "magome",
@@ -8041,7 +9320,25 @@
       ]
     },
     "fallbackCity": "中津川",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "名古屋から中津川駅へ",
+      "to": "中津川駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "石畳の坂道が続く中山道の峠の宿場町"
   },
   {
     "id": "nagahama",
@@ -8120,7 +9417,25 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": "米原駅"
+    "gateway": "米原駅",
+    "gatewayStations": [
+      {
+        "name": "米原駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "米原から長浜駅へ",
+      "to": "長浜駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "琵琶湖畔に広がる黒壁ガラスの文化の街"
   },
   {
     "id": "hikone",
@@ -8199,7 +9514,25 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": "米原駅"
+    "gateway": "米原駅",
+    "gatewayStations": [
+      {
+        "name": "米原駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "米原から彦根駅へ",
+      "to": "彦根駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "国宝の天守が琵琶湖を見下ろして立つ城下町"
   },
   {
     "id": "koyasan",
@@ -8282,7 +9615,25 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": "橋本駅"
+    "gateway": "橋本駅",
+    "gatewayStations": [
+      {
+        "name": "橋本駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "橋本から高野山駅へ",
+      "to": "高野山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "真言密教の聖域として山上に広がる宗教都市"
   },
   {
     "id": "gero-onsen",
@@ -8366,7 +9717,25 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "名古屋から下呂駅へ",
+      "to": "下呂駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉"
   },
   {
     "id": "naruko-onsen",
@@ -8442,7 +9811,25 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": "古川駅"
+    "gateway": "古川駅",
+    "gatewayStations": [
+      {
+        "name": "古川駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "古川から鳴子温泉駅へ",
+      "to": "鳴子温泉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "こけし発祥の地として知られる東北の温泉の里"
   },
   {
     "id": "shima-onsen",
@@ -8524,7 +9911,13 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "奥利根の山あいに湧く千年の歴史を持つ湯治場"
   },
   {
     "id": "hirosaki",
@@ -8609,7 +10002,30 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": "新青森駅"
+    "gateway": "新青森駅",
+    "gatewayStations": [
+      {
+        "name": "新青森駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "青森空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新青森から弘前駅へ",
+      "to": "弘前駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "津軽の城下町に日本一の桜の名所が広がる街"
   },
   {
     "id": "oirase",
@@ -8695,7 +10111,20 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "青森空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "原生林を縫うように清流が流れる渓谷路"
   },
   {
     "id": "mashiko",
@@ -8777,7 +10206,25 @@
     },
     "fallbackCity": "日光",
     "finalPoint": "益子焼共販センター",
-    "gateway": "宇都宮駅"
+    "gateway": "宇都宮駅",
+    "gatewayStations": [
+      {
+        "name": "宇都宮駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "宇都宮から益子駅へ",
+      "to": "益子駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "陶土の香りが漂う関東随一の焼き物の里"
   },
   {
     "id": "bessho-onsen",
@@ -8856,7 +10303,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "上田駅"
+    "gateway": "上田駅",
+    "gatewayStations": [
+      {
+        "name": "上田駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "上田から別所温泉駅へ",
+      "to": "別所温泉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "信州最古と言われる温泉地、観音様が守る山里"
   },
   {
     "id": "izushi",
@@ -8941,7 +10406,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "但馬の小京都と呼ばれる皿そばの城下町"
   },
   {
     "id": "wakura-onsen",
@@ -9018,7 +10489,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "七尾湾に面した能登半島の名湯"
   },
   {
     "id": "misasa-onsen",
@@ -9101,7 +10578,13 @@
       ]
     },
     "fallbackCity": "倉吉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地"
   },
   {
     "id": "obi",
@@ -9179,7 +10662,25 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "gateway": "宮崎駅"
+    "gateway": "宮崎駅",
+    "gatewayStations": [
+      {
+        "name": "宮崎駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "宮崎から飫肥駅へ",
+      "to": "飫肥駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "杉の板塀が続く城下町、日南の小京都"
   },
   {
     "id": "hitoyoshi",
@@ -9259,7 +10760,25 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": "熊本駅"
+    "gateway": "熊本駅",
+    "gatewayStations": [
+      {
+        "name": "熊本駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "熊本から人吉駅へ",
+      "to": "人吉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "球磨川の清流沿いに栄えた九州の城下町"
   },
   {
     "id": "kamikochi",
@@ -9343,7 +10862,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "松本駅"
+    "gateway": "松本駅",
+    "gatewayStations": [
+      {
+        "name": "松本駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "松本から上高地バスターミナルへ",
+      "to": "上高地バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北アルプスの玄関口に広がる手つかずの高原"
   },
   {
     "id": "minakami-onsen",
@@ -9427,7 +10964,13 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "険しい双耳峰を背に利根川の源流が流れる山の温泉地"
   },
   {
     "id": "minami-aso",
@@ -9511,7 +11054,20 @@
       ]
     },
     "fallbackCity": "阿蘇",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "阿蘇くまもと空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "阿蘇カルデラの南に広がる湧水と牧草の高原"
   },
   {
     "id": "imabari",
@@ -9601,7 +11157,25 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山から今治駅へ",
+      "to": "今治駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "ozu",
@@ -9697,7 +11271,25 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "松山から伊予大洲駅へ",
+      "to": "伊予大洲駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伊予の小京都と呼ばれる城下町"
   },
   {
     "id": "shakotan",
@@ -9792,7 +11384,25 @@
       ]
     },
     "fallbackCity": "小樽",
-    "gateway": "小樽駅"
+    "gateway": "小樽駅",
+    "gatewayStations": [
+      {
+        "name": "小樽駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "小樽から積丹バスターミナルへ",
+      "to": "積丹バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北海道西岸の半島に広がる「積丹ブルー」の絶景"
   },
   {
     "id": "izumo",
@@ -9890,7 +11500,30 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": "松江駅"
+    "gateway": "松江駅",
+    "gatewayStations": [
+      {
+        "name": "松江駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "出雲縁結び空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松江から出雲市駅へ",
+      "to": "出雲市駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "縁結びの神様で名高い出雲大社を擁する古代のまち"
   },
   {
     "id": "suzu",
@@ -9963,7 +11596,25 @@
     },
     "finalPoint": "珠洲市街",
     "fallbackCity": "金沢",
-    "gateway": "金沢駅"
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "金沢から珠洲バスターミナルへ",
+      "to": "珠洲バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "yoshino",
@@ -10061,7 +11712,25 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": "橿原神宮前駅"
+    "gateway": "橿原神宮前駅",
+    "gatewayStations": [
+      {
+        "name": "橿原神宮前駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "橿原神宮前から吉野駅へ",
+      "to": "吉野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本一の桜の名所として名高い修験道の山"
   },
   {
     "id": "kumano",
@@ -10159,7 +11828,13 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "瀞峡の秘境と熊野灘の荒磯"
   },
   {
     "id": "iriomote",
@@ -10274,7 +11949,25 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "石垣港"
+    "gateway": "石垣港",
+    "gatewayStations": [
+      {
+        "name": "石垣港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "八重山観光フェリー",
+      "to": "大原港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境"
   },
   {
     "id": "takahashi",
@@ -10372,7 +12065,25 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": "岡山駅"
+    "gateway": "岡山駅",
+    "gatewayStations": [
+      {
+        "name": "岡山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "岡山から備中高梁駅へ",
+      "to": "備中高梁駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天空の山城・備中松山城で知られる城下町"
   },
   {
     "id": "hida-furukawa",
@@ -10464,7 +12175,25 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": "高山駅"
+    "gateway": "高山駅",
+    "gatewayStations": [
+      {
+        "name": "高山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "高山から飛騨古川駅へ",
+      "to": "飛騨古川駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "bungo-takada",
@@ -10561,7 +12290,20 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "昭和30年代の町並みが蘇った「昭和の町」"
   },
   {
     "id": "izu-kogen",
@@ -10654,7 +12396,25 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": "熱海駅"
+    "gateway": "熱海駅",
+    "gatewayStations": [
+      {
+        "name": "熱海駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "熱海から伊豆高原駅へ",
+      "to": "伊豆高原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伊豆半島の東岸に広がる高原リゾート"
   },
   {
     "id": "tanabe",
@@ -10752,7 +12512,20 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "南紀白浜空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "熊野古道の起点・紀伊田辺"
   },
   {
     "id": "tosa-shimizu",
@@ -10847,7 +12620,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "四国最南端の岬・足摺岬を擁する絶景の街"
   },
   {
     "id": "nichinan",
@@ -10946,7 +12725,25 @@
     },
     "fallbackCity": "宮崎",
     "finalPoint": "鵜戸神宮",
-    "gateway": "宮崎駅"
+    "gateway": "宮崎駅",
+    "gatewayStations": [
+      {
+        "name": "宮崎駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "宮崎から日南駅へ",
+      "to": "日南駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日向灘に面した南国の宮崎を代表する海辺の町"
   },
   {
     "id": "mojiko",
@@ -11038,7 +12835,13 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "明治・大正の洋館が立ち並ぶレトロな港町"
   },
   {
     "id": "itoshima",
@@ -11135,7 +12938,25 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": "博多駅"
+    "gateway": "博多駅",
+    "gatewayStations": [
+      {
+        "name": "博多駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "博多から筑前前原駅へ",
+      "to": "筑前前原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "福岡市の隣に広がる絶景の半島"
   },
   {
     "id": "shimabara",
@@ -11233,7 +13054,25 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": "諫早駅"
+    "gateway": "諫早駅",
+    "gatewayStations": [
+      {
+        "name": "諫早駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "諫早から島原駅へ",
+      "to": "島原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "島原の乱の舞台となった歴史の城下町"
   },
   {
     "id": "tsuruga",
@@ -11325,7 +13164,13 @@
       ]
     },
     "fallbackCity": "敦賀",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "shijishima",
@@ -11420,7 +13265,13 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "瀬戸内海に浮かぶ小さな花の島"
   },
   {
     "id": "sounkyo",
@@ -11505,7 +13356,30 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": "上川駅"
+    "gateway": "上川駅",
+    "gatewayStations": [
+      {
+        "name": "上川駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "旭川空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "上川から層雲峡バスターミナルへ",
+      "to": "層雲峡バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山と絶景が楽しめる高原リゾート"
   },
   {
     "id": "rebun-island",
@@ -11612,7 +13486,25 @@
       ]
     },
     "fallbackCity": "稚内",
-    "gateway": "礼文島駅"
+    "gateway": "礼文島駅",
+    "gatewayStations": [
+      {
+        "name": "礼文島駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "ハートランドフェリー",
+      "to": "香深港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海と自然に囲まれた離島の旅"
   },
   {
     "id": "rishiri-island",
@@ -11712,7 +13604,25 @@
       ]
     },
     "fallbackCity": "稚内",
-    "gateway": "利尻島駅"
+    "gateway": "利尻島駅",
+    "gatewayStations": [
+      {
+        "name": "利尻島駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "ハートランドフェリー",
+      "to": "鴛泊港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "利尻富士と呼ばれる円錐形の山がそびえる美しい島"
   },
   {
     "id": "akan",
@@ -11793,7 +13703,20 @@
       ]
     },
     "fallbackCity": "釧路",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "カルデラ湖に浮かぶ天然記念物マリモが有名"
   },
   {
     "id": "abashiri",
@@ -11876,7 +13799,20 @@
     },
     "fallbackCity": "札幌",
     "finalPoint": "オホーツク流氷館",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "流氷が接岸するオホーツク海沿岸の街"
   },
   {
     "id": "shikotsu",
@@ -11956,7 +13892,30 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": "千歳駅"
+    "gateway": "千歳駅",
+    "gatewayStations": [
+      {
+        "name": "千歳駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "新千歳空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "千歳から支笏湖バス停へ",
+      "to": "支笏湖バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "tono",
@@ -12036,7 +13995,25 @@
     },
     "fallbackCity": "盛岡",
     "finalPoint": "カッパ淵",
-    "gateway": "新花巻駅"
+    "gateway": "新花巻駅",
+    "gatewayStations": [
+      {
+        "name": "新花巻駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "新花巻から遠野駅へ",
+      "to": "遠野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "柳田国男の「遠野物語」の舞台"
   },
   {
     "id": "oga",
@@ -12119,7 +14096,25 @@
     },
     "fallbackCity": "角館",
     "finalPoint": "入道崎",
-    "gateway": "秋田駅"
+    "gateway": "秋田駅",
+    "gatewayStations": [
+      {
+        "name": "秋田駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "秋田から男鹿駅へ",
+      "to": "男鹿駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "yonezawa",
@@ -12194,7 +14189,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "dewa-sanzan",
@@ -12277,7 +14278,20 @@
       ]
     },
     "fallbackCity": "鶴岡",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "庄内空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "月山・羽黒山・湯殿山からなる出羽三山"
   },
   {
     "id": "sakunami-onsen",
@@ -12358,7 +14372,20 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "仙台空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "goshogawara",
@@ -12438,7 +14465,30 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": "青森駅"
+    "gateway": "青森駅",
+    "gatewayStations": [
+      {
+        "name": "青森駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "青森空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "青森から五所川原駅へ",
+      "to": "五所川原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "立佞武多（たちねぷた）祭りで有名な青森の街"
   },
   {
     "id": "kawagoe",
@@ -12513,7 +14563,25 @@
       ]
     },
     "fallbackCity": "川越",
-    "gateway": "大宮駅"
+    "gateway": "大宮駅",
+    "gatewayStations": [
+      {
+        "name": "大宮駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大宮から川越駅へ",
+      "to": "川越駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代の蔵造りの街並みが残る「小江戸」"
   },
   {
     "id": "nasu",
@@ -12594,7 +14662,13 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "栃木県北部の高原リゾート"
   },
   {
     "id": "choshi",
@@ -12668,7 +14742,25 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": "千葉駅"
+    "gateway": "千葉駅",
+    "gatewayStations": [
+      {
+        "name": "千葉駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "千葉から銚子駅へ",
+      "to": "銚子駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "犬吠埼灯台が有名な太平洋に突き出た岬の街"
   },
   {
     "id": "ashikaga",
@@ -12743,7 +14835,25 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": "小山駅"
+    "gateway": "小山駅",
+    "gatewayStations": [
+      {
+        "name": "小山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "小山から足利駅へ",
+      "to": "足利駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "足利学校など歴史遺産が豊富"
   },
   {
     "id": "shiobara-onsen",
@@ -12823,7 +14933,13 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "栃木県那須塩原市の温泉郷"
   },
   {
     "id": "sado-island",
@@ -12923,7 +15039,25 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": "佐渡島駅"
+    "gateway": "佐渡島駅",
+    "gatewayStations": [
+      {
+        "name": "佐渡島駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "佐渡島から両津港へ",
+      "to": "両津港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海と自然に囲まれた離島の旅"
   },
   {
     "id": "kiyosato",
@@ -13004,7 +15138,25 @@
     },
     "fallbackCity": "富士河口湖",
     "finalPoint": "清泉寮",
-    "gateway": "小淵沢駅"
+    "gateway": "小淵沢駅",
+    "gatewayStations": [
+      {
+        "name": "小淵沢駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "小淵沢から清里駅へ",
+      "to": "清里駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "八ヶ岳南麓の高原リゾート"
   },
   {
     "id": "tenryu-gorge",
@@ -13078,7 +15230,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "suwa",
@@ -13158,7 +15316,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "塩尻駅"
+    "gateway": "塩尻駅",
+    "gatewayStations": [
+      {
+        "name": "塩尻駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "塩尻から上諏訪駅へ",
+      "to": "上諏訪駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最古の神社の一つ、諏訪大社を擁する諏訪湖畔の街"
   },
   {
     "id": "eiheiji",
@@ -13239,7 +15415,25 @@
     },
     "finalPoint": "永平寺",
     "fallbackCity": "敦賀",
-    "gateway": "福井駅"
+    "gateway": "福井駅",
+    "gatewayStations": [
+      {
+        "name": "福井駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "福井から永平寺口駅へ",
+      "to": "永平寺口駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "道元禅師が開いた曹洞宗の大本山"
   },
   {
     "id": "wakasa-obama",
@@ -13320,7 +15514,25 @@
       ]
     },
     "fallbackCity": "敦賀",
-    "gateway": "敦賀駅"
+    "gateway": "敦賀駅",
+    "gatewayStations": [
+      {
+        "name": "敦賀駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "敦賀から小浜駅へ",
+      "to": "小浜駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "「御食国（みけつくに）」として知られた海の幸の宝庫"
   },
   {
     "id": "okuhida-onsen",
@@ -13404,7 +15616,30 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": "高山駅"
+    "gateway": "高山駅",
+    "gatewayStations": [
+      {
+        "name": "高山駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "松本空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高山から平湯温泉バスターミナルへ",
+      "to": "平湯温泉バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北アルプスの懐に抱かれた温泉郷"
   },
   {
     "id": "minami-izu",
@@ -13486,7 +15721,13 @@
       ]
     },
     "fallbackCity": "下田",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "echizen",
@@ -13566,7 +15807,25 @@
       ]
     },
     "fallbackCity": "敦賀",
-    "gateway": "福井駅"
+    "gateway": "福井駅",
+    "gatewayStations": [
+      {
+        "name": "福井駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "福井から武生駅へ",
+      "to": "武生駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "越前漆器と越前和紙が育まれた福井の城下町"
   },
   {
     "id": "ito",
@@ -13643,7 +15902,25 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": "熱海駅"
+    "gateway": "熱海駅",
+    "gatewayStations": [
+      {
+        "name": "熱海駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "熱海から伊東駅へ",
+      "to": "伊東駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "iga",
@@ -13723,7 +16000,13 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "kashihara",
@@ -13803,7 +16086,25 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": "大阪駅"
+    "gateway": "大阪駅",
+    "gatewayStations": [
+      {
+        "name": "大阪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大阪から橿原神宮前駅へ",
+      "to": "橿原神宮前駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本建国の地とされる橿原神宮を中心とした古代史の宝庫"
   },
   {
     "id": "totsukawa",
@@ -13887,7 +16188,13 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "秘境の自然と静けさが魅力"
   },
   {
     "id": "maizuru",
@@ -13966,7 +16273,13 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "asuka",
@@ -14059,7 +16372,25 @@
     },
     "fallbackCity": "奈良",
     "finalPoint": "石舞台古墳",
-    "gateway": "橿原神宮前駅"
+    "gateway": "橿原神宮前駅",
+    "gatewayStations": [
+      {
+        "name": "橿原神宮前駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "橿原神宮前から飛鳥駅へ",
+      "to": "飛鳥駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "古代日本の政治・文化の中心地"
   },
   {
     "id": "daisen",
@@ -14142,7 +16473,20 @@
       ]
     },
     "fallbackCity": "米子",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "米子空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "yunotsu-onsen",
@@ -14224,7 +16568,25 @@
     },
     "fallbackCity": "松江",
     "finalPoint": "温泉津温泉街",
-    "gateway": "大田市駅"
+    "gateway": "大田市駅",
+    "gatewayStations": [
+      {
+        "name": "大田市駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "大田市から温泉津駅へ",
+      "to": "温泉津駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産「石見銀山」の外港として栄えた港町"
   },
   {
     "id": "iwami-ginzan",
@@ -14306,7 +16668,13 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "16〜17世紀に世界最大規模の産銀量を誇った銀山"
   },
   {
     "id": "iwakuni",
@@ -14388,7 +16756,30 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "広島駅"
+    "gateway": "広島駅",
+    "gatewayStations": [
+      {
+        "name": "広島駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "岩国錦帯橋空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "広島から岩国駅へ",
+      "to": "岩国駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "錦帯橋で有名な山口県の城下町"
   },
   {
     "id": "kurayoshi",
@@ -14470,7 +16861,20 @@
       ]
     },
     "fallbackCity": "鳥取",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "米子空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町"
   },
   {
     "id": "suo-oshima",
@@ -14562,7 +16966,30 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "広島駅"
+    "gateway": "広島駅",
+    "gatewayStations": [
+      {
+        "name": "広島駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "岩国錦帯橋空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "広島から大畠駅へ",
+      "to": "大畠駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "瀬戸内海に浮かぶ柑橘の島"
   },
   {
     "id": "shimanto",
@@ -14643,7 +17070,30 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": "高知駅"
+    "gateway": "高知駅",
+    "gatewayStations": [
+      {
+        "name": "高知駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "高知空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高知から江川崎駅へ",
+      "to": "江川崎駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "「日本最後の清流」四万十川"
   },
   {
     "id": "kashiwajima",
@@ -14734,7 +17184,20 @@
       ]
     },
     "fallbackCity": "宿毛",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "高知空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "透明度抜群の海で知られる高知の秘境離島"
   },
   {
     "id": "saijo",
@@ -14816,7 +17279,30 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "松山空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山から伊予西条駅へ",
+      "to": "伊予西条駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "超軟水の「うちぬき」（自噴水）が湧き出る愛媛の水の都"
   },
   {
     "id": "ainan",
@@ -14898,7 +17384,20 @@
       ]
     },
     "fallbackCity": "宇和島",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "松山空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "四国最南端に位置する透明度の高い海の町"
   },
   {
     "id": "taketa",
@@ -14979,7 +17478,20 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "荒城の月の舞台・岡城跡と温泉が有名な大分の城下町"
   },
   {
     "id": "usuki",
@@ -15060,7 +17572,30 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "大分駅"
+    "gateway": "大分駅",
+    "gatewayStations": [
+      {
+        "name": "大分駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大分から臼杵駅へ",
+      "to": "臼杵駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "国宝の磨崖仏「臼杵石仏」と醤油蔵が有名"
   },
   {
     "id": "hita",
@@ -15140,7 +17675,30 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "久留米駅"
+    "gateway": "久留米駅",
+    "gatewayStations": [
+      {
+        "name": "久留米駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "久留米から日田駅へ",
+      "to": "日田駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代に天領として栄えた商都"
   },
   {
     "id": "hasami",
@@ -15221,7 +17779,20 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "長崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "takeo-onsen",
@@ -15295,7 +17866,13 @@
       ]
     },
     "fallbackCity": "嬉野温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "楼門が国の重要文化財に指定されている温泉地"
   },
   {
     "id": "kitsuki",
@@ -15376,7 +17953,20 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "城を挟んで武家屋敷と商家が坂の上下に分かれた「サンドイッ…"
   },
   {
     "id": "tsushima",
@@ -15479,7 +18069,30 @@
     },
     "finalPoint": "厳原市街",
     "fallbackCity": "長崎",
-    "gateway": "福岡空港"
+    "gateway": "福岡空港",
+    "gatewayStations": [
+      {
+        "name": "福岡空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "対馬空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "福岡空港から対馬空港へ",
+      "to": "対馬空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "朝鮮海峡に浮かぶ国境の島"
   },
   {
     "id": "iki-island",
@@ -15579,7 +18192,30 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": "壱岐駅"
+    "gateway": "壱岐駅",
+    "gatewayStations": [
+      {
+        "name": "壱岐駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "壱岐空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "壱岐から郷ノ浦港へ",
+      "to": "郷ノ浦港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "壱岐焼酎と美しい海で知られる長崎の島"
   },
   {
     "id": "tanegashima",
@@ -15680,7 +18316,30 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島空港"
+    "gateway": "鹿児島空港",
+    "gatewayStations": [
+      {
+        "name": "鹿児島空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "種子島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "鹿児島空港から西之表港へ",
+      "to": "西之表港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鉄砲伝来の地として知られる島"
   },
   {
     "id": "kikuchi",
@@ -15764,7 +18423,20 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "阿蘇くまもと空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "秘境の自然と静けさが魅力"
   },
   {
     "id": "taketomi-island",
@@ -15863,7 +18535,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "竹富島駅"
+    "gateway": "竹富島駅",
+    "gatewayStations": [
+      {
+        "name": "竹富島駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "石垣空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "八重山観光フェリー",
+      "to": "竹富港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "赤瓦の民家が並ぶ沖縄の原風景が残る離島"
   },
   {
     "id": "yonaguni-island",
@@ -15962,7 +18657,30 @@
     },
     "finalPoint": "与那国島",
     "fallbackCity": "那覇",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "与那国空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から与那国空港へ",
+      "to": "与那国空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海と自然に囲まれた離島の旅"
   },
   {
     "id": "nakijin",
@@ -16046,7 +18764,25 @@
       ]
     },
     "fallbackCity": "名護",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から那覇バスターミナルへ",
+      "to": "那覇バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産・今帰仁城跡と沖縄本島北部の自然が魅力"
   },
   {
     "id": "motobu",
@@ -16129,7 +18865,25 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "那覇空港"
+    "gateway": "那覇空港",
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇空港から那覇バスターミナルへ",
+      "to": "那覇バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沖縄美ら海水族館がある本部半島"
   },
   {
     "id": "zamami-island",
@@ -16239,7 +18993,30 @@
     },
     "finalPoint": "座間味島",
     "fallbackCity": "那覇",
-    "gateway": "座間味島駅"
+    "gateway": "座間味島駅",
+    "gatewayStations": [
+      {
+        "name": "座間味島駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "座間味村営フェリー",
+      "to": "座間味港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "那覇から高速船で約50分"
   },
   {
     "id": "ie-island",
@@ -16340,7 +19117,30 @@
       ]
     },
     "fallbackCity": "本部",
-    "gateway": "伊江島駅"
+    "gateway": "伊江島駅",
+    "gatewayStations": [
+      {
+        "name": "伊江島駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "伊江島フェリー",
+      "to": "伊江港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "本部港からフェリーで30分"
   },
   {
     "id": "kohama-island",
@@ -16424,7 +19224,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "小浜島駅"
+    "gateway": "小浜島駅",
+    "gatewayStations": [
+      {
+        "name": "小浜島駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "石垣空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "安栄観光",
+      "to": "小浜港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "NHKドラマ「ちゅらさん」の舞台"
   },
   {
     "id": "matsushiro",
@@ -16505,7 +19328,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "真田氏の城下町として栄えた長野市郊外の歴史的地区"
   },
   {
     "id": "iiyama",
@@ -16587,7 +19416,13 @@
     },
     "fallbackCity": "松本",
     "finalPoint": "菜の花公園",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "千曲川と菜の花が美しい北信濃の小京都"
   },
   {
     "id": "yakake",
@@ -16668,7 +19503,20 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "岡山桃太郎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代の本陣・脇本陣が現存する山陽道の宿場町"
   },
   {
     "id": "tsuyama",
@@ -16750,7 +19598,30 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": "岡山駅"
+    "gateway": "岡山駅",
+    "gatewayStations": [
+      {
+        "name": "岡山駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "岡山桃太郎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "岡山から津山駅へ",
+      "to": "津山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "tsurugi-san",
@@ -16833,7 +19704,20 @@
       ]
     },
     "fallbackCity": "徳島",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "徳島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "nobeoka",
@@ -16918,7 +19802,30 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "gateway": "宮崎駅"
+    "gateway": "宮崎駅",
+    "gatewayStations": [
+      {
+        "name": "宮崎駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "宮崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "宮崎から延岡駅へ",
+      "to": "延岡駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "kamaishi",
@@ -16973,7 +19880,25 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "新花巻駅"
+    "gateway": "新花巻駅",
+    "gatewayStations": [
+      {
+        "name": "新花巻駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新花巻から釜石駅へ",
+      "to": "釜石駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "ofunato",
@@ -17028,7 +19953,25 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "一ノ関駅"
+    "gateway": "一ノ関駅",
+    "gatewayStations": [
+      {
+        "name": "一ノ関駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "一ノ関から大船渡駅へ",
+      "to": "大船渡駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "穏やかな湾に抱かれた漁師町"
   },
   {
     "id": "kuji",
@@ -17083,7 +20026,25 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "八戸駅"
+    "gateway": "八戸駅",
+    "gatewayStations": [
+      {
+        "name": "八戸駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "八戸から久慈駅へ",
+      "to": "久慈駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "琥珀の里として知られる北三陸の玄関口"
   },
   {
     "id": "wakkanai",
@@ -17160,7 +20121,30 @@
     },
     "finalPoint": "稚内市街",
     "fallbackCity": "札幌",
-    "gateway": "稚内駅"
+    "gateway": "稚内駅",
+    "gatewayStations": [
+      {
+        "name": "稚内駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "稚内空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "稚内から稚内空港へ",
+      "to": "稚内空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "obihiro",
@@ -17237,7 +20221,30 @@
     },
     "finalPoint": "帯広市街",
     "fallbackCity": "札幌",
-    "gateway": "帯広駅"
+    "gateway": "帯広駅",
+    "gatewayStations": [
+      {
+        "name": "帯広駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "帯広空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "帯広から帯広空港へ",
+      "to": "帯広空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "十勝平野に広がる農業と食の王国"
   },
   {
     "id": "rausu",
@@ -17321,7 +20328,30 @@
       ]
     },
     "fallbackCity": "網走",
-    "gateway": "知床斜里駅"
+    "gateway": "知床斜里駅",
+    "gatewayStations": [
+      {
+        "name": "知床斜里駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "知床斜里から羅臼バスターミナルへ",
+      "to": "羅臼バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "知床半島の東側、流氷とシャチが来る秘境の漁師町"
   },
   {
     "id": "esashi-hokkaido",
@@ -17402,7 +20432,30 @@
       ]
     },
     "fallbackCity": "函館",
-    "gateway": "木古内駅"
+    "gateway": "木古内駅",
+    "gatewayStations": [
+      {
+        "name": "木古内駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "函館空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "木古内から江差バスターミナルへ",
+      "to": "江差バスターミナル"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "にしん漁で栄えた北海道最古の港町"
   },
   {
     "id": "hanamaki",
@@ -17484,7 +20537,20 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "花巻空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "宮沢賢治の故郷で温泉も豊富な岩手の名湯地"
   },
   {
     "id": "hachimantai",
@@ -17568,7 +20634,30 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "盛岡駅"
+    "gateway": "盛岡駅",
+    "gatewayStations": [
+      {
+        "name": "盛岡駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "花巻空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "盛岡から八幡平頂上バス停へ",
+      "to": "八幡平頂上バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "岩手と秋田にまたがる高原の楽園"
   },
   {
     "id": "tazawako",
@@ -17651,7 +20740,20 @@
     },
     "fallbackCity": "角館",
     "finalPoint": "田沢湖畔",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "秋田空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本一深い神秘の湖と乳頭温泉が共存する秋田の秘湯地帯"
   },
   {
     "id": "yamadera",
@@ -17734,7 +20836,30 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": "山形駅"
+    "gateway": "山形駅",
+    "gatewayStations": [
+      {
+        "name": "山形駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "山形空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "山形から山寺駅へ",
+      "to": "山寺駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "断崖に張りつく奥の細道の霊場"
   },
   {
     "id": "kesennuma",
@@ -17815,7 +20940,20 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "仙台空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "三陸リアス海岸の漁港都市"
   },
   {
     "id": "ikaho",
@@ -17897,7 +21035,25 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": "渋川駅"
+    "gateway": "渋川駅",
+    "gatewayStations": [
+      {
+        "name": "渋川駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "渋川から伊香保温泉バス停へ",
+      "to": "伊香保温泉バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "石段街と黄金の湯が有名な群馬の名湯"
   },
   {
     "id": "enoshima",
@@ -17980,7 +21136,25 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": "藤沢駅"
+    "gateway": "藤沢駅",
+    "gatewayStations": [
+      {
+        "name": "藤沢駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "藤沢から片瀬江ノ島駅へ",
+      "to": "片瀬江ノ島駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "湘南の海に浮かぶ弁財天の島"
   },
   {
     "id": "chichibu",
@@ -18058,7 +21232,25 @@
       ]
     },
     "fallbackCity": "川越",
-    "gateway": "池袋駅"
+    "gateway": "池袋駅",
+    "gatewayStations": [
+      {
+        "name": "池袋駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "池袋から秩父駅へ",
+      "to": "秩父駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "武蔵野の山々に囲まれた霊場と祭りの里"
   },
   {
     "id": "oarai",
@@ -18135,7 +21327,25 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": "水戸駅"
+    "gateway": "水戸駅",
+    "gatewayStations": [
+      {
+        "name": "水戸駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "水戸から大洗駅へ",
+      "to": "大洗駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "磯前神社と太平洋が広がる海水浴とシーフードの名所"
   },
   {
     "id": "sano",
@@ -18211,7 +21421,25 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": "小山駅"
+    "gateway": "小山駅",
+    "gatewayStations": [
+      {
+        "name": "小山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "小山から佐野駅へ",
+      "to": "佐野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "佐野ラーメンとアウトレットで知られる北関東の街"
   },
   {
     "id": "gujo-hachiman",
@@ -18289,7 +21517,25 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": "美濃市駅"
+    "gateway": "美濃市駅",
+    "gatewayStations": [
+      {
+        "name": "美濃市駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "美濃市から郡上八幡駅へ",
+      "to": "郡上八幡駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "澄んだ吉田川と郡上踊りで有名な奥美濃の城下町"
   },
   {
     "id": "narai-juku",
@@ -18370,7 +21616,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "塩尻駅"
+    "gateway": "塩尻駅",
+    "gatewayStations": [
+      {
+        "name": "塩尻駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "塩尻から奈良井駅へ",
+      "to": "奈良井駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "中山道最長の宿場町がほぼ完全な形で残る江戸の街並み"
   },
   {
     "id": "itoigawa",
@@ -18455,7 +21719,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "フォッサマグナの大地に宝石ヒスイが採れる日本海の街"
   },
   {
     "id": "murakami",
@@ -18531,7 +21801,25 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": "新潟駅"
+    "gateway": "新潟駅",
+    "gatewayStations": [
+      {
+        "name": "新潟駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新潟から村上駅へ",
+      "to": "村上駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鮭と塩引き文化が息づく新潟の城下町"
   },
   {
     "id": "shima",
@@ -18614,7 +21902,13 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "英虞湾の複雑なリアス式海岸に真珠養殖いかだが浮かぶ"
   },
   {
     "id": "ogaki",
@@ -18691,7 +21985,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "水の都と呼ばれる湧水と城の街"
   },
   {
     "id": "echizen-kaigan",
@@ -18773,7 +22073,25 @@
     },
     "fallbackCity": "敦賀",
     "finalPoint": "越前岬",
-    "gateway": "武生駅"
+    "gateway": "武生駅",
+    "gatewayStations": [
+      {
+        "name": "武生駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "武生から越前海岸へ",
+      "to": "越前海岸"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "断崖と荒波が続く日本海の絶景海岸"
   },
   {
     "id": "myoko-kogen",
@@ -18856,7 +22174,13 @@
     },
     "fallbackCity": "新潟",
     "finalPoint": "赤倉観光リゾート",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北信越の火山が生んだスキーと温泉のリゾート"
   },
   {
     "id": "nagaoka",
@@ -18931,7 +22255,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大花火のひとつ、長岡大花火大会で有名な信濃川の街"
   },
   {
     "id": "tanba-sasayama",
@@ -19015,7 +22345,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "黒豆と牡丹鍋で名高い丹波の城下町"
   },
   {
     "id": "nachikatsuura",
@@ -19099,7 +22435,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "那智の大滝と熊野大社の霊場を抱く紀伊山地の聖地"
   },
   {
     "id": "kumano-hongu",
@@ -19184,7 +22526,25 @@
       ]
     },
     "fallbackCity": "新宮",
-    "gateway": "新宮駅"
+    "gateway": "新宮駅",
+    "gatewayStations": [
+      {
+        "name": "新宮駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "新宮から本宮大社前バス停へ",
+      "to": "本宮大社前バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産熊野古道の中心地"
   },
   {
     "id": "ako",
@@ -19262,7 +22622,25 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": "相生駅"
+    "gateway": "相生駅",
+    "gatewayStations": [
+      {
+        "name": "相生駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "相生から赤穂駅へ",
+      "to": "赤穂駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "忠臣蔵の故郷で赤穂浪士ゆかりの城と塩田が残る瀬戸内の街"
   },
   {
     "id": "fushimi",
@@ -19345,7 +22723,25 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": "京都駅"
+    "gateway": "京都駅",
+    "gatewayStations": [
+      {
+        "name": "京都駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "京都から伏見稲荷駅へ",
+      "to": "伏見稲荷駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伏見稲荷大社の千本鳥居と日本有数の酒どころが共存する京都…"
   },
   {
     "id": "tomonoura",
@@ -19426,7 +22822,25 @@
       ]
     },
     "fallbackCity": "福山",
-    "gateway": "福山駅"
+    "gateway": "福山駅",
+    "gatewayStations": [
+      {
+        "name": "福山駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "福山から鞆の浦バス停へ",
+      "to": "鞆の浦バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "瀬戸内海の潮待ちの港として栄えた江戸時代の港町"
   },
   {
     "id": "sakaiminato",
@@ -19508,7 +22922,30 @@
       ]
     },
     "fallbackCity": "鳥取",
-    "gateway": "米子駅"
+    "gateway": "米子駅",
+    "gatewayStations": [
+      {
+        "name": "米子駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "米子空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "米子から境港駅へ",
+      "to": "境港駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "水木しげるの故郷で妖怪ブロンズ像が並ぶ鬼太郎ロード"
   },
   {
     "id": "ushimado",
@@ -19597,7 +23034,25 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": "邑久駅"
+    "gateway": "邑久駅",
+    "gatewayStations": [
+      {
+        "name": "邑久駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "邑久から牛窓バス停へ",
+      "to": "牛窓バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本のエーゲ海と称される瀬戸内の白壁の港町"
   },
   {
     "id": "kasaoka",
@@ -19674,7 +23129,13 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "干拓地と無数の離島が浮かぶ備後の港町"
   },
   {
     "id": "tsunoshima",
@@ -19755,7 +23216,25 @@
       ]
     },
     "fallbackCity": "下関",
-    "gateway": "特牛駅"
+    "gateway": "特牛駅",
+    "gatewayStations": [
+      {
+        "name": "特牛駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "特牛から角島大橋へ",
+      "to": "角島大橋"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "エメラルドグリーンの海に架かる角島大橋が絶景の山口の離島"
   },
   {
     "id": "dogo-onsen",
@@ -19847,7 +23326,30 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "松山空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山から道後温泉駅へ",
+      "to": "道後温泉駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最古の温泉と名高い松山の名湯"
   },
   {
     "id": "marugame",
@@ -19930,7 +23432,20 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "高松空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天守が現存する日本一の石垣の丸亀城と骨付鳥が有名な讃岐の…"
   },
   {
     "id": "misaki-sadamisaki",
@@ -20014,7 +23529,30 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": "八幡浜駅"
+    "gateway": "八幡浜駅",
+    "gatewayStations": [
+      {
+        "name": "八幡浜駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "松山空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "八幡浜から三崎港へ",
+      "to": "三崎港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "四国最西端の岬に広がる佐田岬半島"
   },
   {
     "id": "yanagawa",
@@ -20098,7 +23636,25 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": "西鉄福岡駅"
+    "gateway": "西鉄福岡駅",
+    "gatewayStations": [
+      {
+        "name": "西鉄福岡駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "西鉄福岡から西鉄柳川駅へ",
+      "to": "西鉄柳川駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "水郷の都と称される堀割が縦横に走る水の街"
   },
   {
     "id": "hyuga",
@@ -20175,7 +23731,30 @@
     },
     "finalPoint": "日向市街",
     "fallbackCity": "宮崎",
-    "gateway": "日向市駅"
+    "gateway": "日向市駅",
+    "gatewayStations": [
+      {
+        "name": "日向市駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "宮崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "日向市から宮崎空港へ",
+      "to": "宮崎空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "太平洋に面した神話の海岸線と波乗りビーチの街"
   },
   {
     "id": "koshikijima",
@@ -20265,7 +23844,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "川内駅"
+    "gateway": "川内駅",
+    "gatewayStations": [
+      {
+        "name": "川内駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "川内から川内港へ",
+      "to": "川内港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東シナ海の孤島に自然のトンネル「なかまで」と絶壁海岸が続…"
   },
   {
     "id": "kirishima",
@@ -20343,7 +23940,30 @@
     },
     "finalPoint": "霧島温泉郷",
     "fallbackCity": "鹿児島",
-    "gateway": "霧島神宮駅"
+    "gateway": "霧島神宮駅",
+    "gatewayStations": [
+      {
+        "name": "霧島神宮駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "鹿児島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "霧島神宮から鹿児島空港へ",
+      "to": "鹿児島空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天孫降臨の地として名高い霧島連山と温泉が広がる鹿児島のリ…"
   },
   {
     "id": "ebino-kogen",
@@ -20425,7 +24045,30 @@
       ]
     },
     "fallbackCity": "えびの",
-    "gateway": "えびの駅"
+    "gateway": "えびの駅",
+    "gatewayStations": [
+      {
+        "name": "えびの駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "宮崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "えびのからえびの高原バス停へ",
+      "to": "えびの高原バス停"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "宮崎と鹿児島の境に広がる霧島山系の火山高原"
   },
   {
     "id": "onna",
@@ -20501,7 +24144,30 @@
     },
     "finalPoint": "恩納村リゾートエリア",
     "fallbackCity": "那覇",
-    "gateway": "那覇バスターミナル"
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇バスターミナルから那覇空港へ",
+      "to": "那覇空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沖縄本島中部の透明なコバルトブルーの海が続くリゾートエリア"
   },
   {
     "id": "nago",
@@ -20577,7 +24243,30 @@
     },
     "finalPoint": "名護市街",
     "fallbackCity": "那覇",
-    "gateway": "那覇バスターミナル"
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇バスターミナルから那覇空港へ",
+      "to": "那覇空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "オリオンビールの故郷・沖縄北部の拠点都市"
   },
   {
     "id": "yomitanson",
@@ -20654,7 +24343,30 @@
     },
     "finalPoint": "読谷村",
     "fallbackCity": "那覇",
-    "gateway": "那覇バスターミナル"
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇バスターミナルから那覇空港へ",
+      "to": "那覇空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沖縄最大の村でやちむん（陶器）の里と残波岬の絶景が有名"
   },
   {
     "id": "niseko",
@@ -20739,7 +24451,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北海道屈指のスキーリゾート"
   },
   {
     "id": "daisetsuzan",
@@ -20824,7 +24542,25 @@
       ]
     },
     "fallbackCity": "旭川",
-    "gateway": "旭川駅"
+    "gateway": "旭川駅",
+    "gatewayStations": [
+      {
+        "name": "旭川駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "旭川から旭岳温泉へ",
+      "to": "旭岳温泉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北海道の屋根と呼ばれる大雪山国立公園"
   },
   {
     "id": "shiraoi",
@@ -20901,7 +24637,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "アイヌ民族の文化を体感できる国立民族共生公園「ウポポイ」…"
   },
   {
     "id": "tomamu",
@@ -20979,7 +24721,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "星野リゾートが手がける雲海テラスとスキーリゾート"
   },
   {
     "id": "towada",
@@ -21062,7 +24810,25 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": "八戸駅"
+    "gateway": "八戸駅",
+    "gatewayStations": [
+      {
+        "name": "八戸駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "八戸から十和田湖へ",
+      "to": "十和田湖"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "神秘的な碧水をたたえる十和田湖と、奥入瀬渓流の清流"
   },
   {
     "id": "osorezan",
@@ -21145,7 +24911,25 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": "下北駅"
+    "gateway": "下北駅",
+    "gatewayStations": [
+      {
+        "name": "下北駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "下北から恐山へ",
+      "to": "恐山"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "urabandai",
@@ -21230,7 +25014,25 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": "猪苗代駅"
+    "gateway": "猪苗代駅",
+    "gatewayStations": [
+      {
+        "name": "猪苗代駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "猪苗代から五色沼入口へ",
+      "to": "五色沼入口"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "磐梯山噴火が作り出した大小300余りの湖沼群"
   },
   {
     "id": "minami-sanriku",
@@ -21313,7 +25115,25 @@
       ]
     },
     "fallbackCity": "気仙沼",
-    "gateway": "気仙沼駅"
+    "gateway": "気仙沼駅",
+    "gatewayStations": [
+      {
+        "name": "気仙沼駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "気仙沼から南三陸へ",
+      "to": "南三陸"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東日本大震災からの復興を遂げつつある三陸の海"
   },
   {
     "id": "kitakami",
@@ -21392,7 +25212,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "展勝地の桜並木は日本有数の花見スポット"
   },
   {
     "id": "kinugawa-onsen",
@@ -21470,7 +25296,13 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "oze",
@@ -21554,7 +25386,25 @@
       ]
     },
     "fallbackCity": "沼田",
-    "gateway": "沼田駅"
+    "gateway": "沼田駅",
+    "gatewayStations": [
+      {
+        "name": "沼田駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "沼田から鳩待峠へ",
+      "to": "鳩待峠"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "tsukuba",
@@ -21637,7 +25487,13 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "kasama",
@@ -21715,7 +25571,13 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "笠間焼の里と笠間稲荷神社"
   },
   {
     "id": "naritasan",
@@ -21793,7 +25655,13 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "kujukuri",
@@ -21876,7 +25744,25 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": "東金駅"
+    "gateway": "東金駅",
+    "gatewayStations": [
+      {
+        "name": "東金駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "東金から九十九里海岸へ",
+      "to": "九十九里海岸"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "全長66kmにわたる雄大な砂浜"
   },
   {
     "id": "miura",
@@ -21959,7 +25845,13 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "三浦半島の先端に広がるまぐろの街"
   },
   {
     "id": "oku-tama",
@@ -22037,7 +25929,13 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東京都内にありながら深い山懐を持つ奥多摩"
   },
   {
     "id": "jigokudani",
@@ -22120,7 +26018,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉に入るニホンザルの姿が世界を魅了するスノーモンキーパーク"
   },
   {
     "id": "tateshina",
@@ -22205,7 +26109,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "茅野駅"
+    "gateway": "茅野駅",
+    "gatewayStations": [
+      {
+        "name": "茅野駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "茅野から蓼科へ",
+      "to": "蓼科"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "八ヶ岳の麓に広がる高原リゾート"
   },
   {
     "id": "echigo-yuzawa",
@@ -22283,7 +26205,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "川端康成「雪国」の舞台となった豪雪の温泉地"
   },
   {
     "id": "fujinomiya",
@@ -22362,7 +26290,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "富士山の北麓に広がる富士信仰の聖地"
   },
   {
     "id": "norikura",
@@ -22447,7 +26381,25 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": "松本駅"
+    "gateway": "松本駅",
+    "gatewayStations": [
+      {
+        "name": "松本駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "松本から畳平へ",
+      "to": "畳平"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "マイカー規制の静寂の中、バスで辿り着く日本屈指のアルプス高地"
   },
   {
     "id": "tokoname",
@@ -22525,7 +26477,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "六古窯のひとつ、常滑焼の里"
   },
   {
     "id": "korankei",
@@ -22608,7 +26566,25 @@
       ]
     },
     "fallbackCity": "豊田",
-    "gateway": "豊田市駅"
+    "gateway": "豊田市駅",
+    "gatewayStations": [
+      {
+        "name": "豊田市駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "豊田市から香嵐渓へ",
+      "to": "香嵐渓"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "minamichita",
@@ -22691,7 +26667,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "知多半島の先端に広がる海の幸の宝庫"
   },
   {
     "id": "arashiyama",
@@ -22771,7 +26753,13 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "竹林の小径と渡月橋が象徴する京都を代表する景勝地"
   },
   {
     "id": "shigaraki",
@@ -22849,7 +26837,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "「たぬきの里」として親しまれる六古窯のひとつ信楽焼の産地"
   },
   {
     "id": "dorogawa-onsen",
@@ -22932,7 +26926,25 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": "下市口駅"
+    "gateway": "下市口駅",
+    "gatewayStations": [
+      {
+        "name": "下市口駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "下市口から洞川温泉へ",
+      "to": "洞川温泉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大峰山の麓に佇む山岳修験の温泉地"
   },
   {
     "id": "matsusaka",
@@ -23011,7 +27023,13 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "松阪牛の故郷にして、本居宣長の生誕地"
   },
   {
     "id": "sakai",
@@ -23095,7 +27113,13 @@
       ]
     },
     "fallbackCity": "大阪",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "仁徳天皇陵を中心とした百舌鳥古墳群は世界遺産"
   },
   {
     "id": "ama-island",
@@ -23196,7 +27220,25 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": "七類港"
+    "gateway": "七類港",
+    "gatewayStations": [
+      {
+        "name": "七類港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "七類港から菱浦港へ",
+      "to": "菱浦港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "島後の島・隠岐海士町は「島まるごとホテル」の先進地"
   },
   {
     "id": "akiyoshidai",
@@ -23280,7 +27322,25 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "新山口駅"
+    "gateway": "新山口駅",
+    "gatewayStations": [
+      {
+        "name": "新山口駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "新山口から秋吉台へ",
+      "to": "秋吉台"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最大のカルスト台地と東洋屈指の鍾乳洞・秋芳洞"
   },
   {
     "id": "yanai",
@@ -23358,7 +27418,13 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白壁の町並みが残る金魚提灯の街"
   },
   {
     "id": "oki-island",
@@ -23461,7 +27527,30 @@
       ]
     },
     "fallbackCity": "境港",
-    "gateway": "境港"
+    "gateway": "境港",
+    "gatewayStations": [
+      {
+        "name": "境港",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "隠岐空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "境港から西郷港へ",
+      "to": "西郷港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山陰沖に浮かぶ世界ジオパーク認定の離島群"
   },
   {
     "id": "inujima",
@@ -23553,7 +27642,25 @@
       ]
     },
     "fallbackCity": "岡山",
-    "gateway": "宝伝港"
+    "gateway": "宝伝港",
+    "gatewayStations": [
+      {
+        "name": "宝伝港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "宝伝港から犬島港へ",
+      "to": "犬島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "精錬所跡を活かしたアート施設が佇む瀬戸内の小さな島"
   },
   {
     "id": "teshima",
@@ -23653,7 +27760,25 @@
       ]
     },
     "fallbackCity": "高松",
-    "gateway": "高松港"
+    "gateway": "高松港",
+    "gatewayStations": [
+      {
+        "name": "高松港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "高松港から家浦港へ",
+      "to": "家浦港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "豊島美術館と棚田が共存する瀬戸内の離島"
   },
   {
     "id": "niyodogawa",
@@ -23738,7 +27863,25 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": "高知駅"
+    "gateway": "高知駅",
+    "gatewayStations": [
+      {
+        "name": "高知駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高知から仁淀川へ",
+      "to": "仁淀川"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "水質日本一の称号を持つ「仁淀ブルー」の川"
   },
   {
     "id": "yusuhara",
@@ -23823,7 +27966,25 @@
       ]
     },
     "fallbackCity": "須崎",
-    "gateway": "須崎駅"
+    "gateway": "須崎駅",
+    "gatewayStations": [
+      {
+        "name": "須崎駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "須崎から梼原へ",
+      "to": "梼原"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "隈研吾の建築が点在するエコ先進の山村"
   },
   {
     "id": "anan",
@@ -23901,7 +28062,13 @@
       ]
     },
     "fallbackCity": "徳島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本一のアカウミガメ産卵地・大浜海岸を有する徳島南部の海岸線"
   },
   {
     "id": "shikoku-karst",
@@ -23987,7 +28154,25 @@
     },
     "fallbackCity": "松山",
     "finalPoint": "姫鶴平",
-    "gateway": "松山駅"
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "松山から四国カルストへ",
+      "to": "四国カルスト"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "標高1400mの天空に広がる日本三大カルストのひとつ"
   },
   {
     "id": "aoshima",
@@ -24066,7 +28251,13 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "「鬼の洗濯板」と呼ばれる奇岩と亜熱帯植物が共存する宮崎の…"
   },
   {
     "id": "yamaga",
@@ -24150,7 +28341,25 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": "玉名駅"
+    "gateway": "玉名駅",
+    "gatewayStations": [
+      {
+        "name": "玉名駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "玉名から山鹿温泉へ",
+      "to": "山鹿温泉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山鹿灯籠まつりで知られる温泉と文化の街"
   },
   {
     "id": "yoshinogari",
@@ -24233,7 +28442,13 @@
       ]
     },
     "fallbackCity": "嬉野温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最大の弥生時代環濠集落遺跡"
   },
   {
     "id": "kunisaki",
@@ -24318,7 +28533,30 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "宇佐駅"
+    "gateway": "宇佐駅",
+    "gatewayStations": [
+      {
+        "name": "宇佐駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "宇佐から国東へ",
+      "to": "国東"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "六郷満山文化が開花した神仏習合の半島"
   },
   {
     "id": "chiran",
@@ -24403,7 +28641,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島中央駅"
+    "gateway": "鹿児島中央駅",
+    "gatewayStations": [
+      {
+        "name": "鹿児島中央駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "鹿児島中央から知覧へ",
+      "to": "知覧"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "薩摩の小京都と呼ばれる武家屋敷群と、特攻隊の記憶を伝える…"
   },
   {
     "id": "ojika-island",
@@ -24503,7 +28759,25 @@
     },
     "finalPoint": "小値賀島",
     "fallbackCity": "佐世保",
-    "gateway": "佐世保港"
+    "gateway": "佐世保港",
+    "gatewayStations": [
+      {
+        "name": "佐世保港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "佐世保港から小値賀港へ",
+      "to": "小値賀港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "古民家ホテルが生まれたスローツーリズムの先進地"
   },
   {
     "id": "irabu-island",
@@ -24592,7 +28866,25 @@
     },
     "fallbackCity": "那覇",
     "finalPoint": "佐和田の浜",
-    "gateway": "宮古空港"
+    "gateway": "宮古空港",
+    "gatewayStations": [
+      {
+        "name": "宮古空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "宮古空港から伊良部島へ",
+      "to": "伊良部島"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "宮古島と橋で繋がった透明度抜群の離島"
   },
   {
     "id": "aguni-island",
@@ -24694,7 +28986,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "泊港"
+    "gateway": "泊港",
+    "gatewayStations": [
+      {
+        "name": "泊港",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "粟国空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "泊港から粟国港へ",
+      "to": "粟国港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "那覇から60kmの絶海の孤島"
   },
   {
     "id": "itoman",
@@ -24779,7 +29094,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "那覇バスターミナル"
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇バスターミナルから糸満へ",
+      "to": "糸満"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沖縄戦の激戦地であり平和を誓う南端の街"
   },
   {
     "id": "kijoka",
@@ -24863,7 +29201,30 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": "那覇バスターミナル"
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇バスターミナルから喜如嘉へ",
+      "to": "喜如嘉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "長寿の里として名高い大宜味村の芭蕉布の里"
   },
   {
     "id": "miyakejima",
@@ -24958,7 +29319,30 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": "竹芝桟橋"
+    "gateway": "竹芝桟橋",
+    "gatewayStations": [
+      {
+        "name": "竹芝桟橋",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "三宅島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "竹芝桟橋から三宅島港へ",
+      "to": "三宅島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "活火山の島で野鳥観察とダイビングの聖地"
   },
   {
     "id": "hachijojima",
@@ -25060,7 +29444,30 @@
     },
     "finalPoint": "八丈島",
     "fallbackCity": "東京",
-    "gateway": "羽田空港"
+    "gateway": "羽田空港",
+    "gatewayStations": [
+      {
+        "name": "羽田空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "八丈島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "羽田空港から八丈島空港へ",
+      "to": "八丈島空港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東京から飛行機で1時間の亜熱帯の島"
   },
   {
     "id": "niijima",
@@ -25156,7 +29563,30 @@
     },
     "fallbackCity": "東京",
     "finalPoint": "羽伏浦海岸",
-    "gateway": "竹芝桟橋"
+    "gateway": "竹芝桟橋",
+    "gatewayStations": [
+      {
+        "name": "竹芝桟橋",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "新島空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "竹芝桟橋から新島港へ",
+      "to": "新島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "波高いコシキビーチで知られる伊豆諸島きってのサーフィンの聖地"
   },
   {
     "id": "shikinejima",
@@ -25249,7 +29679,25 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": "竹芝桟橋"
+    "gateway": "竹芝桟橋",
+    "gatewayStations": [
+      {
+        "name": "竹芝桟橋",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "竹芝桟橋から式根島港へ",
+      "to": "式根島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海の中に温泉が湧く奇跡の離島"
   },
   {
     "id": "shirakawa",
@@ -25323,7 +29771,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸城下の面影が残る白河小峰城と、松平定信が整備した南湖…"
   },
   {
     "id": "kitakata",
@@ -25396,7 +29850,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大ラーメンの一角「喜多方ラーメン」"
   },
   {
     "id": "koriyama",
@@ -25470,7 +29930,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "福島県の経済・交通の中心地"
   },
   {
     "id": "ryusendo",
@@ -25545,7 +30011,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "ichinoseki",
@@ -25618,7 +30090,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "厳美渓の奇岩と渓流美が見どころ"
   },
   {
     "id": "akita-oga",
@@ -25693,7 +30171,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ナマハゲ文化と日本海の夕日が圧倒的な男鹿半島"
   },
   {
     "id": "kisakata",
@@ -25767,7 +30251,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "松尾芭蕉が『奥の細道』で詠んだ九十九島"
   },
   {
     "id": "gassan",
@@ -25842,7 +30332,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "出羽三山の一角で、初夏まで残る雪と高山植物が美しい信仰の山"
   },
   {
     "id": "higashine",
@@ -25915,7 +30411,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "さくらんぼの産地として有名"
   },
   {
     "id": "akakura-onsen",
@@ -25989,7 +30491,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "妙高山の麓に広がる温泉スキーリゾート"
   },
   {
     "id": "yugawara-onsen",
@@ -26062,7 +30570,13 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東京から1時間の小さな温泉地"
   },
   {
     "id": "yokosuka",
@@ -26136,7 +30650,13 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海軍と米軍文化が融合した港湾都市"
   },
   {
     "id": "mishima",
@@ -26210,7 +30730,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "富士山の伏流水が湧き出る水の都"
   },
   {
     "id": "numazu",
@@ -26284,7 +30810,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "hamamatsu",
@@ -26358,7 +30890,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "うなぎとオートバイ・ピアノ産業の都市"
   },
   {
     "id": "kakegawa",
@@ -26432,7 +30970,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "掛川城は城好きを唸らせる天守"
   },
   {
     "id": "okazaki",
@@ -26506,7 +31050,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "徳川家康の生誕地、岡崎城の城下町"
   },
   {
     "id": "toyohashi",
@@ -26580,7 +31130,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "豊川稲荷と路面電車が走る東三河の中心都市"
   },
   {
     "id": "tajimi",
@@ -26654,7 +31210,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本で最も暑い夏として知られる美濃焼の産地"
   },
   {
     "id": "togakushi",
@@ -26728,7 +31290,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天岩戸伝説の地に建つ戸隠神社と忍者の里"
   },
   {
     "id": "omihachiman",
@@ -26802,7 +31370,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "豊臣秀次が築いた城下町の水郷地帯"
   },
   {
     "id": "takarazuka",
@@ -26876,7 +31450,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "akashi",
@@ -26950,7 +31530,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "naruto",
@@ -27024,7 +31610,13 @@
       ]
     },
     "fallbackCity": "徳島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界三大潮流の鳴門の渦潮が圧巻"
   },
   {
     "id": "innoshima",
@@ -27099,7 +31691,13 @@
       ]
     },
     "fallbackCity": "尾道",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "村上水軍の根拠地だった瀬戸内の島"
   },
   {
     "id": "mihara",
@@ -27173,7 +31771,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "hofu",
@@ -27246,7 +31850,13 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三天神の防府天満宮を擁する古代長門国府の地"
   },
   {
     "id": "karatsu",
@@ -27320,7 +31930,13 @@
       ]
     },
     "fallbackCity": "嬉野温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "唐津くんちで知られる城下町"
   },
   {
     "id": "dazaifu",
@@ -27393,7 +32009,13 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "学問の神様・菅原道真を祀る太宰府天満宮の門前町"
   },
   {
     "id": "nakatsu",
@@ -27467,7 +32089,13 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "nemuro",
@@ -27541,7 +32169,13 @@
       ]
     },
     "fallbackCity": "釧路",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "秘境の自然と静けさが魅力"
   },
   {
     "id": "muroran",
@@ -27615,7 +32249,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "地球岬からの絶景と夜景が美しい工業都市"
   },
   {
     "id": "tomakomai",
@@ -27689,7 +32329,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ホッキ貝の水揚げ量日本一の工業港湾都市"
   },
   {
     "id": "ishinomaki",
@@ -27762,7 +32408,13 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "石ノ森章太郎の故郷で、マンガの世界が街全体に広がる"
   },
   {
     "id": "hitachi",
@@ -27835,7 +32487,13 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海が見えるカフェ「シーバーズカフェ」がある日立駅が美しい"
   },
   {
     "id": "kashima",
@@ -27907,7 +32565,13 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東国三社の一つ鹿島神宮を擁するサッカーの街"
   },
   {
     "id": "shiraoishi",
@@ -27980,7 +32644,13 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "片倉小十郎が城主を務めた白石城（益岡公園）が美しい仙台南…"
   },
   {
     "id": "noshiro",
@@ -28054,7 +32724,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "秋田杉と風の松原が有名な日本海沿いの港町"
   },
   {
     "id": "tendou",
@@ -28127,7 +32803,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "将棋の駒生産量日本一の街"
   },
   {
     "id": "shonai",
@@ -28201,7 +32883,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "出羽三山への玄関口で、庄内米・庄内砂丘メロン・だだちゃ豆…"
   },
   {
     "id": "ogata",
@@ -28276,7 +32964,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "八郎潟干拓で生まれた日本で最も若い村"
   },
   {
     "id": "rikuzentakata",
@@ -28350,7 +33044,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東日本大震災の奇跡の一本松が象徴する復興の海岸都市"
   },
   {
     "id": "sanriku-miyako",
@@ -28425,7 +33125,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白砂に白い岩礁が並ぶ「浄土のような海岸」"
   },
   {
     "id": "motomiya",
@@ -28497,7 +33203,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "猪苗代湖と磐梯山の絶景を背景に安達太良山が聳える"
   },
   {
     "id": "mizusawa",
@@ -28570,7 +33282,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "前九年の役・後三年の役の舞台、奥州藤原氏の本拠地"
   },
   {
     "id": "ichinoseki-geibikei",
@@ -28644,7 +33362,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "砂鉄川沿いの石灰岩の断崖を舟で上る渓谷美"
   },
   {
     "id": "akita-semboku",
@@ -28717,7 +33441,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "田沢湖・角館・乳頭温泉郷が揃う秋田の観光の核心"
   },
   {
     "id": "tendo",
@@ -28790,7 +33520,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "月山・鳥海山の麓に広がるさくらんぼの産地"
   },
   {
     "id": "nyuzen",
@@ -28863,7 +33599,13 @@
       ]
     },
     "fallbackCity": "氷見",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本海に面した富山の小さな町"
   },
   {
     "id": "nanao",
@@ -28936,7 +33678,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "能登半島の付け根、七尾湾に面した温泉と漁港の街"
   },
   {
     "id": "fukuchiyama",
@@ -29009,7 +33757,13 @@
       ]
     },
     "fallbackCity": "京都",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "明智光秀が城主として整備した丹波の拠点城下町"
   },
   {
     "id": "koka",
@@ -29082,7 +33836,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "tondabayashi",
@@ -29155,7 +33915,13 @@
       ]
     },
     "fallbackCity": "大阪",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代の寺内町が完全保存される大阪南部の歴史地区"
   },
   {
     "id": "kishiwada",
@@ -29229,7 +33995,13 @@
       ]
     },
     "fallbackCity": "大阪",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "だんじり祭りで全国に知られる城下町"
   },
   {
     "id": "amagasaki",
@@ -29303,7 +34075,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大阪に隣接する工業都市だが、尼崎城の復元と昭和レトロな商…"
   },
   {
     "id": "nishiwaki",
@@ -29377,7 +34155,13 @@
       ]
     },
     "fallbackCity": "城崎温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本のへそ（東経135度・北緯35度）"
   },
   {
     "id": "nagi",
@@ -29451,7 +34235,13 @@
       ]
     },
     "fallbackCity": "岡山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "奈義現代美術館と那岐山が有名な岡山北部の町"
   },
   {
     "id": "higashihiroshima",
@@ -29524,7 +34314,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "西条の酒蔵群が有名な大学都市"
   },
   {
     "id": "fukuyama",
@@ -29598,7 +34394,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鉄板焼きと福山城が有名なバラのまち"
   },
   {
     "id": "otoyo",
@@ -29670,7 +34472,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "長寿の里として知られる高知の山村"
   },
   {
     "id": "sukumo",
@@ -29743,7 +34551,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "miyoshi-tokushima",
@@ -29817,7 +34631,13 @@
       ]
     },
     "fallbackCity": "徳島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "祖谷地方の中心で、日本三奇橋の一つ「かずら橋」が有名"
   },
   {
     "id": "oita-city",
@@ -29891,7 +34711,13 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "とり天とりゅうきゅうが名物の温泉どころ"
   },
   {
     "id": "yuwaku-onsen",
@@ -29965,7 +34791,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "yura-wakayama",
@@ -30039,7 +34871,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白崎海洋公園の白い石灰岩と青い海が「日本のエーゲ海」と呼…"
   },
   {
     "id": "misaki-osaka",
@@ -30113,7 +34951,13 @@
       ]
     },
     "fallbackCity": "大阪",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "kitakyushu",
@@ -30187,7 +35031,13 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "関門海峡と日本最初の女性向けロボット・焼きうどんが名物の…"
   },
   {
     "id": "asakura",
@@ -30261,7 +35111,13 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大刀洗平和記念館と秋月藩の武家屋敷が残る福岡内陸の古都"
   },
   {
     "id": "ebino",
@@ -30335,7 +35191,13 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山と絶景が楽しめる高原リゾート"
   },
   {
     "id": "hitoyoshi-city",
@@ -30408,7 +35270,13 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三急流の一つ球磨川で楽しむ川下り"
   },
   {
     "id": "minamikyushu",
@@ -30482,7 +35350,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "鹿児島中央駅"
+    "gateway": "鹿児島中央駅",
+    "gatewayStations": [
+      {
+        "name": "鹿児島中央駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "鹿児島中央から知覧バスセンターへ",
+      "to": "知覧バスセンター"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "全国一のお茶の生産量を誇る薩摩半島の農業地帯"
   },
   {
     "id": "minamiosumi",
@@ -30556,7 +35442,25 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": "垂水港"
+    "gateway": "垂水港",
+    "gatewayStations": [
+      {
+        "name": "垂水港",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "垂水港から鹿児島中央駅へ",
+      "to": "鹿児島中央駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大隅半島の最南端・佐多岬は日本本土最南端の地"
   },
   {
     "id": "chatan",
@@ -30633,7 +35537,20 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "アメリカンビレッジがある米軍文化薫る沖縄中部の観光地"
   },
   {
     "id": "uruma",
@@ -30710,7 +35627,20 @@
       ]
     },
     "fallbackCity": "那覇",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "勝連城跡（世界遺産）と海中道路で繋がる浜比嘉島・与勝諸島"
   },
   {
     "id": "nanto",
@@ -30784,7 +35714,13 @@
       ]
     },
     "fallbackCity": "立山黒部",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界遺産白川郷に隣接する五箇山・相倉合掌集落"
   },
   {
     "id": "hakusan",
@@ -30858,7 +35794,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三名山の一つ白山の登山基地"
   },
   {
     "id": "kamo-kyoto",
@@ -30933,7 +35875,13 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "京都府唯一の村で日本茶の産地"
   },
   {
     "id": "shingu-wakayama",
@@ -31006,7 +35954,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "熊野速玉大社と徐福公園のある世界遺産の城"
   },
   {
     "id": "himeshima",
@@ -31083,7 +36037,25 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": "杵築駅"
+    "gateway": "杵築駅",
+    "gatewayStations": [
+      {
+        "name": "杵築駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "杵築から姫島港へ",
+      "to": "姫島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "海と自然に囲まれた離島の旅"
   },
   {
     "id": "toshima",
@@ -31160,7 +36132,13 @@
       ]
     },
     "fallbackCity": "東京",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "椿の島として有名な伊豆諸島最小の有人島"
   },
   {
     "id": "joetsu",
@@ -31233,7 +36211,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "上杉謙信の春日山城と直江津港の歴史"
   },
   {
     "id": "myoko",
@@ -31307,7 +36291,25 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": "関山駅"
+    "gateway": "関山駅",
+    "gatewayStations": [
+      {
+        "name": "関山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "関山から妙高はねうまライン妙高高原駅へ",
+      "to": "妙高はねうまライン妙高高原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "妙高山のパウダースノーと温泉リゾート"
   },
   {
     "id": "hokkaido-hakodate",
@@ -31385,7 +36387,25 @@
     "aliases": [
       "函館市"
     ],
-    "gateway": "新函館北斗駅"
+    "gateway": "新函館北斗駅",
+    "gatewayStations": [
+      {
+        "name": "新函館北斗駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "新函館北斗から函館駅へ",
+      "to": "函館駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "夜景・朝市・西洋館が凝縮した北の港町"
   },
   {
     "id": "hokkaido-asahikawa",
@@ -31463,7 +36483,20 @@
     "aliases": [
       "旭川市"
     ],
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "旭川空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大雪山の麓、日本最大の動物園と旭川ラーメンの街"
   },
   {
     "id": "hokkaido-kushiro",
@@ -31541,7 +36574,20 @@
     "aliases": [
       "釧路市"
     ],
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "釧路湿原・タンチョウ・炉端焼きの街"
   },
   {
     "id": "yoichi",
@@ -31614,7 +36660,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ニッカウヰスキー蒸溜所発祥の地"
   },
   {
     "id": "akkeshi",
@@ -31689,7 +36741,13 @@
     },
     "fallbackCity": "釧路",
     "finalPoint": "厚岸グルメパーク",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "年中食べられるカキと厚岸湖が自慢の漁師町"
   },
   {
     "id": "kitami",
@@ -31765,7 +36823,20 @@
     },
     "fallbackCity": "旭川",
     "finalPoint": "ハッカ記念館",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界有数のハッカ産地で、ジンギスカンとオホーツクの塩が名物"
   },
   {
     "id": "monbetsu",
@@ -31831,7 +36902,20 @@
       "steps": []
     },
     "fallbackCity": "旭川",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "紋別空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "流氷砕氷船「ガリンコ号」で有名な冬の聖地"
   },
   {
     "id": "mashike",
@@ -31906,7 +36990,13 @@
       ]
     },
     "fallbackCity": "旭川",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最北のウイスキー蒸溜所と廃線跡が残る小さな漁港町"
   },
   {
     "id": "fukushima-city",
@@ -31980,7 +37070,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "桃・梨・サクランボが実る果樹王国"
   },
   {
     "id": "omagari",
@@ -32053,7 +37149,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大花火競技大会のひとつ、大曲の花火の舞台"
   },
   {
     "id": "shinjou",
@@ -32126,7 +37228,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "奥羽山脈に囲まれた小盆地"
   },
   {
     "id": "nagai",
@@ -32199,7 +37307,25 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": "米沢駅"
+    "gateway": "米沢駅",
+    "gatewayStations": [
+      {
+        "name": "米沢駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "米沢から長井駅へ",
+      "to": "長井駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "あやめ公園の菖蒲まつりで知られる最上川の水郷"
   },
   {
     "id": "kanagawa-yokohama",
@@ -32277,7 +37403,13 @@
     "aliases": [
       "横浜市"
     ],
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "みなとみらい・中華街・山手洋館"
   },
   {
     "id": "ibaraki-mito",
@@ -32354,7 +37486,13 @@
     "aliases": [
       "水戸市"
     ],
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天下の三名園・偕楽園と納豆発祥の地"
   },
   {
     "id": "utsunomiya",
@@ -32428,7 +37566,13 @@
       ]
     },
     "fallbackCity": "日光",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "餃子の聖地として全国に名をはせる北関東の中心都市"
   },
   {
     "id": "takasaki",
@@ -32502,7 +37646,13 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "だるまの産地と高崎パスタの街"
   },
   {
     "id": "odawara",
@@ -32576,7 +37726,13 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北条氏の難攻不落の城と干物・蒲鉾の街"
   },
   {
     "id": "sawara",
@@ -32650,7 +37806,13 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代の水郷商人町が小江戸として残る"
   },
   {
     "id": "nokogiriyama",
@@ -32725,7 +37887,13 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "石切場跡が生み出す異世界の断崖と百尺観音"
   },
   {
     "id": "katsuura-chiba",
@@ -32799,7 +37967,13 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "azumino",
@@ -32872,7 +38046,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "北アルプスを背景に広がるわさび農園と清流の里"
   },
   {
     "id": "nagano-iida",
@@ -32948,7 +38128,13 @@
     "aliases": [
       "飯田市"
     ],
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "南信州の水引と人形劇の里"
   },
   {
     "id": "nakatsugawa",
@@ -33022,7 +38208,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "栗きんとん発祥の地、中山道の宿場町"
   },
   {
     "id": "yaizu",
@@ -33096,7 +38288,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "カツオ・マグロ水揚げ日本一の漁港町"
   },
   {
     "id": "hamanako",
@@ -33171,7 +38369,13 @@
       ]
     },
     "fallbackCity": "熱海",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "gamagori",
@@ -33245,7 +38449,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "三河湾を望む温泉リゾート"
   },
   {
     "id": "toyota-city",
@@ -33319,7 +38529,13 @@
       ]
     },
     "fallbackCity": "名古屋",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "トヨタ自動車の企業城下町だ"
   },
   {
     "id": "otsu-shiga",
@@ -33393,7 +38609,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "琵琶湖湖畔の近江の国の首府"
   },
   {
     "id": "kusatsu-shiga",
@@ -33467,7 +38689,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東海道・中山道の追分宿として栄えた琵琶湖南岸の街"
   },
   {
     "id": "takashima-shiga",
@@ -33542,7 +38770,13 @@
       ]
     },
     "fallbackCity": "長浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "tango-kyoto",
@@ -33616,7 +38850,13 @@
       ]
     },
     "fallbackCity": "天橋立",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天橋立から北へ続く丹後半島"
   },
   {
     "id": "owase",
@@ -33689,7 +38929,25 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": "名古屋駅"
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "名古屋から尾鷲駅へ",
+      "to": "尾鷲駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本有数の多雨地帯で育つヒノキと新鮮な魚介"
   },
   {
     "id": "gobo",
@@ -33763,7 +39021,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日高川の河口に開けた紀州の小京都"
   },
   {
     "id": "kushimoto",
@@ -33837,7 +39101,13 @@
       ]
     },
     "fallbackCity": "白浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "shimane-matsue",
@@ -33915,7 +39185,20 @@
     "aliases": [
       "松江市"
     ],
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "出雲空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天守が現存する松江城と宍道湖の夕日"
   },
   {
     "id": "hamada-shimane",
@@ -33990,7 +39273,20 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "石見空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "どんちっちアジと石見神楽が自慢の日本海漁港"
   },
   {
     "id": "kure",
@@ -34063,7 +39359,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "miyoshi-hiroshima",
@@ -34136,7 +39438,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霧の海で有名な盆地の城下町"
   },
   {
     "id": "nagato-yamaguchi",
@@ -34210,7 +39518,13 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "元乃隅稲荷神社の123基の鳥居と千畳敷が圧倒的"
   },
   {
     "id": "mine-yamaguchi",
@@ -34283,7 +39597,13 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "東洋一の規模を誇る秋芳洞（鍾乳洞）と秋吉台カルスト台地"
   },
   {
     "id": "kagawa-takamatsu",
@@ -34362,7 +39682,20 @@
     "aliases": [
       "高松市"
     ],
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "高松空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "sakaide",
@@ -34436,7 +39769,13 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "瀬戸大橋の本州側たもとの街"
   },
   {
     "id": "tosa-city",
@@ -34511,7 +39850,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "仁淀川河口と波乗り文化が共存するサーファーの聖地"
   },
   {
     "id": "kanonji",
@@ -34585,7 +39930,13 @@
       ]
     },
     "fallbackCity": "琴平",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "砂浜に描かれた銭形砂絵「寛永通宝」が有名"
   },
   {
     "id": "fukuoka-city",
@@ -34661,7 +40012,20 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "福岡空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "博多ラーメン・もつ鍋・屋台文化が生きる九州最大の都市"
   },
   {
     "id": "kurume",
@@ -34735,7 +40099,13 @@
       ]
     },
     "fallbackCity": "博多",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "久留米ラーメン発祥の地で絣（かすり）織りの産地"
   },
   {
     "id": "yatsushiro",
@@ -34809,7 +40179,13 @@
       ]
     },
     "fallbackCity": "熊本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "い草の生産量日本一で知られる熊本南部の城下町"
   },
   {
     "id": "oguni-kumamoto",
@@ -34877,7 +40253,25 @@
       "steps": []
     },
     "fallbackCity": "黒川温泉",
-    "gateway": "熊本駅"
+    "gateway": "熊本駅",
+    "gatewayStations": [
+      {
+        "name": "熊本駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "熊本から杖立温泉へ",
+      "to": "杖立温泉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "杖立温泉・わいた温泉など個性的な湯が連なる九州有数の温泉地帯"
   },
   {
     "id": "izumi-kagoshima",
@@ -34950,7 +40344,13 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "毎年1万羽以上の鶴が越冬する日本最大の鶴の渡来地"
   },
   {
     "id": "makurazaki",
@@ -35023,7 +40423,13 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "本土最南端の鉄道駅（枕崎駅）とカツオ節の産地"
   },
   {
     "id": "miyakonojo",
@@ -35096,7 +40502,13 @@
       ]
     },
     "fallbackCity": "宮崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "焼酎と牛肉の生産量日本一の盆地都市"
   },
   {
     "id": "nanjo-okinawa",
@@ -35164,7 +40576,20 @@
       "steps": []
     },
     "fallbackCity": "那覇",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "琉球王国の聖地・斎場御嶽と沖縄唯一の鍾乳洞・玉泉洞が同居…"
   },
   {
     "id": "aogashima",
@@ -35232,7 +40657,13 @@
       "steps": []
     },
     "fallbackCity": "東京",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "二重カルデラに人が暮らす日本最小の有人村"
   },
   {
     "id": "kugashima",
@@ -35301,7 +40732,13 @@
       "steps": []
     },
     "fallbackCity": "長崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "江戸時代の潜伏キリシタン信仰が残る離島"
   },
   {
     "id": "nakatosa",
@@ -35374,7 +40811,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "久礼大正市場でカツオを直接競り買いできる漁師の聖地"
   },
   {
     "id": "ikata",
@@ -35450,7 +40893,13 @@
       ]
     },
     "fallbackCity": "松山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "佐田岬半島の突端にある本土最西端の地"
   },
   {
     "id": "muroto-cape",
@@ -35524,7 +40973,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "空海が悟りを開いたとされる荒涼たる岬"
   },
   {
     "id": "oshima-yamaguchi",
@@ -35598,7 +41053,25 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": "大畠駅"
+    "gateway": "大畠駅",
+    "gatewayStations": [
+      {
+        "name": "大畠駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "大畠から大島大橋へ",
+      "to": "大島大橋"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "ibara",
@@ -35671,7 +41144,13 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "デニムの聖地・備後絣の産地"
   },
   {
     "id": "niimi",
@@ -35744,7 +41223,13 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "中国山地に囲まれた渓谷の城下町"
   },
   {
     "id": "uda-nara",
@@ -35819,7 +41304,13 @@
       ]
     },
     "fallbackCity": "奈良",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大和の薬草の里で、松山地区の江戸時代の町並みが現存する"
   },
   {
     "id": "mimasaka",
@@ -35893,7 +41384,13 @@
       ]
     },
     "fallbackCity": "倉敷",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "湯郷温泉・湯原温泉・奥津温泉の「美作三湯」"
   },
   {
     "id": "kochi-shimanto",
@@ -35966,7 +41463,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沈下橋が美しい「最後の清流」四万十川の下流域"
   },
   {
     "id": "yonago",
@@ -36041,7 +41544,20 @@
       ]
     },
     "fallbackCity": "鳥取",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "米子鬼太郎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大山の麓と中海に挟まれた山陰の交通の要衝"
   },
   {
     "id": "kaga-onsen2",
@@ -36114,7 +41630,13 @@
       ]
     },
     "fallbackCity": "金沢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山代・山中・粟津・片山津が揃う加賀温泉郷の中核"
   },
   {
     "id": "takayama-kogen",
@@ -36188,7 +41710,13 @@
       ]
     },
     "fallbackCity": "高山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "新穂高ロープウェイと平湯温泉"
   },
   {
     "id": "iga-ueno",
@@ -36261,7 +41789,13 @@
       ]
     },
     "fallbackCity": "伊勢",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "忍者の里として世界的に有名な城下町"
   },
   {
     "id": "miyanoshita",
@@ -36335,7 +41869,13 @@
       ]
     },
     "fallbackCity": "横浜",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "箱根の奥地に建つ富士屋ホテルと老舗温泉宿街"
   },
   {
     "id": "shibu-onsen",
@@ -36408,7 +41948,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "千と千尋の神隠しのモデルとも言われる石畳の温泉街"
   },
   {
     "id": "togatta-onsen",
@@ -36482,7 +42028,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "温泉と自然が楽しめる癒しの旅先"
   },
   {
     "id": "hachimantai-onsen",
@@ -36557,7 +42109,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "八幡平の火山地帯に湧く秘湯"
   },
   {
     "id": "iiyama-onsen",
@@ -36631,7 +42189,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "野沢菜発祥地で外湯13ヵ所が無料の雪国温泉村"
   },
   {
     "id": "ono-fukui",
@@ -36707,7 +42271,25 @@
     "aliases": [
       "大野"
     ],
-    "gateway": "福井駅"
+    "gateway": "福井駅",
+    "gatewayStations": [
+      {
+        "name": "福井駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "福井から越前大野駅へ",
+      "to": "越前大野駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "天空の城・越前大野城と清水百選の湧水が有名"
   },
   {
     "id": "katsuyama",
@@ -36780,7 +42362,25 @@
       ]
     },
     "fallbackCity": "敦賀",
-    "gateway": "福井駅"
+    "gateway": "福井駅",
+    "gatewayStations": [
+      {
+        "name": "福井駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "福井から勝山駅へ",
+      "to": "勝山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "福井県立恐竜博物館がある恐竜の聖地"
   },
   {
     "id": "nomaike",
@@ -36848,7 +42448,13 @@
       "steps": []
     },
     "fallbackCity": "鹿児島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "自然と文化が融合した観光地"
   },
   {
     "id": "hioki",
@@ -36922,7 +42528,13 @@
       ]
     },
     "fallbackCity": "鹿児島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "島津義弘ゆかりの地・吹上温泉と美山（苗代川）の薩摩焼窯元…"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -36996,7 +42608,13 @@
       ]
     },
     "fallbackCity": "角館",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鶴の湯・黒湯・孫六湯など7つの秘湯が点在する秋田の山中"
   },
   {
     "id": "hirakawa",
@@ -37070,7 +42688,13 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本一のりんごの産地で、岩木山を背景にリンゴ畑が広がる津…"
   },
   {
     "id": "kurikoma",
@@ -37144,7 +42768,13 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "栗駒山の紅葉は東北随一の美しさ"
   },
   {
     "id": "namioka",
@@ -37218,7 +42848,13 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "津軽のリンゴ産地の核心部"
   },
   {
     "id": "shimokita",
@@ -37293,7 +42929,13 @@
       ]
     },
     "fallbackCity": "奥入瀬",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "恐山・仏ヶ浦・大間マグロの地"
   },
   {
     "id": "towada-lake",
@@ -37366,7 +43008,13 @@
       ]
     },
     "fallbackCity": "奥入瀬",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "深い青のカルデラ湖と奥入瀬渓流が一体の絶景"
   },
   {
     "id": "rikuchu-coast",
@@ -37440,7 +43088,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ウニ・アワビ・カキが豊富な三陸リアス海岸の漁村"
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -37512,7 +43166,13 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "中尊寺金色堂を中心とした世界遺産の仏都"
   },
   {
     "id": "numata",
@@ -37586,7 +43246,13 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "リンゴ・コンニャク・お城の城下町"
   },
   {
     "id": "tsuchiura",
@@ -37660,7 +43326,13 @@
       ]
     },
     "fallbackCity": "水戸",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霞ヶ浦湖畔のサイクリングの聖地"
   },
   {
     "id": "oshika",
@@ -37734,7 +43406,13 @@
       ]
     },
     "fallbackCity": "仙台",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "三陸の荒海に突き出た半島"
   },
   {
     "id": "kujukuri-icho",
@@ -37808,7 +43486,13 @@
       ]
     },
     "fallbackCity": "館山",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "サーファーが集う九十九里の南端"
   },
   {
     "id": "miyota",
@@ -37881,7 +43565,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "浅間山を望む軽井沢の隣町"
   },
   {
     "id": "saijo-hiroshima",
@@ -37954,7 +43644,13 @@
       ]
     },
     "fallbackCity": "広島",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本三大酒どころのひとつ"
   },
   {
     "id": "ryoishi",
@@ -38028,7 +43724,25 @@
       ]
     },
     "fallbackCity": "盛岡",
-    "gateway": "釜石駅"
+    "gateway": "釜石駅",
+    "gatewayStations": [
+      {
+        "name": "釜石駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "釜石から綾里駅へ",
+      "to": "綾里駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "リアス式海岸の奥深くに隠れた小さな漁村"
   },
   {
     "id": "noheji",
@@ -38102,7 +43816,13 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "歴史と風情が漂う街歩きの旅先"
   },
   {
     "id": "tobetsu",
@@ -38175,7 +43895,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "デンマーク式の農村景観「スウェーデンヒルズ」"
   },
   {
     "id": "fukaura",
@@ -38250,7 +43976,13 @@
       ]
     },
     "fallbackCity": "弘前",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白神山地の麓と日本海に挟まれた絶景の小集落"
   },
   {
     "id": "isesaki",
@@ -38324,7 +44056,13 @@
       ]
     },
     "fallbackCity": "草津温泉",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "絹織物「伊勢崎銘仙」の産地"
   },
   {
     "id": "matsumoto-kaido",
@@ -38397,7 +44135,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本最高標高のワイン産地として知られる中山道の宿場町"
   },
   {
     "id": "aizu-misato",
@@ -38470,7 +44214,13 @@
       ]
     },
     "fallbackCity": "会津若松",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "伊佐須美神社と新鶴温泉が守る会津盆地の農村"
   },
   {
     "id": "tateyama-toyama",
@@ -38543,7 +44293,13 @@
       ]
     },
     "fallbackCity": "立山黒部",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "立山黒部アルペンルートの富山側の起点"
   },
   {
     "id": "suo-sanbe",
@@ -38616,7 +44372,13 @@
       ]
     },
     "fallbackCity": "松江",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "島根の中央にそびえる活火山"
   },
   {
     "id": "takachihogo-shishiku",
@@ -38684,7 +44446,25 @@
       "steps": []
     },
     "fallbackCity": "高千穂",
-    "gateway": "延岡駅"
+    "gateway": "延岡駅",
+    "gatewayStations": [
+      {
+        "name": "延岡駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "延岡から椎葉村役場へ",
+      "to": "椎葉村役場"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "九州山地の奥深くに隠れた日本三大秘境のひとつ"
   },
   {
     "id": "kamishihoro",
@@ -38757,7 +44537,13 @@
       ]
     },
     "fallbackCity": "帯広",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ナイタイ高原牧場と糠平湖のタウシュベツ川橋梁遺構で知られ…"
   },
   {
     "id": "yakumo",
@@ -38831,7 +44617,13 @@
       ]
     },
     "fallbackCity": "札幌",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "噴火湾沿いのホタテ養殖の聖地"
   },
   {
     "id": "susaki",
@@ -38904,7 +44696,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鍋焼きラーメン発祥の地と汽車道が続く高知西部の港町"
   },
   {
     "id": "ube",
@@ -38980,7 +44778,20 @@
       ]
     },
     "fallbackCity": "萩",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "山口宇部空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "野外彫刻で有名な工業都市"
   },
   {
     "id": "itoigawa2",
@@ -39053,7 +44864,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本のヒスイ発祥地で、フォッサマグナのジオパーク"
   },
   {
     "id": "agematsu",
@@ -39127,7 +44944,13 @@
       ]
     },
     "fallbackCity": "松本",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "寝覚の床（木曽川の奇岩）と御嶽山遥拝所が並ぶ木曽の宿場跡"
   },
   {
     "id": "unzen2",
@@ -39201,7 +45024,13 @@
       ]
     },
     "fallbackCity": "長崎",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "硫黄が噴き出す地獄と高原温泉リゾート"
   },
   {
     "id": "kochi-ino",
@@ -39275,7 +45104,13 @@
       ]
     },
     "fallbackCity": "高知",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "仁淀川の源流域と紙漉き文化が息づく土佐和紙の産地"
   },
   {
     "id": "hiji",
@@ -39349,7 +45184,13 @@
       ]
     },
     "fallbackCity": "湯布院",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "城下カレイと暘谷城址が有名な別府湾の小城下町"
   },
   {
     "id": "tsunan",
@@ -39421,7 +45262,13 @@
       ]
     },
     "fallbackCity": "新潟",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本有数の豪雪地帯に広がるひまわり畑と信濃川の河岸段丘"
   },
   {
     "id": "kurobe",
@@ -39494,7 +45341,13 @@
       ]
     },
     "fallbackCity": "氷見",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "黒部川の清流と湧水が流れる富山の東端"
   },
   {
     "id": "tsuruoka-kinzan",
@@ -39568,7 +45421,13 @@
       ]
     },
     "fallbackCity": "蔵王",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "金山杉と白壁の蔵が美しい景観賞受賞の農山村"
   },
   {
     "id": "tomari-okinawa",
@@ -39636,7 +45495,13 @@
       "steps": []
     },
     "fallbackCity": "那覇",
-    "gateway": null
+    "gateway": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "沖縄最北の有人島で「沖縄のルーツ」とも呼ばれる秘境離島"
   },
   {
     "id": "ogimi",
@@ -39704,6 +45569,19 @@
       "steps": []
     },
     "fallbackCity": "那覇",
-    "gateway": null
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "100歳以上の長寿者が集う「長寿の里」"
   }
 ]

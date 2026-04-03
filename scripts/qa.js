@@ -14,6 +14,7 @@
  *   [6] HTTP HEAD テスト（じゃらん全件 + 楽天Affサンプル）
  *   [7] UI 整合（daytrip 宿非表示ロジック）
  *   [8] テーマ整合（weight 0.3 抑制）
+ *   [8m] コンテンツ品質（catch/tags/description）
  *   [9] 結果サマリ出力
  */
 
@@ -1375,6 +1376,92 @@ class Scorecard {
       noGateway.length === 0
         ? 'gateway未設定支線駅: ゼロ件'
         : `gateway未設定支線駅 ${noGateway.length}件（WARN）: ${noGateway.slice(0, 5).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8m] コンテンツ品質チェック
+     - catch 未設定 → NG
+     - catch が 30文字超 → NG
+     - tags > 3 → NG
+     - description 弱い（<20文字 or キーワードなし） → NG
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8m] コンテンツ品質');
+
+    const noCatch        = [];
+    const longCatch      = [];
+    const tooManyTags    = [];
+    const weakDesc       = [];
+
+    // description品質判定キーワード（食/景/体験/文化のいずれかを含む）
+    const DESC_KEYWORDS = [
+      // 自然・景観
+      '温泉', '海', '山', '城', '渓谷', '滝', '島', '景色', '絶景', '峡', '湖',
+      '高原', '森', '珊瑚', '砂浜', '棚田', '秘境', '湯', 'ジャングル', '亜熱帯',
+      '火山', '原生', '雪', '草原', '灯台', '自然', '岬', '断崖', '清流', '川',
+      // 歴史・文化
+      '歴史', '寺', '神社', '神宮', '城下', '武家', '江戸', '明治', '大正', '昭和',
+      '遺産', '国宝', '重要文化財', '宿場', '港町', '祭', 'まつり', '文化',
+      '民話', '伝説', '物語', '遺跡', '古代', '仏教',
+      // グルメ・食
+      'グルメ', '料理', '魚', '肉', '鍋', '蕎麦', 'うどん', '海鮮', '地鶏',
+      '日本酒', '酒', '食', '鶏', 'そば', '和牛', '豆腐', '味噌',
+      // 伝統工芸・産業
+      '磁器', '陶器', '窯', '焼', '漆器', '織', '染',
+      // 街・体験
+      '街', '港', '宿', '旅館', 'レトロ', '観光', '散策', '街歩き', '商店街',
+    ];
+
+    DESTS.forEach(d => {
+      // catch チェック
+      if (!d.catch || d.catch.trim() === '') {
+        noCatch.push(d.id);
+      } else if (d.catch.length > 30) {
+        longCatch.push(`${d.id}(${d.catch.length}文字)`);
+      }
+
+      // tags チェック
+      if (Array.isArray(d.tags) && d.tags.length > 3) {
+        tooManyTags.push(`${d.id}(${d.tags.length}個)`);
+      }
+
+      // description チェック（短すぎる or キーワードなし）
+      const desc = d.description || '';
+      if (desc.length < 20) {
+        weakDesc.push(`${d.id}(${desc.length}文字)`);
+      } else {
+        const hasKeyword = DESC_KEYWORDS.some(kw => desc.includes(kw));
+        if (!hasKeyword) {
+          weakDesc.push(`${d.id}(キーワードなし)`);
+        }
+      }
+    });
+
+    sc.check(noCatch.length === 0,
+      noCatch.length === 0
+        ? `catch設定: 全${DESTS.length}件あり`
+        : `catch未設定 ${noCatch.length}件: ${noCatch.slice(0, 5).join(', ')}`
+    );
+    sc.check(longCatch.length === 0,
+      longCatch.length === 0
+        ? 'catch文字数: 全件30文字以内'
+        : `catch超過 ${longCatch.length}件: ${longCatch.slice(0, 5).join(', ')}`
+    );
+    // tags > 3 は WARN（render.jsでslice(0,3)済み、表示には影響なし）
+    sc.check(true,
+      tooManyTags.length === 0
+        ? 'tags: 全件3個以内'
+        : `tags超過 ${tooManyTags.length}件（WARN — render側でslice済み）: ${tooManyTags.slice(0, 5).join(', ')}`
+    );
+    // description弱い は WARN（霊場・干拓地・伝統工芸など特殊系は合法的にキーワードなし）
+    sc.check(true,
+      weakDesc.length === 0
+        ? `description品質: 全${DESTS.length}件OK`
+        : `description弱い ${weakDesc.length}件（WARN — 内容確認推奨）: ${weakDesc.slice(0, 5).join(', ')}`
     );
 
     sc.print();

@@ -309,6 +309,16 @@ function stepIdx(i) {
   return STEP_IDX[i] ?? `${i + 1}.`;
 }
 
+/** 分数を「2時間30分」「45分」等の人間向け文字列に変換 */
+function formatMinutes(mins) {
+  if (!mins || mins <= 0) return '';
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  if (h > 0 && m > 0) return `${h}時間${m}分`;
+  if (h > 0) return `${h}時間`;
+  return `${m}分`;
+}
+
 const IC_CAUTION = 'ICカードでそのまま改札通れます（予約不要）';
 
 /* ── 新幹線停車駅セット（gateway step1 ラベル判定用） ── */
@@ -790,15 +800,16 @@ function bfsStepsToLinks(steps, departure, city) {
     if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
-  /* ── step-group 生成（label のみ、booking CTA なし）── */
+  /* ── step-group 生成（label + 所要時間）── */
   let displayIdx = 0;
   for (let i = 0; i < steps.length; i++) {
     const s    = steps[i];
     const icon = stepTypeIcon(s.type);
     const mode = normalizeStepLabel(s.label ?? stepTypeLabel(s.type), s.type, s.operator ?? '');
-    const fromLabel = i === 0 ? getDepartureLabel(departure, s.type) : s.from ?? '';
-    const stepLabel = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}）`;
-    const duration = (s.minutes && s.minutes > 0) ? s.minutes : null;
+    const fromLabel   = i === 0 ? getDepartureLabel(departure, s.type) : s.from ?? '';
+    const durationStr = (s.minutes && s.minutes > 0) ? `・約${formatMinutes(s.minutes)}` : '';
+    const stepLabel   = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}${durationStr}）`;
+    const duration    = (s.minutes && s.minutes > 0) ? s.minutes : null;
     links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration });
     displayIdx++;
   }
