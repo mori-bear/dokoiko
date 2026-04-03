@@ -11,6 +11,13 @@
  * エンコードルール:
  *   じゃらん keyword: hotelAreas.json の Shift-JIS 済み jalanUrl を優先使用
  *   楽天リンク先URL: encodeURIComponent 1回のみ
+ *
+ * 3段フォールバック（楽天・じゃらん共通）:
+ *   Tier1: dest自身の hotelAreas エントリ（area-specific）
+ *   Tier2: dest.fallbackCity → hotelAreas エントリ（weak時またはTier1失敗時）
+ *   Tier3: dest.prefecture のキーワード検索（最終手段）
+ *
+ * weak判定: requiresCar=true かつ destType=mountain/remote のとき
  */
 
 import { loadJson } from '../lib/loadJson.js';
@@ -19,6 +26,7 @@ import { loadJson } from '../lib/loadJson.js';
 const HOTEL_AREAS  = await loadJson('../data/hotelAreas.json',        import.meta.url);
 const AFFILIATE    = await loadJson('../data/affiliateProviders.json', import.meta.url);
 const AREAS_BY_ID  = new Map(HOTEL_AREAS.map(a => [a.id, a]));
+const AREAS_BY_NAME = new Map(HOTEL_AREAS.map(a => [a.name, a]));
 
 /* アフィリエイト設定 */
 const RAKUTEN_AFID = AFFILIATE.rakuten.affiliateId;   // 5113ee4b.8662cfc5.5113ee4c.119de89a
@@ -37,61 +45,95 @@ const DEST_TO_AREA_ID = {
   'esashi-hokkaido': 'esashi',
 };
 
-function lookupArea(destId) {
+/**
+ * weak判定: 宿が非常に少ない（山奥・極地）系の目的地
+ * Tier2（fallbackCity）を優先使用する
+ */
+function isWeak(dest) {
+  return !!(dest.requiresCar && (dest.destType === 'mountain' || dest.destType === 'remote'));
+}
+
+function lookupAreaById(destId) {
   const areaId = DEST_TO_AREA_ID[destId] ?? destId;
   return AREAS_BY_ID.get(areaId) ?? null;
 }
 
+function lookupAreaByName(name) {
+  return AREAS_BY_NAME.get(name) ?? null;
+}
+
 /**
- * 楽天エリアページ URL（アフィリエイトなし）
- * 優先順: hotelAreas エリアパス → エリアfallback → hotelArea（都道府県）→ トップ
+ * 楽天エリアページ URL
+ * 優先: area.rakutenPath → area.rakutenFallback → dest.hotelArea パス
  */
-function buildRakutenDestUrl(dest) {
-  const area = lookupArea(dest.id);
-  const path = area?.rakutenPath
+function getRakutenPath(area, dest) {
+  return area?.rakutenPath
     || area?.rakutenFallback
-    || (dest.hotelArea ? `/yado/${dest.hotelArea}/` : null);
+    || (dest?.hotelArea ? `/yado/${dest.hotelArea}/` : null);
+}
+
+function buildRakutenDestUrl(path) {
   return `https://travel.rakuten.co.jp${path ?? '/'}`;
 }
 
-/**
- * 楽天トラベル: 拠点都市名からエリアURLを取得（name 一致）
- */
-function buildRakutenDestUrlByName(cityName) {
-  const area = HOTEL_AREAS.find(a => a.name === cityName);
-  const path = area?.rakutenPath || area?.rakutenFallback || null;
-  return path ? `https://travel.rakuten.co.jp${path}` : null;
-}
-
-/**
- * 楽天アフィリエイトリンク
- * https://hb.afl.rakuten.co.jp/hgc/{affiliateId}/?pc={encodedDestUrl}
- */
-function buildRakutenUrl(dest) {
-  const destUrl = buildRakutenDestUrl(dest);
-  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`;
-}
-
-function buildRakutenUrlByName(cityName) {
-  const destUrl = buildRakutenDestUrlByName(cityName);
-  if (!destUrl) return null;
+function buildRakutenAffilUrl(destUrl) {
   return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`;
 }
 
 /**
- * じゃらん ValueCommerce アフィリエイトリンク
- * https://ck.jp.ap.valuecommerce.com/servlet/referral?sid={sid}&pid={pid}&vc_url={encodedJalanUrl}
- *
- * ★ jalan.net の uww2011init.do は Shift-JIS エンドポイント。
- *   encodeURIComponent（UTF-8）でエンコードすると jalan 側で文字化けする。
- *   そのため hotelAreas.json に Shift-JIS 済み jalanUrl を保持し、それを優先使用する。
- *   area.jalanUrl がない場合は encodeURIComponent フォールバック（ASCII のみ安全）。
+ * じゃらん VC アフィリエイトリンク
+ * rawJalanUrl は Shift-JIS 済み URL を使う（hotelAreas.json の jalanUrl）
  */
-function buildJalanUrl(keyword, area = null) {
-  // hotelAreas.json に Shift-JIS 済み URL がある場合はそれを使う
-  const rawJalanUrl = area?.jalanUrl
-    ?? `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}&screenId=UWW1402`;
+function buildJalanAffilUrl(rawJalanUrl) {
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`;
+}
+
+/**
+ * 3段フォールバックで楽天URLを解決
+ */
+function resolveRakutenUrl(dest) {
+  // Tier1: dest自身のエリア（weak でなければ優先）
+  if (!isWeak(dest)) {
+    const area = lookupAreaById(dest.id);
+    const path = getRakutenPath(area, dest);
+    if (path) return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+  }
+
+  // Tier2: fallbackCity
+  if (dest.fallbackCity) {
+    const fbArea = lookupAreaByName(dest.fallbackCity);
+    const path = getRakutenPath(fbArea, null);
+    if (path) return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+  }
+
+  // Tier3: dest 自身のエリア（weak でも強制使用）
+  const area = lookupAreaById(dest.id);
+  const path = getRakutenPath(area, dest);
+  return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+}
+
+/**
+ * 3段フォールバックでじゃらんURLを解決
+ */
+function resolveJalanUrl(dest) {
+  // Tier1: dest自身のエリア（weak でなければ優先）
+  if (!isWeak(dest)) {
+    const area = lookupAreaById(dest.id);
+    if (area?.jalanUrl) return buildJalanAffilUrl(area.jalanUrl);
+  }
+
+  // Tier2: fallbackCity
+  if (dest.fallbackCity) {
+    const fbArea = lookupAreaByName(dest.fallbackCity);
+    if (fbArea?.jalanUrl) return buildJalanAffilUrl(fbArea.jalanUrl);
+  }
+
+  // Tier3: dest 自身のエリア（weak でも使用 — 都道府県レベルでも0より良い）
+  const area = lookupAreaById(dest.id);
+  if (area?.jalanUrl) return buildJalanAffilUrl(area.jalanUrl);
+
+  // 最終安全網: 見つからない場合は生じない想定だが念のため
+  return null;
 }
 
 /**
@@ -99,19 +141,15 @@ function buildJalanUrl(keyword, area = null) {
  * @returns {{ heading: string, links: Array, hubLinks?: {heading, links} }}
  */
 export function buildHotelLinks(dest) {
-  const area    = lookupArea(dest.id); // Shift-JIS jalanUrl 取得のため
-  // じゃらん: area.jalanUrl がない場合は「都道府県 地名」でキーワード精度を上げる
-  const baseKeyword = dest.hotelKeyword ?? dest.name;
-  const keyword = area?.jalanUrl
-    ? baseKeyword
-    : (dest.prefecture ? `${dest.prefecture} ${baseKeyword}` : baseKeyword);
-
   /* ── 現地宿（必須） ── */
+  const rakutenUrl = resolveRakutenUrl(dest);
+  const jalanUrl   = resolveJalanUrl(dest);
+
   const result = {
     heading: `現地で泊まる`,
     links: [
-      { type: 'rakuten', label: '楽天で宿を見る',  url: buildRakutenUrl(dest) },
-      { type: 'jalan',   label: 'じゃらんで宿を見る', url: buildJalanUrl(keyword, area) },
+      ...(rakutenUrl ? [{ type: 'rakuten', label: '楽天で宿を見る',   url: rakutenUrl }] : []),
+      ...(jalanUrl   ? [{ type: 'jalan',   label: 'じゃらんで宿を見る', url: jalanUrl }] : []),
     ],
   };
 
@@ -120,17 +158,22 @@ export function buildHotelLinks(dest) {
   const needsHub = dest.needsCar || dest.destType === 'remote' || dest.destType === 'mountain';
   if (needsHub && dest.gatewayHub && dest.gatewayHub !== dest.name) {
     const hub = dest.gatewayHub;
-    const hubArea = HOTEL_AREAS.find(a => a.name === hub) ?? null;
-    const hubRakutenUrl = buildRakutenUrlByName(hub);
-    result.hubLinks = {
-      heading: `アクセスの良い場所で泊まる（${hub}）`,
-      links: [
-        ...(hubRakutenUrl
-          ? [{ type: 'rakuten', label: '楽天で宿を見る', url: hubRakutenUrl }]
-          : []),
-        { type: 'jalan', label: 'じゃらんで宿を見る', url: buildJalanUrl(hub, hubArea) },
-      ],
-    };
+    const hubArea = lookupAreaByName(hub);
+    const hubRakutenPath = getRakutenPath(hubArea, null);
+    const hubRakutenUrl  = hubRakutenPath
+      ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath))
+      : null;
+    const hubJalanUrl = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
+
+    if (hubRakutenUrl || hubJalanUrl) {
+      result.hubLinks = {
+        heading: `アクセスの良い場所で泊まる（${hub}）`,
+        links: [
+          ...(hubRakutenUrl ? [{ type: 'rakuten', label: '楽天で宿を見る',   url: hubRakutenUrl }] : []),
+          ...(hubJalanUrl   ? [{ type: 'jalan',   label: 'じゃらんで宿を見る', url: hubJalanUrl }] : []),
+        ],
+      };
+    }
   }
 
   return result;

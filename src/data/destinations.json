@@ -73,7 +73,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "atami",
@@ -149,7 +150,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "nikko",
@@ -246,7 +248,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "karuizawa",
@@ -338,7 +341,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "fujikawaguchiko",
@@ -421,7 +425,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "富士河口湖"
   },
   {
     "id": "nara",
@@ -499,7 +504,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "ishigaki",
@@ -580,7 +586,8 @@
         }
       ]
     },
-    "finalPoint": "石垣市街"
+    "finalPoint": "石垣市街",
+    "fallbackCity": "那覇"
   },
   {
     "id": "ise",
@@ -674,7 +681,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "beppu",
@@ -760,7 +768,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "otaru",
@@ -838,7 +847,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "furano",
@@ -920,7 +930,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "matsushima",
@@ -1015,7 +1026,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "miyajima",
@@ -1107,7 +1119,8 @@
         }
       ]
     },
-    "finalPoint": "厳島神社"
+    "finalPoint": "厳島神社",
+    "fallbackCity": "広島"
   },
   {
     "id": "onomichi",
@@ -1197,7 +1210,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "shodoshima",
@@ -1292,7 +1306,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "mihonoseki",
@@ -1375,7 +1390,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "境港"
   },
   {
     "id": "ryujin-onsen",
@@ -1454,7 +1470,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "田辺"
   },
   {
     "id": "tokashiki-jima",
@@ -1554,7 +1571,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "kumejima",
@@ -1655,7 +1673,8 @@
         }
       ]
     },
-    "finalPoint": "久米島"
+    "finalPoint": "久米島",
+    "fallbackCity": "那覇"
   },
   {
     "id": "miyakojima",
@@ -1737,7 +1756,8 @@
         }
       ]
     },
-    "finalPoint": "宮古島"
+    "finalPoint": "宮古島",
+    "fallbackCity": "那覇"
   },
   {
     "id": "kouzushima",
@@ -1827,7 +1847,8 @@
           "bookingUrl": "https://www.tokaikisen.co.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "hakone",
@@ -1909,7 +1930,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "shuzenji",
@@ -1984,7 +2006,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "kusatsu-onsen",
@@ -2064,7 +2087,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "shimoda",
@@ -2147,7 +2171,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "izu-oshima",
@@ -2246,7 +2271,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "shirakawago-t",
@@ -2341,7 +2367,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "arima-onsen",
@@ -2423,7 +2450,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "kinosaki-onsen",
@@ -2513,7 +2541,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "kurashiki-o",
@@ -2602,7 +2631,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "shirahama-o",
@@ -2680,7 +2710,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "takayama-o",
@@ -2770,7 +2801,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "toba",
@@ -2849,7 +2881,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "yufuin",
@@ -2943,7 +2976,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "kurokawa-k",
@@ -3028,7 +3062,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "阿蘇"
   },
   {
     "id": "aso",
@@ -3110,7 +3145,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "yakushima",
@@ -3217,7 +3253,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "amakusa",
@@ -3298,7 +3335,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "hiraizumi",
@@ -3375,7 +3413,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "kakunodate",
@@ -3451,7 +3490,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "aizu",
@@ -3540,7 +3580,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "zaosan",
@@ -3621,7 +3662,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "hagi",
@@ -3699,7 +3741,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "shimonoseki",
@@ -3778,7 +3821,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "naoshima",
@@ -3875,7 +3919,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "kotohira",
@@ -3957,7 +4002,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "uwajima",
@@ -4036,7 +4082,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "toyako",
@@ -4118,7 +4165,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "noboribetsu",
@@ -4193,7 +4241,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "shiretoko",
@@ -4277,7 +4326,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "網走"
   },
   {
     "id": "wajima",
@@ -4359,7 +4409,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "kaga-onsen",
@@ -4442,7 +4493,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "hakuba",
@@ -4521,7 +4573,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "amanohashidate",
@@ -4596,7 +4649,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "ine",
@@ -4678,7 +4732,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "天橋立"
   },
   {
     "id": "ibusuki",
@@ -4754,7 +4809,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "sasebo",
@@ -4831,7 +4887,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "hirado",
@@ -4913,7 +4970,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "佐世保"
   },
   {
     "id": "tottori",
@@ -4988,7 +5046,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "鳥取"
   },
   {
     "id": "akita",
@@ -5064,7 +5123,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "awaji",
@@ -5149,7 +5209,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "明石"
   },
   {
     "id": "takao",
@@ -5231,7 +5292,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "tateyama-chiba",
@@ -5315,7 +5377,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "gokayama",
@@ -5397,7 +5460,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "jozankei",
@@ -5480,7 +5544,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "biei",
@@ -5561,7 +5626,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "miyako-iwate",
@@ -5644,7 +5710,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "sakata",
@@ -5721,7 +5788,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "takachiho",
@@ -5805,7 +5873,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "延岡"
   },
   {
     "id": "amami",
@@ -5904,7 +5973,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "goto",
@@ -6003,7 +6073,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "unzen",
@@ -6084,7 +6155,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "ashizuri",
@@ -6163,7 +6235,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "oboke",
@@ -6246,7 +6319,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "tsuwano",
@@ -6323,7 +6397,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "inuyama",
@@ -6399,7 +6474,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "kiso",
@@ -6482,7 +6558,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "miyama",
@@ -6564,7 +6641,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "tateyama-kurobe",
@@ -6646,7 +6724,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "氷見"
   },
   {
     "id": "himi",
@@ -6725,7 +6804,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "氷見"
   },
   {
     "id": "nyuto-onsen",
@@ -6806,7 +6886,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "田沢湖"
   },
   {
     "id": "yuda-onsen",
@@ -6884,7 +6965,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "ureshino-onsen",
@@ -6958,7 +7040,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "嬉野温泉"
   },
   {
     "id": "obuse",
@@ -7033,7 +7116,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "uchiko",
@@ -7108,7 +7192,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "muroto",
@@ -7189,7 +7274,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "iya",
@@ -7272,7 +7358,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "大歩危"
   },
   {
     "id": "oku-izumo",
@@ -7356,7 +7443,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "ginzan-onsen",
@@ -7438,7 +7526,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "ouchi-juku",
@@ -7520,7 +7609,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "nozawa-onsen",
@@ -7600,7 +7690,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "飯山"
   },
   {
     "id": "takehara",
@@ -7676,7 +7767,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "tsumago",
@@ -7759,7 +7851,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "中津川"
   },
   {
     "id": "magome",
@@ -7842,7 +7935,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "中津川"
   },
   {
     "id": "nagahama",
@@ -7919,7 +8013,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "hikone",
@@ -7996,7 +8091,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "koyasan",
@@ -8077,7 +8173,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "gero-onsen",
@@ -8159,7 +8256,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "naruko-onsen",
@@ -8233,7 +8331,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "shima-onsen",
@@ -8313,7 +8412,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "hirosaki",
@@ -8396,7 +8496,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "oirase",
@@ -8480,7 +8581,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "mashiko",
@@ -8559,7 +8661,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "bessho-onsen",
@@ -8636,7 +8739,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "izushi",
@@ -8719,7 +8823,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "wakura-onsen",
@@ -8794,7 +8899,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "misasa-onsen",
@@ -8875,7 +8981,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉吉"
   },
   {
     "id": "obi",
@@ -8951,7 +9058,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "hitoyoshi",
@@ -9029,7 +9137,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "kamikochi",
@@ -9111,7 +9220,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "minakami-onsen",
@@ -9193,7 +9303,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "minami-aso",
@@ -9275,7 +9386,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "阿蘇"
   },
   {
     "id": "imabari",
@@ -9363,7 +9475,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "ozu",
@@ -9457,7 +9570,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "shakotan",
@@ -9550,7 +9664,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "小樽"
   },
   {
     "id": "izumo",
@@ -9646,7 +9761,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "suzu",
@@ -9717,7 +9833,8 @@
         }
       ]
     },
-    "finalPoint": "珠洲市街"
+    "finalPoint": "珠洲市街",
+    "fallbackCity": "金沢"
   },
   {
     "id": "yoshino",
@@ -9813,7 +9930,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "kumano",
@@ -9909,7 +10027,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "iriomote",
@@ -10022,7 +10141,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "takahashi",
@@ -10118,7 +10238,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "hida-furukawa",
@@ -10208,7 +10329,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "bungo-takada",
@@ -10303,7 +10425,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "izu-kogen",
@@ -10394,7 +10517,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "tanabe",
@@ -10490,7 +10614,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "tosa-shimizu",
@@ -10583,7 +10708,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "nichinan",
@@ -10679,7 +10805,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "mojiko",
@@ -10769,7 +10896,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "itoshima",
@@ -10864,7 +10992,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "shimabara",
@@ -10960,7 +11089,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "tsuruga",
@@ -11050,7 +11180,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "shijishima",
@@ -11143,7 +11274,8 @@
           "bookingUrl": "https://www.city.mitoyo.lg.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "sounkyo",
@@ -11226,7 +11358,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "rebun-island",
@@ -11331,7 +11464,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "稚内"
   },
   {
     "id": "rishiri-island",
@@ -11429,7 +11563,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "稚内"
   },
   {
     "id": "akan",
@@ -11508,7 +11643,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "釧路"
   },
   {
     "id": "abashiri",
@@ -11588,7 +11724,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "shikotsu",
@@ -11666,7 +11803,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "tono",
@@ -11743,7 +11881,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "oga",
@@ -11823,7 +11962,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "yonezawa",
@@ -11896,7 +12036,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "dewa-sanzan",
@@ -11977,7 +12118,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "鶴岡"
   },
   {
     "id": "sakunami-onsen",
@@ -12056,7 +12198,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "goshogawara",
@@ -12134,7 +12277,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "kawagoe",
@@ -12207,7 +12351,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "川越"
   },
   {
     "id": "nasu",
@@ -12286,7 +12431,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "choshi",
@@ -12358,7 +12504,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "ashikaga",
@@ -12431,7 +12578,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "shiobara-onsen",
@@ -12509,7 +12657,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "sado-island",
@@ -12607,7 +12756,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "kiyosato",
@@ -12685,7 +12835,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "富士河口湖"
   },
   {
     "id": "tenryu-gorge",
@@ -12757,7 +12908,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "suwa",
@@ -12835,7 +12987,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "eiheiji",
@@ -12914,7 +13067,8 @@
         }
       ]
     },
-    "finalPoint": "永平寺"
+    "finalPoint": "永平寺",
+    "fallbackCity": "敦賀"
   },
   {
     "id": "wakasa-obama",
@@ -12993,7 +13147,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "okuhida-onsen",
@@ -13075,7 +13230,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "minami-izu",
@@ -13155,7 +13311,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "下田"
   },
   {
     "id": "echizen",
@@ -13233,7 +13390,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "ito",
@@ -13308,7 +13466,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "iga",
@@ -13386,7 +13545,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "kashihara",
@@ -13464,7 +13624,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "totsukawa",
@@ -13546,7 +13707,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "maizuru",
@@ -13623,7 +13785,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "asuka",
@@ -13713,7 +13876,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "daisen",
@@ -13794,7 +13958,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "米子"
   },
   {
     "id": "yunotsu-onsen",
@@ -13873,7 +14038,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "iwami-ginzan",
@@ -13953,7 +14119,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "iwakuni",
@@ -14033,7 +14200,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "kurayoshi",
@@ -14113,7 +14281,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "鳥取"
   },
   {
     "id": "suo-oshima",
@@ -14203,7 +14372,8 @@
           "to": "周防大島"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "shimanto",
@@ -14282,7 +14452,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "kashiwajima",
@@ -14371,7 +14542,8 @@
           "to": "柏島"
         }
       ]
-    }
+    },
+    "fallbackCity": "宿毛"
   },
   {
     "id": "saijo",
@@ -14451,7 +14623,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "ainan",
@@ -14531,7 +14704,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "宇和島"
   },
   {
     "id": "taketa",
@@ -14610,7 +14784,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "usuki",
@@ -14689,7 +14864,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "hita",
@@ -14767,7 +14943,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "hasami",
@@ -14846,7 +15023,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "takeo-onsen",
@@ -14918,7 +15096,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "嬉野温泉"
   },
   {
     "id": "kitsuki",
@@ -14997,7 +15176,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "tsushima",
@@ -15098,7 +15278,8 @@
         }
       ]
     },
-    "finalPoint": "厳原市街"
+    "finalPoint": "厳原市街",
+    "fallbackCity": "長崎"
   },
   {
     "id": "iki-island",
@@ -15196,7 +15377,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "tanegashima",
@@ -15295,7 +15477,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "kikuchi",
@@ -15377,7 +15560,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "taketomi-island",
@@ -15474,7 +15658,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "yonaguni-island",
@@ -15571,7 +15756,8 @@
         }
       ]
     },
-    "finalPoint": "与那国島"
+    "finalPoint": "与那国島",
+    "fallbackCity": "那覇"
   },
   {
     "id": "nakijin",
@@ -15653,7 +15839,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "名護"
   },
   {
     "id": "motobu",
@@ -15734,7 +15921,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "zamami-island",
@@ -15842,7 +16030,8 @@
         }
       ]
     },
-    "finalPoint": "座間味島"
+    "finalPoint": "座間味島",
+    "fallbackCity": "那覇"
   },
   {
     "id": "ie-island",
@@ -15941,7 +16130,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "本部"
   },
   {
     "id": "kohama-island",
@@ -16023,7 +16213,8 @@
           "bookingUrl": "https://www.aneikankou.co.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "matsushiro",
@@ -16102,7 +16293,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "iiyama",
@@ -16181,7 +16373,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "yakake",
@@ -16260,7 +16453,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "tsuyama",
@@ -16340,7 +16534,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "tsurugi-san",
@@ -16421,7 +16616,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "nobeoka",
@@ -16504,7 +16700,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "kamaishi",
@@ -16557,7 +16754,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "ofunato",
@@ -16610,7 +16808,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "kuji",
@@ -16663,7 +16862,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "wakkanai",
@@ -16738,7 +16938,8 @@
         }
       ]
     },
-    "finalPoint": "稚内市街"
+    "finalPoint": "稚内市街",
+    "fallbackCity": "札幌"
   },
   {
     "id": "obihiro",
@@ -16813,7 +17014,8 @@
         }
       ]
     },
-    "finalPoint": "帯広市街"
+    "finalPoint": "帯広市街",
+    "fallbackCity": "札幌"
   },
   {
     "id": "rausu",
@@ -16895,7 +17097,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "網走"
   },
   {
     "id": "esashi-hokkaido",
@@ -16974,7 +17177,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "函館"
   },
   {
     "id": "hanamaki",
@@ -17054,7 +17258,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "hachimantai",
@@ -17136,7 +17341,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "tazawako",
@@ -17216,7 +17422,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "yamadera",
@@ -17297,7 +17504,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "kesennuma",
@@ -17376,7 +17584,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "ikaho",
@@ -17456,7 +17665,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "enoshima",
@@ -17537,7 +17747,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "chichibu",
@@ -17613,7 +17824,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "川越"
   },
   {
     "id": "oarai",
@@ -17688,7 +17900,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "sano",
@@ -17762,7 +17975,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "gujo-hachiman",
@@ -17838,7 +18052,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "narai-juku",
@@ -17917,7 +18132,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "itoigawa",
@@ -18000,7 +18216,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "murakami",
@@ -18074,7 +18291,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "shima",
@@ -18155,7 +18373,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "ogaki",
@@ -18230,7 +18449,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "echizen-kaigan",
@@ -18309,7 +18529,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "myoko-kogen",
@@ -18389,7 +18610,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "nagaoka",
@@ -18462,7 +18684,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "tanba-sasayama",
@@ -18544,7 +18767,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "nachikatsuura",
@@ -18626,7 +18850,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "kumano-hongu",
@@ -18709,7 +18934,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "新宮"
   },
   {
     "id": "ako",
@@ -18785,7 +19011,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "fushimi",
@@ -18866,7 +19093,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "tomonoura",
@@ -18945,7 +19173,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "福山"
   },
   {
     "id": "sakaiminato",
@@ -19025,7 +19254,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "鳥取"
   },
   {
     "id": "ushimado",
@@ -19112,7 +19342,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "kasaoka",
@@ -19187,7 +19418,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "tsunoshima",
@@ -19266,7 +19498,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "下関"
   },
   {
     "id": "dogo-onsen",
@@ -19356,7 +19589,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "marugame",
@@ -19437,7 +19671,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "misaki-sadamisaki",
@@ -19519,7 +19754,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "yanagawa",
@@ -19601,7 +19837,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "hyuga",
@@ -19676,7 +19913,8 @@
         }
       ]
     },
-    "finalPoint": "日向市街"
+    "finalPoint": "日向市街",
+    "fallbackCity": "宮崎"
   },
   {
     "id": "koshikijima",
@@ -19764,7 +20002,8 @@
           "to": "甑島"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "kirishima",
@@ -19840,7 +20079,8 @@
         }
       ]
     },
-    "finalPoint": "霧島温泉郷"
+    "finalPoint": "霧島温泉郷",
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "ebino-kogen",
@@ -19920,7 +20160,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "えびの"
   },
   {
     "id": "onna",
@@ -19994,7 +20235,8 @@
         }
       ]
     },
-    "finalPoint": "恩納村リゾートエリア"
+    "finalPoint": "恩納村リゾートエリア",
+    "fallbackCity": "那覇"
   },
   {
     "id": "nago",
@@ -20068,7 +20310,8 @@
         }
       ]
     },
-    "finalPoint": "名護市街"
+    "finalPoint": "名護市街",
+    "fallbackCity": "那覇"
   },
   {
     "id": "yomitanson",
@@ -20143,7 +20386,8 @@
         }
       ]
     },
-    "finalPoint": "読谷村"
+    "finalPoint": "読谷村",
+    "fallbackCity": "那覇"
   },
   {
     "id": "niseko",
@@ -20226,7 +20470,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "daisetsuzan",
@@ -20309,7 +20554,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "旭川"
   },
   {
     "id": "shiraoi",
@@ -20384,7 +20630,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "tomamu",
@@ -20460,7 +20707,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "towada",
@@ -20541,7 +20789,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "osorezan",
@@ -20622,7 +20871,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "urabandai",
@@ -20705,7 +20955,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "minami-sanriku",
@@ -20786,7 +21037,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "気仙沼"
   },
   {
     "id": "kitakami",
@@ -20863,7 +21115,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "kinugawa-onsen",
@@ -20939,7 +21192,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "oze",
@@ -21021,7 +21275,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "沼田"
   },
   {
     "id": "tsukuba",
@@ -21102,7 +21357,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "kasama",
@@ -21178,7 +21434,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "naritasan",
@@ -21254,7 +21511,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "kujukuri",
@@ -21335,7 +21593,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "miura",
@@ -21416,7 +21675,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "oku-tama",
@@ -21492,7 +21752,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "jigokudani",
@@ -21573,7 +21834,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "tateshina",
@@ -21656,7 +21918,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "echigo-yuzawa",
@@ -21732,7 +21995,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "fujinomiya",
@@ -21809,7 +22073,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "norikura",
@@ -21892,7 +22157,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "tokoname",
@@ -21968,7 +22234,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "korankei",
@@ -22049,7 +22316,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "豊田"
   },
   {
     "id": "minamichita",
@@ -22130,7 +22398,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "arashiyama",
@@ -22208,7 +22477,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "shigaraki",
@@ -22284,7 +22554,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "dorogawa-onsen",
@@ -22365,7 +22636,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "matsusaka",
@@ -22442,7 +22714,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "sakai",
@@ -22524,7 +22797,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "大阪"
   },
   {
     "id": "ama-island",
@@ -22623,7 +22897,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "akiyoshidai",
@@ -22705,7 +22980,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "yanai",
@@ -22781,7 +23057,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "oki-island",
@@ -22882,7 +23159,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "境港"
   },
   {
     "id": "inujima",
@@ -22972,7 +23250,8 @@
           "to": "犬島港"
         }
       ]
-    }
+    },
+    "fallbackCity": "岡山"
   },
   {
     "id": "teshima",
@@ -23070,7 +23349,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "高松"
   },
   {
     "id": "niyodogawa",
@@ -23153,7 +23433,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "yusuhara",
@@ -23236,7 +23517,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "須崎"
   },
   {
     "id": "anan",
@@ -23312,7 +23594,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "shikoku-karst",
@@ -23395,7 +23678,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "aoshima",
@@ -23472,7 +23756,8 @@
           "provider": "JR九州"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "yamaga",
@@ -23554,7 +23839,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "yoshinogari",
@@ -23635,7 +23921,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "嬉野温泉"
   },
   {
     "id": "kunisaki",
@@ -23718,7 +24005,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "chiran",
@@ -23801,7 +24089,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "ojika-island",
@@ -23899,7 +24188,8 @@
         }
       ]
     },
-    "finalPoint": "小値賀島"
+    "finalPoint": "小値賀島",
+    "fallbackCity": "佐世保"
   },
   {
     "id": "irabu-island",
@@ -23985,7 +24275,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "aguni-island",
@@ -24085,7 +24376,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "itoman",
@@ -24168,7 +24460,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "kijoka",
@@ -24250,7 +24543,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "miyakejima",
@@ -24343,7 +24637,8 @@
           "bookingUrl": "https://www.tokaikisen.co.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "hachijojima",
@@ -24443,7 +24738,8 @@
         }
       ]
     },
-    "finalPoint": "八丈島"
+    "finalPoint": "八丈島",
+    "fallbackCity": "東京"
   },
   {
     "id": "niijima",
@@ -24536,7 +24832,8 @@
           "bookingUrl": "https://www.tokaikisen.co.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "shikinejima",
@@ -24627,7 +24924,8 @@
           "bookingUrl": "https://www.tokaikisen.co.jp/"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "shirakawa",
@@ -24699,7 +24997,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "kitakata",
@@ -24770,7 +25069,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "koriyama",
@@ -24842,7 +25142,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "ryusendo",
@@ -24915,7 +25216,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "ichinoseki",
@@ -24986,7 +25288,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "akita-oga",
@@ -25059,7 +25362,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "kisakata",
@@ -25131,7 +25435,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "gassan",
@@ -25204,7 +25509,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "higashine",
@@ -25275,7 +25581,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "akakura-onsen",
@@ -25347,7 +25654,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "matsumoto-city",
@@ -25418,7 +25726,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "yugawara-onsen",
@@ -25489,7 +25798,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "yokosuka",
@@ -25561,7 +25871,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "mishima",
@@ -25633,7 +25944,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "numazu",
@@ -25705,7 +26017,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "hamamatsu",
@@ -25777,7 +26090,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "kakegawa",
@@ -25849,7 +26163,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "okazaki",
@@ -25921,7 +26236,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "toyohashi",
@@ -25993,7 +26309,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "tajimi",
@@ -26065,7 +26382,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "togakushi",
@@ -26137,7 +26455,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "omihachiman",
@@ -26209,7 +26528,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "takarazuka",
@@ -26281,7 +26601,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "akashi",
@@ -26353,7 +26674,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "naruto",
@@ -26425,7 +26747,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "innoshima",
@@ -26498,7 +26821,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "尾道"
   },
   {
     "id": "mihara",
@@ -26570,7 +26894,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "hofu",
@@ -26641,7 +26966,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "karatsu",
@@ -26713,7 +27039,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "嬉野温泉"
   },
   {
     "id": "dazaifu",
@@ -26784,7 +27111,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "nakatsu",
@@ -26856,7 +27184,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "nemuro",
@@ -26928,7 +27257,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "釧路"
   },
   {
     "id": "muroran",
@@ -27000,7 +27330,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "tomakomai",
@@ -27072,7 +27403,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "ishinomaki",
@@ -27143,7 +27475,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "hitachi",
@@ -27214,7 +27547,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "kashima",
@@ -27284,7 +27618,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "shiraoishi",
@@ -27355,7 +27690,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "noshiro",
@@ -27427,7 +27763,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "tendou",
@@ -27498,7 +27835,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "shonai",
@@ -27570,7 +27908,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "ogata",
@@ -27643,7 +27982,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "rikuzentakata",
@@ -27715,7 +28055,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "sanriku-miyako",
@@ -27788,7 +28129,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "motomiya",
@@ -27858,7 +28200,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "mizusawa",
@@ -27929,7 +28272,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "ichinoseki-geibikei",
@@ -28001,7 +28345,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "akita-semboku",
@@ -28072,7 +28417,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "tendo",
@@ -28143,7 +28489,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "nyuzen",
@@ -28214,7 +28561,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "氷見"
   },
   {
     "id": "nanao",
@@ -28285,7 +28633,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "fukuchiyama",
@@ -28356,7 +28705,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "京都"
   },
   {
     "id": "koka",
@@ -28427,7 +28777,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "tondabayashi",
@@ -28498,7 +28849,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "大阪"
   },
   {
     "id": "kishiwada",
@@ -28570,7 +28922,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "大阪"
   },
   {
     "id": "amagasaki",
@@ -28642,7 +28995,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "nishiwaki",
@@ -28714,7 +29068,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "城崎温泉"
   },
   {
     "id": "nagi",
@@ -28786,7 +29141,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "岡山"
   },
   {
     "id": "higashihiroshima",
@@ -28857,7 +29213,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "fukuyama",
@@ -28929,7 +29286,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "otoyo",
@@ -28999,7 +29357,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "sukumo",
@@ -29070,7 +29429,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "kochi-hirome",
@@ -29142,7 +29502,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "miyoshi-tokushima",
@@ -29214,7 +29575,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "tokushima-city",
@@ -29286,7 +29648,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "徳島"
   },
   {
     "id": "kumamoto-city",
@@ -29358,7 +29721,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "nagasaki-city",
@@ -29429,7 +29793,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "miyazaki-city",
@@ -29500,7 +29865,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "kagoshima-city",
@@ -29571,7 +29937,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "saga-city",
@@ -29643,7 +30010,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "嬉野温泉"
   },
   {
     "id": "oita-city",
@@ -29715,7 +30083,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "matsuyama-city",
@@ -29787,7 +30156,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "yuwaku-onsen",
@@ -29859,7 +30229,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "yura-wakayama",
@@ -29931,7 +30302,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "misaki-osaka",
@@ -30003,7 +30375,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "大阪"
   },
   {
     "id": "kitakyushu",
@@ -30075,7 +30448,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "asakura",
@@ -30147,7 +30521,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "ebino",
@@ -30219,7 +30594,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "hitoyoshi-city",
@@ -30290,7 +30666,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "minamikyushu",
@@ -30362,7 +30739,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "minamiosumi",
@@ -30434,7 +30812,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "chatan",
@@ -30509,7 +30888,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "uruma",
@@ -30584,7 +30964,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "nanto",
@@ -30656,7 +31037,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "立山黒部"
   },
   {
     "id": "hakusan",
@@ -30728,7 +31110,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "kamo-kyoto",
@@ -30801,7 +31184,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "shingu-wakayama",
@@ -30872,7 +31256,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "himeshima",
@@ -30947,7 +31332,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "toshima",
@@ -31022,7 +31408,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "joetsu",
@@ -31093,7 +31480,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "myoko",
@@ -31165,7 +31553,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "hakodate",
@@ -31238,7 +31627,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "asahikawa",
@@ -31311,7 +31701,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "kushiro",
@@ -31384,7 +31775,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "yoichi",
@@ -31455,7 +31847,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "akkeshi",
@@ -31527,7 +31920,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "釧路"
   },
   {
     "id": "kitami",
@@ -31600,7 +31994,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "旭川"
   },
   {
     "id": "monbetsu",
@@ -31664,7 +32059,8 @@
     "hotelKeyword": "紋別",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "旭川"
   },
   {
     "id": "mashike",
@@ -31737,7 +32133,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "旭川"
   },
   {
     "id": "sendai",
@@ -31810,7 +32207,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "yamagata-city",
@@ -31881,7 +32279,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "fukushima-city",
@@ -31953,7 +32352,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "omagari",
@@ -32024,7 +32424,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "shinjou",
@@ -32095,7 +32496,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "nagai",
@@ -32166,7 +32568,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "yokohama",
@@ -32239,7 +32642,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "mito",
@@ -32311,7 +32715,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "utsunomiya",
@@ -32383,7 +32788,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "日光"
   },
   {
     "id": "takasaki",
@@ -32455,7 +32861,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "odawara",
@@ -32527,7 +32934,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "sawara",
@@ -32599,7 +33007,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "nokogiriyama",
@@ -32672,7 +33081,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "katsuura-chiba",
@@ -32744,7 +33154,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "azumino",
@@ -32815,7 +33226,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "iida",
@@ -32886,7 +33298,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "nakatsugawa",
@@ -32958,7 +33371,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "shizuoka-city",
@@ -33030,7 +33444,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "yaizu",
@@ -33102,7 +33517,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "hamanako",
@@ -33175,7 +33591,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "熱海"
   },
   {
     "id": "gamagori",
@@ -33247,7 +33664,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "toyota-city",
@@ -33319,7 +33737,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "名古屋"
   },
   {
     "id": "otsu-shiga",
@@ -33391,7 +33810,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "kusatsu-shiga",
@@ -33463,7 +33883,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "takashima-shiga",
@@ -33536,7 +33957,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "長浜"
   },
   {
     "id": "tango-kyoto",
@@ -33608,7 +34030,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "天橋立"
   },
   {
     "id": "owase",
@@ -33679,7 +34102,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "gobo",
@@ -33751,7 +34175,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "kushimoto",
@@ -33823,7 +34248,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "白浜"
   },
   {
     "id": "matsue",
@@ -33896,7 +34322,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "hamada-shimane",
@@ -33969,7 +34396,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "kure",
@@ -34040,7 +34468,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "miyoshi-hiroshima",
@@ -34111,7 +34540,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "nagato-yamaguchi",
@@ -34183,7 +34613,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "mine-yamaguchi",
@@ -34254,7 +34685,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "takamatsu",
@@ -34328,7 +34760,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "sakaide",
@@ -34400,7 +34833,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "tosa-city",
@@ -34473,7 +34907,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "kanonji",
@@ -34545,7 +34980,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "琴平"
   },
   {
     "id": "fukuoka-city",
@@ -34619,7 +35055,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "kurume",
@@ -34691,7 +35128,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "博多"
   },
   {
     "id": "yatsushiro",
@@ -34763,7 +35201,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "熊本"
   },
   {
     "id": "oguni-kumamoto",
@@ -34829,7 +35268,8 @@
     "finalPoint": "杖立温泉",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "黒川温泉"
   },
   {
     "id": "izumi-kagoshima",
@@ -34900,7 +35340,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "makurazaki",
@@ -34971,7 +35412,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "miyakonojo",
@@ -35042,7 +35484,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "宮崎"
   },
   {
     "id": "nanjo-okinawa",
@@ -35108,7 +35551,8 @@
     "finalPoint": "斎場御嶽",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "aogashima",
@@ -35174,7 +35618,8 @@
     "isIsland": true,
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "東京"
   },
   {
     "id": "kugashima",
@@ -35241,7 +35686,8 @@
     "isIsland": true,
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "nakatosa",
@@ -35312,7 +35758,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "ikata",
@@ -35386,7 +35833,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松山"
   },
   {
     "id": "muroto-cape",
@@ -35458,7 +35906,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "oshima-yamaguchi",
@@ -35530,7 +35979,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "ibara",
@@ -35601,7 +36051,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "niimi",
@@ -35672,7 +36123,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "uda-nara",
@@ -35745,7 +36197,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "奈良"
   },
   {
     "id": "mimasaka",
@@ -35817,7 +36270,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "倉敷"
   },
   {
     "id": "kochi-shimanto",
@@ -35888,7 +36342,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "yonago",
@@ -35961,7 +36416,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "鳥取"
   },
   {
     "id": "kaga-onsen2",
@@ -36032,7 +36488,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "金沢"
   },
   {
     "id": "takayama-kogen",
@@ -36104,7 +36561,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "高山"
   },
   {
     "id": "iga-ueno",
@@ -36175,7 +36633,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "伊勢"
   },
   {
     "id": "miyanoshita",
@@ -36247,7 +36706,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "横浜"
   },
   {
     "id": "shibu-onsen",
@@ -36318,7 +36778,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "togatta-onsen",
@@ -36390,7 +36851,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "hachimantai-onsen",
@@ -36463,7 +36925,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "iiyama-onsen",
@@ -36535,7 +36998,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "ono-fukui",
@@ -36606,7 +37070,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "katsuyama",
@@ -36677,7 +37142,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "敦賀"
   },
   {
     "id": "nomaike",
@@ -36743,7 +37209,8 @@
     "finalPoint": "野間池港",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "hioki",
@@ -36815,7 +37282,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "鹿児島"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -36887,7 +37355,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "角館"
   },
   {
     "id": "hirakawa",
@@ -36959,7 +37428,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "kurikoma",
@@ -37031,7 +37501,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "namioka",
@@ -37103,7 +37574,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "shimokita",
@@ -37176,7 +37648,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "奥入瀬"
   },
   {
     "id": "towada-lake",
@@ -37247,7 +37720,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "奥入瀬"
   },
   {
     "id": "rikuchu-coast",
@@ -37319,7 +37793,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -37389,7 +37864,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "numata",
@@ -37461,7 +37937,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "tsuchiura",
@@ -37533,7 +38010,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "水戸"
   },
   {
     "id": "oshika",
@@ -37605,7 +38083,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "仙台"
   },
   {
     "id": "kujukuri-icho",
@@ -37677,7 +38156,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "館山"
   },
   {
     "id": "miyota",
@@ -37748,7 +38228,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "saijo-hiroshima",
@@ -37819,7 +38300,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "広島"
   },
   {
     "id": "ryoishi",
@@ -37891,7 +38373,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "盛岡"
   },
   {
     "id": "noheji",
@@ -37963,7 +38446,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "tobetsu",
@@ -38034,7 +38518,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "fukaura",
@@ -38107,7 +38592,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "弘前"
   },
   {
     "id": "isesaki",
@@ -38179,7 +38665,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "草津温泉"
   },
   {
     "id": "matsumoto-kaido",
@@ -38250,7 +38737,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "aizu-misato",
@@ -38321,7 +38809,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "会津若松"
   },
   {
     "id": "tateyama-toyama",
@@ -38392,7 +38881,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "立山黒部"
   },
   {
     "id": "suo-sanbe",
@@ -38463,7 +38953,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "松江"
   },
   {
     "id": "takachihogo-shishiku",
@@ -38529,7 +39020,8 @@
     "finalPoint": "鶴富屋敷",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "高千穂"
   },
   {
     "id": "kamishihoro",
@@ -38600,7 +39092,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "帯広"
   },
   {
     "id": "yakumo",
@@ -38672,7 +39165,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "札幌"
   },
   {
     "id": "susaki",
@@ -38743,7 +39237,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "ube",
@@ -38817,7 +39312,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "萩"
   },
   {
     "id": "itoigawa2",
@@ -38888,7 +39384,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "agematsu",
@@ -38960,7 +39457,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "松本"
   },
   {
     "id": "unzen2",
@@ -39032,7 +39530,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "長崎"
   },
   {
     "id": "kochi-ino",
@@ -39104,7 +39603,8 @@
           "provider": "e5489"
         }
       ]
-    }
+    },
+    "fallbackCity": "高知"
   },
   {
     "id": "hiji",
@@ -39176,7 +39676,8 @@
           "provider": "JR九州ネット予約"
         }
       ]
-    }
+    },
+    "fallbackCity": "湯布院"
   },
   {
     "id": "tsunan",
@@ -39246,7 +39747,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "新潟"
   },
   {
     "id": "kurobe",
@@ -39317,7 +39819,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "氷見"
   },
   {
     "id": "tsuruoka-kinzan",
@@ -39389,7 +39892,8 @@
           "provider": "えきねっと"
         }
       ]
-    }
+    },
+    "fallbackCity": "蔵王"
   },
   {
     "id": "tomari-okinawa",
@@ -39455,7 +39959,8 @@
     "isIsland": true,
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "那覇"
   },
   {
     "id": "ogimi",
@@ -39521,6 +40026,7 @@
     "finalPoint": "大宜味村役場",
     "access": {
       "steps": []
-    }
+    },
+    "fallbackCity": "那覇"
   }
 ]
