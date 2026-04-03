@@ -1254,7 +1254,7 @@
       "from": "珠洲"
     },
     "mapCTA": {
-      "to": "珠洲バスターミナル"
+      "to": "珠洲市街"
     }
   },
   "yoshino": {
@@ -1659,7 +1659,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "永平寺口駅"
+      "to": "永平寺"
     }
   },
   "wakasa-obama": {
@@ -2064,7 +2064,7 @@
       "hub": "那覇"
     },
     "mapCTA": {
-      "to": "座間味港"
+      "to": "座間味島"
     }
   },
   "ie-island": {
@@ -2425,19 +2425,6 @@
     },
     "mapCTA": {
       "to": "長岡駅"
-    }
-  },
-  "shimanto-cho": {
-    "mainCTA": {
-      "type": "flight",
-      "to": "高知龍馬空港"
-    },
-    "subCTA": {
-      "type": "rental",
-      "from": "土佐大正"
-    },
-    "mapCTA": {
-      "to": "土佐大正駅"
     }
   },
   "tanba-sasayama": {
@@ -3119,7 +3106,7 @@
       "from": "佐世保港"
     },
     "mapCTA": {
-      "to": "小値賀港"
+      "to": "小値賀島"
     }
   },
   "irabu-island": {
@@ -3324,15 +3311,6 @@
       "to": "赤倉温泉"
     }
   },
-  "narita": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "成田駅"
-    }
-  },
   "matsumoto-city": {
     "mainCTA": {
       "type": "rail",
@@ -3340,42 +3318,6 @@
     },
     "mapCTA": {
       "to": "松本駅"
-    }
-  },
-  "fukui-eiheiji": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "永平寺"
-    }
-  },
-  "gujo": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "郡上八幡駅"
-    }
-  },
-  "ojika": {
-    "mainCTA": {
-      "type": "ferry",
-      "from": "佐世保港"
-    },
-    "mapCTA": {
-      "to": "小値賀島"
-    }
-  },
-  "zamami": {
-    "mainCTA": {
-      "type": "ferry",
-      "from": "那覇港"
-    },
-    "mapCTA": {
-      "to": "座間味島"
     }
   },
   "yugawara-onsen": {
@@ -3691,15 +3633,6 @@
       "to": "浄土ヶ浜"
     }
   },
-  "kubota-akita": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "ekinet"
-    },
-    "mapCTA": {
-      "to": "秋田駅"
-    }
-  },
   "motomiya": {
     "mainCTA": {
       "type": "rail",
@@ -3956,15 +3889,6 @@
       "to": "松山駅"
     }
   },
-  "ball-game": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "高知駅"
-    }
-  },
   "yuwaku-onsen": {
     "mainCTA": {
       "type": "rail",
@@ -3976,19 +3900,6 @@
     },
     "mapCTA": {
       "to": "湯涌温泉"
-    }
-  },
-  "noto-peninsula": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "subCTA": {
-      "type": "rental",
-      "from": "珠洲"
-    },
-    "mapCTA": {
-      "to": "珠洲市街"
     }
   },
   "yura-wakayama": {
@@ -4151,15 +4062,6 @@
     },
     "mapCTA": {
       "to": "新宮駅"
-    }
-  },
-  "yunotsu": {
-    "mainCTA": {
-      "type": "rail",
-      "provider": "e5489"
-    },
-    "mapCTA": {
-      "to": "温泉津駅"
     }
   },
   "himeshima": {

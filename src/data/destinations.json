@@ -5005,11 +5005,11 @@
       "盛岡"
     ],
     "weight": 1.2,
-    "description": "きりたんぽと竿燈祭りで知られる東北の米どころ。男鹿のなまはげなど固有の伝統文化が旅に深みを加える。",
+    "description": "竿燈まつりときりたんぽ鍋が有名な東北の雄都。千秋公園と比内地鶏・稲庭うどんの産地としても知られる。",
     "tags": [
       "歴史",
       "街歩き",
-      "離島"
+      "グルメ"
     ],
     "spots": [
       "竿燈まつり",
@@ -9716,7 +9716,8 @@
           "method": "レンタカー"
         }
       ]
-    }
+    },
+    "finalPoint": "珠洲市街"
   },
   {
     "id": "yoshino",
@@ -12912,7 +12913,8 @@
           "method": "バス"
         }
       ]
-    }
+    },
+    "finalPoint": "永平寺"
   },
   {
     "id": "wakasa-obama",
@@ -14216,9 +14218,10 @@
     ],
     "departures": [],
     "weight": 1.2,
-    "description": "「日本最後の清流」と呼ばれる四万十川。沈下橋が点在する自然豊かな川沿いの風景。",
+    "description": "「日本最後の清流」四万十川。沈下橋が点在し、川漁・カヌー・自然との共生が体験できる高知の原風景。",
     "tags": [
-      "自然"
+      "自然",
+      "渓谷"
     ],
     "spots": [
       "佐田沈下橋",
@@ -15838,7 +15841,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "座間味島"
   },
   {
     "id": "ie-island",
@@ -18456,86 +18460,6 @@
           "type": "rail",
           "to": "長岡駅",
           "provider": "えきねっと"
-        }
-      ]
-    }
-  },
-  {
-    "id": "shimanto-cho",
-    "name": "四万十町",
-    "type": "destination",
-    "region": "四国",
-    "hub": "kochi",
-    "hotelHub": "四万十町",
-    "stayAllowed": [
-      "1night",
-      "2night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "日本最後の清流と呼ばれる四万十川が悠々と流れる。沈下橋と川漁、豊かな自然の中でのんびり過ごす旅。",
-    "tags": [
-      "自然",
-      "渓谷",
-      "山"
-    ],
-    "spots": [
-      "四万十川",
-      "佐田沈下橋",
-      "中村城跡"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": true,
-    "hotelSearch": "四万十",
-    "gateways": {
-      "rail": [
-        "土佐大正駅"
-      ],
-      "airport": [
-        "高知龍馬空港"
-      ],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": "窪川駅からバスまたはレンタカー",
-    "destType": "sight",
-    "railGateway": "土佐大正駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": "高知龍馬空港",
-    "prefecture": "高知県",
-    "city": "四万十町",
-    "lat": 33.1925,
-    "lng": 132.9413,
-    "stayBias": 2,
-    "gatewayHub": "高知",
-    "airportHub": null,
-    "railProvider": null,
-    "travelTime": {
-      "tokyo": 290,
-      "osaka": 195,
-      "nagoya": 235,
-      "fukuoka": 220,
-      "takamatsu": 195
-    },
-    "stayRecommendation": "1night",
-    "secondaryTransport": "car",
-    "hubStation": "土佐大正駅",
-    "accessStation": "土佐大正駅",
-    "hotelArea": "kochi",
-    "hotelKeyword": "窪川",
-    "access": {
-      "steps": [
-        {
-          "type": "flight",
-          "to": "高知龍馬空港"
-        },
-        {
-          "type": "local",
-          "from": "高知龍馬空港",
-          "to": "土佐大正駅",
-          "method": "レンタカー"
         }
       ]
     }
@@ -23974,7 +23898,8 @@
           "method": "徒歩"
         }
       ]
-    }
+    },
+    "finalPoint": "小値賀島"
   },
   {
     "id": "irabu-island",
@@ -25425,78 +25350,6 @@
     }
   },
   {
-    "id": "narita",
-    "name": "成田",
-    "type": "destination",
-    "region": "関東",
-    "hub": null,
-    "hotelHub": "成田",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "成田山新勝寺の門前町。うなぎ料理と古い参道の雰囲気が成田を訪れる理由になる。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "成田山新勝寺",
-      "表参道",
-      "成田山公園"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "成田",
-    "gateways": {
-      "rail": [
-        "成田駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "成田駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "千葉県",
-    "lat": 35.7721,
-    "lng": 140.318,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 60,
-      "osaka": 250,
-      "nagoya": 195,
-      "fukuoka": 480,
-      "takamatsu": 405
-    },
-    "stayRecommendation": "daytrip",
-    "city": "成田市",
-    "hubStation": "成田駅",
-    "accessStation": "成田駅",
-    "hotelArea": "chiba",
-    "hotelKeyword": "成田",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "成田駅",
-          "provider": "えきねっと"
-        }
-      ]
-    }
-  },
-  {
     "id": "matsumoto-city",
     "name": "松本",
     "type": "destination",
@@ -25563,300 +25416,6 @@
           "type": "rail",
           "to": "松本駅",
           "provider": "えきねっと"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fukui-eiheiji",
-    "name": "永平寺",
-    "type": "destination",
-    "region": "中部",
-    "hub": null,
-    "hotelHub": "永平寺",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "道元禅師が開いた曹洞宗の大本山。コケに覆われた参道と重厚な伽藍が精神的な深みを与える。",
-    "tags": [
-      "歴史",
-      "自然"
-    ],
-    "spots": [
-      "永平寺",
-      "永平寺参道",
-      "えちぜん鉄道"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "永平寺",
-    "gateways": {
-      "rail": [
-        "永平寺口駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": "bus",
-    "destType": "sight",
-    "railGateway": "永平寺口駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "福井県",
-    "lat": 36.0878,
-    "lng": 136.5408,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 200,
-      "osaka": 160,
-      "nagoya": 130,
-      "fukuoka": 380,
-      "takamatsu": 300
-    },
-    "stayRecommendation": "1night",
-    "city": "吉田郡永平寺町",
-    "hubStation": "永平寺口駅",
-    "accessStation": "永平寺口駅",
-    "hotelArea": "fukui",
-    "hotelKeyword": "永平寺",
-    "finalPoint": "永平寺",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "永平寺口駅",
-          "provider": "e5489"
-        }
-      ]
-    }
-  },
-  {
-    "id": "gujo",
-    "name": "郡上八幡",
-    "type": "destination",
-    "region": "中部",
-    "hub": null,
-    "hotelHub": "郡上八幡",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "長良川の清流と城下町の情景が美しい。日本一の盆踊り「郡上踊り」で夏は街全体が踊る。",
-    "tags": [
-      "歴史",
-      "自然"
-    ],
-    "spots": [
-      "郡上八幡城",
-      "宗祇水",
-      "郡上踊り会場"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "郡上八幡",
-    "gateways": {
-      "rail": [
-        "郡上八幡駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "郡上八幡駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "岐阜県",
-    "lat": 35.7462,
-    "lng": 136.9718,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 220,
-      "osaka": 180,
-      "nagoya": 120,
-      "fukuoka": 380,
-      "takamatsu": 310
-    },
-    "stayRecommendation": "1night",
-    "city": "郡上市",
-    "hubStation": "郡上八幡駅",
-    "accessStation": "郡上八幡駅",
-    "hotelArea": "gifu",
-    "hotelKeyword": "郡上八幡",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "郡上八幡駅",
-          "provider": "e5489"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ojika",
-    "name": "小値賀島",
-    "type": "destination",
-    "region": "九州",
-    "hub": null,
-    "hotelHub": "小値賀島",
-    "stayAllowed": [
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "五島列島の最北端に浮かぶ島。古い漁師町と棚田、古民家ゲストハウスで離島の本物の暮らしを体験。",
-    "tags": [
-      "海",
-      "歴史"
-    ],
-    "spots": [
-      "斑島海水浴場",
-      "五両ダキ",
-      "旧野首教会"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "小値賀島",
-    "gateways": {
-      "rail": [
-        "佐世保駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": [
-        "佐世保港"
-      ]
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "island",
-    "railGateway": "佐世保駅",
-    "busGateway": null,
-    "ferryGateway": "佐世保港",
-    "airportGateway": null,
-    "prefecture": "長崎県",
-    "lat": 33.1826,
-    "lng": 129.0724,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "jrkyushu",
-    "travelTime": {
-      "tokyo": 470,
-      "osaka": 380,
-      "nagoya": 440,
-      "fukuoka": 180,
-      "takamatsu": 380
-    },
-    "stayRecommendation": "1night",
-    "city": "北松浦郡小値賀町",
-    "hubStation": "佐世保駅",
-    "accessStation": "小値賀港",
-    "hotelArea": "nagasaki",
-    "hotelKeyword": "小値賀島",
-    "finalPoint": "小値賀島",
-    "isIsland": true,
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "佐世保駅",
-          "provider": "JR九州ネット予約"
-        }
-      ]
-    }
-  },
-  {
-    "id": "zamami",
-    "name": "座間味島",
-    "type": "destination",
-    "region": "沖縄",
-    "hub": null,
-    "hotelHub": "座間味島",
-    "stayAllowed": [
-      "1night",
-      "2night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "慶良間諸島の中核。ケラマブルーの海はダイビングの聖地で、冬はザトウクジラのウォッチングも楽しめる。",
-    "tags": [
-      "海",
-      "自然"
-    ],
-    "spots": [
-      "古座間味ビーチ",
-      "阿真ビーチ",
-      "クジラウォッチング"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "座間味島",
-    "gateways": {
-      "rail": [
-        "座間味港"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": [
-        "那覇港"
-      ]
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "island",
-    "railGateway": "座間味港",
-    "busGateway": null,
-    "ferryGateway": "那覇港",
-    "airportGateway": null,
-    "prefecture": "沖縄県",
-    "lat": 26.2268,
-    "lng": 127.3025,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 440,
-      "osaka": 370,
-      "nagoya": 430,
-      "fukuoka": 260,
-      "takamatsu": 390
-    },
-    "stayRecommendation": "2night",
-    "city": "島尻郡座間味村",
-    "hubStation": "座間味港",
-    "accessStation": "座間味港",
-    "hotelArea": "okinawa",
-    "hotelKeyword": "座間味島",
-    "finalPoint": "座間味島",
-    "isIsland": true,
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "座間味港",
-          "provider": "e5489"
         }
       ]
     }
@@ -28232,78 +27791,6 @@
     }
   },
   {
-    "id": "kubota-akita",
-    "name": "秋田",
-    "type": "destination",
-    "region": "東北",
-    "hub": null,
-    "hotelHub": "秋田",
-    "stayAllowed": [
-      "1night",
-      "2night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "竿燈まつりときりたんぽ鍋が有名な東北の雄都。千秋公園と比内地鶏、稲庭うどんの産地でもある。",
-    "tags": [
-      "歴史",
-      "グルメ"
-    ],
-    "spots": [
-      "千秋公園",
-      "秋田竿燈まつり会場",
-      "久保田城"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "秋田",
-    "gateways": {
-      "rail": [
-        "秋田駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "秋田駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "秋田県",
-    "lat": 39.7188,
-    "lng": 140.1024,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "ekinet",
-    "travelTime": {
-      "tokyo": 240,
-      "osaka": 430,
-      "nagoya": 375,
-      "fukuoka": 630,
-      "takamatsu": 560
-    },
-    "stayRecommendation": "2night",
-    "city": "秋田市",
-    "hubStation": "秋田駅",
-    "accessStation": "秋田駅",
-    "hotelArea": "akita",
-    "hotelKeyword": "秋田",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "秋田駅",
-          "provider": "えきねっと"
-        }
-      ]
-    }
-  },
-  {
     "id": "motomiya",
     "name": "本宮",
     "type": "destination",
@@ -30303,73 +29790,6 @@
     }
   },
   {
-    "id": "ball-game",
-    "name": "高知",
-    "type": "destination",
-    "region": "四国",
-    "hub": null,
-    "hotelHub": "高知",
-    "stayAllowed": [
-      "daytrip",
-      "1night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "ダミー（kochi-hiromeと重複テスト用）",
-    "tags": [
-      "グルメ"
-    ],
-    "spots": [],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "高知",
-    "gateways": {
-      "rail": [
-        "高知駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "city",
-    "railGateway": "高知駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "高知県",
-    "lat": 33.5597,
-    "lng": 133.5311,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 380,
-      "osaka": 220,
-      "nagoya": 295,
-      "fukuoka": 260,
-      "takamatsu": 80
-    },
-    "stayRecommendation": "daytrip",
-    "city": "高知市",
-    "hubStation": "高知駅",
-    "accessStation": "高知駅",
-    "hotelArea": "kochi",
-    "hotelKeyword": "高知",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "高知駅",
-          "provider": "e5489"
-        }
-      ]
-    }
-  },
-  {
     "id": "yuwaku-onsen",
     "name": "湯涌温泉",
     "type": "destination",
@@ -30436,79 +29856,6 @@
         {
           "type": "rail",
           "to": "金沢駅",
-          "provider": "e5489"
-        }
-      ]
-    }
-  },
-  {
-    "id": "noto-peninsula",
-    "name": "珠洲",
-    "type": "destination",
-    "region": "中部",
-    "hub": null,
-    "hotelHub": "珠洲",
-    "stayAllowed": [
-      "1night",
-      "2night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "能登半島の最先端。禄剛崎灯台と見附島、揚げ浜式製塩の伝統が残る能登半島先端の神秘的な岬。",
-    "tags": [
-      "自然",
-      "海"
-    ],
-    "spots": [
-      "禄剛崎灯台",
-      "見附島",
-      "塩田村"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": true,
-    "hotelSearch": "珠洲",
-    "gateways": {
-      "rail": [
-        "穴水駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": "バス",
-    "secondaryTransport": "bus",
-    "destType": "remote",
-    "railGateway": "穴水駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "石川県",
-    "lat": 37.4369,
-    "lng": 137.2636,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 310,
-      "osaka": 260,
-      "nagoya": 260,
-      "fukuoka": 490,
-      "takamatsu": 405
-    },
-    "stayRecommendation": "2night",
-    "city": "珠洲市",
-    "hubStation": "穴水駅",
-    "accessStation": "穴水駅",
-    "hotelArea": "ishikawa",
-    "hotelKeyword": "珠洲",
-    "finalPoint": "珠洲市街",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "穴水駅",
           "provider": "e5489"
         }
       ]
@@ -31522,78 +30869,6 @@
         {
           "type": "rail",
           "to": "新宮駅",
-          "provider": "e5489"
-        }
-      ]
-    }
-  },
-  {
-    "id": "yunotsu",
-    "name": "温泉津",
-    "type": "destination",
-    "region": "中国",
-    "hub": null,
-    "hotelHub": "温泉津",
-    "stayAllowed": [
-      "1night",
-      "2night"
-    ],
-    "departures": [],
-    "weight": 1.2,
-    "description": "石見銀山の積み出し港として栄えた温泉の港町。薬師湯は日本屈指の効能を誇るラジウム泉の名湯。",
-    "tags": [
-      "温泉",
-      "歴史"
-    ],
-    "spots": [
-      "薬師湯",
-      "温泉津温泉街",
-      "龍御前神社"
-    ],
-    "shinkansenAccess": false,
-    "requiresCar": false,
-    "hotelSearch": "温泉津",
-    "gateways": {
-      "rail": [
-        "温泉津駅"
-      ],
-      "airport": [],
-      "bus": [],
-      "ferry": []
-    },
-    "accessHub": null,
-    "railNote": null,
-    "secondaryTransport": null,
-    "destType": "onsen",
-    "railGateway": "温泉津駅",
-    "busGateway": null,
-    "ferryGateway": null,
-    "airportGateway": null,
-    "prefecture": "島根県",
-    "lat": 35.0625,
-    "lng": 132.2974,
-    "stayBias": 1,
-    "gatewayHub": null,
-    "airportHub": null,
-    "railProvider": "e5489",
-    "travelTime": {
-      "tokyo": 420,
-      "osaka": 300,
-      "nagoya": 370,
-      "fukuoka": 250,
-      "takamatsu": 300
-    },
-    "stayRecommendation": "2night",
-    "city": "大田市",
-    "hubStation": "温泉津駅",
-    "accessStation": "温泉津駅",
-    "hotelArea": "shimane",
-    "hotelKeyword": "温泉津",
-    "access": {
-      "steps": [
-        {
-          "type": "rail",
-          "to": "温泉津駅",
           "provider": "e5489"
         }
       ]
