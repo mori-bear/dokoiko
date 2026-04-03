@@ -249,7 +249,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "finalPoint": "日光東照宮"
   },
   {
     "id": "karuizawa",
@@ -342,7 +343,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "finalPoint": "旧軽井沢銀座"
   },
   {
     "id": "fujikawaguchiko",
@@ -931,7 +933,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "finalPoint": "ファーム富田"
   },
   {
     "id": "matsushima",
@@ -1848,7 +1851,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "finalPoint": "長浜海水浴場"
   },
   {
     "id": "hakone",
@@ -3146,7 +3150,8 @@
         }
       ]
     },
-    "fallbackCity": "熊本"
+    "fallbackCity": "熊本",
+    "finalPoint": "阿蘇火口"
   },
   {
     "id": "yakushima",
@@ -3663,7 +3668,8 @@
         }
       ]
     },
-    "fallbackCity": "仙台"
+    "fallbackCity": "仙台",
+    "finalPoint": "御釜"
   },
   {
     "id": "hagi",
@@ -4574,7 +4580,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "finalPoint": "白馬八方尾根"
   },
   {
     "id": "amanohashidate",
@@ -5378,7 +5385,8 @@
         }
       ]
     },
-    "fallbackCity": "館山"
+    "fallbackCity": "館山",
+    "finalPoint": "館山城"
   },
   {
     "id": "gokayama",
@@ -5627,7 +5635,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "finalPoint": "青い池"
   },
   {
     "id": "miyako-iwate",
@@ -5711,7 +5720,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "finalPoint": "浄土ヶ浜"
   },
   {
     "id": "sakata",
@@ -6320,7 +6330,8 @@
         }
       ]
     },
-    "fallbackCity": "徳島"
+    "fallbackCity": "徳島",
+    "finalPoint": "大歩危峡"
   },
   {
     "id": "tsuwano",
@@ -8662,7 +8673,8 @@
         }
       ]
     },
-    "fallbackCity": "日光"
+    "fallbackCity": "日光",
+    "finalPoint": "益子焼共販センター"
   },
   {
     "id": "bessho-onsen",
@@ -10806,7 +10818,8 @@
         }
       ]
     },
-    "fallbackCity": "宮崎"
+    "fallbackCity": "宮崎",
+    "finalPoint": "鵜戸神宮"
   },
   {
     "id": "mojiko",
@@ -11725,7 +11738,8 @@
         }
       ]
     },
-    "fallbackCity": "札幌"
+    "fallbackCity": "札幌",
+    "finalPoint": "オホーツク流氷館"
   },
   {
     "id": "shikotsu",
@@ -11882,7 +11896,8 @@
         }
       ]
     },
-    "fallbackCity": "盛岡"
+    "fallbackCity": "盛岡",
+    "finalPoint": "カッパ淵"
   },
   {
     "id": "oga",
@@ -11963,7 +11978,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "finalPoint": "入道崎"
   },
   {
     "id": "yonezawa",
@@ -12836,7 +12852,8 @@
         }
       ]
     },
-    "fallbackCity": "富士河口湖"
+    "fallbackCity": "富士河口湖",
+    "finalPoint": "清泉寮"
   },
   {
     "id": "tenryu-gorge",
@@ -13877,7 +13894,8 @@
         }
       ]
     },
-    "fallbackCity": "奈良"
+    "fallbackCity": "奈良",
+    "finalPoint": "石舞台古墳"
   },
   {
     "id": "daisen",
@@ -14039,7 +14057,8 @@
         }
       ]
     },
-    "fallbackCity": "松江"
+    "fallbackCity": "松江",
+    "finalPoint": "温泉津温泉街"
   },
   {
     "id": "iwami-ginzan",
@@ -16374,7 +16393,8 @@
         }
       ]
     },
-    "fallbackCity": "松本"
+    "fallbackCity": "松本",
+    "finalPoint": "菜の花公園"
   },
   {
     "id": "yakake",
@@ -17423,7 +17443,8 @@
         }
       ]
     },
-    "fallbackCity": "角館"
+    "fallbackCity": "角館",
+    "finalPoint": "田沢湖畔"
   },
   {
     "id": "yamadera",
@@ -18530,7 +18551,8 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "finalPoint": "越前岬"
   },
   {
     "id": "myoko-kogen",
@@ -18611,7 +18633,8 @@
         }
       ]
     },
-    "fallbackCity": "新潟"
+    "fallbackCity": "新潟",
+    "finalPoint": "赤倉観光リゾート"
   },
   {
     "id": "nagaoka",
@@ -23679,7 +23702,8 @@
         }
       ]
     },
-    "fallbackCity": "松山"
+    "fallbackCity": "松山",
+    "finalPoint": "姫鶴平"
   },
   {
     "id": "aoshima",
@@ -24276,7 +24300,8 @@
         }
       ]
     },
-    "fallbackCity": "那覇"
+    "fallbackCity": "那覇",
+    "finalPoint": "佐和田の浜"
   },
   {
     "id": "aguni-island",
@@ -24833,7 +24858,8 @@
         }
       ]
     },
-    "fallbackCity": "東京"
+    "fallbackCity": "東京",
+    "finalPoint": "羽伏浦海岸"
   },
   {
     "id": "shikinejima",
@@ -31277,7 +31303,8 @@
         }
       ]
     },
-    "fallbackCity": "釧路"
+    "fallbackCity": "釧路",
+    "finalPoint": "厚岸グルメパーク"
   },
   {
     "id": "kitami",
@@ -31351,7 +31378,8 @@
         }
       ]
     },
-    "fallbackCity": "旭川"
+    "fallbackCity": "旭川",
+    "finalPoint": "ハッカ記念館"
   },
   {
     "id": "monbetsu",

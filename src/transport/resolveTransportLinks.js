@@ -353,8 +353,10 @@ function buildCtaUrl(mainCTA, departure) {
     case 'flight': {
       const fromIata = CITY_AIRPORT[departure] ?? null;
       if (!fromIata || !mainCTA.to) return null;
-      const target = mainCTA.hub ? (AIRPORT_HUB_GATEWAY[mainCTA.hub] ?? mainCTA.to) : mainCTA.to;
-      return buildSkyscannerLink(fromIata, target) ?? null;
+      // Fix ④: 就航路線が存在する場合のみ flight CTA を出す
+      const checkTarget = mainCTA.hub ? (AIRPORT_HUB_GATEWAY[mainCTA.hub] ?? mainCTA.to) : mainCTA.to;
+      if (!hasFlightRoute(departure, checkTarget)) return null;
+      return buildSkyscannerLink(fromIata, checkTarget) ?? null;
     }
     case 'ferry':
       return buildFerryLink(mainCTA.from ?? '', mainCTA.url ?? null, mainCTA.provider ?? null);
@@ -395,7 +397,11 @@ function buildSubCtaUrl(subCTA) {
  */
 function buildMapCtaLink(mapCTA, departure, fromCity) {
   if (!mapCTA?.to) return null;
-  const origin = fromCity?.rail ?? DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
+  // Fix ⑤: mapCTA.from が指定されている場合（飛行機到着空港など）はそちらを優先
+  const origin = mapCTA.from
+    ?? fromCity?.rail
+    ?? DEPARTURE_CITY_INFO[departure]?.rail
+    ?? `${departure}駅`;
   const dest   = mapCTA.to;
   const mode   = resolveMapMode(origin, dest);
   return buildGoogleMapsLink(origin, dest, mode, `📍 地図で確認（${dest}）`);
