@@ -5,7 +5,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "鎌倉駅"
+      "to": "鎌倉大仏"
     }
   },
   "atami": {
@@ -14,7 +14,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "熱海駅"
+      "to": "熱海城"
     }
   },
   "nikko": {
@@ -53,7 +53,7 @@
       "from": "河口湖"
     },
     "mapCTA": {
-      "to": "河口湖駅"
+      "to": "河口湖"
     }
   },
   "nara": {
@@ -62,7 +62,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "奈良駅"
+      "to": "東大寺"
     }
   },
   "ishigaki": {
@@ -86,7 +86,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "伊勢市駅"
+      "to": "伊勢神宮"
     }
   },
   "beppu": {
@@ -95,7 +95,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "別府駅"
+      "to": "地獄めぐり"
     }
   },
   "otaru": {
@@ -104,7 +104,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "小樽駅"
+      "to": "小樽運河"
     }
   },
   "furano": {
@@ -126,7 +126,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "松島海岸駅"
+      "to": "松島湾"
     }
   },
   "miyajima": {
@@ -148,7 +148,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "尾道駅"
+      "to": "千光寺"
     }
   },
   "shodoshima": {
@@ -174,7 +174,7 @@
       "from": "美保関"
     },
     "mapCTA": {
-      "to": "境港駅",
+      "to": "美保神社",
       "from": "米子空港"
     }
   },
@@ -188,7 +188,7 @@
       "from": "龍神温泉"
     },
     "mapCTA": {
-      "to": "紀伊田辺駅"
+      "to": "龍神温泉元湯"
     }
   },
   "tokashiki-jima": {
@@ -255,7 +255,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "箱根湯本駅"
+      "to": "芦ノ湖"
     }
   },
   "shuzenji": {
@@ -264,7 +264,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "修善寺駅"
+      "to": "修禅寺"
     }
   },
   "kusatsu-onsen": {
@@ -286,7 +286,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "伊豆急下田駅"
+      "to": "了仙寺"
     }
   },
   "izu-oshima": {
@@ -312,7 +312,7 @@
       "from": "白川郷"
     },
     "mapCTA": {
-      "to": "金沢駅"
+      "to": "荻町城跡展望台"
     }
   },
   "arima-onsen": {
@@ -321,7 +321,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "有馬温泉駅"
+      "to": "金の湯"
     }
   },
   "kinosaki-onsen": {
@@ -330,7 +330,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "城崎温泉駅"
+      "to": "さとの湯"
     }
   },
   "kurashiki-o": {
@@ -339,7 +339,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "倉敷駅"
+      "to": "大原美術館"
     }
   },
   "shirahama-o": {
@@ -348,7 +348,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "白浜駅"
+      "to": "白良浜"
     }
   },
   "takayama-o": {
@@ -357,7 +357,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "高山駅"
+      "to": "古い町並"
     }
   },
   "toba": {
@@ -366,7 +366,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "鳥羽駅"
+      "to": "鳥羽水族館"
     }
   },
   "yufuin": {
@@ -375,7 +375,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "由布院駅"
+      "to": "湯の坪街道"
     }
   },
   "kurokawa-k": {
@@ -388,7 +388,7 @@
       "from": "黒川温泉"
     },
     "mapCTA": {
-      "to": "博多駅"
+      "to": "入湯手形"
     }
   },
   "aso": {
@@ -429,7 +429,7 @@
       "from": "天草"
     },
     "mapCTA": {
-      "to": "熊本駅"
+      "to": "天草五橋"
     }
   },
   "hiraizumi": {
@@ -438,7 +438,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "平泉駅"
+      "to": "中尊寺金色堂"
     }
   },
   "kakunodate": {
@@ -447,7 +447,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "角館駅"
+      "to": "武家屋敷通り"
     }
   },
   "aizu": {
@@ -456,7 +456,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "会津若松駅"
+      "to": "鶴ヶ城"
     }
   },
   "zaosan": {
@@ -478,7 +478,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "萩駅"
+      "to": "萩城跡"
     }
   },
   "shimonoseki": {
@@ -487,7 +487,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "下関駅"
+      "to": "関門橋"
     }
   },
   "naoshima": {
@@ -505,7 +505,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "琴電琴平駅"
+      "to": "こんぴらさん"
     }
   },
   "uwajima": {
@@ -514,7 +514,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "宇和島駅"
+      "to": "宇和島城"
     }
   },
   "toyako": {
@@ -527,7 +527,7 @@
       "from": "洞爺"
     },
     "mapCTA": {
-      "to": "洞爺駅"
+      "to": "洞爺湖"
     }
   },
   "noboribetsu": {
@@ -536,7 +536,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "登別駅"
+      "to": "地獄谷"
     }
   },
   "shiretoko": {
@@ -549,7 +549,7 @@
       "from": "知床"
     },
     "mapCTA": {
-      "to": "知床斜里駅",
+      "to": "知床五湖",
       "from": "女満別空港"
     }
   },
@@ -572,7 +572,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "加賀温泉駅"
+      "to": "山代温泉"
     }
   },
   "hakuba": {
@@ -594,7 +594,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "天橋立駅"
+      "to": "智恩寺"
     }
   },
   "ine": {
@@ -616,7 +616,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "指宿駅"
+      "to": "砂むし会館"
     }
   },
   "sasebo": {
@@ -625,7 +625,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "佐世保駅"
+      "to": "九十九島"
     }
   },
   "hirado": {
@@ -638,7 +638,7 @@
       "from": "平戸"
     },
     "mapCTA": {
-      "to": "佐世保駅"
+      "to": "平戸城"
     }
   },
   "tottori": {
@@ -647,7 +647,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "鳥取駅"
+      "to": "鳥取砂丘"
     }
   },
   "akita": {
@@ -656,7 +656,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "秋田駅"
+      "to": "竿燈まつり"
     }
   },
   "awaji": {
@@ -669,7 +669,7 @@
       "from": "淡路島"
     },
     "mapCTA": {
-      "to": "三ノ宮駅"
+      "to": "鳴門の渦潮"
     }
   },
   "takao": {
@@ -678,7 +678,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "高尾山口駅"
+      "to": "薬王院"
     }
   },
   "tateyama-chiba": {
@@ -709,7 +709,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "札幌駅"
+      "to": "定山渓温泉街"
     }
   },
   "biei": {
@@ -744,7 +744,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "酒田駅"
+      "to": "山居倉庫"
     }
   },
   "takachiho": {
@@ -757,7 +757,7 @@
       "from": "高千穂"
     },
     "mapCTA": {
-      "to": "熊本駅"
+      "to": "高千穂峡"
     }
   },
   "amami": {
@@ -796,7 +796,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "諫早駅"
+      "to": "雲仙地獄"
     }
   },
   "ashizuri": {
@@ -809,7 +809,7 @@
       "from": "足摺岬"
     },
     "mapCTA": {
-      "to": "宿毛駅"
+      "to": "足摺岬灯台"
     }
   },
   "oboke": {
@@ -831,7 +831,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "津和野駅"
+      "to": "太皷谷稲成神社"
     }
   },
   "inuyama": {
@@ -840,7 +840,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "犬山駅"
+      "to": "犬山城"
     }
   },
   "kiso": {
@@ -849,7 +849,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "南木曽駅"
+      "to": "妻籠宿"
     }
   },
   "miyama": {
@@ -862,7 +862,7 @@
       "from": "美山"
     },
     "mapCTA": {
-      "to": "園部駅"
+      "to": "かやぶきの里"
     }
   },
   "tateyama-kurobe": {
@@ -871,7 +871,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "立山駅"
+      "to": "室堂"
     }
   },
   "himi": {
@@ -880,7 +880,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "氷見駅"
+      "to": "氷見漁港朝市"
     }
   },
   "nyuto-onsen": {
@@ -889,7 +889,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "田沢湖駅"
+      "to": "鶴の湯"
     }
   },
   "yuda-onsen": {
@@ -898,7 +898,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "湯田温泉駅"
+      "to": "瑠璃光寺"
     }
   },
   "ureshino-onsen": {
@@ -907,7 +907,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "嬉野温泉駅"
+      "to": "シーボルトの湯"
     }
   },
   "obuse": {
@@ -916,7 +916,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "小布施駅"
+      "to": "北斎館"
     }
   },
   "uchiko": {
@@ -925,7 +925,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "内子駅"
+      "to": "内子座"
     }
   },
   "muroto": {
@@ -938,7 +938,7 @@
       "from": "室戸"
     },
     "mapCTA": {
-      "to": "高知駅"
+      "to": "室戸岬"
     }
   },
   "iya": {
@@ -951,7 +951,7 @@
       "from": "祖谷"
     },
     "mapCTA": {
-      "to": "阿波池田駅"
+      "to": "かずら橋"
     }
   },
   "oku-izumo": {
@@ -964,7 +964,7 @@
       "from": "木次"
     },
     "mapCTA": {
-      "to": "木次駅"
+      "to": "菅谷たたら山内"
     }
   },
   "ginzan-onsen": {
@@ -973,7 +973,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大石田駅"
+      "to": "能登屋旅館"
     }
   },
   "ouchi-juku": {
@@ -986,7 +986,7 @@
       "from": "大内宿"
     },
     "mapCTA": {
-      "to": "会津若松駅"
+      "to": "大内宿町並み"
     }
   },
   "nozawa-onsen": {
@@ -995,7 +995,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "飯山駅"
+      "to": "大湯"
     }
   },
   "takehara": {
@@ -1004,7 +1004,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "竹原駅"
+      "to": "町並み保存地区"
     }
   },
   "tsumago": {
@@ -1013,7 +1013,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "南木曽駅"
+      "to": "妻籠宿本陣"
     }
   },
   "magome": {
@@ -1022,7 +1022,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "中津川駅"
+      "to": "島崎藤村記念館"
     }
   },
   "nagahama": {
@@ -1031,7 +1031,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "長浜駅"
+      "to": "黒壁スクエア"
     }
   },
   "hikone": {
@@ -1040,7 +1040,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "彦根駅"
+      "to": "彦根城"
     }
   },
   "koyasan": {
@@ -1049,7 +1049,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "高野山駅"
+      "to": "奥之院"
     }
   },
   "gero-onsen": {
@@ -1058,7 +1058,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "下呂駅"
+      "to": "噴泉池"
     }
   },
   "naruko-onsen": {
@@ -1067,7 +1067,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "鳴子温泉駅"
+      "to": "鳴子峡"
     }
   },
   "shima-onsen": {
@@ -1076,7 +1076,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "中之条駅"
+      "to": "積善館"
     }
   },
   "hirosaki": {
@@ -1085,7 +1085,7 @@
       "to": "青森空港"
     },
     "mapCTA": {
-      "to": "弘前駅",
+      "to": "弘前城",
       "from": "青森空港"
     }
   },
@@ -1099,7 +1099,7 @@
       "from": "奥入瀬"
     },
     "mapCTA": {
-      "to": "八戸駅",
+      "to": "阿修羅の流れ",
       "from": "青森空港"
     }
   },
@@ -1122,7 +1122,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "別所温泉駅"
+      "to": "北向観音"
     }
   },
   "izushi": {
@@ -1135,7 +1135,7 @@
       "from": "出石"
     },
     "mapCTA": {
-      "to": "豊岡駅"
+      "to": "出石城跡"
     }
   },
   "wakura-onsen": {
@@ -1144,7 +1144,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "和倉温泉駅"
+      "to": "総湯"
     }
   },
   "misasa-onsen": {
@@ -1157,7 +1157,7 @@
       "from": "三朝温泉"
     },
     "mapCTA": {
-      "to": "倉吉駅"
+      "to": "三徳山投入堂"
     }
   },
   "obi": {
@@ -1166,7 +1166,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "飫肥駅"
+      "to": "飫肥城"
     }
   },
   "hitoyoshi": {
@@ -1175,7 +1175,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "人吉駅"
+      "to": "青井阿蘇神社"
     }
   },
   "kamikochi": {
@@ -1193,7 +1193,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "水上駅"
+      "to": "諏訪峡"
     }
   },
   "minami-aso": {
@@ -1206,7 +1206,7 @@
       "from": "南阿蘇"
     },
     "mapCTA": {
-      "to": "熊本駅",
+      "to": "白川水源",
       "from": "阿蘇くまもと空港"
     }
   },
@@ -1216,7 +1216,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "今治駅"
+      "to": "しまなみ海道"
     }
   },
   "ozu": {
@@ -1229,7 +1229,7 @@
       "from": "伊予大洲"
     },
     "mapCTA": {
-      "to": "伊予大洲駅"
+      "to": "大洲城"
     }
   },
   "shakotan": {
@@ -1251,7 +1251,7 @@
       "to": "出雲縁結び空港"
     },
     "mapCTA": {
-      "to": "出雲市駅",
+      "to": "出雲大社",
       "from": "出雲縁結び空港"
     }
   },
@@ -1274,7 +1274,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "吉野駅"
+      "to": "吉野山"
     }
   },
   "kumano": {
@@ -1287,7 +1287,7 @@
       "from": "新宮"
     },
     "mapCTA": {
-      "to": "新宮駅"
+      "to": "熊野那智大社"
     }
   },
   "iriomote": {
@@ -1311,7 +1311,7 @@
       "from": "備中高梁"
     },
     "mapCTA": {
-      "to": "備中高梁駅"
+      "to": "備中松山城"
     }
   },
   "hida-furukawa": {
@@ -1320,7 +1320,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "飛騨古川駅"
+      "to": "瀬戸川と白壁土蔵街"
     }
   },
   "bungo-takada": {
@@ -1333,7 +1333,7 @@
       "from": "豊後高田"
     },
     "mapCTA": {
-      "to": "宇佐駅",
+      "to": "昭和の町",
       "from": "大分空港"
     }
   },
@@ -1343,7 +1343,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "伊豆高原駅"
+      "to": "大室山"
     }
   },
   "tanabe": {
@@ -1352,7 +1352,7 @@
       "to": "南紀白浜空港"
     },
     "mapCTA": {
-      "to": "紀伊田辺駅",
+      "to": "闘鶏神社",
       "from": "南紀白浜空港"
     }
   },
@@ -1366,7 +1366,7 @@
       "from": "土佐清水"
     },
     "mapCTA": {
-      "to": "中村駅"
+      "to": "足摺岬"
     }
   },
   "nichinan": {
@@ -1388,7 +1388,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "門司港駅"
+      "to": "門司港レトロ"
     }
   },
   "itoshima": {
@@ -1401,7 +1401,7 @@
       "from": "筑前前原"
     },
     "mapCTA": {
-      "to": "筑前前原駅"
+      "to": "二見ヶ浦"
     }
   },
   "shimabara": {
@@ -1410,7 +1410,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "島原駅"
+      "to": "島原城"
     }
   },
   "tsuruga": {
@@ -1419,7 +1419,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "敦賀駅"
+      "to": "気比神宮"
     }
   },
   "shijishima": {
@@ -1428,7 +1428,7 @@
       "from": "詫間港"
     },
     "mapCTA": {
-      "to": "詫間駅"
+      "to": "マーガレットの大木"
     }
   },
   "sounkyo": {
@@ -1477,7 +1477,7 @@
       "from": "阿寒湖"
     },
     "mapCTA": {
-      "to": "釧路駅",
+      "to": "マリモ",
       "from": "釧路空港"
     }
   },
@@ -1541,7 +1541,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "米沢駅"
+      "to": "上杉神社"
     }
   },
   "dewa-sanzan": {
@@ -1554,7 +1554,7 @@
       "from": "出羽三山"
     },
     "mapCTA": {
-      "to": "鶴岡駅",
+      "to": "羽黒山五重塔",
       "from": "庄内空港"
     }
   },
@@ -1564,7 +1564,7 @@
       "to": "仙台空港"
     },
     "mapCTA": {
-      "to": "仙台駅",
+      "to": "秋保大滝",
       "from": "仙台空港"
     }
   },
@@ -1574,7 +1574,7 @@
       "to": "青森空港"
     },
     "mapCTA": {
-      "to": "五所川原駅",
+      "to": "立佞武多の館",
       "from": "青森空港"
     }
   },
@@ -1584,7 +1584,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "川越駅"
+      "to": "蔵造りの街並み"
     }
   },
   "nasu": {
@@ -1597,7 +1597,7 @@
       "from": "那須"
     },
     "mapCTA": {
-      "to": "那須塩原駅"
+      "to": "那須岳"
     }
   },
   "choshi": {
@@ -1606,7 +1606,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "銚子駅"
+      "to": "犬吠埼灯台"
     }
   },
   "ashikaga": {
@@ -1615,7 +1615,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "足利駅"
+      "to": "足利学校"
     }
   },
   "shiobara-onsen": {
@@ -1624,7 +1624,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "那須塩原駅"
+      "to": "塩原温泉渓谷"
     }
   },
   "sado-island": {
@@ -1661,7 +1661,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "天竜峡駅"
+      "to": "天竜峡舟下り"
     }
   },
   "suwa": {
@@ -1670,7 +1670,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "上諏訪駅"
+      "to": "諏訪大社"
     }
   },
   "eiheiji": {
@@ -1688,7 +1688,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "小浜駅"
+      "to": "小浜西組（重伝建）"
     }
   },
   "okuhida-onsen": {
@@ -1715,7 +1715,7 @@
       "from": "南伊豆"
     },
     "mapCTA": {
-      "to": "下田駅"
+      "to": "石廊崎"
     }
   },
   "echizen": {
@@ -1728,7 +1728,7 @@
       "from": "越前市"
     },
     "mapCTA": {
-      "to": "武生駅"
+      "to": "越前海岸（水仙）"
     }
   },
   "ito": {
@@ -1737,7 +1737,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "伊東駅"
+      "to": "伊東温泉"
     }
   },
   "iga": {
@@ -1746,7 +1746,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "上野市駅"
+      "to": "伊賀流忍者博物館"
     }
   },
   "kashihara": {
@@ -1755,7 +1755,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "橿原神宮前駅"
+      "to": "橿原神宮"
     }
   },
   "totsukawa": {
@@ -1768,7 +1768,7 @@
       "from": "十津川"
     },
     "mapCTA": {
-      "to": "五条駅"
+      "to": "谷瀬の吊り橋"
     }
   },
   "maizuru": {
@@ -1777,7 +1777,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "東舞鶴駅"
+      "to": "舞鶴引揚記念館"
     }
   },
   "asuka": {
@@ -1803,7 +1803,7 @@
       "from": "大山"
     },
     "mapCTA": {
-      "to": "米子駅",
+      "to": "大山頂上",
       "from": "米子空港"
     }
   },
@@ -1830,7 +1830,7 @@
       "from": "石見銀山"
     },
     "mapCTA": {
-      "to": "大田市駅"
+      "to": "龍源寺間歩"
     }
   },
   "iwakuni": {
@@ -1839,7 +1839,7 @@
       "to": "岩国錦帯橋空港"
     },
     "mapCTA": {
-      "to": "岩国駅",
+      "to": "錦帯橋",
       "from": "岩国錦帯橋空港"
     }
   },
@@ -1849,7 +1849,7 @@
       "to": "米子空港"
     },
     "mapCTA": {
-      "to": "倉吉駅",
+      "to": "白壁土蔵群",
       "from": "米子空港"
     }
   },
@@ -1863,7 +1863,7 @@
       "from": "大畠"
     },
     "mapCTA": {
-      "to": "大畠駅",
+      "to": "片添ヶ浜",
       "from": "岩国錦帯橋空港"
     }
   },
@@ -1877,7 +1877,7 @@
       "from": "江川崎"
     },
     "mapCTA": {
-      "to": "江川崎駅",
+      "to": "佐田沈下橋",
       "from": "高知空港"
     }
   },
@@ -1891,7 +1891,7 @@
       "from": "宿毛"
     },
     "mapCTA": {
-      "to": "宿毛駅",
+      "to": "柏島海岸",
       "from": "高知空港"
     }
   },
@@ -1901,7 +1901,7 @@
       "to": "松山空港"
     },
     "mapCTA": {
-      "to": "伊予西条駅",
+      "to": "西条うちぬき広場",
       "from": "松山空港"
     }
   },
@@ -1915,7 +1915,7 @@
       "from": "愛南"
     },
     "mapCTA": {
-      "to": "宇和島駅",
+      "to": "一本松温泉あけぼの荘",
       "from": "松山空港"
     }
   },
@@ -1929,7 +1929,7 @@
       "from": "豊後竹田"
     },
     "mapCTA": {
-      "to": "豊後竹田駅",
+      "to": "岡城跡",
       "from": "大分空港"
     }
   },
@@ -1939,7 +1939,7 @@
       "to": "大分空港"
     },
     "mapCTA": {
-      "to": "臼杵駅",
+      "to": "臼杵石仏（国宝）",
       "from": "大分空港"
     }
   },
@@ -1949,7 +1949,7 @@
       "to": "大分空港"
     },
     "mapCTA": {
-      "to": "日田駅",
+      "to": "豆田町（重伝建）",
       "from": "大分空港"
     }
   },
@@ -1963,7 +1963,7 @@
       "from": "波佐見"
     },
     "mapCTA": {
-      "to": "川棚温泉駅",
+      "to": "西の原",
       "from": "長崎空港"
     }
   },
@@ -1973,7 +1973,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "武雄温泉駅"
+      "to": "武雄温泉楼門"
     }
   },
   "kitsuki": {
@@ -1982,7 +1982,7 @@
       "to": "大分空港"
     },
     "mapCTA": {
-      "to": "杵築駅",
+      "to": "杵築城",
       "from": "大分空港"
     }
   },
@@ -2039,7 +2039,7 @@
       "from": "菊池"
     },
     "mapCTA": {
-      "to": "熊本駅",
+      "to": "菊池渓谷",
       "from": "阿蘇くまもと空港"
     }
   },
@@ -2142,7 +2142,7 @@
       "from": "松代"
     },
     "mapCTA": {
-      "to": "長野駅"
+      "to": "松代城跡"
     }
   },
   "iiyama": {
@@ -2164,7 +2164,7 @@
       "to": "岡山桃太郎空港"
     },
     "mapCTA": {
-      "to": "矢掛駅",
+      "to": "矢掛本陣（国指定史跡）",
       "from": "岡山桃太郎空港"
     }
   },
@@ -2174,7 +2174,7 @@
       "to": "岡山桃太郎空港"
     },
     "mapCTA": {
-      "to": "津山駅",
+      "to": "津山城（鶴山公園）",
       "from": "岡山桃太郎空港"
     }
   },
@@ -2188,7 +2188,7 @@
       "from": "剣山"
     },
     "mapCTA": {
-      "to": "貞光駅",
+      "to": "剣山山頂",
       "from": "徳島空港"
     }
   },
@@ -2198,7 +2198,7 @@
       "to": "宮崎空港"
     },
     "mapCTA": {
-      "to": "延岡駅",
+      "to": "延岡城跡",
       "from": "宮崎空港"
     }
   },
@@ -2208,7 +2208,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "釜石駅"
+      "to": "根浜海岸"
     }
   },
   "ofunato": {
@@ -2217,7 +2217,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大船渡駅"
+      "to": "碁石海岸"
     }
   },
   "kuji": {
@@ -2226,7 +2226,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "久慈駅"
+      "to": "久慈琥珀博物館"
     }
   },
   "wakkanai": {
@@ -2295,7 +2295,7 @@
       "from": "新花巻"
     },
     "mapCTA": {
-      "to": "新花巻駅",
+      "to": "宮沢賢治記念館",
       "from": "花巻空港"
     }
   },
@@ -2333,7 +2333,7 @@
       "to": "山形空港"
     },
     "mapCTA": {
-      "to": "山寺駅",
+      "to": "立石寺",
       "from": "山形空港"
     }
   },
@@ -2343,7 +2343,7 @@
       "to": "仙台空港"
     },
     "mapCTA": {
-      "to": "気仙沼駅",
+      "to": "気仙沼港",
       "from": "仙台空港"
     }
   },
@@ -2362,7 +2362,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "片瀬江ノ島駅"
+      "to": "江島神社"
     }
   },
   "chichibu": {
@@ -2371,7 +2371,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "秩父駅"
+      "to": "秩父神社"
     }
   },
   "oarai": {
@@ -2380,7 +2380,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大洗駅"
+      "to": "大洗磯前神社"
     }
   },
   "sano": {
@@ -2389,7 +2389,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "佐野駅"
+      "to": "佐野厄除大師"
     }
   },
   "gujo-hachiman": {
@@ -2398,7 +2398,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "郡上八幡駅"
+      "to": "郡上八幡城"
     }
   },
   "narai-juku": {
@@ -2407,7 +2407,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "奈良井駅"
+      "to": "奈良井宿本陣跡"
     }
   },
   "itoigawa": {
@@ -2416,7 +2416,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "糸魚川駅"
+      "to": "フォッサマグナミュージアム"
     }
   },
   "murakami": {
@@ -2425,7 +2425,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "村上駅"
+      "to": "村上城跡"
     }
   },
   "shima": {
@@ -2438,7 +2438,7 @@
       "from": "賢島"
     },
     "mapCTA": {
-      "to": "賢島駅"
+      "to": "英虞湾"
     }
   },
   "ogaki": {
@@ -2447,7 +2447,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大垣駅"
+      "to": "大垣城"
     }
   },
   "echizen-kaigan": {
@@ -2482,7 +2482,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "長岡駅"
+      "to": "長岡花火"
     }
   },
   "tanba-sasayama": {
@@ -2491,7 +2491,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "篠山口駅"
+      "to": "篠山城跡"
     }
   },
   "nachikatsuura": {
@@ -2504,7 +2504,7 @@
       "from": "紀伊勝浦"
     },
     "mapCTA": {
-      "to": "紀伊勝浦駅"
+      "to": "那智の大滝"
     }
   },
   "kumano-hongu": {
@@ -2526,7 +2526,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "赤穂駅"
+      "to": "赤穂城跡"
     }
   },
   "fushimi": {
@@ -2535,7 +2535,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "伏見稲荷駅"
+      "to": "伏見稲荷大社"
     }
   },
   "tomonoura": {
@@ -2553,7 +2553,7 @@
       "to": "米子空港"
     },
     "mapCTA": {
-      "to": "境港駅",
+      "to": "水木しげるロード",
       "from": "米子空港"
     }
   },
@@ -2576,7 +2576,7 @@
       "from": "笠岡港"
     },
     "mapCTA": {
-      "to": "笠岡駅"
+      "to": "笠岡諸島"
     }
   },
   "tsunoshima": {
@@ -2598,7 +2598,7 @@
       "to": "松山空港"
     },
     "mapCTA": {
-      "to": "道後温泉駅",
+      "to": "道後温泉本館",
       "from": "松山空港"
     }
   },
@@ -2608,7 +2608,7 @@
       "to": "高松空港"
     },
     "mapCTA": {
-      "to": "丸亀駅",
+      "to": "丸亀城",
       "from": "高松空港"
     }
   },
@@ -2632,7 +2632,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "西鉄柳川駅"
+      "to": "柳川川下り"
     }
   },
   "hyuga": {
@@ -2741,7 +2741,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "倶知安駅"
+      "to": "グラン・ヒラフ"
     }
   },
   "daisetsuzan": {
@@ -2759,7 +2759,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "白老駅"
+      "to": "ウポポイ（民族共生象徴空間）"
     }
   },
   "tomamu": {
@@ -2768,7 +2768,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "トマム駅"
+      "to": "雲海テラス"
     }
   },
   "towada": {
@@ -2813,7 +2813,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "北上駅"
+      "to": "展勝地"
     }
   },
   "kinugawa-onsen": {
@@ -2822,7 +2822,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "鬼怒川温泉駅"
+      "to": "鬼怒川温泉街"
     }
   },
   "oze": {
@@ -2840,7 +2840,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "つくば駅"
+      "to": "筑波山"
     }
   },
   "kasama": {
@@ -2849,7 +2849,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "笠間駅"
+      "to": "笠間稲荷神社"
     }
   },
   "naritasan": {
@@ -2858,7 +2858,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "成田駅"
+      "to": "成田山新勝寺"
     }
   },
   "kujukuri": {
@@ -2880,7 +2880,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "三崎口駅"
+      "to": "城ヶ島"
     }
   },
   "oku-tama": {
@@ -2889,7 +2889,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "奥多摩駅"
+      "to": "奥多摩湖"
     }
   },
   "jigokudani": {
@@ -2898,7 +2898,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "湯田中駅"
+      "to": "地獄谷野猿公苑"
     }
   },
   "tateshina": {
@@ -2916,7 +2916,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "越後湯沢駅"
+      "to": "石打丸山スキー場"
     }
   },
   "fujinomiya": {
@@ -2925,7 +2925,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "富士宮駅"
+      "to": "富士山本宮浅間大社"
     }
   },
   "norikura": {
@@ -2943,7 +2943,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "常滑駅"
+      "to": "やきもの散歩道"
     }
   },
   "korankei": {
@@ -2965,7 +2965,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "内海駅"
+      "to": "師崎港"
     }
   },
   "arashiyama": {
@@ -2974,7 +2974,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "嵐山駅"
+      "to": "竹林の道"
     }
   },
   "shigaraki": {
@@ -2983,7 +2983,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "信楽駅"
+      "to": "信楽焼窯元"
     }
   },
   "dorogawa-onsen": {
@@ -3001,7 +3001,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "松阪駅"
+      "to": "松阪城跡"
     }
   },
   "sakai": {
@@ -3010,7 +3010,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "堺東駅"
+      "to": "仁徳天皇陵古墳"
     }
   },
   "ama-island": {
@@ -3037,7 +3037,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "柳井駅"
+      "to": "白壁の街並み"
     }
   },
   "oki-island": {
@@ -3104,7 +3104,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "阿南駅"
+      "to": "大浜海岸（アカウミガメ産卵地）"
     }
   },
   "shikoku-karst": {
@@ -3126,7 +3126,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "青島駅"
+      "to": "青島神社"
     }
   },
   "yamaga": {
@@ -3144,7 +3144,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "吉野ヶ里公園駅"
+      "to": "吉野ヶ里歴史公園"
     }
   },
   "kunisaki": {
@@ -3288,7 +3288,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "白河駅"
+      "to": "小峰城"
     }
   },
   "kitakata": {
@@ -3297,7 +3297,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "喜多方駅"
+      "to": "蔵のまち"
     }
   },
   "koriyama": {
@@ -3306,7 +3306,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "郡山駅"
+      "to": "開成山公園"
     }
   },
   "ryusendo": {
@@ -3328,7 +3328,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "一ノ関駅"
+      "to": "厳美渓"
     }
   },
   "akita-oga": {
@@ -3350,7 +3350,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "象潟駅"
+      "to": "蚶満寺"
     }
   },
   "gassan": {
@@ -3372,7 +3372,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "さくらんぼ東根駅"
+      "to": "東根温泉"
     }
   },
   "akakura-onsen": {
@@ -3394,7 +3394,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "湯河原駅"
+      "to": "湯河原温泉街"
     }
   },
   "yokosuka": {
@@ -3403,7 +3403,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "横須賀駅"
+      "to": "猿島"
     }
   },
   "mishima": {
@@ -3412,7 +3412,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "三島駅"
+      "to": "三嶋大社"
     }
   },
   "numazu": {
@@ -3421,7 +3421,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "沼津駅"
+      "to": "沼津港深海水族館"
     }
   },
   "hamamatsu": {
@@ -3430,7 +3430,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "浜松駅"
+      "to": "浜名湖"
     }
   },
   "kakegawa": {
@@ -3439,7 +3439,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "掛川駅"
+      "to": "掛川城"
     }
   },
   "okazaki": {
@@ -3448,7 +3448,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "岡崎駅"
+      "to": "岡崎城"
     }
   },
   "toyohashi": {
@@ -3457,7 +3457,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "豊橋駅"
+      "to": "豊川稲荷（近郊）"
     }
   },
   "tajimi": {
@@ -3466,7 +3466,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "多治見駅"
+      "to": "本町オリベストリート"
     }
   },
   "togakushi": {
@@ -3488,7 +3488,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "近江八幡駅"
+      "to": "八幡堀"
     }
   },
   "takarazuka": {
@@ -3497,7 +3497,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "宝塚駅"
+      "to": "宝塚大劇場"
     }
   },
   "akashi": {
@@ -3506,7 +3506,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "明石駅"
+      "to": "明石市立天文科学館"
     }
   },
   "naruto": {
@@ -3515,7 +3515,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "鳴門駅"
+      "to": "渦の道"
     }
   },
   "innoshima": {
@@ -3537,7 +3537,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "三原駅"
+      "to": "三原城跡"
     }
   },
   "hofu": {
@@ -3546,7 +3546,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "防府駅"
+      "to": "防府天満宮"
     }
   },
   "karatsu": {
@@ -3555,7 +3555,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "唐津駅"
+      "to": "唐津城"
     }
   },
   "dazaifu": {
@@ -3564,7 +3564,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "太宰府駅"
+      "to": "太宰府天満宮"
     }
   },
   "nakatsu": {
@@ -3573,7 +3573,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "中津駅"
+      "to": "中津城"
     }
   },
   "nemuro": {
@@ -3595,7 +3595,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "東室蘭駅"
+      "to": "地球岬"
     }
   },
   "tomakomai": {
@@ -3604,7 +3604,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "苫小牧駅"
+      "to": "ウトナイ湖野生鳥獣保護センター"
     }
   },
   "ishinomaki": {
@@ -3613,7 +3613,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "石巻駅"
+      "to": "石ノ森萬画館"
     }
   },
   "hitachi": {
@@ -3622,7 +3622,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "日立駅"
+      "to": "日立駅（ガラス張りの駅）"
     }
   },
   "kashima": {
@@ -3631,7 +3631,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "鹿島神宮駅"
+      "to": "鹿島神宮"
     }
   },
   "shiraoishi": {
@@ -3640,7 +3640,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "白石蔵王駅"
+      "to": "白石城"
     }
   },
   "noshiro": {
@@ -3649,7 +3649,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "能代駅"
+      "to": "風の松原"
     }
   },
   "tendou": {
@@ -3658,7 +3658,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "天童駅"
+      "to": "舞鶴山公園（人間将棋）"
     }
   },
   "shonai": {
@@ -3667,7 +3667,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "鶴岡駅"
+      "to": "致道博物館"
     }
   },
   "ogata": {
@@ -3689,7 +3689,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "陸前高田駅"
+      "to": "奇跡の一本松"
     }
   },
   "sanriku-miyako": {
@@ -3707,7 +3707,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "本宮駅"
+      "to": "安達太良山"
     }
   },
   "mizusawa": {
@@ -3716,7 +3716,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "水沢江刺駅"
+      "to": "胆沢城跡"
     }
   },
   "ichinoseki-geibikei": {
@@ -3734,7 +3734,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "角館駅"
+      "to": "田沢湖"
     }
   },
   "tendo": {
@@ -3743,7 +3743,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "寒河江駅"
+      "to": "慈恩寺"
     }
   },
   "nyuzen": {
@@ -3752,7 +3752,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "入善駅"
+      "to": "舟見城址館"
     }
   },
   "nanao": {
@@ -3761,7 +3761,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "七尾駅"
+      "to": "和倉温泉"
     }
   },
   "fukuchiyama": {
@@ -3770,7 +3770,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "福知山駅"
+      "to": "福知山城"
     }
   },
   "koka": {
@@ -3779,7 +3779,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "甲賀駅"
+      "to": "甲賀流忍術屋敷"
     }
   },
   "tondabayashi": {
@@ -3788,7 +3788,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "富田林駅"
+      "to": "富田林寺内町"
     }
   },
   "kishiwada": {
@@ -3797,7 +3797,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "岸和田駅"
+      "to": "岸和田城"
     }
   },
   "amagasaki": {
@@ -3806,7 +3806,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "尼崎駅"
+      "to": "尼崎城"
     }
   },
   "nishiwaki": {
@@ -3815,7 +3815,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "西脇市駅"
+      "to": "日本のへそ公園"
     }
   },
   "nagi": {
@@ -3837,7 +3837,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "西条駅"
+      "to": "西条酒蔵通り"
     }
   },
   "fukuyama": {
@@ -3846,7 +3846,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "福山駅"
+      "to": "福山城"
     }
   },
   "otoyo": {
@@ -3855,7 +3855,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "大杉駅"
+      "to": "日本一の大杉"
     },
     "subCTA": {
       "type": "rental",
@@ -3868,7 +3868,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "宿毛駅"
+      "to": "ビオスの里（沖の島）"
     }
   },
   "miyoshi-tokushima": {
@@ -3877,7 +3877,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "阿波池田駅"
+      "to": "かずら橋"
     }
   },
   "oita-city": {
@@ -3886,7 +3886,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "大分駅"
+      "to": "高崎山自然動物園"
     }
   },
   "yuwaku-onsen": {
@@ -3921,7 +3921,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "みさき公園駅"
+      "to": "友ヶ島"
     }
   },
   "kitakyushu": {
@@ -3930,7 +3930,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "小倉駅"
+      "to": "小倉城"
     }
   },
   "asakura": {
@@ -3939,7 +3939,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "甘木駅"
+      "to": "秋月城跡"
     }
   },
   "ebino": {
@@ -3961,7 +3961,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "人吉駅"
+      "to": "球磨川下り"
     }
   },
   "minamikyushu": {
@@ -4063,7 +4063,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "新宮駅"
+      "to": "熊野速玉大社"
     }
   },
   "himeshima": {
@@ -4090,7 +4090,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "上越妙高駅"
+      "to": "春日山城跡"
     }
   },
   "myoko": {
@@ -4112,7 +4112,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "函館駅"
+      "to": "函館山夜景"
     }
   },
   "hokkaido-asahikawa": {
@@ -4121,7 +4121,7 @@
       "to": "旭川空港"
     },
     "mapCTA": {
-      "to": "旭川駅",
+      "to": "旭山動物園",
       "from": "旭川空港"
     }
   },
@@ -4131,7 +4131,7 @@
       "to": "釧路空港"
     },
     "mapCTA": {
-      "to": "釧路駅",
+      "to": "釧路湿原",
       "from": "釧路空港"
     }
   },
@@ -4141,7 +4141,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "余市駅"
+      "to": "ニッカウヰスキー余市蒸溜所"
     }
   },
   "akkeshi": {
@@ -4204,7 +4204,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "福島駅"
+      "to": "吾妻小富士"
     }
   },
   "omagari": {
@@ -4213,7 +4213,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大曲駅"
+      "to": "大曲花火競技大会"
     }
   },
   "shinjou": {
@@ -4222,7 +4222,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "新庄駅"
+      "to": "新庄まつり"
     }
   },
   "nagai": {
@@ -4240,7 +4240,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "横浜駅"
+      "to": "みなとみらい21"
     }
   },
   "ibaraki-mito": {
@@ -4249,7 +4249,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "水戸駅"
+      "to": "偕楽園"
     }
   },
   "utsunomiya": {
@@ -4258,7 +4258,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "宇都宮駅"
+      "to": "大谷資料館"
     }
   },
   "takasaki": {
@@ -4267,7 +4267,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "高崎駅"
+      "to": "高崎白衣大観音"
     }
   },
   "odawara": {
@@ -4276,7 +4276,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "小田原駅"
+      "to": "小田原城"
     }
   },
   "sawara": {
@@ -4285,7 +4285,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "佐原駅"
+      "to": "佐原の町並み"
     }
   },
   "nokogiriyama": {
@@ -4303,7 +4303,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "勝浦駅"
+      "to": "勝浦朝市"
     }
   },
   "azumino": {
@@ -4321,7 +4321,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "飯田駅"
+      "to": "元善光寺"
     }
   },
   "nakatsugawa": {
@@ -4330,7 +4330,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "中津川駅"
+      "to": "栗きんとん老舗街"
     }
   },
   "yaizu": {
@@ -4339,7 +4339,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "焼津駅"
+      "to": "焼津さかなセンター"
     }
   },
   "hamanako": {
@@ -4357,7 +4357,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "蒲郡駅"
+      "to": "竹島"
     }
   },
   "toyota-city": {
@@ -4366,7 +4366,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "豊田市駅"
+      "to": "香嵐渓（足助）"
     }
   },
   "otsu-shiga": {
@@ -4375,7 +4375,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "大津駅"
+      "to": "比叡山延暦寺"
     }
   },
   "kusatsu-shiga": {
@@ -4384,7 +4384,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "草津駅"
+      "to": "草津宿本陣"
     }
   },
   "takashima-shiga": {
@@ -4415,7 +4415,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "尾鷲駅"
+      "to": "尾鷲港"
     }
   },
   "gobo": {
@@ -4424,7 +4424,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "御坊駅"
+      "to": "日高川"
     }
   },
   "kushimoto": {
@@ -4442,7 +4442,7 @@
       "to": "出雲空港"
     },
     "mapCTA": {
-      "to": "松江駅",
+      "to": "松江城",
       "from": "出雲空港"
     }
   },
@@ -4452,7 +4452,7 @@
       "to": "石見空港"
     },
     "mapCTA": {
-      "to": "浜田駅",
+      "to": "浜田港",
       "from": "石見空港"
     }
   },
@@ -4462,7 +4462,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "呉駅"
+      "to": "大和ミュージアム"
     }
   },
   "miyoshi-hiroshima": {
@@ -4471,7 +4471,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "三次駅"
+      "to": "霧の海展望台"
     }
   },
   "nagato-yamaguchi": {
@@ -4506,7 +4506,7 @@
       "to": "高松空港"
     },
     "mapCTA": {
-      "to": "高松駅",
+      "to": "栗林公園",
       "from": "高松空港"
     }
   },
@@ -4516,7 +4516,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "坂出駅"
+      "to": "瀬戸大橋記念館"
     }
   },
   "tosa-city": {
@@ -4538,7 +4538,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "観音寺駅"
+      "to": "琴弾公園・銭形砂絵"
     }
   },
   "fukuoka-city": {
@@ -4547,7 +4547,7 @@
       "to": "福岡空港"
     },
     "mapCTA": {
-      "to": "博多駅",
+      "to": "博多屋台",
       "from": "福岡空港"
     }
   },
@@ -4557,7 +4557,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "久留米駅"
+      "to": "水天宮（久留米）"
     }
   },
   "yatsushiro": {
@@ -4566,7 +4566,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "八代駅"
+      "to": "八代城跡"
     }
   },
   "oguni-kumamoto": {
@@ -4588,7 +4588,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "出水駅"
+      "to": "ツル観察センター"
     }
   },
   "makurazaki": {
@@ -4597,7 +4597,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "枕崎駅"
+      "to": "枕崎港"
     }
   },
   "miyakonojo": {
@@ -4606,7 +4606,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "都城駅"
+      "to": "霧島神宮（近隣）"
     }
   },
   "nanjo-okinawa": {
@@ -4647,7 +4647,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "土佐久礼駅"
+      "to": "久礼大正市場"
     }
   },
   "ikata": {
@@ -4695,7 +4695,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "井原駅"
+      "to": "八塔寺ふるさと村"
     }
   },
   "niimi": {
@@ -4704,7 +4704,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "新見駅"
+      "to": "満奇洞"
     }
   },
   "uda-nara": {
@@ -4744,7 +4744,7 @@
       "to": "米子鬼太郎空港"
     },
     "mapCTA": {
-      "to": "米子駅",
+      "to": "皆生温泉",
       "from": "米子鬼太郎空港"
     }
   },
@@ -4776,7 +4776,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "上野市駅"
+      "to": "伊賀流忍者博物館"
     }
   },
   "miyanoshita": {
@@ -4785,7 +4785,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "宮ノ下駅"
+      "to": "富士屋ホテル"
     }
   },
   "shibu-onsen": {
@@ -4838,7 +4838,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "越前大野駅"
+      "to": "越前大野城"
     }
   },
   "katsuyama": {
@@ -4847,7 +4847,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "勝山駅"
+      "to": "福井県立恐竜博物館"
     }
   },
   "nomaike": {
@@ -4956,7 +4956,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "大槌駅"
+      "to": "吉里吉里海岸"
     }
   },
   "ichinoseki-hiraizumi2": {
@@ -4965,7 +4965,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "平泉駅"
+      "to": "中尊寺金色堂"
     }
   },
   "numata": {
@@ -4974,7 +4974,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "沼田駅"
+      "to": "沼田城跡"
     }
   },
   "tsuchiura": {
@@ -4983,7 +4983,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "土浦駅"
+      "to": "霞ヶ浦サイクリングロード"
     }
   },
   "oshika": {
@@ -5005,7 +5005,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "上総一ノ宮駅"
+      "to": "玉前神社"
     }
   },
   "miyota": {
@@ -5014,7 +5014,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "御代田駅"
+      "to": "浅間山眺望スポット"
     }
   },
   "saijo-hiroshima": {
@@ -5023,7 +5023,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "西条駅"
+      "to": "西条酒蔵通り"
     }
   },
   "ryoishi": {
@@ -5032,7 +5032,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "綾里駅"
+      "to": "綾里湾"
     }
   },
   "noheji": {
@@ -5041,7 +5041,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "野辺地駅"
+      "to": "野辺地防雪原林"
     }
   },
   "tobetsu": {
@@ -5050,7 +5050,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "石狩当別駅"
+      "to": "スウェーデンヒルズ"
     }
   },
   "fukaura": {
@@ -5068,7 +5068,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "伊勢崎駅"
+      "to": "伊勢崎市華蔵寺公園"
     }
   },
   "matsumoto-kaido": {
@@ -5077,7 +5077,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "塩尻駅"
+      "to": "塩尻ワイナリー"
     }
   },
   "aizu-misato": {
@@ -5086,7 +5086,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "会津本郷駅"
+      "to": "伊佐須美神社"
     }
   },
   "tateyama-toyama": {
@@ -5143,7 +5143,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "八雲駅"
+      "to": "八雲あんどん祭り"
     }
   },
   "susaki": {
@@ -5152,7 +5152,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "須崎駅"
+      "to": "鍋焼きラーメン（橋本食堂）"
     }
   },
   "ube": {
@@ -5161,7 +5161,7 @@
       "to": "山口宇部空港"
     },
     "mapCTA": {
-      "to": "宇部新川駅",
+      "to": "ときわ公園野外彫刻",
       "from": "山口宇部空港"
     }
   },
@@ -5171,7 +5171,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "糸魚川駅"
+      "to": "フォッサマグナミュージアム"
     }
   },
   "agematsu": {
@@ -5180,7 +5180,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "上松駅"
+      "to": "寝覚の床"
     }
   },
   "unzen2": {
@@ -5202,7 +5202,7 @@
       "provider": "e5489"
     },
     "mapCTA": {
-      "to": "伊野駅"
+      "to": "土佐和紙工芸村QRAUD"
     }
   },
   "hiji": {
@@ -5211,7 +5211,7 @@
       "provider": "jrkyushu"
     },
     "mapCTA": {
-      "to": "日出駅"
+      "to": "暘谷城跡（日出城）"
     }
   },
   "tsunan": {
@@ -5220,7 +5220,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "津南駅"
+      "to": "ひまわり広場（7月下旬）"
     }
   },
   "kurobe": {
@@ -5229,7 +5229,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "黒部駅"
+      "to": "宇奈月温泉"
     }
   },
   "tsuruoka-kinzan": {
@@ -5238,7 +5238,7 @@
       "provider": "ekinet"
     },
     "mapCTA": {
-      "to": "金山駅"
+      "to": "金山の景観（重文化財）"
     }
   },
   "tomari-okinawa": {

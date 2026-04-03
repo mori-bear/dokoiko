@@ -10,7 +10,7 @@ import {
   decodeUrlParams,
   encodeStateToUrl,
   openXShare,
-  copyShareUrl,
+  copyShareText,
   updatePageMeta,
 } from './src/share.js';
 
@@ -166,11 +166,12 @@ function bindShareHandlers() {
 
     if (copyBtn) {
       try {
-        await copyShareUrl();
+        const city = state.pool[state.poolIndex];
+        if (city) await copyShareText(city, state.departure);
         showCopyFeedback(copyBtn);
       } catch {
         copyBtn.textContent = '⚠ コピー失敗';
-        setTimeout(() => { copyBtn.textContent = '📋 URLをコピー'; }, 2000);
+        setTimeout(() => { copyBtn.textContent = '📋 シェアテキストをコピー'; }, 2000);
       }
     }
   });

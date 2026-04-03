@@ -1270,12 +1270,32 @@ function buildCityTypeRoute(city, departure, fromCity) {
     }
   } else {
     const hasLocal = !isAccessSameAsDest(accessSt, label) || !!city.mapPoint || !!city.finalPoint;
-    stepGroups.push({
-      type: 'step-group',
-      stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
-      cta: null,
-      caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
-    });
+
+    // hubStation が出発地駅・到着駅と異なる場合は 2 ステップに分割（乗換表示）
+    const hubSt = city.hubStation ?? null;
+    const useHubSplit = hubSt && hubSt !== origin && hubSt !== accessSt;
+
+    if (useHubSplit) {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(0)}  ${origin} → ${hubSt}（鉄道）`,
+        cta: null,
+        caution: '▼ 乗り換え',
+      });
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(1)}  ${hubSt} → ${accessSt}（鉄道）`,
+        cta: null,
+        caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
+      });
+    } else {
+      stepGroups.push({
+        type: 'step-group',
+        stepLabel: `${stepIdx(stepGroups.length)}  ${origin} → ${accessSt}（鉄道）`,
+        cta: null,
+        caution: hasLocal ? `▼ ここで下車。この先は現地移動` : null,
+      });
+    }
     if (hasLocal) {
       stepGroups.push(...buildLastSteps(accessSt, city, stepGroups.length));
     }

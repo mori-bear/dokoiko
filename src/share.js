@@ -52,13 +52,7 @@ export function buildShareText(city, departure) {
     : '旅';
   const url = location.href;
 
-  return `【どこ行こ？で決めた】
-${departure} → ${name}
-
-${tags}
-
-👇ルートはこちら
-${url}`;
+  return `どこ行こ？で決めた\n\n${departure} → ${name}\n${tags}\n\n${url}`;
 }
 
 /** Xシェアウィンドウを開く */
@@ -68,15 +62,15 @@ export function openXShare(city, departure) {
   window.open(`https://x.com/intent/tweet?text=${encoded}`, '_blank', 'noopener,noreferrer');
 }
 
-/** URLをクリップボードにコピー */
-export async function copyShareUrl() {
-  const url = location.href;
+/** シェアテキストをクリップボードにコピー */
+export async function copyShareText(city, departure) {
+  const text = buildShareText(city, departure);
   if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(text);
   } else {
     // フォールバック（古いブラウザ・非HTTPS）
     const el = document.createElement('textarea');
-    el.value = url;
+    el.value = text;
     el.style.cssText = 'position:fixed;top:-9999px;left:-9999px';
     document.body.appendChild(el);
     el.select();

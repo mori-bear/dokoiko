@@ -36183,7 +36183,7 @@
   },
   {
     "id": "ono-fukui",
-    "name": "大野",
+    "name": "越前大野",
     "type": "destination",
     "region": "中部",
     "hub": null,
@@ -36251,7 +36251,10 @@
         }
       ]
     },
-    "fallbackCity": "敦賀"
+    "fallbackCity": "敦賀",
+    "aliases": [
+      "大野"
+    ]
   },
   {
     "id": "katsuyama",

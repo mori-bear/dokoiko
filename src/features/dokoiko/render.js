@@ -1040,7 +1040,7 @@ function buildShareBlock() {
         📤 Xでシェア
       </button>
       <button class="btn-copy" id="share-copy-btn">
-        📋 URLをコピー
+        📋 シェアテキストをコピー
       </button>
     </div>
   `;

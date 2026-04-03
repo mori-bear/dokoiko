@@ -1236,6 +1236,44 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8j] routes データ整合性チェック
+     - mapCTA.to が駅名（〜駅）になっていないか
+     - mainCTA が設定されている
+  ─────────────────────────────── */
+  {
+    const ROUTES_DATA = JSON.parse(fs.readFileSync('./src/data/routes.json', 'utf8'));
+    const sc = new Scorecard('[8j] routes整合性');
+
+    const mapCtaStation = [];
+    const noMainCta = [];
+
+    DESTS.forEach(d => {
+      const r = ROUTES_DATA[d.id];
+      if (!r) return;
+      if (r.mapCTA?.to?.endsWith('駅')) {
+        mapCtaStation.push(`${d.id}(${r.mapCTA.to})`);
+      }
+      if (!r.mainCTA?.type) {
+        noMainCta.push(d.id);
+      }
+    });
+
+    sc.check(mapCtaStation.length === 0,
+      mapCtaStation.length === 0
+        ? `mapCTA.to が駅名: ゼロ件`
+        : `mapCTA.to が駅名 ${mapCtaStation.length}件: ${mapCtaStation.slice(0, 5).join(', ')}`
+    );
+    sc.check(noMainCta.length === 0,
+      noMainCta.length === 0
+        ? `mainCTA 未設定: ゼロ件`
+        : `mainCTA 未設定 ${noMainCta.length}件: ${noMainCta.slice(0, 5).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');
