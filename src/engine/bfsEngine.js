@@ -249,3 +249,28 @@ export function buildRoute(departure, destination) {
 
   return steps;
 }
+
+/**
+ * 幹線区間のみ BFS でルートを生成する（hub:departure → hub:gateway）。
+ * Gateway DB と組み合わせて使用。
+ * ローカル区間・最終地点は呼び出し側（routeResolver.js）が追加する。
+ *
+ * @param {string} departure       — 出発都市名（例: '東京'）
+ * @param {string} gatewayStation  — ゲートウェイ駅名（例: '福山駅'）
+ * @returns {Array} — step 配列。経路なし・グラフ外の場合は空配列を返す
+ */
+export function buildTrunkRoute(departure, gatewayStation) {
+  const fromId = `hub:${departure}`;
+  // "福山駅" → "hub:福山", "新大阪駅" → "hub:新大阪" など
+  const gwBase = gatewayStation.replace(/駅$/, '');
+  const toId   = `hub:${gwBase}`;
+
+  if (!GRAPH_DATA.nodes[fromId] || !GRAPH_DATA.nodes[toId]) return [];
+  if (fromId === toId) return []; // 出発地 = gateway → 幹線ステップ不要
+
+  const path = findPath(fromId, toId);
+  if (!path) return [];
+
+  const steps = pathToSteps(path, departure);
+  return steps;
+}
