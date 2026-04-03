@@ -33,8 +33,9 @@ import {
   AIRPORT_HUB_GATEWAY,
   resolveMapMode,
 } from './linkBuilder.js';
-import { buildRoute } from '../engine/bfsEngine.js';
-import { loadJson } from '../lib/loadJson.js';
+import { buildRoute }     from '../engine/bfsEngine.js';
+import { resolveRoute }   from '../engine/routeResolver.js';
+import { loadJson }       from '../lib/loadJson.js';
 
 /* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
 const [PORTS_DATA, SPOT_ACCESS_DATA, ROUTES_DATA] = await Promise.all([
@@ -260,19 +261,34 @@ function isIcRail(step) {
 function stepTypeLabel(type) {
   const MAP = {
     shinkansen: '新幹線', rail: '電車',  flight: '飛行機',
-    car: 'レンタカー',    ferry: 'フェリー', bus: 'バス', localMove: 'ローカル移動',
+    car: 'レンタカー',    ferry: 'フェリー', bus: 'バス', localMove: '徒歩',
   };
   return MAP[type] ?? '';
 }
 
-/** 交通種別を表示用に正規化（列車名・路線名は非表示） */
+/**
+ * 交通種別を表示用に正規化する。
+ * BFS step の label（graph の service 名）や routes.json の label を優先し、
+ * 抽象的な「鉄道」「移動」等の表記を避ける。
+ */
 function normalizeStepLabel(label, stepType, operator = '') {
-  if (stepType === 'shinkansen') return '新幹線';
+  if (stepType === 'shinkansen') {
+    /* 新幹線: 実際の路線名・列車名を表示（北陸新幹線、サンダーバード+新幹線 等） */
+    if (label && label !== '新幹線' && label !== '鉄道') return label;
+    return '新幹線';
+  }
   if (stepType === 'rail') {
+    /* 在来線: 路線名・列車名を表示（越美北線、えちぜん鉄道、高山本線（特急ひだ） 等） */
+    if (label && label !== '電車' && label !== '鉄道') return label;
     if (operator && !operator.startsWith('JR')) return operator;
     return '電車';
   }
-  return label;
+  if (stepType === 'localMove') {
+    /* ラストマイル: 徒歩・レンタカー等を表示 */
+    if (label && label !== 'ローカル移動' && label !== '現地移動') return label;
+    return '徒歩';
+  }
+  return label ?? stepTypeLabel(stepType);
 }
 
 function coords(city) {
@@ -407,7 +423,11 @@ function buildCtaUrl(mainCTA, departure) {
       return buildFerryLink(mainCTA.from ?? '', mainCTA.url ?? null, mainCTA.provider ?? null);
     case 'rail':
     case 'shinkansen': {
-      const provider = mainCTA.provider ?? 'e5489';
+      let provider = mainCTA.provider ?? 'e5489';
+      /* 四国出発はえきねっと（JR東日本）利用不可 → e5489（JR四国）に変換 */
+      if (SHIKOKU_DEPARTURES_SET.has(departure) && provider === 'ekinet') {
+        provider = 'e5489';
+      }
       return buildJrLink(provider);
     }
     case 'bus':
@@ -1695,7 +1715,14 @@ function _resolveFromRoutes(city, departure, fromCity) {
 
 function _resolve(city, departure) {
   const fromCity = DEPARTURE_CITY_INFO[departure];
-  // gateway 主導ルート生成（Phase 1–5）
+
+  /* ── Layer ② + ①: Route Resolver（BFS → Gateway DB） ── */
+  const resolved = resolveRoute(departure, city);
+  if (resolved?.steps?.length > 0) {
+    return bfsStepsToLinks(resolved.steps, departure, city);
+  }
+
+  /* ── Layer ③ フォールバック: パターンビルダー ── */
   return buildRouteByPattern(city, departure, fromCity);
 }
 

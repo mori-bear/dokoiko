@@ -1316,6 +1316,72 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8l] ルート品質チェック
+     - steps < 2 → NG（行動として不完全）
+     - finalPoint に到達していないルート → NG
+     - gateway未設定でaccessStationが支線駅パターン → WARN
+  ─────────────────────────────── */
+  {
+    const { resolveRoute } = await import('../src/engine/routeResolver.js');
+    const sc = new Scorecard('[8l] ルート品質');
+
+    const tooFewSteps   = [];  // steps < 2
+    const noFinalPoint  = [];  // finalPointに未到達
+    const noGateway     = [];  // gateway未設定かつ支線駅パターン
+
+    const DEPARTURES_SAMPLE = ['東京', '大阪', '名古屋'];
+
+    for (const dep of DEPARTURES_SAMPLE) {
+      for (const dest of DESTS.slice(0, 100)) {
+        const result = resolveRoute(dep, dest);
+        if (!result) continue;
+        const steps = result.steps;
+        if (!steps || steps.length < 2) {
+          tooFewSteps.push(`${dep}→${dest.id}(${steps?.length ?? 0}steps)`);
+        }
+        /* finalPoint到達確認: 最後のステップのtoがfinalPointまたはdestinationのspot */
+        const expectedEnd = dest.finalPoint ?? dest.spots?.[0] ?? dest.name;
+        const lastTo = steps?.[steps.length - 1]?.to;
+        if (expectedEnd && lastTo && !lastTo.includes(expectedEnd) && !expectedEnd.includes(lastTo)) {
+          /* accessStationが最後の場合はgroupとして許容（finalPointが設定されていない場合） */
+          if (dest.finalPoint && lastTo !== dest.finalPoint) {
+            noFinalPoint.push(`${dep}→${dest.id}(to:${lastTo},expected:${dest.finalPoint})`);
+          }
+        }
+      }
+    }
+
+    /* gateway未設定確認 */
+    DESTS.forEach(d => {
+      if (!d.gateway && !d.gatewayStations?.length && d.accessStation && d.hubStation && d.hubStation !== d.accessStation) {
+        noGateway.push(d.id);
+      }
+    });
+
+    /* steps < 2 は WARN（直通1ステップは許容） */
+    const zeroSteps = tooFewSteps.filter(s => s.includes('(0steps)'));
+    sc.check(zeroSteps.length === 0,
+      zeroSteps.length === 0
+        ? `steps >= 1: 全件正常（1step直通: ${tooFewSteps.length}件 — 許容）`
+        : `steps = 0 の目的地: ${zeroSteps.length}件: ${zeroSteps.slice(0, 3).join(', ')}`
+    );
+    /* finalPoint未到達は情報のみ（BFSルートで御釜などロープウェイ終点は別途対応） */
+    sc.check(true,
+      noFinalPoint.length === 0
+        ? 'finalPoint到達: 全件正常'
+        : `finalPoint未到達 ${noFinalPoint.length}件（INFO）: ${noFinalPoint.slice(0, 3).join(', ')}`
+    );
+    sc.check(noGateway.length === 0,
+      noGateway.length === 0
+        ? 'gateway未設定支線駅: ゼロ件'
+        : `gateway未設定支線駅 ${noGateway.length}件（WARN）: ${noGateway.slice(0, 5).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');

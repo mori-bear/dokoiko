@@ -154,10 +154,14 @@ export function buildHotelLinks(dest) {
   };
 
   /* ── ハブ宿（条件付き）── */
-  /* 車必須 / remote / mountain で gatewayHub が設定されている場合のみ */
-  const needsHub = dest.needsCar || dest.destType === 'remote' || dest.destType === 'mountain';
-  if (needsHub && dest.gatewayHub && dest.gatewayHub !== dest.name) {
-    const hub = dest.gatewayHub;
+  /* 車必須 / remote / mountain でゲートウェイ都市が設定されている場合のみ */
+  const needsHub = dest.requiresCar || dest.destType === 'remote' || dest.destType === 'mountain';
+  /* gatewayHub（手動設定）→ gateway → gatewayStations[0] の順で解決 */
+  const hubCityName = dest.gatewayHub
+    ?? (dest.gateway ? dest.gateway.replace(/駅$/, '') : null)
+    ?? (dest.gatewayStations?.[0]?.name ? dest.gatewayStations[0].name.replace(/駅$/, '') : null);
+  if (needsHub && hubCityName && hubCityName !== dest.name) {
+    const hub = hubCityName;
     const hubArea = lookupAreaByName(hub);
     const hubRakutenPath = getRakutenPath(hubArea, null);
     const hubRakutenUrl  = hubRakutenPath

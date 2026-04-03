@@ -6,8 +6,8 @@
  * ③ Route Resolver（このファイル）
  *
  * 解決フロー:
- *   1. Transport Graph BFS（全国幹線ネットワーク最適経路）
- *   2. Gateway DB フォールバック（gatewayStations 明示ルーティング）
+ *   1. Gateway DB（gatewayStations 設定済みの場合 — 幹線BFS + ローカルDB + finalPoint）
+ *   2. Transport Graph フルパス BFS（gateway未設定の場合）
  *   3. null → 呼び出し側でパターンビルダーへ降格
  *
  * 返却値:
@@ -20,7 +20,7 @@
 import { buildRoute, buildTrunkRoute } from './bfsEngine.js';
 import { DEPARTURE_CITY_INFO } from '../config/constants.js';
 
-/* ─── 新幹線停車駅（step1 ラベル判定） ─── */
+/* ─── 新幹線停車駅（フォールバック時の型判定） ─── */
 const SHINKANSEN_STATIONS = new Set([
   '東京駅','品川駅','新横浜駅','小田原駅','熱海駅','三島駅','新富士駅',
   '静岡駅','掛川駅','浜松駅','豊橋駅','三河安城駅','名古屋駅','岐阜羽島駅',
@@ -41,6 +41,45 @@ const SHINKANSEN_STATIONS = new Set([
   '新函館北斗駅',
 ]);
 
+/* ─── ローカルアクセス路線名マップ ───
+ * destinations.json の localAccess.description が汎用的すぎる場合に上書き。
+ * 実際の路線名・交通手段名を表示するための手動設定。
+ */
+const LOCAL_LINE_MAP = {
+  /* 越美北線 */
+  'ono-fukui':       '越美北線',
+  /* えちぜん鉄道 */
+  'katsuyama':       'えちぜん鉄道',
+  /* 高山本線 */
+  'gero-onsen':      '高山本線（特急ひだ）',
+  'hida-furukawa':   '高山本線',
+  'takayama-kogen':  '高山本線',
+  /* 山形鉄道フラワー長井線 */
+  'nagai':           '山形鉄道フラワー長井線',
+  /* 三陸鉄道 */
+  'ryoishi':         '三陸鉄道南リアス線',
+  /* 紀勢本線 */
+  'owase':           '特急南紀',
+  /* 伊豆急行 */
+  'shimoda':         '伊豆急行',
+  /* 土讃線 */
+  'oboke':           '土讃線',
+  /* 吉野川特急 */
+  'iya':             '土讃線',
+  /* 予土線 */
+  'shimanto-river':  '予土線',
+  /* 日田彦山線BRT */
+  'hita':            '日田彦山線BRT',
+  /* 指宿枕崎線 */
+  'ibusuki':         '指宿枕崎線',
+  /* バスアクセス */
+  'nikko':           '日光線・東武日光線',
+  'hakusan-spa':     '路線バス',
+  'myoko-kogen':     'えちごトキめき鉄道',
+  /* レンタカー */
+  'karuizawa':       'しなの鉄道',
+};
+
 /* ────────────────────────────────────────
    公開 API
 ──────────────────────────────────────── */
@@ -55,7 +94,7 @@ const SHINKANSEN_STATIONS = new Set([
  */
 export function resolveRoute(departure, destination) {
   /* ── Layer ①: Gateway DB（gatewayStations が設定済みの場合は優先） ── */
-  /* 幹線は BFS hub→hub、ローカル区間は DB から取得 → 正確な経路を保証 */
+  /* 幹線は BFS hub→hub で展開、ローカル区間は DB から取得 → 正確な経路を保証 */
   if (destination.gatewayStations?.length > 0) {
     const gwResult = _tryGatewayDb(departure, destination);
     if (gwResult) return gwResult;
@@ -86,12 +125,42 @@ export function matchesSituation(destination, userType) {
 function _tryBfs(departure, destination) {
   const steps = buildRoute(departure, destination);
   if (!steps || steps.length < 1) return null;
+
+  /* finalPoint 注入: BFS は accessStation までしか到達しないため、
+     finalPoint が設定されている場合はラストマイルステップを追加する */
+  const finalPt = destination.finalPoint
+    ?? (Array.isArray(destination.spots) && destination.spots[0]);
+  if (finalPt) {
+    const lastTo     = steps[steps.length - 1]?.to;
+    const accessSt   = destination.accessStation;
+    /* lastStep が accessStation に到達していてかつ finalPoint と異なる場合に追加 */
+    if (lastTo && finalPt !== lastTo) {
+      const lastAccessStep = destination.access?.steps?.find(s => s.type === 'local');
+      const method = lastAccessStep?.method ?? '徒歩';
+      const type   = method === 'レンタカー' ? 'localMove'
+                   : method === 'バス'       ? 'bus'
+                   : method === 'フェリー'    ? 'ferry'
+                   : 'localMove';
+      const label  = destination.walkMinutes ? `徒歩${destination.walkMinutes}分` : method;
+      steps.push({
+        type,
+        from:     lastTo,
+        to:       finalPt,
+        label,
+        provider: null,
+        operator: null,
+        minutes:  destination.walkMinutes ?? null,
+      });
+    }
+  }
+
   return { steps, method: 'graph' };
 }
 
 /* ────────────────────────────────────────
    Layer ①: Gateway DB
    destination.gatewayStations + localAccess から明示ルートを構築
+   幹線（出発→gateway）は BFS hub-to-hub で展開する。
 ──────────────────────────────────────── */
 
 function _tryGatewayDb(departure, destination) {
@@ -105,45 +174,66 @@ function _tryGatewayDb(departure, destination) {
   const gateway = _selectBestGateway(stations, departure);
   if (!gateway) return null;
 
-  const gwName    = gateway.name;
+  const gwName      = gateway.name;
   const localAccess = destination.localAccess;
-  const accessSt  = localAccess?.to ?? destination.accessStation ?? destination.name;
-  const finalPt   = destination.finalPoint
+  const accessSt    = localAccess?.to ?? destination.accessStation ?? destination.name;
+  const finalPt     = destination.finalPoint
     ?? (Array.isArray(destination.spots) && destination.spots[0])
     ?? destination.name;
 
   const steps = [];
 
-  /* step 1: 出発 → gateway（BFS で型を判定し1ステップに集約） */
+  /* ── step 1+: 出発 → gateway（BFS で幹線ステップを展開して追加） ── */
   if (gwName !== origin) {
     const trunkSteps = buildTrunkRoute(departure, gwName);
-    steps.push(_collapseTrunk(trunkSteps, origin, gwName, destination));
+    if (trunkSteps.length > 0) {
+      /* 連続する新幹線ステップを集約（同一トレイン区間は1ステップに表示）
+       * 例: 東京→名古屋(新幹線)→大阪(新幹線)→岡山(新幹線)→福山(新幹線)
+       *   → 東京→福山（新幹線）[Nozomi は乗り換えなし]
+       */
+      steps.push(..._collapseConsecutiveShinkansen(trunkSteps));
+    } else {
+      /* グラフ外の場合: SHINKANSEN_STATIONS から型を推論してシングルステップ */
+      steps.push({
+        type:     SHINKANSEN_STATIONS.has(gwName) ? 'shinkansen' : 'rail',
+        from:     origin,
+        to:       gwName,
+        label:    SHINKANSEN_STATIONS.has(gwName) ? '新幹線' : '鉄道',
+        provider: _deriveProvider(destination),
+        operator: null,
+        minutes:  null,
+      });
+    }
   }
 
-  /* step 2: gateway → accessStation（ローカル線・バス等） */
+  /* ── step N: gateway → accessStation（ローカル線・バス・フェリー等） ── */
   if (accessSt && accessSt !== gwName) {
-    const localType = _localAccessType(localAccess?.type);
+    const localType  = _localAccessType(localAccess?.type);
+    /* 路線名: LOCAL_LINE_MAP → localAccess.description → 型デフォルト の優先順 */
+    const localLabel = LOCAL_LINE_MAP[destination.id]
+      ?? _buildLocalLabel(localAccess, localType, destination);
     steps.push({
       type:     localType,
       from:     gwName,
       to:       accessSt,
-      label:    localAccess?.description ?? _localLabel(localType),
+      label:    localLabel,
       provider: null,
       operator: null,
-      minutes:  null,
+      minutes:  localAccess?.minutes ?? null,
     });
   }
 
-  /* step 3: accessStation → finalPoint（ラストマイル） */
+  /* ── step N+1: accessStation → finalPoint（ラストマイル） ── */
   if (finalPt && finalPt !== accessSt && finalPt !== gwName) {
+    const { type: finalType, label: finalLabel } = _deriveFinalStep(destination, localAccess);
     steps.push({
-      type:     'localMove',
+      type:     finalType,
       from:     accessSt,
       to:       finalPt,
-      label:    '現地移動',
+      label:    finalLabel,
       provider: null,
       operator: null,
-      minutes:  null,
+      minutes:  destination.walkMinutes ?? null,
     });
   }
 
@@ -156,64 +246,90 @@ function _tryGatewayDb(departure, destination) {
 ──────────────────────────────────────── */
 
 /**
- * 幹線ステップ配列を1ステップに集約する。
- * Gateway DB ルートでは origin→gateway 区間はシングルステップで表示。
- * BFS が型判定に使われる: flight > shinkansen > rail
+ * 連続する新幹線ステップを1ステップに集約する。
+ * 東海道→山陽のように同一トレイン（のぞみ等）で乗り換えなしの区間を
+ * ユーザーが乗り換えと誤解しないように表示を簡潔にする。
+ * 別サービス（サンダーバード→北陸新幹線等）の乗り換えは残す。
  */
-function _collapseTrunk(trunkSteps, origin, gwName, destination) {
-  /* BFS が見つからない場合は SHINKANSEN_STATIONS から型推論 */
-  if (!trunkSteps || trunkSteps.length === 0) {
-    return {
-      type:     SHINKANSEN_STATIONS.has(gwName) ? 'shinkansen' : 'rail',
-      from:     origin,
-      to:       gwName,
-      label:    SHINKANSEN_STATIONS.has(gwName) ? '新幹線' : '鉄道',
-      provider: _deriveProvider(destination, ''),
-      operator: null,
-      minutes:  null,
-    };
+function _collapseConsecutiveShinkansen(steps) {
+  if (steps.length <= 1) return steps;
+  const result = [];
+  for (const step of steps) {
+    const prev = result[result.length - 1];
+    if (
+      prev &&
+      prev.type === 'shinkansen' &&
+      step.type === 'shinkansen' &&
+      /* 同じ系統のみ集約: 東海道+山陽、東北+北陸など。
+         サービス名が大きく異なる場合（サンダーバード+新幹線 vs 北陸新幹線）は保持 */
+      _isSameShinkansen(prev.label, step.label)
+    ) {
+      prev.to      = step.to;
+      prev.minutes = (prev.minutes ?? 0) + (step.minutes ?? 0);
+      if (prev.label !== step.label) prev.label = '新幹線';
+    } else {
+      result.push({ ...step });
+    }
   }
+  return result;
+}
 
-  /* flight が含まれる場合: フライト情報を保持してシングルステップ化 */
-  const flightStep = trunkSteps.find(s => s.type === 'flight');
-  if (flightStep) {
-    return {
-      ...flightStep,
-      from: origin,
-      to:   gwName,
-    };
+/** 同一列車系統として集約できる新幹線サービスかどうか判定 */
+function _isSameShinkansen(labelA, labelB) {
+  /* 完全一致は常に同系統 */
+  if (labelA === labelB) return true;
+  /* 一方が汎用「新幹線」に集約済みの場合: 継続集約として扱う */
+  if (labelA === '新幹線' || labelB === '新幹線') return true;
+  /* 東海道 ↔ 山陽: のぞみ・ひかり・こだまが通し運転 */
+  const TOKAIDO_SANYO = new Set(['東海道新幹線', '山陽新幹線']);
+  if (TOKAIDO_SANYO.has(labelA) && TOKAIDO_SANYO.has(labelB)) return true;
+  /* 東北 ↔ 上越・北陸: 通し運転はない（別個の路線）*/
+  return false;
+}
+
+/**
+ * ローカルアクセス区間のラベルを構築。
+ * LOCAL_LINE_MAP で上書きされない場合のフォールバック。
+ */
+function _buildLocalLabel(localAccess, localType, destination) {
+  /* access.steps から最後のローカル区間のメソッドを参照 */
+  const accessSteps = destination.access?.steps;
+  if (accessSteps?.length > 0) {
+    const localStep = accessSteps.find(s => s.type === 'local');
+    if (localStep?.method && localStep.method !== '徒歩') return localStep.method;
   }
+  return _localLabel(localType);
+}
 
-  /* 新幹線が含まれる場合 */
-  if (trunkSteps.some(s => s.type === 'shinkansen')) {
-    return {
-      type:     'shinkansen',
-      from:     origin,
-      to:       gwName,
-      label:    '新幹線',
-      provider: null,
-      operator: null,
-      minutes:  null,
-    };
+/**
+ * finalPoint へのラストマイル区間タイプとラベルを導出。
+ * access.steps の最後のローカルステップメソッドを参照する。
+ */
+function _deriveFinalStep(destination, localAccess) {
+  const accessSteps = destination.access?.steps;
+  const lastLocal   = accessSteps?.find(s => s.type === 'local');
+  const method      = lastLocal?.method ?? null;
+
+  /* レンタカー */
+  if (localAccess?.type === 'rental' || method === 'レンタカー') {
+    return { type: 'localMove', label: 'レンタカー' };
   }
-
-  /* それ以外（在来線特急・バスなど）*/
-  const lastStep = trunkSteps[trunkSteps.length - 1];
-  return {
-    type:     lastStep.type ?? 'rail',
-    from:     origin,
-    to:       gwName,
-    label:    lastStep.label ?? null,
-    provider: null,
-    operator: null,
-    minutes:  null,
-  };
+  /* バス */
+  if (method === 'バス') {
+    return { type: 'bus', label: 'バス' };
+  }
+  /* フェリー */
+  if (method === 'フェリー') {
+    return { type: 'ferry', label: 'フェリー' };
+  }
+  /* 徒歩（デフォルト） */
+  const mins = destination.walkMinutes;
+  return { type: 'localMove', label: mins ? `徒歩${mins}分` : '徒歩' };
 }
 
 /**
  * 出発地に最も近い gateway を選択する。
  * priority が低い（＝高優先度）ものを選ぶ。
- * 将来的には出発地からの距離で重み付け可能。
  */
 function _selectBestGateway(stations, departure) {
   if (!stations?.length) return null;
@@ -238,7 +354,6 @@ function _localLabel(type) {
   }
 }
 
-function _deriveProvider(destination, departure) {
-  // railProvider を destination から取得
+function _deriveProvider(destination) {
   return destination.railProvider ?? null;
 }

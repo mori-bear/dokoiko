@@ -44,22 +44,24 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
   history.replaceState(null, '', newUrl);
 }
 
-/** シェア用テキスト生成 */
+/** シェア用テキスト生成（絵文字なし・簡潔） */
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
-  const tags = Array.isArray(city.tags) && city.tags.length
-    ? city.tags.slice(0, 3).join('・') + '旅'
-    : '旅';
-  const url = location.href;
-
-  return `どこ行こ？で決めた\n\n${departure} → ${name}\n${tags}\n\n${url}`;
+  const url  = location.href;
+  return `どこ行こ？でここ出た\n\n${departure} → ${name}\n${url}`;
 }
 
 /** Xシェアウィンドウを開く */
 export function openXShare(city, departure) {
-  const text = buildShareText(city, departure);
-  const encoded = encodeURIComponent(text);
-  window.open(`https://x.com/intent/tweet?text=${encoded}`, '_blank', 'noopener,noreferrer');
+  const name    = city.displayName || city.name;
+  const url     = location.href;
+  const tweetText = `どこ行こ？でここ出た\n\n${departure} → ${name}`;
+  const params  = new URLSearchParams({ text: tweetText, url });
+  window.open(
+    `https://twitter.com/intent/tweet?${params.toString()}`,
+    '_blank',
+    'noopener,noreferrer,width=550,height=420',
+  );
 }
 
 /** シェアテキストをクリップボードにコピー */

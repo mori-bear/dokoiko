@@ -170,8 +170,8 @@ function bindShareHandlers() {
         if (city) await copyShareText(city, state.departure);
         showCopyFeedback(copyBtn);
       } catch {
-        copyBtn.textContent = '⚠ コピー失敗';
-        setTimeout(() => { copyBtn.textContent = '📋 シェアテキストをコピー'; }, 2000);
+        copyBtn.textContent = 'コピー失敗';
+        setTimeout(() => { copyBtn.textContent = 'リンクをコピー'; }, 2000);
       }
     }
   });
@@ -179,7 +179,7 @@ function bindShareHandlers() {
 
 function showCopyFeedback(btn) {
   const original = btn.textContent;
-  btn.textContent = '✅ コピーしました！';
+  btn.textContent = 'コピーしました';
   btn.disabled = true;
   setTimeout(() => {
     btn.textContent = original;

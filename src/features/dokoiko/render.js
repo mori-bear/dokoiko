@@ -1036,12 +1036,8 @@ function buildLinkItem(link, isPrimary = false) {
 function buildShareBlock() {
   return `
     <div class="share-block">
-      <button class="btn-share btn-share--x" id="share-x-btn">
-        📤 Xでシェア
-      </button>
-      <button class="btn-copy" id="share-copy-btn">
-        📋 シェアテキストをコピー
-      </button>
+      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
+      <button class="btn-copy" id="share-copy-btn">リンクをコピー</button>
     </div>
   `;
 }
