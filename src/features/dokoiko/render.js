@@ -24,6 +24,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
         ${buildCityBlock(city)}
         ${buildTransportBlock(transportLinks, departure, city.displayName || city.name, city)}
         ${showHotel ? buildStayBlock(hotelLinks) : ''}
+        ${buildShareBlock()}
       </div>
     `;
   } catch (err) {
@@ -1027,5 +1028,20 @@ function buildLinkItem(link, isPrimary = false) {
        class="btn ${btnClass(link.type)}${topClass}">
       ${link.label}
     </a>
+  `;
+}
+
+/* ── シェアブロック ── */
+
+function buildShareBlock() {
+  return `
+    <div class="share-block">
+      <button class="btn-share btn-share--x" id="share-x-btn">
+        📤 Xでシェア
+      </button>
+      <button class="btn-copy" id="share-copy-btn">
+        📋 URLをコピー
+      </button>
+    </div>
   `;
 }

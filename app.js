@@ -4,15 +4,29 @@ import { buildTravelPlan }         from './src/features/dokoiko/travelPlan.js';
 import { renderResult }            from './src/features/dokoiko/render.js';
 import { bindHandlers }            from './src/ui/handlers.js';
 import { DEPARTURE_CITY_INFO }     from './src/config/constants.js';
-import { loadDestinations }        from './src/data/index.js';
+import { loadDestinations }                                  from './src/data/index.js';
+import { calculateTravelTimeMinutes, calculateDistanceStars } from './src/engine/distanceCalculator.js';
+import {
+  decodeUrlParams,
+  encodeStateToUrl,
+  openXShare,
+  copyShareUrl,
+  updatePageMeta,
+} from './src/share.js';
 
 async function init() {
   initIntro();
   bindHandlers(go, retry);
-  detectDeparture();
+  bindShareHandlers();
+
+  // URLパラメータがある場合は位置情報検出をスキップ（URLのfromを優先）
+  const urlParams = decodeUrlParams();
+  if (!urlParams.dest) detectDeparture();
 
   try {
     state.destinations = await loadDestinations();
+    // URLから状態を復元して自動表示
+    if (urlParams.dest) restoreFromUrl(urlParams);
   } catch (err) {
     const btn = document.getElementById('go-btn');
     if (btn) {
@@ -64,6 +78,10 @@ function draw() {
     departure:      state.departure,
   });
 
+  // URLとページメタを更新
+  encodeStateToUrl(state.departure, state.stayType, state.theme, state.excludeCar, city.id);
+  updatePageMeta(city, state.departure);
+
   const remaining = state.pool.length - state.poolIndex - 1;
   const retryBtn  = document.getElementById('retry-btn');
   if (retryBtn) {
@@ -75,6 +93,97 @@ function draw() {
   const resultEl = document.getElementById('result');
   resultEl.hidden = false;
   resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ── URLからの状態復元 ── */
+
+function restoreFromUrl(urlParams) {
+  const { from, nights, theme, excludeCar, dest } = urlParams;
+
+  // 出発地
+  if (from) setDeparture(from);
+
+  // 旅の長さ
+  if (nights) {
+    state.stayType = nights;
+    document.querySelectorAll('[data-stay]').forEach(b => {
+      b.classList.toggle('active', b.dataset.stay === nights);
+    });
+  }
+
+  // テーマ
+  const resolvedTheme = theme || null;
+  state.theme = resolvedTheme;
+  document.querySelectorAll('[data-theme]').forEach(b => {
+    b.classList.toggle('active', (b.dataset.theme || null) === resolvedTheme);
+  });
+
+  // レンタカー除外
+  if (excludeCar) {
+    state.excludeCar = true;
+    document.querySelector('[data-exclude-car]')?.classList.add('active');
+  }
+
+  // プールを構築してdestを先頭に配置
+  buildPool();
+
+  // dest IDで目的地を検索（pool内 or 全destinations）
+  const idxInPool = state.pool.findIndex(d => d.id === dest);
+  if (idxInPool !== -1) {
+    state.poolIndex = idxInPool;
+  } else {
+    // poolに入っていない場合（フィルタ外）でも表示できるよう全データから探す
+    const found = state.destinations.find(d => d.id === dest);
+    if (found) {
+      // 見つかった目的地をpool先頭に差し込む
+      const enriched = {
+        ...found,
+        travelTimeMinutes: calculateTravelTimeMinutes(state.departure, found),
+        distanceStars:     calculateDistanceStars(state.departure, found),
+      };
+      state.pool.unshift(enriched);
+      state.poolIndex = 0;
+    }
+  }
+
+  clearFormError();
+  draw();
+}
+
+/* ── シェアボタン ── */
+
+function bindShareHandlers() {
+  // イベント委任（DOM再描画後も有効）
+  document.addEventListener('click', async (e) => {
+    const xBtn   = e.target.closest('#share-x-btn');
+    const copyBtn = e.target.closest('#share-copy-btn');
+
+    if (xBtn) {
+      const city = state.pool[state.poolIndex];
+      if (city) openXShare(city, state.departure);
+      return;
+    }
+
+    if (copyBtn) {
+      try {
+        await copyShareUrl();
+        showCopyFeedback(copyBtn);
+      } catch {
+        copyBtn.textContent = '⚠ コピー失敗';
+        setTimeout(() => { copyBtn.textContent = '📋 URLをコピー'; }, 2000);
+      }
+    }
+  });
+}
+
+function showCopyFeedback(btn) {
+  const original = btn.textContent;
+  btn.textContent = '✅ コピーしました！';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.disabled = false;
+  }, 2000);
 }
 
 /* ── フォームエラー ── */
