@@ -1312,6 +1312,31 @@ class Scorecard {
       `gateway 設定済み: ${withGateway.length} 件 / ${DESTS.length} 件`
     );
 
+    /* ── gatewayStations 型チェック（ローカル駅禁止） ── */
+    const ALLOWED_GW_TYPES = new Set(['shinkansen', 'airport', 'major', 'ferry', 'port']);
+    const localGateway = [];
+    const stringGateway = [];
+    DESTS.forEach(d => {
+      if (!Array.isArray(d.gatewayStations) || d.gatewayStations.length === 0) return;
+      d.gatewayStations.forEach(g => {
+        if (typeof g === 'string') {
+          stringGateway.push(`${d.id}(${g})`);
+        } else if (g.type && !ALLOWED_GW_TYPES.has(g.type)) {
+          localGateway.push(`${d.id}(${g.name}:${g.type})`);
+        }
+      });
+    });
+    sc.check(localGateway.length === 0,
+      localGateway.length === 0
+        ? `gatewayStations型: 全件 shinkansen/airport/major/ferry/port`
+        : `gatewayにローカル駅 ${localGateway.length}件: ${localGateway.slice(0,5).join(', ')}`
+    );
+    sc.check(stringGateway.length === 0,
+      stringGateway.length === 0
+        ? `gatewayStations形式: オブジェクト形式で統一`
+        : `gatewayStationsが文字列形式（未変換）${stringGateway.length}件: ${stringGateway.slice(0,5).join(', ')}`
+    );
+
     sc.print();
     scorecards.push(sc);
   }

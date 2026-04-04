@@ -102,7 +102,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鎌倉大仏"
+    "mapPoint": "鎌倉大仏",
+    "subType": "sea"
   },
   {
     "id": "atami",
@@ -197,7 +198,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "熱海城"
+    "mapPoint": "熱海城",
+    "subType": "mountain"
   },
   {
     "id": "nikko",
@@ -328,7 +330,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "東照宮"
+    "mapPoint": "東照宮",
+    "subType": "mountain"
   },
   {
     "id": "karuizawa",
@@ -438,7 +441,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "旧軽井沢銀座"
+    "mapPoint": "旧軽井沢銀座",
+    "subType": "mountain"
   },
   {
     "id": "fujikawaguchiko",
@@ -540,7 +544,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "河口湖"
+    "mapPoint": "河口湖",
+    "subType": "mountain"
   },
   {
     "id": "nara",
@@ -647,7 +652,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "東大寺"
+    "mapPoint": "東大寺",
+    "subType": "mountain"
   },
   {
     "id": "ishigaki",
@@ -762,7 +768,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "川平湾"
+    "mapPoint": "川平湾",
+    "subType": "sea"
   },
   {
     "id": "ise",
@@ -885,7 +892,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊勢神宮"
+    "mapPoint": "伊勢神宮",
+    "subType": "sea"
   },
   {
     "id": "beppu",
@@ -999,7 +1007,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "地獄めぐり"
+    "mapPoint": "地獄めぐり",
+    "subType": "mountain"
   },
   {
     "id": "otaru",
@@ -1106,7 +1115,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "小樽運河"
+    "mapPoint": "小樽運河",
+    "subType": "sea"
   },
   {
     "id": "furano",
@@ -1220,7 +1230,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ファーム富田"
+    "mapPoint": "ファーム富田",
+    "subType": "sea"
   },
   {
     "id": "matsushima",
@@ -1346,7 +1357,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "松島湾"
+    "mapPoint": "松島湾",
+    "subType": "remote"
   },
   {
     "id": "miyajima",
@@ -1469,7 +1481,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "厳島神社"
+    "mapPoint": "厳島神社",
+    "subType": "sea"
   },
   {
     "id": "onomichi",
@@ -1588,7 +1601,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "千光寺"
+    "mapPoint": "千光寺",
+    "subType": "sea"
   },
   {
     "id": "shodoshima",
@@ -1711,7 +1725,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "寒霞渓"
+    "mapPoint": "寒霞渓",
+    "subType": "sea"
   },
   {
     "id": "mihonoseki",
@@ -1830,7 +1845,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "美保神社"
+    "mapPoint": "美保神社",
+    "subType": "remote"
   },
   {
     "id": "ryujin-onsen",
@@ -1925,7 +1941,8 @@
     "secondary": [],
     "onsenLevel": 2,
     "hasDirectFlight": false,
-    "mapPoint": "龍神温泉元湯"
+    "mapPoint": "龍神温泉元湯",
+    "subType": "mountain"
   },
   {
     "id": "tokashiki-jima",
@@ -2058,7 +2075,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "阿波連ビーチ"
+    "mapPoint": "阿波連ビーチ",
+    "subType": "sea"
   },
   {
     "id": "kumejima",
@@ -2193,7 +2211,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "はての浜"
+    "mapPoint": "はての浜",
+    "subType": "sea"
   },
   {
     "id": "miyakojima",
@@ -2309,7 +2328,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "与那覇前浜"
+    "mapPoint": "与那覇前浜",
+    "subType": "sea"
   },
   {
     "id": "kouzushima",
@@ -2429,7 +2449,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "前浜"
+    "mapPoint": "前浜",
+    "subType": "sea"
   },
   {
     "id": "hakone",
@@ -2540,7 +2561,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "芦ノ湖"
+    "mapPoint": "芦ノ湖",
+    "subType": "mountain"
   },
   {
     "id": "shuzenji",
@@ -2644,7 +2666,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "修禅寺"
+    "mapPoint": "修禅寺",
+    "subType": "mountain"
   },
   {
     "id": "kusatsu-onsen",
@@ -2752,7 +2775,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "湯畑"
+    "mapPoint": "湯畑",
+    "subType": "mountain"
   },
   {
     "id": "shimoda",
@@ -2866,7 +2890,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "了仙寺"
+    "mapPoint": "了仙寺",
+    "subType": "remote"
   },
   {
     "id": "izu-oshima",
@@ -2996,7 +3021,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "三原山"
+    "mapPoint": "三原山",
+    "subType": "sea"
   },
   {
     "id": "shirakawago-t",
@@ -3108,7 +3134,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "荻町城跡展望台"
+    "mapPoint": "荻町城跡展望台",
+    "subType": "mountain"
   },
   {
     "id": "arima-onsen",
@@ -3219,7 +3246,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "金の湯"
+    "mapPoint": "金の湯",
+    "subType": "mountain"
   },
   {
     "id": "kinosaki-onsen",
@@ -3325,7 +3353,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "さとの湯"
+    "mapPoint": "さとの湯",
+    "subType": "mountain"
   },
   {
     "id": "kurashiki-o",
@@ -3430,7 +3459,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大原美術館"
+    "mapPoint": "大原美術館",
+    "subType": "urban"
   },
   {
     "id": "shirahama-o",
@@ -3527,7 +3557,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "白良浜"
+    "mapPoint": "白良浜",
+    "subType": "mountain"
   },
   {
     "id": "takayama-o",
@@ -3636,7 +3667,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "古い町並"
+    "mapPoint": "古い町並",
+    "subType": "mountain"
   },
   {
     "id": "toba",
@@ -3746,7 +3778,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鳥羽水族館"
+    "mapPoint": "鳥羽水族館",
+    "subType": "remote"
   },
   {
     "id": "yufuin",
@@ -3869,7 +3902,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "湯の坪街道"
+    "mapPoint": "湯の坪街道",
+    "subType": "mountain"
   },
   {
     "id": "kurokawa-k",
@@ -3973,7 +4007,8 @@
     ],
     "onsenLevel": 2,
     "hasDirectFlight": false,
-    "mapPoint": "入湯手形"
+    "mapPoint": "入湯手形",
+    "subType": "remote"
   },
   {
     "id": "aso",
@@ -4084,7 +4119,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "草千里"
+    "mapPoint": "草千里",
+    "subType": "mountain"
   },
   {
     "id": "yakushima",
@@ -4227,7 +4263,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "縄文杉"
+    "mapPoint": "縄文杉",
+    "subType": "sea"
   },
   {
     "id": "amakusa",
@@ -4325,7 +4362,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "天草五橋"
+    "mapPoint": "天草五橋",
+    "subType": "remote"
   },
   {
     "id": "hiraizumi",
@@ -4430,7 +4468,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "中尊寺金色堂"
+    "mapPoint": "中尊寺金色堂",
+    "subType": "urban"
   },
   {
     "id": "kakunodate",
@@ -4534,7 +4573,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "武家屋敷通り"
+    "mapPoint": "武家屋敷通り",
+    "subType": "urban"
   },
   {
     "id": "aizu",
@@ -4640,7 +4680,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "鶴ヶ城"
+    "mapPoint": "鶴ヶ城",
+    "subType": "mountain"
   },
   {
     "id": "zaosan",
@@ -4739,7 +4780,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "お釜"
+    "mapPoint": "お釜",
+    "subType": "mountain"
   },
   {
     "id": "hagi",
@@ -4849,7 +4891,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "萩城跡"
+    "mapPoint": "萩城跡",
+    "subType": "sea"
   },
   {
     "id": "shimonoseki",
@@ -4959,7 +5002,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "関門橋"
+    "mapPoint": "関門橋",
+    "subType": "remote"
   },
   {
     "id": "naoshima",
@@ -5085,7 +5129,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "地中美術館"
+    "mapPoint": "地中美術館",
+    "subType": "sea"
   },
   {
     "id": "kotohira",
@@ -5195,7 +5240,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "こんぴらさん"
+    "mapPoint": "こんぴらさん",
+    "subType": "urban"
   },
   {
     "id": "uwajima",
@@ -5307,7 +5353,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "宇和島城"
+    "mapPoint": "宇和島城",
+    "subType": "remote"
   },
   {
     "id": "toyako",
@@ -5408,7 +5455,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "洞爺湖"
+    "mapPoint": "洞爺湖",
+    "subType": "mountain"
   },
   {
     "id": "noboribetsu",
@@ -5500,7 +5548,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "地獄谷"
+    "mapPoint": "地獄谷",
+    "subType": "mountain"
   },
   {
     "id": "shiretoko",
@@ -5610,7 +5659,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "知床五湖"
+    "mapPoint": "知床五湖",
+    "subType": "remote"
   },
   {
     "id": "wajima",
@@ -5723,7 +5773,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "朝市通り"
+    "mapPoint": "朝市通り",
+    "subType": "remote"
   },
   {
     "id": "kaga-onsen",
@@ -5821,7 +5872,8 @@
     ],
     "secondary": [],
     "onsenLevel": 3,
-    "hasDirectFlight": false
+    "hasDirectFlight": false,
+    "subType": "mountain"
   },
   {
     "id": "hakuba",
@@ -5928,7 +5980,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "八方尾根"
+    "mapPoint": "八方尾根",
+    "subType": "mountain"
   },
   {
     "id": "amanohashidate",
@@ -6030,7 +6083,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "智恩寺"
+    "mapPoint": "智恩寺",
+    "subType": "urban"
   },
   {
     "id": "ine",
@@ -6143,7 +6197,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊根の舟屋"
+    "mapPoint": "伊根の舟屋",
+    "subType": "remote"
   },
   {
     "id": "ibusuki",
@@ -6248,7 +6303,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "砂むし会館"
+    "mapPoint": "砂むし会館",
+    "subType": "mountain"
   },
   {
     "id": "sasebo",
@@ -6354,7 +6410,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "九十九島"
+    "mapPoint": "九十九島",
+    "subType": "remote"
   },
   {
     "id": "hirado",
@@ -6455,7 +6512,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "平戸城"
+    "mapPoint": "平戸城",
+    "subType": "sea"
   },
   {
     "id": "tottori",
@@ -6546,7 +6604,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鳥取砂丘"
+    "mapPoint": "鳥取砂丘",
+    "subType": "sea"
   },
   {
     "id": "akita",
@@ -6639,7 +6698,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "竿燈まつり"
+    "mapPoint": "竿燈まつり",
+    "subType": "urban"
   },
   {
     "id": "awaji",
@@ -6744,7 +6804,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鳴門の渦潮"
+    "mapPoint": "鳴門の渦潮",
+    "subType": "remote"
   },
   {
     "id": "takao",
@@ -6845,7 +6906,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "薬王院"
+    "mapPoint": "薬王院",
+    "subType": "mountain"
   },
   {
     "id": "tateyama-chiba",
@@ -6950,7 +7012,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "沖ノ島"
+    "mapPoint": "沖ノ島",
+    "subType": "remote"
   },
   {
     "id": "gokayama",
@@ -7061,7 +7124,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "菅沼集落"
+    "mapPoint": "菅沼集落",
+    "subType": "mountain"
   },
   {
     "id": "jozankei",
@@ -7164,7 +7228,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "定山渓温泉街"
+    "mapPoint": "定山渓温泉街",
+    "subType": "mountain"
   },
   {
     "id": "biei",
@@ -7273,7 +7338,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "青い池"
+    "mapPoint": "青い池",
+    "subType": "mountain"
   },
   {
     "id": "miyako-iwate",
@@ -7386,7 +7452,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浄土ヶ浜"
+    "mapPoint": "浄土ヶ浜",
+    "subType": "sea"
   },
   {
     "id": "sakata",
@@ -7494,7 +7561,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "山居倉庫"
+    "mapPoint": "山居倉庫",
+    "subType": "sea"
   },
   {
     "id": "takachiho",
@@ -7597,7 +7665,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "高千穂峡"
+    "mapPoint": "高千穂峡",
+    "subType": "remote"
   },
   {
     "id": "amami",
@@ -7725,7 +7794,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "金作原原生林"
+    "mapPoint": "金作原原生林",
+    "subType": "sea"
   },
   {
     "id": "goto",
@@ -7853,7 +7923,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "堂崎天主堂"
+    "mapPoint": "堂崎天主堂",
+    "subType": "sea"
   },
   {
     "id": "unzen",
@@ -7951,7 +8022,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "雲仙地獄"
+    "mapPoint": "雲仙地獄",
+    "subType": "mountain"
   },
   {
     "id": "ashizuri",
@@ -8057,7 +8129,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "足摺岬灯台"
+    "mapPoint": "足摺岬灯台",
+    "subType": "mountain"
   },
   {
     "id": "oboke",
@@ -8170,7 +8243,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大歩危峡"
+    "mapPoint": "大歩危峡",
+    "subType": "remote"
   },
   {
     "id": "tsuwano",
@@ -8278,7 +8352,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "太皷谷稲成神社"
+    "mapPoint": "太皷谷稲成神社",
+    "subType": "mountain"
   },
   {
     "id": "inuyama",
@@ -8383,7 +8458,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "犬山城"
+    "mapPoint": "犬山城",
+    "subType": "mountain"
   },
   {
     "id": "kiso",
@@ -8495,7 +8571,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "妻籠宿"
+    "mapPoint": "妻籠宿",
+    "subType": "mountain"
   },
   {
     "id": "miyama",
@@ -8594,7 +8671,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "かやぶきの里"
+    "mapPoint": "かやぶきの里",
+    "subType": "mountain"
   },
   {
     "id": "tateyama-kurobe",
@@ -8704,7 +8782,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "室堂"
+    "mapPoint": "室堂",
+    "subType": "mountain"
   },
   {
     "id": "himi",
@@ -8815,7 +8894,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "氷見漁港朝市"
+    "mapPoint": "氷見漁港朝市",
+    "subType": "mountain"
   },
   {
     "id": "nyuto-onsen",
@@ -8912,7 +8992,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "鶴の湯"
+    "mapPoint": "鶴の湯",
+    "subType": "mountain"
   },
   {
     "id": "yuda-onsen",
@@ -9010,7 +9091,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "瑠璃光寺"
+    "mapPoint": "瑠璃光寺",
+    "subType": "mountain"
   },
   {
     "id": "ureshino-onsen",
@@ -9100,7 +9182,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "シーボルトの湯"
+    "mapPoint": "シーボルトの湯",
+    "subType": "mountain"
   },
   {
     "id": "obuse",
@@ -9203,7 +9286,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "北斎館"
+    "mapPoint": "北斎館",
+    "subType": "urban"
   },
   {
     "id": "uchiko",
@@ -9306,7 +9390,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "内子座"
+    "mapPoint": "内子座",
+    "subType": "urban"
   },
   {
     "id": "muroto",
@@ -9404,7 +9489,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "室戸岬"
+    "mapPoint": "室戸岬",
+    "subType": "sea"
   },
   {
     "id": "iya",
@@ -9504,7 +9590,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "かずら橋"
+    "mapPoint": "かずら橋",
+    "subType": "remote"
   },
   {
     "id": "oku-izumo",
@@ -9607,7 +9694,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "菅谷たたら山内"
+    "mapPoint": "菅谷たたら山内",
+    "subType": "remote"
   },
   {
     "id": "ginzan-onsen",
@@ -9708,7 +9796,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "能登屋旅館"
+    "mapPoint": "能登屋旅館",
+    "subType": "mountain"
   },
   {
     "id": "ouchi-juku",
@@ -9807,7 +9896,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大内宿町並み"
+    "mapPoint": "大内宿町並み",
+    "subType": "remote"
   },
   {
     "id": "nozawa-onsen",
@@ -9903,7 +9993,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "大湯"
+    "mapPoint": "大湯",
+    "subType": "mountain"
   },
   {
     "id": "takehara",
@@ -10008,7 +10099,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "町並み保存地区"
+    "mapPoint": "町並み保存地区",
+    "subType": "sea"
   },
   {
     "id": "tsumago",
@@ -10120,7 +10212,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "妻籠宿本陣"
+    "mapPoint": "妻籠宿本陣",
+    "subType": "mountain"
   },
   {
     "id": "magome",
@@ -10232,7 +10325,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "島崎藤村記念館"
+    "mapPoint": "島崎藤村記念館",
+    "subType": "remote"
   },
   {
     "id": "nagahama",
@@ -10338,7 +10432,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "黒壁スクエア"
+    "mapPoint": "黒壁スクエア",
+    "subType": "mountain"
   },
   {
     "id": "hikone",
@@ -10444,7 +10539,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "彦根城"
+    "mapPoint": "彦根城",
+    "subType": "mountain"
   },
   {
     "id": "koyasan",
@@ -10553,7 +10649,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "奥之院"
+    "mapPoint": "奥之院",
+    "subType": "mountain"
   },
   {
     "id": "gero-onsen",
@@ -10664,7 +10761,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "噴泉池"
+    "mapPoint": "噴泉池",
+    "subType": "mountain"
   },
   {
     "id": "naruko-onsen",
@@ -10766,7 +10864,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "鳴子峡"
+    "mapPoint": "鳴子峡",
+    "subType": "mountain"
   },
   {
     "id": "shima-onsen",
@@ -10863,7 +10962,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "積善館"
+    "mapPoint": "積善館",
+    "subType": "mountain"
   },
   {
     "id": "hirosaki",
@@ -10980,7 +11080,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "弘前城"
+    "mapPoint": "弘前城",
+    "subType": "urban"
   },
   {
     "id": "oirase",
@@ -11088,7 +11189,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "阿修羅の流れ"
+    "mapPoint": "阿修羅の流れ",
+    "subType": "mountain"
   },
   {
     "id": "mashiko",
@@ -11195,7 +11297,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "つかもと"
+    "mapPoint": "つかもと",
+    "subType": "urban"
   },
   {
     "id": "bessho-onsen",
@@ -11303,7 +11406,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "北向観音"
+    "mapPoint": "北向観音",
+    "subType": "mountain"
   },
   {
     "id": "izushi",
@@ -11403,7 +11507,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "出石城跡"
+    "mapPoint": "出石城跡",
+    "subType": "urban"
   },
   {
     "id": "wakura-onsen",
@@ -11495,7 +11600,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "総湯"
+    "mapPoint": "総湯",
+    "subType": "mountain"
   },
   {
     "id": "misasa-onsen",
@@ -11592,7 +11698,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "三徳山投入堂"
+    "mapPoint": "三徳山投入堂",
+    "subType": "mountain"
   },
   {
     "id": "obi",
@@ -11697,7 +11804,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "飫肥城"
+    "mapPoint": "飫肥城",
+    "subType": "sea"
   },
   {
     "id": "hitoyoshi",
@@ -11806,7 +11914,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "青井阿蘇神社"
+    "mapPoint": "青井阿蘇神社",
+    "subType": "mountain"
   },
   {
     "id": "kamikochi",
@@ -11916,7 +12025,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "河童橋"
+    "mapPoint": "河童橋",
+    "subType": "mountain"
   },
   {
     "id": "minakami-onsen",
@@ -12015,7 +12125,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "諏訪峡"
+    "mapPoint": "諏訪峡",
+    "subType": "mountain"
   },
   {
     "id": "minami-aso",
@@ -12120,7 +12231,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "白川水源"
+    "mapPoint": "白川水源",
+    "subType": "mountain"
   },
   {
     "id": "imabari",
@@ -12239,7 +12351,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "しまなみ海道"
+    "mapPoint": "しまなみ海道",
+    "subType": "remote"
   },
   {
     "id": "ozu",
@@ -12364,7 +12477,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大洲城"
+    "mapPoint": "大洲城",
+    "subType": "mountain"
   },
   {
     "id": "shakotan",
@@ -12486,7 +12600,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "神威岬"
+    "mapPoint": "神威岬",
+    "subType": "remote"
   },
   {
     "id": "izumo",
@@ -12616,7 +12731,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "出雲大社"
+    "mapPoint": "出雲大社",
+    "subType": "urban"
   },
   {
     "id": "suzu",
@@ -12718,7 +12834,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "禄剛崎灯台"
+    "mapPoint": "禄剛崎灯台",
+    "subType": "remote"
   },
   {
     "id": "yoshino",
@@ -12845,7 +12962,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "吉野山"
+    "mapPoint": "吉野山",
+    "subType": "mountain"
   },
   {
     "id": "kumano",
@@ -12958,7 +13076,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "熊野那智大社"
+    "mapPoint": "熊野那智大社",
+    "subType": "remote"
   },
   {
     "id": "iriomote",
@@ -13103,7 +13222,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "ピナイサーラの滝"
+    "mapPoint": "ピナイサーラの滝",
+    "subType": "sea"
   },
   {
     "id": "takahashi",
@@ -13231,7 +13351,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "備中松山城"
+    "mapPoint": "備中松山城",
+    "subType": "sea"
   },
   {
     "id": "hida-furukawa",
@@ -13352,7 +13473,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "瀬戸川と白壁土蔵街"
+    "mapPoint": "瀬戸川と白壁土蔵街",
+    "subType": "mountain"
   },
   {
     "id": "bungo-takada",
@@ -13473,7 +13595,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "昭和の町"
+    "mapPoint": "昭和の町",
+    "subType": "sea"
   },
   {
     "id": "izu-kogen",
@@ -13596,7 +13719,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "大室山"
+    "mapPoint": "大室山",
+    "subType": "mountain"
   },
   {
     "id": "tanabe",
@@ -13718,7 +13842,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "闘鶏神社"
+    "mapPoint": "闘鶏神社",
+    "subType": "mountain"
   },
   {
     "id": "tosa-shimizu",
@@ -13827,7 +13952,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "足摺岬"
+    "mapPoint": "足摺岬",
+    "subType": "sea"
   },
   {
     "id": "nichinan",
@@ -13956,7 +14082,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鵜戸神宮"
+    "mapPoint": "鵜戸神宮",
+    "subType": "remote"
   },
   {
     "id": "mojiko",
@@ -14065,7 +14192,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "門司港レトロ"
+    "mapPoint": "門司港レトロ",
+    "subType": "sea"
   },
   {
     "id": "itoshima",
@@ -14189,7 +14317,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "二見ヶ浦"
+    "mapPoint": "二見ヶ浦",
+    "subType": "remote"
   },
   {
     "id": "shimabara",
@@ -14317,7 +14446,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "島原城"
+    "mapPoint": "島原城",
+    "subType": "remote"
   },
   {
     "id": "tsuruga",
@@ -14424,7 +14554,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "気比神宮"
+    "mapPoint": "気比神宮",
+    "subType": "sea"
   },
   {
     "id": "shijishima",
@@ -14534,7 +14665,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "マーガレットの大木"
+    "mapPoint": "マーガレットの大木",
+    "subType": "sea"
   },
   {
     "id": "sounkyo",
@@ -14654,7 +14786,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "流星の滝"
+    "mapPoint": "流星の滝",
+    "subType": "mountain"
   },
   {
     "id": "rebun-island",
@@ -14790,7 +14923,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "桃岩展望台"
+    "mapPoint": "桃岩展望台",
+    "subType": "sea"
   },
   {
     "id": "rishiri-island",
@@ -14919,7 +15053,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "利尻山"
+    "mapPoint": "利尻山",
+    "subType": "sea"
   },
   {
     "id": "akan",
@@ -15021,7 +15156,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "マリモ"
+    "mapPoint": "マリモ",
+    "subType": "mountain"
   },
   {
     "id": "abashiri",
@@ -15126,7 +15262,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "網走監獄博物館"
+    "mapPoint": "網走監獄博物館",
+    "subType": "sea"
   },
   {
     "id": "shikotsu",
@@ -15237,7 +15374,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "支笏湖ビジターセンター"
+    "mapPoint": "支笏湖ビジターセンター",
+    "subType": "mountain"
   },
   {
     "id": "tono",
@@ -15343,7 +15481,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "カッパ淵"
+    "mapPoint": "カッパ淵",
+    "subType": "mountain"
   },
   {
     "id": "oga",
@@ -15456,7 +15595,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "ナマハゲ館"
+    "mapPoint": "ナマハゲ館",
+    "subType": "mountain"
   },
   {
     "id": "yonezawa",
@@ -15548,7 +15688,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "上杉神社"
+    "mapPoint": "上杉神社",
+    "subType": "urban"
   },
   {
     "id": "dewa-sanzan",
@@ -15655,7 +15796,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "羽黒山五重塔"
+    "mapPoint": "羽黒山五重塔",
+    "subType": "mountain"
   },
   {
     "id": "sakunami-onsen",
@@ -15758,7 +15900,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "秋保大滝"
+    "mapPoint": "秋保大滝",
+    "subType": "mountain"
   },
   {
     "id": "goshogawara",
@@ -15869,7 +16012,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "立佞武多の館"
+    "mapPoint": "立佞武多の館",
+    "subType": "mountain"
   },
   {
     "id": "kawagoe",
@@ -15971,7 +16115,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "蔵造りの街並み"
+    "mapPoint": "蔵造りの街並み",
+    "subType": "urban"
   },
   {
     "id": "nasu",
@@ -16067,7 +16212,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "那須岳"
+    "mapPoint": "那須岳",
+    "subType": "mountain"
   },
   {
     "id": "choshi",
@@ -16168,7 +16314,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "犬吠埼灯台"
+    "mapPoint": "犬吠埼灯台",
+    "subType": "sea"
   },
   {
     "id": "ashikaga",
@@ -16270,7 +16417,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "足利学校"
+    "mapPoint": "足利学校",
+    "subType": "mountain"
   },
   {
     "id": "shiobara-onsen",
@@ -16365,7 +16513,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "塩原温泉渓谷"
+    "mapPoint": "塩原温泉渓谷",
+    "subType": "mountain"
   },
   {
     "id": "sado-island",
@@ -16495,7 +16644,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐渡金山"
+    "mapPoint": "佐渡金山",
+    "subType": "sea"
   },
   {
     "id": "kiyosato",
@@ -16602,7 +16752,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "清泉寮"
+    "mapPoint": "清泉寮",
+    "subType": "mountain"
   },
   {
     "id": "tenryu-gorge",
@@ -16691,7 +16842,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "天竜峡舟下り"
+    "mapPoint": "天竜峡舟下り",
+    "subType": "mountain"
   },
   {
     "id": "suwa",
@@ -16798,7 +16950,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "諏訪大社"
+    "mapPoint": "諏訪大社",
+    "subType": "mountain"
   },
   {
     "id": "eiheiji",
@@ -16905,7 +17058,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "永平寺"
+    "mapPoint": "永平寺",
+    "subType": "mountain"
   },
   {
     "id": "wakasa-obama",
@@ -17015,7 +17169,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "小浜西組（重伝建）"
+    "mapPoint": "小浜西組（重伝建）",
+    "subType": "sea"
   },
   {
     "id": "okuhida-onsen",
@@ -17130,7 +17285,8 @@
     ],
     "secondary": [],
     "onsenLevel": 3,
-    "hasDirectFlight": true
+    "hasDirectFlight": true,
+    "subType": "mountain"
   },
   {
     "id": "minami-izu",
@@ -17229,7 +17385,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "石廊崎"
+    "mapPoint": "石廊崎",
+    "subType": "remote"
   },
   {
     "id": "echizen",
@@ -17336,7 +17493,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "越前海岸（水仙）"
+    "mapPoint": "越前海岸（水仙）",
+    "subType": "mountain"
   },
   {
     "id": "ito",
@@ -17444,7 +17602,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "伊東温泉"
+    "mapPoint": "伊東温泉",
+    "subType": "mountain"
   },
   {
     "id": "iga",
@@ -17538,7 +17697,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊賀流忍者博物館"
+    "mapPoint": "伊賀流忍者博物館",
+    "subType": "urban"
   },
   {
     "id": "kashihara",
@@ -17644,7 +17804,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "橿原神宮"
+    "mapPoint": "橿原神宮",
+    "subType": "urban"
   },
   {
     "id": "totsukawa",
@@ -17746,7 +17907,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "谷瀬の吊り橋"
+    "mapPoint": "谷瀬の吊り橋",
+    "subType": "remote"
   },
   {
     "id": "maizuru",
@@ -17839,7 +18001,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "舞鶴引揚記念館"
+    "mapPoint": "舞鶴引揚記念館",
+    "subType": "sea"
   },
   {
     "id": "asuka",
@@ -17958,7 +18121,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "石舞台古墳"
+    "mapPoint": "石舞台古墳",
+    "subType": "urban"
   },
   {
     "id": "daisen",
@@ -18065,7 +18229,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "大山頂上"
+    "mapPoint": "大山頂上",
+    "subType": "mountain"
   },
   {
     "id": "yunotsu-onsen",
@@ -18176,7 +18341,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "薬師湯"
+    "mapPoint": "薬師湯",
+    "subType": "mountain"
   },
   {
     "id": "iwami-ginzan",
@@ -18275,7 +18441,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "龍源寺間歩"
+    "mapPoint": "龍源寺間歩",
+    "subType": "mountain"
   },
   {
     "id": "iwakuni",
@@ -18389,7 +18556,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "錦帯橋"
+    "mapPoint": "錦帯橋",
+    "subType": "mountain"
   },
   {
     "id": "kurayoshi",
@@ -18493,7 +18661,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "白壁土蔵群"
+    "mapPoint": "白壁土蔵群",
+    "subType": "mountain"
   },
   {
     "id": "suo-oshima",
@@ -18617,7 +18786,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "片添ヶ浜"
+    "mapPoint": "片添ヶ浜",
+    "subType": "sea"
   },
   {
     "id": "shimanto",
@@ -18729,7 +18899,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "佐田沈下橋"
+    "mapPoint": "佐田沈下橋",
+    "subType": "mountain"
   },
   {
     "id": "kashiwajima",
@@ -18842,7 +19013,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "柏島海岸"
+    "mapPoint": "柏島海岸",
+    "subType": "sea"
   },
   {
     "id": "saijo",
@@ -18956,7 +19128,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "西条うちぬき広場"
+    "mapPoint": "西条うちぬき広場",
+    "subType": "mountain"
   },
   {
     "id": "ainan",
@@ -19060,7 +19233,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "一本松温泉あけぼの荘"
+    "mapPoint": "一本松温泉あけぼの荘",
+    "subType": "sea"
   },
   {
     "id": "taketa",
@@ -19163,7 +19337,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "岡城跡"
+    "mapPoint": "岡城跡",
+    "subType": "mountain"
   },
   {
     "id": "usuki",
@@ -19275,7 +19450,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "臼杵石仏（国宝）"
+    "mapPoint": "臼杵石仏（国宝）",
+    "subType": "urban"
   },
   {
     "id": "hita",
@@ -19386,7 +19562,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "豆田町（重伝建）"
+    "mapPoint": "豆田町（重伝建）",
+    "subType": "mountain"
   },
   {
     "id": "hasami",
@@ -19488,7 +19665,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "西の原"
+    "mapPoint": "西の原",
+    "subType": "mountain"
   },
   {
     "id": "takeo-onsen",
@@ -19577,7 +19755,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "武雄温泉楼門"
+    "mapPoint": "武雄温泉楼門",
+    "subType": "mountain"
   },
   {
     "id": "kitsuki",
@@ -19679,7 +19858,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "杵築城"
+    "mapPoint": "杵築城",
+    "subType": "urban"
   },
   {
     "id": "tsushima",
@@ -19817,7 +19997,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "万関橋"
+    "mapPoint": "万関橋",
+    "subType": "sea"
   },
   {
     "id": "iki-island",
@@ -19949,7 +20130,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "辰ノ島"
+    "mapPoint": "辰ノ島",
+    "subType": "sea"
   },
   {
     "id": "tanegashima",
@@ -20082,7 +20264,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "種子島宇宙センター"
+    "mapPoint": "種子島宇宙センター",
+    "subType": "sea"
   },
   {
     "id": "kikuchi",
@@ -20191,7 +20374,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "菊池渓谷"
+    "mapPoint": "菊池渓谷",
+    "subType": "remote"
   },
   {
     "id": "taketomi-island",
@@ -20321,7 +20505,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "星砂の浜"
+    "mapPoint": "星砂の浜",
+    "subType": "sea"
   },
   {
     "id": "yonaguni-island",
@@ -20452,7 +20637,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "西崎灯台（日本最西端）"
+    "mapPoint": "西崎灯台（日本最西端）",
+    "subType": "sea"
   },
   {
     "id": "nakijin",
@@ -20565,7 +20751,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "今帰仁城跡（世界遺産）"
+    "mapPoint": "今帰仁城跡（世界遺産）",
+    "subType": "remote"
   },
   {
     "id": "motobu",
@@ -20675,7 +20862,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "沖縄美ら海水族館"
+    "mapPoint": "沖縄美ら海水族館",
+    "subType": "remote"
   },
   {
     "id": "zamami-island",
@@ -20816,7 +21004,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "古座間味ビーチ"
+    "mapPoint": "古座間味ビーチ",
+    "subType": "sea"
   },
   {
     "id": "ie-island",
@@ -20952,7 +21141,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "城山（タッチュー）"
+    "mapPoint": "城山（タッチュー）",
+    "subType": "sea"
   },
   {
     "id": "kohama-island",
@@ -21068,7 +21258,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "はいむるぶし"
+    "mapPoint": "はいむるぶし",
+    "subType": "sea"
   },
   {
     "id": "matsushiro",
@@ -21164,7 +21355,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "松代城跡"
+    "mapPoint": "松代城跡",
+    "subType": "mountain"
   },
   {
     "id": "iiyama",
@@ -21263,7 +21455,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "菜の花公園"
+    "mapPoint": "菜の花公園",
+    "subType": "mountain"
   },
   {
     "id": "yakake",
@@ -21365,7 +21558,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "矢掛本陣（国指定史跡）"
+    "mapPoint": "矢掛本陣（国指定史跡）",
+    "subType": "mountain"
   },
   {
     "id": "tsuyama",
@@ -21479,7 +21673,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "津山城（鶴山公園）"
+    "mapPoint": "津山城（鶴山公園）",
+    "subType": "mountain"
   },
   {
     "id": "tsurugi-san",
@@ -21586,7 +21781,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "剣山山頂"
+    "mapPoint": "剣山山頂",
+    "subType": "sea"
   },
   {
     "id": "nobeoka",
@@ -21707,7 +21903,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "延岡城跡"
+    "mapPoint": "延岡城跡",
+    "subType": "sea"
   },
   {
     "id": "kamaishi",
@@ -21789,7 +21986,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "根浜海岸"
+    "mapPoint": "根浜海岸",
+    "subType": "sea"
   },
   {
     "id": "ofunato",
@@ -21871,7 +22069,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "碁石海岸"
+    "mapPoint": "碁石海岸",
+    "subType": "sea"
   },
   {
     "id": "kuji",
@@ -21953,7 +22152,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "久慈琥珀博物館"
+    "mapPoint": "久慈琥珀博物館",
+    "subType": "sea"
   },
   {
     "id": "wakkanai",
@@ -22062,7 +22262,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "宗谷岬"
+    "mapPoint": "宗谷岬",
+    "subType": "remote"
   },
   {
     "id": "obihiro",
@@ -22171,7 +22372,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "十勝牧場"
+    "mapPoint": "十勝牧場",
+    "subType": "mountain"
   },
   {
     "id": "rausu",
@@ -22289,7 +22491,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "羅臼岳"
+    "mapPoint": "羅臼岳",
+    "subType": "remote"
   },
   {
     "id": "esashi-hokkaido",
@@ -22402,7 +22605,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "いにしえ街道"
+    "mapPoint": "いにしえ街道",
+    "subType": "sea"
   },
   {
     "id": "hanamaki",
@@ -22506,7 +22710,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "宮沢賢治記念館"
+    "mapPoint": "宮沢賢治記念館",
+    "subType": "mountain"
   },
   {
     "id": "hachimantai",
@@ -22624,7 +22829,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "八幡平頂上"
+    "mapPoint": "八幡平頂上",
+    "subType": "mountain"
   },
   {
     "id": "tazawako",
@@ -22731,7 +22937,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "田沢湖"
+    "mapPoint": "田沢湖",
+    "subType": "mountain"
   },
   {
     "id": "yamadera",
@@ -22848,7 +23055,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "立石寺"
+    "mapPoint": "立石寺",
+    "subType": "mountain"
   },
   {
     "id": "kesennuma",
@@ -22951,7 +23159,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "気仙沼港"
+    "mapPoint": "気仙沼港",
+    "subType": "sea"
   },
   {
     "id": "ikaho",
@@ -23060,7 +23269,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "伊香保石段街"
+    "mapPoint": "伊香保石段街",
+    "subType": "mountain"
   },
   {
     "id": "enoshima",
@@ -23170,7 +23380,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "江島神社"
+    "mapPoint": "江島神社",
+    "subType": "sea"
   },
   {
     "id": "chichibu",
@@ -23277,7 +23488,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "秩父神社"
+    "mapPoint": "秩父神社",
+    "subType": "mountain"
   },
   {
     "id": "oarai",
@@ -23381,7 +23593,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大洗磯前神社"
+    "mapPoint": "大洗磯前神社",
+    "subType": "sea"
   },
   {
     "id": "sano",
@@ -23484,7 +23697,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐野厄除大師"
+    "mapPoint": "佐野厄除大師",
+    "subType": "urban"
   },
   {
     "id": "gujo-hachiman",
@@ -23591,7 +23805,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "郡上八幡城"
+    "mapPoint": "郡上八幡城",
+    "subType": "mountain"
   },
   {
     "id": "narai-juku",
@@ -23699,7 +23914,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "奈良井宿本陣跡"
+    "mapPoint": "奈良井宿本陣跡",
+    "subType": "mountain"
   },
   {
     "id": "itoigawa",
@@ -23801,7 +24017,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "フォッサマグナミュージアム"
+    "mapPoint": "フォッサマグナミュージアム",
+    "subType": "sea"
   },
   {
     "id": "murakami",
@@ -23906,7 +24123,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "村上城跡"
+    "mapPoint": "村上城跡",
+    "subType": "urban"
   },
   {
     "id": "shima",
@@ -24004,7 +24222,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "英虞湾"
+    "mapPoint": "英虞湾",
+    "subType": "sea"
   },
   {
     "id": "ogaki",
@@ -24096,7 +24315,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大垣城"
+    "mapPoint": "大垣城",
+    "subType": "urban"
   },
   {
     "id": "echizen-kaigan",
@@ -24205,7 +24425,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "東尋坊"
+    "mapPoint": "東尋坊",
+    "subType": "sea"
   },
   {
     "id": "myoko-kogen",
@@ -24305,7 +24526,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "妙高山"
+    "mapPoint": "妙高山",
+    "subType": "mountain"
   },
   {
     "id": "nagaoka",
@@ -24395,7 +24617,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "長岡花火"
+    "mapPoint": "長岡花火",
+    "subType": "mountain"
   },
   {
     "id": "tanba-sasayama",
@@ -24496,7 +24719,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "篠山城跡"
+    "mapPoint": "篠山城跡",
+    "subType": "urban"
   },
   {
     "id": "nachikatsuura",
@@ -24597,7 +24821,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "那智の大滝"
+    "mapPoint": "那智の大滝",
+    "subType": "mountain"
   },
   {
     "id": "kumano-hongu",
@@ -24711,7 +24936,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "熊野本宮大社"
+    "mapPoint": "熊野本宮大社",
+    "subType": "remote"
   },
   {
     "id": "ako",
@@ -24818,7 +25044,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "赤穂城跡"
+    "mapPoint": "赤穂城跡",
+    "subType": "sea"
   },
   {
     "id": "fushimi",
@@ -24928,7 +25155,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伏見稲荷大社"
+    "mapPoint": "伏見稲荷大社",
+    "subType": "urban"
   },
   {
     "id": "tomonoura",
@@ -25036,7 +25264,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鞆の浦港"
+    "mapPoint": "鞆の浦港",
+    "subType": "sea"
   },
   {
     "id": "sakaiminato",
@@ -25150,7 +25379,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "水木しげるロード"
+    "mapPoint": "水木しげるロード",
+    "subType": "sea"
   },
   {
     "id": "ushimado",
@@ -25266,7 +25496,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "牛窓オリーブ園"
+    "mapPoint": "牛窓オリーブ園",
+    "subType": "sea"
   },
   {
     "id": "kasaoka",
@@ -25358,7 +25589,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "笠岡諸島"
+    "mapPoint": "笠岡諸島",
+    "subType": "sea"
   },
   {
     "id": "tsunoshima",
@@ -25466,7 +25698,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "角島大橋"
+    "mapPoint": "角島大橋",
+    "subType": "remote"
   },
   {
     "id": "dogo-onsen",
@@ -25590,7 +25823,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "道後温泉本館"
+    "mapPoint": "道後温泉本館",
+    "subType": "mountain"
   },
   {
     "id": "marugame",
@@ -25697,7 +25931,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "丸亀城"
+    "mapPoint": "丸亀城",
+    "subType": "sea"
   },
   {
     "id": "misaki-sadamisaki",
@@ -25813,7 +26048,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "佐田岬灯台"
+    "mapPoint": "佐田岬灯台",
+    "subType": "remote"
   },
   {
     "id": "yanagawa",
@@ -25926,7 +26162,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "柳川川下り"
+    "mapPoint": "柳川川下り",
+    "subType": "mountain"
   },
   {
     "id": "hyuga",
@@ -26035,7 +26272,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "馬ヶ背"
+    "mapPoint": "馬ヶ背",
+    "subType": "sea"
   },
   {
     "id": "koshikijima",
@@ -26154,7 +26392,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "なかまで"
+    "mapPoint": "なかまで",
+    "subType": "sea"
   },
   {
     "id": "kirishima",
@@ -26266,7 +26505,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "mapPoint": "霧島神宮"
+    "mapPoint": "霧島神宮",
+    "subType": "mountain"
   },
   {
     "id": "ebino-kogen",
@@ -26380,7 +26620,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "えびの高原エコミュージアムセンター"
+    "mapPoint": "えびの高原エコミュージアムセンター",
+    "subType": "mountain"
   },
   {
     "id": "onna",
@@ -26488,7 +26729,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "万座毛"
+    "mapPoint": "万座毛",
+    "subType": "remote"
   },
   {
     "id": "nago",
@@ -26596,7 +26838,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "名護城跡"
+    "mapPoint": "名護城跡",
+    "subType": "sea"
   },
   {
     "id": "yomitanson",
@@ -26707,7 +26950,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "残波岬"
+    "mapPoint": "残波岬",
+    "subType": "sea"
   },
   {
     "id": "niseko",
@@ -26809,7 +27053,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "グラン・ヒラフ"
+    "mapPoint": "グラン・ヒラフ",
+    "subType": "mountain"
   },
   {
     "id": "daisetsuzan",
@@ -26923,7 +27168,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "旭岳"
+    "mapPoint": "旭岳",
+    "subType": "mountain"
   },
   {
     "id": "shiraoi",
@@ -27015,7 +27261,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ウポポイ（民族共生象徴空間）"
+    "mapPoint": "ウポポイ（民族共生象徴空間）",
+    "subType": "mountain"
   },
   {
     "id": "tomamu",
@@ -27110,7 +27357,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "雲海テラス"
+    "mapPoint": "雲海テラス",
+    "subType": "mountain"
   },
   {
     "id": "towada",
@@ -27220,7 +27468,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "十和田湖"
+    "mapPoint": "十和田湖",
+    "subType": "mountain"
   },
   {
     "id": "osorezan",
@@ -27330,7 +27579,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "恐山菩提寺"
+    "mapPoint": "恐山菩提寺",
+    "subType": "mountain"
   },
   {
     "id": "urabandai",
@@ -27444,7 +27694,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "五色沼"
+    "mapPoint": "五色沼",
+    "subType": "mountain"
   },
   {
     "id": "minami-sanriku",
@@ -27556,7 +27807,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "さんさん商店街"
+    "mapPoint": "さんさん商店街",
+    "subType": "sea"
   },
   {
     "id": "kitakami",
@@ -27652,7 +27904,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "展勝地"
+    "mapPoint": "展勝地",
+    "subType": "mountain"
   },
   {
     "id": "kinugawa-onsen",
@@ -27747,7 +28000,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "鬼怒川温泉街"
+    "mapPoint": "鬼怒川温泉街",
+    "subType": "mountain"
   },
   {
     "id": "oze",
@@ -27860,7 +28114,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "尾瀬ヶ原"
+    "mapPoint": "尾瀬ヶ原",
+    "subType": "mountain"
   },
   {
     "id": "tsukuba",
@@ -27958,7 +28213,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "筑波山"
+    "mapPoint": "筑波山",
+    "subType": "mountain"
   },
   {
     "id": "kasama",
@@ -28053,7 +28309,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "笠間稲荷神社"
+    "mapPoint": "笠間稲荷神社",
+    "subType": "urban"
   },
   {
     "id": "naritasan",
@@ -28148,7 +28405,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "成田山新勝寺"
+    "mapPoint": "成田山新勝寺",
+    "subType": "urban"
   },
   {
     "id": "kujukuri",
@@ -28258,7 +28516,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "九十九里浜"
+    "mapPoint": "九十九里浜",
+    "subType": "sea"
   },
   {
     "id": "miura",
@@ -28356,7 +28615,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "城ヶ島"
+    "mapPoint": "城ヶ島",
+    "subType": "sea"
   },
   {
     "id": "oku-tama",
@@ -28451,7 +28711,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "奥多摩湖"
+    "mapPoint": "奥多摩湖",
+    "subType": "mountain"
   },
   {
     "id": "jigokudani",
@@ -28549,7 +28810,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "地獄谷野猿公苑"
+    "mapPoint": "地獄谷野猿公苑",
+    "subType": "mountain"
   },
   {
     "id": "tateshina",
@@ -28663,7 +28925,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "蓼科湖"
+    "mapPoint": "蓼科湖",
+    "subType": "mountain"
   },
   {
     "id": "echigo-yuzawa",
@@ -28758,7 +29021,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "石打丸山スキー場"
+    "mapPoint": "石打丸山スキー場",
+    "subType": "mountain"
   },
   {
     "id": "fujinomiya",
@@ -28854,7 +29118,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "富士山本宮浅間大社"
+    "mapPoint": "富士山本宮浅間大社",
+    "subType": "mountain"
   },
   {
     "id": "norikura",
@@ -28968,7 +29233,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "畳平"
+    "mapPoint": "畳平",
+    "subType": "mountain"
   },
   {
     "id": "tokoname",
@@ -29061,7 +29327,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "やきもの散歩道"
+    "mapPoint": "やきもの散歩道",
+    "subType": "urban"
   },
   {
     "id": "korankei",
@@ -29171,7 +29438,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "香嵐渓"
+    "mapPoint": "香嵐渓",
+    "subType": "mountain"
   },
   {
     "id": "minamichita",
@@ -29269,7 +29537,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "師崎港"
+    "mapPoint": "師崎港",
+    "subType": "sea"
   },
   {
     "id": "arashiyama",
@@ -29366,7 +29635,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "竹林の道"
+    "mapPoint": "竹林の道",
+    "subType": "mountain"
   },
   {
     "id": "shigaraki",
@@ -29459,7 +29729,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "信楽焼窯元"
+    "mapPoint": "信楽焼窯元",
+    "subType": "urban"
   },
   {
     "id": "dorogawa-onsen",
@@ -29571,7 +29842,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "龍泉寺"
+    "mapPoint": "龍泉寺",
+    "subType": "mountain"
   },
   {
     "id": "matsusaka",
@@ -29667,7 +29939,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "松阪城跡"
+    "mapPoint": "松阪城跡",
+    "subType": "urban"
   },
   {
     "id": "sakai",
@@ -29768,7 +30041,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "仁徳天皇陵古墳"
+    "mapPoint": "仁徳天皇陵古墳",
+    "subType": "urban"
   },
   {
     "id": "ama-island",
@@ -29898,7 +30172,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "キンニャモニャセンター"
+    "mapPoint": "キンニャモニャセンター",
+    "subType": "sea"
   },
   {
     "id": "akiyoshidai",
@@ -30009,7 +30284,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "秋芳洞"
+    "mapPoint": "秋芳洞",
+    "subType": "mountain"
   },
   {
     "id": "yanai",
@@ -30102,7 +30378,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "白壁の街並み"
+    "mapPoint": "白壁の街並み",
+    "subType": "urban"
   },
   {
     "id": "oki-island",
@@ -30239,7 +30516,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "ローソク島"
+    "mapPoint": "ローソク島",
+    "subType": "sea"
   },
   {
     "id": "inujima",
@@ -30360,7 +30638,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "犬島精錬所美術館"
+    "mapPoint": "犬島精錬所美術館",
+    "subType": "sea"
   },
   {
     "id": "teshima",
@@ -30489,7 +30768,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "豊島美術館"
+    "mapPoint": "豊島美術館",
+    "subType": "sea"
   },
   {
     "id": "niyodogawa",
@@ -30601,7 +30881,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "にこ淵"
+    "mapPoint": "にこ淵",
+    "subType": "remote"
   },
   {
     "id": "yusuhara",
@@ -30715,7 +30996,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ゆすはら座"
+    "mapPoint": "ゆすはら座",
+    "subType": "remote"
   },
   {
     "id": "anan",
@@ -30808,7 +31090,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大浜海岸（アカウミガメ産卵地）"
+    "mapPoint": "大浜海岸（アカウミガメ産卵地）",
+    "subType": "sea"
   },
   {
     "id": "shikoku-karst",
@@ -30921,7 +31204,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "天狗高原"
+    "mapPoint": "天狗高原",
+    "subType": "mountain"
   },
   {
     "id": "aoshima",
@@ -31015,7 +31299,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "青島神社"
+    "mapPoint": "青島神社",
+    "subType": "sea"
   },
   {
     "id": "yamaga",
@@ -31128,7 +31413,8 @@
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "山鹿灯籠民芸館"
+    "mapPoint": "山鹿灯籠民芸館",
+    "subType": "mountain"
   },
   {
     "id": "yoshinogari",
@@ -31226,7 +31512,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "吉野ヶ里歴史公園"
+    "mapPoint": "吉野ヶ里歴史公園",
+    "subType": "urban"
   },
   {
     "id": "kunisaki",
@@ -31345,7 +31632,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "両子寺"
+    "mapPoint": "両子寺",
+    "subType": "mountain"
   },
   {
     "id": "chiran",
@@ -31459,7 +31747,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "知覧武家屋敷群"
+    "mapPoint": "知覧武家屋敷群",
+    "subType": "urban"
   },
   {
     "id": "ojika-island",
@@ -31588,7 +31877,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "古民家宿ほんまもん"
+    "mapPoint": "古民家宿ほんまもん",
+    "subType": "sea"
   },
   {
     "id": "irabu-island",
@@ -31706,7 +31996,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "渡口の浜"
+    "mapPoint": "渡口の浜",
+    "subType": "sea"
   },
   {
     "id": "aguni-island",
@@ -31842,7 +32133,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "粟国島の塩"
+    "mapPoint": "粟国島の塩",
+    "subType": "sea"
   },
   {
     "id": "itoman",
@@ -31961,7 +32253,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "平和祈念公園"
+    "mapPoint": "平和祈念公園",
+    "subType": "sea"
   },
   {
     "id": "kijoka",
@@ -32079,7 +32372,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "芭蕉布会館"
+    "mapPoint": "芭蕉布会館",
+    "subType": "mountain"
   },
   {
     "id": "miyakejima",
@@ -32208,7 +32502,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "雄山"
+    "mapPoint": "雄山",
+    "subType": "sea"
   },
   {
     "id": "hachijojima",
@@ -32344,7 +32639,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
-    "mapPoint": "底土海水浴場"
+    "mapPoint": "底土海水浴場",
+    "subType": "sea"
   },
   {
     "id": "niijima",
@@ -32474,7 +32770,8 @@
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "コシキビーチ"
+    "mapPoint": "コシキビーチ",
+    "subType": "sea"
   },
   {
     "id": "shikinejima",
@@ -32596,7 +32893,8 @@
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "地鉈温泉"
+    "mapPoint": "地鉈温泉",
+    "subType": "sea"
   },
   {
     "id": "shirakawa",
@@ -32684,7 +32982,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "小峰城"
+    "mapPoint": "小峰城",
+    "subType": "mountain"
   },
   {
     "id": "kitakata",
@@ -32771,7 +33070,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "蔵のまち"
+    "mapPoint": "蔵のまち",
+    "subType": "urban"
   },
   {
     "id": "koriyama",
@@ -32859,7 +33159,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "開成山公園"
+    "mapPoint": "開成山公園",
+    "subType": "urban"
   },
   {
     "id": "ryusendo",
@@ -32948,7 +33249,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "龍泉洞"
+    "mapPoint": "龍泉洞",
+    "subType": "mountain"
   },
   {
     "id": "ichinoseki",
@@ -33035,7 +33337,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "厳美渓"
+    "mapPoint": "厳美渓",
+    "subType": "mountain"
   },
   {
     "id": "akita-oga",
@@ -33124,7 +33427,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "男鹿温泉郷"
+    "mapPoint": "男鹿温泉郷",
+    "subType": "mountain"
   },
   {
     "id": "kisakata",
@@ -33212,7 +33516,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "蚶満寺"
+    "mapPoint": "蚶満寺",
+    "subType": "mountain"
   },
   {
     "id": "gassan",
@@ -33301,7 +33606,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "月山スキー場"
+    "mapPoint": "月山スキー場",
+    "subType": "mountain"
   },
   {
     "id": "higashine",
@@ -33388,7 +33694,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "東根温泉"
+    "mapPoint": "東根温泉",
+    "subType": "mountain"
   },
   {
     "id": "akakura-onsen",
@@ -33476,7 +33783,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "赤倉温泉スキー場"
+    "mapPoint": "赤倉温泉スキー場",
+    "subType": "mountain"
   },
   {
     "id": "yugawara-onsen",
@@ -33562,7 +33870,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "湯河原温泉街"
+    "mapPoint": "湯河原温泉街",
+    "subType": "mountain"
   },
   {
     "id": "yokosuka",
@@ -33650,7 +33959,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "猿島"
+    "mapPoint": "猿島",
+    "subType": "urban"
   },
   {
     "id": "mishima",
@@ -33738,7 +34048,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "三嶋大社"
+    "mapPoint": "三嶋大社",
+    "subType": "mountain"
   },
   {
     "id": "numazu",
@@ -33826,7 +34137,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "沼津港深海水族館"
+    "mapPoint": "沼津港深海水族館",
+    "subType": "sea"
   },
   {
     "id": "hamamatsu",
@@ -33914,7 +34226,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浜名湖"
+    "mapPoint": "浜名湖",
+    "subType": "urban"
   },
   {
     "id": "kakegawa",
@@ -34002,7 +34315,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "掛川城"
+    "mapPoint": "掛川城",
+    "subType": "mountain"
   },
   {
     "id": "okazaki",
@@ -34090,7 +34404,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "岡崎城"
+    "mapPoint": "岡崎城",
+    "subType": "urban"
   },
   {
     "id": "toyohashi",
@@ -34178,7 +34493,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "豊川稲荷（近郊）"
+    "mapPoint": "豊川稲荷（近郊）",
+    "subType": "urban"
   },
   {
     "id": "tajimi",
@@ -34266,7 +34582,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "本町オリベストリート"
+    "mapPoint": "本町オリベストリート",
+    "subType": "urban"
   },
   {
     "id": "togakushi",
@@ -34354,7 +34671,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "戸隠神社奥社"
+    "mapPoint": "戸隠神社奥社",
+    "subType": "mountain"
   },
   {
     "id": "omihachiman",
@@ -34442,7 +34760,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "八幡堀"
+    "mapPoint": "八幡堀",
+    "subType": "urban"
   },
   {
     "id": "takarazuka",
@@ -34530,7 +34849,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "宝塚大劇場"
+    "mapPoint": "宝塚大劇場",
+    "subType": "urban"
   },
   {
     "id": "akashi",
@@ -34618,7 +34938,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "明石市立天文科学館"
+    "mapPoint": "明石市立天文科学館",
+    "subType": "urban"
   },
   {
     "id": "naruto",
@@ -34706,7 +35027,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "渦の道"
+    "mapPoint": "渦の道",
+    "subType": "mountain"
   },
   {
     "id": "innoshima",
@@ -34795,7 +35117,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "因島水軍城"
+    "mapPoint": "因島水軍城",
+    "subType": "sea"
   },
   {
     "id": "mihara",
@@ -34883,7 +35206,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "三原城跡"
+    "mapPoint": "三原城跡",
+    "subType": "urban"
   },
   {
     "id": "hofu",
@@ -34969,7 +35293,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "防府天満宮"
+    "mapPoint": "防府天満宮",
+    "subType": "urban"
   },
   {
     "id": "karatsu",
@@ -35057,7 +35382,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "唐津城"
+    "mapPoint": "唐津城",
+    "subType": "sea"
   },
   {
     "id": "dazaifu",
@@ -35143,7 +35469,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "太宰府天満宮"
+    "mapPoint": "太宰府天満宮",
+    "subType": "urban"
   },
   {
     "id": "nakatsu",
@@ -35231,7 +35558,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "中津城"
+    "mapPoint": "中津城",
+    "subType": "urban"
   },
   {
     "id": "nemuro",
@@ -35319,7 +35647,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "納沙布岬"
+    "mapPoint": "納沙布岬",
+    "subType": "remote"
   },
   {
     "id": "muroran",
@@ -35407,7 +35736,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "地球岬"
+    "mapPoint": "地球岬",
+    "subType": "mountain"
   },
   {
     "id": "tomakomai",
@@ -35495,7 +35825,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ウトナイ湖野生鳥獣保護センター"
+    "mapPoint": "ウトナイ湖野生鳥獣保護センター",
+    "subType": "mountain"
   },
   {
     "id": "ishinomaki",
@@ -35582,7 +35913,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "石ノ森萬画館"
+    "mapPoint": "石ノ森萬画館",
+    "subType": "urban"
   },
   {
     "id": "hitachi",
@@ -35669,7 +36001,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "日立駅（ガラス張りの駅）"
+    "mapPoint": "日立駅（ガラス張りの駅）",
+    "subType": "mountain"
   },
   {
     "id": "kashima",
@@ -35754,7 +36087,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鹿島神宮"
+    "mapPoint": "鹿島神宮",
+    "subType": "urban"
   },
   {
     "id": "shiraoishi",
@@ -35840,7 +36174,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "白石城"
+    "mapPoint": "白石城",
+    "subType": "urban"
   },
   {
     "id": "noshiro",
@@ -35928,7 +36263,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "風の松原"
+    "mapPoint": "風の松原",
+    "subType": "mountain"
   },
   {
     "id": "tendou",
@@ -36015,7 +36351,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "舞鶴山公園（人間将棋）"
+    "mapPoint": "舞鶴山公園（人間将棋）",
+    "subType": "mountain"
   },
   {
     "id": "shonai",
@@ -36103,7 +36440,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "致道博物館"
+    "mapPoint": "致道博物館",
+    "subType": "urban"
   },
   {
     "id": "ogata",
@@ -36192,7 +36530,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "なまはげの里（近郊）"
+    "mapPoint": "なまはげの里（近郊）",
+    "subType": "mountain"
   },
   {
     "id": "rikuzentakata",
@@ -36280,7 +36619,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "奇跡の一本松"
+    "mapPoint": "奇跡の一本松",
+    "subType": "mountain"
   },
   {
     "id": "sanriku-miyako",
@@ -36369,7 +36709,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浄土ヶ浜"
+    "mapPoint": "浄土ヶ浜",
+    "subType": "sea"
   },
   {
     "id": "motomiya",
@@ -36454,7 +36795,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "安達太良山"
+    "mapPoint": "安達太良山",
+    "subType": "mountain"
   },
   {
     "id": "mizusawa",
@@ -36541,7 +36883,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "胆沢城跡"
+    "mapPoint": "胆沢城跡",
+    "subType": "urban"
   },
   {
     "id": "ichinoseki-geibikei",
@@ -36629,7 +36972,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "猊鼻渓舟下り"
+    "mapPoint": "猊鼻渓舟下り",
+    "subType": "mountain"
   },
   {
     "id": "akita-semboku",
@@ -36716,7 +37060,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "田沢湖"
+    "mapPoint": "田沢湖",
+    "subType": "mountain"
   },
   {
     "id": "tendo",
@@ -36803,7 +37148,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "慈恩寺"
+    "mapPoint": "慈恩寺",
+    "subType": "mountain"
   },
   {
     "id": "nyuzen",
@@ -36890,7 +37236,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "舟見城址館"
+    "mapPoint": "舟見城址館",
+    "subType": "mountain"
   },
   {
     "id": "nanao",
@@ -36977,7 +37324,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "和倉温泉"
+    "mapPoint": "和倉温泉",
+    "subType": "sea"
   },
   {
     "id": "fukuchiyama",
@@ -37063,7 +37411,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "福知山城"
+    "mapPoint": "福知山城",
+    "subType": "urban"
   },
   {
     "id": "koka",
@@ -37149,7 +37498,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "甲賀流忍術屋敷"
+    "mapPoint": "甲賀流忍術屋敷",
+    "subType": "urban"
   },
   {
     "id": "tondabayashi",
@@ -37235,7 +37585,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "富田林寺内町"
+    "mapPoint": "富田林寺内町",
+    "subType": "urban"
   },
   {
     "id": "kishiwada",
@@ -37323,7 +37674,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "岸和田城"
+    "mapPoint": "岸和田城",
+    "subType": "urban"
   },
   {
     "id": "amagasaki",
@@ -37411,7 +37763,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "尼崎城"
+    "mapPoint": "尼崎城",
+    "subType": "urban"
   },
   {
     "id": "nishiwaki",
@@ -37499,7 +37852,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "日本のへそ公園"
+    "mapPoint": "日本のへそ公園",
+    "subType": "mountain"
   },
   {
     "id": "nagi",
@@ -37587,7 +37941,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "奈義町現代美術館"
+    "mapPoint": "奈義町現代美術館",
+    "subType": "remote"
   },
   {
     "id": "higashihiroshima",
@@ -37674,7 +38029,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "西条酒蔵通り"
+    "mapPoint": "西条酒蔵通り",
+    "subType": "urban"
   },
   {
     "id": "fukuyama",
@@ -37762,7 +38118,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "福山城"
+    "mapPoint": "福山城",
+    "subType": "urban"
   },
   {
     "id": "otoyo",
@@ -37847,7 +38204,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "日本一の大杉"
+    "mapPoint": "日本一の大杉",
+    "subType": "remote"
   },
   {
     "id": "sukumo",
@@ -37934,7 +38292,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ビオスの里（沖の島）"
+    "mapPoint": "ビオスの里（沖の島）",
+    "subType": "sea"
   },
   {
     "id": "miyoshi-tokushima",
@@ -38022,7 +38381,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "かずら橋"
+    "mapPoint": "かずら橋",
+    "subType": "mountain"
   },
   {
     "id": "oita-city",
@@ -38110,7 +38470,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "高崎山自然動物園"
+    "mapPoint": "高崎山自然動物園",
+    "subType": "mountain"
   },
   {
     "id": "yuwaku-onsen",
@@ -38198,7 +38559,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "湯涌温泉街"
+    "mapPoint": "湯涌温泉街",
+    "subType": "mountain"
   },
   {
     "id": "yura-wakayama",
@@ -38286,7 +38648,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "白崎海洋公園"
+    "mapPoint": "白崎海洋公園",
+    "subType": "sea"
   },
   {
     "id": "misaki-osaka",
@@ -38374,7 +38737,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "友ヶ島"
+    "mapPoint": "友ヶ島",
+    "subType": "sea"
   },
   {
     "id": "kitakyushu",
@@ -38462,7 +38826,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "小倉城"
+    "mapPoint": "小倉城",
+    "subType": "urban"
   },
   {
     "id": "asakura",
@@ -38550,7 +38915,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "秋月城跡"
+    "mapPoint": "秋月城跡",
+    "subType": "mountain"
   },
   {
     "id": "ebino",
@@ -38638,7 +39004,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "えびの高原"
+    "mapPoint": "えびの高原",
+    "subType": "mountain"
   },
   {
     "id": "hitoyoshi-city",
@@ -38725,7 +39092,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "球磨川下り"
+    "mapPoint": "球磨川下り",
+    "subType": "mountain"
   },
   {
     "id": "minamikyushu",
@@ -38825,7 +39193,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "知覧特攻平和会館（近郊）"
+    "mapPoint": "知覧特攻平和会館（近郊）",
+    "subType": "mountain"
   },
   {
     "id": "minamiosumi",
@@ -38925,7 +39294,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐多岬"
+    "mapPoint": "佐多岬",
+    "subType": "remote"
   },
   {
     "id": "chatan",
@@ -39023,7 +39393,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "アメリカンビレッジ"
+    "mapPoint": "アメリカンビレッジ",
+    "subType": "sea"
   },
   {
     "id": "uruma",
@@ -39121,7 +39492,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "勝連城跡"
+    "mapPoint": "勝連城跡",
+    "subType": "sea"
   },
   {
     "id": "nanto",
@@ -39209,7 +39581,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "相倉合掌集落"
+    "mapPoint": "相倉合掌集落",
+    "subType": "mountain"
   },
   {
     "id": "hakusan",
@@ -39297,7 +39670,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "白山室堂"
+    "mapPoint": "白山室堂",
+    "subType": "mountain"
   },
   {
     "id": "kamo-kyoto",
@@ -39386,7 +39760,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "童仙房高原"
+    "mapPoint": "童仙房高原",
+    "subType": "remote"
   },
   {
     "id": "shingu-wakayama",
@@ -39473,7 +39848,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "熊野速玉大社"
+    "mapPoint": "熊野速玉大社",
+    "subType": "mountain"
   },
   {
     "id": "himeshima",
@@ -39576,7 +39952,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "姫島七不思議"
+    "mapPoint": "姫島七不思議",
+    "subType": "sea"
   },
   {
     "id": "toshima",
@@ -39667,7 +40044,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "椿林"
+    "mapPoint": "椿林",
+    "subType": "sea"
   },
   {
     "id": "joetsu",
@@ -39754,7 +40132,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "春日山城跡"
+    "mapPoint": "春日山城跡",
+    "subType": "mountain"
   },
   {
     "id": "myoko",
@@ -39854,7 +40233,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "妙高高原"
+    "mapPoint": "妙高高原",
+    "subType": "mountain"
   },
   {
     "id": "hokkaido-hakodate",
@@ -39958,7 +40338,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "函館山夜景"
+    "mapPoint": "函館山夜景",
+    "subType": "urban"
   },
   {
     "id": "hokkaido-asahikawa",
@@ -40057,7 +40438,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "旭山動物園"
+    "mapPoint": "旭山動物園",
+    "subType": "mountain"
   },
   {
     "id": "hokkaido-kushiro",
@@ -40156,7 +40538,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "釧路湿原"
+    "mapPoint": "釧路湿原",
+    "subType": "mountain"
   },
   {
     "id": "yoichi",
@@ -40243,7 +40626,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ニッカウヰスキー余市蒸溜所"
+    "mapPoint": "ニッカウヰスキー余市蒸溜所",
+    "subType": "mountain"
   },
   {
     "id": "akkeshi",
@@ -40332,7 +40716,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "厚岸グルメパーク"
+    "mapPoint": "厚岸グルメパーク",
+    "subType": "mountain"
   },
   {
     "id": "kitami",
@@ -40429,7 +40814,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "北見ハッカ記念館"
+    "mapPoint": "北見ハッカ記念館",
+    "subType": "mountain"
   },
   {
     "id": "monbetsu",
@@ -40515,7 +40901,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "ガリンコ号"
+    "mapPoint": "ガリンコ号",
+    "subType": "mountain"
   },
   {
     "id": "mashike",
@@ -40604,7 +40991,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "国稀酒造"
+    "mapPoint": "国稀酒造",
+    "subType": "urban"
   },
   {
     "id": "fukushima-city",
@@ -40692,7 +41080,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "吾妻小富士"
+    "mapPoint": "吾妻小富士",
+    "subType": "mountain"
   },
   {
     "id": "omagari",
@@ -40779,7 +41168,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大曲花火競技大会"
+    "mapPoint": "大曲花火競技大会",
+    "subType": "mountain"
   },
   {
     "id": "shinjou",
@@ -40866,7 +41256,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "新庄まつり"
+    "mapPoint": "新庄まつり",
+    "subType": "mountain"
   },
   {
     "id": "nagai",
@@ -40964,7 +41355,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "あやめ公園"
+    "mapPoint": "あやめ公園",
+    "subType": "mountain"
   },
   {
     "id": "kanagawa-yokohama",
@@ -41056,7 +41448,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "みなとみらい21"
+    "mapPoint": "みなとみらい21",
+    "subType": "urban"
   },
   {
     "id": "ibaraki-mito",
@@ -41147,7 +41540,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "偕楽園"
+    "mapPoint": "偕楽園",
+    "subType": "mountain"
   },
   {
     "id": "utsunomiya",
@@ -41235,7 +41629,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大谷資料館"
+    "mapPoint": "大谷資料館",
+    "subType": "urban"
   },
   {
     "id": "takasaki",
@@ -41323,7 +41718,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "高崎白衣大観音"
+    "mapPoint": "高崎白衣大観音",
+    "subType": "mountain"
   },
   {
     "id": "odawara",
@@ -41411,7 +41807,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "小田原城"
+    "mapPoint": "小田原城",
+    "subType": "urban"
   },
   {
     "id": "sawara",
@@ -41499,7 +41896,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐原の町並み"
+    "mapPoint": "佐原の町並み",
+    "subType": "urban"
   },
   {
     "id": "nokogiriyama",
@@ -41588,7 +41986,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鋸山ロープウェー"
+    "mapPoint": "鋸山ロープウェー",
+    "subType": "mountain"
   },
   {
     "id": "katsuura-chiba",
@@ -41676,7 +42075,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "勝浦朝市"
+    "mapPoint": "勝浦朝市",
+    "subType": "sea"
   },
   {
     "id": "azumino",
@@ -41762,7 +42162,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大王わさび農場"
+    "mapPoint": "大王わさび農場",
+    "subType": "mountain"
   },
   {
     "id": "nagano-iida",
@@ -41852,7 +42253,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "元善光寺"
+    "mapPoint": "元善光寺",
+    "subType": "mountain"
   },
   {
     "id": "nakatsugawa",
@@ -41940,7 +42342,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "栗きんとん老舗街"
+    "mapPoint": "栗きんとん老舗街",
+    "subType": "urban"
   },
   {
     "id": "yaizu",
@@ -42028,7 +42431,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "焼津さかなセンター"
+    "mapPoint": "焼津さかなセンター",
+    "subType": "sea"
   },
   {
     "id": "hamanako",
@@ -42117,7 +42521,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浜名湖ガーデンパーク"
+    "mapPoint": "浜名湖ガーデンパーク",
+    "subType": "mountain"
   },
   {
     "id": "gamagori",
@@ -42205,7 +42610,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "竹島"
+    "mapPoint": "竹島",
+    "subType": "sea"
   },
   {
     "id": "toyota-city",
@@ -42293,7 +42699,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "香嵐渓（足助）"
+    "mapPoint": "香嵐渓（足助）",
+    "subType": "mountain"
   },
   {
     "id": "otsu-shiga",
@@ -42381,7 +42788,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "比叡山延暦寺"
+    "mapPoint": "比叡山延暦寺",
+    "subType": "mountain"
   },
   {
     "id": "kusatsu-shiga",
@@ -42469,7 +42877,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "草津宿本陣"
+    "mapPoint": "草津宿本陣",
+    "subType": "mountain"
   },
   {
     "id": "takashima-shiga",
@@ -42558,7 +42967,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "白鬚神社"
+    "mapPoint": "白鬚神社",
+    "subType": "mountain"
   },
   {
     "id": "tango-kyoto",
@@ -42646,7 +43056,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊根の舟屋（近隣）"
+    "mapPoint": "伊根の舟屋（近隣）",
+    "subType": "sea"
   },
   {
     "id": "owase",
@@ -42745,7 +43156,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "尾鷲港"
+    "mapPoint": "尾鷲港",
+    "subType": "sea"
   },
   {
     "id": "gobo",
@@ -42833,7 +43245,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "日高川"
+    "mapPoint": "日高川",
+    "subType": "sea"
   },
   {
     "id": "kushimoto",
@@ -42921,7 +43334,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "潮岬（本州最南端）"
+    "mapPoint": "潮岬（本州最南端）",
+    "subType": "sea"
   },
   {
     "id": "shimane-matsue",
@@ -43020,7 +43434,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "松江城"
+    "mapPoint": "松江城",
+    "subType": "urban"
   },
   {
     "id": "hamada-shimane",
@@ -43116,7 +43531,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "浜田港"
+    "mapPoint": "浜田港",
+    "subType": "sea"
   },
   {
     "id": "kure",
@@ -43203,7 +43619,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "大和ミュージアム"
+    "mapPoint": "大和ミュージアム",
+    "subType": "urban"
   },
   {
     "id": "miyoshi-hiroshima",
@@ -43290,7 +43707,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "霧の海展望台"
+    "mapPoint": "霧の海展望台",
+    "subType": "mountain"
   },
   {
     "id": "nagato-yamaguchi",
@@ -43378,7 +43796,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "元乃隅稲荷神社"
+    "mapPoint": "元乃隅稲荷神社",
+    "subType": "mountain"
   },
   {
     "id": "mine-yamaguchi",
@@ -43464,7 +43883,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "秋芳洞"
+    "mapPoint": "秋芳洞",
+    "subType": "mountain"
   },
   {
     "id": "kagawa-takamatsu",
@@ -43564,7 +43984,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "栗林公園"
+    "mapPoint": "栗林公園",
+    "subType": "urban"
   },
   {
     "id": "sakaide",
@@ -43652,7 +44073,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "瀬戸大橋記念館"
+    "mapPoint": "瀬戸大橋記念館",
+    "subType": "sea"
   },
   {
     "id": "tosa-city",
@@ -43741,7 +44163,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "宇佐大橋"
+    "mapPoint": "宇佐大橋",
+    "subType": "sea"
   },
   {
     "id": "kanonji",
@@ -43829,7 +44252,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "琴弾公園・銭形砂絵"
+    "mapPoint": "琴弾公園・銭形砂絵",
+    "subType": "sea"
   },
   {
     "id": "fukuoka-city",
@@ -43926,7 +44350,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "博多屋台"
+    "mapPoint": "博多屋台",
+    "subType": "urban"
   },
   {
     "id": "kurume",
@@ -44014,7 +44439,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "水天宮（久留米）"
+    "mapPoint": "水天宮（久留米）",
+    "subType": "urban"
   },
   {
     "id": "yatsushiro",
@@ -44102,7 +44528,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "八代城跡"
+    "mapPoint": "八代城跡",
+    "subType": "mountain"
   },
   {
     "id": "oguni-kumamoto",
@@ -44196,7 +44623,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "杖立温泉"
+    "mapPoint": "杖立温泉",
+    "subType": "mountain"
   },
   {
     "id": "izumi-kagoshima",
@@ -44282,7 +44710,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ツル観察センター"
+    "mapPoint": "ツル観察センター",
+    "subType": "mountain"
   },
   {
     "id": "makurazaki",
@@ -44369,7 +44798,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "枕崎港"
+    "mapPoint": "枕崎港",
+    "subType": "mountain"
   },
   {
     "id": "miyakonojo",
@@ -44456,7 +44886,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "霧島神宮（近隣）"
+    "mapPoint": "霧島神宮（近隣）",
+    "subType": "mountain"
   },
   {
     "id": "nanjo-okinawa",
@@ -44545,7 +44976,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "斎場御嶽"
+    "mapPoint": "斎場御嶽",
+    "subType": "mountain"
   },
   {
     "id": "aogashima",
@@ -44626,7 +45058,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "丸山（二重カルデラ）"
+    "mapPoint": "丸山（二重カルデラ）",
+    "subType": "sea"
   },
   {
     "id": "kugashima",
@@ -44709,7 +45142,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "旧五輪教会堂"
+    "mapPoint": "旧五輪教会堂",
+    "subType": "sea"
   },
   {
     "id": "nakatosa",
@@ -44796,7 +45230,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "久礼大正市場"
+    "mapPoint": "久礼大正市場",
+    "subType": "sea"
   },
   {
     "id": "ikata",
@@ -44886,7 +45321,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐田岬（本土最西端）"
+    "mapPoint": "佐田岬（本土最西端）",
+    "subType": "sea"
   },
   {
     "id": "muroto-cape",
@@ -44974,7 +45410,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "室戸岬"
+    "mapPoint": "室戸岬",
+    "subType": "mountain"
   },
   {
     "id": "oshima-yamaguchi",
@@ -45074,7 +45511,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "片添ヶ浜"
+    "mapPoint": "片添ヶ浜",
+    "subType": "sea"
   },
   {
     "id": "ibara",
@@ -45161,7 +45599,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "八塔寺ふるさと村"
+    "mapPoint": "八塔寺ふるさと村",
+    "subType": "mountain"
   },
   {
     "id": "niimi",
@@ -45248,7 +45687,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "満奇洞"
+    "mapPoint": "満奇洞",
+    "subType": "mountain"
   },
   {
     "id": "uda-nara",
@@ -45337,7 +45777,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "室生寺"
+    "mapPoint": "室生寺",
+    "subType": "mountain"
   },
   {
     "id": "mimasaka",
@@ -45425,7 +45866,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "湯郷温泉"
+    "mapPoint": "湯郷温泉",
+    "subType": "mountain"
   },
   {
     "id": "kochi-shimanto",
@@ -45511,7 +45953,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "佐田沈下橋"
+    "mapPoint": "佐田沈下橋",
+    "subType": "mountain"
   },
   {
     "id": "yonago",
@@ -45607,7 +46050,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "皆生温泉"
+    "mapPoint": "皆生温泉",
+    "subType": "mountain"
   },
   {
     "id": "kaga-onsen2",
@@ -45693,7 +46137,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "古総湯"
+    "mapPoint": "古総湯",
+    "subType": "mountain"
   },
   {
     "id": "takayama-kogen",
@@ -45781,7 +46226,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "新穂高ロープウェイ"
+    "mapPoint": "新穂高ロープウェイ",
+    "subType": "mountain"
   },
   {
     "id": "iga-ueno",
@@ -45867,7 +46313,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊賀流忍者博物館"
+    "mapPoint": "伊賀流忍者博物館",
+    "subType": "urban"
   },
   {
     "id": "miyanoshita",
@@ -45955,7 +46402,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "富士屋ホテル"
+    "mapPoint": "富士屋ホテル",
+    "subType": "mountain"
   },
   {
     "id": "shibu-onsen",
@@ -46041,7 +46489,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "渋温泉九湯めぐり"
+    "mapPoint": "渋温泉九湯めぐり",
+    "subType": "mountain"
   },
   {
     "id": "togatta-onsen",
@@ -46129,7 +46578,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "遠刈田温泉共同浴場"
+    "mapPoint": "遠刈田温泉共同浴場",
+    "subType": "mountain"
   },
   {
     "id": "hachimantai-onsen",
@@ -46218,7 +46668,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "後生掛温泉"
+    "mapPoint": "後生掛温泉",
+    "subType": "mountain"
   },
   {
     "id": "iiyama-onsen",
@@ -46306,7 +46757,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "麻釜（おがま）"
+    "mapPoint": "麻釜（おがま）",
+    "subType": "mountain"
   },
   {
     "id": "ono-fukui",
@@ -46408,7 +46860,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "越前大野城"
+    "mapPoint": "越前大野城",
+    "subType": "mountain"
   },
   {
     "id": "katsuyama",
@@ -46507,7 +46960,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "福井県立恐竜博物館"
+    "mapPoint": "福井県立恐竜博物館",
+    "subType": "mountain"
   },
   {
     "id": "nomaike",
@@ -46589,7 +47043,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "野間池港"
+    "mapPoint": "野間池港",
+    "subType": "sea"
   },
   {
     "id": "hioki",
@@ -46677,7 +47132,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "美山（苗代川）陶芸村"
+    "mapPoint": "美山（苗代川）陶芸村",
+    "subType": "urban"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -46765,7 +47221,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "鶴の湯温泉"
+    "mapPoint": "鶴の湯温泉",
+    "subType": "mountain"
   },
   {
     "id": "hirakawa",
@@ -46853,7 +47310,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "碇ヶ関温泉"
+    "mapPoint": "碇ヶ関温泉",
+    "subType": "mountain"
   },
   {
     "id": "kurikoma",
@@ -46941,7 +47399,8 @@
     "secondary": [],
     "onsenLevel": 1,
     "hasDirectFlight": false,
-    "mapPoint": "栗駒山"
+    "mapPoint": "栗駒山",
+    "subType": "mountain"
   },
   {
     "id": "namioka",
@@ -47029,7 +47488,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浪岡城跡"
+    "mapPoint": "浪岡城跡",
+    "subType": "urban"
   },
   {
     "id": "shimokita",
@@ -47118,7 +47578,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "恐山（近隣）"
+    "mapPoint": "恐山（近隣）",
+    "subType": "mountain"
   },
   {
     "id": "towada-lake",
@@ -47204,7 +47665,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "十和田湖遊覧船"
+    "mapPoint": "十和田湖遊覧船",
+    "subType": "mountain"
   },
   {
     "id": "rikuchu-coast",
@@ -47292,7 +47754,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "吉里吉里海岸"
+    "mapPoint": "吉里吉里海岸",
+    "subType": "sea"
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -47377,7 +47840,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "中尊寺金色堂"
+    "mapPoint": "中尊寺金色堂",
+    "subType": "urban"
   },
   {
     "id": "numata",
@@ -47465,7 +47929,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "沼田城跡"
+    "mapPoint": "沼田城跡",
+    "subType": "mountain"
   },
   {
     "id": "tsuchiura",
@@ -47553,7 +48018,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "霞ヶ浦サイクリングロード"
+    "mapPoint": "霞ヶ浦サイクリングロード",
+    "subType": "mountain"
   },
   {
     "id": "oshika",
@@ -47641,7 +48107,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "御番所公園（展望台）"
+    "mapPoint": "御番所公園（展望台）",
+    "subType": "sea"
   },
   {
     "id": "kujukuri-icho",
@@ -47729,7 +48196,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "玉前神社"
+    "mapPoint": "玉前神社",
+    "subType": "sea"
   },
   {
     "id": "miyota",
@@ -47815,7 +48283,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "浅間山眺望スポット"
+    "mapPoint": "浅間山眺望スポット",
+    "subType": "mountain"
   },
   {
     "id": "saijo-hiroshima",
@@ -47902,7 +48371,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "西条酒蔵通り"
+    "mapPoint": "西条酒蔵通り",
+    "subType": "urban"
   },
   {
     "id": "ryoishi",
@@ -48002,7 +48472,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "綾里湾"
+    "mapPoint": "綾里湾",
+    "subType": "sea"
   },
   {
     "id": "noheji",
@@ -48090,7 +48561,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "野辺地防雪原林"
+    "mapPoint": "野辺地防雪原林",
+    "subType": "mountain"
   },
   {
     "id": "tobetsu",
@@ -48177,7 +48649,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "スウェーデンヒルズ"
+    "mapPoint": "スウェーデンヒルズ",
+    "subType": "mountain"
   },
   {
     "id": "fukaura",
@@ -48266,7 +48739,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "不老不死温泉（海辺の露天風呂）"
+    "mapPoint": "不老不死温泉（海辺の露天風呂）",
+    "subType": "sea"
   },
   {
     "id": "isesaki",
@@ -48354,7 +48828,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊勢崎市華蔵寺公園"
+    "mapPoint": "伊勢崎市華蔵寺公園",
+    "subType": "urban"
   },
   {
     "id": "matsumoto-kaido",
@@ -48441,7 +48916,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "塩尻ワイナリー"
+    "mapPoint": "塩尻ワイナリー",
+    "subType": "urban"
   },
   {
     "id": "aizu-misato",
@@ -48528,7 +49004,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "伊佐須美神社"
+    "mapPoint": "伊佐須美神社",
+    "subType": "mountain"
   },
   {
     "id": "tateyama-toyama",
@@ -48614,7 +49091,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "雷鳥沢"
+    "mapPoint": "雷鳥沢",
+    "subType": "mountain"
   },
   {
     "id": "suo-sanbe",
@@ -48700,7 +49178,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "三瓶温泉"
+    "mapPoint": "三瓶温泉",
+    "subType": "mountain"
   },
   {
     "id": "takachihogo-shishiku",
@@ -48794,7 +49273,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鶴富屋敷"
+    "mapPoint": "鶴富屋敷",
+    "subType": "mountain"
   },
   {
     "id": "kamishihoro",
@@ -48880,7 +49360,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ナイタイ高原牧場"
+    "mapPoint": "ナイタイ高原牧場",
+    "subType": "mountain"
   },
   {
     "id": "yakumo",
@@ -48968,7 +49449,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "八雲あんどん祭り"
+    "mapPoint": "八雲あんどん祭り",
+    "subType": "mountain"
   },
   {
     "id": "susaki",
@@ -49055,7 +49537,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "鍋焼きラーメン（橋本食堂）"
+    "mapPoint": "鍋焼きラーメン（橋本食堂）",
+    "subType": "sea"
   },
   {
     "id": "ube",
@@ -49152,7 +49635,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "ときわ公園野外彫刻"
+    "mapPoint": "ときわ公園野外彫刻",
+    "subType": "mountain"
   },
   {
     "id": "itoigawa2",
@@ -49239,7 +49723,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "フォッサマグナミュージアム"
+    "mapPoint": "フォッサマグナミュージアム",
+    "subType": "mountain"
   },
   {
     "id": "agematsu",
@@ -49327,7 +49812,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "寝覚の床"
+    "mapPoint": "寝覚の床",
+    "subType": "mountain"
   },
   {
     "id": "unzen2",
@@ -49415,7 +49901,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "mapPoint": "雲仙地獄"
+    "mapPoint": "雲仙地獄",
+    "subType": "mountain"
   },
   {
     "id": "kochi-ino",
@@ -49503,7 +49990,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "土佐和紙工芸村QRAUD"
+    "mapPoint": "土佐和紙工芸村QRAUD",
+    "subType": "mountain"
   },
   {
     "id": "hiji",
@@ -49591,7 +50079,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "暘谷城跡（日出城）"
+    "mapPoint": "暘谷城跡（日出城）",
+    "subType": "sea"
   },
   {
     "id": "tsunan",
@@ -49676,7 +50165,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "ひまわり広場（7月下旬）"
+    "mapPoint": "ひまわり広場（7月下旬）",
+    "subType": "mountain"
   },
   {
     "id": "kurobe",
@@ -49763,7 +50253,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "宇奈月温泉"
+    "mapPoint": "宇奈月温泉",
+    "subType": "mountain"
   },
   {
     "id": "tsuruoka-kinzan",
@@ -49851,7 +50342,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "金山の景観（重文化財）"
+    "mapPoint": "金山の景観（重文化財）",
+    "subType": "mountain"
   },
   {
     "id": "tomari-okinawa",
@@ -49933,7 +50425,8 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": false,
-    "mapPoint": "念頭平松（樹齢数百年の松）"
+    "mapPoint": "念頭平松（樹齢数百年の松）",
+    "subType": "sea"
   },
   {
     "id": "ogimi",
@@ -50022,6 +50515,7 @@
     "secondary": [],
     "onsenLevel": 0,
     "hasDirectFlight": true,
-    "mapPoint": "塩屋大綱引き"
+    "mapPoint": "塩屋大綱引き",
+    "subType": "mountain"
   }
 ]
