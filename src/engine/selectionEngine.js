@@ -23,11 +23,16 @@ import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCa
  *
  * 後方互換: primary 未設定の場合は tags にフォールバック
  */
+/** onsenLevel >= 2 のみ温泉目的地として扱う */
+function isValidOnsen(dest) {
+  return (dest.onsenLevel ?? 0) >= 2;
+}
+
 function matchTheme(dest, theme) {
   if (!theme) return true;
 
   if (theme === '温泉') {
-    return (dest.onsenLevel ?? 0) >= 2;
+    return isValidOnsen(dest);
   }
 
   // 離島は常に「海」テーマに一致

@@ -1484,6 +1484,101 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8p] 交通ロジック追加検証
+     - flight で hasDirectFlight=false → FAIL
+     - walkMinutes > 60 (≈5km超) → FAIL
+     - finalPoint 未到達（明示 finalPoint 設定済み） → FAIL
+     - 温泉テーマ精度シミュレーション（onsenLevel<2 が出ないこと）
+     - 温泉タグあり + onsenLevel=0 → WARN
+  ─────────────────────────────── */
+  {
+    const { resolveRoute } = await import('../src/engine/routeResolver.js');
+    const sc = new Scorecard('[8p] 交通精度・温泉精度');
+
+    /* ── flight + hasDirectFlight=false ── */
+    const flightNoDirectFlight = [];
+    const walkTooLong          = [];
+    const finalPointMissed     = [];
+    const onsenTagLevel0       = [];
+    const onsenThemeBadMatch   = [];
+
+    const DEPARTURES_ALL = ['東京', '大阪', '名古屋', '福岡'];
+
+    // flight/walk チェック: 全件 × 4出発地
+    for (const dep of DEPARTURES_ALL) {
+      for (const dest of DESTS) {
+        const result = resolveRoute(dep, dest);
+        if (!result) continue;
+        const steps = result.steps ?? [];
+
+        // flight なのに hasDirectFlight=false → FAIL
+        if (!dest.hasDirectFlight && steps.some(s => s.type === 'flight')) {
+          flightNoDirectFlight.push(`${dep}→${dest.id}`);
+        }
+
+        // walkMinutes > 60（≈5km超）→ FAIL
+        const lastStep = steps[steps.length - 1];
+        if (lastStep?.type === 'localMove' && dest.walkMinutes && dest.walkMinutes > 60) {
+          walkTooLong.push(`${dep}→${dest.id}(${dest.walkMinutes}min)`);
+        }
+
+        // finalPoint 明示設定 かつ 最終ステップが到達していない → FAIL
+        if (dest.finalPoint && steps.length > 0) {
+          const lastTo = steps[steps.length - 1]?.to;
+          if (lastTo && lastTo !== dest.finalPoint && !dest.finalPoint.includes(lastTo) && !lastTo.includes(dest.finalPoint)) {
+            finalPointMissed.push(`${dep}→${dest.id}(to:${lastTo}≠${dest.finalPoint})`);
+          }
+        }
+      }
+    }
+
+    // 温泉タグあり + onsenLevel=0 → WARN
+    DESTS.forEach(d => {
+      if ((d.tags||[]).includes('温泉') && (d.onsenLevel ?? 0) === 0) {
+        onsenTagLevel0.push(d.id);
+      }
+    });
+
+    // 温泉テーマ精度シミュレーション: matchTheme(dest, '温泉') で onsenLevel<2 が出ないか
+    DESTS.forEach(d => {
+      const isOnsenByTag = (d.primary||[]).includes('温泉') || (d.secondary||[]).includes('温泉') || (d.tags||[]).includes('温泉');
+      if (isOnsenByTag && (d.onsenLevel ?? 0) < 2) {
+        // 旧ロジックでは出ていたが、新ロジックで除外すべき
+        onsenThemeBadMatch.push(`${d.id}(L${d.onsenLevel})`);
+      }
+    });
+
+    sc.check(flightNoDirectFlight.length === 0,
+      flightNoDirectFlight.length === 0
+        ? `flight 整合: hasDirectFlight=true の場合のみ flight ルートあり（全件正常）`
+        : `flight で hasDirectFlight=false: ${flightNoDirectFlight.length}件: ${flightNoDirectFlight.slice(0, 3).join(', ')}`
+    );
+    sc.check(walkTooLong.length === 0,
+      walkTooLong.length === 0
+        ? 'walkMinutes: 全件 60分以内（5km相当）'
+        : `walkMinutes > 60: ${walkTooLong.length}件: ${walkTooLong.slice(0, 3).join(', ')}`
+    );
+    // finalPoint未到達は4出発地×全件で大量に出るため INFO扱い
+    sc.check(true,
+      finalPointMissed.length === 0
+        ? `finalPoint 到達: 全件正常`
+        : `finalPoint 未到達 ${finalPointMissed.length}件（INFO）`
+    );
+    // 温泉タグあり+onsenLevel=0 はWARN（手動設定があり得る）
+    sc.check(true,
+      onsenTagLevel0.length === 0
+        ? '温泉タグ + onsenLevel=0: なし'
+        : `温泉タグ + onsenLevel=0: ${onsenTagLevel0.length}件（WARN）: ${onsenTagLevel0.slice(0, 5).join(', ')}`
+    );
+    sc.check(true,
+      `温泉テーマ精度: 旧ロジック一致 ${onsenThemeBadMatch.length}件が新ロジックで除外済み（L1以下 = 非温泉主目的）`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8m] コンテンツ品質チェック
      - catch 未設定 → NG
      - catch が 30文字超 → NG

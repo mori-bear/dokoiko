@@ -996,7 +996,7 @@ function buildHotelSection(section) {
   const primaryHtml = primary
     ? `<a href="${primary.url}" target="_blank" rel="nofollow sponsored noopener"
           class="stay-btn stay-btn--${primary.type}"
-          aria-label="${primary.label}">最安値を見る</a>`
+          aria-label="${primary.label}">宿を見る</a>`
     : '';
   const secondaryHtml = secondary
     ? `<a href="${secondary.url}" target="_blank" rel="nofollow sponsored noopener"

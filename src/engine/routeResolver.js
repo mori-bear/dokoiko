@@ -126,13 +126,18 @@ function _tryBfs(departure, destination) {
   const steps = buildRoute(departure, destination);
   if (!steps || steps.length < 1) return null;
 
-  /* ④-1/④-5: mountain / remote / requiresCar は飛行機ルートを不採用
-   * 空港→山岳直結は不自然。鉄道+レンタカーが正しいルート。 */
+  /* mountain / remote / requiresCar は飛行機ルートを不採用 */
   const isMountainRemote = destination.destType === 'mountain'
     || destination.destType === 'remote'
     || destination.requiresCar;
   if (isMountainRemote && steps.some(s => s.type === 'flight')) {
-    return null; // パターンビルダーへ降格
+    return null;
+  }
+
+  /* 直行便なし（hasDirectFlight !== true）のに flight ステップが含まれる → 不採用
+   * BFS は edge コストで flight を自然に回避するが、念のため明示チェック */
+  if (!destination.hasDirectFlight && steps.some(s => s.type === 'flight')) {
+    return null;
   }
 
   /* finalPoint 注入: BFS は accessStation までしか到達しないため、
@@ -145,7 +150,11 @@ function _tryBfs(departure, destination) {
     /* lastStep が accessStation に到達していてかつ finalPoint と異なる場合に追加 */
     if (lastTo && finalPt !== lastTo) {
       const lastAccessStep = destination.access?.steps?.find(s => s.type === 'local');
-      const method = lastAccessStep?.method ?? '徒歩';
+      let method = lastAccessStep?.method ?? '徒歩';
+      /* 徒歩60分超（≈5km超）は現実的でないため bus に格上げ */
+      if (method === '徒歩' && destination.walkMinutes && destination.walkMinutes > 60) {
+        method = 'バス';
+      }
       const type   = method === 'レンタカー' ? 'localMove'
                    : method === 'バス'       ? 'bus'
                    : method === 'フェリー'    ? 'ferry'

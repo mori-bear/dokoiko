@@ -100,7 +100,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "atami",
@@ -193,7 +194,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "nikko",
@@ -322,7 +324,8 @@
       "寺社",
       "滝"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "karuizawa",
@@ -430,7 +433,8 @@
       "滝"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fujikawaguchiko",
@@ -530,7 +534,8 @@
     "secondary": [
       "海"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "nara",
@@ -635,7 +640,8 @@
       "滝"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ishigaki",
@@ -748,7 +754,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ise",
@@ -869,7 +876,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "beppu",
@@ -981,7 +989,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "otaru",
@@ -1086,7 +1095,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "furano",
@@ -1198,7 +1208,8 @@
     "secondary": [
       "海"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "matsushima",
@@ -1322,7 +1333,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyajima",
@@ -1443,7 +1455,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "onomichi",
@@ -1560,7 +1573,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shodoshima",
@@ -1681,7 +1695,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mihonoseki",
@@ -1798,7 +1813,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ryujin-onsen",
@@ -1891,7 +1907,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 2
+    "onsenLevel": 2,
+    "hasDirectFlight": false
   },
   {
     "id": "tokashiki-jima",
@@ -2022,7 +2039,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kumejima",
@@ -2155,7 +2173,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "miyakojima",
@@ -2269,7 +2288,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kouzushima",
@@ -2387,7 +2407,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hakone",
@@ -2496,7 +2517,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "shuzenji",
@@ -2598,7 +2620,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kusatsu-onsen",
@@ -2704,7 +2727,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "shimoda",
@@ -2816,7 +2840,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "izu-oshima",
@@ -2944,7 +2969,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shirakawago-t",
@@ -3054,7 +3080,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "arima-onsen",
@@ -3163,7 +3190,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kinosaki-onsen",
@@ -3267,7 +3295,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kurashiki-o",
@@ -3370,7 +3399,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shirahama-o",
@@ -3465,7 +3495,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "takayama-o",
@@ -3572,7 +3603,8 @@
     "secondary": [
       "城"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "toba",
@@ -3680,7 +3712,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yufuin",
@@ -3801,7 +3834,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kurokawa-k",
@@ -3903,7 +3937,8 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 2
+    "onsenLevel": 2,
+    "hasDirectFlight": false
   },
   {
     "id": "aso",
@@ -4012,7 +4047,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yakushima",
@@ -4153,7 +4189,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "amakusa",
@@ -4249,7 +4286,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hiraizumi",
@@ -4352,7 +4390,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kakunodate",
@@ -4454,7 +4493,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "aizu",
@@ -4558,7 +4598,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "zaosan",
@@ -4655,7 +4696,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "hagi",
@@ -4763,7 +4805,8 @@
       "城",
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shimonoseki",
@@ -4871,7 +4914,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "naoshima",
@@ -4995,7 +5039,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kotohira",
@@ -5103,7 +5148,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "uwajima",
@@ -5213,7 +5259,8 @@
       "歴史",
       "離島"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "toyako",
@@ -5312,7 +5359,8 @@
     "secondary": [
       "海"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "noboribetsu",
@@ -5402,7 +5450,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "shiretoko",
@@ -5510,7 +5559,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "wajima",
@@ -5621,7 +5671,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kaga-onsen",
@@ -5718,7 +5769,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "hakuba",
@@ -5823,7 +5875,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "amanohashidate",
@@ -5923,7 +5976,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ine",
@@ -6034,7 +6088,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ibusuki",
@@ -6137,7 +6192,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "sasebo",
@@ -6241,7 +6297,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hirado",
@@ -6340,7 +6397,8 @@
     "secondary": [
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tottori",
@@ -6429,7 +6487,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akita",
@@ -6520,7 +6579,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "awaji",
@@ -6623,7 +6683,8 @@
       "海",
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takao",
@@ -6722,7 +6783,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tateyama-chiba",
@@ -6825,7 +6887,8 @@
       "城",
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gokayama",
@@ -6934,7 +6997,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "jozankei",
@@ -7035,7 +7099,8 @@
       "山",
       "秘境"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "biei",
@@ -7142,7 +7207,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyako-iwate",
@@ -7253,7 +7319,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sakata",
@@ -7359,7 +7426,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takachiho",
@@ -7460,7 +7528,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "amami",
@@ -7586,7 +7655,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "goto",
@@ -7712,7 +7782,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "unzen",
@@ -7808,7 +7879,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "ashizuri",
@@ -7912,7 +7984,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oboke",
@@ -8023,7 +8096,8 @@
       "渓谷"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsuwano",
@@ -8129,7 +8203,8 @@
     "secondary": [
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "inuyama",
@@ -8232,7 +8307,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kiso",
@@ -8342,7 +8418,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyama",
@@ -8439,7 +8516,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tateyama-kurobe",
@@ -8547,7 +8625,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "himi",
@@ -8656,7 +8735,8 @@
       "山",
       "歴史"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "nyuto-onsen",
@@ -8751,7 +8831,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yuda-onsen",
@@ -8847,7 +8928,8 @@
       "城",
       "寺社"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "ureshino-onsen",
@@ -8935,7 +9017,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "obuse",
@@ -9036,7 +9119,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "uchiko",
@@ -9137,7 +9221,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "muroto",
@@ -9233,7 +9318,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "iya",
@@ -9331,7 +9417,8 @@
       "滝"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "oku-izumo",
@@ -9432,7 +9519,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ginzan-onsen",
@@ -9531,7 +9619,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "ouchi-juku",
@@ -9628,7 +9717,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nozawa-onsen",
@@ -9722,7 +9812,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "takehara",
@@ -9825,7 +9916,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsumago",
@@ -9935,7 +10027,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "magome",
@@ -10045,7 +10138,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nagahama",
@@ -10149,7 +10243,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hikone",
@@ -10253,7 +10348,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "koyasan",
@@ -10360,7 +10456,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gero-onsen",
@@ -10469,7 +10566,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "naruko-onsen",
@@ -10569,7 +10667,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "shima-onsen",
@@ -10664,7 +10763,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "hirosaki",
@@ -10779,7 +10879,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "oirase",
@@ -10885,7 +10986,8 @@
       "滝"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "mashiko",
@@ -10990,7 +11092,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "bessho-onsen",
@@ -11096,7 +11199,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "izushi",
@@ -11194,7 +11298,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "wakura-onsen",
@@ -11284,7 +11389,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "misasa-onsen",
@@ -11379,7 +11485,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "obi",
@@ -11482,7 +11589,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hitoyoshi",
@@ -11589,7 +11697,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kamikochi",
@@ -11697,7 +11806,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "minakami-onsen",
@@ -11794,7 +11904,8 @@
       "滝"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "minami-aso",
@@ -11897,7 +12008,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "imabari",
@@ -12014,7 +12126,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ozu",
@@ -12137,7 +12250,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shakotan",
@@ -12257,7 +12371,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "izumo",
@@ -12385,7 +12500,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "suzu",
@@ -12485,7 +12601,8 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yoshino",
@@ -12610,7 +12727,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kumano",
@@ -12721,7 +12839,8 @@
       "渓谷"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "iriomote",
@@ -12864,7 +12983,8 @@
       "滝",
       "秘境"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "takahashi",
@@ -12990,7 +13110,8 @@
       "山",
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hida-furukawa",
@@ -13109,7 +13230,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "bungo-takada",
@@ -13228,7 +13350,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "izu-kogen",
@@ -13349,7 +13472,8 @@
       "城",
       "離島"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "tanabe",
@@ -13469,7 +13593,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "tosa-shimizu",
@@ -13576,7 +13701,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nichinan",
@@ -13703,7 +13829,8 @@
       "寺社",
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mojiko",
@@ -13810,7 +13937,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "itoshima",
@@ -13932,7 +14060,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shimabara",
@@ -14058,7 +14187,8 @@
       "山",
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsuruga",
@@ -14163,7 +14293,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shijishima",
@@ -14271,7 +14402,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sounkyo",
@@ -14389,7 +14521,8 @@
       "渓谷",
       "滝"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "rebun-island",
@@ -14523,7 +14656,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "rishiri-island",
@@ -14650,7 +14784,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akan",
@@ -14750,7 +14885,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "abashiri",
@@ -14853,7 +14989,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "shikotsu",
@@ -14962,7 +15099,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "tono",
@@ -15066,7 +15204,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oga",
@@ -15177,7 +15316,8 @@
       "山",
       "離島"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yonezawa",
@@ -15267,7 +15407,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "dewa-sanzan",
@@ -15372,7 +15513,8 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "sakunami-onsen",
@@ -15473,7 +15615,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "goshogawara",
@@ -15582,7 +15725,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kawagoe",
@@ -15682,7 +15826,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nasu",
@@ -15776,7 +15921,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "choshi",
@@ -15875,7 +16021,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ashikaga",
@@ -15975,7 +16122,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shiobara-onsen",
@@ -16068,7 +16216,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "sado-island",
@@ -16196,7 +16345,8 @@
       "山",
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kiyosato",
@@ -16301,7 +16451,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tenryu-gorge",
@@ -16388,7 +16539,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "suwa",
@@ -16493,7 +16645,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "eiheiji",
@@ -16598,7 +16751,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "wakasa-obama",
@@ -16706,7 +16860,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "okuhida-onsen",
@@ -16820,7 +16975,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "minami-izu",
@@ -16917,7 +17073,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "echizen",
@@ -17022,7 +17179,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ito",
@@ -17128,7 +17286,8 @@
       "城",
       "離島"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "iga",
@@ -17220,7 +17379,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kashihara",
@@ -17324,7 +17484,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "totsukawa",
@@ -17424,7 +17585,8 @@
       "渓谷",
       "寺社"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "maizuru",
@@ -17515,7 +17677,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "asuka",
@@ -17632,7 +17795,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "daisen",
@@ -17737,7 +17901,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "yunotsu-onsen",
@@ -17846,7 +18011,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "iwami-ginzan",
@@ -17943,7 +18109,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "iwakuni",
@@ -18055,7 +18222,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kurayoshi",
@@ -18157,7 +18325,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "suo-oshima",
@@ -18279,7 +18448,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "shimanto",
@@ -18389,7 +18559,8 @@
       "渓谷"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kashiwajima",
@@ -18500,7 +18671,8 @@
       "秘境"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "saijo",
@@ -18612,7 +18784,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ainan",
@@ -18714,7 +18887,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "taketa",
@@ -18815,7 +18989,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "usuki",
@@ -18925,7 +19100,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "hita",
@@ -19034,7 +19210,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "hasami",
@@ -19134,7 +19311,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "takeo-onsen",
@@ -19221,7 +19399,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kitsuki",
@@ -19321,7 +19500,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "tsushima",
@@ -19457,7 +19637,8 @@
       "歴史",
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "iki-island",
@@ -19587,7 +19768,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "tanegashima",
@@ -19718,7 +19900,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kikuchi",
@@ -19825,7 +20008,8 @@
       "歴史",
       "寺社"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "taketomi-island",
@@ -19953,7 +20137,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "yonaguni-island",
@@ -20082,7 +20267,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "nakijin",
@@ -20193,7 +20379,8 @@
     "secondary": [
       "離島"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "motobu",
@@ -20301,7 +20488,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "zamami-island",
@@ -20440,7 +20628,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ie-island",
@@ -20574,7 +20763,8 @@
       "山",
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kohama-island",
@@ -20688,7 +20878,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "matsushiro",
@@ -20782,7 +20973,8 @@
       "城"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "iiyama",
@@ -20879,7 +21071,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yakake",
@@ -20979,7 +21172,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "tsuyama",
@@ -21091,7 +21285,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "tsurugi-san",
@@ -21196,7 +21391,8 @@
     "secondary": [
       "寺社"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "nobeoka",
@@ -21315,7 +21511,8 @@
       "海",
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kamaishi",
@@ -21395,7 +21592,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ofunato",
@@ -21475,7 +21673,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kuji",
@@ -21555,7 +21754,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "wakkanai",
@@ -21662,7 +21862,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "obihiro",
@@ -21769,7 +21970,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "rausu",
@@ -21885,7 +22087,8 @@
     "secondary": [
       "海"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "esashi-hokkaido",
@@ -21996,7 +22199,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "hanamaki",
@@ -22098,7 +22302,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "hachimantai",
@@ -22214,7 +22419,8 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "tazawako",
@@ -22319,7 +22525,8 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "yamadera",
@@ -22434,7 +22641,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kesennuma",
@@ -22535,7 +22743,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ikaho",
@@ -22642,7 +22851,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "enoshima",
@@ -22750,7 +22960,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "chichibu",
@@ -22855,7 +23066,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oarai",
@@ -22957,7 +23169,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sano",
@@ -23058,7 +23271,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gujo-hachiman",
@@ -23163,7 +23377,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "narai-juku",
@@ -23269,7 +23484,8 @@
       "山"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "itoigawa",
@@ -23369,7 +23585,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "murakami",
@@ -23472,7 +23689,8 @@
     "secondary": [
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shima",
@@ -23568,7 +23786,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ogaki",
@@ -23658,7 +23877,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "echizen-kaigan",
@@ -23765,7 +23985,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "myoko-kogen",
@@ -23863,7 +24084,8 @@
     "secondary": [
       "滝"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "nagaoka",
@@ -23951,7 +24173,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tanba-sasayama",
@@ -24050,7 +24273,8 @@
     "secondary": [
       "城"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nachikatsuura",
@@ -24149,7 +24373,8 @@
     "secondary": [
       "グルメ"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kumano-hongu",
@@ -24261,7 +24486,8 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "ako",
@@ -24366,7 +24592,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fushimi",
@@ -24474,7 +24701,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tomonoura",
@@ -24580,7 +24808,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sakaiminato",
@@ -24692,7 +24921,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "ushimado",
@@ -24806,7 +25036,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kasaoka",
@@ -24896,7 +25127,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsunoshima",
@@ -25002,7 +25234,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "dogo-onsen",
@@ -25124,7 +25357,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "marugame",
@@ -25229,7 +25463,8 @@
     "secondary": [
       "海"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "misaki-sadamisaki",
@@ -25343,7 +25578,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "yanagawa",
@@ -25454,7 +25690,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hyuga",
@@ -25561,7 +25798,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "koshikijima",
@@ -25678,7 +25916,8 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kirishima",
@@ -25788,7 +26027,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": true
   },
   {
     "id": "ebino-kogen",
@@ -25900,7 +26140,8 @@
       "秘境"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "onna",
@@ -26006,7 +26247,8 @@
       "離島"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "nago",
@@ -26112,7 +26354,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "yomitanson",
@@ -26221,7 +26464,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "niseko",
@@ -26321,7 +26565,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "daisetsuzan",
@@ -26433,7 +26678,8 @@
     "secondary": [
       "紅葉"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shiraoi",
@@ -26523,7 +26769,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tomamu",
@@ -26616,7 +26863,8 @@
     "secondary": [
       "リゾート"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "towada",
@@ -26724,7 +26972,8 @@
       "紅葉"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "osorezan",
@@ -26832,7 +27081,8 @@
       "精神"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "urabandai",
@@ -26944,7 +27194,8 @@
     "secondary": [
       "山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "minami-sanriku",
@@ -27054,7 +27305,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kitakami",
@@ -27148,7 +27400,8 @@
     "secondary": [
       "文化"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kinugawa-onsen",
@@ -27241,7 +27494,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "oze",
@@ -27352,7 +27606,8 @@
     "secondary": [
       "植物"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsukuba",
@@ -27448,7 +27703,8 @@
       "文化"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kasama",
@@ -27541,7 +27797,8 @@
     "secondary": [
       "食"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "naritasan",
@@ -27634,7 +27891,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kujukuri",
@@ -27742,7 +28000,8 @@
       "食"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miura",
@@ -27838,7 +28097,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oku-tama",
@@ -27931,7 +28191,8 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "jigokudani",
@@ -28027,7 +28288,8 @@
       "野生動物"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "tateshina",
@@ -28139,7 +28401,8 @@
     "secondary": [
       "リゾート"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "echigo-yuzawa",
@@ -28232,7 +28495,8 @@
     "secondary": [
       "文化"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "fujinomiya",
@@ -28326,7 +28590,8 @@
     "secondary": [
       "文化"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "norikura",
@@ -28438,7 +28703,8 @@
     "secondary": [
       "登山"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tokoname",
@@ -28529,7 +28795,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "korankei",
@@ -28637,7 +28904,8 @@
       "川"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "minamichita",
@@ -28733,7 +29001,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "arashiyama",
@@ -28828,7 +29097,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shigaraki",
@@ -28919,7 +29189,8 @@
       "街歩き"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "dorogawa-onsen",
@@ -29029,7 +29300,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "matsusaka",
@@ -29123,7 +29395,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sakai",
@@ -29222,7 +29495,8 @@
     "secondary": [
       "街歩き"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ama-island",
@@ -29350,7 +29624,8 @@
     "secondary": [
       "食"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akiyoshidai",
@@ -29459,7 +29734,8 @@
       "高原"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yanai",
@@ -29550,7 +29826,8 @@
       "文化"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oki-island",
@@ -29685,7 +29962,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "inujima",
@@ -29804,7 +30082,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "teshima",
@@ -29931,7 +30210,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "niyodogawa",
@@ -30041,7 +30321,8 @@
       "川"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yusuhara",
@@ -30153,7 +30434,8 @@
     "secondary": [
       "建築"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "anan",
@@ -30244,7 +30526,8 @@
       "野生動物"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shikoku-karst",
@@ -30355,7 +30638,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "aoshima",
@@ -30447,7 +30731,8 @@
       "寺社"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yamaga",
@@ -30558,7 +30843,8 @@
     "secondary": [
       "歴史"
     ],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yoshinogari",
@@ -30654,7 +30940,8 @@
       "文化"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kunisaki",
@@ -30771,7 +31058,8 @@
     "secondary": [
       "文化"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "chiran",
@@ -30883,7 +31171,8 @@
     "secondary": [
       "平和"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ojika-island",
@@ -31010,7 +31299,8 @@
     "secondary": [
       "スロー"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "irabu-island",
@@ -31126,7 +31416,8 @@
     "secondary": [
       "ダイビング"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "aguni-island",
@@ -31260,7 +31551,8 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "itoman",
@@ -31377,7 +31669,8 @@
     "secondary": [
       "文化"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kijoka",
@@ -31493,7 +31786,8 @@
     "secondary": [
       "長寿"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "miyakejima",
@@ -31620,7 +31914,8 @@
     "secondary": [
       "野鳥"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "hachijojima",
@@ -31754,7 +32049,8 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": true
   },
   {
     "id": "niijima",
@@ -31882,7 +32178,8 @@
     "secondary": [
       "サーフィン"
     ],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "shikinejima",
@@ -32002,7 +32299,8 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "shirakawa",
@@ -32088,7 +32386,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kitakata",
@@ -32173,7 +32472,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "koriyama",
@@ -32259,7 +32559,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ryusendo",
@@ -32346,7 +32647,8 @@
       "絶景"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ichinoseki",
@@ -32431,7 +32733,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "akita-oga",
@@ -32518,7 +32821,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kisakata",
@@ -32604,7 +32908,8 @@
       "絶景"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gassan",
@@ -32691,7 +32996,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "higashine",
@@ -32776,7 +33082,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akakura-onsen",
@@ -32862,7 +33169,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yugawara-onsen",
@@ -32946,7 +33254,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yokosuka",
@@ -33032,7 +33341,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mishima",
@@ -33118,7 +33428,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "numazu",
@@ -33204,7 +33515,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hamamatsu",
@@ -33290,7 +33602,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kakegawa",
@@ -33376,7 +33689,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "okazaki",
@@ -33462,7 +33776,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "toyohashi",
@@ -33548,7 +33863,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tajimi",
@@ -33634,7 +33950,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "togakushi",
@@ -33720,7 +34037,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "omihachiman",
@@ -33806,7 +34124,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takarazuka",
@@ -33892,7 +34211,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akashi",
@@ -33978,7 +34298,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "naruto",
@@ -34064,7 +34385,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "innoshima",
@@ -34151,7 +34473,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mihara",
@@ -34237,7 +34560,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hofu",
@@ -34321,7 +34645,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "karatsu",
@@ -34407,7 +34732,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "dazaifu",
@@ -34491,7 +34817,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nakatsu",
@@ -34577,7 +34904,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nemuro",
@@ -34663,7 +34991,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "muroran",
@@ -34749,7 +35078,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tomakomai",
@@ -34835,7 +35165,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ishinomaki",
@@ -34920,7 +35251,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hitachi",
@@ -35005,7 +35337,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kashima",
@@ -35088,7 +35421,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shiraoishi",
@@ -35172,7 +35506,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "noshiro",
@@ -35258,7 +35593,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tendou",
@@ -35343,7 +35679,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shonai",
@@ -35429,7 +35766,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ogata",
@@ -35516,7 +35854,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "rikuzentakata",
@@ -35602,7 +35941,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sanriku-miyako",
@@ -35689,7 +36029,8 @@
       "絶景"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "motomiya",
@@ -35772,7 +36113,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mizusawa",
@@ -35857,7 +36199,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ichinoseki-geibikei",
@@ -35943,7 +36286,8 @@
       "絶景"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akita-semboku",
@@ -36028,7 +36372,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "tendo",
@@ -36113,7 +36458,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nyuzen",
@@ -36198,7 +36544,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nanao",
@@ -36283,7 +36630,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "fukuchiyama",
@@ -36367,7 +36715,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "koka",
@@ -36451,7 +36800,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tondabayashi",
@@ -36535,7 +36885,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kishiwada",
@@ -36621,7 +36972,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "amagasaki",
@@ -36707,7 +37059,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nishiwaki",
@@ -36793,7 +37146,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nagi",
@@ -36879,7 +37233,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "higashihiroshima",
@@ -36964,7 +37319,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fukuyama",
@@ -37050,7 +37406,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "otoyo",
@@ -37133,7 +37490,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sukumo",
@@ -37218,7 +37576,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyoshi-tokushima",
@@ -37304,7 +37663,8 @@
       "絶景"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oita-city",
@@ -37390,7 +37750,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "yuwaku-onsen",
@@ -37476,7 +37837,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "yura-wakayama",
@@ -37562,7 +37924,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "misaki-osaka",
@@ -37648,7 +38011,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kitakyushu",
@@ -37734,7 +38098,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "asakura",
@@ -37820,7 +38185,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ebino",
@@ -37906,7 +38272,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "hitoyoshi-city",
@@ -37991,7 +38358,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "minamikyushu",
@@ -38089,7 +38457,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "minamiosumi",
@@ -38187,7 +38556,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "chatan",
@@ -38283,7 +38653,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "uruma",
@@ -38379,7 +38750,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "nanto",
@@ -38465,7 +38837,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hakusan",
@@ -38551,7 +38924,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "kamo-kyoto",
@@ -38638,7 +39012,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shingu-wakayama",
@@ -38723,7 +39098,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "himeshima",
@@ -38824,7 +39200,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "toshima",
@@ -38913,7 +39290,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "joetsu",
@@ -38998,7 +39376,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "myoko",
@@ -39096,7 +39475,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "hokkaido-hakodate",
@@ -39198,7 +39578,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hokkaido-asahikawa",
@@ -39295,7 +39676,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "hokkaido-kushiro",
@@ -39392,7 +39774,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "yoichi",
@@ -39477,7 +39860,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "akkeshi",
@@ -39564,7 +39948,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kitami",
@@ -39659,7 +40044,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "monbetsu",
@@ -39743,7 +40129,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "mashike",
@@ -39830,7 +40217,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fukushima-city",
@@ -39916,7 +40304,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "omagari",
@@ -40001,7 +40390,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shinjou",
@@ -40086,7 +40476,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nagai",
@@ -40182,7 +40573,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kanagawa-yokohama",
@@ -40272,7 +40664,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ibaraki-mito",
@@ -40361,7 +40754,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "utsunomiya",
@@ -40447,7 +40841,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takasaki",
@@ -40533,7 +40928,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "odawara",
@@ -40619,7 +41015,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "sawara",
@@ -40705,7 +41102,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nokogiriyama",
@@ -40792,7 +41190,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "katsuura-chiba",
@@ -40878,7 +41277,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "azumino",
@@ -40962,7 +41362,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nagano-iida",
@@ -41050,7 +41451,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nakatsugawa",
@@ -41136,7 +41538,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yaizu",
@@ -41222,7 +41625,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hamanako",
@@ -41309,7 +41713,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gamagori",
@@ -41395,7 +41800,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "toyota-city",
@@ -41481,7 +41887,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "otsu-shiga",
@@ -41567,7 +41974,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kusatsu-shiga",
@@ -41653,7 +42061,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takashima-shiga",
@@ -41740,7 +42149,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tango-kyoto",
@@ -41826,7 +42236,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "owase",
@@ -41923,7 +42334,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "gobo",
@@ -42009,7 +42421,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kushimoto",
@@ -42095,7 +42508,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shimane-matsue",
@@ -42192,7 +42606,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "hamada-shimane",
@@ -42286,7 +42701,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kure",
@@ -42371,7 +42787,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyoshi-hiroshima",
@@ -42456,7 +42873,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nagato-yamaguchi",
@@ -42542,7 +42960,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mine-yamaguchi",
@@ -42626,7 +43045,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kagawa-takamatsu",
@@ -42724,7 +43144,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "sakaide",
@@ -42810,7 +43231,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tosa-city",
@@ -42897,7 +43319,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kanonji",
@@ -42983,7 +43406,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fukuoka-city",
@@ -43078,7 +43502,8 @@
       "街"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kurume",
@@ -43164,7 +43589,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yatsushiro",
@@ -43250,7 +43676,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oguni-kumamoto",
@@ -43342,7 +43769,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "izumi-kagoshima",
@@ -43426,7 +43854,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "makurazaki",
@@ -43511,7 +43940,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyakonojo",
@@ -43596,7 +44026,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nanjo-okinawa",
@@ -43683,7 +44114,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "aogashima",
@@ -43762,7 +44194,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kugashima",
@@ -43843,7 +44276,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nakatosa",
@@ -43928,7 +44362,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ikata",
@@ -44016,7 +44451,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "muroto-cape",
@@ -44102,7 +44538,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oshima-yamaguchi",
@@ -44200,7 +44637,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ibara",
@@ -44285,7 +44723,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "niimi",
@@ -44370,7 +44809,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "uda-nara",
@@ -44457,7 +44897,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "mimasaka",
@@ -44543,7 +44984,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kochi-shimanto",
@@ -44627,7 +45069,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yonago",
@@ -44721,7 +45164,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "kaga-onsen2",
@@ -44805,7 +45249,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "takayama-kogen",
@@ -44891,7 +45336,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "iga-ueno",
@@ -44975,7 +45421,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyanoshita",
@@ -45061,7 +45508,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "shibu-onsen",
@@ -45145,7 +45593,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "togatta-onsen",
@@ -45231,7 +45680,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "hachimantai-onsen",
@@ -45318,7 +45768,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "iiyama-onsen",
@@ -45404,7 +45855,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "ono-fukui",
@@ -45504,7 +45956,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "katsuyama",
@@ -45601,7 +46054,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "nomaike",
@@ -45681,7 +46135,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hioki",
@@ -45767,7 +46222,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -45853,7 +46309,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "hirakawa",
@@ -45939,7 +46396,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kurikoma",
@@ -46025,7 +46483,8 @@
       "温泉"
     ],
     "secondary": [],
-    "onsenLevel": 1
+    "onsenLevel": 1,
+    "hasDirectFlight": false
   },
   {
     "id": "namioka",
@@ -46111,7 +46570,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "shimokita",
@@ -46198,7 +46658,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "towada-lake",
@@ -46282,7 +46743,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "rikuchu-coast",
@@ -46368,7 +46830,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -46451,7 +46914,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "numata",
@@ -46537,7 +47001,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsuchiura",
@@ -46623,7 +47088,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "oshika",
@@ -46709,7 +47175,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kujukuri-icho",
@@ -46795,7 +47262,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "miyota",
@@ -46879,7 +47347,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "saijo-hiroshima",
@@ -46964,7 +47433,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ryoishi",
@@ -47062,7 +47532,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "noheji",
@@ -47148,7 +47619,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tobetsu",
@@ -47233,7 +47705,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "fukaura",
@@ -47320,7 +47793,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "isesaki",
@@ -47406,7 +47880,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "matsumoto-kaido",
@@ -47491,7 +47966,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "aizu-misato",
@@ -47576,7 +48052,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tateyama-toyama",
@@ -47660,7 +48137,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "suo-sanbe",
@@ -47744,7 +48222,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "takachihogo-shishiku",
@@ -47836,7 +48315,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kamishihoro",
@@ -47920,7 +48400,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "yakumo",
@@ -48006,7 +48487,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "susaki",
@@ -48091,7 +48573,8 @@
       "海"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ube",
@@ -48186,7 +48669,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   },
   {
     "id": "itoigawa2",
@@ -48271,7 +48755,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "agematsu",
@@ -48357,7 +48842,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "unzen2",
@@ -48443,7 +48929,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 3
+    "onsenLevel": 3,
+    "hasDirectFlight": false
   },
   {
     "id": "kochi-ino",
@@ -48529,7 +49016,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "hiji",
@@ -48615,7 +49103,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsunan",
@@ -48698,7 +49187,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "kurobe",
@@ -48783,7 +49273,8 @@
       "グルメ"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tsuruoka-kinzan",
@@ -48869,7 +49360,8 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "tomari-okinawa",
@@ -48949,7 +49441,8 @@
       "自然"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": false
   },
   {
     "id": "ogimi",
@@ -49036,6 +49529,7 @@
       "歴史"
     ],
     "secondary": [],
-    "onsenLevel": 0
+    "onsenLevel": 0,
+    "hasDirectFlight": true
   }
 ]
