@@ -18,7 +18,12 @@
  */
 
 import { buildRoute, buildTrunkRoute } from './bfsEngine.js';
-import { DEPARTURE_CITY_INFO } from '../config/constants.js';
+import { DEPARTURE_CITY_INFO }           from '../config/constants.js';
+import { loadJson }                       from '../lib/loadJson.js';
+import { scoreRoute }                     from '../transport/routeNarrator.js';
+
+/* ── gateways.json: destId → 経由地チェーン ── */
+const GATEWAYS_MAP = await loadJson('../data/gateways.json', import.meta.url).catch(() => ({}));
 
 /* ─── 新幹線停車駅（フォールバック時の型判定） ─── */
 const SHINKANSEN_STATIONS = new Set([
@@ -93,18 +98,32 @@ const LOCAL_LINE_MAP = {
  *          steps は BFS step 形式の配列。解決不能な場合は null。
  */
 export function resolveRoute(departure, destination) {
-  /* ── Layer ①: Gateway DB（gatewayStations が設定済みの場合は優先） ── */
-  /* 幹線は BFS hub→hub で展開、ローカル区間は DB から取得 → 正確な経路を保証 */
+  const candidates = [];
+
+  /* ── Layer ①: Gateway DB（gatewayStations 設定済み → 幹線BFS + ローカルDB） ── */
   if (destination.gatewayStations?.length > 0) {
     const gwResult = _tryGatewayDb(departure, destination);
-    if (gwResult) return gwResult;
+    if (gwResult) candidates.push(gwResult);
   }
 
-  /* ── Layer ②: Transport Graph フルパス BFS（gateway未設定の場合） ── */
-  const bfsResult = _tryBfs(departure, destination);
-  if (bfsResult) return bfsResult;
+  /* ── Layer ①': gateways.json 経由チェーン（BFSより優先: 見つかれば即リターン） ── */
+  const vias = GATEWAYS_MAP[destination.id];
+  if (vias?.length > 0 && candidates.length === 0) {
+    const chainResult = _tryGatewayChain(departure, destination, vias);
+    if (chainResult) return chainResult;  // spec: BFSより優先
+  }
 
-  return null; // 呼び出し側でパターンビルダーへ降格
+  /* ── Layer ②: Transport Graph フルパス BFS ── */
+  const bfsResult = _tryBfs(departure, destination);
+  if (bfsResult) candidates.push(bfsResult);
+
+  if (candidates.length === 0) return null;
+
+  /* 複数候補があれば最高スコアを採用 */
+  if (candidates.length === 1) return candidates[0];
+  return candidates.reduce((best, c) =>
+    scoreRoute(c.steps) >= scoreRoute(best.steps) ? c : best
+  );
 }
 
 /**
@@ -173,6 +192,61 @@ function _tryBfs(departure, destination) {
   }
 
   return { steps, method: 'graph' };
+}
+
+/* ────────────────────────────────────────
+   Layer ①': gateways.json 経由チェーン
+   vias 配列の都市を順に経由する人間的ルートを構築。
+   BFS で各セグメントを展開し連結する。
+──────────────────────────────────────── */
+
+function _tryGatewayChain(departure, destination, vias) {
+  const fromCity  = DEPARTURE_CITY_INFO[departure];
+  const origin    = fromCity?.rail ?? `${departure}駅`;
+
+  const steps = [];
+  const cities = [departure, ...vias, destination.name];
+
+  /* セグメントごとに BFS で幹線ステップを展開 */
+  for (let i = 0; i < cities.length - 1; i++) {
+    const segDep  = cities[i];
+    const segDest = cities[i + 1];
+    const trunkSteps = buildTrunkRoute(segDep, segDest + '駅');
+    if (trunkSteps.length > 0) {
+      steps.push(..._collapseConsecutiveShinkansen(trunkSteps));
+    } else {
+      /* BFS で見つからない場合は単一ステップとして追加 */
+      const isShinkansen = SHINKANSEN_STATIONS.has(segDest + '駅');
+      steps.push({
+        type:     isShinkansen ? 'shinkansen' : 'rail',
+        from:     steps.length > 0 ? (steps[steps.length - 1].to ?? origin) : origin,
+        to:       segDest,
+        label:    isShinkansen ? '新幹線' : '鉄道',
+        provider: null, operator: null, minutes: null,
+      });
+    }
+  }
+
+  if (steps.length === 0) return null;
+
+  /* finalPoint 注入（BFS と同じロジック） */
+  const finalPt = destination.finalPoint
+    ?? (Array.isArray(destination.spots) && destination.spots[0]);
+  if (finalPt) {
+    const lastTo = steps[steps.length - 1]?.to;
+    if (lastTo && finalPt !== lastTo) {
+      const lastAccessStep = destination.access?.steps?.find(s => s.type === 'local');
+      const method = lastAccessStep?.method ?? '徒歩';
+      steps.push({
+        type: method === 'レンタカー' ? 'localMove' : method === 'バス' ? 'bus' : 'localMove',
+        from: lastTo, to: finalPt,
+        label: method, provider: null, operator: null,
+        minutes: destination.walkMinutes ?? null,
+      });
+    }
+  }
+
+  return { steps, method: 'gateway-chain' };
 }
 
 /* ────────────────────────────────────────
