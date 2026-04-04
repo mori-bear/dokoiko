@@ -1,0 +1,6 @@
+{
+  "_comment": "廃線・存在しない交通手段のブラックリスト。key=destination.id, value=[blocked transport types]。BFS step生成時にこのリストの交通手段をスキップする。",
+  "mashike":       ["rail-direct"],
+  "tomamae":       ["rail"],
+  "haboro-town":   ["rail"]
+}

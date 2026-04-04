@@ -290,7 +290,7 @@ function buildMainCtaBlock(item) {
 function buildSubCtaBlock(item) {
   const cta = item.cta;
   if (!cta?.url) return '';
-  const label = cta.label ?? '🚗 レンタカーを探す';
+  const label = cta.label ?? 'レンタカーを探す';
   return `
     <div class="sub-cta-row">
       <a href="${cta.url}" target="_blank" rel="noopener noreferrer"
@@ -306,7 +306,7 @@ function buildSubCtaBlock(item) {
 function buildMapCtaBlock(item) {
   const cta = item.cta;
   if (!cta?.url) return '';
-  const label = cta.label ?? '📍 地図で確認';
+  const label = cta.label ?? '地図で確認';
   return `
     <div class="map-cta-row">
       <a href="${cta.url}" target="_blank" rel="noopener noreferrer"
@@ -317,15 +317,15 @@ function buildMapCtaBlock(item) {
 
 function buildMainCtaLabel(type) {
   const LABELS = {
-    'skyscanner':    '✈️ 航空券を比較する',
-    'google-flights':'✈️ 航空券を比較する',
-    'jr-east':       '🚄 えきねっとで予約する',
-    'jr-west':       '🚄 e5489で予約する',
-    'jr-kyushu':     '🚄 JR九州ネット予約',
-    'jr-ex':         '🚄 EXで予約する',
-    'jr-window':     '🚄 みどりの窓口で購入',
-    'ferry':         '🚢 フェリーを予約する',
-    'bus':           '🚌 バスを予約する',
+    'skyscanner':    '航空券を比較する',
+    'google-flights':'航空券を比較する',
+    'jr-east':       'えきねっとで予約する',
+    'jr-west':       'e5489で予約する',
+    'jr-kyushu':     'JR九州ネット予約',
+    'jr-ex':         'EXで予約する',
+    'jr-window':     'みどりの窓口で購入',
+    'ferry':         'フェリーを予約する',
+    'bus':           'バスを予約する',
   };
   return LABELS[type] ?? 'チケットを予約する';
 }

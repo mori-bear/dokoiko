@@ -193,7 +193,7 @@ export function buildSkyscannerLink(fromIata, toAirportName) {
   if (!fromAirportName) return null; // IATAコード露出防止
   return {
     type: 'skyscanner',
-    label: `✈️ 航空券を比較する（${fromAirportName} → ${toAirportName}）`,
+    label: `航空券を比較する（${fromAirportName} → ${toAirportName}）`,
     url: `https://www.skyscanner.jp/transport/flights/${fromIata.toLowerCase()}/${toIata.toLowerCase()}/`,
   };
 }
@@ -206,7 +206,7 @@ export function buildGoogleFlightsLink(fromIata, toAirportName) {
   if (!fromAirportName) return null; // IATAコード露出防止
   return {
     type: 'google-flights',
-    label: `✈️ Google Flightsで比較（${fromAirportName} → ${toAirportName}）`,
+    label: `Google Flightsで比較（${fromAirportName} → ${toAirportName}）`,
     url: `https://www.google.com/flights#search;f=${fromIata};t=${toIata};tt=o`,
   };
 }
@@ -233,7 +233,7 @@ export function buildJrLink(bookingProvider, route = null) {
 export function buildRentalLink(gatewayCity = null) {
   const target = 'https://www.jalan.net/rentacar/';
   const vc = `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=${encodeURIComponent(target)}`;
-  const label = gatewayCity ? `🚗 レンタカーを借りる（${gatewayCity}）` : '🚗 レンタカーを探す';
+  const label = gatewayCity ? `レンタカーを借りる（${gatewayCity}）` : 'レンタカーを探す';
   return { type: 'rental', label, url: vc, gatewayCity };
 }
 
@@ -266,19 +266,19 @@ export function buildHighwayBusLink(from, to) {
 export function buildFerryLink(ferryGateway, bookingUrl = null, operatorName = null) {
   if (bookingUrl) {
     const label = operatorName
-      ? `🚢 フェリーを予約する（${operatorName}）`
-      : `🚢 フェリーを予約する（${ferryGateway}）`;
+      ? `フェリーを予約する（${operatorName}）`
+      : `フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: bookingUrl };
   }
   const info = PORT_FERRY_MAP[ferryGateway];
   if (info) {
     const label = info.operator
       ? `時刻・料金を見る（${info.operator}）`
-      : `🚢 フェリーを予約する（${ferryGateway}）`;
+      : `フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: info.url };
   }
   // 未登録港・URLなし → じゃらん 船・フェリー検索へフォールバック（フェリーCTAを必ず出す）
-  return { type: 'ferry', label: `🚢 フェリーを探す（${ferryGateway}）`, url: 'https://www.jalan.net/ship/' };
+  return { type: 'ferry', label: `フェリーを探す（${ferryGateway}）`, url: 'https://www.jalan.net/ship/' };
 }
 
 /**
@@ -300,7 +300,7 @@ export function buildFerryLinkForDest(destId, ferryGateway, bookingUrl = null, o
   if (destInfo) {
     const label = destInfo.operator
       ? `時刻・料金を見る（${destInfo.operator}）`
-      : `🚢 フェリーを予約する（${ferryGateway}）`;
+      : `フェリーを予約する（${ferryGateway}）`;
     return { type: 'ferry', label, url: destInfo.url };
   }
   // DEST_FERRY_MAP にない → 港名ベースにフォールバック

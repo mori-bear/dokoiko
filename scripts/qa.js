@@ -1785,6 +1785,94 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8s] 交通精度・データ完整性チェック
+     - flight で直線距離 < 300km → FAIL
+     - steps.length < 2（直通以外で1ステップのみ）→ WARN
+     - spots/finalPoint が両方未設定 → WARN（map宛先が都市名になる）
+     - 絵文字がstepLabelに含まれる → FAIL
+  ─────────────────────────────── */
+  {
+    const { resolveRoute }          = await import('../src/engine/routeResolver.js');
+    const { resolveTransportLinks } = await import('../src/transport/resolveTransportLinks.js');
+    const sc = new Scorecard('[8s] 交通精度・データ完整性');
+
+    /* 出発地座標（ローカル定義） */
+    const DEP_COORDS = {
+      '東京':{lat:35.68,lng:139.77},'大阪':{lat:34.69,lng:135.50},
+      '福岡':{lat:33.59,lng:130.40},'札幌':{lat:43.06,lng:141.35},
+      '名古屋':{lat:35.17,lng:136.91},'広島':{lat:34.40,lng:132.46},
+    };
+    function distKm(lat1,lng1,lat2,lng2){const R=6371;const dL=(lat2-lat1)*Math.PI/180;const dN=(lng2-lng1)*Math.PI/180;const a=Math.sin(dL/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dN/2)**2;return 2*R*Math.asin(Math.sqrt(a));}
+
+    let flightShort = [], emojiInStep = [];
+    let noMapTarget = 0, singleStep = [];
+
+    const DEPS_SAMPLE = Object.keys(DEP_COORDS);
+    for (const dep of DEPS_SAMPLE) {
+      const dc = DEP_COORDS[dep];
+      for (const dest of DESTS) {
+        const r = resolveRoute(dep, dest);
+        if (!r?.steps?.length) continue;
+
+        // flight < 300km チェック
+        if (r.steps.some(s => s.type === 'flight') && dest.lat && dest.lng) {
+          const km = Math.round(distKm(dc.lat, dc.lng, dest.lat, dest.lng));
+          if (km < 300) flightShort.push(`${dest.id}@${dep}(${km}km)`);
+        }
+
+        // ステップ数チェック（孤立ケース除く: island/ferryのみ）
+        const isSingleAllowed = dest.destType === 'island' || dest.ferryGateway || dest.isIsland;
+        if (r.steps.length < 2 && !isSingleAllowed && singleStep.length < 5) {
+          singleStep.push(`${dest.id}@${dep}`);
+        }
+      }
+    }
+
+    // 絵文字チェック（全 destination × 1出発地）
+    const EMOJI_RE = /[\u{1F000}-\u{1FFFF}]|[\u{2702}-\u{27B0}]|[✈🚄🚃🚌🚗🚢📍]/u;
+    for (const dest of DESTS.slice(0, 200)) {
+      const links = resolveTransportLinks(dest, '東京');
+      links.filter(l => l.type === 'step-group').forEach(l => {
+        if (l.stepLabel && EMOJI_RE.test(l.stepLabel) && emojiInStep.length < 5) {
+          emojiInStep.push(`${dest.id}: ${l.stepLabel.slice(0,30)}`);
+        }
+      });
+    }
+
+    // map宛先チェック（spots/finalPoint/mapPoint 全てなし）
+    DESTS.forEach(d => {
+      const hasTarget = d.mapPoint || d.finalPoint || (Array.isArray(d.spots) && d.spots.length > 0);
+      if (!hasTarget) noMapTarget++;
+    });
+
+    sc.check(flightShort.length === 0,
+      flightShort.length === 0
+        ? `flight距離: 全件300km以上`
+        : `flight < 300km: ${flightShort.slice(0,5).join(', ')}`
+    );
+    sc.check(emojiInStep.length === 0,
+      emojiInStep.length === 0
+        ? 'stepLabel絵文字: なし'
+        : `stepLabel絵文字 ${emojiInStep.length}件: ${emojiInStep.join(', ')}`
+    );
+    // map宛先なし は WARN（都市名にfallbackするため致命的ではない）
+    sc.check(true,
+      noMapTarget === 0
+        ? `map宛先: 全${DESTS.length}件OK`
+        : `mapターゲット未設定 ${noMapTarget}件（WARN）`
+    );
+    // 1ステップのみ は WARN
+    sc.check(true,
+      singleStep.length === 0
+        ? '全ルートステップ数: OK'
+        : `1ステップ ${singleStep.length}件（WARN）: ${singleStep.join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');

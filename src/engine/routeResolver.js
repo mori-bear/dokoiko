@@ -18,12 +18,19 @@
  */
 
 import { buildRoute, buildTrunkRoute } from './bfsEngine.js';
-import { DEPARTURE_CITY_INFO }           from '../config/constants.js';
+import { DEPARTURE_CITY_INFO, DEPARTURE_COORDS } from '../config/constants.js';
 import { loadJson }                       from '../lib/loadJson.js';
 import { scoreRoute }                     from '../transport/routeNarrator.js';
+import { calcDistanceKm }                 from '../utils/geo.js';
 
 /* ── gateways.json: destId → 経由地チェーン ── */
 const GATEWAYS_MAP = await loadJson('../data/gateways.json', import.meta.url).catch(() => ({}));
+
+/* ── invalidRoutes.json: 廃線・無効交通手段ブラックリスト ── */
+const INVALID_ROUTES = await loadJson('../data/invalidRoutes.json', import.meta.url).catch(() => ({}));
+
+/* ── 飛行機使用の最低直線距離（km） ── */
+const FLIGHT_MIN_DISTANCE_KM = 300;
 
 /* ─── 新幹線停車駅（フォールバック時の型判定） ─── */
 const SHINKANSEN_STATIONS = new Set([
@@ -153,9 +160,26 @@ function _tryBfs(departure, destination) {
     return null;
   }
 
-  /* 直行便なし（hasDirectFlight !== true）のに flight ステップが含まれる → 不採用
-   * BFS は edge コストで flight を自然に回避するが、念のため明示チェック */
+  /* 直行便なし（hasDirectFlight !== true）のに flight ステップが含まれる → 不採用 */
   if (!destination.hasDirectFlight && steps.some(s => s.type === 'flight')) {
+    return null;
+  }
+
+  /* 直線距離 300km 未満は飛行機不採用 */
+  if (steps.some(s => s.type === 'flight')) {
+    const depCoords  = DEPARTURE_COORDS[departure];
+    const destCoords = (destination.lat && destination.lng)
+      ? { lat: destination.lat, lng: destination.lng }
+      : null;
+    if (depCoords && destCoords) {
+      const distKm = calcDistanceKm(depCoords, destCoords);
+      if (distKm < FLIGHT_MIN_DISTANCE_KM) return null;
+    }
+  }
+
+  /* invalidRoutes: 廃線・無効交通手段のフィルタ */
+  const blocked = INVALID_ROUTES[destination.id];
+  if (blocked?.length && steps.some(s => blocked.includes(s.type))) {
     return null;
   }
 

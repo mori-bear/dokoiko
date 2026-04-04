@@ -20,7 +20,8 @@
  */
 
 import { ROUTES, CITY_TO_SHINKANSEN }  from '../features/dokoiko/routes.js';
-import { DEPARTURE_CITY_INFO }          from '../config/constants.js';
+import { DEPARTURE_CITY_INFO, DEPARTURE_COORDS } from '../config/constants.js';
+import { calcDistanceKm }               from '../utils/geo.js';
 import { CITY_AIRPORT }                 from '../utilities/airportMap.js';
 import {
   buildGoogleMapsLink,
@@ -92,13 +93,9 @@ function getStayRecommend(city) {
   return 'overnight';
 }
 
-/* ── Phase 2: 交通モードアイコン ── */
-function stepTypeIcon(type) {
-  const M = {
-    shinkansen: '', rail: '', flight: '',
-    ferry: '', bus: '', car: '', localMove: '',
-  };
-  return M[type] ?? '';
+/* ── Phase 2: 交通モードアイコン（絵文字なし） ── */
+function stepTypeIcon(_type) {
+  return '';
 }
 
 /**
@@ -479,7 +476,7 @@ function buildMapCtaLink(mapCTA, departure, fromCity) {
     ?? `${departure}駅`;
   const dest   = mapCTA.to;
   const mode   = resolveMapMode(origin, dest);
-  return buildGoogleMapsLink(origin, dest, mode, `📍 地図で確認（${dest}）`);
+  return buildGoogleMapsLink(origin, dest, mode, `地図で確認（${dest}）`);
 }
 
 
@@ -593,7 +590,7 @@ function _deriveMapCtaFromCity(city, departure, fromCity) {
   if (!dest) return null;
   const origin = fromCity?.rail ?? DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
   const mode   = resolveMapMode(origin, dest);
-  return buildGoogleMapsLink(origin, dest, mode, `📍 地図で確認（${dest}）`);
+  return buildGoogleMapsLink(origin, dest, mode, `地図で確認（${dest}）`);
 }
 
 /* ══════════════════════════════════════════════════════
@@ -612,12 +609,21 @@ function isFlightAllowed(city, departure) {
   if (city.isIsland || city.destType === 'island') return true;
   if (city.flightHub) return true;
 
-  // remote/mountain は距離計算が過小評価されがちなため常に飛行機を許可
-  // （知床・大雪山など：陸路では数時間かかるが直線距離は短い）
+  // hasDirectFlight が明示 false なら不許可
+  if (city.hasDirectFlight === false) return false;
+
+  // 直線距離 300km 未満は飛行機不要
+  const depCoords  = DEPARTURE_COORDS[departure];
+  const destCoords = (city.lat && city.lng) ? { lat: city.lat, lng: city.lng } : null;
+  if (depCoords && destCoords) {
+    const distKm = calcDistanceKm(depCoords, destCoords);
+    if (distKm < 300) return false;
+  }
+
+  // remote/mountain は常に許可（陸路が遠回りになる場合あり）
   if (city.destType === 'remote' || city.destType === 'mountain') return true;
 
   // 移動時間 200分未満（目安 〜300km）は飛行機不要
-  // 200min = 在来線・新幹線で概ね300km相当
   const travelMin = city.travelTimeMinutes ?? 999;
   if (travelMin > 0 && travelMin < 200) return false;
 
@@ -1212,7 +1218,7 @@ function buildAutoLinks(city, departure, fromCity) {
   const autoWaypoints = (() => {
     const pts = [];
     for (const sg of stepGroups) {
-      const m = sg.stepLabel?.match(/^[①②③④⑤\d\.]+\s*[✈🚄🚃🚢🚌🚗📍]*\s*(.+?)\s*→\s*(.+?)（/u);
+      const m = sg.stepLabel?.match(/^[①②③④⑤\d\.]+\s*[]*\s*(.+?)\s*→\s*(.+?)（/u);
       if (!m) continue;
       if (pts.length === 0) pts.push(m[1]);
       const to = m[2];
