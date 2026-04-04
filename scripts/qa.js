@@ -1484,6 +1484,126 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8q] ルートナレーション品質チェック
+     - viaルートあり → gateway-chain または gateway-db で解決されること
+     - narrative 生成率チェック（80%以上 → PASS）
+  ─────────────────────────────── */
+  {
+    const { resolveRoute } = await import('../src/engine/routeResolver.js');
+    const { buildNarrative, scoreRoute } = await import('../src/transport/routeNarrator.js');
+    const GATEWAYS = JSON.parse(fs.readFileSync('./src/data/gateways.json', 'utf8'));
+    const sc = new Scorecard('[8q] ルートナレーション品質');
+
+    let narrativeOk = 0, narrativeFail = 0;
+    let viaUsed = 0, viaMissed = 0;
+    const DEPS_SAMPLE = ['東京', '大阪'];
+
+    for (const dep of DEPS_SAMPLE) {
+      for (const dest of DESTS.slice(0, 200)) {
+        const result = resolveRoute(dep, dest);
+        if (!result?.steps?.length) continue;
+
+        // narrative 生成チェック
+        const narr = buildNarrative(result.steps);
+        if (narr && narr.length > 0) narrativeOk++;
+        else narrativeFail++;
+
+        // via チェック: GATEWAYS に登録あり → gateway-chain or gateway-db で解決すべき
+        if (GATEWAYS[dest.id]) {
+          if (result.method === 'gateway-chain' || result.method === 'gateway-db') viaUsed++;
+          else viaMissed++;
+        }
+      }
+    }
+
+    const narrativeTotal = narrativeOk + narrativeFail;
+    const narrativeRate  = narrativeTotal > 0 ? (narrativeOk / narrativeTotal * 100).toFixed(1) : 0;
+
+    sc.check(Number(narrativeRate) >= 80,
+      `narrative 生成率: ${narrativeRate}% (${narrativeOk}/${narrativeTotal})`
+    );
+    sc.check(viaMissed === 0,
+      viaMissed === 0
+        ? `viaルート使用率: ${viaUsed}/${viaUsed + viaMissed}件`
+        : `viaルート未使用 ${viaMissed}件（FAIL）`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
+     [8r] P1 UX 品質チェック
+     - CTAが存在しない → FAIL
+     - mapリンクの宛先が駅名 → FAIL
+     - access.steps 経路が使われている → FAIL
+  ─────────────────────────────── */
+  {
+    const { resolveTransportLinks } = await import('../src/transport/resolveTransportLinks.js');
+    const sc = new Scorecard('[8r] P1 UX（CTA/マップ品質）');
+
+    const DEPS_SAMPLE = ['東京', '大阪', '福岡'];
+    let ctaMissing = 0, ctaTotal = 0;
+    let mapStation = 0, mapTotal = 0;
+    let accessStepsUsed = 0;
+    const ctaMissingList = [], mapStationList = [], accessStepsList = [];
+
+    for (const dep of DEPS_SAMPLE) {
+      for (const dest of DESTS.slice(0, 200)) {
+        const links = resolveTransportLinks(dest, dep);
+        ctaTotal++;
+
+        // ① CTA チェック
+        const mainCta = links.find(l => l.type === 'main-cta');
+        if (!mainCta?.cta?.url) {
+          ctaMissing++;
+          if (ctaMissingList.length < 5) ctaMissingList.push(`${dest.id}@${dep}`);
+        }
+
+        // ② mapリンク宛先チェック（駅名禁止）
+        const mapCta = links.find(l => l.type === 'map-cta');
+        if (mapCta?.cta?.url) {
+          mapTotal++;
+          const urlObj = new URL(mapCta.cta.url);
+          const mapDest = decodeURIComponent(urlObj.searchParams.get('destination') ?? '');
+          if (mapDest.endsWith('駅')) {
+            mapStation++;
+            if (mapStationList.length < 5) mapStationList.push(`${dest.id}@${dep}(${mapDest})`);
+          }
+        }
+
+        // ③ access.steps 経路チェック（step-group に local ステップが混入していないか）
+        const hasAccessStepsLabel = links.some(l =>
+          l.type === 'step-group' && l.stepLabel?.includes('（現地移動）')
+        );
+        if (hasAccessStepsLabel) {
+          accessStepsUsed++;
+          if (accessStepsList.length < 5) accessStepsList.push(`${dest.id}@${dep}`);
+        }
+      }
+    }
+
+    sc.check(ctaMissing === 0,
+      ctaMissing === 0
+        ? `CTA存在率: 全${ctaTotal}件OK`
+        : `CTA未設定 ${ctaMissing}/${ctaTotal}件: ${ctaMissingList.join(', ')}`
+    );
+    sc.check(mapStation === 0,
+      mapStation === 0
+        ? `mapリンク宛先: 全${mapTotal}件が駅以外`
+        : `mapが駅 ${mapStation}/${mapTotal}件: ${mapStationList.join(', ')}`
+    );
+    sc.check(accessStepsUsed === 0,
+      accessStepsUsed === 0
+        ? 'access.steps 経路: 使用なし（全BFS/gateway）'
+        : `access.steps 混入 ${accessStepsUsed}件: ${accessStepsList.join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8p] 交通ロジック追加検証
      - flight で hasDirectFlight=false → FAIL
      - walkMinutes > 60 (≈5km超) → FAIL

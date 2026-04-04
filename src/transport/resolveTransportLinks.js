@@ -484,6 +484,119 @@ function buildMapCtaLink(mapCTA, departure, fromCity) {
 
 
 /* ══════════════════════════════════════════════════════
+   CTA 自動導出（routes.json 非依存）
+   BFS steps または step-group labels から CTA を生成する。
+   accessStation は使用しない。
+══════════════════════════════════════════════════════ */
+
+/**
+ * BFS step から JR予約プロバイダを導出する。
+ * step.operator → 新幹線ライン名 → 出発地 jrArea の順に判定。
+ */
+function _deriveJrProviderFromStep(step, departure) {
+  if (step?.operator && OPERATOR_PROVIDER[step.operator]) {
+    return OPERATOR_PROVIDER[step.operator];
+  }
+  const label = step?.label ?? '';
+  if (SHINKANSEN_LINE_PROVIDER[label]) return SHINKANSEN_LINE_PROVIDER[label];
+  const jrArea = DEPARTURE_CITY_INFO[departure]?.jrArea;
+  if (jrArea === 'east')   return 'ekinet';
+  if (jrArea === 'kyushu') return 'jrkyushu';
+  return 'e5489';
+}
+
+/**
+ * BFS / routes.js 形式の steps[] から main-cta を導出する。
+ * 最初の非 localMove ステップの type を優先する。
+ */
+function _deriveMainCtaFromSteps(steps, departure, city) {
+  const primaryStep = steps.find(s => s.type !== 'localMove');
+  const fallbackRail = () => buildJrLink(_deriveJrProviderFromStep(null, departure));
+
+  if (!primaryStep) return fallbackRail();
+
+  switch (primaryStep.type) {
+    case 'flight': {
+      const fromIata  = CITY_AIRPORT[departure] ?? null;
+      if (!fromIata) return fallbackRail();
+      const toAirport = primaryStep.to ?? '';
+      return buildSkyscannerLink(fromIata, toAirport) ?? fallbackRail();
+    }
+    case 'shinkansen':
+    case 'rail':
+      return buildJrLink(_deriveJrProviderFromStep(primaryStep, departure));
+    case 'ferry': {
+      const gw        = primaryStep.from ?? departure;
+      const bookUrl   = primaryStep.ferryUrl ?? null;
+      const op        = primaryStep.ferryOperator ?? null;
+      const dId       = primaryStep.destId ?? city?.id ?? '';
+      return buildFerryLinkForDest(dId, gw, bookUrl, op)
+          ?? buildFerryLink(gw, bookUrl, op);
+    }
+    case 'bus':
+      return buildHighwayBusLink(departure, cityLabel(city));
+    default:
+      return fallbackRail();
+  }
+}
+
+/**
+ * pattern builder の step-group 配列から main-cta を導出する。
+ * stepLabel の（モード）テキストから交通手段を判定する。
+ */
+function _deriveMainCtaFromStepGroups(stepGroups, city, departure) {
+  const hasFlight = stepGroups.some(sg => sg.stepLabel?.includes('（飛行機）'));
+  const hasFerry  = stepGroups.some(sg => sg.stepLabel?.includes('（フェリー）'));
+  const fromIata  = CITY_AIRPORT[departure] ?? null;
+
+  if (hasFlight && fromIata) {
+    const airport = city.airportGateway
+        ?? (city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
+    if (airport) {
+      return buildSkyscannerLink(fromIata, airport) ?? buildJrLink(_deriveJrProviderFromStep(null, departure));
+    }
+  }
+  if (hasFerry) {
+    return buildFerryLinkForDest(city.id, city.ferryGateway ?? '', null, null)
+        ?? buildFerryLink(city.ferryGateway ?? '', null, null);
+  }
+  return buildJrLink(_deriveJrProviderFromStep(null, departure));
+}
+
+/**
+ * BFS / routes.js steps[] からレンタカー sub-cta を導出する。
+ * レンタカーステップまたは requiresCar フラグがある場合のみ生成する。
+ */
+function _deriveSubCtaFromSteps(steps, city) {
+  const hasRental = steps.some(s =>
+    s.type === 'car' ||
+    (s.type === 'localMove' && (s.label === 'レンタカー' || (s.label ?? '').includes('レンタカー')))
+  );
+  if (!hasRental && !city?.requiresCar) return null;
+  const lastMain = [...steps].reverse().find(s => s.type !== 'localMove' && s.type !== 'car');
+  const gatewayCity = lastMain?.to?.replace(/駅$/, '') ?? null;
+  return buildRentalLink(gatewayCity);
+}
+
+/**
+ * 目的地から map-cta を導出する。
+ * mapPoint → finalPoint → spots[0] → 都市名 の順で使用する。
+ * accessStation は使用しない（「駅までのマップ」防止）。
+ */
+function _deriveMapCtaFromCity(city, departure, fromCity) {
+  // mapPoint が駅名（駅で終わる）の場合はスキップして次候補へ
+  const mapPt = (city.mapPoint && !city.mapPoint.endsWith('駅')) ? city.mapPoint : null;
+  const dest = mapPt
+    ?? city.finalPoint
+    ?? (Array.isArray(city.spots) && city.spots[0])
+    ?? cityLabel(city);
+  if (!dest) return null;
+  const origin = fromCity?.rail ?? DEPARTURE_CITY_INFO[departure]?.rail ?? `${departure}駅`;
+  const mode   = resolveMapMode(origin, dest);
+  return buildGoogleMapsLink(origin, dest, mode, `📍 地図で確認（${dest}）`);
+}
+
+/* ══════════════════════════════════════════════════════
    飛行機可否判定
    短距離 / 同一地方への飛行機ルートを禁止する。
    ただし離島（isIsland / island）・flightHub 経由目的地は常に許可。
@@ -789,14 +902,13 @@ function bfsStepsToLinks(steps, departure, city) {
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: steps から自動導出 ── */
   {
-    const routeEntry = ROUTES_DATA[city.id];
-    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
+    const mainCta = _deriveMainCtaFromSteps(steps, departure, city);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
-    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
+    const subCta = _deriveSubCtaFromSteps(steps, city);
     if (subCta) links.push({ type: 'sub-cta', cta: subCta });
-    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure);
+    const mapCta = _deriveMapCtaFromCity(city, departure, null);
     if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
@@ -843,14 +955,13 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     routeLabel:    getRouteLabel(routeTransfers, city),
   });
 
-  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: steps から自動導出 ── */
   {
-    const routeEntry = ROUTES_DATA[city.id];
-    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
+    const mainCta = _deriveMainCtaFromSteps(routes, departure, city);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
-    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
+    const subCta = _deriveSubCtaFromSteps(routes, city);
     if (subCta) links.push({ type: 'sub-cta', cta: subCta });
-    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure, fromCity);
+    const mapCta = _deriveMapCtaFromCity(city, departure, fromCity);
     if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 
@@ -1118,7 +1229,11 @@ function buildAutoLinks(city, departure, fromCity) {
     routeLabel:    getRouteLabel(autoTransfers, city),
   });
 
-  /* main-cta: routes.json のデータをそのまま使う（buildAutoLinks は departure を持たないのでスキップ）*/
+  /* ── main-cta / map-cta: step-groups から自動導出 ── */
+  const mainCta = _deriveMainCtaFromStepGroups(stepGroups, city, departure);
+  if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
+  const mapCta = _deriveMapCtaFromCity(city, departure, fromCity);
+  if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   links.push(...stepGroups);
   return links;
 }
@@ -1228,14 +1343,15 @@ function buildLinksFromStepGroups(stepGroups, city, departure = null, fromCity =
     routeLabel:    getRouteLabel(transfers, city),
   });
 
-  /* ── main-cta / sub-cta / map-cta: routes.json のデータをそのまま使う ── */
+  /* ── main-cta / sub-cta / map-cta: step-groups から自動導出 ── */
   if (departure) {
-    const routeEntry = ROUTES_DATA[city.id];
-    const mainCta = buildCtaUrl(routeEntry?.mainCTA, departure);
+    const mainCta = _deriveMainCtaFromStepGroups(stepGroups, city, departure);
     if (mainCta) links.push({ type: 'main-cta', cta: mainCta });
-    const subCta = buildSubCtaUrl(routeEntry?.subCTA);
-    if (subCta) links.push({ type: 'sub-cta', cta: subCta });
-    const mapCta = buildMapCtaLink(routeEntry?.mapCTA, departure, fromCity);
+    const hasRental = stepGroups.some(sg => sg.stepLabel?.includes('（レンタカー）'));
+    if (hasRental || city?.requiresCar) {
+      links.push({ type: 'sub-cta', cta: buildRentalLink(null) });
+    }
+    const mapCta = _deriveMapCtaFromCity(city, departure, fromCity);
     if (mapCta) links.push({ type: 'map-cta', cta: mapCta });
   }
 

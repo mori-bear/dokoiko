@@ -12,6 +12,7 @@
 
 import { DEPARTURE_CITY_INFO }                   from '../../config/constants.js';
 import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuilder.js';
+import { buildNarrative }                         from '../../transport/routeNarrator.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
@@ -166,11 +167,6 @@ function buildCategoryBadge(city) {
 /* ── 交通ブロック ── */
 
 function buildTransportBlock(links, departure, destLabel, city = null) {
-  /* access.steps 方式（優先）: destinations.json の steps[] を直接使用 */
-  if (city?.access?.steps) {
-    return buildAccessBlock(city, departure);
-  }
-
   /* step-group 方式: 統合シーケンシャル表示 */
   if (links.some(l => l.type === 'step-group')) {
     return buildStepsBlock(links, departure, destLabel, city);
@@ -450,20 +446,26 @@ function buildStepCtaLabel(sg) {
  * ルート概要テキストを生成する。
  *   "高松 → 梼原" + 到着後アクセス補足（secondaryTransport ベース）
  */
-function buildRouteSummary(departure, destLabel, city) {
+function buildRouteSummary(departure, destLabel, city, routeSteps = null) {
   const headline = `${departure} → ${destLabel}`;
 
+  /* ナレーション: routeSteps があれば生成 */
+  const narrative = routeSteps?.length
+    ? buildNarrative(routeSteps)
+    : '';
+
   let localPreview = '';
-  if (city && !(city.isIsland || city.destType === 'island')) {
+  if (!narrative && city && !(city.isIsland || city.destType === 'island')) {
     const transport = city.secondaryTransport ?? null;
     const needsCar  = !!(city.requiresCar ?? city.needsCar) || city.destType === 'mountain' || city.destType === 'remote' || transport === 'car';
     const hasBus    = city.railNote === 'バス' || city.busGateway != null || transport === 'bus';
-    if (needsCar)      localPreview = '　🚗 レンタカー必要';
-    else if (hasBus)   localPreview = '　駅からバス';
+    if (needsCar)      localPreview = 'レンタカー必要';
+    else if (hasBus)   localPreview = '駅からバス';
   }
 
-  return localPreview
-    ? `<span class="route-headline">${headline}</span><span class="route-detail">${localPreview}</span>`
+  const detail = narrative || localPreview;
+  return detail
+    ? `<span class="route-headline">${headline}</span><span class="route-narrative">${detail}</span>`
     : headline;
 }
 
@@ -932,7 +934,7 @@ function buildAccessBlock(city, departure) {
   return `
     <div class="card-section">
       ${mapMainHtml}
-      <div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>
+      <div class="route-summary">${buildRouteSummary(departure, destLabel, city, uiData.steps)}</div>
       ${mainCtaHtml}
       <div class="step-list">${stepsHtml}</div>
       ${subCtaHtml}
