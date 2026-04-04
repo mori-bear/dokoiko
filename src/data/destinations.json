@@ -93,7 +93,14 @@
       "couple",
       "friends"
     ],
-    "catch": "古都の寺社と海が共存する歴史の街"
+    "catch": "古都の寺社と海が共存する歴史の街",
+    "primary": [
+      "寺社",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "atami",
@@ -177,7 +184,16 @@
       "couple",
       "friends"
     ],
-    "catch": "昭和レトロと温泉が絡み合う海辺の保養地"
+    "catch": "昭和レトロと温泉が絡み合う海辺の保養地",
+    "primary": [
+      "温泉",
+      "海",
+      "城"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "nikko",
@@ -295,7 +311,18 @@
       "couple",
       "friends"
     ],
-    "catch": "山と湖と滝に囲まれた世界遺産の聖地"
+    "catch": "山と湖と滝に囲まれた世界遺産の聖地",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "歴史",
+      "寺社",
+      "滝"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "karuizawa",
@@ -396,7 +423,14 @@
       "couple",
       "friends"
     ],
-    "catch": "高原の空気と別荘文化が溶け合う避暑地"
+    "catch": "高原の空気と別荘文化が溶け合う避暑地",
+    "primary": [
+      "山",
+      "自然",
+      "滝"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "fujikawaguchiko",
@@ -487,7 +521,16 @@
       "couple",
       "friends"
     ],
-    "catch": "富士山を映す湖と雄大な自然に包まれた高原地"
+    "catch": "富士山を映す湖と雄大な自然に包まれた高原地",
+    "primary": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "海"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "nara",
@@ -585,7 +628,14 @@
       "couple",
       "friends"
     ],
-    "catch": "鹿と仏教建築が共存する千年の古都"
+    "catch": "鹿と仏教建築が共存する千年の古都",
+    "primary": [
+      "歴史",
+      "寺社",
+      "滝"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ishigaki",
@@ -691,7 +741,14 @@
       "couple",
       "friends"
     ],
-    "catch": "八重山の文化と透明度抜群の珊瑚礁が広がる離島"
+    "catch": "八重山の文化と透明度抜群の珊瑚礁が広がる離島",
+    "primary": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ise",
@@ -805,7 +862,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最古の神宮が鎮座する神聖な参拝の地"
+    "catch": "日本最古の神宮が鎮座する神聖な参拝の地",
+    "primary": [
+      "海",
+      "街歩き",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "beppu",
@@ -911,7 +975,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市"
+    "catch": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市",
+    "primary": [
+      "温泉",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "otaru",
@@ -1009,7 +1079,14 @@
       "couple",
       "friends"
     ],
-    "catch": "北の港町に残る運河と倉庫群が旅情を誘う街"
+    "catch": "北の港町に残る運河と倉庫群が旅情を誘う街",
+    "primary": [
+      "海",
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "furano",
@@ -1112,7 +1189,16 @@
       "couple",
       "friends"
     ],
-    "catch": "ラベンダー畑と大自然が広がる北海道の高原地帯"
+    "catch": "ラベンダー畑と大自然が広がる北海道の高原地帯",
+    "primary": [
+      "街歩き",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "海"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "matsushima",
@@ -1227,7 +1313,16 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三景のひとつ、松の島々が浮かぶ美しい海"
+    "catch": "日本三景のひとつ、松の島々が浮かぶ美しい海",
+    "primary": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "miyajima",
@@ -1339,7 +1434,16 @@
       "couple",
       "friends"
     ],
-    "catch": "海に浮かぶ鳥居が象徴する世界遺産の神の島"
+    "catch": "海に浮かぶ鳥居が象徴する世界遺産の神の島",
+    "primary": [
+      "離島",
+      "海",
+      "寺社"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "onomichi",
@@ -1449,7 +1553,14 @@
       "couple",
       "friends"
     ],
-    "catch": "坂と猫と寺社が点在する瀬戸内の港町"
+    "catch": "坂と猫と寺社が点在する瀬戸内の港町",
+    "primary": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shodoshima",
@@ -1564,7 +1675,13 @@
       "couple",
       "friends"
     ],
-    "catch": "オリーブと醤油の産地として知られる瀬戸内の島"
+    "catch": "オリーブと醤油の産地として知られる瀬戸内の島",
+    "primary": [
+      "離島",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mihonoseki",
@@ -1672,7 +1789,16 @@
       "couple",
       "friends"
     ],
-    "catch": "島根半島の東端に静かに佇む漁師町"
+    "catch": "島根半島の東端に静かに佇む漁師町",
+    "primary": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ryujin-onsen",
@@ -1759,7 +1885,13 @@
       "couple",
       "friends"
     ],
-    "catch": "紀伊山地の奥深くに湧く日本三美人の湯"
+    "catch": "紀伊山地の奥深くに湧く日本三美人の湯",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 2
   },
   {
     "id": "tokashiki-jima",
@@ -1884,7 +2016,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ケラマブルーの海が広がる沖縄の離島"
+    "catch": "ケラマブルーの海が広がる沖縄の離島",
+    "primary": [
+      "離島",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kumejima",
@@ -2010,7 +2148,14 @@
       "couple",
       "friends"
     ],
-    "catch": "手つかずの白砂浜と沖縄の原風景が残る離島"
+    "catch": "手つかずの白砂浜と沖縄の原風景が残る離島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyakojima",
@@ -2117,7 +2262,14 @@
       "couple",
       "friends"
     ],
-    "catch": "宮古ブルーと称される透明度抜群の海を持つ離島"
+    "catch": "宮古ブルーと称される透明度抜群の海を持つ離島",
+    "primary": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kouzushima",
@@ -2228,7 +2380,14 @@
       "couple",
       "friends"
     ],
-    "catch": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島"
+    "catch": "伊豆諸島の南に浮かぶ、星空と透明な海が美しい離島",
+    "primary": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hakone",
@@ -2330,7 +2489,14 @@
       "couple",
       "friends"
     ],
-    "catch": "山と湖と温泉が揃う関東を代表する保養地"
+    "catch": "山と湖と温泉が揃う関東を代表する保養地",
+    "primary": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "shuzenji",
@@ -2425,7 +2591,14 @@
       "couple",
       "friends"
     ],
-    "catch": "竹林に囲まれた伊豆最古の温泉郷"
+    "catch": "竹林に囲まれた伊豆最古の温泉郷",
+    "primary": [
+      "温泉",
+      "歴史",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kusatsu-onsen",
@@ -2525,7 +2698,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯"
+    "catch": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "shimoda",
@@ -2628,7 +2807,16 @@
       "couple",
       "friends"
     ],
-    "catch": "黒船来航の歴史が残る伊豆半島南端の港町"
+    "catch": "黒船来航の歴史が残る伊豆半島南端の港町",
+    "primary": [
+      "歴史",
+      "海",
+      "寺社"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "izu-oshima",
@@ -2747,7 +2935,16 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅"
+    "catch": "海と自然に囲まれた離島の旅",
+    "primary": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shirakawago-t",
@@ -2850,7 +3047,14 @@
       "couple",
       "friends"
     ],
-    "catch": "雪に耐える合掌造りの集落が世界遺産に登録された里"
+    "catch": "雪に耐える合掌造りの集落が世界遺産に登録された里",
+    "primary": [
+      "山",
+      "城",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "arima-onsen",
@@ -2952,7 +3156,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本書紀にも記された六甲山麓の古湯"
+    "catch": "日本書紀にも記された六甲山麓の古湯",
+    "primary": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kinosaki-onsen",
@@ -3050,7 +3261,13 @@
       "couple",
       "friends"
     ],
-    "catch": "浴衣で七つの外湯を巡る情緒ある温泉街"
+    "catch": "浴衣で七つの外湯を巡る情緒ある温泉街",
+    "primary": [
+      "温泉",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kurashiki-o",
@@ -3147,7 +3364,13 @@
       "couple",
       "friends"
     ],
-    "catch": "白壁の土蔵と柳が並ぶ江戸の面影が残る街"
+    "catch": "白壁の土蔵と柳が並ぶ江戸の面影が残る街",
+    "primary": [
+      "歴史",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shirahama-o",
@@ -3233,7 +3456,16 @@
       "couple",
       "friends"
     ],
-    "catch": "白い砂浜と透明な海が広がる南紀のリゾート地"
+    "catch": "白い砂浜と透明な海が広がる南紀のリゾート地",
+    "primary": [
+      "温泉",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "takayama-o",
@@ -3331,7 +3563,16 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸の町割りが残る飛騨山脈に囲まれた城下町"
+    "catch": "江戸の町割りが残る飛騨山脈に囲まれた城下町",
+    "primary": [
+      "温泉",
+      "山",
+      "歴史"
+    ],
+    "secondary": [
+      "城"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "toba",
@@ -3430,7 +3671,16 @@
       "couple",
       "friends"
     ],
-    "catch": "伊勢志摩の海女文化と真珠産業が息づく港町"
+    "catch": "伊勢志摩の海女文化と真珠産業が息づく港町",
+    "primary": [
+      "街歩き",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "yufuin",
@@ -3544,7 +3794,14 @@
       "couple",
       "friends"
     ],
-    "catch": "霧立つ温泉郷として知られる九州の奥座敷"
+    "catch": "霧立つ温泉郷として知られる九州の奥座敷",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kurokawa-k",
@@ -3637,7 +3894,16 @@
       "couple",
       "friends"
     ],
-    "catch": "杉林に隠れた小さな温泉旅館が集まる秘湯の里"
+    "catch": "杉林に隠れた小さな温泉旅館が集まる秘湯の里",
+    "primary": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "温泉"
+    ],
+    "onsenLevel": 2
   },
   {
     "id": "aso",
@@ -3740,7 +4006,13 @@
       "couple",
       "friends"
     ],
-    "catch": "世界最大級のカルデラと活火山が広がる大自然の地"
+    "catch": "世界最大級のカルデラと活火山が広がる大自然の地",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yakushima",
@@ -3872,7 +4144,16 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産に認定された原始の森が島を覆う、屋久島"
+    "catch": "世界遺産に認定された原始の森が島を覆う、屋久島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "amakusa",
@@ -3961,7 +4242,14 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産のキリシタン集落と海に囲まれた九州の島"
+    "catch": "世界遺産のキリシタン集落と海に囲まれた九州の島",
+    "primary": [
+      "海",
+      "歴史",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hiraizumi",
@@ -4058,7 +4346,13 @@
       "couple",
       "friends"
     ],
-    "catch": "奥州藤原氏の黄金文化が栄えた世界遺産の地"
+    "catch": "奥州藤原氏の黄金文化が栄えた世界遺産の地",
+    "primary": [
+      "歴史",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kakunodate",
@@ -4154,7 +4448,13 @@
       "couple",
       "friends"
     ],
-    "catch": "武家屋敷と枝垂れ桜が残る秋田の城下町"
+    "catch": "武家屋敷と枝垂れ桜が残る秋田の城下町",
+    "primary": [
+      "歴史",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "aizu",
@@ -4251,7 +4551,14 @@
       "couple",
       "friends"
     ],
-    "catch": "白虎隊の悲話で知られる東北の誇り高い城下町"
+    "catch": "白虎隊の悲話で知られる東北の誇り高い城下町",
+    "primary": [
+      "温泉",
+      "城",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "zaosan",
@@ -4341,7 +4648,14 @@
       "couple",
       "friends"
     ],
-    "catch": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯"
+    "catch": "色変わりする火口湖と冬の白い怪木が名物の山岳地帯",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hagi",
@@ -4439,7 +4753,17 @@
       "couple",
       "friends"
     ],
-    "catch": "幕末の志士たちが歩いた山口の城下町"
+    "catch": "幕末の志士たちが歩いた山口の城下町",
+    "primary": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "城",
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shimonoseki",
@@ -4538,7 +4862,16 @@
       "couple",
       "friends"
     ],
-    "catch": "本州最西端に位置する関門海峡の街"
+    "catch": "本州最西端に位置する関門海峡の街",
+    "primary": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "naoshima",
@@ -4655,7 +4988,14 @@
       "couple",
       "friends"
     ],
-    "catch": "現代アートが島全体を美術館にした瀬戸内の離島"
+    "catch": "現代アートが島全体を美術館にした瀬戸内の離島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kotohira",
@@ -4757,7 +5097,13 @@
       "couple",
       "friends"
     ],
-    "catch": "785段の石段で知られる金刀比羅宮の門前町"
+    "catch": "785段の石段で知られる金刀比羅宮の門前町",
+    "primary": [
+      "街歩き",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "uwajima",
@@ -4856,7 +5202,18 @@
       "couple",
       "friends"
     ],
-    "catch": "南予の海と山に囲まれた闘牛と鯛めしの城下町"
+    "catch": "南予の海と山に囲まれた闘牛と鯛めしの城下町",
+    "primary": [
+      "城",
+      "温泉",
+      "海"
+    ],
+    "secondary": [
+      "山",
+      "歴史",
+      "離島"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "toyako",
@@ -4946,7 +5303,16 @@
       "couple",
       "friends"
     ],
-    "catch": "活火山と湖が共存する北海道の絶景エリア"
+    "catch": "活火山と湖が共存する北海道の絶景エリア",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "海"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "noboribetsu",
@@ -5029,7 +5395,14 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道有数の温泉地、鉄泉が湧く地獄の景観"
+    "catch": "北海道有数の温泉地、鉄泉が湧く地獄の景観",
+    "primary": [
+      "温泉",
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "shiretoko",
@@ -5128,7 +5501,16 @@
       "couple",
       "friends"
     ],
-    "catch": "世界自然遺産に認定された原生の大地と海"
+    "catch": "世界自然遺産に認定された原生の大地と海",
+    "primary": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "wajima",
@@ -5230,7 +5612,16 @@
       "couple",
       "friends"
     ],
-    "catch": "能登半島の先端、輪島塗の伝統と朝市が息づく街"
+    "catch": "能登半島の先端、輪島塗の伝統と朝市が息づく街",
+    "primary": [
+      "離島",
+      "歴史",
+      "海"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kaga-onsen",
@@ -5321,7 +5712,13 @@
       "couple",
       "friends"
     ],
-    "catch": "九谷焼の産地に広がる北陸の温泉地帯"
+    "catch": "九谷焼の産地に広がる北陸の温泉地帯",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hakuba",
@@ -5421,7 +5818,12 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスの峰々を望む高原の山岳リゾート"
+    "catch": "北アルプスの峰々を望む高原の山岳リゾート",
+    "primary": [
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "amanohashidate",
@@ -5516,7 +5918,12 @@
       "couple",
       "friends"
     ],
-    "catch": "天に昇る橋のような砂洲が続く日本三景の地"
+    "catch": "天に昇る橋のような砂洲が続く日本三景の地",
+    "primary": [
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ine",
@@ -5618,7 +6025,16 @@
       "couple",
       "friends"
     ],
-    "catch": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落"
+    "catch": "海に直接浮かぶ舟屋が並ぶ独特の漁村集落",
+    "primary": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ibusuki",
@@ -5714,7 +6130,14 @@
       "couple",
       "friends"
     ],
-    "catch": "薩摩半島南端に広がる砂むし温泉の街"
+    "catch": "薩摩半島南端に広がる砂むし温泉の街",
+    "primary": [
+      "温泉",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "sasebo",
@@ -5811,7 +6234,14 @@
       "couple",
       "friends"
     ],
-    "catch": "数えきれない島々が複雑な海岸線を描く長崎県北の街"
+    "catch": "数えきれない島々が複雑な海岸線を描く長崎県北の街",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hirado",
@@ -5901,7 +6331,16 @@
       "couple",
       "friends"
     ],
-    "catch": "日本で最初に外国貿易が行われた歴史ある港町"
+    "catch": "日本で最初に外国貿易が行われた歴史ある港町",
+    "primary": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "tottori",
@@ -5984,7 +6423,13 @@
       "couple",
       "friends"
     ],
-    "catch": "巨大な砂丘と松葉がにが名物の日本海の街"
+    "catch": "巨大な砂丘と松葉がにが名物の日本海の街",
+    "primary": [
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "akita",
@@ -6068,7 +6513,14 @@
       "couple",
       "friends"
     ],
-    "catch": "竿燈まつりときりたんぽ鍋が有名な東北の雄都"
+    "catch": "竿燈まつりときりたんぽ鍋が有名な東北の雄都",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "awaji",
@@ -6161,7 +6613,17 @@
       "couple",
       "friends"
     ],
-    "catch": "玉ねぎと潮風に包まれた明石海峡の先の島"
+    "catch": "玉ねぎと潮風に包まれた明石海峡の先の島",
+    "primary": [
+      "自然",
+      "街歩き",
+      "歴史"
+    ],
+    "secondary": [
+      "海",
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "takao",
@@ -6251,7 +6713,16 @@
       "couple",
       "friends"
     ],
-    "catch": "都市に隣接しながら深い自然が残る霊峰の山"
+    "catch": "都市に隣接しながら深い自然が残る霊峰の山",
+    "primary": [
+      "山",
+      "寺社",
+      "自然"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "tateyama-chiba",
@@ -6344,7 +6815,17 @@
       "couple",
       "friends"
     ],
-    "catch": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総"
+    "catch": "黒潮が運ぶ温暖な気候と美しい海岸が広がる南房総",
+    "primary": [
+      "海",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "城",
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "gokayama",
@@ -6446,7 +6927,14 @@
       "couple",
       "friends"
     ],
-    "catch": "白川郷と並ぶ合掌造りの集落が残る山深い里"
+    "catch": "白川郷と並ぶ合掌造りの集落が残る山深い里",
+    "primary": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "jozankei",
@@ -6537,7 +7025,17 @@
       "couple",
       "friends"
     ],
-    "catch": "札幌市街に近い豊平川沿いの温泉郷"
+    "catch": "札幌市街に近い豊平川沿いの温泉郷",
+    "primary": [
+      "温泉",
+      "自然",
+      "海"
+    ],
+    "secondary": [
+      "山",
+      "秘境"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "biei",
@@ -6639,7 +7137,12 @@
       "couple",
       "friends"
     ],
-    "catch": "丘と農場が織りなすパッチワークの大地"
+    "catch": "丘と農場が織りなすパッチワークの大地",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyako-iwate",
@@ -6743,7 +7246,14 @@
       "couple",
       "friends"
     ],
-    "catch": "三陸の白い岩場と碧い海が広がる港町"
+    "catch": "三陸の白い岩場と碧い海が広がる港町",
+    "primary": [
+      "海",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sakata",
@@ -6840,7 +7350,16 @@
       "couple",
       "friends"
     ],
-    "catch": "北前船の交易で栄えた日本海の湊町"
+    "catch": "北前船の交易で栄えた日本海の湊町",
+    "primary": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "takachiho",
@@ -6932,7 +7451,16 @@
       "couple",
       "friends"
     ],
-    "catch": "神話の里として知られる宮崎の峡谷地帯"
+    "catch": "神話の里として知られる宮崎の峡谷地帯",
+    "primary": [
+      "自然",
+      "渓谷",
+      "寺社"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "amami",
@@ -7051,7 +7579,14 @@
       "couple",
       "friends"
     ],
-    "catch": "亜熱帯の原生林とサンゴ礁が広がる離島"
+    "catch": "亜熱帯の原生林とサンゴ礁が広がる離島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "goto",
@@ -7170,7 +7705,14 @@
       "couple",
       "friends"
     ],
-    "catch": "教会と海が共存するキリシタンゆかりの島々"
+    "catch": "教会と海が共存するキリシタンゆかりの島々",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "unzen",
@@ -7259,7 +7801,14 @@
       "couple",
       "friends"
     ],
-    "catch": "長崎県の山上に湧く地獄と温泉の街"
+    "catch": "長崎県の山上に湧く地獄と温泉の街",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "ashizuri",
@@ -7358,7 +7907,12 @@
       "couple",
       "friends"
     ],
-    "catch": "四国最南端に太平洋へ突き出した断崖の岬"
+    "catch": "四国最南端に太平洋へ突き出した断崖の岬",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oboke",
@@ -7462,7 +8016,14 @@
       "couple",
       "friends"
     ],
-    "catch": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街"
+    "catch": "吉野川が刻んだ断崖と碧い流れが続く峡谷の街",
+    "primary": [
+      "秘境",
+      "自然",
+      "渓谷"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsuwano",
@@ -7559,7 +8120,16 @@
       "couple",
       "friends"
     ],
-    "catch": "山陰の小京都と呼ばれる鯉が泳ぐ城下町"
+    "catch": "山陰の小京都と呼ばれる鯉が泳ぐ城下町",
+    "primary": [
+      "歴史",
+      "寺社",
+      "山"
+    ],
+    "secondary": [
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "inuyama",
@@ -7655,7 +8225,14 @@
       "couple",
       "friends"
     ],
-    "catch": "清流沿いに建つ国宝天守を持つ城下町"
+    "catch": "清流沿いに建つ国宝天守を持つ城下町",
+    "primary": [
+      "城",
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kiso",
@@ -7758,7 +8335,14 @@
       "couple",
       "friends"
     ],
-    "catch": "中山道の宿場町が今も残る木曽の山あい"
+    "catch": "中山道の宿場町が今も残る木曽の山あい",
+    "primary": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyama",
@@ -7848,7 +8432,14 @@
       "couple",
       "friends"
     ],
-    "catch": "茅葺き屋根が50棟以上並ぶ山の集落"
+    "catch": "茅葺き屋根が50棟以上並ぶ山の集落",
+    "primary": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tateyama-kurobe",
@@ -7950,7 +8541,13 @@
       "couple",
       "friends"
     ],
-    "catch": "3000メートル級の稜線を歩くアルペンルート"
+    "catch": "3000メートル級の稜線を歩くアルペンルート",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "himi",
@@ -8049,7 +8646,17 @@
       "couple",
       "friends"
     ],
-    "catch": "立山連峰を望む富山湾の漁師町"
+    "catch": "立山連峰を望む富山湾の漁師町",
+    "primary": [
+      "温泉",
+      "海",
+      "街歩き"
+    ],
+    "secondary": [
+      "山",
+      "歴史"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "nyuto-onsen",
@@ -8138,7 +8745,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里"
+    "catch": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "yuda-onsen",
@@ -8224,7 +8837,17 @@
       "couple",
       "friends"
     ],
-    "catch": "白狐伝説が残る山口市街に湧く城下の湯"
+    "catch": "白狐伝説が残る山口市街に湧く城下の湯",
+    "primary": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "secondary": [
+      "城",
+      "寺社"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "ureshino-onsen",
@@ -8306,7 +8929,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大美肌の湯として知られる佐賀の重曹泉"
+    "catch": "日本三大美肌の湯として知られる佐賀の重曹泉",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "obuse",
@@ -8401,7 +9030,13 @@
       "couple",
       "friends"
     ],
-    "catch": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町"
+    "catch": "栗菓子と葛飾北斎ゆかりの文化が息づく小さな町",
+    "primary": [
+      "街歩き",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "uchiko",
@@ -8496,7 +9131,13 @@
       "couple",
       "friends"
     ],
-    "catch": "白壁と木蝋の香り漂う四国の商人文化の街"
+    "catch": "白壁と木蝋の香り漂う四国の商人文化の街",
+    "primary": [
+      "街歩き",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "muroto",
@@ -8585,7 +9226,14 @@
       "couple",
       "friends"
     ],
-    "catch": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬"
+    "catch": "太平洋の荒波が刻んだ奇岩群が続く四国最南東の岬",
+    "primary": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "iya",
@@ -8676,7 +9324,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大秘境のひとつ、霧が漂う深い谷間の集落"
+    "catch": "日本三大秘境のひとつ、霧が漂う深い谷間の集落",
+    "primary": [
+      "秘境",
+      "温泉",
+      "滝"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "oku-izumo",
@@ -8768,7 +9423,16 @@
       "couple",
       "friends"
     ],
-    "catch": "たたら製鉄の歴史が残る出雲の山あいの里"
+    "catch": "たたら製鉄の歴史が残る出雲の山あいの里",
+    "primary": [
+      "山",
+      "自然",
+      "渓谷"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ginzan-onsen",
@@ -8858,7 +9522,16 @@
       "couple",
       "friends"
     ],
-    "catch": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街"
+    "catch": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街",
+    "primary": [
+      "温泉",
+      "山",
+      "街歩き"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "ouchi-juku",
@@ -8948,7 +9621,14 @@
       "couple",
       "friends"
     ],
-    "catch": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里"
+    "catch": "茅葺き屋根の宿場町が江戸時代のまま残る福島の里",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nozawa-onsen",
@@ -9036,7 +9716,13 @@
       "couple",
       "friends"
     ],
-    "catch": "村全体が温泉場になった信州の山里"
+    "catch": "村全体が温泉場になった信州の山里",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "takehara",
@@ -9132,7 +9818,14 @@
       "couple",
       "friends"
     ],
-    "catch": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街"
+    "catch": "安芸の小京都と呼ばれる江戸の商家が残る白壁の街",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsumago",
@@ -9235,7 +9928,14 @@
       "couple",
       "friends"
     ],
-    "catch": "石畳と茅葺きの宿場が中山道に残る木曽の里"
+    "catch": "石畳と茅葺きの宿場が中山道に残る木曽の里",
+    "primary": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "magome",
@@ -9338,7 +10038,14 @@
       "couple",
       "friends"
     ],
-    "catch": "石畳の坂道が続く中山道の峠の宿場町"
+    "catch": "石畳の坂道が続く中山道の峠の宿場町",
+    "primary": [
+      "歴史",
+      "山",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nagahama",
@@ -9435,7 +10142,14 @@
       "couple",
       "friends"
     ],
-    "catch": "琵琶湖畔に広がる黒壁ガラスの文化の街"
+    "catch": "琵琶湖畔に広がる黒壁ガラスの文化の街",
+    "primary": [
+      "歴史",
+      "自然",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hikone",
@@ -9532,7 +10246,14 @@
       "couple",
       "friends"
     ],
-    "catch": "国宝の天守が琵琶湖を見下ろして立つ城下町"
+    "catch": "国宝の天守が琵琶湖を見下ろして立つ城下町",
+    "primary": [
+      "歴史",
+      "自然",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "koyasan",
@@ -9633,7 +10354,13 @@
       "couple",
       "friends"
     ],
-    "catch": "真言密教の聖域として山上に広がる宗教都市"
+    "catch": "真言密教の聖域として山上に広がる宗教都市",
+    "primary": [
+      "山",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "gero-onsen",
@@ -9735,7 +10462,14 @@
       "couple",
       "friends"
     ],
-    "catch": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉"
+    "catch": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉",
+    "primary": [
+      "温泉",
+      "街歩き",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "naruko-onsen",
@@ -9829,7 +10563,13 @@
       "couple",
       "friends"
     ],
-    "catch": "こけし発祥の地として知られる東北の温泉の里"
+    "catch": "こけし発祥の地として知られる東北の温泉の里",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "shima-onsen",
@@ -9917,7 +10657,14 @@
       "couple",
       "friends"
     ],
-    "catch": "奥利根の山あいに湧く千年の歴史を持つ湯治場"
+    "catch": "奥利根の山あいに湧く千年の歴史を持つ湯治場",
+    "primary": [
+      "温泉",
+      "山",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hirosaki",
@@ -10025,7 +10772,14 @@
       "couple",
       "friends"
     ],
-    "catch": "津軽の城下町に日本一の桜の名所が広がる街"
+    "catch": "津軽の城下町に日本一の桜の名所が広がる街",
+    "primary": [
+      "歴史",
+      "城",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oirase",
@@ -10124,7 +10878,14 @@
       "couple",
       "friends"
     ],
-    "catch": "原生林を縫うように清流が流れる渓谷路"
+    "catch": "原生林を縫うように清流が流れる渓谷路",
+    "primary": [
+      "自然",
+      "渓谷",
+      "滝"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mashiko",
@@ -10224,7 +10985,12 @@
       "couple",
       "friends"
     ],
-    "catch": "陶土の香りが漂う関東随一の焼き物の里"
+    "catch": "陶土の香りが漂う関東随一の焼き物の里",
+    "primary": [
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "bessho-onsen",
@@ -10321,7 +11087,16 @@
       "couple",
       "friends"
     ],
-    "catch": "信州最古と言われる温泉地、観音様が守る山里"
+    "catch": "信州最古と言われる温泉地、観音様が守る山里",
+    "primary": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "izushi",
@@ -10412,7 +11187,14 @@
       "couple",
       "friends"
     ],
-    "catch": "但馬の小京都と呼ばれる皿そばの城下町"
+    "catch": "但馬の小京都と呼ばれる皿そばの城下町",
+    "primary": [
+      "歴史",
+      "城",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "wakura-onsen",
@@ -10495,7 +11277,14 @@
       "couple",
       "friends"
     ],
-    "catch": "七尾湾に面した能登半島の名湯"
+    "catch": "七尾湾に面した能登半島の名湯",
+    "primary": [
+      "温泉",
+      "海",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "misasa-onsen",
@@ -10584,7 +11373,13 @@
       "couple",
       "friends"
     ],
-    "catch": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地"
+    "catch": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地",
+    "primary": [
+      "温泉",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "obi",
@@ -10680,7 +11475,14 @@
       "couple",
       "friends"
     ],
-    "catch": "杉の板塀が続く城下町、日南の小京都"
+    "catch": "杉の板塀が続く城下町、日南の小京都",
+    "primary": [
+      "歴史",
+      "海",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hitoyoshi",
@@ -10778,7 +11580,16 @@
       "couple",
       "friends"
     ],
-    "catch": "球磨川の清流沿いに栄えた九州の城下町"
+    "catch": "球磨川の清流沿いに栄えた九州の城下町",
+    "primary": [
+      "温泉",
+      "歴史",
+      "城"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "kamikochi",
@@ -10880,7 +11691,13 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスの玄関口に広がる手つかずの高原"
+    "catch": "北アルプスの玄関口に広がる手つかずの高原",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "minakami-onsen",
@@ -10970,7 +11787,14 @@
       "couple",
       "friends"
     ],
-    "catch": "険しい双耳峰を背に利根川の源流が流れる山の温泉地"
+    "catch": "険しい双耳峰を背に利根川の源流が流れる山の温泉地",
+    "primary": [
+      "温泉",
+      "山",
+      "滝"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "minami-aso",
@@ -11067,7 +11891,13 @@
       "couple",
       "friends"
     ],
-    "catch": "阿蘇カルデラの南に広がる湧水と牧草の高原"
+    "catch": "阿蘇カルデラの南に広がる湧水と牧草の高原",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "imabari",
@@ -11175,7 +12005,16 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "街歩き",
+      "海",
+      "城"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ozu",
@@ -11289,7 +12128,16 @@
       "couple",
       "friends"
     ],
-    "catch": "伊予の小京都と呼ばれる城下町"
+    "catch": "伊予の小京都と呼ばれる城下町",
+    "primary": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shakotan",
@@ -11402,7 +12250,14 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道西岸の半島に広がる「積丹ブルー」の絶景"
+    "catch": "北海道西岸の半島に広がる「積丹ブルー」の絶景",
+    "primary": [
+      "海",
+      "街歩き",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "izumo",
@@ -11523,7 +12378,14 @@
       "couple",
       "friends"
     ],
-    "catch": "縁結びの神様で名高い出雲大社を擁する古代のまち"
+    "catch": "縁結びの神様で名高い出雲大社を擁する古代のまち",
+    "primary": [
+      "寺社",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "suzu",
@@ -11614,7 +12476,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "secondary": [
+      "秘境"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "yoshino",
@@ -11730,7 +12601,16 @@
       "couple",
       "friends"
     ],
-    "catch": "日本一の桜の名所として名高い修験道の山"
+    "catch": "日本一の桜の名所として名高い修験道の山",
+    "primary": [
+      "自然",
+      "歴史",
+      "山"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kumano",
@@ -11834,7 +12714,14 @@
       "couple",
       "friends"
     ],
-    "catch": "瀞峡の秘境と熊野灘の荒磯"
+    "catch": "瀞峡の秘境と熊野灘の荒磯",
+    "primary": [
+      "秘境",
+      "自然",
+      "渓谷"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "iriomote",
@@ -11967,7 +12854,17 @@
       "couple",
       "friends"
     ],
-    "catch": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境"
+    "catch": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "滝",
+      "秘境"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "takahashi",
@@ -12083,7 +12980,17 @@
       "couple",
       "friends"
     ],
-    "catch": "天空の山城・備中松山城で知られる城下町"
+    "catch": "天空の山城・備中松山城で知られる城下町",
+    "primary": [
+      "城",
+      "歴史",
+      "海"
+    ],
+    "secondary": [
+      "山",
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "hida-furukawa",
@@ -12193,7 +13100,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "bungo-takada",
@@ -12303,7 +13219,16 @@
       "couple",
       "friends"
     ],
-    "catch": "昭和30年代の町並みが蘇った「昭和の町」"
+    "catch": "昭和30年代の町並みが蘇った「昭和の町」",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "izu-kogen",
@@ -12414,7 +13339,17 @@
       "couple",
       "friends"
     ],
-    "catch": "伊豆半島の東岸に広がる高原リゾート"
+    "catch": "伊豆半島の東岸に広がる高原リゾート",
+    "primary": [
+      "温泉",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "城",
+      "離島"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "tanabe",
@@ -12525,7 +13460,16 @@
       "couple",
       "friends"
     ],
-    "catch": "熊野古道の起点・紀伊田辺"
+    "catch": "熊野古道の起点・紀伊田辺",
+    "primary": [
+      "温泉",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "tosa-shimizu",
@@ -12626,7 +13570,13 @@
       "couple",
       "friends"
     ],
-    "catch": "四国最南端の岬・足摺岬を擁する絶景の街"
+    "catch": "四国最南端の岬・足摺岬を擁する絶景の街",
+    "primary": [
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nichinan",
@@ -12743,7 +13693,17 @@
       "couple",
       "friends"
     ],
-    "catch": "日向灘に面した南国の宮崎を代表する海辺の町"
+    "catch": "日向灘に面した南国の宮崎を代表する海辺の町",
+    "primary": [
+      "海",
+      "歴史",
+      "城"
+    ],
+    "secondary": [
+      "寺社",
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "mojiko",
@@ -12841,7 +13801,16 @@
       "couple",
       "friends"
     ],
-    "catch": "明治・大正の洋館が立ち並ぶレトロな港町"
+    "catch": "明治・大正の洋館が立ち並ぶレトロな港町",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "itoshima",
@@ -12956,7 +13925,14 @@
       "couple",
       "friends"
     ],
-    "catch": "福岡市の隣に広がる絶景の半島"
+    "catch": "福岡市の隣に広がる絶景の半島",
+    "primary": [
+      "海",
+      "街歩き",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shimabara",
@@ -13072,7 +14048,17 @@
       "couple",
       "friends"
     ],
-    "catch": "島原の乱の舞台となった歴史の城下町"
+    "catch": "島原の乱の舞台となった歴史の城下町",
+    "primary": [
+      "歴史",
+      "城",
+      "自然"
+    ],
+    "secondary": [
+      "山",
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "tsuruga",
@@ -13170,7 +14156,14 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "海",
+      "街歩き",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shijishima",
@@ -13271,7 +14264,14 @@
       "couple",
       "friends"
     ],
-    "catch": "瀬戸内海に浮かぶ小さな花の島"
+    "catch": "瀬戸内海に浮かぶ小さな花の島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sounkyo",
@@ -13379,7 +14379,17 @@
       "couple",
       "friends"
     ],
-    "catch": "山と絶景が楽しめる高原リゾート"
+    "catch": "山と絶景が楽しめる高原リゾート",
+    "primary": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [
+      "渓谷",
+      "滝"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "rebun-island",
@@ -13504,7 +14514,16 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅"
+    "catch": "海と自然に囲まれた離島の旅",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "rishiri-island",
@@ -13622,7 +14641,16 @@
       "couple",
       "friends"
     ],
-    "catch": "利尻富士と呼ばれる円錐形の山がそびえる美しい島"
+    "catch": "利尻富士と呼ばれる円錐形の山がそびえる美しい島",
+    "primary": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "akan",
@@ -13716,7 +14744,13 @@
       "couple",
       "friends"
     ],
-    "catch": "カルデラ湖に浮かぶ天然記念物マリモが有名"
+    "catch": "カルデラ湖に浮かぶ天然記念物マリモが有名",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "abashiri",
@@ -13812,7 +14846,14 @@
       "couple",
       "friends"
     ],
-    "catch": "流氷が接岸するオホーツク海沿岸の街"
+    "catch": "流氷が接岸するオホーツク海沿岸の街",
+    "primary": [
+      "街歩き",
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shikotsu",
@@ -13915,7 +14956,13 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "tono",
@@ -14013,7 +15060,13 @@
       "couple",
       "friends"
     ],
-    "catch": "柳田国男の「遠野物語」の舞台"
+    "catch": "柳田国男の「遠野物語」の舞台",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oga",
@@ -14114,7 +15167,17 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "山",
+      "離島"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "yonezawa",
@@ -14195,7 +15258,16 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "dewa-sanzan",
@@ -14291,7 +15363,16 @@
       "couple",
       "friends"
     ],
-    "catch": "月山・羽黒山・湯殿山からなる出羽三山"
+    "catch": "月山・羽黒山・湯殿山からなる出羽三山",
+    "primary": [
+      "寺社",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "温泉"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "sakunami-onsen",
@@ -14385,7 +15466,14 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "滝",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "goshogawara",
@@ -14488,7 +15576,13 @@
       "couple",
       "friends"
     ],
-    "catch": "立佞武多（たちねぷた）祭りで有名な青森の街"
+    "catch": "立佞武多（たちねぷた）祭りで有名な青森の街",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kawagoe",
@@ -14581,7 +15675,14 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代の蔵造りの街並みが残る「小江戸」"
+    "catch": "江戸時代の蔵造りの街並みが残る「小江戸」",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nasu",
@@ -14668,7 +15769,14 @@
       "couple",
       "friends"
     ],
-    "catch": "栃木県北部の高原リゾート"
+    "catch": "栃木県北部の高原リゾート",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "choshi",
@@ -14760,7 +15868,14 @@
       "couple",
       "friends"
     ],
-    "catch": "犬吠埼灯台が有名な太平洋に突き出た岬の街"
+    "catch": "犬吠埼灯台が有名な太平洋に突き出た岬の街",
+    "primary": [
+      "海",
+      "街歩き",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ashikaga",
@@ -14853,7 +15968,14 @@
       "couple",
       "friends"
     ],
-    "catch": "足利学校など歴史遺産が豊富"
+    "catch": "足利学校など歴史遺産が豊富",
+    "primary": [
+      "歴史",
+      "自然",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shiobara-onsen",
@@ -14939,7 +16061,14 @@
       "couple",
       "friends"
     ],
-    "catch": "栃木県那須塩原市の温泉郷"
+    "catch": "栃木県那須塩原市の温泉郷",
+    "primary": [
+      "温泉",
+      "渓谷",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "sado-island",
@@ -15057,7 +16186,17 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅"
+    "catch": "海と自然に囲まれた離島の旅",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [
+      "山",
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kiyosato",
@@ -15156,7 +16295,13 @@
       "couple",
       "friends"
     ],
-    "catch": "八ヶ岳南麓の高原リゾート"
+    "catch": "八ヶ岳南麓の高原リゾート",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tenryu-gorge",
@@ -15236,7 +16381,14 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "渓谷",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "suwa",
@@ -15334,7 +16486,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最古の神社の一つ、諏訪大社を擁する諏訪湖畔の街"
+    "catch": "日本最古の神社の一つ、諏訪大社を擁する諏訪湖畔の街",
+    "primary": [
+      "温泉",
+      "寺社",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "eiheiji",
@@ -15433,7 +16592,13 @@
       "couple",
       "friends"
     ],
-    "catch": "道元禅師が開いた曹洞宗の大本山"
+    "catch": "道元禅師が開いた曹洞宗の大本山",
+    "primary": [
+      "寺社",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "wakasa-obama",
@@ -15532,7 +16697,16 @@
       "couple",
       "friends"
     ],
-    "catch": "「御食国（みけつくに）」として知られた海の幸の宝庫"
+    "catch": "「御食国（みけつくに）」として知られた海の幸の宝庫",
+    "primary": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "okuhida-onsen",
@@ -15639,7 +16813,14 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスの懐に抱かれた温泉郷"
+    "catch": "北アルプスの懐に抱かれた温泉郷",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "minami-izu",
@@ -15727,7 +16908,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "echizen",
@@ -15825,7 +17015,14 @@
       "couple",
       "friends"
     ],
-    "catch": "越前漆器と越前和紙が育まれた福井の城下町"
+    "catch": "越前漆器と越前和紙が育まれた福井の城下町",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ito",
@@ -15920,7 +17117,18 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "海",
+      "街歩き"
+    ],
+    "secondary": [
+      "山",
+      "城",
+      "離島"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "iga",
@@ -16006,7 +17214,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kashihara",
@@ -16104,7 +17318,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本建国の地とされる橿原神宮を中心とした古代史の宝庫"
+    "catch": "日本建国の地とされる橿原神宮を中心とした古代史の宝庫",
+    "primary": [
+      "歴史",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "totsukawa",
@@ -16194,7 +17414,17 @@
       "couple",
       "friends"
     ],
-    "catch": "秘境の自然と静けさが魅力"
+    "catch": "秘境の自然と静けさが魅力",
+    "primary": [
+      "秘境",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [
+      "渓谷",
+      "寺社"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "maizuru",
@@ -16279,7 +17509,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "asuka",
@@ -16390,7 +17626,13 @@
       "couple",
       "friends"
     ],
-    "catch": "古代日本の政治・文化の中心地"
+    "catch": "古代日本の政治・文化の中心地",
+    "primary": [
+      "歴史",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "daisen",
@@ -16486,7 +17728,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "yunotsu-onsen",
@@ -16586,7 +17837,16 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産「石見銀山」の外港として栄えた港町"
+    "catch": "世界遺産「石見銀山」の外港として栄えた港町",
+    "primary": [
+      "温泉",
+      "歴史",
+      "海"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "iwami-ginzan",
@@ -16674,7 +17934,16 @@
       "couple",
       "friends"
     ],
-    "catch": "16〜17世紀に世界最大規模の産銀量を誇った銀山"
+    "catch": "16〜17世紀に世界最大規模の産銀量を誇った銀山",
+    "primary": [
+      "歴史",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "iwakuni",
@@ -16779,7 +18048,14 @@
       "couple",
       "friends"
     ],
-    "catch": "錦帯橋で有名な山口県の城下町"
+    "catch": "錦帯橋で有名な山口県の城下町",
+    "primary": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kurayoshi",
@@ -16874,7 +18150,14 @@
       "couple",
       "friends"
     ],
-    "catch": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町"
+    "catch": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町",
+    "primary": [
+      "歴史",
+      "温泉",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "suo-oshima",
@@ -16989,7 +18272,14 @@
       "couple",
       "friends"
     ],
-    "catch": "瀬戸内海に浮かぶ柑橘の島"
+    "catch": "瀬戸内海に浮かぶ柑橘の島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shimanto",
@@ -17093,7 +18383,13 @@
       "couple",
       "friends"
     ],
-    "catch": "「日本最後の清流」四万十川"
+    "catch": "「日本最後の清流」四万十川",
+    "primary": [
+      "自然",
+      "渓谷"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kashiwajima",
@@ -17197,7 +18493,14 @@
       "couple",
       "friends"
     ],
-    "catch": "透明度抜群の海で知られる高知の秘境離島"
+    "catch": "透明度抜群の海で知られる高知の秘境離島",
+    "primary": [
+      "離島",
+      "海",
+      "秘境"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "saijo",
@@ -17302,7 +18605,14 @@
       "couple",
       "friends"
     ],
-    "catch": "超軟水の「うちぬき」（自噴水）が湧き出る愛媛の水の都"
+    "catch": "超軟水の「うちぬき」（自噴水）が湧き出る愛媛の水の都",
+    "primary": [
+      "街歩き",
+      "自然",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ainan",
@@ -17397,7 +18707,14 @@
       "couple",
       "friends"
     ],
-    "catch": "四国最南端に位置する透明度の高い海の町"
+    "catch": "四国最南端に位置する透明度の高い海の町",
+    "primary": [
+      "海",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "taketa",
@@ -17491,7 +18808,14 @@
       "couple",
       "friends"
     ],
-    "catch": "荒城の月の舞台・岡城跡と温泉が有名な大分の城下町"
+    "catch": "荒城の月の舞台・岡城跡と温泉が有名な大分の城下町",
+    "primary": [
+      "温泉",
+      "歴史",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "usuki",
@@ -17595,7 +18919,13 @@
       "couple",
       "friends"
     ],
-    "catch": "国宝の磨崖仏「臼杵石仏」と醤油蔵が有名"
+    "catch": "国宝の磨崖仏「臼杵石仏」と醤油蔵が有名",
+    "primary": [
+      "歴史",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hita",
@@ -17698,7 +19028,13 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代に天領として栄えた商都"
+    "catch": "江戸時代に天領として栄えた商都",
+    "primary": [
+      "温泉",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hasami",
@@ -17792,7 +19128,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "takeo-onsen",
@@ -17872,7 +19214,14 @@
       "couple",
       "friends"
     ],
-    "catch": "楼門が国の重要文化財に指定されている温泉地"
+    "catch": "楼門が国の重要文化財に指定されている温泉地",
+    "primary": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kitsuki",
@@ -17966,7 +19315,13 @@
       "couple",
       "friends"
     ],
-    "catch": "城を挟んで武家屋敷と商家が坂の上下に分かれた「サンドイッ…"
+    "catch": "城を挟んで武家屋敷と商家が坂の上下に分かれた「サンドイッ…",
+    "primary": [
+      "歴史",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsushima",
@@ -18092,7 +19447,17 @@
       "couple",
       "friends"
     ],
-    "catch": "朝鮮海峡に浮かぶ国境の島"
+    "catch": "朝鮮海峡に浮かぶ国境の島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "歴史",
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "iki-island",
@@ -18215,7 +19580,14 @@
       "couple",
       "friends"
     ],
-    "catch": "壱岐焼酎と美しい海で知られる長崎の島"
+    "catch": "壱岐焼酎と美しい海で知られる長崎の島",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tanegashima",
@@ -18339,7 +19711,14 @@
       "couple",
       "friends"
     ],
-    "catch": "鉄砲伝来の地として知られる島"
+    "catch": "鉄砲伝来の地として知られる島",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kikuchi",
@@ -18436,7 +19815,17 @@
       "couple",
       "friends"
     ],
-    "catch": "秘境の自然と静けさが魅力"
+    "catch": "秘境の自然と静けさが魅力",
+    "primary": [
+      "自然",
+      "温泉",
+      "渓谷"
+    ],
+    "secondary": [
+      "歴史",
+      "寺社"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "taketomi-island",
@@ -18558,7 +19947,13 @@
       "couple",
       "friends"
     ],
-    "catch": "赤瓦の民家が並ぶ沖縄の原風景が残る離島"
+    "catch": "赤瓦の民家が並ぶ沖縄の原風景が残る離島",
+    "primary": [
+      "離島",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yonaguni-island",
@@ -18680,7 +20075,14 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅"
+    "catch": "海と自然に囲まれた離島の旅",
+    "primary": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nakijin",
@@ -18782,7 +20184,16 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産・今帰仁城跡と沖縄本島北部の自然が魅力"
+    "catch": "世界遺産・今帰仁城跡と沖縄本島北部の自然が魅力",
+    "primary": [
+      "城",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [
+      "離島"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "motobu",
@@ -18883,7 +20294,14 @@
       "couple",
       "friends"
     ],
-    "catch": "沖縄美ら海水族館がある本部半島"
+    "catch": "沖縄美ら海水族館がある本部半島",
+    "primary": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "zamami-island",
@@ -19016,7 +20434,13 @@
       "couple",
       "friends"
     ],
-    "catch": "那覇から高速船で約50分"
+    "catch": "那覇から高速船で約50分",
+    "primary": [
+      "離島",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ie-island",
@@ -19140,7 +20564,17 @@
       "couple",
       "friends"
     ],
-    "catch": "本部港からフェリーで30分"
+    "catch": "本部港からフェリーで30分",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "山",
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kohama-island",
@@ -19247,7 +20681,14 @@
       "couple",
       "friends"
     ],
-    "catch": "NHKドラマ「ちゅらさん」の舞台"
+    "catch": "NHKドラマ「ちゅらさん」の舞台",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "matsushiro",
@@ -19334,7 +20775,14 @@
       "couple",
       "friends"
     ],
-    "catch": "真田氏の城下町として栄えた長野市郊外の歴史的地区"
+    "catch": "真田氏の城下町として栄えた長野市郊外の歴史的地区",
+    "primary": [
+      "歴史",
+      "温泉",
+      "城"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "iiyama",
@@ -19422,7 +20870,16 @@
       "couple",
       "friends"
     ],
-    "catch": "千曲川と菜の花が美しい北信濃の小京都"
+    "catch": "千曲川と菜の花が美しい北信濃の小京都",
+    "primary": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "yakake",
@@ -19516,7 +20973,13 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代の本陣・脇本陣が現存する山陽道の宿場町"
+    "catch": "江戸時代の本陣・脇本陣が現存する山陽道の宿場町",
+    "primary": [
+      "歴史",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsuyama",
@@ -19621,7 +21084,14 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "城",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsurugi-san",
@@ -19717,7 +21187,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "山",
+      "自然",
+      "海"
+    ],
+    "secondary": [
+      "寺社"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "nobeoka",
@@ -19825,7 +21304,18 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "secondary": [
+      "自然",
+      "海",
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kamaishi",
@@ -19898,7 +21388,14 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ofunato",
@@ -19971,7 +21468,14 @@
       "couple",
       "friends"
     ],
-    "catch": "穏やかな湾に抱かれた漁師町"
+    "catch": "穏やかな湾に抱かれた漁師町",
+    "primary": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kuji",
@@ -20044,7 +21548,14 @@
       "couple",
       "friends"
     ],
-    "catch": "琥珀の里として知られる北三陸の玄関口"
+    "catch": "琥珀の里として知られる北三陸の玄関口",
+    "primary": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "wakkanai",
@@ -20144,7 +21655,14 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "自然",
+      "秘境",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "obihiro",
@@ -20244,7 +21762,14 @@
       "couple",
       "friends"
     ],
-    "catch": "十勝平野に広がる農業と食の王国"
+    "catch": "十勝平野に広がる農業と食の王国",
+    "primary": [
+      "自然",
+      "グルメ",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "rausu",
@@ -20351,7 +21876,16 @@
       "couple",
       "friends"
     ],
-    "catch": "知床半島の東側、流氷とシャチが来る秘境の漁師町"
+    "catch": "知床半島の東側、流氷とシャチが来る秘境の漁師町",
+    "primary": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "海"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "esashi-hokkaido",
@@ -20455,7 +21989,14 @@
       "couple",
       "friends"
     ],
-    "catch": "にしん漁で栄えた北海道最古の港町"
+    "catch": "にしん漁で栄えた北海道最古の港町",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hanamaki",
@@ -20550,7 +22091,14 @@
       "couple",
       "friends"
     ],
-    "catch": "宮沢賢治の故郷で温泉も豊富な岩手の名湯地"
+    "catch": "宮沢賢治の故郷で温泉も豊富な岩手の名湯地",
+    "primary": [
+      "温泉",
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hachimantai",
@@ -20657,7 +22205,16 @@
       "couple",
       "friends"
     ],
-    "catch": "岩手と秋田にまたがる高原の楽園"
+    "catch": "岩手と秋田にまたがる高原の楽園",
+    "primary": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [
+      "秘境"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "tazawako",
@@ -20753,7 +22310,16 @@
       "couple",
       "friends"
     ],
-    "catch": "日本一深い神秘の湖と乳頭温泉が共存する秋田の秘湯地帯"
+    "catch": "日本一深い神秘の湖と乳頭温泉が共存する秋田の秘湯地帯",
+    "primary": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "secondary": [
+      "秘境"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "yamadera",
@@ -20859,7 +22425,16 @@
       "couple",
       "friends"
     ],
-    "catch": "断崖に張りつく奥の細道の霊場"
+    "catch": "断崖に張りつく奥の細道の霊場",
+    "primary": [
+      "寺社",
+      "山",
+      "歴史"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kesennuma",
@@ -20953,7 +22528,14 @@
       "couple",
       "friends"
     ],
-    "catch": "三陸リアス海岸の漁港都市"
+    "catch": "三陸リアス海岸の漁港都市",
+    "primary": [
+      "海",
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ikaho",
@@ -21053,7 +22635,14 @@
       "couple",
       "friends"
     ],
-    "catch": "石段街と黄金の湯が有名な群馬の名湯"
+    "catch": "石段街と黄金の湯が有名な群馬の名湯",
+    "primary": [
+      "温泉",
+      "街歩き",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "enoshima",
@@ -21154,7 +22743,14 @@
       "couple",
       "friends"
     ],
-    "catch": "湘南の海に浮かぶ弁財天の島"
+    "catch": "湘南の海に浮かぶ弁財天の島",
+    "primary": [
+      "海",
+      "寺社",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "chichibu",
@@ -21250,7 +22846,16 @@
       "couple",
       "friends"
     ],
-    "catch": "武蔵野の山々に囲まれた霊場と祭りの里"
+    "catch": "武蔵野の山々に囲まれた霊場と祭りの里",
+    "primary": [
+      "寺社",
+      "自然",
+      "渓谷"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "oarai",
@@ -21345,7 +22950,14 @@
       "couple",
       "friends"
     ],
-    "catch": "磯前神社と太平洋が広がる海水浴とシーフードの名所"
+    "catch": "磯前神社と太平洋が広がる海水浴とシーフードの名所",
+    "primary": [
+      "海",
+      "寺社",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sano",
@@ -21439,7 +23051,14 @@
       "couple",
       "friends"
     ],
-    "catch": "佐野ラーメンとアウトレットで知られる北関東の街"
+    "catch": "佐野ラーメンとアウトレットで知られる北関東の街",
+    "primary": [
+      "グルメ",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "gujo-hachiman",
@@ -21535,7 +23154,16 @@
       "couple",
       "friends"
     ],
-    "catch": "澄んだ吉田川と郡上踊りで有名な奥美濃の城下町"
+    "catch": "澄んだ吉田川と郡上踊りで有名な奥美濃の城下町",
+    "primary": [
+      "渓谷",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "narai-juku",
@@ -21634,7 +23262,14 @@
       "couple",
       "friends"
     ],
-    "catch": "中山道最長の宿場町がほぼ完全な形で残る江戸の街並み"
+    "catch": "中山道最長の宿場町がほぼ完全な形で残る江戸の街並み",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "山"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "itoigawa",
@@ -21725,7 +23360,16 @@
       "couple",
       "friends"
     ],
-    "catch": "フォッサマグナの大地に宝石ヒスイが採れる日本海の街"
+    "catch": "フォッサマグナの大地に宝石ヒスイが採れる日本海の街",
+    "primary": [
+      "自然",
+      "海",
+      "歴史"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "murakami",
@@ -21819,7 +23463,16 @@
       "couple",
       "friends"
     ],
-    "catch": "鮭と塩引き文化が息づく新潟の城下町"
+    "catch": "鮭と塩引き文化が息づく新潟の城下町",
+    "primary": [
+      "歴史",
+      "グルメ",
+      "街歩き"
+    ],
+    "secondary": [
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shima",
@@ -21908,7 +23561,14 @@
       "couple",
       "friends"
     ],
-    "catch": "英虞湾の複雑なリアス式海岸に真珠養殖いかだが浮かぶ"
+    "catch": "英虞湾の複雑なリアス式海岸に真珠養殖いかだが浮かぶ",
+    "primary": [
+      "海",
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ogaki",
@@ -21991,7 +23651,14 @@
       "couple",
       "friends"
     ],
-    "catch": "水の都と呼ばれる湧水と城の街"
+    "catch": "水の都と呼ばれる湧水と城の街",
+    "primary": [
+      "歴史",
+      "城",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "echizen-kaigan",
@@ -22091,7 +23758,14 @@
       "couple",
       "friends"
     ],
-    "catch": "断崖と荒波が続く日本海の絶景海岸"
+    "catch": "断崖と荒波が続く日本海の絶景海岸",
+    "primary": [
+      "海",
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "myoko-kogen",
@@ -22180,7 +23854,16 @@
       "couple",
       "friends"
     ],
-    "catch": "北信越の火山が生んだスキーと温泉のリゾート"
+    "catch": "北信越の火山が生んだスキーと温泉のリゾート",
+    "primary": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "滝"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "nagaoka",
@@ -22261,7 +23944,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大花火のひとつ、長岡大花火大会で有名な信濃川の街"
+    "catch": "日本三大花火のひとつ、長岡大花火大会で有名な信濃川の街",
+    "primary": [
+      "自然",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tanba-sasayama",
@@ -22351,7 +24041,16 @@
       "couple",
       "friends"
     ],
-    "catch": "黒豆と牡丹鍋で名高い丹波の城下町"
+    "catch": "黒豆と牡丹鍋で名高い丹波の城下町",
+    "primary": [
+      "歴史",
+      "グルメ",
+      "街歩き"
+    ],
+    "secondary": [
+      "城"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "nachikatsuura",
@@ -22441,7 +24140,16 @@
       "couple",
       "friends"
     ],
-    "catch": "那智の大滝と熊野大社の霊場を抱く紀伊山地の聖地"
+    "catch": "那智の大滝と熊野大社の霊場を抱く紀伊山地の聖地",
+    "primary": [
+      "寺社",
+      "滝",
+      "自然"
+    ],
+    "secondary": [
+      "グルメ"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kumano-hongu",
@@ -22544,7 +24252,16 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産熊野古道の中心地"
+    "catch": "世界遺産熊野古道の中心地",
+    "primary": [
+      "秘境",
+      "自然",
+      "寺社"
+    ],
+    "secondary": [
+      "温泉"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "ako",
@@ -22640,7 +24357,16 @@
       "couple",
       "friends"
     ],
-    "catch": "忠臣蔵の故郷で赤穂浪士ゆかりの城と塩田が残る瀬戸内の街"
+    "catch": "忠臣蔵の故郷で赤穂浪士ゆかりの城と塩田が残る瀬戸内の街",
+    "primary": [
+      "歴史",
+      "城",
+      "海"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "fushimi",
@@ -22741,7 +24467,14 @@
       "couple",
       "friends"
     ],
-    "catch": "伏見稲荷大社の千本鳥居と日本有数の酒どころが共存する京都…"
+    "catch": "伏見稲荷大社の千本鳥居と日本有数の酒どころが共存する京都…",
+    "primary": [
+      "寺社",
+      "グルメ",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tomonoura",
@@ -22840,7 +24573,14 @@
       "couple",
       "friends"
     ],
-    "catch": "瀬戸内海の潮待ちの港として栄えた江戸時代の港町"
+    "catch": "瀬戸内海の潮待ちの港として栄えた江戸時代の港町",
+    "primary": [
+      "歴史",
+      "海",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sakaiminato",
@@ -22945,7 +24685,14 @@
       "couple",
       "friends"
     ],
-    "catch": "水木しげるの故郷で妖怪ブロンズ像が並ぶ鬼太郎ロード"
+    "catch": "水木しげるの故郷で妖怪ブロンズ像が並ぶ鬼太郎ロード",
+    "primary": [
+      "街歩き",
+      "グルメ",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ushimado",
@@ -23052,7 +24799,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本のエーゲ海と称される瀬戸内の白壁の港町"
+    "catch": "日本のエーゲ海と称される瀬戸内の白壁の港町",
+    "primary": [
+      "海",
+      "街歩き",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kasaoka",
@@ -23135,7 +24889,14 @@
       "couple",
       "friends"
     ],
-    "catch": "干拓地と無数の離島が浮かぶ備後の港町"
+    "catch": "干拓地と無数の離島が浮かぶ備後の港町",
+    "primary": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsunoshima",
@@ -23234,7 +24995,14 @@
       "couple",
       "friends"
     ],
-    "catch": "エメラルドグリーンの海に架かる角島大橋が絶景の山口の離島"
+    "catch": "エメラルドグリーンの海に架かる角島大橋が絶景の山口の離島",
+    "primary": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "dogo-onsen",
@@ -23349,7 +25117,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最古の温泉と名高い松山の名湯"
+    "catch": "日本最古の温泉と名高い松山の名湯",
+    "primary": [
+      "温泉",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "marugame",
@@ -23445,7 +25220,16 @@
       "couple",
       "friends"
     ],
-    "catch": "天守が現存する日本一の石垣の丸亀城と骨付鳥が有名な讃岐の…"
+    "catch": "天守が現存する日本一の石垣の丸亀城と骨付鳥が有名な讃岐の…",
+    "primary": [
+      "城",
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [
+      "海"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "misaki-sadamisaki",
@@ -23552,7 +25336,14 @@
       "couple",
       "friends"
     ],
-    "catch": "四国最西端の岬に広がる佐田岬半島"
+    "catch": "四国最西端の岬に広がる佐田岬半島",
+    "primary": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yanagawa",
@@ -23654,7 +25445,16 @@
       "couple",
       "friends"
     ],
-    "catch": "水郷の都と称される堀割が縦横に走る水の街"
+    "catch": "水郷の都と称される堀割が縦横に走る水の街",
+    "primary": [
+      "街歩き",
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "hyuga",
@@ -23754,7 +25554,14 @@
       "couple",
       "friends"
     ],
-    "catch": "太平洋に面した神話の海岸線と波乗りビーチの街"
+    "catch": "太平洋に面した神話の海岸線と波乗りビーチの街",
+    "primary": [
+      "海",
+      "寺社",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "koshikijima",
@@ -23862,7 +25669,16 @@
       "couple",
       "friends"
     ],
-    "catch": "東シナ海の孤島に自然のトンネル「なかまで」と絶壁海岸が続…"
+    "catch": "東シナ海の孤島に自然のトンネル「なかまで」と絶壁海岸が続…",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "秘境"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kirishima",
@@ -23963,7 +25779,16 @@
       "couple",
       "friends"
     ],
-    "catch": "天孫降臨の地として名高い霧島連山と温泉が広がる鹿児島のリ…"
+    "catch": "天孫降臨の地として名高い霧島連山と温泉が広がる鹿児島のリ…",
+    "primary": [
+      "温泉",
+      "山",
+      "寺社"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "ebino-kogen",
@@ -24068,7 +25893,14 @@
       "couple",
       "friends"
     ],
-    "catch": "宮崎と鹿児島の境に広がる霧島山系の火山高原"
+    "catch": "宮崎と鹿児島の境に広がる霧島山系の火山高原",
+    "primary": [
+      "山",
+      "自然",
+      "秘境"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "onna",
@@ -24167,7 +25999,14 @@
       "couple",
       "friends"
     ],
-    "catch": "沖縄本島中部の透明なコバルトブルーの海が続くリゾートエリア"
+    "catch": "沖縄本島中部の透明なコバルトブルーの海が続くリゾートエリア",
+    "primary": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nago",
@@ -24266,7 +26105,14 @@
       "couple",
       "friends"
     ],
-    "catch": "オリオンビールの故郷・沖縄北部の拠点都市"
+    "catch": "オリオンビールの故郷・沖縄北部の拠点都市",
+    "primary": [
+      "海",
+      "自然",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yomitanson",
@@ -24366,7 +26212,16 @@
       "couple",
       "friends"
     ],
-    "catch": "沖縄最大の村でやちむん（陶器）の里と残波岬の絶景が有名"
+    "catch": "沖縄最大の村でやちむん（陶器）の里と残波岬の絶景が有名",
+    "primary": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "niseko",
@@ -24457,7 +26312,16 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道屈指のスキーリゾート"
+    "catch": "北海道屈指のスキーリゾート",
+    "primary": [
+      "スキー",
+      "山",
+      "温泉"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "daisetsuzan",
@@ -24560,7 +26424,16 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道の屋根と呼ばれる大雪山国立公園"
+    "catch": "北海道の屋根と呼ばれる大雪山国立公園",
+    "primary": [
+      "山",
+      "自然",
+      "登山"
+    ],
+    "secondary": [
+      "紅葉"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shiraoi",
@@ -24643,7 +26516,14 @@
       "couple",
       "friends"
     ],
-    "catch": "アイヌ民族の文化を体感できる国立民族共生公園「ウポポイ」…"
+    "catch": "アイヌ民族の文化を体感できる国立民族共生公園「ウポポイ」…",
+    "primary": [
+      "文化",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tomamu",
@@ -24727,7 +26607,16 @@
       "couple",
       "friends"
     ],
-    "catch": "星野リゾートが手がける雲海テラスとスキーリゾート"
+    "catch": "星野リゾートが手がける雲海テラスとスキーリゾート",
+    "primary": [
+      "スキー",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "リゾート"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "towada",
@@ -24828,7 +26717,14 @@
       "couple",
       "friends"
     ],
-    "catch": "神秘的な碧水をたたえる十和田湖と、奥入瀬渓流の清流"
+    "catch": "神秘的な碧水をたたえる十和田湖と、奥入瀬渓流の清流",
+    "primary": [
+      "湖",
+      "自然",
+      "紅葉"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "osorezan",
@@ -24929,7 +26825,14 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "霊場",
+      "自然",
+      "精神"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "urabandai",
@@ -25032,7 +26935,16 @@
       "couple",
       "friends"
     ],
-    "catch": "磐梯山噴火が作り出した大小300余りの湖沼群"
+    "catch": "磐梯山噴火が作り出した大小300余りの湖沼群",
+    "primary": [
+      "湖",
+      "自然",
+      "紅葉"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "minami-sanriku",
@@ -25133,7 +27045,16 @@
       "couple",
       "friends"
     ],
-    "catch": "東日本大震災からの復興を遂げつつある三陸の海"
+    "catch": "東日本大震災からの復興を遂げつつある三陸の海",
+    "primary": [
+      "海",
+      "食",
+      "復興"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kitakami",
@@ -25218,7 +27139,16 @@
       "couple",
       "friends"
     ],
-    "catch": "展勝地の桜並木は日本有数の花見スポット"
+    "catch": "展勝地の桜並木は日本有数の花見スポット",
+    "primary": [
+      "桜",
+      "自然",
+      "川"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kinugawa-onsen",
@@ -25302,7 +27232,16 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "山",
+      "川"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "oze",
@@ -25404,7 +27343,16 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "自然",
+      "湿原",
+      "山"
+    ],
+    "secondary": [
+      "植物"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "tsukuba",
@@ -25493,7 +27441,14 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "山",
+      "自然",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kasama",
@@ -25577,7 +27532,16 @@
       "couple",
       "friends"
     ],
-    "catch": "笠間焼の里と笠間稲荷神社"
+    "catch": "笠間焼の里と笠間稲荷神社",
+    "primary": [
+      "陶芸",
+      "寺社",
+      "文化"
+    ],
+    "secondary": [
+      "食"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "naritasan",
@@ -25661,7 +27625,16 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "寺社",
+      "食",
+      "歴史"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kujukuri",
@@ -25762,7 +27735,14 @@
       "couple",
       "friends"
     ],
-    "catch": "全長66kmにわたる雄大な砂浜"
+    "catch": "全長66kmにわたる雄大な砂浜",
+    "primary": [
+      "海",
+      "自然",
+      "食"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miura",
@@ -25851,7 +27831,14 @@
       "couple",
       "friends"
     ],
-    "catch": "三浦半島の先端に広がるまぐろの街"
+    "catch": "三浦半島の先端に広がるまぐろの街",
+    "primary": [
+      "海",
+      "食",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oku-tama",
@@ -25935,7 +27922,16 @@
       "couple",
       "friends"
     ],
-    "catch": "東京都内にありながら深い山懐を持つ奥多摩"
+    "catch": "東京都内にありながら深い山懐を持つ奥多摩",
+    "primary": [
+      "山",
+      "自然",
+      "川"
+    ],
+    "secondary": [
+      "温泉"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "jigokudani",
@@ -26024,7 +28020,14 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉に入るニホンザルの姿が世界を魅了するスノーモンキーパーク"
+    "catch": "温泉に入るニホンザルの姿が世界を魅了するスノーモンキーパーク",
+    "primary": [
+      "自然",
+      "温泉",
+      "野生動物"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "tateshina",
@@ -26127,7 +28130,16 @@
       "couple",
       "friends"
     ],
-    "catch": "八ヶ岳の麓に広がる高原リゾート"
+    "catch": "八ヶ岳の麓に広がる高原リゾート",
+    "primary": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "secondary": [
+      "リゾート"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "echigo-yuzawa",
@@ -26211,7 +28223,16 @@
       "couple",
       "friends"
     ],
-    "catch": "川端康成「雪国」の舞台となった豪雪の温泉地"
+    "catch": "川端康成「雪国」の舞台となった豪雪の温泉地",
+    "primary": [
+      "温泉",
+      "スキー",
+      "雪"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "fujinomiya",
@@ -26296,7 +28317,16 @@
       "couple",
       "friends"
     ],
-    "catch": "富士山の北麓に広がる富士信仰の聖地"
+    "catch": "富士山の北麓に広がる富士信仰の聖地",
+    "primary": [
+      "山",
+      "寺社",
+      "食"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "norikura",
@@ -26399,7 +28429,16 @@
       "couple",
       "friends"
     ],
-    "catch": "マイカー規制の静寂の中、バスで辿り着く日本屈指のアルプス高地"
+    "catch": "マイカー規制の静寂の中、バスで辿り着く日本屈指のアルプス高地",
+    "primary": [
+      "山",
+      "自然",
+      "高山"
+    ],
+    "secondary": [
+      "登山"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "tokoname",
@@ -26483,7 +28522,14 @@
       "couple",
       "friends"
     ],
-    "catch": "六古窯のひとつ、常滑焼の里"
+    "catch": "六古窯のひとつ、常滑焼の里",
+    "primary": [
+      "陶芸",
+      "文化",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "korankei",
@@ -26584,7 +28630,14 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "紅葉",
+      "自然",
+      "川"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "minamichita",
@@ -26673,7 +28726,14 @@
       "couple",
       "friends"
     ],
-    "catch": "知多半島の先端に広がる海の幸の宝庫"
+    "catch": "知多半島の先端に広がる海の幸の宝庫",
+    "primary": [
+      "海",
+      "食",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "arashiyama",
@@ -26759,7 +28819,16 @@
       "couple",
       "friends"
     ],
-    "catch": "竹林の小径と渡月橋が象徴する京都を代表する景勝地"
+    "catch": "竹林の小径と渡月橋が象徴する京都を代表する景勝地",
+    "primary": [
+      "竹林",
+      "寺社",
+      "自然"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shigaraki",
@@ -26843,7 +28912,14 @@
       "couple",
       "friends"
     ],
-    "catch": "「たぬきの里」として親しまれる六古窯のひとつ信楽焼の産地"
+    "catch": "「たぬきの里」として親しまれる六古窯のひとつ信楽焼の産地",
+    "primary": [
+      "陶芸",
+      "文化",
+      "街歩き"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "dorogawa-onsen",
@@ -26944,7 +29020,16 @@
       "couple",
       "friends"
     ],
-    "catch": "大峰山の麓に佇む山岳修験の温泉地"
+    "catch": "大峰山の麓に佇む山岳修験の温泉地",
+    "primary": [
+      "温泉",
+      "山",
+      "精神"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "matsusaka",
@@ -27029,7 +29114,16 @@
       "couple",
       "friends"
     ],
-    "catch": "松阪牛の故郷にして、本居宣長の生誕地"
+    "catch": "松阪牛の故郷にして、本居宣長の生誕地",
+    "primary": [
+      "食",
+      "歴史",
+      "城"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "sakai",
@@ -27119,7 +29213,16 @@
       "couple",
       "friends"
     ],
-    "catch": "仁徳天皇陵を中心とした百舌鳥古墳群は世界遺産"
+    "catch": "仁徳天皇陵を中心とした百舌鳥古墳群は世界遺産",
+    "primary": [
+      "歴史",
+      "世界遺産",
+      "文化"
+    ],
+    "secondary": [
+      "街歩き"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ama-island",
@@ -27238,7 +29341,16 @@
       "couple",
       "friends"
     ],
-    "catch": "島後の島・隠岐海士町は「島まるごとホテル」の先進地"
+    "catch": "島後の島・隠岐海士町は「島まるごとホテル」の先進地",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "食"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "akiyoshidai",
@@ -27340,7 +29452,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最大のカルスト台地と東洋屈指の鍾乳洞・秋芳洞"
+    "catch": "日本最大のカルスト台地と東洋屈指の鍾乳洞・秋芳洞",
+    "primary": [
+      "自然",
+      "洞窟",
+      "高原"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yanai",
@@ -27424,7 +29543,14 @@
       "couple",
       "friends"
     ],
-    "catch": "白壁の町並みが残る金魚提灯の街"
+    "catch": "白壁の町並みが残る金魚提灯の街",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oki-island",
@@ -27550,7 +29676,16 @@
       "couple",
       "friends"
     ],
-    "catch": "山陰沖に浮かぶ世界ジオパーク認定の離島群"
+    "catch": "山陰沖に浮かぶ世界ジオパーク認定の離島群",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "inujima",
@@ -27660,7 +29795,16 @@
       "couple",
       "friends"
     ],
-    "catch": "精錬所跡を活かしたアート施設が佇む瀬戸内の小さな島"
+    "catch": "精錬所跡を活かしたアート施設が佇む瀬戸内の小さな島",
+    "primary": [
+      "離島",
+      "海",
+      "アート"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "teshima",
@@ -27778,7 +29922,16 @@
       "couple",
       "friends"
     ],
-    "catch": "豊島美術館と棚田が共存する瀬戸内の離島"
+    "catch": "豊島美術館と棚田が共存する瀬戸内の離島",
+    "primary": [
+      "離島",
+      "海",
+      "アート"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "niyodogawa",
@@ -27881,7 +30034,14 @@
       "couple",
       "friends"
     ],
-    "catch": "水質日本一の称号を持つ「仁淀ブルー」の川"
+    "catch": "水質日本一の称号を持つ「仁淀ブルー」の川",
+    "primary": [
+      "秘境",
+      "自然",
+      "川"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yusuhara",
@@ -27984,7 +30144,16 @@
       "couple",
       "friends"
     ],
-    "catch": "隈研吾の建築が点在するエコ先進の山村"
+    "catch": "隈研吾の建築が点在するエコ先進の山村",
+    "primary": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "建築"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "anan",
@@ -28068,7 +30237,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本一のアカウミガメ産卵地・大浜海岸を有する徳島南部の海岸線"
+    "catch": "日本一のアカウミガメ産卵地・大浜海岸を有する徳島南部の海岸線",
+    "primary": [
+      "海",
+      "自然",
+      "野生動物"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shikoku-karst",
@@ -28172,7 +30348,14 @@
       "couple",
       "friends"
     ],
-    "catch": "標高1400mの天空に広がる日本三大カルストのひとつ"
+    "catch": "標高1400mの天空に広がる日本三大カルストのひとつ",
+    "primary": [
+      "山",
+      "高原",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "aoshima",
@@ -28257,7 +30440,14 @@
       "couple",
       "friends"
     ],
-    "catch": "「鬼の洗濯板」と呼ばれる奇岩と亜熱帯植物が共存する宮崎の…"
+    "catch": "「鬼の洗濯板」と呼ばれる奇岩と亜熱帯植物が共存する宮崎の…",
+    "primary": [
+      "海",
+      "自然",
+      "寺社"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yamaga",
@@ -28359,7 +30549,16 @@
       "couple",
       "friends"
     ],
-    "catch": "山鹿灯籠まつりで知られる温泉と文化の街"
+    "catch": "山鹿灯籠まつりで知られる温泉と文化の街",
+    "primary": [
+      "温泉",
+      "祭り",
+      "文化"
+    ],
+    "secondary": [
+      "歴史"
+    ],
+    "onsenLevel": 3
   },
   {
     "id": "yoshinogari",
@@ -28448,7 +30647,14 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最大の弥生時代環濠集落遺跡"
+    "catch": "日本最大の弥生時代環濠集落遺跡",
+    "primary": [
+      "歴史",
+      "遺跡",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kunisaki",
@@ -28556,7 +30762,16 @@
       "couple",
       "friends"
     ],
-    "catch": "六郷満山文化が開花した神仏習合の半島"
+    "catch": "六郷満山文化が開花した神仏習合の半島",
+    "primary": [
+      "歴史",
+      "寺社",
+      "山"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "chiran",
@@ -28659,7 +30874,16 @@
       "couple",
       "friends"
     ],
-    "catch": "薩摩の小京都と呼ばれる武家屋敷群と、特攻隊の記憶を伝える…"
+    "catch": "薩摩の小京都と呼ばれる武家屋敷群と、特攻隊の記憶を伝える…",
+    "primary": [
+      "歴史",
+      "武家屋敷",
+      "文化"
+    ],
+    "secondary": [
+      "平和"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "ojika-island",
@@ -28777,7 +31001,16 @@
       "couple",
       "friends"
     ],
-    "catch": "古民家ホテルが生まれたスローツーリズムの先進地"
+    "catch": "古民家ホテルが生まれたスローツーリズムの先進地",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "スロー"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "irabu-island",
@@ -28884,7 +31117,16 @@
       "couple",
       "friends"
     ],
-    "catch": "宮古島と橋で繋がった透明度抜群の離島"
+    "catch": "宮古島と橋で繋がった透明度抜群の離島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "ダイビング"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "aguni-island",
@@ -29009,7 +31251,16 @@
       "couple",
       "friends"
     ],
-    "catch": "那覇から60kmの絶海の孤島"
+    "catch": "那覇から60kmの絶海の孤島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "秘境"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "itoman",
@@ -29117,7 +31368,16 @@
       "couple",
       "friends"
     ],
-    "catch": "沖縄戦の激戦地であり平和を誓う南端の街"
+    "catch": "沖縄戦の激戦地であり平和を誓う南端の街",
+    "primary": [
+      "歴史",
+      "平和",
+      "海"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "kijoka",
@@ -29224,7 +31484,16 @@
       "couple",
       "friends"
     ],
-    "catch": "長寿の里として名高い大宜味村の芭蕉布の里"
+    "catch": "長寿の里として名高い大宜味村の芭蕉布の里",
+    "primary": [
+      "文化",
+      "自然",
+      "工芸"
+    ],
+    "secondary": [
+      "長寿"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "miyakejima",
@@ -29342,7 +31611,16 @@
       "couple",
       "friends"
     ],
-    "catch": "活火山の島で野鳥観察とダイビングの聖地"
+    "catch": "活火山の島で野鳥観察とダイビングの聖地",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "野鳥"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "hachijojima",
@@ -29467,7 +31745,16 @@
       "couple",
       "friends"
     ],
-    "catch": "東京から飛行機で1時間の亜熱帯の島"
+    "catch": "東京から飛行機で1時間の亜熱帯の島",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "温泉"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "niijima",
@@ -29586,7 +31873,16 @@
       "couple",
       "friends"
     ],
-    "catch": "波高いコシキビーチで知られる伊豆諸島きってのサーフィンの聖地"
+    "catch": "波高いコシキビーチで知られる伊豆諸島きってのサーフィンの聖地",
+    "primary": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "サーフィン"
+    ],
+    "onsenLevel": 0
   },
   {
     "id": "shikinejima",
@@ -29697,7 +31993,16 @@
       "couple",
       "friends"
     ],
-    "catch": "海の中に温泉が湧く奇跡の離島"
+    "catch": "海の中に温泉が湧く奇跡の離島",
+    "primary": [
+      "離島",
+      "海",
+      "温泉"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 1
   },
   {
     "id": "shirakawa",
@@ -29777,7 +32082,13 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸城下の面影が残る白河小峰城と、松平定信が整備した南湖…"
+    "catch": "江戸城下の面影が残る白河小峰城と、松平定信が整備した南湖…",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kitakata",
@@ -29856,7 +32167,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大ラーメンの一角「喜多方ラーメン」"
+    "catch": "日本三大ラーメンの一角「喜多方ラーメン」",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "koriyama",
@@ -29936,7 +32253,13 @@
       "couple",
       "friends"
     ],
-    "catch": "福島県の経済・交通の中心地"
+    "catch": "福島県の経済・交通の中心地",
+    "primary": [
+      "街",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ryusendo",
@@ -30017,7 +32340,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "自然",
+      "絶景"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ichinoseki",
@@ -30096,7 +32425,13 @@
       "couple",
       "friends"
     ],
-    "catch": "厳美渓の奇岩と渓流美が見どころ"
+    "catch": "厳美渓の奇岩と渓流美が見どころ",
+    "primary": [
+      "歴史",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "akita-oga",
@@ -30177,7 +32512,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ナマハゲ文化と日本海の夕日が圧倒的な男鹿半島"
+    "catch": "ナマハゲ文化と日本海の夕日が圧倒的な男鹿半島",
+    "primary": [
+      "温泉",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kisakata",
@@ -30257,7 +32598,13 @@
       "couple",
       "friends"
     ],
-    "catch": "松尾芭蕉が『奥の細道』で詠んだ九十九島"
+    "catch": "松尾芭蕉が『奥の細道』で詠んだ九十九島",
+    "primary": [
+      "自然",
+      "絶景"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "gassan",
@@ -30338,7 +32685,13 @@
       "couple",
       "friends"
     ],
-    "catch": "出羽三山の一角で、初夏まで残る雪と高山植物が美しい信仰の山"
+    "catch": "出羽三山の一角で、初夏まで残る雪と高山植物が美しい信仰の山",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "higashine",
@@ -30417,7 +32770,13 @@
       "couple",
       "friends"
     ],
-    "catch": "さくらんぼの産地として有名"
+    "catch": "さくらんぼの産地として有名",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "akakura-onsen",
@@ -30497,7 +32856,13 @@
       "couple",
       "friends"
     ],
-    "catch": "妙高山の麓に広がる温泉スキーリゾート"
+    "catch": "妙高山の麓に広がる温泉スキーリゾート",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "yugawara-onsen",
@@ -30576,7 +32941,12 @@
       "couple",
       "friends"
     ],
-    "catch": "東京から1時間の小さな温泉地"
+    "catch": "東京から1時間の小さな温泉地",
+    "primary": [
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "yokosuka",
@@ -30656,7 +33026,13 @@
       "couple",
       "friends"
     ],
-    "catch": "海軍と米軍文化が融合した港湾都市"
+    "catch": "海軍と米軍文化が融合した港湾都市",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mishima",
@@ -30736,7 +33112,13 @@
       "couple",
       "friends"
     ],
-    "catch": "富士山の伏流水が湧き出る水の都"
+    "catch": "富士山の伏流水が湧き出る水の都",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "numazu",
@@ -30816,7 +33198,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "海",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hamamatsu",
@@ -30896,7 +33284,13 @@
       "couple",
       "friends"
     ],
-    "catch": "うなぎとオートバイ・ピアノ産業の都市"
+    "catch": "うなぎとオートバイ・ピアノ産業の都市",
+    "primary": [
+      "グルメ",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kakegawa",
@@ -30976,7 +33370,13 @@
       "couple",
       "friends"
     ],
-    "catch": "掛川城は城好きを唸らせる天守"
+    "catch": "掛川城は城好きを唸らせる天守",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "okazaki",
@@ -31056,7 +33456,13 @@
       "couple",
       "friends"
     ],
-    "catch": "徳川家康の生誕地、岡崎城の城下町"
+    "catch": "徳川家康の生誕地、岡崎城の城下町",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "toyohashi",
@@ -31136,7 +33542,13 @@
       "couple",
       "friends"
     ],
-    "catch": "豊川稲荷と路面電車が走る東三河の中心都市"
+    "catch": "豊川稲荷と路面電車が走る東三河の中心都市",
+    "primary": [
+      "グルメ",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tajimi",
@@ -31216,7 +33628,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本で最も暑い夏として知られる美濃焼の産地"
+    "catch": "日本で最も暑い夏として知られる美濃焼の産地",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "togakushi",
@@ -31296,7 +33714,13 @@
       "couple",
       "friends"
     ],
-    "catch": "天岩戸伝説の地に建つ戸隠神社と忍者の里"
+    "catch": "天岩戸伝説の地に建つ戸隠神社と忍者の里",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "omihachiman",
@@ -31376,7 +33800,13 @@
       "couple",
       "friends"
     ],
-    "catch": "豊臣秀次が築いた城下町の水郷地帯"
+    "catch": "豊臣秀次が築いた城下町の水郷地帯",
+    "primary": [
+      "歴史",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "takarazuka",
@@ -31456,7 +33886,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "街",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "akashi",
@@ -31536,7 +33972,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "naruto",
@@ -31616,7 +34058,13 @@
       "couple",
       "friends"
     ],
-    "catch": "世界三大潮流の鳴門の渦潮が圧巻"
+    "catch": "世界三大潮流の鳴門の渦潮が圧巻",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "innoshima",
@@ -31697,7 +34145,13 @@
       "couple",
       "friends"
     ],
-    "catch": "村上水軍の根拠地だった瀬戸内の島"
+    "catch": "村上水軍の根拠地だった瀬戸内の島",
+    "primary": [
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mihara",
@@ -31777,7 +34231,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hofu",
@@ -31856,7 +34316,12 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三天神の防府天満宮を擁する古代長門国府の地"
+    "catch": "日本三天神の防府天満宮を擁する古代長門国府の地",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "karatsu",
@@ -31936,7 +34401,13 @@
       "couple",
       "friends"
     ],
-    "catch": "唐津くんちで知られる城下町"
+    "catch": "唐津くんちで知られる城下町",
+    "primary": [
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "dazaifu",
@@ -32015,7 +34486,12 @@
       "couple",
       "friends"
     ],
-    "catch": "学問の神様・菅原道真を祀る太宰府天満宮の門前町"
+    "catch": "学問の神様・菅原道真を祀る太宰府天満宮の門前町",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nakatsu",
@@ -32095,7 +34571,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nemuro",
@@ -32175,7 +34657,13 @@
       "couple",
       "friends"
     ],
-    "catch": "秘境の自然と静けさが魅力"
+    "catch": "秘境の自然と静けさが魅力",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "muroran",
@@ -32255,7 +34743,13 @@
       "couple",
       "friends"
     ],
-    "catch": "地球岬からの絶景と夜景が美しい工業都市"
+    "catch": "地球岬からの絶景と夜景が美しい工業都市",
+    "primary": [
+      "自然",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tomakomai",
@@ -32335,7 +34829,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ホッキ貝の水揚げ量日本一の工業港湾都市"
+    "catch": "ホッキ貝の水揚げ量日本一の工業港湾都市",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ishinomaki",
@@ -32414,7 +34914,13 @@
       "couple",
       "friends"
     ],
-    "catch": "石ノ森章太郎の故郷で、マンガの世界が街全体に広がる"
+    "catch": "石ノ森章太郎の故郷で、マンガの世界が街全体に広がる",
+    "primary": [
+      "街",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hitachi",
@@ -32493,7 +34999,13 @@
       "couple",
       "friends"
     ],
-    "catch": "海が見えるカフェ「シーバーズカフェ」がある日立駅が美しい"
+    "catch": "海が見えるカフェ「シーバーズカフェ」がある日立駅が美しい",
+    "primary": [
+      "自然",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kashima",
@@ -32571,7 +35083,12 @@
       "couple",
       "friends"
     ],
-    "catch": "東国三社の一つ鹿島神宮を擁するサッカーの街"
+    "catch": "東国三社の一つ鹿島神宮を擁するサッカーの街",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shiraoishi",
@@ -32650,7 +35167,12 @@
       "couple",
       "friends"
     ],
-    "catch": "片倉小十郎が城主を務めた白石城（益岡公園）が美しい仙台南…"
+    "catch": "片倉小十郎が城主を務めた白石城（益岡公園）が美しい仙台南…",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "noshiro",
@@ -32730,7 +35252,13 @@
       "couple",
       "friends"
     ],
-    "catch": "秋田杉と風の松原が有名な日本海沿いの港町"
+    "catch": "秋田杉と風の松原が有名な日本海沿いの港町",
+    "primary": [
+      "自然",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tendou",
@@ -32809,7 +35337,13 @@
       "couple",
       "friends"
     ],
-    "catch": "将棋の駒生産量日本一の街"
+    "catch": "将棋の駒生産量日本一の街",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shonai",
@@ -32889,7 +35423,13 @@
       "couple",
       "friends"
     ],
-    "catch": "出羽三山への玄関口で、庄内米・庄内砂丘メロン・だだちゃ豆…"
+    "catch": "出羽三山への玄関口で、庄内米・庄内砂丘メロン・だだちゃ豆…",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ogata",
@@ -32970,7 +35510,13 @@
       "couple",
       "friends"
     ],
-    "catch": "八郎潟干拓で生まれた日本で最も若い村"
+    "catch": "八郎潟干拓で生まれた日本で最も若い村",
+    "primary": [
+      "自然",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "rikuzentakata",
@@ -33050,7 +35596,13 @@
       "couple",
       "friends"
     ],
-    "catch": "東日本大震災の奇跡の一本松が象徴する復興の海岸都市"
+    "catch": "東日本大震災の奇跡の一本松が象徴する復興の海岸都市",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sanriku-miyako",
@@ -33131,7 +35683,13 @@
       "couple",
       "friends"
     ],
-    "catch": "白砂に白い岩礁が並ぶ「浄土のような海岸」"
+    "catch": "白砂に白い岩礁が並ぶ「浄土のような海岸」",
+    "primary": [
+      "海",
+      "絶景"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "motomiya",
@@ -33209,7 +35767,12 @@
       "couple",
       "friends"
     ],
-    "catch": "猪苗代湖と磐梯山の絶景を背景に安達太良山が聳える"
+    "catch": "猪苗代湖と磐梯山の絶景を背景に安達太良山が聳える",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mizusawa",
@@ -33288,7 +35851,13 @@
       "couple",
       "friends"
     ],
-    "catch": "前九年の役・後三年の役の舞台、奥州藤原氏の本拠地"
+    "catch": "前九年の役・後三年の役の舞台、奥州藤原氏の本拠地",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ichinoseki-geibikei",
@@ -33368,7 +35937,13 @@
       "couple",
       "friends"
     ],
-    "catch": "砂鉄川沿いの石灰岩の断崖を舟で上る渓谷美"
+    "catch": "砂鉄川沿いの石灰岩の断崖を舟で上る渓谷美",
+    "primary": [
+      "自然",
+      "絶景"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "akita-semboku",
@@ -33447,7 +36022,13 @@
       "couple",
       "friends"
     ],
-    "catch": "田沢湖・角館・乳頭温泉郷が揃う秋田の観光の核心"
+    "catch": "田沢湖・角館・乳頭温泉郷が揃う秋田の観光の核心",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "tendo",
@@ -33526,7 +36107,13 @@
       "couple",
       "friends"
     ],
-    "catch": "月山・鳥海山の麓に広がるさくらんぼの産地"
+    "catch": "月山・鳥海山の麓に広がるさくらんぼの産地",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nyuzen",
@@ -33605,7 +36192,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本海に面した富山の小さな町"
+    "catch": "日本海に面した富山の小さな町",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nanao",
@@ -33684,7 +36277,13 @@
       "couple",
       "friends"
     ],
-    "catch": "能登半島の付け根、七尾湾に面した温泉と漁港の街"
+    "catch": "能登半島の付け根、七尾湾に面した温泉と漁港の街",
+    "primary": [
+      "温泉",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "fukuchiyama",
@@ -33763,7 +36362,12 @@
       "couple",
       "friends"
     ],
-    "catch": "明智光秀が城主として整備した丹波の拠点城下町"
+    "catch": "明智光秀が城主として整備した丹波の拠点城下町",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "koka",
@@ -33842,7 +36446,12 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tondabayashi",
@@ -33921,7 +36530,12 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代の寺内町が完全保存される大阪南部の歴史地区"
+    "catch": "江戸時代の寺内町が完全保存される大阪南部の歴史地区",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kishiwada",
@@ -34001,7 +36615,13 @@
       "couple",
       "friends"
     ],
-    "catch": "だんじり祭りで全国に知られる城下町"
+    "catch": "だんじり祭りで全国に知られる城下町",
+    "primary": [
+      "歴史",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "amagasaki",
@@ -34081,7 +36701,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大阪に隣接する工業都市だが、尼崎城の復元と昭和レトロな商…"
+    "catch": "大阪に隣接する工業都市だが、尼崎城の復元と昭和レトロな商…",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nishiwaki",
@@ -34161,7 +36787,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本のへそ（東経135度・北緯35度）"
+    "catch": "日本のへそ（東経135度・北緯35度）",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nagi",
@@ -34241,7 +36873,13 @@
       "couple",
       "friends"
     ],
-    "catch": "奈義現代美術館と那岐山が有名な岡山北部の町"
+    "catch": "奈義現代美術館と那岐山が有名な岡山北部の町",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "higashihiroshima",
@@ -34320,7 +36958,13 @@
       "couple",
       "friends"
     ],
-    "catch": "西条の酒蔵群が有名な大学都市"
+    "catch": "西条の酒蔵群が有名な大学都市",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "fukuyama",
@@ -34400,7 +37044,13 @@
       "couple",
       "friends"
     ],
-    "catch": "鉄板焼きと福山城が有名なバラのまち"
+    "catch": "鉄板焼きと福山城が有名なバラのまち",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "otoyo",
@@ -34478,7 +37128,12 @@
       "couple",
       "friends"
     ],
-    "catch": "長寿の里として知られる高知の山村"
+    "catch": "長寿の里として知られる高知の山村",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sukumo",
@@ -34557,7 +37212,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyoshi-tokushima",
@@ -34637,7 +37298,13 @@
       "couple",
       "friends"
     ],
-    "catch": "祖谷地方の中心で、日本三奇橋の一つ「かずら橋」が有名"
+    "catch": "祖谷地方の中心で、日本三奇橋の一つ「かずら橋」が有名",
+    "primary": [
+      "自然",
+      "絶景"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oita-city",
@@ -34717,7 +37384,13 @@
       "couple",
       "friends"
     ],
-    "catch": "とり天とりゅうきゅうが名物の温泉どころ"
+    "catch": "とり天とりゅうきゅうが名物の温泉どころ",
+    "primary": [
+      "グルメ",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "yuwaku-onsen",
@@ -34797,7 +37470,13 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "yura-wakayama",
@@ -34877,7 +37556,13 @@
       "couple",
       "friends"
     ],
-    "catch": "白崎海洋公園の白い石灰岩と青い海が「日本のエーゲ海」と呼…"
+    "catch": "白崎海洋公園の白い石灰岩と青い海が「日本のエーゲ海」と呼…",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "misaki-osaka",
@@ -34957,7 +37642,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kitakyushu",
@@ -35037,7 +37728,13 @@
       "couple",
       "friends"
     ],
-    "catch": "関門海峡と日本最初の女性向けロボット・焼きうどんが名物の…"
+    "catch": "関門海峡と日本最初の女性向けロボット・焼きうどんが名物の…",
+    "primary": [
+      "街",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "asakura",
@@ -35117,7 +37814,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大刀洗平和記念館と秋月藩の武家屋敷が残る福岡内陸の古都"
+    "catch": "大刀洗平和記念館と秋月藩の武家屋敷が残る福岡内陸の古都",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ebino",
@@ -35197,7 +37900,13 @@
       "couple",
       "friends"
     ],
-    "catch": "山と絶景が楽しめる高原リゾート"
+    "catch": "山と絶景が楽しめる高原リゾート",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "hitoyoshi-city",
@@ -35276,7 +37985,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三急流の一つ球磨川で楽しむ川下り"
+    "catch": "日本三急流の一つ球磨川で楽しむ川下り",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "minamikyushu",
@@ -35368,7 +38083,13 @@
       "couple",
       "friends"
     ],
-    "catch": "全国一のお茶の生産量を誇る薩摩半島の農業地帯"
+    "catch": "全国一のお茶の生産量を誇る薩摩半島の農業地帯",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "minamiosumi",
@@ -35460,7 +38181,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大隅半島の最南端・佐多岬は日本本土最南端の地"
+    "catch": "大隅半島の最南端・佐多岬は日本本土最南端の地",
+    "primary": [
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "chatan",
@@ -35550,7 +38277,13 @@
       "couple",
       "friends"
     ],
-    "catch": "アメリカンビレッジがある米軍文化薫る沖縄中部の観光地"
+    "catch": "アメリカンビレッジがある米軍文化薫る沖縄中部の観光地",
+    "primary": [
+      "街",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "uruma",
@@ -35640,7 +38373,13 @@
       "couple",
       "friends"
     ],
-    "catch": "勝連城跡（世界遺産）と海中道路で繋がる浜比嘉島・与勝諸島"
+    "catch": "勝連城跡（世界遺産）と海中道路で繋がる浜比嘉島・与勝諸島",
+    "primary": [
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nanto",
@@ -35720,7 +38459,13 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産白川郷に隣接する五箇山・相倉合掌集落"
+    "catch": "世界遺産白川郷に隣接する五箇山・相倉合掌集落",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hakusan",
@@ -35800,7 +38545,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三名山の一つ白山の登山基地"
+    "catch": "日本三名山の一つ白山の登山基地",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "kamo-kyoto",
@@ -35881,7 +38632,13 @@
       "couple",
       "friends"
     ],
-    "catch": "京都府唯一の村で日本茶の産地"
+    "catch": "京都府唯一の村で日本茶の産地",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shingu-wakayama",
@@ -35960,7 +38717,13 @@
       "couple",
       "friends"
     ],
-    "catch": "熊野速玉大社と徐福公園のある世界遺産の城"
+    "catch": "熊野速玉大社と徐福公園のある世界遺産の城",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "himeshima",
@@ -36055,7 +38818,13 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅"
+    "catch": "海と自然に囲まれた離島の旅",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "toshima",
@@ -36138,7 +38907,13 @@
       "couple",
       "friends"
     ],
-    "catch": "椿の島として有名な伊豆諸島最小の有人島"
+    "catch": "椿の島として有名な伊豆諸島最小の有人島",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "joetsu",
@@ -36217,7 +38992,13 @@
       "couple",
       "friends"
     ],
-    "catch": "上杉謙信の春日山城と直江津港の歴史"
+    "catch": "上杉謙信の春日山城と直江津港の歴史",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "myoko",
@@ -36309,7 +39090,13 @@
       "couple",
       "friends"
     ],
-    "catch": "妙高山のパウダースノーと温泉リゾート"
+    "catch": "妙高山のパウダースノーと温泉リゾート",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "hokkaido-hakodate",
@@ -36405,7 +39192,13 @@
       "couple",
       "friends"
     ],
-    "catch": "夜景・朝市・西洋館が凝縮した北の港町"
+    "catch": "夜景・朝市・西洋館が凝縮した北の港町",
+    "primary": [
+      "街",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hokkaido-asahikawa",
@@ -36496,7 +39289,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大雪山の麓、日本最大の動物園と旭川ラーメンの街"
+    "catch": "大雪山の麓、日本最大の動物園と旭川ラーメンの街",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hokkaido-kushiro",
@@ -36587,7 +39386,13 @@
       "couple",
       "friends"
     ],
-    "catch": "釧路湿原・タンチョウ・炉端焼きの街"
+    "catch": "釧路湿原・タンチョウ・炉端焼きの街",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yoichi",
@@ -36666,7 +39471,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ニッカウヰスキー蒸溜所発祥の地"
+    "catch": "ニッカウヰスキー蒸溜所発祥の地",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "akkeshi",
@@ -36747,7 +39558,13 @@
       "couple",
       "friends"
     ],
-    "catch": "年中食べられるカキと厚岸湖が自慢の漁師町"
+    "catch": "年中食べられるカキと厚岸湖が自慢の漁師町",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kitami",
@@ -36836,7 +39653,13 @@
       "couple",
       "friends"
     ],
-    "catch": "世界有数のハッカ産地で、ジンギスカンとオホーツクの塩が名物"
+    "catch": "世界有数のハッカ産地で、ジンギスカンとオホーツクの塩が名物",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "monbetsu",
@@ -36915,7 +39738,12 @@
       "couple",
       "friends"
     ],
-    "catch": "流氷砕氷船「ガリンコ号」で有名な冬の聖地"
+    "catch": "流氷砕氷船「ガリンコ号」で有名な冬の聖地",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mashike",
@@ -36996,7 +39824,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最北のウイスキー蒸溜所と廃線跡が残る小さな漁港町"
+    "catch": "日本最北のウイスキー蒸溜所と廃線跡が残る小さな漁港町",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "fukushima-city",
@@ -37076,7 +39910,13 @@
       "couple",
       "friends"
     ],
-    "catch": "桃・梨・サクランボが実る果樹王国"
+    "catch": "桃・梨・サクランボが実る果樹王国",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "omagari",
@@ -37155,7 +39995,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大花火競技大会のひとつ、大曲の花火の舞台"
+    "catch": "日本三大花火競技大会のひとつ、大曲の花火の舞台",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shinjou",
@@ -37234,7 +40080,13 @@
       "couple",
       "friends"
     ],
-    "catch": "奥羽山脈に囲まれた小盆地"
+    "catch": "奥羽山脈に囲まれた小盆地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nagai",
@@ -37325,7 +40177,12 @@
       "couple",
       "friends"
     ],
-    "catch": "あやめ公園の菖蒲まつりで知られる最上川の水郷"
+    "catch": "あやめ公園の菖蒲まつりで知られる最上川の水郷",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kanagawa-yokohama",
@@ -37409,7 +40266,13 @@
       "couple",
       "friends"
     ],
-    "catch": "みなとみらい・中華街・山手洋館"
+    "catch": "みなとみらい・中華街・山手洋館",
+    "primary": [
+      "街",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ibaraki-mito",
@@ -37492,7 +40355,13 @@
       "couple",
       "friends"
     ],
-    "catch": "天下の三名園・偕楽園と納豆発祥の地"
+    "catch": "天下の三名園・偕楽園と納豆発祥の地",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "utsunomiya",
@@ -37572,7 +40441,13 @@
       "couple",
       "friends"
     ],
-    "catch": "餃子の聖地として全国に名をはせる北関東の中心都市"
+    "catch": "餃子の聖地として全国に名をはせる北関東の中心都市",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "takasaki",
@@ -37652,7 +40527,13 @@
       "couple",
       "friends"
     ],
-    "catch": "だるまの産地と高崎パスタの街"
+    "catch": "だるまの産地と高崎パスタの街",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "odawara",
@@ -37732,7 +40613,13 @@
       "couple",
       "friends"
     ],
-    "catch": "北条氏の難攻不落の城と干物・蒲鉾の街"
+    "catch": "北条氏の難攻不落の城と干物・蒲鉾の街",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sawara",
@@ -37812,7 +40699,13 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代の水郷商人町が小江戸として残る"
+    "catch": "江戸時代の水郷商人町が小江戸として残る",
+    "primary": [
+      "歴史",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nokogiriyama",
@@ -37893,7 +40786,13 @@
       "couple",
       "friends"
     ],
-    "catch": "石切場跡が生み出す異世界の断崖と百尺観音"
+    "catch": "石切場跡が生み出す異世界の断崖と百尺観音",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "katsuura-chiba",
@@ -37973,7 +40872,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "azumino",
@@ -38052,7 +40957,12 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスを背景に広がるわさび農園と清流の里"
+    "catch": "北アルプスを背景に広がるわさび農園と清流の里",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nagano-iida",
@@ -38134,7 +41044,13 @@
       "couple",
       "friends"
     ],
-    "catch": "南信州の水引と人形劇の里"
+    "catch": "南信州の水引と人形劇の里",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nakatsugawa",
@@ -38214,7 +41130,13 @@
       "couple",
       "friends"
     ],
-    "catch": "栗きんとん発祥の地、中山道の宿場町"
+    "catch": "栗きんとん発祥の地、中山道の宿場町",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yaizu",
@@ -38294,7 +41216,13 @@
       "couple",
       "friends"
     ],
-    "catch": "カツオ・マグロ水揚げ日本一の漁港町"
+    "catch": "カツオ・マグロ水揚げ日本一の漁港町",
+    "primary": [
+      "グルメ",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hamanako",
@@ -38375,7 +41303,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "gamagori",
@@ -38455,7 +41389,13 @@
       "couple",
       "friends"
     ],
-    "catch": "三河湾を望む温泉リゾート"
+    "catch": "三河湾を望む温泉リゾート",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "toyota-city",
@@ -38535,7 +41475,13 @@
       "couple",
       "friends"
     ],
-    "catch": "トヨタ自動車の企業城下町だ"
+    "catch": "トヨタ自動車の企業城下町だ",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "otsu-shiga",
@@ -38615,7 +41561,13 @@
       "couple",
       "friends"
     ],
-    "catch": "琵琶湖湖畔の近江の国の首府"
+    "catch": "琵琶湖湖畔の近江の国の首府",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kusatsu-shiga",
@@ -38695,7 +41647,13 @@
       "couple",
       "friends"
     ],
-    "catch": "東海道・中山道の追分宿として栄えた琵琶湖南岸の街"
+    "catch": "東海道・中山道の追分宿として栄えた琵琶湖南岸の街",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "takashima-shiga",
@@ -38776,7 +41734,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tango-kyoto",
@@ -38856,7 +41820,13 @@
       "couple",
       "friends"
     ],
-    "catch": "天橋立から北へ続く丹後半島"
+    "catch": "天橋立から北へ続く丹後半島",
+    "primary": [
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "owase",
@@ -38947,7 +41917,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本有数の多雨地帯で育つヒノキと新鮮な魚介"
+    "catch": "日本有数の多雨地帯で育つヒノキと新鮮な魚介",
+    "primary": [
+      "海",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "gobo",
@@ -39027,7 +42003,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日高川の河口に開けた紀州の小京都"
+    "catch": "日高川の河口に開けた紀州の小京都",
+    "primary": [
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kushimoto",
@@ -39107,7 +42089,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shimane-matsue",
@@ -39198,7 +42186,13 @@
       "couple",
       "friends"
     ],
-    "catch": "天守が現存する松江城と宍道湖の夕日"
+    "catch": "天守が現存する松江城と宍道湖の夕日",
+    "primary": [
+      "歴史",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hamada-shimane",
@@ -39286,7 +42280,13 @@
       "couple",
       "friends"
     ],
-    "catch": "どんちっちアジと石見神楽が自慢の日本海漁港"
+    "catch": "どんちっちアジと石見神楽が自慢の日本海漁港",
+    "primary": [
+      "海",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kure",
@@ -39365,7 +42365,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyoshi-hiroshima",
@@ -39444,7 +42450,13 @@
       "couple",
       "friends"
     ],
-    "catch": "霧の海で有名な盆地の城下町"
+    "catch": "霧の海で有名な盆地の城下町",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nagato-yamaguchi",
@@ -39524,7 +42536,13 @@
       "couple",
       "friends"
     ],
-    "catch": "元乃隅稲荷神社の123基の鳥居と千畳敷が圧倒的"
+    "catch": "元乃隅稲荷神社の123基の鳥居と千畳敷が圧倒的",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mine-yamaguchi",
@@ -39603,7 +42621,12 @@
       "couple",
       "friends"
     ],
-    "catch": "東洋一の規模を誇る秋芳洞（鍾乳洞）と秋吉台カルスト台地"
+    "catch": "東洋一の規模を誇る秋芳洞（鍾乳洞）と秋吉台カルスト台地",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kagawa-takamatsu",
@@ -39695,7 +42718,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "sakaide",
@@ -39775,7 +42804,13 @@
       "couple",
       "friends"
     ],
-    "catch": "瀬戸大橋の本州側たもとの街"
+    "catch": "瀬戸大橋の本州側たもとの街",
+    "primary": [
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tosa-city",
@@ -39856,7 +42891,13 @@
       "couple",
       "friends"
     ],
-    "catch": "仁淀川河口と波乗り文化が共存するサーファーの聖地"
+    "catch": "仁淀川河口と波乗り文化が共存するサーファーの聖地",
+    "primary": [
+      "海",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kanonji",
@@ -39936,7 +42977,13 @@
       "couple",
       "friends"
     ],
-    "catch": "砂浜に描かれた銭形砂絵「寛永通宝」が有名"
+    "catch": "砂浜に描かれた銭形砂絵「寛永通宝」が有名",
+    "primary": [
+      "歴史",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "fukuoka-city",
@@ -40025,7 +43072,13 @@
       "couple",
       "friends"
     ],
-    "catch": "博多ラーメン・もつ鍋・屋台文化が生きる九州最大の都市"
+    "catch": "博多ラーメン・もつ鍋・屋台文化が生きる九州最大の都市",
+    "primary": [
+      "グルメ",
+      "街"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kurume",
@@ -40105,7 +43158,13 @@
       "couple",
       "friends"
     ],
-    "catch": "久留米ラーメン発祥の地で絣（かすり）織りの産地"
+    "catch": "久留米ラーメン発祥の地で絣（かすり）織りの産地",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yatsushiro",
@@ -40185,7 +43244,13 @@
       "couple",
       "friends"
     ],
-    "catch": "い草の生産量日本一で知られる熊本南部の城下町"
+    "catch": "い草の生産量日本一で知られる熊本南部の城下町",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oguni-kumamoto",
@@ -40271,7 +43336,13 @@
       "couple",
       "friends"
     ],
-    "catch": "杖立温泉・わいた温泉など個性的な湯が連なる九州有数の温泉地帯"
+    "catch": "杖立温泉・わいた温泉など個性的な湯が連なる九州有数の温泉地帯",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "izumi-kagoshima",
@@ -40350,7 +43421,12 @@
       "couple",
       "friends"
     ],
-    "catch": "毎年1万羽以上の鶴が越冬する日本最大の鶴の渡来地"
+    "catch": "毎年1万羽以上の鶴が越冬する日本最大の鶴の渡来地",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "makurazaki",
@@ -40429,7 +43505,13 @@
       "couple",
       "friends"
     ],
-    "catch": "本土最南端の鉄道駅（枕崎駅）とカツオ節の産地"
+    "catch": "本土最南端の鉄道駅（枕崎駅）とカツオ節の産地",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyakonojo",
@@ -40508,7 +43590,13 @@
       "couple",
       "friends"
     ],
-    "catch": "焼酎と牛肉の生産量日本一の盆地都市"
+    "catch": "焼酎と牛肉の生産量日本一の盆地都市",
+    "primary": [
+      "グルメ",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nanjo-okinawa",
@@ -40589,7 +43677,13 @@
       "couple",
       "friends"
     ],
-    "catch": "琉球王国の聖地・斎場御嶽と沖縄唯一の鍾乳洞・玉泉洞が同居…"
+    "catch": "琉球王国の聖地・斎場御嶽と沖縄唯一の鍾乳洞・玉泉洞が同居…",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "aogashima",
@@ -40663,7 +43757,12 @@
       "couple",
       "friends"
     ],
-    "catch": "二重カルデラに人が暮らす日本最小の有人村"
+    "catch": "二重カルデラに人が暮らす日本最小の有人村",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kugashima",
@@ -40738,7 +43837,13 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸時代の潜伏キリシタン信仰が残る離島"
+    "catch": "江戸時代の潜伏キリシタン信仰が残る離島",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nakatosa",
@@ -40817,7 +43922,13 @@
       "couple",
       "friends"
     ],
-    "catch": "久礼大正市場でカツオを直接競り買いできる漁師の聖地"
+    "catch": "久礼大正市場でカツオを直接競り買いできる漁師の聖地",
+    "primary": [
+      "グルメ",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ikata",
@@ -40899,7 +44010,13 @@
       "couple",
       "friends"
     ],
-    "catch": "佐田岬半島の突端にある本土最西端の地"
+    "catch": "佐田岬半島の突端にある本土最西端の地",
+    "primary": [
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "muroto-cape",
@@ -40979,7 +44096,13 @@
       "couple",
       "friends"
     ],
-    "catch": "空海が悟りを開いたとされる荒涼たる岬"
+    "catch": "空海が悟りを開いたとされる荒涼たる岬",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oshima-yamaguchi",
@@ -41071,7 +44194,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ibara",
@@ -41150,7 +44279,13 @@
       "couple",
       "friends"
     ],
-    "catch": "デニムの聖地・備後絣の産地"
+    "catch": "デニムの聖地・備後絣の産地",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "niimi",
@@ -41229,7 +44364,13 @@
       "couple",
       "friends"
     ],
-    "catch": "中国山地に囲まれた渓谷の城下町"
+    "catch": "中国山地に囲まれた渓谷の城下町",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "uda-nara",
@@ -41310,7 +44451,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大和の薬草の里で、松山地区の江戸時代の町並みが現存する"
+    "catch": "大和の薬草の里で、松山地区の江戸時代の町並みが現存する",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "mimasaka",
@@ -41390,7 +44537,13 @@
       "couple",
       "friends"
     ],
-    "catch": "湯郷温泉・湯原温泉・奥津温泉の「美作三湯」"
+    "catch": "湯郷温泉・湯原温泉・奥津温泉の「美作三湯」",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kochi-shimanto",
@@ -41469,7 +44622,12 @@
       "couple",
       "friends"
     ],
-    "catch": "沈下橋が美しい「最後の清流」四万十川の下流域"
+    "catch": "沈下橋が美しい「最後の清流」四万十川の下流域",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yonago",
@@ -41557,7 +44715,13 @@
       "couple",
       "friends"
     ],
-    "catch": "大山の麓と中海に挟まれた山陰の交通の要衝"
+    "catch": "大山の麓と中海に挟まれた山陰の交通の要衝",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kaga-onsen2",
@@ -41636,7 +44800,12 @@
       "couple",
       "friends"
     ],
-    "catch": "山代・山中・粟津・片山津が揃う加賀温泉郷の中核"
+    "catch": "山代・山中・粟津・片山津が揃う加賀温泉郷の中核",
+    "primary": [
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "takayama-kogen",
@@ -41716,7 +44885,13 @@
       "couple",
       "friends"
     ],
-    "catch": "新穂高ロープウェイと平湯温泉"
+    "catch": "新穂高ロープウェイと平湯温泉",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "iga-ueno",
@@ -41795,7 +44970,12 @@
       "couple",
       "friends"
     ],
-    "catch": "忍者の里として世界的に有名な城下町"
+    "catch": "忍者の里として世界的に有名な城下町",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyanoshita",
@@ -41875,7 +45055,13 @@
       "couple",
       "friends"
     ],
-    "catch": "箱根の奥地に建つ富士屋ホテルと老舗温泉宿街"
+    "catch": "箱根の奥地に建つ富士屋ホテルと老舗温泉宿街",
+    "primary": [
+      "温泉",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "shibu-onsen",
@@ -41954,7 +45140,12 @@
       "couple",
       "friends"
     ],
-    "catch": "千と千尋の神隠しのモデルとも言われる石畳の温泉街"
+    "catch": "千と千尋の神隠しのモデルとも言われる石畳の温泉街",
+    "primary": [
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "togatta-onsen",
@@ -42034,7 +45225,13 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先"
+    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hachimantai-onsen",
@@ -42115,7 +45312,13 @@
       "couple",
       "friends"
     ],
-    "catch": "八幡平の火山地帯に湧く秘湯"
+    "catch": "八幡平の火山地帯に湧く秘湯",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "iiyama-onsen",
@@ -42195,7 +45398,13 @@
       "couple",
       "friends"
     ],
-    "catch": "野沢菜発祥地で外湯13ヵ所が無料の雪国温泉村"
+    "catch": "野沢菜発祥地で外湯13ヵ所が無料の雪国温泉村",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "ono-fukui",
@@ -42289,7 +45498,13 @@
       "couple",
       "friends"
     ],
-    "catch": "天空の城・越前大野城と清水百選の湧水が有名"
+    "catch": "天空の城・越前大野城と清水百選の湧水が有名",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "katsuyama",
@@ -42380,7 +45595,13 @@
       "couple",
       "friends"
     ],
-    "catch": "福井県立恐竜博物館がある恐竜の聖地"
+    "catch": "福井県立恐竜博物館がある恐竜の聖地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "nomaike",
@@ -42454,7 +45675,13 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地"
+    "catch": "自然と文化が融合した観光地",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hioki",
@@ -42534,7 +45761,13 @@
       "couple",
       "friends"
     ],
-    "catch": "島津義弘ゆかりの地・吹上温泉と美山（苗代川）の薩摩焼窯元…"
+    "catch": "島津義弘ゆかりの地・吹上温泉と美山（苗代川）の薩摩焼窯元…",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -42614,7 +45847,13 @@
       "couple",
       "friends"
     ],
-    "catch": "鶴の湯・黒湯・孫六湯など7つの秘湯が点在する秋田の山中"
+    "catch": "鶴の湯・黒湯・孫六湯など7つの秘湯が点在する秋田の山中",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "hirakawa",
@@ -42694,7 +45933,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本一のりんごの産地で、岩木山を背景にリンゴ畑が広がる津…"
+    "catch": "日本一のりんごの産地で、岩木山を背景にリンゴ畑が広がる津…",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kurikoma",
@@ -42774,7 +46019,13 @@
       "couple",
       "friends"
     ],
-    "catch": "栗駒山の紅葉は東北随一の美しさ"
+    "catch": "栗駒山の紅葉は東北随一の美しさ",
+    "primary": [
+      "自然",
+      "温泉"
+    ],
+    "secondary": [],
+    "onsenLevel": 1
   },
   {
     "id": "namioka",
@@ -42854,7 +46105,13 @@
       "couple",
       "friends"
     ],
-    "catch": "津軽のリンゴ産地の核心部"
+    "catch": "津軽のリンゴ産地の核心部",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "shimokita",
@@ -42935,7 +46192,13 @@
       "couple",
       "friends"
     ],
-    "catch": "恐山・仏ヶ浦・大間マグロの地"
+    "catch": "恐山・仏ヶ浦・大間マグロの地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "towada-lake",
@@ -43014,7 +46277,12 @@
       "couple",
       "friends"
     ],
-    "catch": "深い青のカルデラ湖と奥入瀬渓流が一体の絶景"
+    "catch": "深い青のカルデラ湖と奥入瀬渓流が一体の絶景",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "rikuchu-coast",
@@ -43094,7 +46362,13 @@
       "couple",
       "friends"
     ],
-    "catch": "ウニ・アワビ・カキが豊富な三陸リアス海岸の漁村"
+    "catch": "ウニ・アワビ・カキが豊富な三陸リアス海岸の漁村",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -43172,7 +46446,12 @@
       "couple",
       "friends"
     ],
-    "catch": "中尊寺金色堂を中心とした世界遺産の仏都"
+    "catch": "中尊寺金色堂を中心とした世界遺産の仏都",
+    "primary": [
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "numata",
@@ -43252,7 +46531,13 @@
       "couple",
       "friends"
     ],
-    "catch": "リンゴ・コンニャク・お城の城下町"
+    "catch": "リンゴ・コンニャク・お城の城下町",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsuchiura",
@@ -43332,7 +46617,13 @@
       "couple",
       "friends"
     ],
-    "catch": "霞ヶ浦湖畔のサイクリングの聖地"
+    "catch": "霞ヶ浦湖畔のサイクリングの聖地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "oshika",
@@ -43412,7 +46703,13 @@
       "couple",
       "friends"
     ],
-    "catch": "三陸の荒海に突き出た半島"
+    "catch": "三陸の荒海に突き出た半島",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kujukuri-icho",
@@ -43492,7 +46789,13 @@
       "couple",
       "friends"
     ],
-    "catch": "サーファーが集う九十九里の南端"
+    "catch": "サーファーが集う九十九里の南端",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "miyota",
@@ -43571,7 +46874,12 @@
       "couple",
       "friends"
     ],
-    "catch": "浅間山を望む軽井沢の隣町"
+    "catch": "浅間山を望む軽井沢の隣町",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "saijo-hiroshima",
@@ -43650,7 +46958,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大酒どころのひとつ"
+    "catch": "日本三大酒どころのひとつ",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ryoishi",
@@ -43742,7 +47056,13 @@
       "couple",
       "friends"
     ],
-    "catch": "リアス式海岸の奥深くに隠れた小さな漁村"
+    "catch": "リアス式海岸の奥深くに隠れた小さな漁村",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "noheji",
@@ -43822,7 +47142,13 @@
       "couple",
       "friends"
     ],
-    "catch": "歴史と風情が漂う街歩きの旅先"
+    "catch": "歴史と風情が漂う街歩きの旅先",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tobetsu",
@@ -43901,7 +47227,13 @@
       "couple",
       "friends"
     ],
-    "catch": "デンマーク式の農村景観「スウェーデンヒルズ」"
+    "catch": "デンマーク式の農村景観「スウェーデンヒルズ」",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "fukaura",
@@ -43982,7 +47314,13 @@
       "couple",
       "friends"
     ],
-    "catch": "白神山地の麓と日本海に挟まれた絶景の小集落"
+    "catch": "白神山地の麓と日本海に挟まれた絶景の小集落",
+    "primary": [
+      "自然",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "isesaki",
@@ -44062,7 +47400,13 @@
       "couple",
       "friends"
     ],
-    "catch": "絹織物「伊勢崎銘仙」の産地"
+    "catch": "絹織物「伊勢崎銘仙」の産地",
+    "primary": [
+      "歴史",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "matsumoto-kaido",
@@ -44141,7 +47485,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最高標高のワイン産地として知られる中山道の宿場町"
+    "catch": "日本最高標高のワイン産地として知られる中山道の宿場町",
+    "primary": [
+      "グルメ",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "aizu-misato",
@@ -44220,7 +47570,13 @@
       "couple",
       "friends"
     ],
-    "catch": "伊佐須美神社と新鶴温泉が守る会津盆地の農村"
+    "catch": "伊佐須美神社と新鶴温泉が守る会津盆地の農村",
+    "primary": [
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tateyama-toyama",
@@ -44299,7 +47655,12 @@
       "couple",
       "friends"
     ],
-    "catch": "立山黒部アルペンルートの富山側の起点"
+    "catch": "立山黒部アルペンルートの富山側の起点",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "suo-sanbe",
@@ -44378,7 +47739,12 @@
       "couple",
       "friends"
     ],
-    "catch": "島根の中央にそびえる活火山"
+    "catch": "島根の中央にそびえる活火山",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "takachihogo-shishiku",
@@ -44464,7 +47830,13 @@
       "couple",
       "friends"
     ],
-    "catch": "九州山地の奥深くに隠れた日本三大秘境のひとつ"
+    "catch": "九州山地の奥深くに隠れた日本三大秘境のひとつ",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kamishihoro",
@@ -44543,7 +47915,12 @@
       "couple",
       "friends"
     ],
-    "catch": "ナイタイ高原牧場と糠平湖のタウシュベツ川橋梁遺構で知られ…"
+    "catch": "ナイタイ高原牧場と糠平湖のタウシュベツ川橋梁遺構で知られ…",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "yakumo",
@@ -44623,7 +48000,13 @@
       "couple",
       "friends"
     ],
-    "catch": "噴火湾沿いのホタテ養殖の聖地"
+    "catch": "噴火湾沿いのホタテ養殖の聖地",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "susaki",
@@ -44702,7 +48085,13 @@
       "couple",
       "friends"
     ],
-    "catch": "鍋焼きラーメン発祥の地と汽車道が続く高知西部の港町"
+    "catch": "鍋焼きラーメン発祥の地と汽車道が続く高知西部の港町",
+    "primary": [
+      "グルメ",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ube",
@@ -44791,7 +48180,13 @@
       "couple",
       "friends"
     ],
-    "catch": "野外彫刻で有名な工業都市"
+    "catch": "野外彫刻で有名な工業都市",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "itoigawa2",
@@ -44870,7 +48265,13 @@
       "couple",
       "friends"
     ],
-    "catch": "日本のヒスイ発祥地で、フォッサマグナのジオパーク"
+    "catch": "日本のヒスイ発祥地で、フォッサマグナのジオパーク",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "agematsu",
@@ -44950,7 +48351,13 @@
       "couple",
       "friends"
     ],
-    "catch": "寝覚の床（木曽川の奇岩）と御嶽山遥拝所が並ぶ木曽の宿場跡"
+    "catch": "寝覚の床（木曽川の奇岩）と御嶽山遥拝所が並ぶ木曽の宿場跡",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "unzen2",
@@ -45030,7 +48437,13 @@
       "couple",
       "friends"
     ],
-    "catch": "硫黄が噴き出す地獄と高原温泉リゾート"
+    "catch": "硫黄が噴き出す地獄と高原温泉リゾート",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 3
   },
   {
     "id": "kochi-ino",
@@ -45110,7 +48523,13 @@
       "couple",
       "friends"
     ],
-    "catch": "仁淀川の源流域と紙漉き文化が息づく土佐和紙の産地"
+    "catch": "仁淀川の源流域と紙漉き文化が息づく土佐和紙の産地",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "hiji",
@@ -45190,7 +48609,13 @@
       "couple",
       "friends"
     ],
-    "catch": "城下カレイと暘谷城址が有名な別府湾の小城下町"
+    "catch": "城下カレイと暘谷城址が有名な別府湾の小城下町",
+    "primary": [
+      "海",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsunan",
@@ -45268,7 +48693,12 @@
       "couple",
       "friends"
     ],
-    "catch": "日本有数の豪雪地帯に広がるひまわり畑と信濃川の河岸段丘"
+    "catch": "日本有数の豪雪地帯に広がるひまわり畑と信濃川の河岸段丘",
+    "primary": [
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "kurobe",
@@ -45347,7 +48777,13 @@
       "couple",
       "friends"
     ],
-    "catch": "黒部川の清流と湧水が流れる富山の東端"
+    "catch": "黒部川の清流と湧水が流れる富山の東端",
+    "primary": [
+      "自然",
+      "グルメ"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tsuruoka-kinzan",
@@ -45427,7 +48863,13 @@
       "couple",
       "friends"
     ],
-    "catch": "金山杉と白壁の蔵が美しい景観賞受賞の農山村"
+    "catch": "金山杉と白壁の蔵が美しい景観賞受賞の農山村",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "tomari-okinawa",
@@ -45501,7 +48943,13 @@
       "couple",
       "friends"
     ],
-    "catch": "沖縄最北の有人島で「沖縄のルーツ」とも呼ばれる秘境離島"
+    "catch": "沖縄最北の有人島で「沖縄のルーツ」とも呼ばれる秘境離島",
+    "primary": [
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   },
   {
     "id": "ogimi",
@@ -45582,6 +49030,12 @@
       "couple",
       "friends"
     ],
-    "catch": "100歳以上の長寿者が集う「長寿の里」"
+    "catch": "100歳以上の長寿者が集う「長寿の里」",
+    "primary": [
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0
   }
 ]

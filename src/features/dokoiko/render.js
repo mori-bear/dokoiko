@@ -58,9 +58,12 @@ function buildCityBlock(city) {
     ? `<p class="appeal-line">${city.description}</p>`
     : '';
 
-  // タグは最大3つ
-  const themesHtml = Array.isArray(city.tags) && city.tags.length
-    ? city.tags.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
+  // タグ表示: primary + secondary（v2）、なければ tags にフォールバック、最大3つ
+  const displayTags = city.primary?.length
+    ? [...(city.primary ?? []), ...(city.secondary ?? [])]
+    : (city.tags ?? []);
+  const themesHtml = displayTags.length
+    ? displayTags.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
     : '';
 
   const categoryBadge = buildCategoryBadge(city);

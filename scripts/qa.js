@@ -1383,6 +1383,60 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8o] テーマ精度チェック（v2 tags）
+     - onsenLevel < 2 の目的地が温泉テーマで出たらFAIL
+     - primary 未設定 → WARN
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8o] テーマ精度 (onsen/primary)');
+
+    // onsenLevel 整合チェック
+    const onsenLevelMissing = DESTS.filter(d => d.onsenLevel === undefined || d.onsenLevel === null);
+    const onsenNoPrimary    = DESTS.filter(d => !d.primary || d.primary.length === 0);
+    const onsenWrongLevel   = DESTS.filter(d =>
+      d.destType === 'onsen' && (d.onsenLevel ?? 0) < 3
+    );
+
+    // 温泉テーマで onsenLevel <2 が出ないことを確認（matchTheme ロジック）
+    // selectionEngine の matchTheme をインライン検証
+    const falseOnsenMatches = DESTS.filter(d => {
+      const level = d.onsenLevel ?? 0;
+      // onsen theme を選択したとき level >= 2 のみ出るべき
+      // level < 2 かつ destType=onsen は矛盾
+      if (d.destType === 'onsen' && level < 2) return true;
+      return false;
+    });
+
+    sc.check(onsenLevelMissing.length === 0,
+      onsenLevelMissing.length === 0
+        ? `onsenLevel 設定済み: 全${DESTS.length}件`
+        : `onsenLevel 未設定 ${onsenLevelMissing.length}件: ${onsenLevelMissing.slice(0, 5).map(d=>d.id).join(', ')}`
+    );
+    sc.check(onsenWrongLevel.length === 0,
+      onsenWrongLevel.length === 0
+        ? 'destType=onsen は全件 onsenLevel=3'
+        : `destType=onsen なのに onsenLevel<3: ${onsenWrongLevel.length}件: ${onsenWrongLevel.map(d=>d.id+'='+d.onsenLevel).join(', ')}`
+    );
+    // primary 未設定は WARN
+    sc.check(true,
+      onsenNoPrimary.length === 0
+        ? `primary 設定済み: 全${DESTS.length}件`
+        : `primary 未設定 ${onsenNoPrimary.length}件（WARN）: ${onsenNoPrimary.slice(0, 5).map(d=>d.id).join(', ')}`
+    );
+
+    const level3 = DESTS.filter(d => (d.onsenLevel ?? 0) === 3).length;
+    const level2 = DESTS.filter(d => (d.onsenLevel ?? 0) === 2).length;
+    const level1 = DESTS.filter(d => (d.onsenLevel ?? 0) === 1).length;
+    const level0 = DESTS.filter(d => (d.onsenLevel ?? 0) === 0).length;
+    sc.check(true,
+      `onsenLevel 分布: L3=${level3} L2=${level2} L1=${level1} L0=${level0}（温泉テーマ対象: ${level3+level2}件）`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8n] 交通ロジック品質チェック
      - mountain/remote で flight のみ → FAIL
      - steps=0 → FAIL（[8l]と重複だが独立チェック）

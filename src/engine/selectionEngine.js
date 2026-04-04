@@ -16,9 +16,38 @@
 
 import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCalculator.js';
 
+/**
+ * テーマ判定（v2）
+ * 温泉: onsenLevel >= 2 のみ（ハードフィルタ）
+ * 他テーマ: primary または secondary に含まれるか（alias含む）
+ *
+ * 後方互換: primary 未設定の場合は tags にフォールバック
+ */
+function matchTheme(dest, theme) {
+  if (!theme) return true;
+
+  if (theme === '温泉') {
+    return (dest.onsenLevel ?? 0) >= 2;
+  }
+
+  // 離島は常に「海」テーマに一致
+  if (theme === '海' && (dest.isIsland || dest.destType === 'island')) return true;
+
+  const aliases = THEME_TAG_ALIASES[theme] ?? [theme];
+
+  // primary / secondary フィールド優先、なければ tags にフォールバック
+  const primaryTags   = dest.primary   ?? [];
+  const secondaryTags = dest.secondary ?? [];
+  const legacyTags    = (primaryTags.length === 0 && secondaryTags.length === 0)
+    ? (dest.tags ?? [])
+    : [];
+
+  return [...primaryTags, ...secondaryTags, ...legacyTags]
+    .some(t => aliases.includes(t));
+}
+
 /** テーマ → 一致させるタグ群（エイリアス） */
 const THEME_TAG_ALIASES = {
-  '温泉':   ['温泉', '秘湯'],
   '絶景':   ['絶景', '自然', '山', '渓谷', '富士山', '高原', '湖', '火山', 'アルプス', '秘境', '滝', '高山'],
   '海':     ['海', '海の幸', '離島', 'ダイビング', '港町', 'リゾート'],
   '街歩き': ['街歩き', '歴史', '城下町', '宿場町', '古都', '寺社', '城', '文化', '武家屋敷', '世界遺産'],
@@ -85,13 +114,9 @@ function isSamePrefectureOvernight(destination, departure, stayType) {
   return destPref === DEPARTURE_PREFECTURE[departure];
 }
 
-/** テーマがタグに一致するか（エイリアス含む） */
+/** @deprecated matchTheme を使用 */
 function matchesTheme(city, theme) {
-  if (!theme) return true;
-  // 離島は常に「海」テーマに一致
-  if (theme === '海' && (city.isIsland || city.destType === 'island')) return true;
-  const aliases = THEME_TAG_ALIASES[theme] ?? [theme];
-  return (city.tags || []).some(t => aliases.includes(t));
+  return matchTheme(city, theme);
 }
 
 function getWeight(city, theme) {
@@ -100,7 +125,7 @@ function getWeight(city, theme) {
 
   let themeW = 1;
   if (theme) {
-    themeW = matchesTheme(city, theme) ? 3.0 : 0.3;
+    themeW = matchTheme(city, theme) ? 3.0 : 0.3;
   }
 
   return base * capW * themeW;
