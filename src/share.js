@@ -51,13 +51,11 @@ export function buildShareText(city, departure) {
   return `これ出たんやけど当たり？笑\n\n${departure} → ${name}\n${url}`;
 }
 
-/** Xシェアウィンドウを開く */
+/** Xシェアウィンドウを開く（URLのみ） */
 export function openXShare(city, departure) {
-  const name      = city.displayName || city.name;
-  const url       = location.href;
-  const tweetText = `${departure} → ${name} どこ行こ？で出た`;
+  const url = location.href;
   window.open(
-    `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweetText)}`,
+    `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`,
     '_blank',
     'noopener,noreferrer,width=550,height=420',
   );

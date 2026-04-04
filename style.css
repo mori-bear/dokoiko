@@ -911,6 +911,26 @@ body {
   font-weight: 400;
 }
 
+.route-narrative {
+  display: block;
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 400;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.route-badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-sub);
+  background: var(--bg-tag, #f0f0f0);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
 /* ── Phase 7: 代替ルート折りたたみ ── */
 
 .alt-route-section {

@@ -219,9 +219,19 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
   const altRoutes  = links.filter(l => l.type === 'alt-route');
 
-  // ① ルート概要
+  // ① ルート概要（合計時間・乗換回数バッジ付き）
+  let routeBadge = '';
+  const totalMins = stepGroups.reduce((sum, sg) => sum + (sg.duration ?? 0), 0);
+  const transferCount = Math.max(0, stepGroups.length - 1);
+  if (totalMins > 0) {
+    const h = Math.floor(totalMins / 60);
+    const m = totalMins % 60;
+    const timeStr = (h > 0 && m > 0) ? `${h}時間${m}分` : h > 0 ? `${h}時間` : `${m}分`;
+    const xferStr = transferCount === 0 ? '直通' : `乗換${transferCount}回`;
+    routeBadge = `<span class="route-badge">約${timeStr} / ${xferStr}</span>`;
+  }
   const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`
+    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}${routeBadge}</div>`
     : '';
 
   // ② メインCTA（routes.json の main-cta を直接使用 — 推測・生成しない）

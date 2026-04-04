@@ -1805,7 +1805,7 @@ class Scorecard {
     function distKm(lat1,lng1,lat2,lng2){const R=6371;const dL=(lat2-lat1)*Math.PI/180;const dN=(lng2-lng1)*Math.PI/180;const a=Math.sin(dL/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dN/2)**2;return 2*R*Math.asin(Math.sqrt(a));}
 
     let flightShort = [], emojiInStep = [];
-    let noMapTarget = 0, singleStep = [];
+    let singleStep = [];
 
     const DEPS_SAMPLE = Object.keys(DEP_COORDS);
     for (const dep of DEPS_SAMPLE) {
@@ -1839,10 +1839,15 @@ class Scorecard {
       });
     }
 
-    // map宛先チェック（spots/finalPoint/mapPoint 全てなし）
+    // mapPointチェック
+    const mapPointMissing = [];
+    const mapPointIsStation = [];
     DESTS.forEach(d => {
-      const hasTarget = d.mapPoint || d.finalPoint || (Array.isArray(d.spots) && d.spots.length > 0);
-      if (!hasTarget) noMapTarget++;
+      if (!d.mapPoint) {
+        mapPointMissing.push(d.id);
+      } else if (d.mapPoint.endsWith('駅') || d.mapPoint.endsWith('駅前')) {
+        mapPointIsStation.push(`${d.id}:${d.mapPoint}`);
+      }
     });
 
     sc.check(flightShort.length === 0,
@@ -1855,11 +1860,15 @@ class Scorecard {
         ? 'stepLabel絵文字: なし'
         : `stepLabel絵文字 ${emojiInStep.length}件: ${emojiInStep.join(', ')}`
     );
-    // map宛先なし は WARN（都市名にfallbackするため致命的ではない）
-    sc.check(true,
-      noMapTarget === 0
-        ? `map宛先: 全${DESTS.length}件OK`
-        : `mapターゲット未設定 ${noMapTarget}件（WARN）`
+    sc.check(mapPointMissing.length === 0,
+      mapPointMissing.length === 0
+        ? `mapPoint: 全${DESTS.length}件設定済み`
+        : `mapPoint未設定 ${mapPointMissing.length}件: ${mapPointMissing.slice(0,5).join(', ')}`
+    );
+    sc.check(mapPointIsStation.length === 0,
+      mapPointIsStation.length === 0
+        ? 'mapPointに駅名なし: OK'
+        : `mapPointが駅名 ${mapPointIsStation.length}件: ${mapPointIsStation.slice(0,5).join(', ')}`
     );
     // 1ステップのみ は WARN
     sc.check(true,
