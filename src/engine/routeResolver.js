@@ -126,6 +126,15 @@ function _tryBfs(departure, destination) {
   const steps = buildRoute(departure, destination);
   if (!steps || steps.length < 1) return null;
 
+  /* ④-1/④-5: mountain / remote / requiresCar は飛行機ルートを不採用
+   * 空港→山岳直結は不自然。鉄道+レンタカーが正しいルート。 */
+  const isMountainRemote = destination.destType === 'mountain'
+    || destination.destType === 'remote'
+    || destination.requiresCar;
+  if (isMountainRemote && steps.some(s => s.type === 'flight')) {
+    return null; // パターンビルダーへ降格
+  }
+
   /* finalPoint 注入: BFS は accessStation までしか到達しないため、
      finalPoint が設定されている場合はラストマイルステップを追加する */
   const finalPt = destination.finalPoint

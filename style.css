@@ -1374,6 +1374,32 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   color: #fff;
 }
 
+/* ── 宿泊CTA サブテキスト ── */
+
+.stay-sub {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* ── 近隣ホテルセクション ── */
+
+.stay-nearby {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.stay-nearby-heading {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 /* ── ハブ都市宿泊ブロック ── */
 
 .stay-block--hub {

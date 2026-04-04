@@ -20,7 +20,9 @@
  * weak判定: requiresCar=true かつ destType=mountain/remote のとき
  */
 
-import { loadJson } from '../lib/loadJson.js';
+import { loadJson }       from '../lib/loadJson.js';
+import { getDefaultDates } from '../utils/date.js';
+import { calcDistanceKm }  from '../utils/geo.js';
 
 /* hotelAreas.json / affiliateProviders.json を起動時に1回ロード */
 const HOTEL_AREAS  = await loadJson('../data/hotelAreas.json',        import.meta.url);
@@ -63,6 +65,22 @@ function lookupAreaByName(name) {
 }
 
 /**
+ * 日付パラメータを外部URLに付与（best-effort）
+ * Rakuten / Jalan の外部ページに checkin/checkout を渡す
+ */
+function appendDateParams(url) {
+  try {
+    const { checkin, checkout } = getDefaultDates();
+    const u = new URL(url);
+    u.searchParams.set('checkin',  checkin);
+    u.searchParams.set('checkout', checkout);
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
+/**
  * 楽天エリアページ URL
  * 優先: area.rakutenPath → area.rakutenFallback → dest.hotelArea パス
  */
@@ -77,7 +95,7 @@ function buildRakutenDestUrl(path) {
 }
 
 function buildRakutenAffilUrl(destUrl) {
-  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`;
+  return appendDateParams(`https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFID}/?pc=${encodeURIComponent(destUrl)}`);
 }
 
 /**
@@ -85,7 +103,7 @@ function buildRakutenAffilUrl(destUrl) {
  * rawJalanUrl は Shift-JIS 済み URL を使う（hotelAreas.json の jalanUrl）
  */
 function buildJalanAffilUrl(rawJalanUrl) {
-  return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`;
+  return appendDateParams(`https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`);
 }
 
 /**
@@ -137,8 +155,51 @@ function resolveJalanUrl(dest) {
 }
 
 /**
+ * 近隣ホテルリンク（30km以内の別エリア）
+ * lat/lng のある hotelAreas から距離順で最大2件を返す。
+ * hubLinks が別途生成される mountain/remote は除外。
+ *
  * @param {object} dest — destination エントリ
- * @returns {{ heading: string, links: Array, hubLinks?: {heading, links} }}
+ * @returns {Array<{heading, links}> | null}
+ */
+function buildNearbyHotelLinks(dest) {
+  if (!dest.lat || !dest.lng) return null;
+  /* mountain/remote は hubLinks 側で「アクセス良い街」を案内済み → ここでは不要 */
+  if (dest.requiresCar || dest.destType === 'mountain' || dest.destType === 'remote') return null;
+
+  const AREACODE = DEST_TO_AREA_ID[dest.id] ?? dest.id;
+
+  const nearby = HOTEL_AREAS
+    .filter(a => a.lat && a.lng && a.id !== AREACODE)
+    .map(a => ({ ...a, dist: calcDistanceKm(dest, a) }))
+    .filter(a => a.dist >= 3 && a.dist <= 30)   // 3km以上30km以内（同一市内除外）
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 2);
+
+  if (nearby.length === 0) return null;
+
+  return nearby.map(area => {
+    const rakutenPath = getRakutenPath(area, null);
+    const rakutenUrl  = rakutenPath
+      ? buildRakutenAffilUrl(buildRakutenDestUrl(rakutenPath))
+      : null;
+    const jalanUrl = area.jalanUrl ? buildJalanAffilUrl(area.jalanUrl) : null;
+    if (!rakutenUrl && !jalanUrl) return null;
+
+    const distStr = `${Math.round(area.dist)}km`;
+    return {
+      heading: `${area.name}（${distStr}）`,
+      links: [
+        ...(rakutenUrl ? [{ type: 'rakuten', label: '楽天で宿を見る',   url: rakutenUrl }] : []),
+        ...(jalanUrl   ? [{ type: 'jalan',   label: 'じゃらんで宿を見る', url: jalanUrl }] : []),
+      ],
+    };
+  }).filter(Boolean);
+}
+
+/**
+ * @param {object} dest — destination エントリ
+ * @returns {{ heading: string, links: Array, hubLinks?: {heading, links}, nearbyLinks?: Array }}
  */
 export function buildHotelLinks(dest) {
   /* ── 現地宿（必須） ── */
@@ -178,6 +239,12 @@ export function buildHotelLinks(dest) {
         ],
       };
     }
+  }
+
+  /* ── 近隣ホテル（距離30km以内の別エリア） ── */
+  const nearbyLinks = buildNearbyHotelLinks(dest);
+  if (nearbyLinks?.length) {
+    result.nearbyLinks = nearbyLinks;
   }
 
   return result;

@@ -989,23 +989,52 @@ function _buildAccessLocalSection(mapLocal, filledSteps, city) {
 /* ── 宿泊ブロック ── */
 
 function buildHotelSection(section) {
-  const buttonsHtml = section.links.map(l =>
-    `<a href="${l.url}" target="_blank" rel="nofollow sponsored noopener" class="stay-btn stay-btn--${l.type}">${l.label}</a>`
-  ).join('');
-  return `<p class="stay-label">${section.heading}</p><div class="stay-buttons">${buttonsHtml}</div>`;
+  const [primary, secondary] = section.links;
+  const primaryHtml = primary
+    ? `<a href="${primary.url}" target="_blank" rel="nofollow sponsored noopener"
+          class="stay-btn stay-btn--${primary.type}"
+          aria-label="${primary.label}">最安値を見る</a>`
+    : '';
+  const secondaryHtml = secondary
+    ? `<a href="${secondary.url}" target="_blank" rel="nofollow sponsored noopener"
+          class="stay-btn stay-btn--${secondary.type} stay-btn--secondary"
+          aria-label="${secondary.label}">じゃらんでも比較</a>`
+    : '';
+  const subHtml = section.links.length > 0
+    ? `<p class="stay-sub">楽天・じゃらんで空室確認</p>`
+    : '';
+  return `
+    <p class="stay-label">${section.heading}</p>
+    <div class="stay-buttons">${primaryHtml}${secondaryHtml}</div>
+    ${subHtml}
+  `;
 }
 
 function buildStayBlock(hotelLinks) {
   if (!hotelLinks?.links?.length) return '';
-  // 表示順: 現地 → ハブ
+
   let hubHtml = '';
   if (hotelLinks.hubLinks?.links?.length) {
     hubHtml = buildHotelSection(hotelLinks.hubLinks);
   }
+
+  let nearbyHtml = '';
+  if (hotelLinks.nearbyLinks?.length) {
+    const sectionsHtml = hotelLinks.nearbyLinks
+      .map(n => buildHotelSection(n))
+      .join('');
+    nearbyHtml = `
+      <div class="stay-nearby">
+        <p class="stay-nearby-heading">アクセスの良い街で泊まる</p>
+        ${sectionsHtml}
+      </div>`;
+  }
+
   return `
     <div class="stay-block">
       ${buildHotelSection(hotelLinks)}
       ${hubHtml}
+      ${nearbyHtml}
     </div>`;
 }
 

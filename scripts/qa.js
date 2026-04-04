@@ -1383,6 +1383,53 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8n] 交通ロジック品質チェック
+     - mountain/remote で flight のみ → FAIL
+     - steps=0 → FAIL（[8l]と重複だが独立チェック）
+  ─────────────────────────────── */
+  {
+    const { resolveRoute } = await import('../src/engine/routeResolver.js');
+    const sc = new Scorecard('[8n] 交通ロジック品質');
+
+    const flightMountain = [];  // mountain/remote に flight ルート
+    const zeroSteps      = [];  // steps = 0
+
+    const MOUNTAIN_DESTS = DESTS.filter(
+      d => d.destType === 'mountain' || d.destType === 'remote' || d.requiresCar
+    );
+
+    const DEPARTURES_SAMPLE = ['東京', '大阪', '名古屋'];
+
+    for (const dep of DEPARTURES_SAMPLE) {
+      for (const dest of MOUNTAIN_DESTS) {
+        const result = resolveRoute(dep, dest);
+        if (!result) continue;
+        const steps = result.steps ?? [];
+        if (steps.length === 0) {
+          zeroSteps.push(`${dep}→${dest.id}`);
+        }
+        if (steps.some(s => s.type === 'flight')) {
+          flightMountain.push(`${dep}→${dest.id}`);
+        }
+      }
+    }
+
+    sc.check(flightMountain.length === 0,
+      flightMountain.length === 0
+        ? `mountain/remote に flight なし（全${MOUNTAIN_DESTS.length}件×${DEPARTURES_SAMPLE.length}出発地 正常）`
+        : `mountain/remote に flight ${flightMountain.length}件: ${flightMountain.slice(0, 3).join(', ')}`
+    );
+    sc.check(zeroSteps.length === 0,
+      zeroSteps.length === 0
+        ? 'steps=0 なし'
+        : `steps=0 が ${zeroSteps.length}件: ${zeroSteps.slice(0, 3).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8m] コンテンツ品質チェック
      - catch 未設定 → NG
      - catch が 30文字超 → NG

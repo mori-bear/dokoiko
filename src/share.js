@@ -55,24 +55,23 @@ export function buildShareText(city, departure) {
 export function openXShare(city, departure) {
   const name      = city.displayName || city.name;
   const url       = location.href;
-  const tweetText = `これ出たんやけど当たり？笑\n\n${departure} → ${name}`;
-  const params    = new URLSearchParams({ text: tweetText, url });
+  const tweetText = `${departure} → ${name} どこ行こ？で出た`;
   window.open(
-    `https://twitter.com/intent/tweet?${params.toString()}`,
+    `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(tweetText)}`,
     '_blank',
     'noopener,noreferrer,width=550,height=420',
   );
 }
 
-/** シェアテキストをクリップボードにコピー */
+/** URLをクリップボードにコピー */
 export async function copyShareText(city, departure) {
-  const text = buildShareText(city, departure);
+  const url = location.href;
   if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(url);
   } else {
     // フォールバック（古いブラウザ・非HTTPS）
     const el = document.createElement('textarea');
-    el.value = text;
+    el.value = url;
     el.style.cssText = 'position:fixed;top:-9999px;left:-9999px';
     document.body.appendChild(el);
     el.select();

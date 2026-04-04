@@ -21,7 +21,9 @@
     "rakutenKeyword": "三重県 伊勢市",
     "jalanCode": "240020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%88%C9%90%A8%8E%73",
-    "jalanKeyword": "三重県 伊勢市"
+    "jalanKeyword": "三重県 伊勢市",
+    "lat": 34.4888,
+    "lng": 136.7115
   },
   {
     "id": "shirakawago",
@@ -34,7 +36,9 @@
     "jalanCode": "210070",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%94%92%90%EC%91%BA",
     "city": "大野郡白川村",
-    "jalanKeyword": "岐阜県 白川村"
+    "jalanKeyword": "岐阜県 白川村",
+    "lat": 36.2577,
+    "lng": 136.9051
   },
   {
     "id": "takayama",
@@ -46,7 +50,9 @@
     "rakutenKeyword": "岐阜県 岐阜高山",
     "jalanCode": "210060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%8A%F2%95%8C%8D%82%8E%52",
-    "jalanKeyword": "岐阜県 岐阜高山"
+    "jalanKeyword": "岐阜県 岐阜高山",
+    "lat": 36.1461,
+    "lng": 137.2518
   },
   {
     "id": "toba",
@@ -58,7 +64,9 @@
     "rakutenKeyword": "三重県 鳥羽市",
     "jalanCode": "240040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%92%B9%89%48%8E%73",
-    "jalanKeyword": "三重県 鳥羽市"
+    "jalanKeyword": "三重県 鳥羽市",
+    "lat": 34.4828,
+    "lng": 136.844
   },
   {
     "id": "inuyama",
@@ -70,7 +78,9 @@
     "rakutenKeyword": "愛知県 犬山市",
     "jalanCode": "230040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%8C%A2%8E%52%8E%73",
-    "jalanKeyword": "愛知県 犬山市"
+    "jalanKeyword": "愛知県 犬山市",
+    "lat": 35.3836,
+    "lng": 136.9434
   },
   {
     "id": "kiso",
@@ -82,7 +92,9 @@
     "rakutenKeyword": "長野県 木曽町",
     "jalanCode": "200060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%96%D8%91%5D%92%AC",
-    "jalanKeyword": "長野県 木曽町"
+    "jalanKeyword": "長野県 木曽町",
+    "lat": 35.7543,
+    "lng": 137.7141
   },
   {
     "id": "kanazawa",
@@ -106,7 +118,9 @@
     "rakutenKeyword": "石川県 輪島市",
     "jalanCode": "170030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%97%D6%93%87%8E%73",
-    "jalanKeyword": "石川県 輪島市"
+    "jalanKeyword": "石川県 輪島市",
+    "lat": 37.3895,
+    "lng": 136.8952
   },
   {
     "id": "kaga-onsen",
@@ -118,7 +132,9 @@
     "rakutenKeyword": "石川県 加賀市",
     "jalanCode": "170020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%89%C1%89%EA%8E%73",
-    "jalanKeyword": "石川県 加賀市"
+    "jalanKeyword": "石川県 加賀市",
+    "lat": 36.2991,
+    "lng": 136.3102
   },
   {
     "id": "gokayama",
@@ -130,7 +146,9 @@
     "rakutenKeyword": "富山県 南砺市",
     "jalanCode": "160020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%93%EC%93%76%8E%73",
-    "jalanKeyword": "富山県 南砺市"
+    "jalanKeyword": "富山県 南砺市",
+    "lat": 36.2383,
+    "lng": 136.8899
   },
   {
     "id": "himi",
@@ -142,7 +160,9 @@
     "rakutenKeyword": "富山県 氷見市",
     "jalanCode": "160010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%95%58%8C%A9%8E%73",
-    "jalanKeyword": "富山県 氷見市"
+    "jalanKeyword": "富山県 氷見市",
+    "lat": 36.8561,
+    "lng": 136.9879
   },
   {
     "id": "gifu",
@@ -190,7 +210,9 @@
     "rakutenKeyword": "静岡県 熱海市",
     "jalanCode": "220010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%94%4D%8A%43%8E%73",
-    "jalanKeyword": "静岡県 熱海市"
+    "jalanKeyword": "静岡県 熱海市",
+    "lat": 35.0963,
+    "lng": 139.0722
   },
   {
     "id": "fujikawaguchiko",
@@ -202,7 +224,9 @@
     "rakutenKeyword": "山梨県 山梨富士河口湖",
     "jalanCode": "190010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%97%9C%8C%A7%20%8E%52%97%9C%95%78%8E%6D%89%CD%8C%FB%8C%CE",
-    "jalanKeyword": "山梨県 山梨富士河口湖"
+    "jalanKeyword": "山梨県 山梨富士河口湖",
+    "lat": 35.5028,
+    "lng": 138.7536
   },
   {
     "id": "shuzenji",
@@ -214,7 +238,9 @@
     "rakutenKeyword": "静岡県 伊豆市",
     "jalanCode": "220020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%88%C9%93%A4%8E%73",
-    "jalanKeyword": "静岡県 伊豆市"
+    "jalanKeyword": "静岡県 伊豆市",
+    "lat": 34.9735,
+    "lng": 138.9291
   },
   {
     "id": "shimoda",
@@ -226,7 +252,9 @@
     "rakutenKeyword": "静岡県 下田市",
     "jalanCode": "220060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%89%BA%93%63%8E%73",
-    "jalanKeyword": "静岡県 下田市"
+    "jalanKeyword": "静岡県 下田市",
+    "lat": 34.6758,
+    "lng": 138.945
   },
   {
     "id": "hakuba",
@@ -238,7 +266,9 @@
     "rakutenKeyword": "長野県 白馬村",
     "jalanCode": "200020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%94%92%94%6E%91%BA",
-    "jalanKeyword": "長野県 白馬村"
+    "jalanKeyword": "長野県 白馬村",
+    "lat": 36.6982,
+    "lng": 137.8605
   },
   {
     "id": "tateyama-kurobe",
@@ -250,7 +280,9 @@
     "rakutenKeyword": "富山県 立山町",
     "jalanCode": "160030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%97%A7%8E%52%92%AC",
-    "jalanKeyword": "富山県 立山町"
+    "jalanKeyword": "富山県 立山町",
+    "lat": 36.5731,
+    "lng": 137.6221
   },
   {
     "id": "hiroshima",
@@ -274,7 +306,9 @@
     "rakutenKeyword": "広島県 廿日市市",
     "jalanCode": "340060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%93%F9%93%FA%8E%73%8E%73",
-    "jalanKeyword": "広島県 廿日市市"
+    "jalanKeyword": "広島県 廿日市市",
+    "lat": 34.2981,
+    "lng": 132.3194
   },
   {
     "id": "onomichi",
@@ -286,7 +320,9 @@
     "rakutenKeyword": "広島県 尾道市",
     "jalanCode": "340020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%94%F6%93%B9%8E%73",
-    "jalanKeyword": "広島県 尾道市"
+    "jalanKeyword": "広島県 尾道市",
+    "lat": 34.4087,
+    "lng": 133.2028
   },
   {
     "id": "kurashiki",
@@ -298,7 +334,9 @@
     "rakutenKeyword": "岡山県 岡山倉敷",
     "jalanCode": "330020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%89%AA%8E%52%91%71%95%7E",
-    "jalanKeyword": "岡山県 岡山倉敷"
+    "jalanKeyword": "岡山県 岡山倉敷",
+    "lat": 34.5853,
+    "lng": 133.7725
   },
   {
     "id": "hagi",
@@ -310,7 +348,9 @@
     "rakutenKeyword": "山口県 萩市",
     "jalanCode": "350020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%94%8B%8E%73",
-    "jalanKeyword": "山口県 萩市"
+    "jalanKeyword": "山口県 萩市",
+    "lat": 34.4077,
+    "lng": 131.399
   },
   {
     "id": "shimonoseki",
@@ -322,7 +362,9 @@
     "rakutenKeyword": "山口県 下関市",
     "jalanCode": "350010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%89%BA%8A%D6%8E%73",
-    "jalanKeyword": "山口県 下関市"
+    "jalanKeyword": "山口県 下関市",
+    "lat": 33.9543,
+    "lng": 130.9419
   },
   {
     "id": "tottori",
@@ -334,7 +376,9 @@
     "rakutenKeyword": "鳥取県 鳥取市",
     "jalanCode": "310010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%92%B9%8E%E6%8E%73",
-    "jalanKeyword": "鳥取県 鳥取市"
+    "jalanKeyword": "鳥取県 鳥取市",
+    "lat": 35.5013,
+    "lng": 134.2351
   },
   {
     "id": "tsuwano",
@@ -346,7 +390,9 @@
     "rakutenKeyword": "島根県 津和野町",
     "jalanCode": "320030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%92%C3%98%61%96%EC%92%AC",
-    "jalanKeyword": "島根県 津和野町"
+    "jalanKeyword": "島根県 津和野町",
+    "lat": 34.4657,
+    "lng": 131.775
   },
   {
     "id": "okayama",
@@ -382,7 +428,9 @@
     "rakutenKeyword": "北海道 小樽市",
     "jalanCode": "010140",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8F%AC%92%4D%8E%73",
-    "jalanKeyword": "北海道 小樽市"
+    "jalanKeyword": "北海道 小樽市",
+    "lat": 43.1907,
+    "lng": 140.9946
   },
   {
     "id": "furano",
@@ -394,7 +442,9 @@
     "rakutenKeyword": "北海道 富良野市",
     "jalanCode": "010170",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%95%78%97%C7%96%EC%8E%73",
-    "jalanKeyword": "北海道 富良野市"
+    "jalanKeyword": "北海道 富良野市",
+    "lat": 43.342,
+    "lng": 142.3834
   },
   {
     "id": "toyako",
@@ -406,7 +456,9 @@
     "rakutenKeyword": "北海道 洞爺湖町",
     "jalanCode": "010140",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%93%B4%96%EA%8C%CE%92%AC",
-    "jalanKeyword": "北海道 洞爺湖町"
+    "jalanKeyword": "北海道 洞爺湖町",
+    "lat": 42.5966,
+    "lng": 140.8045
   },
   {
     "id": "noboribetsu",
@@ -418,7 +470,9 @@
     "rakutenKeyword": "北海道 登別市",
     "jalanCode": "010130",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%93%6F%95%CA%8E%73",
-    "jalanKeyword": "北海道 登別市"
+    "jalanKeyword": "北海道 登別市",
+    "lat": 42.4154,
+    "lng": 141.1063
   },
   {
     "id": "shiretoko",
@@ -430,7 +484,9 @@
     "rakutenKeyword": "北海道 斜里町",
     "jalanCode": "010290",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8E%CE%97%A2%92%AC",
-    "jalanKeyword": "北海道 斜里町"
+    "jalanKeyword": "北海道 斜里町",
+    "lat": 44.078,
+    "lng": 144.97
   },
   {
     "id": "jozankei",
@@ -442,7 +498,9 @@
     "rakutenKeyword": "北海道 札幌市",
     "jalanCode": "010220",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8E%44%96%79%8E%73",
-    "jalanKeyword": "北海道 札幌市"
+    "jalanKeyword": "北海道 札幌市",
+    "lat": 42.9775,
+    "lng": 141.0938
   },
   {
     "id": "biei",
@@ -454,7 +512,9 @@
     "rakutenKeyword": "北海道 美瑛町",
     "jalanCode": "010370",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%94%FC%89%6C%92%AC",
-    "jalanKeyword": "北海道 美瑛町"
+    "jalanKeyword": "北海道 美瑛町",
+    "lat": 43.5859,
+    "lng": 142.4746
   },
   {
     "id": "hokkaido-asahikawa",
@@ -466,7 +526,9 @@
     "rakutenKeyword": "北海道 旭川市",
     "jalanCode": "010060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%88%AE%90%EC%8E%73",
-    "jalanKeyword": "北海道 旭川市"
+    "jalanKeyword": "北海道 旭川市",
+    "lat": 43.7707,
+    "lng": 142.3651
   },
   {
     "id": "hokkaido-kushiro",
@@ -478,7 +540,9 @@
     "rakutenKeyword": "北海道 釧路市",
     "jalanCode": "010110",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8B%FA%98%48%8E%73",
-    "jalanKeyword": "北海道 釧路市"
+    "jalanKeyword": "北海道 釧路市",
+    "lat": 42.9846,
+    "lng": 144.3817
   },
   {
     "id": "hokkaido-hakodate",
@@ -490,7 +554,9 @@
     "rakutenKeyword": "北海道 函館市",
     "jalanCode": "010050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%94%9F%8A%D9%8E%73",
-    "jalanKeyword": "北海道 函館市"
+    "jalanKeyword": "北海道 函館市",
+    "lat": 41.7688,
+    "lng": 140.729
   },
   {
     "id": "osaka",
@@ -514,7 +580,9 @@
     "rakutenKeyword": "奈良県 奈良市",
     "jalanCode": "290010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%93%DE%97%C7%8E%73",
-    "jalanKeyword": "奈良県 奈良市"
+    "jalanKeyword": "奈良県 奈良市",
+    "lat": 34.6851,
+    "lng": 135.8048
   },
   {
     "id": "arima-onsen",
@@ -526,7 +594,9 @@
     "rakutenKeyword": "兵庫県 神戸市",
     "jalanCode": "280010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%90%5F%8C%CB%8E%73",
-    "jalanKeyword": "兵庫県 神戸市"
+    "jalanKeyword": "兵庫県 神戸市",
+    "lat": 34.7988,
+    "lng": 135.2466
   },
   {
     "id": "kinosaki-onsen",
@@ -538,7 +608,9 @@
     "rakutenKeyword": "兵庫県 豊岡市",
     "jalanCode": "280060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%96%4C%89%AA%8E%73",
-    "jalanKeyword": "兵庫県 豊岡市"
+    "jalanKeyword": "兵庫県 豊岡市",
+    "lat": 35.6283,
+    "lng": 134.8053
   },
   {
     "id": "shirahama-o",
@@ -550,7 +622,9 @@
     "rakutenKeyword": "和歌山県 和歌山白浜",
     "jalanCode": "300020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%98%61%89%CC%8E%52%94%92%95%6C",
-    "jalanKeyword": "和歌山県 和歌山白浜"
+    "jalanKeyword": "和歌山県 和歌山白浜",
+    "lat": 33.6846,
+    "lng": 135.3568
   },
   {
     "id": "amanohashidate",
@@ -562,7 +636,9 @@
     "rakutenKeyword": "京都府 宮津市",
     "jalanCode": "260030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%8B%7B%92%C3%8E%73",
-    "jalanKeyword": "京都府 宮津市"
+    "jalanKeyword": "京都府 宮津市",
+    "lat": 35.5731,
+    "lng": 135.1836
   },
   {
     "id": "awaji",
@@ -574,7 +650,9 @@
     "rakutenKeyword": "兵庫県 兵庫淡路島",
     "jalanCode": "280070",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%95%BA%8C%C9%92%57%98%48%93%87",
-    "jalanKeyword": "兵庫県 兵庫淡路島"
+    "jalanKeyword": "兵庫県 兵庫淡路島",
+    "lat": 34.4289,
+    "lng": 134.87
   },
   {
     "id": "kyoto",
@@ -598,7 +676,9 @@
     "rakutenKeyword": "京都府 伊根町",
     "jalanCode": "260040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%88%C9%8D%AA%92%AC",
-    "jalanKeyword": "京都府 伊根町"
+    "jalanKeyword": "京都府 伊根町",
+    "lat": 35.6908,
+    "lng": 135.2668
   },
   {
     "id": "miyama",
@@ -610,7 +690,9 @@
     "rakutenKeyword": "京都府 南丹市",
     "jalanCode": "260050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%93%EC%92%4F%8E%73",
-    "jalanKeyword": "京都府 南丹市"
+    "jalanKeyword": "京都府 南丹市",
+    "lat": 35.2994,
+    "lng": 135.6126
   },
   {
     "id": "kobe",
@@ -658,7 +740,9 @@
     "rakutenKeyword": "神奈川県 横浜市",
     "jalanCode": "140020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%89%A1%95%6C%8E%73",
-    "jalanKeyword": "神奈川県 横浜市"
+    "jalanKeyword": "神奈川県 横浜市",
+    "lat": 35.4437,
+    "lng": 139.638
   },
   {
     "id": "tokyo",
@@ -682,7 +766,9 @@
     "rakutenKeyword": "神奈川県 鎌倉市",
     "jalanCode": "140050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%8A%99%91%71%8E%73",
-    "jalanKeyword": "神奈川県 鎌倉市"
+    "jalanKeyword": "神奈川県 鎌倉市",
+    "lat": 35.3197,
+    "lng": 139.5497
   },
   {
     "id": "nikko",
@@ -694,7 +780,9 @@
     "rakutenKeyword": "栃木県 日光市",
     "jalanCode": "090020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%93%FA%8C%F5%8E%73",
-    "jalanKeyword": "栃木県 日光市"
+    "jalanKeyword": "栃木県 日光市",
+    "lat": 36.7198,
+    "lng": 139.6981
   },
   {
     "id": "kouzushima",
@@ -706,7 +794,9 @@
     "rakutenKeyword": "東京都 神津島村",
     "jalanCode": "130120",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%90%5F%92%C3%93%87%91%BA",
-    "jalanKeyword": "東京都 神津島村"
+    "jalanKeyword": "東京都 神津島村",
+    "lat": 34.2073,
+    "lng": 139.1385
   },
   {
     "id": "hakone",
@@ -718,7 +808,9 @@
     "rakutenKeyword": "神奈川県 箱根町",
     "jalanCode": "140060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%94%A0%8D%AA%92%AC",
-    "jalanKeyword": "神奈川県 箱根町"
+    "jalanKeyword": "神奈川県 箱根町",
+    "lat": 35.2325,
+    "lng": 139.1067
   },
   {
     "id": "kusatsu-onsen",
@@ -730,7 +822,9 @@
     "rakutenKeyword": "群馬県 草津町",
     "jalanCode": "100050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%91%90%92%C3%92%AC",
-    "jalanKeyword": "群馬県 草津町"
+    "jalanKeyword": "群馬県 草津町",
+    "lat": 36.6199,
+    "lng": 138.5968
   },
   {
     "id": "izu-oshima",
@@ -742,7 +836,9 @@
     "rakutenKeyword": "東京都 大島町",
     "jalanCode": "130100",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%91%E5%93%87%92%AC",
-    "jalanKeyword": "東京都 大島町"
+    "jalanKeyword": "東京都 大島町",
+    "lat": 34.7248,
+    "lng": 139.3962
   },
   {
     "id": "takao",
@@ -755,7 +851,9 @@
     "jalanCode": "130030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%94%AA%89%A4%8E%71%8E%73",
     "city": "八王子市",
-    "jalanKeyword": "東京都 八王子市"
+    "jalanKeyword": "東京都 八王子市",
+    "lat": 35.6251,
+    "lng": 139.2437
   },
   {
     "id": "tateyama-chiba",
@@ -767,7 +865,9 @@
     "rakutenKeyword": "千葉県 千葉館山",
     "jalanCode": "120110",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%90%E7%97%74%8A%D9%8E%52",
-    "jalanKeyword": "千葉県 千葉館山"
+    "jalanKeyword": "千葉県 千葉館山",
+    "lat": 34.996,
+    "lng": 139.8682
   },
   {
     "id": "fukuoka",
@@ -815,7 +915,9 @@
     "rakutenKeyword": "大分県 由布市",
     "jalanCode": "440020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%97%52%95%7A%8E%73",
-    "jalanKeyword": "大分県 由布市"
+    "jalanKeyword": "大分県 由布市",
+    "lat": 33.2641,
+    "lng": 131.3644
   },
   {
     "id": "kurokawa",
@@ -828,7 +930,9 @@
     "jalanCode": "430060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%93%EC%8F%AC%8D%91%92%AC",
     "city": "阿蘇郡南小国町",
-    "jalanKeyword": "熊本県 南小国町"
+    "jalanKeyword": "熊本県 南小国町",
+    "lat": 33.1022,
+    "lng": 131.0543
   },
   {
     "id": "aso",
@@ -840,7 +944,9 @@
     "rakutenKeyword": "熊本県 阿蘇市",
     "jalanCode": "430020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%88%A2%91%68%8E%73",
-    "jalanKeyword": "熊本県 阿蘇市"
+    "jalanKeyword": "熊本県 阿蘇市",
+    "lat": 32.8838,
+    "lng": 131.0878
   },
   {
     "id": "takachiho",
@@ -852,7 +958,9 @@
     "rakutenKeyword": "宮崎県 高千穂町",
     "jalanCode": "450030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%8D%82%90%E7%95%E4%92%AC",
-    "jalanKeyword": "宮崎県 高千穂町"
+    "jalanKeyword": "宮崎県 高千穂町",
+    "lat": 32.7081,
+    "lng": 131.3003
   },
   {
     "id": "nagasaki",
@@ -876,7 +984,9 @@
     "rakutenKeyword": "長崎県 佐世保市",
     "jalanCode": "420030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%8D%B2%90%A2%95%DB%8E%73",
-    "jalanKeyword": "長崎県 佐世保市"
+    "jalanKeyword": "長崎県 佐世保市",
+    "lat": 33.1603,
+    "lng": 129.715
   },
   {
     "id": "hirado",
@@ -888,7 +998,9 @@
     "rakutenKeyword": "長崎県 平戸市",
     "jalanCode": "420040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%95%BD%8C%CB%8E%73",
-    "jalanKeyword": "長崎県 平戸市"
+    "jalanKeyword": "長崎県 平戸市",
+    "lat": 33.3696,
+    "lng": 129.5492
   },
   {
     "id": "goto",
@@ -900,7 +1012,9 @@
     "rakutenKeyword": "長崎県 五島市",
     "jalanCode": "420060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%8C%DC%93%87%8E%73",
-    "jalanKeyword": "長崎県 五島市"
+    "jalanKeyword": "長崎県 五島市",
+    "lat": 32.693,
+    "lng": 128.8356
   },
   {
     "id": "unzen",
@@ -912,7 +1026,9 @@
     "rakutenKeyword": "長崎県 雲仙市",
     "jalanCode": "420050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%89%5F%90%E5%8E%73",
-    "jalanKeyword": "長崎県 雲仙市"
+    "jalanKeyword": "長崎県 雲仙市",
+    "lat": 32.7561,
+    "lng": 130.276
   },
   {
     "id": "kagoshima",
@@ -936,7 +1052,9 @@
     "rakutenKeyword": "鹿児島県 屋久島町",
     "jalanCode": "460040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%89%AE%8B%76%93%87%92%AC",
-    "jalanKeyword": "鹿児島県 屋久島町"
+    "jalanKeyword": "鹿児島県 屋久島町",
+    "lat": 30.3928,
+    "lng": 130.6576
   },
   {
     "id": "ibusuki",
@@ -948,7 +1066,9 @@
     "rakutenKeyword": "鹿児島県 指宿市",
     "jalanCode": "460010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%8E%77%8F%68%8E%73",
-    "jalanKeyword": "鹿児島県 指宿市"
+    "jalanKeyword": "鹿児島県 指宿市",
+    "lat": 31.2517,
+    "lng": 130.6306
   },
   {
     "id": "amami",
@@ -960,7 +1080,9 @@
     "rakutenKeyword": "鹿児島県 奄美市",
     "jalanCode": "460020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%89%82%94%FC%8E%73",
-    "jalanKeyword": "鹿児島県 奄美市"
+    "jalanKeyword": "鹿児島県 奄美市",
+    "lat": 28.3769,
+    "lng": 129.4934
   },
   {
     "id": "miyazaki",
@@ -984,7 +1106,9 @@
     "rakutenKeyword": "大分県 別府市",
     "jalanCode": "440030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%95%CA%95%7B%8E%73",
-    "jalanKeyword": "大分県 別府市"
+    "jalanKeyword": "大分県 別府市",
+    "lat": 33.2882,
+    "lng": 131.4917
   },
   {
     "id": "amakusa",
@@ -996,7 +1120,9 @@
     "rakutenKeyword": "熊本県 天草市",
     "jalanCode": "430040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%93%56%91%90%8E%73",
-    "jalanKeyword": "熊本県 天草市"
+    "jalanKeyword": "熊本県 天草市",
+    "lat": 32.4562,
+    "lng": 130.1906
   },
   {
     "id": "naha",
@@ -1020,7 +1146,9 @@
     "rakutenKeyword": "沖縄県 石垣市",
     "jalanCode": "470030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%90%CE%8A%5F%8E%73",
-    "jalanKeyword": "沖縄県 石垣市"
+    "jalanKeyword": "沖縄県 石垣市",
+    "lat": 24.3448,
+    "lng": 124.1572
   },
   {
     "id": "kumejima",
@@ -1032,7 +1160,9 @@
     "rakutenKeyword": "沖縄県 久米島町",
     "jalanCode": "470060",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8B%76%95%C4%93%87%92%AC",
-    "jalanKeyword": "沖縄県 久米島町"
+    "jalanKeyword": "沖縄県 久米島町",
+    "lat": 26.3394,
+    "lng": 126.8038
   },
   {
     "id": "miyakojima",
@@ -1044,7 +1174,9 @@
     "rakutenKeyword": "沖縄県 宮古島市",
     "jalanCode": "470040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8B%7B%8C%C3%93%87%8E%73",
-    "jalanKeyword": "沖縄県 宮古島市"
+    "jalanKeyword": "沖縄県 宮古島市",
+    "lat": 24.8057,
+    "lng": 125.2813
   },
   {
     "id": "matsuyama",
@@ -1068,7 +1200,9 @@
     "rakutenKeyword": "愛媛県 宇和島市",
     "jalanCode": "380020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%89%46%98%61%93%87%8E%73",
-    "jalanKeyword": "愛媛県 宇和島市"
+    "jalanKeyword": "愛媛県 宇和島市",
+    "lat": 33.2234,
+    "lng": 132.5641
   },
   {
     "id": "tokushima",
@@ -1104,7 +1238,9 @@
     "rakutenKeyword": "高知県 土佐清水市",
     "jalanCode": "390020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%93%79%8D%B2%90%B4%90%85%8E%73",
-    "jalanKeyword": "高知県 土佐清水市"
+    "jalanKeyword": "高知県 土佐清水市",
+    "lat": 32.7281,
+    "lng": 133.0149
   },
   {
     "id": "naoshima",
@@ -1116,7 +1252,9 @@
     "rakutenKeyword": "香川県 直島町",
     "jalanCode": "370020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%92%BC%93%87%92%AC",
-    "jalanKeyword": "香川県 直島町"
+    "jalanKeyword": "香川県 直島町",
+    "lat": 34.4611,
+    "lng": 133.9965
   },
   {
     "id": "kotohira",
@@ -1128,7 +1266,9 @@
     "rakutenKeyword": "香川県 琴平町",
     "jalanCode": "370030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8B%D5%95%BD%92%AC",
-    "jalanKeyword": "香川県 琴平町"
+    "jalanKeyword": "香川県 琴平町",
+    "lat": 34.1893,
+    "lng": 133.8244
   },
   {
     "id": "oboke",
@@ -1140,7 +1280,9 @@
     "rakutenKeyword": "徳島県 三好市",
     "jalanCode": "360030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%8E%4F%8D%44%8E%73",
-    "jalanKeyword": "徳島県 三好市"
+    "jalanKeyword": "徳島県 三好市",
+    "lat": 33.9021,
+    "lng": 133.8939
   },
   {
     "id": "sendai",
@@ -1164,7 +1306,9 @@
     "rakutenKeyword": "宮城県 松島町",
     "jalanCode": "040030",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%8F%BC%93%87%92%AC",
-    "jalanKeyword": "宮城県 松島町"
+    "jalanKeyword": "宮城県 松島町",
+    "lat": 38.368,
+    "lng": 141.0652
   },
   {
     "id": "hiraizumi",
@@ -1176,7 +1320,9 @@
     "rakutenKeyword": "岩手県 平泉町",
     "jalanCode": "030020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%95%BD%90%F2%92%AC",
-    "jalanKeyword": "岩手県 平泉町"
+    "jalanKeyword": "岩手県 平泉町",
+    "lat": 38.9873,
+    "lng": 141.1108
   },
   {
     "id": "kakunodate",
@@ -1188,7 +1334,9 @@
     "rakutenKeyword": "秋田県 仙北市",
     "jalanCode": "050010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%90%E5%96%6B%8E%73",
-    "jalanKeyword": "秋田県 仙北市"
+    "jalanKeyword": "秋田県 仙北市",
+    "lat": 39.5986,
+    "lng": 140.5597
   },
   {
     "id": "aizu",
@@ -1201,7 +1349,9 @@
     "jalanCode": "070020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%89%EF%92%C3%8E%E1%8F%BC%8E%73",
     "city": "会津若松市",
-    "jalanKeyword": "福島県 会津若松市"
+    "jalanKeyword": "福島県 会津若松市",
+    "lat": 37.4936,
+    "lng": 139.9308
   },
   {
     "id": "zaosan",
@@ -1213,7 +1363,9 @@
     "rakutenKeyword": "宮城県 宮城蔵王",
     "jalanCode": "060010",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%8B%7B%8F%E9%91%A0%89%A4",
-    "jalanKeyword": "宮城県 宮城蔵王"
+    "jalanKeyword": "宮城県 宮城蔵王",
+    "lat": 38.1389,
+    "lng": 140.4494
   },
   {
     "id": "akita",
@@ -1225,7 +1377,9 @@
     "rakutenKeyword": "秋田県 秋田市",
     "jalanCode": "050020",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%8F%48%93%63%8E%73",
-    "jalanKeyword": "秋田県 秋田市"
+    "jalanKeyword": "秋田県 秋田市",
+    "lat": 39.7187,
+    "lng": 140.1023
   },
   {
     "id": "sakata",
@@ -1237,7 +1391,9 @@
     "rakutenKeyword": "山形県 酒田市",
     "jalanCode": "060040",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8E%F0%93%63%8E%73",
-    "jalanKeyword": "山形県 酒田市"
+    "jalanKeyword": "山形県 酒田市",
+    "lat": 38.9136,
+    "lng": 139.8368
   },
   {
     "id": "yamagata",
@@ -1273,7 +1429,9 @@
     "rakutenKeyword": "岩手県 宮古市",
     "jalanCode": "030050",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%8B%7B%8C%C3%8E%73",
-    "jalanKeyword": "岩手県 宮古市"
+    "jalanKeyword": "岩手県 宮古市",
+    "lat": 39.6409,
+    "lng": 141.9574
   },
   {
     "id": "karuizawa",
@@ -1285,7 +1443,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8C%79%88%E4%91%F2%92%AC",
     "jalanKeyword": "長野県 軽井沢町",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/"
+    "rakutenFallback": "/yado/nagano/",
+    "lat": 36.3491,
+    "lng": 138.5963
   },
   {
     "id": "shodoshima",
@@ -1297,7 +1457,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8F%AC%93%A4%93%87%92%AC",
     "jalanKeyword": "香川県 小豆島町",
     "prefCode": "kagawa",
-    "rakutenFallback": "/yado/kagawa/takamatsu.html"
+    "rakutenFallback": "/yado/kagawa/takamatsu.html",
+    "lat": 34.4805,
+    "lng": 134.1677
   },
   {
     "id": "mihonoseki",
@@ -1309,7 +1471,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%8F%BC%8D%5D%8E%73",
     "jalanKeyword": "島根県 松江市",
     "prefCode": "shimane",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 35.5748,
+    "lng": 133.3122
   },
   {
     "id": "ryujin-onsen",
@@ -1321,7 +1485,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%93%63%95%D3%8E%73",
     "jalanKeyword": "和歌山県 田辺市",
     "prefCode": "wakayama",
-    "rakutenFallback": "/yado/wakayama/shirahama.html"
+    "rakutenFallback": "/yado/wakayama/shirahama.html",
+    "lat": 33.9547,
+    "lng": 135.6393
   },
   {
     "id": "tokashiki-jima",
@@ -1333,7 +1499,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%93%6E%89%C3%95%7E%91%BA",
     "jalanKeyword": "沖縄県 渡嘉敷村",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.1936,
+    "lng": 127.3551
   },
   {
     "id": "nyuto-onsen",
@@ -1345,7 +1513,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%90%E5%96%6B%8E%73",
     "jalanKeyword": "秋田県 仙北市",
     "prefCode": "akita",
-    "rakutenPath": "/yado/akita/"
+    "rakutenPath": "/yado/akita/",
+    "lat": 39.78,
+    "lng": 140.657
   },
   {
     "id": "yuda-onsen",
@@ -1357,7 +1527,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%8E%52%8C%FB%8E%73",
     "jalanKeyword": "山口県 山口市",
     "prefCode": "yamaguchi",
-    "rakutenPath": "/yado/yamaguchi/"
+    "rakutenPath": "/yado/yamaguchi/",
+    "lat": 34.1759,
+    "lng": 131.4655
   },
   {
     "id": "ureshino-onsen",
@@ -1369,7 +1541,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%B2%89%EA%8C%A7%20%8A%F0%96%EC%8E%73",
     "jalanKeyword": "佐賀県 嬉野市",
     "prefCode": "saga",
-    "rakutenPath": "/yado/saga/ureshino.html"
+    "rakutenPath": "/yado/saga/ureshino.html",
+    "lat": 33.1076,
+    "lng": 129.9943
   },
   {
     "id": "obuse",
@@ -1381,7 +1555,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%AC%95%7A%8E%7B%92%AC",
     "jalanKeyword": "長野県 小布施町",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/nagano.html"
+    "rakutenFallback": "/yado/nagano/nagano.html",
+    "lat": 36.6965,
+    "lng": 138.3115
   },
   {
     "id": "uchiko",
@@ -1393,7 +1569,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%93%E0%8E%71%92%AC",
     "jalanKeyword": "愛媛県 内子町",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 33.5407,
+    "lng": 132.6593
   },
   {
     "id": "muroto",
@@ -1405,7 +1583,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8E%BA%8C%CB%8E%73",
     "jalanKeyword": "高知県 室戸市",
     "prefCode": "kochi",
-    "rakutenFallback": "/yado/kochi/kochi.html"
+    "rakutenFallback": "/yado/kochi/kochi.html",
+    "lat": 33.2932,
+    "lng": 134.1576
   },
   {
     "id": "iya",
@@ -1417,7 +1597,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%8E%4F%8D%44%8E%73",
     "jalanKeyword": "徳島県 三好市",
     "prefCode": "tokushima",
-    "rakutenFallback": "/yado/tokushima/"
+    "rakutenFallback": "/yado/tokushima/",
+    "lat": 33.87,
+    "lng": 133.95
   },
   {
     "id": "oku-izumo",
@@ -1429,7 +1611,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%90%6D%91%BD%8C%53%89%9C%8F%6F%89%5F%92%AC",
     "jalanKeyword": "島根県 仁多郡奥出雲町",
     "prefCode": "shimane",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 35.0048,
+    "lng": 133.0082
   },
   {
     "id": "ginzan-onsen",
@@ -1441,7 +1625,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%94%F6%89%D4%91%F2%8E%73",
     "jalanKeyword": "山形県 尾花沢市",
     "prefCode": "yamagata",
-    "rakutenFallback": "/yado/yamagata/yamagata.html"
+    "rakutenFallback": "/yado/yamagata/yamagata.html",
+    "lat": 38.7012,
+    "lng": 140.6427
   },
   {
     "id": "ouchi-juku",
@@ -1453,7 +1639,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%93%EC%89%EF%92%C3%8C%53%89%BA%8B%BD%92%AC",
     "jalanKeyword": "福島県 南会津郡下郷町",
     "prefCode": "fukushima",
-    "rakutenFallback": "/yado/fukushima/aizu.html"
+    "rakutenFallback": "/yado/fukushima/aizu.html",
+    "lat": 37.0909,
+    "lng": 139.7858
   },
   {
     "id": "nozawa-onsen",
@@ -1465,7 +1653,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%89%BA%8D%82%88%E4%8C%53%96%EC%91%F2%89%B7%90%F2%91%BA",
     "jalanKeyword": "長野県 下高井郡野沢温泉村",
     "prefCode": "nagano",
-    "rakutenPath": "/yado/nagano/nozawa.html"
+    "rakutenPath": "/yado/nagano/nozawa.html",
+    "lat": 36.9118,
+    "lng": 138.4484
   },
   {
     "id": "takehara",
@@ -1477,7 +1667,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%92%7C%8C%B4%8E%73",
     "jalanKeyword": "広島県 竹原市",
     "prefCode": "hiroshima",
-    "rakutenFallback": "/yado/hiroshima/"
+    "rakutenFallback": "/yado/hiroshima/",
+    "lat": 34.3418,
+    "lng": 132.9054
   },
   {
     "id": "tsumago",
@@ -1489,7 +1681,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%96%D8%91%5D%92%AC",
     "jalanKeyword": "長野県 木曽町",
     "prefCode": "nagano",
-    "rakutenPath": "/yado/nagano/kiso.html"
+    "rakutenPath": "/yado/nagano/kiso.html",
+    "lat": 35.5505,
+    "lng": 137.5905
   },
   {
     "id": "magome",
@@ -1501,7 +1695,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%92%86%92%C3%90%EC%8E%73",
     "jalanKeyword": "岐阜県 中津川市",
     "prefCode": "gifu",
-    "rakutenFallback": "/yado/gifu/takayama.html"
+    "rakutenFallback": "/yado/gifu/takayama.html",
+    "lat": 35.5278,
+    "lng": 137.5916
   },
   {
     "id": "nagahama",
@@ -1513,7 +1709,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%92%B7%95%6C%8E%73",
     "jalanKeyword": "滋賀県 長浜市",
     "prefCode": "shiga",
-    "rakutenFallback": "/yado/shiga/shigaraki.html"
+    "rakutenFallback": "/yado/shiga/shigaraki.html",
+    "lat": 35.3747,
+    "lng": 136.2694
   },
   {
     "id": "hikone",
@@ -1525,7 +1723,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%95%46%8D%AA%8E%73",
     "jalanKeyword": "滋賀県 彦根市",
     "prefCode": "shiga",
-    "rakutenFallback": "/yado/shiga/shigaraki.html"
+    "rakutenFallback": "/yado/shiga/shigaraki.html",
+    "lat": 35.2762,
+    "lng": 136.2544
   },
   {
     "id": "koyasan",
@@ -1537,7 +1737,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%8D%82%96%EC%92%AC",
     "jalanKeyword": "和歌山県 高野町",
     "prefCode": "wakayama",
-    "rakutenFallback": "/yado/wakayama/wakayama.html"
+    "rakutenFallback": "/yado/wakayama/wakayama.html",
+    "lat": 34.2133,
+    "lng": 135.5848
   },
   {
     "id": "gero-onsen",
@@ -1550,7 +1752,9 @@
     "jalanKeyword": "岐阜県 下呂市",
     "prefCode": "gifu",
     "rakutenFallback": "/yado/gifu/takayama.html",
-    "rakutenPath": "/yado/gifu/gero.html"
+    "rakutenPath": "/yado/gifu/gero.html",
+    "lat": 35.8063,
+    "lng": 137.2458
   },
   {
     "id": "naruko-onsen",
@@ -1563,7 +1767,9 @@
     "jalanKeyword": "宮城県 大崎市",
     "prefCode": "miyagi",
     "rakutenFallback": "/yado/miyagi/sendai.html",
-    "rakutenPath": "/yado/miyagi/naruko.html"
+    "rakutenPath": "/yado/miyagi/naruko.html",
+    "lat": 38.7282,
+    "lng": 140.7286
   },
   {
     "id": "shima-onsen",
@@ -1575,7 +1781,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%8C%E1%8D%C8%8C%53%92%86%94%56%8F%F0%92%AC",
     "jalanKeyword": "群馬県 吾妻郡中之条町",
     "prefCode": "gunma",
-    "rakutenPath": "/yado/gunma/shimaonsen.html"
+    "rakutenPath": "/yado/gunma/shimaonsen.html",
+    "lat": 36.676,
+    "lng": 138.683
   },
   {
     "id": "hirosaki",
@@ -1587,7 +1795,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%8D%4F%91%4F%8E%73",
     "jalanKeyword": "青森県 弘前市",
     "prefCode": "aomori",
-    "rakutenPath": "/yado/aomori/hirosaki.html"
+    "rakutenPath": "/yado/aomori/hirosaki.html",
+    "lat": 40.6027,
+    "lng": 140.4641
   },
   {
     "id": "oirase",
@@ -1599,7 +1809,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%8F%5C%98%61%93%63%8E%73",
     "jalanKeyword": "青森県 十和田市",
     "prefCode": "aomori",
-    "rakutenFallback": "/yado/aomori/hirosaki.html"
+    "rakutenFallback": "/yado/aomori/hirosaki.html",
+    "lat": 40.5393,
+    "lng": 141.3793
   },
   {
     "id": "mashiko",
@@ -1611,7 +1823,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%89%76%8E%71%92%AC",
     "jalanKeyword": "栃木県 益子町",
     "prefCode": "tochigi",
-    "rakutenPath": "/yado/tochigi/mashiko.html"
+    "rakutenPath": "/yado/tochigi/mashiko.html",
+    "lat": 36.4708,
+    "lng": 140.1047
   },
   {
     "id": "bessho-onsen",
@@ -1623,7 +1837,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%E3%93%63%8E%73",
     "jalanKeyword": "長野県 上田市",
     "prefCode": "nagano",
-    "rakutenPath": "/yado/nagano/ueda.html"
+    "rakutenPath": "/yado/nagano/ueda.html",
+    "lat": 36.3451,
+    "lng": 138.1521
   },
   {
     "id": "izushi",
@@ -1635,7 +1851,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%96%4C%89%AA%8E%73",
     "jalanKeyword": "兵庫県 豊岡市",
     "prefCode": "hyogo",
-    "rakutenPath": "/yado/hyogo/"
+    "rakutenPath": "/yado/hyogo/",
+    "lat": 35.4862,
+    "lng": 134.8812
   },
   {
     "id": "wakura-onsen",
@@ -1647,7 +1865,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%8E%B5%94%F6%8E%73",
     "jalanKeyword": "石川県 七尾市",
     "prefCode": "ishikawa",
-    "rakutenFallback": "/yado/ishikawa/kanazawa.html"
+    "rakutenFallback": "/yado/ishikawa/kanazawa.html",
+    "lat": 37.0509,
+    "lng": 136.9983
   },
   {
     "id": "misasa-onsen",
@@ -1659,7 +1879,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%8E%4F%92%A9%92%AC",
     "jalanKeyword": "鳥取県 三朝町",
     "prefCode": "tottori",
-    "rakutenFallback": "/yado/tottori/tottori.html"
+    "rakutenFallback": "/yado/tottori/tottori.html",
+    "lat": 35.3779,
+    "lng": 133.83
   },
   {
     "id": "obi",
@@ -1671,7 +1893,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%93%FA%93%EC%8E%73",
     "jalanKeyword": "宮崎県 日南市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/miyazaki.html"
+    "rakutenFallback": "/yado/miyazaki/miyazaki.html",
+    "lat": 31.6604,
+    "lng": 131.3704
   },
   {
     "id": "hitoyoshi",
@@ -1683,7 +1907,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%90%6C%8B%67%8E%73",
     "jalanKeyword": "熊本県 人吉市",
     "prefCode": "kumamoto",
-    "rakutenFallback": "/yado/kumamoto/kumamoto.html"
+    "rakutenFallback": "/yado/kumamoto/kumamoto.html",
+    "lat": 32.2079,
+    "lng": 130.7645
   },
   {
     "id": "kamikochi",
@@ -1695,7 +1921,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%BC%96%7B%8E%73",
     "jalanKeyword": "長野県 松本市",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/"
+    "rakutenFallback": "/yado/nagano/",
+    "lat": 36.238,
+    "lng": 137.6524
   },
   {
     "id": "minakami-onsen",
@@ -1707,7 +1935,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%82%DD%82%C8%82%A9%82%DD%92%AC",
     "jalanKeyword": "群馬県 みなかみ町",
     "prefCode": "gunma",
-    "rakutenFallback": "/yado/gunma/"
+    "rakutenFallback": "/yado/gunma/",
+    "lat": 36.9115,
+    "lng": 138.9932
   },
   {
     "id": "minami-aso",
@@ -1719,7 +1949,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%93%EC%88%A2%91%68%91%BA",
     "jalanKeyword": "熊本県 南阿蘇村",
     "prefCode": "kumamoto",
-    "rakutenPath": "/yado/kumamoto/aso.html"
+    "rakutenPath": "/yado/kumamoto/aso.html",
+    "lat": 32.8193,
+    "lng": 131.0244
   },
   {
     "id": "imabari",
@@ -1731,7 +1963,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8D%A1%8E%A1%8E%73",
     "jalanKeyword": "愛媛県 今治市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 34.0658,
+    "lng": 132.9978
   },
   {
     "id": "ozu",
@@ -1743,7 +1977,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%91%E5%8F%46%8E%73",
     "jalanKeyword": "愛媛県 大洲市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 33.4982,
+    "lng": 132.5462
   },
   {
     "id": "shakotan",
@@ -1755,7 +1991,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%90%CF%92%4F%92%AC",
     "jalanKeyword": "北海道 積丹町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 43.2428,
+    "lng": 140.4563
   },
   {
     "id": "izumo",
@@ -1767,7 +2005,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%8F%6F%89%5F%8E%73",
     "jalanKeyword": "島根県 出雲市",
     "prefCode": "shimane",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 35.3676,
+    "lng": 132.7546
   },
   {
     "id": "suzu",
@@ -1779,7 +2019,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%8E%EC%8F%46%8E%73",
     "jalanKeyword": "石川県 珠洲市",
     "prefCode": "ishikawa",
-    "rakutenPath": "/yado/ishikawa/"
+    "rakutenPath": "/yado/ishikawa/",
+    "lat": 37.429,
+    "lng": 137.2648
   },
   {
     "id": "yoshino",
@@ -1791,7 +2033,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%8B%67%96%EC%92%AC",
     "jalanKeyword": "奈良県 吉野町",
     "prefCode": "nara",
-    "rakutenFallback": "/yado/nara/nara.html"
+    "rakutenFallback": "/yado/nara/nara.html",
+    "lat": 34.3699,
+    "lng": 135.8588
   },
   {
     "id": "kumano",
@@ -1803,7 +2047,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%8C%46%96%EC%8E%73",
     "jalanKeyword": "三重県 熊野市",
     "prefCode": "mie",
-    "rakutenPath": "/yado/mie/kumano.html"
+    "rakutenPath": "/yado/mie/kumano.html",
+    "lat": 33.72,
+    "lng": 135.9897
   },
   {
     "id": "iriomote",
@@ -1815,7 +2061,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%92%7C%95%78%92%AC",
     "jalanKeyword": "沖縄県 竹富町",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 24.3245,
+    "lng": 123.9043
   },
   {
     "id": "takahashi",
@@ -1827,7 +2075,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%8D%82%97%C0%8E%73",
     "jalanKeyword": "岡山県 高梁市",
     "prefCode": "okayama",
-    "rakutenFallback": "/yado/okayama/tsuyama.html"
+    "rakutenFallback": "/yado/okayama/tsuyama.html",
+    "lat": 34.7953,
+    "lng": 133.5888
   },
   {
     "id": "hida-furukawa",
@@ -1839,7 +2089,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%94%F2%91%CB%8E%73",
     "jalanKeyword": "岐阜県 飛騨市",
     "prefCode": "gifu",
-    "rakutenFallback": "/yado/gifu/takayama.html"
+    "rakutenFallback": "/yado/gifu/takayama.html",
+    "lat": 36.232,
+    "lng": 137.1829
   },
   {
     "id": "bungo-takada",
@@ -1851,7 +2103,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%96%4C%8C%E3%8D%82%93%63%8E%73",
     "jalanKeyword": "大分県 豊後高田市",
     "prefCode": "oita",
-    "rakutenFallback": "/yado/oita/beppu.html"
+    "rakutenFallback": "/yado/oita/beppu.html",
+    "lat": 33.5613,
+    "lng": 131.4948
   },
   {
     "id": "izu-kogen",
@@ -1863,7 +2117,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%88%C9%93%8C%8E%73",
     "jalanKeyword": "静岡県 伊東市",
     "prefCode": "shizuoka",
-    "rakutenFallback": "/yado/shizuoka/atami.html"
+    "rakutenFallback": "/yado/shizuoka/atami.html",
+    "lat": 34.9052,
+    "lng": 139.0914
   },
   {
     "id": "tanabe",
@@ -1875,7 +2131,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%93%63%95%D3%8E%73",
     "jalanKeyword": "和歌山県 田辺市",
     "prefCode": "wakayama",
-    "rakutenFallback": "/yado/wakayama/shirahama.html"
+    "rakutenFallback": "/yado/wakayama/shirahama.html",
+    "lat": 33.7319,
+    "lng": 135.3753
   },
   {
     "id": "tosa-shimizu",
@@ -1887,7 +2145,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%93%79%8D%B2%90%B4%90%85%8E%73",
     "jalanKeyword": "高知県 土佐清水市",
     "prefCode": "kochi",
-    "rakutenFallback": "/yado/kochi/"
+    "rakutenFallback": "/yado/kochi/",
+    "lat": 32.7817,
+    "lng": 132.9573
   },
   {
     "id": "nichinan",
@@ -1899,7 +2159,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%93%FA%93%EC%8E%73",
     "jalanKeyword": "宮崎県 日南市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/miyazaki.html"
+    "rakutenFallback": "/yado/miyazaki/miyazaki.html",
+    "lat": 31.6026,
+    "lng": 131.4094
   },
   {
     "id": "mojiko",
@@ -1911,7 +2173,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%96%6B%8B%E3%8F%42%8E%73%96%E5%8E%69%8B%E6",
     "jalanKeyword": "福岡県 北九州市門司区",
     "prefCode": "fukuoka",
-    "rakutenFallback": "/yado/fukuoka/fukuoka.html"
+    "rakutenFallback": "/yado/fukuoka/fukuoka.html",
+    "lat": 33.9401,
+    "lng": 130.9695
   },
   {
     "id": "itoshima",
@@ -1923,7 +2187,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%8E%85%93%87%8E%73",
     "jalanKeyword": "福岡県 糸島市",
     "prefCode": "fukuoka",
-    "rakutenFallback": "/yado/fukuoka/fukuoka.html"
+    "rakutenFallback": "/yado/fukuoka/fukuoka.html",
+    "lat": 33.556,
+    "lng": 130.1797
   },
   {
     "id": "shimabara",
@@ -1935,7 +2201,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%93%87%8C%B4%8E%73",
     "jalanKeyword": "長崎県 島原市",
     "prefCode": "nagasaki",
-    "rakutenFallback": "/yado/nagasaki/unzen.html"
+    "rakutenFallback": "/yado/nagasaki/unzen.html",
+    "lat": 32.7887,
+    "lng": 130.3669
   },
   {
     "id": "tsuruga",
@@ -1947,7 +2215,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%93%D6%89%EA%8E%73",
     "jalanKeyword": "福井県 敦賀市",
     "prefCode": "fukui",
-    "rakutenPath": "/yado/fukui/tsuruga.html"
+    "rakutenPath": "/yado/fukui/tsuruga.html",
+    "lat": 35.6449,
+    "lng": 136.0557
   },
   {
     "id": "shijishima",
@@ -1959,7 +2229,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8E%4F%96%4C%8E%73",
     "jalanKeyword": "香川県 三豊市",
     "prefCode": "kagawa",
-    "rakutenFallback": "/yado/kagawa/takamatsu.html"
+    "rakutenFallback": "/yado/kagawa/takamatsu.html",
+    "lat": 34.303,
+    "lng": 133.672
   },
   {
     "id": "sounkyo",
@@ -1971,7 +2243,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8F%E3%90%EC%92%AC",
     "jalanKeyword": "北海道 上川町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 43.739,
+    "lng": 142.8728
   },
   {
     "id": "rebun-island",
@@ -1983,7 +2257,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%97%E7%95%B6%92%AC",
     "jalanKeyword": "北海道 礼文町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 45.349,
+    "lng": 141.0488
   },
   {
     "id": "rishiri-island",
@@ -1995,7 +2271,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%97%98%90%4B%92%AC",
     "jalanKeyword": "北海道 利尻町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 45.1672,
+    "lng": 141.2256
   },
   {
     "id": "akan",
@@ -2007,7 +2285,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8B%FA%98%48%8E%73",
     "jalanKeyword": "北海道 釧路市",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 43.4446,
+    "lng": 144.0961
   },
   {
     "id": "abashiri",
@@ -2019,7 +2299,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%96%D4%91%96%8E%73",
     "jalanKeyword": "北海道 網走市",
     "prefCode": "hokkaido",
-    "rakutenPath": "/yado/hokkaido/abashiri.html"
+    "rakutenPath": "/yado/hokkaido/abashiri.html",
+    "lat": 44.021,
+    "lng": 144.2769
   },
   {
     "id": "shikotsu",
@@ -2031,7 +2313,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%90%E7%8D%CE%8E%73",
     "jalanKeyword": "北海道 千歳市",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 42.7468,
+    "lng": 141.3714
   },
   {
     "id": "tono",
@@ -2043,7 +2327,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%89%93%96%EC%8E%73",
     "jalanKeyword": "岩手県 遠野市",
     "prefCode": "iwate",
-    "rakutenFallback": "/yado/iwate/morioka.html"
+    "rakutenFallback": "/yado/iwate/morioka.html",
+    "lat": 39.3275,
+    "lng": 141.5273
   },
   {
     "id": "oga",
@@ -2055,7 +2341,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%92%6A%8E%AD%8E%73",
     "jalanKeyword": "秋田県 男鹿市",
     "prefCode": "akita",
-    "rakutenFallback": "/yado/akita/akita.html"
+    "rakutenFallback": "/yado/akita/akita.html",
+    "lat": 39.8905,
+    "lng": 139.8428
   },
   {
     "id": "yonezawa",
@@ -2067,7 +2355,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%95%C4%91%F2%8E%73",
     "jalanKeyword": "山形県 米沢市",
     "prefCode": "yamagata",
-    "rakutenPath": "/yado/yamagata/yonezawa.html"
+    "rakutenPath": "/yado/yamagata/yonezawa.html",
+    "lat": 37.9121,
+    "lng": 140.1181
   },
   {
     "id": "dewa-sanzan",
@@ -2079,7 +2369,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%92%DF%89%AA%8E%73",
     "jalanKeyword": "山形県 鶴岡市",
     "prefCode": "yamagata",
-    "rakutenFallback": "/yado/yamagata/"
+    "rakutenFallback": "/yado/yamagata/",
+    "lat": 38.7285,
+    "lng": 139.9748
   },
   {
     "id": "sakunami-onsen",
@@ -2091,7 +2383,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%90%E5%91%E4%8E%73",
     "jalanKeyword": "宮城県 仙台市",
     "prefCode": "miyagi",
-    "rakutenFallback": "/yado/miyagi/sendai.html"
+    "rakutenFallback": "/yado/miyagi/sendai.html",
+    "lat": 38.2532,
+    "lng": 140.6548
   },
   {
     "id": "goshogawara",
@@ -2103,7 +2397,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%8C%DC%8F%8A%90%EC%8C%B4%8E%73",
     "jalanKeyword": "青森県 五所川原市",
     "prefCode": "aomori",
-    "rakutenFallback": "/yado/aomori/hirosaki.html"
+    "rakutenFallback": "/yado/aomori/hirosaki.html",
+    "lat": 40.807,
+    "lng": 140.4377
   },
   {
     "id": "kawagoe",
@@ -2115,7 +2411,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%E9%8B%CA%8C%A7%20%90%EC%89%7A%8E%73",
     "jalanKeyword": "埼玉県 川越市",
     "prefCode": "saitama",
-    "rakutenPath": "/yado/saitama/kawagoe.html"
+    "rakutenPath": "/yado/saitama/kawagoe.html",
+    "lat": 35.925,
+    "lng": 139.4853
   },
   {
     "id": "nasu",
@@ -2127,7 +2425,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%93%DF%90%7B%92%AC",
     "jalanKeyword": "栃木県 那須町",
     "prefCode": "tochigi",
-    "rakutenPath": "/yado/tochigi/nasu.html"
+    "rakutenPath": "/yado/tochigi/nasu.html",
+    "lat": 37.0765,
+    "lng": 140.0358
   },
   {
     "id": "choshi",
@@ -2139,7 +2439,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%92%B6%8E%71%8E%73",
     "jalanKeyword": "千葉県 銚子市",
     "prefCode": "chiba",
-    "rakutenPath": "/yado/chiba/choshi.html"
+    "rakutenPath": "/yado/chiba/choshi.html",
+    "lat": 35.7356,
+    "lng": 140.8267
   },
   {
     "id": "ashikaga",
@@ -2151,7 +2453,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%91%AB%97%98%8E%73",
     "jalanKeyword": "栃木県 足利市",
     "prefCode": "tochigi",
-    "rakutenFallback": "/yado/tochigi/nikko.html"
+    "rakutenFallback": "/yado/tochigi/nikko.html",
+    "lat": 36.3401,
+    "lng": 139.4496
   },
   {
     "id": "shiobara-onsen",
@@ -2163,7 +2467,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%93%DF%90%7B%89%96%8C%B4%8E%73",
     "jalanKeyword": "栃木県 那須塩原市",
     "prefCode": "tochigi",
-    "rakutenFallback": "/yado/tochigi/nikko.html"
+    "rakutenFallback": "/yado/tochigi/nikko.html",
+    "lat": 36.9419,
+    "lng": 139.8672
   },
   {
     "id": "sado-island",
@@ -2175,7 +2481,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%8D%B2%93%6E%8E%73",
     "jalanKeyword": "新潟県 佐渡市",
     "prefCode": "niigata",
-    "rakutenPath": "/yado/niigata/sado.html"
+    "rakutenPath": "/yado/niigata/sado.html",
+    "lat": 38.0181,
+    "lng": 138.3688
   },
   {
     "id": "kiyosato",
@@ -2187,7 +2495,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%97%9C%8C%A7%20%96%6B%93%6D%8E%73",
     "jalanKeyword": "山梨県 北杜市",
     "prefCode": "yamanashi",
-    "rakutenPath": "/yado/yamanashi/kiyosato.html"
+    "rakutenPath": "/yado/yamanashi/kiyosato.html",
+    "lat": 35.9121,
+    "lng": 138.4248
   },
   {
     "id": "tenryu-gorge",
@@ -2199,7 +2509,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%94%D1%93%63%8E%73",
     "jalanKeyword": "長野県 飯田市",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/"
+    "rakutenFallback": "/yado/nagano/",
+    "lat": 35.3593,
+    "lng": 137.8163
   },
   {
     "id": "suwa",
@@ -2211,7 +2523,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%90%7A%96%4B%8E%73",
     "jalanKeyword": "長野県 諏訪市",
     "prefCode": "nagano",
-    "rakutenPath": "/yado/nagano/suwa.html"
+    "rakutenPath": "/yado/nagano/suwa.html",
+    "lat": 36.039,
+    "lng": 138.1147
   },
   {
     "id": "eiheiji",
@@ -2223,7 +2537,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%89%69%95%BD%8E%9B%92%AC",
     "jalanKeyword": "福井県 永平寺町",
     "prefCode": "fukui",
-    "rakutenFallback": "/yado/fukui/fukui.html"
+    "rakutenFallback": "/yado/fukui/fukui.html",
+    "lat": 36.091,
+    "lng": 136.482
   },
   {
     "id": "wakasa-obama",
@@ -2235,7 +2551,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%8F%AC%95%6C%8E%73",
     "jalanKeyword": "福井県 小浜市",
     "prefCode": "fukui",
-    "rakutenPath": "/yado/fukui/obama.html"
+    "rakutenPath": "/yado/fukui/obama.html",
+    "lat": 35.4979,
+    "lng": 135.7448
   },
   {
     "id": "okuhida-onsen",
@@ -2247,7 +2565,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%8D%82%8E%52%8E%73",
     "jalanKeyword": "岐阜県 高山市",
     "prefCode": "gifu",
-    "rakutenFallback": "/yado/gifu/takayama.html"
+    "rakutenFallback": "/yado/gifu/takayama.html",
+    "lat": 36.3327,
+    "lng": 137.5622
   },
   {
     "id": "minami-izu",
@@ -2259,7 +2579,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%93%EC%88%C9%93%A4%92%AC",
     "jalanKeyword": "静岡県 南伊豆町",
     "prefCode": "shizuoka",
-    "rakutenFallback": "/yado/shizuoka/atami.html"
+    "rakutenFallback": "/yado/shizuoka/atami.html",
+    "lat": 34.6155,
+    "lng": 138.827
   },
   {
     "id": "echizen",
@@ -2271,7 +2593,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%89%7A%91%4F%8E%73",
     "jalanKeyword": "福井県 越前市",
     "prefCode": "fukui",
-    "rakutenPath": "/yado/fukui/echizen.html"
+    "rakutenPath": "/yado/fukui/echizen.html",
+    "lat": 35.9971,
+    "lng": 136.1819
   },
   {
     "id": "ito",
@@ -2283,7 +2607,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%88%C9%93%8C%8E%73",
     "jalanKeyword": "静岡県 伊東市",
     "prefCode": "shizuoka",
-    "rakutenPath": "/yado/shizuoka/ito.html"
+    "rakutenPath": "/yado/shizuoka/ito.html",
+    "lat": 34.9658,
+    "lng": 139.0984
   },
   {
     "id": "iga",
@@ -2295,7 +2621,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%88%C9%89%EA%8E%73",
     "jalanKeyword": "三重県 伊賀市",
     "prefCode": "mie",
-    "rakutenPath": "/yado/mie/iga.html"
+    "rakutenPath": "/yado/mie/iga.html",
+    "lat": 34.7691,
+    "lng": 136.1313
   },
   {
     "id": "kashihara",
@@ -2307,7 +2635,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%8A%80%8C%B4%8E%73",
     "jalanKeyword": "奈良県 橿原市",
     "prefCode": "nara",
-    "rakutenFallback": "/yado/nara/nara.html"
+    "rakutenFallback": "/yado/nara/nara.html",
+    "lat": 34.4844,
+    "lng": 135.7942
   },
   {
     "id": "totsukawa",
@@ -2319,7 +2649,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%8F%5C%92%C3%90%EC%91%BA",
     "jalanKeyword": "奈良県 十津川村",
     "prefCode": "nara",
-    "rakutenFallback": "/yado/nara/nara.html"
+    "rakutenFallback": "/yado/nara/nara.html",
+    "lat": 34.0542,
+    "lng": 135.6702
   },
   {
     "id": "maizuru",
@@ -2331,7 +2663,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%95%91%92%DF%8E%73",
     "jalanKeyword": "京都府 舞鶴市",
     "prefCode": "kyoto",
-    "rakutenFallback": "/yado/kyoto/"
+    "rakutenFallback": "/yado/kyoto/",
+    "lat": 35.4723,
+    "lng": 135.3763
   },
   {
     "id": "asuka",
@@ -2343,7 +2677,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%96%BE%93%FA%8D%81%91%BA",
     "jalanKeyword": "奈良県 明日香村",
     "prefCode": "nara",
-    "rakutenFallback": "/yado/nara/nara.html"
+    "rakutenFallback": "/yado/nara/nara.html",
+    "lat": 34.4712,
+    "lng": 135.8277
   },
   {
     "id": "daisen",
@@ -2355,7 +2691,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%91%E5%8E%52%92%AC",
     "jalanKeyword": "鳥取県 大山町",
     "prefCode": "tottori",
-    "rakutenFallback": "/yado/tottori/tottori.html"
+    "rakutenFallback": "/yado/tottori/tottori.html",
+    "lat": 35.3804,
+    "lng": 133.5453
   },
   {
     "id": "yunotsu-onsen",
@@ -2367,7 +2705,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%91%E5%93%63%8E%73",
     "jalanKeyword": "島根県 大田市",
     "prefCode": "shimane",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 35.0873,
+    "lng": 132.3592
   },
   {
     "id": "iwami-ginzan",
@@ -2379,7 +2719,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%91%E5%93%63%8E%73",
     "jalanKeyword": "島根県 大田市",
     "prefCode": "shimane",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 35.1044,
+    "lng": 132.4234
   },
   {
     "id": "iwakuni",
@@ -2391,7 +2733,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%8A%E2%8D%91%8E%73",
     "jalanKeyword": "山口県 岩国市",
     "prefCode": "yamaguchi",
-    "rakutenPath": "/yado/yamaguchi/iwakuni.html"
+    "rakutenPath": "/yado/yamaguchi/iwakuni.html",
+    "lat": 34.1673,
+    "lng": 132.223
   },
   {
     "id": "kurayoshi",
@@ -2403,7 +2747,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%91%71%8B%67%8E%73",
     "jalanKeyword": "鳥取県 倉吉市",
     "prefCode": "tottori",
-    "rakutenFallback": "/yado/tottori/tottori.html"
+    "rakutenFallback": "/yado/tottori/tottori.html",
+    "lat": 35.4308,
+    "lng": 133.8308
   },
   {
     "id": "suo-oshima",
@@ -2415,7 +2761,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%91%E5%93%87%8C%53%8E%FC%96%68%91%E5%93%87%92%AC",
     "jalanKeyword": "山口県 大島郡周防大島町",
     "prefCode": "yamaguchi",
-    "rakutenFallback": "/yado/yamaguchi/hagi.html"
+    "rakutenFallback": "/yado/yamaguchi/hagi.html",
+    "lat": 33.956,
+    "lng": 132.221
   },
   {
     "id": "shimanto",
@@ -2427,7 +2775,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8E%6C%96%9C%8F%5C%8E%73",
     "jalanKeyword": "高知県 四万十市",
     "prefCode": "kochi",
-    "rakutenFallback": "/yado/kochi/"
+    "rakutenFallback": "/yado/kochi/",
+    "lat": 33.005,
+    "lng": 132.951
   },
   {
     "id": "kashiwajima",
@@ -2439,7 +2789,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%91%E5%8C%8E%92%AC",
     "jalanKeyword": "高知県 大月町",
     "prefCode": "kochi",
-    "rakutenFallback": "/yado/kochi/"
+    "rakutenFallback": "/yado/kochi/",
+    "lat": 32.778,
+    "lng": 132.745
   },
   {
     "id": "saijo",
@@ -2451,7 +2803,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%90%BC%8F%F0%8E%73",
     "jalanKeyword": "愛媛県 西条市",
     "prefCode": "ehime",
-    "rakutenPath": "/yado/ehime/saijo.html"
+    "rakutenPath": "/yado/ehime/saijo.html",
+    "lat": 33.9193,
+    "lng": 133.1821
   },
   {
     "id": "ainan",
@@ -2463,7 +2817,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%88%A4%95%51%88%A4%93%EC",
     "jalanKeyword": "愛媛県 愛媛愛南",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 32.96,
+    "lng": 132.66
   },
   {
     "id": "taketa",
@@ -2475,7 +2831,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%92%7C%93%63%8E%73",
     "jalanKeyword": "大分県 竹田市",
     "prefCode": "oita",
-    "rakutenPath": "/yado/oita/taketa.html"
+    "rakutenPath": "/yado/oita/taketa.html",
+    "lat": 32.9754,
+    "lng": 131.3963
   },
   {
     "id": "usuki",
@@ -2487,7 +2845,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%89%50%8B%6E%8E%73",
     "jalanKeyword": "大分県 臼杵市",
     "prefCode": "oita",
-    "rakutenPath": "/yado/oita/usuki.html"
+    "rakutenPath": "/yado/oita/usuki.html",
+    "lat": 33.1228,
+    "lng": 131.8019
   },
   {
     "id": "hita",
@@ -2499,7 +2859,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%93%FA%93%63%8E%73",
     "jalanKeyword": "大分県 日田市",
     "prefCode": "oita",
-    "rakutenPath": "/yado/oita/hita.html"
+    "rakutenPath": "/yado/oita/hita.html",
+    "lat": 33.3217,
+    "lng": 130.94
   },
   {
     "id": "hasami",
@@ -2511,7 +2873,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%94%67%8D%B2%8C%A9%92%AC",
     "jalanKeyword": "長崎県 波佐見町",
     "prefCode": "nagasaki",
-    "rakutenFallback": "/yado/nagasaki/nagasaki.html"
+    "rakutenFallback": "/yado/nagasaki/nagasaki.html",
+    "lat": 33.0981,
+    "lng": 129.8888
   },
   {
     "id": "takeo-onsen",
@@ -2523,7 +2887,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%B2%89%EA%8C%A7%20%95%90%97%59%8E%73",
     "jalanKeyword": "佐賀県 武雄市",
     "prefCode": "saga",
-    "rakutenFallback": "/yado/saga/ureshino.html"
+    "rakutenFallback": "/yado/saga/ureshino.html",
+    "lat": 33.1936,
+    "lng": 130.0162
   },
   {
     "id": "kitsuki",
@@ -2535,7 +2901,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%8B%6E%92%7A%8E%73",
     "jalanKeyword": "大分県 杵築市",
     "prefCode": "oita",
-    "rakutenFallback": "/yado/oita/beppu.html"
+    "rakutenFallback": "/yado/oita/beppu.html",
+    "lat": 33.4169,
+    "lng": 131.6069
   },
   {
     "id": "tsushima",
@@ -2547,7 +2915,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%91%CE%94%6E%8E%73",
     "jalanKeyword": "長崎県 対馬市",
     "prefCode": "nagasaki",
-    "rakutenPath": "/yado/nagasaki/tsushima.html"
+    "rakutenPath": "/yado/nagasaki/tsushima.html",
+    "lat": 34.2017,
+    "lng": 129.2893
   },
   {
     "id": "iki-island",
@@ -2559,7 +2929,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%88%EB%8A%F2%8E%73",
     "jalanKeyword": "長崎県 壱岐市",
     "prefCode": "nagasaki",
-    "rakutenPath": "/yado/nagasaki/iki.html"
+    "rakutenPath": "/yado/nagasaki/iki.html",
+    "lat": 33.7483,
+    "lng": 129.695
   },
   {
     "id": "tanegashima",
@@ -2571,7 +2943,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%90%BC%94%56%95%5C%8E%73",
     "jalanKeyword": "鹿児島県 西之表市",
     "prefCode": "kagoshima",
-    "rakutenFallback": "/yado/kagoshima/yakushima.html"
+    "rakutenFallback": "/yado/kagoshima/yakushima.html",
+    "lat": 30.743,
+    "lng": 130.976
   },
   {
     "id": "kikuchi",
@@ -2583,7 +2957,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%8B%65%92%72%8E%73",
     "jalanKeyword": "熊本県 菊池市",
     "prefCode": "kumamoto",
-    "rakutenPath": "/yado/kumamoto/kikuchi.html"
+    "rakutenPath": "/yado/kumamoto/kikuchi.html",
+    "lat": 32.9857,
+    "lng": 130.8215
   },
   {
     "id": "taketomi-island",
@@ -2595,7 +2971,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%92%7C%95%78%92%AC",
     "jalanKeyword": "沖縄県 竹富町",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 24.3248,
+    "lng": 124.0839
   },
   {
     "id": "yonaguni-island",
@@ -2607,7 +2985,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%97%5E%93%DF%8D%91%92%AC",
     "jalanKeyword": "沖縄県 与那国町",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 24.4668,
+    "lng": 122.9887
   },
   {
     "id": "nakijin",
@@ -2619,7 +2999,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8D%A1%8B%41%90%6D%91%BA",
     "jalanKeyword": "沖縄県 今帰仁村",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.6885,
+    "lng": 127.9927
   },
   {
     "id": "motobu",
@@ -2631,7 +3013,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%96%7B%95%94%92%AC",
     "jalanKeyword": "沖縄県 本部町",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.6608,
+    "lng": 127.8877
   },
   {
     "id": "zamami-island",
@@ -2643,7 +3027,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8D%C0%8A%D4%96%A1%91%BA",
     "jalanKeyword": "沖縄県 座間味村",
     "prefCode": "okinawa",
-    "rakutenPath": "/yado/okinawa/"
+    "rakutenPath": "/yado/okinawa/",
+    "lat": 26.2232,
+    "lng": 127.3003
   },
   {
     "id": "ie-island",
@@ -2655,7 +3041,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8D%91%93%AA%8C%53%88%C9%8D%5D%91%BA",
     "jalanKeyword": "沖縄県 国頭郡伊江村",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.7197,
+    "lng": 127.795
   },
   {
     "id": "kohama-island",
@@ -2667,7 +3055,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%94%AA%8F%64%8E%52%8C%53%92%7C%95%78%92%AC",
     "jalanKeyword": "沖縄県 八重山郡竹富町",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 24.3461,
+    "lng": 124.055
   },
   {
     "id": "matsushiro",
@@ -2679,7 +3069,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%92%B7%96%EC%8E%73",
     "jalanKeyword": "長野県 長野市",
     "prefCode": "nagano",
-    "rakutenPath": "/yado/nagano/nagano.html"
+    "rakutenPath": "/yado/nagano/nagano.html",
+    "lat": 36.5484,
+    "lng": 138.2067
   },
   {
     "id": "iiyama",
@@ -2691,7 +3083,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%94%D1%8E%52%8E%73",
     "jalanKeyword": "長野県 飯山市",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/nozawa.html"
+    "rakutenFallback": "/yado/nagano/nozawa.html",
+    "lat": 36.8577,
+    "lng": 138.3644
   },
   {
     "id": "yakake",
@@ -2703,7 +3097,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%96%EE%8A%7C%92%AC",
     "jalanKeyword": "岡山県 矢掛町",
     "prefCode": "okayama",
-    "rakutenFallback": "/yado/okayama/kurashiki.html"
+    "rakutenFallback": "/yado/okayama/kurashiki.html",
+    "lat": 34.5773,
+    "lng": 133.5769
   },
   {
     "id": "tsuyama",
@@ -2715,7 +3111,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%92%C3%8E%52%8E%73",
     "jalanKeyword": "岡山県 津山市",
     "prefCode": "okayama",
-    "rakutenPath": "/yado/okayama/tsuyama.html"
+    "rakutenPath": "/yado/okayama/tsuyama.html",
+    "lat": 35.0687,
+    "lng": 134.0035
   },
   {
     "id": "tsurugi-san",
@@ -2727,7 +3125,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%94%FC%94%6E%8E%73",
     "jalanKeyword": "徳島県 美馬市",
     "prefCode": "tokushima",
-    "rakutenFallback": "/yado/tokushima/"
+    "rakutenFallback": "/yado/tokushima/",
+    "lat": 33.8565,
+    "lng": 134.0897
   },
   {
     "id": "nobeoka",
@@ -2739,7 +3139,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%89%84%89%AA%8E%73",
     "jalanKeyword": "宮崎県 延岡市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/miyazaki.html"
+    "rakutenFallback": "/yado/miyazaki/miyazaki.html",
+    "lat": 32.5818,
+    "lng": 131.668
   },
   {
     "id": "kamaishi",
@@ -2751,7 +3153,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%8A%98%90%CE%8E%73",
     "jalanKeyword": "岩手県 釜石市",
     "prefCode": "iwate",
-    "rakutenFallback": "/yado/iwate/morioka.html"
+    "rakutenFallback": "/yado/iwate/morioka.html",
+    "lat": 39.276,
+    "lng": 141.8859
   },
   {
     "id": "ofunato",
@@ -2763,7 +3167,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%91%E5%91%44%93%6E%8E%73",
     "jalanKeyword": "岩手県 大船渡市",
     "prefCode": "iwate",
-    "rakutenPath": "/yado/iwate/ofunato.html"
+    "rakutenPath": "/yado/iwate/ofunato.html",
+    "lat": 39.0823,
+    "lng": 141.7147
   },
   {
     "id": "kuji",
@@ -2775,7 +3181,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%8B%76%8E%9C%8E%73",
     "jalanKeyword": "岩手県 久慈市",
     "prefCode": "iwate",
-    "rakutenPath": "/yado/iwate/kuji.html"
+    "rakutenPath": "/yado/iwate/kuji.html",
+    "lat": 40.1906,
+    "lng": 141.7747
   },
   {
     "id": "wakkanai",
@@ -2787,7 +3195,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%92%74%93%E0%8E%73",
     "jalanKeyword": "北海道 稚内市",
     "prefCode": "hokkaido",
-    "rakutenPath": "/yado/hokkaido/wakkanai.html"
+    "rakutenPath": "/yado/hokkaido/wakkanai.html",
+    "lat": 45.4161,
+    "lng": 141.6731
   },
   {
     "id": "obihiro",
@@ -2799,7 +3209,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%91%D1%8D%4C%8E%73",
     "jalanKeyword": "北海道 帯広市",
     "prefCode": "hokkaido",
-    "rakutenPath": "/yado/hokkaido/obihiro.html"
+    "rakutenPath": "/yado/hokkaido/obihiro.html",
+    "lat": 42.9236,
+    "lng": 143.1965
   },
   {
     "id": "rausu",
@@ -2811,7 +3223,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%97%85%89%50%92%AC",
     "jalanKeyword": "北海道 羅臼町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 44.0214,
+    "lng": 145.194
   },
   {
     "id": "esashi",
@@ -2823,7 +3237,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8D%5D%8D%B7%92%AC",
     "jalanKeyword": "北海道 江差町",
     "prefCode": "hokkaido",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 41.8694,
+    "lng": 140.1293
   },
   {
     "id": "hanamaki",
@@ -2835,7 +3251,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%89%D4%8A%AA%8E%73",
     "jalanKeyword": "岩手県 花巻市",
     "prefCode": "iwate",
-    "rakutenFallback": "/yado/iwate/morioka.html"
+    "rakutenFallback": "/yado/iwate/morioka.html",
+    "lat": 39.3886,
+    "lng": 141.1169
   },
   {
     "id": "hachimantai",
@@ -2847,7 +3265,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%94%AA%94%A6%95%BD%8E%73",
     "jalanKeyword": "岩手県 八幡平市",
     "prefCode": "iwate",
-    "rakutenFallback": "/yado/iwate/morioka.html"
+    "rakutenFallback": "/yado/iwate/morioka.html",
+    "lat": 39.9338,
+    "lng": 140.8556
   },
   {
     "id": "tazawako",
@@ -2859,7 +3279,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%90%E5%96%6B%8E%73",
     "jalanKeyword": "秋田県 仙北市",
     "prefCode": "akita",
-    "rakutenFallback": "/yado/akita/"
+    "rakutenFallback": "/yado/akita/",
+    "lat": 39.7023,
+    "lng": 140.7228
   },
   {
     "id": "yamadera",
@@ -2871,7 +3293,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8E%52%8C%60%8E%73",
     "jalanKeyword": "山形県 山形市",
     "prefCode": "yamagata",
-    "rakutenFallback": "/yado/yamagata/yamagata.html"
+    "rakutenFallback": "/yado/yamagata/yamagata.html",
+    "lat": 38.3162,
+    "lng": 140.4414
   },
   {
     "id": "kesennuma",
@@ -2883,7 +3307,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%8B%43%90%E5%8F%C0%8E%73",
     "jalanKeyword": "宮城県 気仙沼市",
     "prefCode": "miyagi",
-    "rakutenFallback": "/yado/miyagi/sendai.html"
+    "rakutenFallback": "/yado/miyagi/sendai.html",
+    "lat": 38.9085,
+    "lng": 141.5688
   },
   {
     "id": "ikaho",
@@ -2895,7 +3321,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%8F%61%90%EC%8E%73",
     "jalanKeyword": "群馬県 渋川市",
     "prefCode": "gunma",
-    "rakutenPath": "/yado/gunma/ikaho.html"
+    "rakutenPath": "/yado/gunma/ikaho.html",
+    "lat": 36.5458,
+    "lng": 138.9977
   },
   {
     "id": "enoshima",
@@ -2907,7 +3335,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%93%A1%91%F2%8E%73",
     "jalanKeyword": "神奈川県 藤沢市",
     "prefCode": "kanagawa",
-    "rakutenFallback": "/yado/kanagawa/yokohama.html"
+    "rakutenFallback": "/yado/kanagawa/yokohama.html",
+    "lat": 35.2988,
+    "lng": 139.4806
   },
   {
     "id": "chichibu",
@@ -2919,7 +3349,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%E9%8B%CA%8C%A7%20%92%81%95%83%8E%73",
     "jalanKeyword": "埼玉県 秩父市",
     "prefCode": "saitama",
-    "rakutenPath": "/yado/saitama/chichibu.html"
+    "rakutenPath": "/yado/saitama/chichibu.html",
+    "lat": 35.9912,
+    "lng": 139.0853
   },
   {
     "id": "oarai",
@@ -2931,7 +3363,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%93%8C%88%EF%8F%E9%8C%53%91%E5%90%F4%92%AC",
     "jalanKeyword": "茨城県 東茨城郡大洗町",
     "prefCode": "ibaraki",
-    "rakutenPath": "/yado/ibaraki/oarai.html"
+    "rakutenPath": "/yado/ibaraki/oarai.html",
+    "lat": 36.3122,
+    "lng": 140.5758
   },
   {
     "id": "sano",
@@ -2943,7 +3377,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%8D%B2%96%EC%8E%73",
     "jalanKeyword": "栃木県 佐野市",
     "prefCode": "tochigi",
-    "rakutenFallback": "/yado/tochigi/nikko.html"
+    "rakutenFallback": "/yado/tochigi/nikko.html",
+    "lat": 36.3149,
+    "lng": 139.5784
   },
   {
     "id": "gujo-hachiman",
@@ -2955,7 +3391,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%8C%53%8F%E3%8E%73",
     "jalanKeyword": "岐阜県 郡上市",
     "prefCode": "gifu",
-    "rakutenFallback": "/yado/gifu/takayama.html"
+    "rakutenFallback": "/yado/gifu/takayama.html",
+    "lat": 35.748,
+    "lng": 136.9627
   },
   {
     "id": "narai-juku",
@@ -2967,7 +3405,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%89%96%90%4B%8E%73",
     "jalanKeyword": "長野県 塩尻市",
     "prefCode": "nagano",
-    "rakutenFallback": "/yado/nagano/kiso.html"
+    "rakutenFallback": "/yado/nagano/kiso.html",
+    "lat": 35.927,
+    "lng": 137.8725
   },
   {
     "id": "itoigawa",
@@ -2979,7 +3419,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%8E%85%8B%9B%90%EC%8E%73",
     "jalanKeyword": "新潟県 糸魚川市",
     "prefCode": "niigata",
-    "rakutenFallback": "/yado/niigata/niigata.html"
+    "rakutenFallback": "/yado/niigata/niigata.html",
+    "lat": 37.0388,
+    "lng": 137.8618
   },
   {
     "id": "kofu",
@@ -3003,7 +3445,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%91%BA%8F%E3%8E%73",
     "jalanKeyword": "新潟県 村上市",
     "prefCode": "niigata",
-    "rakutenFallback": "/yado/niigata/niigata.html"
+    "rakutenFallback": "/yado/niigata/niigata.html",
+    "lat": 38.2243,
+    "lng": 139.4804
   },
   {
     "id": "shima",
@@ -3015,7 +3459,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%8E%75%96%80%8E%73",
     "jalanKeyword": "三重県 志摩市",
     "prefCode": "mie",
-    "rakutenPath": "/yado/mie/shima.html"
+    "rakutenPath": "/yado/mie/shima.html",
+    "lat": 34.3278,
+    "lng": 136.8231
   },
   {
     "id": "ogaki",
@@ -3027,7 +3473,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%91%E5%8A%5F%8E%73",
     "jalanKeyword": "岐阜県 大垣市",
     "prefCode": "gifu",
-    "rakutenPath": "/yado/gifu/ogaki.html"
+    "rakutenPath": "/yado/gifu/ogaki.html",
+    "lat": 35.3606,
+    "lng": 136.6211
   },
   {
     "id": "echizen-kaigan",
@@ -3039,7 +3487,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%89%7A%91%4F%8E%73",
     "jalanKeyword": "福井県 越前市",
     "prefCode": "fukui",
-    "rakutenPath": "/yado/fukui/echizen.html"
+    "rakutenPath": "/yado/fukui/echizen.html",
+    "lat": 35.9108,
+    "lng": 136.156
   },
   {
     "id": "myoko-kogen",
@@ -3051,7 +3501,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%96%AD%8D%82%8E%73",
     "jalanKeyword": "新潟県 妙高市",
     "prefCode": "niigata",
-    "rakutenFallback": "/yado/niigata/yuzawa.html"
+    "rakutenFallback": "/yado/niigata/yuzawa.html",
+    "lat": 36.8913,
+    "lng": 138.2483
   },
   {
     "id": "nagaoka",
@@ -3063,7 +3515,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%92%B7%89%AA%8E%73",
     "jalanKeyword": "新潟県 長岡市",
     "prefCode": "niigata",
-    "rakutenFallback": "/yado/niigata/niigata.html"
+    "rakutenFallback": "/yado/niigata/niigata.html",
+    "lat": 37.4469,
+    "lng": 138.8514
   },
   {
     "id": "tanba-sasayama",
@@ -3075,7 +3529,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%92%4F%94%67%8E%C2%8E%52%8E%73",
     "jalanKeyword": "兵庫県 丹波篠山市",
     "prefCode": "hyogo",
-    "rakutenFallback": "/yado/hyogo/kobe.html"
+    "rakutenFallback": "/yado/hyogo/kobe.html",
+    "lat": 35.0748,
+    "lng": 135.2196
   },
   {
     "id": "nachikatsuura",
@@ -3087,7 +3543,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%93%8C%96%B4%98%4B%8C%53%93%DF%92%71%8F%9F%89%59%92%AC",
     "jalanKeyword": "和歌山県 東牟婁郡那智勝浦町",
     "prefCode": "wakayama",
-    "rakutenFallback": "/yado/wakayama/shirahama.html"
+    "rakutenFallback": "/yado/wakayama/shirahama.html",
+    "lat": 33.6273,
+    "lng": 135.9382
   },
   {
     "id": "kumano-hongu",
@@ -3099,7 +3557,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%93%63%95%D3%8E%73",
     "jalanKeyword": "和歌山県 田辺市",
     "prefCode": "wakayama",
-    "rakutenFallback": "/yado/wakayama/shirahama.html"
+    "rakutenFallback": "/yado/wakayama/shirahama.html",
+    "lat": 33.8478,
+    "lng": 135.7842
   },
   {
     "id": "ako",
@@ -3111,7 +3571,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%90%D4%95%E4%8E%73",
     "jalanKeyword": "兵庫県 赤穂市",
     "prefCode": "hyogo",
-    "rakutenFallback": "/yado/hyogo/kobe.html"
+    "rakutenFallback": "/yado/hyogo/kobe.html",
+    "lat": 34.7531,
+    "lng": 134.3956
   },
   {
     "id": "fushimi",
@@ -3123,7 +3585,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%8B%9E%93%73%8E%73",
     "jalanKeyword": "京都府 京都市",
     "prefCode": "kyoto",
-    "rakutenFallback": "/yado/kyoto/"
+    "rakutenFallback": "/yado/kyoto/",
+    "lat": 34.9671,
+    "lng": 135.7727
   },
   {
     "id": "tomonoura",
@@ -3135,7 +3599,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%95%9F%8E%52%8E%73",
     "jalanKeyword": "広島県 福山市",
     "prefCode": "hiroshima",
-    "rakutenPath": "/yado/hiroshima/fukuyama.html"
+    "rakutenPath": "/yado/hiroshima/fukuyama.html",
+    "lat": 34.3827,
+    "lng": 133.3811
   },
   {
     "id": "sakaiminato",
@@ -3147,7 +3613,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%8B%AB%8D%60%8E%73",
     "jalanKeyword": "鳥取県 境港市",
     "prefCode": "tottori",
-    "rakutenFallback": "/yado/tottori/tottori.html"
+    "rakutenFallback": "/yado/tottori/tottori.html",
+    "lat": 35.5517,
+    "lng": 133.2301
   },
   {
     "id": "ushimado",
@@ -3159,7 +3627,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%90%A3%8C%CB%93%E0%8E%73",
     "jalanKeyword": "岡山県 瀬戸内市",
     "prefCode": "okayama",
-    "rakutenPath": "/yado/okayama/"
+    "rakutenPath": "/yado/okayama/",
+    "lat": 34.6038,
+    "lng": 134.2017
   },
   {
     "id": "kasaoka",
@@ -3171,7 +3641,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%8A%7D%89%AA%8E%73",
     "jalanKeyword": "岡山県 笠岡市",
     "prefCode": "okayama",
-    "rakutenFallback": "/yado/okayama/kurashiki.html"
+    "rakutenFallback": "/yado/okayama/kurashiki.html",
+    "lat": 34.5019,
+    "lng": 133.5072
   },
   {
     "id": "tsunoshima",
@@ -3183,7 +3655,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%89%BA%8A%D6%8E%73",
     "jalanKeyword": "山口県 下関市",
     "prefCode": "yamaguchi",
-    "rakutenFallback": "/yado/yamaguchi/hagi.html"
+    "rakutenFallback": "/yado/yamaguchi/hagi.html",
+    "lat": 34.3681,
+    "lng": 130.8801
   },
   {
     "id": "dogo-onsen",
@@ -3195,7 +3669,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8F%BC%8E%52%8E%73",
     "jalanKeyword": "愛媛県 松山市",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 33.8519,
+    "lng": 132.7855
   },
   {
     "id": "marugame",
@@ -3207,7 +3683,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8A%DB%8B%54%8E%73",
     "jalanKeyword": "香川県 丸亀市",
     "prefCode": "kagawa",
-    "rakutenFallback": "/yado/kagawa/takamatsu.html"
+    "rakutenFallback": "/yado/kagawa/takamatsu.html",
+    "lat": 34.2854,
+    "lng": 133.798
   },
   {
     "id": "misaki-sadamisaki",
@@ -3219,7 +3697,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%90%BC%89%46%98%61%8C%53%88%C9%95%FB%92%AC",
     "jalanKeyword": "愛媛県 西宇和郡伊方町",
     "prefCode": "ehime",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 33.3487,
+    "lng": 132.2274
   },
   {
     "id": "yanagawa",
@@ -3231,7 +3711,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%96%F6%90%EC%8E%73",
     "jalanKeyword": "福岡県 柳川市",
     "prefCode": "fukuoka",
-    "rakutenFallback": "/yado/fukuoka/fukuoka.html"
+    "rakutenFallback": "/yado/fukuoka/fukuoka.html",
+    "lat": 33.1635,
+    "lng": 130.4057
   },
   {
     "id": "hyuga",
@@ -3243,7 +3725,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%93%FA%8C%FC%8E%73",
     "jalanKeyword": "宮崎県 日向市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/miyazaki.html"
+    "rakutenFallback": "/yado/miyazaki/miyazaki.html",
+    "lat": 32.4218,
+    "lng": 131.6239
   },
   {
     "id": "koshikijima",
@@ -3255,7 +3739,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%8E%46%96%80%90%EC%93%E0%8E%73",
     "jalanKeyword": "鹿児島県 薩摩川内市",
     "prefCode": "kagoshima",
-    "rakutenFallback": "/yado/kagoshima/kagoshima.html"
+    "rakutenFallback": "/yado/kagoshima/kagoshima.html",
+    "lat": 31.8189,
+    "lng": 129.9225
   },
   {
     "id": "kirishima",
@@ -3267,7 +3753,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%96%B6%93%87%8E%73",
     "jalanKeyword": "鹿児島県 霧島市",
     "prefCode": "kagoshima",
-    "rakutenFallback": "/yado/kagoshima/"
+    "rakutenFallback": "/yado/kagoshima/",
+    "lat": 31.8946,
+    "lng": 130.8578
   },
   {
     "id": "ebino-kogen",
@@ -3279,7 +3767,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%82%A6%82%D1%82%CC%8E%73",
     "jalanKeyword": "宮崎県 えびの市",
     "prefCode": "miyazaki",
-    "rakutenFallback": "/yado/miyazaki/"
+    "rakutenFallback": "/yado/miyazaki/",
+    "lat": 31.9489,
+    "lng": 130.8048
   },
   {
     "id": "onna",
@@ -3291,7 +3781,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8D%91%93%AA%8C%53%89%B6%94%5B%91%BA",
     "jalanKeyword": "沖縄県 国頭郡恩納村",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.4813,
+    "lng": 127.844
   },
   {
     "id": "nago",
@@ -3303,7 +3795,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%96%BC%8C%EC%8E%73",
     "jalanKeyword": "沖縄県 名護市",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.5913,
+    "lng": 127.977
   },
   {
     "id": "yomitanson",
@@ -3315,7 +3809,9 @@
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%92%86%93%AA%8C%53%93%C7%92%4A%91%BA",
     "jalanKeyword": "沖縄県 中頭郡読谷村",
     "prefCode": "okinawa",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.3952,
+    "lng": 127.7451
   },
   {
     "id": "niseko",
@@ -3327,7 +3823,9 @@
     "rakutenKeyword": "北海道 倶知安町",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8B%E4%92%6D%88%C0%92%AC",
-    "jalanKeyword": "北海道 倶知安町"
+    "jalanKeyword": "北海道 倶知安町",
+    "lat": 42.8137,
+    "lng": 140.6886
   },
   {
     "id": "daisetsuzan",
@@ -3340,7 +3838,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%93%8C%90%EC%92%AC",
     "jalanKeyword": "北海道 東川町",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 43.6728,
+    "lng": 142.8597
   },
   {
     "id": "shiraoi",
@@ -3353,7 +3853,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%94%92%98%56%92%AC",
     "jalanKeyword": "北海道 白老町",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 42.5513,
+    "lng": 141.3517
   },
   {
     "id": "tomamu",
@@ -3366,7 +3868,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%90%E8%8A%A5%91%BA",
     "jalanKeyword": "北海道 占冠村",
-    "rakutenFallback": "/yado/hokkaido/sapporo.html"
+    "rakutenFallback": "/yado/hokkaido/sapporo.html",
+    "lat": 43.0289,
+    "lng": 142.7618
   },
   {
     "id": "towada",
@@ -3379,7 +3883,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%8F%5C%98%61%93%63%8E%73",
     "jalanKeyword": "青森県 十和田市",
-    "rakutenFallback": "/yado/aomori/hirosaki.html"
+    "rakutenFallback": "/yado/aomori/hirosaki.html",
+    "lat": 40.4768,
+    "lng": 140.8828
   },
   {
     "id": "osorezan",
@@ -3392,7 +3898,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%82%DE%82%C2%8E%73",
     "jalanKeyword": "青森県 むつ市",
-    "rakutenFallback": "/yado/aomori/hirosaki.html"
+    "rakutenFallback": "/yado/aomori/hirosaki.html",
+    "lat": 41.3167,
+    "lng": 141.0767
   },
   {
     "id": "urabandai",
@@ -3404,7 +3912,9 @@
     "rakutenKeyword": "福島県 北塩原村",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%96%6B%89%96%8C%B4%91%BA",
-    "jalanKeyword": "福島県 北塩原村"
+    "jalanKeyword": "福島県 北塩原村",
+    "lat": 37.6712,
+    "lng": 140.0628
   },
   {
     "id": "minami-sanriku",
@@ -3417,7 +3927,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%93%EC%8E%4F%97%A4%92%AC",
     "jalanKeyword": "宮城県 南三陸町",
-    "rakutenFallback": "/yado/miyagi/sendai.html"
+    "rakutenFallback": "/yado/miyagi/sendai.html",
+    "lat": 38.6783,
+    "lng": 141.4483
   },
   {
     "id": "kitakami",
@@ -3429,7 +3941,9 @@
     "rakutenKeyword": "岩手県 北上市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%96%6B%8F%E3%8E%73",
-    "jalanKeyword": "岩手県 北上市"
+    "jalanKeyword": "岩手県 北上市",
+    "lat": 39.2873,
+    "lng": 141.1134
   },
   {
     "id": "kinugawa-onsen",
@@ -3442,7 +3956,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%93%FA%8C%F5%8E%73",
     "jalanKeyword": "栃木県 日光市",
-    "rakutenFallback": "/yado/tochigi/nikko.html"
+    "rakutenFallback": "/yado/tochigi/nikko.html",
+    "lat": 36.7928,
+    "lng": 139.7211
   },
   {
     "id": "oze",
@@ -3454,7 +3970,9 @@
     "rakutenKeyword": "群馬県 片品村",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%95%D0%95%69%91%BA",
-    "jalanKeyword": "群馬県 片品村"
+    "jalanKeyword": "群馬県 片品村",
+    "lat": 36.9538,
+    "lng": 139.2397
   },
   {
     "id": "tsukuba",
@@ -3466,7 +3984,9 @@
     "rakutenKeyword": "茨城県 つくば市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%82%C2%82%AD%82%CE%8E%73",
-    "jalanKeyword": "茨城県 つくば市"
+    "jalanKeyword": "茨城県 つくば市",
+    "lat": 36.2171,
+    "lng": 140.1064
   },
   {
     "id": "kasama",
@@ -3479,7 +3999,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%8A%7D%8A%D4%8E%73",
     "jalanKeyword": "茨城県 笠間市",
-    "rakutenFallback": "/yado/ibaraki/mito.html"
+    "rakutenFallback": "/yado/ibaraki/mito.html",
+    "lat": 36.3784,
+    "lng": 140.2956
   },
   {
     "id": "naritasan",
@@ -3492,7 +4014,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%90%AC%93%63%8E%73",
     "jalanKeyword": "千葉県 成田市",
-    "rakutenFallback": "/yado/chiba/choshi.html"
+    "rakutenFallback": "/yado/chiba/choshi.html",
+    "lat": 35.7944,
+    "lng": 140.3079
   },
   {
     "id": "kujukuri",
@@ -3505,7 +4029,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%8B%E3%8F%5C%8B%E3%97%A2%92%AC",
     "jalanKeyword": "千葉県 九十九里町",
-    "rakutenFallback": "/yado/chiba/tateyama.html"
+    "rakutenFallback": "/yado/chiba/tateyama.html",
+    "lat": 35.5974,
+    "lng": 140.5324
   },
   {
     "id": "miura",
@@ -3517,7 +4043,9 @@
     "rakutenKeyword": "神奈川県 三浦市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%8E%4F%89%59%8E%73",
-    "jalanKeyword": "神奈川県 三浦市"
+    "jalanKeyword": "神奈川県 三浦市",
+    "lat": 35.1319,
+    "lng": 139.6177
   },
   {
     "id": "oku-tama",
@@ -3530,7 +4058,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%89%9C%91%BD%96%80%92%AC",
     "jalanKeyword": "東京都 奥多摩町",
-    "rakutenFallback": "/yado/tokyo/tokyo.html"
+    "rakutenFallback": "/yado/tokyo/tokyo.html",
+    "lat": 35.8289,
+    "lng": 139.0978
   },
   {
     "id": "jigokudani",
@@ -3543,7 +4073,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8E%52%83%6D%93%E0%92%AC",
     "jalanKeyword": "長野県 山ノ内町",
-    "rakutenFallback": "/yado/nagano/ueda.html"
+    "rakutenFallback": "/yado/nagano/ueda.html",
+    "lat": 36.6536,
+    "lng": 138.4737
   },
   {
     "id": "tateshina",
@@ -3556,7 +4088,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8A%9D%96%EC%8E%73",
     "jalanKeyword": "長野県 茅野市",
-    "rakutenFallback": "/yado/nagano/suwa.html"
+    "rakutenFallback": "/yado/nagano/suwa.html",
+    "lat": 36.1097,
+    "lng": 138.2909
   },
   {
     "id": "echigo-yuzawa",
@@ -3568,7 +4102,9 @@
     "rakutenKeyword": "新潟県 湯沢町",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%93%92%91%F2%92%AC",
-    "jalanKeyword": "新潟県 湯沢町"
+    "jalanKeyword": "新潟県 湯沢町",
+    "lat": 36.9299,
+    "lng": 138.8128
   },
   {
     "id": "fujinomiya",
@@ -3581,7 +4117,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%95%78%8E%6D%8B%7B%8E%73",
     "jalanKeyword": "静岡県 富士宮市",
-    "rakutenFallback": "/yado/shizuoka/atami.html"
+    "rakutenFallback": "/yado/shizuoka/atami.html",
+    "lat": 35.2283,
+    "lng": 138.6198
   },
   {
     "id": "norikura",
@@ -3594,7 +4132,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%BC%96%7B%8E%73",
     "jalanKeyword": "長野県 松本市",
-    "rakutenFallback": "/yado/nagano/"
+    "rakutenFallback": "/yado/nagano/",
+    "lat": 36.1082,
+    "lng": 137.5537
   },
   {
     "id": "tokoname",
@@ -3607,7 +4147,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%8F%ED%8A%8A%8E%73",
     "jalanKeyword": "愛知県 常滑市",
-    "rakutenFallback": "/yado/aichi/"
+    "rakutenFallback": "/yado/aichi/",
+    "lat": 34.8878,
+    "lng": 136.8408
   },
   {
     "id": "korankei",
@@ -3620,7 +4162,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%96%4C%93%63%8E%73",
     "jalanKeyword": "愛知県 豊田市",
-    "rakutenFallback": "/yado/aichi/"
+    "rakutenFallback": "/yado/aichi/",
+    "lat": 35.2037,
+    "lng": 137.3044
   },
   {
     "id": "minamichita",
@@ -3632,7 +4176,9 @@
     "rakutenKeyword": "愛知県 南知多町",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%93%EC%92%6D%91%BD%92%AC",
-    "jalanKeyword": "愛知県 南知多町"
+    "jalanKeyword": "愛知県 南知多町",
+    "lat": 34.7264,
+    "lng": 136.9119
   },
   {
     "id": "arashiyama",
@@ -3645,7 +4191,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%8B%9E%93%73%8E%73",
     "jalanKeyword": "京都府 京都市",
-    "rakutenFallback": "/yado/kyoto/"
+    "rakutenFallback": "/yado/kyoto/",
+    "lat": 35.0095,
+    "lng": 135.6719
   },
   {
     "id": "shigaraki",
@@ -3657,7 +4205,9 @@
     "rakutenKeyword": "滋賀県 甲賀市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8D%62%89%EA%8E%73",
-    "jalanKeyword": "滋賀県 甲賀市"
+    "jalanKeyword": "滋賀県 甲賀市",
+    "lat": 34.8774,
+    "lng": 136.1324
   },
   {
     "id": "dorogawa-onsen",
@@ -3670,7 +4220,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%93%56%90%EC%91%BA",
     "jalanKeyword": "奈良県 天川村",
-    "rakutenFallback": "/yado/nara/nara.html"
+    "rakutenFallback": "/yado/nara/nara.html",
+    "lat": 34.2481,
+    "lng": 135.9222
   },
   {
     "id": "matsusaka",
@@ -3682,7 +4234,9 @@
     "rakutenKeyword": "三重県 松阪市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%8F%BC%8D%E3%8E%73",
-    "jalanKeyword": "三重県 松阪市"
+    "jalanKeyword": "三重県 松阪市",
+    "lat": 34.5784,
+    "lng": 136.527
   },
   {
     "id": "sakai",
@@ -3695,7 +4249,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%8D%E3%95%7B%20%8D%E4%8E%73",
     "jalanKeyword": "大阪府 堺市",
-    "rakutenFallback": "/yado/osaka/"
+    "rakutenFallback": "/yado/osaka/",
+    "lat": 34.5736,
+    "lng": 135.4829
   },
   {
     "id": "ama-island",
@@ -3708,7 +4264,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%8A%43%8E%6D%92%AC",
     "jalanKeyword": "島根県 海士町",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 36.0921,
+    "lng": 133.0603
   },
   {
     "id": "akiyoshidai",
@@ -3721,7 +4279,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%94%FC%94%49%8E%73",
     "jalanKeyword": "山口県 美祢市",
-    "rakutenFallback": "/yado/yamaguchi/hagi.html"
+    "rakutenFallback": "/yado/yamaguchi/hagi.html",
+    "lat": 34.2285,
+    "lng": 131.3026
   },
   {
     "id": "yanai",
@@ -3734,7 +4294,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%96%F6%88%E4%8E%73",
     "jalanKeyword": "山口県 柳井市",
-    "rakutenFallback": "/yado/yamaguchi/iwakuni.html"
+    "rakutenFallback": "/yado/yamaguchi/iwakuni.html",
+    "lat": 33.9627,
+    "lng": 132.1002
   },
   {
     "id": "oki-island",
@@ -3747,7 +4309,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%89%42%8A%F2%82%CC%93%87%92%AC",
     "jalanKeyword": "島根県 隠岐の島町",
-    "rakutenFallback": "/yado/shimane/matsue.html"
+    "rakutenFallback": "/yado/shimane/matsue.html",
+    "lat": 36.2069,
+    "lng": 133.3264
   },
   {
     "id": "inujima",
@@ -3760,7 +4324,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%89%AA%8E%52%8E%73",
     "jalanKeyword": "岡山県 岡山市",
-    "rakutenFallback": "/yado/okayama/okayama.html"
+    "rakutenFallback": "/yado/okayama/okayama.html",
+    "lat": 34.6667,
+    "lng": 134.1833
   },
   {
     "id": "teshima",
@@ -3773,7 +4339,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%93%79%8F%AF%92%AC",
     "jalanKeyword": "香川県 土庄町",
-    "rakutenFallback": "/yado/kagawa/takamatsu.html"
+    "rakutenFallback": "/yado/kagawa/takamatsu.html",
+    "lat": 34.4667,
+    "lng": 134.0833
   },
   {
     "id": "niyodogawa",
@@ -3786,7 +4354,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%90%6D%97%84%90%EC%92%AC",
     "jalanKeyword": "高知県 仁淀川町",
-    "rakutenFallback": "/yado/kochi/kochi.html"
+    "rakutenFallback": "/yado/kochi/kochi.html",
+    "lat": 33.5278,
+    "lng": 132.9936
   },
   {
     "id": "yusuhara",
@@ -3799,7 +4369,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%93%8E%8C%B4%92%AC",
     "jalanKeyword": "高知県 梼原町",
-    "rakutenFallback": "/yado/kochi/kochi.html"
+    "rakutenFallback": "/yado/kochi/kochi.html",
+    "lat": 33.4032,
+    "lng": 132.9278
   },
   {
     "id": "anan",
@@ -3812,7 +4384,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%88%A2%93%EC%8E%73",
     "jalanKeyword": "徳島県 阿南市",
-    "rakutenFallback": "/yado/tokushima/tokushima.html"
+    "rakutenFallback": "/yado/tokushima/tokushima.html",
+    "lat": 33.9204,
+    "lng": 134.6633
   },
   {
     "id": "shikoku-karst",
@@ -3825,7 +4399,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%8B%76%96%9C%8D%82%8C%B4%92%AC",
     "jalanKeyword": "愛媛県 久万高原町",
-    "rakutenFallback": "/yado/ehime/"
+    "rakutenFallback": "/yado/ehime/",
+    "lat": 33.3722,
+    "lng": 132.9506
   },
   {
     "id": "aoshima",
@@ -3837,7 +4413,9 @@
     "rakutenKeyword": "宮崎県 宮崎市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%8B%7B%8D%E8%8E%73",
-    "jalanKeyword": "宮崎県 宮崎市"
+    "jalanKeyword": "宮崎県 宮崎市",
+    "lat": 31.7822,
+    "lng": 131.4757
   },
   {
     "id": "yamaga",
@@ -3850,7 +4428,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%8E%52%8E%AD%8E%73",
     "jalanKeyword": "熊本県 山鹿市",
-    "rakutenFallback": "/yado/kumamoto/kikuchi.html"
+    "rakutenFallback": "/yado/kumamoto/kikuchi.html",
+    "lat": 33.0156,
+    "lng": 130.6867
   },
   {
     "id": "yoshinogari",
@@ -3863,7 +4443,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%B2%89%EA%8C%A7%20%8B%67%96%EC%83%96%97%A2%92%AC",
     "jalanKeyword": "佐賀県 吉野ヶ里町",
-    "rakutenFallback": "/yado/saga/saga.html"
+    "rakutenFallback": "/yado/saga/saga.html",
+    "lat": 33.3256,
+    "lng": 130.4064
   },
   {
     "id": "kunisaki",
@@ -3875,7 +4457,9 @@
     "rakutenKeyword": "大分県 国東市",
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%8D%91%93%8C%8E%73",
-    "jalanKeyword": "大分県 国東市"
+    "jalanKeyword": "大分県 国東市",
+    "lat": 33.5592,
+    "lng": 131.7316
   },
   {
     "id": "chiran",
@@ -3888,7 +4472,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%93%EC%8B%E3%8F%42%8E%73",
     "jalanKeyword": "鹿児島県 南九州市",
-    "rakutenFallback": "/yado/kagoshima/"
+    "rakutenFallback": "/yado/kagoshima/",
+    "lat": 31.3716,
+    "lng": 130.4457
   },
   {
     "id": "ojika-island",
@@ -3901,7 +4487,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%8F%AC%92%6C%89%EA%92%AC",
     "jalanKeyword": "長崎県 小値賀町",
-    "rakutenFallback": "/yado/nagasaki/"
+    "rakutenFallback": "/yado/nagasaki/",
+    "lat": 33.1779,
+    "lng": 129.0808
   },
   {
     "id": "irabu-island",
@@ -3914,7 +4502,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8B%7B%8C%C3%93%87%8E%73",
     "jalanKeyword": "沖縄県 宮古島市",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 24.8333,
+    "lng": 125.1667
   },
   {
     "id": "aguni-island",
@@ -3927,7 +4517,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%88%BE%8D%91%91%BA",
     "jalanKeyword": "沖縄県 粟国村",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.5933,
+    "lng": 127.2297
   },
   {
     "id": "itoman",
@@ -3940,7 +4532,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%8E%85%96%9E%8E%73",
     "jalanKeyword": "沖縄県 糸満市",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.1256,
+    "lng": 127.6671
   },
   {
     "id": "kijoka",
@@ -3953,7 +4547,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%91%E5%8B%58%96%A1%91%BA",
     "jalanKeyword": "沖縄県 大宜味村",
-    "rakutenFallback": "/yado/okinawa/"
+    "rakutenFallback": "/yado/okinawa/",
+    "lat": 26.7123,
+    "lng": 128.1456
   },
   {
     "id": "miyakejima",
@@ -3966,7 +4562,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%8E%4F%91%EE%91%BA",
     "jalanKeyword": "東京都 三宅村",
-    "rakutenFallback": "/yado/tokyo/tokyo.html"
+    "rakutenFallback": "/yado/tokyo/tokyo.html",
+    "lat": 34.0736,
+    "lng": 139.5277
   },
   {
     "id": "hachijojima",
@@ -3979,7 +4577,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%94%AA%8F%E4%93%87%92%AC",
     "jalanKeyword": "東京都 八丈島町",
-    "rakutenFallback": "/yado/tokyo/tokyo.html"
+    "rakutenFallback": "/yado/tokyo/tokyo.html",
+    "lat": 33.1051,
+    "lng": 139.7927
   },
   {
     "id": "niijima",
@@ -3992,7 +4592,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%90%56%93%87%91%BA",
     "jalanKeyword": "東京都 新島村",
-    "rakutenFallback": "/yado/tokyo/tokyo.html"
+    "rakutenFallback": "/yado/tokyo/tokyo.html",
+    "lat": 34.3736,
+    "lng": 139.2623
   },
   {
     "id": "shikinejima",
@@ -4005,7 +4607,9 @@
     "jalanCode": "",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%90%56%93%87%91%BA",
     "jalanKeyword": "東京都 新島村",
-    "rakutenFallback": "/yado/tokyo/tokyo.html"
+    "rakutenFallback": "/yado/tokyo/tokyo.html",
+    "lat": 34.3283,
+    "lng": 139.2253
   },
   {
     "id": "sapporo-t",
@@ -4147,7 +4751,9 @@
     "rakutenPath": "/yado/kagawa/takamatsu.html",
     "rakutenKeyword": "香川県 高松市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8D%82%8F%BC%8E%73",
-    "jalanKeyword": "香川県 高松市"
+    "jalanKeyword": "香川県 高松市",
+    "lat": 34.3428,
+    "lng": 134.0466
   },
   {
     "id": "shimane-matsue",
@@ -4157,7 +4763,9 @@
     "rakutenPath": "/yado/shimane/matsue.html",
     "rakutenKeyword": "島根県 松江市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%8F%BC%8D%5D%8E%73",
-    "jalanKeyword": "島根県 松江市"
+    "jalanKeyword": "島根県 松江市",
+    "lat": 35.4723,
+    "lng": 133.0505
   },
   {
     "id": "fukui",
@@ -4188,7 +4796,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "rakutenKeyword": "静岡県 浜松市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%95%40%8F%BC%8E%73",
-    "jalanKeyword": "静岡県 浜松市"
+    "jalanKeyword": "静岡県 浜松市",
+    "lat": 34.7108,
+    "lng": 137.7261
   },
   {
     "id": "ibaraki-mito",
@@ -4198,7 +4808,9 @@
     "rakutenPath": "/yado/ibaraki/mito.html",
     "rakutenKeyword": "茨城県 水戸市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%CE%8F%E9%8C%A7%20%90%85%8C%CB%8E%73",
-    "jalanKeyword": "茨城県 水戸市"
+    "jalanKeyword": "茨城県 水戸市",
+    "lat": 36.3418,
+    "lng": 140.4468
   },
   {
     "id": "nagano-iida",
@@ -4209,7 +4821,9 @@
     "rakutenPath": "/yado/nagano/iida.html",
     "rakutenKeyword": "長野県 飯田市",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%94%D3%93c%8E%73",
-    "jalanKeyword": "長野県 飯田市"
+    "jalanKeyword": "長野県 飯田市",
+    "lat": 35.5153,
+    "lng": 137.8219
   },
   {
     "id": "shimanto-cho",
@@ -4237,7 +4851,9 @@
     "prefecture": "滋賀県",
     "rakutenPath": "/yado/shiga/otsu.html",
     "jalanKeyword": "滋賀県 大津市",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%91%E5%92%C3%8E%73&screenId=UWW1402"
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%91%E5%92%C3%8E%73&screenId=UWW1402",
+    "lat": 35.0044,
+    "lng": 135.8686
   },
   {
     "id": "kusatsu-shiga",
@@ -4246,7 +4862,9 @@
     "prefecture": "滋賀県",
     "rakutenPath": "/yado/shiga/",
     "jalanKeyword": "滋賀県 草津市",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%91%90%92%C3%8E%73&screenId=UWW1402"
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%91%90%92%C3%8E%73&screenId=UWW1402",
+    "lat": 35.0151,
+    "lng": 135.9591
   },
   {
     "id": "takashima-shiga",
@@ -4255,7 +4873,9 @@
     "prefecture": "滋賀県",
     "rakutenPath": "/yado/shiga/takashima.html",
     "jalanKeyword": "滋賀県 高島市",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8D%82%93%87%8E%73&screenId=UWW1402"
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8D%82%93%87%8E%73&screenId=UWW1402",
+    "lat": 35.3426,
+    "lng": 136.0361
   },
   {
     "id": "omihachiman",
@@ -4264,7 +4884,9 @@
     "prefecture": "滋賀県",
     "rakutenPath": "/yado/shiga/omihachiman.html",
     "jalanKeyword": "滋賀県 近江八幡市",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8B%DF%8D%5D%94%AA%94%A6%8E%73&screenId=UWW1402"
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8B%DF%8D%5D%94%AA%94%A6%8E%73&screenId=UWW1402",
+    "lat": 35.1291,
+    "lng": 136.0985
   },
   {
     "id": "koka",
@@ -4273,7 +4895,9 @@
     "prefecture": "滋賀県",
     "rakutenPath": "/yado/shiga/",
     "jalanKeyword": "滋賀県 甲賀市",
-    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8D%62%89%EA%8E%73&screenId=UWW1402"
+    "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%A0%89%EA%8C%A7%20%8D%62%89%EA%8E%73&screenId=UWW1402",
+    "lat": 34.9671,
+    "lng": 136.164
   },
   {
     "id": "shirakawa",
@@ -4283,7 +4907,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%94%92%89%CD&screenId=UWW1402",
     "jalanKeyword": "福島県 白河",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.1267,
+    "lng": 140.208
   },
   {
     "id": "kitakata",
@@ -4293,7 +4919,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%8A%EC%91%BD%95%FB&screenId=UWW1402",
     "jalanKeyword": "福島県 喜多方",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.6525,
+    "lng": 139.8748
   },
   {
     "id": "koriyama",
@@ -4303,7 +4931,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%8C%53%8E%52&screenId=UWW1402",
     "jalanKeyword": "福島県 郡山",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.4017,
+    "lng": 140.3877
   },
   {
     "id": "ryusendo",
@@ -4313,7 +4943,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%97%B4%90%F2%93%B4&screenId=UWW1402",
     "jalanKeyword": "岩手県 龍泉洞",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.7072,
+    "lng": 141.7944
   },
   {
     "id": "ichinoseki",
@@ -4323,7 +4955,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%88%EA%8A%D6&screenId=UWW1402",
     "jalanKeyword": "岩手県 一関",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.9348,
+    "lng": 141.1268
   },
   {
     "id": "akita-oga",
@@ -4333,7 +4967,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%92%6A%8E%AD%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "秋田県 男鹿温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.8913,
+    "lng": 139.8384
   },
   {
     "id": "kisakata",
@@ -4343,7 +4979,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%8F%DB%8A%83&screenId=UWW1402",
     "jalanKeyword": "秋田県 象潟",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.109,
+    "lng": 139.9219
   },
   {
     "id": "gassan",
@@ -4353,7 +4991,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8C%8E%8E%52&screenId=UWW1402",
     "jalanKeyword": "山形県 月山",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.5481,
+    "lng": 140.0297
   },
   {
     "id": "higashine",
@@ -4363,7 +5003,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%93%8C%8D%AA&screenId=UWW1402",
     "jalanKeyword": "山形県 東根",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.4318,
+    "lng": 140.3883
   },
   {
     "id": "akakura-onsen",
@@ -4373,7 +5015,9 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%90%D4%91%71%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "新潟県 赤倉温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.9082,
+    "lng": 138.1827
   },
   {
     "id": "yugawara-onsen",
@@ -4383,7 +5027,9 @@
     "rakutenPath": "/yado/kanagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%93%92%89%CD%8C%B4%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "神奈川県 湯河原温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.1494,
+    "lng": 139.0614
   },
   {
     "id": "yokosuka",
@@ -4393,7 +5039,9 @@
     "rakutenPath": "/yado/kanagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%89%A1%90%7B%89%EA&screenId=UWW1402",
     "jalanKeyword": "神奈川県 横須賀",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.2813,
+    "lng": 139.6703
   },
   {
     "id": "mishima",
@@ -4403,7 +5051,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%8E%4F%93%87&screenId=UWW1402",
     "jalanKeyword": "静岡県 三島",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.1191,
+    "lng": 138.9113
   },
   {
     "id": "numazu",
@@ -4413,7 +5063,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%8F%C0%92%C3&screenId=UWW1402",
     "jalanKeyword": "静岡県 沼津",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.0965,
+    "lng": 138.8631
   },
   {
     "id": "kakegawa",
@@ -4423,7 +5075,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%8A%7C%90%EC&screenId=UWW1402",
     "jalanKeyword": "静岡県 掛川",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.7694,
+    "lng": 138.0179
   },
   {
     "id": "okazaki",
@@ -4433,7 +5087,9 @@
     "rakutenPath": "/yado/aichi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%89%AA%8D%E8&screenId=UWW1402",
     "jalanKeyword": "愛知県 岡崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.9496,
+    "lng": 137.1753
   },
   {
     "id": "toyohashi",
@@ -4443,7 +5099,9 @@
     "rakutenPath": "/yado/aichi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%96%4C%8B%B4&screenId=UWW1402",
     "jalanKeyword": "愛知県 豊橋",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.6911,
+    "lng": 137.3893
   },
   {
     "id": "tajimi",
@@ -4453,7 +5111,9 @@
     "rakutenPath": "/yado/gifu/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%91%BD%8E%A1%8C%A9&screenId=UWW1402",
     "jalanKeyword": "岐阜県 多治見",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.3488,
+    "lng": 137.1313
   },
   {
     "id": "togakushi",
@@ -4463,7 +5123,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8C%CB%89%42&screenId=UWW1402",
     "jalanKeyword": "長野県 戸隠",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.766,
+    "lng": 138.085
   },
   {
     "id": "takarazuka",
@@ -4473,7 +5135,9 @@
     "rakutenPath": "/yado/hyogo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%95%F3%92%CB&screenId=UWW1402",
     "jalanKeyword": "兵庫県 宝塚",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.8031,
+    "lng": 135.356
   },
   {
     "id": "akashi",
@@ -4483,7 +5147,9 @@
     "rakutenPath": "/yado/hyogo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%96%BE%90%CE&screenId=UWW1402",
     "jalanKeyword": "兵庫県 明石",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.6452,
+    "lng": 134.9963
   },
   {
     "id": "naruto",
@@ -4493,7 +5159,9 @@
     "rakutenPath": "/yado/tokushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%96%C2%96%E5&screenId=UWW1402",
     "jalanKeyword": "徳島県 鳴門",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.1793,
+    "lng": 134.6088
   },
   {
     "id": "innoshima",
@@ -4503,7 +5171,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%88%F6%93%87&screenId=UWW1402",
     "jalanKeyword": "広島県 因島",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.2458,
+    "lng": 133.1771
   },
   {
     "id": "mihara",
@@ -4513,7 +5183,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%8E%4F%8C%B4&screenId=UWW1402",
     "jalanKeyword": "広島県 三原",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.3975,
+    "lng": 133.0758
   },
   {
     "id": "hofu",
@@ -4523,7 +5195,9 @@
     "rakutenPath": "/yado/yamaguchi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%96%68%95%7B&screenId=UWW1402",
     "jalanKeyword": "山口県 防府",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.0546,
+    "lng": 131.561
   },
   {
     "id": "karatsu",
@@ -4533,7 +5207,9 @@
     "rakutenPath": "/yado/saga/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%B2%89%EA%8C%A7%20%93%82%92%C3&screenId=UWW1402",
     "jalanKeyword": "佐賀県 唐津",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.4458,
+    "lng": 129.9693
   },
   {
     "id": "dazaifu",
@@ -4543,7 +5219,9 @@
     "rakutenPath": "/yado/fukuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%91%E5%8D%C9%95%7B&screenId=UWW1402",
     "jalanKeyword": "福岡県 大宰府",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.5137,
+    "lng": 130.5334
   },
   {
     "id": "nakatsu",
@@ -4553,7 +5231,9 @@
     "rakutenPath": "/yado/oita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%92%86%92%C3&screenId=UWW1402",
     "jalanKeyword": "大分県 中津",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.5985,
+    "lng": 131.1879
   },
   {
     "id": "nemuro",
@@ -4563,7 +5243,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8D%AA%8E%BA&screenId=UWW1402",
     "jalanKeyword": "北海道 根室",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.3291,
+    "lng": 145.5824
   },
   {
     "id": "muroran",
@@ -4573,7 +5255,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8E%BA%97%96&screenId=UWW1402",
     "jalanKeyword": "北海道 室蘭",
-    "_generated": true
+    "_generated": true,
+    "lat": 42.3149,
+    "lng": 140.973
   },
   {
     "id": "tomakomai",
@@ -4583,7 +5267,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%93%CF%8F%AC%96%71&screenId=UWW1402",
     "jalanKeyword": "北海道 苫小牧",
-    "_generated": true
+    "_generated": true,
+    "lat": 42.6328,
+    "lng": 141.6045
   },
   {
     "id": "ishinomaki",
@@ -4593,7 +5279,9 @@
     "rakutenPath": "/yado/miyagi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%90%CE%8A%AA&screenId=UWW1402",
     "jalanKeyword": "宮城県 石巻",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.4326,
+    "lng": 141.3025
   },
   {
     "id": "hitachi",
@@ -4603,7 +5291,9 @@
     "rakutenPath": "/yado/ibaraki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%93%FA%97%A7&screenId=UWW1402",
     "jalanKeyword": "茨城県 日立",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.5987,
+    "lng": 140.6516
   },
   {
     "id": "kashima",
@@ -4613,7 +5303,9 @@
     "rakutenPath": "/yado/ibaraki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%8E%AD%93%88&screenId=UWW1402",
     "jalanKeyword": "茨城県 鹿嶋",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.9652,
+    "lng": 140.6457
   },
   {
     "id": "shiraoishi",
@@ -4623,7 +5315,9 @@
     "rakutenPath": "/yado/miyagi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%94%92%90%CE&screenId=UWW1402",
     "jalanKeyword": "宮城県 白石",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.9875,
+    "lng": 140.6192
   },
   {
     "id": "noshiro",
@@ -4633,7 +5327,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%94%5C%91%E3&screenId=UWW1402",
     "jalanKeyword": "秋田県 能代",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.2121,
+    "lng": 140.0264
   },
   {
     "id": "tendou",
@@ -4643,7 +5339,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%93%56%93%B6&screenId=UWW1402",
     "jalanKeyword": "山形県 天童",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.3644,
+    "lng": 140.3788
   },
   {
     "id": "shonai",
@@ -4653,7 +5351,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%92%DF%89%AA&screenId=UWW1402",
     "jalanKeyword": "山形県 鶴岡",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.7341,
+    "lng": 139.8266
   },
   {
     "id": "ogata",
@@ -4663,7 +5363,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%91%E5%8A%83%91%BA&screenId=UWW1402",
     "jalanKeyword": "秋田県 大潟村",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.0079,
+    "lng": 140.1083
   },
   {
     "id": "rikuzentakata",
@@ -4673,7 +5375,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%97%A4%91%4F%8D%82%93%63&screenId=UWW1402",
     "jalanKeyword": "岩手県 陸前高田",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.0069,
+    "lng": 141.6279
   },
   {
     "id": "sanriku-miyako",
@@ -4683,7 +5387,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%8F%F2%93%79%83%96%95%6C&screenId=UWW1402",
     "jalanKeyword": "岩手県 浄土ヶ浜",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.6534,
+    "lng": 141.9777
   },
   {
     "id": "motomiya",
@@ -4693,7 +5399,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%96%7B%8B%7B&screenId=UWW1402",
     "jalanKeyword": "福島県 本宮",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.5126,
+    "lng": 140.3914
   },
   {
     "id": "mizusawa",
@@ -4703,7 +5411,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%89%9C%8F%42&screenId=UWW1402",
     "jalanKeyword": "岩手県 奥州",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.1442,
+    "lng": 141.1383
   },
   {
     "id": "ichinoseki-geibikei",
@@ -4713,7 +5423,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%E0%C7%95%40%8C%6B&screenId=UWW1402",
     "jalanKeyword": "岩手県 猊鼻渓",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.0022,
+    "lng": 141.218
   },
   {
     "id": "akita-semboku",
@@ -4723,7 +5435,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%90%E5%96%6B&screenId=UWW1402",
     "jalanKeyword": "秋田県 仙北",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.5802,
+    "lng": 140.5606
   },
   {
     "id": "tendo",
@@ -4733,7 +5447,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8A%A6%89%CD%8D%5D&screenId=UWW1402",
     "jalanKeyword": "山形県 寒河江",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.3788,
+    "lng": 140.2355
   },
   {
     "id": "nyuzen",
@@ -4743,7 +5459,9 @@
     "rakutenPath": "/yado/toyama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%93%FC%91%50&screenId=UWW1402",
     "jalanKeyword": "富山県 入善",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.9362,
+    "lng": 137.5029
   },
   {
     "id": "nanao",
@@ -4753,7 +5471,9 @@
     "rakutenPath": "/yado/ishikawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%8E%B5%94%F6&screenId=UWW1402",
     "jalanKeyword": "石川県 七尾",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.0484,
+    "lng": 136.9637
   },
   {
     "id": "fukuchiyama",
@@ -4763,7 +5483,9 @@
     "rakutenPath": "/yado/kyoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%95%9F%92%6D%8E%52&screenId=UWW1402",
     "jalanKeyword": "京都府 福知山",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.2984,
+    "lng": 135.1201
   },
   {
     "id": "tondabayashi",
@@ -4773,7 +5495,9 @@
     "rakutenPath": "/yado/osaka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%8D%E3%95%7B%20%95%78%93%63%97%D1&screenId=UWW1402",
     "jalanKeyword": "大阪府 富田林",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.4991,
+    "lng": 135.5978
   },
   {
     "id": "kishiwada",
@@ -4783,7 +5507,9 @@
     "rakutenPath": "/yado/osaka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%8D%E3%95%7B%20%8A%DD%98%61%93%63&screenId=UWW1402",
     "jalanKeyword": "大阪府 岸和田",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.462,
+    "lng": 135.3679
   },
   {
     "id": "amagasaki",
@@ -4793,7 +5519,9 @@
     "rakutenPath": "/yado/hyogo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%93%F2%8D%E8&screenId=UWW1402",
     "jalanKeyword": "兵庫県 尼崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.733,
+    "lng": 135.4069
   },
   {
     "id": "nishiwaki",
@@ -4803,7 +5531,9 @@
     "rakutenPath": "/yado/hyogo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%BA%8C%C9%8C%A7%20%90%BC%98%65&screenId=UWW1402",
     "jalanKeyword": "兵庫県 西脇",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.991,
+    "lng": 135.0044
   },
   {
     "id": "nagi",
@@ -4813,7 +5543,9 @@
     "rakutenPath": "/yado/okayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%93%DE%8B%60&screenId=UWW1402",
     "jalanKeyword": "岡山県 奈義",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.1265,
+    "lng": 134.1775
   },
   {
     "id": "higashihiroshima",
@@ -4823,7 +5555,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%93%8C%8D%4C%93%87&screenId=UWW1402",
     "jalanKeyword": "広島県 東広島",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.4237,
+    "lng": 132.7428
   },
   {
     "id": "fukuyama",
@@ -4833,7 +5567,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%95%9F%8E%52&screenId=UWW1402",
     "jalanKeyword": "広島県 福山",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.4864,
+    "lng": 133.3625
   },
   {
     "id": "otoyo",
@@ -4843,7 +5579,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%91%E5%96%4C&screenId=UWW1402",
     "jalanKeyword": "高知県 大豊",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.7218,
+    "lng": 133.6505
   },
   {
     "id": "sukumo",
@@ -4853,7 +5591,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8F%68%96%D1&screenId=UWW1402",
     "jalanKeyword": "高知県 宿毛",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.9368,
+    "lng": 132.7252
   },
   {
     "id": "miyoshi-tokushima",
@@ -4863,7 +5603,9 @@
     "rakutenPath": "/yado/tokushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%BF%93%87%8C%A7%20%8E%4F%8D%44&screenId=UWW1402",
     "jalanKeyword": "徳島県 三好",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.9913,
+    "lng": 133.7973
   },
   {
     "id": "oita-city",
@@ -4873,7 +5615,9 @@
     "rakutenPath": "/yado/oita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%91%E5%95%AA&screenId=UWW1402",
     "jalanKeyword": "大分県 大分",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.2382,
+    "lng": 131.6126
   },
   {
     "id": "yuwaku-onsen",
@@ -4883,7 +5627,9 @@
     "rakutenPath": "/yado/ishikawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%93%92%97%4F%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "石川県 湯涌温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.528,
+    "lng": 136.7143
   },
   {
     "id": "yura-wakayama",
@@ -4893,7 +5639,9 @@
     "rakutenPath": "/yado/wakayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%97%52%97%C7&screenId=UWW1402",
     "jalanKeyword": "和歌山県 由良",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.9529,
+    "lng": 135.1199
   },
   {
     "id": "misaki-osaka",
@@ -4903,7 +5651,9 @@
     "rakutenPath": "/yado/osaka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%8D%E3%95%7B%20%96%A6&screenId=UWW1402",
     "jalanKeyword": "大阪府 岬",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.3133,
+    "lng": 135.1519
   },
   {
     "id": "kitakyushu",
@@ -4913,7 +5663,9 @@
     "rakutenPath": "/yado/fukuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%96%6B%8B%E3%8F%42&screenId=UWW1402",
     "jalanKeyword": "福岡県 北九州",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.8834,
+    "lng": 130.8751
   },
   {
     "id": "asakura",
@@ -4923,7 +5675,9 @@
     "rakutenPath": "/yado/fukuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%92%A9%91%71&screenId=UWW1402",
     "jalanKeyword": "福岡県 朝倉",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.427,
+    "lng": 130.6632
   },
   {
     "id": "ebino",
@@ -4933,7 +5687,9 @@
     "rakutenPath": "/yado/miyazaki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%82%A6%82%D1%82%CC&screenId=UWW1402",
     "jalanKeyword": "宮崎県 えびの",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.0476,
+    "lng": 130.694
   },
   {
     "id": "hitoyoshi-city",
@@ -4943,7 +5699,9 @@
     "rakutenPath": "/yado/kumamoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%8B%85%96%81%90%EC&screenId=UWW1402",
     "jalanKeyword": "熊本県 球磨川",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.215,
+    "lng": 130.7574
   },
   {
     "id": "minamikyushu",
@@ -4953,7 +5711,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%93%EC%8B%E3%8F%42&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 南九州",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.4064,
+    "lng": 130.4531
   },
   {
     "id": "minamiosumi",
@@ -4963,7 +5723,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%93%EC%91%E5%8B%F7&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 南大隅",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.2298,
+    "lng": 130.9778
   },
   {
     "id": "chatan",
@@ -4973,7 +5735,9 @@
     "rakutenPath": "/yado/okinawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%96%6B%92%4A&screenId=UWW1402",
     "jalanKeyword": "沖縄県 北谷",
-    "_generated": true
+    "_generated": true,
+    "lat": 26.3085,
+    "lng": 127.7565
   },
   {
     "id": "uruma",
@@ -4983,7 +5747,9 @@
     "rakutenPath": "/yado/okinawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%82%A4%82%E9%82%DC&screenId=UWW1402",
     "jalanKeyword": "沖縄県 うるま",
-    "_generated": true
+    "_generated": true,
+    "lat": 26.3803,
+    "lng": 127.8574
   },
   {
     "id": "nanto",
@@ -4993,7 +5759,9 @@
     "rakutenPath": "/yado/toyama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%93%EC%93%76&screenId=UWW1402",
     "jalanKeyword": "富山県 南砺",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.5523,
+    "lng": 136.8671
   },
   {
     "id": "hakusan",
@@ -5003,7 +5771,9 @@
     "rakutenPath": "/yado/ishikawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%94%92%8E%52&screenId=UWW1402",
     "jalanKeyword": "石川県 白山",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.2255,
+    "lng": 136.7706
   },
   {
     "id": "kamo-kyoto",
@@ -5013,7 +5783,9 @@
     "rakutenPath": "/yado/kyoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%93%EC%8E%52%8F%E9&screenId=UWW1402",
     "jalanKeyword": "京都府 南山城",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.7086,
+    "lng": 135.9992
   },
   {
     "id": "shingu-wakayama",
@@ -5023,7 +5795,9 @@
     "rakutenPath": "/yado/wakayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%90%56%8B%7B&screenId=UWW1402",
     "jalanKeyword": "和歌山県 新宮",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.7262,
+    "lng": 135.9954
   },
   {
     "id": "himeshima",
@@ -5033,7 +5807,9 @@
     "rakutenPath": "/yado/oita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%95%50%93%87&screenId=UWW1402",
     "jalanKeyword": "大分県 姫島",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.7213,
+    "lng": 131.6644
   },
   {
     "id": "toshima",
@@ -5043,7 +5819,9 @@
     "rakutenPath": "/yado/tokyo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%97%98%93%87&screenId=UWW1402",
     "jalanKeyword": "東京都 利島",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.5153,
+    "lng": 139.2804
   },
   {
     "id": "joetsu",
@@ -5053,7 +5831,9 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%8F%E3%89%7A&screenId=UWW1402",
     "jalanKeyword": "新潟県 上越",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.1479,
+    "lng": 138.236
   },
   {
     "id": "myoko",
@@ -5063,7 +5843,9 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%96%AD%8D%82&screenId=UWW1402",
     "jalanKeyword": "新潟県 妙高",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.0028,
+    "lng": 138.2541
   },
   {
     "id": "yoichi",
@@ -5073,7 +5855,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%97%5D%8E%73&screenId=UWW1402",
     "jalanKeyword": "北海道 余市",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.1947,
+    "lng": 140.785
   },
   {
     "id": "akkeshi",
@@ -5083,7 +5867,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8C%FA%8A%DD&screenId=UWW1402",
     "jalanKeyword": "北海道 厚岸",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.0498,
+    "lng": 144.853
   },
   {
     "id": "kitami",
@@ -5093,7 +5879,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%96%6B%8C%A9&screenId=UWW1402",
     "jalanKeyword": "北海道 北見",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.8031,
+    "lng": 143.8936
   },
   {
     "id": "monbetsu",
@@ -5103,7 +5891,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%96%E4%95%CA&screenId=UWW1402",
     "jalanKeyword": "北海道 紋別",
-    "_generated": true
+    "_generated": true,
+    "lat": 44.3566,
+    "lng": 143.3558
   },
   {
     "id": "mashike",
@@ -5113,7 +5903,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%91%9D%96%D1&screenId=UWW1402",
     "jalanKeyword": "北海道 増毛",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.8528,
+    "lng": 141.5233
   },
   {
     "id": "fukushima-city",
@@ -5123,7 +5915,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%95%9F%93%87&screenId=UWW1402",
     "jalanKeyword": "福島県 福島",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.7606,
+    "lng": 140.4748
   },
   {
     "id": "omagari",
@@ -5133,7 +5927,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%91%E5%8B%C8&screenId=UWW1402",
     "jalanKeyword": "秋田県 大曲",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.4609,
+    "lng": 140.4781
   },
   {
     "id": "shinjou",
@@ -5143,7 +5939,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%90%56%8F%AF&screenId=UWW1402",
     "jalanKeyword": "山形県 新庄",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.7726,
+    "lng": 140.3027
   },
   {
     "id": "nagai",
@@ -5153,7 +5951,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%92%B7%88%E4&screenId=UWW1402",
     "jalanKeyword": "山形県 長井",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.1059,
+    "lng": 140.0353
   },
   {
     "id": "utsunomiya",
@@ -5163,7 +5963,9 @@
     "rakutenPath": "/yado/tochigi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%C8%96%D8%8C%A7%20%89%46%93%73%8B%7B&screenId=UWW1402",
     "jalanKeyword": "栃木県 宇都宮",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.5657,
+    "lng": 139.8836
   },
   {
     "id": "takasaki",
@@ -5173,7 +5975,9 @@
     "rakutenPath": "/yado/gunma/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%8D%82%8D%E8&screenId=UWW1402",
     "jalanKeyword": "群馬県 高崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.3227,
+    "lng": 139.0028
   },
   {
     "id": "odawara",
@@ -5183,7 +5987,9 @@
     "rakutenPath": "/yado/kanagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%8F%AC%93%63%8C%B4&screenId=UWW1402",
     "jalanKeyword": "神奈川県 小田原",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.2651,
+    "lng": 139.1527
   },
   {
     "id": "sawara",
@@ -5193,7 +5999,9 @@
     "rakutenPath": "/yado/chiba/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%8D%B2%8C%B4&screenId=UWW1402",
     "jalanKeyword": "千葉県 佐原",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.8871,
+    "lng": 140.4988
   },
   {
     "id": "nokogiriyama",
@@ -5203,7 +6011,9 @@
     "rakutenPath": "/yado/chiba/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%8B%98%8E%52&screenId=UWW1402",
     "jalanKeyword": "千葉県 鋸山",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.1628,
+    "lng": 139.8374
   },
   {
     "id": "katsuura-chiba",
@@ -5213,7 +6023,9 @@
     "rakutenPath": "/yado/chiba/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%8F%9F%89%59&screenId=UWW1402",
     "jalanKeyword": "千葉県 勝浦",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.1348,
+    "lng": 140.3148
   },
   {
     "id": "azumino",
@@ -5223,7 +6035,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%88%C0%93%DC%96%EC&screenId=UWW1402",
     "jalanKeyword": "長野県 安曇野",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.3058,
+    "lng": 137.8861
   },
   {
     "id": "nakatsugawa",
@@ -5233,7 +6047,9 @@
     "rakutenPath": "/yado/gifu/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%92%86%92%C3%90%EC&screenId=UWW1402",
     "jalanKeyword": "岐阜県 中津川",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.488,
+    "lng": 137.5011
   },
   {
     "id": "yaizu",
@@ -5243,7 +6059,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%8F%C4%92%C3&screenId=UWW1402",
     "jalanKeyword": "静岡県 焼津",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.8665,
+    "lng": 138.323
   },
   {
     "id": "hamanako",
@@ -5253,7 +6071,9 @@
     "rakutenPath": "/yado/shizuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C3%89%AA%8C%A7%20%95%6C%96%BC%8C%CE&screenId=UWW1402",
     "jalanKeyword": "静岡県 浜名湖",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.726,
+    "lng": 137.6033
   },
   {
     "id": "gamagori",
@@ -5263,7 +6083,9 @@
     "rakutenPath": "/yado/aichi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%8A%97%8C%53&screenId=UWW1402",
     "jalanKeyword": "愛知県 蒲郡",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.8275,
+    "lng": 137.2197
   },
   {
     "id": "toyota-city",
@@ -5273,7 +6095,9 @@
     "rakutenPath": "/yado/aichi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%92%6D%8C%A7%20%96%4C%93%63&screenId=UWW1402",
     "jalanKeyword": "愛知県 豊田",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.0828,
+    "lng": 137.1566
   },
   {
     "id": "tango-kyoto",
@@ -5283,7 +6107,9 @@
     "rakutenPath": "/yado/kyoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%9E%93%73%95%7B%20%92%4F%8C%E3&screenId=UWW1402",
     "jalanKeyword": "京都府 丹後",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.6239,
+    "lng": 135.0583
   },
   {
     "id": "owase",
@@ -5293,7 +6119,9 @@
     "rakutenPath": "/yado/mie/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%94%F6%98%68&screenId=UWW1402",
     "jalanKeyword": "三重県 尾鷲",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.0704,
+    "lng": 136.1909
   },
   {
     "id": "gobo",
@@ -5303,7 +6131,9 @@
     "rakutenPath": "/yado/wakayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%8C%E4%96%56&screenId=UWW1402",
     "jalanKeyword": "和歌山県 御坊",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.8924,
+    "lng": 135.1573
   },
   {
     "id": "kushimoto",
@@ -5313,7 +6143,9 @@
     "rakutenPath": "/yado/wakayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%98%61%89%CC%8E%52%8C%A7%20%8B%F8%96%7B&screenId=UWW1402",
     "jalanKeyword": "和歌山県 串本",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.4762,
+    "lng": 135.7758
   },
   {
     "id": "hamada-shimane",
@@ -5323,7 +6155,9 @@
     "rakutenPath": "/yado/shimane/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%95%6C%93%63&screenId=UWW1402",
     "jalanKeyword": "島根県 浜田",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.8993,
+    "lng": 132.0776
   },
   {
     "id": "kure",
@@ -5333,7 +6167,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%8C%E0&screenId=UWW1402",
     "jalanKeyword": "広島県 呉",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.249,
+    "lng": 132.5663
   },
   {
     "id": "miyoshi-hiroshima",
@@ -5343,7 +6179,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%8E%4F%8E%9F&screenId=UWW1402",
     "jalanKeyword": "広島県 三次",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.8022,
+    "lng": 132.8604
   },
   {
     "id": "nagato-yamaguchi",
@@ -5353,7 +6191,9 @@
     "rakutenPath": "/yado/yamaguchi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%92%B7%96%E5&screenId=UWW1402",
     "jalanKeyword": "山口県 長門",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.3706,
+    "lng": 131.1823
   },
   {
     "id": "mine-yamaguchi",
@@ -5363,7 +6203,9 @@
     "rakutenPath": "/yado/yamaguchi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%94%FC%94%49&screenId=UWW1402",
     "jalanKeyword": "山口県 美祢",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.1716,
+    "lng": 131.205
   },
   {
     "id": "sakaide",
@@ -5373,7 +6215,9 @@
     "rakutenPath": "/yado/kagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8D%E2%8F%6F&screenId=UWW1402",
     "jalanKeyword": "香川県 坂出",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.3178,
+    "lng": 133.861
   },
   {
     "id": "tosa-city",
@@ -5383,7 +6227,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%93%79%8D%B2%8E%73&screenId=UWW1402",
     "jalanKeyword": "高知県 土佐市",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.4985,
+    "lng": 133.4272
   },
   {
     "id": "kanonji",
@@ -5393,7 +6239,9 @@
     "rakutenPath": "/yado/kagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%81%90%EC%8C%A7%20%8A%CF%89%B9%8E%9B&screenId=UWW1402",
     "jalanKeyword": "香川県 観音寺",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.0656,
+    "lng": 133.6618
   },
   {
     "id": "fukuoka-city",
@@ -5403,7 +6251,9 @@
     "rakutenPath": "/yado/fukuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%95%9F%89%AA&screenId=UWW1402",
     "jalanKeyword": "福岡県 福岡",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.5904,
+    "lng": 130.4017
   },
   {
     "id": "kurume",
@@ -5413,7 +6263,9 @@
     "rakutenPath": "/yado/fukuoka/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%89%AA%8C%A7%20%8B%76%97%AF%95%C4&screenId=UWW1402",
     "jalanKeyword": "福岡県 久留米",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.3189,
+    "lng": 130.5081
   },
   {
     "id": "yatsushiro",
@@ -5423,7 +6275,9 @@
     "rakutenPath": "/yado/kumamoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%94%AA%91%E3&screenId=UWW1402",
     "jalanKeyword": "熊本県 八代",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.5056,
+    "lng": 130.6008
   },
   {
     "id": "oguni-kumamoto",
@@ -5433,7 +6287,9 @@
     "rakutenPath": "/yado/kumamoto/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%46%96%7B%8C%A7%20%8F%AC%8D%91&screenId=UWW1402",
     "jalanKeyword": "熊本県 小国",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.1254,
+    "lng": 131.074
   },
   {
     "id": "izumi-kagoshima",
@@ -5443,7 +6299,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%8F%6F%90%85&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 出水",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.0867,
+    "lng": 130.3527
   },
   {
     "id": "makurazaki",
@@ -5453,7 +6311,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%96%8D%8D%E8&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 枕崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.2727,
+    "lng": 130.296
   },
   {
     "id": "miyakonojo",
@@ -5463,7 +6323,9 @@
     "rakutenPath": "/yado/miyazaki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%93%73%8F%E9&screenId=UWW1402",
     "jalanKeyword": "宮崎県 都城",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.7241,
+    "lng": 131.064
   },
   {
     "id": "nanjo-okinawa",
@@ -5473,7 +6335,9 @@
     "rakutenPath": "/yado/okinawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%93%EC%8F%E9&screenId=UWW1402",
     "jalanKeyword": "沖縄県 南城",
-    "_generated": true
+    "_generated": true,
+    "lat": 26.1449,
+    "lng": 127.7714
   },
   {
     "id": "aogashima",
@@ -5483,7 +6347,9 @@
     "rakutenPath": "/yado/tokyo/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%8C%8B%9E%93%73%20%90%C2%83%96%93%87&screenId=UWW1402",
     "jalanKeyword": "東京都 青ヶ島",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.4619,
+    "lng": 139.7647
   },
   {
     "id": "kugashima",
@@ -5493,7 +6359,9 @@
     "rakutenPath": "/yado/nagasaki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%8B%76%89%EA%93%87&screenId=UWW1402",
     "jalanKeyword": "長崎県 久賀島",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.7169,
+    "lng": 128.8064
   },
   {
     "id": "nakatosa",
@@ -5503,7 +6371,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%92%86%93%79%8D%B2&screenId=UWW1402",
     "jalanKeyword": "高知県 中土佐",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.2079,
+    "lng": 133.1087
   },
   {
     "id": "ikata",
@@ -5513,7 +6383,9 @@
     "rakutenPath": "/yado/ehime/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%A4%95%51%8C%A7%20%88%C9%95%FB&screenId=UWW1402",
     "jalanKeyword": "愛媛県 伊方",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.4916,
+    "lng": 132.3534
   },
   {
     "id": "muroto-cape",
@@ -5523,7 +6395,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8E%BA%8C%CB%96%A6&screenId=UWW1402",
     "jalanKeyword": "高知県 室戸岬",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.2594,
+    "lng": 134.1741
   },
   {
     "id": "oshima-yamaguchi",
@@ -5533,7 +6407,9 @@
     "rakutenPath": "/yado/yamaguchi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%91%E5%93%87%81%69%8E%52%8C%FB%81%6A&screenId=UWW1402",
     "jalanKeyword": "山口県 大島（山口）",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.9261,
+    "lng": 132.2053
   },
   {
     "id": "ibara",
@@ -5543,7 +6419,9 @@
     "rakutenPath": "/yado/okayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%88%E4%8C%B4&screenId=UWW1402",
     "jalanKeyword": "岡山県 井原",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.5978,
+    "lng": 133.4697
   },
   {
     "id": "niimi",
@@ -5553,7 +6431,9 @@
     "rakutenPath": "/yado/okayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%90%56%8C%A9&screenId=UWW1402",
     "jalanKeyword": "岡山県 新見",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.9791,
+    "lng": 133.468
   },
   {
     "id": "uda-nara",
@@ -5563,7 +6443,9 @@
     "rakutenPath": "/yado/nara/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%DE%97%C7%8C%A7%20%89%46%91%C9&screenId=UWW1402",
     "jalanKeyword": "奈良県 宇陀",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.5349,
+    "lng": 135.9258
   },
   {
     "id": "mimasaka",
@@ -5573,7 +6455,9 @@
     "rakutenPath": "/yado/okayama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AA%8E%52%8C%A7%20%94%FC%8D%EC&screenId=UWW1402",
     "jalanKeyword": "岡山県 美作",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.0057,
+    "lng": 134.1634
   },
   {
     "id": "kochi-shimanto",
@@ -5583,7 +6467,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%8E%6C%96%9C%8F%5C%90%EC&screenId=UWW1402",
     "jalanKeyword": "高知県 四万十川",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.9931,
+    "lng": 132.9316
   },
   {
     "id": "yonago",
@@ -5593,7 +6479,9 @@
     "rakutenPath": "/yado/tottori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B9%8E%E6%8C%A7%20%95%C4%8E%71&screenId=UWW1402",
     "jalanKeyword": "鳥取県 米子",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.4284,
+    "lng": 133.3305
   },
   {
     "id": "kaga-onsen2",
@@ -5603,7 +6491,9 @@
     "rakutenPath": "/yado/ishikawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%CE%90%EC%8C%A7%20%8E%52%91%E3%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "石川県 山代温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.306,
+    "lng": 136.3375
   },
   {
     "id": "takayama-kogen",
@@ -5613,7 +6503,9 @@
     "rakutenPath": "/yado/gifu/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%F2%95%8C%8C%A7%20%94%F2%91%CB%8D%82%8E%52%81%69%96%6B%83%41%83%8B%83%76%83%58%91%A4%81%6A&screenId=UWW1402",
     "jalanKeyword": "岐阜県 飛騨高山（北アルプス側）",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.2048,
+    "lng": 137.1897
   },
   {
     "id": "iga-ueno",
@@ -5623,7 +6515,9 @@
     "rakutenPath": "/yado/mie/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%4F%8F%64%8C%A7%20%88%C9%89%EA%8F%E3%96%EC&screenId=UWW1402",
     "jalanKeyword": "三重県 伊賀上野",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.769,
+    "lng": 136.1321
   },
   {
     "id": "miyanoshita",
@@ -5633,7 +6527,9 @@
     "rakutenPath": "/yado/kanagawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%5F%93%DE%90%EC%8C%A7%20%8B%7B%83%6D%89%BA&screenId=UWW1402",
     "jalanKeyword": "神奈川県 宮ノ下",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.2378,
+    "lng": 139.0601
   },
   {
     "id": "shibu-onsen",
@@ -5643,7 +6539,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%61%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "長野県 渋温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.7502,
+    "lng": 138.4292
   },
   {
     "id": "togatta-onsen",
@@ -5653,7 +6551,9 @@
     "rakutenPath": "/yado/miyagi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%89%93%8A%A0%93%63%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "宮城県 遠刈田温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.1218,
+    "lng": 140.6182
   },
   {
     "id": "hachimantai-onsen",
@@ -5663,7 +6563,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%8C%E3%90%B6%8A%7C%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "秋田県 後生掛温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.9455,
+    "lng": 140.8338
   },
   {
     "id": "iiyama-onsen",
@@ -5673,7 +6575,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%96%EC%91%F2%8D%D8%82%CC%97%A2%81%45%96%EC%91%F2%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "長野県 野沢菜の里・野沢温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.9319,
+    "lng": 138.435
   },
   {
     "id": "ono-fukui",
@@ -5693,7 +6597,9 @@
     "rakutenPath": "/yado/fukui/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%88%E4%8C%A7%20%8F%9F%8E%52&screenId=UWW1402",
     "jalanKeyword": "福井県 勝山",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.0646,
+    "lng": 136.5002
   },
   {
     "id": "nomaike",
@@ -5703,7 +6609,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%96%EC%8A%D4%92%72&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 野間池",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.73,
+    "lng": 130.005
   },
   {
     "id": "hioki",
@@ -5713,7 +6621,9 @@
     "rakutenPath": "/yado/kagoshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%AD%8E%99%93%87%8C%A7%20%93%FA%92%75&screenId=UWW1402",
     "jalanKeyword": "鹿児島県 日置",
-    "_generated": true
+    "_generated": true,
+    "lat": 31.6151,
+    "lng": 130.3955
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -5723,7 +6633,9 @@
     "rakutenPath": "/yado/akita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8F%48%93%63%8C%A7%20%93%FB%93%AA%89%B7%90%F2%8B%BD&screenId=UWW1402",
     "jalanKeyword": "秋田県 乳頭温泉郷",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.744,
+    "lng": 140.7238
   },
   {
     "id": "hirakawa",
@@ -5733,7 +6645,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%95%BD%90%EC&screenId=UWW1402",
     "jalanKeyword": "青森県 平川",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.5928,
+    "lng": 140.5657
   },
   {
     "id": "kurikoma",
@@ -5743,7 +6657,9 @@
     "rakutenPath": "/yado/miyagi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%8C%49%8B%EE&screenId=UWW1402",
     "jalanKeyword": "宮城県 栗駒",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.9474,
+    "lng": 140.7748
   },
   {
     "id": "namioka",
@@ -5753,7 +6669,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%98%51%89%AA&screenId=UWW1402",
     "jalanKeyword": "青森県 浪岡",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.7238,
+    "lng": 140.5936
   },
   {
     "id": "shimokita",
@@ -5763,7 +6681,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%89%BA%96%6B%94%BC%93%87&screenId=UWW1402",
     "jalanKeyword": "青森県 下北半島",
-    "_generated": true
+    "_generated": true,
+    "lat": 41.2924,
+    "lng": 141.1868
   },
   {
     "id": "towada-lake",
@@ -5773,7 +6693,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%8F%5C%98%61%93%63%8C%CE&screenId=UWW1402",
     "jalanKeyword": "青森県 十和田湖",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.4727,
+    "lng": 140.8762
   },
   {
     "id": "rikuchu-coast",
@@ -5783,7 +6705,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%8E%4F%97%A4%81%69%91%E5%92%C6%81%6A&screenId=UWW1402",
     "jalanKeyword": "岩手県 三陸（大槌）",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.3597,
+    "lng": 141.8995
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -5793,7 +6717,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%95%BD%90%F2%8E%FC%95%D3&screenId=UWW1402",
     "jalanKeyword": "岩手県 平泉周辺",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.9867,
+    "lng": 141.1128
   },
   {
     "id": "numata",
@@ -5803,7 +6729,9 @@
     "rakutenPath": "/yado/gunma/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%8F%C0%93%63&screenId=UWW1402",
     "jalanKeyword": "群馬県 沼田",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.6448,
+    "lng": 139.0444
   },
   {
     "id": "tsuchiura",
@@ -5813,7 +6741,9 @@
     "rakutenPath": "/yado/ibaraki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%88%EF%8F%E9%8C%A7%20%93%79%89%59&screenId=UWW1402",
     "jalanKeyword": "茨城県 土浦",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.0822,
+    "lng": 140.2034
   },
   {
     "id": "oshika",
@@ -5823,7 +6753,9 @@
     "rakutenPath": "/yado/miyagi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8F%E9%8C%A7%20%89%B2%8E%AD%94%BC%93%87&screenId=UWW1402",
     "jalanKeyword": "宮城県 牡鹿半島",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.3046,
+    "lng": 141.494
   },
   {
     "id": "kujukuri-icho",
@@ -5833,7 +6765,9 @@
     "rakutenPath": "/yado/chiba/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%E7%97%74%8C%A7%20%88%EA%8B%7B%81%69%93%8C%98%51%8C%A9%81%6A&screenId=UWW1402",
     "jalanKeyword": "千葉県 一宮（東浪見）",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.3572,
+    "lng": 140.3738
   },
   {
     "id": "miyota",
@@ -5843,7 +6777,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8C%E4%91%E3%93%63&screenId=UWW1402",
     "jalanKeyword": "長野県 御代田",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.3224,
+    "lng": 138.5638
   },
   {
     "id": "saijo-hiroshima",
@@ -5853,7 +6789,9 @@
     "rakutenPath": "/yado/hiroshima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%4C%93%87%8C%A7%20%90%BC%8F%F0%81%69%8E%F0%93%73%81%6A&screenId=UWW1402",
     "jalanKeyword": "広島県 西条（酒都）",
-    "_generated": true
+    "_generated": true,
+    "lat": 34.4336,
+    "lng": 132.7347
   },
   {
     "id": "ryoishi",
@@ -5863,7 +6801,9 @@
     "rakutenPath": "/yado/iwate/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8A%E2%8E%E8%8C%A7%20%88%BB%97%A2&screenId=UWW1402",
     "jalanKeyword": "岩手県 綾里",
-    "_generated": true
+    "_generated": true,
+    "lat": 39.1177,
+    "lng": 141.763
   },
   {
     "id": "noheji",
@@ -5873,7 +6813,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%96%EC%95%D3%92%6E&screenId=UWW1402",
     "jalanKeyword": "青森県 野辺地",
-    "_generated": true
+    "_generated": true,
+    "lat": 41.0869,
+    "lng": 141.1219
   },
   {
     "id": "tobetsu",
@@ -5883,7 +6825,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%93%96%95%CA&screenId=UWW1402",
     "jalanKeyword": "北海道 当別",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.2237,
+    "lng": 141.7001
   },
   {
     "id": "fukaura",
@@ -5893,7 +6837,9 @@
     "rakutenPath": "/yado/aomori/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%C2%90%58%8C%A7%20%90%5B%89%59&screenId=UWW1402",
     "jalanKeyword": "青森県 深浦",
-    "_generated": true
+    "_generated": true,
+    "lat": 40.6484,
+    "lng": 139.9248
   },
   {
     "id": "isesaki",
@@ -5903,7 +6849,9 @@
     "rakutenPath": "/yado/gunma/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8C%51%94%6E%8C%A7%20%88%C9%90%A8%8D%E8&screenId=UWW1402",
     "jalanKeyword": "群馬県 伊勢崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.3108,
+    "lng": 139.1965
   },
   {
     "id": "matsumoto-kaido",
@@ -5913,7 +6861,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%89%96%90%4B&screenId=UWW1402",
     "jalanKeyword": "長野県 塩尻",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.1151,
+    "lng": 137.9541
   },
   {
     "id": "aizu-misato",
@@ -5923,7 +6873,9 @@
     "rakutenPath": "/yado/fukushima/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%9F%93%87%8C%A7%20%89%EF%92%C3%94%FC%97%A2&screenId=UWW1402",
     "jalanKeyword": "福島県 会津美里",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.4273,
+    "lng": 139.8055
   },
   {
     "id": "tateyama-toyama",
@@ -5933,7 +6885,9 @@
     "rakutenPath": "/yado/toyama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%97%A7%8E%52&screenId=UWW1402",
     "jalanKeyword": "富山県 立山",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.5733,
+    "lng": 137.6202
   },
   {
     "id": "suo-sanbe",
@@ -5943,7 +6897,9 @@
     "rakutenPath": "/yado/shimane/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%93%87%8D%AA%8C%A7%20%8E%4F%95%72%8E%52&screenId=UWW1402",
     "jalanKeyword": "島根県 三瓶山",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.153,
+    "lng": 132.6245
   },
   {
     "id": "takachihogo-shishiku",
@@ -5953,7 +6909,9 @@
     "rakutenPath": "/yado/miyazaki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8B%7B%8D%E8%8C%A7%20%92%C5%97%74&screenId=UWW1402",
     "jalanKeyword": "宮崎県 椎葉",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.4627,
+    "lng": 131.098
   },
   {
     "id": "kamishihoro",
@@ -5963,7 +6921,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%8F%E3%8E%6D%96%79&screenId=UWW1402",
     "jalanKeyword": "北海道 上士幌",
-    "_generated": true
+    "_generated": true,
+    "lat": 43.2139,
+    "lng": 143.2669
   },
   {
     "id": "yakumo",
@@ -5973,7 +6933,9 @@
     "rakutenPath": "/yado/hokkaido/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%96%6B%8A%43%93%B9%20%94%AA%89%5F&screenId=UWW1402",
     "jalanKeyword": "北海道 八雲",
-    "_generated": true
+    "_generated": true,
+    "lat": 42.2614,
+    "lng": 140.2689
   },
   {
     "id": "susaki",
@@ -5983,7 +6945,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%90%7B%8D%E8&screenId=UWW1402",
     "jalanKeyword": "高知県 須崎",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.3994,
+    "lng": 133.2863
   },
   {
     "id": "ube",
@@ -5993,7 +6957,9 @@
     "rakutenPath": "/yado/yamaguchi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%FB%8C%A7%20%89%46%95%94&screenId=UWW1402",
     "jalanKeyword": "山口県 宇部",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.9519,
+    "lng": 131.2468
   },
   {
     "id": "itoigawa2",
@@ -6003,7 +6969,9 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%8E%85%8B%9B%90%EC%81%69%83%71%83%58%83%43%81%6A&screenId=UWW1402",
     "jalanKeyword": "新潟県 糸魚川（ヒスイ）",
-    "_generated": true
+    "_generated": true,
+    "lat": 37.0373,
+    "lng": 137.862
   },
   {
     "id": "agematsu",
@@ -6013,7 +6981,9 @@
     "rakutenPath": "/yado/nagano/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%96%EC%8C%A7%20%8F%E3%8F%BC&screenId=UWW1402",
     "jalanKeyword": "長野県 上松",
-    "_generated": true
+    "_generated": true,
+    "lat": 35.7764,
+    "lng": 137.6052
   },
   {
     "id": "unzen2",
@@ -6023,7 +6993,9 @@
     "rakutenPath": "/yado/nagasaki/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%92%B7%8D%E8%8C%A7%20%89%5F%90%E5%89%B7%90%F2&screenId=UWW1402",
     "jalanKeyword": "長崎県 雲仙温泉",
-    "_generated": true
+    "_generated": true,
+    "lat": 32.7403,
+    "lng": 130.187
   },
   {
     "id": "kochi-ino",
@@ -6033,7 +7005,9 @@
     "rakutenPath": "/yado/kochi/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8D%82%92%6D%8C%A7%20%82%A2%82%CC%92%AC&screenId=UWW1402",
     "jalanKeyword": "高知県 いの町",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.5458,
+    "lng": 133.427
   },
   {
     "id": "hiji",
@@ -6043,7 +7017,9 @@
     "rakutenPath": "/yado/oita/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%91%E5%95%AA%8C%A7%20%93%FA%8F%6F&screenId=UWW1402",
     "jalanKeyword": "大分県 日出",
-    "_generated": true
+    "_generated": true,
+    "lat": 33.3755,
+    "lng": 131.5508
   },
   {
     "id": "tsunan",
@@ -6053,7 +7029,9 @@
     "rakutenPath": "/yado/niigata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%90%56%8A%83%8C%A7%20%92%C3%93%EC&screenId=UWW1402",
     "jalanKeyword": "新潟県 津南",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.9326,
+    "lng": 138.6648
   },
   {
     "id": "kurobe",
@@ -6063,7 +7041,9 @@
     "rakutenPath": "/yado/toyama/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%95%78%8E%52%8C%A7%20%8D%95%95%94&screenId=UWW1402",
     "jalanKeyword": "富山県 黒部",
-    "_generated": true
+    "_generated": true,
+    "lat": 36.8698,
+    "lng": 137.4592
   },
   {
     "id": "tsuruoka-kinzan",
@@ -6073,7 +7053,9 @@
     "rakutenPath": "/yado/yamagata/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%8E%52%8C%60%8C%A7%20%8B%E0%8E%52%92%AC&screenId=UWW1402",
     "jalanKeyword": "山形県 金山町",
-    "_generated": true
+    "_generated": true,
+    "lat": 38.8844,
+    "lng": 140.4157
   },
   {
     "id": "tomari-okinawa",
@@ -6083,7 +7065,9 @@
     "rakutenPath": "/yado/okinawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%88%C9%95%BD%89%AE%93%87&screenId=UWW1402",
     "jalanKeyword": "沖縄県 伊平屋島",
-    "_generated": true
+    "_generated": true,
+    "lat": 27.062,
+    "lng": 127.9603
   },
   {
     "id": "ogimi",
@@ -6093,6 +7077,8 @@
     "rakutenPath": "/yado/okinawa/",
     "jalanUrl": "https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=%89%AB%93%EA%8C%A7%20%91%E5%8B%58%96%A1&screenId=UWW1402",
     "jalanKeyword": "沖縄県 大宜味",
-    "_generated": true
+    "_generated": true,
+    "lat": 26.6879,
+    "lng": 128.138
   }
 ]
