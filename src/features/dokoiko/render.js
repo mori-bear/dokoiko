@@ -13,6 +13,7 @@
 import { DEPARTURE_CITY_INFO }                   from '../../config/constants.js';
 import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuilder.js';
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
+import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
@@ -707,18 +708,10 @@ function buildDestMapUrl(city) {
 /**
  * Google Maps transit 経路リンク（出発駅 → 最寄り駅）
  * PRIMARY CTA として使用する。
- * origin: DEPARTURE_CITY_INFO の rail（駅名）
- * destination: city.accessStation（最寄り駅・空港・港）
+ * buildRouteMapUrl ユーティリティに委譲（緯度経度禁止・駅名ベース統一）。
  */
 function buildTransitMapUrl(departure, city) {
-  if (!departure || !city) return null;
-  const fromStation = DEPARTURE_CITY_INFO[departure]?.rail;
-  const toStation   = city.accessStation;
-  // どちらかがない場合は地名にフォールバック
-  const origin = encodeURIComponent(fromStation || departure);
-  const dest   = encodeURIComponent(toStation   || city.displayName || city.name || '');
-  if (!dest) return null;
-  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=transit`;
+  return buildRouteMapUrl(departure, city);
 }
 
 /* ── ステップ分類（main / transfer / local）── */

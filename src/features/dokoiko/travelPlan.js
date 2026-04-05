@@ -1,22 +1,31 @@
 /**
  * buildTravelPlan — 旅行プラン生成の司令塔
  *
- * 交通・宿を1オブジェクトにまとめて返す。
- * app.js から呼び出し、render.js はこの結果を描画するだけ。
+ * transportEngine.buildTransportContext を唯一の交通情報源として使用する。
+ * render.js はこの結果を描画するだけ（交通手段の再判定禁止）。
  *
  * @param {object} destination — destinations.json エントリ
  * @param {string} departure   — 出発都市名
  * @returns {{
- *   transportLinks: Array, — step-group 配列（render.js が受け取る形式そのまま）
- *   hotelLinks: object,    — buildHotelLinks の戻り値
+ *   transportLinks: Array,         — step-group 配列（render.js 互換形式）
+ *   hotelLinks: object,            — buildHotelLinks の戻り値
+ *   transportContext: object,      — engine の完全コンテキスト（拡張用）
  * }}
  */
 
-import { resolveTransportLinks } from '../../transport/resolveTransportLinks.js';
+import { buildTransportContext } from '../../engine/transportEngine.js';
 import { buildHotelLinks }       from '../../hotel/hotelLinkBuilder.js';
 
 export function buildTravelPlan(destination, departure) {
-  const transportLinks = resolveTransportLinks(destination, departure);
-  const hotelLinks     = buildHotelLinks(destination);
-  return { transportLinks, hotelLinks };
+  /* 交通コンテキスト（engine が唯一の正） */
+  const context = buildTransportContext(departure, destination);
+
+  /* 宿泊リンク */
+  const hotelLinks = buildHotelLinks(destination);
+
+  return {
+    transportLinks:   context.stepGroups,  // render.js 互換: step-group 配列
+    hotelLinks,
+    transportContext: context,             // 拡張用: engine の完全コンテキスト
+  };
 }
