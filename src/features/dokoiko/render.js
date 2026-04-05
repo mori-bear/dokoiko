@@ -186,21 +186,6 @@ function pickStayUrl(hotelLinks, city) {
 }
 
 /**
- * 移動時間から「背中押し」コピーを生成。
- * 説明ではなく体験・感情で表現。時間表記は route-badge に任せ、ここには出さない。
- */
-function buildDecisionCopy(totalMins) {
-  if (!totalMins || totalMins <= 0) return '';
-  if (totalMins < 60)  return '思い立ったらすぐ行ける。';
-  if (totalMins < 100) return '近いのに、意外と知らない場所。';
-  if (totalMins < 150) return '日帰りで、ちゃんと旅した気分になれる。';
-  if (totalMins < 210) return 'ちょっとだけ遠出したい。そんな週末に。';
-  if (totalMins < 310) return '週末にちょうどいい。少し遠出の気分。';
-  if (totalMins < 420) return '少し遠いから、非日常になれる。';
-  return '行ったことがないのは、遠いからだけ。';
-}
-
-/**
  * 予約CTAのCSSクラスを返す（engine が生成した cta.type に基づく）。
  * render 内の唯一のタイプ→クラス変換ポイント（分散禁止）。
  *
@@ -385,9 +370,7 @@ function buildTransportBlock(links, departure, destLabel, city = null) {
 
   let summaryHtml = '';
   if (departure && destLabel && noteLink) {
-    const transfers = noteLink.transfers ?? 0;
-    const transferStr = transfers === 0 ? '直通' : `乗換${transfers}回`;
-    summaryHtml = `<div class="route-summary">${departure} → ${destLabel}（${transferStr}）</div>`;
+    summaryHtml = `<div class="route-summary">${departure} → ${destLabel}</div>`;
   }
 
   let firstActionable = true;
@@ -425,19 +408,9 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
   const altRoutes  = links.filter(l => l.type === 'alt-route');
 
-  // ① ルート概要（合計時間・乗換回数バッジ付き）
-  let routeBadge = '';
-  const totalMins = stepGroups.reduce((sum, sg) => sum + (sg.duration ?? 0), 0);
-  const transferCount = Math.max(0, stepGroups.length - 1);
-  if (totalMins > 0) {
-    const h = Math.floor(totalMins / 60);
-    const m = totalMins % 60;
-    const timeStr = (h > 0 && m > 0) ? `${h}時間${m}分` : h > 0 ? `${h}時間` : `${m}分`;
-    const xferStr = transferCount === 0 ? '直通' : `乗換${transferCount}回`;
-    routeBadge = `<span class="route-badge">約${timeStr} / ${xferStr}</span>`;
-  }
+  // ① ルート概要（出発地 → 目的地のみ）
   const summaryHtml = (departure && destLabel)
-    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}${routeBadge}</div>`
+    ? `<div class="route-summary">${buildRouteSummary(departure, destLabel, city)}</div>`
     : '';
 
   // ② メインCTA（routes.json の main-cta を直接使用 — 推測・生成しない）
