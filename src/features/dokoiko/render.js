@@ -276,16 +276,11 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn btn-rental btn--action">現地の移動にレンタカーを見る</a>`);
   }
 
-  // 納得感テキスト（CTA直前・engine生成・1行のみ）
-  const reasonHtml = reason
-    ? `<p class="route-reason">${reason}</p>`
-    : '';
-
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // 宿セクション（daytrip = 完全非表示、それ以外 = 最良1ボタン）
+  // 宿セクション（daytrip = 完全非表示）
   const staySection = showHotel ? buildStaySection(hotelLinks, city) : '';
 
   // ルート詳細（折りたたみ）— alt-route は最適ルート1本に統一するため非表示
@@ -313,7 +308,6 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
-      ${reasonHtml}
       ${ctaGroupHtml}
       ${staySection}
       ${detailsBlock}
@@ -368,9 +362,6 @@ function buildStaySection(hotelLinks, city) {
   const jalan     = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
 
-  const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
-  const heading = stayCityName ? `この旅、泊まるなら${stayCityName}がちょうどいい。` : 'この旅の宿を探す';
-
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn--stay-rakuten btn--action">楽天で見る</a>` : '',
@@ -380,7 +371,6 @@ function buildStaySection(hotelLinks, city) {
 
   return `
     <div class="stay-section">
-      <p class="stay-heading">${heading}</p>
       <div class="stay-buttons">${buttons}</div>
     </div>
   `;
@@ -1242,7 +1232,6 @@ function buildStayBlock(hotelLinks, city, stayType) {
   return `
     <div class="stay-block">
       ${longDaytripNote}
-      <p class="stay-heading">ゆっくりするなら「${stayCityName}」に泊まるのもあり。</p>
       <div class="stay-buttons">
         <a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
            class="stay-btn stay-btn--${hotelLinks.bestType}">宿を見る</a>
