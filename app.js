@@ -95,10 +95,12 @@ function draw() {
 
     renderResult({
       city,
-      transportLinks: plan.transportLinks,
-      hotelLinks:     plan.hotelLinks,
-      stayType:       state.stayType,
-      departure:      state.departure,
+      transportLinks:  plan.transportLinks,
+      hotelLinks:      plan.hotelLinks,
+      stayType:        state.stayType,
+      departure:       state.departure,
+      mapUrl:          plan.transportContext?.mapUrl          ?? null,
+      mapOnlyFallback: plan.transportContext?.mapOnlyFallback ?? false,
     });
 
     // URLとページメタを更新

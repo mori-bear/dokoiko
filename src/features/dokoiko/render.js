@@ -15,7 +15,7 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -26,7 +26,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel)
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback)
           : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
         }
         ${buildShareBlock()}
@@ -201,10 +201,32 @@ function buildDecisionCopy(totalMins) {
 }
 
 /**
+ * 予約CTAのCSSクラスを返す（engine が生成した cta.type に基づく）。
+ * render 内の唯一のタイプ→クラス変換ポイント（分散禁止）。
+ *
+ * btn--jr     : JR系予約（青系・信頼感）
+ * btn--booking: 航空券・フェリー・バス等
+ */
+function actionBtnClass(ctaType) {
+  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+  return JR_TYPES.has(ctaType) ? 'btn--jr' : 'btn--booking';
+}
+
+/**
  * ルート情報・CTA・宿・再検索を1ブロックに統合。
  * step-group 形式のルートでのみ使用する。
+ *
+ * @param {Array}   links           — step-group 配列
+ * @param {object}  hotelLinks      — buildHotelLinks の出力
+ * @param {string}  stayType        — 'daytrip' | 'overnight' etc.
+ * @param {string}  departure       — 出発都市名
+ * @param {string}  destLabel       — 表示用目的地名
+ * @param {object}  city            — destinations.json エントリ
+ * @param {boolean} showHotel       — 宿セクションを表示するか
+ * @param {string|null} engineMapUrl — engine が生成した Google Maps URL（hubCity優先）
+ * @param {boolean} mapOnlyFallback — CTA 生成不可・Maps のみ案内モード
  */
-function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel) {
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false) {
   const stepGroups = links.filter(l => l.type === 'step-group');
   const altRoutes  = links.filter(l => l.type === 'alt-route');
 
@@ -223,33 +245,26 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<div class="route-line">${departure} → ${destLabel}${badge}</div>`
     : '';
 
-  // 意思決定コピー（ルート直下に1行）
-  const decisionCopyText = buildDecisionCopy(totalMins);
-  const decisionCopyHtml = decisionCopyText
-    ? `<p class="decision-copy">${decisionCopyText}</p>`
-    : '';
-
   // CTA グループ（最大2つ: 地図ルート=PRIMARY / 予約=SECONDARY）
   const mainCtaItem = links.find(l => l.type === 'main-cta');
   const ctaItems = [];
   const seenCtaUrls = new Set();
 
-  // PRIMARY: Google Maps transit route（常に最上部・タイトル直下）
-  const transitMapUrl = buildTransitMapUrl(departure, city);
-  if (transitMapUrl && !seenCtaUrls.has(transitMapUrl)) {
-    seenCtaUrls.add(transitMapUrl);
-    ctaItems.push(`<a href="${transitMapUrl}" target="_blank" rel="noopener noreferrer"
+  // PRIMARY: engine が生成した Maps URL（hubCity 優先）を使用。
+  // なければ render 側の buildTransitMapUrl にフォールバック。
+  const primaryMapUrl = engineMapUrl ?? buildTransitMapUrl(departure, city);
+  if (primaryMapUrl && !seenCtaUrls.has(primaryMapUrl)) {
+    seenCtaUrls.add(primaryMapUrl);
+    ctaItems.push(`<a href="${primaryMapUrl}" target="_blank" rel="noopener noreferrer"
        class="btn btn--transport btn--action">地図でルートを見る</a>`);
   }
 
-  // SECONDARY: 予約・チケット（JR / 航空券 / ferry など）- 重複URL除外
-  if (mainCtaItem?.cta?.url && !seenCtaUrls.has(mainCtaItem.cta.url)) {
+  // SECONDARY: 予約・チケット — mapOnlyFallback 時は表示しない
+  if (!mapOnlyFallback && mainCtaItem?.cta?.url && !seenCtaUrls.has(mainCtaItem.cta.url)) {
     seenCtaUrls.add(mainCtaItem.cta.url);
     const bookingLabel = mainCtaItem.cta.label ?? buildMainCtaLabel(mainCtaItem.cta.type);
-    const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
-    const bookingClass = JR_TYPES.has(mainCtaItem.cta.type) ? 'btn--jr' : 'btn--booking';
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
-       class="btn ${bookingClass} btn--action">${bookingLabel}</a>`);
+       class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
