@@ -1033,6 +1033,83 @@ body {
 }
 .btn--stay-soft:hover { background: #ede5dc; }
 
+/* ── 宿ピッカー（タップで楽天/じゃらん展開） ── */
+
+.stay-picker {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.stay-picker-trigger {
+  list-style: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a5c3a;
+  background: #f5f0eb;
+  border: 1.5px solid #e0d0c0;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+.stay-picker-trigger::-webkit-details-marker { display: none; }
+.stay-picker-trigger:hover { background: #ede5dc; }
+
+.stay-picker[open] .stay-picker-trigger {
+  border-radius: 10px 10px 0 0;
+  background: #ede5dc;
+}
+
+.stay-picker-options {
+  border: 1.5px solid #e0d0c0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  background: #faf7f4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 楽天: 赤系（ロゴ不使用・色のみ） */
+.btn--stay-rakuten {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #c0392b;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn--stay-rakuten:hover { opacity: 0.87; }
+
+/* じゃらん: オレンジ系（ロゴ不使用・色のみ） */
+.btn--stay-jalan {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #e8722a;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn--stay-jalan:hover { opacity: 0.87; }
+
 /* 別の旅を見るボタン（カード内） */
 .retry-btn-inline {
   display: block;

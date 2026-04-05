@@ -198,14 +198,13 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
        class="btn btn-maps btn--action">地図で見る</a>`);
   }
-  if (showHotel && hotelLinks?.bestUrl) {
-    ctaItems.push(`<a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
-       class="btn btn--stay-soft btn--action">宿を見る</a>`);
-  }
 
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
+
+  // 宿ピッカー（初期: 1ボタン → 展開: 楽天/じゃらん）
+  const stayPickerHtml = showHotel ? buildStayPicker(hotelLinks) : '';
 
   // 日帰り長距離ノート（宿CTAが出る場合のみ）
   const travelMins = city?.travelTimeMinutes ?? 0;
@@ -243,11 +242,44 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     <div class="action-block">
       ${routeLineHtml}
       ${ctaGroupHtml}
+      ${stayPickerHtml}
       ${longDaytripNote}
       ${detailsBlock}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
+  `;
+}
+
+/**
+ * 宿ピッカー: 「宿を探す」ボタン押下で楽天/じゃらん選択UIを展開。
+ * <details>/<summary> を使用してJS不要で実現。
+ * ロゴは使用せず色のみブランド連想。
+ */
+function buildStayPicker(hotelLinks) {
+  if (!hotelLinks) return '';
+
+  // useHub: mountain/remote はハブ都市の宿を使う（bestUrlの選定ロジックと合わせる）
+  const bestLinks = hotelLinks.hubLinks?.links?.length
+    ? hotelLinks.hubLinks.links
+    : (hotelLinks.links ?? []);
+
+  const rakuten = bestLinks.find(l => l.type === 'rakuten');
+  const jalan   = bestLinks.find(l => l.type === 'jalan');
+  if (!rakuten && !jalan) return '';
+
+  const optionsHtml = [
+    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-rakuten">楽天で見る</a>` : '',
+    jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-jalan">じゃらんで見る</a>` : '',
+  ].filter(Boolean).join('');
+
+  return `
+    <details class="stay-picker">
+      <summary class="stay-picker-trigger">宿を探す</summary>
+      <div class="stay-picker-options">${optionsHtml}</div>
+    </details>
   `;
 }
 
