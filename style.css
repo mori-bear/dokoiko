@@ -1002,6 +1002,15 @@ body {
   font-weight: 600;
 }
 
+/* 意思決定コピー（ルート概要直下） */
+.decision-copy {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+  margin: -6px 0 14px;
+  line-height: 1.5;
+}
+
 .cta-group {
   display: flex;
   flex-direction: column;
@@ -1023,18 +1032,22 @@ body {
   text-decoration: none;
 }
 
-/* 行き方を見る: ダーク（主アクション・最優先） */
+/* 行き方を見る: 最強アクション（shadow + 大きめpadding） */
 .btn--transport {
-  background: #2c2c2c;
+  background: #1c1c1c;
   color: #fff;
   border: none;
+  padding: 16px 24px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
-.btn--transport:hover { background: #444; opacity: 1; }
+.btn--transport:hover { background: #333; opacity: 1; box-shadow: 0 6px 18px rgba(0,0,0,0.28); }
 
-/* 地図で見る: やや控えめ（副アクション） */
+/* 地図で見る: 副アクション（やや小さく・shadow なし） */
 .btn--transport-secondary {
   background: #4a4a4a;
   color: #fff;
+  border: none;
 }
 .btn--transport-secondary:hover { background: #5e5e5e; }
 

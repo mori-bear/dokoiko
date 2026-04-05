@@ -185,6 +185,27 @@ function pickStayUrl(hotelLinks, city) {
 }
 
 /**
+ * 移動時間から意思決定を後押しする1行コピーを生成。
+ * 例: 300分 → "約5時間。週末でも行ける距離。"
+ */
+function buildDecisionCopy(totalMins) {
+  if (!totalMins || totalMins <= 0) return '';
+  const h = Math.floor(totalMins / 60);
+  const m = totalMins % 60;
+  const t = h > 0
+    ? (m >= 30 ? `約${h}時間半` : `約${h}時間`)
+    : `${totalMins}分`;
+
+  if (totalMins < 60)  return `${totalMins}分で着く。気軽に行ける距離。`;
+  if (totalMins < 100) return `${t}。意外と近い。`;
+  if (totalMins < 150) return `${t}。日帰りでも余裕の距離。`;
+  if (totalMins < 210) return `${t}。週末でちょうどいい距離。`;
+  if (totalMins < 310) return `${t}。週末でも行ける距離。`;
+  if (totalMins < 420) return `${t}。少し遠い。だから知らない場所かも。`;
+  return `${t}。遠いけど、行く価値がある場所。`;
+}
+
+/**
  * ルート情報・CTA・宿・再検索を1ブロックに統合。
  * step-group 形式のルートでのみ使用する。
  */
@@ -207,6 +228,12 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<div class="route-line">${departure} → ${destLabel}${badge}</div>`
     : '';
 
+  // 意思決定コピー（ルート直下に1行）
+  const decisionCopyText = buildDecisionCopy(totalMins);
+  const decisionCopyHtml = decisionCopyText
+    ? `<p class="decision-copy">${decisionCopyText}</p>`
+    : '';
+
   // CTA グループ（最大3つ: 行き方 / 地図 / 宿）
   const mainCtaItem = links.find(l => l.type === 'main-cta');
   const destMapUrl  = buildDestMapUrl(city);
@@ -218,7 +245,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   }
   if (destMapUrl) {
     ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--transport btn--action btn--transport-secondary">地図で見る</a>`);
+       class="btn btn--transport-secondary btn--action">地図で見る</a>`);
   }
   const stayUrl = showHotel ? pickStayUrl(hotelLinks, city) : null;
   if (stayUrl) {
@@ -271,6 +298,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
+      ${decisionCopyHtml}
       ${ctaGroupHtml}
       ${stayNote}
       ${detailsBlock}
