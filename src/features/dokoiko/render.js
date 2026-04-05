@@ -265,6 +265,15 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   // ③ 番号付きフロー（Google Maps サブリンクのみ表示）
   const stepsHtml = stepGroups.map(sg => buildStepCard(sg)).join('');
 
+  // ③' 目的地マップリンク（地図ボタン — 目的地1点）
+  const destMapUrl = buildDestMapUrl(city);
+  const destMapHtml = destMapUrl
+    ? `<div class="dest-map-row">
+         <a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
+            class="btn btn-maps">地図で見る</a>
+       </div>`
+    : '';
+
   // ④ 代替ルート
   const altRoutesHtml = altRoutes.map(ar => buildAltRouteSection(ar)).join('');
 
@@ -288,11 +297,20 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
        </div>`
     : '';
 
+  // ステップ詳細を折りたたみ表示（初期は閉じた状態）
+  const stepsBlock = stepsHtml
+    ? `<details class="step-details">
+         <summary class="step-details-summary">ルート詳細を見る</summary>
+         <div class="step-list">${stepsHtml}</div>
+       </details>`
+    : '';
+
   return `
     <div class="card-section">
       ${summaryHtml}
       ${mainCtaHtml}
-      <div class="step-list">${stepsHtml}</div>
+      ${destMapHtml}
+      ${stepsBlock}
       ${altRoutesHtml}
       ${localSection}
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
@@ -1044,7 +1062,7 @@ function buildStayBlock(hotelLinks, city, stayType) {
   return `
     <div class="stay-block">
       ${longDaytripNote}
-      <p class="stay-heading">この旅、泊まるなら「${stayCityName}」がおすすめ</p>
+      <p class="stay-heading">ゆっくりするなら「${stayCityName}」に泊まるのもあり。</p>
       <div class="stay-buttons">
         <a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
            class="stay-btn stay-btn--${hotelLinks.bestType}">宿を見る</a>

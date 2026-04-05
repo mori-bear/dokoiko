@@ -978,6 +978,36 @@ body {
   padding: 2px 8px;
 }
 
+/* ── ステップ詳細トグル ── */
+
+.step-details {
+  margin-top: 8px;
+}
+
+.step-details-summary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  list-style: none;
+  padding: 6px 0;
+  user-select: none;
+}
+
+.step-details-summary::-webkit-details-marker { display: none; }
+.step-details-summary::before { content: '▶ '; font-size: 10px; }
+.step-details[open] .step-details-summary::before { content: '▼ '; }
+
+.step-details .step-list {
+  margin-top: 8px;
+}
+
+/* ── 目的地マップボタン ── */
+
+.dest-map-row {
+  margin-top: 8px;
+}
+
 /* ── Phase 7: 代替ルート折りたたみ ── */
 
 .alt-route-section {
