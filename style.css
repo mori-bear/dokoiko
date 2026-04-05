@@ -1092,7 +1092,17 @@ body {
 }
 .btn--booking:hover { background: #5e5e5e; }
 
-/* JR系予約ボタン（blue #0066cc に統一） */
+/* えきねっと（JR東日本）: 緑系 */
+.btn--jr-east {
+  background: #008a00;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.btn--jr-east:hover { background: #006800; }
+
+/* e5489・九州等（JR西・九州・新幹線EX）: 青系 */
 .btn--jr {
   background: #0066cc;
   color: #fff;
@@ -1101,6 +1111,26 @@ body {
   padding: 12px 20px;
 }
 .btn--jr:hover { background: #0052a3; }
+
+/* 航空券（Skyscanner / Google Flights）: 青系 */
+.btn--flight {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.btn--flight:hover { background: #1558b0; }
+
+/* フェリー予約: オレンジ系 */
+.btn--ferry-cta {
+  background: #e8722a;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.btn--ferry-cta:hover { opacity: 0.87; }
 
 /* 宿を探す: 最も控えめ（3番手） */
 .btn--stay {

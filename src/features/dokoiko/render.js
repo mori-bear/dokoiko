@@ -208,8 +208,12 @@ function buildDecisionCopy(totalMins) {
  * btn--booking: 航空券・フェリー・バス等
  */
 function actionBtnClass(ctaType) {
-  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
-  return JR_TYPES.has(ctaType) ? 'btn--jr' : 'btn--booking';
+  if (ctaType === 'jr-east')                           return 'btn--jr-east';   // えきねっと: 緑
+  if (['skyscanner', 'google-flights'].includes(ctaType)) return 'btn--flight'; // 航空券: 青
+  if (ctaType === 'ferry')                             return 'btn--ferry-cta'; // フェリー: オレンジ
+  const JR_WEST = new Set(['jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+  if (JR_WEST.has(ctaType))                           return 'btn--jr';        // e5489等: 青
+  return 'btn--booking';
 }
 
 /**
@@ -230,19 +234,9 @@ function actionBtnClass(ctaType) {
 function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '') {
   const stepGroups = links.filter(l => l.type === 'step-group');
 
-  // ルート概要行: "東京 → 日田（約5時間・乗換2回）"
-  const totalMins     = stepGroups.reduce((sum, sg) => sum + (sg.duration ?? 0), 0);
-  const transferCount = Math.max(0, stepGroups.length - 1);
-  let badge = '';
-  if (totalMins > 0) {
-    const h = Math.floor(totalMins / 60);
-    const m = totalMins % 60;
-    const timeStr = (h > 0 && m > 0) ? `${h}時間${m}分` : h > 0 ? `${h}時間` : `${m}分`;
-    const xferStr = transferCount === 0 ? '直通' : `乗換${transferCount}回`;
-    badge = `<span class="route-badge">約${timeStr}・${xferStr}</span>`;
-  }
+  // ルート概要行: "東京 → 日田"
   const routeLineHtml = (departure && destLabel)
-    ? `<div class="route-line">${departure} → ${destLabel}${badge}</div>`
+    ? `<div class="route-line">${departure} → ${destLabel}</div>`
     : '';
 
   // CTA グループ（最大2つ: 地図ルート=PRIMARY / 予約=SECONDARY）
