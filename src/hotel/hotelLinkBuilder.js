@@ -199,53 +199,78 @@ function buildNearbyHotelLinks(dest) {
 
 /**
  * @param {object} dest — destination エントリ
- * @returns {{ heading: string, links: Array, hubLinks?: {heading, links}, nearbyLinks?: Array }}
+ * @returns {{
+ *   links: Array,               // 現地宿リンク（rakuten/jalan）
+ *   hubLinks?: {links},         // ハブ宿リンク（mountain/remote のみ）
+ *   stayCityName: string,       // UI表示用の宿泊地名（1件）
+ *   bestUrl: string|null,       // 最良の宿リンクURL（1CTA用）
+ *   bestType: string|null,      // 'rakuten' | 'jalan'
+ * }}
  */
 export function buildHotelLinks(dest) {
-  /* ── 現地宿（必須） ── */
+  /* ── hubCity: 観光地は明示的なハブ都市の宿を使用 ── */
+  if (dest.hubCity) {
+    const hubArea        = lookupAreaByName(dest.hubCity);
+    const hubRakutenPath = getRakutenPath(hubArea, null);
+    const hubRakutenUrl  = hubRakutenPath ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)) : null;
+    const hubJalanUrl    = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
+    const links = [
+      ...(hubRakutenUrl ? [{ type: 'rakuten', url: hubRakutenUrl }] : []),
+      ...(hubJalanUrl   ? [{ type: 'jalan',   url: hubJalanUrl   }] : []),
+    ];
+    if (links.length) {
+      return {
+        links,
+        stayCityName: dest.hubCity,
+        bestUrl:  links[0]?.url  ?? null,
+        bestType: links[0]?.type ?? null,
+      };
+    }
+  }
+
+  /* ── 現地宿 ── */
   const rakutenUrl = resolveRakutenUrl(dest);
   const jalanUrl   = resolveJalanUrl(dest);
 
   const result = {
-    heading: `現地で泊まる`,
     links: [
-      ...(rakutenUrl ? [{ type: 'rakuten', label: '楽天で宿を見る',   url: rakutenUrl }] : []),
-      ...(jalanUrl   ? [{ type: 'jalan',   label: 'じゃらんで宿を見る', url: jalanUrl }] : []),
+      ...(rakutenUrl ? [{ type: 'rakuten', url: rakutenUrl }] : []),
+      ...(jalanUrl   ? [{ type: 'jalan',   url: jalanUrl   }] : []),
     ],
   };
 
-  /* ── ハブ宿（条件付き）── */
-  /* 車必須 / remote / mountain でゲートウェイ都市が設定されている場合のみ */
+  /* ── ハブ宿（車必須 / remote / mountain のみ）── */
   const needsHub = dest.requiresCar || dest.destType === 'remote' || dest.destType === 'mountain';
-  /* gatewayHub（手動設定）→ gateway → gatewayStations[0] の順で解決 */
   const hubCityName = dest.gatewayHub
     ?? (dest.gateway ? dest.gateway.replace(/駅$/, '') : null)
     ?? (dest.gatewayStations?.[0]?.name ? dest.gatewayStations[0].name.replace(/駅$/, '') : null);
+
   if (needsHub && hubCityName && hubCityName !== dest.name) {
-    const hub = hubCityName;
-    const hubArea = lookupAreaByName(hub);
+    const hubArea        = lookupAreaByName(hubCityName);
     const hubRakutenPath = getRakutenPath(hubArea, null);
-    const hubRakutenUrl  = hubRakutenPath
-      ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath))
-      : null;
-    const hubJalanUrl = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
+    const hubRakutenUrl  = hubRakutenPath ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)) : null;
+    const hubJalanUrl    = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
 
     if (hubRakutenUrl || hubJalanUrl) {
       result.hubLinks = {
-        heading: `アクセスの良い場所で泊まる（${hub}）`,
         links: [
-          ...(hubRakutenUrl ? [{ type: 'rakuten', label: '楽天で宿を見る',   url: hubRakutenUrl }] : []),
-          ...(hubJalanUrl   ? [{ type: 'jalan',   label: 'じゃらんで宿を見る', url: hubJalanUrl }] : []),
+          ...(hubRakutenUrl ? [{ type: 'rakuten', url: hubRakutenUrl }] : []),
+          ...(hubJalanUrl   ? [{ type: 'jalan',   url: hubJalanUrl   }] : []),
         ],
       };
     }
   }
 
-  /* ── 近隣ホテル（距離30km以内の別エリア） ── */
-  const nearbyLinks = buildNearbyHotelLinks(dest);
-  if (nearbyLinks?.length) {
-    result.nearbyLinks = nearbyLinks;
-  }
+  /* ── UI用: 宿泊地名 + 1CTA URL ── */
+  // mountain/remote はハブ都市に泊まる方が自然
+  const useHub = !!(result.hubLinks?.links?.length && needsHub);
+  result.stayCityName = useHub
+    ? hubCityName
+    : (dest.displayName || dest.name);
+
+  const bestLinks = useHub ? result.hubLinks.links : result.links;
+  result.bestUrl  = bestLinks[0]?.url ?? null;
+  result.bestType = bestLinks[0]?.type ?? null;
 
   return result;
 }

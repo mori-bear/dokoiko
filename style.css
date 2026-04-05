@@ -1061,6 +1061,16 @@ body {
 }
 .btn--booking:hover { background: #5e5e5e; }
 
+/* JR系予約ボタン（blue #0066cc に統一） */
+.btn--jr {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.btn--jr:hover { background: #0052a3; }
+
 /* 宿を探す: 最も控えめ（3番手） */
 .btn--stay {
   background: #f5f0eb;

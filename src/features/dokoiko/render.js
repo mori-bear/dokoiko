@@ -17,7 +17,7 @@ import { buildNarrative }                         from '../../transport/routeNar
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
-    const showHotel = stayType !== 'daytrip' || (city.travelTimeMinutes ?? 0) >= 150;
+    const showHotel = stayType !== 'daytrip';
     const hasStepGroups = transportLinks.some(l => l.type === 'step-group');
 
     const el = document.getElementById('result-inner');
@@ -239,11 +239,13 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn btn--transport btn--action">地図でルートを見る</a>`);
   }
 
-  // SECONDARY: 予約・チケット（ferry / 特急 / 航空券 など。routes.json の main-cta を使用）
+  // SECONDARY: 予約・チケット（JR / 航空券 / ferry など）
   if (mainCtaItem?.cta?.url) {
     const bookingLabel = mainCtaItem.cta.label ?? buildMainCtaLabel(mainCtaItem.cta.type);
+    const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+    const bookingClass = JR_TYPES.has(mainCtaItem.cta.type) ? 'btn--jr' : 'btn--booking';
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--booking btn--action">${bookingLabel}</a>`);
+       class="btn ${bookingClass} btn--action">${bookingLabel}</a>`);
   }
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
@@ -703,13 +705,18 @@ function buildDestMapUrl(city) {
 }
 
 /**
- * Google Maps transit 経路リンク（出発地 → 目的地）
+ * Google Maps transit 経路リンク（出発駅 → 最寄り駅）
  * PRIMARY CTA として使用する。
+ * origin: DEPARTURE_CITY_INFO の rail（駅名）
+ * destination: city.accessStation（最寄り駅・空港・港）
  */
 function buildTransitMapUrl(departure, city) {
   if (!departure || !city) return null;
-  const origin = encodeURIComponent(departure);
-  const dest   = encodeURIComponent(city.displayName || city.name || '');
+  const fromStation = DEPARTURE_CITY_INFO[departure]?.rail;
+  const toStation   = city.accessStation;
+  // どちらかがない場合は地名にフォールバック
+  const origin = encodeURIComponent(fromStation || departure);
+  const dest   = encodeURIComponent(toStation   || city.displayName || city.name || '');
   if (!dest) return null;
   return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=transit`;
 }
