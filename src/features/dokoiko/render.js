@@ -232,16 +232,19 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   // CTA グループ（最大2つ: 地図ルート=PRIMARY / 予約=SECONDARY）
   const mainCtaItem = links.find(l => l.type === 'main-cta');
   const ctaItems = [];
+  const seenCtaUrls = new Set();
 
-  // PRIMARY: Google Maps transit route（常に最上部）
+  // PRIMARY: Google Maps transit route（常に最上部・タイトル直下）
   const transitMapUrl = buildTransitMapUrl(departure, city);
-  if (transitMapUrl) {
+  if (transitMapUrl && !seenCtaUrls.has(transitMapUrl)) {
+    seenCtaUrls.add(transitMapUrl);
     ctaItems.push(`<a href="${transitMapUrl}" target="_blank" rel="noopener noreferrer"
        class="btn btn--transport btn--action">地図でルートを見る</a>`);
   }
 
-  // SECONDARY: 予約・チケット（JR / 航空券 / ferry など）
-  if (mainCtaItem?.cta?.url) {
+  // SECONDARY: 予約・チケット（JR / 航空券 / ferry など）- 重複URL除外
+  if (mainCtaItem?.cta?.url && !seenCtaUrls.has(mainCtaItem.cta.url)) {
+    seenCtaUrls.add(mainCtaItem.cta.url);
     const bookingLabel = mainCtaItem.cta.label ?? buildMainCtaLabel(mainCtaItem.cta.type);
     const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
     const bookingClass = JR_TYPES.has(mainCtaItem.cta.type) ? 'btn--jr' : 'btn--booking';
@@ -252,9 +255,8 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // 宿セクション（文言分岐 + 楽天/じゃらん2ボタン）
-  const travelMins = city?.travelTimeMinutes ?? 0;
-  const staySection = showHotel ? buildStaySection(hotelLinks, city, stayType, travelMins) : '';
+  // 宿セクション（daytrip = 完全非表示、それ以外 = 最良1ボタン）
+  const staySection = showHotel ? buildStaySection(hotelLinks, city) : '';
 
   // ルート詳細（折りたたみ）
   const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -283,7 +285,6 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
-      ${decisionCopyHtml}
       ${ctaGroupHtml}
       ${staySection}
       ${detailsBlock}
@@ -326,47 +327,18 @@ function buildStayPicker(hotelLinks) {
 }
 
 /**
- * 宿泊セクション: 文言分岐 + 楽天/じゃらん2ボタン横並び
- *
- * 文言ルール:
- *   非日帰り     → 「この旅、泊まるなら{city}がちょうどいい。」
- *   日帰り長距離 → 「日帰りでも行ける。でも、泊まるとちょうどいい距離。」
- *   その他       → 「ゆっくりするなら、{city}に泊まるのもあり。」
+ * 宿泊セクション: 最良の1ボタンのみ表示（楽天/じゃらんを内部で選択）。
+ * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
  */
-function buildStaySection(hotelLinks, city, stayType, travelMins = 0) {
-  if (!hotelLinks) return '';
-
-  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
-  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
-  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
-  const rakuten   = stayLinks.find(l => l.type === 'rakuten');
-  const jalan     = stayLinks.find(l => l.type === 'jalan');
-  if (!rakuten && !jalan) return '';
-
-  const stayCityName = hotelLinks.stayCityName || city?.displayName || city?.name || '';
-  const isDaytrip    = stayType === 'daytrip';
-
-  let note = '';
-  if (!isDaytrip && stayCityName) {
-    note = `この旅、泊まるなら${stayCityName}がちょうどいい。`;
-  } else if (isDaytrip && travelMins >= 150) {
-    note = '日帰りでも行ける。でも、泊まるとちょうどいい距離。';
-  } else if (stayCityName) {
-    note = `ゆっくりするなら、${stayCityName}に泊まるのもあり。`;
-  }
-
-  const noteHtml = note ? `<p class="stay-note">${note}</p>` : '';
-  const btnsHtml = [
-    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten">楽天で見る</a>` : '',
-    jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan">じゃらんで見る</a>` : '',
-  ].filter(Boolean).join('');
-
+function buildStaySection(hotelLinks, city) {
+  const bestUrl = pickStayUrl(hotelLinks, city);
+  if (!bestUrl) return '';
+  const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
+  const label = stayCityName ? `${stayCityName}の宿を探す` : '宿を探す';
   return `
     <div class="stay-section">
-      ${noteHtml}
-      <div class="stay-hotel-btns">${btnsHtml}</div>
+      <a href="${bestUrl}" target="_blank" rel="nofollow sponsored noopener"
+         class="btn btn--stay btn--action">${label}</a>
     </div>
   `;
 }

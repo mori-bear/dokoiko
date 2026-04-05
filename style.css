@@ -1079,6 +1079,12 @@ body {
   font-weight: 600;
   font-size: 14px;
   padding: 12px 20px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
 }
 .btn--stay:hover { background: #ede5dc; }
 
