@@ -51,31 +51,60 @@ export function buildShareText(city, departure) {
   return `これ出たんやけど当たり？笑\n\n${departure} → ${name}\n${url}`;
 }
 
-/** Xシェアウィンドウを開く（URLのみ） */
+/** Xシェアウィンドウを開く（軽いテキスト + URL） */
 export function openXShare(city, departure) {
-  const url = location.href;
+  const url  = location.href;
+  const text = 'この行き先、ちょっと良くない？';
   window.open(
-    `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`,
+    `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
     '_blank',
     'noopener,noreferrer,width=550,height=420',
   );
 }
 
-/** URLをクリップボードにコピー */
+/** URLをクリップボードにコピー（toast表示つき） */
 export async function copyShareText(city, departure) {
   const url = location.href;
-  if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(url);
-  } else {
-    // フォールバック（古いブラウザ・非HTTPS）
-    const el = document.createElement('textarea');
-    el.value = url;
-    el.style.cssText = 'position:fixed;top:-9999px;left:-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(url);
+    } else {
+      const el = document.createElement('textarea');
+      el.value = url;
+      el.style.cssText = 'position:fixed;top:-9999px;left:-9999px';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
+    showCopyToast();
+  } catch (e) {
+    console.error('[copyShareText] コピー失敗:', e);
   }
+}
+
+/** コピー完了 toast を2秒表示 */
+function showCopyToast() {
+  const existing = document.getElementById('copy-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'copy-toast';
+  toast.textContent = 'リンクをコピーしました';
+  toast.style.cssText = [
+    'position:fixed', 'bottom:24px', 'left:50%', 'transform:translateX(-50%)',
+    'background:#1c1c1c', 'color:#fff', 'padding:10px 20px', 'border-radius:8px',
+    'font-size:13px', 'font-weight:600', 'z-index:9999',
+    'box-shadow:0 4px 12px rgba(0,0,0,.25)', 'pointer-events:none',
+    'animation:toast-in .2s ease',
+  ].join(';');
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity .3s';
+    setTimeout(() => toast.remove(), 300);
+  }, 1800);
 }
 
 /** ページタイトル + descriptionを動的更新（タブ表示 + 一部SNS対応） */

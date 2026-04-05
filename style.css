@@ -575,12 +575,29 @@ body {
 
 .theme-tag {
   font-size: 12px;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 4px 12px;
+  border: none;
+  /* デフォルト（分類未対応タグ） */
   color: var(--text-sub);
   background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 3px 10px;
 }
+
+/* タグカラー分類 */
+.tag-onsen    { background: #fff0e8; color: #b84400; }
+.tag-nature   { background: #e8f5ee; color: #1a6b3a; }
+.tag-sea      { background: #e8f3ff; color: #005faa; }
+.tag-mountain { background: #f0ebe8; color: #7a3820; }
+.tag-city     { background: #f0f0f0; color: #444; }
+.tag-history  { background: #f5f0e8; color: #7a5000; }
+.tag-gourmet  { background: #fff8e8; color: #aa6600; }
+.tag-island   { background: #e8f8ff; color: #007ab8; }
+.tag-shrine   { background: #f0e8f5; color: #6600aa; }
+.tag-castle   { background: #e8eaf5; color: #3040a0; }
+.tag-scenic   { background: #e8f5f0; color: #005040; }
+.tag-remote   { background: #ebebeb; color: #555; }
+.tag-default  { background: var(--bg); color: var(--text-sub); }
 
 .spot-list {
   margin-bottom: 20px;
@@ -1586,13 +1603,41 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   }
 }
 
-/* ── キャッチコピー（city-name 直下） ── */
+/* ── 「こんな旅、どう？」眉上テキスト ── */
+.result-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ── キャッチコピー（感情を動かす大見出し） ── */
 .city-catch {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--text);
+  margin-top: 6px;
+  margin-bottom: 4px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* ── 滞在イメージ1行 ── */
+.city-stay {
+  font-size: 13px;
+  color: var(--text-sub);
   margin-top: 4px;
   margin-bottom: 0;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
+  line-height: 1.6;
+  font-style: italic;
+  padding-left: 10px;
+  border-left: 2px solid #e0dfd9;
+}
+
+/* ── コピーtoastアニメーション ── */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0);   }
 }

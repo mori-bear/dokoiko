@@ -93,7 +93,7 @@
       "couple",
       "friends"
     ],
-    "catch": "古都の寺社と海が共存する歴史の街",
+    "catch": "石畳を歩くたびに、時代がひとつずつ遡っていく。",
     "primary": [
       "寺社",
       "海",
@@ -103,7 +103,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鎌倉大仏",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "atami",
@@ -187,7 +188,7 @@
       "couple",
       "friends"
     ],
-    "catch": "昭和レトロと温泉が絡み合う海辺の保養地",
+    "catch": "昭和の海岸線に温泉が湧く。夜の湯けむりが懐かしかった。",
     "primary": [
       "温泉",
       "海",
@@ -199,7 +200,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "熱海城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "nikko",
@@ -317,7 +319,7 @@
       "couple",
       "friends"
     ],
-    "catch": "山と湖と滝に囲まれた世界遺産の聖地",
+    "catch": "東照宮の金と華厳の滝の轟音。どちらも人を黙らせる。",
     "primary": [
       "温泉",
       "自然",
@@ -331,7 +333,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "東照宮",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "karuizawa",
@@ -432,7 +435,7 @@
       "couple",
       "friends"
     ],
-    "catch": "高原の空気と別荘文化が溶け合う避暑地",
+    "catch": "白樺の木漏れ日の下で、何もしない贅沢を買いに来た。",
     "primary": [
       "山",
       "自然",
@@ -442,7 +445,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "旧軽井沢銀座",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "fujikawaguchiko",
@@ -533,7 +537,7 @@
       "couple",
       "friends"
     ],
-    "catch": "富士山を映す湖と雄大な自然に包まれた高原地",
+    "catch": "湖面に映る逆さ富士を見た瞬間、ため息が出た。",
     "primary": [
       "温泉",
       "山",
@@ -545,7 +549,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "河口湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "nara",
@@ -643,7 +648,7 @@
       "couple",
       "friends"
     ],
-    "catch": "鹿と仏教建築が共存する千年の古都",
+    "catch": "大仏の前では、自分が小さいと思い知らされた。",
     "primary": [
       "歴史",
       "寺社",
@@ -653,7 +658,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "東大寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ishigaki",
@@ -759,7 +765,7 @@
       "couple",
       "friends"
     ],
-    "catch": "八重山の文化と透明度抜群の珊瑚礁が広がる離島",
+    "catch": "その海の色が、本当にターコイズブルーだった。",
     "primary": [
       "離島",
       "海",
@@ -769,7 +775,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "川平湾",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "ise",
@@ -893,7 +900,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊勢神宮",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "beppu",
@@ -999,7 +1007,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最大の湯量を誇る、湯煙の街として知られる温泉都市",
+    "catch": "湯けむりの街で地獄めぐりをして、夜は静かな露天風呂に沈んだ。",
     "primary": [
       "温泉",
       "海"
@@ -1008,7 +1016,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "地獄めぐり",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "otaru",
@@ -1106,7 +1115,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北の港町に残る運河と倉庫群が旅情を誘う街",
+    "catch": "夜の運河に灯りが映る。この景色は北の港町だけのものだ。",
     "primary": [
       "海",
       "歴史",
@@ -1116,7 +1125,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小樽運河",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "furano",
@@ -1219,7 +1229,7 @@
       "couple",
       "friends"
     ],
-    "catch": "ラベンダー畑と大自然が広がる北海道の高原地帯",
+    "catch": "ラベンダーの香りが風に乗ってきた瞬間、旅が始まった。",
     "primary": [
       "街歩き",
       "自然",
@@ -1231,7 +1241,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ファーム富田",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "matsushima",
@@ -1346,7 +1357,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三景のひとつ、松の島々が浮かぶ美しい海",
+    "catch": "松の島々が霞む中、遊覧船に揺られながら牡蠣を食べた。",
     "primary": [
       "街歩き",
       "海",
@@ -1358,7 +1369,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "松島湾",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "miyajima",
@@ -1470,7 +1482,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海に浮かぶ鳥居が象徴する世界遺産の神の島",
+    "catch": "満潮の夕暮れに鳥居が水面に浮かんだ。その光景が忘れられない。",
     "primary": [
       "離島",
       "海",
@@ -1482,7 +1494,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "厳島神社",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "onomichi",
@@ -1592,7 +1605,7 @@
       "couple",
       "friends"
     ],
-    "catch": "坂と猫と寺社が点在する瀬戸内の港町",
+    "catch": "坂の途中で振り返ると、瀬戸内の海があった。",
     "primary": [
       "街歩き",
       "海",
@@ -1602,7 +1615,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "千光寺",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shodoshima",
@@ -1726,7 +1740,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "寒霞渓",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "mihonoseki",
@@ -1846,7 +1861,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "美保神社",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "ryujin-onsen",
@@ -1942,7 +1958,8 @@
     "onsenLevel": 2,
     "hasDirectFlight": false,
     "mapPoint": "龍神温泉元湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tokashiki-jima",
@@ -2067,7 +2084,7 @@
       "couple",
       "friends"
     ],
-    "catch": "ケラマブルーの海が広がる沖縄の離島",
+    "catch": "那覇から1時間で、この透明な海に来られることに驚いた。",
     "primary": [
       "離島",
       "海"
@@ -2076,7 +2093,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "阿波連ビーチ",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kumejima",
@@ -2202,7 +2220,7 @@
       "couple",
       "friends"
     ],
-    "catch": "手つかずの白砂浜と沖縄の原風景が残る離島",
+    "catch": "畳石と白砂浜。沖縄の原型がこの島に残っていた。",
     "primary": [
       "離島",
       "海",
@@ -2212,7 +2230,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "はての浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "miyakojima",
@@ -2319,7 +2338,7 @@
       "couple",
       "friends"
     ],
-    "catch": "宮古ブルーと称される透明度抜群の海を持つ離島",
+    "catch": "砂浜に裸足で立った瞬間、全ての予定がどうでもよくなった。",
     "primary": [
       "離島",
       "海",
@@ -2329,7 +2348,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "与那覇前浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kouzushima",
@@ -2450,7 +2470,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "前浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "hakone",
@@ -2552,7 +2573,7 @@
       "couple",
       "friends"
     ],
-    "catch": "山と湖と温泉が揃う関東を代表する保養地",
+    "catch": "箱根の山に入ると、富士山が向こうから近づいてきた。",
     "primary": [
       "温泉",
       "山",
@@ -2562,7 +2583,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "芦ノ湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "shuzenji",
@@ -2657,7 +2679,7 @@
       "couple",
       "friends"
     ],
-    "catch": "竹林に囲まれた伊豆最古の温泉郷",
+    "catch": "竹林と川と温泉。修善寺の朝は静かすぎて困るくらいだった。",
     "primary": [
       "温泉",
       "歴史",
@@ -2667,7 +2689,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "修禅寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kusatsu-onsen",
@@ -2767,7 +2790,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三名泉のひとつ、源泉かけ流しで知られる高原の湯",
+    "catch": "湯畑の湯けむりを見た瞬間、やっと来られたと思った。",
     "primary": [
       "温泉",
       "山"
@@ -2776,7 +2799,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "湯畑",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "shimoda",
@@ -2879,7 +2903,7 @@
       "couple",
       "friends"
     ],
-    "catch": "黒船来航の歴史が残る伊豆半島南端の港町",
+    "catch": "黒船が来た港の街で、海の風を受けながら歩いた。",
     "primary": [
       "歴史",
       "海",
@@ -2891,7 +2915,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "了仙寺",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "izu-oshima",
@@ -3010,7 +3035,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅",
+    "catch": "東京から行ける離島に、火山と温泉と海がある。",
     "primary": [
       "離島",
       "海",
@@ -3022,7 +3047,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "三原山",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "shirakawago-t",
@@ -3125,7 +3151,7 @@
       "couple",
       "friends"
     ],
-    "catch": "雪に耐える合掌造りの集落が世界遺産に登録された里",
+    "catch": "雪に包まれた合掌造りの集落。言葉より先に写真を撮った。",
     "primary": [
       "山",
       "城",
@@ -3135,7 +3161,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "荻町城跡展望台",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "arima-onsen",
@@ -3237,7 +3264,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本書紀にも記された六甲山麓の古湯",
+    "catch": "大阪から1時間で、山の奥の温泉街にいる感覚が好きだ。",
     "primary": [
       "温泉",
       "歴史",
@@ -3247,7 +3274,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "金の湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kinosaki-onsen",
@@ -3345,7 +3373,7 @@
       "couple",
       "friends"
     ],
-    "catch": "浴衣で七つの外湯を巡る情緒ある温泉街",
+    "catch": "浴衣で外湯をはしごする。それだけで旅の価値がある。",
     "primary": [
       "温泉",
       "城"
@@ -3354,7 +3382,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "さとの湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kurashiki-o",
@@ -3451,7 +3480,7 @@
       "couple",
       "friends"
     ],
-    "catch": "白壁の土蔵と柳が並ぶ江戸の面影が残る街",
+    "catch": "白壁の川沿いを歩くと、江戸の商人の気配が漂っていた。",
     "primary": [
       "歴史",
       "寺社"
@@ -3460,7 +3489,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大原美術館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "大原美術館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "shirahama-o",
@@ -3546,7 +3576,7 @@
       "couple",
       "friends"
     ],
-    "catch": "白い砂浜と透明な海が広がる南紀のリゾート地",
+    "catch": "白浜の海と温泉を1泊でどちらも楽しめる場所がある。",
     "primary": [
       "温泉",
       "海",
@@ -3558,7 +3588,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "白良浜",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "takayama-o",
@@ -3656,7 +3687,7 @@
       "couple",
       "friends"
     ],
-    "catch": "江戸の町割りが残る飛騨山脈に囲まれた城下町",
+    "catch": "古い町並みに足を踏み入れると、江戸の空気が残っていた。",
     "primary": [
       "温泉",
       "山",
@@ -3668,7 +3699,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "古い町並",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "toba",
@@ -3779,7 +3811,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鳥羽水族館",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "yufuin",
@@ -3893,7 +3926,7 @@
       "couple",
       "friends"
     ],
-    "catch": "霧立つ温泉郷として知られる九州の奥座敷",
+    "catch": "霧の朝の盆地に温泉街が浮かんでいた。非現実的に美しかった。",
     "primary": [
       "温泉",
       "自然",
@@ -3903,7 +3936,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "湯の坪街道",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kurokawa-k",
@@ -3996,7 +4030,7 @@
       "couple",
       "friends"
     ],
-    "catch": "杉林に隠れた小さな温泉旅館が集まる秘湯の里",
+    "catch": "山の奥の小さな宿で、露天風呂と夜空だけがあった。",
     "primary": [
       "秘境",
       "山",
@@ -4008,7 +4042,8 @@
     "onsenLevel": 2,
     "hasDirectFlight": false,
     "mapPoint": "入湯手形",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "aso",
@@ -4111,7 +4146,7 @@
       "couple",
       "friends"
     ],
-    "catch": "世界最大級のカルデラと活火山が広がる大自然の地",
+    "catch": "火口の縁に立つと、地球がまだ動いていると分かった。",
     "primary": [
       "山",
       "自然"
@@ -4120,7 +4155,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "草千里",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "yakushima",
@@ -4252,7 +4288,7 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産に認定された原始の森が島を覆う、屋久島",
+    "catch": "縄文杉の根元に立って、人間が客であることを知った。",
     "primary": [
       "離島",
       "海",
@@ -4264,7 +4300,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "縄文杉",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "amakusa",
@@ -4353,7 +4390,7 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産のキリシタン集落と海に囲まれた九州の島",
+    "catch": "海と教会が共存する天草は、日本の中の別世界だった。",
     "primary": [
       "海",
       "歴史",
@@ -4363,7 +4400,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "天草五橋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "hiraizumi",
@@ -4460,7 +4498,7 @@
       "couple",
       "friends"
     ],
-    "catch": "奥州藤原氏の黄金文化が栄えた世界遺産の地",
+    "catch": "金色堂の前で立ち止まって、何か大切なことを考えた。",
     "primary": [
       "歴史",
       "寺社"
@@ -4469,7 +4507,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "中尊寺金色堂",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "中尊寺金色堂を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "kakunodate",
@@ -4565,7 +4604,7 @@
       "couple",
       "friends"
     ],
-    "catch": "武家屋敷と枝垂れ桜が残る秋田の城下町",
+    "catch": "武家屋敷の桜並木に、息をのんだ。",
     "primary": [
       "歴史",
       "城"
@@ -4574,7 +4613,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "武家屋敷通り",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "武家屋敷通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "aizu",
@@ -4681,7 +4721,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "鶴ヶ城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "zaosan",
@@ -4781,7 +4822,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "お釜",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hagi",
@@ -4892,7 +4934,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "萩城跡",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shimonoseki",
@@ -5003,7 +5046,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "関門橋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "naoshima",
@@ -5120,7 +5164,7 @@
       "couple",
       "friends"
     ],
-    "catch": "現代アートが島全体を美術館にした瀬戸内の離島",
+    "catch": "アート作品の前で立ち止まって、気づいたら2時間が過ぎていた。",
     "primary": [
       "離島",
       "海",
@@ -5130,7 +5174,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "地中美術館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kotohira",
@@ -5241,7 +5286,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "こんぴらさん",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "こんぴらさんを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "uwajima",
@@ -5354,7 +5400,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "宇和島城",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。"
   },
   {
     "id": "toyako",
@@ -5456,7 +5503,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "洞爺湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "noboribetsu",
@@ -5539,7 +5587,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道有数の温泉地、鉄泉が湧く地獄の景観",
+    "catch": "地獄谷の噴煙と濃厚な温泉。体の奥まで温まる場所がある。",
     "primary": [
       "温泉",
       "自然",
@@ -5549,7 +5597,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "地獄谷",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "shiretoko",
@@ -5648,7 +5697,7 @@
       "couple",
       "friends"
     ],
-    "catch": "世界自然遺産に認定された原生の大地と海",
+    "catch": "ヒグマと流氷と原生林。地球の端っこを自分の足で歩いた。",
     "primary": [
       "秘境",
       "自然",
@@ -5660,7 +5709,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "知床五湖",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "wajima",
@@ -5774,7 +5824,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "朝市通り",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "kaga-onsen",
@@ -5873,7 +5924,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": false,
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hakuba",
@@ -5973,7 +6025,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスの峰々を望む高原の山岳リゾート",
+    "catch": "白馬の峰々が窓の外に広がる。山と雪と温泉だけの時間。",
     "primary": [
       "山"
     ],
@@ -5981,7 +6033,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "八方尾根",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "amanohashidate",
@@ -6084,7 +6137,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "智恩寺",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "智恩寺を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ine",
@@ -6198,7 +6252,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊根の舟屋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "ibusuki",
@@ -6294,7 +6349,7 @@
       "couple",
       "friends"
     ],
-    "catch": "薩摩半島南端に広がる砂むし温泉の街",
+    "catch": "砂の中に埋まって、じわじわと温まっていく。不思議な心地よさ。",
     "primary": [
       "温泉",
       "自然",
@@ -6304,7 +6359,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "砂むし会館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "sasebo",
@@ -6411,7 +6467,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "九十九島",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "hirado",
@@ -6513,7 +6570,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "平戸城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "tottori",
@@ -6605,7 +6663,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鳥取砂丘",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "akita",
@@ -6699,7 +6758,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "竿燈まつり",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "竿燈まつりを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "awaji",
@@ -6805,7 +6865,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鳴門の渦潮",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "takao",
@@ -6907,7 +6968,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "薬王院",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tateyama-chiba",
@@ -7013,7 +7075,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "沖ノ島",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "gokayama",
@@ -7115,7 +7178,7 @@
       "couple",
       "friends"
     ],
-    "catch": "白川郷と並ぶ合掌造りの集落が残る山深い里",
+    "catch": "合掌造りの村に宿を取った。夜は囲炉裏の煙と静寂だけ。",
     "primary": [
       "歴史",
       "自然",
@@ -7125,7 +7188,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "菅沼集落",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "jozankei",
@@ -7229,7 +7293,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "定山渓温泉街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "biei",
@@ -7331,7 +7396,7 @@
       "couple",
       "friends"
     ],
-    "catch": "丘と農場が織りなすパッチワークの大地",
+    "catch": "丘の上からの景色が、もうポスターだった。",
     "primary": [
       "自然"
     ],
@@ -7339,7 +7404,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "青い池",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "miyako-iwate",
@@ -7453,7 +7519,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浄土ヶ浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "sakata",
@@ -7562,7 +7629,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "山居倉庫",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "takachiho",
@@ -7654,7 +7722,7 @@
       "couple",
       "friends"
     ],
-    "catch": "神話の里として知られる宮崎の峡谷地帯",
+    "catch": "高千穂峡の緑色の川に、滝が落ちていた。神話の景色だった。",
     "primary": [
       "自然",
       "渓谷",
@@ -7666,7 +7734,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "高千穂峡",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "amami",
@@ -7795,7 +7864,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "金作原原生林",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "goto",
@@ -7924,7 +7994,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "堂崎天主堂",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "unzen",
@@ -8023,7 +8094,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "雲仙地獄",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "ashizuri",
@@ -8130,7 +8202,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "足摺岬灯台",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oboke",
@@ -8244,7 +8317,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大歩危峡",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "tsuwano",
@@ -8353,7 +8427,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "太皷谷稲成神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "inuyama",
@@ -8459,7 +8534,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "犬山城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kiso",
@@ -8572,7 +8648,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "妻籠宿",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "miyama",
@@ -8672,7 +8749,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "かやぶきの里",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tateyama-kurobe",
@@ -8783,7 +8861,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "室堂",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "himi",
@@ -8895,7 +8974,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "氷見漁港朝市",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "nyuto-onsen",
@@ -8984,7 +9064,7 @@
       "couple",
       "friends"
     ],
-    "catch": "ブナ林に囲まれた乳白色の湯が七湯に湧く秘湯の里",
+    "catch": "秘湯の露天風呂に入って、ここまで来てよかったと思った。",
     "primary": [
       "温泉",
       "自然"
@@ -8993,7 +9073,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "鶴の湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yuda-onsen",
@@ -9092,7 +9173,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "瑠璃光寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "ureshino-onsen",
@@ -9183,7 +9265,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "シーボルトの湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "obuse",
@@ -9287,7 +9370,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "北斎館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "北斎館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "uchiko",
@@ -9391,7 +9475,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "内子座",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "内子座を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "muroto",
@@ -9490,7 +9575,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "室戸岬",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "iya",
@@ -9581,7 +9667,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本三大秘境のひとつ、霧が漂う深い谷間の集落",
+    "catch": "祖谷のかずら橋を渡りながら、秘境という言葉を実感した。",
     "primary": [
       "秘境",
       "温泉",
@@ -9591,7 +9677,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "かずら橋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。"
   },
   {
     "id": "oku-izumo",
@@ -9695,7 +9782,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "菅谷たたら山内",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "ginzan-onsen",
@@ -9785,7 +9873,7 @@
       "couple",
       "friends"
     ],
-    "catch": "大正ロマンの洋館が川沿いに並ぶ山形の温泉街",
+    "catch": "ガス灯の灯りと大正ロマンの宿。現実から離れる一夜がある。",
     "primary": [
       "温泉",
       "山",
@@ -9797,7 +9885,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "能登屋旅館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "ouchi-juku",
@@ -9897,7 +9986,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大内宿町並み",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "nozawa-onsen",
@@ -9985,7 +10075,7 @@
       "couple",
       "friends"
     ],
-    "catch": "村全体が温泉場になった信州の山里",
+    "catch": "急斜面のゲレンデと村の外湯。スキーと温泉の両方を手に入れた。",
     "primary": [
       "温泉",
       "山"
@@ -9994,7 +10084,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "大湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "takehara",
@@ -10100,7 +10191,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "町並み保存地区",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "tsumago",
@@ -10213,7 +10305,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "妻籠宿本陣",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "magome",
@@ -10326,7 +10419,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "島崎藤村記念館",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "nagahama",
@@ -10433,7 +10527,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "黒壁スクエア",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "hikone",
@@ -10540,7 +10635,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "彦根城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "koyasan",
@@ -10641,7 +10737,7 @@
       "couple",
       "friends"
     ],
-    "catch": "真言密教の聖域として山上に広がる宗教都市",
+    "catch": "朝の奥之院に霧が流れていた。生と死の境があいまいな場所。",
     "primary": [
       "山",
       "寺社"
@@ -10650,7 +10746,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "奥之院",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "gero-onsen",
@@ -10752,7 +10849,7 @@
       "couple",
       "friends"
     ],
-    "catch": "飛騨川沿いに湯けむりが立ちのぼる日本三名泉",
+    "catch": "飛騨の山々に囲まれて、川のそばで湯に沈む夜があった。",
     "primary": [
       "温泉",
       "街歩き",
@@ -10762,7 +10859,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "噴泉池",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "naruko-onsen",
@@ -10865,7 +10963,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "鳴子峡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "shima-onsen",
@@ -10963,7 +11062,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "積善館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hirosaki",
@@ -11081,7 +11181,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "弘前城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "弘前城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "oirase",
@@ -11180,7 +11281,7 @@
       "couple",
       "friends"
     ],
-    "catch": "原生林を縫うように清流が流れる渓谷路",
+    "catch": "渓流に沿って歩いていたら、何も考えなくなった。",
     "primary": [
       "自然",
       "渓谷",
@@ -11190,7 +11291,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "阿修羅の流れ",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "mashiko",
@@ -11298,7 +11400,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "つかもと",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "益子の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。"
   },
   {
     "id": "bessho-onsen",
@@ -11407,7 +11510,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "北向観音",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "izushi",
@@ -11508,7 +11612,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "出石城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "出石城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "wakura-onsen",
@@ -11601,7 +11706,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "総湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "misasa-onsen",
@@ -11699,7 +11805,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "三徳山投入堂",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "obi",
@@ -11805,7 +11912,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "飫肥城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hitoyoshi",
@@ -11915,7 +12023,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "青井阿蘇神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kamikochi",
@@ -12017,7 +12126,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北アルプスの玄関口に広がる手つかずの高原",
+    "catch": "河童橋から穂高を見上げた。それだけで来た甲斐があった。",
     "primary": [
       "山",
       "自然"
@@ -12026,7 +12135,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "河童橋",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "minakami-onsen",
@@ -12126,7 +12236,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "諏訪峡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "minami-aso",
@@ -12232,7 +12343,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "白川水源",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "imabari",
@@ -12352,7 +12464,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "しまなみ海道",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "ozu",
@@ -12478,7 +12591,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大洲城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shakotan",
@@ -12601,7 +12715,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "神威岬",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "izumo",
@@ -12732,7 +12847,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "出雲大社",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "出雲大社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "suzu",
@@ -12835,7 +12951,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "禄剛崎灯台",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "yoshino",
@@ -12951,7 +13068,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本一の桜の名所として名高い修験道の山",
+    "catch": "千本桜の中を歩いた。日本に生まれてよかったと感じた。",
     "primary": [
       "自然",
       "歴史",
@@ -12963,7 +13080,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "吉野山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kumano",
@@ -13077,7 +13195,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "熊野那智大社",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "iriomote",
@@ -13210,7 +13329,7 @@
       "couple",
       "friends"
     ],
-    "catch": "亜熱帯のジャングルと珊瑚礁が広がる手付かずの秘境",
+    "catch": "ジャングルの奥で、時計が止まった気がした。",
     "primary": [
       "離島",
       "海",
@@ -13223,7 +13342,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "ピナイサーラの滝",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "takahashi",
@@ -13352,7 +13472,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "備中松山城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hida-furukawa",
@@ -13474,7 +13595,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "瀬戸川と白壁土蔵街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "bungo-takada",
@@ -13596,7 +13718,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "昭和の町",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "izu-kogen",
@@ -13720,7 +13843,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "大室山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tanabe",
@@ -13843,7 +13967,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "闘鶏神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tosa-shimizu",
@@ -13953,7 +14078,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "足摺岬",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "nichinan",
@@ -14083,7 +14209,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鵜戸神宮",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "mojiko",
@@ -14193,7 +14320,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "門司港レトロ",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "itoshima",
@@ -14318,7 +14446,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "二見ヶ浦",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "shimabara",
@@ -14447,7 +14576,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "島原城",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "tsuruga",
@@ -14555,7 +14685,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "気比神宮",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shijishima",
@@ -14666,7 +14797,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "マーガレットの大木",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "sounkyo",
@@ -14787,7 +14919,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "流星の滝",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "rebun-island",
@@ -14912,7 +15045,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅",
+    "catch": "礼文島の花と岬。ここまで来た人だけが見られる景色。",
     "primary": [
       "離島",
       "海",
@@ -14924,7 +15057,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "桃岩展望台",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "rishiri-island",
@@ -15054,7 +15188,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "利尻山",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "akan",
@@ -15148,7 +15283,7 @@
       "couple",
       "friends"
     ],
-    "catch": "カルデラ湖に浮かぶ天然記念物マリモが有名",
+    "catch": "霧の湖面にマリモが眠る。北海道の奥地の深い静寂。",
     "primary": [
       "温泉",
       "自然"
@@ -15157,7 +15292,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "マリモ",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "abashiri",
@@ -15263,7 +15399,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "網走監獄博物館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shikotsu",
@@ -15375,7 +15512,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "支笏湖ビジターセンター",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tono",
@@ -15473,7 +15611,7 @@
       "couple",
       "friends"
     ],
-    "catch": "柳田国男の「遠野物語」の舞台",
+    "catch": "ここに来ると、民話が本当のことのように思えてくる。",
     "primary": [
       "歴史",
       "自然"
@@ -15482,7 +15620,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "カッパ淵",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oga",
@@ -15596,7 +15735,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "ナマハゲ館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yonezawa",
@@ -15689,7 +15829,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "上杉神社",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "上杉神社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "dewa-sanzan",
@@ -15785,7 +15926,7 @@
       "couple",
       "friends"
     ],
-    "catch": "月山・羽黒山・湯殿山からなる出羽三山",
+    "catch": "羽黒山の杉並木を歩いて、何かが浄化された気がした。",
     "primary": [
       "寺社",
       "自然",
@@ -15797,7 +15938,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "羽黒山五重塔",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "sakunami-onsen",
@@ -15901,7 +16043,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "秋保大滝",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "goshogawara",
@@ -16013,7 +16156,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "立佞武多の館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kawagoe",
@@ -16116,7 +16260,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "蔵造りの街並み",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "蔵造りの街並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nasu",
@@ -16213,7 +16358,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "那須岳",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "choshi",
@@ -16315,7 +16461,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "犬吠埼灯台",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ashikaga",
@@ -16418,7 +16565,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "足利学校",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shiobara-onsen",
@@ -16514,7 +16662,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "塩原温泉渓谷",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "sado-island",
@@ -16632,7 +16781,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅",
+    "catch": "広い島に金山跡と能楽と海が残る。本州とは違う時間が流れる。",
     "primary": [
       "離島",
       "海",
@@ -16645,7 +16794,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐渡金山",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kiyosato",
@@ -16753,7 +16903,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "清泉寮",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tenryu-gorge",
@@ -16843,7 +16994,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "天竜峡舟下り",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "suwa",
@@ -16951,7 +17103,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "諏訪大社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "eiheiji",
@@ -17059,7 +17212,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "永平寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "wakasa-obama",
@@ -17170,7 +17324,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小浜西組（重伝建）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "okuhida-onsen",
@@ -17286,7 +17441,8 @@
     "secondary": [],
     "onsenLevel": 3,
     "hasDirectFlight": true,
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "minami-izu",
@@ -17386,7 +17542,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "石廊崎",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。"
   },
   {
     "id": "echizen",
@@ -17494,7 +17651,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "越前海岸（水仙）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ito",
@@ -17589,7 +17747,7 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "catch": "伊豆の海を眺めながら湯に浸かれる場所がある。",
     "primary": [
       "温泉",
       "海",
@@ -17603,7 +17761,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "伊東温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "iga",
@@ -17698,7 +17857,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊賀流忍者博物館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "伊賀流忍者博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "kashihara",
@@ -17805,7 +17965,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "橿原神宮",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "橿原神宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "totsukawa",
@@ -17908,7 +18069,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "谷瀬の吊り橋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。"
   },
   {
     "id": "maizuru",
@@ -18002,7 +18164,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "舞鶴引揚記念館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "asuka",
@@ -18122,7 +18285,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "石舞台古墳",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "石舞台古墳を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "daisen",
@@ -18230,7 +18394,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "大山頂上",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yunotsu-onsen",
@@ -18342,7 +18507,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "薬師湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "iwami-ginzan",
@@ -18442,7 +18608,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "龍源寺間歩",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "iwakuni",
@@ -18557,7 +18724,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "錦帯橋",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kurayoshi",
@@ -18662,7 +18830,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "白壁土蔵群",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "suo-oshima",
@@ -18787,7 +18956,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "片添ヶ浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "shimanto",
@@ -18900,7 +19070,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "佐田沈下橋",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kashiwajima",
@@ -19014,7 +19185,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "柏島海岸",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "saijo",
@@ -19129,7 +19301,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "西条うちぬき広場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ainan",
@@ -19234,7 +19407,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "一本松温泉あけぼの荘",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "海を眺めながら温泉に浸かって、新鮮な魚料理で夜を締める。"
   },
   {
     "id": "taketa",
@@ -19338,7 +19512,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "岡城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "usuki",
@@ -19451,7 +19626,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "臼杵石仏（国宝）",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "臼杵石仏（国宝）を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "hita",
@@ -19563,7 +19739,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "豆田町（重伝建）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hasami",
@@ -19666,7 +19843,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "西の原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "takeo-onsen",
@@ -19756,7 +19934,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "武雄温泉楼門",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kitsuki",
@@ -19859,7 +20038,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "杵築城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "杵築城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "tsushima",
@@ -19998,7 +20178,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "万関橋",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "iki-island",
@@ -20131,7 +20312,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "辰ノ島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "tanegashima",
@@ -20265,7 +20447,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "種子島宇宙センター",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kikuchi",
@@ -20375,7 +20558,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "菊池渓谷",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。"
   },
   {
     "id": "taketomi-island",
@@ -20497,7 +20681,7 @@
       "couple",
       "friends"
     ],
-    "catch": "赤瓦の民家が並ぶ沖縄の原風景が残る離島",
+    "catch": "水牛に揺られながら、赤瓦の路地をゆっくりと過ぎた。",
     "primary": [
       "離島",
       "海"
@@ -20506,7 +20690,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "星砂の浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "yonaguni-island",
@@ -20628,7 +20813,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅",
+    "catch": "日本の最西端の島。水平線の向こうに台湾がある。",
     "primary": [
       "離島",
       "海",
@@ -20638,7 +20823,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "西崎灯台（日本最西端）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "nakijin",
@@ -20752,7 +20938,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "今帰仁城跡（世界遺産）",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "motobu",
@@ -20863,7 +21050,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "沖縄美ら海水族館",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "zamami-island",
@@ -20996,7 +21184,7 @@
       "couple",
       "friends"
     ],
-    "catch": "那覇から高速船で約50分",
+    "catch": "海の透明度がおかしいくらい高くて、魚が宙に浮いて見えた。",
     "primary": [
       "離島",
       "海"
@@ -21005,7 +21193,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "古座間味ビーチ",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "ie-island",
@@ -21129,7 +21318,7 @@
       "couple",
       "friends"
     ],
-    "catch": "本部港からフェリーで30分",
+    "catch": "伊江島タッチューの頂から、沖縄の海が一望できた。",
     "primary": [
       "離島",
       "海",
@@ -21142,7 +21331,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "城山（タッチュー）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kohama-island",
@@ -21249,7 +21439,7 @@
       "couple",
       "friends"
     ],
-    "catch": "NHKドラマ「ちゅらさん」の舞台",
+    "catch": "サトウキビ畑の向こうに、コバルトブルーの海が広がっていた。",
     "primary": [
       "離島",
       "海",
@@ -21259,7 +21449,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "はいむるぶし",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "matsushiro",
@@ -21356,7 +21547,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "松代城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "iiyama",
@@ -21456,7 +21648,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "菜の花公園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yakake",
@@ -21559,7 +21752,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "矢掛本陣（国指定史跡）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tsuyama",
@@ -21674,7 +21868,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "津山城（鶴山公園）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tsurugi-san",
@@ -21782,7 +21977,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "剣山山頂",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "nobeoka",
@@ -21904,7 +22100,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "延岡城跡",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kamaishi",
@@ -21987,7 +22184,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "根浜海岸",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ofunato",
@@ -22070,7 +22268,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "碁石海岸",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kuji",
@@ -22153,7 +22352,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "久慈琥珀博物館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "wakkanai",
@@ -22263,7 +22463,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "宗谷岬",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "obihiro",
@@ -22373,7 +22574,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "十勝牧場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "rausu",
@@ -22492,7 +22694,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "羅臼岳",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "esashi-hokkaido",
@@ -22606,7 +22809,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "いにしえ街道",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hanamaki",
@@ -22711,7 +22915,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "宮沢賢治記念館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hachimantai",
@@ -22830,7 +23035,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "八幡平頂上",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tazawako",
@@ -22938,7 +23144,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "田沢湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yamadera",
@@ -23056,7 +23263,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "立石寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kesennuma",
@@ -23160,7 +23368,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "気仙沼港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ikaho",
@@ -23270,7 +23479,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "伊香保石段街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "enoshima",
@@ -23371,7 +23581,7 @@
       "couple",
       "friends"
     ],
-    "catch": "湘南の海に浮かぶ弁財天の島",
+    "catch": "橋を渡り、島の頂から海を見下ろす。それだけで違う世界。",
     "primary": [
       "海",
       "寺社",
@@ -23381,7 +23591,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "江島神社",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "chichibu",
@@ -23477,7 +23688,7 @@
       "couple",
       "friends"
     ],
-    "catch": "武蔵野の山々に囲まれた霊場と祭りの里",
+    "catch": "山の神社と秩父夜祭。静かな山里に、熱が残っていた。",
     "primary": [
       "寺社",
       "自然",
@@ -23489,7 +23700,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "秩父神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oarai",
@@ -23594,7 +23806,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大洗磯前神社",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "sano",
@@ -23698,7 +23911,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐野厄除大師",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "佐野厄除大師を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "gujo-hachiman",
@@ -23806,7 +24020,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "郡上八幡城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "narai-juku",
@@ -23915,7 +24130,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "奈良井宿本陣跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "itoigawa",
@@ -24018,7 +24234,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "フォッサマグナミュージアム",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "murakami",
@@ -24124,7 +24341,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "村上城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "村上城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "shima",
@@ -24223,7 +24441,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "英虞湾",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ogaki",
@@ -24316,7 +24535,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大垣城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "大垣城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "echizen-kaigan",
@@ -24426,7 +24646,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "東尋坊",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "myoko-kogen",
@@ -24527,7 +24748,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "妙高山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "nagaoka",
@@ -24618,7 +24840,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "長岡花火",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tanba-sasayama",
@@ -24720,7 +24943,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "篠山城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "篠山城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nachikatsuura",
@@ -24822,7 +25046,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "那智の大滝",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kumano-hongu",
@@ -24925,7 +25150,7 @@
       "couple",
       "friends"
     ],
-    "catch": "世界遺産熊野古道の中心地",
+    "catch": "深い山の中の熊野本宮。ここに来ると、洗い流される感覚がある。",
     "primary": [
       "秘境",
       "自然",
@@ -24937,7 +25162,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "熊野本宮大社",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "ako",
@@ -25045,7 +25271,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "赤穂城跡",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "fushimi",
@@ -25146,7 +25373,7 @@
       "couple",
       "friends"
     ],
-    "catch": "伏見稲荷大社の千本鳥居と日本有数の酒どころが共存する京都…",
+    "catch": "千本鳥居をくぐりながら、願いでもかけてみようと思った。",
     "primary": [
       "寺社",
       "グルメ",
@@ -25156,7 +25383,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伏見稲荷大社",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "伏見稲荷大社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "tomonoura",
@@ -25255,7 +25483,7 @@
       "couple",
       "friends"
     ],
-    "catch": "瀬戸内海の潮待ちの港として栄えた江戸時代の港町",
+    "catch": "瀬戸内の漁港の朝は、静かで美しかった。",
     "primary": [
       "歴史",
       "海",
@@ -25265,7 +25493,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鞆の浦港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "sakaiminato",
@@ -25380,7 +25609,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "水木しげるロード",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ushimado",
@@ -25497,7 +25727,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "牛窓オリーブ園",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kasaoka",
@@ -25590,7 +25821,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "笠岡諸島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "tsunoshima",
@@ -25699,7 +25931,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "角島大橋",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "dogo-onsen",
@@ -25814,7 +26047,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最古の温泉と名高い松山の名湯",
+    "catch": "日本最古の温泉に入る。少し特別な気分がした。",
     "primary": [
       "温泉",
       "歴史",
@@ -25824,7 +26057,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "道後温泉本館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "marugame",
@@ -25932,7 +26166,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "丸亀城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "misaki-sadamisaki",
@@ -26049,7 +26284,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "佐田岬灯台",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "yanagawa",
@@ -26163,7 +26399,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "柳川川下り",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "hyuga",
@@ -26273,7 +26510,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "馬ヶ背",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "koshikijima",
@@ -26393,7 +26631,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "なかまで",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kirishima",
@@ -26494,7 +26733,7 @@
       "couple",
       "friends"
     ],
-    "catch": "天孫降臨の地として名高い霧島連山と温泉が広がる鹿児島のリ…",
+    "catch": "霧島の噴煙を見ながら温泉に浸かる。日本の原風景がここにある。",
     "primary": [
       "温泉",
       "山",
@@ -26506,7 +26745,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": true,
     "mapPoint": "霧島神宮",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "ebino-kogen",
@@ -26621,7 +26861,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "えびの高原エコミュージアムセンター",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "onna",
@@ -26730,7 +26971,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "万座毛",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "nago",
@@ -26839,7 +27081,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "名護城跡",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "yomitanson",
@@ -26951,7 +27194,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "残波岬",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "niseko",
@@ -27042,7 +27286,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道屈指のスキーリゾート",
+    "catch": "粉雪を滑った後、温泉に沈む。冬の北海道の正解がここにある。",
     "primary": [
       "スキー",
       "山",
@@ -27054,7 +27298,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "グラン・ヒラフ",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "daisetsuzan",
@@ -27157,7 +27402,7 @@
       "couple",
       "friends"
     ],
-    "catch": "北海道の屋根と呼ばれる大雪山国立公園",
+    "catch": "北海道の屋根を歩くと、果てしなさに目眩がした。",
     "primary": [
       "山",
       "自然",
@@ -27169,7 +27414,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "旭岳",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shiraoi",
@@ -27262,7 +27508,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ウポポイ（民族共生象徴空間）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tomamu",
@@ -27358,7 +27605,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "雲海テラス",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "towada",
@@ -27469,7 +27717,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "十和田湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "osorezan",
@@ -27580,7 +27829,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "恐山菩提寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "urabandai",
@@ -27695,7 +27945,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "五色沼",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "minami-sanriku",
@@ -27808,7 +28059,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "さんさん商店街",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kitakami",
@@ -27905,7 +28157,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "展勝地",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kinugawa-onsen",
@@ -27989,7 +28242,7 @@
       "couple",
       "friends"
     ],
-    "catch": "温泉と自然が楽しめる癒しの旅先",
+    "catch": "渓谷の真上に建つ旅館で、川の音を聞きながら眠った。",
     "primary": [
       "温泉",
       "山",
@@ -28001,7 +28254,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "鬼怒川温泉街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "oze",
@@ -28103,7 +28357,7 @@
       "couple",
       "friends"
     ],
-    "catch": "自然と文化が融合した観光地",
+    "catch": "木道の先に水芭蕉の湿原。東京からこれほど遠くへ来られる。",
     "primary": [
       "自然",
       "湿原",
@@ -28115,7 +28369,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "尾瀬ヶ原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tsukuba",
@@ -28214,7 +28469,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "筑波山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kasama",
@@ -28310,7 +28566,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "笠間稲荷神社",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "笠間稲荷神社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "naritasan",
@@ -28406,7 +28663,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "成田山新勝寺",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "成田山新勝寺を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "kujukuri",
@@ -28517,7 +28775,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "九十九里浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "miura",
@@ -28616,7 +28875,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "城ヶ島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "oku-tama",
@@ -28712,7 +28972,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "奥多摩湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "jigokudani",
@@ -28811,7 +29072,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "地獄谷野猿公苑",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tateshina",
@@ -28926,7 +29188,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "蓼科湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "echigo-yuzawa",
@@ -29022,7 +29285,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "石打丸山スキー場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "fujinomiya",
@@ -29119,7 +29383,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "富士山本宮浅間大社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "norikura",
@@ -29234,7 +29499,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "畳平",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tokoname",
@@ -29328,7 +29594,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "やきもの散歩道",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "常滑の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。"
   },
   {
     "id": "korankei",
@@ -29439,7 +29706,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "香嵐渓",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "minamichita",
@@ -29538,7 +29806,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "師崎港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "arashiyama",
@@ -29624,7 +29893,7 @@
       "couple",
       "friends"
     ],
-    "catch": "竹林の小径と渡月橋が象徴する京都を代表する景勝地",
+    "catch": "竹林の中に入ると、京都の喧騒が急に消えた。",
     "primary": [
       "竹林",
       "寺社",
@@ -29636,7 +29905,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "竹林の道",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shigaraki",
@@ -29730,7 +30000,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "信楽焼窯元",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "信楽の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。"
   },
   {
     "id": "dorogawa-onsen",
@@ -29843,7 +30114,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "龍泉寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "matsusaka",
@@ -29940,7 +30212,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "松阪城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "松阪城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "sakai",
@@ -30042,7 +30315,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "仁徳天皇陵古墳",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "仁徳天皇陵古墳を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ama-island",
@@ -30173,7 +30447,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "キンニャモニャセンター",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "akiyoshidai",
@@ -30275,7 +30550,7 @@
       "couple",
       "friends"
     ],
-    "catch": "日本最大のカルスト台地と東洋屈指の鍾乳洞・秋芳洞",
+    "catch": "日本最大のカルスト台地に立つと、地球の底が見える気がした。",
     "primary": [
       "自然",
       "洞窟",
@@ -30285,7 +30560,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "秋芳洞",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "yanai",
@@ -30379,7 +30655,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "白壁の街並み",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "白壁の街並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "oki-island",
@@ -30517,7 +30794,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "ローソク島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "inujima",
@@ -30639,7 +30917,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "犬島精錬所美術館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "teshima",
@@ -30769,7 +31048,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "豊島美術館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "niyodogawa",
@@ -30882,7 +31162,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "にこ淵",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "yusuhara",
@@ -30997,7 +31278,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ゆすはら座",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "anan",
@@ -31091,7 +31373,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大浜海岸（アカウミガメ産卵地）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shikoku-karst",
@@ -31205,7 +31488,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "天狗高原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "aoshima",
@@ -31300,7 +31584,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "青島神社",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "yamaga",
@@ -31414,7 +31699,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "山鹿灯籠民芸館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yoshinogari",
@@ -31513,7 +31799,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "吉野ヶ里歴史公園",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "吉野ヶ里歴史公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "kunisaki",
@@ -31633,7 +31920,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "両子寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "chiran",
@@ -31748,7 +32036,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "知覧武家屋敷群",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "知覧武家屋敷群を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ojika-island",
@@ -31878,7 +32167,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "古民家宿ほんまもん",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "irabu-island",
@@ -31997,7 +32287,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "渡口の浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "aguni-island",
@@ -32134,7 +32425,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "粟国島の塩",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "itoman",
@@ -32254,7 +32546,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "平和祈念公園",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kijoka",
@@ -32373,7 +32666,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "芭蕉布会館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "miyakejima",
@@ -32503,7 +32797,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "雄山",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "hachijojima",
@@ -32640,7 +32935,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "底土海水浴場",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "niijima",
@@ -32771,7 +33067,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "コシキビーチ",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "shikinejima",
@@ -32894,7 +33191,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "地鉈温泉",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "shirakawa",
@@ -32983,7 +33281,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小峰城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kitakata",
@@ -33071,7 +33370,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "蔵のまち",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "蔵のまちを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "koriyama",
@@ -33160,7 +33460,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "開成山公園",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "ryusendo",
@@ -33250,7 +33551,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "龍泉洞",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ichinoseki",
@@ -33338,7 +33640,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "厳美渓",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "akita-oga",
@@ -33428,7 +33731,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "男鹿温泉郷",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kisakata",
@@ -33517,7 +33821,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "蚶満寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "gassan",
@@ -33607,7 +33912,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "月山スキー場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "higashine",
@@ -33695,7 +34001,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "東根温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "akakura-onsen",
@@ -33784,7 +34091,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "赤倉温泉スキー場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yugawara-onsen",
@@ -33871,7 +34179,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "湯河原温泉街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yokosuka",
@@ -33960,7 +34269,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "猿島",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "猿島を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "mishima",
@@ -34049,7 +34359,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "三嶋大社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "numazu",
@@ -34138,7 +34449,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "沼津港深海水族館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hamamatsu",
@@ -34227,7 +34539,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浜名湖",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "kakegawa",
@@ -34316,7 +34629,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "掛川城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "okazaki",
@@ -34405,7 +34719,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "岡崎城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "岡崎城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "toyohashi",
@@ -34494,7 +34809,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "豊川稲荷（近郊）",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "tajimi",
@@ -34583,7 +34899,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "本町オリベストリート",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "本町オリベストリートを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "togakushi",
@@ -34672,7 +34989,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "戸隠神社奥社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "omihachiman",
@@ -34761,7 +35079,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "八幡堀",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "八幡堀を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "takarazuka",
@@ -34850,7 +35169,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "宝塚大劇場",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "宝塚大劇場を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "akashi",
@@ -34939,7 +35259,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "明石市立天文科学館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "明石市立天文科学館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "naruto",
@@ -35028,7 +35349,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "渦の道",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "innoshima",
@@ -35118,7 +35440,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "因島水軍城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "mihara",
@@ -35207,7 +35530,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "三原城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "三原城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "hofu",
@@ -35294,7 +35618,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "防府天満宮",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "防府天満宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "karatsu",
@@ -35383,7 +35708,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "唐津城",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "dazaifu",
@@ -35470,7 +35796,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "太宰府天満宮",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "太宰府天満宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nakatsu",
@@ -35559,7 +35886,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "中津城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "中津城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nemuro",
@@ -35648,7 +35976,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "納沙布岬",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "muroran",
@@ -35737,7 +36066,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "地球岬",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tomakomai",
@@ -35826,7 +36156,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ウトナイ湖野生鳥獣保護センター",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ishinomaki",
@@ -35914,7 +36245,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "石ノ森萬画館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "石ノ森萬画館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "hitachi",
@@ -36002,7 +36334,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "日立駅（ガラス張りの駅）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kashima",
@@ -36088,7 +36421,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鹿島神宮",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "鹿島神宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "shiraoishi",
@@ -36175,7 +36509,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "白石城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "白石城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "noshiro",
@@ -36264,7 +36599,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "風の松原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tendou",
@@ -36352,7 +36688,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "舞鶴山公園（人間将棋）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shonai",
@@ -36441,7 +36778,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "致道博物館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "致道博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ogata",
@@ -36531,7 +36869,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "なまはげの里（近郊）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "rikuzentakata",
@@ -36620,7 +36959,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "奇跡の一本松",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "sanriku-miyako",
@@ -36710,7 +37050,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浄土ヶ浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "motomiya",
@@ -36796,7 +37137,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "安達太良山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "mizusawa",
@@ -36884,7 +37226,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "胆沢城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "胆沢城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ichinoseki-geibikei",
@@ -36973,7 +37316,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "猊鼻渓舟下り",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "akita-semboku",
@@ -37061,7 +37405,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "田沢湖",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "tendo",
@@ -37149,7 +37494,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "慈恩寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nyuzen",
@@ -37237,7 +37583,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "舟見城址館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nanao",
@@ -37325,7 +37672,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "和倉温泉",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "海を眺めながら温泉に浸かって、新鮮な魚料理で夜を締める。"
   },
   {
     "id": "fukuchiyama",
@@ -37412,7 +37760,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "福知山城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "福知山城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "koka",
@@ -37499,7 +37848,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "甲賀流忍術屋敷",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "甲賀流忍術屋敷を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "tondabayashi",
@@ -37586,7 +37936,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "富田林寺内町",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "富田林寺内町を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "kishiwada",
@@ -37675,7 +38026,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "岸和田城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "岸和田城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "amagasaki",
@@ -37764,7 +38116,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "尼崎城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "尼崎城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nishiwaki",
@@ -37853,7 +38206,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "日本のへそ公園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nagi",
@@ -37942,7 +38296,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "奈義町現代美術館",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "higashihiroshima",
@@ -38030,7 +38385,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "西条酒蔵通り",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "西条酒蔵通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "fukuyama",
@@ -38119,7 +38475,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "福山城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "福山城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "otoyo",
@@ -38205,7 +38562,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "日本一の大杉",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "sukumo",
@@ -38293,7 +38651,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ビオスの里（沖の島）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "miyoshi-tokushima",
@@ -38382,7 +38741,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "かずら橋",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oita-city",
@@ -38471,7 +38831,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "高崎山自然動物園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yuwaku-onsen",
@@ -38560,7 +38921,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "湯涌温泉街",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "yura-wakayama",
@@ -38649,7 +39011,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "白崎海洋公園",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "misaki-osaka",
@@ -38738,7 +39101,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "友ヶ島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kitakyushu",
@@ -38827,7 +39191,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小倉城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "asakura",
@@ -38916,7 +39281,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "秋月城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "ebino",
@@ -39005,7 +39371,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "えびの高原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hitoyoshi-city",
@@ -39093,7 +39460,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "球磨川下り",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "minamikyushu",
@@ -39194,7 +39562,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "知覧特攻平和会館（近郊）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "minamiosumi",
@@ -39295,7 +39664,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐多岬",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "chatan",
@@ -39394,7 +39764,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "アメリカンビレッジ",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "uruma",
@@ -39493,7 +39864,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "勝連城跡",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "nanto",
@@ -39582,7 +39954,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "相倉合掌集落",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "hakusan",
@@ -39671,7 +40044,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "白山室堂",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kamo-kyoto",
@@ -39761,7 +40135,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "童仙房高原",
-    "subType": "remote"
+    "subType": "remote",
+    "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。"
   },
   {
     "id": "shingu-wakayama",
@@ -39849,7 +40224,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "熊野速玉大社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "himeshima",
@@ -39944,7 +40320,7 @@
       "couple",
       "friends"
     ],
-    "catch": "海と自然に囲まれた離島の旅",
+    "catch": "鬼が上陸したという伝説と、豊かな漁港の島。",
     "primary": [
       "海",
       "自然"
@@ -39953,7 +40329,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "姫島七不思議",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "toshima",
@@ -40045,7 +40422,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "椿林",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "joetsu",
@@ -40133,7 +40511,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "春日山城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "myoko",
@@ -40234,7 +40613,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "妙高高原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hokkaido-hakodate",
@@ -40330,7 +40710,7 @@
       "couple",
       "friends"
     ],
-    "catch": "夜景・朝市・西洋館が凝縮した北の港町",
+    "catch": "夜景のために来たのに、朝市の海丼でそれを超えてしまった。",
     "primary": [
       "街",
       "グルメ"
@@ -40339,7 +40719,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "函館山夜景",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "hokkaido-asahikawa",
@@ -40439,7 +40820,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "旭山動物園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "hokkaido-kushiro",
@@ -40539,7 +40921,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "釧路湿原",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "yoichi",
@@ -40627,7 +41010,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ニッカウヰスキー余市蒸溜所",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "akkeshi",
@@ -40717,7 +41101,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "厚岸グルメパーク",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kitami",
@@ -40815,7 +41200,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "北見ハッカ記念館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "monbetsu",
@@ -40902,7 +41288,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "ガリンコ号",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "mashike",
@@ -40992,7 +41379,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "国稀酒造",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "国稀酒造を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "fukushima-city",
@@ -41081,7 +41469,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "吾妻小富士",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "omagari",
@@ -41169,7 +41558,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大曲花火競技大会",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "shinjou",
@@ -41257,7 +41647,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "新庄まつり",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nagai",
@@ -41356,7 +41747,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "あやめ公園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kanagawa-yokohama",
@@ -41449,7 +41841,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "みなとみらい21",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "ibaraki-mito",
@@ -41541,7 +41934,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "偕楽園",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "utsunomiya",
@@ -41630,7 +42024,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大谷資料館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "大谷資料館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "takasaki",
@@ -41719,7 +42114,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "高崎白衣大観音",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "odawara",
@@ -41808,7 +42204,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小田原城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "小田原城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "sawara",
@@ -41897,7 +42294,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐原の町並み",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "佐原の町並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "nokogiriyama",
@@ -41987,7 +42385,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鋸山ロープウェー",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "katsuura-chiba",
@@ -42076,7 +42475,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "勝浦朝市",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "azumino",
@@ -42163,7 +42563,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大王わさび農場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nagano-iida",
@@ -42254,7 +42655,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "元善光寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nakatsugawa",
@@ -42343,7 +42745,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "栗きんとん老舗街",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "栗きんとん老舗街を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "yaizu",
@@ -42432,7 +42835,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "焼津さかなセンター",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hamanako",
@@ -42522,7 +42926,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浜名湖ガーデンパーク",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "gamagori",
@@ -42611,7 +43016,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "竹島",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "toyota-city",
@@ -42700,7 +43106,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "香嵐渓（足助）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "otsu-shiga",
@@ -42789,7 +43196,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "比叡山延暦寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kusatsu-shiga",
@@ -42878,7 +43286,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "草津宿本陣",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "takashima-shiga",
@@ -42968,7 +43377,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "白鬚神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tango-kyoto",
@@ -43057,7 +43467,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊根の舟屋（近隣）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "owase",
@@ -43157,7 +43568,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "尾鷲港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "gobo",
@@ -43246,7 +43658,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "日高川",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kushimoto",
@@ -43335,7 +43748,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "潮岬（本州最南端）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "shimane-matsue",
@@ -43435,7 +43849,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "松江城",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "松江城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "hamada-shimane",
@@ -43532,7 +43947,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "浜田港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kure",
@@ -43620,7 +44036,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大和ミュージアム",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "大和ミュージアムを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "miyoshi-hiroshima",
@@ -43708,7 +44125,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霧の海展望台",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nagato-yamaguchi",
@@ -43797,7 +44215,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "元乃隅稲荷神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "mine-yamaguchi",
@@ -43884,7 +44303,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "秋芳洞",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kagawa-takamatsu",
@@ -43985,7 +44405,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "栗林公園",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "栗林公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "sakaide",
@@ -44074,7 +44495,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "瀬戸大橋記念館",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "tosa-city",
@@ -44164,7 +44586,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "宇佐大橋",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kanonji",
@@ -44253,7 +44676,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "琴弾公園・銭形砂絵",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "fukuoka-city",
@@ -44351,7 +44775,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "博多屋台",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。"
   },
   {
     "id": "kurume",
@@ -44440,7 +44865,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "水天宮（久留米）",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "水天宮（久留米）を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "yatsushiro",
@@ -44529,7 +44955,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "八代城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oguni-kumamoto",
@@ -44624,7 +45051,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "杖立温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "izumi-kagoshima",
@@ -44711,7 +45139,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ツル観察センター",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "makurazaki",
@@ -44799,7 +45228,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "枕崎港",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "miyakonojo",
@@ -44887,7 +45317,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霧島神宮（近隣）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nanjo-okinawa",
@@ -44977,7 +45408,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "斎場御嶽",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "aogashima",
@@ -45059,7 +45491,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "丸山（二重カルデラ）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "kugashima",
@@ -45143,7 +45576,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "旧五輪教会堂",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "nakatosa",
@@ -45231,7 +45665,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "久礼大正市場",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ikata",
@@ -45322,7 +45757,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐田岬（本土最西端）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "muroto-cape",
@@ -45411,7 +45847,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "室戸岬",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oshima-yamaguchi",
@@ -45512,7 +45949,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "片添ヶ浜",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ibara",
@@ -45600,7 +46038,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "八塔寺ふるさと村",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "niimi",
@@ -45688,7 +46127,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "満奇洞",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "uda-nara",
@@ -45778,7 +46218,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "室生寺",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "mimasaka",
@@ -45867,7 +46308,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "湯郷温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kochi-shimanto",
@@ -45954,7 +46396,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "佐田沈下橋",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "yonago",
@@ -46051,7 +46494,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "皆生温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kaga-onsen2",
@@ -46138,7 +46582,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "古総湯",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "takayama-kogen",
@@ -46227,7 +46672,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "新穂高ロープウェイ",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "iga-ueno",
@@ -46314,7 +46760,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊賀流忍者博物館",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "伊賀流忍者博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "miyanoshita",
@@ -46403,7 +46850,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "富士屋ホテル",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "shibu-onsen",
@@ -46482,7 +46930,7 @@
       "couple",
       "friends"
     ],
-    "catch": "千と千尋の神隠しのモデルとも言われる石畳の温泉街",
+    "catch": "9つの外湯を浴衣で巡る。温泉街の夜は長い。",
     "primary": [
       "温泉"
     ],
@@ -46490,7 +46938,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "渋温泉九湯めぐり",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "togatta-onsen",
@@ -46579,7 +47028,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "遠刈田温泉共同浴場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hachimantai-onsen",
@@ -46669,7 +47119,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "後生掛温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "iiyama-onsen",
@@ -46758,7 +47209,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "麻釜（おがま）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "ono-fukui",
@@ -46861,7 +47313,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "越前大野城",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "katsuyama",
@@ -46961,7 +47414,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "福井県立恐竜博物館",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "nomaike",
@@ -47044,7 +47498,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "野間池港",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "hioki",
@@ -47133,7 +47588,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "美山（苗代川）陶芸村",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "美山（苗代川）陶芸村を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -47222,7 +47678,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "鶴の湯温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "hirakawa",
@@ -47311,7 +47768,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "碇ヶ関温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kurikoma",
@@ -47400,7 +47858,8 @@
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "栗駒山",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "namioka",
@@ -47489,7 +47948,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浪岡城跡",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "浪岡城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "shimokita",
@@ -47579,7 +48039,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "恐山（近隣）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "towada-lake",
@@ -47658,7 +48119,7 @@
       "couple",
       "friends"
     ],
-    "catch": "深い青のカルデラ湖と奥入瀬渓流が一体の絶景",
+    "catch": "原生林に囲まれた湖は、静かすぎて逆に不安になるほどだった。",
     "primary": [
       "自然"
     ],
@@ -47666,7 +48127,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "十和田湖遊覧船",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "rikuchu-coast",
@@ -47755,7 +48217,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "吉里吉里海岸",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -47841,7 +48304,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "中尊寺金色堂",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "中尊寺金色堂を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "numata",
@@ -47930,7 +48394,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "沼田城跡",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tsuchiura",
@@ -48019,7 +48484,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霞ヶ浦サイクリングロード",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "oshika",
@@ -48108,7 +48574,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "御番所公園（展望台）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "kujukuri-icho",
@@ -48197,7 +48664,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "玉前神社",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "miyota",
@@ -48284,7 +48752,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浅間山眺望スポット",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "saijo-hiroshima",
@@ -48372,7 +48841,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "西条酒蔵通り",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "西条酒蔵通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "ryoishi",
@@ -48473,7 +48943,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "綾里湾",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "noheji",
@@ -48562,7 +49033,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "野辺地防雪原林",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tobetsu",
@@ -48650,7 +49122,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "スウェーデンヒルズ",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "fukaura",
@@ -48740,7 +49213,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "不老不死温泉（海辺の露天風呂）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "isesaki",
@@ -48829,7 +49303,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊勢崎市華蔵寺公園",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "伊勢崎市華蔵寺公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "matsumoto-kaido",
@@ -48917,7 +49392,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "塩尻ワイナリー",
-    "subType": "urban"
+    "subType": "urban",
+    "stayDescription": "塩尻ワイナリーを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。"
   },
   {
     "id": "aizu-misato",
@@ -49005,7 +49481,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊佐須美神社",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tateyama-toyama",
@@ -49092,7 +49569,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "雷鳥沢",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "suo-sanbe",
@@ -49179,7 +49657,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "三瓶温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "takachihogo-shishiku",
@@ -49274,7 +49753,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鶴富屋敷",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kamishihoro",
@@ -49361,7 +49841,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ナイタイ高原牧場",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "yakumo",
@@ -49450,7 +49931,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "八雲あんどん祭り",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "susaki",
@@ -49538,7 +50020,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鍋焼きラーメン（橋本食堂）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "ube",
@@ -49636,7 +50119,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "ときわ公園野外彫刻",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "itoigawa2",
@@ -49724,7 +50208,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "フォッサマグナミュージアム",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "agematsu",
@@ -49813,7 +50298,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "寝覚の床",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "unzen2",
@@ -49902,7 +50388,8 @@
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "雲仙地獄",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。"
   },
   {
     "id": "kochi-ino",
@@ -49991,7 +50478,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "土佐和紙工芸村QRAUD",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "hiji",
@@ -50080,7 +50568,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "暘谷城跡（日出城）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
   },
   {
     "id": "tsunan",
@@ -50166,7 +50655,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ひまわり広場（7月下旬）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "kurobe",
@@ -50254,7 +50744,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "宇奈月温泉",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tsuruoka-kinzan",
@@ -50343,7 +50834,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "金山の景観（重文化財）",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   },
   {
     "id": "tomari-okinawa",
@@ -50426,7 +50918,8 @@
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "念頭平松（樹齢数百年の松）",
-    "subType": "sea"
+    "subType": "sea",
+    "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。"
   },
   {
     "id": "ogimi",
@@ -50516,6 +51009,7 @@
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "塩屋大綱引き",
-    "subType": "mountain"
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。"
   }
 ]

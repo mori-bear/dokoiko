@@ -52,19 +52,38 @@ function accessLabel(station) {
   return '最寄駅';
 }
 
+/* ── タグ → カラークラスマッピング ── */
+const TAG_COLOR_MAP = {
+  '温泉':   'tag-onsen',
+  '自然':   'tag-nature',
+  '海':     'tag-sea',
+  '山':     'tag-mountain',
+  '街歩き': 'tag-city',
+  '歴史':   'tag-history',
+  'グルメ': 'tag-gourmet',
+  '離島':   'tag-island',
+  '寺社':   'tag-shrine',
+  '城':     'tag-castle',
+  '絶景':   'tag-scenic',
+  '秘境':   'tag-remote',
+  '高原':   'tag-mountain',
+  '川':     'tag-nature',
+  '湖':     'tag-nature',
+  '渓谷':   'tag-nature',
+};
+
 /* ── 都市ブロック ── */
 
 function buildCityBlock(city) {
-  const descriptionHtml = city.description
-    ? `<p class="appeal-line">${city.description}</p>`
-    : '';
-
-  // タグ表示: primary + secondary（v2）、なければ tags にフォールバック、最大3つ
+  // タグ表示: primary + secondary（v2）、なければ tags にフォールバック、最大4つ
   const displayTags = city.primary?.length
     ? [...(city.primary ?? []), ...(city.secondary ?? [])]
     : (city.tags ?? []);
   const themesHtml = displayTags.length
-    ? displayTags.slice(0, 3).map((t) => `<span class="theme-tag">${t}</span>`).join('')
+    ? displayTags.slice(0, 4).map((t) => {
+        const cls = TAG_COLOR_MAP[t] ?? 'tag-default';
+        return `<span class="theme-tag ${cls}">${t}</span>`;
+      }).join('')
     : '';
 
   const categoryBadge = buildCategoryBadge(city);
@@ -85,21 +104,26 @@ function buildCityBlock(city) {
   const isMountainRemote = city.destType === 'mountain' || city.destType === 'remote';
   const isIslandDest     = !!(city.isIsland || city.destType === 'island');
   const hubName     = city.gatewayHub || (city.hubStation ? city.hubStation.replace(/駅$/, '') : null);
-  // TASK4: 島の場合は「駅」で終わる accessStation を非表示（港・空港のみ表示）
   const showAccess  = city.accessStation && !(isIslandDest && city.accessStation.endsWith('駅'));
   const accessHtml  = isMountainRemote
     ? (hubName ? `<p class="city-station city-station--hub">最寄り拠点：${hubName}<span class="hub-label">（車でアクセス）</span></p>` : '')
     : (showAccess ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}${city.operator ? `<span class="operator-badge${city.operatorType === 'private' ? ' operator-badge--private' : ''}">${city.operator}</span>` : ''}</p>` : '');
 
-  const catchHtml = city.catch
-    ? `<p class="city-catch">${city.catch}</p>`
+  const stayHtml = city.stayDescription
+    ? `<p class="city-stay">${city.stayDescription}</p>`
+    : '';
+
+  const descriptionHtml = city.description
+    ? `<p class="appeal-line">${city.description}</p>`
     : '';
 
   return `
     <div class="city-block">
+      <p class="result-eyebrow">こんな旅、どう？</p>
       <div class="city-header">
         <h2 class="city-name">${city.displayName || city.name}</h2>
-        ${catchHtml}
+        ${city.catch ? `<p class="city-catch">${city.catch}</p>` : ''}
+        ${stayHtml}
         <p class="city-sub">${locationStr}${categoryBadge}</p>
         ${accessHtml}
       </div>

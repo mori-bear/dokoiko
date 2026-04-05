@@ -202,9 +202,47 @@
     }
     .empty-state p { font-size: 15px; }
 
+    /* ── おすすめセクション ── */
+    .recommended-section {
+      margin-bottom: 32px;
+    }
+    .section-heading {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+    }
+    .recommended-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .rec-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: box-shadow 0.15s, border-color 0.15s;
+      border-left: 3px solid var(--accent);
+    }
+    .rec-card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,.09);
+      border-left-color: var(--accent);
+    }
+    .rec-name { font-size: 16px; font-weight: 800; color: var(--text); }
+    .rec-catch { font-size: 12px; color: var(--text-sub); line-height: 1.5;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
     /* ── レスポンシブ ── */
     @media (max-width: 600px) {
       .dest-grid { grid-template-columns: 1fr; }
+      .recommended-grid { grid-template-columns: 1fr 1fr; }
       .filter-panel { padding: 16px; }
     }
   </style>
@@ -227,6 +265,12 @@
       <section class="dest-hero">
         <h1>目的地一覧</h1>
         <p>行ったことのない場所を探してみよう</p>
+      </section>
+
+      <!-- おすすめセクション -->
+      <section class="recommended-section">
+        <h2 class="section-heading">いま見てほしい旅先</h2>
+        <div class="recommended-grid" id="recommended-grid"></div>
       </section>
 
       <div class="filter-panel">
@@ -411,7 +455,42 @@
       render();
     });
 
+    /* ── おすすめカード ── */
+    function buildRecCard(dest) {
+      const url = `./index.html?dest=${encodeURIComponent(dest.id)}`;
+      const a = document.createElement('a');
+      a.className = 'rec-card';
+      a.href = url;
+      a.innerHTML = `
+        <div class="rec-name">${dest.name}<span style="font-size:11px;font-weight:500;color:var(--text-sub);margin-left:6px">${dest.prefecture}</span></div>
+        <div class="rec-catch">${dest.catch ?? ''}</div>
+      `;
+      return a;
+    }
+
+    function renderRecommended() {
+      // weight上位からタイプ分散で10件選択
+      const byType = {};
+      DESTS.forEach(d => {
+        const t = d.destType;
+        if (!byType[t]) byType[t] = [];
+        byType[t].push(d);
+      });
+      // 各タイプからweight上位を1〜2件選ぶ
+      const picks = [];
+      const typeOrder = ['island','onsen','sight','mountain','city','remote'];
+      for (const t of typeOrder) {
+        const sorted = (byType[t] ?? []).sort((a,b)=>(b.weight??1)-(a.weight??1));
+        const take = t === 'island' ? 3 : t === 'onsen' ? 3 : 2;
+        picks.push(...sorted.slice(0, take));
+        if (picks.length >= 10) break;
+      }
+      const grid = document.getElementById('recommended-grid');
+      picks.slice(0, 10).forEach(d => grid.appendChild(buildRecCard(d)));
+    }
+
     /* ── 初期化 ── */
+    renderRecommended();
     buildChips('region-chips', REGIONS, 'region');
     buildChips('type-chips',   TYPES,   'type');
     buildChips('tag-chips',    TAGS,    'tag');

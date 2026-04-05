@@ -1885,6 +1885,23 @@ class Scorecard {
         ? 'stepLabel絵文字: なし'
         : `stepLabel絵文字 ${emojiInStep.length}件: ${emojiInStep.join(', ')}`
     );
+    /* catchが説明文パターン → WARN */
+    const BAD_CATCH_PATTERNS = ['から高速船で', '港からフェリー', 'NHKドラマ', 'バスターミナルから'];
+    const badCatch = DESTS.filter(d => BAD_CATCH_PATTERNS.some(p => (d.catch ?? '').includes(p)));
+    sc.check(true,
+      badCatch.length === 0
+        ? `catch品質: 説明文・交通情報なし`
+        : `catchに交通情報/ドラマ言及 ${badCatch.length}件（WARN）: ${badCatch.slice(0,3).map(d=>d.id).join(', ')}`
+    );
+
+    /* stayDescription 設定率 */
+    const noStayDesc = DESTS.filter(d => !d.stayDescription);
+    sc.check(noStayDesc.length === 0,
+      noStayDesc.length === 0
+        ? `stayDescription: 全${DESTS.length}件設定済み`
+        : `stayDescription未設定 ${noStayDesc.length}件`
+    );
+
     sc.check(mapPointMissing.length === 0,
       mapPointMissing.length === 0
         ? `mapPoint: 全${DESTS.length}件設定済み`
