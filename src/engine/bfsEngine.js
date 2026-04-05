@@ -25,10 +25,10 @@
  */
 
 import { loadJson } from '../lib/loadJson.js';
+import { iataToAirportName } from '../transport/linkBuilder.js';
 
 /* `with { type: 'json' }` は Safari 17.2+ 限定のため loadJson() に切り替え（Safari 15+ 対応） */
 const GRAPH_DATA = await loadJson('../data/transportGraph.json', import.meta.url);
-import { iataToAirportName } from '../transport/linkBuilder.js';
 
 /* ── 隣接マップ（起動時1回構築） ── */
 const ADJ = {};
