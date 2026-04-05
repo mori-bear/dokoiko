@@ -241,29 +241,13 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
        class="btn btn--transport-secondary btn--action">地図で見る</a>`);
   }
-  const stayUrl = showHotel ? pickStayUrl(hotelLinks, city) : null;
-  if (stayUrl) {
-    ctaItems.push(`<a href="${stayUrl}" target="_blank" rel="nofollow sponsored noopener"
-       class="btn btn--stay btn--action">宿を探す</a>`);
-  }
-
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // 宿コピー（控えめ提案）
-  const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
+  // 宿セクション（文言分岐 + 楽天/じゃらん2ボタン）
   const travelMins = city?.travelTimeMinutes ?? 0;
-  const isDaytrip  = stayType === 'daytrip';
-  const hours      = Math.round(travelMins / 6) / 10;
-  let stayNote = '';
-  if (stayUrl && stayCityName) {
-    if (isDaytrip && travelMins >= 150) {
-      stayNote = `<p class="stay-note">日帰りだと少し長め（約${hours}時間）。ゆっくりするなら、${stayCityName}に泊まるのもあり。</p>`;
-    } else if (!isDaytrip) {
-      stayNote = `<p class="stay-note">ゆっくりするなら、${stayCityName}に泊まるのもあり。</p>`;
-    }
-  }
+  const staySection = showHotel ? buildStaySection(hotelLinks, city, stayType, travelMins) : '';
 
   // ルート詳細（折りたたみ）
   const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -294,7 +278,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
       ${routeLineHtml}
       ${decisionCopyHtml}
       ${ctaGroupHtml}
-      ${stayNote}
+      ${staySection}
       ${detailsBlock}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
@@ -331,6 +315,52 @@ function buildStayPicker(hotelLinks) {
       <summary class="stay-picker-trigger">宿を探す</summary>
       <div class="stay-picker-options">${optionsHtml}</div>
     </details>
+  `;
+}
+
+/**
+ * 宿泊セクション: 文言分岐 + 楽天/じゃらん2ボタン横並び
+ *
+ * 文言ルール:
+ *   非日帰り     → 「この旅、泊まるなら{city}がちょうどいい。」
+ *   日帰り長距離 → 「日帰りでも行ける。でも、泊まるとちょうどいい距離。」
+ *   その他       → 「ゆっくりするなら、{city}に泊まるのもあり。」
+ */
+function buildStaySection(hotelLinks, city, stayType, travelMins = 0) {
+  if (!hotelLinks) return '';
+
+  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
+  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
+  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
+  const rakuten   = stayLinks.find(l => l.type === 'rakuten');
+  const jalan     = stayLinks.find(l => l.type === 'jalan');
+  if (!rakuten && !jalan) return '';
+
+  const stayCityName = hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  const isDaytrip    = stayType === 'daytrip';
+
+  let note = '';
+  if (!isDaytrip && stayCityName) {
+    note = `この旅、泊まるなら${stayCityName}がちょうどいい。`;
+  } else if (isDaytrip && travelMins >= 150) {
+    note = '日帰りでも行ける。でも、泊まるとちょうどいい距離。';
+  } else if (stayCityName) {
+    note = `ゆっくりするなら、${stayCityName}に泊まるのもあり。`;
+  }
+
+  const noteHtml = note ? `<p class="stay-note">${note}</p>` : '';
+  const btnsHtml = [
+    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-rakuten">楽天で見る</a>` : '',
+    jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-jalan">じゃらんで見る</a>` : '',
+  ].filter(Boolean).join('');
+
+  return `
+    <div class="stay-section">
+      ${noteHtml}
+      <div class="stay-hotel-btns">${btnsHtml}</div>
+    </div>
   `;
 }
 
@@ -672,9 +702,7 @@ function buildRouteSummary(departure, destLabel, city, routeSteps = null) {
 
 function buildDestMapUrl(city) {
   if (!city) return null;
-  if (city.lat && city.lng) {
-    return `https://www.google.com/maps/search/?api=1&query=${city.lat},${city.lng}`;
-  }
+  // 緯度経度ではなく地名で検索する（座標リンクは意図しない場所を示すことがある）
   const name = city.displayName || city.name || '';
   return name ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}` : null;
 }
