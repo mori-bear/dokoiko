@@ -721,22 +721,6 @@ function buildTransitMapUrl(departure, city) {
   return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=transit`;
 }
 
-/**
- * 出発駅 → 観光地 or 最寄り駅 のルートマップURL（最上部に表示）
- * mapPoint あり（観光地・スポット型）→ 観光地まで案内
- * mapPoint なし → accessStation（最寄り駅）まで案内
- *
- * @param {string} departure — 出発都市名（例: '高松'）
- * @param {object} city     — 目的地エントリ
- */
-function buildRouteMapUrl(departureStation, city) {
-  if (!departureStation || !city) return null;
-  const from = departureStation;
-  const to   = city.mapPoint ?? city.accessStation ?? city.displayName ?? city.name;
-  if (!to) return null;
-  return `https://www.google.com/maps/dir/${encodeURIComponent(from)}/${encodeURIComponent(to)}`;
-}
-
 /* ── ステップ分類（main / transfer / local）── */
 
 /**

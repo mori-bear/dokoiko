@@ -494,10 +494,14 @@ function buildMapCtaLink(mapCTA, departure, fromCity) {
  * @returns {'flight' | 'ferry' | 'rail' | null}
  */
 function _resolveTransportType(departure, city) {
-  // railCompany が null = 鉄道なし（沖縄など）→ 飛行機前提
-  if (city?.railCompany === null) return 'flight';
+  // 沖縄 + railProvider なし → 飛行機前提
+  // （railProvider: null は北海道など未設定の地域にも存在するため region で補完）
+  if (city?.region === '沖縄' && city?.railProvider === null) return 'flight';
 
-  // 島 → フェリー
+  // 離島で直行便あり → 飛行機（石垣・宮古など）
+  if ((city?.isIsland || city?.destType === 'island') && city?.airportGateway && city?.hasDirectFlight) return 'flight';
+
+  // 離島 → フェリー
   if (city?.isIsland || city?.destType === 'island') return 'ferry';
 
   // 500km超 + 出発地に空港あり + 直行便あり → 飛行機
@@ -545,11 +549,11 @@ function _deriveJrProviderFromStep(step, departure) {
 function _deriveMainCtaFromSteps(steps, departure, city) {
   const primaryStep = steps.find(s => s.type !== 'localMove');
 
-  // railCompany === null の場合は鉄道予約CTAを生成しない
-  const canUseRail  = city?.railCompany !== null;
-  const fallbackRail = () => canUseRail
-    ? buildJrLink(_deriveJrProviderFromStep(null, departure))
-    : null;
+  // 沖縄のみ鉄道フォールバックを禁止（離島でも宮島・小豆島などは新幹線でアクセス可能）
+  const isOkinawa     = city?.region === '沖縄';
+  const fallbackRail  = () => isOkinawa
+    ? null
+    : buildJrLink(_deriveJrProviderFromStep(null, departure));
 
   if (!primaryStep) {
     // ステップ不明でも transport type で最終判定
@@ -557,6 +561,10 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
     if (tType === 'flight') {
       const fromIata = CITY_AIRPORT[departure] ?? null;
       return _buildFlightCta(fromIata, city?.airportGateway ?? '');
+    }
+    if (tType === 'ferry') {
+      return buildFerryLinkForDest(city.id, city.ferryGateway ?? '', null, null)
+          ?? buildFerryLink(city.ferryGateway ?? '', null, null);
     }
     return fallbackRail();
   }
@@ -569,10 +577,25 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
       return _buildFlightCta(fromIata, toAirport);
     }
     case 'shinkansen':
-    case 'rail':
-      return canUseRail
-        ? buildJrLink(_deriveJrProviderFromStep(primaryStep, departure))
-        : null;
+    case 'rail': {
+      // データ品質問題: gateway-db が flight 経路を rail として記録している場合がある
+      // 沖縄または直行便あり離島 → metadata ベースで flight CTA に切り替える
+      if (isOkinawa) {
+        const fromIata  = CITY_AIRPORT[departure] ?? null;
+        const toAirport = city?.airportGateway
+          ?? (city?.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null)
+          ?? null;
+        // flight CTA が生成できない場合でも JR は出さない
+        return _buildFlightCta(fromIata, toAirport ?? '');
+      }
+      // 離島で直行便あり → 飛行機 CTA
+      if (city?.isIsland && city?.airportGateway && city?.hasDirectFlight) {
+        const fromIata = CITY_AIRPORT[departure] ?? null;
+        return _buildFlightCta(fromIata, city.airportGateway);
+      }
+      // 通常の鉄道 → JR リンク生成
+      return buildJrLink(_deriveJrProviderFromStep(primaryStep, departure));
+    }
     case 'ferry': {
       const gw        = primaryStep.from ?? departure;
       const bookUrl   = primaryStep.ferryUrl ?? null;
@@ -609,8 +632,8 @@ function _deriveMainCtaFromStepGroups(stepGroups, city, departure) {
     return buildFerryLinkForDest(city.id, city.ferryGateway ?? '', null, null)
         ?? buildFerryLink(city.ferryGateway ?? '', null, null);
   }
-  // railCompany === null の場合は JR CTA を生成しない
-  if (city?.railCompany === null) return null;
+  // 沖縄の場合は JR CTA を生成しない（離島は新幹線でハブ都市まで行く場合があるため除外しない）
+  if (city?.region === '沖縄') return null;
   return buildJrLink(_deriveJrProviderFromStep(null, departure));
 }
 
