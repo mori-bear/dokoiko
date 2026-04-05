@@ -301,6 +301,37 @@ body {
   outline-offset: 1px;
 }
 
+.departure-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-location {
+  flex-shrink: 0;
+  background: var(--btn-bg);
+  color: var(--text-sub);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+
+.btn-location:hover {
+  background: var(--btn-hover);
+  color: var(--text);
+}
+
+.btn-location:disabled {
+  background: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
+  cursor: not-allowed;
+}
+
 /* 出発日時（date + time 分離） */
 
 .datetime-row {

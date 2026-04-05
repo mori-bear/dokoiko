@@ -81,6 +81,7 @@ export function bindHandlers(onGo, onRetry) {
     if (e.target.id === 'departure-select') {
       console.log('[change] departure:', e.target.value);
       state.departure = e.target.value;
+      localStorage.setItem('departure', e.target.value);
       if (isResultVisible()) onGo();
     }
   });

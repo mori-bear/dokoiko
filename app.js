@@ -20,10 +20,14 @@ async function init() {
   bindHandlers(go, retry);
   bindShareHandlers();
   bindExampleLinks();
+  bindLocationButton();
 
-  // URLパラメータがある場合は位置情報検出をスキップ（URLのfromを優先）
+  // 出発地の優先順位: URLパラメータ > localStorage > デフォルト（東京）
   const urlParams = decodeUrlParams();
-  if (!urlParams.dest) detectDeparture();
+  if (!urlParams.from) {
+    const saved = localStorage.getItem('departure');
+    if (saved) setDeparture(saved);
+  }
 
   try {
     state.destinations = await loadDestinations();
@@ -292,19 +296,31 @@ function setDeparture(city) {
   if ([...sel.options].some(o => o.value === city)) {
     sel.value       = city;
     state.departure = city;
+    localStorage.setItem('departure', city);
   }
 }
 
-function detectDeparture() {
-  if (!navigator.geolocation) return;
-  navigator.geolocation.getCurrentPosition(
-    (pos) => {
-      const city = nearestDeparture(pos.coords.latitude, pos.coords.longitude);
-      if (state.departure === '東京') setDeparture(city);
-    },
-    () => { /* 拒否・エラー → 東京のまま */ },
-    { timeout: 5000, maximumAge: 60000 },
-  );
+function bindLocationButton() {
+  const btn = document.getElementById('location-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    if (!navigator.geolocation) return;
+    btn.disabled    = true;
+    btn.textContent = '取得中…';
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const city = nearestDeparture(pos.coords.latitude, pos.coords.longitude);
+        setDeparture(city);
+        btn.disabled    = false;
+        btn.textContent = '📍 現在地を使う';
+      },
+      () => {
+        btn.disabled    = false;
+        btn.textContent = '📍 現在地を使う';
+      },
+      { timeout: 8000, maximumAge: 60000 },
+    );
+  });
 }
 
 /* ── イントロ演出 ── */
