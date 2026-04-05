@@ -18,13 +18,16 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip' || (city.travelTimeMinutes ?? 0) >= 150;
+    const hasStepGroups = transportLinks.some(l => l.type === 'step-group');
 
     const el = document.getElementById('result-inner');
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${buildTransportBlock(transportLinks, departure, city.displayName || city.name, city)}
-        ${showHotel ? buildStayBlock(hotelLinks, city, stayType) : ''}
+        ${hasStepGroups
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel)
+          : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
+        }
         ${buildShareBlock()}
       </div>
     `;
@@ -87,35 +90,11 @@ function buildCityBlock(city) {
     : '';
 
   const categoryBadge = buildCategoryBadge(city);
-  const spotListHtml  = buildSpotList(city.landmarks ?? city.spots);
-
-  const nearbyHtml    = buildNearbyList(city.nearby);
-  const itineraryHtml = buildItineraryList(city.itinerary);
-
-  // 乗換ガイド（私鉄など乗換が必要な場合）
-  const transferHtml  = buildTransferNote(city);
 
   // 所在地（都道府県＋市区町村）
   const locationStr = city.prefecture && city.city && city.city !== city.name
     ? `${city.prefecture}${city.city}`
     : city.prefecture || '';
-
-  // mountain/remote: 最寄り拠点（hub）を表示
-  const isMountainRemote = city.destType === 'mountain' || city.destType === 'remote';
-  const isIslandDest     = !!(city.isIsland || city.destType === 'island');
-  const hubName     = city.gatewayHub || (city.hubStation ? city.hubStation.replace(/駅$/, '') : null);
-  const showAccess  = city.accessStation && !(isIslandDest && city.accessStation.endsWith('駅'));
-  const accessHtml  = isMountainRemote
-    ? (hubName ? `<p class="city-station city-station--hub">最寄り拠点：${hubName}<span class="hub-label">（車でアクセス）</span></p>` : '')
-    : (showAccess ? `<p class="city-station">${accessLabel(city.accessStation)}：${city.accessStation}${city.operator ? `<span class="operator-badge${city.operatorType === 'private' ? ' operator-badge--private' : ''}">${city.operator}</span>` : ''}</p>` : '');
-
-  const stayHtml = city.stayDescription
-    ? `<p class="city-stay">${city.stayDescription}</p>`
-    : '';
-
-  const descriptionHtml = city.description
-    ? `<p class="appeal-line">${city.description}</p>`
-    : '';
 
   return `
     <div class="city-block">
@@ -123,16 +102,9 @@ function buildCityBlock(city) {
       <div class="city-header">
         <h2 class="city-name">${city.displayName || city.name}</h2>
         ${city.catch ? `<p class="city-catch">${city.catch}</p>` : ''}
-        ${stayHtml}
         <p class="city-sub">${locationStr}${categoryBadge}</p>
-        ${accessHtml}
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
-      ${spotListHtml}
-      <div class="city-appeal">${descriptionHtml}</div>
-      ${transferHtml}
-      ${nearbyHtml}
-      ${itineraryHtml}
     </div>
   `;
 }
@@ -186,6 +158,97 @@ function buildCategoryBadge(city) {
   if (isRemote)   return `　<span class="type-badge type-remote">秘境</span>`;
   if (isSight)    return `　<span class="type-badge type-sight">自然</span>`;
   return '';
+}
+
+/* ── 統合アクションブロック（1スクロール完結レイアウト） ── */
+
+/**
+ * ルート情報・CTA・宿・再検索を1ブロックに統合。
+ * step-group 形式のルートでのみ使用する。
+ */
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel) {
+  const stepGroups = links.filter(l => l.type === 'step-group');
+  const altRoutes  = links.filter(l => l.type === 'alt-route');
+
+  // ルート概要行: "東京 → 日田（約5時間・乗換2回）"
+  const totalMins     = stepGroups.reduce((sum, sg) => sum + (sg.duration ?? 0), 0);
+  const transferCount = Math.max(0, stepGroups.length - 1);
+  let badge = '';
+  if (totalMins > 0) {
+    const h = Math.floor(totalMins / 60);
+    const m = totalMins % 60;
+    const timeStr = (h > 0 && m > 0) ? `${h}時間${m}分` : h > 0 ? `${h}時間` : `${m}分`;
+    const xferStr = transferCount === 0 ? '直通' : `乗換${transferCount}回`;
+    badge = `<span class="route-badge">約${timeStr}・${xferStr}</span>`;
+  }
+  const routeLineHtml = (departure && destLabel)
+    ? `<div class="route-line">${departure} → ${destLabel}${badge}</div>`
+    : '';
+
+  // CTA グループ（最大3つ: 行き方 / 地図 / 宿）
+  const mainCtaItem = links.find(l => l.type === 'main-cta');
+  const destMapUrl  = buildDestMapUrl(city);
+  const ctaItems = [];
+
+  if (mainCtaItem?.cta?.url) {
+    ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
+       class="btn ${btnClass(mainCtaItem.cta.type)} btn--action">行き方を見る</a>`);
+  }
+  if (destMapUrl) {
+    ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn-maps btn--action">地図で見る</a>`);
+  }
+  if (showHotel && hotelLinks?.bestUrl) {
+    ctaItems.push(`<a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
+       class="btn btn--stay-soft btn--action">宿を見る</a>`);
+  }
+
+  const ctaGroupHtml = ctaItems.length
+    ? `<div class="cta-group">${ctaItems.join('')}</div>`
+    : '';
+
+  // 日帰り長距離ノート（宿CTAが出る場合のみ）
+  const travelMins = city?.travelTimeMinutes ?? 0;
+  const isDaytrip  = stayType === 'daytrip';
+  const hours      = Math.round(travelMins / 6) / 10;
+  const longDaytripNote = isDaytrip && travelMins >= 150 && showHotel
+    ? `<p class="stay-note">日帰りだと少し長め（約${hours}時間）。ゆっくりするなら泊まるのもあり。</p>`
+    : '';
+
+  // ルート詳細（折りたたみ）
+  const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
+  const altHtml    = altRoutes.map(ar => buildAltRouteSection(ar)).join('');
+  const subCtaItem = links.find(l => l.type === 'sub-cta');
+  const mapCtaItem = links.find(l => l.type === 'map-cta');
+  const hint       = buildLocalTransportHint(city);
+  const secondaryCta = subCtaItem ? buildSubCtaBlock(subCtaItem) : (mapCtaItem ? buildMapCtaBlock(mapCtaItem) : '');
+  const localSec   = (hint || secondaryCta)
+    ? `<div class="local-section"><div class="local-header">到着後の移動</div>${hint}${secondaryCta}</div>`
+    : '';
+
+  const detailsInner = [
+    stepsHtml ? `<div class="step-list">${stepsHtml}</div>` : '',
+    altHtml,
+    localSec,
+  ].filter(Boolean).join('');
+
+  const detailsBlock = detailsInner
+    ? `<details class="step-details">
+         <summary class="step-details-summary">ルート詳細を見る</summary>
+         ${detailsInner}
+       </details>`
+    : '';
+
+  return `
+    <div class="action-block">
+      ${routeLineHtml}
+      ${ctaGroupHtml}
+      ${longDaytripNote}
+      ${detailsBlock}
+      <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
+      <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
+    </div>
+  `;
 }
 
 /* ── 交通ブロック ── */

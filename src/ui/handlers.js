@@ -61,9 +61,16 @@ export function bindHandlers(onGo, onRetry) {
       return;
     }
 
-    /* リトライボタン */
+    /* リトライボタン（ヘッダー外） */
     if (e.target.closest('#retry-btn')) {
       console.log('[click] retry-btn');
+      onRetry();
+      return;
+    }
+
+    /* 再検索ボタン（カード内インライン） */
+    if (e.target.closest('[data-action="retry"]')) {
+      console.log('[click] retry-inline');
       onRetry();
       return;
     }
