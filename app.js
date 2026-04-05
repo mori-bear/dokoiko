@@ -101,8 +101,8 @@ function draw() {
     const retryBtn  = document.getElementById('retry-btn');
     if (retryBtn) {
       retryBtn.textContent = remaining > 0
-        ? `引き直す（あと${remaining}件）`
-        : 'もう一度最初から引く';
+        ? `別の旅先を見る（あと${remaining}件）`
+        : 'もう一度探す';
     }
   } catch (err) {
     console.error('[draw] エラー:', err);

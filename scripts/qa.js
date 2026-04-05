@@ -1924,6 +1924,95 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8t] ルート品質チェック（追加）
+     - 長距離(500km+) + hasDirectFlight + rail-only → FAIL
+     - steps > 3 → FAIL
+     - targetFiles 内の未追跡 import ファイル → FAIL
+  ─────────────────────────────── */
+  {
+    const { resolveRoute } = await import('../src/engine/routeResolver.js');
+    const sc = new Scorecard('[8t] ルート品質（長距離/ステップ数/import）');
+
+    /* 出発地座標（ローカル定義） */
+    const DEP_COORDS_T = {
+      '東京':{lat:35.68,lng:139.77},'大阪':{lat:34.69,lng:135.50},
+      '福岡':{lat:33.59,lng:130.40},'札幌':{lat:43.06,lng:141.35},
+      '名古屋':{lat:35.17,lng:136.91},
+    };
+    function distKmT(lat1,lng1,lat2,lng2){const R=6371;const dL=(lat2-lat1)*Math.PI/180;const dN=(lng2-lng1)*Math.PI/180;const a=Math.sin(dL/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dN/2)**2;return 2*R*Math.asin(Math.sqrt(a));}
+
+    const SURFACE_TYPES = new Set(['rail', 'shinkansen', 'localMove', 'bus']);
+    const longRailOnly = [];  // 長距離 + hasDirectFlight + rail-only
+    const tooManySteps = [];  // steps > 3
+
+    for (const dep of Object.keys(DEP_COORDS_T)) {
+      const dc = DEP_COORDS_T[dep];
+      for (const dest of DESTS) {
+        const r = resolveRoute(dep, dest);
+        if (!r?.steps?.length) continue;
+        const steps = r.steps;
+
+        // ステップ数チェック（island/ferry は1ステップ許容済みのため除外しない）
+        if (steps.length > 3) {
+          tooManySteps.push(`${dep}→${dest.id}(${steps.length}steps)`);
+        }
+
+        // 長距離 + hasDirectFlight + rail-only チェック（BFSルートのみ: gatewayは手動設定で許容）
+        if (r.method === 'graph' && dest.hasDirectFlight && dest.lat && dest.lng) {
+          const km = distKmT(dc.lat, dc.lng, dest.lat, dest.lng);
+          if (km >= 500) {
+            const isRailOnly = steps.every(s => SURFACE_TYPES.has(s.type));
+            if (isRailOnly) {
+              longRailOnly.push(`${dep}→${dest.id}(${Math.round(km)}km)`);
+            }
+          }
+        }
+      }
+    }
+
+    sc.check(longRailOnly.length === 0,
+      longRailOnly.length === 0
+        ? '長距離(500km+)rail-only: ゼロ件（全件 flight または短距離）'
+        : `長距離rail-only ${longRailOnly.length}件（FAIL）: ${longRailOnly.slice(0, 5).join(', ')}`
+    );
+    sc.check(tooManySteps.length === 0,
+      tooManySteps.length === 0
+        ? 'ステップ数: 全件 3以内'
+        : `steps > 3 が ${tooManySteps.length}件（FAIL）: ${tooManySteps.slice(0, 5).join(', ')}`
+    );
+
+    /* 未追跡 import ファイルチェック */
+    const { execSync } = await import('child_process');
+    const trackedSet = new Set(execSync('git ls-files', { cwd: process.cwd() }).toString().trim().split('\n'));
+    const TARGET_FILES = [
+      'app.js',
+      'src/state.js', 'src/share.js',
+      'src/config/constants.js',
+      'src/data/index.js',
+      'src/engine/bfsEngine.js', 'src/engine/distanceCalculator.js',
+      'src/engine/routeResolver.js', 'src/engine/selectionEngine.js',
+      'src/features/dokoiko/render.js', 'src/features/dokoiko/routes.js',
+      'src/features/dokoiko/travelPlan.js',
+      'src/hotel/hotelLinkBuilder.js',
+      'src/lib/loadJson.js',
+      'src/transport/linkBuilder.js', 'src/transport/resolveTransportLinks.js',
+      'src/transport/routeNarrator.js',
+      'src/ui/handlers.js',
+      'src/utilities/airportMap.js',
+      'src/utils/date.js', 'src/utils/geo.js',
+    ];
+    const untracked = TARGET_FILES.filter(f => !trackedSet.has(f));
+    sc.check(untracked.length === 0,
+      untracked.length === 0
+        ? 'import対象ファイル: 全件 git 管理下'
+        : `git未追跡 import ${untracked.length}件（FAIL）: ${untracked.join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');

@@ -32,6 +32,9 @@ const INVALID_ROUTES = await loadJson('../data/invalidRoutes.json', import.meta.
 /* ── 飛行機使用の最低直線距離（km） ── */
 const FLIGHT_MIN_DISTANCE_KM = 300;
 
+/* ── 長距離判定（rail-only 禁止）の閾値（km） ── */
+const LONG_DISTANCE_KM = 500;
+
 /* ─── 新幹線停車駅（フォールバック時の型判定） ─── */
 const SHINKANSEN_STATIONS = new Set([
   '東京駅','品川駅','新横浜駅','小田原駅','熱海駅','三島駅','新富士駅',
@@ -117,7 +120,10 @@ export function resolveRoute(departure, destination) {
   const vias = GATEWAYS_MAP[destination.id];
   if (vias?.length > 0 && candidates.length === 0) {
     const chainResult = _tryGatewayChain(departure, destination, vias);
-    if (chainResult) return chainResult;  // spec: BFSより優先
+    if (chainResult) {
+      if (chainResult.steps.length > 3) chainResult.steps = chainResult.steps.slice(0, 3);
+      return chainResult;  // spec: BFSより優先
+    }
   }
 
   /* ── Layer ②: Transport Graph フルパス BFS ── */
@@ -127,10 +133,15 @@ export function resolveRoute(departure, destination) {
   if (candidates.length === 0) return null;
 
   /* 複数候補があれば最高スコアを採用 */
-  if (candidates.length === 1) return candidates[0];
-  return candidates.reduce((best, c) =>
-    scoreRoute(c.steps) >= scoreRoute(best.steps) ? c : best
-  );
+  const best = candidates.length === 1
+    ? candidates[0]
+    : candidates.reduce((b, c) => scoreRoute(c.steps) >= scoreRoute(b.steps) ? c : b);
+
+  /* 最大ステップ数制限: 3ステップまで（ユーザーが迷わない範囲） */
+  if (best.steps.length > 3) {
+    best.steps = best.steps.slice(0, 3);
+  }
+  return best;
 }
 
 /**
@@ -181,6 +192,16 @@ function _tryBfs(departure, destination) {
   const blocked = INVALID_ROUTES[destination.id];
   if (blocked?.length && steps.some(s => blocked.includes(s.type))) {
     return null;
+  }
+
+  /* 長距離(500km+) かつ hasDirectFlight ありの場合は rail-only ルート不採用（flight を優先） */
+  if (destination.hasDirectFlight) {
+    const SURFACE_TYPES = new Set(['rail', 'shinkansen', 'localMove', 'bus']);
+    const isRailOnly = steps.every(s => SURFACE_TYPES.has(s.type));
+    if (isRailOnly) {
+      const distKm = _distanceKm(departure, destination);
+      if (distKm !== null && distKm >= LONG_DISTANCE_KM) return null;
+    }
   }
 
   /* finalPoint 注入: BFS は accessStation までしか到達しないため、
@@ -472,4 +493,14 @@ function _localLabel(type) {
 
 function _deriveProvider(destination) {
   return destination.railProvider ?? null;
+}
+
+/* 出発地と目的地の直線距離（km）を返す。座標不明な場合は null */
+function _distanceKm(departure, destination) {
+  const depCoords  = DEPARTURE_COORDS[departure];
+  const destCoords = (destination.lat && destination.lng)
+    ? { lat: destination.lat, lng: destination.lng }
+    : null;
+  if (!depCoords || !destCoords) return null;
+  return calcDistanceKm(depCoords, destCoords);
 }

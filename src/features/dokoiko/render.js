@@ -277,13 +277,14 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const mapCtaHtml = mapCtaItem ? buildMapCtaBlock(mapCtaItem) : '';
 
   // ⑦ 到着後ヒント（railNote など）
+  // CTA は最大2つ（main + secondary 1つ）。sub-cta を優先、なければ map-cta。
   const hint = buildLocalTransportHint(city);
-  const localSection = (hint || subCtaHtml || mapCtaHtml)
+  const secondaryCtaHtml = subCtaHtml || mapCtaHtml;
+  const localSection = (hint || secondaryCtaHtml)
     ? `<div class="local-section">
          <div class="local-header">到着後の移動</div>
          ${hint}
-         ${subCtaHtml}
-         ${mapCtaHtml}
+         ${secondaryCtaHtml}
        </div>`
     : '';
 
