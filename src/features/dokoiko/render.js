@@ -17,14 +17,14 @@ import { buildNarrative }                         from '../../transport/routeNar
 export function renderResult({ city, transportLinks, hotelLinks, stayType, departure }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
-    const showHotel = stayType !== 'daytrip';
+    const showHotel = stayType !== 'daytrip' || (city.travelTimeMinutes ?? 0) >= 150;
 
     const el = document.getElementById('result-inner');
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildTransportBlock(transportLinks, departure, city.displayName || city.name, city)}
-        ${showHotel ? buildStayBlock(hotelLinks) : ''}
+        ${showHotel ? buildStayBlock(hotelLinks, city, stayType) : ''}
         ${buildShareBlock()}
       </div>
     `;
@@ -1027,53 +1027,27 @@ function _buildAccessLocalSection(mapLocal, filledSteps, city) {
 
 /* ── 宿泊ブロック ── */
 
-function buildHotelSection(section) {
-  const [primary, secondary] = section.links;
-  const primaryHtml = primary
-    ? `<a href="${primary.url}" target="_blank" rel="nofollow sponsored noopener"
-          class="stay-btn stay-btn--${primary.type}"
-          aria-label="${primary.label}">宿を見る</a>`
-    : '';
-  const secondaryHtml = secondary
-    ? `<a href="${secondary.url}" target="_blank" rel="nofollow sponsored noopener"
-          class="stay-btn stay-btn--${secondary.type} stay-btn--secondary"
-          aria-label="${secondary.label}">じゃらんでも比較</a>`
-    : '';
-  const subHtml = section.links.length > 0
-    ? `<p class="stay-sub">楽天・じゃらんで空室確認</p>`
-    : '';
-  return `
-    <p class="stay-label">${section.heading}</p>
-    <div class="stay-buttons">${primaryHtml}${secondaryHtml}</div>
-    ${subHtml}
-  `;
-}
+function buildStayBlock(hotelLinks, city, stayType) {
+  if (!hotelLinks?.bestUrl) return '';
 
-function buildStayBlock(hotelLinks) {
-  if (!hotelLinks?.links?.length) return '';
+  const travelMins = city?.travelTimeMinutes ?? 0;
+  const isDaytrip  = stayType === 'daytrip';
+  const stayCityName = hotelLinks.stayCityName || city?.displayName || city?.name || '';
 
-  let hubHtml = '';
-  if (hotelLinks.hubLinks?.links?.length) {
-    hubHtml = buildHotelSection(hotelLinks.hubLinks);
-  }
-
-  let nearbyHtml = '';
-  if (hotelLinks.nearbyLinks?.length) {
-    const sectionsHtml = hotelLinks.nearbyLinks
-      .map(n => buildHotelSection(n))
-      .join('');
-    nearbyHtml = `
-      <div class="stay-nearby">
-        <p class="stay-nearby-heading">アクセスの良い街で泊まる</p>
-        ${sectionsHtml}
-      </div>`;
-  }
+  // 日帰りで2.5時間以上: 滞在提案メモ
+  const hours = Math.round(travelMins / 6) / 10; // 小数1桁
+  const longDaytripNote = isDaytrip && travelMins >= 150
+    ? `<p class="stay-note">このルート、日帰りだと少し長め（約${hours}時間）。ゆっくりするなら1泊もおすすめ。</p>`
+    : '';
 
   return `
     <div class="stay-block">
-      ${buildHotelSection(hotelLinks)}
-      ${hubHtml}
-      ${nearbyHtml}
+      ${longDaytripNote}
+      <p class="stay-heading">この旅、泊まるなら「${stayCityName}」がおすすめ</p>
+      <div class="stay-buttons">
+        <a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
+           class="stay-btn stay-btn--${hotelLinks.bestType}">宿を見る</a>
+      </div>
     </div>`;
 }
 
