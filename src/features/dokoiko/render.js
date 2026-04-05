@@ -185,24 +185,18 @@ function pickStayUrl(hotelLinks, city) {
 }
 
 /**
- * 移動時間から意思決定を後押しする1行コピーを生成。
- * 例: 300分 → "約5時間。週末でも行ける距離。"
+ * 移動時間から「背中押し」コピーを生成。
+ * 説明ではなく体験・感情で表現。時間表記は route-badge に任せ、ここには出さない。
  */
 function buildDecisionCopy(totalMins) {
   if (!totalMins || totalMins <= 0) return '';
-  const h = Math.floor(totalMins / 60);
-  const m = totalMins % 60;
-  const t = h > 0
-    ? (m >= 30 ? `約${h}時間半` : `約${h}時間`)
-    : `${totalMins}分`;
-
-  if (totalMins < 60)  return `${totalMins}分で着く。気軽に行ける距離。`;
-  if (totalMins < 100) return `${t}。意外と近い。`;
-  if (totalMins < 150) return `${t}。日帰りでも余裕の距離。`;
-  if (totalMins < 210) return `${t}。週末でちょうどいい距離。`;
-  if (totalMins < 310) return `${t}。週末でも行ける距離。`;
-  if (totalMins < 420) return `${t}。少し遠い。だから知らない場所かも。`;
-  return `${t}。遠いけど、行く価値がある場所。`;
+  if (totalMins < 60)  return '思い立ったらすぐ行ける。';
+  if (totalMins < 100) return '近いのに、意外と知らない場所。';
+  if (totalMins < 150) return '日帰りで、ちゃんと旅した気分になれる。';
+  if (totalMins < 210) return 'ちょっとだけ遠出したい。そんな週末に。';
+  if (totalMins < 310) return '週末にちょうどいい。少し遠出の気分。';
+  if (totalMins < 420) return '少し遠いから、非日常になれる。';
+  return '行ったことがないのは、遠いからだけ。';
 }
 
 /**
