@@ -206,7 +206,57 @@ export function validateRoute(transportType, city, distanceKm = 0) {
 }
 
 /* ══════════════════════════════════════════════════════
-   ④ CTA 完全一本化（engine 内で1回だけ確定）
+   ④ ルート納得感テキスト（CTA直前に1行表示）
+══════════════════════════════════════════════════════ */
+
+/**
+ * 交通手段・距離・状態から「納得感」テキストを1文で返す。
+ *
+ * 設計方針:
+ *   - 説明ではなく「行き方が決まった」感覚を与える
+ *   - 20文字以内・体言止め・です/ます禁止
+ *   - fallback / mapOnly 時は状況説明を優先
+ *
+ * @param {'flight'|'ferry'|'rail'} transportType
+ * @param {number} distanceKm
+ * @param {object|null} city
+ * @param {boolean} isFallback
+ * @param {boolean} mapOnlyFallback
+ * @returns {string}
+ */
+export function buildRouteReason(transportType, distanceKm, city = null, isFallback = false, mapOnlyFallback = false) {
+  if (mapOnlyFallback) {
+    return '予約情報が見つからなかった。地図でルートを確認してください。';
+  }
+  if (isFallback) {
+    return '通常ルートから代替アクセスに切り替えました。';
+  }
+
+  const isIsland = city?.isIsland === true || city?.destType === 'island';
+
+  switch (transportType) {
+    case 'flight':
+      if (city?.hasDirectFlight === true) return '直行便あり。乗ったらすぐ。';
+      return '飛行機が一番はやい。';
+
+    case 'ferry':
+      if (isIsland) return '島へはフェリーで。これが行き方。';
+      return 'フェリーでのアクセスルート。';
+
+    case 'rail':
+      if (distanceKm <= 100) return '電車でサクッと行ける距離。';
+      if (distanceKm <= 200) return '新幹線・特急でスッと行ける。';
+      if (distanceKm <= 400) return '新幹線でダイレクトアクセス。';
+      if (distanceKm <= 600) return '少し遠い。それがちょうどいい。';
+      return '新幹線で遠出。旅のスタートはここから。';
+
+    default:
+      return '';
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   ⑤ CTA 完全一本化（engine 内で1回だけ確定）
 ══════════════════════════════════════════════════════ */
 
 /**
@@ -258,6 +308,7 @@ function buildCanonicalStepGroups(rawStepGroups, canonicalCta, transportType) {
  *   valid            — 禁止ルール通過フラグ（false = 推奨外）
  *   isFallback       — fallback 経由で type が変更された場合 true
  *   mapOnlyFallback  — CTA が一切生成できない場合 true（Maps のみ案内）
+ *   reason           — CTA 直前に表示する「納得感」テキスト（1文）
  *   regionPath       — 地方経路（['関東','中部','近畿','中国','九州']など）
  *   via              — 経由地（hubCity → gatewayHub の順）
  *   stepGroups       — engine CTA 確定済み step-group 配列
@@ -351,6 +402,9 @@ export function buildTransportContext(departure, city) {
    */
   const mapUrl = buildRouteMapUrl(departure, city, via ?? null);
 
+  /* ⑫ 納得感テキスト（CTA 直前に1行表示） */
+  const reason = buildRouteReason(transportType, distanceKm, city, isFallback, mapOnlyFallback);
+
   return {
     transportType,
     distanceKm,
@@ -358,6 +412,7 @@ export function buildTransportContext(departure, city) {
     valid,
     isFallback,
     mapOnlyFallback,
+    reason,
     regionPath,
     via,
     stepGroups,

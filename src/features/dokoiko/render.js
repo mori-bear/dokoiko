@@ -15,7 +15,7 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '' }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -26,7 +26,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback)
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason)
           : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
         }
         ${buildShareBlock()}
@@ -225,10 +225,10 @@ function actionBtnClass(ctaType) {
  * @param {boolean} showHotel       — 宿セクションを表示するか
  * @param {string|null} engineMapUrl — engine が生成した Google Maps URL（hubCity優先）
  * @param {boolean} mapOnlyFallback — CTA 生成不可・Maps のみ案内モード
+ * @param {string}  reason          — CTA 直前の「納得感」テキスト（engine 生成）
  */
-function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false) {
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '') {
   const stepGroups = links.filter(l => l.type === 'step-group');
-  const altRoutes  = links.filter(l => l.type === 'alt-route');
 
   // ルート概要行: "東京 → 日田（約5時間・乗換2回）"
   const totalMins     = stepGroups.reduce((sum, sg) => sum + (sg.duration ?? 0), 0);
@@ -266,6 +266,11 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
+  // 納得感テキスト（CTA直前・engine生成・1行のみ）
+  const reasonHtml = reason
+    ? `<p class="route-reason">${reason}</p>`
+    : '';
+
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
@@ -273,9 +278,8 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   // 宿セクション（daytrip = 完全非表示、それ以外 = 最良1ボタン）
   const staySection = showHotel ? buildStaySection(hotelLinks, city) : '';
 
-  // ルート詳細（折りたたみ）
+  // ルート詳細（折りたたみ）— alt-route は最適ルート1本に統一するため非表示
   const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
-  const altHtml    = altRoutes.map(ar => buildAltRouteSection(ar)).join('');
   const subCtaItem = links.find(l => l.type === 'sub-cta');
   const mapCtaItem = links.find(l => l.type === 'map-cta');
   const hint       = buildLocalTransportHint(city);
@@ -286,7 +290,6 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
 
   const detailsInner = [
     stepsHtml ? `<div class="step-list">${stepsHtml}</div>` : '',
-    altHtml,
     localSec,
   ].filter(Boolean).join('');
 
@@ -300,6 +303,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
+      ${reasonHtml}
       ${ctaGroupHtml}
       ${staySection}
       ${detailsBlock}

@@ -1002,12 +1002,12 @@ body {
   font-weight: 600;
 }
 
-/* 意思決定コピー（ルート概要直下） */
-.decision-copy {
+/* 納得感テキスト（CTA直前・engine生成・1行） */
+.route-reason {
   font-size: 13px;
-  font-weight: 500;
-  color: #888;
-  margin: -6px 0 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin: 0 0 12px;
   line-height: 1.5;
 }
 

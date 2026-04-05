@@ -101,6 +101,7 @@ function draw() {
       departure:       state.departure,
       mapUrl:          plan.transportContext?.mapUrl          ?? null,
       mapOnlyFallback: plan.transportContext?.mapOnlyFallback ?? false,
+      reason:          plan.transportContext?.reason          ?? '',
     });
 
     // URLとページメタを更新
