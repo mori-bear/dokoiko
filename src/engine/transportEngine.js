@@ -226,29 +226,29 @@ export function validateRoute(transportType, city, distanceKm = 0) {
  */
 export function buildRouteReason(transportType, distanceKm, city = null, isFallback = false, mapOnlyFallback = false) {
   if (mapOnlyFallback) {
-    return '予約情報が見つからなかった。地図でルートを確認してください。';
+    return 'まず地図でルートを確かめて。';
   }
   if (isFallback) {
-    return '通常ルートから代替アクセスに切り替えました。';
+    return '別のルートから行ける。';
   }
 
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
   switch (transportType) {
     case 'flight':
-      if (city?.hasDirectFlight === true) return '直行便あり。乗ったらすぐ。';
-      return '飛行機が一番はやい。';
+      if (city?.hasDirectFlight === true) return '乗ってしまえば、もうそこ。';
+      return '空から行く、それで決まり。';
 
     case 'ferry':
-      if (isIsland) return '島へはフェリーで。これが行き方。';
-      return 'フェリーでのアクセスルート。';
+      if (isIsland) return '船に乗る瞬間から、非日常。';
+      return '船で行く。それだけで特別。';
 
     case 'rail':
-      if (distanceKm <= 100) return '電車でサクッと行ける距離。';
-      if (distanceKm <= 200) return '新幹線・特急でスッと行ける。';
-      if (distanceKm <= 400) return '新幹線でダイレクトアクセス。';
-      if (distanceKm <= 600) return '少し遠い。それがちょうどいい。';
-      return '新幹線で遠出。旅のスタートはここから。';
+      if (distanceKm <= 100) return '思い立ったら、今日行ける。';
+      if (distanceKm <= 200) return '新幹線でそのまま行ける。';
+      if (distanceKm <= 400) return '乗ったら、あとは着くだけ。';
+      if (distanceKm <= 600) return '少し遠いのが、ちょうどいい。';
+      return 'これくらい遠い方が、旅っぽい。';
 
     default:
       return '';
