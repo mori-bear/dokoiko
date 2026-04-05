@@ -1,7 +1,9 @@
 {
   "type": "module",
   "scripts": {
-    "test:e2e": "playwright test"
+    "predeploy": "node scripts/predeploy-check.js",
+    "qa":        "node scripts/qa.js",
+    "test:e2e":  "playwright test"
   },
   "dependencies": {
     "iconv-lite": "^0.7.2",
