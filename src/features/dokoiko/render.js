@@ -267,13 +267,13 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
 
-  // RENTAL: flight の場合のみ、フライトCTA直下にレンタカーを追加（現地移動の意思決定を連続させる）
-  const isFlight = ['skyscanner', 'google-flights'].includes(mainCtaItem?.cta?.type);
-  if (!mapOnlyFallback && isFlight) {
-    const destCity = city?.accessStation?.replace(/空港$/, '') || city?.displayName || city?.name || null;
+  // RENTAL: flight / ferry のとき、交通CTA直下にレンタカーを追加（現地移動の意思決定を連続させる）
+  const needsRentalCta = ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaItem?.cta?.type);
+  if (!mapOnlyFallback && needsRentalCta) {
+    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
     ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-       class="btn btn-rental btn--action">${rentalLink.label}</a>`);
+       class="btn btn-rental btn--action">現地の移動にレンタカーを見る</a>`);
   }
 
   // 納得感テキスト（CTA直前・engine生成・1行のみ）
@@ -369,7 +369,7 @@ function buildStaySection(hotelLinks, city) {
   if (!rakuten && !jalan) return '';
 
   const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
-  const heading = stayCityName ? `この旅、泊まるなら${stayCityName}` : 'この旅、泊まるなら';
+  const heading = stayCityName ? `この旅、泊まるなら${stayCityName}がちょうどいい。` : 'この旅の宿を探す';
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"

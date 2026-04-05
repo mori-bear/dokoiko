@@ -38,6 +38,7 @@ async function init() {
     } else if (urlParams.from || urlParams.nights || urlParams.theme) {
       // フォーム状態のみ復元（destなし）→ その条件で自動提案
       restoreFromUrl(urlParams);
+    }
     // else: 初回ロード — URLパラメータなし → 検索画面のみ表示（ユーザー操作待ち）
   } catch (err) {
     console.error('[init] データ読み込みエラー:', err);
@@ -319,11 +320,11 @@ function bindLocationButton() {
         const city = nearestDeparture(pos.coords.latitude, pos.coords.longitude);
         setDeparture(city);
         btn.disabled    = false;
-        btn.textContent = '📍 現在地を使う';
+        btn.textContent = '📍 今いる場所から探す';
       },
       () => {
         btn.disabled    = false;
-        btn.textContent = '📍 現在地を使う';
+        btn.textContent = '📍 今いる場所から探す';
       },
       { timeout: 8000, maximumAge: 60000 },
     );
