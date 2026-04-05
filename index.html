@@ -33,26 +33,29 @@
     window.addEventListener('unhandledrejection', function(e) {
       showError('Promise Rejection', e.reason?.stack ?? String(e.reason ?? e));
     });
-    // フォールバック: 5s後にオーバーレイを強制削除（JSクラッシュ時の救済）
+    // フォールバック: 8s後にオーバーレイを強制削除（JSON読み込み遅延に対応）
     setTimeout(function() {
       var el = document.getElementById('intro-overlay');
       if (el) { el.style.cssText += ';opacity:0;visibility:hidden'; setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 600); }
-    }, 5000);
-    // 6s後にJSモジュールが起動したか診断（INIT STARTがない場合は赤バナー）
+    }, 8000);
+    // 20s後にJSモジュールが起動したか診断（大容量JSON読み込みに余裕を持たせる）
+    // __appInitStarted は import完了直後（init()の外）に設定されるため、
+    // 20s超でも未設定 = 本物のモジュール読み込み失敗
     setTimeout(function() {
       if (!window.__appInitStarted) {
         showError('MODULE LOAD FAILURE',
-          'app.js が6秒経っても起動していません。\n' +
-          'import チェーンでクラッシュしている可能性があります。\n\n' +
-          '確認手順:\n' +
-          '1. ブラウザの開発者ツール → Console タブを開く\n' +
-          '2. "Failed to resolve module" などのエラーを探す\n' +
-          '3. または Network タブで 404 になっているファイルを探す\n\n' +
-          '最も多い原因: file:// で直接開いている場合は\n' +
-          '"npx serve ." でサーバーを起動してください。'
+          'app.js が20秒経っても起動していません。\n\n' +
+          '【確認手順】\n' +
+          '1. F12 → Console タブを開く\n' +
+          '2. 赤字のエラーを探す（"SyntaxError" "Failed to fetch" "404" など）\n' +
+          '3. Network タブ → JS/Fetch で失敗しているファイルを確認\n\n' +
+          '【よくある原因】\n' +
+          '・file:// で直接開いている → "npx serve ." で起動\n' +
+          '・GitHub Pagesでキャッシュが古い → Ctrl+Shift+R で強制リロード\n' +
+          '・ネットワークエラー → オフラインかVPNを確認'
         );
       }
-    }, 6000);
+    }, 20000);
   </script>
 </head>
 <body>
@@ -198,6 +201,12 @@
     <p class="footer-copy">© 2026 どこ行こ？</p>
   </footer>
 
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js" onerror="
+    var msg = 'app.js モジュールの読み込みに失敗しました。\n\n' +
+      'ブラウザの Console → Network タブで\n' +
+      '404や ERR_FAILED になっているファイルを確認してください。';
+    if(window.showError) window.showError('SCRIPT LOAD ERROR', msg);
+    else console.error('[SCRIPT LOAD ERROR]', msg);
+  "></script>
 </body>
 </html>

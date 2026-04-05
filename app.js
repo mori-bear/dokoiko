@@ -15,8 +15,6 @@ import {
 } from './src/share.js';
 
 async function init() {
-  window.__appInitStarted = true;   // モジュール起動確認フラグ
-  window.__appState = state;        // console診断用
   console.log('[INIT START]');
   initIntro();
   bindHandlers(go, retry);
@@ -292,5 +290,10 @@ function initIntro() {
   // ページ非表示タブなどで 1.5s が長すぎる場合の安全弁（4s で強制削除）
   setTimeout(() => { overlay.isConnected && overlay.remove(); clearTimeout(fadeTimer); }, 4000);
 }
+
+// 全 import（top-level await 含む）が完了し app.js が評価された証拠
+window.__appInitStarted = true;
+window.__appState = state;   // console診断用
+console.log('[MODULE LOADED] app.js 評価完了');
 
 init();
