@@ -99,7 +99,7 @@ function buildCityBlock(city) {
 
   return `
     <div class="city-block">
-      <p class="result-eyebrow">こんな旅、どう？</p>
+      <p class="result-eyebrow">ちゃんと行ける旅、見つけました</p>
       <div class="city-header">
         <h2 class="city-name">${city.displayName || city.name}</h2>
         ${city.catch ? `<p class="city-catch">${city.catch}</p>` : ''}

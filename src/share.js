@@ -44,18 +44,18 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
   history.replaceState(null, '', newUrl);
 }
 
-/** シェア用テキスト生成（口語調・シェアしたくなる） */
+/** シェア用テキスト生成（出発地ベース・口語調） */
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
   const url  = location.href;
-  return `この旅、ちょっと良くない？\n\n${departure} → ${name}\n${url}`;
+  return `${departure}からなら、${name}に行けるらしい\n${url}`;
 }
 
-/** Xシェアウィンドウを開く（軽いテキスト + URL） */
+/** Xシェアウィンドウを開く（出発地ベースコピー） */
 export function openXShare(city, departure) {
   const url  = location.href;
   const name = city.displayName || city.name;
-  const text = `この旅、ちょっと良くない？\n${departure} → ${name}`;
+  const text = `${departure}からなら、${name}に行けるらしい`;
   window.open(
     `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
     '_blank',
@@ -112,8 +112,8 @@ function showCopyToast() {
 export function updatePageMeta(city, departure) {
   const name = city.displayName || city.name;
   const tags = Array.isArray(city.tags) ? city.tags.slice(0, 3).join('・') : '';
-  const title = `${departure} → ${name} | どこ行こ？`;
-  const desc  = `${departure}から${name}への旅プラン。${tags}`;
+  const title = `${departure}から行ける、ちょうどいい旅 | どこ行こ？`;
+  const desc  = `まだ知らない${name}に、ちゃんと行けるルート付きで。${tags ? tags + '。' : ''}`;
 
   document.title = title;
 

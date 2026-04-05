@@ -65,13 +65,23 @@ function go() {
     return;
   }
   clearFormError();
-  buildPool();
-  console.log('[go] pool:', state.pool.length, '件 / stayType:', state.stayType, '/ theme:', state.theme, '/ departure:', state.departure);
-  if (state.pool.length === 0) {
-    showFormError('条件に合う旅先が見つかりませんでした。条件を変えてお試しください。');
-    return;
-  }
-  draw();
+
+  // ローディング演出：ボタンを一時的に「探しています…」に変更
+  const goBtn = document.getElementById('go-btn');
+  if (goBtn) { goBtn.textContent = '探しています…'; goBtn.disabled = true; }
+
+  // requestAnimationFrame で描画反映後に処理（ローディング表示を確実に見せる）
+  requestAnimationFrame(() => setTimeout(() => {
+    buildPool();
+    console.log('[go] pool:', state.pool.length, '件 / stayType:', state.stayType, '/ theme:', state.theme, '/ departure:', state.departure);
+    if (state.pool.length === 0) {
+      showFormError('条件に合う旅先が見つかりませんでした。条件を変えてお試しください。');
+      if (goBtn) { goBtn.textContent = 'どこ行こ？'; goBtn.disabled = false; }
+      return;
+    }
+    draw();
+    if (goBtn) { goBtn.textContent = 'もう一度探す'; goBtn.disabled = false; }
+  }, 180));
 }
 
 function retry() {
