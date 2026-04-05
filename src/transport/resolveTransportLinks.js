@@ -26,6 +26,7 @@ import { CITY_AIRPORT }                 from '../utilities/airportMap.js';
 import {
   buildGoogleMapsLink,
   buildSkyscannerLink,
+  buildGoogleFlightsLink,
   buildJrLink,
   buildFerryLink,
   buildFerryLinkForDest,
@@ -487,6 +488,41 @@ function buildMapCtaLink(mapCTA, departure, fromCity) {
 ══════════════════════════════════════════════════════ */
 
 /**
+ * 交通手段を距離・島判定・railCompany から導出する。
+ * step-based の検出が失敗した場合のメタデータフォールバックに使用。
+ *
+ * @returns {'flight' | 'ferry' | 'rail' | null}
+ */
+function _resolveTransportType(departure, city) {
+  // railCompany が null = 鉄道なし（沖縄など）→ 飛行機前提
+  if (city?.railCompany === null) return 'flight';
+
+  // 島 → フェリー
+  if (city?.isIsland || city?.destType === 'island') return 'ferry';
+
+  // 500km超 + 出発地に空港あり + 直行便あり → 飛行機
+  const depCoords  = DEPARTURE_COORDS[departure];
+  const distKm     = depCoords && (city?.lat || city?.lng)
+    ? calcDistanceKm(depCoords, city)
+    : 0;
+  const hasAirport = !!(CITY_AIRPORT[departure]);
+  if (distKm > 500 && hasAirport && city?.hasDirectFlight) return 'flight';
+
+  return 'rail';
+}
+
+/**
+ * 航空便 CTA を生成する（Skyscanner → Google Flights の順で試みる）。
+ * どちらも生成できない場合は null を返す（JR にフォールバックしない）。
+ */
+function _buildFlightCta(fromIata, toAirport) {
+  if (!fromIata || !toAirport) return null;
+  return buildSkyscannerLink(fromIata, toAirport)
+      ?? buildGoogleFlightsLink(fromIata, toAirport)
+      ?? null;
+}
+
+/**
  * BFS step から JR予約プロバイダを導出する。
  * step.operator → 新幹線ライン名 → 出発地 jrArea の順に判定。
  */
@@ -508,20 +544,35 @@ function _deriveJrProviderFromStep(step, departure) {
  */
 function _deriveMainCtaFromSteps(steps, departure, city) {
   const primaryStep = steps.find(s => s.type !== 'localMove');
-  const fallbackRail = () => buildJrLink(_deriveJrProviderFromStep(null, departure));
 
-  if (!primaryStep) return fallbackRail();
+  // railCompany === null の場合は鉄道予約CTAを生成しない
+  const canUseRail  = city?.railCompany !== null;
+  const fallbackRail = () => canUseRail
+    ? buildJrLink(_deriveJrProviderFromStep(null, departure))
+    : null;
+
+  if (!primaryStep) {
+    // ステップ不明でも transport type で最終判定
+    const tType = _resolveTransportType(departure, city);
+    if (tType === 'flight') {
+      const fromIata = CITY_AIRPORT[departure] ?? null;
+      return _buildFlightCta(fromIata, city?.airportGateway ?? '');
+    }
+    return fallbackRail();
+  }
 
   switch (primaryStep.type) {
     case 'flight': {
       const fromIata  = CITY_AIRPORT[departure] ?? null;
-      if (!fromIata) return fallbackRail();
       const toAirport = primaryStep.to ?? '';
-      return buildSkyscannerLink(fromIata, toAirport) ?? fallbackRail();
+      // JR にフォールバックしない — flight ステップが明示されているので null を返す
+      return _buildFlightCta(fromIata, toAirport);
     }
     case 'shinkansen':
     case 'rail':
-      return buildJrLink(_deriveJrProviderFromStep(primaryStep, departure));
+      return canUseRail
+        ? buildJrLink(_deriveJrProviderFromStep(primaryStep, departure))
+        : null;
     case 'ferry': {
       const gw        = primaryStep.from ?? departure;
       const bookUrl   = primaryStep.ferryUrl ?? null;
@@ -546,17 +597,20 @@ function _deriveMainCtaFromStepGroups(stepGroups, city, departure) {
   const hasFerry  = stepGroups.some(sg => sg.stepLabel?.includes('（フェリー）'));
   const fromIata  = CITY_AIRPORT[departure] ?? null;
 
-  if (hasFlight && fromIata) {
+  // ステップに飛行機が含まれる、または metadata が flight を示す場合
+  const tType = _resolveTransportType(departure, city);
+  if (hasFlight || tType === 'flight') {
     const airport = city.airportGateway
         ?? (city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
-    if (airport) {
-      return buildSkyscannerLink(fromIata, airport) ?? buildJrLink(_deriveJrProviderFromStep(null, departure));
-    }
+    // JR にフォールバックしない — flight と判定されたら flight CTA or null
+    return _buildFlightCta(fromIata, airport ?? '');
   }
-  if (hasFerry) {
+  if (hasFerry || tType === 'ferry') {
     return buildFerryLinkForDest(city.id, city.ferryGateway ?? '', null, null)
         ?? buildFerryLink(city.ferryGateway ?? '', null, null);
   }
+  // railCompany === null の場合は JR CTA を生成しない
+  if (city?.railCompany === null) return null;
   return buildJrLink(_deriveJrProviderFromStep(null, departure));
 }
 
