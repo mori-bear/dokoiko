@@ -15,6 +15,30 @@
   <meta name="twitter:title"      content="どこ行こ？ — まだ知らない街と、出会おう。">
   <meta name="twitter:description" content="まだ知らない街と、出会おう。出発地と日程を選ぶだけで、行ったことのない日本の街に出会えます。">
   <link rel="stylesheet" href="./style.css">
+  <!-- JSクラッシュ可視化 + フォールバックタイマー（モジュールより前に同期実行） -->
+  <script>
+    // エラーをページ上に赤字で表示（JSクラッシュ原因が一目でわかる）
+    function showError(label, msg) {
+      var el = document.getElementById('intro-overlay');
+      if (el) { el.style.cssText += ';opacity:0;visibility:hidden'; }
+      var pre = document.createElement('pre');
+      pre.id = 'js-error-banner';
+      pre.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#fff0f0;color:#c00;padding:16px;font-size:12px;z-index:99999;white-space:pre-wrap;border-bottom:3px solid #c00;max-height:50vh;overflow:auto;';
+      pre.textContent = '[' + label + ']\n' + msg;
+      document.body ? document.body.prepend(pre) : document.addEventListener('DOMContentLoaded', function(){ document.body.prepend(pre); });
+    }
+    window.onerror = function(msg, src, line, col, err) {
+      showError('JS ERROR', msg + '\n' + (src ? src + ':' + line + ':' + col : '') + '\n' + (err && err.stack ? err.stack : ''));
+    };
+    window.addEventListener('unhandledrejection', function(e) {
+      showError('Promise Rejection', e.reason?.stack ?? String(e.reason ?? e));
+    });
+    // フォールバック: 5s後にオーバーレイを強制削除（JSクラッシュ時の救済）
+    setTimeout(function() {
+      var el = document.getElementById('intro-overlay');
+      if (el) { el.style.cssText += ';opacity:0;visibility:hidden'; setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 600); }
+    }, 5000);
+  </script>
 </head>
 <body>
 

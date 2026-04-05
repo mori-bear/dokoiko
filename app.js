@@ -15,6 +15,7 @@ import {
 } from './src/share.js';
 
 async function init() {
+  console.log('[INIT START]');
   initIntro();
   bindHandlers(go, retry);
   bindShareHandlers();
@@ -25,6 +26,7 @@ async function init() {
 
   try {
     state.destinations = await loadDestinations();
+    console.log('[INIT] destinations loaded:', state.destinations?.length, '件');
     // URLから状態を復元して自動表示
     if (urlParams.dest) restoreFromUrl(urlParams);
   } catch (err) {
@@ -73,6 +75,7 @@ function retry() {
 
 function draw() {
   const city = state.pool[state.poolIndex];
+  console.log('[draw] city:', city?.name ?? 'undefined', '/ poolIndex:', state.poolIndex);
   if (!city) return;
 
   // result を先に表示しておく（エラー時もフォールバックが見える）

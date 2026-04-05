@@ -16,11 +16,19 @@
 export async function loadJson(relPath, metaUrl) {
   const url = new URL(relPath, metaUrl);
   if (url.protocol === 'file:') {
-    // Node.js 環境（scripts/*.mjs などのテストから呼ばれる場合）
-    const { readFile } = await import('node:fs/promises');
-    return JSON.parse(await readFile(url, 'utf8'));
+    // Node.js 環境かチェック（ブラウザで file:// を開いた場合と区別）
+    const isNode = typeof process !== 'undefined' && process.versions?.node;
+    if (isNode) {
+      const { readFile } = await import('node:fs/promises');
+      return JSON.parse(await readFile(url, 'utf8'));
+    }
+    // ブラウザで file:// を開いた場合 → 明示的エラー
+    throw new Error(
+      '[loadJson] file:// プロトコルはブラウザで動作しません。\n' +
+      'ターミナルで "npx serve ." を実行し、http://localhost:3000 からアクセスしてください。'
+    );
   }
-  // ブラウザ環境
+  // ブラウザ環境 (http/https)
   const res = await fetch(url);
   if (!res.ok) throw new Error(`[loadJson] HTTP ${res.status}: ${url}`);
   return res.json();
