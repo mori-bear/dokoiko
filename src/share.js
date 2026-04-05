@@ -48,7 +48,7 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
   const url  = location.href;
-  return `これ出たんやけど当たり？笑\n\n${departure} → ${name}\n${url}`;
+  return `この行き先、ちょっと良くない？\n\n${departure} → ${name}\n${url}`;
 }
 
 /** Xシェアウィンドウを開く（軽いテキスト + URL） */

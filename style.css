@@ -172,6 +172,36 @@ body {
   max-width: 360px;
 }
 
+/* ── ヒーロー例示リンク ── */
+.hero-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+}
+.hero-examples-label {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.hero-example-link {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  text-decoration: none;
+  background: var(--btn-bg);
+  transition: background 0.15s, color 0.15s;
+}
+.hero-example-link:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 /* ── 使い方ステップ ── */
 
 .how-to {
@@ -1122,10 +1152,29 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
+  text-align: center;
+}
+.share-prompt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.share-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
+}
+
+/* スクショ用ブランドフッター */
+.card-brand-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-sub);
+  opacity: 0.5;
+  padding: 8px 0 4px;
+  letter-spacing: 0.05em;
 }
 
 .btn-share {

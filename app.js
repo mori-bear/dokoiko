@@ -27,8 +27,16 @@ async function init() {
   try {
     state.destinations = await loadDestinations();
     console.log('[INIT] destinations loaded:', state.destinations?.length, '件');
-    // URLから状態を復元して自動表示
-    if (urlParams.dest) restoreFromUrl(urlParams);
+    if (urlParams.dest) {
+      // URL に目的地指定あり → 完全復元して表示
+      restoreFromUrl(urlParams);
+    } else if (urlParams.from || urlParams.nights || urlParams.theme) {
+      // フォーム状態のみ復元（destなし）→ その条件で自動提案
+      restoreFromUrl(urlParams);
+    } else {
+      // 初回ロード: デフォルト条件で1件自動提案
+      go();
+    }
   } catch (err) {
     console.error('[init] データ読み込みエラー:', err);
     const btn = document.getElementById('go-btn');
