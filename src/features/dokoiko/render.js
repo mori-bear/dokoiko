@@ -163,6 +163,28 @@ function buildCategoryBadge(city) {
 /* ── 統合アクションブロック（1スクロール完結レイアウト） ── */
 
 /**
+ * onsen → じゃらん優先、それ以外 → 楽天。
+ * mountain/remote はハブ都市のリンクを使用。
+ */
+function pickStayUrl(hotelLinks, city) {
+  if (!hotelLinks) return null;
+  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
+  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
+  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
+  const rakuten   = stayLinks.find(l => l.type === 'rakuten');
+  const jalan     = stayLinks.find(l => l.type === 'jalan');
+
+  const isOnsen = city?.destType === 'onsen'
+    || (city?.primary ?? []).includes('温泉')
+    || (city?.tags ?? []).includes('温泉');
+
+  if (isOnsen && jalan) return jalan.url;
+  if (rakuten)          return rakuten.url;
+  if (jalan)            return jalan.url;
+  return null;
+}
+
+/**
  * ルート情報・CTA・宿・再検索を1ブロックに統合。
  * step-group 形式のルートでのみ使用する。
  */
@@ -192,27 +214,35 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
 
   if (mainCtaItem?.cta?.url) {
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
-       class="btn ${btnClass(mainCtaItem.cta.type)} btn--action">行き方を見る</a>`);
+       class="btn btn--transport btn--action">行き方を見る</a>`);
   }
   if (destMapUrl) {
     ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn-maps btn--action">地図で見る</a>`);
+       class="btn btn--transport btn--action btn--transport-secondary">地図で見る</a>`);
+  }
+  const stayUrl = showHotel ? pickStayUrl(hotelLinks, city) : null;
+  if (stayUrl) {
+    ctaItems.push(`<a href="${stayUrl}" target="_blank" rel="nofollow sponsored noopener"
+       class="btn btn--stay btn--action">宿を探す</a>`);
   }
 
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // 宿ピッカー（初期: 1ボタン → 展開: 楽天/じゃらん）
-  const stayPickerHtml = showHotel ? buildStayPicker(hotelLinks) : '';
-
-  // 日帰り長距離ノート（宿CTAが出る場合のみ）
+  // 宿コピー（控えめ提案）
+  const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
   const travelMins = city?.travelTimeMinutes ?? 0;
   const isDaytrip  = stayType === 'daytrip';
   const hours      = Math.round(travelMins / 6) / 10;
-  const longDaytripNote = isDaytrip && travelMins >= 150 && showHotel
-    ? `<p class="stay-note">日帰りだと少し長め（約${hours}時間）。ゆっくりするなら泊まるのもあり。</p>`
-    : '';
+  let stayNote = '';
+  if (stayUrl && stayCityName) {
+    if (isDaytrip && travelMins >= 150) {
+      stayNote = `<p class="stay-note">日帰りだと少し長め（約${hours}時間）。ゆっくりするなら、${stayCityName}に泊まるのもあり。</p>`;
+    } else if (!isDaytrip) {
+      stayNote = `<p class="stay-note">ゆっくりするなら、${stayCityName}に泊まるのもあり。</p>`;
+    }
+  }
 
   // ルート詳細（折りたたみ）
   const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -242,8 +272,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     <div class="action-block">
       ${routeLineHtml}
       ${ctaGroupHtml}
-      ${stayPickerHtml}
-      ${longDaytripNote}
+      ${stayNote}
       ${detailsBlock}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
