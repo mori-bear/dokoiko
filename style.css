@@ -1127,6 +1127,13 @@ body {
   border-top: 1px solid var(--border);
 }
 
+.stay-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin: 0 0 10px;
+}
+
 .stay-hotel-btns {
   display: flex;
   gap: 8px;
@@ -1134,7 +1141,9 @@ body {
 }
 
 .stay-hotel-btns .btn--stay-rakuten,
-.stay-hotel-btns .btn--stay-jalan {
+.stay-hotel-btns .btn--stay-jalan,
+.stay-buttons .btn--stay-rakuten,
+.stay-buttons .btn--stay-jalan {
   flex: 1;
   width: auto;
   padding: 12px 10px;

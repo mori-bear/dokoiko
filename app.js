@@ -38,10 +38,7 @@ async function init() {
     } else if (urlParams.from || urlParams.nights || urlParams.theme) {
       // フォーム状態のみ復元（destなし）→ その条件で自動提案
       restoreFromUrl(urlParams);
-    } else {
-      // 初回ロード: デフォルト条件で1件自動提案
-      go();
-    }
+    // else: 初回ロード — URLパラメータなし → 検索画面のみ表示（ユーザー操作待ち）
   } catch (err) {
     console.error('[init] データ読み込みエラー:', err);
     const btn = document.getElementById('go-btn');

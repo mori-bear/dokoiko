@@ -266,6 +266,16 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
+
+  // RENTAL: flight の場合のみ、フライトCTA直下にレンタカーを追加（現地移動の意思決定を連続させる）
+  const isFlight = ['skyscanner', 'google-flights'].includes(mainCtaItem?.cta?.type);
+  if (!mapOnlyFallback && isFlight) {
+    const destCity = city?.accessStation?.replace(/空港$/, '') || city?.displayName || city?.name || null;
+    const rentalLink = buildRentalLink(destCity);
+    ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+       class="btn btn-rental btn--action">${rentalLink.label}</a>`);
+  }
+
   // 納得感テキスト（CTA直前・engine生成・1行のみ）
   const reasonHtml = reason
     ? `<p class="route-reason">${reason}</p>`
@@ -346,18 +356,32 @@ function buildStayPicker(hotelLinks) {
 }
 
 /**
- * 宿泊セクション: 最良の1ボタンのみ表示（楽天/じゃらんを内部で選択）。
+ * 宿泊セクション: 楽天・じゃらんの2ボタン表示。
  * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
  */
 function buildStaySection(hotelLinks, city) {
-  const bestUrl = pickStayUrl(hotelLinks, city);
-  if (!bestUrl) return '';
+  if (!hotelLinks) return '';
+  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
+  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
+  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
+  const rakuten   = stayLinks.find(l => l.type === 'rakuten');
+  const jalan     = stayLinks.find(l => l.type === 'jalan');
+  if (!rakuten && !jalan) return '';
+
   const stayCityName = hotelLinks?.stayCityName || city?.displayName || city?.name || '';
-  const label = stayCityName ? `${stayCityName}の宿を探す` : '宿を探す';
+  const heading = stayCityName ? `この旅、泊まるなら${stayCityName}` : 'この旅、泊まるなら';
+
+  const buttons = [
+    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-rakuten btn--action">楽天で見る</a>` : '',
+    jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn--stay-jalan btn--action">じゃらんで見る</a>` : '',
+  ].filter(Boolean).join('');
+
   return `
     <div class="stay-section">
-      <a href="${bestUrl}" target="_blank" rel="nofollow sponsored noopener"
-         class="btn btn--stay btn--action">${label}</a>
+      <p class="stay-heading">${heading}</p>
+      <div class="stay-buttons">${buttons}</div>
     </div>
   `;
 }
