@@ -48,13 +48,14 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
   const url  = location.href;
-  return `この行き先、ちょっと良くない？\n\n${departure} → ${name}\n${url}`;
+  return `この旅、ちょっと良くない？\n\n${departure} → ${name}\n${url}`;
 }
 
 /** Xシェアウィンドウを開く（軽いテキスト + URL） */
 export function openXShare(city, departure) {
   const url  = location.href;
-  const text = 'この行き先、ちょっと良くない？';
+  const name = city.displayName || city.name;
+  const text = `この旅、ちょっと良くない？\n${departure} → ${name}`;
   window.open(
     `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
     '_blank',

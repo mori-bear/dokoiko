@@ -19,6 +19,7 @@ async function init() {
   initIntro();
   bindHandlers(go, retry);
   bindShareHandlers();
+  bindExampleLinks();
 
   // URLパラメータがある場合は位置情報検出をスキップ（URLのfromを優先）
   const urlParams = decodeUrlParams();
@@ -124,6 +125,34 @@ function draw() {
   }
 
   resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ── ヒーローサンプルリンク（ページリロードなしで適用） ── */
+
+function bindExampleLinks() {
+  document.addEventListener('click', e => {
+    const link = e.target.closest('.hero-example-link');
+    if (!link || !link.href) return;
+    e.preventDefault();
+
+    const params = new URLSearchParams(new URL(link.href, location.origin).search);
+    const from   = params.get('from');
+    const nights = params.get('nights');
+    const theme  = params.get('theme') || null;
+
+    if (from) setDeparture(from);
+    if (nights) {
+      state.stayType = nights;
+      document.querySelectorAll('[data-stay]').forEach(b =>
+        b.classList.toggle('active', b.dataset.stay === nights));
+    }
+    state.theme = theme;
+    document.querySelectorAll('[data-theme]').forEach(b =>
+      b.classList.toggle('active', (b.dataset.theme || null) === theme));
+
+    go();
+    document.getElementById('result')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 }
 
 /* ── URLからの状態復元 ── */
