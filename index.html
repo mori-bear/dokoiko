@@ -38,6 +38,21 @@
       var el = document.getElementById('intro-overlay');
       if (el) { el.style.cssText += ';opacity:0;visibility:hidden'; setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 600); }
     }, 5000);
+    // 6s後にJSモジュールが起動したか診断（INIT STARTがない場合は赤バナー）
+    setTimeout(function() {
+      if (!window.__appInitStarted) {
+        showError('MODULE LOAD FAILURE',
+          'app.js が6秒経っても起動していません。\n' +
+          'import チェーンでクラッシュしている可能性があります。\n\n' +
+          '確認手順:\n' +
+          '1. ブラウザの開発者ツール → Console タブを開く\n' +
+          '2. "Failed to resolve module" などのエラーを探す\n' +
+          '3. または Network タブで 404 になっているファイルを探す\n\n' +
+          '最も多い原因: file:// で直接開いている場合は\n' +
+          '"npx serve ." でサーバーを起動してください。'
+        );
+      }
+    }, 6000);
   </script>
 </head>
 <body>
@@ -154,7 +169,11 @@
         <p id="form-error" class="form-error" hidden></p>
 
         <!-- GOボタン -->
-        <button id="go-btn" class="go-btn">どこ行こ？</button>
+        <!-- onclick属性はモジュール失敗時のフォールバック診断用 -->
+        <button id="go-btn" class="go-btn"
+          onclick="console.log('[go-btn onclick] appInit=' + !!window.__appInitStarted + ' destinations=' + (window.__appState && window.__appState.destinations && window.__appState.destinations.length))">
+          どこ行こ？
+        </button>
 
       </section>
 

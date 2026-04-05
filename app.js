@@ -15,6 +15,8 @@ import {
 } from './src/share.js';
 
 async function init() {
+  window.__appInitStarted = true;   // モジュール起動確認フラグ
+  window.__appState = state;        // console診断用
   console.log('[INIT START]');
   initIntro();
   bindHandlers(go, retry);
