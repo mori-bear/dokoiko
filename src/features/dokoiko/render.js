@@ -228,18 +228,22 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<p class="decision-copy">${decisionCopyText}</p>`
     : '';
 
-  // CTA グループ（最大3つ: 行き方 / 地図 / 宿）
+  // CTA グループ（最大2つ: 地図ルート=PRIMARY / 予約=SECONDARY）
   const mainCtaItem = links.find(l => l.type === 'main-cta');
-  const destMapUrl  = buildDestMapUrl(city);
   const ctaItems = [];
 
-  if (mainCtaItem?.cta?.url) {
-    ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--transport btn--action">行き方を見る</a>`);
+  // PRIMARY: Google Maps transit route（常に最上部）
+  const transitMapUrl = buildTransitMapUrl(departure, city);
+  if (transitMapUrl) {
+    ctaItems.push(`<a href="${transitMapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--transport btn--action">地図でルートを見る</a>`);
   }
-  if (destMapUrl) {
-    ctaItems.push(`<a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--transport-secondary btn--action">地図で見る</a>`);
+
+  // SECONDARY: 予約・チケット（ferry / 特急 / 航空券 など。routes.json の main-cta を使用）
+  if (mainCtaItem?.cta?.url) {
+    const bookingLabel = mainCtaItem.cta.label ?? buildMainCtaLabel(mainCtaItem.cta.type);
+    ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--booking btn--action">${bookingLabel}</a>`);
   }
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
@@ -585,25 +589,16 @@ function buildAltRouteSection(altRoute) {
  * Googleマップサブリンク（ローカル移動用）のみ小テキストで表示する。
  */
 function buildStepCard(sg) {
-  const ctaLabel     = buildStepCtaLabel(sg);
-  const isGoogleMaps = sg.cta?.type === 'google-maps';
-  // booking CTA はメインCTAブロックで表示済み → ステップ内には出さない
-  // Google Maps のみ補助サブリンクとして表示
-  const ctaHtml = (sg.cta?.url && ctaLabel && isGoogleMaps)
-    ? `<a href="${sg.cta.url}" target="_blank" rel="noopener noreferrer" class="btn btn-maps">${ctaLabel}</a>`
-    : '';
-
+  // ステップは純粋な表示のみ — CTA は上部の primary/secondary に集約済み
   const cautionHtml = sg.caution
     ? `<p class="step-card-caution">${sg.caution}</p>`
     : '';
 
-  // stepLabel も表示要素も何もない場合のみスキップ
-  if (!sg.stepLabel && !ctaHtml && !cautionHtml) return '';
+  if (!sg.stepLabel && !cautionHtml) return '';
 
   return `
     <div class="step-card">
       <div class="step-card-header">${sg.stepLabel ?? ''}</div>
-      ${ctaHtml}
       ${cautionHtml}
     </div>
   `;
@@ -705,6 +700,18 @@ function buildDestMapUrl(city) {
   // 緯度経度ではなく地名で検索する（座標リンクは意図しない場所を示すことがある）
   const name = city.displayName || city.name || '';
   return name ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}` : null;
+}
+
+/**
+ * Google Maps transit 経路リンク（出発地 → 目的地）
+ * PRIMARY CTA として使用する。
+ */
+function buildTransitMapUrl(departure, city) {
+  if (!departure || !city) return null;
+  const origin = encodeURIComponent(departure);
+  const dest   = encodeURIComponent(city.displayName || city.name || '');
+  if (!dest) return null;
+  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=transit`;
 }
 
 /**

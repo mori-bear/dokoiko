@@ -1051,6 +1051,16 @@ body {
 }
 .btn--transport-secondary:hover { background: #5e5e5e; }
 
+/* 予約・チケット（secondary booking CTA） */
+.btn--booking {
+  background: #4a4a4a;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.btn--booking:hover { background: #5e5e5e; }
+
 /* 宿を探す: 最も控えめ（3番手） */
 .btn--stay {
   background: #f5f0eb;
