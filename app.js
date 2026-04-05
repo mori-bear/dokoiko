@@ -28,6 +28,7 @@ async function init() {
     // URLから状態を復元して自動表示
     if (urlParams.dest) restoreFromUrl(urlParams);
   } catch (err) {
+    console.error('[init] データ読み込みエラー:', err);
     const btn = document.getElementById('go-btn');
     if (btn) {
       btn.disabled = true;
@@ -48,10 +49,16 @@ function buildPool() {
 function go() {
   if (state.destinations.length === 0) {
     showFormError('データを読み込み中です。しばらくお待ちください。');
+    console.warn('[go] destinations が空です');
     return;
   }
   clearFormError();
   buildPool();
+  console.log('[go] pool:', state.pool.length, '件 / stayType:', state.stayType, '/ theme:', state.theme, '/ departure:', state.departure);
+  if (state.pool.length === 0) {
+    showFormError('条件に合う旅先が見つかりませんでした。条件を変えてお試しください。');
+    return;
+  }
   draw();
 }
 
@@ -68,30 +75,40 @@ function draw() {
   const city = state.pool[state.poolIndex];
   if (!city) return;
 
-  const plan = buildTravelPlan(city, state.departure);
-
-  renderResult({
-    city,
-    transportLinks: plan.transportLinks,
-    hotelLinks:     plan.hotelLinks,
-    stayType:       state.stayType,
-    departure:      state.departure,
-  });
-
-  // URLとページメタを更新
-  encodeStateToUrl(state.departure, state.stayType, state.theme, state.excludeCar, city.id);
-  updatePageMeta(city, state.departure);
-
-  const remaining = state.pool.length - state.poolIndex - 1;
-  const retryBtn  = document.getElementById('retry-btn');
-  if (retryBtn) {
-    retryBtn.textContent = remaining > 0
-      ? `引き直す（あと${remaining}件）`
-      : 'もう一度最初から引く';
-  }
-
+  // result を先に表示しておく（エラー時もフォールバックが見える）
   const resultEl = document.getElementById('result');
   resultEl.hidden = false;
+
+  try {
+    const plan = buildTravelPlan(city, state.departure);
+
+    renderResult({
+      city,
+      transportLinks: plan.transportLinks,
+      hotelLinks:     plan.hotelLinks,
+      stayType:       state.stayType,
+      departure:      state.departure,
+    });
+
+    // URLとページメタを更新
+    encodeStateToUrl(state.departure, state.stayType, state.theme, state.excludeCar, city.id);
+    updatePageMeta(city, state.departure);
+
+    const remaining = state.pool.length - state.poolIndex - 1;
+    const retryBtn  = document.getElementById('retry-btn');
+    if (retryBtn) {
+      retryBtn.textContent = remaining > 0
+        ? `引き直す（あと${remaining}件）`
+        : 'もう一度最初から引く';
+    }
+  } catch (err) {
+    console.error('[draw] エラー:', err);
+    const inner = document.getElementById('result-inner');
+    if (inner) {
+      inner.innerHTML = `<div class="result-card"><p style="padding:1.5rem;color:#666;">表示中にエラーが発生しました。もう一度お試しください。</p><p style="padding:0 1.5rem 1rem;font-size:12px;color:#999;">${err?.message ?? ''}</p></div>`;
+    }
+  }
+
   resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
