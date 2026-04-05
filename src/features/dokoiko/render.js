@@ -1273,8 +1273,9 @@ function buildShareBlock() {
     <div class="share-block">
       <p class="share-prompt">この旅、ちょっと良くない？</p>
       <div class="share-buttons">
-        <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
-        <button class="btn-copy" id="share-copy-btn">リンクをコピー</button>
+        <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
+        <button class="btn-share btn-share--img" id="share-img-btn">📸 画像でシェア</button>
+        <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
       </div>
     </div>
     <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>

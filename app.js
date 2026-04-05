@@ -13,6 +13,7 @@ import {
   copyShareText,
   updatePageMeta,
 } from './src/share.js';
+import { captureShareCard, shareOrDownload } from './src/share-image.js';
 
 async function init() {
   console.log('[INIT START]');
@@ -228,11 +229,32 @@ function bindShareHandlers() {
   // イベント委任（DOM再描画後も有効）
   document.addEventListener('click', async (e) => {
     const xBtn   = e.target.closest('#share-x-btn');
+    const imgBtn = e.target.closest('#share-img-btn');
     const copyBtn = e.target.closest('#share-copy-btn');
 
     if (xBtn) {
       const city = state.pool[state.poolIndex];
       if (city) openXShare(city, state.departure);
+      return;
+    }
+
+    if (imgBtn) {
+      const city = state.pool[state.poolIndex];
+      if (!city) return;
+      const original = imgBtn.textContent;
+      imgBtn.disabled = true;
+      imgBtn.textContent = '生成中…';
+      try {
+        const canvas = await captureShareCard(city, state.departure);
+        shareOrDownload(canvas, city, state.departure);
+      } catch (err) {
+        console.error('[share-img] 画像生成失敗:', err);
+        imgBtn.textContent = '生成失敗';
+        setTimeout(() => { imgBtn.textContent = original; }, 2000);
+      } finally {
+        imgBtn.disabled    = false;
+        imgBtn.textContent = original;
+      }
       return;
     }
 

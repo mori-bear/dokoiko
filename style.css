@@ -1498,7 +1498,17 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   color: #fff;
 }
 
+.btn-share--img {
+  background: var(--btn-bg);
+  color: var(--text);
+}
+
 .btn-share:hover { opacity: 0.82; }
+
+.btn-share:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .btn-copy {
   display: inline-block;
