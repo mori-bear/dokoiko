@@ -356,12 +356,35 @@ function pickMainSegment(segments) {
 }
 
 /**
- * ユーザー向けシンプル表示ルート（出発地 → 目的地）。
- * 常に「出発地 → 最終目的地」で表示。中継駅は出さない。
+ * ユーザー向け表示ルート。到着駅を明示する。
+ * waypointsの末端を arrivalStation として使い、目的地名と異なれば分離表示。
  */
-function buildDisplayRoute(mainSeg, departure, city) {
+function buildDisplayRoute(mainSeg, departure, city, waypoints) {
   const destName = city?.displayName || city?.name || '';
-  return { from: departure, to: destName };
+  const clean = (n) => n.replace(/駅$|港$|空港$/, '');
+
+  // waypointsの末端 = 実際の到着地点
+  const lastWp = waypoints?.length > 0 ? waypoints[waypoints.length - 1] : null;
+  const arrivalRaw = lastWp || city?.representativeStation || destName;
+  const arrival = clean(arrivalRaw);
+
+  // 到着駅と目的地名が同じか判定
+  const destClean = clean(destName);
+  // 駅名≠都市名だが同一エリアのケース
+  const STATION_CITY_ALIAS = { '博多': '福岡', '天神': '福岡', '新大阪': '大阪', '品川': '東京', '新横浜': '横浜' };
+  const aliased = STATION_CITY_ALIAS[arrival] ?? arrival;
+  const sameAsDest = arrival === destClean
+    || destClean.includes(arrival)
+    || arrival.includes(destClean)
+    || aliased === destClean;
+
+  return {
+    from: departure,
+    to: sameAsDest ? destName : arrival,
+    arrivalStation: arrival,
+    destName,
+    needsAccess: !sameAsDest,
+  };
 }
 
 /* ══════════════════════════════════════════════════════
@@ -487,7 +510,7 @@ export function buildTransportContext(departure, city) {
 
   // ⑩ 主役セグメント + 表示用ルート
   const mainSegment = pickMainSegment(segments);
-  const displayRoute = buildDisplayRoute(mainSegment, departure, city);
+  const displayRoute = buildDisplayRoute(mainSegment, departure, city, waypoints);
 
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */

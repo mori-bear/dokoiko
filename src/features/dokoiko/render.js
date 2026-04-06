@@ -339,18 +339,24 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌' };
   const icon = main ? (MAIN_ICON[main.type] ?? '🚃') : '🚃';
 
-  // シンプル2点ルート: ✈️ 東京 → 福岡
+  // ルート行: ✈️ 東京 → 福岡（到着駅ベース）
   const routeLine = `${icon} ${dr.from} → ${dr.to}`;
 
   // 理由文
   const reason = best.reason || tc.reason;
 
-  // 最終アクセス（bus/carのみ表示。walkは非表示）
-  const accessHtml = best.finalAccess === 'bus'
-    ? '<div class="best-route-access">📍 駅からバスでアクセス</div>'
-    : best.finalAccess === 'car'
-    ? '<div class="best-route-access">📍 車があると便利</div>'
-    : '';
+  // アクセス行: 到着駅≠目的地名の場合、または bus/car の場合に表示
+  let accessHtml = '';
+  const fa = best.finalAccess;
+  if (dr.needsAccess) {
+    const ACCESS_VERB = { walk: '徒歩', bus: 'バス', car: '車' };
+    const verb = ACCESS_VERB[fa] ?? '徒歩';
+    accessHtml = `<div class="best-route-access">📍 ${dr.destName}エリアへ（${verb}でアクセス）</div>`;
+  } else if (fa === 'bus') {
+    accessHtml = '<div class="best-route-access">📍 駅からバスでアクセス</div>';
+  } else if (fa === 'car') {
+    accessHtml = '<div class="best-route-access">📍 車があると便利</div>';
+  }
 
   return `
     <div class="route-block">

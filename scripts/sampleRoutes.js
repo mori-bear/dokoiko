@@ -46,8 +46,14 @@ for (const { departure, destId } of SAMPLES) {
   console.log(`\n  ── UI ──`);
   console.log(`  ${icon} ${dr.from} → ${dr.to}`);
   console.log(`  ${tc.reason}`);
-  if (city.finalAccess === 'bus') console.log(`  📍 駅からバスでアクセス`);
-  if (city.finalAccess === 'car') console.log(`  📍 車があると便利`);
+  if (dr.needsAccess) {
+    const verb = { walk: '徒歩', bus: 'バス', car: '車' }[city.finalAccess] ?? '徒歩';
+    console.log(`  📍 ${dr.destName}エリアへ（${verb}でアクセス）`);
+  } else if (city.finalAccess === 'bus') {
+    console.log(`  📍 駅からバスでアクセス`);
+  } else if (city.finalAccess === 'car') {
+    console.log(`  📍 車があると便利`);
+  }
   console.log(``);
   console.log(`  [地図で行き方を見る]`);
   if (mainSeg) {
