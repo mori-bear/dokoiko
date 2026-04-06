@@ -333,13 +333,16 @@ function buildRouteBlock(tc, departure, destLabel, city) {
 
   const best = tc.bestRoute;
   const icon = TRANSPORT_ICON[best.transportType] ?? '🚃';
-  const viaStr = tc.via ? `<span class="route-via">${tc.via}経由</span>` : '';
 
-  // bestRoute: アイコン + 理由文のみ
+  // 1行経路: 🚃 高松 → 大阪 → 飛鳥
+  const routeParts = [departure, tc.via, destLabel].filter(Boolean);
+  const routeLine = `${icon} ${routeParts.join(' → ')}`;
+
+  // bestRoute: 経路1行 + 理由文
   const bestHtml = `
     <div class="best-route">
-      <span class="best-route-icon">${icon}</span>
-      <span class="best-route-reason">${best.reason || tc.reason}</span>
+      <div class="best-route-line">${routeLine}</div>
+      <div class="best-route-reason">${best.reason || tc.reason}</div>
     </div>`;
 
   // alternatives（最大2つ）: アイコン + 不採用理由のみ
@@ -358,8 +361,6 @@ function buildRouteBlock(tc, departure, destLabel, city) {
 
   return `
     <div class="route-block">
-      <div class="route-header">${departure} → ${destLabel}</div>
-      ${viaStr}
       ${bestHtml}
       ${altHtml}
     </div>`;
@@ -369,54 +370,53 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const ctaItems = [];
   const seenUrls = new Set();
 
-  // 1. Google Maps（最優先）
+  // 1. Googleマップで確認（メイン）
   const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
   if (mapUrl && !seenUrls.has(mapUrl)) {
     seenUrls.add(mapUrl);
     ctaItems.push(`<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">Googleマップでルートを見る</a>`);
+       class="btn btn--maps btn--action">Googleマップで確認</a>`);
   }
 
-  // 2. 予約CTA（accessType=bus時はスキップ）
+  // 2. 予約CTA（区間付き・必要な場合のみ）
   if (tc?.accessType !== 'bus' && !tc?.mapOnlyFallback) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       seenUrls.add(mainCta.cta.url);
-      const label = mainCta.cta.label ?? buildMainCtaLabel(mainCta.cta.type);
+      const label = buildBookingLabel(mainCta.cta.type, departure, city, tc);
       ctaItems.push(`<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`);
     }
   }
 
-  // 3. レンタカー（必要時のみ）
-  const mainCtaType = transportLinks?.find(l => l.type === 'main-cta')?.cta?.type;
-  const needsRental = city?.requiresCar === true ||
-    ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaType);
-  if (!tc?.mapOnlyFallback && needsRental) {
+  // CTA最大2つ + シェア
+  const ctas = ctaItems.slice(0, 2).join('');
+
+  // シェア（Xのみ）
+  const shareHtml = `
+    <div class="share-inline">
+      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
+    </div>`;
+
+  // レンタカー（車があると便利な場合のみ・最下部）
+  let rentalHtml = '';
+  if (!tc?.mapOnlyFallback && city?.requiresCar === true) {
     const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenUrls.has(rentalLink.url)) {
-      seenUrls.add(rentalLink.url);
-      ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-         class="btn btn-rental btn--action">レンタカーを探す</a>`);
+      rentalHtml = `<div class="rental-hint">
+        <span class="rental-hint-label">🚗 車があると便利</span>
+        <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+           class="btn btn-rental btn--action-sm">レンタカーを探す</a>
+      </div>`;
     }
   }
-
-  // 最大3つ
-  const ctas = ctaItems.slice(0, 3).join('');
-
-  // シェアボタン
-  const shareHtml = `
-    <div class="share-inline">
-      <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
-      <button class="btn-share btn-share--img" id="share-img-btn">画像でシェア</button>
-      <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
-    </div>`;
 
   return `
     <div class="cta-block">
       <div class="cta-group">${ctas}</div>
       ${shareHtml}
+      ${rentalHtml}
     </div>`;
 }
 
@@ -511,30 +511,28 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
 
-  // TERTIARY: requiresCar=true / flight / ferry のときレンタカーを追加（重複なし）
-  const needsRentalCta =
-    (city?.requiresCar === true) ||
-    ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaItem?.cta?.type);
-  if (!mapOnlyFallback && needsRentalCta) {
-    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
-    const rentalLink = buildRentalLink(destCity);
-    if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
-      seenCtaUrls.add(rentalLink.url);
-      ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-         class="btn btn-rental btn--action">現地の移動にレンタカーを見る</a>`);
-    }
-  }
-
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // シェアボタン（CTA直下）
+  // レンタカー（車があると便利な場合のみ・最下部配置）
+  let rentalHintHtml = '';
+  if (!mapOnlyFallback && city?.requiresCar === true) {
+    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
+    const rentalLink = buildRentalLink(destCity);
+    if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
+      rentalHintHtml = `<div class="rental-hint">
+        <span class="rental-hint-label">🚗 車があると便利</span>
+        <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+           class="btn btn-rental btn--action-sm">レンタカーを探す</a>
+      </div>`;
+    }
+  }
+
+  // シェアボタン（Xのみ）
   const shareInlineHtml = `
     <div class="share-inline">
-      <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
-      <button class="btn-share btn-share--img" id="share-img-btn">📸 画像でシェア</button>
-      <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
+      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
     </div>`;
 
   // 宿セクション（daytrip = 完全非表示）
@@ -571,6 +569,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
       ${shareInlineHtml}
       ${staySection}
       ${detailsBlock}
+      ${rentalHintHtml}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>
@@ -817,6 +816,30 @@ function buildMapCtaBlock(item) {
          class="btn btn-maps">${label}</a>
     </div>
   `;
+}
+
+/**
+ * 予約CTAの区間付きラベルを生成する。
+ * 例: 🚄 高松 → 大阪まで予約
+ */
+function buildBookingLabel(type, departure, city, tc) {
+  const dest = tc?.via || city?.accessStation?.replace(/駅$/, '') || city?.hubCity || city?.displayName || city?.name || '';
+  const section = (departure && dest) ? `${departure} → ${dest}` : '';
+
+  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+  if (JR_TYPES.has(type) && section) {
+    return `🚄 ${section}まで予約`;
+  }
+  if (['skyscanner', 'google-flights'].includes(type) && section) {
+    return `✈️ ${section}の航空券`;
+  }
+  if (type === 'ferry' && section) {
+    return `⛴ ${section}のフェリー`;
+  }
+  if (type === 'bus' && section) {
+    return `🚌 ${section}のバス`;
+  }
+  return buildMainCtaLabel(type);
 }
 
 function buildMainCtaLabel(type) {
