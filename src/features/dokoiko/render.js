@@ -15,7 +15,7 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -26,7 +26,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via)
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via, accessType)
           : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
         }
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
@@ -146,16 +146,18 @@ function buildSpotList(spots) {
 }
 
 function buildCategoryBadge(city) {
-  const isIsland   = city.isIsland || city.destType === 'island';
-  const isOnsen    = city.destType === 'onsen';
-  const isSight    = city.destType === 'sight';
-  const isMountain = city.destType === 'mountain';
-  const isRemote   = city.destType === 'remote';
-  if (isIsland)   return `　<span class="type-badge type-island">島</span>`;
-  if (isOnsen)    return `　<span class="type-badge type-onsen">温泉</span>`;
-  if (isMountain) return `　<span class="type-badge type-mountain">高原・山岳</span>`;
-  if (isRemote)   return `　<span class="type-badge type-remote">秘境</span>`;
-  if (isSight)    return `　<span class="type-badge type-sight">自然</span>`;
+  const isIsland    = city.isIsland || city.destType === 'island';
+  const isOnsen     = city.destType === 'onsen';
+  const isSight     = city.destType === 'sight';
+  const isMountain  = city.destType === 'mountain';
+  const isRemote    = city.destType === 'remote';
+  const isPeninsula = city.destType === 'peninsula';
+  if (isIsland)    return `　<span class="type-badge type-island">島</span>`;
+  if (isPeninsula) return `　<span class="type-badge type-peninsula">半島</span>`;
+  if (isOnsen)     return `　<span class="type-badge type-onsen">温泉</span>`;
+  if (isMountain)  return `　<span class="type-badge type-mountain">高原・山岳</span>`;
+  if (isRemote)    return `　<span class="type-badge type-remote">秘境</span>`;
+  if (isSight)     return `　<span class="type-badge type-sight">自然</span>`;
   return '';
 }
 
@@ -211,7 +213,7 @@ function actionBtnClass(ctaType) {
  * @param {boolean} mapOnlyFallback — CTA 生成不可・Maps のみ案内モード
  * @param {string}  reason          — CTA 直前の「納得感」テキスト（engine 生成）
  */
-function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null) {
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
 
   // ルート概要行: "東京 → 壱岐" + 必要なら "博多経由"
@@ -236,8 +238,9 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn btn--transport btn--action">地図でルートを見る</a>`);
   }
 
-  // SECONDARY: 予約・チケット — mapOnlyFallback 時は表示しない
-  if (!mapOnlyFallback && mainCtaItem?.cta?.url && !seenCtaUrls.has(mainCtaItem.cta.url)) {
+  // SECONDARY: 予約・チケット — mapOnlyFallback / accessType=bus 時は表示しない
+  const skipBooking = accessType === 'bus';
+  if (!mapOnlyFallback && !skipBooking && mainCtaItem?.cta?.url && !seenCtaUrls.has(mainCtaItem.cta.url)) {
     seenCtaUrls.add(mainCtaItem.cta.url);
     const bookingLabel = mainCtaItem.cta.label ?? buildMainCtaLabel(mainCtaItem.cta.type);
     ctaItems.push(`<a href="${mainCtaItem.cta.url}" target="_blank" rel="noopener noreferrer"

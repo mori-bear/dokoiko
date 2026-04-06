@@ -78,6 +78,9 @@ const FLIGHT_ONLY_REGION    = '沖縄';
  *   5. regionGraph ヒント                     → flight / ferry
  *   6. それ以外                               → rail
  *
+ * peninsula / remote は幹線交通（hubCity まで）のタイプを返す。
+ * ラストマイル（bus/car）は accessType で別途計算。
+ *
  * @param {string} departure — 出発都市名
  * @param {object} city      — destinations.json エントリ
  * @param {number} distKm    — 出発地〜目的地の直線距離（事前計算済み）
@@ -109,6 +112,35 @@ export function determineTransportType(departure, city, distKm = 0) {
   }
 
   return 'rail';
+}
+
+/* ══════════════════════════════════════════════════════
+   ①-b accessType 算出（ラストマイル交通手段）
+══════════════════════════════════════════════════════ */
+
+/**
+ * 目的地への最終アクセス手段を返す。
+ *
+ * peninsula / remote:
+ *   secondaryTransport === 'bus' → 'bus'
+ *   requiresCar === true         → 'car'
+ *   fallback                     → 'bus'
+ *
+ * その他: transportType をそのまま返す。
+ *
+ * @param {object} city           — destinations.json エントリ
+ * @param {'flight'|'ferry'|'rail'} transportType — 幹線交通手段
+ * @returns {'rail'|'flight'|'ferry'|'bus'|'car'}
+ */
+export function resolveAccessType(city, transportType) {
+  const dt = city?.destType;
+  if (dt === 'peninsula' || dt === 'remote') {
+    if (city.secondaryTransport === 'bus')  return 'bus';
+    if (city.secondaryTransport === 'car')  return 'car';
+    if (city.requiresCar === true)           return 'car';
+    return 'bus'; // peninsula/remote のデフォルト
+  }
+  return transportType;
 }
 
 /* ══════════════════════════════════════════════════════
@@ -159,6 +191,11 @@ export function scoreTransport(transportType, distanceKm, city = null) {
   if (transportType === 'flight' && city?.hasDirectFlight === true) score += 10;
   if (transportType === 'rail'   && distanceKm > 0 && distanceKm <= 200) score += 10;
   if (transportType === 'ferry'  && city?.isIsland === true)              score += 15;
+
+  /* バスアクセスボーナス（ラストマイルがバスで到達可能） */
+  if (city?.secondaryTransport === 'bus')          score += 15;
+  /* 半島ボーナス（橋・道路接続で到達しやすい） */
+  if (city?.destType === 'peninsula')              score += 10;
 
   return Math.max(0, Math.min(100, score));
 }
@@ -254,12 +291,18 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
       if (isIsland) return '船に乗る瞬間から、非日常。';
       return '船で行く。それだけで特別。';
 
-    case 'rail':
+    case 'rail': {
+      // peninsula / remote: 幹線は rail だが、ラストマイルがバスなので表現を変える
+      const isPeninsulaOrRemote = city?.destType === 'peninsula' || city?.destType === 'remote';
+      if (isPeninsulaOrRemote && city?.secondaryTransport === 'bus') {
+        return '電車とバスで、そのまま行ける。';
+      }
       if (distanceKm <= 100) return '思い立ったら、今日行ける。';
       if (distanceKm <= 200) return '新幹線でそのまま行ける。';
       if (distanceKm <= 400) return '乗ったら、あとは着くだけ。';
       if (distanceKm <= 600) return '少し遠いのが、ちょうどいい。';
       return 'これくらい遠い方が、旅っぽい。';
+    }
 
     default:
       return '';
@@ -313,7 +356,8 @@ function buildCanonicalStepGroups(rawStepGroups, canonicalCta, transportType) {
  * 出発地・目的地から交通コンテキストを構築する（唯一の真実）。
  *
  * 返り値:
- *   transportType    — 確定した交通手段（flight / ferry / rail）
+ *   transportType    — 確定した幹線交通手段（flight / ferry / rail）
+ *   accessType       — ラストマイル交通手段（rail / flight / ferry / bus / car）
  *   distanceKm       — 直線距離
  *   score            — 現実性スコア（0〜100）
  *   valid            — 禁止ルール通過フラグ（false = 推奨外）
@@ -410,11 +454,15 @@ export function buildTransportContext(departure, city) {
    */
   const mapUrl = buildRouteMapUrl(departure, city, via ?? null);
 
-  /* ⑫ 納得感テキスト（CTA 直前に1行表示） */
+  /* ⑫ accessType（ラストマイル交通手段） */
+  const accessType = resolveAccessType(city, transportType);
+
+  /* ⑬ 納得感テキスト（CTA 直前に1行表示） */
   const reason = buildRouteReason(transportType, distanceKm, city, isFallback, mapOnlyFallback);
 
   return {
     transportType,
+    accessType,
     distanceKm,
     score,
     valid,

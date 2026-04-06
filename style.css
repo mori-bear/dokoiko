@@ -571,7 +571,8 @@ body {
 .type-rural    { background: #eaf5e8; color: #3a7a20; }
 .type-town     { background: #f0eeff; color: #5a3ab0; }
 .type-mountain { background: #f0f4e0; color: #4a6e00; }
-.type-remote   { background: #f5f0e8; color: #7a5000; }
+.type-remote    { background: #f5f0e8; color: #7a5000; }
+.type-peninsula { background: #e8f0f5; color: #2a6080; }
 
 .city-meta-row {
   display: flex;

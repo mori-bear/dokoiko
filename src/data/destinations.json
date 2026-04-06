@@ -6751,7 +6751,7 @@
     "accessHub": "三ノ宮",
     "railNote": "バス",
     "secondaryTransport": "bus",
-    "destType": "sight",
+    "destType": "peninsula",
     "railGateway": "三ノ宮駅",
     "busGateway": null,
     "ferryGateway": null,
@@ -6787,7 +6787,7 @@
           "type": "local",
           "from": "三ノ宮駅",
           "to": "淡路島",
-          "method": "レンタカー"
+          "method": "バス"
         }
       ]
     },
@@ -6813,7 +6813,8 @@
     "mapPoint": "鳴門の渦潮",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "淡路島"
+    "hubCity": "淡路島",
+    "localHub": "三ノ宮"
   },
   {
     "id": "takao",
