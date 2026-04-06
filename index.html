@@ -34,11 +34,6 @@
     window.addEventListener('unhandledrejection', function(e) {
       showError('Promise Rejection', e.reason?.stack ?? String(e.reason ?? e));
     });
-    // フォールバック: 8s後にオーバーレイを強制削除（JSON読み込み遅延に対応）
-    setTimeout(function() {
-      var el = document.getElementById('intro-overlay');
-      if (el) { el.style.cssText += ';opacity:0;visibility:hidden'; setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 600); }
-    }, 8000);
     // 20s後にJSモジュールが起動したか診断（大容量JSON読み込みに余裕を持たせる）
     // __appInitStarted は import完了直後（init()の外）に設定されるため、
     // 20s超でも未設定 = 本物のモジュール読み込み失敗
@@ -60,11 +55,6 @@
   </script>
 </head>
 <body>
-
-  <!-- イントロ演出（毎回表示） -->
-  <div id="intro-overlay" class="intro-overlay" aria-hidden="true">
-    <p class="intro-text">まだ知らない街と、出会おう。</p>
-  </div>
 
   <header class="site-header">
     <div class="header-inner">

@@ -17,7 +17,6 @@ import { captureShareCard, shareOrDownload } from './src/share-image.js';
 
 async function init() {
   console.log('[INIT START]');
-  initIntro();
   bindHandlers(go, retry);
   bindShareHandlers();
   bindExampleLinks();
@@ -351,30 +350,6 @@ function bindLocationButton() {
       { timeout: 8000, maximumAge: 60000 },
     );
   });
-}
-
-/* ── イントロ演出 ── */
-
-/*
- * CSS animation（fill-mode: both）を使うと pointer-events が keyframe 経由で
- * 上書きされ Safari/iOS でクリック不能になるため、JS transition に切り替え。
- * pointer-events: none は CSS クラスのみで管理し、JS/animation は一切触らない。
- */
-function initIntro() {
-  const overlay = document.getElementById('intro-overlay');
-  if (!overlay) return;
-
-  // 1.5s 表示 → .intro-overlay--hiding で opacity:0 + visibility:hidden
-  const fadeTimer = setTimeout(() => {
-    overlay.classList.add('intro-overlay--hiding');
-    // transition 終了後（0.6s）に DOM から削除
-    overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
-    // フォールバック: transitionend が発火しない場合も 1s 後に強制削除
-    setTimeout(() => { overlay.isConnected && overlay.remove(); }, 800);
-  }, 1500);
-
-  // ページ非表示タブなどで 1.5s が長すぎる場合の安全弁（4s で強制削除）
-  setTimeout(() => { overlay.isConnected && overlay.remove(); clearTimeout(fadeTimer); }, 4000);
 }
 
 // 全 import（top-level await 含む）が完了し app.js が評価された証拠

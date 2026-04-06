@@ -50,38 +50,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── イントロ演出（毎回表示） ── */
-
-/*
- * pointer-events は @keyframes に書かない（アニメーション不可プロパティ）。
- * animation-fill-mode: both との組み合わせで Safari が intermediate state を
- * auto に戻す実装があるため、CSS animation は使わず JS transition に切り替える。
- */
-.intro-overlay {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  pointer-events: none;        /* 常に none — JS/CSS ともに一切上書きしない */
-  opacity: 1;
-  transition: opacity 0.6s ease-out;
-}
-
-.intro-overlay--hiding {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.intro-text {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--text);
-  line-height: 1.4;
-}
 
 /* ── ヘッダー ── */
 
@@ -1474,25 +1442,14 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   color: var(--text);
 }
 
-/* ── SNSシェア＋コピーブロック ── */
+/* ── SNSシェア（CTA直下インライン配置） ── */
 
-.share-block {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-.share-prompt {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.share-buttons {
+.share-inline {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 
 /* スクショ用ブランドフッター */
@@ -1708,9 +1665,8 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
     padding: 13px 14px;
   }
 
-  .share-block {
+  .share-inline {
     flex-direction: column;
-    align-items: stretch;
   }
 
   .btn-share,

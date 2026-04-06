@@ -183,9 +183,9 @@ export function scoreTransport(transportType, distanceKm, city = null) {
 export function validateRoute(transportType, city, distanceKm = 0) {
   switch (transportType) {
     case 'rail':
-      if (city?.region === FLIGHT_ONLY_REGION) return false;         // 沖縄: 絶対NG（物理的に不可）
-      if (city?.isIsland === true)              return false;         // 離島: 鉄道でたどり着けない
-      if (distanceKm > RAIL_MAX_DISTANCE)      return false;         // 1000km超: 新幹線最長区間超
+      if (city?.region === FLIGHT_ONLY_REGION)                          return false; // 沖縄: 絶対NG
+      if (city?.isIsland === true || city?.destType === 'island')        return false; // 離島: 鉄道不可
+      if (distanceKm > RAIL_MAX_DISTANCE)                               return false; // 1000km超
       return true;
 
     case 'flight':

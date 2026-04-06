@@ -29,7 +29,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
           ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason)
           : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
         }
-        ${buildShareBlock()}
+        <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
     `;
   } catch (err) {
@@ -99,10 +99,8 @@ function buildCityBlock(city) {
 
   return `
     <div class="city-block">
-      <p class="result-eyebrow">ちゃんと行ける旅、見つけました</p>
       <div class="city-header">
         <h2 class="city-name">${city.displayName || city.name}</h2>
-        ${city.catch ? `<p class="city-catch">${city.catch}</p>` : ''}
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
@@ -243,20 +241,31 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
 
-  // RENTAL: requiresCar=true / flight / ferry のとき交通CTA直下にレンタカーを追加
+  // TERTIARY: requiresCar=true / flight / ferry のときレンタカーを追加（重複なし）
   const needsRentalCta =
     (city?.requiresCar === true) ||
     ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaItem?.cta?.type);
   if (!mapOnlyFallback && needsRentalCta) {
     const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
-    ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-       class="btn btn-rental btn--action">現地の移動にレンタカーを見る</a>`);
+    if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
+      seenCtaUrls.add(rentalLink.url);
+      ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+         class="btn btn-rental btn--action">現地の移動にレンタカーを見る</a>`);
+    }
   }
 
   const ctaGroupHtml = ctaItems.length
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
+
+  // シェアボタン（CTA直下）
+  const shareInlineHtml = `
+    <div class="share-inline">
+      <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
+      <button class="btn-share btn-share--img" id="share-img-btn">📸 画像でシェア</button>
+      <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
+    </div>`;
 
   // 宿セクション（daytrip = 完全非表示）
   const staySection = showHotel ? buildStaySection(hotelLinks, city) : '';
@@ -287,6 +296,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     <div class="action-block">
       ${routeLineHtml}
       ${ctaGroupHtml}
+      ${shareInlineHtml}
       ${staySection}
       ${detailsBlock}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
@@ -1227,18 +1237,3 @@ function buildLinkItem(link, isPrimary = false) {
   `;
 }
 
-/* ── シェアブロック ── */
-
-function buildShareBlock() {
-  return `
-    <div class="share-block">
-      <p class="share-prompt">この旅、ちょっと良くない？</p>
-      <div class="share-buttons">
-        <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
-        <button class="btn-share btn-share--img" id="share-img-btn">📸 画像でシェア</button>
-        <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
-      </div>
-    </div>
-    <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
-  `;
-}
