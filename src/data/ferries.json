@@ -310,5 +310,61 @@
     "to": "式根島",
     "operator": "東海汽船",
     "url": "https://www.tokaikisen.co.jp/"
+  },
+  {
+    "destId": "kugashima",
+    "destName": "久賀島",
+    "from": "福江港",
+    "to": "久賀島",
+    "operator": "五島旅客船",
+    "url": null
+  },
+  {
+    "destId": "tomari-okinawa",
+    "destName": "伊平屋島",
+    "from": "運天港",
+    "to": "伊平屋島",
+    "operator": "伊平屋村営フェリー",
+    "url": null
+  },
+  {
+    "destId": "toshima",
+    "destName": "利島",
+    "from": "竹芝客船ターミナル",
+    "to": "利島",
+    "operator": "東海汽船",
+    "url": "https://www.tokaikisen.co.jp/"
+  },
+  {
+    "destId": "himeshima",
+    "destName": "姫島",
+    "from": "伊美港",
+    "to": "姫島",
+    "operator": "姫島村営フェリー",
+    "url": null
+  },
+  {
+    "destId": "aogashima",
+    "destName": "青ヶ島",
+    "from": "八丈島港",
+    "to": "青ヶ島",
+    "operator": "伊豆諸島開発",
+    "url": null
+  },
+  {
+    "destId": "nomaike",
+    "destName": "野間池",
+    "from": "串木野新港",
+    "to": "甑島",
+    "operator": "甑島商船",
+    "url": null
+  },
+  {
+    "destId": "ikata",
+    "destName": "伊方",
+    "from": "三崎港",
+    "to": "佐田岬",
+    "operator": null,
+    "url": null
   }
 ]

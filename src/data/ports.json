@@ -317,5 +317,60 @@
     "nearestNode": null,
     "method": null,
     "hubProvider": null
+  },
+  {
+    "port": "福江港",
+    "city": "五島",
+    "prefecture": "長崎",
+    "lat": 32.6942,
+    "lng": 128.8419,
+    "accessType": "rail",
+    "nearestNode": "長崎駅",
+    "method": "バス",
+    "hubProvider": "jrkyushu"
+  },
+  {
+    "port": "運天港",
+    "city": "今帰仁",
+    "prefecture": "沖縄",
+    "lat": 26.6872,
+    "lng": 127.9322,
+    "accessType": "flight",
+    "nearestNode": "那覇空港",
+    "method": "バス",
+    "hubProvider": null
+  },
+  {
+    "port": "串木野新港",
+    "city": "いちき串木野",
+    "prefecture": "鹿児島",
+    "lat": 31.7150,
+    "lng": 130.2694,
+    "accessType": "rail",
+    "nearestNode": "串木野駅",
+    "method": "バス",
+    "hubProvider": "jrkyushu"
+  },
+  {
+    "port": "伊美港",
+    "city": "国東",
+    "prefecture": "大分",
+    "lat": 33.7189,
+    "lng": 131.6889,
+    "accessType": "rail",
+    "nearestNode": "宇佐駅",
+    "method": "バス",
+    "hubProvider": "jrkyushu"
+  },
+  {
+    "port": "八丈島港",
+    "city": "八丈島",
+    "prefecture": "東京",
+    "lat": 33.1081,
+    "lng": 139.8019,
+    "accessType": "flight",
+    "nearestNode": "八丈島空港",
+    "method": "バス",
+    "hubProvider": null
   }
 ]
