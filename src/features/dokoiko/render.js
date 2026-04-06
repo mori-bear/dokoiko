@@ -335,9 +335,12 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   const main = best.mainSegment;
   const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
-  // 主役セグメントのアイコン
-  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌' };
-  const icon = main ? (MAIN_ICON[main.type] ?? '🚃') : '🚃';
+  // アイコン: islandDisplayType があればそちらを優先
+  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌', bus: '🚍', car: '🚗' };
+  const displayType = best.islandDisplayType;
+  const icon = displayType
+    ? (MAIN_ICON[displayType] ?? '🚃')
+    : main ? (MAIN_ICON[main.type] ?? '🚃') : '🚃';
 
   // ルート行: ✈️ 東京 → 福岡（到着駅ベース）
   const routeLine = `${icon} ${dr.from} → ${dr.to}`;

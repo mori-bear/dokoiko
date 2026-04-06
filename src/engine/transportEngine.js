@@ -253,6 +253,13 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
 
   const accessType = resolveAccessType(city, transportType);
   const isIsland = city?.isIsland === true || city?.destType === 'island';
+  const isPeninsula = city?.destType === 'peninsula';
+  const islandType = resolveIslandDisplayType(city);
+
+  // 島・半島の専用reason
+  if (islandType === 'ferry')  return 'フェリーで渡れる';
+  if (islandType === 'bus')    return 'バスでそのまま行ける';
+  if (islandType === 'car')    return '車でのアクセスが便利';
 
   // 複合ルート（乗り換えあり）
   if (accessType === 'bus') {
@@ -269,7 +276,7 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
   // 単独ルート
   switch (transportType) {
     case 'flight': return '飛行機がいちばん現実的';
-    case 'ferry':  return isIsland ? 'フェリーで渡れる' : 'フェリーで自然に行ける';
+    case 'ferry':  return 'フェリーで自然に行ける';
     case 'rail':   return distanceKm < 200 ? '直通で行ける' : '乗り換え少なくスムーズ';
     default:       return 'この行き方が現実的';
   }
@@ -347,7 +354,20 @@ function isBookableSegment(type) {
 }
 
 /** 主役セグメント1つを決定（flight > shinkansen > ferry > highway_bus） */
-function pickMainSegment(segments) {
+function pickMainSegment(segments, city = null) {
+  const isIsland = city?.isIsland === true || city?.destType === 'island';
+  const bookable = segments.filter(s => s.bookable);
+
+  // 島: ferry を最優先。CTA用には最も目的地に近い bookable を返す
+  if (isIsland) {
+    const ferry = segments.find(s => s.type === 'ferry');
+    if (ferry) return ferry;
+    const flight = segments.find(s => s.type === 'flight');
+    if (flight) return flight;
+    // 前段の鉄道: 最後の bookable（目的地に最も近い予約区間）
+    return bookable.length > 0 ? bookable[bookable.length - 1] : null;
+  }
+
   return segments.find(s => s.type === 'flight')
     ?? segments.find(s => s.type === 'shinkansen')
     ?? segments.find(s => s.type === 'ferry')
@@ -356,21 +376,46 @@ function pickMainSegment(segments) {
 }
 
 /**
+ * 島・半島の表示用 transportType を決定する。
+ * engineのtransportType（rail等）を上書きして、ユーザーが理解できる手段にする。
+ */
+function resolveIslandDisplayType(city) {
+  if (!city) return null;
+  const isIsland = city.isIsland === true || city.destType === 'island';
+  const isPeninsula = city.destType === 'peninsula';
+  if (!isIsland && !isPeninsula) return null;
+
+  // フェリーアクセスがある島
+  if (city.ferryGateway) return 'ferry';
+  // 空港アクセスがある島
+  if (city.airportGateway) return 'flight';
+  // 橋接続の島・半島
+  if (city.requiresCar) return 'car';
+  if (city.secondaryTransport === 'bus') return 'bus';
+  return 'bus';
+}
+
+/**
  * ユーザー向け表示ルート。到着駅を明示する。
- * waypointsの末端を arrivalStation として使い、目的地名と異なれば分離表示。
+ * 島・半島は常に「出発地 → 目的地名」で表示。
  */
 function buildDisplayRoute(mainSeg, departure, city, waypoints) {
   const destName = city?.displayName || city?.name || '';
   const clean = (n) => n.replace(/駅$|港$|空港$/, '');
+  const isIsland = city?.isIsland === true || city?.destType === 'island';
+  const isPeninsula = city?.destType === 'peninsula';
 
-  // waypointsの末端 = 実際の到着地点
+  // 島・半島: 常に「出発地 → 目的地名」（到着地点は島/半島名）
+  if (isIsland || isPeninsula) {
+    return { from: departure, to: destName, arrivalStation: destName, destName, needsAccess: false };
+  }
+
+  // 通常ルート: waypointsの末端を到着駅とする
   const lastWp = waypoints?.length > 0 ? waypoints[waypoints.length - 1] : null;
   const arrivalRaw = lastWp || city?.representativeStation || destName;
   const arrival = clean(arrivalRaw);
 
-  // 到着駅と目的地名が同じか判定
   const destClean = clean(destName);
-  // 駅名≠都市名だが同一エリアのケース
   const STATION_CITY_ALIAS = { '博多': '福岡', '天神': '福岡', '新大阪': '大阪', '品川': '東京', '新横浜': '横浜' };
   const aliased = STATION_CITY_ALIAS[arrival] ?? arrival;
   const sameAsDest = arrival === destClean
@@ -509,8 +554,9 @@ export function buildTransportContext(departure, city) {
   const repStation = city?.representativeStation ?? null;
 
   // ⑩ 主役セグメント + 表示用ルート
-  const mainSegment = pickMainSegment(segments);
+  const mainSegment = pickMainSegment(segments, city);
   const displayRoute = buildDisplayRoute(mainSegment, departure, city, waypoints);
+  const islandDisplayType = resolveIslandDisplayType(city);
 
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
@@ -525,6 +571,7 @@ export function buildTransportContext(departure, city) {
       representativeStation: repStation,
       mainSegment,
       displayRoute,
+      islandDisplayType,
     },
     alternatives,
 
