@@ -382,12 +382,13 @@ export function buildTransportContext(departure, city) {
     ? findRegionPath(fromRegion, city.region)
     : null;
 
-  /* ⑧ 経由地（hubCity が目的地と異なる場合のみ使用）
-   *    remote / mountain / requiresCar 目的地では via を必ず使用する
-   *    hubCity: destinations.json に統一されたハブ都市
+  /* ⑧ 経由地
+   *    localHub: 交通専用のハブ（設定時最優先 — 宿と最適地が異なるケース）
+   *    hubCity:  宿泊ハブ兼フォールバック（dest と異なる場合に使用）
    */
   const destName = city?.displayName || city?.name;
-  const via = (city?.hubCity && city.hubCity !== destName) ? city.hubCity : null;
+  const via = city?.localHub
+    ?? ((city?.hubCity && city.hubCity !== destName) ? city.hubCity : null);
 
   /* ⑨ step-group 生成（既存エンジンに委譲） */
   const rawStepGroups = resolveTransportLinks(city, departure);

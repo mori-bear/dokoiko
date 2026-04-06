@@ -735,6 +735,10 @@ class Scorecard {
     const noHubCity = DESTS.filter(c => !c.hubCity);
     sc.check(noHubCity.length === 0, `hubCity 未設定: ${noHubCity.map(c=>c.id).join(', ')}`);
 
+    // localHub はあれば hubCity と異なること（同値は不要）
+    const redundantLocalHub = DESTS.filter(c => c.localHub && c.localHub === c.hubCity);
+    sc.check(redundantLocalHub.length === 0, `localHub === hubCity（冗長）: ${redundantLocalHub.map(c=>c.id).join(', ')}`);
+
     // オブジェクト形式が残っていないこと
     const objFormat = DESTS.filter(c => c.secondaryTransport && typeof c.secondaryTransport === 'object');
     sc.check(objFormat.length === 0, `object形式のsecondaryTransportが残存: ${objFormat.map(c=>c.id).join(', ')}`);
