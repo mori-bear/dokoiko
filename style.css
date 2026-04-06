@@ -1153,6 +1153,13 @@ body {
   border-top: 1px solid var(--border);
 }
 
+.stay-hint {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
 .stay-heading {
   font-size: 13px;
   font-weight: 600;

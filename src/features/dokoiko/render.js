@@ -95,7 +95,7 @@ function buildCityBlock(city) {
   // 所在地
   const locationStr = city.prefecture || '';
 
-  // タグライン: catch から「。」以降を削除して短縮
+  // タグライン: catch から体験要素を抽出
   const tagline = buildTagline(city);
   const nameDisplay = city.displayName || city.name;
   const titleHtml = tagline
@@ -107,11 +107,11 @@ function buildCityBlock(city) {
     ? `<p class="city-description">${city.description}</p>`
     : '';
 
-  // スポット例（最大3つ）
-  const spots = city.spots?.length ? city.spots : displayTags.slice(0, 3);
-  const spotsHtml = spots.length
-    ? `<p class="city-spots">${spots.slice(0, 3).join('・')}</p>`
-    : '';
+  // スポット例（最大3つ）: spots優先、なければtags補完
+  const spotsHtml = buildSpotsLine(city, displayTags);
+
+  // stayPriority ヒント（宿CTAの直前に配置 — buildActionBlockで使用）
+  // ここでは city-block 内に含めず、buildActionBlock 側で挿入する
 
   return `
     <div class="city-block">
@@ -127,21 +127,48 @@ function buildCityBlock(city) {
 }
 
 /**
+ * スポット表示行を生成。
+ * 優先: spots データ → tags からの補完（最大3つ）
+ */
+function buildSpotsLine(city, displayTags) {
+  if (city.spots?.length) {
+    return `<p class="city-spots">${city.spots.slice(0, 3).join('・')}</p>`;
+  }
+  // spots がなければ tags から補完
+  const fallback = (displayTags ?? []).slice(0, 3);
+  if (fallback.length) {
+    return `<p class="city-spots">${fallback.join('・')}</p>`;
+  }
+  return '';
+}
+
+/**
  * catch フレーズからタグラインを生成。
- * 短く体験が伝わる表現（20文字以内を目安）。
+ *
+ * 制約:
+ *   - 地名のみは禁止（必ず体験 or 要素を含める）
+ *   - 20文字以内
+ *   - tags fallback時は2要素を「と」で組み合わせ
  */
 function buildTagline(city) {
+  const name = city.displayName || city.name;
+  const tags = city.primary ?? city.tags ?? [];
+
   // catch がなければ tags から生成
   if (!city.catch) {
-    const tags = city.primary ?? city.tags ?? [];
-    return tags.slice(0, 2).join('と') || '';
+    return tags.length >= 2 ? `${tags[0]}と${tags[1]}` : (tags[0] || '');
   }
-  // catch の最初の句点まで、長すぎたら tags フォールバック
+
+  // catch の最初の句読点まで
   const first = city.catch.split(/[。、！]/)[0] ?? '';
-  if (first.length <= 20) return first;
-  // 長すぎる場合: tags から簡潔に
-  const tags = city.primary ?? city.tags ?? [];
-  return tags.slice(0, 2).join('と') || '';
+
+  // 地名のみ（地名で始まって体験要素がない）を除外
+  const isNameOnly = first === name || first.length <= 3;
+
+  if (!isNameOnly && first.length <= 20) return first;
+
+  // tags フォールバック: 2要素���み合わせ
+  return tags.length >= 2 ? `${tags[0]}と${tags[1]}` : (tags[0] || '');
 }
 
 /* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */
@@ -378,7 +405,23 @@ function buildStayPicker(hotelLinks) {
 }
 
 /**
- * 宿泊セクション: 「{stay}に泊まる」見出し + 楽天・じゃらんの2ボタン表示。
+ * stayPriority に基づく宿泊ヒントテキスト。
+ * スポットの下・宿CTAの直前に表示。
+ */
+function buildStayHint(city) {
+  const priority = city?.stayPriority;
+  if (priority === 'high') {
+    return `<p class="stay-hint">この街に泊まるのがいちばんいい</p>`;
+  }
+  if (priority === 'low' && city?.hubCity) {
+    const hubName = city.hubCity;
+    return `<p class="stay-hint">${hubName}に泊まって、ここを巡るのが現実的</p>`;
+  }
+  return '';
+}
+
+/**
+ * 宿泊セクション: stayPriorityヒント + 宿CTA。
  * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
  */
 function buildStaySection(hotelLinks, city, stayCityName = null) {
@@ -389,18 +432,18 @@ function buildStaySection(hotelLinks, city, stayCityName = null) {
   if (!rakuten && !jalan) return '';
 
   const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
-  const heading = stayLabel ? `<div class="stay-heading">${stayLabel}に泊まる</div>` : '';
+  const stayHint = buildStayHint(city);
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten btn--action">楽天で見る</a>` : '',
+                  class="btn btn--stay-rakuten btn--action">${stayLabel}に泊まる（楽天）</a>` : '',
     jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan btn--action">じゃらんで見る</a>` : '',
+                  class="btn btn--stay-jalan btn--action">${stayLabel}に泊まる（じゃらん）</a>` : '',
   ].filter(Boolean).join('');
 
   return `
     <div class="stay-section">
-      ${heading}
+      ${stayHint}
       <div class="stay-buttons">${buttons}</div>
     </div>
   `;
@@ -1247,15 +1290,15 @@ function buildStayBlock(hotelLinks, city, stayType, stayCityName = null) {
     ? `<p class="stay-note">このルート、日帰りだと少し長め（約${hours}時間）。ゆっくりするなら1泊もおすすめ。</p>`
     : '';
 
-  const heading = stayLabel ? `<div class="stay-heading">${stayLabel}に泊まる</div>` : '';
+  const stayHint = buildStayHint(city);
 
   return `
     <div class="stay-block">
       ${longDaytripNote}
-      ${heading}
+      ${stayHint}
       <div class="stay-buttons">
         <a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
-           class="stay-btn stay-btn--${hotelLinks.bestType}">宿を見る</a>
+           class="stay-btn stay-btn--${hotelLinks.bestType}">${stayLabel}に泊まる</a>
       </div>
     </div>`;
 }
