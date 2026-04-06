@@ -116,35 +116,61 @@ function buildCityBlock(city) {
 }
 
 /**
- * スポット表示行を生成。
- * 優先: spots データ → tags からの補完（最大3つ）
+ * スポット表示行。spots を短縮して行動が浮かぶ形にする。
  */
 function buildSpotsLine(city, displayTags) {
   if (city.spots?.length) {
-    return `<p class="city-spots">${city.spots.slice(0, 3).join('・')}</p>`;
+    const shortened = city.spots.slice(0, 3).map(shortenSpot);
+    return `<p class="city-spots">${shortened.join('・')}</p>`;
   }
-  // spots がなければ tags から補完
   const fallback = (displayTags ?? []).slice(0, 3);
-  if (fallback.length) {
-    return `<p class="city-spots">${fallback.join('・')}</p>`;
-  }
-  return '';
+  return fallback.length ? `<p class="city-spots">${fallback.join('・')}</p>` : '';
+}
+
+/** スポット名を短縮（正式名称 → 行動が浮かぶ短い語） */
+function shortenSpot(name) {
+  return name
+    .replace(/^(.*?)（.*?）$/, '$1')              // 括弧内を除去
+    .replace(/(温泉郷|温泉街|温泉地)$/, '温泉')    // 温泉系統一
+    .replace(/(旧|新)?(紀州|東海道|中山道)街道/, '街道散歩')
+    .replace(/国立公園$/, '')
+    .replace(/世界遺産$/, '');
 }
 
 /**
- * タグライン: description の1文目を使用。
- * 「何がある場所か」を20文字以内で伝える。
- * 20文字超なら tags フォールバック。
+ * タグライン: description の2文目（体験文）を優先。
+ * 1文目は説明的になりがちなため、「〜できる/〜感じる」形式の2文目を使う。
+ * 15〜25文字に収まるものを選択。
  */
 function buildTagline(city) {
   const tags = city.primary ?? city.tags ?? [];
 
   if (city.description) {
-    const first = city.description.split('。')[0] ?? '';
-    if (first.length > 0 && first.length <= 20) return first;
+    const sentences = city.description.split('。').filter(s => s.length > 0);
+
+    // 抽象ワード（タグラインに不適）
+    const ABSTRACT = /空気|魅力|余韻|世界|心の|時間を|旅情|特別な/;
+
+    // 2文目優先（体験ベースが多い）→ 1文目フォールバック
+    for (const idx of [1, 0]) {
+      const s = sentences[idx];
+      if (!s) continue;
+      const trimmed = s.replace(/^[、。\s]+/, '');
+      if (trimmed.length >= 10 && trimmed.length <= 25 && !ABSTRACT.test(trimmed)) return trimmed;
+    }
+
+    // どちらも長すぎる場合: 1文目を25文字で切る
+    if (sentences[0] && sentences[0].length > 25) {
+      const cut = sentences[0].slice(0, 24);
+      // 最後の助詞・接続詞で切る
+      const lastBreak = cut.search(/[、のがをにで][^、のがをにで]*$/);
+      if (lastBreak > 10) return cut.slice(0, lastBreak);
+    }
   }
 
-  return tags.length >= 2 ? `${tags[0]}と${tags[1]}の街` : (tags[0] ? `${tags[0]}の街` : '');
+  // tags フォールバック: 体験形
+  if (tags.length >= 2) return `${tags[0]}と${tags[1]}を楽しめる街`;
+  return tags[0] ? `${tags[0]}を楽しめる街` : '';
 }
 
 /* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */

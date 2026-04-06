@@ -237,8 +237,8 @@ export function resolveAccessType(city, transportType) {
 ══════════════════════════════════════════════════════ */
 
 /**
- * スコアリング結果に基づくルート理由文。
- * 「なぜこの交通手段か」を1行で伝える。
+ * ルート理由文。「なぜこの手段か」を具体的に伝える。
+ * 比較要素（最短・直通・乗り換え少）を含める。
  */
 export function buildRouteReason(transportType, distanceKm, city = null, isFallback = false, mapOnlyFallback = false) {
   if (mapOnlyFallback) return '地図でルートを確認';
@@ -246,23 +246,29 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
   const accessType = resolveAccessType(city, transportType);
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
-  // accessType が bus/car → 複合ルート
-  const trunkLabel = transportType === 'flight' ? '飛行機'
-    : transportType === 'ferry' ? 'フェリー' : '電車';
-  if (accessType === 'bus') return `${trunkLabel}＋バスで行くのが現実的`;
-  if (accessType === 'car') return `${trunkLabel}＋車で行くのが現実的`;
+  // 複合ルート（幹線 + ラストマイル）
+  if (accessType === 'bus' || accessType === 'car') {
+    const lastMile = accessType === 'bus' ? 'バス' : '車';
+    if (transportType === 'flight') return `最寄空港まで飛んで${lastMile}に乗り換え`;
+    if (transportType === 'ferry')  return `フェリーで渡って${lastMile}に乗り換え`;
+    if (distanceKm <= 200) return `電車で近くまで行って${lastMile}に乗り換え`;
+    return `新幹線で近くまで行って${lastMile}に乗り換え`;
+  }
 
   switch (transportType) {
     case 'flight':
-      return '飛行機がいちばん現実的';
+      if (city?.hasDirectFlight) return '直行便あり、最短で着ける';
+      return '飛行機が最短ルート';
 
     case 'ferry':
-      if (isIsland) return 'フェリーで行くのが自然';
-      return 'フェリーで行くのが現実的';
+      if (isIsland) return '船で直接渡れる';
+      return 'フェリーで直接行ける';
 
     case 'rail':
-      if (distanceKm <= 200) return '電車でスムーズに行ける';
-      return '電車で行くのが現実的';
+      if (distanceKm <= 100) return '乗り換え少なく一直線で行ける';
+      if (distanceKm <= 300) return '新幹線で乗り換えなしで行ける';
+      if (distanceKm <= 600) return '新幹線1本で行ける距離';
+      return '新幹線で行ける最遠エリア';
 
     default:
       return '';
