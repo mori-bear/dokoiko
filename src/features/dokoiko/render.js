@@ -345,20 +345,19 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   // 理由文
   const reason = best.reason || tc.reason;
 
-  // 最終アクセス（常に表示）
-  const FINAL_ACCESS = {
-    walk: '📍 駅から徒歩で行ける',
-    bus:  '📍 駅からバスでアクセス',
-    car:  '📍 車があると便利',
-  };
-  const accessLabel = FINAL_ACCESS[best.finalAccess] ?? FINAL_ACCESS.walk;
+  // 最終アクセス（bus/carのみ表示。walkは非表示）
+  const accessHtml = best.finalAccess === 'bus'
+    ? '<div class="best-route-access">📍 駅からバスでアクセス</div>'
+    : best.finalAccess === 'car'
+    ? '<div class="best-route-access">📍 車があると便利</div>'
+    : '';
 
   return `
     <div class="route-block">
       <div class="best-route">
         <div class="best-route-line">${routeLine}</div>
         <div class="best-route-reason">${reason}</div>
-        <div class="best-route-access">${accessLabel}</div>
+        ${accessHtml}
       </div>
     </div>`;
 }
@@ -368,54 +367,32 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const best = tc?.bestRoute;
   const main = best?.mainSegment;
 
-  // 予約CTA（主役セグメントがある場合のみ・1つだけ）
+  // ① 地図CTA（常に表示）
+  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+  let mapHtml = '';
+  if (mapUrl) {
+    seenUrls.add(mapUrl);
+    mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--maps btn--action">地図で行き方を見る</a>`;
+  }
+
+  // ② 主役予約CTA（1つだけ）
   let bookingHtml = '';
   if (main && !tc?.mapOnlyFallback) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
-    if (mainCta?.cta?.url) {
-      seenUrls.add(mainCta.cta.url);
+    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = buildSegmentCtaLabel(main, mainCta.cta.type);
       bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
     }
   }
 
-  // 地図CTA（常に表示）
-  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
-  let mapHtml = '';
-  if (mapUrl && !seenUrls.has(mapUrl)) {
-    mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">${bookingHtml ? '地図で全体を見る' : '地図で行き方を見る'}</a>`;
-  }
-
-  // シェア
-  const shareHtml = `
-    <div class="share-inline">
-      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
-    </div>`;
-
-  // レンタカー（finalAccess=car または requiresCar）
-  let rentalHtml = '';
-  if (!tc?.mapOnlyFallback && (city?.requiresCar === true || best?.finalAccess === 'car')) {
-    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
-    const rentalLink = buildRentalLink(destCity);
-    if (rentalLink?.url && !seenUrls.has(rentalLink.url)) {
-      rentalHtml = `<div class="rental-hint">
-        <span class="rental-hint-label">🚗 車があると便利</span>
-        <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-           class="btn btn-rental btn--action-sm">レンタカーを探す</a>
-      </div>`;
-    }
-  }
-
   return `
     <div class="cta-block">
       <div class="cta-group">
-        ${bookingHtml}
         ${mapHtml}
+        ${bookingHtml}
       </div>
-      ${shareHtml}
-      ${rentalHtml}
     </div>`;
 }
 
@@ -822,16 +799,14 @@ function buildMapCtaBlock(item) {
  * 例: 新幹線を予約（岡山 → 京都）
  */
 function buildSegmentCtaLabel(segment, ctaType) {
-  // 駅名を正規化（「東京駅」→「東京」、空港・港はそのまま）
-  const cleanName = (n) => /空港$|港$/.test(n) ? n : n.replace(/駅$/, '');
-  const from = cleanName(segment.from);
-  const to   = cleanName(segment.to);
-  const section = `${from} → ${to}`;
+  const clean = (n) => n.replace(/駅$|空港$|港$/, '');
+  const from = clean(segment.from);
+  const to   = clean(segment.to);
   switch (segment.type) {
-    case 'shinkansen':  return `新幹線を予約（${section}）`;
-    case 'flight':      return `航空券を探す（${section}）`;
-    case 'ferry':       return `フェリーを予約（${section}）`;
-    case 'highway_bus': return `バスを予約（${section}）`;
+    case 'shinkansen':  return `🚄 ${to}まで予約`;
+    case 'flight':      return `✈️ ${from} → ${to} を予約`;
+    case 'ferry':       return `⛴ ${from} → ${to} を予約`;
+    case 'highway_bus': return `🚌 ${to}まで予約`;
     default:            return buildMainCtaLabel(ctaType);
   }
 }

@@ -357,21 +357,11 @@ function pickMainSegment(segments) {
 
 /**
  * ユーザー向けシンプル表示ルート（出発地 → 目的地）。
- * flight: 都市名→都市名（空港・駅を省略）
- * shinkansen: 新幹線区間の両端
- * その他: departure → destName
+ * 常に「出発地 → 最終目的地」で表示。中継駅は出さない。
  */
 function buildDisplayRoute(mainSeg, departure, city) {
   const destName = city?.displayName || city?.name || '';
-  if (!mainSeg) return { from: departure, to: destName };
-
-  const clean = (n) => n.replace(/駅$|空港$|港$/, '');
-
-  if (mainSeg.type === 'flight') {
-    return { from: clean(mainSeg.from) || departure, to: clean(mainSeg.to) || destName };
-  }
-  // shinkansen/ferry: そのままの区間
-  return { from: clean(mainSeg.from), to: clean(mainSeg.to) };
+  return { from: departure, to: destName };
 }
 
 /* ══════════════════════════════════════════════════════

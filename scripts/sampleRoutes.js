@@ -41,16 +41,22 @@ for (const { departure, destId } of SAMPLES) {
   const dr = best.displayRoute;
   const mainSeg = best.mainSegment;
   const icon = mainSeg ? (ICON[mainSeg.type] ?? '🚃') : '🚃';
-  const FINAL = { walk: '📍 駅から徒歩で行ける', bus: '📍 駅からバスでアクセス', car: '📍 車があると便利' };
+  const clean = (n) => n.replace(/駅$|空港$|港$/, '');
 
-  console.log(`\n  ── UI表示 ──`);
+  console.log(`\n  ── UI ──`);
   console.log(`  ${icon} ${dr.from} → ${dr.to}`);
   console.log(`  ${tc.reason}`);
-  console.log(`  ${FINAL[city.finalAccess] ?? FINAL.walk}`);
-  console.log(`  ──`);
+  if (city.finalAccess === 'bus') console.log(`  📍 駅からバスでアクセス`);
+  if (city.finalAccess === 'car') console.log(`  📍 車があると便利`);
+  console.log(``);
+  console.log(`  [地図で行き方を見る]`);
   if (mainSeg) {
-    const clean = (n) => /空港$|港$/.test(n) ? n : n.replace(/駅$/, '');
-    console.log(`  [${mainSeg.type === 'shinkansen' ? '新幹線' : mainSeg.type === 'flight' ? '航空券' : 'フェリー'}を予約（${clean(mainSeg.from)} → ${clean(mainSeg.to)}）]`);
+    const to = clean(mainSeg.to);
+    const from = clean(mainSeg.from);
+    if (mainSeg.type === 'shinkansen' || mainSeg.type === 'highway_bus') {
+      console.log(`  [${ICON[mainSeg.type]} ${to}まで予約]`);
+    } else {
+      console.log(`  [${ICON[mainSeg.type]} ${from} → ${to} を予約]`);
+    }
   }
-  console.log(`  [地図で${mainSeg ? '全体を' : '行き方を'}見る]`);
 }
