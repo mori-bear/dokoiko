@@ -279,10 +279,15 @@ function actionBtnClass(ctaType) {
 function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null, stayCityName = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
 
-  // ルート概要行: "東京 → 壱岐" + 必要なら "博多経由"
+  // ルート概要行: "東京 → 壱岐"
   const routeLineHtml = (departure && destLabel)
     ? `<div class="route-line">${departure} → ${destLabel}</div>`
     : '';
+  // ルート理由: "飛行機がいちばん現実的"
+  const reasonHtml = reason
+    ? `<div class="route-reason">${reason}</div>`
+    : '';
+  // 経由地: "博多経由"
   const viaLineHtml = via
     ? `<div class="via-line">${via}経由</div>`
     : '';
@@ -364,6 +369,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
+      ${reasonHtml}
       ${viaLineHtml}
       ${ctaGroupHtml}
       ${shareInlineHtml}

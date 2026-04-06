@@ -236,32 +236,33 @@ export function resolveAccessType(city, transportType) {
    ⑤ 納得感テキスト
 ══════════════════════════════════════════════════════ */
 
+/**
+ * スコアリング結果に基づくルート理由文。
+ * 「なぜこの交通手段か」を1行で伝える。
+ */
 export function buildRouteReason(transportType, distanceKm, city = null, isFallback = false, mapOnlyFallback = false) {
-  if (mapOnlyFallback) return 'まず地図でルートを確かめて。';
-  if (isFallback)      return '別のルートから行ける。';
+  if (mapOnlyFallback) return '地図でルートを確認';
 
+  const accessType = resolveAccessType(city, transportType);
   const isIsland = city?.isIsland === true || city?.destType === 'island';
+
+  // accessType が bus/car → 複合ルート
+  const trunkLabel = transportType === 'flight' ? '飛行機'
+    : transportType === 'ferry' ? 'フェリー' : '電車';
+  if (accessType === 'bus') return `${trunkLabel}＋バスで行くのが現実的`;
+  if (accessType === 'car') return `${trunkLabel}＋車で行くのが現実的`;
 
   switch (transportType) {
     case 'flight':
-      if (city?.hasDirectFlight === true) return '乗ってしまえば、もうそこ。';
-      return '空から行く、それで決まり。';
+      return '飛行機がいちばん現実的';
 
     case 'ferry':
-      if (isIsland) return '船に乗る瞬間から、非日常。';
-      return '船で行く。それだけで特別。';
+      if (isIsland) return 'フェリーで行くのが自然';
+      return 'フェリーで行くのが現実的';
 
-    case 'rail': {
-      const isPeninsulaOrRemote = city?.destType === 'peninsula' || city?.destType === 'remote';
-      if (isPeninsulaOrRemote && city?.secondaryTransport === 'bus') {
-        return '電車とバスで、そのまま行ける。';
-      }
-      if (distanceKm <= 100) return '思い立ったら、今日行ける。';
-      if (distanceKm <= 200) return '新幹線でそのまま行ける。';
-      if (distanceKm <= 400) return '乗ったら、あとは着くだけ。';
-      if (distanceKm <= 600) return '少し遠いのが、ちょうどいい。';
-      return 'これくらい遠い方が、旅っぽい。';
-    }
+    case 'rail':
+      if (distanceKm <= 200) return '電車でスムーズに行ける';
+      return '電車で行くのが現実的';
 
     default:
       return '';
