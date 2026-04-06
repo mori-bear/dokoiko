@@ -127,14 +127,23 @@ export function validateRoute(type, city, distKm = 0, departure = '') {
 /**
  * 候補のスコアを算出する。高い方が最適。
  *
+ * 最適ルート選択ルール（優先順位順）:
+ *   1. 直行ルートを最優先（直行便/直通フェリー: +40）
+ *   2. 乗り換え少ないルートを優先（経由あり: -10）
+ *   3. flight DB確認済み → 他手段を基本除外（+40で圧勝）
+ *   4. ferry は島のみ優先採用（島+ferry: +30）
+ *   5. bus はラストマイルのみ（destType bonus で制御済み）
+ *
  * @param {'flight'|'ferry'|'rail'} type
  * @param {number} distKm
  * @param {object} city
- * @param {boolean} hasCta — CTA生成可能か
- * @returns {number}
+ * @param {boolean} hasCta
+ * @param {string} departure — DB照合用
+ * @returns {{ score: number, selectionReason: string }}
  */
-function scoreCandidate(type, distKm, city, hasCta) {
+function scoreCandidate(type, distKm, city, hasCta, departure = '') {
   let score = 0;
+  let selectionReason = '';
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
   /* ── ベーススコア ── */
@@ -144,33 +153,51 @@ function scoreCandidate(type, distKm, city, hasCta) {
     case 'rail':   score = 10; break;
   }
 
+  /* ── ① 直行ルート最優先 ── */
+  if (type === 'flight' && departure && city?.airportGateway && hasFlightInDB(departure, city.airportGateway)) {
+    score += 40;  // DB確認済み直行便 → 圧倒的優先
+    selectionReason = '直行便あり';
+  }
+
+  if (type === 'ferry' && isIsland && city?.ferryGateway) {
+    score += 30;  // 島 + 直通フェリー → 強く優先
+    selectionReason = '直通フェリーあり';
+  }
+
+  /* ── ② 乗り換えペナルティ ── */
+  const destName = city?.displayName || city?.name;
+  const hasVia = city?.localHub || (city?.hubCity && city.hubCity !== destName);
+  if (hasVia) score -= 10;  // 経由地あり = 乗り換え発生
+
   /* ── 距離適正 ── */
   if (type === 'rail') {
-    if      (distKm <= 200) score += 30;   // 鉄道最適距離
-    else if (distKm <= 400) score += 15;   // 新幹線圏内
-    else if (distKm <= 600) score += 0;    // 長め
-    else if (distKm <= 800) score -= 20;   // かなり長い
-    else                    score -= 50;   // 非推奨距離
+    if      (distKm <= 200) score += 30;
+    else if (distKm <= 400) score += 15;
+    else if (distKm <= 600) score += 0;
+    else if (distKm <= 800) score -= 20;
+    else                    score -= 50;
+    if (!selectionReason) selectionReason = distKm <= 300 ? '直通で行ける' : '新幹線で行ける';
   }
 
   if (type === 'flight') {
-    if      (distKm >= 700)  score += 25;  // 飛行機最適距離
-    else if (distKm >= 500)  score += 20;  // 飛行機推奨
-    else if (distKm >= 300)  score += 0;   // 微妙
-    else                     score -= 30;  // 近距離フライト
+    if      (distKm >= 700)  score += 25;
+    else if (distKm >= 500)  score += 20;
+    else if (distKm >= 300)  score += 0;
+    else                     score -= 30;
+    if (!selectionReason) selectionReason = '最短ルート';
   }
 
   if (type === 'ferry') {
-    if (isIsland)            score += 20;  // 離島フェリーは自然
-    if (city?.ferryGateway)  score += 10;  // フェリー港あり
+    if (isIsland)            score += 20;
+    if (city?.ferryGateway)  score += 10;
+    if (!selectionReason) selectionReason = isIsland ? '船で直接渡れる' : 'フェリーで行ける';
   }
 
   /* ── インフラボーナス ── */
-  if (type === 'flight' && city?.hasDirectFlight === true) score += 15;
-
-  /* ── regionGraph ヒント ── */
-  // 地方間で陸路不通の場合、flight/ferryにボーナス
-  // （validateRouteを通過した候補のみここに来るので安全）
+  if (type === 'flight' && city?.hasDirectFlight === true && !selectionReason) {
+    score += 15;
+    selectionReason = '直行便あり';
+  }
 
   /* ── CTA ペナルティ ── */
   if (!hasCta) score -= 50;
@@ -179,61 +206,94 @@ function scoreCandidate(type, distKm, city, hasCta) {
   if (city?.secondaryTransport === 'bus') score += 5;
   if (city?.destType === 'peninsula')     score += 10;
 
-  return score;
+  return { score, selectionReason };
 }
 
 /**
  * 後方互換: 旧 scoreTransport API（QA等で使用）。
- * 新設計では buildCandidates 内で scoreCandidate を使用。
  */
 export function scoreTransport(transportType, distanceKm, city = null) {
-  const hasCta = true; // 旧API互換: CTA有無は考慮しない
-  return Math.max(0, Math.min(100, scoreCandidate(transportType, distanceKm, city, hasCta)));
+  const { score } = scoreCandidate(transportType, distanceKm, city, true);
+  return Math.max(0, Math.min(100, score));
 }
 
 /* ══════════════════════════════════════════════════════
    ③ 候補生成・最適選択
 ══════════════════════════════════════════════════════ */
 
-/** @typedef {{ type: string, score: number, cta: object|null }} Candidate */
+/** @typedef {{ type: string, score: number, cta: object|null, selectionReason: string }} Candidate */
+/** @typedef {{ type: string, reason: string }} RejectedRoute */
+
+/** validateRoute 除外理由を返す */
+function getRejectReason(type, city, distKm, departure) {
+  const isIsland = city?.isIsland === true || city?.destType === 'island';
+  switch (type) {
+    case 'rail':
+      if (city?.region === FLIGHT_ONLY_REGION) return '沖縄に鉄道なし';
+      if (isIsland)                            return '離島に鉄道なし';
+      return '条件外';
+    case 'flight':
+      if (!city?.airportGateway && !city?.flightHub) return '空港情報なし';
+      if (distKm > 0 && distKm < FLIGHT_MIN_DISTANCE) return '近距離すぎる';
+      if (isIsland && distKm <= 500) return 'フェリー圏内';
+      if (!isIsland && distKm < FLIGHT_DISTANCE_KM) return '鉄道圏内';
+      if (departure && city?.airportGateway && !hasFlightInDB(departure, city.airportGateway))
+        return `${departure}からの直行便なし`;
+      return '条件外';
+    case 'ferry':
+      if (!isIsland && !city?.ferryGateway) return 'フェリー港なし';
+      if (city?.ferryGateway && !hasFerryInDB(city?.id, city?.ferryGateway))
+        return 'フェリー航路が未登録';
+      return '条件外';
+    default: return '条件外';
+  }
+}
 
 /**
- * 全交通手段を評価し、スコア順にソートした候補リストを返す。
- * ルール違反の候補は含まれない。
+ * 全候補を評価。選択候補（スコア順）と除外候補（理由付き）を返す。
  *
  * @param {string} departure
  * @param {object} city
  * @param {number} distKm
- * @returns {Candidate[]}
+ * @returns {{ candidates: Candidate[], rejected: RejectedRoute[] }}
  */
 function buildCandidates(departure, city, distKm) {
   const TYPES = ['flight', 'ferry', 'rail'];
   const candidates = [];
+  const rejected   = [];
 
   for (const type of TYPES) {
     // Phase 1: ルールベース除外 + DB照合
-    if (!validateRoute(type, city, distKm, departure)) continue;
+    if (!validateRoute(type, city, distKm, departure)) {
+      rejected.push({ type, reason: getRejectReason(type, city, distKm, departure) });
+      continue;
+    }
 
     // CTA 生成試行
     const cta = resolveCtaByType(type, departure, city);
 
-    // Phase 2: スコアリング
-    const score = scoreCandidate(type, distKm, city, !!cta);
+    // Phase 2: スコアリング（直行優先・乗り換えペナルティ込み）
+    const { score, selectionReason } = scoreCandidate(type, distKm, city, !!cta, departure);
 
-    candidates.push({ type, score, cta });
+    candidates.push({ type, score, cta, selectionReason });
   }
 
   // スコア降順ソート
   candidates.sort((a, b) => b.score - a.score);
-  return candidates;
+
+  // 選択されなかった候補も rejected に追加（理由: スコア負け）
+  for (let i = 1; i < candidates.length; i++) {
+    rejected.push({ type: candidates[i].type, reason: `${candidates[0].type}の方がスコアが高い` });
+  }
+
+  return { candidates, rejected };
 }
 
 /**
  * 後方互換: 旧 determineTransportType API。
- * 新設計では buildCandidates の最高スコア候補を返す。
  */
 export function determineTransportType(departure, city, distKm = 0) {
-  const candidates = buildCandidates(departure, city, distKm);
+  const { candidates } = buildCandidates(departure, city, distKm);
   return candidates.length > 0 ? candidates[0].type : 'rail';
 }
 
@@ -342,38 +402,37 @@ export function buildTransportContext(departure, city) {
     : 0;
 
   /* ② 全候補生成・ルール除外・スコアリング・最適選択 */
-  const candidates = buildCandidates(departure, city, distanceKm);
+  const { candidates, rejected } = buildCandidates(departure, city, distanceKm);
   const best = candidates[0] ?? null;
 
-  let transportType  = best?.type ?? 'rail';
-  let cta            = best?.cta  ?? null;
-  let score          = best?.score ?? 0;
-  let valid          = !!best;
-  let isFallback     = false;
+  let transportType   = best?.type ?? 'rail';
+  let cta             = best?.cta  ?? null;
+  let score           = best?.score ?? 0;
+  let selectionReason = best?.selectionReason ?? '';
+  let valid           = !!best;
+  let isFallback      = false;
   let mapOnlyFallback = false;
 
   if (!best) {
     mapOnlyFallback = true;
   } else if (!cta) {
-    // CTA なしの最高スコア候補:
-    //   rail は step 由来CTA が機能するため mapOnly にしない
-    //   flight/ferry は次点でCTAありを探す
     if (transportType === 'rail') {
-      // rail: step 由来 CTA に委ねる（buildCanonicalStepGroups が維持）
+      // rail: step 由来 CTA に委ねる
     } else {
       const withCta = candidates.find(c => c.cta);
       if (withCta) {
-        transportType = withCta.type;
-        cta           = withCta.cta;
-        score         = withCta.score;
-        isFallback    = true;
+        transportType   = withCta.type;
+        cta             = withCta.cta;
+        score           = withCta.score;
+        selectionReason = withCta.selectionReason;
+        isFallback      = true;
       } else {
-        // rail 候補があれば step 由来 CTA を使う
         const railCandidate = candidates.find(c => c.type === 'rail');
         if (railCandidate) {
-          transportType = 'rail';
-          score         = railCandidate.score;
-          isFallback    = true;
+          transportType   = 'rail';
+          score           = railCandidate.score;
+          selectionReason = railCandidate.selectionReason;
+          isFallback      = true;
         } else {
           mapOnlyFallback = true;
         }
@@ -417,6 +476,8 @@ export function buildTransportContext(departure, city) {
     isFallback,
     mapOnlyFallback,
     reason,
+    selectionReason,     // なぜこの手段が選ばれたか（直行便あり/直通で行ける等）
+    rejectedRoutes: rejected, // 除外されたルート（理由付き）
     regionPath,
     via,
     stepGroups,
