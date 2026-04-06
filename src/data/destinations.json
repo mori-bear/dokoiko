@@ -103,7 +103,8 @@
     "mapPoint": "鎌倉大仏",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "鎌倉"
+    "hubCity": "鎌倉",
+    "stayPriority": "medium"
   },
   {
     "id": "atami",
@@ -199,7 +200,8 @@
     "mapPoint": "熱海城",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "熱海"
+    "hubCity": "熱海",
+    "stayPriority": "high"
   },
   {
     "id": "nikko",
@@ -331,7 +333,8 @@
     "mapPoint": "東照宮",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "日光"
+    "hubCity": "日光",
+    "stayPriority": "high"
   },
   {
     "id": "karuizawa",
@@ -442,7 +445,8 @@
     "mapPoint": "旧軽井沢銀座",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "軽井沢"
+    "hubCity": "軽井沢",
+    "stayPriority": "medium"
   },
   {
     "id": "fujikawaguchiko",
@@ -545,7 +549,8 @@
     "mapPoint": "河口湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "富士河口湖"
+    "hubCity": "富士河口湖",
+    "stayPriority": "high"
   },
   {
     "id": "nara",
@@ -653,7 +658,8 @@
     "mapPoint": "東大寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "奈良"
+    "hubCity": "奈良",
+    "stayPriority": "medium"
   },
   {
     "id": "ishigaki",
@@ -769,7 +775,8 @@
     "mapPoint": "川平湾",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "石垣島"
+    "hubCity": "石垣島",
+    "stayPriority": "high"
   },
   {
     "id": "ise",
@@ -893,7 +900,8 @@
     "mapPoint": "伊勢神宮",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "伊勢"
+    "hubCity": "伊勢",
+    "stayPriority": "medium"
   },
   {
     "id": "beppu",
@@ -1008,7 +1016,8 @@
     "mapPoint": "地獄めぐり",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "別府"
+    "hubCity": "別府",
+    "stayPriority": "high"
   },
   {
     "id": "otaru",
@@ -1116,7 +1125,8 @@
     "mapPoint": "小樽運河",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "小樽"
+    "hubCity": "小樽",
+    "stayPriority": "medium"
   },
   {
     "id": "furano",
@@ -1231,7 +1241,8 @@
     "mapPoint": "ファーム富田",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "富良野"
+    "hubCity": "富良野",
+    "stayPriority": "medium"
   },
   {
     "id": "matsushima",
@@ -1358,7 +1369,8 @@
     "mapPoint": "松島湾",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "松島"
+    "hubCity": "松島",
+    "stayPriority": "medium"
   },
   {
     "id": "miyajima",
@@ -1483,7 +1495,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "宮島",
-    "localHub": "宮島口"
+    "localHub": "宮島口",
+    "stayPriority": "high"
   },
   {
     "id": "onomichi",
@@ -1603,7 +1616,8 @@
     "mapPoint": "千光寺",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "尾道"
+    "hubCity": "尾道",
+    "stayPriority": "medium"
   },
   {
     "id": "shodoshima",
@@ -1728,7 +1742,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "小豆島",
-    "localHub": "高松"
+    "localHub": "高松",
+    "stayPriority": "high"
   },
   {
     "id": "mihonoseki",
@@ -1848,7 +1863,8 @@
     "mapPoint": "美保神社",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "米子"
+    "hubCity": "米子",
+    "stayPriority": "medium"
   },
   {
     "id": "ryujin-onsen",
@@ -1944,7 +1960,8 @@
     "mapPoint": "龍神温泉元湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "白浜"
+    "hubCity": "白浜",
+    "stayPriority": "medium"
   },
   {
     "id": "tokashiki-jima",
@@ -2079,7 +2096,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "渡嘉敷島",
-    "localHub": "那覇"
+    "localHub": "那覇",
+    "stayPriority": "high"
   },
   {
     "id": "kumejima",
@@ -2216,7 +2234,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "久米島",
-    "localHub": "那覇"
+    "localHub": "那覇",
+    "stayPriority": "high"
   },
   {
     "id": "miyakojima",
@@ -2333,7 +2352,8 @@
     "mapPoint": "与那覇前浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "宮古島"
+    "hubCity": "宮古島",
+    "stayPriority": "high"
   },
   {
     "id": "kouzushima",
@@ -2455,7 +2475,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "神津島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "hakone",
@@ -2567,7 +2588,8 @@
     "mapPoint": "芦ノ湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "箱根"
+    "hubCity": "箱根",
+    "stayPriority": "high"
   },
   {
     "id": "shuzenji",
@@ -2672,7 +2694,8 @@
     "mapPoint": "修禅寺",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "修善寺"
+    "hubCity": "修善寺",
+    "stayPriority": "high"
   },
   {
     "id": "kusatsu-onsen",
@@ -2781,7 +2804,8 @@
     "mapPoint": "湯畑",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "草津温泉"
+    "hubCity": "草津温泉",
+    "stayPriority": "high"
   },
   {
     "id": "shimoda",
@@ -2896,7 +2920,8 @@
     "mapPoint": "了仙寺",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "下田"
+    "hubCity": "下田",
+    "stayPriority": "medium"
   },
   {
     "id": "izu-oshima",
@@ -3028,7 +3053,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊豆大島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "shirakawago-t",
@@ -3141,7 +3167,8 @@
     "mapPoint": "荻町城跡展望台",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高山"
+    "hubCity": "高山",
+    "stayPriority": "medium"
   },
   {
     "id": "arima-onsen",
@@ -3253,7 +3280,8 @@
     "mapPoint": "金の湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "有馬温泉"
+    "hubCity": "有馬温泉",
+    "stayPriority": "high"
   },
   {
     "id": "kinosaki-onsen",
@@ -3360,7 +3388,8 @@
     "mapPoint": "さとの湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "城崎温泉"
+    "hubCity": "城崎温泉",
+    "stayPriority": "high"
   },
   {
     "id": "kurashiki-o",
@@ -3466,7 +3495,8 @@
     "mapPoint": "大原美術館",
     "subType": "urban",
     "stayDescription": "大原美術館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "倉敷"
+    "hubCity": "倉敷",
+    "stayPriority": "medium"
   },
   {
     "id": "shirahama-o",
@@ -3564,7 +3594,8 @@
     "mapPoint": "白良浜",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "白浜"
+    "hubCity": "白浜",
+    "stayPriority": "high"
   },
   {
     "id": "takayama-o",
@@ -3674,7 +3705,8 @@
     "mapPoint": "古い町並",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "高山"
+    "hubCity": "高山",
+    "stayPriority": "high"
   },
   {
     "id": "toba",
@@ -3785,7 +3817,8 @@
     "mapPoint": "鳥羽水族館",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "鳥羽"
+    "hubCity": "鳥羽",
+    "stayPriority": "medium"
   },
   {
     "id": "yufuin",
@@ -3909,7 +3942,8 @@
     "mapPoint": "湯の坪街道",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯布院"
+    "hubCity": "湯布院",
+    "stayPriority": "high"
   },
   {
     "id": "kurokawa-k",
@@ -4014,7 +4048,8 @@
     "mapPoint": "入湯手形",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "黒川温泉"
+    "hubCity": "黒川温泉",
+    "stayPriority": "low"
   },
   {
     "id": "aso",
@@ -4126,7 +4161,8 @@
     "mapPoint": "草千里",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "阿蘇"
+    "hubCity": "阿蘇",
+    "stayPriority": "medium"
   },
   {
     "id": "yakushima",
@@ -4271,7 +4307,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "屋久島",
-    "localHub": "鹿児島"
+    "localHub": "鹿児島",
+    "stayPriority": "high"
   },
   {
     "id": "amakusa",
@@ -4370,7 +4407,8 @@
     "mapPoint": "天草五橋",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "天草"
+    "hubCity": "天草",
+    "stayPriority": "medium"
   },
   {
     "id": "hiraizumi",
@@ -4476,7 +4514,8 @@
     "mapPoint": "中尊寺金色堂",
     "subType": "urban",
     "stayDescription": "中尊寺金色堂を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "平泉"
+    "hubCity": "平泉",
+    "stayPriority": "medium"
   },
   {
     "id": "kakunodate",
@@ -4581,7 +4620,8 @@
     "mapPoint": "武家屋敷通り",
     "subType": "urban",
     "stayDescription": "武家屋敷通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "角館"
+    "hubCity": "角館",
+    "stayPriority": "medium"
   },
   {
     "id": "aizu",
@@ -4688,7 +4728,8 @@
     "mapPoint": "鶴ヶ城",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "会津若松"
+    "hubCity": "会津若松",
+    "stayPriority": "high"
   },
   {
     "id": "zaosan",
@@ -4788,7 +4829,8 @@
     "mapPoint": "お釜",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "蔵王"
+    "hubCity": "蔵王",
+    "stayPriority": "high"
   },
   {
     "id": "hagi",
@@ -4899,7 +4941,8 @@
     "mapPoint": "萩城跡",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "萩"
+    "hubCity": "萩",
+    "stayPriority": "medium"
   },
   {
     "id": "shimonoseki",
@@ -5010,7 +5053,8 @@
     "mapPoint": "関門橋",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "下関"
+    "hubCity": "下関",
+    "stayPriority": "medium"
   },
   {
     "id": "naoshima",
@@ -5138,7 +5182,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "直島",
-    "localHub": "高松"
+    "localHub": "高松",
+    "stayPriority": "high"
   },
   {
     "id": "kotohira",
@@ -5249,7 +5294,8 @@
     "mapPoint": "こんぴらさん",
     "subType": "urban",
     "stayDescription": "こんぴらさんを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "琴平"
+    "hubCity": "琴平",
+    "stayPriority": "medium"
   },
   {
     "id": "uwajima",
@@ -5362,7 +5408,8 @@
     "mapPoint": "宇和島城",
     "subType": "remote",
     "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。",
-    "hubCity": "宇和島"
+    "hubCity": "宇和島",
+    "stayPriority": "medium"
   },
   {
     "id": "toyako",
@@ -5464,7 +5511,8 @@
     "mapPoint": "洞爺湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "洞爺湖"
+    "hubCity": "洞爺湖",
+    "stayPriority": "high"
   },
   {
     "id": "noboribetsu",
@@ -5557,7 +5605,8 @@
     "mapPoint": "地獄谷",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "登別"
+    "hubCity": "登別",
+    "stayPriority": "high"
   },
   {
     "id": "shiretoko",
@@ -5668,7 +5717,8 @@
     "mapPoint": "知床五湖",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "知床"
+    "hubCity": "知床",
+    "stayPriority": "low"
   },
   {
     "id": "wajima",
@@ -5782,7 +5832,8 @@
     "mapPoint": "朝市通り",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "輪島"
+    "hubCity": "輪島",
+    "stayPriority": "medium"
   },
   {
     "id": "kaga-onsen",
@@ -5881,7 +5932,8 @@
     "hasDirectFlight": false,
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "加賀温泉郷"
+    "hubCity": "加賀温泉郷",
+    "stayPriority": "high"
   },
   {
     "id": "hakuba",
@@ -5989,7 +6041,8 @@
     "mapPoint": "八方尾根",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "白馬"
+    "hubCity": "白馬",
+    "stayPriority": "medium"
   },
   {
     "id": "amanohashidate",
@@ -6092,7 +6145,8 @@
     "mapPoint": "智恩寺",
     "subType": "urban",
     "stayDescription": "智恩寺を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "天橋立"
+    "hubCity": "天橋立",
+    "stayPriority": "medium"
   },
   {
     "id": "ine",
@@ -6206,7 +6260,8 @@
     "mapPoint": "伊根の舟屋",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "伊根"
+    "hubCity": "伊根",
+    "stayPriority": "medium"
   },
   {
     "id": "ibusuki",
@@ -6312,7 +6367,8 @@
     "mapPoint": "砂むし会館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "指宿"
+    "hubCity": "指宿",
+    "stayPriority": "high"
   },
   {
     "id": "sasebo",
@@ -6419,7 +6475,8 @@
     "mapPoint": "九十九島",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "佐世保"
+    "hubCity": "佐世保",
+    "stayPriority": "medium"
   },
   {
     "id": "hirado",
@@ -6521,7 +6578,8 @@
     "mapPoint": "平戸城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "平戸"
+    "hubCity": "平戸",
+    "stayPriority": "medium"
   },
   {
     "id": "tottori",
@@ -6613,7 +6671,8 @@
     "mapPoint": "鳥取砂丘",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "鳥取"
+    "hubCity": "鳥取",
+    "stayPriority": "medium"
   },
   {
     "id": "akita",
@@ -6707,7 +6766,8 @@
     "mapPoint": "竿燈まつり",
     "subType": "urban",
     "stayDescription": "竿燈まつりを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "秋田"
+    "hubCity": "秋田",
+    "stayPriority": "medium"
   },
   {
     "id": "awaji",
@@ -6814,7 +6874,8 @@
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
     "hubCity": "淡路島",
-    "localHub": "三ノ宮"
+    "localHub": "三ノ宮",
+    "stayPriority": "low"
   },
   {
     "id": "takao",
@@ -6916,7 +6977,8 @@
     "mapPoint": "薬王院",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高尾山"
+    "hubCity": "高尾山",
+    "stayPriority": "medium"
   },
   {
     "id": "tateyama-chiba",
@@ -7022,7 +7084,8 @@
     "mapPoint": "沖ノ島",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "館山"
+    "hubCity": "館山",
+    "stayPriority": "medium"
   },
   {
     "id": "gokayama",
@@ -7134,7 +7197,8 @@
     "mapPoint": "菅沼集落",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高山"
+    "hubCity": "高山",
+    "stayPriority": "medium"
   },
   {
     "id": "jozankei",
@@ -7238,7 +7302,8 @@
     "mapPoint": "定山渓温泉街",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "定山渓"
+    "hubCity": "定山渓",
+    "stayPriority": "high"
   },
   {
     "id": "biei",
@@ -7348,7 +7413,8 @@
     "mapPoint": "青い池",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "美瑛"
+    "hubCity": "美瑛",
+    "stayPriority": "medium"
   },
   {
     "id": "miyako-iwate",
@@ -7462,7 +7528,8 @@
     "mapPoint": "浄土ヶ浜",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "宮古"
+    "hubCity": "宮古",
+    "stayPriority": "medium"
   },
   {
     "id": "sakata",
@@ -7571,7 +7638,8 @@
     "mapPoint": "山居倉庫",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "酒田"
+    "hubCity": "酒田",
+    "stayPriority": "medium"
   },
   {
     "id": "takachiho",
@@ -7675,7 +7743,8 @@
     "mapPoint": "高千穂峡",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "高千穂"
+    "hubCity": "高千穂",
+    "stayPriority": "low"
   },
   {
     "id": "amami",
@@ -7805,7 +7874,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "奄美大島",
-    "localHub": "鹿児島"
+    "localHub": "鹿児島",
+    "stayPriority": "high"
   },
   {
     "id": "goto",
@@ -7935,7 +8005,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "五島列島",
-    "localHub": "博多"
+    "localHub": "博多",
+    "stayPriority": "high"
   },
   {
     "id": "unzen",
@@ -8034,7 +8105,8 @@
     "mapPoint": "雲仙地獄",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "雲仙"
+    "hubCity": "雲仙",
+    "stayPriority": "high"
   },
   {
     "id": "ashizuri",
@@ -8141,7 +8213,8 @@
     "mapPoint": "足摺岬灯台",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "足摺岬"
+    "hubCity": "足摺岬",
+    "stayPriority": "medium"
   },
   {
     "id": "oboke",
@@ -8255,7 +8328,8 @@
     "mapPoint": "大歩危峡",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "大歩危"
+    "hubCity": "大歩危",
+    "stayPriority": "low"
   },
   {
     "id": "tsuwano",
@@ -8364,7 +8438,8 @@
     "mapPoint": "太皷谷稲成神社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "津和野"
+    "hubCity": "津和野",
+    "stayPriority": "medium"
   },
   {
     "id": "inuyama",
@@ -8470,7 +8545,8 @@
     "mapPoint": "犬山城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "犬山"
+    "hubCity": "犬山",
+    "stayPriority": "medium"
   },
   {
     "id": "kiso",
@@ -8583,7 +8659,8 @@
     "mapPoint": "妻籠宿",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "木曽"
+    "hubCity": "木曽",
+    "stayPriority": "medium"
   },
   {
     "id": "miyama",
@@ -8683,7 +8760,8 @@
     "mapPoint": "かやぶきの里",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "美山"
+    "hubCity": "美山",
+    "stayPriority": "medium"
   },
   {
     "id": "tateyama-kurobe",
@@ -8794,7 +8872,8 @@
     "mapPoint": "室堂",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "立山黒部"
+    "hubCity": "立山黒部",
+    "stayPriority": "medium"
   },
   {
     "id": "himi",
@@ -8906,7 +8985,8 @@
     "mapPoint": "氷見漁港朝市",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "氷見"
+    "hubCity": "氷見",
+    "stayPriority": "high"
   },
   {
     "id": "nyuto-onsen",
@@ -9004,7 +9084,8 @@
     "mapPoint": "鶴の湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "乳頭温泉"
+    "hubCity": "乳頭温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yuda-onsen",
@@ -9103,7 +9184,8 @@
     "mapPoint": "瑠璃光寺",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯田温泉"
+    "hubCity": "湯田温泉",
+    "stayPriority": "high"
   },
   {
     "id": "ureshino-onsen",
@@ -9194,7 +9276,8 @@
     "mapPoint": "シーボルトの湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "嬉野温泉"
+    "hubCity": "嬉野温泉",
+    "stayPriority": "high"
   },
   {
     "id": "obuse",
@@ -9298,7 +9381,8 @@
     "mapPoint": "北斎館",
     "subType": "urban",
     "stayDescription": "北斎館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "小布施"
+    "hubCity": "小布施",
+    "stayPriority": "medium"
   },
   {
     "id": "uchiko",
@@ -9402,7 +9486,8 @@
     "mapPoint": "内子座",
     "subType": "urban",
     "stayDescription": "内子座を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "内子"
+    "hubCity": "内子",
+    "stayPriority": "medium"
   },
   {
     "id": "muroto",
@@ -9501,7 +9586,8 @@
     "mapPoint": "室戸岬",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "室戸"
+    "hubCity": "室戸",
+    "stayPriority": "medium"
   },
   {
     "id": "iya",
@@ -9602,7 +9688,8 @@
     "mapPoint": "かずら橋",
     "subType": "remote",
     "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。",
-    "hubCity": "祖谷"
+    "hubCity": "祖谷",
+    "stayPriority": "low"
   },
   {
     "id": "oku-izumo",
@@ -9706,7 +9793,8 @@
     "mapPoint": "菅谷たたら山内",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "奥出雲"
+    "hubCity": "奥出雲",
+    "stayPriority": "low"
   },
   {
     "id": "ginzan-onsen",
@@ -9808,7 +9896,8 @@
     "mapPoint": "能登屋旅館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "銀山温泉"
+    "hubCity": "銀山温泉",
+    "stayPriority": "high"
   },
   {
     "id": "ouchi-juku",
@@ -9908,7 +9997,8 @@
     "mapPoint": "大内宿町並み",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "大内宿"
+    "hubCity": "大内宿",
+    "stayPriority": "medium"
   },
   {
     "id": "nozawa-onsen",
@@ -10005,7 +10095,8 @@
     "mapPoint": "大湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "野沢温泉"
+    "hubCity": "野沢温泉",
+    "stayPriority": "high"
   },
   {
     "id": "takehara",
@@ -10111,7 +10202,8 @@
     "mapPoint": "町並み保存地区",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "竹原"
+    "hubCity": "竹原",
+    "stayPriority": "medium"
   },
   {
     "id": "tsumago",
@@ -10224,7 +10316,8 @@
     "mapPoint": "妻籠宿本陣",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "妻籠"
+    "hubCity": "妻籠",
+    "stayPriority": "medium"
   },
   {
     "id": "magome",
@@ -10337,7 +10430,8 @@
     "mapPoint": "島崎藤村記念館",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "馬籠"
+    "hubCity": "馬籠",
+    "stayPriority": "medium"
   },
   {
     "id": "nagahama",
@@ -10444,7 +10538,8 @@
     "mapPoint": "黒壁スクエア",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "長浜"
+    "hubCity": "長浜",
+    "stayPriority": "medium"
   },
   {
     "id": "hikone",
@@ -10551,7 +10646,8 @@
     "mapPoint": "彦根城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "彦根"
+    "hubCity": "彦根",
+    "stayPriority": "medium"
   },
   {
     "id": "koyasan",
@@ -10661,7 +10757,8 @@
     "mapPoint": "奥之院",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高野山"
+    "hubCity": "高野山",
+    "stayPriority": "medium"
   },
   {
     "id": "gero-onsen",
@@ -10773,7 +10870,8 @@
     "mapPoint": "噴泉池",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "下呂温泉"
+    "hubCity": "下呂温泉",
+    "stayPriority": "high"
   },
   {
     "id": "naruko-onsen",
@@ -10876,7 +10974,8 @@
     "mapPoint": "鳴子峡",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "鳴子温泉"
+    "hubCity": "鳴子温泉",
+    "stayPriority": "high"
   },
   {
     "id": "shima-onsen",
@@ -10974,7 +11073,8 @@
     "mapPoint": "積善館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "四万温泉"
+    "hubCity": "四万温泉",
+    "stayPriority": "high"
   },
   {
     "id": "hirosaki",
@@ -11092,7 +11192,8 @@
     "mapPoint": "弘前城",
     "subType": "urban",
     "stayDescription": "弘前城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "弘前"
+    "hubCity": "弘前",
+    "stayPriority": "medium"
   },
   {
     "id": "oirase",
@@ -11201,7 +11302,8 @@
     "mapPoint": "阿修羅の流れ",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "奥入瀬"
+    "hubCity": "奥入瀬",
+    "stayPriority": "low"
   },
   {
     "id": "mashiko",
@@ -11309,7 +11411,8 @@
     "mapPoint": "つかもと",
     "subType": "urban",
     "stayDescription": "益子の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。",
-    "hubCity": "益子"
+    "hubCity": "益子",
+    "stayPriority": "medium"
   },
   {
     "id": "bessho-onsen",
@@ -11418,7 +11521,8 @@
     "mapPoint": "北向観音",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "別所温泉"
+    "hubCity": "別所温泉",
+    "stayPriority": "high"
   },
   {
     "id": "izushi",
@@ -11519,7 +11623,8 @@
     "mapPoint": "出石城跡",
     "subType": "urban",
     "stayDescription": "出石城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "出石"
+    "hubCity": "出石",
+    "stayPriority": "medium"
   },
   {
     "id": "wakura-onsen",
@@ -11612,7 +11717,8 @@
     "mapPoint": "総湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "和倉温泉"
+    "hubCity": "和倉温泉",
+    "stayPriority": "high"
   },
   {
     "id": "misasa-onsen",
@@ -11710,7 +11816,8 @@
     "mapPoint": "三徳山投入堂",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "三朝温泉"
+    "hubCity": "三朝温泉",
+    "stayPriority": "high"
   },
   {
     "id": "obi",
@@ -11816,7 +11923,8 @@
     "mapPoint": "飫肥城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "飫肥"
+    "hubCity": "飫肥",
+    "stayPriority": "medium"
   },
   {
     "id": "hitoyoshi",
@@ -11926,7 +12034,8 @@
     "mapPoint": "青井阿蘇神社",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "人吉"
+    "hubCity": "人吉",
+    "stayPriority": "high"
   },
   {
     "id": "kamikochi",
@@ -12037,7 +12146,8 @@
     "mapPoint": "河童橋",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "松本"
+    "hubCity": "松本",
+    "stayPriority": "medium"
   },
   {
     "id": "minakami-onsen",
@@ -12137,7 +12247,8 @@
     "mapPoint": "諏訪峡",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "水上温泉"
+    "hubCity": "水上温泉",
+    "stayPriority": "high"
   },
   {
     "id": "minami-aso",
@@ -12243,7 +12354,8 @@
     "mapPoint": "白川水源",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "南阿蘇"
+    "hubCity": "南阿蘇",
+    "stayPriority": "medium"
   },
   {
     "id": "imabari",
@@ -12363,7 +12475,8 @@
     "mapPoint": "しまなみ海道",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "今治"
+    "hubCity": "今治",
+    "stayPriority": "medium"
   },
   {
     "id": "ozu",
@@ -12489,7 +12602,8 @@
     "mapPoint": "大洲城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大洲"
+    "hubCity": "大洲",
+    "stayPriority": "medium"
   },
   {
     "id": "shakotan",
@@ -12612,7 +12726,8 @@
     "mapPoint": "神威岬",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "積丹"
+    "hubCity": "積丹",
+    "stayPriority": "medium"
   },
   {
     "id": "izumo",
@@ -12743,7 +12858,8 @@
     "mapPoint": "出雲大社",
     "subType": "urban",
     "stayDescription": "出雲大社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "出雲"
+    "hubCity": "出雲",
+    "stayPriority": "medium"
   },
   {
     "id": "suzu",
@@ -12846,7 +12962,8 @@
     "mapPoint": "禄剛崎灯台",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "珠洲"
+    "hubCity": "珠洲",
+    "stayPriority": "medium"
   },
   {
     "id": "yoshino",
@@ -12974,7 +13091,8 @@
     "mapPoint": "吉野山",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "吉野"
+    "hubCity": "吉野",
+    "stayPriority": "medium"
   },
   {
     "id": "kumano",
@@ -13088,7 +13206,8 @@
     "mapPoint": "熊野那智大社",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "熊野"
+    "hubCity": "熊野",
+    "stayPriority": "low"
   },
   {
     "id": "iriomote",
@@ -13235,7 +13354,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "西表島",
-    "localHub": "石垣"
+    "localHub": "石垣",
+    "stayPriority": "high"
   },
   {
     "id": "takahashi",
@@ -13364,7 +13484,8 @@
     "mapPoint": "備中松山城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "高梁"
+    "hubCity": "高梁",
+    "stayPriority": "medium"
   },
   {
     "id": "hida-furukawa",
@@ -13486,7 +13607,8 @@
     "mapPoint": "瀬戸川と白壁土蔵街",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "飛騨古川"
+    "hubCity": "飛騨古川",
+    "stayPriority": "medium"
   },
   {
     "id": "bungo-takada",
@@ -13608,7 +13730,8 @@
     "mapPoint": "昭和の町",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "豊後高田"
+    "hubCity": "豊後高田",
+    "stayPriority": "medium"
   },
   {
     "id": "izu-kogen",
@@ -13732,7 +13855,8 @@
     "mapPoint": "大室山",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "伊豆高原"
+    "hubCity": "伊豆高原",
+    "stayPriority": "high"
   },
   {
     "id": "tanabe",
@@ -13855,7 +13979,8 @@
     "mapPoint": "闘鶏神社",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "田辺"
+    "hubCity": "田辺",
+    "stayPriority": "high"
   },
   {
     "id": "tosa-shimizu",
@@ -13965,7 +14090,8 @@
     "mapPoint": "足摺岬",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "土佐清水"
+    "hubCity": "土佐清水",
+    "stayPriority": "medium"
   },
   {
     "id": "nichinan",
@@ -14095,7 +14221,8 @@
     "mapPoint": "鵜戸神宮",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "日南"
+    "hubCity": "日南",
+    "stayPriority": "medium"
   },
   {
     "id": "mojiko",
@@ -14205,7 +14332,8 @@
     "mapPoint": "門司港レトロ",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "門司港"
+    "hubCity": "門司港",
+    "stayPriority": "medium"
   },
   {
     "id": "itoshima",
@@ -14330,7 +14458,8 @@
     "mapPoint": "二見ヶ浦",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "糸島"
+    "hubCity": "糸島",
+    "stayPriority": "medium"
   },
   {
     "id": "shimabara",
@@ -14459,7 +14588,8 @@
     "mapPoint": "島原城",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "島原"
+    "hubCity": "島原",
+    "stayPriority": "medium"
   },
   {
     "id": "tsuruga",
@@ -14567,7 +14697,8 @@
     "mapPoint": "気比神宮",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "敦賀"
+    "hubCity": "敦賀",
+    "stayPriority": "medium"
   },
   {
     "id": "shijishima",
@@ -14678,7 +14809,8 @@
     "mapPoint": "マーガレットの大木",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "高松"
+    "hubCity": "高松",
+    "stayPriority": "high"
   },
   {
     "id": "sounkyo",
@@ -14799,7 +14931,8 @@
     "mapPoint": "流星の滝",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "層雲峡温泉"
+    "hubCity": "層雲峡温泉",
+    "stayPriority": "low"
   },
   {
     "id": "rebun-island",
@@ -14937,7 +15070,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "礼文島",
-    "localHub": "稚内"
+    "localHub": "稚内",
+    "stayPriority": "high"
   },
   {
     "id": "rishiri-island",
@@ -15068,7 +15202,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "利尻島",
-    "localHub": "稚内"
+    "localHub": "稚内",
+    "stayPriority": "high"
   },
   {
     "id": "akan",
@@ -15171,7 +15306,8 @@
     "mapPoint": "マリモ",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "阿寒湖温泉"
+    "hubCity": "阿寒湖温泉",
+    "stayPriority": "high"
   },
   {
     "id": "abashiri",
@@ -15277,7 +15413,8 @@
     "mapPoint": "網走監獄博物館",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "網走"
+    "hubCity": "網走",
+    "stayPriority": "medium"
   },
   {
     "id": "shikotsu",
@@ -15389,7 +15526,8 @@
     "mapPoint": "支笏湖ビジターセンター",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "支笏湖温泉"
+    "hubCity": "支笏湖温泉",
+    "stayPriority": "high"
   },
   {
     "id": "tono",
@@ -15496,7 +15634,8 @@
     "mapPoint": "カッパ淵",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "遠野"
+    "hubCity": "遠野",
+    "stayPriority": "medium"
   },
   {
     "id": "oga",
@@ -15610,7 +15749,8 @@
     "mapPoint": "ナマハゲ館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "男鹿温泉"
+    "hubCity": "男鹿温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yonezawa",
@@ -15703,7 +15843,8 @@
     "mapPoint": "上杉神社",
     "subType": "urban",
     "stayDescription": "上杉神社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "米沢"
+    "hubCity": "米沢",
+    "stayPriority": "medium"
   },
   {
     "id": "dewa-sanzan",
@@ -15811,7 +15952,8 @@
     "mapPoint": "羽黒山五重塔",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "羽黒山"
+    "hubCity": "羽黒山",
+    "stayPriority": "medium"
   },
   {
     "id": "sakunami-onsen",
@@ -15915,7 +16057,8 @@
     "mapPoint": "秋保大滝",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "秋保温泉"
+    "hubCity": "秋保温泉",
+    "stayPriority": "high"
   },
   {
     "id": "goshogawara",
@@ -16027,7 +16170,8 @@
     "mapPoint": "立佞武多の館",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "五所川原"
+    "hubCity": "五所川原",
+    "stayPriority": "medium"
   },
   {
     "id": "kawagoe",
@@ -16130,7 +16274,8 @@
     "mapPoint": "蔵造りの街並み",
     "subType": "urban",
     "stayDescription": "蔵造りの街並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "川越"
+    "hubCity": "川越",
+    "stayPriority": "medium"
   },
   {
     "id": "nasu",
@@ -16227,7 +16372,8 @@
     "mapPoint": "那須岳",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "那須温泉"
+    "hubCity": "那須温泉",
+    "stayPriority": "high"
   },
   {
     "id": "choshi",
@@ -16329,7 +16475,8 @@
     "mapPoint": "犬吠埼灯台",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "銚子"
+    "hubCity": "銚子",
+    "stayPriority": "medium"
   },
   {
     "id": "ashikaga",
@@ -16432,7 +16579,8 @@
     "mapPoint": "足利学校",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "足利"
+    "hubCity": "足利",
+    "stayPriority": "medium"
   },
   {
     "id": "shiobara-onsen",
@@ -16528,7 +16676,8 @@
     "mapPoint": "塩原温泉渓谷",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "塩原温泉"
+    "hubCity": "塩原温泉",
+    "stayPriority": "high"
   },
   {
     "id": "sado-island",
@@ -16660,7 +16809,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "佐渡",
-    "localHub": "新潟"
+    "localHub": "新潟",
+    "stayPriority": "high"
   },
   {
     "id": "kiyosato",
@@ -16768,7 +16918,8 @@
     "mapPoint": "清泉寮",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "清里"
+    "hubCity": "清里",
+    "stayPriority": "medium"
   },
   {
     "id": "tenryu-gorge",
@@ -16858,7 +17009,8 @@
     "mapPoint": "天竜峡舟下り",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "天竜峡温泉"
+    "hubCity": "天竜峡温泉",
+    "stayPriority": "medium"
   },
   {
     "id": "suwa",
@@ -16966,7 +17118,8 @@
     "mapPoint": "諏訪大社",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "諏訪温泉"
+    "hubCity": "諏訪温泉",
+    "stayPriority": "high"
   },
   {
     "id": "eiheiji",
@@ -17074,7 +17227,8 @@
     "mapPoint": "永平寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "永平寺"
+    "hubCity": "永平寺",
+    "stayPriority": "medium"
   },
   {
     "id": "wakasa-obama",
@@ -17185,7 +17339,8 @@
     "mapPoint": "小浜西組（重伝建）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "小浜"
+    "hubCity": "小浜",
+    "stayPriority": "medium"
   },
   {
     "id": "okuhida-onsen",
@@ -17301,7 +17456,8 @@
     "hasDirectFlight": true,
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "奥飛騨温泉郷"
+    "hubCity": "奥飛騨温泉郷",
+    "stayPriority": "high"
   },
   {
     "id": "minami-izu",
@@ -17401,7 +17557,8 @@
     "mapPoint": "石廊崎",
     "subType": "remote",
     "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。",
-    "hubCity": "南伊豆"
+    "hubCity": "南伊豆",
+    "stayPriority": "medium"
   },
   {
     "id": "echizen",
@@ -17509,7 +17666,8 @@
     "mapPoint": "越前海岸（水仙）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "越前"
+    "hubCity": "越前",
+    "stayPriority": "medium"
   },
   {
     "id": "ito",
@@ -17618,7 +17776,8 @@
     "mapPoint": "伊東温泉",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "伊東温泉"
+    "hubCity": "伊東温泉",
+    "stayPriority": "high"
   },
   {
     "id": "iga",
@@ -17713,7 +17872,8 @@
     "mapPoint": "伊賀流忍者博物館",
     "subType": "urban",
     "stayDescription": "伊賀流忍者博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "伊賀上野"
+    "hubCity": "伊賀上野",
+    "stayPriority": "medium"
   },
   {
     "id": "kashihara",
@@ -17820,7 +17980,8 @@
     "mapPoint": "橿原神宮",
     "subType": "urban",
     "stayDescription": "橿原神宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "橿原"
+    "hubCity": "橿原",
+    "stayPriority": "medium"
   },
   {
     "id": "totsukawa",
@@ -17923,7 +18084,8 @@
     "mapPoint": "谷瀬の吊り橋",
     "subType": "remote",
     "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。",
-    "hubCity": "十津川温泉"
+    "hubCity": "十津川温泉",
+    "stayPriority": "low"
   },
   {
     "id": "maizuru",
@@ -18017,7 +18179,8 @@
     "mapPoint": "舞鶴引揚記念館",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "舞鶴"
+    "hubCity": "舞鶴",
+    "stayPriority": "medium"
   },
   {
     "id": "asuka",
@@ -18137,7 +18300,8 @@
     "mapPoint": "石舞台古墳",
     "subType": "urban",
     "stayDescription": "石舞台古墳を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "飛鳥"
+    "hubCity": "飛鳥",
+    "stayPriority": "medium"
   },
   {
     "id": "daisen",
@@ -18245,7 +18409,8 @@
     "mapPoint": "大山頂上",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "大山温泉"
+    "hubCity": "大山温泉",
+    "stayPriority": "medium"
   },
   {
     "id": "yunotsu-onsen",
@@ -18357,7 +18522,8 @@
     "mapPoint": "薬師湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "温泉津温泉"
+    "hubCity": "温泉津温泉",
+    "stayPriority": "high"
   },
   {
     "id": "iwami-ginzan",
@@ -18457,7 +18623,8 @@
     "mapPoint": "龍源寺間歩",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大田 石見銀山"
+    "hubCity": "大田 石見銀山",
+    "stayPriority": "medium"
   },
   {
     "id": "iwakuni",
@@ -18572,7 +18739,8 @@
     "mapPoint": "錦帯橋",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "岩国"
+    "hubCity": "岩国",
+    "stayPriority": "medium"
   },
   {
     "id": "kurayoshi",
@@ -18677,7 +18845,8 @@
     "mapPoint": "白壁土蔵群",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "倉吉"
+    "hubCity": "倉吉",
+    "stayPriority": "medium"
   },
   {
     "id": "suo-oshima",
@@ -18803,7 +18972,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "周防大島",
-    "localHub": "柳井"
+    "localHub": "柳井",
+    "stayPriority": "high"
   },
   {
     "id": "shimanto",
@@ -18916,7 +19086,8 @@
     "mapPoint": "佐田沈下橋",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "四万十川"
+    "hubCity": "四万十川",
+    "stayPriority": "medium"
   },
   {
     "id": "kashiwajima",
@@ -19031,7 +19202,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "柏島",
-    "localHub": "宿毛"
+    "localHub": "宿毛",
+    "stayPriority": "high"
   },
   {
     "id": "saijo",
@@ -19146,7 +19318,8 @@
     "mapPoint": "西条うちぬき広場",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "西条"
+    "hubCity": "西条",
+    "stayPriority": "medium"
   },
   {
     "id": "ainan",
@@ -19251,7 +19424,8 @@
     "mapPoint": "一本松温泉あけぼの荘",
     "subType": "sea",
     "stayDescription": "海を眺めながら温泉に浸かって、新鮮な魚料理で夜を締める。",
-    "hubCity": "愛南"
+    "hubCity": "愛南",
+    "stayPriority": "medium"
   },
   {
     "id": "taketa",
@@ -19355,7 +19529,8 @@
     "mapPoint": "岡城跡",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "竹田温泉"
+    "hubCity": "竹田温泉",
+    "stayPriority": "high"
   },
   {
     "id": "usuki",
@@ -19468,7 +19643,8 @@
     "mapPoint": "臼杵石仏（国宝）",
     "subType": "urban",
     "stayDescription": "臼杵石仏（国宝）を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "臼杵"
+    "hubCity": "臼杵",
+    "stayPriority": "medium"
   },
   {
     "id": "hita",
@@ -19580,7 +19756,8 @@
     "mapPoint": "豆田町（重伝建）",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "日田温泉"
+    "hubCity": "日田温泉",
+    "stayPriority": "high"
   },
   {
     "id": "hasami",
@@ -19683,7 +19860,8 @@
     "mapPoint": "西の原",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "波佐見"
+    "hubCity": "波佐見",
+    "stayPriority": "medium"
   },
   {
     "id": "takeo-onsen",
@@ -19773,7 +19951,8 @@
     "mapPoint": "武雄温泉楼門",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "武雄温泉"
+    "hubCity": "武雄温泉",
+    "stayPriority": "high"
   },
   {
     "id": "kitsuki",
@@ -19876,7 +20055,8 @@
     "mapPoint": "杵築城",
     "subType": "urban",
     "stayDescription": "杵築城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "杵築"
+    "hubCity": "杵築",
+    "stayPriority": "medium"
   },
   {
     "id": "tsushima",
@@ -20016,7 +20196,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "対馬",
-    "localHub": "博多"
+    "localHub": "博多",
+    "stayPriority": "high"
   },
   {
     "id": "iki-island",
@@ -20150,7 +20331,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "壱岐",
-    "localHub": "博多"
+    "localHub": "博多",
+    "stayPriority": "high"
   },
   {
     "id": "tanegashima",
@@ -20285,7 +20467,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "種子島",
-    "localHub": "鹿児島"
+    "localHub": "鹿児島",
+    "stayPriority": "high"
   },
   {
     "id": "kikuchi",
@@ -20395,7 +20578,8 @@
     "mapPoint": "菊池渓谷",
     "subType": "remote",
     "stayDescription": "温泉でゆっくりして、夜は地元の料理と地酒を楽しむ一泊。",
-    "hubCity": "菊池温泉"
+    "hubCity": "菊池温泉",
+    "stayPriority": "low"
   },
   {
     "id": "taketomi-island",
@@ -20527,7 +20711,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "竹富島",
-    "localHub": "石垣"
+    "localHub": "石垣",
+    "stayPriority": "high"
   },
   {
     "id": "yonaguni-island",
@@ -20660,7 +20845,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "与那国島",
-    "localHub": "石垣"
+    "localHub": "石垣",
+    "stayPriority": "high"
   },
   {
     "id": "nakijin",
@@ -20774,7 +20960,8 @@
     "mapPoint": "今帰仁城跡（世界遺産）",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "今帰仁"
+    "hubCity": "今帰仁",
+    "stayPriority": "medium"
   },
   {
     "id": "motobu",
@@ -20885,7 +21072,8 @@
     "mapPoint": "沖縄美ら海水族館",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "本部"
+    "hubCity": "本部",
+    "stayPriority": "medium"
   },
   {
     "id": "zamami-island",
@@ -21028,7 +21216,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "座間味島",
-    "localHub": "那覇"
+    "localHub": "那覇",
+    "stayPriority": "high"
   },
   {
     "id": "ie-island",
@@ -21166,7 +21355,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊江島",
-    "localHub": "本部"
+    "localHub": "本部",
+    "stayPriority": "high"
   },
   {
     "id": "kohama-island",
@@ -21284,7 +21474,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "小浜島",
-    "localHub": "石垣"
+    "localHub": "石垣",
+    "stayPriority": "high"
   },
   {
     "id": "matsushiro",
@@ -21381,7 +21572,8 @@
     "mapPoint": "松代城跡",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "松代温泉"
+    "hubCity": "松代温泉",
+    "stayPriority": "medium"
   },
   {
     "id": "iiyama",
@@ -21481,7 +21673,8 @@
     "mapPoint": "菜の花公園",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "飯山温泉"
+    "hubCity": "飯山温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yakake",
@@ -21584,7 +21777,8 @@
     "mapPoint": "矢掛本陣（国指定史跡）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "矢掛"
+    "hubCity": "矢掛",
+    "stayPriority": "medium"
   },
   {
     "id": "tsuyama",
@@ -21699,7 +21893,8 @@
     "mapPoint": "津山城（鶴山公園）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "津山"
+    "hubCity": "津山",
+    "stayPriority": "medium"
   },
   {
     "id": "tsurugi-san",
@@ -21807,7 +22002,8 @@
     "mapPoint": "剣山山頂",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "剣山 貞光"
+    "hubCity": "剣山 貞光",
+    "stayPriority": "medium"
   },
   {
     "id": "nobeoka",
@@ -21929,7 +22125,8 @@
     "mapPoint": "延岡城跡",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "延岡"
+    "hubCity": "延岡",
+    "stayPriority": "medium"
   },
   {
     "id": "kamaishi",
@@ -22013,7 +22210,8 @@
     "mapPoint": "根浜海岸",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "釜石"
+    "hubCity": "釜石",
+    "stayPriority": "medium"
   },
   {
     "id": "ofunato",
@@ -22097,7 +22295,8 @@
     "mapPoint": "碁石海岸",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "大船渡"
+    "hubCity": "大船渡",
+    "stayPriority": "medium"
   },
   {
     "id": "kuji",
@@ -22181,7 +22380,8 @@
     "mapPoint": "久慈琥珀博物館",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "久慈"
+    "hubCity": "久慈",
+    "stayPriority": "medium"
   },
   {
     "id": "wakkanai",
@@ -22291,7 +22491,8 @@
     "mapPoint": "宗谷岬",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "稚内"
+    "hubCity": "稚内",
+    "stayPriority": "medium"
   },
   {
     "id": "obihiro",
@@ -22401,7 +22602,8 @@
     "mapPoint": "十勝牧場",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "帯広"
+    "hubCity": "帯広",
+    "stayPriority": "medium"
   },
   {
     "id": "rausu",
@@ -22520,7 +22722,8 @@
     "mapPoint": "羅臼岳",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "羅臼"
+    "hubCity": "羅臼",
+    "stayPriority": "low"
   },
   {
     "id": "esashi-hokkaido",
@@ -22634,7 +22837,8 @@
     "mapPoint": "いにしえ街道",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "江差"
+    "hubCity": "江差",
+    "stayPriority": "medium"
   },
   {
     "id": "hanamaki",
@@ -22739,7 +22943,8 @@
     "mapPoint": "宮沢賢治記念館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "花巻"
+    "hubCity": "花巻",
+    "stayPriority": "high"
   },
   {
     "id": "hachimantai",
@@ -22858,7 +23063,8 @@
     "mapPoint": "八幡平頂上",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "八幡平"
+    "hubCity": "八幡平",
+    "stayPriority": "low"
   },
   {
     "id": "tazawako",
@@ -22966,7 +23172,8 @@
     "mapPoint": "田沢湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "田沢湖"
+    "hubCity": "田沢湖",
+    "stayPriority": "high"
   },
   {
     "id": "yamadera",
@@ -23084,7 +23291,8 @@
     "mapPoint": "立石寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "山寺"
+    "hubCity": "山寺",
+    "stayPriority": "medium"
   },
   {
     "id": "kesennuma",
@@ -23188,7 +23396,8 @@
     "mapPoint": "気仙沼港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "気仙沼"
+    "hubCity": "気仙沼",
+    "stayPriority": "medium"
   },
   {
     "id": "ikaho",
@@ -23298,7 +23507,8 @@
     "mapPoint": "伊香保石段街",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "伊香保温泉"
+    "hubCity": "伊香保温泉",
+    "stayPriority": "high"
   },
   {
     "id": "enoshima",
@@ -23409,7 +23619,8 @@
     "mapPoint": "江島神社",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "江の島"
+    "hubCity": "江の島",
+    "stayPriority": "medium"
   },
   {
     "id": "chichibu",
@@ -23517,7 +23728,8 @@
     "mapPoint": "秩父神社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "秩父"
+    "hubCity": "秩父",
+    "stayPriority": "medium"
   },
   {
     "id": "oarai",
@@ -23622,7 +23834,8 @@
     "mapPoint": "大洗磯前神社",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "大洗"
+    "hubCity": "大洗",
+    "stayPriority": "medium"
   },
   {
     "id": "sano",
@@ -23726,7 +23939,8 @@
     "mapPoint": "佐野厄除大師",
     "subType": "urban",
     "stayDescription": "佐野厄除大師を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "佐野"
+    "hubCity": "佐野",
+    "stayPriority": "medium"
   },
   {
     "id": "gujo-hachiman",
@@ -23834,7 +24048,8 @@
     "mapPoint": "郡上八幡城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "郡上八幡"
+    "hubCity": "郡上八幡",
+    "stayPriority": "medium"
   },
   {
     "id": "narai-juku",
@@ -23943,7 +24158,8 @@
     "mapPoint": "奈良井宿本陣跡",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "奈良井宿"
+    "hubCity": "奈良井宿",
+    "stayPriority": "medium"
   },
   {
     "id": "itoigawa",
@@ -24046,7 +24262,8 @@
     "mapPoint": "フォッサマグナミュージアム",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "糸魚川"
+    "hubCity": "糸魚川",
+    "stayPriority": "medium"
   },
   {
     "id": "murakami",
@@ -24152,7 +24369,8 @@
     "mapPoint": "村上城跡",
     "subType": "urban",
     "stayDescription": "村上城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "村上"
+    "hubCity": "村上",
+    "stayPriority": "medium"
   },
   {
     "id": "shima",
@@ -24251,7 +24469,8 @@
     "mapPoint": "英虞湾",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "志摩"
+    "hubCity": "志摩",
+    "stayPriority": "medium"
   },
   {
     "id": "ogaki",
@@ -24344,7 +24563,8 @@
     "mapPoint": "大垣城",
     "subType": "urban",
     "stayDescription": "大垣城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "大垣"
+    "hubCity": "大垣",
+    "stayPriority": "medium"
   },
   {
     "id": "echizen-kaigan",
@@ -24454,7 +24674,8 @@
     "mapPoint": "東尋坊",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "越前海岸"
+    "hubCity": "越前海岸",
+    "stayPriority": "medium"
   },
   {
     "id": "myoko-kogen",
@@ -24555,7 +24776,8 @@
     "mapPoint": "妙高山",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "妙高高原"
+    "hubCity": "妙高高原",
+    "stayPriority": "high"
   },
   {
     "id": "nagaoka",
@@ -24646,7 +24868,8 @@
     "mapPoint": "長岡花火",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "長岡"
+    "hubCity": "長岡",
+    "stayPriority": "medium"
   },
   {
     "id": "tanba-sasayama",
@@ -24748,7 +24971,8 @@
     "mapPoint": "篠山城跡",
     "subType": "urban",
     "stayDescription": "篠山城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "丹波篠山"
+    "hubCity": "丹波篠山",
+    "stayPriority": "medium"
   },
   {
     "id": "nachikatsuura",
@@ -24850,7 +25074,8 @@
     "mapPoint": "那智の大滝",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "那智勝浦"
+    "hubCity": "那智勝浦",
+    "stayPriority": "medium"
   },
   {
     "id": "kumano-hongu",
@@ -24965,7 +25190,8 @@
     "mapPoint": "熊野本宮大社",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "熊野本宮"
+    "hubCity": "熊野本宮",
+    "stayPriority": "low"
   },
   {
     "id": "ako",
@@ -25073,7 +25299,8 @@
     "mapPoint": "赤穂城跡",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "赤穂"
+    "hubCity": "赤穂",
+    "stayPriority": "medium"
   },
   {
     "id": "fushimi",
@@ -25184,7 +25411,8 @@
     "mapPoint": "伏見稲荷大社",
     "subType": "urban",
     "stayDescription": "伏見稲荷大社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "伏見"
+    "hubCity": "伏見",
+    "stayPriority": "medium"
   },
   {
     "id": "tomonoura",
@@ -25293,7 +25521,8 @@
     "mapPoint": "鞆の浦港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "鞆の浦"
+    "hubCity": "鞆の浦",
+    "stayPriority": "medium"
   },
   {
     "id": "sakaiminato",
@@ -25408,7 +25637,8 @@
     "hasDirectFlight": true,
     "mapPoint": "水木しげるロード",
     "subType": "sea",
-    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。"
+    "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
+    "stayPriority": "medium"
   },
   {
     "id": "ushimado",
@@ -25525,7 +25755,8 @@
     "mapPoint": "牛窓オリーブ園",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "牛窓"
+    "hubCity": "牛窓",
+    "stayPriority": "medium"
   },
   {
     "id": "kasaoka",
@@ -25618,7 +25849,8 @@
     "mapPoint": "笠岡諸島",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "笠岡"
+    "hubCity": "笠岡",
+    "stayPriority": "medium"
   },
   {
     "id": "tsunoshima",
@@ -25727,7 +25959,8 @@
     "mapPoint": "角島大橋",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "角島"
+    "hubCity": "角島",
+    "stayPriority": "low"
   },
   {
     "id": "dogo-onsen",
@@ -25852,7 +26085,8 @@
     "mapPoint": "道後温泉本館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "道後温泉"
+    "hubCity": "道後温泉",
+    "stayPriority": "high"
   },
   {
     "id": "marugame",
@@ -25960,7 +26194,8 @@
     "mapPoint": "丸亀城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "丸亀"
+    "hubCity": "丸亀",
+    "stayPriority": "medium"
   },
   {
     "id": "misaki-sadamisaki",
@@ -26078,7 +26313,8 @@
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
     "hubCity": "松山",
-    "localHub": "八幡浜"
+    "localHub": "八幡浜",
+    "stayPriority": "low"
   },
   {
     "id": "yanagawa",
@@ -26192,7 +26428,8 @@
     "mapPoint": "柳川川下り",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "柳川"
+    "hubCity": "柳川",
+    "stayPriority": "medium"
   },
   {
     "id": "hyuga",
@@ -26302,7 +26539,8 @@
     "mapPoint": "馬ヶ背",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "日向"
+    "hubCity": "日向",
+    "stayPriority": "medium"
   },
   {
     "id": "koshikijima",
@@ -26423,7 +26661,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "甑島",
-    "localHub": "薩摩川内"
+    "localHub": "薩摩川内",
+    "stayPriority": "high"
   },
   {
     "id": "kirishima",
@@ -26536,7 +26775,8 @@
     "mapPoint": "霧島神宮",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "霧島"
+    "hubCity": "霧島",
+    "stayPriority": "high"
   },
   {
     "id": "ebino-kogen",
@@ -26651,7 +26891,8 @@
     "mapPoint": "えびの高原エコミュージアムセンター",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "えびの高原"
+    "hubCity": "えびの高原",
+    "stayPriority": "low"
   },
   {
     "id": "onna",
@@ -26760,7 +27001,8 @@
     "mapPoint": "万座毛",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "恩納村"
+    "hubCity": "恩納村",
+    "stayPriority": "medium"
   },
   {
     "id": "nago",
@@ -26869,7 +27111,8 @@
     "mapPoint": "名護城跡",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "名護"
+    "hubCity": "名護",
+    "stayPriority": "medium"
   },
   {
     "id": "yomitanson",
@@ -26981,7 +27224,8 @@
     "mapPoint": "残波岬",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "読谷村"
+    "hubCity": "読谷村",
+    "stayPriority": "medium"
   },
   {
     "id": "niseko",
@@ -27084,7 +27328,8 @@
     "mapPoint": "グラン・ヒラフ",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "ニセコ"
+    "hubCity": "ニセコ",
+    "stayPriority": "medium"
   },
   {
     "id": "daisetsuzan",
@@ -27199,7 +27444,8 @@
     "mapPoint": "旭岳",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "旭川"
+    "hubCity": "旭川",
+    "stayPriority": "medium"
   },
   {
     "id": "shiraoi",
@@ -27292,7 +27538,8 @@
     "mapPoint": "ウポポイ（民族共生象徴空間）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "白老"
+    "hubCity": "白老",
+    "stayPriority": "medium"
   },
   {
     "id": "tomamu",
@@ -27388,7 +27635,8 @@
     "mapPoint": "雲海テラス",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "トマム"
+    "hubCity": "トマム",
+    "stayPriority": "medium"
   },
   {
     "id": "towada",
@@ -27499,7 +27747,8 @@
     "mapPoint": "十和田湖",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "十和田"
+    "hubCity": "十和田",
+    "stayPriority": "medium"
   },
   {
     "id": "osorezan",
@@ -27610,7 +27859,8 @@
     "mapPoint": "恐山菩提寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "恐山"
+    "hubCity": "恐山",
+    "stayPriority": "medium"
   },
   {
     "id": "urabandai",
@@ -27725,7 +27975,8 @@
     "mapPoint": "五色沼",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "裏磐梯"
+    "hubCity": "裏磐梯",
+    "stayPriority": "medium"
   },
   {
     "id": "minami-sanriku",
@@ -27838,7 +28089,8 @@
     "mapPoint": "さんさん商店街",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "南三陸"
+    "hubCity": "南三陸",
+    "stayPriority": "medium"
   },
   {
     "id": "kitakami",
@@ -27935,7 +28187,8 @@
     "mapPoint": "展勝地",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "北上"
+    "hubCity": "北上",
+    "stayPriority": "medium"
   },
   {
     "id": "kinugawa-onsen",
@@ -28031,7 +28284,8 @@
     "mapPoint": "鬼怒川温泉街",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "鬼怒川温泉"
+    "hubCity": "鬼怒川温泉",
+    "stayPriority": "high"
   },
   {
     "id": "oze",
@@ -28145,7 +28399,8 @@
     "mapPoint": "尾瀬ヶ原",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "尾瀬"
+    "hubCity": "尾瀬",
+    "stayPriority": "medium"
   },
   {
     "id": "tsukuba",
@@ -28244,7 +28499,8 @@
     "mapPoint": "筑波山",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "筑波"
+    "hubCity": "筑波",
+    "stayPriority": "medium"
   },
   {
     "id": "kasama",
@@ -28340,7 +28596,8 @@
     "mapPoint": "笠間稲荷神社",
     "subType": "urban",
     "stayDescription": "笠間稲荷神社を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "笠間"
+    "hubCity": "笠間",
+    "stayPriority": "medium"
   },
   {
     "id": "naritasan",
@@ -28436,7 +28693,8 @@
     "mapPoint": "成田山新勝寺",
     "subType": "urban",
     "stayDescription": "成田山新勝寺を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "成田"
+    "hubCity": "成田",
+    "stayPriority": "medium"
   },
   {
     "id": "kujukuri",
@@ -28547,7 +28805,8 @@
     "mapPoint": "九十九里浜",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "九十九里"
+    "hubCity": "九十九里",
+    "stayPriority": "medium"
   },
   {
     "id": "miura",
@@ -28646,7 +28905,8 @@
     "mapPoint": "城ヶ島",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "三浦"
+    "hubCity": "三浦",
+    "stayPriority": "medium"
   },
   {
     "id": "oku-tama",
@@ -28742,7 +29002,8 @@
     "mapPoint": "奥多摩湖",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "奥多摩"
+    "hubCity": "奥多摩",
+    "stayPriority": "medium"
   },
   {
     "id": "jigokudani",
@@ -28841,7 +29102,8 @@
     "mapPoint": "地獄谷野猿公苑",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯田中"
+    "hubCity": "湯田中",
+    "stayPriority": "medium"
   },
   {
     "id": "tateshina",
@@ -28956,7 +29218,8 @@
     "mapPoint": "蓼科湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "蓼科"
+    "hubCity": "蓼科",
+    "stayPriority": "medium"
   },
   {
     "id": "echigo-yuzawa",
@@ -29052,7 +29315,8 @@
     "mapPoint": "石打丸山スキー場",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "越後湯沢"
+    "hubCity": "越後湯沢",
+    "stayPriority": "high"
   },
   {
     "id": "fujinomiya",
@@ -29149,7 +29413,8 @@
     "mapPoint": "富士山本宮浅間大社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "富士宮"
+    "hubCity": "富士宮",
+    "stayPriority": "medium"
   },
   {
     "id": "norikura",
@@ -29264,7 +29529,8 @@
     "mapPoint": "畳平",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "乗鞍"
+    "hubCity": "乗鞍",
+    "stayPriority": "medium"
   },
   {
     "id": "tokoname",
@@ -29358,7 +29624,8 @@
     "mapPoint": "やきもの散歩道",
     "subType": "urban",
     "stayDescription": "常滑の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。",
-    "hubCity": "常滑"
+    "hubCity": "常滑",
+    "stayPriority": "medium"
   },
   {
     "id": "korankei",
@@ -29469,7 +29736,8 @@
     "mapPoint": "香嵐渓",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "香嵐渓"
+    "hubCity": "香嵐渓",
+    "stayPriority": "medium"
   },
   {
     "id": "minamichita",
@@ -29568,7 +29836,8 @@
     "mapPoint": "師崎港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "南知多"
+    "hubCity": "南知多",
+    "stayPriority": "medium"
   },
   {
     "id": "arashiyama",
@@ -29666,7 +29935,8 @@
     "mapPoint": "竹林の道",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "嵐山"
+    "hubCity": "嵐山",
+    "stayPriority": "medium"
   },
   {
     "id": "shigaraki",
@@ -29760,7 +30030,8 @@
     "mapPoint": "信楽焼窯元",
     "subType": "urban",
     "stayDescription": "信楽の空気を吸いながら、ゆっくり歩いて食べて泊まる旅。",
-    "hubCity": "信楽"
+    "hubCity": "信楽",
+    "stayPriority": "medium"
   },
   {
     "id": "dorogawa-onsen",
@@ -29873,7 +30144,8 @@
     "mapPoint": "龍泉寺",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "洞川温泉"
+    "hubCity": "洞川温泉",
+    "stayPriority": "high"
   },
   {
     "id": "matsusaka",
@@ -29970,7 +30242,8 @@
     "mapPoint": "松阪城跡",
     "subType": "urban",
     "stayDescription": "松阪城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "松阪"
+    "hubCity": "松阪",
+    "stayPriority": "medium"
   },
   {
     "id": "sakai",
@@ -30072,7 +30345,8 @@
     "mapPoint": "仁徳天皇陵古墳",
     "subType": "urban",
     "stayDescription": "仁徳天皇陵古墳を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "堺"
+    "hubCity": "堺",
+    "stayPriority": "medium"
   },
   {
     "id": "ama-island",
@@ -30204,7 +30478,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "海士",
-    "localHub": "松江"
+    "localHub": "松江",
+    "stayPriority": "high"
   },
   {
     "id": "akiyoshidai",
@@ -30316,7 +30591,8 @@
     "mapPoint": "秋芳洞",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "秋吉台"
+    "hubCity": "秋吉台",
+    "stayPriority": "medium"
   },
   {
     "id": "yanai",
@@ -30410,7 +30686,8 @@
     "mapPoint": "白壁の街並み",
     "subType": "urban",
     "stayDescription": "白壁の街並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "柳井"
+    "hubCity": "柳井",
+    "stayPriority": "medium"
   },
   {
     "id": "oki-island",
@@ -30549,7 +30826,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "隠岐の島",
-    "localHub": "境港"
+    "localHub": "境港",
+    "stayPriority": "high"
   },
   {
     "id": "inujima",
@@ -30672,7 +30950,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "犬島",
-    "localHub": "岡山"
+    "localHub": "岡山",
+    "stayPriority": "high"
   },
   {
     "id": "teshima",
@@ -30803,7 +31082,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "豊島",
-    "localHub": "高松"
+    "localHub": "高松",
+    "stayPriority": "high"
   },
   {
     "id": "niyodogawa",
@@ -30916,7 +31196,8 @@
     "mapPoint": "にこ淵",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "仁淀川"
+    "hubCity": "仁淀川",
+    "stayPriority": "low"
   },
   {
     "id": "yusuhara",
@@ -31031,7 +31312,8 @@
     "mapPoint": "ゆすはら座",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "梼原"
+    "hubCity": "梼原",
+    "stayPriority": "low"
   },
   {
     "id": "anan",
@@ -31125,7 +31407,8 @@
     "mapPoint": "大浜海岸（アカウミガメ産卵地）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "阿南"
+    "hubCity": "阿南",
+    "stayPriority": "medium"
   },
   {
     "id": "shikoku-karst",
@@ -31239,7 +31522,8 @@
     "mapPoint": "天狗高原",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "四国カルスト"
+    "hubCity": "四国カルスト",
+    "stayPriority": "low"
   },
   {
     "id": "aoshima",
@@ -31334,7 +31618,8 @@
     "mapPoint": "青島神社",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "青島"
+    "hubCity": "青島",
+    "stayPriority": "medium"
   },
   {
     "id": "yamaga",
@@ -31448,7 +31733,8 @@
     "mapPoint": "山鹿灯籠民芸館",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "山鹿"
+    "hubCity": "山鹿",
+    "stayPriority": "high"
   },
   {
     "id": "yoshinogari",
@@ -31547,7 +31833,8 @@
     "mapPoint": "吉野ヶ里歴史公園",
     "subType": "urban",
     "stayDescription": "吉野ヶ里歴史公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "吉野ヶ里"
+    "hubCity": "吉野ヶ里",
+    "stayPriority": "medium"
   },
   {
     "id": "kunisaki",
@@ -31667,7 +31954,8 @@
     "mapPoint": "両子寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "国東"
+    "hubCity": "国東",
+    "stayPriority": "medium"
   },
   {
     "id": "chiran",
@@ -31782,7 +32070,8 @@
     "mapPoint": "知覧武家屋敷群",
     "subType": "urban",
     "stayDescription": "知覧武家屋敷群を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "知覧"
+    "hubCity": "知覧",
+    "stayPriority": "medium"
   },
   {
     "id": "ojika-island",
@@ -31913,7 +32202,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "小値賀島",
-    "localHub": "佐世保"
+    "localHub": "佐世保",
+    "stayPriority": "high"
   },
   {
     "id": "irabu-island",
@@ -32033,7 +32323,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊良部島",
-    "localHub": "宮古"
+    "localHub": "宮古",
+    "stayPriority": "high"
   },
   {
     "id": "aguni-island",
@@ -32171,7 +32462,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "粟国島",
-    "localHub": "那覇"
+    "localHub": "那覇",
+    "stayPriority": "high"
   },
   {
     "id": "itoman",
@@ -32291,7 +32583,8 @@
     "mapPoint": "平和祈念公園",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "糸満"
+    "hubCity": "糸満",
+    "stayPriority": "medium"
   },
   {
     "id": "kijoka",
@@ -32410,7 +32703,8 @@
     "mapPoint": "芭蕉布会館",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "喜如嘉"
+    "hubCity": "喜如嘉",
+    "stayPriority": "medium"
   },
   {
     "id": "miyakejima",
@@ -32541,7 +32835,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "三宅島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "hachijojima",
@@ -32679,7 +32974,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "八丈島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "niijima",
@@ -32811,7 +33107,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "新島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "shikinejima",
@@ -32935,7 +33232,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "式根島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "shirakawa",
@@ -33024,7 +33322,8 @@
     "mapPoint": "小峰城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "白河"
+    "hubCity": "白河",
+    "stayPriority": "medium"
   },
   {
     "id": "kitakata",
@@ -33112,7 +33411,8 @@
     "mapPoint": "蔵のまち",
     "subType": "urban",
     "stayDescription": "蔵のまちを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "喜多方"
+    "hubCity": "喜多方",
+    "stayPriority": "medium"
   },
   {
     "id": "koriyama",
@@ -33201,7 +33501,8 @@
     "mapPoint": "開成山公園",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "郡山"
+    "hubCity": "郡山",
+    "stayPriority": "medium"
   },
   {
     "id": "ryusendo",
@@ -33291,7 +33592,8 @@
     "mapPoint": "龍泉洞",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "龍泉洞"
+    "hubCity": "龍泉洞",
+    "stayPriority": "medium"
   },
   {
     "id": "ichinoseki",
@@ -33379,7 +33681,8 @@
     "mapPoint": "厳美渓",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "一関"
+    "hubCity": "一関",
+    "stayPriority": "medium"
   },
   {
     "id": "akita-oga",
@@ -33469,7 +33772,8 @@
     "mapPoint": "男鹿温泉郷",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "男鹿温泉"
+    "hubCity": "男鹿温泉",
+    "stayPriority": "high"
   },
   {
     "id": "kisakata",
@@ -33558,7 +33862,8 @@
     "mapPoint": "蚶満寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "象潟"
+    "hubCity": "象潟",
+    "stayPriority": "medium"
   },
   {
     "id": "gassan",
@@ -33648,7 +33953,8 @@
     "mapPoint": "月山スキー場",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "月山"
+    "hubCity": "月山",
+    "stayPriority": "low"
   },
   {
     "id": "higashine",
@@ -33736,7 +34042,8 @@
     "mapPoint": "東根温泉",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "東根"
+    "hubCity": "東根",
+    "stayPriority": "medium"
   },
   {
     "id": "akakura-onsen",
@@ -33825,7 +34132,8 @@
     "mapPoint": "赤倉温泉スキー場",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "赤倉温泉"
+    "hubCity": "赤倉温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yugawara-onsen",
@@ -33912,7 +34220,8 @@
     "mapPoint": "湯河原温泉街",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯河原温泉"
+    "hubCity": "湯河原温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yokosuka",
@@ -34001,7 +34310,8 @@
     "mapPoint": "猿島",
     "subType": "urban",
     "stayDescription": "猿島を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "横須賀"
+    "hubCity": "横須賀",
+    "stayPriority": "medium"
   },
   {
     "id": "mishima",
@@ -34090,7 +34400,8 @@
     "mapPoint": "三嶋大社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "三島"
+    "hubCity": "三島",
+    "stayPriority": "medium"
   },
   {
     "id": "numazu",
@@ -34179,7 +34490,8 @@
     "mapPoint": "沼津港深海水族館",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "沼津"
+    "hubCity": "沼津",
+    "stayPriority": "medium"
   },
   {
     "id": "hamamatsu",
@@ -34268,7 +34580,8 @@
     "mapPoint": "浜名湖",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "浜松"
+    "hubCity": "浜松",
+    "stayPriority": "medium"
   },
   {
     "id": "kakegawa",
@@ -34357,7 +34670,8 @@
     "mapPoint": "掛川城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "掛川"
+    "hubCity": "掛川",
+    "stayPriority": "medium"
   },
   {
     "id": "okazaki",
@@ -34446,7 +34760,8 @@
     "mapPoint": "岡崎城",
     "subType": "urban",
     "stayDescription": "岡崎城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "岡崎"
+    "hubCity": "岡崎",
+    "stayPriority": "medium"
   },
   {
     "id": "toyohashi",
@@ -34535,7 +34850,8 @@
     "mapPoint": "豊川稲荷（近郊）",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "豊橋"
+    "hubCity": "豊橋",
+    "stayPriority": "medium"
   },
   {
     "id": "tajimi",
@@ -34624,7 +34940,8 @@
     "mapPoint": "本町オリベストリート",
     "subType": "urban",
     "stayDescription": "本町オリベストリートを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "多治見"
+    "hubCity": "多治見",
+    "stayPriority": "medium"
   },
   {
     "id": "togakushi",
@@ -34713,7 +35030,8 @@
     "mapPoint": "戸隠神社奥社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "戸隠"
+    "hubCity": "戸隠",
+    "stayPriority": "medium"
   },
   {
     "id": "omihachiman",
@@ -34802,7 +35120,8 @@
     "mapPoint": "八幡堀",
     "subType": "urban",
     "stayDescription": "八幡堀を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "近江八幡"
+    "hubCity": "近江八幡",
+    "stayPriority": "medium"
   },
   {
     "id": "takarazuka",
@@ -34891,7 +35210,8 @@
     "mapPoint": "宝塚大劇場",
     "subType": "urban",
     "stayDescription": "宝塚大劇場を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "宝塚"
+    "hubCity": "宝塚",
+    "stayPriority": "medium"
   },
   {
     "id": "akashi",
@@ -34980,7 +35300,8 @@
     "mapPoint": "明石市立天文科学館",
     "subType": "urban",
     "stayDescription": "明石市立天文科学館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "明石"
+    "hubCity": "明石",
+    "stayPriority": "medium"
   },
   {
     "id": "naruto",
@@ -35069,7 +35390,8 @@
     "mapPoint": "渦の道",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "鳴門"
+    "hubCity": "鳴門",
+    "stayPriority": "medium"
   },
   {
     "id": "innoshima",
@@ -35159,7 +35481,8 @@
     "mapPoint": "因島水軍城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "因島"
+    "hubCity": "因島",
+    "stayPriority": "medium"
   },
   {
     "id": "mihara",
@@ -35248,7 +35571,8 @@
     "mapPoint": "三原城跡",
     "subType": "urban",
     "stayDescription": "三原城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "三原"
+    "hubCity": "三原",
+    "stayPriority": "medium"
   },
   {
     "id": "hofu",
@@ -35335,7 +35659,8 @@
     "mapPoint": "防府天満宮",
     "subType": "urban",
     "stayDescription": "防府天満宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "防府"
+    "hubCity": "防府",
+    "stayPriority": "medium"
   },
   {
     "id": "karatsu",
@@ -35424,7 +35749,8 @@
     "mapPoint": "唐津城",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "唐津"
+    "hubCity": "唐津",
+    "stayPriority": "medium"
   },
   {
     "id": "dazaifu",
@@ -35511,7 +35837,8 @@
     "mapPoint": "太宰府天満宮",
     "subType": "urban",
     "stayDescription": "太宰府天満宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "大宰府"
+    "hubCity": "大宰府",
+    "stayPriority": "medium"
   },
   {
     "id": "nakatsu",
@@ -35600,7 +35927,8 @@
     "mapPoint": "中津城",
     "subType": "urban",
     "stayDescription": "中津城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "中津"
+    "hubCity": "中津",
+    "stayPriority": "medium"
   },
   {
     "id": "nemuro",
@@ -35689,7 +36017,8 @@
     "mapPoint": "納沙布岬",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "根室"
+    "hubCity": "根室",
+    "stayPriority": "low"
   },
   {
     "id": "muroran",
@@ -35778,7 +36107,8 @@
     "mapPoint": "地球岬",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "室蘭"
+    "hubCity": "室蘭",
+    "stayPriority": "medium"
   },
   {
     "id": "tomakomai",
@@ -35867,7 +36197,8 @@
     "mapPoint": "ウトナイ湖野生鳥獣保護センター",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "苫小牧"
+    "hubCity": "苫小牧",
+    "stayPriority": "medium"
   },
   {
     "id": "ishinomaki",
@@ -35955,7 +36286,8 @@
     "mapPoint": "石ノ森萬画館",
     "subType": "urban",
     "stayDescription": "石ノ森萬画館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "石巻"
+    "hubCity": "石巻",
+    "stayPriority": "medium"
   },
   {
     "id": "hitachi",
@@ -36043,7 +36375,8 @@
     "mapPoint": "日立駅（ガラス張りの駅）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "日立"
+    "hubCity": "日立",
+    "stayPriority": "medium"
   },
   {
     "id": "kashima",
@@ -36129,7 +36462,8 @@
     "mapPoint": "鹿島神宮",
     "subType": "urban",
     "stayDescription": "鹿島神宮を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "鹿嶋"
+    "hubCity": "鹿嶋",
+    "stayPriority": "medium"
   },
   {
     "id": "shiraoishi",
@@ -36216,7 +36550,8 @@
     "mapPoint": "白石城",
     "subType": "urban",
     "stayDescription": "白石城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "白石"
+    "hubCity": "白石",
+    "stayPriority": "medium"
   },
   {
     "id": "noshiro",
@@ -36305,7 +36640,8 @@
     "mapPoint": "風の松原",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "能代"
+    "hubCity": "能代",
+    "stayPriority": "medium"
   },
   {
     "id": "tendou",
@@ -36393,7 +36729,8 @@
     "mapPoint": "舞鶴山公園（人間将棋）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "天童"
+    "hubCity": "天童",
+    "stayPriority": "medium"
   },
   {
     "id": "shonai",
@@ -36482,7 +36819,8 @@
     "mapPoint": "致道博物館",
     "subType": "urban",
     "stayDescription": "致道博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "鶴岡"
+    "hubCity": "鶴岡",
+    "stayPriority": "medium"
   },
   {
     "id": "ogata",
@@ -36572,7 +36910,8 @@
     "mapPoint": "なまはげの里（近郊）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大潟村"
+    "hubCity": "大潟村",
+    "stayPriority": "medium"
   },
   {
     "id": "rikuzentakata",
@@ -36661,7 +37000,8 @@
     "mapPoint": "奇跡の一本松",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "陸前高田"
+    "hubCity": "陸前高田",
+    "stayPriority": "medium"
   },
   {
     "id": "sanriku-miyako",
@@ -36751,7 +37091,8 @@
     "mapPoint": "浄土ヶ浜",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "浄土ヶ浜"
+    "hubCity": "浄土ヶ浜",
+    "stayPriority": "medium"
   },
   {
     "id": "motomiya",
@@ -36837,7 +37178,8 @@
     "mapPoint": "安達太良山",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "本宮"
+    "hubCity": "本宮",
+    "stayPriority": "medium"
   },
   {
     "id": "mizusawa",
@@ -36925,7 +37267,8 @@
     "mapPoint": "胆沢城跡",
     "subType": "urban",
     "stayDescription": "胆沢城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "奥州"
+    "hubCity": "奥州",
+    "stayPriority": "medium"
   },
   {
     "id": "ichinoseki-geibikei",
@@ -37014,7 +37357,8 @@
     "mapPoint": "猊鼻渓舟下り",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "猊鼻渓"
+    "hubCity": "猊鼻渓",
+    "stayPriority": "medium"
   },
   {
     "id": "akita-semboku",
@@ -37102,7 +37446,8 @@
     "mapPoint": "田沢湖",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "仙北"
+    "hubCity": "仙北",
+    "stayPriority": "medium"
   },
   {
     "id": "tendo",
@@ -37190,7 +37535,8 @@
     "mapPoint": "慈恩寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "寒河江"
+    "hubCity": "寒河江",
+    "stayPriority": "medium"
   },
   {
     "id": "nyuzen",
@@ -37278,7 +37624,8 @@
     "mapPoint": "舟見城址館",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "入善"
+    "hubCity": "入善",
+    "stayPriority": "medium"
   },
   {
     "id": "nanao",
@@ -37366,7 +37713,8 @@
     "mapPoint": "和倉温泉",
     "subType": "sea",
     "stayDescription": "海を眺めながら温泉に浸かって、新鮮な魚料理で夜を締める。",
-    "hubCity": "七尾"
+    "hubCity": "七尾",
+    "stayPriority": "medium"
   },
   {
     "id": "fukuchiyama",
@@ -37453,7 +37801,8 @@
     "mapPoint": "福知山城",
     "subType": "urban",
     "stayDescription": "福知山城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "福知山"
+    "hubCity": "福知山",
+    "stayPriority": "medium"
   },
   {
     "id": "koka",
@@ -37540,7 +37889,8 @@
     "mapPoint": "甲賀流忍術屋敷",
     "subType": "urban",
     "stayDescription": "甲賀流忍術屋敷を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "甲賀"
+    "hubCity": "甲賀",
+    "stayPriority": "medium"
   },
   {
     "id": "tondabayashi",
@@ -37627,7 +37977,8 @@
     "mapPoint": "富田林寺内町",
     "subType": "urban",
     "stayDescription": "富田林寺内町を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "富田林"
+    "hubCity": "富田林",
+    "stayPriority": "medium"
   },
   {
     "id": "kishiwada",
@@ -37716,7 +38067,8 @@
     "mapPoint": "岸和田城",
     "subType": "urban",
     "stayDescription": "岸和田城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "岸和田"
+    "hubCity": "岸和田",
+    "stayPriority": "medium"
   },
   {
     "id": "amagasaki",
@@ -37805,7 +38157,8 @@
     "mapPoint": "尼崎城",
     "subType": "urban",
     "stayDescription": "尼崎城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "尼崎"
+    "hubCity": "尼崎",
+    "stayPriority": "medium"
   },
   {
     "id": "nishiwaki",
@@ -37894,7 +38247,8 @@
     "mapPoint": "日本のへそ公園",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "西脇"
+    "hubCity": "西脇",
+    "stayPriority": "medium"
   },
   {
     "id": "nagi",
@@ -37983,7 +38337,8 @@
     "mapPoint": "奈義町現代美術館",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "奈義"
+    "hubCity": "奈義",
+    "stayPriority": "low"
   },
   {
     "id": "higashihiroshima",
@@ -38071,7 +38426,8 @@
     "mapPoint": "西条酒蔵通り",
     "subType": "urban",
     "stayDescription": "西条酒蔵通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "東広島"
+    "hubCity": "東広島",
+    "stayPriority": "medium"
   },
   {
     "id": "fukuyama",
@@ -38160,7 +38516,8 @@
     "mapPoint": "福山城",
     "subType": "urban",
     "stayDescription": "福山城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "福山"
+    "hubCity": "福山",
+    "stayPriority": "medium"
   },
   {
     "id": "otoyo",
@@ -38246,7 +38603,8 @@
     "mapPoint": "日本一の大杉",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "大豊"
+    "hubCity": "大豊",
+    "stayPriority": "low"
   },
   {
     "id": "sukumo",
@@ -38334,7 +38692,8 @@
     "mapPoint": "ビオスの里（沖の島）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "宿毛"
+    "hubCity": "宿毛",
+    "stayPriority": "medium"
   },
   {
     "id": "miyoshi-tokushima",
@@ -38423,7 +38782,8 @@
     "mapPoint": "かずら橋",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "三好"
+    "hubCity": "三好",
+    "stayPriority": "medium"
   },
   {
     "id": "oita-city",
@@ -38512,7 +38872,8 @@
     "mapPoint": "高崎山自然動物園",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "大分"
+    "hubCity": "大分",
+    "stayPriority": "medium"
   },
   {
     "id": "yuwaku-onsen",
@@ -38601,7 +38962,8 @@
     "mapPoint": "湯涌温泉街",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯涌温泉"
+    "hubCity": "湯涌温泉",
+    "stayPriority": "high"
   },
   {
     "id": "yura-wakayama",
@@ -38690,7 +39052,8 @@
     "mapPoint": "白崎海洋公園",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "由良"
+    "hubCity": "由良",
+    "stayPriority": "medium"
   },
   {
     "id": "misaki-osaka",
@@ -38779,7 +39142,8 @@
     "mapPoint": "友ヶ島",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "岬"
+    "hubCity": "岬",
+    "stayPriority": "medium"
   },
   {
     "id": "kitakyushu",
@@ -38868,7 +39232,8 @@
     "mapPoint": "小倉城",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "北九州"
+    "hubCity": "北九州",
+    "stayPriority": "medium"
   },
   {
     "id": "asakura",
@@ -38957,7 +39322,8 @@
     "mapPoint": "秋月城跡",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "朝倉"
+    "hubCity": "朝倉",
+    "stayPriority": "medium"
   },
   {
     "id": "ebino",
@@ -39046,7 +39412,8 @@
     "mapPoint": "えびの高原",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "えびの"
+    "hubCity": "えびの",
+    "stayPriority": "low"
   },
   {
     "id": "hitoyoshi-city",
@@ -39134,7 +39501,8 @@
     "mapPoint": "球磨川下り",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "球磨川"
+    "hubCity": "球磨川",
+    "stayPriority": "medium"
   },
   {
     "id": "minamikyushu",
@@ -39235,7 +39603,8 @@
     "mapPoint": "知覧特攻平和会館（近郊）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "南九州"
+    "hubCity": "南九州",
+    "stayPriority": "medium"
   },
   {
     "id": "minamiosumi",
@@ -39336,7 +39705,8 @@
     "mapPoint": "佐多岬",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "南大隅"
+    "hubCity": "南大隅",
+    "stayPriority": "low"
   },
   {
     "id": "chatan",
@@ -39435,7 +39805,8 @@
     "mapPoint": "アメリカンビレッジ",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "北谷"
+    "hubCity": "北谷",
+    "stayPriority": "medium"
   },
   {
     "id": "uruma",
@@ -39534,7 +39905,8 @@
     "mapPoint": "勝連城跡",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "うるま"
+    "hubCity": "うるま",
+    "stayPriority": "medium"
   },
   {
     "id": "nanto",
@@ -39623,7 +39995,8 @@
     "mapPoint": "相倉合掌集落",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "南砺"
+    "hubCity": "南砺",
+    "stayPriority": "medium"
   },
   {
     "id": "hakusan",
@@ -39712,7 +40085,8 @@
     "mapPoint": "白山室堂",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "白山"
+    "hubCity": "白山",
+    "stayPriority": "low"
   },
   {
     "id": "kamo-kyoto",
@@ -39802,7 +40176,8 @@
     "mapPoint": "童仙房高原",
     "subType": "remote",
     "stayDescription": "スマホを鞄に入れたまま、山の時間に身を委ねる旅。",
-    "hubCity": "南山城"
+    "hubCity": "南山城",
+    "stayPriority": "low"
   },
   {
     "id": "shingu-wakayama",
@@ -39890,7 +40265,8 @@
     "mapPoint": "熊野速玉大社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "新宮"
+    "hubCity": "新宮",
+    "stayPriority": "medium"
   },
   {
     "id": "himeshima",
@@ -39995,7 +40371,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "姫島",
-    "localHub": "国東"
+    "localHub": "国東",
+    "stayPriority": "high"
   },
   {
     "id": "toshima",
@@ -40088,7 +40465,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "利島",
-    "localHub": "東京"
+    "localHub": "東京",
+    "stayPriority": "high"
   },
   {
     "id": "joetsu",
@@ -40176,7 +40554,8 @@
     "mapPoint": "春日山城跡",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "上越"
+    "hubCity": "上越",
+    "stayPriority": "medium"
   },
   {
     "id": "myoko",
@@ -40277,7 +40656,8 @@
     "mapPoint": "妙高高原",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "妙高"
+    "hubCity": "妙高",
+    "stayPriority": "low"
   },
   {
     "id": "hokkaido-hakodate",
@@ -40382,7 +40762,8 @@
     "mapPoint": "函館山夜景",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "函館"
+    "hubCity": "函館",
+    "stayPriority": "medium"
   },
   {
     "id": "hokkaido-asahikawa",
@@ -40482,7 +40863,8 @@
     "mapPoint": "旭山動物園",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "旭川"
+    "hubCity": "旭川",
+    "stayPriority": "medium"
   },
   {
     "id": "hokkaido-kushiro",
@@ -40582,7 +40964,8 @@
     "mapPoint": "釧路湿原",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "釧路"
+    "hubCity": "釧路",
+    "stayPriority": "medium"
   },
   {
     "id": "yoichi",
@@ -40670,7 +41053,8 @@
     "mapPoint": "ニッカウヰスキー余市蒸溜所",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "余市"
+    "hubCity": "余市",
+    "stayPriority": "medium"
   },
   {
     "id": "akkeshi",
@@ -40760,7 +41144,8 @@
     "mapPoint": "厚岸グルメパーク",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "厚岸"
+    "hubCity": "厚岸",
+    "stayPriority": "medium"
   },
   {
     "id": "kitami",
@@ -40858,7 +41243,8 @@
     "mapPoint": "北見ハッカ記念館",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "北見"
+    "hubCity": "北見",
+    "stayPriority": "medium"
   },
   {
     "id": "monbetsu",
@@ -40945,7 +41331,8 @@
     "mapPoint": "ガリンコ号",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "紋別"
+    "hubCity": "紋別",
+    "stayPriority": "medium"
   },
   {
     "id": "mashike",
@@ -41035,7 +41422,8 @@
     "mapPoint": "国稀酒造",
     "subType": "urban",
     "stayDescription": "国稀酒造を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "増毛"
+    "hubCity": "増毛",
+    "stayPriority": "medium"
   },
   {
     "id": "fukushima-city",
@@ -41124,7 +41512,8 @@
     "mapPoint": "吾妻小富士",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "福島"
+    "hubCity": "福島",
+    "stayPriority": "medium"
   },
   {
     "id": "omagari",
@@ -41212,7 +41601,8 @@
     "mapPoint": "大曲花火競技大会",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大曲"
+    "hubCity": "大曲",
+    "stayPriority": "medium"
   },
   {
     "id": "shinjou",
@@ -41300,7 +41690,8 @@
     "mapPoint": "新庄まつり",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "新庄"
+    "hubCity": "新庄",
+    "stayPriority": "medium"
   },
   {
     "id": "nagai",
@@ -41399,7 +41790,8 @@
     "mapPoint": "あやめ公園",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "長井"
+    "hubCity": "長井",
+    "stayPriority": "medium"
   },
   {
     "id": "kanagawa-yokohama",
@@ -41492,7 +41884,8 @@
     "mapPoint": "みなとみらい21",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "横浜"
+    "hubCity": "横浜",
+    "stayPriority": "medium"
   },
   {
     "id": "ibaraki-mito",
@@ -41584,7 +41977,8 @@
     "mapPoint": "偕楽園",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "水戸"
+    "hubCity": "水戸",
+    "stayPriority": "medium"
   },
   {
     "id": "utsunomiya",
@@ -41673,7 +42067,8 @@
     "mapPoint": "大谷資料館",
     "subType": "urban",
     "stayDescription": "大谷資料館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "宇都宮"
+    "hubCity": "宇都宮",
+    "stayPriority": "medium"
   },
   {
     "id": "takasaki",
@@ -41762,7 +42157,8 @@
     "mapPoint": "高崎白衣大観音",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高崎"
+    "hubCity": "高崎",
+    "stayPriority": "medium"
   },
   {
     "id": "odawara",
@@ -41851,7 +42247,8 @@
     "mapPoint": "小田原城",
     "subType": "urban",
     "stayDescription": "小田原城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "小田原"
+    "hubCity": "小田原",
+    "stayPriority": "medium"
   },
   {
     "id": "sawara",
@@ -41940,7 +42337,8 @@
     "mapPoint": "佐原の町並み",
     "subType": "urban",
     "stayDescription": "佐原の町並みを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "佐原"
+    "hubCity": "佐原",
+    "stayPriority": "medium"
   },
   {
     "id": "nokogiriyama",
@@ -42030,7 +42428,8 @@
     "mapPoint": "鋸山ロープウェー",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "鋸山"
+    "hubCity": "鋸山",
+    "stayPriority": "low"
   },
   {
     "id": "katsuura-chiba",
@@ -42119,7 +42518,8 @@
     "mapPoint": "勝浦朝市",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "勝浦"
+    "hubCity": "勝浦",
+    "stayPriority": "medium"
   },
   {
     "id": "azumino",
@@ -42206,7 +42606,8 @@
     "mapPoint": "大王わさび農場",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "安曇野"
+    "hubCity": "安曇野",
+    "stayPriority": "medium"
   },
   {
     "id": "nagano-iida",
@@ -42297,7 +42698,8 @@
     "mapPoint": "元善光寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "飯田"
+    "hubCity": "飯田",
+    "stayPriority": "medium"
   },
   {
     "id": "nakatsugawa",
@@ -42386,7 +42788,8 @@
     "mapPoint": "栗きんとん老舗街",
     "subType": "urban",
     "stayDescription": "栗きんとん老舗街を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "中津川"
+    "hubCity": "中津川",
+    "stayPriority": "medium"
   },
   {
     "id": "yaizu",
@@ -42475,7 +42878,8 @@
     "mapPoint": "焼津さかなセンター",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "焼津"
+    "hubCity": "焼津",
+    "stayPriority": "medium"
   },
   {
     "id": "hamanako",
@@ -42565,7 +42969,8 @@
     "mapPoint": "浜名湖ガーデンパーク",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "浜名湖"
+    "hubCity": "浜名湖",
+    "stayPriority": "medium"
   },
   {
     "id": "gamagori",
@@ -42654,7 +43059,8 @@
     "mapPoint": "竹島",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "蒲郡"
+    "hubCity": "蒲郡",
+    "stayPriority": "medium"
   },
   {
     "id": "toyota-city",
@@ -42743,7 +43149,8 @@
     "mapPoint": "香嵐渓（足助）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "豊田"
+    "hubCity": "豊田",
+    "stayPriority": "medium"
   },
   {
     "id": "otsu-shiga",
@@ -42832,7 +43239,8 @@
     "mapPoint": "比叡山延暦寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大津"
+    "hubCity": "大津",
+    "stayPriority": "medium"
   },
   {
     "id": "kusatsu-shiga",
@@ -42921,7 +43329,8 @@
     "mapPoint": "草津宿本陣",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "草津（滋賀）"
+    "hubCity": "草津（滋賀）",
+    "stayPriority": "medium"
   },
   {
     "id": "takashima-shiga",
@@ -43011,7 +43420,8 @@
     "mapPoint": "白鬚神社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "高島"
+    "hubCity": "高島",
+    "stayPriority": "medium"
   },
   {
     "id": "tango-kyoto",
@@ -43100,7 +43510,8 @@
     "mapPoint": "伊根の舟屋（近隣）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "丹後"
+    "hubCity": "丹後",
+    "stayPriority": "medium"
   },
   {
     "id": "owase",
@@ -43200,7 +43611,8 @@
     "mapPoint": "尾鷲港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "尾鷲"
+    "hubCity": "尾鷲",
+    "stayPriority": "medium"
   },
   {
     "id": "gobo",
@@ -43289,7 +43701,8 @@
     "mapPoint": "日高川",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "御坊"
+    "hubCity": "御坊",
+    "stayPriority": "medium"
   },
   {
     "id": "kushimoto",
@@ -43378,7 +43791,8 @@
     "mapPoint": "潮岬（本州最南端）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "串本"
+    "hubCity": "串本",
+    "stayPriority": "medium"
   },
   {
     "id": "shimane-matsue",
@@ -43478,7 +43892,8 @@
     "mapPoint": "松江城",
     "subType": "urban",
     "stayDescription": "松江城を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "松江"
+    "hubCity": "松江",
+    "stayPriority": "medium"
   },
   {
     "id": "hamada-shimane",
@@ -43575,7 +43990,8 @@
     "mapPoint": "浜田港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "浜田"
+    "hubCity": "浜田",
+    "stayPriority": "medium"
   },
   {
     "id": "kure",
@@ -43663,7 +44079,8 @@
     "mapPoint": "大和ミュージアム",
     "subType": "urban",
     "stayDescription": "大和ミュージアムを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "呉"
+    "hubCity": "呉",
+    "stayPriority": "medium"
   },
   {
     "id": "miyoshi-hiroshima",
@@ -43751,7 +44168,8 @@
     "mapPoint": "霧の海展望台",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "三次"
+    "hubCity": "三次",
+    "stayPriority": "medium"
   },
   {
     "id": "nagato-yamaguchi",
@@ -43840,7 +44258,8 @@
     "mapPoint": "元乃隅稲荷神社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "長門"
+    "hubCity": "長門",
+    "stayPriority": "medium"
   },
   {
     "id": "mine-yamaguchi",
@@ -43927,7 +44346,8 @@
     "mapPoint": "秋芳洞",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "美祢"
+    "hubCity": "美祢",
+    "stayPriority": "medium"
   },
   {
     "id": "kagawa-takamatsu",
@@ -44028,7 +44448,8 @@
     "mapPoint": "栗林公園",
     "subType": "urban",
     "stayDescription": "栗林公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "高松"
+    "hubCity": "高松",
+    "stayPriority": "medium"
   },
   {
     "id": "sakaide",
@@ -44117,7 +44538,8 @@
     "mapPoint": "瀬戸大橋記念館",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "坂出"
+    "hubCity": "坂出",
+    "stayPriority": "medium"
   },
   {
     "id": "tosa-city",
@@ -44207,7 +44629,8 @@
     "mapPoint": "宇佐大橋",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "土佐市"
+    "hubCity": "土佐市",
+    "stayPriority": "medium"
   },
   {
     "id": "kanonji",
@@ -44296,7 +44719,8 @@
     "mapPoint": "琴弾公園・銭形砂絵",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "観音寺"
+    "hubCity": "観音寺",
+    "stayPriority": "medium"
   },
   {
     "id": "fukuoka-city",
@@ -44394,7 +44818,8 @@
     "mapPoint": "博多屋台",
     "subType": "urban",
     "stayDescription": "食べることが旅の目的になる場所。昼も夜も食べ続けたい。",
-    "hubCity": "福岡"
+    "hubCity": "福岡",
+    "stayPriority": "medium"
   },
   {
     "id": "kurume",
@@ -44483,7 +44908,8 @@
     "mapPoint": "水天宮（久留米）",
     "subType": "urban",
     "stayDescription": "水天宮（久留米）を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "久留米"
+    "hubCity": "久留米",
+    "stayPriority": "medium"
   },
   {
     "id": "yatsushiro",
@@ -44572,7 +44998,8 @@
     "mapPoint": "八代城跡",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "八代"
+    "hubCity": "八代",
+    "stayPriority": "medium"
   },
   {
     "id": "oguni-kumamoto",
@@ -44667,7 +45094,8 @@
     "mapPoint": "杖立温泉",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "小国"
+    "hubCity": "小国",
+    "stayPriority": "high"
   },
   {
     "id": "izumi-kagoshima",
@@ -44754,7 +45182,8 @@
     "mapPoint": "ツル観察センター",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "出水"
+    "hubCity": "出水",
+    "stayPriority": "medium"
   },
   {
     "id": "makurazaki",
@@ -44842,7 +45271,8 @@
     "mapPoint": "枕崎港",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "枕崎"
+    "hubCity": "枕崎",
+    "stayPriority": "medium"
   },
   {
     "id": "miyakonojo",
@@ -44930,7 +45360,8 @@
     "mapPoint": "霧島神宮（近隣）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "都城"
+    "hubCity": "都城",
+    "stayPriority": "medium"
   },
   {
     "id": "nanjo-okinawa",
@@ -45020,7 +45451,8 @@
     "mapPoint": "斎場御嶽",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "南城"
+    "hubCity": "南城",
+    "stayPriority": "medium"
   },
   {
     "id": "aogashima",
@@ -45103,7 +45535,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "青ヶ島",
-    "localHub": "八丈島"
+    "localHub": "八丈島",
+    "stayPriority": "high"
   },
   {
     "id": "kugashima",
@@ -45188,7 +45621,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "久賀島",
-    "localHub": "五島"
+    "localHub": "五島",
+    "stayPriority": "high"
   },
   {
     "id": "nakatosa",
@@ -45276,7 +45710,8 @@
     "mapPoint": "久礼大正市場",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "中土佐"
+    "hubCity": "中土佐",
+    "stayPriority": "medium"
   },
   {
     "id": "ikata",
@@ -45367,7 +45802,8 @@
     "mapPoint": "佐田岬（本土最西端）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "伊方"
+    "hubCity": "伊方",
+    "stayPriority": "medium"
   },
   {
     "id": "muroto-cape",
@@ -45456,7 +45892,8 @@
     "mapPoint": "室戸岬",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "室戸岬"
+    "hubCity": "室戸岬",
+    "stayPriority": "medium"
   },
   {
     "id": "oshima-yamaguchi",
@@ -45557,7 +45994,8 @@
     "mapPoint": "片添ヶ浜",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "大島（山口）"
+    "hubCity": "大島（山口）",
+    "stayPriority": "medium"
   },
   {
     "id": "ibara",
@@ -45645,7 +46083,8 @@
     "mapPoint": "八塔寺ふるさと村",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "井原"
+    "hubCity": "井原",
+    "stayPriority": "medium"
   },
   {
     "id": "niimi",
@@ -45733,7 +46172,8 @@
     "mapPoint": "満奇洞",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "新見"
+    "hubCity": "新見",
+    "stayPriority": "medium"
   },
   {
     "id": "uda-nara",
@@ -45823,7 +46263,8 @@
     "mapPoint": "室生寺",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "宇陀"
+    "hubCity": "宇陀",
+    "stayPriority": "medium"
   },
   {
     "id": "mimasaka",
@@ -45912,7 +46353,8 @@
     "mapPoint": "湯郷温泉",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "美作"
+    "hubCity": "美作",
+    "stayPriority": "high"
   },
   {
     "id": "kochi-shimanto",
@@ -45999,7 +46441,8 @@
     "mapPoint": "佐田沈下橋",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "四万十川"
+    "hubCity": "四万十川",
+    "stayPriority": "medium"
   },
   {
     "id": "yonago",
@@ -46096,7 +46539,8 @@
     "mapPoint": "皆生温泉",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "米子"
+    "hubCity": "米子",
+    "stayPriority": "medium"
   },
   {
     "id": "kaga-onsen2",
@@ -46183,7 +46627,8 @@
     "mapPoint": "古総湯",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "山代温泉"
+    "hubCity": "山代温泉",
+    "stayPriority": "high"
   },
   {
     "id": "takayama-kogen",
@@ -46272,7 +46717,8 @@
     "mapPoint": "新穂高ロープウェイ",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "飛騨高山（北アルプス側）"
+    "hubCity": "飛騨高山（北アルプス側）",
+    "stayPriority": "low"
   },
   {
     "id": "iga-ueno",
@@ -46359,7 +46805,8 @@
     "mapPoint": "伊賀流忍者博物館",
     "subType": "urban",
     "stayDescription": "伊賀流忍者博物館を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "伊賀上野"
+    "hubCity": "伊賀上野",
+    "stayPriority": "medium"
   },
   {
     "id": "miyanoshita",
@@ -46448,7 +46895,8 @@
     "mapPoint": "富士屋ホテル",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "宮ノ下"
+    "hubCity": "宮ノ下",
+    "stayPriority": "high"
   },
   {
     "id": "shibu-onsen",
@@ -46535,7 +46983,8 @@
     "mapPoint": "渋温泉九湯めぐり",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "渋温泉"
+    "hubCity": "渋温泉",
+    "stayPriority": "high"
   },
   {
     "id": "togatta-onsen",
@@ -46624,7 +47073,8 @@
     "mapPoint": "遠刈田温泉共同浴場",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "遠刈田温泉"
+    "hubCity": "遠刈田温泉",
+    "stayPriority": "high"
   },
   {
     "id": "hachimantai-onsen",
@@ -46714,7 +47164,8 @@
     "mapPoint": "後生掛温泉",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "後生掛温泉"
+    "hubCity": "後生掛温泉",
+    "stayPriority": "high"
   },
   {
     "id": "iiyama-onsen",
@@ -46803,7 +47254,8 @@
     "mapPoint": "麻釜（おがま）",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "野沢菜の里・野沢温泉"
+    "hubCity": "野沢菜の里・野沢温泉",
+    "stayPriority": "high"
   },
   {
     "id": "ono-fukui",
@@ -46906,7 +47358,8 @@
     "mapPoint": "越前大野城",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大野"
+    "hubCity": "大野",
+    "stayPriority": "medium"
   },
   {
     "id": "katsuyama",
@@ -47006,7 +47459,8 @@
     "mapPoint": "福井県立恐竜博物館",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "勝山"
+    "hubCity": "勝山",
+    "stayPriority": "medium"
   },
   {
     "id": "nomaike",
@@ -47089,7 +47543,8 @@
     "mapPoint": "野間池港",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "野間池"
+    "hubCity": "野間池",
+    "stayPriority": "medium"
   },
   {
     "id": "hioki",
@@ -47178,7 +47633,8 @@
     "mapPoint": "美山（苗代川）陶芸村",
     "subType": "urban",
     "stayDescription": "美山（苗代川）陶芸村を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "日置"
+    "hubCity": "日置",
+    "stayPriority": "medium"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -47267,7 +47723,8 @@
     "mapPoint": "鶴の湯温泉",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "乳頭温泉郷"
+    "hubCity": "乳頭温泉郷",
+    "stayPriority": "high"
   },
   {
     "id": "hirakawa",
@@ -47356,7 +47813,8 @@
     "mapPoint": "碇ヶ関温泉",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "平川"
+    "hubCity": "平川",
+    "stayPriority": "medium"
   },
   {
     "id": "kurikoma",
@@ -47445,7 +47903,8 @@
     "mapPoint": "栗駒山",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "栗駒"
+    "hubCity": "栗駒",
+    "stayPriority": "low"
   },
   {
     "id": "namioka",
@@ -47534,7 +47993,8 @@
     "mapPoint": "浪岡城跡",
     "subType": "urban",
     "stayDescription": "浪岡城跡を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "浪岡"
+    "hubCity": "浪岡",
+    "stayPriority": "medium"
   },
   {
     "id": "shimokita",
@@ -47624,7 +48084,8 @@
     "mapPoint": "恐山（近隣）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "下北半島"
+    "hubCity": "下北半島",
+    "stayPriority": "medium"
   },
   {
     "id": "towada-lake",
@@ -47711,7 +48172,8 @@
     "mapPoint": "十和田湖遊覧船",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "十和田湖"
+    "hubCity": "十和田湖",
+    "stayPriority": "medium"
   },
   {
     "id": "rikuchu-coast",
@@ -47800,7 +48262,8 @@
     "mapPoint": "吉里吉里海岸",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "三陸（大槌）"
+    "hubCity": "三陸（大槌）",
+    "stayPriority": "medium"
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -47886,7 +48349,8 @@
     "mapPoint": "中尊寺金色堂",
     "subType": "urban",
     "stayDescription": "中尊寺金色堂を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "平泉周辺"
+    "hubCity": "平泉周辺",
+    "stayPriority": "medium"
   },
   {
     "id": "numata",
@@ -47975,7 +48439,8 @@
     "mapPoint": "沼田城跡",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "沼田"
+    "hubCity": "沼田",
+    "stayPriority": "medium"
   },
   {
     "id": "tsuchiura",
@@ -48064,7 +48529,8 @@
     "mapPoint": "霞ヶ浦サイクリングロード",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "土浦"
+    "hubCity": "土浦",
+    "stayPriority": "medium"
   },
   {
     "id": "oshika",
@@ -48153,7 +48619,8 @@
     "mapPoint": "御番所公園（展望台）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "牡鹿半島"
+    "hubCity": "牡鹿半島",
+    "stayPriority": "medium"
   },
   {
     "id": "kujukuri-icho",
@@ -48242,7 +48709,8 @@
     "mapPoint": "玉前神社",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "一宮（東浪見）"
+    "hubCity": "一宮（東浪見）",
+    "stayPriority": "medium"
   },
   {
     "id": "miyota",
@@ -48329,7 +48797,8 @@
     "mapPoint": "浅間山眺望スポット",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "御代田"
+    "hubCity": "御代田",
+    "stayPriority": "medium"
   },
   {
     "id": "saijo-hiroshima",
@@ -48417,7 +48886,8 @@
     "mapPoint": "西条酒蔵通り",
     "subType": "urban",
     "stayDescription": "西条酒蔵通りを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "西条（酒都）"
+    "hubCity": "西条（酒都）",
+    "stayPriority": "medium"
   },
   {
     "id": "ryoishi",
@@ -48518,7 +48988,8 @@
     "mapPoint": "綾里湾",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "綾里"
+    "hubCity": "綾里",
+    "stayPriority": "medium"
   },
   {
     "id": "noheji",
@@ -48607,7 +49078,8 @@
     "mapPoint": "野辺地防雪原林",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "野辺地"
+    "hubCity": "野辺地",
+    "stayPriority": "medium"
   },
   {
     "id": "tobetsu",
@@ -48695,7 +49167,8 @@
     "mapPoint": "スウェーデンヒルズ",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "当別"
+    "hubCity": "当別",
+    "stayPriority": "medium"
   },
   {
     "id": "fukaura",
@@ -48785,7 +49258,8 @@
     "mapPoint": "不老不死温泉（海辺の露天風呂）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "深浦"
+    "hubCity": "深浦",
+    "stayPriority": "medium"
   },
   {
     "id": "isesaki",
@@ -48874,7 +49348,8 @@
     "mapPoint": "伊勢崎市華蔵寺公園",
     "subType": "urban",
     "stayDescription": "伊勢崎市華蔵寺公園を歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "伊勢崎"
+    "hubCity": "伊勢崎",
+    "stayPriority": "medium"
   },
   {
     "id": "matsumoto-kaido",
@@ -48962,7 +49437,8 @@
     "mapPoint": "塩尻ワイナリー",
     "subType": "urban",
     "stayDescription": "塩尻ワイナリーを歩いて、夜は古い街の宿にこもる。歴史が体に入ってくる旅。",
-    "hubCity": "塩尻"
+    "hubCity": "塩尻",
+    "stayPriority": "medium"
   },
   {
     "id": "aizu-misato",
@@ -49050,7 +49526,8 @@
     "mapPoint": "伊佐須美神社",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "会津美里"
+    "hubCity": "会津美里",
+    "stayPriority": "medium"
   },
   {
     "id": "tateyama-toyama",
@@ -49137,7 +49614,8 @@
     "mapPoint": "雷鳥沢",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "立山"
+    "hubCity": "立山",
+    "stayPriority": "low"
   },
   {
     "id": "suo-sanbe",
@@ -49224,7 +49702,8 @@
     "mapPoint": "三瓶温泉",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "三瓶山"
+    "hubCity": "三瓶山",
+    "stayPriority": "low"
   },
   {
     "id": "takachihogo-shishiku",
@@ -49319,7 +49798,8 @@
     "mapPoint": "鶴富屋敷",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "椎葉"
+    "hubCity": "椎葉",
+    "stayPriority": "low"
   },
   {
     "id": "kamishihoro",
@@ -49406,7 +49886,8 @@
     "mapPoint": "ナイタイ高原牧場",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "上士幌"
+    "hubCity": "上士幌",
+    "stayPriority": "medium"
   },
   {
     "id": "yakumo",
@@ -49495,7 +49976,8 @@
     "mapPoint": "八雲あんどん祭り",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "八雲"
+    "hubCity": "八雲",
+    "stayPriority": "medium"
   },
   {
     "id": "susaki",
@@ -49583,7 +50065,8 @@
     "mapPoint": "鍋焼きラーメン（橋本食堂）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "須崎"
+    "hubCity": "須崎",
+    "stayPriority": "medium"
   },
   {
     "id": "ube",
@@ -49681,7 +50164,8 @@
     "mapPoint": "ときわ公園野外彫刻",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "宇部"
+    "hubCity": "宇部",
+    "stayPriority": "medium"
   },
   {
     "id": "itoigawa2",
@@ -49769,7 +50253,8 @@
     "mapPoint": "フォッサマグナミュージアム",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "糸魚川（ヒスイ）"
+    "hubCity": "糸魚川（ヒスイ）",
+    "stayPriority": "medium"
   },
   {
     "id": "agematsu",
@@ -49858,7 +50343,8 @@
     "mapPoint": "寝覚の床",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "上松"
+    "hubCity": "上松",
+    "stayPriority": "medium"
   },
   {
     "id": "unzen2",
@@ -49947,7 +50433,8 @@
     "mapPoint": "雲仙地獄",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "雲仙温泉"
+    "hubCity": "雲仙温泉",
+    "stayPriority": "high"
   },
   {
     "id": "kochi-ino",
@@ -50036,7 +50523,8 @@
     "mapPoint": "土佐和紙工芸村QRAUD",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "いの町"
+    "hubCity": "いの町",
+    "stayPriority": "medium"
   },
   {
     "id": "hiji",
@@ -50125,7 +50613,8 @@
     "mapPoint": "暘谷城跡（日出城）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "日出"
+    "hubCity": "日出",
+    "stayPriority": "medium"
   },
   {
     "id": "tsunan",
@@ -50211,7 +50700,8 @@
     "mapPoint": "ひまわり広場（7月下旬）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "津南"
+    "hubCity": "津南",
+    "stayPriority": "medium"
   },
   {
     "id": "kurobe",
@@ -50299,7 +50789,8 @@
     "mapPoint": "宇奈月温泉",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "黒部"
+    "hubCity": "黒部",
+    "stayPriority": "medium"
   },
   {
     "id": "tsuruoka-kinzan",
@@ -50388,7 +50879,8 @@
     "mapPoint": "金山の景観（重文化財）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "金山町"
+    "hubCity": "金山町",
+    "stayPriority": "medium"
   },
   {
     "id": "tomari-okinawa",
@@ -50472,7 +50964,8 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊平屋島",
-    "localHub": "今帰仁"
+    "localHub": "今帰仁",
+    "stayPriority": "high"
   },
   {
     "id": "ogimi",
@@ -50562,6 +51055,7 @@
     "mapPoint": "塩屋大綱引き",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大宜味"
+    "hubCity": "大宜味",
+    "stayPriority": "medium"
   }
 ]

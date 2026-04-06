@@ -203,10 +203,16 @@ function buildNearbyHotelLinks(dest) {
  * 宿泊地を解決する（交通ロジックから独立）。
  *
  * 優先順位:
- *   1. stayAreas[0] — 明示的な宿泊エリア指定
- *   2. destType === 'city' → dest.name（都市なら自身に泊まる）
- *   3. hubCity — 拠点都市（温泉・山岳・半島など）
- *   4. dest.name — 最終フォールバック
+ *   1. stayAreas[0]          — 明示的な宿泊エリア指定
+ *   2. stayPriority='high'   → 現地泊（温泉・島など）
+ *   3. destType='city'       → 都市なら自身に泊まる
+ *   4. hubCity               — 拠点都市（山岳・秘境・半島など）
+ *   5. dest.name             — 最終フォールバック
+ *
+ * stayPriority:
+ *   high   — 現地泊を優先（onsen, island）
+ *   medium — 既存ロジック通り（city, sight）
+ *   low    — hubCity泊を優先（mountain, remote, peninsula）
  *
  * @param {object} dest — destinations.json エントリ
  * @returns {string} 宿泊地名
@@ -214,6 +220,9 @@ function buildNearbyHotelLinks(dest) {
 export function resolveStay(dest) {
   if (dest.stayAreas && dest.stayAreas.length > 0) {
     return dest.stayAreas[0];
+  }
+  if (dest.stayPriority === 'high') {
+    return dest.displayName || dest.name;
   }
   if (dest.destType === 'city') {
     return dest.displayName || dest.name;
