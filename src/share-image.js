@@ -11,7 +11,7 @@
  * @param {string} departure — 出発地名
  * @returns {Promise<HTMLCanvasElement>}
  */
-export async function captureShareCard(city, departure) {
+export async function captureShareCard(city, departure, transportContext = null) {
   if (typeof window.html2canvas !== 'function') {
     throw new Error('html2canvas が読み込まれていません');
   }
@@ -21,6 +21,13 @@ export async function captureShareCard(city, departure) {
   const tags       = (city.primary ?? city.tags ?? []).slice(0, 3).join('・');
   const spots      = (city.spots ?? []).slice(0, 3).join('・');
   const tagline    = city.description?.split('。')[0] ?? '';
+
+  // ルート理由文（1行）
+  const ROUTE_ICON = { flight: '✈️', rail: '🚃', ferry: '⛴' };
+  const best       = transportContext?.bestRoute;
+  const routeLine  = best
+    ? `${ROUTE_ICON[best.transportType] ?? '🚃'} ${best.reason || transportContext?.reason || ''}`
+    : '';
 
   // ── オフスクリーンカード要素を生成 ──
   const card = document.createElement('div');
@@ -42,7 +49,8 @@ export async function captureShareCard(city, departure) {
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
     ${tagline ? `<div style="font-size:15px;color:#555;line-height:1.7;margin-bottom:16px;">${escHtml(tagline)}</div>` : ''}
     <div style="font-size:13px;color:#999;margin-bottom:8px;">📍 ${escHtml(prefecture)}${tags ? `　🏷 ${escHtml(tags)}` : ''}</div>
-    <div style="font-size:13px;color:#888;margin-bottom:20px;">🚃 ${escHtml(departure)} → ${escHtml(name)}</div>
+    <div style="font-size:13px;color:#888;margin-bottom:${routeLine ? '8' : '20'}px;">${escHtml(departure)} → ${escHtml(name)}</div>
+    ${routeLine ? `<div style="font-size:14px;color:#444;margin-bottom:20px;">${escHtml(routeLine)}</div>` : ''}
     ${spots ? `<div style="font-size:13px;color:#666;line-height:1.6;">${escHtml(spots)}</div>` : ''}
     <div style="font-size:11px;color:#ccc;text-align:right;margin-top:32px;letter-spacing:0.08em;">tabidokoiko.com</div>
   `;

@@ -126,14 +126,13 @@ function assignTier(type, distKm, city, hasCta, departure) {
   if (type === 'flight') {
     const hasDirect = departure && city?.airportGateway && hasFlightInDB(departure, city.airportGateway);
 
-    // 例外: 新幹線強区間 → flight を Tier3 に降格
     if (hasDirect && isShinkansenStrong(departure, city)) {
-      return { tier: 3, reason: '新幹線の方が便利な区間' };
+      return { tier: 3, reason: '直行で一気に行ける' };
     }
 
-    if (hasDirect && distKm >= FLIGHT_PREFER_KM) return { tier: 1, reason: '直行で最短' };
-    if (hasDirect)                                return { tier: 2, reason: '直行便あり' };
-    return { tier: 2, reason: '経由便で行ける' };
+    if (hasDirect && distKm >= FLIGHT_PREFER_KM) return { tier: 1, reason: '直行で一気に行ける' };
+    if (hasDirect)                                return { tier: 2, reason: '直行で一気に行ける' };
+    return { tier: 2, reason: '飛行機で行ける' };
   }
 
   if (type === 'ferry') {
@@ -142,12 +141,11 @@ function assignTier(type, distKm, city, hasCta, departure) {
   }
 
   if (type === 'rail') {
-    // 例外: 新幹線強区間 → rail を Tier1 に昇格
-    if (isShinkansenStrong(departure, city)) return { tier: 1, reason: '新幹線で直行' };
+    if (isShinkansenStrong(departure, city)) return { tier: 1, reason: '電車でスムーズに行ける' };
 
-    if (distKm <= 300 && !hasVia)  return { tier: 1, reason: '乗り換えなしで直通' };
-    if (distKm <= 600)             return { tier: 2, reason: '新幹線で行ける' };
-    return { tier: 3, reason: '鉄道で行ける' };
+    if (distKm <= 300 && !hasVia)  return { tier: 1, reason: '電車でスムーズに行ける' };
+    if (distKm <= 600)             return { tier: 2, reason: '電車でスムーズに行ける' };
+    return { tier: 3, reason: '電車で行ける' };
   }
 
   return { tier: 4, reason: '' };
@@ -218,19 +216,9 @@ function selectBestRoute(candidates, rejected) {
 
   for (let i = 1; i < candidates.length; i++) {
     const c = candidates[i];
-    let rejectedReason;
-    if (c.tier > best.tier) {
-      rejectedReason = '直行がない';
-    } else if (c.time > best.time + 30) {
-      rejectedReason = '時間がかかる';
-    } else {
-      rejectedReason = `${best.type}の方が早い`;
-    }
     alternatives.push({
       transportType: c.type,
-      time: c.time,
-      tier: c.tier,
-      rejectedReason,
+      rejectedReason: buildRejectedReason(best.type, c.type, c.tier, best.tier),
     });
   }
 
@@ -256,34 +244,51 @@ export function resolveAccessType(city, transportType) {
    ⑦ UI用 reason テキスト
 ══════════════════════════════════════════════════════ */
 
+/**
+ * ルート理由文（意味ベース・数値なし）。
+ * 15〜25文字。ユーザーが一瞬で納得できる文言。
+ */
 export function buildRouteReason(transportType, distanceKm, city = null, isFallback = false, mapOnlyFallback = false) {
   if (mapOnlyFallback) return '地図でルートを確認';
 
   const accessType = resolveAccessType(city, transportType);
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
-  if (accessType === 'bus' || accessType === 'car') {
-    const lastMile = accessType === 'bus' ? 'バス' : '車';
-    if (transportType === 'flight') return `最寄空港まで飛んで${lastMile}に乗り換え`;
-    if (transportType === 'ferry')  return `フェリーで渡って${lastMile}に乗り換え`;
-    if (distanceKm <= 200) return `電車で近くまで行って${lastMile}に乗り換え`;
-    return `新幹線で近くまで行って${lastMile}に乗り換え`;
+  // 複合ルート
+  if (accessType === 'bus') {
+    if (transportType === 'flight') return '飛行機＋バスで一気に行ける';
+    if (transportType === 'ferry')  return 'フェリー＋バスで渡れる';
+    return '電車＋バスでスムーズに行ける';
+  }
+  if (accessType === 'car') {
+    if (transportType === 'flight') return '飛行機＋車で一気に行ける';
+    if (transportType === 'ferry')  return 'フェリー＋車で渡れる';
+    return '電車＋車でスムーズに行ける';
   }
 
   switch (transportType) {
-    case 'flight':
-      if (city?.hasDirectFlight) return '直行便あり、最短で着ける';
-      return '飛行機が最短ルート';
-    case 'ferry':
-      return isIsland ? '船で直接渡れる' : 'フェリーで直接行ける';
-    case 'rail':
-      if (distanceKm <= 100) return '乗り換え少なく一直線で行ける';
-      if (distanceKm <= 300) return '新幹線で乗り換えなしで行ける';
-      if (distanceKm <= 600) return '新幹線1本で行ける距離';
-      return '新幹線で行ける最遠エリア';
-    default:
-      return '';
+    case 'flight': return '直行で一気に行ける';
+    case 'ferry':  return isIsland ? 'フェリーで直接渡れる' : 'フェリーで行ける';
+    case 'rail':   return '電車でスムーズに行ける';
+    default:       return '';
   }
+}
+
+/**
+ * alternative の不採用理由（意味ベース・数値なし）。
+ */
+export function buildRejectedReason(bestType, altType, altTier, bestTier) {
+  if (altTier > bestTier) {
+    // Tier差 → 直行がない / 遠回り
+    if (altType === 'flight') return '直行便がない';
+    if (altType === 'ferry')  return 'フェリー航路がない';
+    return '遠回りになる';
+  }
+  // 同Tier → 時間差
+  if (altType === 'rail')   return '遠回りになる';
+  if (altType === 'flight') return '直行便がない';
+  if (altType === 'ferry')  return '時間がかかる';
+  return '現実的でない';
 }
 
 /* ══════════════════════════════════════════════════════
@@ -400,7 +405,7 @@ export function buildTransportContext(departure, city) {
     bestRoute: {
       transportType,
       accessType,
-      time: best ? calculateTime(transportType, distanceKm) : 0,
+      distanceKm,
       reason: selectionReason,
     },
     alternatives,

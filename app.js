@@ -106,6 +106,8 @@ function draw() {
   try {
     const plan = buildTravelPlan(city, state.departure);
 
+    state.lastTransportContext = plan.transportContext;
+
     renderResult({
       city,
       transportLinks:  plan.transportLinks,
@@ -243,7 +245,7 @@ function bindShareHandlers() {
       imgBtn.disabled = true;
       imgBtn.textContent = '生成中…';
       try {
-        const canvas = await captureShareCard(city, state.departure);
+        const canvas = await captureShareCard(city, state.departure, state.lastTransportContext);
         shareOrDownload(canvas, city, state.departure);
       } catch (err) {
         console.error('[share-img] 画像生成失敗:', err);

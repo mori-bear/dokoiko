@@ -328,56 +328,32 @@ function buildCategoryBadge(city) {
 
 const TRANSPORT_ICON = { flight: '✈️', rail: '🚃', ferry: '⛴' };
 
-function formatTime(min) {
-  if (!min || min >= 9999) return '';
-  const h = Math.floor(min / 60);
-  const m = min % 60;
-  return h > 0 ? `約${h}時間${m > 0 ? m + '分' : ''}` : `約${m}分`;
-}
-
 function buildRouteBlock(tc, departure, destLabel, city) {
   if (!tc?.bestRoute) return '';
 
   const best = tc.bestRoute;
   const icon = TRANSPORT_ICON[best.transportType] ?? '🚃';
-  const timeStr = formatTime(best.time);
   const viaStr = tc.via ? `<span class="route-via">${tc.via}経由</span>` : '';
 
-  // 最適ルート
+  // bestRoute: アイコン + 理由文のみ
   const bestHtml = `
     <div class="best-route">
       <span class="best-route-icon">${icon}</span>
-      <div class="best-route-body">
-        <span class="best-route-reason">${best.reason || tc.reason}</span>
-        ${timeStr ? `<span class="best-route-time">${timeStr}</span>` : ''}
-      </div>
+      <span class="best-route-reason">${best.reason || tc.reason}</span>
     </div>`;
 
-  // alternatives（最大2つ）
+  // alternatives（最大2つ）: アイコン + 不採用理由のみ
   let altHtml = '';
   const alts = (tc.alternatives ?? []).slice(0, 2);
   if (alts.length > 0) {
     const altItems = alts.map(a => {
       const aIcon = TRANSPORT_ICON[a.transportType] ?? '🚃';
-      const aTime = formatTime(a.time);
       return `<div class="alt-route">
         <span class="alt-route-icon">${aIcon}</span>
-        <span class="alt-route-label">${aTime}</span>
         <span class="alt-route-reason">${a.rejectedReason}</span>
       </div>`;
     }).join('');
     altHtml = `<div class="alt-routes">${altItems}</div>`;
-  }
-
-  // rejected（DB除外のみ表示）
-  const dbRejected = (tc.rejectedRoutes ?? []).filter(r => r.reason !== '条件外');
-  let rejHtml = '';
-  if (dbRejected.length > 0) {
-    const rejItems = dbRejected.map(r => {
-      const rIcon = TRANSPORT_ICON[r.type] ?? '';
-      return `<span class="rej-route">${rIcon} ${r.reason}</span>`;
-    }).join('');
-    rejHtml = `<div class="rej-routes">${rejItems}</div>`;
   }
 
   return `
@@ -386,7 +362,6 @@ function buildRouteBlock(tc, departure, destLabel, city) {
       ${viaStr}
       ${bestHtml}
       ${altHtml}
-      ${rejHtml}
     </div>`;
 }
 
@@ -1092,7 +1067,7 @@ function mergeConsecutiveTransfers(transferSteps) {
       const hops    = j - i - 1;
       const from    = extractStepFrom(first);
       const to      = extractStepTo(last);
-      result.push({ _mergedRoute: true, routeLabel: `${from} → ${to}（${mode}・乗換${hops}回）` });
+      result.push({ _mergedRoute: true, routeLabel: `${from} → ${to}（${mode}）` });
     } else {
       result.push(transferSteps[i]);
     }
@@ -1511,10 +1486,9 @@ function buildStayBlock(hotelLinks, city, stayType, stayCityName = null) {
   const isDaytrip  = stayType === 'daytrip';
   const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
 
-  // 日帰りで2.5時間以上: 滞在提案メモ
-  const hours = Math.round(travelMins / 6) / 10; // 小数1桁
+  // 日帰りで遠い場合: 滞在提案メモ（時間表示なし）
   const longDaytripNote = isDaytrip && travelMins >= 150
-    ? `<p class="stay-note">このルート、日帰りだと少し長め（約${hours}時間）。ゆっくりするなら1泊もおすすめ。</p>`
+    ? `<p class="stay-note">日帰りだと少し遠め。ゆっくりするなら1泊もおすすめ。</p>`
     : '';
 
   const stayHint = buildStayHint(city);

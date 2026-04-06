@@ -12,4 +12,5 @@ export const state = {
   excludeCar:   false,
   pool:         [],
   poolIndex:    0,
+  lastTransportContext: null,
 };
