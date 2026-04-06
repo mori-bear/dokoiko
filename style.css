@@ -481,6 +481,13 @@ body {
   color: var(--text);
 }
 
+.city-tagline {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-sub);
+  letter-spacing: -0.5px;
+}
+
 .city-sub {
   margin-top: 6px;
   font-size: 13px;
@@ -489,6 +496,20 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.city-description {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.city-spots {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--text-sub);
+  letter-spacing: 0.3px;
 }
 
 .operator-badge {
@@ -1695,6 +1716,10 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 
   .city-name {
     font-size: 28px;
+  }
+
+  .city-tagline {
+    font-size: 15px;
   }
 
   .result-card {

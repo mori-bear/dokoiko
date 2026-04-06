@@ -92,20 +92,56 @@ function buildCityBlock(city) {
 
   const categoryBadge = buildCategoryBadge(city);
 
-  // 所在地（都道府県＋市区町村）
-  const locationStr = city.prefecture && city.city && city.city !== city.name
-    ? `${city.prefecture}${city.city}`
-    : city.prefecture || '';
+  // 所在地
+  const locationStr = city.prefecture || '';
+
+  // タグライン: catch から「。」以降を削除して短縮
+  const tagline = buildTagline(city);
+  const nameDisplay = city.displayName || city.name;
+  const titleHtml = tagline
+    ? `<h2 class="city-name">${nameDisplay}<span class="city-tagline">｜${tagline}</span></h2>`
+    : `<h2 class="city-name">${nameDisplay}</h2>`;
+
+  // 説明文
+  const descHtml = city.description
+    ? `<p class="city-description">${city.description}</p>`
+    : '';
+
+  // スポット例（最大3つ）
+  const spots = city.spots?.length ? city.spots : displayTags.slice(0, 3);
+  const spotsHtml = spots.length
+    ? `<p class="city-spots">${spots.slice(0, 3).join('・')}</p>`
+    : '';
 
   return `
     <div class="city-block">
       <div class="city-header">
-        <h2 class="city-name">${city.displayName || city.name}</h2>
+        ${titleHtml}
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
       ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
+      ${descHtml}
+      ${spotsHtml}
     </div>
   `;
+}
+
+/**
+ * catch フレーズからタグラインを生成。
+ * 短く体験が伝わる表現（20文字以内を目安）。
+ */
+function buildTagline(city) {
+  // catch がなければ tags から生成
+  if (!city.catch) {
+    const tags = city.primary ?? city.tags ?? [];
+    return tags.slice(0, 2).join('と') || '';
+  }
+  // catch の最初の句点まで、長すぎたら tags フォールバック
+  const first = city.catch.split(/[。、！]/)[0] ?? '';
+  if (first.length <= 20) return first;
+  // 長すぎる場合: tags から簡潔に
+  const tags = city.primary ?? city.tags ?? [];
+  return tags.slice(0, 2).join('と') || '';
 }
 
 /* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */
