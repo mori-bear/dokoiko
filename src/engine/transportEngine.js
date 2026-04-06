@@ -42,11 +42,30 @@ import { calcDistanceKm }                          from '../utils/geo.js';
 import { resolveTransportLinks }                   from '../transport/resolveTransportLinks.js';
 import { resolveCtaByType }                        from './ctaResolver.js';
 import { buildRouteMapUrl }                        from '../utils/map/buildRouteMapUrl.js';
+import { loadJson }                                from '../lib/loadJson.js';
 import {
   findRegionPath,
   getRegionTransportHint,
   DEPARTURE_REGION_MAP,
 } from './regionGraph.js';
+
+/* ── 交通DB（起動時1回ロード） ── */
+const FLIGHT_ROUTES = await loadJson('../data/flightRoutes.json', import.meta.url);
+const FERRY_ROUTES  = await loadJson('../data/ferries.json',      import.meta.url);
+
+/** 出発地→目的地空港の直行便がDBに存在するか */
+function hasFlightInDB(departure, airportGateway) {
+  if (!departure || !airportGateway) return false;
+  return FLIGHT_ROUTES.some(r => r.from === departure && r.to === airportGateway);
+}
+
+/** 目的地のフェリー航路がDBに存在するか */
+function hasFerryInDB(destId, ferryGateway) {
+  if (!destId && !ferryGateway) return false;
+  return FERRY_ROUTES.some(r =>
+    (destId && r.destId === destId) || (ferryGateway && r.from === ferryGateway)
+  );
+}
 
 /* ── 判定閾値 ── */
 const FLIGHT_DISTANCE_KM    = 500;
@@ -60,34 +79,40 @@ const FLIGHT_ONLY_REGION    = '沖縄';
 
 /**
  * ルートが物理的に可能かを判定（false = 完全除外）。
+ * DB照合: flight/ferry はDBに存在するルートのみ許可。
  *
  * @param {'flight'|'ferry'|'rail'} type
  * @param {object} city
  * @param {number} distKm
+ * @param {string} [departure] — 出発地（DB照合に使用）
  * @returns {boolean}
  */
-export function validateRoute(type, city, distKm = 0) {
+export function validateRoute(type, city, distKm = 0, departure = '') {
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
   switch (type) {
     case 'rail':
-      if (city?.region === FLIGHT_ONLY_REGION) return false;  // 沖縄: 物理的に不可
-      if (isIsland)                            return false;  // 離島: 鉄道なし
-      // 距離はスコアで制御（長距離でも候補に残し、他に選択肢がない場合のフォールバック）
+      if (city?.region === FLIGHT_ONLY_REGION) return false;
+      if (isIsland)                            return false;
       return true;
 
-    case 'flight':
+    case 'flight': {
       if (city?.region === FLIGHT_ONLY_REGION) return true;
       if (!city?.airportGateway && !city?.flightHub && city?.hasDirectFlight !== true) return false;
       if (distKm > 0 && distKm < FLIGHT_MIN_DISTANCE) return false;
-      // 離島: 500km以内はferry優先（flightは除外）
       if (isIsland && distKm > 0 && distKm <= 500) return false;
-      // 一般: 500km未満はrail圏内（flightは除外）
       if (!isIsland && distKm > 0 && distKm < FLIGHT_DISTANCE_KM) return false;
+      // DB照合: flightRoutes.json に存在しないルートは除外
+      if (departure && city?.airportGateway) {
+        if (!hasFlightInDB(departure, city.airportGateway)) return false;
+      }
       return true;
+    }
 
     case 'ferry':
       if (city?.isIsland !== true && !city?.ferryGateway) return false;
+      // DB照合: ferries.json に存在しない航路は除外
+      if (city?.ferryGateway && !hasFerryInDB(city?.id, city?.ferryGateway)) return false;
       return true;
 
     default:
@@ -186,8 +211,8 @@ function buildCandidates(departure, city, distKm) {
   const candidates = [];
 
   for (const type of TYPES) {
-    // Phase 1: ルールベース除外
-    if (!validateRoute(type, city, distKm)) continue;
+    // Phase 1: ルールベース除外 + DB照合
+    if (!validateRoute(type, city, distKm, departure)) continue;
 
     // CTA 生成試行
     const cta = resolveCtaByType(type, departure, city);

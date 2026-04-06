@@ -2017,6 +2017,66 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8v] 交通DB整合性チェック
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8v] 交通DB整合性');
+    const flightRoutes = JSON.parse(fs.readFileSync('./src/data/flightRoutes.json', 'utf8'));
+    const ferries      = JSON.parse(fs.readFileSync('./src/data/ferries.json', 'utf8'));
+    const ports        = JSON.parse(fs.readFileSync('./src/data/ports.json', 'utf8'));
+    const portCities   = new Map(ports.map(p => [p.port, p.city]));
+
+    // hasDirectFlight=true だが空港にルートが0件
+    const flightAirports = new Set(flightRoutes.map(r => r.to));
+    const noRouteAirports = [];
+    for (const dest of DESTS) {
+      if (dest.hasDirectFlight === true && dest.airportGateway) {
+        if (!flightAirports.has(dest.airportGateway)) {
+          noRouteAirports.push(`${dest.id}(${dest.airportGateway})`);
+        }
+      }
+    }
+    sc.check(noRouteAirports.length === 0,
+      noRouteAirports.length === 0
+        ? 'hasDirectFlight: 全件ルート存在'
+        : `hasDirectFlight=trueだがルート未定義 ${noRouteAirports.length}件: ${noRouteAirports.slice(0,5).join(', ')}`
+    );
+
+    // ferryGateway 設定あり だが ferries.json に未定義
+    const ferryDestIds  = new Set(ferries.map(f => f.destId));
+    const ferryPorts    = new Set(ferries.map(f => f.from));
+    const noFerryDests = [];
+    for (const dest of DESTS) {
+      if (dest.ferryGateway && !ferryDestIds.has(dest.id) && !ferryPorts.has(dest.ferryGateway)) {
+        noFerryDests.push(`${dest.id}(${dest.ferryGateway})`);
+      }
+    }
+    sc.check(noFerryDests.length === 0,
+      noFerryDests.length === 0
+        ? 'ferryGateway: 全件DB登録あり'
+        : `ferryGateway設定ありだがDB未定義 ${noFerryDests.length}件: ${noFerryDests.slice(0,5).join(', ')}`
+    );
+
+    // ferryGateway の港が ports.json に未定義
+    const noPortMapping = [];
+    for (const dest of DESTS) {
+      if (dest.ferryGateway && !portCities.has(dest.ferryGateway)) {
+        noPortMapping.push(`${dest.ferryGateway}(${dest.id})`);
+      }
+    }
+    // 重複除去
+    const uniqueNoPort = [...new Set(noPortMapping)];
+    sc.check(uniqueNoPort.length === 0,
+      uniqueNoPort.length === 0
+        ? 'ports.json: 全フェリー港に都市マッピングあり'
+        : `ports.json未定義港 ${uniqueNoPort.length}件: ${uniqueNoPort.slice(0,5).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [8u] タグライン品質チェック
   ─────────────────────────────── */
   {
