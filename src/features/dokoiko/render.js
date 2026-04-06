@@ -339,11 +339,22 @@ function buildRouteBlock(tc, departure, destLabel, city) {
     : [departure, tc.via, destLabel].filter(Boolean);
   const routeLine = waypoints.join(' → ');
 
-  // bestRoute: 経路1行 + 理由文
+  // 最終アクセス
+  const FINAL_ACCESS_LABEL = {
+    walk: '駅から歩いて行ける',
+    bus:  '駅からバスでアクセス',
+    car:  '駅から車でアクセス',
+  };
+  const finalAccessHtml = best.finalAccess && best.finalAccess !== 'walk'
+    ? `<div class="best-route-access">${FINAL_ACCESS_LABEL[best.finalAccess] ?? ''}</div>`
+    : '';
+
+  // bestRoute: 経路1行 + 理由文 + 最終アクセス
   const bestHtml = `
     <div class="best-route">
       <div class="best-route-line">${routeLine}</div>
       <div class="best-route-reason">${best.reason || tc.reason}</div>
+      ${finalAccessHtml}
     </div>`;
 
   // alternatives（最大2つ）: アイコン + 不採用理由のみ
@@ -827,7 +838,11 @@ function buildMapCtaBlock(item) {
  * 例: 新幹線を予約（岡山 → 京都）
  */
 function buildSegmentCtaLabel(segment, ctaType) {
-  const section = `${segment.from} → ${segment.to}`;
+  // 駅名を正規化（「東京駅」→「東京」、空港・港はそのまま）
+  const cleanName = (n) => /空港$|港$/.test(n) ? n : n.replace(/駅$/, '');
+  const from = cleanName(segment.from);
+  const to   = cleanName(segment.to);
+  const section = `${from} → ${to}`;
   switch (segment.type) {
     case 'shinkansen':  return `新幹線を予約（${section}）`;
     case 'flight':      return `航空券を探す（${section}）`;

@@ -324,13 +324,20 @@ function classifySegmentType(mode, from, to) {
   if (/飛行機|航空/.test(mode))      return 'flight';
   if (/フェリー/.test(mode))         return 'ferry';
   if (/高速バス/.test(mode))         return 'highway_bus';
-  if (/レンタカー|車/.test(mode))    return 'rental';
+  if (/レンタカー/.test(mode))        return 'rental';
   if (/マリンライナー/.test(mode))   return 'rail_express';
   if (/特急/.test(mode))             return 'rail_express';
   if (/徒歩/.test(mode))             return 'walk';
-  // 空港→空港は実質フライト（stepLabel上は「電車」でも）
+  // 空港が絡む区間の判定（stepLabelのモード名が不正確なケースを補正）
+  if (/空港$/.test(to) && !/空港$/.test(from)) {
+    // X → Y空港: from地域とto地域が異なる場合はflight
+    // 同一地域のアクセス（バスで空港へ等）は除外
+    const fromClean = from.replace(/駅$/, '');
+    const toClean = to.replace(/空港$/, '');
+    if (fromClean !== toClean && !toClean.startsWith(fromClean)) return 'flight';
+  }
   if (/空港$/.test(from) && /空港$/.test(to)) return 'flight';
-  if (/空港$/.test(to) && /バス/.test(mode))  return 'local_bus';
+  if (/空港$/.test(from) && /駅$/.test(to))   return 'rail_local'; // 空港→駅 = 空港アクセス
   if (/バス/.test(mode))             return 'local_bus';
   return 'rail_local';
 }
@@ -456,6 +463,10 @@ export function buildTransportContext(departure, city) {
     ? [...new Set([transportSegs[0].from, ...transportSegs.map(s => s.to)])]
     : [departure, city?.displayName || city?.name].filter(Boolean);
 
+  // finalAccess: 最寄駅→目的地の最終アクセス手段
+  const finalAccess = city?.finalAccess ?? 'walk';
+  const repStation = city?.representativeStation ?? null;
+
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
     bestRoute: {
@@ -465,6 +476,8 @@ export function buildTransportContext(departure, city) {
       reason: selectionReason,
       segments,
       waypoints,
+      finalAccess,
+      representativeStation: repStation,
     },
     alternatives,
 
