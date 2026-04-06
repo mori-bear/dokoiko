@@ -110,8 +110,8 @@ function buildCityBlock(city) {
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
       ${taglineHtml}
-      ${spotsHtml}
       ${descHtml}
+      ${spotsHtml}
     </div>
   `;
 }
@@ -375,7 +375,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   if (mapUrl && !seenUrls.has(mapUrl)) {
     seenUrls.add(mapUrl);
     ctaItems.push(`<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">Googleマップで確認</a>`);
+       class="btn btn--maps btn--action">地図で行き方を見る</a>`);
   }
 
   // 2. 予約CTA（区間付き・必要な場合のみ）
@@ -499,7 +499,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   if (primaryMapUrl && !seenCtaUrls.has(primaryMapUrl)) {
     seenCtaUrls.add(primaryMapUrl);
     ctaItems.push(`<a href="${primaryMapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--transport btn--action">地図でルートを見る</a>`);
+       class="btn btn--transport btn--action">地図で行き方を見る</a>`);
   }
 
   // SECONDARY: 予約・チケット — mapOnlyFallback / accessType=bus 時は表示しない
@@ -820,7 +820,7 @@ function buildMapCtaBlock(item) {
 
 /**
  * 予約CTAの区間付きラベルを生成する。
- * 例: 🚄 高松 → 大阪まで予約
+ * 例: 🚄 新幹線を予約（高松 → 大阪）
  */
 function buildBookingLabel(type, departure, city, tc) {
   const dest = tc?.via || city?.accessStation?.replace(/駅$/, '') || city?.hubCity || city?.displayName || city?.name || '';
@@ -828,16 +828,16 @@ function buildBookingLabel(type, departure, city, tc) {
 
   const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
   if (JR_TYPES.has(type) && section) {
-    return `🚄 ${section}まで予約`;
+    return `🚄 新幹線を予約（${section}）`;
   }
   if (['skyscanner', 'google-flights'].includes(type) && section) {
-    return `✈️ ${section}の航空券`;
+    return `✈️ 航空券を探す（${section}）`;
   }
   if (type === 'ferry' && section) {
-    return `⛴ ${section}のフェリー`;
+    return `⛴ フェリーを予約（${section}）`;
   }
   if (type === 'bus' && section) {
-    return `🚌 ${section}のバス`;
+    return `🚌 バスを予約（${section}）`;
   }
   return buildMainCtaLabel(type);
 }

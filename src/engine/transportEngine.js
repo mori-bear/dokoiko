@@ -254,23 +254,24 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
   const accessType = resolveAccessType(city, transportType);
   const isIsland = city?.isIsland === true || city?.destType === 'island';
 
-  // 複合ルート
+  // 複合ルート（乗り換えあり）
   if (accessType === 'bus') {
-    if (transportType === 'flight') return '飛行機＋バスで一気に行ける';
+    if (transportType === 'flight') return '飛行機＋バスで行ける';
     if (transportType === 'ferry')  return 'フェリー＋バスで渡れる';
-    return '電車＋バスでスムーズに行ける';
+    return '乗り換え少なくスムーズ';
   }
   if (accessType === 'car') {
-    if (transportType === 'flight') return '飛行機＋車で一気に行ける';
+    if (transportType === 'flight') return '飛行機＋車で行ける';
     if (transportType === 'ferry')  return 'フェリー＋車で渡れる';
-    return '電車＋車でスムーズに行ける';
+    return '乗り換え少なくスムーズ';
   }
 
+  // 単独ルート
   switch (transportType) {
-    case 'flight': return '直行で一気に行ける';
-    case 'ferry':  return isIsland ? 'フェリーで直接渡れる' : 'フェリーで行ける';
-    case 'rail':   return '電車でスムーズに行ける';
-    default:       return '';
+    case 'flight': return '飛行機がいちばん現実的';
+    case 'ferry':  return isIsland ? 'フェリーで渡れる' : 'フェリーで自然に行ける';
+    case 'rail':   return distanceKm < 200 ? '直通で行ける' : '乗り換え少なくスムーズ';
+    default:       return 'この行き方が現実的';
   }
 }
 
