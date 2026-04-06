@@ -346,6 +346,34 @@ function isBookableSegment(type) {
   return ['shinkansen', 'flight', 'ferry', 'highway_bus'].includes(type);
 }
 
+/** 主役セグメント1つを決定（flight > shinkansen > ferry > highway_bus） */
+function pickMainSegment(segments) {
+  return segments.find(s => s.type === 'flight')
+    ?? segments.find(s => s.type === 'shinkansen')
+    ?? segments.find(s => s.type === 'ferry')
+    ?? segments.find(s => s.type === 'highway_bus')
+    ?? null;
+}
+
+/**
+ * ユーザー向けシンプル表示ルート（出発地 → 目的地）。
+ * flight: 都市名→都市名（空港・駅を省略）
+ * shinkansen: 新幹線区間の両端
+ * その他: departure → destName
+ */
+function buildDisplayRoute(mainSeg, departure, city) {
+  const destName = city?.displayName || city?.name || '';
+  if (!mainSeg) return { from: departure, to: destName };
+
+  const clean = (n) => n.replace(/駅$|空港$|港$/, '');
+
+  if (mainSeg.type === 'flight') {
+    return { from: clean(mainSeg.from) || departure, to: clean(mainSeg.to) || destName };
+  }
+  // shinkansen/ferry: そのままの区間
+  return { from: clean(mainSeg.from), to: clean(mainSeg.to) };
+}
+
 /* ══════════════════════════════════════════════════════
    ⑨ CTA一本化
 ══════════════════════════════════════════════════════ */
@@ -467,6 +495,10 @@ export function buildTransportContext(departure, city) {
   const finalAccess = city?.finalAccess ?? 'walk';
   const repStation = city?.representativeStation ?? null;
 
+  // ⑩ 主役セグメント + 表示用ルート
+  const mainSegment = pickMainSegment(segments);
+  const displayRoute = buildDisplayRoute(mainSegment, departure, city);
+
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
     bestRoute: {
@@ -478,6 +510,8 @@ export function buildTransportContext(departure, city) {
       waypoints,
       finalAccess,
       representativeStation: repStation,
+      mainSegment,
+      displayRoute,
     },
     alternatives,
 

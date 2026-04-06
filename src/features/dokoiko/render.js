@@ -332,90 +332,71 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   if (!tc?.bestRoute) return '';
 
   const best = tc.bestRoute;
+  const main = best.mainSegment;
+  const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
-  // waypoints ベースの経路表示（セグメント分解済み）
-  const waypoints = best.waypoints?.length >= 2
-    ? best.waypoints
-    : [departure, tc.via, destLabel].filter(Boolean);
-  const routeLine = waypoints.join(' → ');
+  // 主役セグメントのアイコン
+  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌' };
+  const icon = main ? (MAIN_ICON[main.type] ?? '🚃') : '🚃';
 
-  // 最終アクセス
-  const FINAL_ACCESS_LABEL = {
-    walk: '駅から歩いて行ける',
-    bus:  '駅からバスでアクセス',
-    car:  '駅から車でアクセス',
+  // シンプル2点ルート: ✈️ 東京 → 福岡
+  const routeLine = `${icon} ${dr.from} → ${dr.to}`;
+
+  // 理由文
+  const reason = best.reason || tc.reason;
+
+  // 最終アクセス（常に表示）
+  const FINAL_ACCESS = {
+    walk: '📍 駅から徒歩で行ける',
+    bus:  '📍 駅からバスでアクセス',
+    car:  '📍 車があると便利',
   };
-  const finalAccessHtml = best.finalAccess && best.finalAccess !== 'walk'
-    ? `<div class="best-route-access">${FINAL_ACCESS_LABEL[best.finalAccess] ?? ''}</div>`
-    : '';
-
-  // bestRoute: 経路1行 + 理由文 + 最終アクセス
-  const bestHtml = `
-    <div class="best-route">
-      <div class="best-route-line">${routeLine}</div>
-      <div class="best-route-reason">${best.reason || tc.reason}</div>
-      ${finalAccessHtml}
-    </div>`;
-
-  // alternatives（最大2つ）: アイコン + 不採用理由のみ
-  let altHtml = '';
-  const alts = (tc.alternatives ?? []).slice(0, 2);
-  if (alts.length > 0) {
-    const altItems = alts.map(a => {
-      const aIcon = TRANSPORT_ICON[a.transportType] ?? '🚃';
-      return `<div class="alt-route">
-        <span class="alt-route-icon">${aIcon}</span>
-        <span class="alt-route-reason">${a.rejectedReason}</span>
-      </div>`;
-    }).join('');
-    altHtml = `<div class="alt-routes">${altItems}</div>`;
-  }
+  const accessLabel = FINAL_ACCESS[best.finalAccess] ?? FINAL_ACCESS.walk;
 
   return `
     <div class="route-block">
-      ${bestHtml}
-      ${altHtml}
+      <div class="best-route">
+        <div class="best-route-line">${routeLine}</div>
+        <div class="best-route-reason">${reason}</div>
+        <div class="best-route-access">${accessLabel}</div>
+      </div>
     </div>`;
 }
 
 function buildCtaBlock(tc, transportLinks, city, departure) {
-  const ctaItems = [];
   const seenUrls = new Set();
+  const best = tc?.bestRoute;
+  const main = best?.mainSegment;
 
-  // 1. Googleマップで確認（メイン）
-  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
-  if (mapUrl && !seenUrls.has(mapUrl)) {
-    seenUrls.add(mapUrl);
-    ctaItems.push(`<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">地図で行き方を見る</a>`);
-  }
-
-  // 2. 予約CTA（bookable セグメントの区間のみ）
-  if (!tc?.mapOnlyFallback) {
+  // 予約CTA（主役セグメントがある場合のみ・1つだけ）
+  let bookingHtml = '';
+  if (main && !tc?.mapOnlyFallback) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
-    const bookable = tc?.bestRoute?.segments?.find(s => s.bookable);
-    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
+    if (mainCta?.cta?.url) {
       seenUrls.add(mainCta.cta.url);
-      const label = bookable
-        ? buildSegmentCtaLabel(bookable, mainCta.cta.type)
-        : buildMainCtaLabel(mainCta.cta.type);
-      ctaItems.push(`<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`);
+      const label = buildSegmentCtaLabel(main, mainCta.cta.type);
+      bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
     }
   }
 
-  // CTA最大2つ + シェア
-  const ctas = ctaItems.slice(0, 2).join('');
+  // 地図CTA（常に表示）
+  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+  let mapHtml = '';
+  if (mapUrl && !seenUrls.has(mapUrl)) {
+    mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--maps btn--action">${bookingHtml ? '地図で全体を見る' : '地図で行き方を見る'}</a>`;
+  }
 
-  // シェア（Xのみ）
+  // シェア
   const shareHtml = `
     <div class="share-inline">
       <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
     </div>`;
 
-  // レンタカー（車があると便利な場合のみ・最下部）
+  // レンタカー（finalAccess=car または requiresCar）
   let rentalHtml = '';
-  if (!tc?.mapOnlyFallback && city?.requiresCar === true) {
+  if (!tc?.mapOnlyFallback && (city?.requiresCar === true || best?.finalAccess === 'car')) {
     const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenUrls.has(rentalLink.url)) {
@@ -429,7 +410,10 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 
   return `
     <div class="cta-block">
-      <div class="cta-group">${ctas}</div>
+      <div class="cta-group">
+        ${bookingHtml}
+        ${mapHtml}
+      </div>
       ${shareHtml}
       ${rentalHtml}
     </div>`;
