@@ -15,7 +15,7 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -26,8 +26,8 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via, accessType)
-          : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via, accessType, stayCityName)
+          : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType, stayCityName) : '')
         }
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -213,7 +213,7 @@ function actionBtnClass(ctaType) {
  * @param {boolean} mapOnlyFallback — CTA 生成不可・Maps のみ案内モード
  * @param {string}  reason          — CTA 直前の「納得感」テキスト（engine 生成）
  */
-function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null) {
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null, stayCityName = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
 
   // ルート概要行: "東京 → 壱岐" + 必要なら "博多経由"
@@ -274,7 +274,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     </div>`;
 
   // 宿セクション（daytrip = 完全非表示）
-  const staySection = showHotel ? buildStaySection(hotelLinks, city) : '';
+  const staySection = showHotel ? buildStaySection(hotelLinks, city, stayCityName) : '';
 
   // ルート詳細（折りたたみ）— alt-route は最適ルート1本に統一するため非表示
   const stepsHtml  = stepGroups.map(sg => buildStepCard(sg)).join('');
@@ -342,15 +342,18 @@ function buildStayPicker(hotelLinks) {
 }
 
 /**
- * 宿泊セクション: 楽天・じゃらんの2ボタン表示。
+ * 宿泊セクション: 「{stay}に泊まる」見出し + 楽天・じゃらんの2ボタン表示。
  * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
  */
-function buildStaySection(hotelLinks, city) {
+function buildStaySection(hotelLinks, city, stayCityName = null) {
   if (!hotelLinks) return '';
   const stayLinks = hotelLinks.links ?? [];
   const rakuten   = stayLinks.find(l => l.type === 'rakuten');
   const jalan     = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
+
+  const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  const heading = stayLabel ? `<div class="stay-heading">${stayLabel}に泊まる</div>` : '';
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
@@ -361,6 +364,7 @@ function buildStaySection(hotelLinks, city) {
 
   return `
     <div class="stay-section">
+      ${heading}
       <div class="stay-buttons">${buttons}</div>
     </div>
   `;
@@ -1194,12 +1198,12 @@ function _buildAccessLocalSection(mapLocal, filledSteps, city) {
 
 /* ── 宿泊ブロック ── */
 
-function buildStayBlock(hotelLinks, city, stayType) {
+function buildStayBlock(hotelLinks, city, stayType, stayCityName = null) {
   if (!hotelLinks?.bestUrl) return '';
 
   const travelMins = city?.travelTimeMinutes ?? 0;
   const isDaytrip  = stayType === 'daytrip';
-  const stayCityName = hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
 
   // 日帰りで2.5時間以上: 滞在提案メモ
   const hours = Math.round(travelMins / 6) / 10; // 小数1桁
@@ -1207,9 +1211,12 @@ function buildStayBlock(hotelLinks, city, stayType) {
     ? `<p class="stay-note">このルート、日帰りだと少し長め（約${hours}時間）。ゆっくりするなら1泊もおすすめ。</p>`
     : '';
 
+  const heading = stayLabel ? `<div class="stay-heading">${stayLabel}に泊まる</div>` : '';
+
   return `
     <div class="stay-block">
       ${longDaytripNote}
+      ${heading}
       <div class="stay-buttons">
         <a href="${hotelLinks.bestUrl}" target="_blank" rel="nofollow sponsored noopener"
            class="stay-btn stay-btn--${hotelLinks.bestType}">宿を見る</a>

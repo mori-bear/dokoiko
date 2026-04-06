@@ -110,6 +110,7 @@ function draw() {
       city,
       transportLinks:  plan.transportLinks,
       hotelLinks:      plan.hotelLinks,
+      stayCityName:    plan.stayCityName,
       stayType:        state.stayType,
       departure:       state.departure,
       mapUrl:          plan.transportContext?.mapUrl          ?? null,

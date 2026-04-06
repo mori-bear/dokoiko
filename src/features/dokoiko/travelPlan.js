@@ -14,18 +14,20 @@
  */
 
 import { buildTransportContext } from '../../engine/transportEngine.js';
-import { buildHotelLinks }       from '../../hotel/hotelLinkBuilder.js';
+import { buildHotelLinks, resolveStay } from '../../hotel/hotelLinkBuilder.js';
 
 export function buildTravelPlan(destination, departure) {
   /* 交通コンテキスト（engine が唯一の正） */
   const context = buildTransportContext(departure, destination);
 
-  /* 宿泊リンク */
-  const hotelLinks = buildHotelLinks(destination);
+  /* 宿泊（交通から完全独立） */
+  const hotelLinks   = buildHotelLinks(destination);
+  const stayCityName = resolveStay(destination);
 
   return {
     transportLinks:   context.stepGroups,  // render.js 互換: step-group 配列
     hotelLinks,
+    stayCityName,                          // 宿泊地名（UI表示用）
     transportContext: context,             // 拡張用: engine の完全コンテキスト
   };
 }
