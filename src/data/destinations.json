@@ -1496,7 +1496,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "宮島",
     "localHub": "宮島口",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "onomichi",
@@ -2097,7 +2097,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "渡嘉敷島",
     "localHub": "那覇",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "kumejima",
@@ -2476,7 +2476,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "神津島",
     "localHub": "東京",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "hakone",
@@ -5183,7 +5183,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "直島",
     "localHub": "高松",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "kotohira",
@@ -14810,7 +14810,7 @@
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "高松",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "sounkyo",
@@ -15071,7 +15071,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "礼文島",
     "localHub": "稚内",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "rishiri-island",
@@ -15203,7 +15203,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "利尻島",
     "localHub": "稚内",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "akan",
@@ -18973,7 +18973,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "周防大島",
     "localHub": "柳井",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "shimanto",
@@ -19203,7 +19203,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "柏島",
     "localHub": "宿毛",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "saijo",
@@ -20197,7 +20197,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "対馬",
     "localHub": "博多",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "iki-island",
@@ -20332,7 +20332,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "壱岐",
     "localHub": "博多",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "tanegashima",
@@ -20712,7 +20712,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "竹富島",
     "localHub": "石垣",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "yonaguni-island",
@@ -20846,7 +20846,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "与那国島",
     "localHub": "石垣",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "nakijin",
@@ -21217,7 +21217,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "座間味島",
     "localHub": "那覇",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "ie-island",
@@ -21356,7 +21356,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊江島",
     "localHub": "本部",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "kohama-island",
@@ -21475,7 +21475,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "小浜島",
     "localHub": "石垣",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "matsushiro",
@@ -26662,7 +26662,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "甑島",
     "localHub": "薩摩川内",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "kirishima",
@@ -30479,7 +30479,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "海士",
     "localHub": "松江",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "akiyoshidai",
@@ -30827,7 +30827,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "隠岐の島",
     "localHub": "境港",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "inujima",
@@ -30951,7 +30951,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "犬島",
     "localHub": "岡山",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "teshima",
@@ -31083,7 +31083,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "豊島",
     "localHub": "高松",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "niyodogawa",
@@ -32203,7 +32203,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "小値賀島",
     "localHub": "佐世保",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "irabu-island",
@@ -32463,7 +32463,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "粟国島",
     "localHub": "那覇",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "itoman",
@@ -32836,7 +32836,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "三宅島",
     "localHub": "東京",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "hachijojima",
@@ -33108,7 +33108,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "新島",
     "localHub": "東京",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "shikinejima",
@@ -33233,7 +33233,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "式根島",
     "localHub": "東京",
-    "stayPriority": "high"
+    "stayPriority": "medium"
   },
   {
     "id": "shirakawa",
@@ -40372,7 +40372,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "姫島",
     "localHub": "国東",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "toshima",
@@ -40466,7 +40466,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "利島",
     "localHub": "東京",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "joetsu",
@@ -45536,7 +45536,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "青ヶ島",
     "localHub": "八丈島",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "kugashima",
@@ -45622,7 +45622,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "久賀島",
     "localHub": "五島",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "nakatosa",
@@ -50965,7 +50965,7 @@
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
     "hubCity": "伊平屋島",
     "localHub": "今帰仁",
-    "stayPriority": "high"
+    "stayPriority": "low"
   },
   {
     "id": "ogimi",
