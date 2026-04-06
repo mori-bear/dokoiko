@@ -332,11 +332,12 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   if (!tc?.bestRoute) return '';
 
   const best = tc.bestRoute;
-  const icon = TRANSPORT_ICON[best.transportType] ?? '🚃';
 
-  // 1行経路: 🚃 高松 → 大阪 → 飛鳥
-  const routeParts = [departure, tc.via, destLabel].filter(Boolean);
-  const routeLine = `${icon} ${routeParts.join(' → ')}`;
+  // waypoints ベースの経路表示（セグメント分解済み）
+  const waypoints = best.waypoints?.length >= 2
+    ? best.waypoints
+    : [departure, tc.via, destLabel].filter(Boolean);
+  const routeLine = waypoints.join(' → ');
 
   // bestRoute: 経路1行 + 理由文
   const bestHtml = `
@@ -378,12 +379,15 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`);
   }
 
-  // 2. 予約CTA（区間付き・必要な場合のみ）
-  if (tc?.accessType !== 'bus' && !tc?.mapOnlyFallback) {
+  // 2. 予約CTA（bookable セグメントの区間のみ）
+  if (!tc?.mapOnlyFallback) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
+    const bookable = tc?.bestRoute?.segments?.find(s => s.bookable);
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       seenUrls.add(mainCta.cta.url);
-      const label = buildBookingLabel(mainCta.cta.type, departure, city, tc);
+      const label = bookable
+        ? buildSegmentCtaLabel(bookable, mainCta.cta.type)
+        : buildMainCtaLabel(mainCta.cta.type);
       ctaItems.push(`<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`);
     }
@@ -819,27 +823,18 @@ function buildMapCtaBlock(item) {
 }
 
 /**
- * 予約CTAの区間付きラベルを生成する。
- * 例: 🚄 新幹線を予約（高松 → 大阪）
+ * bookable セグメントの実在区間でCTAラベルを生成する。
+ * 例: 新幹線を予約（岡山 → 京都）
  */
-function buildBookingLabel(type, departure, city, tc) {
-  const dest = tc?.via || city?.accessStation?.replace(/駅$/, '') || city?.hubCity || city?.displayName || city?.name || '';
-  const section = (departure && dest) ? `${departure} → ${dest}` : '';
-
-  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
-  if (JR_TYPES.has(type) && section) {
-    return `🚄 新幹線を予約（${section}）`;
+function buildSegmentCtaLabel(segment, ctaType) {
+  const section = `${segment.from} → ${segment.to}`;
+  switch (segment.type) {
+    case 'shinkansen':  return `新幹線を予約（${section}）`;
+    case 'flight':      return `航空券を探す（${section}）`;
+    case 'ferry':       return `フェリーを予約（${section}）`;
+    case 'highway_bus': return `バスを予約（${section}）`;
+    default:            return buildMainCtaLabel(ctaType);
   }
-  if (['skyscanner', 'google-flights'].includes(type) && section) {
-    return `✈️ 航空券を探す（${section}）`;
-  }
-  if (type === 'ferry' && section) {
-    return `⛴ フェリーを予約（${section}）`;
-  }
-  if (type === 'bus' && section) {
-    return `🚌 バスを予約（${section}）`;
-  }
-  return buildMainCtaLabel(type);
 }
 
 function buildMainCtaLabel(type) {

@@ -293,7 +293,54 @@ export function buildRejectedReason(bestType, altType, altTier, bestTier) {
 }
 
 /* ══════════════════════════════════════════════════════
-   ⑧ CTA一本化
+   ⑧ セグメント分解（stepGroups → segments）
+══════════════════════════════════════════════════════ */
+
+/** stepGroupのstepLabelからfrom/to/modeを抽出し、bookable判定を付与する */
+function extractSegments(stepGroups) {
+  const segments = [];
+  for (const sg of stepGroups) {
+    if (sg.type !== 'step-group' || !sg.stepLabel) continue;
+    // "① 高松 → 岡山（マリンライナー）" or "② 岡山 → 京都（新幹線）"
+    const m = sg.stepLabel.match(/[\s①-⑧\d.]*\s*(.+?)\s*→\s*(.+?)（(.+?)）/u);
+    if (!m) continue;
+    const from = m[1].trim();
+    const to   = m[2].trim();
+    const mode = m[3].trim();
+    const type = classifySegmentType(mode, from, to);
+    segments.push({
+      from,
+      to,
+      mode,
+      type,
+      bookable: isBookableSegment(type),
+    });
+  }
+  return segments;
+}
+
+function classifySegmentType(mode, from, to) {
+  if (/新幹線/.test(mode))           return 'shinkansen';
+  if (/飛行機|航空/.test(mode))      return 'flight';
+  if (/フェリー/.test(mode))         return 'ferry';
+  if (/高速バス/.test(mode))         return 'highway_bus';
+  if (/レンタカー|車/.test(mode))    return 'rental';
+  if (/マリンライナー/.test(mode))   return 'rail_express';
+  if (/特急/.test(mode))             return 'rail_express';
+  if (/徒歩/.test(mode))             return 'walk';
+  // 空港→空港は実質フライト（stepLabel上は「電車」でも）
+  if (/空港$/.test(from) && /空港$/.test(to)) return 'flight';
+  if (/空港$/.test(to) && /バス/.test(mode))  return 'local_bus';
+  if (/バス/.test(mode))             return 'local_bus';
+  return 'rail_local';
+}
+
+function isBookableSegment(type) {
+  return ['shinkansen', 'flight', 'ferry', 'highway_bus'].includes(type);
+}
+
+/* ══════════════════════════════════════════════════════
+   ⑨ CTA一本化
 ══════════════════════════════════════════════════════ */
 
 function buildCanonicalStepGroups(rawStepGroups, canonicalCta, transportType) {
@@ -401,6 +448,14 @@ export function buildTransportContext(departure, city) {
   /* ⑧ reason テキスト */
   const reason = buildRouteReason(transportType, distanceKm, city, isFallback, mapOnlyFallback);
 
+  /* ⑨ セグメント分解 */
+  const segments = extractSegments(stepGroups);
+  // 交通セグメントのみでwaypoints構築（徒歩・観光巡回を除外）
+  const transportSegs = segments.filter(s => !['walk', 'local_bus'].includes(s.type) || /空港|港|駅/.test(s.to));
+  const waypoints = transportSegs.length > 0
+    ? [...new Set([transportSegs[0].from, ...transportSegs.map(s => s.to)])]
+    : [departure, city?.displayName || city?.name].filter(Boolean);
+
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
     bestRoute: {
@@ -408,6 +463,8 @@ export function buildTransportContext(departure, city) {
       accessType,
       distanceKm,
       reason: selectionReason,
+      segments,
+      waypoints,
     },
     alternatives,
 

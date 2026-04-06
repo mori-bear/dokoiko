@@ -21,14 +21,12 @@ export async function captureShareCard(city, departure, transportContext = null)
   const tags       = (city.primary ?? city.tags ?? []).slice(0, 3).join('・');
   const tagline    = city.description?.split('。')[0] ?? '';
 
-  // ルート1行 + 理由1行
-  const ROUTE_ICON = { flight: '✈️', rail: '🚃', ferry: '⛴' };
+  // ルート1行（waypoints ベース）+ 理由1行
   const best       = transportContext?.bestRoute;
-  const via        = transportContext?.via;
-  const routeParts = [departure, via, name].filter(Boolean);
-  const routeLine  = best
-    ? `${ROUTE_ICON[best.transportType] ?? '🚃'} ${routeParts.join(' → ')}`
-    : '';
+  const waypoints  = best?.waypoints?.length >= 2
+    ? best.waypoints
+    : [departure, transportContext?.via, name].filter(Boolean);
+  const routeLine  = waypoints.join(' → ');
   const reasonLine = best?.reason || transportContext?.reason || '';
 
   // ── オフスクリーンカード要素を生成 ──
