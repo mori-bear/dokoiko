@@ -262,7 +262,7 @@ function regionDistQA(from, to) {
   return 99;
 }
 function calcStarsQA(dep, city) {
-  const hub=city.hotelHub||city.name;
+  const hub=city.hubCity||city.name;
   const isIsland=!!(city.isIsland||city.destType==='island');
   if(hub===dep) return 1;
   if(METRO1_QA[dep]?.has(hub)) return 1;
@@ -341,10 +341,10 @@ function getLinks(city, dep) {
   // フェリー（非島）
   if (ferryGateway && !isIsland) links.push({ type:'ferry' });
 
-  // 二次交通（railGateway なし・gatewayHub あり）
+  // 二次交通（railGateway なし）
   if (!railGateway && city.secondaryTransport) {
     links.push({ type:'google-maps' });
-  } else if (!railGateway && city.gatewayHub) {
+  } else if (!railGateway && city.requiresCar) {
     links.push({ type:'google-maps' });
   }
 
@@ -731,9 +731,9 @@ class Scorecard {
       );
     });
 
-    // gatewayHub があるなら secondaryTransport も必須
-    const gwNoST = DESTS.filter(c => c.gatewayHub && !c.secondaryTransport);
-    sc.check(gwNoST.length === 0, `gatewayHub あり・secondaryTransport なし: ${gwNoST.map(c=>c.id).join(', ')}`);
+    // hubCity が設定されていること（全件必須）
+    const noHubCity = DESTS.filter(c => !c.hubCity);
+    sc.check(noHubCity.length === 0, `hubCity 未設定: ${noHubCity.map(c=>c.id).join(', ')}`);
 
     // オブジェクト形式が残っていないこと
     const objFormat = DESTS.filter(c => c.secondaryTransport && typeof c.secondaryTransport === 'object');

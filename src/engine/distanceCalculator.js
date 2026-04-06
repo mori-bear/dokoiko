@@ -157,12 +157,12 @@ const NEAR_CROSS_REGION = {
   '高松': new Set(['岡山', '倉敷']),
 };
 
-function isSameMetro(departure, hotelHub) {
-  return (METRO1[departure]?.has(hotelHub)) ?? false;
+function isSameMetro(departure, hubCity) {
+  return (METRO1[departure]?.has(hubCity)) ?? false;
 }
 
-function getHubRegion(hotelHub, fallbackRegion) {
-  return HOTEL_HUB_REGION[hotelHub] ?? fallbackRegion ?? null;
+function getHubRegion(hubCity, fallbackRegion) {
+  return HOTEL_HUB_REGION[hubCity] ?? fallbackRegion ?? null;
 }
 
 /**
@@ -188,7 +188,7 @@ const DEPARTURE_REF_KEY = {
  * なければ地域ベースの推定にフォールバック。
  *
  * @param {string} departure - 出発都市名
- * @param {{ hotelHub?:string, name:string, region:string, isIsland?:boolean, destType?:string, travelTime?:object }} destination
+ * @param {{ hubCity?:string, name:string, region:string, isIsland?:boolean, destType?:string, travelTime?:object }} destination
  * @returns {number} 推定移動時間（分）
  */
 export function calculateTravelTimeMinutes(departure, destination) {
@@ -201,15 +201,15 @@ export function calculateTravelTimeMinutes(departure, destination) {
     }
   }
 
-  const hotelHub = destination.hotelHub ?? destination.name;
+  const hubCity = destination.hubCity ?? destination.name;
   const isIsland = destination.isIsland || destination.destType === 'island';
 
   // 近距離: 出発地と同一都市または同一都市圏 → 60分
-  if (hotelHub === departure) return 60;
-  if (isSameMetro(departure, hotelHub)) return 60;
+  if (hubCity === departure) return 60;
+  if (isSameMetro(departure, hubCity)) return 60;
 
   // 中距離: 近接クロスリージョン（高松↔岡山等）→ 180分
-  if (NEAR_CROSS_REGION[departure]?.has(hotelHub)) return 180;
+  if (NEAR_CROSS_REGION[departure]?.has(hubCity)) return 180;
 
   // 島: 都市圏以外は遠方扱い → 360分
   if (isIsland) return 360;
@@ -217,7 +217,7 @@ export function calculateTravelTimeMinutes(departure, destination) {
   const depReg = DEPARTURE_REGION[departure];
   if (!depReg) return 180;
 
-  const rawHubReg = getHubRegion(hotelHub, destination.region);
+  const rawHubReg = getHubRegion(hubCity, destination.region);
   const hubReg = rawHubReg ?? depReg;
 
   const dist = regionDist(depReg, hubReg);

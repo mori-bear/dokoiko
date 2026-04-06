@@ -9,7 +9,7 @@
  *
  * チェック項目:
  *   [1] 宿リンク HTML解析: 楽天・じゃらん パターン検証
- *   [2] 宿リンク fallback: destination → hotelHub → prefecture
+ *   [2] 宿リンク fallback: destination → hubCity → prefecture
  *   [3] 交通リンク URL形式検証
  *   [4] BFSルート検証 (全件, transportGraph使用)
  *   [5] travelTime整合性検証 (全件)
@@ -124,14 +124,14 @@ function sampleByRegion(arr, n) {
 ═══════════════════════════════════════ */
 
 function primaryKeyword(city) {
-  return city.hotelHub ?? city.hotelSearch ?? city.name;
+  return city.hubCity ?? city.hotelSearch ?? city.name;
 }
 
-/** destination → hotelHub → prefecture の順でフォールバックリストを返す */
+/** destination → hubCity → prefecture の順でフォールバックリストを返す */
 function fallbackList(city) {
   const primary = primaryKeyword(city);
   const list = [];
-  if (city.hotelHub && city.hotelHub !== primary) list.push(city.hotelHub);
+  if (city.hubCity && city.hubCity !== primary) list.push(city.hubCity);
   if (city.hotelSearch && !list.includes(city.hotelSearch)) list.push(city.hotelSearch);
   if (city.name !== primary && !list.includes(city.name)) list.push(city.name);
   const pref = (city.prefecture || '').replace(/[都道府県]$/, '');

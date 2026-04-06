@@ -165,13 +165,10 @@ function buildCategoryBadge(city) {
 
 /**
  * onsen → じゃらん優先、それ以外 → 楽天。
- * mountain/remote はハブ都市のリンクを使用。
  */
 function pickStayUrl(hotelLinks, city) {
   if (!hotelLinks) return null;
-  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
-  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
-  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
+  const stayLinks = hotelLinks.links ?? [];
   const rakuten   = stayLinks.find(l => l.type === 'rakuten');
   const jalan     = stayLinks.find(l => l.type === 'jalan');
 
@@ -306,10 +303,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
 function buildStayPicker(hotelLinks) {
   if (!hotelLinks) return '';
 
-  // useHub: mountain/remote はハブ都市の宿を使う（bestUrlの選定ロジックと合わせる）
-  const bestLinks = hotelLinks.hubLinks?.links?.length
-    ? hotelLinks.hubLinks.links
-    : (hotelLinks.links ?? []);
+  const bestLinks = hotelLinks.links ?? [];
 
   const rakuten = bestLinks.find(l => l.type === 'rakuten');
   const jalan   = bestLinks.find(l => l.type === 'jalan');
@@ -336,9 +330,7 @@ function buildStayPicker(hotelLinks) {
  */
 function buildStaySection(hotelLinks, city) {
   if (!hotelLinks) return '';
-  const needsHub  = !!(city?.requiresCar || city?.destType === 'remote' || city?.destType === 'mountain');
-  const useHub    = needsHub && hotelLinks.hubLinks?.links?.length;
-  const stayLinks = useHub ? hotelLinks.hubLinks.links : (hotelLinks.links ?? []);
+  const stayLinks = hotelLinks.links ?? [];
   const rakuten   = stayLinks.find(l => l.type === 'rakuten');
   const jalan     = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';

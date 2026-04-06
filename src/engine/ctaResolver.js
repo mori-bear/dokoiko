@@ -75,7 +75,8 @@ export function resolveCtaByType(transportType, departure, city) {
     }
 
     case 'rental': {
-      const gatewayCity = city.gatewayHub
+      const destName = city.displayName ?? city.name;
+      const gatewayCity = (city.hubCity && city.hubCity !== destName ? city.hubCity : null)
         ?? city.gateway?.replace(/駅$/, '')
         ?? city.gatewayStations?.[0]?.name?.replace(/駅$/, '')
         ?? null;

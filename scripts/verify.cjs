@@ -18,8 +18,8 @@ spots.forEach(function(s) {
 console.log('spot orphan:', orphanCount);
 
 const dests = d.filter(function(x) { return x.type === 'destination'; });
-const noHub = dests.filter(function(x) { return !x.hotelHub; });
-console.log('destination.hotelHub未設定:', noHub.length);
+const noHub = dests.filter(function(x) { return !x.hubCity; });
+console.log('destination.hubCity未設定:', noHub.length);
 
 const hubs = d.filter(function(x) { return x.type === 'hub'; });
 console.log('---');

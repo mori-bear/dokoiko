@@ -201,7 +201,7 @@ const result = data.map(d => {
     return { ...d, type: 'destination' };
   }
   if (d.type === 'spot') {
-    const parentId = SPOT_PARENT[d.id] || nameToId[d.hotelHub] || d.hotelHub;
+    const parentId = SPOT_PARENT[d.id] || nameToId[d.hubCity] || d.hubCity;
     parentAdded++;
     spotCount++;
     const { hotelHub, ...rest } = d;

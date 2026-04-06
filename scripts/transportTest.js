@@ -245,7 +245,7 @@ const HUB_PREFECTURE = {
 };
 
 function checkHotelUrls(city) {
-  const hub = city.hotelSearch ?? city.hotelHub ?? city.name;
+  const hub = city.hotelSearch ?? city.hubCity ?? city.name;
   const pref = HUB_PREFECTURE[hub];
   const rakutenBase = 'https://hb.afl.rakuten.co.jp';
   const jalanBase = 'https://ck.jp.ap.valuecommerce.com';
@@ -320,7 +320,7 @@ const HOTEL_SAMPLES = ['matsuyama', 'naoshima', 'sapporo-t', 'kanazawa-t'];
 HOTEL_SAMPLES.forEach(id => {
   const city = cities.find(c => c.id === id);
   if (!city) return;
-  const hub = city.hotelSearch ?? city.hotelHub ?? city.name;
+  const hub = city.hotelSearch ?? city.hubCity ?? city.name;
   console.log(`[${city.name}] keyword=${hub}`);
   const rakutenOk = typeof hub === 'string' && hub.length > 0;
   const jalanOk   = typeof hub === 'string' && hub.length > 0;

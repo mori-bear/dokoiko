@@ -382,17 +382,12 @@ export function buildTransportContext(departure, city) {
     ? findRegionPath(fromRegion, city.region)
     : null;
 
-  /* ⑧ 経由地（hubCity を優先）
+  /* ⑧ 経由地（hubCity が目的地と異なる場合のみ使用）
    *    remote / mountain / requiresCar 目的地では via を必ず使用する
-   *    hubCity: 明示的なハブ都市（例: 境港 → 米子）
-   *    gatewayHub: BFS で自動検出されたゲートウェイ
+   *    hubCity: destinations.json に統一されたハブ都市
    */
-  const needsHub = city?.destType === 'remote'
-    || city?.destType === 'mountain'
-    || city?.requiresCar === true;
-  const via = city?.hubCity
-    ?? city?.gatewayHub
-    ?? (needsHub ? null : null); // hub なし remote は Maps が目的地直行
+  const destName = city?.displayName || city?.name;
+  const via = (city?.hubCity && city.hubCity !== destName) ? city.hubCity : null;
 
   /* ⑨ step-group 生成（既存エンジンに委譲） */
   const rawStepGroups = resolveTransportLinks(city, departure);

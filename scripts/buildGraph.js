@@ -690,7 +690,8 @@ dests.forEach(d => {
   const rg  = d.railGateway ? d.railGateway.replace('駅','').trim() : null;
   const fg  = d.ferryGateway;
   const ag  = d.airportGateway;
-  const hub = d.gatewayHub;
+  const destName = d.displayName || d.name;
+  const hub = (d.hubCity && d.hubCity !== destName) ? d.hubCity : null;
   const st  = d.secondaryTransport; // 'bus'|'ferry'|'car'|null
 
   // === 10a. railGateway → station → destination ===

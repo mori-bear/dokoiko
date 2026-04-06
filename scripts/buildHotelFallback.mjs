@@ -176,8 +176,8 @@ const updatedDestinations = destinations.map(dest => {
   if (WEAK_FALLBACK[dest.id]) {
     fallbackCity = WEAK_FALLBACK[dest.id];
     weakCount++;
-  } else if (dest.gatewayHub && AREAS_BY_NAME.has(dest.gatewayHub)) {
-    fallbackCity = dest.gatewayHub;
+  } else if (dest.hubCity && dest.hubCity !== (dest.displayName || dest.name) && AREAS_BY_NAME.has(dest.hubCity)) {
+    fallbackCity = dest.hubCity;
     hubCount++;
   } else {
     fallbackCity = PREF_FALLBACK[dest.hotelArea] ?? null;

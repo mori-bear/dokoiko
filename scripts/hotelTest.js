@@ -7,8 +7,8 @@
  *
  * チェック内容:
  *   1. 全都市で宿リンク 2 件（楽天 + じゃらん）生成されること
- *   2. 全都市の hotelHub が keyword に使われること
- *   3. HUB_PREFECTURE 未登録の hotelHub が 0 件
+ *   2. 全都市の hubCity が keyword に使われること
+ *   3. HUB_PREFECTURE 未登録の hubCity が 0 件
  *   4. 楽天 target URL（yado/{prefecture}/）→ HTTP 200
  *   5. じゃらん target URL（uwp2011?keyword=...）→ HTTP 200
  *
@@ -99,12 +99,12 @@ const HUB_PREFECTURE = {
 /* ── ヘルパー ── */
 
 function resolveKeyword(city) {
-  return city.hotelHub || city.hotelSearch || city.name;
+  return city.hubCity || city.hotelSearch || city.name;
 }
 
 function buildRakutenTarget(city) {
   const keyword    = resolveKeyword(city);
-  const prefecture = HUB_PREFECTURE[keyword] || HUB_PREFECTURE[city.hotelHub] || HUB_PREFECTURE[city.name];
+  const prefecture = HUB_PREFECTURE[keyword] || HUB_PREFECTURE[city.hubCity] || HUB_PREFECTURE[city.name];
   return prefecture
     ? `https://travel.rakuten.co.jp/yado/${prefecture}/`
     : `https://travel.rakuten.co.jp/yado/`;
@@ -183,7 +183,7 @@ function sampleCities(cities) {
 
   allCities.forEach(city => {
     const keyword    = resolveKeyword(city);
-    const prefecture = HUB_PREFECTURE[keyword] || HUB_PREFECTURE[city.hotelHub] || HUB_PREFECTURE[city.name];
+    const prefecture = HUB_PREFECTURE[keyword] || HUB_PREFECTURE[city.hubCity] || HUB_PREFECTURE[city.name];
 
     if (!keyword || !keyword.trim()) {
       console.log(`  [ERR] ${city.id}: keyword 空`);

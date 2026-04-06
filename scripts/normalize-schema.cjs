@@ -3,7 +3,7 @@
  * destinations.json スキーマ正規化スクリプト
  *
  * hub        : { id, name, type:"hub", region, + 運用フィールド }
- * destination: { id, name, type:"destination", region, hub, hotelHub, tags[], spots[], + 運用フィールド }
+ * destination: { id, name, type:"destination", region, hub, hubCity, tags[], spots[], + 運用フィールド }
  * spot       : { id, name, type:"spot", destination }
  *
  * 削除: atmosphere, image, jr_region, mapDestination, parentHub, transport,
@@ -184,7 +184,7 @@ const result = data.map(function(d) {
       type:            'hub',
       region:          d.region,
       // 運用フィールド
-      hotelHub:        d.hotelHub ?? d.name,
+      hubCity:        d.hubCity ?? d.name,
       stayAllowed:     d.stayAllowed     ?? [],
       departures:      d.departures      ?? [],
       weight:          d.weight          ?? 0.35,
@@ -210,7 +210,7 @@ const result = data.map(function(d) {
       type:            'destination',
       region:          d.region,
       hub:             hub ?? null,
-      hotelHub:        d.hotelHub ?? d.name,
+      hubCity:        d.hubCity ?? d.name,
       // 運用フィールド
       stayAllowed:     d.stayAllowed     ?? [],
       departures:      d.departures      ?? [],

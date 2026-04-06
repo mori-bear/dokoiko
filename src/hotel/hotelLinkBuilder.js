@@ -12,7 +12,9 @@
  *   じゃらん keyword: hotelAreas.json の Shift-JIS 済み jalanUrl を優先使用
  *   楽天リンク先URL: encodeURIComponent 1回のみ
  *
- * 3段フォールバック（楽天・じゃらん共通）:
+ * ハブ判定: dest.hubCity !== dest.name のとき hubCity エリアを直接使用
+ *
+ * 3段フォールバック（hubCity === dest.name の場合のみ）:
  *   Tier1: dest自身の hotelAreas エントリ（area-specific）
  *   Tier2: dest.fallbackCity → hotelAreas エントリ（weak時またはTier1失敗時）
  *   Tier3: dest.prefecture のキーワード検索（最終手段）
@@ -200,16 +202,17 @@ function buildNearbyHotelLinks(dest) {
 /**
  * @param {object} dest — destination エントリ
  * @returns {{
- *   links: Array,               // 現地宿リンク（rakuten/jalan）
- *   hubLinks?: {links},         // ハブ宿リンク（mountain/remote のみ）
- *   stayCityName: string,       // UI表示用の宿泊地名（1件）
+ *   links: Array,               // 宿リンク（rakuten/jalan）
+ *   stayCityName: string,       // UI表示用の宿泊地名
  *   bestUrl: string|null,       // 最良の宿リンクURL（1CTA用）
  *   bestType: string|null,      // 'rakuten' | 'jalan'
  * }}
  */
 export function buildHotelLinks(dest) {
-  /* ── hubCity: 観光地は明示的なハブ都市の宿を使用 ── */
-  if (dest.hubCity) {
+  const destName = dest.displayName || dest.name;
+
+  /* ── hubCity が目的地と異なる → hubCity エリアを直接使用 ── */
+  if (dest.hubCity && dest.hubCity !== destName) {
     const hubArea        = lookupAreaByName(dest.hubCity);
     const hubRakutenPath = getRakutenPath(hubArea, null);
     const hubRakutenUrl  = hubRakutenPath ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)) : null;
@@ -228,52 +231,19 @@ export function buildHotelLinks(dest) {
     }
   }
 
-  /* ── 現地宿 ── */
+  /* ── 現地宿（Tier1 → Tier2 → Tier3）── */
   const rakutenUrl = resolveRakutenUrl(dest);
   const jalanUrl   = resolveJalanUrl(dest);
 
-  const result = {
-    links: [
-      ...(rakutenUrl ? [{ type: 'rakuten', url: rakutenUrl }] : []),
-      ...(jalanUrl   ? [{ type: 'jalan',   url: jalanUrl   }] : []),
-    ],
+  const links = [
+    ...(rakutenUrl ? [{ type: 'rakuten', url: rakutenUrl }] : []),
+    ...(jalanUrl   ? [{ type: 'jalan',   url: jalanUrl   }] : []),
+  ];
+
+  return {
+    links,
+    stayCityName: destName,
+    bestUrl:  links[0]?.url  ?? null,
+    bestType: links[0]?.type ?? null,
   };
-
-  /* ── ハブ宿（車必須 / remote / mountain のみ）── */
-  const needsHub = dest.requiresCar || dest.destType === 'remote' || dest.destType === 'mountain';
-  // 優先順位: hubCity（明示）> hotelHub（宿泊適地）> gatewayHub（交通ハブ）> gateway
-  const hubCityName = dest.hubCity
-    ?? dest.hotelHub
-    ?? dest.gatewayHub
-    ?? (dest.gateway ? dest.gateway.replace(/駅$/, '') : null)
-    ?? (dest.gatewayStations?.[0]?.name ? dest.gatewayStations[0].name.replace(/駅$/, '') : null);
-
-  if (needsHub && hubCityName && hubCityName !== dest.name) {
-    const hubArea        = lookupAreaByName(hubCityName);
-    const hubRakutenPath = getRakutenPath(hubArea, null);
-    const hubRakutenUrl  = hubRakutenPath ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)) : null;
-    const hubJalanUrl    = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
-
-    if (hubRakutenUrl || hubJalanUrl) {
-      result.hubLinks = {
-        links: [
-          ...(hubRakutenUrl ? [{ type: 'rakuten', url: hubRakutenUrl }] : []),
-          ...(hubJalanUrl   ? [{ type: 'jalan',   url: hubJalanUrl   }] : []),
-        ],
-      };
-    }
-  }
-
-  /* ── UI用: 宿泊地名 + 1CTA URL ── */
-  // mountain/remote はハブ都市に泊まる方が自然
-  const useHub = !!(result.hubLinks?.links?.length && needsHub);
-  result.stayCityName = useHub
-    ? hubCityName
-    : (dest.displayName || dest.name);
-
-  const bestLinks = useHub ? result.hubLinks.links : result.links;
-  result.bestUrl  = bestLinks[0]?.url ?? null;
-  result.bestType = bestLinks[0]?.type ?? null;
-
-  return result;
 }

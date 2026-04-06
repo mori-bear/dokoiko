@@ -218,7 +218,7 @@ if (ngList.length > 0) {
   console.log('\n[提案] 以下の hotelSearch を修正することを検討:');
   for (const ng of ngList) {
     const dest = dests.find(d => d.id === ng.id);
-    const suggestion = dest?.gatewayHub ?? dest?.prefecture?.replace(/[都道府県]$/, '');
+    const suggestion = dest?.hubCity ?? dest?.prefecture?.replace(/[都道府県]$/, '');
     console.log(`  ${ng.id}: "${ng.keyword}" → "${suggestion} ホテル" に変更候補`);
   }
 }
