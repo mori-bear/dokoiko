@@ -482,10 +482,11 @@ body {
 }
 
 .city-tagline {
-  font-size: 18px;
+  margin: 8px 0 0;
+  font-size: 15px;
   font-weight: 500;
-  color: var(--text-sub);
-  letter-spacing: -0.5px;
+  color: var(--text);
+  line-height: 1.5;
 }
 
 .city-sub {
@@ -1732,7 +1733,7 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   }
 
   .city-tagline {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .result-card {

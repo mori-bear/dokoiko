@@ -79,28 +79,17 @@ const TAG_COLOR_MAP = {
 /* ── 都市ブロック ── */
 
 function buildCityBlock(city) {
-  // タグ表示: primary + secondary（v2）、なければ tags にフォールバック、最大4つ
+  const categoryBadge = buildCategoryBadge(city);
   const displayTags = city.primary?.length
     ? [...(city.primary ?? []), ...(city.secondary ?? [])]
     : (city.tags ?? []);
-  const themesHtml = displayTags.length
-    ? displayTags.slice(0, 4).map((t) => {
-        const cls = TAG_COLOR_MAP[t] ?? 'tag-default';
-        return `<span class="theme-tag ${cls}">${t}</span>`;
-      }).join('')
-    : '';
-
-  const categoryBadge = buildCategoryBadge(city);
 
   // 所在地
   const locationStr = city.prefecture || '';
 
-  // タグライン: catch から体験要素を抽出
-  const tagline = buildTagline(city);
   const nameDisplay = city.displayName || city.name;
-  const titleHtml = tagline
-    ? `<h2 class="city-name">${nameDisplay}<span class="city-tagline">｜${tagline}</span></h2>`
-    : `<h2 class="city-name">${nameDisplay}</h2>`;
+  const tagline = buildTagline(city);
+  const taglineHtml = tagline ? `<p class="city-tagline">${tagline}</p>` : '';
 
   // 説明文
   const descHtml = city.description
@@ -116,12 +105,12 @@ function buildCityBlock(city) {
   return `
     <div class="city-block">
       <div class="city-header">
-        ${titleHtml}
+        <h2 class="city-name">${nameDisplay}</h2>
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
-      ${themesHtml ? `<div class="themes-row">${themesHtml}</div>` : ''}
-      ${descHtml}
+      ${taglineHtml}
       ${spotsHtml}
+      ${descHtml}
     </div>
   `;
 }
@@ -143,32 +132,19 @@ function buildSpotsLine(city, displayTags) {
 }
 
 /**
- * catch フレーズからタグラインを生成。
- *
- * 制約:
- *   - 地名のみは禁止（必ず体験 or 要素を含める）
- *   - 20文字以内
- *   - tags fallback時は2要素を「と」で組み合わせ
+ * タグライン: description の1文目を使用。
+ * 「何がある場所か」を20文字以内で伝える。
+ * 20文字超なら tags フォールバック。
  */
 function buildTagline(city) {
-  const name = city.displayName || city.name;
   const tags = city.primary ?? city.tags ?? [];
 
-  // catch がなければ tags から生成
-  if (!city.catch) {
-    return tags.length >= 2 ? `${tags[0]}と${tags[1]}` : (tags[0] || '');
+  if (city.description) {
+    const first = city.description.split('。')[0] ?? '';
+    if (first.length > 0 && first.length <= 20) return first;
   }
 
-  // catch の最初の句読点まで
-  const first = city.catch.split(/[。、！]/)[0] ?? '';
-
-  // 地名のみ（地名で始まって体験要素がない）を除外
-  const isNameOnly = first === name || first.length <= 3;
-
-  if (!isNameOnly && first.length <= 20) return first;
-
-  // tags フォールバック: 2要素���み合わせ
-  return tags.length >= 2 ? `${tags[0]}と${tags[1]}` : (tags[0] || '');
+  return tags.length >= 2 ? `${tags[0]}と${tags[1]}の街` : (tags[0] ? `${tags[0]}の街` : '');
 }
 
 /* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */
