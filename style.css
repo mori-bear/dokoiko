@@ -988,12 +988,18 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: var(--text-main);
-  margin-bottom: 14px;
+  margin-bottom: 4px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
   line-height: 1.4;
+}
+
+.via-line {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-bottom: 12px;
 }
 
 .route-line .route-badge {

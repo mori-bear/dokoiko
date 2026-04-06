@@ -115,6 +115,7 @@ function draw() {
       mapUrl:          plan.transportContext?.mapUrl          ?? null,
       mapOnlyFallback: plan.transportContext?.mapOnlyFallback ?? false,
       reason:          plan.transportContext?.reason          ?? '',
+      via:             plan.transportContext?.via             ?? null,
     });
 
     // URLとページメタを更新

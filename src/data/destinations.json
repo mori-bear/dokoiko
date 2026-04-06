@@ -1482,7 +1482,8 @@
     "mapPoint": "厳島神社",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "宮島"
+    "hubCity": "宮島",
+    "localHub": "宮島口"
   },
   {
     "id": "onomichi",
@@ -1726,7 +1727,8 @@
     "mapPoint": "寒霞渓",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "小豆島"
+    "hubCity": "小豆島",
+    "localHub": "高松"
   },
   {
     "id": "mihonoseki",
@@ -2076,7 +2078,8 @@
     "mapPoint": "阿波連ビーチ",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "渡嘉敷島"
+    "hubCity": "渡嘉敷島",
+    "localHub": "那覇"
   },
   {
     "id": "kumejima",
@@ -2212,7 +2215,8 @@
     "mapPoint": "はての浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "久米島"
+    "hubCity": "久米島",
+    "localHub": "那覇"
   },
   {
     "id": "miyakojima",
@@ -2450,7 +2454,8 @@
     "mapPoint": "前浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "神津島"
+    "hubCity": "神津島",
+    "localHub": "東京"
   },
   {
     "id": "hakone",
@@ -3022,7 +3027,8 @@
     "mapPoint": "三原山",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "伊豆大島"
+    "hubCity": "伊豆大島",
+    "localHub": "東京"
   },
   {
     "id": "shirakawago-t",
@@ -4264,7 +4270,8 @@
     "mapPoint": "縄文杉",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "屋久島"
+    "hubCity": "屋久島",
+    "localHub": "鹿児島"
   },
   {
     "id": "amakusa",
@@ -5130,7 +5137,8 @@
     "mapPoint": "地中美術館",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "直島"
+    "hubCity": "直島",
+    "localHub": "高松"
   },
   {
     "id": "kotohira",
@@ -7795,7 +7803,8 @@
     "mapPoint": "金作原原生林",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "奄美大島"
+    "hubCity": "奄美大島",
+    "localHub": "鹿児島"
   },
   {
     "id": "goto",
@@ -7924,7 +7933,8 @@
     "mapPoint": "堂崎天主堂",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "五島列島"
+    "hubCity": "五島列島",
+    "localHub": "博多"
   },
   {
     "id": "unzen",
@@ -13223,7 +13233,8 @@
     "mapPoint": "ピナイサーラの滝",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "西表島"
+    "hubCity": "西表島",
+    "localHub": "石垣"
   },
   {
     "id": "takahashi",
@@ -14924,7 +14935,8 @@
     "mapPoint": "桃岩展望台",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "礼文島"
+    "hubCity": "礼文島",
+    "localHub": "稚内"
   },
   {
     "id": "rishiri-island",
@@ -15054,7 +15066,8 @@
     "mapPoint": "利尻山",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "利尻島"
+    "hubCity": "利尻島",
+    "localHub": "稚内"
   },
   {
     "id": "akan",
@@ -16645,7 +16658,8 @@
     "mapPoint": "佐渡金山",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "佐渡"
+    "hubCity": "佐渡",
+    "localHub": "新潟"
   },
   {
     "id": "kiyosato",
@@ -18787,7 +18801,8 @@
     "mapPoint": "片添ヶ浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "周防大島"
+    "hubCity": "周防大島",
+    "localHub": "柳井"
   },
   {
     "id": "shimanto",
@@ -19014,7 +19029,8 @@
     "mapPoint": "柏島海岸",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "柏島"
+    "hubCity": "柏島",
+    "localHub": "宿毛"
   },
   {
     "id": "saijo",
@@ -19998,7 +20014,8 @@
     "mapPoint": "万関橋",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "対馬"
+    "hubCity": "対馬",
+    "localHub": "博多"
   },
   {
     "id": "iki-island",
@@ -20131,7 +20148,8 @@
     "mapPoint": "辰ノ島",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "壱岐"
+    "hubCity": "壱岐",
+    "localHub": "博多"
   },
   {
     "id": "tanegashima",
@@ -20265,7 +20283,8 @@
     "mapPoint": "種子島宇宙センター",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "種子島"
+    "hubCity": "種子島",
+    "localHub": "鹿児島"
   },
   {
     "id": "kikuchi",
@@ -20506,7 +20525,8 @@
     "mapPoint": "星砂の浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "竹富島"
+    "hubCity": "竹富島",
+    "localHub": "石垣"
   },
   {
     "id": "yonaguni-island",
@@ -20638,7 +20658,8 @@
     "mapPoint": "西崎灯台（日本最西端）",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "与那国島"
+    "hubCity": "与那国島",
+    "localHub": "石垣"
   },
   {
     "id": "nakijin",
@@ -21005,7 +21026,8 @@
     "mapPoint": "古座間味ビーチ",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "座間味島"
+    "hubCity": "座間味島",
+    "localHub": "那覇"
   },
   {
     "id": "ie-island",
@@ -21142,7 +21164,8 @@
     "mapPoint": "城山（タッチュー）",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "伊江島"
+    "hubCity": "伊江島",
+    "localHub": "本部"
   },
   {
     "id": "kohama-island",
@@ -21259,7 +21282,8 @@
     "mapPoint": "はいむるぶし",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "小浜島"
+    "hubCity": "小浜島",
+    "localHub": "石垣"
   },
   {
     "id": "matsushiro",
@@ -26397,7 +26421,8 @@
     "mapPoint": "なかまで",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "甑島"
+    "hubCity": "甑島",
+    "localHub": "薩摩川内"
   },
   {
     "id": "kirishima",
@@ -30177,7 +30202,8 @@
     "mapPoint": "キンニャモニャセンター",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "海士"
+    "hubCity": "海士",
+    "localHub": "松江"
   },
   {
     "id": "akiyoshidai",
@@ -30521,7 +30547,8 @@
     "mapPoint": "ローソク島",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "隠岐の島"
+    "hubCity": "隠岐の島",
+    "localHub": "境港"
   },
   {
     "id": "inujima",
@@ -30643,7 +30670,8 @@
     "mapPoint": "犬島精錬所美術館",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "犬島"
+    "hubCity": "犬島",
+    "localHub": "岡山"
   },
   {
     "id": "teshima",
@@ -30773,7 +30801,8 @@
     "mapPoint": "豊島美術館",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "豊島"
+    "hubCity": "豊島",
+    "localHub": "高松"
   },
   {
     "id": "niyodogawa",
@@ -31882,7 +31911,8 @@
     "mapPoint": "古民家宿ほんまもん",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "小値賀島"
+    "hubCity": "小値賀島",
+    "localHub": "佐世保"
   },
   {
     "id": "irabu-island",
@@ -32001,7 +32031,8 @@
     "mapPoint": "渡口の浜",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "伊良部島"
+    "hubCity": "伊良部島",
+    "localHub": "宮古"
   },
   {
     "id": "aguni-island",
@@ -32138,7 +32169,8 @@
     "mapPoint": "粟国島の塩",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "粟国島"
+    "hubCity": "粟国島",
+    "localHub": "那覇"
   },
   {
     "id": "itoman",
@@ -32507,7 +32539,8 @@
     "mapPoint": "雄山",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "三宅島"
+    "hubCity": "三宅島",
+    "localHub": "東京"
   },
   {
     "id": "hachijojima",
@@ -32644,7 +32677,8 @@
     "mapPoint": "底土海水浴場",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "八丈島"
+    "hubCity": "八丈島",
+    "localHub": "東京"
   },
   {
     "id": "niijima",
@@ -32775,7 +32809,8 @@
     "mapPoint": "コシキビーチ",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "新島"
+    "hubCity": "新島",
+    "localHub": "東京"
   },
   {
     "id": "shikinejima",
@@ -32898,7 +32933,8 @@
     "mapPoint": "地鉈温泉",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "式根島"
+    "hubCity": "式根島",
+    "localHub": "東京"
   },
   {
     "id": "shirakawa",
@@ -39957,7 +39993,8 @@
     "mapPoint": "姫島七不思議",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "姫島"
+    "hubCity": "姫島",
+    "localHub": "国東"
   },
   {
     "id": "toshima",
@@ -40049,7 +40086,8 @@
     "mapPoint": "椿林",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "利島"
+    "hubCity": "利島",
+    "localHub": "東京"
   },
   {
     "id": "joetsu",
@@ -45063,7 +45101,8 @@
     "mapPoint": "丸山（二重カルデラ）",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "青ヶ島"
+    "hubCity": "青ヶ島",
+    "localHub": "八丈島"
   },
   {
     "id": "kugashima",
@@ -45147,7 +45186,8 @@
     "mapPoint": "旧五輪教会堂",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "久賀島"
+    "hubCity": "久賀島",
+    "localHub": "五島"
   },
   {
     "id": "nakatosa",
@@ -50430,7 +50470,8 @@
     "mapPoint": "念頭平松（樹齢数百年の松）",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "伊平屋島"
+    "hubCity": "伊平屋島",
+    "localHub": "今帰仁"
   },
   {
     "id": "ogimi",

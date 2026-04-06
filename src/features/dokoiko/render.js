@@ -15,7 +15,7 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '' }) {
+export function renderResult({ city, transportLinks, hotelLinks, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null }) {
   // 白画面防止 — レンダリングエラーを catch してフォールバック表示
   try {
     const showHotel = stayType !== 'daytrip';
@@ -26,7 +26,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayType, depar
       <div class="result-card">
         ${buildCityBlock(city)}
         ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason)
+          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via)
           : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType) : '')
         }
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
@@ -211,12 +211,15 @@ function actionBtnClass(ctaType) {
  * @param {boolean} mapOnlyFallback — CTA 生成不可・Maps のみ案内モード
  * @param {string}  reason          — CTA 直前の「納得感」テキスト（engine 生成）
  */
-function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '') {
+function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, city, showHotel, engineMapUrl = null, mapOnlyFallback = false, reason = '', via = null) {
   const stepGroups = links.filter(l => l.type === 'step-group');
 
-  // ルート概要行: "東京 → 日田"
+  // ルート概要行: "東京 → 壱岐" + 必要なら "博多経由"
   const routeLineHtml = (departure && destLabel)
     ? `<div class="route-line">${departure} → ${destLabel}</div>`
+    : '';
+  const viaLineHtml = via
+    ? `<div class="via-line">${via}経由</div>`
     : '';
 
   // CTA グループ（最大2つ: 地図ルート=PRIMARY / 予約=SECONDARY）
@@ -295,6 +298,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
   return `
     <div class="action-block">
       ${routeLineHtml}
+      ${viaLineHtml}
       ${ctaGroupHtml}
       ${shareInlineHtml}
       ${staySection}

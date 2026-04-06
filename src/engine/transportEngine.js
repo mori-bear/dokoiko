@@ -87,12 +87,15 @@ export function determineTransportType(departure, city, distKm = 0) {
   // 1. 沖縄地方 → 飛行機
   if (city?.region === FLIGHT_ONLY_REGION) return 'flight';
 
-  // 2. 離島で直行便あり → 飛行機
+  // 2. 離島: 遠距離(>500km) + 直行便あり → 飛行機（例: 東京→屋久島）
   if ((city?.isIsland === true || city?.destType === 'island') &&
-      city?.airportGateway && city?.hasDirectFlight === true) return 'flight';
+      city?.airportGateway && city?.hasDirectFlight === true && distKm > 500) return 'flight';
 
-  // 3. 離島 → フェリー
-  if (city?.isIsland === true || city?.destType === 'island') return 'ferry';
+  // 3. 離島: フェリー港あり → フェリー（近距離島・本土フェリー接続）
+  if ((city?.isIsland === true || city?.destType === 'island') && city?.ferryGateway) return 'ferry';
+
+  // 4. 離島: フェリーなし + 空港 → 飛行機（宮古島など）
+  if ((city?.isIsland === true || city?.destType === 'island') && city?.airportGateway) return 'flight';
 
   // 4. 距離 + 直行便 → 飛行機
   if (distKm > FLIGHT_DISTANCE_KM && city?.hasDirectFlight === true) return 'flight';
@@ -195,9 +198,11 @@ export function validateRoute(transportType, city, distanceKm = 0) {
       if (!city?.airportGateway && !city?.flightHub && city?.hasDirectFlight !== true) return false;
       // 近距離フライト（150km未満）は非現実的
       if (distanceKm > 0 && distanceKm < FLIGHT_MIN_DISTANCE) return false;
-      // 離島: hasDirectFlight があれば距離に関係なく有効
-      if (city?.isIsland === true || city?.destType === 'island') return true;
-      // 一般目的地: 500km未満は鉄道の方が現実的 — railProvider:null でも flight fallback を許可しない
+      // 離島: 500km超 → OK / 500km以内は ferry を使うべき
+      if (city?.isIsland === true || city?.destType === 'island') {
+        return distanceKm > 500;
+      }
+      // 一般目的地: 500km未満は鉄道の方が現実的
       if (distanceKm > 0 && distanceKm < FLIGHT_DISTANCE_KM) return false;
       return true;
 
@@ -383,12 +388,13 @@ export function buildTransportContext(departure, city) {
     : null;
 
   /* ⑧ 経由地
-   *    localHub: 交通専用のハブ（設定時最優先 — 宿と最適地が異なるケース）
-   *    hubCity:  宿泊ハブ兼フォールバック（dest と異なる場合に使用）
+   *    localHub: 交通専用ハブ（最優先 — 全島に設定済み、宿hubCityと異なるケース）
+   *    hubCity:  localHub未設定かつ目的地と異なる場合のフォールバック
    */
   const destName = city?.displayName || city?.name;
   const via = city?.localHub
-    ?? ((city?.hubCity && city.hubCity !== destName) ? city.hubCity : null);
+    ?? ((city?.hubCity && city.hubCity !== destName) ? city.hubCity : null)
+    ?? null;
 
   /* ⑨ step-group 生成（既存エンジンに委譲） */
   const rawStepGroups = resolveTransportLinks(city, departure);
