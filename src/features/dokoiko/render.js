@@ -246,8 +246,10 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        class="btn ${actionBtnClass(mainCtaItem.cta.type)} btn--action">${bookingLabel}</a>`);
   }
 
-  // RENTAL: flight / ferry のとき、交通CTA直下にレンタカーを追加（現地移動の意思決定を連続させる）
-  const needsRentalCta = ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaItem?.cta?.type);
+  // RENTAL: requiresCar=true / flight / ferry のとき交通CTA直下にレンタカーを追加
+  const needsRentalCta =
+    (city?.requiresCar === true) ||
+    ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaItem?.cta?.type);
   if (!mapOnlyFallback && needsRentalCta) {
     const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);

@@ -241,7 +241,10 @@ export function buildHotelLinks(dest) {
 
   /* ── ハブ宿（車必須 / remote / mountain のみ）── */
   const needsHub = dest.requiresCar || dest.destType === 'remote' || dest.destType === 'mountain';
-  const hubCityName = dest.gatewayHub
+  // 優先順位: hubCity（明示）> hotelHub（宿泊適地）> gatewayHub（交通ハブ）> gateway
+  const hubCityName = dest.hubCity
+    ?? dest.hotelHub
+    ?? dest.gatewayHub
     ?? (dest.gateway ? dest.gateway.replace(/駅$/, '') : null)
     ?? (dest.gatewayStations?.[0]?.name ? dest.gatewayStations[0].name.replace(/駅$/, '') : null);
 

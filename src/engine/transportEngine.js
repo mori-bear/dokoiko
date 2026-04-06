@@ -189,10 +189,16 @@ export function validateRoute(transportType, city, distanceKm = 0) {
       return true;
 
     case 'flight':
+      // 沖縄: 鉄道・フェリーで行けない → flight 常に有効
+      if (city?.region === FLIGHT_ONLY_REGION) return true;
       // 空港情報が一切ない → flight CTA が生成できない
       if (!city?.airportGateway && !city?.flightHub && city?.hasDirectFlight !== true) return false;
-      // 近距離フライト（150km未満）は非現実的: 空港送迎だけで目的地に着く距離
+      // 近距離フライト（150km未満）は非現実的
       if (distanceKm > 0 && distanceKm < FLIGHT_MIN_DISTANCE) return false;
+      // 離島: hasDirectFlight があれば距離に関係なく有効
+      if (city?.isIsland === true || city?.destType === 'island') return true;
+      // 一般目的地: 500km未満は鉄道の方が現実的 — railProvider:null でも flight fallback を許可しない
+      if (distanceKm > 0 && distanceKm < FLIGHT_DISTANCE_KM) return false;
       return true;
 
     case 'ferry':
