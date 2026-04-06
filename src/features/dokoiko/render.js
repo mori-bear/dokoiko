@@ -137,40 +137,135 @@ function shortenSpot(name) {
     .replace(/世界遺産$/, '');
 }
 
+/* ── タグラインNG判定 ── */
+const TAGLINE_NG = /の街$|の場所|が共存|歴史|自然|文化|魅力|空気|余韻|心の|時間を|旅情|特別な|保養地|観光地|聖地/;
+
 /**
- * タグライン: description の2文目（体験文）を優先。
- * 1文目は説明的になりがちなため、「〜できる/〜感じる」形式の2文目を使う。
- * 15〜25文字に収まるものを選択。
+ * タグライン生成。
+ *
+ * 優先順位:
+ *   1. spots からシーン生成（具体的な体験が浮かぶ）
+ *   2. description を分解・再構成（動詞系に変換）
+ *   3. tags fallback（シーン形式）
+ *
+ * 制約:
+ *   - 15〜25文字
+ *   - 抽象ワード禁止（TAGLINE_NG）
+ *   - 「〜の街」「〜の場所」で終わらない
+ *   - 必ず動詞 or シーンを含む
  */
 function buildTagline(city) {
   const tags = city.primary ?? city.tags ?? [];
+  const spots = city.spots ?? [];
 
-  if (city.description) {
-    const sentences = city.description.split('。').filter(s => s.length > 0);
+  // Phase 1: spots からシーン生成
+  const fromSpots = buildTaglineFromSpots(spots, tags, city);
+  if (fromSpots) return fromSpots;
 
-    // 抽象ワード（タグラインに不適）
-    const ABSTRACT = /空気|魅力|余韻|世界|心の|時間を|旅情|特別な/;
+  // Phase 2: description から動詞句を抽出
+  const fromDesc = buildTaglineFromDesc(city.description);
+  if (fromDesc) return fromDesc;
 
-    // 2文目優先（体験ベースが多い）→ 1文目フォールバック
-    for (const idx of [1, 0]) {
-      const s = sentences[idx];
-      if (!s) continue;
-      const trimmed = s.replace(/^[、。\s]+/, '');
-      if (trimmed.length >= 10 && trimmed.length <= 25 && !ABSTRACT.test(trimmed)) return trimmed;
-    }
+  // Phase 3: tags からシーン生成
+  return buildTaglineFromTags(tags);
+}
 
-    // どちらも長すぎる場合: 1文目を25文字で切る
-    if (sentences[0] && sentences[0].length > 25) {
-      const cut = sentences[0].slice(0, 24);
-      // 最後の助詞・接続詞で切る
-      const lastBreak = cut.search(/[、のがをにで][^、のがをにで]*$/);
-      if (lastBreak > 10) return cut.slice(0, lastBreak);
-    }
+/** spots + tags → シーン形式タグライン */
+function buildTaglineFromSpots(spots, tags, city) {
+  if (spots.length === 0) return null;
+
+  // スポットを短縮（単語の切れ目で切る）
+  const short = spots.slice(0, 2).map(trimSpotName);
+
+  // spots 内容 + tags から動詞を決定
+  const verb = pickVerb(spots, tags, city);
+  const joined = short.join('や');
+
+  const candidate = `${joined}${verb}`;
+  if (candidate.length >= 10 && candidate.length <= 25) return candidate;
+
+  // 短すぎ or 長すぎ: スポット数を調整
+  if (candidate.length > 25 && short.length === 2) {
+    // 1スポットだけに絞る
+    const single = `${short[0]}${verb}`;
+    if (single.length >= 10 && single.length <= 25) return single;
   }
 
-  // tags フォールバック: 体験形
-  if (tags.length >= 2) return `${tags[0]}と${tags[1]}を楽しめる街`;
-  return tags[0] ? `${tags[0]}を楽しめる街` : '';
+  if (spots.length >= 3) {
+    const s3 = spots.slice(0, 3).map(trimSpotName);
+    const list = `${s3.join('・')}を巡れる`;
+    if (list.length >= 10 && list.length <= 25) return list;
+  }
+
+  return null;
+}
+
+/** スポット名を短縮（単語として意味が通る長さで切る） */
+function trimSpotName(name) {
+  let s = name
+    .replace(/^(.*?)（.*?）$/, '$1')
+    .replace(/(温泉郷|温泉街|温泉地)$/, '温泉')
+    .replace(/歴史の道$/, '')
+    .replace(/自然文化園$/, '')
+    .replace(/(自然|文化)(休養)?(林|園)$/, '')
+    .replace(/自然動物(園|公園)$/, '動物園')
+    .replace(/歴史(公園|館)$/, '')
+    .replace(/(総合)?文化(ホール|センター|会館)$/, '');
+  // 7文字超は助詞・の・記号の位置で切る
+  if (s.length > 7) {
+    const breakAt = s.slice(0, 8).search(/[のやと・]/);
+    if (breakAt >= 3) s = s.slice(0, breakAt);
+    else s = s.slice(0, 7);
+  }
+  return s;
+}
+
+/** spots内容 + tags/destType → 適切な動詞 */
+function pickVerb(spots, tags, city) {
+  const dt = city?.destType;
+  const tagSet = new Set(tags);
+  const spotsJoined = spots.join('');
+
+  // spots の中身で判断（tagsより具体的）
+  if (spotsJoined.match(/温泉/))              return 'に浸かれる';
+  if (spotsJoined.match(/海[岸辺沿]|ビーチ/)) return 'と海を歩ける';
+
+  // destType + tags
+  if (dt === 'island' || tagSet.has('離島'))   return 'を巡れる';
+  if (tagSet.has('海'))                        return 'と海を歩ける';
+  if (tagSet.has('山') || tagSet.has('高原'))   return 'を歩ける';
+  if (tagSet.has('寺社') || tagSet.has('城'))   return 'を歩いて回れる';
+  if (tagSet.has('街歩き') || tagSet.has('街')) return 'を歩ける';
+  if (tagSet.has('グルメ'))                    return 'を食べ歩ける';
+  if (dt === 'onsen' || tagSet.has('温泉'))    return 'に浸かれる';
+  return 'を巡れる';
+}
+
+/** description から動詞句を抽出 */
+function buildTaglineFromDesc(desc) {
+  if (!desc) return null;
+
+  // 「〜できる」「〜楽しめる」「〜味わえる」「〜行ける」系の句を抽出
+  const verbMatch = desc.match(/([\u3000-\u9FFFa-zA-Z0-9ー]{3,15}(?:できる|楽しめる|味わえる|歩ける|浸かれる|望める|眺められる|体感できる|体験できる|感じられる|堪能できる|巡れる|渡れる|行ける|過ごせる|見られる|出会える))/);
+  if (verbMatch) {
+    const v = verbMatch[1];
+    if (v.length >= 10 && v.length <= 25 && !TAGLINE_NG.test(v)) return v;
+  }
+
+  return null;
+}
+
+/** tags → シーン形式（最終フォールバック） */
+function buildTaglineFromTags(tags) {
+  if (tags.length >= 2) {
+    // 「温泉と海沿い散歩」「寺と海を歩ける」
+    const t0 = tags[0];
+    const t1 = tags[1];
+    const scene = `${t0}と${t1}を楽しめる`;
+    if (scene.length <= 25) return scene;
+    return `${t0}を楽しめる`;
+  }
+  return tags[0] ? `${tags[0]}を楽しめる` : '';
 }
 
 /* ── 乗換ガイド（私鉄乗換が必要な場合にステップ形式で表示） ── */

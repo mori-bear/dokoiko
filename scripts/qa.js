@@ -2017,6 +2017,75 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8u] タグライン品質チェック
+  ─────────────────────────────── */
+  {
+    const sc = new Scorecard('[8u] タグライン品質');
+    const TAGLINE_NG = /の街$|の場所$|が共存|歴史|自然|文化|魅力|空気|余韻|心の|時間を|旅情|特別な|保養地|観光地|聖地/;
+
+    // spots からタグラインを生成（render.js のロジックを簡易再現）
+    function trimSpot(name) {
+      let s = name.replace(/^(.*?)（.*?）$/, '$1').replace(/(温泉郷|温泉街|温泉地)$/, '温泉')
+        .replace(/歴史の道$/, '').replace(/自然文化園$/, '').replace(/(自然|文化)(休養)?(林|園)$/, '')
+        .replace(/自然動物(園|公園)$/, '動物園').replace(/歴史(公園|館)$/, '').replace(/(総合)?文化(ホール|センター|会館)$/, '');
+      if (s.length > 7) { const b = s.slice(0, 8).search(/[のやと・]/); s = b >= 3 ? s.slice(0, b) : s.slice(0, 7); }
+      return s;
+    }
+    function pickV(spots, tags, city) {
+      const sj = spots.join('');
+      if (sj.match(/温泉/)) return 'に浸かれる';
+      if (sj.match(/海[岸辺沿]|ビーチ/)) return 'と海を歩ける';
+      const ts = new Set(tags); const dt = city?.destType;
+      if (dt === 'island' || ts.has('離島')) return 'を巡れる';
+      if (ts.has('海')) return 'と海を歩ける';
+      if (ts.has('山') || ts.has('高原')) return 'を歩ける';
+      if (ts.has('寺社') || ts.has('城')) return 'を歩いて回れる';
+      if (ts.has('街歩き') || ts.has('街')) return 'を歩ける';
+      if (ts.has('グルメ')) return 'を食べ歩ける';
+      if (dt === 'onsen' || ts.has('温泉')) return 'に浸かれる';
+      return 'を巡れる';
+    }
+    function genTL(city) {
+      const tags = city.primary ?? city.tags ?? [];
+      const spots = city.spots ?? [];
+      if (!spots.length) return tags.length >= 2 ? `${tags[0]}と${tags[1]}を楽しめる` : '';
+      const short = spots.slice(0, 2).map(trimSpot);
+      const verb = pickV(spots, tags, city);
+      const c = short.join('や') + verb;
+      if (c.length >= 10 && c.length <= 25) return c;
+      if (c.length > 25) { const s = short[0] + verb; if (s.length >= 10 && s.length <= 25) return s; }
+      if (spots.length >= 3) { const s3 = spots.slice(0, 3).map(trimSpot); const l = s3.join('・') + 'を巡れる'; if (l.length >= 10 && l.length <= 25) return l; }
+      return '';
+    }
+
+    const ngList = [];
+    for (const city of DESTS) {
+      const tl = genTL(city);
+      if (tl && TAGLINE_NG.test(tl)) ngList.push(`${city.id}: "${tl}"`);
+    }
+    sc.check(ngList.length === 0,
+      ngList.length === 0
+        ? 'タグライン: 抽象ワードゼロ'
+        : `抽象ワード混入 ${ngList.length}件: ${ngList.slice(0, 5).join(', ')}`
+    );
+
+    // 「の街」で終わるチェック
+    const noMachiList = [];
+    for (const city of DESTS) {
+      const tl = genTL(city);
+      if (tl && /の街$/.test(tl)) noMachiList.push(city.id);
+    }
+    sc.check(noMachiList.length === 0,
+      noMachiList.length === 0
+        ? 'タグライン: 「〜の街」終わりゼロ'
+        : `「〜の街」終わり ${noMachiList.length}件: ${noMachiList.slice(0, 5).join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');
