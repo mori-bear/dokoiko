@@ -18,18 +18,19 @@ export async function captureShareCard(city, departure) {
 
   const name       = city.displayName || city.name;
   const prefecture = city.prefecture  || '';
-  const subCopy    = city.catch       || city.appeal?.[0] || '';
+  const tags       = (city.primary ?? city.tags ?? []).slice(0, 3).join('・');
+  const spots      = (city.spots ?? []).slice(0, 3).join('・');
+  const tagline    = city.description?.split('。')[0] ?? '';
 
   // ── オフスクリーンカード要素を生成 ──
   const card = document.createElement('div');
 
-  // html2canvasはcomputedStyleを読むため、inline styleで確実に指定する
   Object.assign(card.style, {
     position:   'fixed',
     left:       '-9999px',
     top:        '0',
     width:      '560px',
-    padding:    '48px 44px 40px',
+    padding:    '56px 48px 48px',
     background: '#ffffff',
     fontFamily: '"Hiragino Kaku Gothic Pro", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif',
     boxSizing:  'border-box',
@@ -38,11 +39,12 @@ export async function captureShareCard(city, departure) {
   });
 
   card.innerHTML = `
-    <div style="font-size:13px;color:#aaaaaa;letter-spacing:0.06em;margin-bottom:28px;font-weight:400;">${escHtml(departure)} → ${escHtml(name)}</div>
-    <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:${prefecture ? '8px' : '0'};">${escHtml(name)}</div>
-    ${prefecture ? `<div style="font-size:14px;color:#aaaaaa;margin-bottom:0;margin-top:6px;font-weight:400;">${escHtml(prefecture)}</div>` : ''}
-    ${subCopy    ? `<div style="font-size:15px;color:#555555;line-height:1.8;margin-top:28px;">${escHtml(subCopy)}</div>` : ''}
-    <div style="font-size:11px;color:#cccccc;text-align:right;margin-top:40px;letter-spacing:0.08em;">tabidokoiko.com</div>
+    <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
+    ${tagline ? `<div style="font-size:15px;color:#555;line-height:1.7;margin-bottom:16px;">${escHtml(tagline)}</div>` : ''}
+    <div style="font-size:13px;color:#999;margin-bottom:8px;">📍 ${escHtml(prefecture)}${tags ? `　🏷 ${escHtml(tags)}` : ''}</div>
+    <div style="font-size:13px;color:#888;margin-bottom:20px;">🚃 ${escHtml(departure)} → ${escHtml(name)}</div>
+    ${spots ? `<div style="font-size:13px;color:#666;line-height:1.6;">${escHtml(spots)}</div>` : ''}
+    <div style="font-size:11px;color:#ccc;text-align:right;margin-top:32px;letter-spacing:0.08em;">tabidokoiko.com</div>
   `;
 
   document.body.appendChild(card);

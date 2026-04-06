@@ -113,11 +113,7 @@ function draw() {
       stayCityName:    plan.stayCityName,
       stayType:        state.stayType,
       departure:       state.departure,
-      mapUrl:          plan.transportContext?.mapUrl          ?? null,
-      mapOnlyFallback: plan.transportContext?.mapOnlyFallback ?? false,
-      reason:          plan.transportContext?.reason          ?? '',
-      via:             plan.transportContext?.via             ?? null,
-      accessType:      plan.transportContext?.accessType      ?? null,
+      transportContext: plan.transportContext,
     });
 
     // URLとページメタを更新

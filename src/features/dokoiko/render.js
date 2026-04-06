@@ -15,20 +15,21 @@ import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuil
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, mapUrl = null, mapOnlyFallback = false, reason = '', via = null, accessType = null }) {
-  // 白画面防止 — レンダリングエラーを catch してフォールバック表示
+export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, transportContext = {} }) {
   try {
     const showHotel = stayType !== 'daytrip';
-    const hasStepGroups = transportLinks.some(l => l.type === 'step-group');
+    const tc = transportContext;
+    const destLabel = city.displayName || city.name;
 
     const el = document.getElementById('result-inner');
     el.innerHTML = `
       <div class="result-card">
         ${buildCityBlock(city)}
-        ${hasStepGroups
-          ? buildActionBlock(transportLinks, hotelLinks, stayType, departure, city.displayName || city.name, city, showHotel, mapUrl, mapOnlyFallback, reason, via, accessType, stayCityName)
-          : buildTransportBlock(transportLinks, departure, city.displayName || city.name, city) + (showHotel ? buildStayBlock(hotelLinks, city, stayType, stayCityName) : '')
-        }
+        ${buildRouteBlock(tc, departure, destLabel, city)}
+        ${buildCtaBlock(tc, transportLinks, city, departure)}
+        ${showHotel ? buildStaySection(hotelLinks, city, stayCityName) : ''}
+        <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
+        <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
     `;
@@ -321,7 +322,130 @@ function buildCategoryBadge(city) {
   return '';
 }
 
-/* ── 統合アクションブロック（1スクロール完結レイアウト） ── */
+/* ══════════════════════════════════════════════════════
+   行き方ブロック（bestRoute + alternatives）
+══════════════════════════════════════════════════════ */
+
+const TRANSPORT_ICON = { flight: '✈️', rail: '🚃', ferry: '⛴' };
+
+function formatTime(min) {
+  if (!min || min >= 9999) return '';
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return h > 0 ? `約${h}時間${m > 0 ? m + '分' : ''}` : `約${m}分`;
+}
+
+function buildRouteBlock(tc, departure, destLabel, city) {
+  if (!tc?.bestRoute) return '';
+
+  const best = tc.bestRoute;
+  const icon = TRANSPORT_ICON[best.transportType] ?? '🚃';
+  const timeStr = formatTime(best.time);
+  const viaStr = tc.via ? `<span class="route-via">${tc.via}経由</span>` : '';
+
+  // 最適ルート
+  const bestHtml = `
+    <div class="best-route">
+      <span class="best-route-icon">${icon}</span>
+      <div class="best-route-body">
+        <span class="best-route-reason">${best.reason || tc.reason}</span>
+        ${timeStr ? `<span class="best-route-time">${timeStr}</span>` : ''}
+      </div>
+    </div>`;
+
+  // alternatives（最大2つ）
+  let altHtml = '';
+  const alts = (tc.alternatives ?? []).slice(0, 2);
+  if (alts.length > 0) {
+    const altItems = alts.map(a => {
+      const aIcon = TRANSPORT_ICON[a.transportType] ?? '🚃';
+      const aTime = formatTime(a.time);
+      return `<div class="alt-route">
+        <span class="alt-route-icon">${aIcon}</span>
+        <span class="alt-route-label">${aTime}</span>
+        <span class="alt-route-reason">${a.rejectedReason}</span>
+      </div>`;
+    }).join('');
+    altHtml = `<div class="alt-routes">${altItems}</div>`;
+  }
+
+  // rejected（DB除外のみ表示）
+  const dbRejected = (tc.rejectedRoutes ?? []).filter(r => r.reason !== '条件外');
+  let rejHtml = '';
+  if (dbRejected.length > 0) {
+    const rejItems = dbRejected.map(r => {
+      const rIcon = TRANSPORT_ICON[r.type] ?? '';
+      return `<span class="rej-route">${rIcon} ${r.reason}</span>`;
+    }).join('');
+    rejHtml = `<div class="rej-routes">${rejItems}</div>`;
+  }
+
+  return `
+    <div class="route-block">
+      <div class="route-header">${departure} → ${destLabel}</div>
+      ${viaStr}
+      ${bestHtml}
+      ${altHtml}
+      ${rejHtml}
+    </div>`;
+}
+
+function buildCtaBlock(tc, transportLinks, city, departure) {
+  const ctaItems = [];
+  const seenUrls = new Set();
+
+  // 1. Google Maps（最優先）
+  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+  if (mapUrl && !seenUrls.has(mapUrl)) {
+    seenUrls.add(mapUrl);
+    ctaItems.push(`<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--maps btn--action">Googleマップでルートを見る</a>`);
+  }
+
+  // 2. 予約CTA（accessType=bus時はスキップ）
+  if (tc?.accessType !== 'bus' && !tc?.mapOnlyFallback) {
+    const mainCta = transportLinks?.find(l => l.type === 'main-cta');
+    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
+      seenUrls.add(mainCta.cta.url);
+      const label = mainCta.cta.label ?? buildMainCtaLabel(mainCta.cta.type);
+      ctaItems.push(`<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`);
+    }
+  }
+
+  // 3. レンタカー（必要時のみ）
+  const mainCtaType = transportLinks?.find(l => l.type === 'main-cta')?.cta?.type;
+  const needsRental = city?.requiresCar === true ||
+    ['skyscanner', 'google-flights', 'ferry'].includes(mainCtaType);
+  if (!tc?.mapOnlyFallback && needsRental) {
+    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
+    const rentalLink = buildRentalLink(destCity);
+    if (rentalLink?.url && !seenUrls.has(rentalLink.url)) {
+      seenUrls.add(rentalLink.url);
+      ctaItems.push(`<a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+         class="btn btn-rental btn--action">レンタカーを探す</a>`);
+    }
+  }
+
+  // 最大3つ
+  const ctas = ctaItems.slice(0, 3).join('');
+
+  // シェアボタン
+  const shareHtml = `
+    <div class="share-inline">
+      <button class="btn-share btn-share--x"   id="share-x-btn">Xでシェア</button>
+      <button class="btn-share btn-share--img" id="share-img-btn">画像でシェア</button>
+      <button class="btn-copy"                 id="share-copy-btn">リンクをコピー</button>
+    </div>`;
+
+  return `
+    <div class="cta-block">
+      <div class="cta-group">${ctas}</div>
+      ${shareHtml}
+    </div>`;
+}
+
+/* ── 旧 buildActionBlock（後方互換・非step-group用） ── */
 
 /**
  * onsen → じゃらん優先、それ以外 → 楽天。

@@ -1000,49 +1000,72 @@ body {
   padding: 2px 8px;
 }
 
-/* ── 統合アクションブロック（1スクロール完結レイアウト） ── */
+/* ── ルートブロック ── */
 
-.action-block {
-  padding: 16px 18px 4px;
+.route-block {
+  padding: 20px 0 0;
+  margin-top: 16px;
   border-top: 1px solid var(--border);
 }
 
-.route-line {
+.route-header {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 6px;
 }
 
-.route-reason {
-  font-size: 13px;
-  color: var(--text-sub);
-  margin-bottom: 4px;
-}
-
-.via-line {
+.route-via {
+  display: inline-block;
   font-size: 12px;
   color: var(--text-sub);
   margin-bottom: 12px;
 }
 
-.route-line .route-badge {
-  font-size: 12px;
-  font-weight: 600;
+/* 最適ルート */
+.best-route {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--bg-sub, #f8f8f8);
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
-/* 納得感テキスト（CTA直前・engine生成・1行） */
-.route-reason {
+.best-route-icon { font-size: 22px; flex-shrink: 0; line-height: 1.2; }
+.best-route-body { display: flex; flex-direction: column; gap: 2px; }
+.best-route-reason { font-size: 14px; font-weight: 600; color: var(--text); }
+.best-route-time   { font-size: 13px; color: var(--text-sub); }
+
+/* 比較ルート */
+.alt-routes { margin-bottom: 10px; }
+.alt-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
   font-size: 13px;
-  font-weight: 600;
   color: var(--text-sub);
-  margin: 0 0 12px;
-  line-height: 1.5;
+}
+.alt-route-icon { font-size: 16px; flex-shrink: 0; }
+.alt-route-label { min-width: 70px; }
+.alt-route-reason { color: #999; }
+
+/* 除外ルート */
+.rej-routes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding: 0 16px;
+}
+.rej-route { font-size: 12px; color: #bbb; }
+
+/* ── CTAブロック ── */
+
+.cta-block {
+  padding: 4px 0 0;
 }
 
 .cta-group {
@@ -1065,6 +1088,17 @@ body {
   line-height: 1.3;
   text-decoration: none;
 }
+
+/* Googleマップ: プライマリCTA */
+.btn--maps {
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+.btn--maps:hover { background: #333; opacity: 1; box-shadow: 0 6px 18px rgba(0,0,0,0.28); }
 
 /* 行き方を見る: 最強アクション（shadow + 大きめpadding） */
 .btn--transport {
