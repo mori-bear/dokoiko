@@ -124,6 +124,8 @@ export const AIRPORT_HUB_GATEWAY = {
   '石垣':   '石垣空港',
   '鹿児島': '鹿児島空港',
   '福岡':   '福岡空港',
+  '宮古':   '宮古空港',
+  '稚内':   '稚内空港',
 };
 
 /* ── Google Maps（transit / driving 統一） ── */
