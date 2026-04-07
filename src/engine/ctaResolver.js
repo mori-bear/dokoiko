@@ -31,13 +31,14 @@ import { DEPARTURE_CITY_INFO } from '../config/constants.js';
  * ルール:
  *   ① 九州内 → jrkyushu
  *   ② 東日本内（east × east）→ ekinet
- *   ③ 西日本が絡む（east含まない）→ e5489
- *   ④ 東京→大阪など東西跨ぎ → ex（スマートEX）
- *   ⑤ 判定不能 → 目的地のrailProviderにフォールバック
+ *   ③ それ以外（跨ぎ含む）→ e5489
+ *
+ * EX（スマートEX）は東海道・山陽限定で区間制約があるため使用しない。
+ * e5489は全国の新幹線を予約可能なため、跨ぎ区間の安全なデフォルト。
  */
 function resolveJrProvider(departure, city) {
   const depArea = DEPARTURE_CITY_INFO[departure]?.jrArea ?? null;
-  const destProvider = city.railProvider; // ekinet / e5489 / jrkyushu / ex
+  const destProvider = city.railProvider;
 
   if (!depArea || !destProvider) return destProvider;
 
@@ -47,19 +48,8 @@ function resolveJrProvider(departure, city) {
   // ② 東日本内完結
   if (depArea === 'east' && destProvider === 'ekinet') return 'ekinet';
 
-  // ③ 西日本エリア同士（west × e5489/jrkyushu）
-  if (depArea === 'west' && (destProvider === 'e5489' || destProvider === 'jrkyushu')) return 'e5489';
-
-  // ④ 九州出発で西日本方面
-  if (depArea === 'kyushu' && destProvider === 'e5489') return 'e5489';
-
-  // ⑤ 東西跨ぎ（east × west系 or 逆）→ スマートEX
-  if ((depArea === 'east' && destProvider !== 'ekinet') ||
-      (depArea !== 'east' && destProvider === 'ekinet')) {
-    return 'ex';
-  }
-
-  return destProvider;
+  // ③ それ以外は全てe5489（跨ぎ含む）
+  return 'e5489';
 }
 
 /**
