@@ -23,6 +23,44 @@ import {
 } from '../transport/linkBuilder.js';
 import { CITY_AIRPORT } from '../utilities/airportMap.js';
 import { AIRPORT_HUB_GATEWAY } from '../transport/linkBuilder.js';
+import { DEPARTURE_CITY_INFO } from '../config/constants.js';
+
+/**
+ * 出発地 × 目的地の区間でJR予約プロバイダを判定する。
+ *
+ * ルール:
+ *   ① 九州内 → jrkyushu
+ *   ② 東日本内（east × east）→ ekinet
+ *   ③ 西日本が絡む（east含まない）→ e5489
+ *   ④ 東京→大阪など東西跨ぎ → ex（スマートEX）
+ *   ⑤ 判定不能 → 目的地のrailProviderにフォールバック
+ */
+function resolveJrProvider(departure, city) {
+  const depArea = DEPARTURE_CITY_INFO[departure]?.jrArea ?? null;
+  const destProvider = city.railProvider; // ekinet / e5489 / jrkyushu / ex
+
+  if (!depArea || !destProvider) return destProvider;
+
+  // ① 九州内完結
+  if (depArea === 'kyushu' && destProvider === 'jrkyushu') return 'jrkyushu';
+
+  // ② 東日本内完結
+  if (depArea === 'east' && destProvider === 'ekinet') return 'ekinet';
+
+  // ③ 西日本エリア同士（west × e5489/jrkyushu）
+  if (depArea === 'west' && (destProvider === 'e5489' || destProvider === 'jrkyushu')) return 'e5489';
+
+  // ④ 九州出発で西日本方面
+  if (depArea === 'kyushu' && destProvider === 'e5489') return 'e5489';
+
+  // ⑤ 東西跨ぎ（east × west系 or 逆）→ スマートEX
+  if ((depArea === 'east' && destProvider !== 'ekinet') ||
+      (depArea !== 'east' && destProvider === 'ekinet')) {
+    return 'ex';
+  }
+
+  return destProvider;
+}
 
 /**
  * 交通手段タイプと目的地情報から CTA オブジェクトを生成する。
@@ -64,10 +102,11 @@ export function resolveCtaByType(transportType, departure, city) {
 
     case 'rail': {
       // 沖縄 or 離島 の場合は JR CTA を生成しない
-      // （railProvider: null は北海道など鉄道ある地域にも存在するため region/isIsland で判定）
       if (city?.region === '沖縄' || city?.isIsland === true) return null;
       if (!city.railProvider) return null;
-      return buildJrLink(city.railProvider) ?? null;
+      // 区間ベースでJRプロバイダを判定
+      const provider = resolveJrProvider(departure, city);
+      return provider ? (buildJrLink(provider) ?? null) : null;
     }
 
     case 'bus': {
