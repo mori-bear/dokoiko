@@ -385,14 +385,20 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ② 主役予約CTA（1つだけ）
+  // ② 予約CTA（bookableセグメント or ctaResolver から）
+  // 島・半島で車/バスアクセスの場合、JR CTAは出さない（嘘になる）
+  const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
   let bookingHtml = '';
-  if (main && !tc?.mapOnlyFallback) {
+  if (!tc?.mapOnlyFallback && !suppressBooking) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildSegmentCtaLabel(main, mainCta.cta.type);
-      bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
+      const label = main
+        ? buildSegmentCtaLabel(main, mainCta.cta.type)
+        : buildCtaFallbackLabel(mainCta.cta, city, best?.displayRoute);
+      if (label) {
+        bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+           class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
+      }
     }
   }
 
@@ -833,6 +839,28 @@ function buildMainCtaLabel(type) {
     'bus':           'バスを予約する',
   };
   return LABELS[type] ?? 'チケットを予約する';
+}
+
+/**
+ * bookableセグメントがないがctaが存在する場合のフォールバックラベル。
+ * displayRouteの到着地を使い「どこまで予約するか」を明示する。
+ */
+function buildCtaFallbackLabel(cta, city, displayRoute) {
+  const clean = (n) => n?.replace(/駅$|空港$|港$/, '') ?? '';
+  const dest = clean(displayRoute?.to ?? city?.displayName ?? city?.name ?? '');
+  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+  const FLIGHT_TYPES = new Set(['skyscanner', 'google-flights']);
+
+  if (JR_TYPES.has(cta.type) && dest) {
+    return `🚄 ${dest}まで予約`;
+  }
+  if (FLIGHT_TYPES.has(cta.type) && dest) {
+    return `✈️ ${dest}への航空券`;
+  }
+  if (cta.type === 'ferry' && dest) {
+    return `⛴ ${dest}へのフェリー`;
+  }
+  return buildMainCtaLabel(cta.type);
 }
 
 /**

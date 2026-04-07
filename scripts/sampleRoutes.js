@@ -8,8 +8,8 @@ import { buildTransportContext } from '../src/engine/transportEngine.js';
 const destinations = JSON.parse(readFileSync(new URL('../src/data/destinations.json', import.meta.url), 'utf8'));
 
 const SAMPLES = [
+  { departure: '高松', destId: 'kirishima' },
   { departure: '高松', destId: 'asuka' },
-  { departure: '東京', destId: 'fukuoka-city' },
   { departure: '大阪', destId: 'awaji' },
 ];
 
@@ -55,8 +55,12 @@ for (const { departure, destId } of SAMPLES) {
     console.log(`  📍 車があると便利`);
   }
   console.log(``);
+  // CTA（実UIと同じロジック: mainSegment優先 → ctaフォールバック）
+  const mainCta = tc.stepGroups.find(sg => sg.type === 'main-cta')?.cta;
+  const suppressBooking = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
   console.log(`  [地図で行き方を見る]`);
-  if (mainSeg) {
+  if (suppressBooking) { /* skip */ }
+  else if (mainSeg && mainCta) {
     const to = clean(mainSeg.to);
     const from = clean(mainSeg.from);
     if (mainSeg.type === 'shinkansen' || mainSeg.type === 'highway_bus') {
@@ -64,5 +68,14 @@ for (const { departure, destId } of SAMPLES) {
     } else {
       console.log(`  [${ICON[mainSeg.type]} ${from} → ${to} を予約]`);
     }
+  } else if (mainCta) {
+    // bookableセグメントなしだがCTA存在 → フォールバック
+    const JR = new Set(['jr-east','jr-west','jr-kyushu','jr-ex','jr-window']);
+    const FLIGHT = new Set(['skyscanner','google-flights']);
+    const dest = clean(dr.to);
+    if (JR.has(mainCta.type))       console.log(`  [🚄 ${dest}まで予約]`);
+    else if (FLIGHT.has(mainCta.type)) console.log(`  [✈️ ${dest}への航空券]`);
+    else if (mainCta.type === 'ferry') console.log(`  [⛴ ${dest}へのフェリー]`);
+    else console.log(`  [${mainCta.label}]`);
   }
 }
