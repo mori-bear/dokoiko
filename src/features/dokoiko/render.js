@@ -817,13 +817,7 @@ function buildSegmentCtaLabel(segment, ctaType) {
   const clean = (n) => n.replace(/駅$|空港$|港$/, '');
   const from = clean(segment.from);
   const to   = clean(segment.to);
-  switch (segment.type) {
-    case 'shinkansen':  return `🚄 ${to}まで予約`;
-    case 'flight':      return `✈️ ${from} → ${to} を予約`;
-    case 'ferry':       return `⛴ ${from} → ${to} を予約`;
-    case 'highway_bus': return `🚌 ${to}まで予約`;
-    default:            return buildMainCtaLabel(ctaType);
-  }
+  return `${from} → ${to} だけ予約する`;
 }
 
 function buildMainCtaLabel(type) {
@@ -847,15 +841,8 @@ function buildMainCtaLabel(type) {
  */
 function buildCtaFallbackLabel(cta, city, ctaDestination) {
   const dest = ctaDestination || '';
-  if (!dest) return buildMainCtaLabel(cta.type);
-
-  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
-  const FLIGHT_TYPES = new Set(['skyscanner', 'google-flights']);
-
-  if (JR_TYPES.has(cta.type))       return `🚄 ${dest}まで予約`;
-  if (FLIGHT_TYPES.has(cta.type))   return `✈️ ${dest}への航空券`;
-  if (cta.type === 'ferry')         return `⛴ ${dest}へのフェリー`;
-  return buildMainCtaLabel(cta.type);
+  if (!dest) return null;
+  return `${dest}まで だけ予約する`;
 }
 
 /**
