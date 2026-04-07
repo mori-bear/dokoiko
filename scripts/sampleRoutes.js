@@ -69,13 +69,13 @@ for (const { departure, destId } of SAMPLES) {
       console.log(`  [${ICON[mainSeg.type]} ${from} → ${to} を予約]`);
     }
   } else if (mainCta) {
-    // bookableセグメントなしだがCTA存在 → フォールバック
+    // bookableセグメントなしだがCTA存在 → ctaDestinationでフォールバック
     const JR = new Set(['jr-east','jr-west','jr-kyushu','jr-ex','jr-window']);
     const FLIGHT = new Set(['skyscanner','google-flights']);
-    const dest = clean(dr.to);
-    if (JR.has(mainCta.type))       console.log(`  [🚄 ${dest}まで予約]`);
-    else if (FLIGHT.has(mainCta.type)) console.log(`  [✈️ ${dest}への航空券]`);
-    else if (mainCta.type === 'ferry') console.log(`  [⛴ ${dest}へのフェリー]`);
+    const ctaDest = best.ctaDestination || clean(dr.to);
+    if (JR.has(mainCta.type))          console.log(`  [🚄 ${ctaDest}まで予約]`);
+    else if (FLIGHT.has(mainCta.type)) console.log(`  [✈️ ${ctaDest}への航空券]`);
+    else if (mainCta.type === 'ferry') console.log(`  [⛴ ${ctaDest}へのフェリー]`);
     else console.log(`  [${mainCta.label}]`);
   }
 }

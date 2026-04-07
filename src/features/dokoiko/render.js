@@ -394,7 +394,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = main
         ? buildSegmentCtaLabel(main, mainCta.cta.type)
-        : buildCtaFallbackLabel(mainCta.cta, city, best?.displayRoute);
+        : buildCtaFallbackLabel(mainCta.cta, city, best?.ctaDestination);
       if (label) {
         bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
            class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
@@ -843,23 +843,18 @@ function buildMainCtaLabel(type) {
 
 /**
  * bookableセグメントがないがctaが存在する場合のフォールバックラベル。
- * displayRouteの到着地を使い「どこまで予約するか」を明示する。
+ * ctaDestination（現実的到達点）を使い「どこまで予約するか」を明示する。
  */
-function buildCtaFallbackLabel(cta, city, displayRoute) {
-  const clean = (n) => n?.replace(/駅$|空港$|港$/, '') ?? '';
-  const dest = clean(displayRoute?.to ?? city?.displayName ?? city?.name ?? '');
+function buildCtaFallbackLabel(cta, city, ctaDestination) {
+  const dest = ctaDestination || '';
+  if (!dest) return buildMainCtaLabel(cta.type);
+
   const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
   const FLIGHT_TYPES = new Set(['skyscanner', 'google-flights']);
 
-  if (JR_TYPES.has(cta.type) && dest) {
-    return `🚄 ${dest}まで予約`;
-  }
-  if (FLIGHT_TYPES.has(cta.type) && dest) {
-    return `✈️ ${dest}への航空券`;
-  }
-  if (cta.type === 'ferry' && dest) {
-    return `⛴ ${dest}へのフェリー`;
-  }
+  if (JR_TYPES.has(cta.type))       return `🚄 ${dest}まで予約`;
+  if (FLIGHT_TYPES.has(cta.type))   return `✈️ ${dest}への航空券`;
+  if (cta.type === 'ferry')         return `⛴ ${dest}へのフェリー`;
   return buildMainCtaLabel(cta.type);
 }
 

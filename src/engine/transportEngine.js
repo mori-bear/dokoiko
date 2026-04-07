@@ -432,6 +432,31 @@ function buildDisplayRoute(mainSeg, departure, city, waypoints) {
   };
 }
 
+/**
+ * CTA到達点を解決する。ctaのtype（JR/flight/ferry）に応じて
+ * 実在する正しい到達点を返す。
+ */
+function resolveCtaDestination(city, cta) {
+  if (!city || !cta) return null;
+  const clean = (n) => n?.replace(/駅$|港$|空港$/, '') ?? '';
+  const JR_TYPES = new Set(['jr-east', 'jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
+  const FLIGHT_TYPES = new Set(['skyscanner', 'google-flights']);
+
+  if (JR_TYPES.has(cta.type)) {
+    // JR: gateway（乗り換え駅）を優先。なければaccessStation
+    return clean(city.gateway || city.railGateway || city.accessStation || '');
+  }
+  if (FLIGHT_TYPES.has(cta.type)) {
+    // flight: 空港名
+    return clean(city.airportGateway || '');
+  }
+  if (cta.type === 'ferry') {
+    // ferry: フェリー港
+    return clean(city.ferryGateway || '');
+  }
+  return clean(city.gateway || city.railGateway || city.accessStation || '');
+}
+
 /* ══════════════════════════════════════════════════════
    ⑨ CTA一本化
 ══════════════════════════════════════════════════════ */
@@ -558,6 +583,9 @@ export function buildTransportContext(departure, city) {
   const displayRoute = buildDisplayRoute(mainSegment, departure, city, waypoints);
   const islandDisplayType = resolveIslandDisplayType(city);
 
+  // ⑪ CTA到達点（bookableセグメントがない場合のフォールバック用）
+  const ctaDestination = resolveCtaDestination(city, cta);
+
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
     bestRoute: {
@@ -572,6 +600,7 @@ export function buildTransportContext(departure, city) {
       mainSegment,
       displayRoute,
       islandDisplayType,
+      ctaDestination,
     },
     alternatives,
 
