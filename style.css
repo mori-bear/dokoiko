@@ -1054,6 +1054,20 @@ body {
   color: #888;
 }
 
+/* 予約区間ヒント */
+.booking-hint {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+}
+.booking-hint-sub {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
 /* 比較ルート */
 .alt-routes { margin-bottom: 10px; }
 .alt-route {

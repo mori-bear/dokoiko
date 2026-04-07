@@ -26,6 +26,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
+        ${buildBookingHint(tc, departure)}
         ${buildCtaBlock(tc, transportLinks, city, departure)}
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName) : ''}
         <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
@@ -369,6 +370,44 @@ function buildRouteBlock(tc, departure, destLabel, city) {
         ${accessHtml}
       </div>
     </div>`;
+}
+
+/**
+ * 予約区間の理由ヒント。CTAの上に表示し「なぜその区間だけか」を説明する。
+ */
+function buildBookingHint(tc, departure) {
+  const best = tc?.bestRoute;
+  if (!best || tc?.mapOnlyFallback) return '';
+
+  const main = best.mainSegment;
+  const suppressBooking = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
+  const clean = (n) => n?.replace(/駅$|空港$|港$/, '') ?? '';
+
+  // 予約不要パターン
+  if (!main && suppressBooking) {
+    const mode = best.islandDisplayType === 'car' ? 'バス or 車' : 'バス';
+    return `<div class="booking-hint">👉 予約不要<br><span class="booking-hint-sub">（${mode}でアクセス）</span></div>`;
+  }
+
+  if (!main && !best.ctaDestination) return '';
+
+  // 予約ありパターン: 区間を明示
+  const from = main ? clean(main.from) : departure;
+  const to   = main ? clean(main.to) : (best.ctaDestination ?? '');
+  if (!from || !to) return '';
+
+  // 残り区間の説明
+  const fa = best.finalAccess;
+  const REST = {
+    shinkansen: 'そこから先は在来線で行ける',
+    flight:     '空港から市内へすぐアクセス',
+    ferry:      '港からすぐアクセス',
+    highway_bus:'そこから先は在来線で行ける',
+  };
+  const restText = main ? (REST[main.type] ?? 'あとは現地移動') : 'あとは現地移動';
+  const restFinal = fa === 'bus' ? 'そこからバスでアクセス' : fa === 'car' ? 'そこから車でアクセス' : restText;
+
+  return `<div class="booking-hint">👉 ${from} → ${to}だけ予約<br><span class="booking-hint-sub">（${restFinal}）</span></div>`;
 }
 
 function buildCtaBlock(tc, transportLinks, city, departure) {
