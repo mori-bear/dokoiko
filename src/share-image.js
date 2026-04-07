@@ -21,13 +21,18 @@ export async function captureShareCard(city, departure, transportContext = null)
   const tags       = (city.primary ?? city.tags ?? []).slice(0, 3).join('・');
   const tagline    = city.description?.split('。')[0] ?? '';
 
-  // ルート1行（displayRoute ベース）+ 理由1行
+  // ルート1行（displayRoute ベース）
   const best       = transportContext?.bestRoute;
   const dr         = best?.displayRoute;
-  const ICON       = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌' };
-  const mainIcon   = best?.mainSegment ? (ICON[best.mainSegment.type] ?? '🚃') : '🚃';
-  const routeLine  = dr ? `${mainIcon} ${dr.from} → ${dr.to}` : '';
-  const reasonLine = best?.reason || transportContext?.reason || '';
+  const routeLine  = dr ? `🚃 ${dr.from} → ${dr.to}` : '';
+
+  // CTA行（予約区間 + 理由）
+  const main = best?.mainSegment;
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const HINT = { shinkansen: '新幹線', flight: '飛行機', ferry: 'フェリー', highway_bus: 'バス' };
+  const ctaLine = main
+    ? `👉 ${clean(main.from)} → ${clean(main.to)}だけ予約${HINT[main.type] ? `（${HINT[main.type]}）` : ''}`
+    : '';
 
   // ── オフスクリーンカード要素を生成 ──
   const card = document.createElement('div');
@@ -49,9 +54,12 @@ export async function captureShareCard(city, departure, transportContext = null)
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
     ${tagline ? `<div style="font-size:15px;color:#555;line-height:1.7;margin-bottom:16px;">${escHtml(tagline)}</div>` : ''}
     <div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
-    ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:6px;">${escHtml(routeLine)}</div>` : ''}
-    ${reasonLine ? `<div style="font-size:13px;color:#666;margin-bottom:0;">${escHtml(reasonLine)}</div>` : ''}
-    <div style="font-size:11px;color:#ccc;text-align:right;margin-top:32px;letter-spacing:0.08em;">tabidokoiko.com</div>
+    ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:8px;">${escHtml(routeLine)}</div>` : ''}
+    ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;margin-bottom:0;line-height:1.5;">${escHtml(ctaLine)}</div>` : ''}
+    <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
+      <div style="font-size:12px;color:#888;margin-bottom:4px;">👇 行き方すぐ出る</div>
+      <div style="font-size:13px;color:#1c1c1c;font-weight:600;letter-spacing:0.05em;">tabidokoiko.com</div>
+    </div>
   `;
 
   document.body.appendChild(card);
