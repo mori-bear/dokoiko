@@ -12,6 +12,7 @@ import {
   openXShare,
   updatePageMeta,
 } from './src/share.js';
+import { captureShareCard, shareOrDownload } from './src/share-image.js';
 
 async function init() {
   console.log('[INIT START]');
@@ -103,6 +104,8 @@ function draw() {
 
   try {
     const plan = buildTravelPlan(city, state.departure);
+
+    state.lastTransportContext = plan.transportContext;
 
     renderResult({
       city,
@@ -222,11 +225,32 @@ function restoreFromUrl(urlParams) {
 /* ── シェアボタン ── */
 
 function bindShareHandlers() {
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', async (e) => {
     const xBtn = e.target.closest('#share-x-btn');
     if (xBtn) {
       const city = state.pool[state.poolIndex];
       if (city) openXShare(city, state.departure);
+      return;
+    }
+
+    const imgBtn = e.target.closest('#share-img-btn');
+    if (imgBtn) {
+      const city = state.pool[state.poolIndex];
+      if (!city) return;
+      const original = imgBtn.textContent;
+      imgBtn.disabled = true;
+      imgBtn.textContent = '生成中…';
+      try {
+        const canvas = await captureShareCard(city, state.departure, state.lastTransportContext);
+        shareOrDownload(canvas, city, state.departure);
+      } catch (err) {
+        console.error('[share-img] 画像生成失敗:', err);
+        imgBtn.textContent = '生成失敗';
+        setTimeout(() => { imgBtn.textContent = original; }, 2000);
+      } finally {
+        imgBtn.disabled = false;
+        imgBtn.textContent = original;
+      }
     }
   });
 }

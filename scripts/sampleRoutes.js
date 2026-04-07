@@ -66,6 +66,6 @@ for (const { departure, destId } of SAMPLES) {
     console.log(`  [${from} → ${to} だけ予約する]`);
   } else if (mainCta) {
     const ctaDest = best.ctaDestination || clean(dr.to);
-    console.log(`  [${ctaDest}まで だけ予約する]`);
+    console.log(`  [${departure} → ${ctaDest} だけ予約する]`);
   }
 }

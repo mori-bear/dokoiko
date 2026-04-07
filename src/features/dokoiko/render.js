@@ -394,7 +394,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = main
         ? buildSegmentCtaLabel(main, mainCta.cta.type)
-        : buildCtaFallbackLabel(mainCta.cta, city, best?.ctaDestination);
+        : buildCtaFallbackLabel(mainCta.cta, city, best?.ctaDestination, departure);
       if (label) {
         bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
            class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
@@ -402,12 +402,20 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     }
   }
 
+  // ③ シェア（X + 画像）
+  const shareHtml = `
+    <div class="share-inline">
+      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
+      <button class="btn-share btn-share--img" id="share-img-btn">画像でシェア</button>
+    </div>`;
+
   return `
     <div class="cta-block">
       <div class="cta-group">
         ${mapHtml}
         ${bookingHtml}
       </div>
+      ${shareHtml}
     </div>`;
 }
 
@@ -839,10 +847,11 @@ function buildMainCtaLabel(type) {
  * bookableセグメントがないがctaが存在する場合のフォールバックラベル。
  * ctaDestination（現実的到達点）を使い「どこまで予約するか」を明示する。
  */
-function buildCtaFallbackLabel(cta, city, ctaDestination) {
+function buildCtaFallbackLabel(cta, city, ctaDestination, departure) {
   const dest = ctaDestination || '';
   if (!dest) return null;
-  return `${dest}まで だけ予約する`;
+  const from = departure || '';
+  return `${from} → ${dest} だけ予約する`;
 }
 
 /**
