@@ -58,32 +58,17 @@ for (const { departure, destId } of SAMPLES) {
   // CTA（実UIと同じロジック: mainSegment優先 → ctaフォールバック）
   const mainCta = tc.stepGroups.find(sg => sg.type === 'main-cta')?.cta;
   const suppressBooking = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
-  // 予約ヒント
-  const suppress = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
-  if (mainSeg) {
-    const from = clean(mainSeg.from); const to = clean(mainSeg.to);
-    const REST = { shinkansen:'そこから先は在来線で行ける', flight:'空港から市内へすぐアクセス', ferry:'港からすぐアクセス' };
-    const rest = city.finalAccess === 'bus' ? 'そこからバスでアクセス' : city.finalAccess === 'car' ? 'そこから車でアクセス' : (REST[mainSeg.type] ?? 'あとは現地移動');
-    console.log(`  👉 ${from} → ${to}だけ予約`);
-    console.log(`  　（${rest}）`);
-  } else if (suppress) {
-    const mode = best.islandDisplayType === 'car' ? 'バス or 車' : 'バス';
-    console.log(`  👉 予約不要（${mode}でアクセス）`);
-  } else if (mainCta) {
-    const ctaDest = best.ctaDestination || clean(dr.to);
-    const rest = city.finalAccess === 'bus' ? 'そこからバスでアクセス' : 'あとは現地移動';
-    console.log(`  👉 ${departure} → ${ctaDest}だけ予約`);
-    console.log(`  　（${rest}）`);
-  }
   console.log(``);
   console.log(`  [地図で行き方を見る]`);
-  if (suppressBooking) { /* skip */ }
+  const suppressBk = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
+  if (suppressBk) { /* skip */ }
   else if (mainSeg && mainCta) {
-    const to = clean(mainSeg.to);
-    const from = clean(mainSeg.from);
-    console.log(`  [${from} → ${to} だけ予約する]`);
+    const from = clean(mainSeg.from); const to = clean(mainSeg.to);
+    const HINT = { shinkansen:'新幹線区間', flight:'直行便', ferry:'フェリー区間', highway_bus:'バス区間' };
+    const hint = HINT[mainSeg.type] ?? '';
+    console.log(`  [${from} → ${to}だけ予約${hint ? `（${hint}）` : ''}]`);
   } else if (mainCta) {
     const ctaDest = best.ctaDestination || clean(dr.to);
-    console.log(`  [${departure} → ${ctaDest} だけ予約する]`);
+    console.log(`  [${ctaDest}まで予約（最寄り駅）]`);
   }
 }
