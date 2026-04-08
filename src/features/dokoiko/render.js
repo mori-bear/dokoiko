@@ -368,7 +368,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildChainCtaLabel(chainCta, mainCta.cta.type);
+      const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
       seenUrls.add(mainCta.cta.url);
       const gatewayCity = resolveGatewayCity(best, city);
       const accessText = buildAccessText(best?.finalAccess, city, gatewayCity);
@@ -426,22 +426,22 @@ function buildAccessText(access, city, gatewayCity = null) {
     const trClean = transfer ? clean(transfer) : null;
     // A. midStation + transferStation: 2ステップ乗換
     if (midClean && trClean) {
-      return `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ`;
+      return `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ行く`;
     }
     // B. transferStationのみ（gatewayと異なる場合）
     if (trClean && trClean !== from) {
-      return `${from}から${trClean}で${company}に乗換 → ${to}へ`;
+      return `${from}から${trClean}で${company}に乗換 → ${to}へ行く`;
     }
     // C. シンプル
-    return `${from}から${company}で${to}へ`;
+    return `${from}から${company}で${to}へ行く`;
   }
   if (fa.type === 'bus') {
     const from = gatewayCity || (fa.from ? clean(fa.from) : null);
-    return from ? `${from}からバスで${destName}へ` : '';
+    return from ? `${from}からバスで${destName}へ行く` : '';
   }
   if (fa.type === 'car') {
     const from = gatewayCity || '';
-    return from ? `${from}から車で${destName}へ` : '';
+    return from ? `${from}から車で${destName}へ行く` : '';
   }
   return '';
 }
@@ -871,35 +871,37 @@ function buildMapCtaBlock(item) {
   `;
 }
 
+/** CTA用のprovider/typeマッピング */
+const CTA_PROVIDER = {
+  'jr-east':        'えきねっと',
+  'jr-west':        'e5489',
+  'jr-kyushu':      '九州ネット予約',
+  'jr-ex':          'EX',
+  'skyscanner':     'Skyscanner',
+  'google-flights': 'Google Flights',
+  'ferry':          'フェリー予約',
+};
+const CTA_TYPE_HINT = {
+  shinkansen: '新幹線',
+  limited:    '特急',
+  flight:     '飛行機',
+  ferry:      'フェリー',
+};
+
 /**
- * JRチェーンCTAからラベルを生成する。
- * 例: 高松 → 米子をe5489で予約
+ * JRチェーンCTAから2行HTMLを生成する。
+ * 1行目: 👉 高松 → 米子
+ * 2行目: e5489で予約（特急）
  */
-function buildChainCtaLabel(chainCta, providerType = null) {
+function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const from = clean(chainCta.from);
   const to   = clean(chainCta.to);
-  const PROVIDER = {
-    'jr-east':        'えきねっと',
-    'jr-west':        'e5489',
-    'jr-kyushu':      '九州ネット予約',
-    'jr-ex':          'EX',
-    'skyscanner':     'Skyscanner',
-    'google-flights': 'Google Flights',
-    'ferry':          'フェリー予約',
-  };
-  const TYPE_HINT = {
-    shinkansen: '新幹線',
-    limited:    '特急',
-    flight:     '飛行機',
-    ferry:      'フェリー',
-  };
-  const provider = PROVIDER[providerType] ?? null;
-  const hint = TYPE_HINT[chainCta.type] ?? '';
+  const provider = CTA_PROVIDER[providerType] ?? null;
+  const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
-  return provider
-    ? `${from} → ${to}を${provider}で予約する${suffix}`
-    : `${from} → ${to}を予約する${suffix}`;
+  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
+  return `<span class="cta-route">👉 ${from} → ${to}</span><br><span class="cta-provider">${line2}</span>`;
 }
 
 function buildMainCtaLabel(type) {

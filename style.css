@@ -1097,10 +1097,21 @@ body {
   margin-bottom: 8px;
 }
 
+.cta-route {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cta-provider {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
 .cta-access-next {
   font-size: 13px;
   color: #666;
-  padding: 6px 0 0;
+  padding: 4px 0 0;
   line-height: 1.5;
 }
 

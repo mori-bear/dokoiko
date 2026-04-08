@@ -28,48 +28,31 @@ export async function captureShareCard(city, departure, transportContext = null)
   const routeIcon  = best?.jrChainCta ? (ROUTE_ICON[best.jrChainCta.type] ?? '🚃') : '🚃';
   const routeLine  = departure ? `${routeIcon} ${departure} → ${repStation}` : '';
 
-  // CTA行（JRチェーンCTAから直接生成）
+  // CTA（2行構造: 区間 + 予約手段）
   const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  // transportContext経由でproviderを取得
   const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
   const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
-  const provName = PROV_MAP[ctaProvider] ?? null;
   const TYPE_HINT = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
+  const provName = PROV_MAP[ctaProvider] ?? null;
   const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
-  const typeSuffix = typeHint ? `（${typeHint}）` : '';
-  const ctaLine = chainCta
-    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を${provName ? provName+'で' : ''}予約する${typeSuffix}`
+  const ctaLine1 = chainCta ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}` : '';
+  const ctaLine2 = chainCta
+    ? (provName ? `${provName}で予約${typeHint ? `（${typeHint}）` : ''}` : `予約する${typeHint ? `（${typeHint}）` : ''}`)
     : '';
 
-  // finalAccess行（gatewayCityベース）
+  // finalAccess（シェア画像用: from省略で最短表現 + 「行く」）
   const fa = best?.finalAccess;
-  const gw = chainCta ? clean(chainCta.to) : null;
   let accessLine = '';
-  if (fa && typeof fa === 'object') {
+  if (fa && typeof fa === 'object' && fa.type !== 'walk') {
+    const dest = clean(fa.to) || city.displayName || city.name || '';
     if (fa.type === 'train' && fa.line) {
       const company = extractCompany(fa.line);
-      const from = gw || clean(fa.from) || '';
-      const faTo = clean(fa.to) || city.displayName || city.name || '';
-      const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
-      const transfer = typeof fa.transferStation === 'object' ? fa.transferStation?.name : fa.transferStation;
-      const midClean = mid ? clean(mid) : null;
-      const trClean = transfer ? clean(transfer) : null;
-      if (midClean && trClean) {
-        accessLine = `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${faTo}へ`;
-      } else if (trClean && trClean !== from) {
-        accessLine = `${from}から${trClean}で${company}に乗換 → ${faTo}へ`;
-      } else {
-        accessLine = `${from}から${company}で${faTo}へ`;
-      }
+      accessLine = `${company}で${dest}へ行く`;
     } else if (fa.type === 'bus') {
-      const from = gw || (fa.from ? clean(fa.from) : null);
-      const dest = city.displayName || city.name || '';
-      accessLine = from ? `${from}からバスで${dest}へ` : '';
+      accessLine = `バスで${dest}へ行く`;
     } else if (fa.type === 'car') {
-      const carFrom = gw || '';
-      const dest = city.displayName || city.name || '';
-      accessLine = carFrom ? `${carFrom}から車で${dest}へ` : '';
+      accessLine = `車で${dest}へ行く`;
     }
   }
 
@@ -93,8 +76,9 @@ export async function captureShareCard(city, departure, transportContext = null)
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
     <div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
     ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:16px;">${escHtml(routeLine)}</div>` : ''}
-    ${ctaLine || accessLine ? `<div style="margin-bottom:0;">
-      ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;line-height:1.5;">${escHtml(ctaLine)}</div>` : ''}
+    ${ctaLine1 || accessLine ? `<div style="margin-bottom:0;">
+      ${ctaLine1 ? `<div style="font-size:18px;color:#e65100;font-weight:700;line-height:1.3;">${escHtml(ctaLine1)}</div>` : ''}
+      ${ctaLine2 ? `<div style="font-size:13px;color:#e65100;font-weight:400;line-height:1.5;margin-top:2px;opacity:0.85;">${escHtml(ctaLine2)}</div>` : ''}
       ${accessLine ? `<div style="font-size:12px;color:#666;line-height:1.5;margin-top:4px;">→ ${escHtml(accessLine)}</div>` : ''}
     </div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
