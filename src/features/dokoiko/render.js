@@ -27,7 +27,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${buildCityBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
         ${buildCtaBlock(tc, transportLinks, city, departure)}
-        ${showHotel ? buildStaySection(hotelLinks, city, stayCityName) : ''}
+        ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
         <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
@@ -385,7 +385,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ② 予約CTA（bookableセグメント or ctaResolver から）
+  // ② 予約CTA（mainSegmentの実在区間のみ表示）
   // 島・半島で車/バスアクセスの場合、JR CTAは出さない（嘘になる）
   const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
   let bookingHtml = '';
@@ -394,15 +394,20 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = main
         ? buildSegmentCtaLabel(main, mainCta.cta.type)
-        : buildCtaFallbackLabel(mainCta.cta, city, best?.ctaDestination, departure);
-      if (label) {
-        bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-           class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
-      }
+        : buildMainCtaLabel(mainCta.cta.type);
+      bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
     }
   }
 
-  // ③ シェア（X + 画像）
+  // ③ 最終アクセス表示（予約到達点 → 目的地）
+  const destName = city?.displayName || city?.name || '';
+  const gatewayCity = resolveGatewayCity(best, city);
+  const accessHtml = (gatewayCity && gatewayCity !== destName)
+    ? `<div class="access-hint">📍 ${destName}へは${gatewayCity}からアクセス</div>`
+    : '';
+
+  // ④ シェア（X + 画像）
   const shareHtml = `
     <div class="share-inline">
       <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
@@ -415,8 +420,22 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
         ${mapHtml}
         ${bookingHtml}
       </div>
+      ${accessHtml}
       ${shareHtml}
     </div>`;
+}
+
+/**
+ * 予約到達点（gatewayCity）を解決する。
+ * mainSegment.to → representativeStation → hubCity の順で試行。
+ */
+function resolveGatewayCity(bestRoute, city) {
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const main = bestRoute?.mainSegment;
+  if (main?.to) return clean(main.to);
+  if (city?.representativeStation) return clean(city.representativeStation);
+  if (city?.hubCity) return city.hubCity;
+  return null;
 }
 
 /* ── 旧 buildActionBlock（後方互換・非step-group用） ── */
@@ -624,14 +643,16 @@ function buildStayHint(city) {
  * 宿泊セクション: stayPriorityヒント + 宿CTA。
  * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
  */
-function buildStaySection(hotelLinks, city, stayCityName = null) {
+function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   if (!hotelLinks) return '';
   const stayLinks = hotelLinks.links ?? [];
   const rakuten   = stayLinks.find(l => l.type === 'rakuten');
   const jalan     = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
 
-  const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  // gatewayCity（予約到達点の主要都市）を優先、なければ従来のフォールバック
+  const gatewayCity = resolveGatewayCity(tc?.bestRoute, city);
+  const stayLabel = gatewayCity || stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
   const stayHint = buildStayHint(city);
 
   const buttons = [
@@ -852,15 +873,6 @@ function buildMainCtaLabel(type) {
   return LABELS[type] ?? 'チケットを予約する';
 }
 
-/**
- * bookableセグメントがないがctaが存在する場合のフォールバックラベル。
- * ctaDestination（現実的到達点）を使い「どこまで予約するか」を明示する。
- */
-function buildCtaFallbackLabel(cta, city, ctaDestination, departure) {
-  const dest = ctaDestination || '';
-  if (!dest) return null;
-  return `${dest}まで予約（最寄り駅）`;
-}
 
 /**
  * Phase 7: 代替ルート（「他の行き方」）を折りたたみで表示。

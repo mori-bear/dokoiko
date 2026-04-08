@@ -1093,6 +1093,13 @@ body {
   margin-bottom: 4px;
 }
 
+.access-hint {
+  font-size: 13px;
+  color: #666;
+  padding: 8px 0 4px;
+  line-height: 1.5;
+}
+
 /* アクションCTA共通: 大きめタップターゲット */
 .btn--action {
   display: block;
