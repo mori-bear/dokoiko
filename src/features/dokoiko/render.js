@@ -370,7 +370,8 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = buildChainCtaLabel(chainCta);
       seenUrls.add(mainCta.cta.url);
-      const accessText = buildAccessText(best?.finalAccess, city);
+      const gatewayCity = resolveGatewayCity(best, city);
+      const accessText = buildAccessText(best?.finalAccess, city, gatewayCity);
       actionHtml = `
         <div class="cta-action">
           <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
@@ -407,18 +408,23 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 /**
  * finalAccessからテキスト（HTMLタグなし）を返す。
  * CTA直下に「→ ...」として一体表示するため。
+ * gatewayCityを優先し、ユーザーが知らない駅名を先頭に出さない。
  */
-function buildAccessText(access, city) {
+function buildAccessText(access, city, gatewayCity = null) {
   if (!access) return '';
   const fa = typeof access === 'string' ? { type: access } : access;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const destName = city?.displayName || city?.name || '';
 
-  if (fa.type === 'train' && fa.line && fa.from) {
-    const to = fa.to || city?.displayName || city?.name || '';
-    return `${clean(fa.from)}から${fa.line}で${clean(to)}へ`;
+  if (fa.type === 'train' && fa.line) {
+    // 路線名を簡略化（例: 近鉄吉野線 → 近鉄）
+    const shortLine = fa.line.replace(/(線|本線)$/, '');
+    const from = gatewayCity || clean(fa.from) || '';
+    const to = clean(fa.to) || destName;
+    return `${from}から${shortLine}で${to}へ`;
   }
   if (fa.type === 'bus') {
-    const from = fa.from ? clean(fa.from) : null;
+    const from = gatewayCity || (fa.from ? clean(fa.from) : null);
     return from ? `${from}からバスでアクセス` : '駅からバスでアクセス';
   }
   if (fa.type === 'car') {

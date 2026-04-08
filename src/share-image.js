@@ -34,15 +34,19 @@ export async function captureShareCard(city, departure, transportContext = null)
     ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}だけ予約${HINT[chainCta.type] ? `（${HINT[chainCta.type]}）` : ''}`
     : '';
 
-  // finalAccess行
+  // finalAccess行（gatewayCityベース）
   const fa = best?.finalAccess;
+  const gw = chainCta ? clean(chainCta.to) : null;
   let accessLine = '';
   if (fa && typeof fa === 'object') {
-    if (fa.type === 'train' && fa.line && fa.from) {
-      const faTo = fa.to || city.displayName || city.name || '';
-      accessLine = `${clean(fa.from)}から${fa.line}で${clean(faTo)}へ`;
-    } else if (fa.type === 'bus' && fa.from) {
-      accessLine = `${clean(fa.from)}からバスでアクセス`;
+    if (fa.type === 'train' && fa.line) {
+      const shortLine = fa.line.replace(/(線|本線)$/, '');
+      const from = gw || clean(fa.from) || '';
+      const faTo = clean(fa.to) || city.displayName || city.name || '';
+      accessLine = `${from}から${shortLine}で${faTo}へ`;
+    } else if (fa.type === 'bus') {
+      const from = gw || (fa.from ? clean(fa.from) : null);
+      accessLine = from ? `${from}からバスでアクセス` : '';
     } else if (fa.type === 'car') {
       accessLine = 'レンタカーでアクセス';
     }
