@@ -363,15 +363,15 @@ function isJRSegment(seg) {
   if (seg.type === 'shinkansen') return true;
   if (seg.operator && /^JR/.test(seg.operator)) return true;
   const mode = seg.mode ?? '';
+  // 私鉄は明示的に除外（最優先）
+  if (PRIVATE_RAILWAY.test(mode)) return false;
   // 明示的にJRと書かれている
   if (/^JR/.test(mode)) return true;
-  // マリンライナー・特急はJR（私鉄名が含まれなければ）
+  // マリンライナー・特急はJR
   if (/マリンライナー/.test(mode)) return true;
-  if (/特急/.test(mode) && !PRIVATE_RAILWAY.test(mode)) return true;
-  // 在来線（rail_local）でJR路線名パターン
-  if (/本線|線$/.test(mode) && /^JR|^(在来線|快速)/.test(mode)) return true;
-  // 私鉄は除外
-  if (PRIVATE_RAILWAY.test(mode)) return false;
+  if (/特急/.test(mode)) return true;
+  // rail_local / rail_express で私鉄でない → JR（ローカル線含む）
+  if (seg.type === 'rail_local' || seg.type === 'rail_express') return true;
   return false;
 }
 
@@ -412,7 +412,13 @@ function buildJRChainCta(segments) {
   const ferry = segments.find(s => s.type === 'ferry');
   if (ferry) return { from: ferry.from, to: ferry.to, type: 'ferry' };
 
-  // JRチェーン抽出 → 最長チェーンの from→to をCTA化
+  // 交通セグメント（walk除外）
+  const transportSegs = segments.filter(s => s.type !== 'walk');
+  if (!transportSegs.length) return null;
+
+  // 全セグメントがJR → 最終目的地まで拡張
+  const allJR = transportSegs.every(s => isJRSegment(s));
+
   const chains = extractJRChains(segments);
   const mainChain = pickMainJRChain(chains);
   if (!mainChain) return null;
@@ -422,8 +428,9 @@ function buildJRChainCta(segments) {
   const type = hasShinkansen ? 'shinkansen' : hasLimited ? 'limited' : 'jr';
   return {
     from: mainChain[0].from,
-    to:   mainChain[mainChain.length - 1].to,
+    to:   allJR ? transportSegs[transportSegs.length - 1].to : mainChain[mainChain.length - 1].to,
     type,
+    allJR,
   };
 }
 

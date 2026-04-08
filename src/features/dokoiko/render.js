@@ -371,7 +371,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
       seenUrls.add(mainCta.cta.url);
       const gatewayCity = resolveGatewayCity(best, city);
-      const accessText = buildAccessText(best?.finalAccess, city, gatewayCity);
+      const accessText = chainCta.allJR ? '' : buildAccessText(best?.finalAccess, city, gatewayCity);
       actionHtml = `
         <div class="cta-action">
           <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"

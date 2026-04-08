@@ -41,10 +41,10 @@ export async function captureShareCard(city, departure, transportContext = null)
     ? (provName ? `${provName}で予約${typeHint ? `（${typeHint}）` : ''}` : `予約する${typeHint ? `（${typeHint}）` : ''}`)
     : '';
 
-  // finalAccess（シェア画像用: from省略で最短表現 + 「行く」）
+  // finalAccess（シェア画像用: allJR時は非表示、from省略で最短表現 + 「行く」）
   const fa = best?.finalAccess;
   let accessLine = '';
-  if (fa && typeof fa === 'object' && fa.type !== 'walk') {
+  if (!chainCta?.allJR && fa && typeof fa === 'object' && fa.type !== 'walk') {
     const dest = clean(fa.to) || city.displayName || city.name || '';
     if (fa.type === 'train' && fa.line) {
       const company = extractCompany(fa.line);
