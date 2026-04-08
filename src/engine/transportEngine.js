@@ -387,46 +387,29 @@ function pickMainJRChain(chains) {
 }
 
 /**
- * 主役セグメント（CTA対象）を決定する。
- *
- * JR連続区間（チェーン）を抽出し、最長チェーンの from→to をまとめて返す。
- * flight / ferry / highway_bus はチェーン対象外（単独セグメントとして優先判定）。
+ * JRチェーンからCTA情報を直接生成する。
+ * flight / ferry は別ロジック。bus/car はCTAなし。
  */
-function pickMainSegment(segments, city = null) {
-  const isIsland = city?.isIsland === true || city?.destType === 'island';
-
-  // 島: ferry / flight を最優先
-  if (isIsland) {
-    const ferry = segments.find(s => s.type === 'ferry');
-    if (ferry) return ferry;
-    const flight = segments.find(s => s.type === 'flight');
-    if (flight) return flight;
-  }
-
-  // flight は常に単独で最優先
+function buildJRChainCta(segments) {
+  // flight は単独CTA（JRチェーン対象外）
   const flight = segments.find(s => s.type === 'flight');
-  if (flight) return flight;
+  if (flight) return { from: flight.from, to: flight.to, type: 'flight' };
 
-  // JRチェーン抽出 → 最長チェーンを統合セグメントとして返す
+  // ferry は単独CTA
+  const ferry = segments.find(s => s.type === 'ferry');
+  if (ferry) return { from: ferry.from, to: ferry.to, type: 'ferry' };
+
+  // JRチェーン抽出 → 最長チェーンの from→to をCTA化
   const chains = extractJRChains(segments);
   const mainChain = pickMainJRChain(chains);
-  if (mainChain) {
-    const hasShinkansenInChain = mainChain.some(s => s.type === 'shinkansen');
-    return {
-      from: mainChain[0].from,
-      to:   mainChain[mainChain.length - 1].to,
-      type: hasShinkansenInChain ? 'shinkansen' : 'rail',
-      bookable: true,
-      mode: hasShinkansenInChain ? '新幹線' : 'JR',
-      operator: mainChain[0].operator,
-      _chain: mainChain,
-    };
-  }
+  if (!mainChain) return null;
 
-  // ferry / highway_bus フォールバック
-  return segments.find(s => s.type === 'ferry')
-    ?? segments.find(s => s.type === 'highway_bus')
-    ?? null;
+  const hasShinkansenInChain = mainChain.some(s => s.type === 'shinkansen');
+  return {
+    from: mainChain[0].from,
+    to:   mainChain[mainChain.length - 1].to,
+    type: hasShinkansenInChain ? 'shinkansen' : 'jr',
+  };
 }
 
 /**
@@ -453,7 +436,7 @@ function resolveIslandDisplayType(city) {
  * ユーザー向け表示ルート。到着駅を明示する。
  * 島・半島は常に「出発地 → 目的地名」で表示。
  */
-function buildDisplayRoute(mainSeg, departure, city, waypoints) {
+function buildDisplayRoute(departure, city, waypoints) {
   const destName = city?.displayName || city?.name || '';
   const clean = (n) => n.replace(/駅$|港$|空港$/, '');
   const isIsland = city?.isIsland === true || city?.destType === 'island';
@@ -632,9 +615,9 @@ export function buildTransportContext(departure, city) {
   const finalAccess = city?.finalAccess ?? 'walk';
   const repStation = city?.representativeStation ?? null;
 
-  // ⑩ 主役セグメント + 表示用ルート
-  const mainSegment = pickMainSegment(segments, city);
-  const displayRoute = buildDisplayRoute(mainSegment, departure, city, waypoints);
+  // ⑩ JRチェーンCTA + 表示用ルート
+  const jrChainCta = buildJRChainCta(segments);
+  const displayRoute = buildDisplayRoute(departure, city, waypoints);
   const islandDisplayType = resolveIslandDisplayType(city);
 
   // ⑪ CTA到達点（bookableセグメントがない場合のフォールバック用）
@@ -651,7 +634,7 @@ export function buildTransportContext(departure, city) {
       waypoints,
       finalAccess,
       representativeStation: repStation,
-      mainSegment,
+      jrChainCta,
       displayRoute,
       islandDisplayType,
       ctaDestination,

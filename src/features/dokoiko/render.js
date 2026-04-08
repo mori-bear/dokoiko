@@ -332,15 +332,15 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   if (!tc?.bestRoute) return '';
 
   const best = tc.bestRoute;
-  const main = best.mainSegment;
+  const cta  = best.jrChainCta;
   const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
   // アイコン: islandDisplayType があればそちらを優先
-  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌', bus: '🚍', car: '🚗' };
+  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌', bus: '🚍', car: '🚗', jr: '🚃' };
   const displayType = best.islandDisplayType;
   const icon = displayType
     ? (MAIN_ICON[displayType] ?? '🚃')
-    : main ? (MAIN_ICON[main.type] ?? '🚃') : '🚃';
+    : cta ? (MAIN_ICON[cta.type] ?? '🚃') : '🚃';
 
   // ルート行: ✈️ 東京 → 福岡（到着駅ベース）
   const routeLine = `${icon} ${dr.from} → ${dr.to}`;
@@ -374,7 +374,7 @@ function buildRouteBlock(tc, departure, destLabel, city) {
 function buildCtaBlock(tc, transportLinks, city, departure) {
   const seenUrls = new Set();
   const best = tc?.bestRoute;
-  const main = best?.mainSegment;
+  const chainCta = best?.jrChainCta;
 
   // ① 地図CTA（常に表示）
   const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
@@ -385,16 +385,14 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ② 予約CTA（mainSegmentの実在区間のみ表示）
+  // ② 予約CTA（JRチェーン / flight / ferry から直接生成）
   // 島・半島で車/バスアクセスの場合、JR CTAは出さない（嘘になる）
   const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
   let bookingHtml = '';
-  if (!tc?.mapOnlyFallback && !suppressBooking) {
+  if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = main
-        ? buildSegmentCtaLabel(main, mainCta.cta.type)
-        : buildMainCtaLabel(mainCta.cta.type);
+      const label = buildChainCtaLabel(chainCta);
       bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
     }
@@ -427,12 +425,12 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 
 /**
  * 予約到達点（gatewayCity）を解決する。
- * mainSegment.to → representativeStation → hubCity の順で試行。
+ * jrChainCta.to → representativeStation → hubCity の順で試行。
  */
 function resolveGatewayCity(bestRoute, city) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const main = bestRoute?.mainSegment;
-  if (main?.to) return clean(main.to);
+  const cta = bestRoute?.jrChainCta;
+  if (cta?.to) return clean(cta.to);
   if (city?.representativeStation) return clean(city.representativeStation);
   if (city?.hubCity) return city.hubCity;
   return null;
@@ -839,21 +837,20 @@ function buildMapCtaBlock(item) {
 }
 
 /**
- * bookable セグメント（JRチェーン統合済み）の実在区間でCTAラベルを生成する。
+ * JRチェーンCTAからラベルを生成する。
  * 例: 高松 → 大阪だけ予約（新幹線）
  */
-function buildSegmentCtaLabel(segment, ctaType) {
-  const clean = (n) => n.replace(/駅$|空港$|港$/, '');
-  const from = clean(segment.from);
-  const to   = clean(segment.to);
+function buildChainCtaLabel(chainCta) {
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const from = clean(chainCta.from);
+  const to   = clean(chainCta.to);
   const HINT = {
-    shinkansen:  '新幹線',
-    rail:        'JR',
-    flight:      '飛行機',
-    ferry:       'フェリー',
-    highway_bus: 'バス',
+    shinkansen: '新幹線',
+    jr:         'JR',
+    flight:     '飛行機',
+    ferry:      'フェリー',
   };
-  const hint = HINT[segment.type] ?? '';
+  const hint = HINT[chainCta.type] ?? '';
   return hint
     ? `${from} → ${to}だけ予約（${hint}）`
     : `${from} → ${to}だけ予約`;

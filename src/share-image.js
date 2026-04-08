@@ -26,12 +26,12 @@ export async function captureShareCard(city, departure, transportContext = null)
   const dr         = best?.displayRoute;
   const routeLine  = dr ? `🚃 ${dr.from} → ${dr.to}` : '';
 
-  // CTA行（予約区間 + 理由）
-  const main = best?.mainSegment;
+  // CTA行（JRチェーンCTAから直接生成）
+  const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const HINT = { shinkansen: '新幹線', rail: 'JR', flight: '飛行機', ferry: 'フェリー', highway_bus: 'バス' };
-  const ctaLine = main
-    ? `👉 ${clean(main.from)} → ${clean(main.to)}だけ予約${HINT[main.type] ? `（${HINT[main.type]}）` : ''}`
+  const HINT = { shinkansen: '新幹線', jr: 'JR', flight: '飛行機', ferry: 'フェリー' };
+  const ctaLine = chainCta
+    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}だけ予約${HINT[chainCta.type] ? `（${HINT[chainCta.type]}）` : ''}`
     : '';
 
   // ── オフスクリーンカード要素を生成 ──
