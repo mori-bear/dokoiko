@@ -401,7 +401,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     actionHtml = `
       <div class="cta-action">
         <a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-           class="btn btn--maps btn--action">👉 そのまま行く（予約不要）</a>
+           class="btn btn--maps btn--action">そのまま行く（予約不要）</a>
       </div>`;
     mapHtml = '';
   }
@@ -700,9 +700,9 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten btn--action">👉 ${stayLabel}で泊まる（楽天）</a>` : '',
+                  class="btn btn--stay-rakuten btn--action">${stayLabel}で泊まる（楽天）</a>` : '',
     jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan btn--action">👉 ${stayLabel}で泊まる（じゃらん）</a>` : '',
+                  class="btn btn--stay-jalan btn--action">${stayLabel}で泊まる（じゃらん）</a>` : '',
   ].filter(Boolean).join('');
 
   return `
@@ -900,8 +900,8 @@ const CTA_TYPE_HINT = {
 
 /**
  * JRチェーンCTAから2行HTMLを生成する。
- * 1行目: 👉 高松 → 米子
- * 2行目: e5489で予約（特急）
+ * 1行目: 高松 → 米子（区間のみ）
+ * 2行目: e5489（予約手段）
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
@@ -911,7 +911,7 @@ function buildChainCtaHtml(chainCta, providerType = null) {
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
   const line2 = provider ? `${provider}${suffix}` : `予約${suffix}`;
-  return `<span class="cta-route">👉 ${from} → ${to}</span><br><span class="cta-provider">${line2}</span>`;
+  return `<span class="cta-route">${from} → ${to}</span><br><span class="cta-provider">${line2}</span>`;
 }
 
 function buildMainCtaLabel(type) {

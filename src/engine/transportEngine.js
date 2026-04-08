@@ -141,10 +141,10 @@ function assignTier(type, distKm, city, hasCta, departure) {
   }
 
   if (type === 'rail') {
-    if (isShinkansenStrong(departure, city)) return { tier: 1, reason: '電車でスムーズに行ける' };
+    if (isShinkansenStrong(departure, city)) return { tier: 1, reason: '電車で行ける' };
 
-    if (distKm <= 300 && !hasVia)  return { tier: 1, reason: '電車でスムーズに行ける' };
-    if (distKm <= 600)             return { tier: 2, reason: '電車でスムーズに行ける' };
+    if (distKm <= 300 && !hasVia)  return { tier: 1, reason: '電車で行ける' };
+    if (distKm <= 600)             return { tier: 2, reason: '電車で行ける' };
     return { tier: 3, reason: '電車で行ける' };
   }
 
@@ -265,19 +265,19 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
   if (accessType === 'bus') {
     if (transportType === 'flight') return '飛行機＋バスで行ける';
     if (transportType === 'ferry')  return 'フェリー＋バスで渡れる';
-    return '乗り換え少なくスムーズ';
+    return '乗り換え少なく行ける';
   }
   if (accessType === 'car') {
     if (transportType === 'flight') return '飛行機＋車で行ける';
     if (transportType === 'ferry')  return 'フェリー＋車で渡れる';
-    return '乗り換え少なくスムーズ';
+    return '乗り換え少なく行ける';
   }
 
   // 単独ルート
   switch (transportType) {
     case 'flight': return '飛行機がいちばん現実的';
     case 'ferry':  return 'フェリーで自然に行ける';
-    case 'rail':   return distanceKm < 200 ? '直通で行ける' : '乗り換え少なくスムーズ';
+    case 'rail':   return distanceKm < 200 ? '直通で行ける' : '乗り換え少なく行ける';
     default:       return 'この行き方が現実的';
   }
 }
@@ -641,6 +641,16 @@ export function buildTransportContext(departure, city) {
 
   // ⑩ JRチェーンCTA + 表示用ルート
   const jrChainCta = buildJRChainCta(segments);
+  // CTA の to を駅/市に正規化（観光スポット名が混入するケースを排除）
+  if (jrChainCta) {
+    const cleanTo = jrChainCta.to?.replace(/駅$|空港$|港$/, '') ?? '';
+    const destName = city?.displayName || city?.name || '';
+    const station = repStation?.replace(/駅$/, '') ?? '';
+    // 目的地名・駅名と一致しない場合はrepresentativeStation or nameにフォールバック
+    if (cleanTo !== destName && cleanTo !== station && !destName.includes(cleanTo)) {
+      jrChainCta.to = repStation || destName;
+    }
+  }
   const displayRoute = buildDisplayRoute(departure, city, waypoints);
   const islandDisplayType = resolveIslandDisplayType(city);
 

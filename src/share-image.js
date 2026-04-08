@@ -36,7 +36,7 @@ export async function captureShareCard(city, departure, transportContext = null)
   const TYPE_HINT = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
   const provName = PROV_MAP[ctaProvider] ?? null;
   const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
-  const ctaLine1 = chainCta ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}` : '';
+  const ctaLine1 = chainCta ? `${clean(chainCta.from)} → ${clean(chainCta.to)}` : '';
   const ctaLine2 = chainCta
     ? (provName ? `${provName}${typeHint ? `（${typeHint}）` : ''}` : `予約${typeHint ? `（${typeHint}）` : ''}`)
     : '';

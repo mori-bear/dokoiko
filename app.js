@@ -265,7 +265,7 @@ async function shareWithImage(canvas, city, departure, tc) {
   if (chainCta) {
     const from = clean(chainCta.from);
     const to   = clean(chainCta.to);
-    text = `${departure}から${name}まで電車で行けるの知ってた？\n\n👉 ${from} → ${to}\n${prov}${hint ? `（${hint}）` : ''}\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
+    text = `${departure}から${name}まで電車で行けるの知ってた？\n\n${from} → ${to}\n${prov}${hint ? `（${hint}）` : ''}\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
   } else {
     text = `${departure}から${name}、意外と行けるらしい\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
   }
