@@ -355,10 +355,23 @@ function isBookableSegment(type) {
   return ['shinkansen', 'flight', 'ferry', 'highway_bus'].includes(type);
 }
 
-/** セグメントがJR系かどうかを判定（新幹線は常にJR） */
+/** 私鉄パターン（JRチェーンから除外） */
+const PRIVATE_RAILWAY = /近鉄|南海|小田急|東武|西武|京王|京急|京成|京阪|阪急|阪神|名鉄|相鉄|東急|えちぜん|えちご|富山地方|長野電鉄|島原|松浦|鹿島臨海|叡山|江ノ電|秩父鉄道|上田電鉄|ケーブル|ロープウェイ|モノレール|ゆりかもめ/;
+
+/** セグメントがJR系かどうかを判定（mode文字列 + operator で総合判定） */
 function isJRSegment(seg) {
   if (seg.type === 'shinkansen') return true;
   if (seg.operator && /^JR/.test(seg.operator)) return true;
+  const mode = seg.mode ?? '';
+  // 明示的にJRと書かれている
+  if (/^JR/.test(mode)) return true;
+  // マリンライナー・特急はJR（私鉄名が含まれなければ）
+  if (/マリンライナー/.test(mode)) return true;
+  if (/特急/.test(mode) && !PRIVATE_RAILWAY.test(mode)) return true;
+  // 在来線（rail_local）でJR路線名パターン
+  if (/本線|線$/.test(mode) && /^JR|^(在来線|快速)/.test(mode)) return true;
+  // 私鉄は除外
+  if (PRIVATE_RAILWAY.test(mode)) return false;
   return false;
 }
 

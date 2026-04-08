@@ -8,9 +8,9 @@ import { buildTransportContext } from '../src/engine/transportEngine.js';
 const destinations = JSON.parse(readFileSync(new URL('../src/data/destinations.json', import.meta.url), 'utf8'));
 
 const SAMPLES = [
-  { departure: '高松', destId: 'kirishima' },
-  { departure: '高松', destId: 'asuka' },
-  { departure: '大阪', destId: 'awaji' },
+  { departure: '高松', destId: 'asuka' },     // JR→私鉄（近鉄）
+  { departure: '東京', destId: 'hakone' },     // JR→バス
+  { departure: '東京', destId: 'atami' },      // JR→徒歩
 ];
 
 for (const { departure, destId } of SAMPLES) {

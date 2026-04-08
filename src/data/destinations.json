@@ -345,7 +345,10 @@
     "stayPriority": "high",
     "representativeStation": "日光駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "下今市",
+      "line": "東武日光線",
+      "to": "日光"
     }
   },
   {
@@ -7231,7 +7234,10 @@
     "stayPriority": "medium",
     "representativeStation": "高尾山口駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "高尾",
+      "line": "ケーブルカー",
+      "to": "高尾山"
     }
   },
   {
@@ -11154,7 +11160,10 @@
     "stayPriority": "medium",
     "representativeStation": "高野山駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "橋本",
+      "line": "南海高野線",
+      "to": "高野山"
     }
   },
   {
@@ -13574,7 +13583,10 @@
     "stayPriority": "medium",
     "representativeStation": "吉野駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "橿原神宮前",
+      "line": "近鉄吉野線",
+      "to": "吉野"
     }
   },
   {
@@ -16868,7 +16880,10 @@
     "stayPriority": "medium",
     "representativeStation": "川越駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "大宮",
+      "line": "東武東上線",
+      "to": "川越"
     }
   },
   {
@@ -18974,7 +18989,10 @@
     "stayPriority": "medium",
     "representativeStation": "飛鳥駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "橿原神宮前",
+      "line": "近鉄吉野線",
+      "to": "飛鳥"
     }
   },
   {
@@ -24484,7 +24502,10 @@
     "stayPriority": "medium",
     "representativeStation": "片瀬江ノ島駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "藤沢",
+      "line": "江ノ電",
+      "to": "江ノ島"
     }
   },
   {
@@ -24597,8 +24618,10 @@
     "stayPriority": "medium",
     "representativeStation": "池袋駅",
     "finalAccess": {
-      "type": "bus",
-      "from": "池袋駅"
+      "type": "train",
+      "from": "熊谷",
+      "line": "秩父鉄道",
+      "to": "秩父"
     }
   },
   {
