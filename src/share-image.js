@@ -33,8 +33,11 @@ export async function captureShareCard(city, departure, transportContext = null)
   const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
   const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
   const provName = PROV_MAP[ctaProvider] ?? null;
+  const TYPE_HINT = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
+  const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
+  const typeSuffix = typeHint ? `（${typeHint}）` : '';
   const ctaLine = chainCta
-    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を${provName ? provName+'で' : ''}予約する`
+    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を${provName ? provName+'で' : ''}予約する${typeSuffix}`
     : '';
 
   // finalAccess行（gatewayCityベース）
@@ -49,10 +52,12 @@ export async function captureShareCard(city, departure, transportContext = null)
       accessLine = `${from}から${company}で${faTo}へ`;
     } else if (fa.type === 'bus') {
       const from = gw || (fa.from ? clean(fa.from) : null);
-      accessLine = from ? `${from}からバスでアクセス` : '';
+      const dest = city.displayName || city.name || '';
+      accessLine = from ? `${from}からバスで${dest}へ` : '';
     } else if (fa.type === 'car') {
       const carFrom = gw || '';
-      accessLine = carFrom ? `${carFrom}から車でアクセス` : '車でアクセス';
+      const dest = city.displayName || city.name || '';
+      accessLine = carFrom ? `${carFrom}から車で${dest}へ` : '';
     }
   }
 

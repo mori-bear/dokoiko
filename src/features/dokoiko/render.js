@@ -425,11 +425,11 @@ function buildAccessText(access, city, gatewayCity = null) {
   }
   if (fa.type === 'bus') {
     const from = gatewayCity || (fa.from ? clean(fa.from) : null);
-    return from ? `${from}からバスでアクセス` : '駅からバスでアクセス';
+    return from ? `${from}からバスで${destName}へ` : '';
   }
   if (fa.type === 'car') {
     const from = gatewayCity || '';
-    return from ? `${from}から車でアクセス` : '車でアクセス';
+    return from ? `${from}から車で${destName}へ` : '';
   }
   return '';
 }
@@ -876,10 +876,18 @@ function buildChainCtaLabel(chainCta, providerType = null) {
     'google-flights': 'Google Flights',
     'ferry':          'フェリー予約',
   };
+  const TYPE_HINT = {
+    shinkansen: '新幹線',
+    limited:    '特急',
+    flight:     '飛行機',
+    ferry:      'フェリー',
+  };
   const provider = PROVIDER[providerType] ?? null;
+  const hint = TYPE_HINT[chainCta.type] ?? '';
+  const suffix = hint ? `（${hint}）` : '';
   return provider
-    ? `${from} → ${to}を${provider}で予約する`
-    : `${from} → ${to}を予約する`;
+    ? `${from} → ${to}を${provider}で予約する${suffix}`
+    : `${from} → ${to}を予約する${suffix}`;
 }
 
 function buildMainCtaLabel(type) {
