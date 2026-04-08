@@ -29,9 +29,9 @@ export async function captureShareCard(city, departure, transportContext = null)
   // CTA行（JRチェーンCTAから直接生成）
   const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const HINT = { shinkansen: '新幹線区間', limited: '特急区間', jr: 'JR区間', flight: '直行便', ferry: 'フェリー区間' };
+  const PROVIDER = { shinkansen: '新幹線', limited: '特急', jr: 'JR', flight: '飛行機', ferry: 'フェリー' };
   const ctaLine = chainCta
-    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}だけ予約${HINT[chainCta.type] ? `（${HINT[chainCta.type]}）` : ''}`
+    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を予約（${PROVIDER[chainCta.type] ?? ''}）`
     : '';
 
   // finalAccess行（gatewayCityベース）

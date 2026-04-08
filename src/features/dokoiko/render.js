@@ -368,7 +368,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildChainCtaLabel(chainCta);
+      const label = buildChainCtaLabel(chainCta, mainCta.cta.type);
       seenUrls.add(mainCta.cta.url);
       const gatewayCity = resolveGatewayCity(best, city);
       const accessText = buildAccessText(best?.finalAccess, city, gatewayCity);
@@ -848,23 +848,25 @@ function buildMapCtaBlock(item) {
 
 /**
  * JRチェーンCTAからラベルを生成する。
- * 例: 高松 → 大阪だけ予約（新幹線）
+ * 例: 高松 → 米子をe5489で予約
  */
-function buildChainCtaLabel(chainCta) {
+function buildChainCtaLabel(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const from = clean(chainCta.from);
   const to   = clean(chainCta.to);
-  const HINT = {
-    shinkansen: '新幹線区間',
-    limited:    '特急区間',
-    jr:         'JR区間',
-    flight:     '直行便',
-    ferry:      'フェリー区間',
+  const PROVIDER = {
+    'jr-east':        'えきねっと',
+    'jr-west':        'e5489',
+    'jr-kyushu':      'JR九州ネット',
+    'jr-ex':          'EX',
+    'skyscanner':     'Skyscanner',
+    'google-flights': 'Google Flights',
+    'ferry':          'フェリー予約',
   };
-  const hint = HINT[chainCta.type] ?? '';
-  return hint
-    ? `${from} → ${to}だけ予約（${hint}）`
-    : `${from} → ${to}だけ予約`;
+  const provider = PROVIDER[providerType] ?? null;
+  return provider
+    ? `${from} → ${to}を${provider}で予約`
+    : `${from} → ${to}を予約`;
 }
 
 function buildMainCtaLabel(type) {
