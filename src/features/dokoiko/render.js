@@ -428,7 +428,8 @@ function buildAccessText(access, city, gatewayCity = null) {
     return from ? `${from}からバスでアクセス` : '駅からバスでアクセス';
   }
   if (fa.type === 'car') {
-    return 'レンタカーでアクセス';
+    const from = gatewayCity || '';
+    return from ? `${from}から車でアクセス` : '車でアクセス';
   }
   return '';
 }
@@ -869,7 +870,7 @@ function buildChainCtaLabel(chainCta, providerType = null) {
   const PROVIDER = {
     'jr-east':        'えきねっと',
     'jr-west':        'e5489',
-    'jr-kyushu':      'JR九州ネット',
+    'jr-kyushu':      '九州ネット予約',
     'jr-ex':          'EX',
     'skyscanner':     'Skyscanner',
     'google-flights': 'Google Flights',
@@ -877,8 +878,8 @@ function buildChainCtaLabel(chainCta, providerType = null) {
   };
   const provider = PROVIDER[providerType] ?? null;
   return provider
-    ? `${from} → ${to}を${provider}で予約`
-    : `${from} → ${to}を予約`;
+    ? `${from} → ${to}を${provider}で予約する`
+    : `${from} → ${to}を予約する`;
 }
 
 function buildMainCtaLabel(type) {

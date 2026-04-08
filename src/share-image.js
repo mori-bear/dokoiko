@@ -29,9 +29,12 @@ export async function captureShareCard(city, departure, transportContext = null)
   // CTA行（JRチェーンCTAから直接生成）
   const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const PROVIDER = { shinkansen: '新幹線', limited: '特急', jr: 'JR', flight: '飛行機', ferry: 'フェリー' };
+  // transportContext経由でproviderを取得
+  const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
+  const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+  const provName = PROV_MAP[ctaProvider] ?? null;
   const ctaLine = chainCta
-    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を予約（${PROVIDER[chainCta.type] ?? ''}）`
+    ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}を${provName ? provName+'で' : ''}予約する`
     : '';
 
   // finalAccess行（gatewayCityベース）
@@ -48,7 +51,8 @@ export async function captureShareCard(city, departure, transportContext = null)
       const from = gw || (fa.from ? clean(fa.from) : null);
       accessLine = from ? `${from}からバスでアクセス` : '';
     } else if (fa.type === 'car') {
-      accessLine = 'レンタカーでアクセス';
+      const carFrom = gw || '';
+      accessLine = carFrom ? `${carFrom}から車でアクセス` : '車でアクセス';
     }
   }
 
@@ -73,7 +77,7 @@ export async function captureShareCard(city, departure, transportContext = null)
     <div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
     ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:8px;">${escHtml(routeLine)}</div>` : ''}
     ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;margin-bottom:6px;line-height:1.5;">${escHtml(ctaLine)}</div>` : ''}
-    ${accessLine ? `<div style="font-size:12px;color:#888;line-height:1.5;">${escHtml(accessLine)}</div>` : ''}
+    ${accessLine ? `<div style="font-size:12px;color:#888;line-height:1.5;">→ ${escHtml(accessLine)}</div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
       <div style="font-size:12px;color:#888;margin-bottom:4px;">👇 行き方すぐ出る</div>
       <div style="font-size:13px;color:#1c1c1c;font-weight:600;letter-spacing:0.05em;">tabidokoiko.com</div>
