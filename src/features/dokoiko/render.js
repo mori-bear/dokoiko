@@ -417,10 +417,13 @@ function buildAccessText(access, city, gatewayCity = null) {
   const destName = city?.displayName || city?.name || '';
 
   if (fa.type === 'train' && fa.line) {
-    // 鉄道会社名まで簡略化（例: 近鉄吉野線 → 近鉄、東武日光線 → 東武）
     const company = extractRailwayCompany(fa.line);
     const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
+    const transfer = fa.transferStation ? clean(fa.transferStation) : null;
+    if (transfer && transfer !== from) {
+      return `${from}から${transfer}で${company}に乗換 → ${to}へ`;
+    }
     return `${from}から${company}で${to}へ`;
   }
   if (fa.type === 'bus') {

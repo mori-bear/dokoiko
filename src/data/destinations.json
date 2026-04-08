@@ -348,7 +348,8 @@
       "type": "train",
       "from": "下今市",
       "line": "東武日光線",
-      "to": "日光"
+      "to": "日光",
+      "transferStation": "宇都宮駅"
     }
   },
   {
@@ -3399,7 +3400,11 @@
     "stayPriority": "high",
     "representativeStation": "有馬温泉駅",
     "finalAccess": {
-      "type": "walk"
+      "type": "train",
+      "from": "三宮",
+      "line": "神戸電鉄",
+      "to": "有馬温泉",
+      "transferStation": "三宮駅"
     }
   },
   {
@@ -11163,7 +11168,8 @@
       "type": "train",
       "from": "橋本",
       "line": "南海高野線",
-      "to": "高野山"
+      "to": "高野山",
+      "transferStation": "難波駅"
     }
   },
   {
@@ -13586,7 +13592,8 @@
       "type": "train",
       "from": "橿原神宮前",
       "line": "近鉄吉野線",
-      "to": "吉野"
+      "to": "吉野",
+      "transferStation": "大阪阿部野橋駅"
     }
   },
   {
@@ -16883,7 +16890,8 @@
       "type": "train",
       "from": "大宮",
       "line": "東武東上線",
-      "to": "川越"
+      "to": "川越",
+      "transferStation": "大宮駅"
     }
   },
   {
@@ -18992,7 +19000,8 @@
       "type": "train",
       "from": "橿原神宮前",
       "line": "近鉄吉野線",
-      "to": "飛鳥"
+      "to": "飛鳥",
+      "transferStation": "大阪阿部野橋駅"
     }
   },
   {
@@ -24621,7 +24630,8 @@
       "type": "train",
       "from": "熊谷",
       "line": "秩父鉄道",
-      "to": "秩父"
+      "to": "秩父",
+      "transferStation": "熊谷駅"
     }
   },
   {

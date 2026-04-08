@@ -8,9 +8,9 @@ import { buildTransportContext } from '../src/engine/transportEngine.js';
 const destinations = JSON.parse(readFileSync(new URL('../src/data/destinations.json', import.meta.url), 'utf8'));
 
 const SAMPLES = [
-  { departure: '高松', destId: 'asuka' },     // JR→私鉄（近鉄）
-  { departure: '東京', destId: 'nikko' },      // JR→私鉄（東武）
-  { departure: '東京', destId: 'hakone' },     // JR→バス
+  { departure: '高松', destId: 'asuka' },     // JR→近鉄（transferStation付き）
+  { departure: '東京', destId: 'nikko' },      // JR→東武（transferStation付き）
+  { departure: '東京', destId: 'enoshima' },   // JR→江ノ電（transferStationなし）
 ];
 
 for (const { departure, destId } of SAMPLES) {
@@ -49,11 +49,16 @@ for (const { departure, destId } of SAMPLES) {
   const fa = typeof city.finalAccess === 'object' ? city.finalAccess : { type: city.finalAccess ?? 'walk' };
   const gw = chainCta ? clean(chainCta.to) : null;
   if (fa.type === 'train' && fa.line) {
-    const COMPANIES = ['近鉄','南海','小田急','東武','西武','京王','京急','京成','京阪','阪急','阪神','名鉄','相鉄','東急','江ノ電','JR'];
+    const COMPANIES = ['近鉄','南海','小田急','東武','西武','京王','京急','京成','京阪','阪急','阪神','名鉄','相鉄','東急','江ノ電','神戸電鉄','JR'];
     const company = COMPANIES.find(c => fa.line.startsWith(c)) || fa.line.replace(/(線|本線)$/, '');
     const from = gw || clean(fa.from || '');
     const to = clean(fa.to || '') || name;
-    console.log(`  → ${from}から${company}で${to}へ`);
+    const transfer = fa.transferStation ? clean(fa.transferStation) : null;
+    if (transfer && transfer !== from) {
+      console.log(`  → ${from}から${transfer}で${company}に乗換 → ${to}へ`);
+    } else {
+      console.log(`  → ${from}から${company}で${to}へ`);
+    }
   } else if (fa.type === 'bus') {
     const from = gw || (fa.from ? fa.from.replace(/駅$/, '') : '駅');
     console.log(`  → ${from}からバスでアクセス`);
