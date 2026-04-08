@@ -417,11 +417,11 @@ function buildAccessText(access, city, gatewayCity = null) {
   const destName = city?.displayName || city?.name || '';
 
   if (fa.type === 'train' && fa.line) {
-    // 路線名を簡略化（例: 近鉄吉野線 → 近鉄）
-    const shortLine = fa.line.replace(/(線|本線)$/, '');
+    // 鉄道会社名まで簡略化（例: 近鉄吉野線 → 近鉄、東武日光線 → 東武）
+    const company = extractRailwayCompany(fa.line);
     const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
-    return `${from}から${shortLine}で${to}へ`;
+    return `${from}から${company}で${to}へ`;
   }
   if (fa.type === 'bus') {
     const from = gatewayCity || (fa.from ? clean(fa.from) : null);
@@ -431,6 +431,18 @@ function buildAccessText(access, city, gatewayCity = null) {
     return 'レンタカーでアクセス';
   }
   return '';
+}
+
+/** 路線名から鉄道会社名を抽出する（例: 近鉄吉野線 → 近鉄） */
+function extractRailwayCompany(line) {
+  const COMPANIES = [
+    '近鉄', '南海', '小田急', '東武', '西武', '京王', '京急', '京成',
+    '京阪', '阪急', '阪神', '名鉄', '相鉄', '東急', '江ノ電', 'JR',
+  ];
+  for (const c of COMPANIES) {
+    if (line.startsWith(c)) return c;
+  }
+  return line.replace(/(線|本線)$/, '');
 }
 
 /**

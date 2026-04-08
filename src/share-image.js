@@ -21,10 +21,10 @@ export async function captureShareCard(city, departure, transportContext = null)
   const tags       = (city.primary ?? city.tags ?? []).slice(0, 3).join('・');
   const tagline    = city.description?.split('。')[0] ?? '';
 
-  // ルート1行（displayRoute ベース）
+  // ルート1行（出発地 → 目的地駅）
   const best       = transportContext?.bestRoute;
-  const dr         = best?.displayRoute;
-  const routeLine  = dr ? `🚃 ${dr.from} → ${dr.to}` : '';
+  const repStation = city.representativeStation || city.displayName || city.name;
+  const routeLine  = departure ? `🚃 ${departure} → ${repStation}` : '';
 
   // CTA行（JRチェーンCTAから直接生成）
   const chainCta = best?.jrChainCta;
@@ -40,10 +40,10 @@ export async function captureShareCard(city, departure, transportContext = null)
   let accessLine = '';
   if (fa && typeof fa === 'object') {
     if (fa.type === 'train' && fa.line) {
-      const shortLine = fa.line.replace(/(線|本線)$/, '');
+      const company = extractCompany(fa.line);
       const from = gw || clean(fa.from) || '';
       const faTo = clean(fa.to) || city.displayName || city.name || '';
-      accessLine = `${from}から${shortLine}で${faTo}へ`;
+      accessLine = `${from}から${company}で${faTo}へ`;
     } else if (fa.type === 'bus') {
       const from = gw || (fa.from ? clean(fa.from) : null);
       accessLine = from ? `${from}からバスでアクセス` : '';
@@ -132,6 +132,13 @@ function fallbackDownload(blob, fileName) {
   a.click();
   document.body.removeChild(a);
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+/** 路線名から鉄道会社名を抽出する */
+function extractCompany(line) {
+  const COMPANIES = ['近鉄','南海','小田急','東武','西武','京王','京急','京成','京阪','阪急','阪神','名鉄','相鉄','東急','江ノ電','JR'];
+  for (const c of COMPANIES) { if (line.startsWith(c)) return c; }
+  return line.replace(/(線|本線)$/, '');
 }
 
 /** XSS対策: HTML特殊文字をエスケープ */

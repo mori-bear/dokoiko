@@ -9,8 +9,8 @@ const destinations = JSON.parse(readFileSync(new URL('../src/data/destinations.j
 
 const SAMPLES = [
   { departure: '高松', destId: 'asuka' },     // JR→私鉄（近鉄）
-  { departure: '東京', destId: 'hakone' },     // JR→バス
   { departure: '東京', destId: 'nikko' },      // JR→私鉄（東武）
+  { departure: '東京', destId: 'hakone' },     // JR→バス
 ];
 
 for (const { departure, destId } of SAMPLES) {
@@ -49,10 +49,11 @@ for (const { departure, destId } of SAMPLES) {
   const fa = typeof city.finalAccess === 'object' ? city.finalAccess : { type: city.finalAccess ?? 'walk' };
   const gw = chainCta ? clean(chainCta.to) : null;
   if (fa.type === 'train' && fa.line) {
-    const shortLine = fa.line.replace(/(線|本線)$/, '');
+    const COMPANIES = ['近鉄','南海','小田急','東武','西武','京王','京急','京成','京阪','阪急','阪神','名鉄','相鉄','東急','江ノ電','JR'];
+    const company = COMPANIES.find(c => fa.line.startsWith(c)) || fa.line.replace(/(線|本線)$/, '');
     const from = gw || clean(fa.from || '');
     const to = clean(fa.to || '') || name;
-    console.log(`  → ${from}から${shortLine}で${to}へ`);
+    console.log(`  → ${from}から${company}で${to}へ`);
   } else if (fa.type === 'bus') {
     const from = gw || (fa.from ? fa.from.replace(/駅$/, '') : '駅');
     console.log(`  → ${from}からバスでアクセス`);
@@ -67,8 +68,8 @@ for (const { departure, destId } of SAMPLES) {
   const suppressBk = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
   if (!suppressBk && chainCta && mainCta) {
     const from = clean(chainCta.from); const to = clean(chainCta.to);
-    const HINT = { shinkansen:'新幹線区間', limited:'特急区間', jr:'JR区間', flight:'直行便', ferry:'フェリー区間' };
-    const hint = HINT[chainCta.type] ?? '';
-    console.log(`  [${from} → ${to}だけ予約${hint ? `（${hint}）` : ''}]`);
+    const PROV = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'JR九州ネット', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+    const prov = PROV[mainCta.type] ?? '';
+    console.log(`  [${from} → ${to}を${prov ? prov+'で' : ''}予約]`);
   }
 }
