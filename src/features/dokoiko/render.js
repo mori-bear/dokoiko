@@ -362,23 +362,25 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const best = tc?.bestRoute;
   const chainCta = best?.jrChainCta;
 
-  // ① 予約CTA（JRチェーン / flight / ferry から直接生成）
+  // ① 予約CTA + finalAccess（連続した行動として一体表示）
   const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
-  let bookingHtml = '';
+  let actionHtml = '';
   if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = buildChainCtaLabel(chainCta);
       seenUrls.add(mainCta.cta.url);
-      bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-         class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
+      const accessText = buildAccessText(best?.finalAccess, city);
+      actionHtml = `
+        <div class="cta-action">
+          <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>
+          ${accessText ? `<div class="cta-access-next">→ ${accessText}</div>` : ''}
+        </div>`;
     }
   }
 
-  // ② finalAccess表示（降りた後どう行くか）
-  const accessHtml = renderFinalAccess(best?.finalAccess, city);
-
-  // ③ 地図CTA
+  // ② 地図CTA
   const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
   let mapHtml = '';
   if (mapUrl) {
@@ -387,7 +389,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ④ シェア（X + 画像）
+  // ③ シェア（X + 画像）
   const shareHtml = `
     <div class="share-inline">
       <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
@@ -396,47 +398,32 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 
   return `
     <div class="cta-block">
-      ${bookingHtml ? `<div class="cta-group">${bookingHtml}</div>` : ''}
-      ${accessHtml}
+      ${actionHtml}
       ${mapHtml ? `<div class="cta-group">${mapHtml}</div>` : ''}
       ${shareHtml}
     </div>`;
 }
 
 /**
- * finalAccess（構造化オブジェクト）から補助テキストを生成する。
- *
- * { type: "train", line: "近鉄南大阪線", from: "大阪阿部野橋", to: "富田林" }
- *   → "大阪阿部野橋から近鉄南大阪線で富田林へ"
- *
- * { type: "bus", from: "小田原駅" }
- *   → "小田原からバスでアクセス"
- *
- * { type: "car" }
- *   → "レンタカーでアクセス"
- *
- * { type: "walk" }
- *   → "" (非表示)
+ * finalAccessからテキスト（HTMLタグなし）を返す。
+ * CTA直下に「→ ...」として一体表示するため。
  */
-function renderFinalAccess(access, city) {
+function buildAccessText(access, city) {
   if (!access) return '';
   const fa = typeof access === 'string' ? { type: access } : access;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
 
   if (fa.type === 'train' && fa.line && fa.from) {
     const to = fa.to || city?.displayName || city?.name || '';
-    return `<div class="access-hint">${clean(fa.from)}から${fa.line}で${clean(to)}へ</div>`;
+    return `${clean(fa.from)}から${fa.line}で${clean(to)}へ`;
   }
   if (fa.type === 'bus') {
     const from = fa.from ? clean(fa.from) : null;
-    return from
-      ? `<div class="access-hint">${from}からバスでアクセス</div>`
-      : '<div class="access-hint">駅からバスでアクセス</div>';
+    return from ? `${from}からバスでアクセス` : '駅からバスでアクセス';
   }
   if (fa.type === 'car') {
-    return '<div class="access-hint">レンタカーでアクセス</div>';
+    return 'レンタカーでアクセス';
   }
-  // walk → 非表示（駅から徒歩圏内は言うまでもない）
   return '';
 }
 

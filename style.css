@@ -1093,10 +1093,14 @@ body {
   margin-bottom: 4px;
 }
 
-.access-hint {
+.cta-action {
+  margin-bottom: 8px;
+}
+
+.cta-access-next {
   font-size: 13px;
   color: #666;
-  padding: 8px 0 4px;
+  padding: 6px 0 0;
   line-height: 1.5;
 }
 
