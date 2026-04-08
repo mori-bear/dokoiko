@@ -315,12 +315,14 @@ function extractSegments(stepGroups) {
     const to   = m[2].trim();
     const mode = m[3].trim();
     const type = classifySegmentType(mode, from, to);
+    const operator = sg.operator ?? null;
     segments.push({
       from,
       to,
       mode,
       type,
       bookable: isBookableSegment(type),
+      operator,
     });
   }
   return segments;
@@ -353,24 +355,76 @@ function isBookableSegment(type) {
   return ['shinkansen', 'flight', 'ferry', 'highway_bus'].includes(type);
 }
 
-/** 主役セグメント1つを決定（flight > shinkansen > ferry > highway_bus） */
+/** セグメントがJR系かどうかを判定（新幹線は常にJR） */
+function isJRSegment(seg) {
+  if (seg.type === 'shinkansen') return true;
+  if (seg.operator && /^JR/.test(seg.operator)) return true;
+  return false;
+}
+
+/** 連続するJRセグメントをチェーンとして抽出する */
+function extractJRChains(segments) {
+  const chains = [];
+  let current = [];
+  for (const seg of segments) {
+    if (isJRSegment(seg)) {
+      current.push(seg);
+    } else {
+      if (current.length) {
+        chains.push(current);
+        current = [];
+      }
+    }
+  }
+  if (current.length) chains.push(current);
+  return chains;
+}
+
+/** JRチェーンの中から最長（セグメント数）を採用する */
+function pickMainJRChain(chains) {
+  if (!chains.length) return null;
+  return chains.reduce((best, c) => c.length > best.length ? c : best, chains[0]);
+}
+
+/**
+ * 主役セグメント（CTA対象）を決定する。
+ *
+ * JR連続区間（チェーン）を抽出し、最長チェーンの from→to をまとめて返す。
+ * flight / ferry / highway_bus はチェーン対象外（単独セグメントとして優先判定）。
+ */
 function pickMainSegment(segments, city = null) {
   const isIsland = city?.isIsland === true || city?.destType === 'island';
-  const bookable = segments.filter(s => s.bookable);
 
-  // 島: ferry を最優先。CTA用には最も目的地に近い bookable を返す
+  // 島: ferry / flight を最優先
   if (isIsland) {
     const ferry = segments.find(s => s.type === 'ferry');
     if (ferry) return ferry;
     const flight = segments.find(s => s.type === 'flight');
     if (flight) return flight;
-    // 前段の鉄道: 最後の bookable（目的地に最も近い予約区間）
-    return bookable.length > 0 ? bookable[bookable.length - 1] : null;
   }
 
-  return segments.find(s => s.type === 'flight')
-    ?? segments.find(s => s.type === 'shinkansen')
-    ?? segments.find(s => s.type === 'ferry')
+  // flight は常に単独で最優先
+  const flight = segments.find(s => s.type === 'flight');
+  if (flight) return flight;
+
+  // JRチェーン抽出 → 最長チェーンを統合セグメントとして返す
+  const chains = extractJRChains(segments);
+  const mainChain = pickMainJRChain(chains);
+  if (mainChain) {
+    const hasShinkansenInChain = mainChain.some(s => s.type === 'shinkansen');
+    return {
+      from: mainChain[0].from,
+      to:   mainChain[mainChain.length - 1].to,
+      type: hasShinkansenInChain ? 'shinkansen' : 'rail',
+      bookable: true,
+      mode: hasShinkansenInChain ? '新幹線' : 'JR',
+      operator: mainChain[0].operator,
+      _chain: mainChain,
+    };
+  }
+
+  // ferry / highway_bus フォールバック
+  return segments.find(s => s.type === 'ferry')
     ?? segments.find(s => s.type === 'highway_bus')
     ?? null;
 }

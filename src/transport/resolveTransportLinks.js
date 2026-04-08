@@ -1005,7 +1005,7 @@ function bfsStepsToLinks(steps, departure, city) {
     const durationStr = (s.minutes && s.minutes > 0) ? `・約${formatMinutes(s.minutes)}` : '';
     const stepLabel   = `${stepIdx(displayIdx)} ${icon} ${fromLabel} → ${s.to}（${mode}${durationStr}）`;
     const duration    = (s.minutes && s.minutes > 0) ? s.minutes : null;
-    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration });
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, duration, stepType: s.type, operator: s.operator ?? null });
     displayIdx++;
   }
   return links.filter(Boolean);
@@ -1088,7 +1088,7 @@ function buildLinksFromRoutes(routesInput, city, departure, fromCity) {
     }
 
     // step-group: label のみ。booking CTA は main-cta として別途配置する
-    links.push({ type: 'step-group', stepLabel, cta: null, caution: null });
+    links.push({ type: 'step-group', stepLabel, cta: null, caution: null, stepType: step.type, operator: step.operator ?? null });
     prevStepTo = to;
     displayIdx++;
   }

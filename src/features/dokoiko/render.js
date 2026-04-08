@@ -839,18 +839,19 @@ function buildMapCtaBlock(item) {
 }
 
 /**
- * bookable セグメントの実在区間でCTAラベルを生成する。
- * 例: 新幹線を予約（岡山 → 京都）
+ * bookable セグメント（JRチェーン統合済み）の実在区間でCTAラベルを生成する。
+ * 例: 高松 → 大阪だけ予約（新幹線）
  */
 function buildSegmentCtaLabel(segment, ctaType) {
   const clean = (n) => n.replace(/駅$|空港$|港$/, '');
   const from = clean(segment.from);
   const to   = clean(segment.to);
   const HINT = {
-    shinkansen:  '新幹線区間',
-    flight:      '直行便',
-    ferry:       'フェリー区間',
-    highway_bus: 'バス区間',
+    shinkansen:  '新幹線',
+    rail:        'JR',
+    flight:      '飛行機',
+    ferry:       'フェリー',
+    highway_bus: 'バス',
   };
   const hint = HINT[segment.type] ?? '';
   return hint
