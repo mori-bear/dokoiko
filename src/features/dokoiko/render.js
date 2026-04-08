@@ -390,11 +390,10 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ③ シェア（X + 画像）
+  // ③ シェア（画像付き1ボタン）
   const shareHtml = `
     <div class="share-inline">
-      <button class="btn-share btn-share--x" id="share-x-btn">Xでシェア</button>
-      <button class="btn-share btn-share--img" id="share-img-btn">画像でシェア</button>
+      <button class="btn-share btn-share--x" id="share-img-btn">Xでシェア</button>
     </div>`;
 
   // CTAなし時：地図で直接案内
@@ -695,16 +694,15 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const jalan     = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
 
-  // gatewayCity（予約到達点の主要都市）を優先、なければ従来のフォールバック
-  const gatewayCity = resolveGatewayCity(tc?.bestRoute, city);
-  const stayLabel = gatewayCity || stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  // 宿ラベルはリンク生成時の都市名を優先（gatewayCity ではなく宿の実体に合わせる）
+  const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const stayHint = buildStayHint(city);
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten btn--action">${stayLabel}に泊まる（楽天）</a>` : '',
+                  class="btn btn--stay-rakuten btn--action">👉 ${stayLabel}で泊まる（楽天）</a>` : '',
     jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan btn--action">${stayLabel}に泊まる（じゃらん）</a>` : '',
+                  class="btn btn--stay-jalan btn--action">👉 ${stayLabel}で泊まる（じゃらん）</a>` : '',
   ].filter(Boolean).join('');
 
   return `

@@ -226,33 +226,67 @@ function restoreFromUrl(urlParams) {
 
 function bindShareHandlers() {
   document.addEventListener('click', async (e) => {
-    const xBtn = e.target.closest('#share-x-btn');
-    if (xBtn) {
-      const city = state.pool[state.poolIndex];
-      if (city) openXShare(city, state.departure);
-      return;
-    }
+    const btn = e.target.closest('#share-img-btn');
+    if (!btn) return;
 
-    const imgBtn = e.target.closest('#share-img-btn');
-    if (imgBtn) {
-      const city = state.pool[state.poolIndex];
-      if (!city) return;
-      const original = imgBtn.textContent;
-      imgBtn.disabled = true;
-      imgBtn.textContent = '生成中…';
-      try {
-        const canvas = await captureShareCard(city, state.departure, state.lastTransportContext);
-        shareOrDownload(canvas, city, state.departure);
-      } catch (err) {
-        console.error('[share-img] 画像生成失敗:', err);
-        imgBtn.textContent = '生成失敗';
-        setTimeout(() => { imgBtn.textContent = original; }, 2000);
-      } finally {
-        imgBtn.disabled = false;
-        imgBtn.textContent = original;
+    const city = state.pool[state.poolIndex];
+    if (!city) return;
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '生成中…';
+    try {
+      const canvas = await captureShareCard(city, state.departure, state.lastTransportContext);
+      await shareWithImage(canvas, city, state.departure, state.lastTransportContext);
+    } catch (err) {
+      if (err.name !== 'AbortError') {
+        console.error('[share] 失敗:', err);
+        btn.textContent = '生成失敗';
+        setTimeout(() => { btn.textContent = original; }, 2000);
       }
+    } finally {
+      btn.disabled = false;
+      btn.textContent = original;
     }
   });
+}
+
+/** 画像+テキストを同時にシェア（Web Share API → フォールバック: X intent + ダウンロード） */
+async function shareWithImage(canvas, city, departure, tc) {
+  const name = city.displayName || city.name;
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const chainCta = tc?.bestRoute?.jrChainCta;
+  const ctaProvider = tc?.cta?.type ?? tc?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
+  const PROV = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+  const TYPE = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
+  const prov = PROV[ctaProvider] ?? '';
+  const hint = chainCta ? (TYPE[chainCta.type] ?? '') : '';
+
+  let text;
+  if (chainCta) {
+    const from = clean(chainCta.from);
+    const to   = clean(chainCta.to);
+    text = `${departure}から${name}まで電車で行けるの知ってた？\n\n👉 ${from} → ${to}\n${prov}${hint ? `（${hint}）` : ''}\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
+  } else {
+    text = `${departure}から${name}、意外と行けるらしい\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
+  }
+
+  const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+  if (!blob) return;
+  const file = new File([blob], `${departure}-${name}.png`, { type: 'image/png' });
+
+  // Web Share API（スマホ: 画像+テキスト同時投稿）
+  if (navigator.share && navigator.canShare?.({ files: [file] })) {
+    await navigator.share({ text, files: [file] });
+    return;
+  }
+
+  // PC フォールバック: X intent（テキストのみ）+ 画像ダウンロード
+  shareOrDownload(canvas, city, departure);
+  window.open(
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
+    '_blank',
+    'noopener,noreferrer,width=550,height=420',
+  );
 }
 
 /* ── フォームエラー ── */
