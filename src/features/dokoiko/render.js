@@ -421,18 +421,23 @@ function buildAccessText(access, city, gatewayCity = null) {
     const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
     const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
-    const transfer = typeof fa.transferStation === 'object' ? fa.transferStation?.name : fa.transferStation;
+    const trObj = typeof fa.transferStation === 'object' ? fa.transferStation : null;
+    const trClean = trObj ? clean(trObj.name) : (typeof fa.transferStation === 'string' ? clean(fa.transferStation) : null);
     const midClean = mid ? clean(mid) : null;
-    const trClean = transfer ? clean(transfer) : null;
-    // A. midStation + transferStation: 2ステップ乗換
-    if (midClean && trClean) {
+    const isSameStation = trObj?.access === 'same';
+    // A. midStation + transferStation（徒歩乗換）: 2ステップ
+    if (midClean && trClean && !isSameStation) {
       return `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ行く`;
     }
-    // B. transferStationのみ（gatewayと異なる場合）
+    // B. 同一駅乗換 or transferStationのみ → シンプル表示
+    if (isSameStation || (trClean && trClean === from)) {
+      return `${from}から${company}で${to}へ行く`;
+    }
+    // C. transferStation（gateway と異なる）
     if (trClean && trClean !== from) {
       return `${from}から${trClean}で${company}に乗換 → ${to}へ行く`;
     }
-    // C. シンプル
+    // D. シンプル
     return `${from}から${company}で${to}へ行く`;
   }
   if (fa.type === 'bus') {

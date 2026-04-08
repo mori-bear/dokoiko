@@ -1109,10 +1109,11 @@ body {
 }
 
 .cta-access-next {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
   padding: 4px 0 0;
   line-height: 1.5;
+  opacity: 0.7;
 }
 
 /* アクションCTA共通: 大きめタップターゲット */

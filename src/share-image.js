@@ -79,7 +79,7 @@ export async function captureShareCard(city, departure, transportContext = null)
     ${ctaLine1 || accessLine ? `<div style="margin-bottom:0;">
       ${ctaLine1 ? `<div style="font-size:18px;color:#e65100;font-weight:700;line-height:1.3;">${escHtml(ctaLine1)}</div>` : ''}
       ${ctaLine2 ? `<div style="font-size:13px;color:#e65100;font-weight:400;line-height:1.5;margin-top:2px;opacity:0.85;">${escHtml(ctaLine2)}</div>` : ''}
-      ${accessLine ? `<div style="font-size:12px;color:#666;line-height:1.5;margin-top:4px;">→ ${escHtml(accessLine)}</div>` : ''}
+      ${accessLine ? `<div style="font-size:12px;color:#666;line-height:1.5;margin-top:4px;opacity:0.7;">→ ${escHtml(accessLine)}</div>` : ''}
     </div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
       <div style="font-size:12px;color:#888;margin-bottom:4px;">👇 行き方すぐ出る</div>
