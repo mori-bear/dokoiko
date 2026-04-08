@@ -11169,7 +11169,8 @@
       "from": "橋本",
       "line": "南海高野線",
       "to": "高野山",
-      "transferStation": "難波駅"
+      "transferStation": "難波駅",
+      "midStation": "なんば"
     }
   },
   {
@@ -13593,7 +13594,8 @@
       "from": "橿原神宮前",
       "line": "近鉄吉野線",
       "to": "吉野",
-      "transferStation": "大阪阿部野橋駅"
+      "transferStation": "大阪阿部野橋駅",
+      "midStation": "天王寺"
     }
   },
   {
@@ -19001,7 +19003,8 @@
       "from": "橿原神宮前",
       "line": "近鉄吉野線",
       "to": "飛鳥",
-      "transferStation": "大阪阿部野橋駅"
+      "transferStation": "大阪阿部野橋駅",
+      "midStation": "天王寺"
     }
   },
   {

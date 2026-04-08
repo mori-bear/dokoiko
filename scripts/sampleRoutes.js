@@ -8,9 +8,9 @@ import { buildTransportContext } from '../src/engine/transportEngine.js';
 const destinations = JSON.parse(readFileSync(new URL('../src/data/destinations.json', import.meta.url), 'utf8'));
 
 const SAMPLES = [
-  { departure: '高松', destId: 'asuka' },     // JR→近鉄（transferStation付き）
-  { departure: '東京', destId: 'nikko' },      // JR→東武（transferStation付き）
-  { departure: '東京', destId: 'enoshima' },   // JR→江ノ電（transferStationなし）
+  { departure: '高松', destId: 'asuka' },     // midStation+transferStation（天王寺→阿部野橋）
+  { departure: '高松', destId: 'koyasan' },   // midStation+transferStation（なんば→難波）
+  { departure: '東京', destId: 'nikko' },      // transferStation=gateway（省略）
 ];
 
 for (const { departure, destId } of SAMPLES) {
@@ -53,8 +53,11 @@ for (const { departure, destId } of SAMPLES) {
     const company = COMPANIES.find(c => fa.line.startsWith(c)) || fa.line.replace(/(線|本線)$/, '');
     const from = gw || clean(fa.from || '');
     const to = clean(fa.to || '') || name;
+    const mid = fa.midStation ? clean(fa.midStation) : null;
     const transfer = fa.transferStation ? clean(fa.transferStation) : null;
-    if (transfer && transfer !== from) {
+    if (mid && transfer) {
+      console.log(`  → ${from}から${mid}へ → ${transfer}で${company}に乗換 → ${to}へ`);
+    } else if (transfer && transfer !== from) {
       console.log(`  → ${from}から${transfer}で${company}に乗換 → ${to}へ`);
     } else {
       console.log(`  → ${from}から${company}で${to}へ`);

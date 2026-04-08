@@ -49,10 +49,15 @@ export async function captureShareCard(city, departure, transportContext = null)
       const company = extractCompany(fa.line);
       const from = gw || clean(fa.from) || '';
       const faTo = clean(fa.to) || city.displayName || city.name || '';
+      const mid = fa.midStation ? clean(fa.midStation) : null;
       const transfer = fa.transferStation ? clean(fa.transferStation) : null;
-      accessLine = (transfer && transfer !== from)
-        ? `${from}から${transfer}で${company}に乗換 → ${faTo}へ`
-        : `${from}から${company}で${faTo}へ`;
+      if (mid && transfer) {
+        accessLine = `${from}から${mid}へ → ${transfer}で${company}に乗換 → ${faTo}へ`;
+      } else if (transfer && transfer !== from) {
+        accessLine = `${from}から${transfer}で${company}に乗換 → ${faTo}へ`;
+      } else {
+        accessLine = `${from}から${company}で${faTo}へ`;
+      }
     } else if (fa.type === 'bus') {
       const from = gw || (fa.from ? clean(fa.from) : null);
       const dest = city.displayName || city.name || '';

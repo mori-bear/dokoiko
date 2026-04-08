@@ -420,7 +420,13 @@ function buildAccessText(access, city, gatewayCity = null) {
     const company = extractRailwayCompany(fa.line);
     const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
+    const mid = fa.midStation ? clean(fa.midStation) : null;
     const transfer = fa.transferStation ? clean(fa.transferStation) : null;
+    // midStation + transferStation: 2ステップ乗換
+    if (mid && transfer) {
+      return `${from}から${mid}へ → ${transfer}で${company}に乗換 → ${to}へ`;
+    }
+    // transferStationのみ（gatewayと異なる場合）
     if (transfer && transfer !== from) {
       return `${from}から${transfer}で${company}に乗換 → ${to}へ`;
     }
