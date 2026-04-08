@@ -397,6 +397,16 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       <button class="btn-share btn-share--img" id="share-img-btn">画像でシェア</button>
     </div>`;
 
+  // CTAなし時：地図で直接案内
+  if (!actionHtml && mapHtml) {
+    actionHtml = `
+      <div class="cta-action">
+        <a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+           class="btn btn--maps btn--action">👉 そのまま行く（予約不要）</a>
+      </div>`;
+    mapHtml = '';
+  }
+
   return `
     <div class="cta-block">
       ${actionHtml}
@@ -418,35 +428,32 @@ function buildAccessText(access, city, gatewayCity = null) {
 
   if (fa.type === 'train' && fa.line) {
     const company = extractRailwayCompany(fa.line);
-    const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
     const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
     const trObj = typeof fa.transferStation === 'object' ? fa.transferStation : null;
     const trClean = trObj ? clean(trObj.name) : (typeof fa.transferStation === 'string' ? clean(fa.transferStation) : null);
     const midClean = mid ? clean(mid) : null;
-    const isSameStation = trObj?.access === 'same';
-    // A. midStation + transferStation（徒歩乗換）: 2ステップ
-    if (midClean && trClean && !isSameStation) {
-      return `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ行く`;
+    const isSame = trObj?.access === 'same';
+    // A. midStation + transferStation（徒歩乗換）
+    if (midClean && trClean && !isSame) {
+      return `${midClean} → ${trClean}で${company} → ${to}`;
     }
-    // B. 同一駅乗換 or transferStationのみ → シンプル表示
-    if (isSameStation || (trClean && trClean === from)) {
-      return `${from}から${company}で${to}へ行く`;
+    // B. 同一駅乗換 → シンプル
+    if (isSame) {
+      return `${company}で${to}`;
     }
-    // C. transferStation（gateway と異なる）
-    if (trClean && trClean !== from) {
-      return `${from}から${trClean}で${company}に乗換 → ${to}へ行く`;
+    // C. transferStation
+    if (trClean) {
+      return `${trClean}で${company} → ${to}`;
     }
     // D. シンプル
-    return `${from}から${company}で${to}へ行く`;
+    return `${company}で${to}`;
   }
   if (fa.type === 'bus') {
-    const from = gatewayCity || (fa.from ? clean(fa.from) : null);
-    return from ? `${from}からバスで${destName}へ行く` : '';
+    return `バスで${destName}`;
   }
   if (fa.type === 'car') {
-    const from = gatewayCity || '';
-    return from ? `${from}から車で${destName}へ行く` : '';
+    return `車で${destName}`;
   }
   return '';
 }
@@ -905,7 +912,7 @@ function buildChainCtaHtml(chainCta, providerType = null) {
   const provider = CTA_PROVIDER[providerType] ?? null;
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
-  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
+  const line2 = provider ? `${provider}${suffix}` : `予約${suffix}`;
   return `<span class="cta-route">👉 ${from} → ${to}</span><br><span class="cta-provider">${line2}</span>`;
 }
 

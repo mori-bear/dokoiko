@@ -55,40 +55,42 @@ for (const { departure, destId } of SAMPLES) {
   else if (fa.type === 'train' && fa.line) {
     const COMPANIES = ['近鉄','南海','小田急','東武','西武','京王','京急','京成','京阪','阪急','阪神','名鉄','相鉄','東急','江ノ電','神戸電鉄','JR'];
     const company = COMPANIES.find(c => fa.line.startsWith(c)) || fa.line.replace(/(線|本線)$/, '');
-    const from = gw || clean(fa.from || '');
     const to = clean(fa.to || '') || name;
     const trObj = typeof fa.transferStation === 'object' ? fa.transferStation : null;
     const trClean = trObj ? clean(trObj.name) : null;
-    const midClean = (typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation) ? clean(typeof fa.midStation === 'object' ? fa.midStation.name : fa.midStation) : null;
+    const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
+    const midClean = mid ? clean(mid) : null;
     const isSame = trObj?.access === 'same';
     if (midClean && trClean && !isSame) {
-      console.log(`  → ${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ行く`);
-    } else if (isSame || (trClean && trClean === from)) {
-      console.log(`  → ${from}から${company}で${to}へ行く`);
-    } else if (trClean && trClean !== from) {
-      console.log(`  → ${from}から${trClean}で${company}に乗換 → ${to}へ行く`);
+      console.log(`  → ${midClean} → ${trClean}で${company} → ${to}`);
+    } else if (isSame) {
+      console.log(`  → ${company}で${to}`);
+    } else if (trClean) {
+      console.log(`  → ${trClean}で${company} → ${to}`);
     } else {
-      console.log(`  → ${from}から${company}で${to}へ行く`);
+      console.log(`  → ${company}で${to}`);
     }
   } else if (fa.type === 'bus') {
-    const from = gw || (fa.from ? fa.from.replace(/駅$/, '') : '');
     const dest = city.displayName || city.name || '';
-    console.log(`  → ${from}からバスで${dest}へ行く`);
+    console.log(`  → バスで${dest}`);
   } else if (fa.type === 'car') {
-    const from = gw || '';
     const dest = city.displayName || city.name || '';
-    console.log(`  → ${from}から車で${dest}へ行く`);
+    console.log(`  → 車で${dest}`);
   }
   console.log(``);
   // CTA（JRチェーンベース）
   const mainCta = tc.stepGroups.find(sg => sg.type === 'main-cta')?.cta;
   console.log(``);
-  console.log(`  [地図で行き方を見る]`);
   const suppressBk = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
   if (!suppressBk && chainCta && mainCta) {
     const from = clean(chainCta.from); const to = clean(chainCta.to);
-    const PROV = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'JR九州ネット', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+    const PROV = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+    const TYPE = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
     const prov = PROV[mainCta.type] ?? '';
-    console.log(`  [${from} → ${to}を${prov ? prov+'で' : ''}予約]`);
+    const hint = TYPE[chainCta.type] ?? '';
+    console.log(`  [👉 ${from} → ${to}]`);
+    console.log(`  [${prov || '予約'}${hint ? `（${hint}）` : ''}]`);
+  } else {
+    console.log(`  [👉 そのまま行く（予約不要）]`);
   }
 }

@@ -38,21 +38,21 @@ export async function captureShareCard(city, departure, transportContext = null)
   const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
   const ctaLine1 = chainCta ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}` : '';
   const ctaLine2 = chainCta
-    ? (provName ? `${provName}で予約${typeHint ? `（${typeHint}）` : ''}` : `予約する${typeHint ? `（${typeHint}）` : ''}`)
+    ? (provName ? `${provName}${typeHint ? `（${typeHint}）` : ''}` : `予約${typeHint ? `（${typeHint}）` : ''}`)
     : '';
 
-  // finalAccess（シェア画像用: allJR時は非表示、from省略で最短表現 + 「行く」）
+  // finalAccess（シェア画像用: allJR時は非表示、矢印つなぎで最短表現）
   const fa = best?.finalAccess;
   let accessLine = '';
   if (!chainCta?.allJR && fa && typeof fa === 'object' && fa.type !== 'walk') {
     const dest = clean(fa.to) || city.displayName || city.name || '';
     if (fa.type === 'train' && fa.line) {
       const company = extractCompany(fa.line);
-      accessLine = `${company}で${dest}へ行く`;
+      accessLine = `${company}で${dest}`;
     } else if (fa.type === 'bus') {
-      accessLine = `バスで${dest}へ行く`;
+      accessLine = `バスで${dest}`;
     } else if (fa.type === 'car') {
-      accessLine = `車で${dest}へ行く`;
+      accessLine = `車で${dest}`;
     }
   }
 
