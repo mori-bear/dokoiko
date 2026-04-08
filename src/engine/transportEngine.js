@@ -404,11 +404,13 @@ function buildJRChainCta(segments) {
   const mainChain = pickMainJRChain(chains);
   if (!mainChain) return null;
 
-  const hasShinkansenInChain = mainChain.some(s => s.type === 'shinkansen');
+  const hasShinkansen = mainChain.some(s => s.type === 'shinkansen');
+  const hasLimited    = mainChain.some(s => s.type === 'rail_express');
+  const type = hasShinkansen ? 'shinkansen' : hasLimited ? 'limited' : 'jr';
   return {
     from: mainChain[0].from,
     to:   mainChain[mainChain.length - 1].to,
-    type: hasShinkansenInChain ? 'shinkansen' : 'jr',
+    type,
   };
 }
 

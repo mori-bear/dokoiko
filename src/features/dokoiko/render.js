@@ -398,12 +398,16 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     }
   }
 
-  // ③ 最終アクセス表示（予約到達点 → 目的地）
+  // ③ 最終アクセス表示（予約到達点から残りどう行くか）
   const destName = city?.displayName || city?.name || '';
   const gatewayCity = resolveGatewayCity(best, city);
-  const accessHtml = (gatewayCity && gatewayCity !== destName)
-    ? `<div class="access-hint">📍 ${destName}へは${gatewayCity}からアクセス</div>`
-    : '';
+  let accessHtml = '';
+  if (gatewayCity && gatewayCity !== destName) {
+    const fa = best?.finalAccess ?? 'walk';
+    const ACCESS_METHOD = { walk: '在来線', bus: 'バス', car: '車' };
+    const method = ACCESS_METHOD[fa] ?? '在来線';
+    accessHtml = `<div class="access-hint">${gatewayCity}からは${method}でアクセス</div>`;
+  }
 
   // ④ シェア（X + 画像）
   const shareHtml = `
@@ -845,10 +849,11 @@ function buildChainCtaLabel(chainCta) {
   const from = clean(chainCta.from);
   const to   = clean(chainCta.to);
   const HINT = {
-    shinkansen: '新幹線',
-    jr:         'JR',
-    flight:     '飛行機',
-    ferry:      'フェリー',
+    shinkansen: '新幹線区間',
+    limited:    '特急区間',
+    jr:         'JR区間',
+    flight:     '直行便',
+    ferry:      'フェリー区間',
   };
   const hint = HINT[chainCta.type] ?? '';
   return hint
