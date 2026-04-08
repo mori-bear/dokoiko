@@ -420,16 +420,19 @@ function buildAccessText(access, city, gatewayCity = null) {
     const company = extractRailwayCompany(fa.line);
     const from = gatewayCity || clean(fa.from) || '';
     const to = clean(fa.to) || destName;
-    const mid = fa.midStation ? clean(fa.midStation) : null;
-    const transfer = fa.transferStation ? clean(fa.transferStation) : null;
-    // midStation + transferStation: 2ステップ乗換
-    if (mid && transfer) {
-      return `${from}から${mid}へ → ${transfer}で${company}に乗換 → ${to}へ`;
+    const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
+    const transfer = typeof fa.transferStation === 'object' ? fa.transferStation?.name : fa.transferStation;
+    const midClean = mid ? clean(mid) : null;
+    const trClean = transfer ? clean(transfer) : null;
+    // A. midStation + transferStation: 2ステップ乗換
+    if (midClean && trClean) {
+      return `${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ`;
     }
-    // transferStationのみ（gatewayと異なる場合）
-    if (transfer && transfer !== from) {
-      return `${from}から${transfer}で${company}に乗換 → ${to}へ`;
+    // B. transferStationのみ（gatewayと異なる場合）
+    if (trClean && trClean !== from) {
+      return `${from}から${trClean}で${company}に乗換 → ${to}へ`;
     }
+    // C. シンプル
     return `${from}から${company}で${to}へ`;
   }
   if (fa.type === 'bus') {

@@ -53,12 +53,14 @@ for (const { departure, destId } of SAMPLES) {
     const company = COMPANIES.find(c => fa.line.startsWith(c)) || fa.line.replace(/(線|本線)$/, '');
     const from = gw || clean(fa.from || '');
     const to = clean(fa.to || '') || name;
-    const mid = fa.midStation ? clean(fa.midStation) : null;
-    const transfer = fa.transferStation ? clean(fa.transferStation) : null;
-    if (mid && transfer) {
-      console.log(`  → ${from}から${mid}へ → ${transfer}で${company}に乗換 → ${to}へ`);
-    } else if (transfer && transfer !== from) {
-      console.log(`  → ${from}から${transfer}で${company}に乗換 → ${to}へ`);
+    const mid = typeof fa.midStation === 'object' ? fa.midStation?.name : fa.midStation;
+    const transfer = typeof fa.transferStation === 'object' ? fa.transferStation?.name : fa.transferStation;
+    const midClean = mid ? clean(mid) : null;
+    const trClean = transfer ? clean(transfer) : null;
+    if (midClean && trClean) {
+      console.log(`  → ${from}から${midClean}へ → ${trClean}で${company}に乗換 → ${to}へ`);
+    } else if (trClean && trClean !== from) {
+      console.log(`  → ${from}から${trClean}で${company}に乗換 → ${to}へ`);
     } else {
       console.log(`  → ${from}から${company}で${to}へ`);
     }
