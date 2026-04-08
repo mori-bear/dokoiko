@@ -106,7 +106,9 @@
     "hubCity": "鎌倉",
     "stayPriority": "medium",
     "representativeStation": "鎌倉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "atami",
@@ -205,7 +207,9 @@
     "hubCity": "熱海",
     "stayPriority": "high",
     "representativeStation": "熱海駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nikko",
@@ -340,7 +344,9 @@
     "hubCity": "日光",
     "stayPriority": "high",
     "representativeStation": "日光駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "karuizawa",
@@ -454,7 +460,9 @@
     "hubCity": "軽井沢",
     "stayPriority": "medium",
     "representativeStation": "軽井沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "fujikawaguchiko",
@@ -560,7 +568,10 @@
     "hubCity": "富士河口湖",
     "stayPriority": "high",
     "representativeStation": "河口湖駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "河口湖駅"
+    }
   },
   {
     "id": "nara",
@@ -671,7 +682,9 @@
     "hubCity": "奈良",
     "stayPriority": "medium",
     "representativeStation": "奈良駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ishigaki",
@@ -790,7 +803,9 @@
     "hubCity": "石垣島",
     "stayPriority": "high",
     "representativeStation": "石垣空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ise",
@@ -917,7 +932,9 @@
     "hubCity": "伊勢",
     "stayPriority": "medium",
     "representativeStation": "伊勢市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "beppu",
@@ -1035,7 +1052,9 @@
     "hubCity": "別府",
     "stayPriority": "high",
     "representativeStation": "別府駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "otaru",
@@ -1146,7 +1165,9 @@
     "hubCity": "小樽",
     "stayPriority": "medium",
     "representativeStation": "小樽駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "furano",
@@ -1264,7 +1285,9 @@
     "hubCity": "富良野",
     "stayPriority": "medium",
     "representativeStation": "富良野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "matsushima",
@@ -1394,7 +1417,9 @@
     "hubCity": "松島",
     "stayPriority": "medium",
     "representativeStation": "松島海岸駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyajima",
@@ -1522,7 +1547,9 @@
     "localHub": "宮島口",
     "stayPriority": "medium",
     "representativeStation": "宮島口港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "onomichi",
@@ -1645,7 +1672,9 @@
     "hubCity": "尾道",
     "stayPriority": "medium",
     "representativeStation": "尾道駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shodoshima",
@@ -1773,7 +1802,9 @@
     "localHub": "高松",
     "stayPriority": "high",
     "representativeStation": "池田港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mihonoseki",
@@ -1896,7 +1927,9 @@
     "hubCity": "米子",
     "stayPriority": "medium",
     "representativeStation": "境港駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ryujin-onsen",
@@ -1995,7 +2028,9 @@
     "hubCity": "白浜",
     "stayPriority": "medium",
     "representativeStation": "紀伊田辺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tokashiki-jima",
@@ -2133,7 +2168,9 @@
     "localHub": "那覇",
     "stayPriority": "medium",
     "representativeStation": "渡嘉敷港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kumejima",
@@ -2273,7 +2310,9 @@
     "localHub": "那覇",
     "stayPriority": "high",
     "representativeStation": "久米島空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyakojima",
@@ -2393,7 +2432,9 @@
     "hubCity": "宮古島",
     "stayPriority": "high",
     "representativeStation": "宮古空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kouzushima",
@@ -2518,7 +2559,9 @@
     "localHub": "東京",
     "stayPriority": "medium",
     "representativeStation": "神津島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hakone",
@@ -2633,7 +2676,10 @@
     "hubCity": "箱根",
     "stayPriority": "high",
     "representativeStation": "小田原駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "小田原駅"
+    }
   },
   {
     "id": "shuzenji",
@@ -2741,7 +2787,10 @@
     "hubCity": "修善寺",
     "stayPriority": "high",
     "representativeStation": "三島駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "三島駅"
+    }
   },
   {
     "id": "kusatsu-onsen",
@@ -2853,7 +2902,9 @@
     "hubCity": "草津温泉",
     "stayPriority": "high",
     "representativeStation": "草津温泉バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimoda",
@@ -2971,7 +3022,10 @@
     "hubCity": "下田",
     "stayPriority": "medium",
     "representativeStation": "熱海駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "熱海駅"
+    }
   },
   {
     "id": "izu-oshima",
@@ -3106,7 +3160,9 @@
     "localHub": "東京",
     "stayPriority": "high",
     "representativeStation": "元町港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shirakawago-t",
@@ -3222,7 +3278,9 @@
     "hubCity": "高山",
     "stayPriority": "medium",
     "representativeStation": "金沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "arima-onsen",
@@ -3337,7 +3395,9 @@
     "hubCity": "有馬温泉",
     "stayPriority": "high",
     "representativeStation": "有馬温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kinosaki-onsen",
@@ -3447,7 +3507,9 @@
     "hubCity": "城崎温泉",
     "stayPriority": "high",
     "representativeStation": "城崎温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurashiki-o",
@@ -3556,7 +3618,9 @@
     "hubCity": "倉敷",
     "stayPriority": "medium",
     "representativeStation": "倉敷駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shirahama-o",
@@ -3657,7 +3721,9 @@
     "hubCity": "白浜",
     "stayPriority": "high",
     "representativeStation": "白浜駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takayama-o",
@@ -3770,7 +3836,9 @@
     "hubCity": "高山",
     "stayPriority": "high",
     "representativeStation": "高山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "toba",
@@ -3884,7 +3952,9 @@
     "hubCity": "鳥羽",
     "stayPriority": "medium",
     "representativeStation": "鳥羽駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yufuin",
@@ -4011,7 +4081,9 @@
     "hubCity": "湯布院",
     "stayPriority": "high",
     "representativeStation": "由布院駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurokawa-k",
@@ -4119,7 +4191,9 @@
     "hubCity": "黒川温泉",
     "stayPriority": "low",
     "representativeStation": "博多駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "aso",
@@ -4234,7 +4308,9 @@
     "hubCity": "阿蘇",
     "stayPriority": "medium",
     "representativeStation": "阿蘇駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yakushima",
@@ -4382,7 +4458,9 @@
     "localHub": "鹿児島",
     "stayPriority": "high",
     "representativeStation": "安房港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "amakusa",
@@ -4484,7 +4562,9 @@
     "hubCity": "天草",
     "stayPriority": "medium",
     "representativeStation": "熊本駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hiraizumi",
@@ -4593,7 +4673,9 @@
     "hubCity": "平泉",
     "stayPriority": "medium",
     "representativeStation": "平泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kakunodate",
@@ -4701,7 +4783,9 @@
     "hubCity": "角館",
     "stayPriority": "medium",
     "representativeStation": "角館駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "aizu",
@@ -4811,7 +4895,9 @@
     "hubCity": "会津若松",
     "stayPriority": "high",
     "representativeStation": "会津若松駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "zaosan",
@@ -4914,7 +5000,9 @@
     "hubCity": "蔵王",
     "stayPriority": "high",
     "representativeStation": "蔵王駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hagi",
@@ -5028,7 +5116,9 @@
     "hubCity": "萩",
     "stayPriority": "medium",
     "representativeStation": "萩駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimonoseki",
@@ -5142,7 +5232,9 @@
     "hubCity": "下関",
     "stayPriority": "medium",
     "representativeStation": "下関駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "naoshima",
@@ -5273,7 +5365,9 @@
     "localHub": "高松",
     "stayPriority": "medium",
     "representativeStation": "宮浦港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kotohira",
@@ -5387,7 +5481,10 @@
     "hubCity": "琴平",
     "stayPriority": "medium",
     "representativeStation": "高松駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "高松駅"
+    }
   },
   {
     "id": "uwajima",
@@ -5503,7 +5600,9 @@
     "hubCity": "宇和島",
     "stayPriority": "medium",
     "representativeStation": "宇和島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "toyako",
@@ -5608,7 +5707,9 @@
     "hubCity": "洞爺湖",
     "stayPriority": "high",
     "representativeStation": "洞爺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "noboribetsu",
@@ -5704,7 +5805,9 @@
     "hubCity": "登別",
     "stayPriority": "high",
     "representativeStation": "登別駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shiretoko",
@@ -5818,7 +5921,9 @@
     "hubCity": "知床",
     "stayPriority": "low",
     "representativeStation": "知床斜里駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "wajima",
@@ -5935,7 +6040,9 @@
     "hubCity": "輪島",
     "stayPriority": "medium",
     "representativeStation": "輪島バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kaga-onsen",
@@ -6037,7 +6144,9 @@
     "hubCity": "加賀温泉郷",
     "stayPriority": "high",
     "representativeStation": "加賀温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hakuba",
@@ -6148,7 +6257,9 @@
     "hubCity": "白馬",
     "stayPriority": "medium",
     "representativeStation": "白馬駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "amanohashidate",
@@ -6254,7 +6365,10 @@
     "hubCity": "天橋立",
     "stayPriority": "medium",
     "representativeStation": "福知山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "福知山駅"
+    }
   },
   {
     "id": "ine",
@@ -6371,7 +6485,9 @@
     "hubCity": "伊根",
     "stayPriority": "medium",
     "representativeStation": "伊根港バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ibusuki",
@@ -6480,7 +6596,9 @@
     "hubCity": "指宿",
     "stayPriority": "high",
     "representativeStation": "指宿駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sasebo",
@@ -6590,7 +6708,9 @@
     "hubCity": "佐世保",
     "stayPriority": "medium",
     "representativeStation": "佐世保駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hirado",
@@ -6695,7 +6815,9 @@
     "hubCity": "平戸",
     "stayPriority": "medium",
     "representativeStation": "佐世保駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tottori",
@@ -6790,7 +6912,9 @@
     "hubCity": "鳥取",
     "stayPriority": "medium",
     "representativeStation": "鳥取駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akita",
@@ -6887,7 +7011,9 @@
     "hubCity": "秋田",
     "stayPriority": "medium",
     "representativeStation": "秋田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "awaji",
@@ -6997,7 +7123,9 @@
     "localHub": "三ノ宮",
     "stayPriority": "low",
     "representativeStation": "三ノ宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takao",
@@ -7102,7 +7230,9 @@
     "hubCity": "高尾山",
     "stayPriority": "medium",
     "representativeStation": "高尾山口駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tateyama-chiba",
@@ -7211,7 +7341,9 @@
     "hubCity": "館山",
     "stayPriority": "medium",
     "representativeStation": "館山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gokayama",
@@ -7326,7 +7458,9 @@
     "hubCity": "高山",
     "stayPriority": "medium",
     "representativeStation": "五箇山バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "jozankei",
@@ -7433,7 +7567,9 @@
     "hubCity": "定山渓",
     "stayPriority": "high",
     "representativeStation": "札幌駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "biei",
@@ -7546,7 +7682,9 @@
     "hubCity": "美瑛",
     "stayPriority": "medium",
     "representativeStation": "美瑛駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyako-iwate",
@@ -7663,7 +7801,9 @@
     "hubCity": "宮古",
     "stayPriority": "medium",
     "representativeStation": "宮古駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sakata",
@@ -7775,7 +7915,9 @@
     "hubCity": "酒田",
     "stayPriority": "medium",
     "representativeStation": "酒田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takachiho",
@@ -7882,7 +8024,9 @@
     "hubCity": "高千穂",
     "stayPriority": "low",
     "representativeStation": "熊本駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "amami",
@@ -8015,7 +8159,9 @@
     "localHub": "鹿児島",
     "stayPriority": "high",
     "representativeStation": "名瀬港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "goto",
@@ -8148,7 +8294,9 @@
     "localHub": "博多",
     "stayPriority": "high",
     "representativeStation": "福江港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "unzen",
@@ -8250,7 +8398,9 @@
     "hubCity": "雲仙",
     "stayPriority": "high",
     "representativeStation": "諫早駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ashizuri",
@@ -8360,7 +8510,10 @@
     "hubCity": "足摺岬",
     "stayPriority": "medium",
     "representativeStation": "高知駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "高知駅"
+    }
   },
   {
     "id": "oboke",
@@ -8477,7 +8630,9 @@
     "hubCity": "大歩危",
     "stayPriority": "low",
     "representativeStation": "大歩危駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsuwano",
@@ -8589,7 +8744,9 @@
     "hubCity": "津和野",
     "stayPriority": "medium",
     "representativeStation": "津和野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "inuyama",
@@ -8698,7 +8855,9 @@
     "hubCity": "犬山",
     "stayPriority": "medium",
     "representativeStation": "犬山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kiso",
@@ -8814,7 +8973,9 @@
     "hubCity": "木曽",
     "stayPriority": "medium",
     "representativeStation": "南木曽駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyama",
@@ -8917,7 +9078,9 @@
     "hubCity": "美山",
     "stayPriority": "medium",
     "representativeStation": "園部駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tateyama-kurobe",
@@ -9031,7 +9194,10 @@
     "hubCity": "立山黒部",
     "stayPriority": "medium",
     "representativeStation": "富山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "富山駅"
+    }
   },
   {
     "id": "himi",
@@ -9146,7 +9312,9 @@
     "hubCity": "氷見",
     "stayPriority": "high",
     "representativeStation": "氷見駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nyuto-onsen",
@@ -9247,7 +9415,9 @@
     "hubCity": "乳頭温泉",
     "stayPriority": "high",
     "representativeStation": "田沢湖駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yuda-onsen",
@@ -9349,7 +9519,9 @@
     "hubCity": "湯田温泉",
     "stayPriority": "high",
     "representativeStation": "湯田温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ureshino-onsen",
@@ -9443,7 +9615,9 @@
     "hubCity": "嬉野温泉",
     "stayPriority": "high",
     "representativeStation": "嬉野温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "obuse",
@@ -9550,7 +9724,10 @@
     "hubCity": "小布施",
     "stayPriority": "medium",
     "representativeStation": "長野駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "長野駅"
+    }
   },
   {
     "id": "uchiko",
@@ -9657,7 +9834,9 @@
     "hubCity": "内子",
     "stayPriority": "medium",
     "representativeStation": "内子駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "muroto",
@@ -9759,7 +9938,9 @@
     "hubCity": "室戸",
     "stayPriority": "medium",
     "representativeStation": "高知駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iya",
@@ -9863,7 +10044,9 @@
     "hubCity": "祖谷",
     "stayPriority": "low",
     "representativeStation": "阿波池田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oku-izumo",
@@ -9970,7 +10153,9 @@
     "hubCity": "奥出雲",
     "stayPriority": "low",
     "representativeStation": "木次駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ginzan-onsen",
@@ -10075,7 +10260,9 @@
     "hubCity": "銀山温泉",
     "stayPriority": "high",
     "representativeStation": "大石田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ouchi-juku",
@@ -10178,7 +10365,9 @@
     "hubCity": "大内宿",
     "stayPriority": "medium",
     "representativeStation": "会津若松駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nozawa-onsen",
@@ -10278,7 +10467,9 @@
     "hubCity": "野沢温泉",
     "stayPriority": "high",
     "representativeStation": "飯山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takehara",
@@ -10387,7 +10578,9 @@
     "hubCity": "竹原",
     "stayPriority": "medium",
     "representativeStation": "竹原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsumago",
@@ -10503,7 +10696,9 @@
     "hubCity": "妻籠",
     "stayPriority": "medium",
     "representativeStation": "南木曽駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "magome",
@@ -10619,7 +10814,9 @@
     "hubCity": "馬籠",
     "stayPriority": "medium",
     "representativeStation": "中津川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nagahama",
@@ -10729,7 +10926,9 @@
     "hubCity": "長浜",
     "stayPriority": "medium",
     "representativeStation": "長浜駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hikone",
@@ -10839,7 +11038,9 @@
     "hubCity": "彦根",
     "stayPriority": "medium",
     "representativeStation": "彦根駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "koyasan",
@@ -10952,7 +11153,9 @@
     "hubCity": "高野山",
     "stayPriority": "medium",
     "representativeStation": "高野山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gero-onsen",
@@ -11067,7 +11270,9 @@
     "hubCity": "下呂温泉",
     "stayPriority": "high",
     "representativeStation": "下呂駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "naruko-onsen",
@@ -11173,7 +11378,9 @@
     "hubCity": "鳴子温泉",
     "stayPriority": "high",
     "representativeStation": "鳴子温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shima-onsen",
@@ -11274,7 +11481,9 @@
     "hubCity": "四万温泉",
     "stayPriority": "high",
     "representativeStation": "中之条駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hirosaki",
@@ -11395,7 +11604,9 @@
     "hubCity": "弘前",
     "stayPriority": "medium",
     "representativeStation": "弘前駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oirase",
@@ -11507,7 +11718,9 @@
     "hubCity": "奥入瀬",
     "stayPriority": "low",
     "representativeStation": "八戸駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mashiko",
@@ -11618,7 +11831,10 @@
     "hubCity": "益子",
     "stayPriority": "medium",
     "representativeStation": "宇都宮駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宇都宮駅"
+    }
   },
   {
     "id": "bessho-onsen",
@@ -11730,7 +11946,10 @@
     "hubCity": "別所温泉",
     "stayPriority": "high",
     "representativeStation": "上田駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "上田駅"
+    }
   },
   {
     "id": "izushi",
@@ -11834,7 +12053,9 @@
     "hubCity": "出石",
     "stayPriority": "medium",
     "representativeStation": "豊岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "wakura-onsen",
@@ -11930,7 +12151,9 @@
     "hubCity": "和倉温泉",
     "stayPriority": "high",
     "representativeStation": "和倉温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "misasa-onsen",
@@ -12031,7 +12254,9 @@
     "hubCity": "三朝温泉",
     "stayPriority": "high",
     "representativeStation": "倉吉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "obi",
@@ -12140,7 +12365,9 @@
     "hubCity": "飫肥",
     "stayPriority": "medium",
     "representativeStation": "飫肥駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hitoyoshi",
@@ -12253,7 +12480,9 @@
     "hubCity": "人吉",
     "stayPriority": "high",
     "representativeStation": "人吉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kamikochi",
@@ -12367,7 +12596,9 @@
     "hubCity": "松本",
     "stayPriority": "medium",
     "representativeStation": "上高地バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "minakami-onsen",
@@ -12470,7 +12701,9 @@
     "hubCity": "水上温泉",
     "stayPriority": "high",
     "representativeStation": "水上駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "minami-aso",
@@ -12579,7 +12812,9 @@
     "hubCity": "南阿蘇",
     "stayPriority": "medium",
     "representativeStation": "熊本駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "imabari",
@@ -12702,7 +12937,9 @@
     "hubCity": "今治",
     "stayPriority": "medium",
     "representativeStation": "今治駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ozu",
@@ -12831,7 +13068,9 @@
     "hubCity": "大洲",
     "stayPriority": "medium",
     "representativeStation": "伊予大洲駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shakotan",
@@ -12957,7 +13196,9 @@
     "hubCity": "積丹",
     "stayPriority": "medium",
     "representativeStation": "積丹バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "izumo",
@@ -13091,7 +13332,9 @@
     "hubCity": "出雲",
     "stayPriority": "medium",
     "representativeStation": "出雲市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "suzu",
@@ -13197,7 +13440,9 @@
     "hubCity": "珠洲",
     "stayPriority": "medium",
     "representativeStation": "珠洲バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yoshino",
@@ -13328,7 +13573,9 @@
     "hubCity": "吉野",
     "stayPriority": "medium",
     "representativeStation": "吉野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kumano",
@@ -13445,7 +13692,9 @@
     "hubCity": "熊野",
     "stayPriority": "low",
     "representativeStation": "新宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iriomote",
@@ -13595,7 +13844,9 @@
     "localHub": "石垣",
     "stayPriority": "high",
     "representativeStation": "大原港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takahashi",
@@ -13727,7 +13978,9 @@
     "hubCity": "高梁",
     "stayPriority": "medium",
     "representativeStation": "備中高梁駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hida-furukawa",
@@ -13852,7 +14105,9 @@
     "hubCity": "飛騨古川",
     "stayPriority": "medium",
     "representativeStation": "飛騨古川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "bungo-takada",
@@ -13977,7 +14232,9 @@
     "hubCity": "豊後高田",
     "stayPriority": "medium",
     "representativeStation": "宇佐駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "izu-kogen",
@@ -14104,7 +14361,10 @@
     "hubCity": "伊豆高原",
     "stayPriority": "high",
     "representativeStation": "熱海駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "熱海駅"
+    }
   },
   {
     "id": "tanabe",
@@ -14230,7 +14490,9 @@
     "hubCity": "田辺",
     "stayPriority": "high",
     "representativeStation": "紀伊田辺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tosa-shimizu",
@@ -14343,7 +14605,10 @@
     "hubCity": "土佐清水",
     "stayPriority": "medium",
     "representativeStation": "中村駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "中村駅"
+    }
   },
   {
     "id": "nichinan",
@@ -14476,7 +14741,9 @@
     "hubCity": "日南",
     "stayPriority": "medium",
     "representativeStation": "日南駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mojiko",
@@ -14589,7 +14856,9 @@
     "hubCity": "門司港",
     "stayPriority": "medium",
     "representativeStation": "門司港駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "itoshima",
@@ -14717,7 +14986,9 @@
     "hubCity": "糸島",
     "stayPriority": "medium",
     "representativeStation": "筑前前原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimabara",
@@ -14849,7 +15120,10 @@
     "hubCity": "島原",
     "stayPriority": "medium",
     "representativeStation": "諫早駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "諫早駅"
+    }
   },
   {
     "id": "tsuruga",
@@ -14960,7 +15234,9 @@
     "hubCity": "敦賀",
     "stayPriority": "medium",
     "representativeStation": "敦賀駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shijishima",
@@ -15074,7 +15350,9 @@
     "hubCity": "高松",
     "stayPriority": "low",
     "representativeStation": "詫間駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sounkyo",
@@ -15198,7 +15476,9 @@
     "hubCity": "層雲峡温泉",
     "stayPriority": "low",
     "representativeStation": "層雲峡バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "rebun-island",
@@ -15339,7 +15619,9 @@
     "localHub": "稚内",
     "stayPriority": "low",
     "representativeStation": "香深港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "rishiri-island",
@@ -15473,7 +15755,9 @@
     "localHub": "稚内",
     "stayPriority": "low",
     "representativeStation": "鴛泊港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akan",
@@ -15579,7 +15863,9 @@
     "hubCity": "阿寒湖温泉",
     "stayPriority": "high",
     "representativeStation": "釧路駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "abashiri",
@@ -15688,7 +15974,9 @@
     "hubCity": "網走",
     "stayPriority": "medium",
     "representativeStation": "網走駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shikotsu",
@@ -15803,7 +16091,9 @@
     "hubCity": "支笏湖温泉",
     "stayPriority": "high",
     "representativeStation": "支笏湖バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tono",
@@ -15913,7 +16203,9 @@
     "hubCity": "遠野",
     "stayPriority": "medium",
     "representativeStation": "遠野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oga",
@@ -16030,7 +16322,9 @@
     "hubCity": "男鹿温泉",
     "stayPriority": "high",
     "representativeStation": "男鹿駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yonezawa",
@@ -16126,7 +16420,9 @@
     "hubCity": "米沢",
     "stayPriority": "medium",
     "representativeStation": "米沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "dewa-sanzan",
@@ -16237,7 +16533,9 @@
     "hubCity": "羽黒山",
     "stayPriority": "medium",
     "representativeStation": "鶴岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sakunami-onsen",
@@ -16344,7 +16642,9 @@
     "hubCity": "秋保温泉",
     "stayPriority": "high",
     "representativeStation": "仙台駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "goshogawara",
@@ -16459,7 +16759,9 @@
     "hubCity": "五所川原",
     "stayPriority": "medium",
     "representativeStation": "五所川原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kawagoe",
@@ -16565,7 +16867,9 @@
     "hubCity": "川越",
     "stayPriority": "medium",
     "representativeStation": "川越駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nasu",
@@ -16665,7 +16969,9 @@
     "hubCity": "那須温泉",
     "stayPriority": "high",
     "representativeStation": "那須塩原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "choshi",
@@ -16770,7 +17076,9 @@
     "hubCity": "銚子",
     "stayPriority": "medium",
     "representativeStation": "銚子駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ashikaga",
@@ -16876,7 +17184,9 @@
     "hubCity": "足利",
     "stayPriority": "medium",
     "representativeStation": "足利駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shiobara-onsen",
@@ -16975,7 +17285,9 @@
     "hubCity": "塩原温泉",
     "stayPriority": "high",
     "representativeStation": "那須塩原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sado-island",
@@ -17110,7 +17422,9 @@
     "localHub": "新潟",
     "stayPriority": "high",
     "representativeStation": "両津港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kiyosato",
@@ -17221,7 +17535,9 @@
     "hubCity": "清里",
     "stayPriority": "medium",
     "representativeStation": "清里駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tenryu-gorge",
@@ -17314,7 +17630,9 @@
     "hubCity": "天竜峡温泉",
     "stayPriority": "medium",
     "representativeStation": "天竜峡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "suwa",
@@ -17425,7 +17743,9 @@
     "hubCity": "諏訪温泉",
     "stayPriority": "high",
     "representativeStation": "上諏訪駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "eiheiji",
@@ -17536,7 +17856,10 @@
     "hubCity": "永平寺",
     "stayPriority": "medium",
     "representativeStation": "福井駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "福井駅"
+    }
   },
   {
     "id": "wakasa-obama",
@@ -17650,7 +17973,9 @@
     "hubCity": "小浜",
     "stayPriority": "medium",
     "representativeStation": "小浜駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "okuhida-onsen",
@@ -17769,7 +18094,9 @@
     "hubCity": "奥飛騨温泉郷",
     "stayPriority": "high",
     "representativeStation": "平湯温泉バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "minami-izu",
@@ -17872,7 +18199,10 @@
     "hubCity": "南伊豆",
     "stayPriority": "medium",
     "representativeStation": "下田駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "下田駅"
+    }
   },
   {
     "id": "echizen",
@@ -17983,7 +18313,10 @@
     "hubCity": "越前",
     "stayPriority": "medium",
     "representativeStation": "福井駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "福井駅"
+    }
   },
   {
     "id": "ito",
@@ -18095,7 +18428,9 @@
     "hubCity": "伊東温泉",
     "stayPriority": "high",
     "representativeStation": "伊東駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iga",
@@ -18193,7 +18528,10 @@
     "hubCity": "伊賀上野",
     "stayPriority": "medium",
     "representativeStation": "上野市駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "上野市駅"
+    }
   },
   {
     "id": "kashihara",
@@ -18303,7 +18641,9 @@
     "hubCity": "橿原",
     "stayPriority": "medium",
     "representativeStation": "橿原神宮前駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "totsukawa",
@@ -18409,7 +18749,9 @@
     "hubCity": "十津川温泉",
     "stayPriority": "low",
     "representativeStation": "五条駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "maizuru",
@@ -18506,7 +18848,9 @@
     "hubCity": "舞鶴",
     "stayPriority": "medium",
     "representativeStation": "東舞鶴駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "asuka",
@@ -18629,7 +18973,9 @@
     "hubCity": "飛鳥",
     "stayPriority": "medium",
     "representativeStation": "飛鳥駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "daisen",
@@ -18740,7 +19086,9 @@
     "hubCity": "大山温泉",
     "stayPriority": "medium",
     "representativeStation": "米子駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yunotsu-onsen",
@@ -18855,7 +19203,9 @@
     "hubCity": "温泉津温泉",
     "stayPriority": "high",
     "representativeStation": "温泉津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iwami-ginzan",
@@ -18958,7 +19308,9 @@
     "hubCity": "大田 石見銀山",
     "stayPriority": "medium",
     "representativeStation": "大田市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iwakuni",
@@ -19076,7 +19428,9 @@
     "hubCity": "岩国",
     "stayPriority": "medium",
     "representativeStation": "岩国駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurayoshi",
@@ -19184,7 +19538,9 @@
     "hubCity": "倉吉",
     "stayPriority": "medium",
     "representativeStation": "倉吉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "suo-oshima",
@@ -19313,7 +19669,9 @@
     "localHub": "柳井",
     "stayPriority": "medium",
     "representativeStation": "大畠駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimanto",
@@ -19429,7 +19787,9 @@
     "hubCity": "四万十川",
     "stayPriority": "medium",
     "representativeStation": "江川崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kashiwajima",
@@ -19547,7 +19907,10 @@
     "localHub": "宿毛",
     "stayPriority": "medium",
     "representativeStation": "宿毛駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宿毛駅"
+    }
   },
   {
     "id": "saijo",
@@ -19665,7 +20028,9 @@
     "hubCity": "西条",
     "stayPriority": "medium",
     "representativeStation": "伊予西条駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ainan",
@@ -19773,7 +20138,9 @@
     "hubCity": "愛南",
     "stayPriority": "medium",
     "representativeStation": "宇和島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "taketa",
@@ -19880,7 +20247,9 @@
     "hubCity": "竹田温泉",
     "stayPriority": "high",
     "representativeStation": "豊後竹田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "usuki",
@@ -19996,7 +20365,9 @@
     "hubCity": "臼杵",
     "stayPriority": "medium",
     "representativeStation": "臼杵駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hita",
@@ -20111,7 +20482,9 @@
     "hubCity": "日田温泉",
     "stayPriority": "high",
     "representativeStation": "日田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hasami",
@@ -20217,7 +20590,9 @@
     "hubCity": "波佐見",
     "stayPriority": "medium",
     "representativeStation": "川棚温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takeo-onsen",
@@ -20310,7 +20685,9 @@
     "hubCity": "武雄温泉",
     "stayPriority": "high",
     "representativeStation": "武雄温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kitsuki",
@@ -20416,7 +20793,9 @@
     "hubCity": "杵築",
     "stayPriority": "medium",
     "representativeStation": "杵築駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsushima",
@@ -20559,7 +20938,9 @@
     "localHub": "博多",
     "stayPriority": "low",
     "representativeStation": "対馬空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iki-island",
@@ -20696,7 +21077,9 @@
     "localHub": "博多",
     "stayPriority": "low",
     "representativeStation": "郷ノ浦港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tanegashima",
@@ -20834,7 +21217,9 @@
     "localHub": "鹿児島",
     "stayPriority": "high",
     "representativeStation": "西之表港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kikuchi",
@@ -20947,7 +21332,9 @@
     "hubCity": "菊池温泉",
     "stayPriority": "low",
     "representativeStation": "熊本駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "taketomi-island",
@@ -21082,7 +21469,9 @@
     "localHub": "石垣",
     "stayPriority": "medium",
     "representativeStation": "竹富港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yonaguni-island",
@@ -21218,7 +21607,9 @@
     "localHub": "石垣",
     "stayPriority": "medium",
     "representativeStation": "与那国空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nakijin",
@@ -21335,7 +21726,9 @@
     "hubCity": "今帰仁",
     "stayPriority": "medium",
     "representativeStation": "那覇バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "motobu",
@@ -21449,7 +21842,9 @@
     "hubCity": "本部",
     "stayPriority": "medium",
     "representativeStation": "那覇バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "zamami-island",
@@ -21595,7 +21990,9 @@
     "localHub": "那覇",
     "stayPriority": "medium",
     "representativeStation": "座間味港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ie-island",
@@ -21736,7 +22133,9 @@
     "localHub": "本部",
     "stayPriority": "low",
     "representativeStation": "伊江港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kohama-island",
@@ -21857,7 +22256,9 @@
     "localHub": "石垣",
     "stayPriority": "medium",
     "representativeStation": "小浜港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "matsushiro",
@@ -21957,7 +22358,9 @@
     "hubCity": "松代温泉",
     "stayPriority": "medium",
     "representativeStation": "長野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iiyama",
@@ -22060,7 +22463,9 @@
     "hubCity": "飯山温泉",
     "stayPriority": "high",
     "representativeStation": "飯山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yakake",
@@ -22166,7 +22571,10 @@
     "hubCity": "矢掛",
     "stayPriority": "medium",
     "representativeStation": "矢掛駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "矢掛駅"
+    }
   },
   {
     "id": "tsuyama",
@@ -22284,7 +22692,9 @@
     "hubCity": "津山",
     "stayPriority": "medium",
     "representativeStation": "津山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsurugi-san",
@@ -22395,7 +22805,9 @@
     "hubCity": "剣山 貞光",
     "stayPriority": "medium",
     "representativeStation": "貞光駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nobeoka",
@@ -22520,7 +22932,9 @@
     "hubCity": "延岡",
     "stayPriority": "medium",
     "representativeStation": "延岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kamaishi",
@@ -22607,7 +23021,9 @@
     "hubCity": "釜石",
     "stayPriority": "medium",
     "representativeStation": "釜石駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ofunato",
@@ -22694,7 +23110,10 @@
     "hubCity": "大船渡",
     "stayPriority": "medium",
     "representativeStation": "一ノ関駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "一ノ関駅"
+    }
   },
   {
     "id": "kuji",
@@ -22781,7 +23200,9 @@
     "hubCity": "久慈",
     "stayPriority": "medium",
     "representativeStation": "久慈駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "wakkanai",
@@ -22894,7 +23315,9 @@
     "hubCity": "稚内",
     "stayPriority": "medium",
     "representativeStation": "稚内空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "obihiro",
@@ -23007,7 +23430,9 @@
     "hubCity": "帯広",
     "stayPriority": "medium",
     "representativeStation": "帯広空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "rausu",
@@ -23129,7 +23554,9 @@
     "hubCity": "羅臼",
     "stayPriority": "low",
     "representativeStation": "羅臼バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "esashi-hokkaido",
@@ -23246,7 +23673,9 @@
     "hubCity": "江差",
     "stayPriority": "medium",
     "representativeStation": "江差バスターミナル",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hanamaki",
@@ -23354,7 +23783,9 @@
     "hubCity": "花巻",
     "stayPriority": "high",
     "representativeStation": "新花巻駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hachimantai",
@@ -23476,7 +23907,9 @@
     "hubCity": "八幡平",
     "stayPriority": "low",
     "representativeStation": "八幡平頂上バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tazawako",
@@ -23587,7 +24020,9 @@
     "hubCity": "田沢湖",
     "stayPriority": "high",
     "representativeStation": "田沢湖駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yamadera",
@@ -23708,7 +24143,9 @@
     "hubCity": "山寺",
     "stayPriority": "medium",
     "representativeStation": "山寺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kesennuma",
@@ -23815,7 +24252,9 @@
     "hubCity": "気仙沼",
     "stayPriority": "medium",
     "representativeStation": "気仙沼駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ikaho",
@@ -23928,7 +24367,9 @@
     "hubCity": "伊香保温泉",
     "stayPriority": "high",
     "representativeStation": "伊香保温泉バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "enoshima",
@@ -24042,7 +24483,9 @@
     "hubCity": "江の島",
     "stayPriority": "medium",
     "representativeStation": "片瀬江ノ島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "chichibu",
@@ -24153,7 +24596,10 @@
     "hubCity": "秩父",
     "stayPriority": "medium",
     "representativeStation": "池袋駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "池袋駅"
+    }
   },
   {
     "id": "oarai",
@@ -24261,7 +24707,10 @@
     "hubCity": "大洗",
     "stayPriority": "medium",
     "representativeStation": "水戸駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "水戸駅"
+    }
   },
   {
     "id": "sano",
@@ -24368,7 +24817,9 @@
     "hubCity": "佐野",
     "stayPriority": "medium",
     "representativeStation": "佐野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gujo-hachiman",
@@ -24479,7 +24930,10 @@
     "hubCity": "郡上八幡",
     "stayPriority": "medium",
     "representativeStation": "美濃市駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "美濃市駅"
+    }
   },
   {
     "id": "narai-juku",
@@ -24591,7 +25045,9 @@
     "hubCity": "奈良井宿",
     "stayPriority": "medium",
     "representativeStation": "奈良井駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "itoigawa",
@@ -24697,7 +25153,9 @@
     "hubCity": "糸魚川",
     "stayPriority": "medium",
     "representativeStation": "糸魚川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "murakami",
@@ -24806,7 +25264,9 @@
     "hubCity": "村上",
     "stayPriority": "medium",
     "representativeStation": "村上駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shima",
@@ -24908,7 +25368,9 @@
     "hubCity": "志摩",
     "stayPriority": "medium",
     "representativeStation": "賢島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ogaki",
@@ -25004,7 +25466,9 @@
     "hubCity": "大垣",
     "stayPriority": "medium",
     "representativeStation": "大垣駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "echizen-kaigan",
@@ -25117,7 +25581,9 @@
     "hubCity": "越前海岸",
     "stayPriority": "medium",
     "representativeStation": "武生駅",
-    "finalAccess": "car"
+    "finalAccess": {
+      "type": "car"
+    }
   },
   {
     "id": "myoko-kogen",
@@ -25221,7 +25687,10 @@
     "hubCity": "妙高高原",
     "stayPriority": "high",
     "representativeStation": "妙高高原駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "妙高高原駅"
+    }
   },
   {
     "id": "nagaoka",
@@ -25315,7 +25784,9 @@
     "hubCity": "長岡",
     "stayPriority": "medium",
     "representativeStation": "長岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tanba-sasayama",
@@ -25420,7 +25891,9 @@
     "hubCity": "丹波篠山",
     "stayPriority": "medium",
     "representativeStation": "篠山口駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nachikatsuura",
@@ -25525,7 +25998,9 @@
     "hubCity": "那智勝浦",
     "stayPriority": "medium",
     "representativeStation": "紀伊勝浦駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kumano-hongu",
@@ -25643,7 +26118,9 @@
     "hubCity": "熊野本宮",
     "stayPriority": "low",
     "representativeStation": "本宮大社前バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ako",
@@ -25754,7 +26231,10 @@
     "hubCity": "赤穂",
     "stayPriority": "medium",
     "representativeStation": "相生駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "相生駅"
+    }
   },
   {
     "id": "fushimi",
@@ -25868,7 +26348,9 @@
     "hubCity": "伏見",
     "stayPriority": "medium",
     "representativeStation": "伏見稲荷駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tomonoura",
@@ -25980,7 +26462,9 @@
     "hubCity": "鞆の浦",
     "stayPriority": "medium",
     "representativeStation": "鞆の浦バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sakaiminato",
@@ -26098,7 +26582,9 @@
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
     "stayPriority": "medium",
     "representativeStation": "境港駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ushimado",
@@ -26218,7 +26704,9 @@
     "hubCity": "牛窓",
     "stayPriority": "medium",
     "representativeStation": "牛窓バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kasaoka",
@@ -26314,7 +26802,9 @@
     "hubCity": "笠岡",
     "stayPriority": "medium",
     "representativeStation": "笠岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsunoshima",
@@ -26426,7 +26916,9 @@
     "hubCity": "角島",
     "stayPriority": "low",
     "representativeStation": "特牛駅",
-    "finalAccess": "car"
+    "finalAccess": {
+      "type": "car"
+    }
   },
   {
     "id": "dogo-onsen",
@@ -26554,7 +27046,10 @@
     "hubCity": "道後温泉",
     "stayPriority": "high",
     "representativeStation": "松山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "松山駅"
+    }
   },
   {
     "id": "marugame",
@@ -26665,7 +27160,9 @@
     "hubCity": "丸亀",
     "stayPriority": "medium",
     "representativeStation": "丸亀駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "misaki-sadamisaki",
@@ -26786,7 +27283,9 @@
     "localHub": "八幡浜",
     "stayPriority": "low",
     "representativeStation": "三崎港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yanagawa",
@@ -26903,7 +27402,9 @@
     "hubCity": "柳川",
     "stayPriority": "medium",
     "representativeStation": "西鉄柳川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hyuga",
@@ -27016,7 +27517,9 @@
     "hubCity": "日向",
     "stayPriority": "medium",
     "representativeStation": "宮崎空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "koshikijima",
@@ -27140,7 +27643,9 @@
     "localHub": "薩摩川内",
     "stayPriority": "medium",
     "representativeStation": "川内港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kirishima",
@@ -27256,7 +27761,9 @@
     "hubCity": "霧島",
     "stayPriority": "high",
     "representativeStation": "鹿児島空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ebino-kogen",
@@ -27374,7 +27881,9 @@
     "hubCity": "えびの高原",
     "stayPriority": "low",
     "representativeStation": "えびの高原バス停",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "onna",
@@ -27486,7 +27995,9 @@
     "hubCity": "恩納村",
     "stayPriority": "medium",
     "representativeStation": "那覇空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nago",
@@ -27598,7 +28109,9 @@
     "hubCity": "名護",
     "stayPriority": "medium",
     "representativeStation": "那覇空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yomitanson",
@@ -27713,7 +28226,9 @@
     "hubCity": "読谷村",
     "stayPriority": "medium",
     "representativeStation": "那覇空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "niseko",
@@ -27819,7 +28334,9 @@
     "hubCity": "ニセコ",
     "stayPriority": "medium",
     "representativeStation": "倶知安駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "daisetsuzan",
@@ -27937,7 +28454,10 @@
     "hubCity": "旭川",
     "stayPriority": "medium",
     "representativeStation": "旭川駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "旭川駅"
+    }
   },
   {
     "id": "shiraoi",
@@ -28033,7 +28553,9 @@
     "hubCity": "白老",
     "stayPriority": "medium",
     "representativeStation": "白老駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tomamu",
@@ -28132,7 +28654,9 @@
     "hubCity": "トマム",
     "stayPriority": "medium",
     "representativeStation": "トマム駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "towada",
@@ -28246,7 +28770,10 @@
     "hubCity": "十和田",
     "stayPriority": "medium",
     "representativeStation": "八戸駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "八戸駅"
+    }
   },
   {
     "id": "osorezan",
@@ -28360,7 +28887,10 @@
     "hubCity": "恐山",
     "stayPriority": "medium",
     "representativeStation": "下北駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "下北駅"
+    }
   },
   {
     "id": "urabandai",
@@ -28478,7 +29008,10 @@
     "hubCity": "裏磐梯",
     "stayPriority": "medium",
     "representativeStation": "猪苗代駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "猪苗代駅"
+    }
   },
   {
     "id": "minami-sanriku",
@@ -28594,7 +29127,10 @@
     "hubCity": "南三陸",
     "stayPriority": "medium",
     "representativeStation": "気仙沼駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "気仙沼駅"
+    }
   },
   {
     "id": "kitakami",
@@ -28694,7 +29230,9 @@
     "hubCity": "北上",
     "stayPriority": "medium",
     "representativeStation": "北上駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kinugawa-onsen",
@@ -28793,7 +29331,9 @@
     "hubCity": "鬼怒川温泉",
     "stayPriority": "high",
     "representativeStation": "鬼怒川温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oze",
@@ -28910,7 +29450,10 @@
     "hubCity": "尾瀬",
     "stayPriority": "medium",
     "representativeStation": "沼田駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "沼田駅"
+    }
   },
   {
     "id": "tsukuba",
@@ -29012,7 +29555,9 @@
     "hubCity": "筑波",
     "stayPriority": "medium",
     "representativeStation": "つくば駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kasama",
@@ -29111,7 +29656,9 @@
     "hubCity": "笠間",
     "stayPriority": "medium",
     "representativeStation": "笠間駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "naritasan",
@@ -29210,7 +29757,9 @@
     "hubCity": "成田",
     "stayPriority": "medium",
     "representativeStation": "成田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kujukuri",
@@ -29324,7 +29873,10 @@
     "hubCity": "九十九里",
     "stayPriority": "medium",
     "representativeStation": "東金駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "東金駅"
+    }
   },
   {
     "id": "miura",
@@ -29426,7 +29978,9 @@
     "hubCity": "三浦",
     "stayPriority": "medium",
     "representativeStation": "三崎口駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oku-tama",
@@ -29525,7 +30079,9 @@
     "hubCity": "奥多摩",
     "stayPriority": "medium",
     "representativeStation": "奥多摩駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "jigokudani",
@@ -29627,7 +30183,10 @@
     "hubCity": "湯田中",
     "stayPriority": "medium",
     "representativeStation": "湯田中駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "湯田中駅"
+    }
   },
   {
     "id": "tateshina",
@@ -29745,7 +30304,10 @@
     "hubCity": "蓼科",
     "stayPriority": "medium",
     "representativeStation": "茅野駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "茅野駅"
+    }
   },
   {
     "id": "echigo-yuzawa",
@@ -29844,7 +30406,9 @@
     "hubCity": "越後湯沢",
     "stayPriority": "high",
     "representativeStation": "越後湯沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "fujinomiya",
@@ -29944,7 +30508,9 @@
     "hubCity": "富士宮",
     "stayPriority": "medium",
     "representativeStation": "富士宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "norikura",
@@ -30062,7 +30628,10 @@
     "hubCity": "乗鞍",
     "stayPriority": "medium",
     "representativeStation": "松本駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "松本駅"
+    }
   },
   {
     "id": "tokoname",
@@ -30159,7 +30728,9 @@
     "hubCity": "常滑",
     "stayPriority": "medium",
     "representativeStation": "常滑駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "korankei",
@@ -30273,7 +30844,10 @@
     "hubCity": "香嵐渓",
     "stayPriority": "medium",
     "representativeStation": "豊田市駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "豊田市駅"
+    }
   },
   {
     "id": "minamichita",
@@ -30375,7 +30949,9 @@
     "hubCity": "南知多",
     "stayPriority": "medium",
     "representativeStation": "内海駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "arashiyama",
@@ -30476,7 +31052,9 @@
     "hubCity": "嵐山",
     "stayPriority": "medium",
     "representativeStation": "嵐山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shigaraki",
@@ -30573,7 +31151,10 @@
     "hubCity": "信楽",
     "stayPriority": "medium",
     "representativeStation": "信楽駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "信楽駅"
+    }
   },
   {
     "id": "dorogawa-onsen",
@@ -30689,7 +31270,10 @@
     "hubCity": "洞川温泉",
     "stayPriority": "high",
     "representativeStation": "下市口駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "下市口駅"
+    }
   },
   {
     "id": "matsusaka",
@@ -30789,7 +31373,9 @@
     "hubCity": "松阪",
     "stayPriority": "medium",
     "representativeStation": "松阪駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sakai",
@@ -30894,7 +31480,9 @@
     "hubCity": "堺",
     "stayPriority": "medium",
     "representativeStation": "堺東駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ama-island",
@@ -31029,7 +31617,9 @@
     "localHub": "松江",
     "stayPriority": "medium",
     "representativeStation": "菱浦港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akiyoshidai",
@@ -31144,7 +31734,10 @@
     "hubCity": "秋吉台",
     "stayPriority": "medium",
     "representativeStation": "新山口駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "新山口駅"
+    }
   },
   {
     "id": "yanai",
@@ -31241,7 +31834,9 @@
     "hubCity": "柳井",
     "stayPriority": "medium",
     "representativeStation": "柳井駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oki-island",
@@ -31383,7 +31978,9 @@
     "localHub": "境港",
     "stayPriority": "medium",
     "representativeStation": "西郷港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "inujima",
@@ -31509,7 +32106,9 @@
     "localHub": "岡山",
     "stayPriority": "low",
     "representativeStation": "犬島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "teshima",
@@ -31643,7 +32242,9 @@
     "localHub": "高松",
     "stayPriority": "low",
     "representativeStation": "家浦港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "niyodogawa",
@@ -31759,7 +32360,10 @@
     "hubCity": "仁淀川",
     "stayPriority": "low",
     "representativeStation": "高知駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "高知駅"
+    }
   },
   {
     "id": "yusuhara",
@@ -31877,7 +32481,10 @@
     "hubCity": "梼原",
     "stayPriority": "low",
     "representativeStation": "須崎駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "須崎駅"
+    }
   },
   {
     "id": "anan",
@@ -31974,7 +32581,9 @@
     "hubCity": "阿南",
     "stayPriority": "medium",
     "representativeStation": "阿南駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shikoku-karst",
@@ -32091,7 +32700,10 @@
     "hubCity": "四国カルスト",
     "stayPriority": "low",
     "representativeStation": "松山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "松山駅"
+    }
   },
   {
     "id": "aoshima",
@@ -32189,7 +32801,9 @@
     "hubCity": "青島",
     "stayPriority": "medium",
     "representativeStation": "青島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yamaga",
@@ -32306,7 +32920,10 @@
     "hubCity": "山鹿",
     "stayPriority": "high",
     "representativeStation": "玉名駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "玉名駅"
+    }
   },
   {
     "id": "yoshinogari",
@@ -32408,7 +33025,9 @@
     "hubCity": "吉野ヶ里",
     "stayPriority": "medium",
     "representativeStation": "吉野ヶ里公園駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kunisaki",
@@ -32531,7 +33150,10 @@
     "hubCity": "国東",
     "stayPriority": "medium",
     "representativeStation": "宇佐駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宇佐駅"
+    }
   },
   {
     "id": "chiran",
@@ -32649,7 +33271,10 @@
     "hubCity": "知覧",
     "stayPriority": "medium",
     "representativeStation": "鹿児島中央駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "鹿児島中央駅"
+    }
   },
   {
     "id": "ojika-island",
@@ -32783,7 +33408,9 @@
     "localHub": "佐世保",
     "stayPriority": "low",
     "representativeStation": "小値賀港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "irabu-island",
@@ -32906,7 +33533,10 @@
     "localHub": "宮古",
     "stayPriority": "high",
     "representativeStation": "宮古空港",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宮古空港"
+    }
   },
   {
     "id": "aguni-island",
@@ -33047,7 +33677,9 @@
     "localHub": "那覇",
     "stayPriority": "low",
     "representativeStation": "粟国港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "itoman",
@@ -33170,7 +33802,10 @@
     "hubCity": "糸満",
     "stayPriority": "medium",
     "representativeStation": "那覇バスターミナル",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "那覇バスターミナル"
+    }
   },
   {
     "id": "kijoka",
@@ -33292,7 +33927,10 @@
     "hubCity": "喜如嘉",
     "stayPriority": "medium",
     "representativeStation": "那覇バスターミナル",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "那覇バスターミナル"
+    }
   },
   {
     "id": "miyakejima",
@@ -33426,7 +34064,9 @@
     "localHub": "東京",
     "stayPriority": "medium",
     "representativeStation": "三宅島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hachijojima",
@@ -33567,7 +34207,9 @@
     "localHub": "東京",
     "stayPriority": "high",
     "representativeStation": "八丈島空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "niijima",
@@ -33702,7 +34344,9 @@
     "localHub": "東京",
     "stayPriority": "medium",
     "representativeStation": "新島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shikinejima",
@@ -33829,7 +34473,9 @@
     "localHub": "東京",
     "stayPriority": "medium",
     "representativeStation": "式根島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shirakawa",
@@ -33921,7 +34567,9 @@
     "hubCity": "白河",
     "stayPriority": "medium",
     "representativeStation": "白河駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kitakata",
@@ -34012,7 +34660,9 @@
     "hubCity": "喜多方",
     "stayPriority": "medium",
     "representativeStation": "喜多方駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "koriyama",
@@ -34104,7 +34754,9 @@
     "hubCity": "郡山",
     "stayPriority": "medium",
     "representativeStation": "郡山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ryusendo",
@@ -34197,7 +34849,10 @@
     "hubCity": "龍泉洞",
     "stayPriority": "medium",
     "representativeStation": "盛駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "盛駅"
+    }
   },
   {
     "id": "ichinoseki",
@@ -34288,7 +34943,9 @@
     "hubCity": "一関",
     "stayPriority": "medium",
     "representativeStation": "一ノ関駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akita-oga",
@@ -34381,7 +35038,9 @@
     "hubCity": "男鹿温泉",
     "stayPriority": "high",
     "representativeStation": "男鹿駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kisakata",
@@ -34473,7 +35132,9 @@
     "hubCity": "象潟",
     "stayPriority": "medium",
     "representativeStation": "象潟駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gassan",
@@ -34566,7 +35227,9 @@
     "hubCity": "月山",
     "stayPriority": "low",
     "representativeStation": "山形駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "higashine",
@@ -34657,7 +35320,9 @@
     "hubCity": "東根",
     "stayPriority": "medium",
     "representativeStation": "さくらんぼ東根駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akakura-onsen",
@@ -34749,7 +35414,10 @@
     "hubCity": "赤倉温泉",
     "stayPriority": "high",
     "representativeStation": "関山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "関山駅"
+    }
   },
   {
     "id": "yugawara-onsen",
@@ -34839,7 +35507,9 @@
     "hubCity": "湯河原温泉",
     "stayPriority": "high",
     "representativeStation": "湯河原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yokosuka",
@@ -34931,7 +35601,9 @@
     "hubCity": "横須賀",
     "stayPriority": "medium",
     "representativeStation": "横須賀駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mishima",
@@ -35023,7 +35695,9 @@
     "hubCity": "三島",
     "stayPriority": "medium",
     "representativeStation": "三島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "numazu",
@@ -35115,7 +35789,9 @@
     "hubCity": "沼津",
     "stayPriority": "medium",
     "representativeStation": "沼津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hamamatsu",
@@ -35207,7 +35883,9 @@
     "hubCity": "浜松",
     "stayPriority": "medium",
     "representativeStation": "浜松駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kakegawa",
@@ -35299,7 +35977,9 @@
     "hubCity": "掛川",
     "stayPriority": "medium",
     "representativeStation": "掛川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "okazaki",
@@ -35391,7 +36071,9 @@
     "hubCity": "岡崎",
     "stayPriority": "medium",
     "representativeStation": "岡崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "toyohashi",
@@ -35483,7 +36165,9 @@
     "hubCity": "豊橋",
     "stayPriority": "medium",
     "representativeStation": "豊橋駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tajimi",
@@ -35575,7 +36259,9 @@
     "hubCity": "多治見",
     "stayPriority": "medium",
     "representativeStation": "多治見駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "togakushi",
@@ -35667,7 +36353,9 @@
     "hubCity": "戸隠",
     "stayPriority": "medium",
     "representativeStation": "長野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "omihachiman",
@@ -35759,7 +36447,9 @@
     "hubCity": "近江八幡",
     "stayPriority": "medium",
     "representativeStation": "近江八幡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takarazuka",
@@ -35851,7 +36541,9 @@
     "hubCity": "宝塚",
     "stayPriority": "medium",
     "representativeStation": "宝塚駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akashi",
@@ -35943,7 +36635,9 @@
     "hubCity": "明石",
     "stayPriority": "medium",
     "representativeStation": "明石駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "naruto",
@@ -36035,7 +36729,9 @@
     "hubCity": "鳴門",
     "stayPriority": "medium",
     "representativeStation": "鳴門駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "innoshima",
@@ -36128,7 +36824,9 @@
     "hubCity": "因島",
     "stayPriority": "medium",
     "representativeStation": "福山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mihara",
@@ -36220,7 +36918,9 @@
     "hubCity": "三原",
     "stayPriority": "medium",
     "representativeStation": "三原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hofu",
@@ -36310,7 +37010,9 @@
     "hubCity": "防府",
     "stayPriority": "medium",
     "representativeStation": "防府駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "karatsu",
@@ -36402,7 +37104,9 @@
     "hubCity": "唐津",
     "stayPriority": "medium",
     "representativeStation": "唐津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "dazaifu",
@@ -36492,7 +37196,9 @@
     "hubCity": "大宰府",
     "stayPriority": "medium",
     "representativeStation": "太宰府駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nakatsu",
@@ -36584,7 +37290,9 @@
     "hubCity": "中津",
     "stayPriority": "medium",
     "representativeStation": "中津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nemuro",
@@ -36676,7 +37384,9 @@
     "hubCity": "根室",
     "stayPriority": "low",
     "representativeStation": "根室駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "muroran",
@@ -36768,7 +37478,9 @@
     "hubCity": "室蘭",
     "stayPriority": "medium",
     "representativeStation": "東室蘭駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tomakomai",
@@ -36860,7 +37572,9 @@
     "hubCity": "苫小牧",
     "stayPriority": "medium",
     "representativeStation": "苫小牧駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ishinomaki",
@@ -36951,7 +37665,9 @@
     "hubCity": "石巻",
     "stayPriority": "medium",
     "representativeStation": "石巻駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hitachi",
@@ -37042,7 +37758,9 @@
     "hubCity": "日立",
     "stayPriority": "medium",
     "representativeStation": "日立駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kashima",
@@ -37131,7 +37849,9 @@
     "hubCity": "鹿嶋",
     "stayPriority": "medium",
     "representativeStation": "鹿島神宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shiraoishi",
@@ -37221,7 +37941,9 @@
     "hubCity": "白石",
     "stayPriority": "medium",
     "representativeStation": "白石蔵王駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "noshiro",
@@ -37313,7 +38035,9 @@
     "hubCity": "能代",
     "stayPriority": "medium",
     "representativeStation": "能代駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tendou",
@@ -37404,7 +38128,9 @@
     "hubCity": "天童",
     "stayPriority": "medium",
     "representativeStation": "天童駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shonai",
@@ -37496,7 +38222,9 @@
     "hubCity": "鶴岡",
     "stayPriority": "medium",
     "representativeStation": "鶴岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ogata",
@@ -37589,7 +38317,9 @@
     "hubCity": "大潟村",
     "stayPriority": "medium",
     "representativeStation": "八郎潟駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "rikuzentakata",
@@ -37681,7 +38411,10 @@
     "hubCity": "陸前高田",
     "stayPriority": "medium",
     "representativeStation": "陸前高田駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "陸前高田駅"
+    }
   },
   {
     "id": "sanriku-miyako",
@@ -37774,7 +38507,9 @@
     "hubCity": "浄土ヶ浜",
     "stayPriority": "medium",
     "representativeStation": "宮古駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "motomiya",
@@ -37863,7 +38598,9 @@
     "hubCity": "本宮",
     "stayPriority": "medium",
     "representativeStation": "本宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mizusawa",
@@ -37954,7 +38691,9 @@
     "hubCity": "奥州",
     "stayPriority": "medium",
     "representativeStation": "水沢江刺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ichinoseki-geibikei",
@@ -38046,7 +38785,9 @@
     "hubCity": "猊鼻渓",
     "stayPriority": "medium",
     "representativeStation": "猊鼻渓駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akita-semboku",
@@ -38137,7 +38878,9 @@
     "hubCity": "仙北",
     "stayPriority": "medium",
     "representativeStation": "角館駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tendo",
@@ -38228,7 +38971,9 @@
     "hubCity": "寒河江",
     "stayPriority": "medium",
     "representativeStation": "寒河江駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nyuzen",
@@ -38319,7 +39064,10 @@
     "hubCity": "入善",
     "stayPriority": "medium",
     "representativeStation": "入善駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "入善駅"
+    }
   },
   {
     "id": "nanao",
@@ -38410,7 +39158,9 @@
     "hubCity": "七尾",
     "stayPriority": "medium",
     "representativeStation": "七尾駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "fukuchiyama",
@@ -38500,7 +39250,9 @@
     "hubCity": "福知山",
     "stayPriority": "medium",
     "representativeStation": "福知山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "koka",
@@ -38590,7 +39342,9 @@
     "hubCity": "甲賀",
     "stayPriority": "medium",
     "representativeStation": "甲賀駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tondabayashi",
@@ -38680,7 +39434,9 @@
     "hubCity": "富田林",
     "stayPriority": "medium",
     "representativeStation": "富田林駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kishiwada",
@@ -38772,7 +39528,9 @@
     "hubCity": "岸和田",
     "stayPriority": "medium",
     "representativeStation": "岸和田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "amagasaki",
@@ -38864,7 +39622,9 @@
     "hubCity": "尼崎",
     "stayPriority": "medium",
     "representativeStation": "尼崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nishiwaki",
@@ -38956,7 +39716,9 @@
     "hubCity": "西脇",
     "stayPriority": "medium",
     "representativeStation": "西脇市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nagi",
@@ -39048,7 +39810,9 @@
     "hubCity": "奈義",
     "stayPriority": "low",
     "representativeStation": "津山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "higashihiroshima",
@@ -39139,7 +39903,9 @@
     "hubCity": "東広島",
     "stayPriority": "medium",
     "representativeStation": "西条駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "fukuyama",
@@ -39231,7 +39997,9 @@
     "hubCity": "福山",
     "stayPriority": "medium",
     "representativeStation": "福山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "otoyo",
@@ -39320,7 +40088,9 @@
     "hubCity": "大豊",
     "stayPriority": "low",
     "representativeStation": "大杉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sukumo",
@@ -39411,7 +40181,10 @@
     "hubCity": "宿毛",
     "stayPriority": "medium",
     "representativeStation": "宿毛駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宿毛駅"
+    }
   },
   {
     "id": "miyoshi-tokushima",
@@ -39503,7 +40276,9 @@
     "hubCity": "三好",
     "stayPriority": "medium",
     "representativeStation": "阿波池田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oita-city",
@@ -39595,7 +40370,9 @@
     "hubCity": "大分",
     "stayPriority": "medium",
     "representativeStation": "大分駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yuwaku-onsen",
@@ -39687,7 +40464,9 @@
     "hubCity": "湯涌温泉",
     "stayPriority": "high",
     "representativeStation": "金沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yura-wakayama",
@@ -39779,7 +40558,9 @@
     "hubCity": "由良",
     "stayPriority": "medium",
     "representativeStation": "由良駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "misaki-osaka",
@@ -39871,7 +40652,9 @@
     "hubCity": "岬",
     "stayPriority": "medium",
     "representativeStation": "みさき公園駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kitakyushu",
@@ -39963,7 +40746,9 @@
     "hubCity": "北九州",
     "stayPriority": "medium",
     "representativeStation": "小倉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "asakura",
@@ -40055,7 +40840,9 @@
     "hubCity": "朝倉",
     "stayPriority": "medium",
     "representativeStation": "甘木駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ebino",
@@ -40147,7 +40934,9 @@
     "hubCity": "えびの",
     "stayPriority": "low",
     "representativeStation": "えびの駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hitoyoshi-city",
@@ -40238,7 +41027,9 @@
     "hubCity": "球磨川",
     "stayPriority": "medium",
     "representativeStation": "人吉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "minamikyushu",
@@ -40342,7 +41133,10 @@
     "hubCity": "南九州",
     "stayPriority": "medium",
     "representativeStation": "鹿児島中央駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "鹿児島中央駅"
+    }
   },
   {
     "id": "minamiosumi",
@@ -40446,7 +41240,9 @@
     "hubCity": "南大隅",
     "stayPriority": "low",
     "representativeStation": "鹿児島中央駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "chatan",
@@ -40548,7 +41344,9 @@
     "hubCity": "北谷",
     "stayPriority": "medium",
     "representativeStation": "那覇空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "uruma",
@@ -40650,7 +41448,9 @@
     "hubCity": "うるま",
     "stayPriority": "medium",
     "representativeStation": "那覇空港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nanto",
@@ -40742,7 +41542,9 @@
     "hubCity": "南砺",
     "stayPriority": "medium",
     "representativeStation": "新高岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hakusan",
@@ -40834,7 +41636,9 @@
     "hubCity": "白山",
     "stayPriority": "low",
     "representativeStation": "金沢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kamo-kyoto",
@@ -40927,7 +41731,9 @@
     "hubCity": "南山城",
     "stayPriority": "low",
     "representativeStation": "月ヶ瀬口駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shingu-wakayama",
@@ -41018,7 +41824,9 @@
     "hubCity": "新宮",
     "stayPriority": "medium",
     "representativeStation": "新宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "himeshima",
@@ -41126,7 +41934,9 @@
     "localHub": "国東",
     "stayPriority": "low",
     "representativeStation": "姫島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "toshima",
@@ -41222,7 +42032,9 @@
     "localHub": "東京",
     "stayPriority": "low",
     "representativeStation": "利島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "joetsu",
@@ -41313,7 +42125,9 @@
     "hubCity": "上越",
     "stayPriority": "medium",
     "representativeStation": "上越妙高駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "myoko",
@@ -41417,7 +42231,10 @@
     "hubCity": "妙高",
     "stayPriority": "low",
     "representativeStation": "関山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "関山駅"
+    }
   },
   {
     "id": "hokkaido-hakodate",
@@ -41525,7 +42342,9 @@
     "hubCity": "函館",
     "stayPriority": "medium",
     "representativeStation": "函館駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hokkaido-asahikawa",
@@ -41628,7 +42447,9 @@
     "hubCity": "旭川",
     "stayPriority": "medium",
     "representativeStation": "旭川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hokkaido-kushiro",
@@ -41731,7 +42552,9 @@
     "hubCity": "釧路",
     "stayPriority": "medium",
     "representativeStation": "釧路駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yoichi",
@@ -41822,7 +42645,9 @@
     "hubCity": "余市",
     "stayPriority": "medium",
     "representativeStation": "余市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "akkeshi",
@@ -41915,7 +42740,9 @@
     "hubCity": "厚岸",
     "stayPriority": "medium",
     "representativeStation": "厚岸駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kitami",
@@ -42016,7 +42843,9 @@
     "hubCity": "北見",
     "stayPriority": "medium",
     "representativeStation": "北見駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "monbetsu",
@@ -42106,7 +42935,10 @@
     "hubCity": "紋別",
     "stayPriority": "medium",
     "representativeStation": "紋別駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "紋別駅"
+    }
   },
   {
     "id": "mashike",
@@ -42199,7 +43031,10 @@
     "hubCity": "増毛",
     "stayPriority": "medium",
     "representativeStation": "留萌駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "留萌駅"
+    }
   },
   {
     "id": "fukushima-city",
@@ -42291,7 +43126,9 @@
     "hubCity": "福島",
     "stayPriority": "medium",
     "representativeStation": "福島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "omagari",
@@ -42382,7 +43219,9 @@
     "hubCity": "大曲",
     "stayPriority": "medium",
     "representativeStation": "大曲駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shinjou",
@@ -42473,7 +43312,9 @@
     "hubCity": "新庄",
     "stayPriority": "medium",
     "representativeStation": "新庄駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nagai",
@@ -42575,7 +43416,10 @@
     "hubCity": "長井",
     "stayPriority": "medium",
     "representativeStation": "米沢駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "米沢駅"
+    }
   },
   {
     "id": "kanagawa-yokohama",
@@ -42671,7 +43515,9 @@
     "hubCity": "横浜",
     "stayPriority": "medium",
     "representativeStation": "横浜駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ibaraki-mito",
@@ -42766,7 +43612,9 @@
     "hubCity": "水戸",
     "stayPriority": "medium",
     "representativeStation": "水戸駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "utsunomiya",
@@ -42858,7 +43706,9 @@
     "hubCity": "宇都宮",
     "stayPriority": "medium",
     "representativeStation": "宇都宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takasaki",
@@ -42950,7 +43800,9 @@
     "hubCity": "高崎",
     "stayPriority": "medium",
     "representativeStation": "高崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "odawara",
@@ -43042,7 +43894,9 @@
     "hubCity": "小田原",
     "stayPriority": "medium",
     "representativeStation": "小田原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sawara",
@@ -43134,7 +43988,9 @@
     "hubCity": "佐原",
     "stayPriority": "medium",
     "representativeStation": "佐原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nokogiriyama",
@@ -43227,7 +44083,9 @@
     "hubCity": "鋸山",
     "stayPriority": "low",
     "representativeStation": "浜金谷駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "katsuura-chiba",
@@ -43319,7 +44177,9 @@
     "hubCity": "勝浦",
     "stayPriority": "medium",
     "representativeStation": "勝浦駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "azumino",
@@ -43409,7 +44269,9 @@
     "hubCity": "安曇野",
     "stayPriority": "medium",
     "representativeStation": "穂高駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nagano-iida",
@@ -43503,7 +44365,9 @@
     "hubCity": "飯田",
     "stayPriority": "medium",
     "representativeStation": "飯田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nakatsugawa",
@@ -43595,7 +44459,9 @@
     "hubCity": "中津川",
     "stayPriority": "medium",
     "representativeStation": "中津川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yaizu",
@@ -43687,7 +44553,9 @@
     "hubCity": "焼津",
     "stayPriority": "medium",
     "representativeStation": "焼津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hamanako",
@@ -43780,7 +44648,9 @@
     "hubCity": "浜名湖",
     "stayPriority": "medium",
     "representativeStation": "弁天島駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gamagori",
@@ -43872,7 +44742,9 @@
     "hubCity": "蒲郡",
     "stayPriority": "medium",
     "representativeStation": "蒲郡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "toyota-city",
@@ -43964,7 +44836,9 @@
     "hubCity": "豊田",
     "stayPriority": "medium",
     "representativeStation": "豊田市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "otsu-shiga",
@@ -44056,7 +44930,9 @@
     "hubCity": "大津",
     "stayPriority": "medium",
     "representativeStation": "大津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kusatsu-shiga",
@@ -44148,7 +45024,9 @@
     "hubCity": "草津（滋賀）",
     "stayPriority": "medium",
     "representativeStation": "草津駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takashima-shiga",
@@ -44241,7 +45119,9 @@
     "hubCity": "高島",
     "stayPriority": "medium",
     "representativeStation": "マキノ駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tango-kyoto",
@@ -44333,7 +45213,10 @@
     "hubCity": "丹後",
     "stayPriority": "medium",
     "representativeStation": "天橋立駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "天橋立駅"
+    }
   },
   {
     "id": "owase",
@@ -44436,7 +45319,9 @@
     "hubCity": "尾鷲",
     "stayPriority": "medium",
     "representativeStation": "尾鷲駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "gobo",
@@ -44528,7 +45413,9 @@
     "hubCity": "御坊",
     "stayPriority": "medium",
     "representativeStation": "御坊駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kushimoto",
@@ -44620,7 +45507,9 @@
     "hubCity": "串本",
     "stayPriority": "medium",
     "representativeStation": "串本駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimane-matsue",
@@ -44723,7 +45612,9 @@
     "hubCity": "松江",
     "stayPriority": "medium",
     "representativeStation": "松江駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hamada-shimane",
@@ -44823,7 +45714,9 @@
     "hubCity": "浜田",
     "stayPriority": "medium",
     "representativeStation": "浜田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kure",
@@ -44914,7 +45807,9 @@
     "hubCity": "呉",
     "stayPriority": "medium",
     "representativeStation": "呉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyoshi-hiroshima",
@@ -45005,7 +45900,9 @@
     "hubCity": "三次",
     "stayPriority": "medium",
     "representativeStation": "三次駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nagato-yamaguchi",
@@ -45097,7 +45994,9 @@
     "hubCity": "長門",
     "stayPriority": "medium",
     "representativeStation": "長門市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mine-yamaguchi",
@@ -45187,7 +46086,9 @@
     "hubCity": "美祢",
     "stayPriority": "medium",
     "representativeStation": "美祢駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kagawa-takamatsu",
@@ -45291,7 +46192,9 @@
     "hubCity": "高松",
     "stayPriority": "medium",
     "representativeStation": "高松駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "sakaide",
@@ -45383,7 +46286,9 @@
     "hubCity": "坂出",
     "stayPriority": "medium",
     "representativeStation": "坂出駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tosa-city",
@@ -45476,7 +46381,10 @@
     "hubCity": "土佐市",
     "stayPriority": "medium",
     "representativeStation": "波介川口駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "波介川口駅"
+    }
   },
   {
     "id": "kanonji",
@@ -45568,7 +46476,9 @@
     "hubCity": "観音寺",
     "stayPriority": "medium",
     "representativeStation": "観音寺駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "fukuoka-city",
@@ -45669,7 +46579,9 @@
     "hubCity": "福岡",
     "stayPriority": "medium",
     "representativeStation": "博多駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurume",
@@ -45761,7 +46673,9 @@
     "hubCity": "久留米",
     "stayPriority": "medium",
     "representativeStation": "久留米駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yatsushiro",
@@ -45853,7 +46767,9 @@
     "hubCity": "八代",
     "stayPriority": "medium",
     "representativeStation": "八代駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oguni-kumamoto",
@@ -45951,7 +46867,10 @@
     "hubCity": "小国",
     "stayPriority": "high",
     "representativeStation": "熊本駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "熊本駅"
+    }
   },
   {
     "id": "izumi-kagoshima",
@@ -46041,7 +46960,9 @@
     "hubCity": "出水",
     "stayPriority": "medium",
     "representativeStation": "出水駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "makurazaki",
@@ -46132,7 +47053,9 @@
     "hubCity": "枕崎",
     "stayPriority": "medium",
     "representativeStation": "枕崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyakonojo",
@@ -46223,7 +47146,9 @@
     "hubCity": "都城",
     "stayPriority": "medium",
     "representativeStation": "都城駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nanjo-okinawa",
@@ -46316,7 +47241,10 @@
     "hubCity": "南城",
     "stayPriority": "medium",
     "representativeStation": "南城駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "南城駅"
+    }
   },
   {
     "id": "aogashima",
@@ -46402,7 +47330,9 @@
     "localHub": "八丈島",
     "stayPriority": "low",
     "representativeStation": "青ヶ島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kugashima",
@@ -46490,7 +47420,9 @@
     "localHub": "五島",
     "stayPriority": "low",
     "representativeStation": "久賀島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "nakatosa",
@@ -46581,7 +47513,9 @@
     "hubCity": "中土佐",
     "stayPriority": "medium",
     "representativeStation": "土佐久礼駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ikata",
@@ -46675,7 +47609,9 @@
     "hubCity": "伊方",
     "stayPriority": "medium",
     "representativeStation": "八幡浜駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "muroto-cape",
@@ -46767,7 +47703,10 @@
     "hubCity": "室戸岬",
     "stayPriority": "medium",
     "representativeStation": "奈半利駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "奈半利駅"
+    }
   },
   {
     "id": "oshima-yamaguchi",
@@ -46871,7 +47810,10 @@
     "hubCity": "大島（山口）",
     "stayPriority": "medium",
     "representativeStation": "大畠駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "大畠駅"
+    }
   },
   {
     "id": "ibara",
@@ -46962,7 +47904,10 @@
     "hubCity": "井原",
     "stayPriority": "medium",
     "representativeStation": "井原駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "井原駅"
+    }
   },
   {
     "id": "niimi",
@@ -47053,7 +47998,9 @@
     "hubCity": "新見",
     "stayPriority": "medium",
     "representativeStation": "新見駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "uda-nara",
@@ -47146,7 +48093,9 @@
     "hubCity": "宇陀",
     "stayPriority": "medium",
     "representativeStation": "榛原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "mimasaka",
@@ -47238,7 +48187,9 @@
     "hubCity": "美作",
     "stayPriority": "high",
     "representativeStation": "林野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kochi-shimanto",
@@ -47328,7 +48279,10 @@
     "hubCity": "四万十川",
     "stayPriority": "medium",
     "representativeStation": "中村駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "中村駅"
+    }
   },
   {
     "id": "yonago",
@@ -47428,7 +48382,9 @@
     "hubCity": "米子",
     "stayPriority": "medium",
     "representativeStation": "米子駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kaga-onsen2",
@@ -47518,7 +48474,9 @@
     "hubCity": "山代温泉",
     "stayPriority": "high",
     "representativeStation": "加賀温泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takayama-kogen",
@@ -47610,7 +48568,9 @@
     "hubCity": "飛騨高山（北アルプス側）",
     "stayPriority": "low",
     "representativeStation": "高山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iga-ueno",
@@ -47700,7 +48660,10 @@
     "hubCity": "伊賀上野",
     "stayPriority": "medium",
     "representativeStation": "上野市駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "上野市駅"
+    }
   },
   {
     "id": "miyanoshita",
@@ -47792,7 +48755,10 @@
     "hubCity": "宮ノ下",
     "stayPriority": "high",
     "representativeStation": "宮ノ下駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "宮ノ下駅"
+    }
   },
   {
     "id": "shibu-onsen",
@@ -47882,7 +48848,10 @@
     "hubCity": "渋温泉",
     "stayPriority": "high",
     "representativeStation": "湯田中駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "湯田中駅"
+    }
   },
   {
     "id": "togatta-onsen",
@@ -47974,7 +48943,9 @@
     "hubCity": "遠刈田温泉",
     "stayPriority": "high",
     "representativeStation": "白石蔵王駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hachimantai-onsen",
@@ -48067,7 +49038,9 @@
     "hubCity": "後生掛温泉",
     "stayPriority": "high",
     "representativeStation": "鹿角花輪駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "iiyama-onsen",
@@ -48159,7 +49132,9 @@
     "hubCity": "野沢菜の里・野沢温泉",
     "stayPriority": "high",
     "representativeStation": "飯山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ono-fukui",
@@ -48265,7 +49240,9 @@
     "hubCity": "大野",
     "stayPriority": "medium",
     "representativeStation": "越前大野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "katsuyama",
@@ -48368,7 +49345,10 @@
     "hubCity": "勝山",
     "stayPriority": "medium",
     "representativeStation": "福井駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "福井駅"
+    }
   },
   {
     "id": "nomaike",
@@ -48454,7 +49434,9 @@
     "hubCity": "野間池",
     "stayPriority": "medium",
     "representativeStation": "野間池港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hioki",
@@ -48546,7 +49528,9 @@
     "hubCity": "日置",
     "stayPriority": "medium",
     "representativeStation": "伊集院駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -48638,7 +49622,9 @@
     "hubCity": "乳頭温泉郷",
     "stayPriority": "high",
     "representativeStation": "田沢湖駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hirakawa",
@@ -48730,7 +49716,9 @@
     "hubCity": "平川",
     "stayPriority": "medium",
     "representativeStation": "碇ヶ関駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurikoma",
@@ -48822,7 +49810,9 @@
     "hubCity": "栗駒",
     "stayPriority": "low",
     "representativeStation": "くりこま高原駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "namioka",
@@ -48914,7 +49904,9 @@
     "hubCity": "浪岡",
     "stayPriority": "medium",
     "representativeStation": "浪岡駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "shimokita",
@@ -49007,7 +49999,9 @@
     "hubCity": "下北半島",
     "stayPriority": "medium",
     "representativeStation": "下北駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "towada-lake",
@@ -49097,7 +50091,9 @@
     "hubCity": "十和田湖",
     "stayPriority": "medium",
     "representativeStation": "八戸駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "rikuchu-coast",
@@ -49189,7 +50185,10 @@
     "hubCity": "三陸（大槌）",
     "stayPriority": "medium",
     "representativeStation": "大槌駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "大槌駅"
+    }
   },
   {
     "id": "ichinoseki-hiraizumi2",
@@ -49278,7 +50277,9 @@
     "hubCity": "平泉周辺",
     "stayPriority": "medium",
     "representativeStation": "平泉駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "numata",
@@ -49370,7 +50371,9 @@
     "hubCity": "沼田",
     "stayPriority": "medium",
     "representativeStation": "沼田駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsuchiura",
@@ -49462,7 +50465,9 @@
     "hubCity": "土浦",
     "stayPriority": "medium",
     "representativeStation": "土浦駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "oshika",
@@ -49554,7 +50559,9 @@
     "hubCity": "牡鹿半島",
     "stayPriority": "medium",
     "representativeStation": "石巻駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kujukuri-icho",
@@ -49646,7 +50653,9 @@
     "hubCity": "一宮（東浪見）",
     "stayPriority": "medium",
     "representativeStation": "上総一ノ宮駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "miyota",
@@ -49736,7 +50745,10 @@
     "hubCity": "御代田",
     "stayPriority": "medium",
     "representativeStation": "御代田駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "御代田駅"
+    }
   },
   {
     "id": "saijo-hiroshima",
@@ -49827,7 +50839,9 @@
     "hubCity": "西条（酒都）",
     "stayPriority": "medium",
     "representativeStation": "西条駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ryoishi",
@@ -49931,7 +50945,10 @@
     "hubCity": "綾里",
     "stayPriority": "medium",
     "representativeStation": "釜石駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "釜石駅"
+    }
   },
   {
     "id": "noheji",
@@ -50023,7 +51040,9 @@
     "hubCity": "野辺地",
     "stayPriority": "medium",
     "representativeStation": "野辺地駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tobetsu",
@@ -50114,7 +51133,10 @@
     "hubCity": "当別",
     "stayPriority": "medium",
     "representativeStation": "石狩当別駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "石狩当別駅"
+    }
   },
   {
     "id": "fukaura",
@@ -50207,7 +51229,9 @@
     "hubCity": "深浦",
     "stayPriority": "medium",
     "representativeStation": "深浦駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "isesaki",
@@ -50299,7 +51323,9 @@
     "hubCity": "伊勢崎",
     "stayPriority": "medium",
     "representativeStation": "伊勢崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "matsumoto-kaido",
@@ -50390,7 +51416,9 @@
     "hubCity": "塩尻",
     "stayPriority": "medium",
     "representativeStation": "塩尻駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "aizu-misato",
@@ -50481,7 +51509,9 @@
     "hubCity": "会津美里",
     "stayPriority": "medium",
     "representativeStation": "会津本郷駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tateyama-toyama",
@@ -50571,7 +51601,10 @@
     "hubCity": "立山",
     "stayPriority": "low",
     "representativeStation": "立山駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "立山駅"
+    }
   },
   {
     "id": "suo-sanbe",
@@ -50661,7 +51694,9 @@
     "hubCity": "三瓶山",
     "stayPriority": "low",
     "representativeStation": "大田市駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "takachihogo-shishiku",
@@ -50759,7 +51794,10 @@
     "hubCity": "椎葉",
     "stayPriority": "low",
     "representativeStation": "延岡駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "延岡駅"
+    }
   },
   {
     "id": "kamishihoro",
@@ -50849,7 +51887,9 @@
     "hubCity": "上士幌",
     "stayPriority": "medium",
     "representativeStation": "帯広駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "yakumo",
@@ -50941,7 +51981,9 @@
     "hubCity": "八雲",
     "stayPriority": "medium",
     "representativeStation": "八雲駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "susaki",
@@ -51032,7 +52074,9 @@
     "hubCity": "須崎",
     "stayPriority": "medium",
     "representativeStation": "須崎駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ube",
@@ -51133,7 +52177,9 @@
     "hubCity": "宇部",
     "stayPriority": "medium",
     "representativeStation": "宇部新川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "itoigawa2",
@@ -51224,7 +52270,9 @@
     "hubCity": "糸魚川（ヒスイ）",
     "stayPriority": "medium",
     "representativeStation": "糸魚川駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "agematsu",
@@ -51316,7 +52364,9 @@
     "hubCity": "上松",
     "stayPriority": "medium",
     "representativeStation": "上松駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "unzen2",
@@ -51408,7 +52458,9 @@
     "hubCity": "雲仙温泉",
     "stayPriority": "high",
     "representativeStation": "諫早駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kochi-ino",
@@ -51500,7 +52552,9 @@
     "hubCity": "いの町",
     "stayPriority": "medium",
     "representativeStation": "伊野駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "hiji",
@@ -51592,7 +52646,9 @@
     "hubCity": "日出",
     "stayPriority": "medium",
     "representativeStation": "日出駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tsunan",
@@ -51681,7 +52737,9 @@
     "hubCity": "津南",
     "stayPriority": "medium",
     "representativeStation": "津南駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "kurobe",
@@ -51772,7 +52830,10 @@
     "hubCity": "黒部",
     "stayPriority": "medium",
     "representativeStation": "黒部駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "黒部駅"
+    }
   },
   {
     "id": "tsuruoka-kinzan",
@@ -51864,7 +52925,9 @@
     "hubCity": "金山町",
     "stayPriority": "medium",
     "representativeStation": "金山駅",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "tomari-okinawa",
@@ -51951,7 +53014,9 @@
     "localHub": "今帰仁",
     "stayPriority": "low",
     "representativeStation": "伊平屋島港",
-    "finalAccess": "walk"
+    "finalAccess": {
+      "type": "walk"
+    }
   },
   {
     "id": "ogimi",
@@ -52044,6 +53109,9 @@
     "hubCity": "大宜味",
     "stayPriority": "medium",
     "representativeStation": "大宜味駅",
-    "finalAccess": "bus"
+    "finalAccess": {
+      "type": "bus",
+      "from": "大宜味駅"
+    }
   }
 ]

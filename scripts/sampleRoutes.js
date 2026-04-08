@@ -27,7 +27,7 @@ for (const { departure, destId } of SAMPLES) {
   console.log(`  ${departure} → ${name}`);
   console.log(`${'═'.repeat(50)}`);
   console.log(`  representativeStation: ${city.representativeStation}`);
-  console.log(`  finalAccess: ${city.finalAccess}`);
+  console.log(`  finalAccess: ${JSON.stringify(city.finalAccess)}`);
   console.log(`  transportType: ${best.transportType}`);
   console.log(`  reason: ${tc.reason}`);
   console.log(`  waypoints: ${best.waypoints.join(' → ')}`);
@@ -39,36 +39,32 @@ for (const { departure, destId } of SAMPLES) {
   // === 最終UI出力 ===
   const ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌' };
   const dr = best.displayRoute;
-  const mainSeg = best.mainSegment;
-  const icon = mainSeg ? (ICON[mainSeg.type] ?? '🚃') : '🚃';
+  const chainCta = best.jrChainCta;
+  const icon = chainCta ? (ICON[chainCta.type] ?? '🚃') : '🚃';
   const clean = (n) => n.replace(/駅$|空港$|港$/, '');
 
   console.log(`\n  ── UI ──`);
   console.log(`  ${icon} ${dr.from} → ${dr.to}`);
   console.log(`  ${tc.reason}`);
-  if (dr.needsAccess) {
-    const verb = { walk: '徒歩', bus: 'バス', car: '車' }[city.finalAccess] ?? '徒歩';
-    console.log(`  📍 ${dr.destName}エリアへ（${verb}でアクセス）`);
-  } else if (city.finalAccess === 'bus') {
-    console.log(`  📍 駅からバスでアクセス`);
-  } else if (city.finalAccess === 'car') {
-    console.log(`  📍 車があると便利`);
+  const fa = typeof city.finalAccess === 'object' ? city.finalAccess : { type: city.finalAccess ?? 'walk' };
+  if (fa.type === 'train' && fa.line) {
+    console.log(`  ${fa.from}から${fa.line}で${fa.to ?? name}へ`);
+  } else if (fa.type === 'bus') {
+    const from = fa.from ? fa.from.replace(/駅$/, '') : '駅';
+    console.log(`  ${from}からバスでアクセス`);
+  } else if (fa.type === 'car') {
+    console.log(`  レンタカーでアクセス`);
   }
   console.log(``);
-  // CTA（実UIと同じロジック: mainSegment優先 → ctaフォールバック）
+  // CTA（JRチェーンベース）
   const mainCta = tc.stepGroups.find(sg => sg.type === 'main-cta')?.cta;
-  const suppressBooking = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
   console.log(``);
   console.log(`  [地図で行き方を見る]`);
   const suppressBk = best.islandDisplayType === 'bus' || best.islandDisplayType === 'car';
-  if (suppressBk) { /* skip */ }
-  else if (mainSeg && mainCta) {
-    const from = clean(mainSeg.from); const to = clean(mainSeg.to);
-    const HINT = { shinkansen:'新幹線区間', flight:'直行便', ferry:'フェリー区間', highway_bus:'バス区間' };
-    const hint = HINT[mainSeg.type] ?? '';
+  if (!suppressBk && chainCta && mainCta) {
+    const from = clean(chainCta.from); const to = clean(chainCta.to);
+    const HINT = { shinkansen:'新幹線区間', limited:'特急区間', jr:'JR区間', flight:'直行便', ferry:'フェリー区間' };
+    const hint = HINT[chainCta.type] ?? '';
     console.log(`  [${from} → ${to}だけ予約${hint ? `（${hint}）` : ''}]`);
-  } else if (mainCta) {
-    const ctaDest = best.ctaDestination || clean(dr.to);
-    console.log(`  [${ctaDest}まで予約（最寄り駅）]`);
   }
 }

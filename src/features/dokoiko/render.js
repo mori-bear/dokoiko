@@ -348,25 +348,11 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   // 理由文
   const reason = best.reason || tc.reason;
 
-  // アクセス行: 到着駅≠目的地名の場合、または bus/car の場合に表示
-  let accessHtml = '';
-  const fa = best.finalAccess;
-  if (dr.needsAccess) {
-    const ACCESS_VERB = { walk: '徒歩', bus: 'バス', car: '車' };
-    const verb = ACCESS_VERB[fa] ?? '徒歩';
-    accessHtml = `<div class="best-route-access">📍 ${dr.destName}エリアへ（${verb}でアクセス）</div>`;
-  } else if (fa === 'bus') {
-    accessHtml = '<div class="best-route-access">📍 駅からバスでアクセス</div>';
-  } else if (fa === 'car') {
-    accessHtml = '<div class="best-route-access">📍 車があると便利</div>';
-  }
-
   return `
     <div class="route-block">
       <div class="best-route">
         <div class="best-route-line">${routeLine}</div>
         <div class="best-route-reason">${reason}</div>
-        ${accessHtml}
       </div>
     </div>`;
 }
@@ -376,37 +362,29 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const best = tc?.bestRoute;
   const chainCta = best?.jrChainCta;
 
-  // ① 地図CTA（常に表示）
-  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
-  let mapHtml = '';
-  if (mapUrl) {
-    seenUrls.add(mapUrl);
-    mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">地図で行き方を見る</a>`;
-  }
-
-  // ② 予約CTA（JRチェーン / flight / ferry から直接生成）
-  // 島・半島で車/バスアクセスの場合、JR CTAは出さない（嘘になる）
+  // ① 予約CTA（JRチェーン / flight / ferry から直接生成）
   const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
   let bookingHtml = '';
   if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
       const label = buildChainCtaLabel(chainCta);
+      seenUrls.add(mainCta.cta.url);
       bookingHtml = `<a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
          class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>`;
     }
   }
 
-  // ③ 最終アクセス表示（予約到達点から残りどう行くか）
-  const destName = city?.displayName || city?.name || '';
-  const gatewayCity = resolveGatewayCity(best, city);
-  let accessHtml = '';
-  if (gatewayCity && gatewayCity !== destName) {
-    const fa = best?.finalAccess ?? 'walk';
-    const ACCESS_METHOD = { walk: '在来線', bus: 'バス', car: '車' };
-    const method = ACCESS_METHOD[fa] ?? '在来線';
-    accessHtml = `<div class="access-hint">${gatewayCity}からは${method}でアクセス</div>`;
+  // ② finalAccess表示（降りた後どう行くか）
+  const accessHtml = renderFinalAccess(best?.finalAccess, city);
+
+  // ③ 地図CTA
+  const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+  let mapHtml = '';
+  if (mapUrl) {
+    seenUrls.add(mapUrl);
+    mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+       class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
   // ④ シェア（X + 画像）
@@ -418,13 +396,48 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 
   return `
     <div class="cta-block">
-      <div class="cta-group">
-        ${mapHtml}
-        ${bookingHtml}
-      </div>
+      ${bookingHtml ? `<div class="cta-group">${bookingHtml}</div>` : ''}
       ${accessHtml}
+      ${mapHtml ? `<div class="cta-group">${mapHtml}</div>` : ''}
       ${shareHtml}
     </div>`;
+}
+
+/**
+ * finalAccess（構造化オブジェクト）から補助テキストを生成する。
+ *
+ * { type: "train", line: "近鉄南大阪線", from: "大阪阿部野橋", to: "富田林" }
+ *   → "大阪阿部野橋から近鉄南大阪線で富田林へ"
+ *
+ * { type: "bus", from: "小田原駅" }
+ *   → "小田原からバスでアクセス"
+ *
+ * { type: "car" }
+ *   → "レンタカーでアクセス"
+ *
+ * { type: "walk" }
+ *   → "" (非表示)
+ */
+function renderFinalAccess(access, city) {
+  if (!access) return '';
+  const fa = typeof access === 'string' ? { type: access } : access;
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+
+  if (fa.type === 'train' && fa.line && fa.from) {
+    const to = fa.to || city?.displayName || city?.name || '';
+    return `<div class="access-hint">${clean(fa.from)}から${fa.line}で${clean(to)}へ</div>`;
+  }
+  if (fa.type === 'bus') {
+    const from = fa.from ? clean(fa.from) : null;
+    return from
+      ? `<div class="access-hint">${from}からバスでアクセス</div>`
+      : '<div class="access-hint">駅からバスでアクセス</div>';
+  }
+  if (fa.type === 'car') {
+    return '<div class="access-hint">レンタカーでアクセス</div>';
+  }
+  // walk → 非表示（駅から徒歩圏内は言うまでもない）
+  return '';
 }
 
 /**

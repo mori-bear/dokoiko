@@ -18,19 +18,20 @@ for (const { departure, destId } of CASES) {
   const tc = buildTransportContext(departure, city);
   const best = tc.bestRoute;
   const dr = best.displayRoute;
-  const main = best.mainSegment;
+  const chainCta = best.jrChainCta;
   const name = city.displayName || city.name;
   const ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌', bus: '🚍', car: '🚗' };
   const displayType = best.islandDisplayType;
-  const icon = displayType ? (ICON[displayType] ?? '🚃') : main ? (ICON[main.type] ?? '🚃') : '🚃';
+  const icon = displayType ? (ICON[displayType] ?? '🚃') : chainCta ? (ICON[chainCta.type] ?? '🚃') : '🚃';
 
   console.log(`\n${departure} → ${name} (${city.destType}${city.isIsland ? '/island' : ''}) islandType=${best.islandDisplayType ?? 'none'}`);
   console.log(`  ${icon} ${dr.from} → ${dr.to}`);
   console.log(`  ${tc.reason}`);
   if (dr.needsAccess) {
-    const verb = { walk: '徒歩', bus: 'バス', car: '車' }[best.finalAccess] ?? '徒歩';
+    const faType = typeof best.finalAccess === 'object' ? best.finalAccess.type : (best.finalAccess ?? 'walk');
+    const verb = { walk: '徒歩', bus: 'バス', car: '車' }[faType] ?? '徒歩';
     console.log(`  📍 ${dr.destName}エリアへ（${verb}）`);
   }
-  if (main) console.log(`  CTA: [${main.type}] ${main.from} → ${main.to}`);
+  if (chainCta) console.log(`  CTA: [${chainCta.type}] ${chainCta.from} → ${chainCta.to}`);
   else console.log(`  CTA: 地図のみ`);
 }

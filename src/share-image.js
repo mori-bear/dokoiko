@@ -34,6 +34,20 @@ export async function captureShareCard(city, departure, transportContext = null)
     ? `👉 ${clean(chainCta.from)} → ${clean(chainCta.to)}だけ予約${HINT[chainCta.type] ? `（${HINT[chainCta.type]}）` : ''}`
     : '';
 
+  // finalAccess行
+  const fa = best?.finalAccess;
+  let accessLine = '';
+  if (fa && typeof fa === 'object') {
+    if (fa.type === 'train' && fa.line && fa.from) {
+      const faTo = fa.to || city.displayName || city.name || '';
+      accessLine = `${clean(fa.from)}から${fa.line}で${clean(faTo)}へ`;
+    } else if (fa.type === 'bus' && fa.from) {
+      accessLine = `${clean(fa.from)}からバスでアクセス`;
+    } else if (fa.type === 'car') {
+      accessLine = 'レンタカーでアクセス';
+    }
+  }
+
   // ── オフスクリーンカード要素を生成 ──
   const card = document.createElement('div');
 
@@ -54,8 +68,8 @@ export async function captureShareCard(city, departure, transportContext = null)
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
     <div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
     ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:8px;">${escHtml(routeLine)}</div>` : ''}
-    ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;margin-bottom:0;line-height:1.5;">${escHtml(ctaLine)}</div>` : ''}
-    ${tagline ? `<div style="font-size:13px;color:#888;line-height:1.7;margin-top:16px;">${escHtml(tagline)}</div>` : ''}
+    ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;margin-bottom:6px;line-height:1.5;">${escHtml(ctaLine)}</div>` : ''}
+    ${accessLine ? `<div style="font-size:12px;color:#888;line-height:1.5;">${escHtml(accessLine)}</div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
       <div style="font-size:12px;color:#888;margin-bottom:4px;">👇 行き方すぐ出る</div>
       <div style="font-size:13px;color:#1c1c1c;font-weight:600;letter-spacing:0.05em;">tabidokoiko.com</div>

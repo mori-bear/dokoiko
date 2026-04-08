@@ -613,8 +613,10 @@ export function buildTransportContext(departure, city) {
     ? [...new Set([transportSegs[0].from, ...transportSegs.map(s => s.to)])]
     : [departure, city?.displayName || city?.name].filter(Boolean);
 
-  // finalAccess: 最寄駅→目的地の最終アクセス手段
-  const finalAccess = city?.finalAccess ?? 'walk';
+  // finalAccess: 最寄駅→目的地の最終アクセス手段（構造化オブジェクト）
+  const finalAccess = typeof city?.finalAccess === 'object'
+    ? city.finalAccess
+    : { type: city?.finalAccess ?? 'walk' };
   const repStation = city?.representativeStation ?? null;
 
   // ⑩ JRチェーンCTA + 表示用ルート
