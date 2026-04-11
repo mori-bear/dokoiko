@@ -379,7 +379,9 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
       seenUrls.add(mainCta.cta.url);
       const gatewayCity = resolveGatewayCity(best, city);
-      const accessText = chainCta.allJR ? '' : buildAccessText(best?.finalAccess, city, gatewayCity);
+      // showFinalAccess: セグメント実態ベースで表示判定（JRのみなら非表示）
+      const shouldShow = best?.showFinalAccess !== false && !chainCta.allJR;
+      const accessText = shouldShow ? buildAccessText(best?.finalAccess, city, gatewayCity) : '';
       const accessHtml = accessText ? `
         <details class="final-access-details">
           <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>

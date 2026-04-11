@@ -259,7 +259,7 @@ export function buildRouteReason(transportType, distanceKm, city = null, isFallb
   // 島・半島の専用reason
   if (islandType === 'ferry')  return 'フェリーで渡れる';
   if (islandType === 'bus')    return 'バスでそのまま行ける';
-  if (islandType === 'car')    return '車でのアクセスが便利';
+  if (islandType === 'car')    return '車で行ける';
 
   // 複合ルート（乗り換えあり）
   if (accessType === 'bus') {
@@ -443,6 +443,41 @@ function buildJRChainCta(segments) {
     type,
     allJR,
   };
+}
+
+/**
+ * segments から実態ベースの transportType を決定する。
+ * 主役交通（flight/新幹線/ferry）を優先し、目的地のローカルバス等は無視する。
+ * 優先順位: flight > shinkansen > ferry > rail_private > bus > rail
+ */
+function classifyTransport(segments) {
+  // 主役交通の判定にはlocal_bus/walk/rentalを除外
+  const mainSegs = segments.filter(s =>
+    s.type !== 'walk' && s.type !== 'rental' && s.type !== 'local_bus'
+  );
+  if (mainSegs.some(s => s.type === 'flight'))      return 'flight';
+  if (mainSegs.some(s => s.type === 'shinkansen'))  return 'shinkansen';
+  if (mainSegs.some(s => s.type === 'ferry'))       return 'ferry';
+  if (mainSegs.some(s => s.type === 'highway_bus')) return 'bus';
+  const hasPrivate = mainSegs.some(s =>
+    (s.type === 'rail_local' || s.type === 'rail_express') && !isJRSegment(s)
+  );
+  if (hasPrivate) return 'rail_private';
+  return 'rail';
+}
+
+/**
+ * finalAccess を表示すべきか判定する。
+ * JRのみで到達できるなら非表示、私鉄/バス/徒歩が含まれるなら表示。
+ */
+function shouldShowFinalAccessFromSegments(segments, jrChainCta) {
+  if (jrChainCta?.allJR) return false;
+  return segments.some(s => {
+    if (s.type === 'local_bus' || s.type === 'highway_bus') return true;
+    if (s.type === 'walk' && !/徒歩/.test(s.mode ?? '')) return false; // walkはmode次第
+    if ((s.type === 'rail_local' || s.type === 'rail_express') && !isJRSegment(s)) return true;
+    return false;
+  });
 }
 
 /**
@@ -650,16 +685,18 @@ export function buildTransportContext(departure, city) {
     : { type: city?.finalAccess ?? 'walk' };
   const repStation = city?.representativeStation ?? null;
 
-  // ⑩ JRチェーンCTA + 表示用ルート
+  // ⑩ segments ベースで transportType を再判定（BFS 由来の誤判定を補正）
+  const classifiedType = classifyTransport(segments);
+  const showFinalAccess = shouldShowFinalAccessFromSegments(segments, null);
+
+  // ⑪ JRチェーンCTA + 表示用ルート
   const jrChainCta = buildJRChainCta(segments);
-  // CTA の to を駅/市に正規化（観光スポット名が混入するケースを排除）
+  // CTA の to を駅/市に正規化（観光スポット名のみを排除）
   if (jrChainCta) {
     const cleanTo = jrChainCta.to?.replace(/駅$|空港$|港$/, '') ?? '';
-    const destName = city?.displayName || city?.name || '';
-    const station = repStation?.replace(/駅$/, '') ?? '';
-    // 目的地名・駅名と一致しない場合はrepresentativeStation or nameにフォールバック
-    if (cleanTo !== destName && cleanTo !== station && !destName.includes(cleanTo)) {
-      jrChainCta.to = repStation || destName;
+    const SPOT_PATTERN = /海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ/;
+    if (SPOT_PATTERN.test(cleanTo)) {
+      jrChainCta.to = repStation || city?.displayName || city?.name || jrChainCta.to;
     }
   }
   const displayRoute = buildDisplayRoute(departure, city, waypoints);
@@ -671,13 +708,14 @@ export function buildTransportContext(departure, city) {
   return {
     /* ── UI用データ（⑦ bestRoute / alternatives 形式） ── */
     bestRoute: {
-      transportType,
+      transportType: classifiedType,
       accessType,
       distanceKm,
       reason: selectionReason,
       segments,
       waypoints,
       finalAccess,
+      showFinalAccess,
       representativeStation: repStation,
       jrChainCta,
       displayRoute,

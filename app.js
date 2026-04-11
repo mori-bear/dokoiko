@@ -263,11 +263,10 @@ async function shareWithImage(canvas, city, departure, tc) {
 
   let text;
   if (chainCta) {
-    const from = clean(chainCta.from);
-    const to   = clean(chainCta.to);
-    text = `${departure}から${name}まで電車で行けるの知ってた？\n\n${from} → ${to}\n${prov}${hint ? `（${hint}）` : ''}\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
+    const to = clean(chainCta.to);
+    text = `${departure}から${name}って意外と近い\n${to}まで予約して行ける\n\nhttps://tabidokoiko.com`;
   } else {
-    text = `${departure}から${name}、意外と行けるらしい\n\n👇すぐルート出る\nhttps://tabidokoiko.com`;
+    text = `${departure}から${name}って意外と近い\n\nhttps://tabidokoiko.com`;
   }
 
   const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
