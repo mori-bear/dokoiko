@@ -393,10 +393,17 @@ function extractJRChains(segments) {
   return chains;
 }
 
-/** JRチェーンの中から最長（セグメント数）を採用する */
+/**
+ * JRチェーンの中から採用するチェーンを決定する。
+ * 先頭から始まる最初のチェーンを優先（出発→JR→私鉄の順を想定）。
+ * 先頭がJRでない場合は、最長チェーンにフォールバック。
+ */
 function pickMainJRChain(chains) {
   if (!chains.length) return null;
-  return chains.reduce((best, c) => c.length > best.length ? c : best, chains[0]);
+  // 先頭チェーンを基本採用、ただし明らかに短い（1segのみ）なら最長を使う
+  const first = chains[0];
+  const longest = chains.reduce((best, c) => c.length > best.length ? c : best, chains[0]);
+  return first.length >= longest.length * 0.5 ? first : longest;
 }
 
 /**

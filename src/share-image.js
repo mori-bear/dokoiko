@@ -24,9 +24,7 @@ export async function captureShareCard(city, departure, transportContext = null)
   // ルート1行（出発地 → 目的地駅）
   const best       = transportContext?.bestRoute;
   const repStation = city.representativeStation || city.displayName || city.name;
-  const ROUTE_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', limited: '🚃', jr: '🚃' };
-  const routeIcon  = best?.jrChainCta ? (ROUTE_ICON[best.jrChainCta.type] ?? '🚃') : '🚃';
-  const routeLine  = departure ? `${routeIcon} ${departure} → ${repStation}` : '';
+  const routeLine  = departure ? `${departure} → ${repStation}` : '';
 
   // CTA（2行構造: 区間 + 予約手段）
   const chainCta = best?.jrChainCta;
@@ -74,7 +72,7 @@ export async function captureShareCard(city, departure, transportContext = null)
 
   card.innerHTML = `
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
-    <div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
+    <div style="font-size:13px;color:#999;margin-bottom:20px;">${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
     ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:16px;">${escHtml(routeLine)}</div>` : ''}
     ${ctaLine1 || accessLine ? `<div style="margin-bottom:0;">
       ${ctaLine1 ? `<div style="font-size:18px;color:#e65100;font-weight:700;line-height:1.3;">${escHtml(ctaLine1)}</div>` : ''}

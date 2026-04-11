@@ -326,24 +326,14 @@ function buildCategoryBadge(city) {
    行き方ブロック（bestRoute + alternatives）
 ══════════════════════════════════════════════════════ */
 
-const TRANSPORT_ICON = { flight: '✈️', rail: '🚃', ferry: '⛴' };
-
 function buildRouteBlock(tc, departure, destLabel, city) {
   if (!tc?.bestRoute) return '';
 
   const best = tc.bestRoute;
-  const cta  = best.jrChainCta;
   const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
-  // アイコン: islandDisplayType があればそちらを優先
-  const MAIN_ICON = { flight: '✈️', shinkansen: '🚄', ferry: '⛴', highway_bus: '🚌', bus: '🚍', car: '🚗', jr: '🚃' };
-  const displayType = best.islandDisplayType;
-  const icon = displayType
-    ? (MAIN_ICON[displayType] ?? '🚃')
-    : cta ? (MAIN_ICON[cta.type] ?? '🚃') : '🚃';
-
-  // ルート行: ✈️ 東京 → 福岡（到着駅ベース）
-  const routeLine = `${icon} ${dr.from} → ${dr.to}`;
+  // ルート行: 東京 → 福岡（アイコンなし）
+  const routeLine = `${dr.from} → ${dr.to}`;
 
   // 理由文
   const reason = best.reason || tc.reason;
@@ -584,7 +574,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
       rentalHintHtml = `<div class="rental-hint">
-        <span class="rental-hint-label">🚗 車があると便利</span>
+        <span class="rental-hint-label">車があると便利</span>
         <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
            class="btn btn-rental btn--action-sm">レンタカーを探す</a>
       </div>`;
