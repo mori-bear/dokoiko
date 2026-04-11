@@ -362,11 +362,16 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       seenUrls.add(mainCta.cta.url);
       const gatewayCity = resolveGatewayCity(best, city);
       const accessText = chainCta.allJR ? '' : buildAccessText(best?.finalAccess, city, gatewayCity);
+      const accessHtml = accessText ? `
+        <details class="final-access-details">
+          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
+          <div class="final-access-body">${accessText}</div>
+        </details>` : '';
       actionHtml = `
         <div class="cta-action">
           <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
              class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>
-          ${accessText ? `<div class="cta-access-next">→ ${accessText}</div>` : ''}
+          ${accessHtml}
         </div>`;
     }
   }

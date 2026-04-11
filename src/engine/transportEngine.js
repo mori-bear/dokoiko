@@ -314,7 +314,8 @@ function extractSegments(stepGroups) {
     const from = m[1].trim();
     const to   = m[2].trim();
     const mode = m[3].trim();
-    const type = classifySegmentType(mode, from, to);
+    // stepType（BFS由来の正しい型）を優先参照
+    const type = classifySegmentType(mode, from, to, sg.stepType);
     const operator = sg.operator ?? null;
     segments.push({
       from,
@@ -328,7 +329,14 @@ function extractSegments(stepGroups) {
   return segments;
 }
 
-function classifySegmentType(mode, from, to) {
+function classifySegmentType(mode, from, to, stepType = null) {
+  // stepType が明示されている場合はそれを優先
+  if (stepType === 'shinkansen') return 'shinkansen';
+  if (stepType === 'flight')     return 'flight';
+  if (stepType === 'ferry')      return 'ferry';
+  if (stepType === 'bus')        return /高速/.test(mode) ? 'highway_bus' : 'local_bus';
+  if (stepType === 'car')        return 'rental';
+  // stepType === 'rail' の場合は mode で判定（特急/在来線/空港アクセス等）
   if (/新幹線/.test(mode))           return 'shinkansen';
   if (/飛行機|航空/.test(mode))      return 'flight';
   if (/フェリー/.test(mode))         return 'ferry';
@@ -337,16 +345,16 @@ function classifySegmentType(mode, from, to) {
   if (/マリンライナー/.test(mode))   return 'rail_express';
   if (/特急/.test(mode))             return 'rail_express';
   if (/徒歩/.test(mode))             return 'walk';
-  // 空港が絡む区間の判定（stepLabelのモード名が不正確なケースを補正）
+  // stepType が rail なら flight 誤分類を禁止（X駅→Y空港でも rail_local のまま）
+  if (stepType === 'rail')           return 'rail_local';
+  // stepType なしの従来ロジック（後方互換）
   if (/空港$/.test(to) && !/空港$/.test(from)) {
-    // X → Y空港: from地域とto地域が異なる場合はflight
-    // 同一地域のアクセス（バスで空港へ等）は除外
     const fromClean = from.replace(/駅$/, '');
     const toClean = to.replace(/空港$/, '');
     if (fromClean !== toClean && !toClean.startsWith(fromClean)) return 'flight';
   }
   if (/空港$/.test(from) && /空港$/.test(to)) return 'flight';
-  if (/空港$/.test(from) && /駅$/.test(to))   return 'rail_local'; // 空港→駅 = 空港アクセス
+  if (/空港$/.test(from) && /駅$/.test(to))   return 'rail_local';
   if (/バス/.test(mode))             return 'local_bus';
   return 'rail_local';
 }
@@ -395,15 +403,11 @@ function extractJRChains(segments) {
 
 /**
  * JRチェーンの中から採用するチェーンを決定する。
- * 先頭から始まる最初のチェーンを優先（出発→JR→私鉄の順を想定）。
- * 先頭がJRでない場合は、最長チェーンにフォールバック。
+ * 最長（セグメント数）を基本採用。同長なら先頭を優先。
  */
 function pickMainJRChain(chains) {
   if (!chains.length) return null;
-  // 先頭チェーンを基本採用、ただし明らかに短い（1segのみ）なら最長を使う
-  const first = chains[0];
-  const longest = chains.reduce((best, c) => c.length > best.length ? c : best, chains[0]);
-  return first.length >= longest.length * 0.5 ? first : longest;
+  return chains.reduce((best, c) => c.length > best.length ? c : best, chains[0]);
 }
 
 /**
