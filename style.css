@@ -1048,6 +1048,14 @@ body {
   line-height: 1.5;
 }
 
+.best-route-meta {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-sub);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
 .best-route-access {
   margin-top: 8px;
   font-size: 13px;

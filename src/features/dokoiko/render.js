@@ -332,19 +332,37 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   const best = tc.bestRoute;
   const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
-  // ルート行: 東京 → 福岡（アイコンなし）
+  // ルート行: 東京 → 福岡
   const routeLine = `${dr.from} → ${dr.to}`;
 
-  // 理由文
-  const reason = best.reason || tc.reason;
+  // 所要時間・乗換回数（stepGroupsから集計）
+  const stepGroups = tc.stepGroups ?? [];
+  const summary    = stepGroups.find(s => s.type === 'summary');
+  const totalMin   = stepGroups
+    .filter(s => s.type === 'step-group' && typeof s.duration === 'number')
+    .reduce((sum, s) => sum + s.duration, 0);
+  const transfers  = summary?.transfers ?? 0;
+
+  const parts = [];
+  if (totalMin > 0) parts.push(`約${formatMinutes(totalMin)}`);
+  parts.push(transfers === 0 ? '乗換なし' : `乗換${transfers}回`);
+  const metaLine = parts.join(' / ');
 
   return `
     <div class="route-block">
       <div class="best-route">
         <div class="best-route-line">${routeLine}</div>
-        <div class="best-route-reason">${reason}</div>
+        <div class="best-route-meta">${metaLine}</div>
       </div>
     </div>`;
+}
+
+/** 分 → "1時間30分" / "45分" 形式 */
+function formatMinutes(min) {
+  if (min < 60) return `${min}分`;
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return m === 0 ? `${h}時間` : `${h}時間${m}分`;
 }
 
 function buildCtaBlock(tc, transportLinks, city, departure) {
@@ -430,24 +448,24 @@ function buildAccessText(access, city, gatewayCity = null) {
     const isSame = trObj?.access === 'same';
     // A. midStation + transferStation（徒歩乗換）
     if (midClean && trClean && !isSame) {
-      return `${midClean} → ${trClean}で${company} → ${to}`;
+      return `${midClean}で${company}に乗換 → ${to}へ行く`;
     }
     // B. 同一駅乗換 → シンプル
     if (isSame) {
-      return `${company}で${to}`;
+      return `${company}で${to}へ行く`;
     }
     // C. transferStation
     if (trClean) {
-      return `${trClean}で${company} → ${to}`;
+      return `${trClean}で${company}に乗換 → ${to}へ行く`;
     }
     // D. シンプル
-    return `${company}で${to}`;
+    return `${company}で${to}へ行く`;
   }
   if (fa.type === 'bus') {
-    return `バスで${destName}`;
+    return `バスで${destName}へ行く`;
   }
   if (fa.type === 'car') {
-    return `車で${destName}`;
+    return `車で${destName}へ行く`;
   }
   return '';
 }
@@ -895,18 +913,18 @@ const CTA_TYPE_HINT = {
 
 /**
  * JRチェーンCTAから2行HTMLを生成する。
- * 1行目: 高松 → 米子（区間のみ）
- * 2行目: e5489（予約手段）
+ * 1行目: 米子まで予約する（動詞込みアクション）
+ * 2行目: e5489で予約（予約手段）
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const from = clean(chainCta.from);
   const to   = clean(chainCta.to);
   const provider = CTA_PROVIDER[providerType] ?? null;
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
-  const line2 = provider ? `${provider}${suffix}` : `予約${suffix}`;
-  return `<span class="cta-route">${from} → ${to}</span><br><span class="cta-provider">${line2}</span>`;
+  const line1 = `${to}まで予約する`;
+  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
+  return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
 }
 
 function buildMainCtaLabel(type) {
