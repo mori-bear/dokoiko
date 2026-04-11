@@ -332,37 +332,15 @@ function buildRouteBlock(tc, departure, destLabel, city) {
   const best = tc.bestRoute;
   const dr   = best.displayRoute ?? { from: departure, to: destLabel };
 
-  // ルート行: 東京 → 福岡
+  // ルート行のみ（時間・乗換情報は表示しない — Googleマップで確認するため）
   const routeLine = `${dr.from} → ${dr.to}`;
-
-  // 所要時間・乗換回数（stepGroupsから集計）
-  const stepGroups = tc.stepGroups ?? [];
-  const summary    = stepGroups.find(s => s.type === 'summary');
-  const totalMin   = stepGroups
-    .filter(s => s.type === 'step-group' && typeof s.duration === 'number')
-    .reduce((sum, s) => sum + s.duration, 0);
-  const transfers  = summary?.transfers ?? 0;
-
-  // 時間がある場合のみ表示、乗換ありなら補足
-  const metaLine = totalMin > 0
-    ? `約${formatMinutes(totalMin)}${transfers > 0 ? '・乗換あり' : ''}`
-    : '';
 
   return `
     <div class="route-block">
       <div class="best-route">
         <div class="best-route-line">${routeLine}</div>
-        <div class="best-route-meta">${metaLine}</div>
       </div>
     </div>`;
-}
-
-/** 分 → "1時間30分" / "45分" 形式 */
-function formatMinutes(min) {
-  if (min < 60) return `${min}分`;
-  const h = Math.floor(min / 60);
-  const m = min % 60;
-  return m === 0 ? `${h}時間` : `${h}時間${m}分`;
 }
 
 function buildCtaBlock(tc, transportLinks, city, departure) {
@@ -384,7 +362,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       const accessText = shouldShow ? buildAccessText(best?.finalAccess, city, gatewayCity) : '';
       const accessHtml = accessText ? `
         <details class="final-access-details">
-          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
+          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの乗り換え</summary>
           <div class="final-access-body">${accessText}</div>
         </details>` : '';
       actionHtml = `
