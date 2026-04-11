@@ -343,10 +343,10 @@ function buildRouteBlock(tc, departure, destLabel, city) {
     .reduce((sum, s) => sum + s.duration, 0);
   const transfers  = summary?.transfers ?? 0;
 
-  const parts = [];
-  if (totalMin > 0) parts.push(`約${formatMinutes(totalMin)}`);
-  parts.push(transfers === 0 ? '乗換なし' : `乗換${transfers}回`);
-  const metaLine = parts.join(' / ');
+  // 時間必須、乗換ありの場合のみ補足
+  const metaLine = totalMin > 0
+    ? `約${formatMinutes(totalMin)}${transfers > 0 ? '（乗換あり）' : ''}`
+    : (transfers > 0 ? '乗換あり' : '');
 
   return `
     <div class="route-block">
