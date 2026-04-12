@@ -625,7 +625,7 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
       rentalHintHtml = `<div class="rental-hint">
-        <span class="rental-hint-label">車があると便利</span>
+        <span class="rental-hint-label">レンタカー推奨エリア</span>
         <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
            class="btn btn-rental btn--action-sm">レンタカーを探す</a>
       </div>`;
@@ -1628,7 +1628,7 @@ function buildStayBlock(hotelLinks, city, stayType, stayCityName = null) {
 
   // 日帰りで遠い場合: 滞在提案メモ（時間表示なし）
   const longDaytripNote = isDaytrip && travelMins >= 150
-    ? `<p class="stay-note">日帰りだと少し遠め。ゆっくりするなら1泊もおすすめ。</p>`
+    ? `<p class="stay-note">日帰りだと距離がある。1泊するなら宿を確認。</p>`
     : '';
 
   const stayHint = buildStayHint(city);

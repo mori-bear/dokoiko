@@ -2155,8 +2155,8 @@ class Scorecard {
     const { buildTransportContext } = await import('../src/engine/transportEngine.js');
     const sc = new Scorecard('[8w] CTA駅名・finalAccess整合性');
 
-    // engine側SPOT_PATTERNと同期（実在駅名を含む温泉/海岸/湖/館/港は除外済み）
-    const SPOT_PATTERN = /海水浴|公園$|城跡|神宮$|大社$|古墳|観音|大仏$|大橋$|岬$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード/;
+    // engine側SPOT_PATTERNと完全同期（isKnownStationガードで実在駅名を保護）
+    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
     const DEPS_SAMPLE = ['東京', '大阪', '福岡'];
     let ctaSpotCount = 0, faAllJRCount = 0;
     const ctaSpotList = [], faAllJRList = [];

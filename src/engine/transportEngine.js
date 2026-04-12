@@ -349,12 +349,9 @@ function classifySegmentType(mode, from, to, stepType = null) {
   // stepType が rail なら flight 誤分類を禁止（X駅→Y空港でも rail_local のまま）
   if (stepType === 'rail')           return 'rail_local';
   // stepType なしの従来ロジック（後方互換）
-  if (/空港$/.test(to) && !/空港$/.test(from)) {
-    const fromClean = from.replace(/駅$/, '');
-    const toClean = to.replace(/空港$/, '');
-    if (fromClean !== toClean && !toClean.startsWith(fromClean)) return 'flight';
-  }
-  if (/空港$/.test(from) && /空港$/.test(to)) return 'flight';
+  // 注: 空港名を含むだけでflight判定しない（空港アクセス鉄道を誤検出するため）
+  // flight判定は stepType === 'flight' または mode に「飛行機|航空」を含む場合のみ
+  if (/空港$/.test(from) && /空港$/.test(to)) return 'flight'; // 空港→空港のみflight
   if (/空港$/.test(from) && /駅$/.test(to))   return 'rail_local';
   if (/バス/.test(mode))             return 'local_bus';
   return 'rail_local';
@@ -604,6 +601,10 @@ export function determineTransportType(departure, city, distKm = 0) {
 ══════════════════════════════════════════════════════ */
 
 export function buildTransportContext(departure, city) {
+  const destId = city?.id ?? 'unknown';
+  if (!departure) console.error('[transport] departure missing:', destId);
+  if (!city) console.error('[transport] city missing');
+
   /* ① 距離計算 */
   const depCoords  = DEPARTURE_COORDS[departure];
   const distanceKm = depCoords && city?.lat && city?.lng
@@ -676,6 +677,9 @@ export function buildTransportContext(departure, city) {
 
   /* ⑨ セグメント分解 */
   const segments = extractSegments(stepGroups);
+  if (!segments.length && !mapOnlyFallback) {
+    console.warn('[transport] segments empty:', destId, '@', departure);
+  }
   // 交通セグメントのみでwaypoints構築（徒歩・観光巡回を除外）
   const transportSegs = segments.filter(s => !['walk', 'local_bus'].includes(s.type) || /空港|港|駅/.test(s.to));
   const waypoints = transportSegs.length > 0
@@ -694,6 +698,9 @@ export function buildTransportContext(departure, city) {
 
   // ⑪ JRチェーンCTA + 表示用ルート
   const jrChainCta = buildJRChainCta(segments);
+  if (jrChainCta && !jrChainCta.to) {
+    console.error('[CTA] to missing:', destId, '@', departure);
+  }
   // CTA の to を駅/市に正規化（観光スポット名のみを排除）
   // 実在駅名（加賀温泉駅、松島海岸駅、角館駅、河口湖駅など）は除外
   if (jrChainCta) {
@@ -702,7 +709,8 @@ export function buildTransportContext(departure, city) {
     const destClean = (city?.displayName || city?.name || '').replace(/駅$|空港$|港$/, '');
     // 既にrepStationまたはdisplayNameと一致 → 正しい駅名なので補正不要
     const isKnownStation = cleanTo === repClean || cleanTo === destClean;
-    const SPOT_PATTERN = /海水浴|公園$|城跡|神宮$|大社$|古墳|観音|大仏$|大橋$|岬$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード/;
+    // 温泉/寺/神社/館/湖/港 等はisKnownStationガードで実在駅名を保護しつつ検出
+    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
     if (!isKnownStation && SPOT_PATTERN.test(cleanTo)) {
       console.warn('[CTA] 観光地名を検出・駅名に補正:', cleanTo, '→', repStation || city?.displayName || city?.name);
       jrChainCta.to = repStation || city?.displayName || city?.name || jrChainCta.to;

@@ -349,11 +349,11 @@ function bindLocationButton() {
         const city = nearestDeparture(pos.coords.latitude, pos.coords.longitude);
         setDeparture(city);
         btn.disabled    = false;
-        btn.textContent = '📍 今いる場所から探す';
+        btn.textContent = '今いる場所から探す';
       },
       () => {
         btn.disabled    = false;
-        btn.textContent = '📍 今いる場所から探す';
+        btn.textContent = '今いる場所から探す';
       },
       { timeout: 8000, maximumAge: 60000 },
     );
