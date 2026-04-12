@@ -57,6 +57,27 @@ function isWeak(dest) {
   return !!(dest.requiresCar && (dest.destType === 'mountain' || dest.destType === 'remote'));
 }
 
+/**
+ * 宿検索エリアを解決する（観光エリア粒度）。
+ *
+ * 優先順位:
+ *   1. 温泉名（城崎温泉、有馬温泉 etc.）→ そのまま使用
+ *   2. 島名（直島、石垣島 etc.）→ そのまま使用
+ *   3. hotelAreas のエリア名 → エリア名を使用
+ *   4. fallback: 都市名
+ */
+function resolveStayArea(dest) {
+  const name = dest.displayName || dest.name;
+  // 温泉名はそのまま（楽天で温泉名検索すると観光エリア粒度でヒット）
+  if (/温泉/.test(name)) return name;
+  // 島名はそのまま
+  if (dest.isIsland || dest.destType === 'island') return name;
+  // hotelAreas にエリア名がある場合
+  const area = lookupAreaById(dest.id);
+  if (area?.name) return area.name;
+  return name;
+}
+
 function lookupAreaById(destId) {
   const areaId = DEST_TO_AREA_ID[destId] ?? destId;
   return AREAS_BY_ID.get(areaId) ?? null;
@@ -101,6 +122,22 @@ function buildRakutenAffilUrl(destUrl) {
 }
 
 /**
+ * 楽天キーワード検索URL（エリア特化ページがない場合のフォールバック）
+ * 観光エリア名で直接検索し、都道府県レベルより精度の高い結果を返す
+ */
+function buildRakutenKeywordUrl(keyword) {
+  const destUrl = `https://travel.rakuten.co.jp/keyword/keyword.html?keyword=${encodeURIComponent(keyword)}`;
+  return buildRakutenAffilUrl(destUrl);
+}
+
+/** rakutenPath が都道府県レベル（粗粒度）かどうかを判定 */
+function isCoarseRakutenPath(path) {
+  if (!path) return true;
+  // /yado/hokkaido/ のような .html なしパスは都道府県レベル
+  return !path.includes('.html');
+}
+
+/**
  * じゃらん VC アフィリエイトリンク
  * rawJalanUrl は Shift-JIS 済み URL を使う（hotelAreas.json の jalanUrl）
  */
@@ -109,27 +146,47 @@ function buildJalanAffilUrl(rawJalanUrl) {
 }
 
 /**
- * 3段フォールバックで楽天URLを解決
+ * 3段フォールバック + キーワード検索で楽天URLを解決
+ *
+ * エリア特化ページ（.html）がある → そのまま使用
+ * 都道府県レベル（粗粒度）→ resolveStayArea でキーワード検索に切り替え
  */
 function resolveRakutenUrl(dest) {
   // Tier1: dest自身のエリア（weak でなければ優先）
   if (!isWeak(dest)) {
     const area = lookupAreaById(dest.id);
     const path = getRakutenPath(area, dest);
-    if (path) return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+    if (path && !isCoarseRakutenPath(path)) {
+      return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+    }
+    // 粗粒度 → キーワード検索で観光エリア粒度に
+    if (path) {
+      const stayArea = resolveStayArea(dest);
+      return buildRakutenKeywordUrl(stayArea);
+    }
   }
 
   // Tier2: fallbackCity
   if (dest.fallbackCity) {
     const fbArea = lookupAreaByName(dest.fallbackCity);
     const path = getRakutenPath(fbArea, null);
-    if (path) return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+    if (path && !isCoarseRakutenPath(path)) {
+      return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+    }
+    if (path) {
+      return buildRakutenKeywordUrl(dest.fallbackCity);
+    }
   }
 
   // Tier3: dest 自身のエリア（weak でも強制使用）
   const area = lookupAreaById(dest.id);
   const path = getRakutenPath(area, dest);
-  return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+  if (path && !isCoarseRakutenPath(path)) {
+    return buildRakutenAffilUrl(buildRakutenDestUrl(path));
+  }
+  // 最終フォールバック: キーワード検索
+  const stayArea = resolveStayArea(dest);
+  return buildRakutenKeywordUrl(stayArea);
 }
 
 /**
@@ -183,7 +240,9 @@ function buildNearbyHotelLinks(dest) {
   return nearby.map(area => {
     const rakutenPath = getRakutenPath(area, null);
     const rakutenUrl  = rakutenPath
-      ? buildRakutenAffilUrl(buildRakutenDestUrl(rakutenPath))
+      ? (isCoarseRakutenPath(rakutenPath)
+        ? buildRakutenKeywordUrl(area.name)
+        : buildRakutenAffilUrl(buildRakutenDestUrl(rakutenPath)))
       : null;
     const jalanUrl = area.jalanUrl ? buildJalanAffilUrl(area.jalanUrl) : null;
     if (!rakutenUrl && !jalanUrl) return null;
@@ -249,7 +308,12 @@ export function buildHotelLinks(dest) {
   if (dest.hubCity && dest.hubCity !== destName) {
     const hubArea        = lookupAreaByName(dest.hubCity);
     const hubRakutenPath = getRakutenPath(hubArea, null);
-    const hubRakutenUrl  = hubRakutenPath ? buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)) : null;
+    // hubCity でも粗粒度ならキーワード検索に切り替え
+    const hubRakutenUrl  = hubRakutenPath
+      ? (isCoarseRakutenPath(hubRakutenPath)
+        ? buildRakutenKeywordUrl(dest.hubCity)
+        : buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)))
+      : null;
     const hubJalanUrl    = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
     const links = [
       ...(hubRakutenUrl ? [{ type: 'rakuten', url: hubRakutenUrl }] : []),
@@ -276,7 +340,7 @@ export function buildHotelLinks(dest) {
 
   return {
     links,
-    stayCityName: destName,
+    stayCityName: resolveStayArea(dest),
     bestUrl:  links[0]?.url  ?? null,
     bestType: links[0]?.type ?? null,
   };
