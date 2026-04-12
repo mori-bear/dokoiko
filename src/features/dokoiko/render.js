@@ -414,15 +414,15 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   const orderB = `${ctaHtml}${mapGroup}`;   // B: 予約CTA → 地図
   const ctaOrder = state.ctaOrder === 'B' ? orderB : orderA;
 
-  // ⑤ 宿CTA（finalAccessの後・シェアの前）
+  // ⑤ 宿CTA（交通CTAの直後・主役級配置）
   const stayHtml = hotelLinks ? buildStaySection(hotelLinks, city, stayCityName, tc) : '';
 
-  // 順番固定: 地図 → 交通CTA → finalAccess → 宿 → シェア
+  // 順番固定: 地図 → 交通CTA → 宿CTA → finalAccess → シェア
   return `
     <div class="cta-block">
       ${ctaOrder}
-      ${accessHtml}
       ${stayHtml}
+      ${accessHtml}
       ${shareHtml}
     </div>`;
 }
@@ -745,11 +745,8 @@ function buildStayHint(city) {
 }
 
 /**
- * 宿泊セクション: 泊まる理由 + 宿CTA（楽天のみ）。
+ * 宿泊セクション: 泊まる理由 + 宿CTA（楽天のみ・主役級）。
  * daytrip 時は呼び出し元で showHotel=false により非表示。
- *
- * hasStay=true  → 「〇〇の宿を探す」
- * hasStay=false → 「△△の宿を探す（拠点）」
  */
 function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   if (!hotelLinks) return '';
@@ -758,28 +755,40 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   if (!rakuten) return '';
 
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
-  const hasStay = hotelLinks.hasStay !== false;
   const stayReason = hotelLinks.stayReason ?? null;
 
-  // 宿CTA文言
-  const btnLabel = hasStay
-    ? `${stayLabel}の宿を探す`
-    : `${stayLabel}の宿を探す（拠点）`;
+  // 宿CTA文言（「拠点」などの内部用語は出さない）
+  const btnLabel = `${stayLabel}の宿を探す`;
 
-  // 泊まる理由（1行）
-  const reasonHtml = stayReason
-    ? `<p class="stay-reason">${stayReason}</p>`
+  // 泊まる理由（2行: デメリット + メリット）
+  const nudge = buildStayNudge(city);
+  const reasonHtml = (stayReason || nudge)
+    ? `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`
     : '';
 
   return `
-    <div class="stay-section">
+    <div class="stay-section stay-section--primary">
       ${reasonHtml}
       <div class="stay-buttons">
         <a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-           class="btn btn--stay-rakuten btn--action" data-track="hotel_click">${btnLabel}</a>
+           class="btn btn--stay-primary" data-track="hotel_click">${btnLabel}</a>
       </div>
     </div>
   `;
+}
+
+/**
+ * 「今じゃなくていい」を潰すナッジテキスト。
+ * 距離・destTypeに基づいて1行返す。
+ */
+function buildStayNudge(city) {
+  const dt = city?.destType;
+  if (dt === 'onsen')    return '1泊でちょうどいい距離';
+  if (dt === 'island')   return '1泊するとゆっくり回れる';
+  if (dt === 'mountain' || dt === 'remote') return '1泊するとゆっくり回れる';
+  if (dt === 'city')     return '週末でも行ける距離';
+  if (dt === 'sight')    return '1泊でちょうどいい距離';
+  return null;
 }
 
 /* ── 交通ブロック ── */
