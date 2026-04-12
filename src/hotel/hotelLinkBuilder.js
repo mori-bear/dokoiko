@@ -92,16 +92,17 @@ const STAY_LABEL_SPOT = /川$|山$|岳$|峰$|滝$|湖$|渓谷|海岸|岬$|ロー
 
 function resolveStayLabel(rawName, dest) {
   if (!rawName) return dest?.displayName || dest?.name || '';
+  // 括弧付き名前は括弧前の部分で判定（"飛騨高山（北アルプス側）" → "飛騨高山"）
+  const coreName = rawName.replace(/（.*）$/, '');
   // ホワイトリスト登録済み温泉名はそのまま許可
-  if (ONSEN_STAY_AREAS.has(rawName)) return rawName;
-  // 観光地パターンに一致しなければそのまま
-  if (!STAY_LABEL_SPOT.test(rawName)) return rawName;
-  // 観光地名 → 駅名 or fallbackCity に変換
+  if (ONSEN_STAY_AREAS.has(coreName) || ONSEN_STAY_AREAS.has(rawName)) return coreName;
+  // 観光地パターンに一致しなければそのまま（括弧除去後で判定）
+  if (!STAY_LABEL_SPOT.test(coreName)) return coreName;
+  // 観光地名 → 駅名 or fallbackCity に変換し、元の観光地名を補足表示
   const clean = (n) => String(n ?? '').replace(/駅$/, '');
-  const rep = clean(dest?.representativeStation);
-  if (rep) return rep;
-  if (dest?.fallbackCity) return dest.fallbackCity;
-  return dest?.displayName || dest?.name || rawName;
+  const base = clean(dest?.representativeStation) || dest?.fallbackCity || dest?.displayName || dest?.name || coreName;
+  if (base === coreName) return base;
+  return `${base}（${coreName}）`;
 }
 
 function lookupAreaById(destId) {

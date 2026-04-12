@@ -2268,15 +2268,17 @@ class Scorecard {
       const h = buildHotelLinks(dest);
       const label = h.stayCityName;
       // ホワイトリスト登録済み温泉名はスキップ（正規表現ではなくhotelAreas照合）
-      const isOnsenArea = HOTEL_AREAS_RAW.some(a => a.name === label && a.name.includes('温泉'));
-      if (label && isOnsenArea) continue;
-      if (!label || !STAY_SPOT.test(label)) continue;
+      // 括弧付き補足 "中村（四万十川）" → ベース部分 "中村" のみチェック
+      const baseLabel = label?.replace(/（.*）$/, '') ?? '';
+      const isOnsenArea = HOTEL_AREAS_RAW.some(a => a.name === baseLabel && a.name.includes('温泉'));
+      if (baseLabel && isOnsenArea) continue;
+      if (!baseLabel || !STAY_SPOT.test(baseLabel)) continue;
       // representativeStation（駅名クリーン）と一致 → 実在市名なのでOK
       const repClean = (dest.representativeStation ?? '').replace(/駅$/, '');
-      if (label === repClean) continue;
-      // hotelAreas にエリアとして存在 かつ hubCity === label → 市名として信頼
-      if (label === dest.hubCity) {
-        const area = HOTEL_AREAS_RAW.find(a => a.name === label);
+      if (baseLabel === repClean) continue;
+      // hotelAreas にエリアとして存在 かつ hubCity === baseLabel → 市名として信頼
+      if (baseLabel === dest.hubCity) {
+        const area = HOTEL_AREAS_RAW.find(a => a.name === baseLabel);
         if (area) continue;
       }
       spotLabel++;
