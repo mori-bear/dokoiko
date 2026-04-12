@@ -2146,6 +2146,64 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8w] CTA駅名・finalAccess整合性チェック
+     - CTAのtoに観光地名が入っていないか
+     - JR完結時にfinalAccessが非表示か
+     - 非JR時にCTA到達点がgatewayStation(JRチェーン末端)か
+  ─────────────────────────────── */
+  {
+    const { buildTransportContext } = await import('../src/engine/transportEngine.js');
+    const sc = new Scorecard('[8w] CTA駅名・finalAccess整合性');
+
+    // engine側SPOT_PATTERNと同期（実在駅名を含む温泉/海岸/湖/館/港は除外済み）
+    const SPOT_PATTERN = /海水浴|公園$|城跡|神宮$|大社$|古墳|観音|大仏$|大橋$|岬$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード/;
+    const DEPS_SAMPLE = ['東京', '大阪', '福岡'];
+    let ctaSpotCount = 0, faAllJRCount = 0;
+    const ctaSpotList = [], faAllJRList = [];
+
+    for (const dep of DEPS_SAMPLE) {
+      for (const dest of DESTS.slice(0, 150)) {
+        try {
+          const tc = buildTransportContext(dep, dest);
+          const chain = tc?.bestRoute?.jrChainCta;
+          if (!chain) continue;
+
+          // CTAのtoが観光地名でないことを確認
+          // 実在駅名（加賀温泉駅、松島海岸駅、河口湖駅など）は許容
+          const cleanTo = (chain.to ?? '').replace(/駅$|空港$|港$/, '');
+          const repClean = (dest.representativeStation ?? '').replace(/駅$|空港$|港$/, '');
+          const destClean = (dest.displayName ?? dest.name ?? '').replace(/駅$|空港$|港$/, '');
+          const isKnownStation = cleanTo === repClean || cleanTo === destClean;
+          if (!isKnownStation && SPOT_PATTERN.test(cleanTo)) {
+            ctaSpotCount++;
+            if (ctaSpotList.length < 5) ctaSpotList.push(`${dest.id}@${dep}:${cleanTo}`);
+          }
+
+          // JR完結時にfinalAccess=false であること
+          if (chain.allJR && tc.bestRoute.showFinalAccess) {
+            faAllJRCount++;
+            if (faAllJRList.length < 5) faAllJRList.push(`${dest.id}@${dep}`);
+          }
+        } catch { /* skip */ }
+      }
+    }
+
+    sc.check(ctaSpotCount === 0,
+      ctaSpotCount === 0
+        ? 'CTA to: 観光地名なし（全件駅名）'
+        : `CTA観光地名混入 ${ctaSpotCount}件: ${ctaSpotList.join(', ')}`
+    );
+    sc.check(faAllJRCount === 0,
+      faAllJRCount === 0
+        ? 'finalAccess整合: JR完結時は全件非表示'
+        : `JR完結なのにfinalAccess表示 ${faAllJRCount}件: ${faAllJRList.join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');

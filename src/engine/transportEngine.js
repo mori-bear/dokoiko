@@ -81,7 +81,8 @@ export function validateRoute(type, city, distKm = 0, departure = '') {
 
     case 'flight':
       if (city?.region === OKINAWA) return true;
-      if (!city?.airportGateway && !city?.flightHub && city?.hasDirectFlight !== true) return false;
+      // DB照合のみ（hasDirectFlight依存を排除）
+      if (!city?.airportGateway && !city?.flightHub) return false;
       if (distKm > 0 && distKm < FLIGHT_MIN_KM) return false;
       if (departure && city?.airportGateway && !hasFlightInDB(departure, city.airportGateway)) return false;
       return true;
@@ -448,7 +449,7 @@ function buildJRChainCta(segments) {
 /**
  * segments から実態ベースの transportType を決定する。
  * 主役交通（flight/新幹線/ferry）を優先し、目的地のローカルバス等は無視する。
- * 優先順位: flight > shinkansen > ferry > rail_private > bus > rail
+ * 優先順位: flight > shinkansen > limited > ferry > bus > rail_private > rail
  */
 function classifyTransport(segments) {
   // 主役交通の判定にはlocal_bus/walk/rentalを除外
@@ -694,10 +695,16 @@ export function buildTransportContext(departure, city) {
   // ⑪ JRチェーンCTA + 表示用ルート
   const jrChainCta = buildJRChainCta(segments);
   // CTA の to を駅/市に正規化（観光スポット名のみを排除）
+  // 実在駅名（加賀温泉駅、松島海岸駅、角館駅、河口湖駅など）は除外
   if (jrChainCta) {
     const cleanTo = jrChainCta.to?.replace(/駅$|空港$|港$/, '') ?? '';
-    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
-    if (SPOT_PATTERN.test(cleanTo)) {
+    const repClean = repStation?.replace(/駅$|空港$|港$/, '') ?? '';
+    const destClean = (city?.displayName || city?.name || '').replace(/駅$|空港$|港$/, '');
+    // 既にrepStationまたはdisplayNameと一致 → 正しい駅名なので補正不要
+    const isKnownStation = cleanTo === repClean || cleanTo === destClean;
+    const SPOT_PATTERN = /海水浴|公園$|城跡|神宮$|大社$|古墳|観音|大仏$|大橋$|岬$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード/;
+    if (!isKnownStation && SPOT_PATTERN.test(cleanTo)) {
+      console.warn('[CTA] 観光地名を検出・駅名に補正:', cleanTo, '→', repStation || city?.displayName || city?.name);
       jrChainCta.to = repStation || city?.displayName || city?.name || jrChainCta.to;
     }
   }

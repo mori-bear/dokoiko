@@ -378,13 +378,18 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   if (chainCta && !tc?.mapOnlyFallback && !suppressBooking) {
     const gatewayCity = resolveGatewayCity(best, city);
     const shouldShow = best?.showFinalAccess !== false && !chainCta.allJR;
-    const accessText = shouldShow ? buildAccessText(best?.finalAccess, city, gatewayCity) : '';
-    if (accessText) {
-      accessHtml = `
-        <details class="final-access-details">
-          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
-          <div class="final-access-body">${accessText}</div>
-        </details>`;
+    if (shouldShow) {
+      // セグメントベースの具体ルート（非JRセグメントを抽出）
+      const segmentAccess = buildSegmentAccessText(best?.segments, city);
+      // fallback: finalAccessオブジェクトから生成
+      const accessText = segmentAccess || buildAccessText(best?.finalAccess, city, gatewayCity);
+      if (accessText) {
+        accessHtml = `
+          <details class="final-access-details">
+            <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
+            <div class="final-access-body">${accessText}</div>
+          </details>`;
+      }
     }
   }
 
@@ -454,6 +459,43 @@ function buildAccessText(access, city, gatewayCity = null) {
     return `車で${destName}へ行く`;
   }
   return '';
+}
+
+/**
+ * セグメント配列からfinalAccess用の具体ルートテキストを生成する。
+ * JRセグメントは除外し、私鉄・バス・フェリー等のみ表示。
+ * 具体的な「from → to（手段）」形式で返す。
+ */
+function buildSegmentAccessText(segments, city) {
+  if (!segments?.length) return '';
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  // 非JR・非walkの末端セグメントを抽出
+  const accessSegs = segments.filter(s => {
+    if (s.type === 'walk') return false;
+    if (s.type === 'shinkansen') return false;
+    if (s.type === 'flight') return false;
+    // JRセグメント（rail_local/rail_express でJR系）は除外
+    if ((s.type === 'rail_local' || s.type === 'rail_express') && isJRSegmentFromMode(s)) return false;
+    return true;
+  });
+  if (!accessSegs.length) return '';
+  const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', rental: 'レンタカー' };
+  return accessSegs.map(s => {
+    const from = clean(s.from);
+    const to = clean(s.to);
+    const mode = MODE_LABEL[s.type] || s.mode || '乗換';
+    return `${from} → ${to}（${mode}）`;
+  }).join(' → ');
+}
+
+/** セグメントのmode文字列からJR系か判定（render側用・簡易版） */
+function isJRSegmentFromMode(seg) {
+  const PRIVATE = /近鉄|南海|小田急|東武|西武|京王|京急|京成|京阪|阪急|阪神|名鉄|相鉄|東急|えちぜん|えちご|富山地方|長野電鉄/;
+  if (seg.operator && /^JR/.test(seg.operator)) return true;
+  const mode = seg.mode ?? '';
+  if (PRIVATE.test(mode)) return false;
+  if (/^JR/.test(mode) || /マリンライナー/.test(mode) || /特急/.test(mode)) return true;
+  return true; // デフォルトはJR扱い
 }
 
 /** 路線名から鉄道会社名を抽出する（例: 近鉄吉野線 → 近鉄） */
@@ -782,7 +824,7 @@ function buildStepsBlock(links, departure, destLabel, city = null) {
   const destMapHtml = destMapUrl
     ? `<div class="dest-map-row">
          <a href="${destMapUrl}" target="_blank" rel="noopener noreferrer"
-            class="btn btn-maps">地図で見る</a>
+            class="btn btn-maps">現地の場所を見る</a>
        </div>`
     : '';
 
@@ -899,8 +941,8 @@ const CTA_TYPE_HINT = {
 
 /**
  * JRチェーンCTAから2行HTMLを生成する。
- * 1行目: 米子まで予約する（動詞込みアクション）
- * 2行目: e5489で予約（予約手段）
+ * allJR → 最終目的地まで予約する
+ * 非JR含む → gatewayStation（JRチェーン末端）まで予約する + 「一部別手段あり」
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
@@ -909,7 +951,9 @@ function buildChainCtaHtml(chainCta, providerType = null) {
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
   const line1 = `${to}まで予約する`;
-  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
+  const line2 = chainCta.allJR
+    ? (provider ? `${provider}で予約${suffix}` : `予約する${suffix}`)
+    : (provider ? `${provider}で予約（一部別手段あり）` : `予約する（一部別手段あり）`);
   return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
 }
 
@@ -1063,8 +1107,9 @@ function buildRouteSummary(departure, destLabel, city, routeSteps = null) {
 
 function buildDestMapUrl(city) {
   if (!city) return null;
-  // 緯度経度ではなく地名で検索する（座標リンクは意図しない場所を示すことがある）
-  const name = city.displayName || city.name || '';
+  // 目的地の優先順位: 観光スポット → 宿エリア → 駅名 → 都市名
+  const spot = city.spots?.[0] ?? null;
+  const name = spot || city.displayName || city.name || '';
   return name ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}` : null;
 }
 

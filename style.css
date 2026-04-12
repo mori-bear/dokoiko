@@ -1102,6 +1102,7 @@ body {
 }
 
 .cta-action {
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -1125,7 +1126,7 @@ body {
 }
 
 .final-access-details {
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 12px;
   color: #666;
 }
