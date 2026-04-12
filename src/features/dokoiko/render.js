@@ -29,7 +29,6 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${buildRouteBlock(tc, departure, destLabel, city)}
         ${buildCtaBlock(tc, transportLinks, city, departure)}
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
-        <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -475,17 +474,18 @@ function buildAccessText(access, city, gatewayCity = null) {
 function buildSegmentAccessText(segments, city) {
   if (!segments?.length) return '';
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  // 非JR・非walkの末端セグメントを抽出
+  // 非JR区間を抽出（ferry/flightも含む — CTA対象外の区間を表示）
   const accessSegs = segments.filter(s => {
     if (s.type === 'walk') return false;
     if (s.type === 'shinkansen') return false;
-    if (s.type === 'flight') return false;
+    // ferry/flight は finalAccess に含める（CTAから分離された区間）
+    if (s.type === 'ferry' || s.type === 'flight') return true;
     // JRセグメント（rail_local/rail_express でJR系）は除外
     if ((s.type === 'rail_local' || s.type === 'rail_express') && isJRSegmentFromMode(s)) return false;
     return true;
   });
   if (!accessSegs.length) return '';
-  const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', rental: 'レンタカー' };
+  const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', flight: '飛行機', rental: 'レンタカー' };
   const steps = accessSegs
     .filter(s => {
       // from===to や徒歩すぐ等の無意味ステップを除外
@@ -957,8 +957,11 @@ const CTA_TYPE_HINT = {
 
 /**
  * JRチェーンCTAから2行HTMLを生成する。
- * allJR → 最終目的地まで予約する
- * 非JR含む → gatewayStation（JRチェーン末端）まで予約する + 「一部別手段あり」
+ *
+ * transport.type別ルール:
+ *   allJR        → ${to}まで予約する / e5489で予約（新幹線）
+ *   mixed(JR+他) → ${gatewayStation}まで予約する / e5489で予約（${gatewayStation}まで → フェリーで${dest}）
+ *   nonJrOnly    → 公式サイトを見る / Skyscanner or フェリー予約
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
@@ -966,10 +969,27 @@ function buildChainCtaHtml(chainCta, providerType = null) {
   const provider = CTA_PROVIDER[providerType] ?? null;
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
   const suffix = hint ? `（${hint}）` : '';
+
+  // ① nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）
+  if (chainCta.nonJrOnly) {
+    const line1 = `${to}の予約サイトを見る`;
+    const line2 = provider ? `${provider}で確認${suffix}` : `公式サイトで確認${suffix}`;
+    return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
+  }
+
+  // ② mixed（JR + フェリー/飛行機）
+  if (chainCta.nonJrType) {
+    const nonJrLabel = chainCta.nonJrType === 'flight' ? '飛行機' : 'フェリー';
+    const nonJrDest  = clean(chainCta.nonJrDest ?? '');
+    const line1 = `${to}まで予約する`;
+    const subDetail = nonJrDest ? `${to}まで → ${nonJrLabel}で${nonJrDest}` : `${to}から${nonJrLabel}に乗換`;
+    const line2 = provider ? `${provider}で予約（${subDetail}）` : `予約する（${subDetail}）`;
+    return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
+  }
+
+  // ③ allJR
   const line1 = `${to}まで予約する`;
-  const line2 = chainCta.allJR
-    ? (provider ? `${provider}で予約${suffix}` : `予約する${suffix}`)
-    : (provider ? `${provider}で予約（一部別手段あり）` : `予約する（一部別手段あり）`);
+  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
   return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
 }
 

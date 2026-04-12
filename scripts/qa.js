@@ -2158,8 +2158,8 @@ class Scorecard {
     // engine側SPOT_PATTERNと完全同期（isKnownStationガードで実在駅名を保護）
     const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
     const DEPS_SAMPLE = ['東京', '大阪', '福岡'];
-    let ctaSpotCount = 0, faAllJRCount = 0;
-    const ctaSpotList = [], faAllJRList = [];
+    let ctaSpotCount = 0, faAllJRCount = 0, mixedNoFA = 0, ferryJrMix = 0, noGateway = 0;
+    const ctaSpotList = [], faAllJRList = [], mixedNoFAList = [], ferryJrMixList = [], noGatewayList = [];
 
     for (const dep of DEPS_SAMPLE) {
       for (const dest of DESTS.slice(0, 150)) {
@@ -2184,6 +2184,24 @@ class Scorecard {
             faAllJRCount++;
             if (faAllJRList.length < 5) faAllJRList.push(`${dest.id}@${dep}`);
           }
+
+          // mixed（JR+ferry/flight）時にfinalAccessが表示されること
+          if (chain.nonJrType && !tc.bestRoute.showFinalAccess) {
+            mixedNoFA++;
+            if (mixedNoFAList.length < 5) mixedNoFAList.push(`${dest.id}@${dep}`);
+          }
+
+          // ferry型CTAなのにe5489表示 → 異常（nonJrOnlyのはず）
+          if (chain.type === 'ferry' && !chain.nonJrOnly && !chain.nonJrType) {
+            ferryJrMix++;
+            if (ferryJrMixList.length < 5) ferryJrMixList.push(`${dest.id}@${dep}`);
+          }
+
+          // gatewayStation（chain.to）が空でないこと
+          if (!chain.to) {
+            noGateway++;
+            if (noGatewayList.length < 5) noGatewayList.push(`${dest.id}@${dep}`);
+          }
         } catch { /* skip */ }
       }
     }
@@ -2197,6 +2215,16 @@ class Scorecard {
       faAllJRCount === 0
         ? 'finalAccess整合: JR完結時は全件非表示'
         : `JR完結なのにfinalAccess表示 ${faAllJRCount}件: ${faAllJRList.join(', ')}`
+    );
+    sc.check(mixedNoFA === 0,
+      mixedNoFA === 0
+        ? 'mixed整合: JR+ferry/flight時はfinalAccess表示'
+        : `mixedなのにfinalAccess非表示 ${mixedNoFA}件: ${mixedNoFAList.join(', ')}`
+    );
+    sc.check(noGateway === 0,
+      noGateway === 0
+        ? 'gatewayStation: 全件存在'
+        : `gatewayStation欠損 ${noGateway}件: ${noGatewayList.join(', ')}`
     );
 
     sc.print();

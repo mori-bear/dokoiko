@@ -413,25 +413,43 @@ function pickMainJRChain(chains) {
  * flight / ferry は別ロジック。bus/car はCTAなし。
  */
 function buildJRChainCta(segments) {
-  // flight は単独CTA（JRチェーン対象外）
-  const flight = segments.find(s => s.type === 'flight');
-  if (flight) return { from: flight.from, to: flight.to, type: 'flight' };
-
-  // ferry は単独CTA
-  const ferry = segments.find(s => s.type === 'ferry');
-  if (ferry) return { from: ferry.from, to: ferry.to, type: 'ferry' };
-
-  // 交通セグメント（walk除外）
   const transportSegs = segments.filter(s => s.type !== 'walk');
   if (!transportSegs.length) return null;
 
-  // 全セグメントがJR → 最終目的地まで拡張
-  const allJR = transportSegs.every(s => isJRSegment(s));
+  // flight/ferryの有無を確認
+  const flight = segments.find(s => s.type === 'flight');
+  const ferry  = segments.find(s => s.type === 'ferry');
 
+  // JRチェーンを抽出
   const chains = extractJRChains(segments);
   const mainChain = pickMainJRChain(chains);
-  if (!mainChain) return null;
 
+  // flight/ferry がある場合でもJRチェーンがあればJR CTAを優先
+  // → ferry/flightはfinalAccessに分離（ユーザーが「どこまでJRで行けるか」を明示）
+  if ((flight || ferry) && mainChain?.length) {
+    const hasShinkansen = mainChain.some(s => s.type === 'shinkansen');
+    const hasLimited    = mainChain.some(s => s.type === 'rail_express');
+    const type = hasShinkansen ? 'shinkansen' : hasLimited ? 'limited' : 'jr';
+    // 非JR区間の情報を付与（CTA補足テキスト用）
+    const nonJrType = flight ? 'flight' : 'ferry';
+    const nonJrDest = flight ? flight.to : ferry.to;
+    return {
+      from: mainChain[0].from,
+      to:   mainChain[mainChain.length - 1].to,
+      type,
+      allJR: false,
+      nonJrType,
+      nonJrDest,
+    };
+  }
+
+  // flight/ferryのみ（JRチェーンなし）→ 非JR単独CTA
+  if (flight) return { from: flight.from, to: flight.to, type: 'flight', allJR: false, nonJrOnly: true };
+  if (ferry)  return { from: ferry.from,  to: ferry.to,  type: 'ferry',  allJR: false, nonJrOnly: true };
+
+  // JRのみルート
+  if (!mainChain) return null;
+  const allJR = transportSegs.every(s => isJRSegment(s));
   const hasShinkansen = mainChain.some(s => s.type === 'shinkansen');
   const hasLimited    = mainChain.some(s => s.type === 'rail_express');
   const type = hasShinkansen ? 'shinkansen' : hasLimited ? 'limited' : 'jr';
@@ -468,13 +486,17 @@ function classifyTransport(segments) {
 
 /**
  * finalAccess を表示すべきか判定する。
- * JRのみで到達できるなら非表示、私鉄/バス/徒歩が含まれるなら表示。
+ * JRのみで到達できるなら非表示。
+ * フェリー/飛行機がJRチェーンと共存する場合（mixed）も表示する。
  */
 function shouldShowFinalAccessFromSegments(segments, jrChainCta) {
   if (jrChainCta?.allJR) return false;
+  // mixed（JR + ferry/flight）の場合は必ず表示
+  if (jrChainCta?.nonJrType) return true;
   return segments.some(s => {
     if (s.type === 'local_bus' || s.type === 'highway_bus') return true;
-    if (s.type === 'walk' && !/徒歩/.test(s.mode ?? '')) return false; // walkはmode次第
+    if (s.type === 'ferry') return true;
+    if (s.type === 'walk' && !/徒歩/.test(s.mode ?? '')) return false;
     if ((s.type === 'rail_local' || s.type === 'rail_express') && !isJRSegment(s)) return true;
     return false;
   });
@@ -694,10 +716,10 @@ export function buildTransportContext(departure, city) {
 
   // ⑩ segments ベースで transportType を再判定（BFS 由来の誤判定を補正）
   const classifiedType = classifyTransport(segments);
-  const showFinalAccess = shouldShowFinalAccessFromSegments(segments, null);
 
-  // ⑪ JRチェーンCTA + 表示用ルート
+  // ⑪ JRチェーンCTA + 表示用ルート（showFinalAccessはjrChainCta構築後に判定）
   const jrChainCta = buildJRChainCta(segments);
+  const showFinalAccess = shouldShowFinalAccessFromSegments(segments, jrChainCta);
   if (jrChainCta && !jrChainCta.to) {
     console.error('[CTA] to missing:', destId, '@', departure);
   }
