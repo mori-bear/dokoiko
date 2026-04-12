@@ -1294,10 +1294,10 @@ body {
 
 /* 宿CTA 2カラムグリッド（楽天・じゃらん同列） */
 .stay-section-heading {
-  font-size: 12px;
-  color: var(--text-sub);
-  margin: 0 0 8px;
-  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px;
 }
 
 .stay-dual-grid {
@@ -1313,7 +1313,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 14px 10px 12px;
+  padding: 16px 10px 14px;
   text-align: center;
   font-size: 14px;
   font-weight: 700;
@@ -1323,18 +1323,32 @@ body {
   border: 1.5px solid #ddd;
   border-radius: 10px;
   text-decoration: none;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 .btn--stay-dual:hover {
-  border-color: #999;
-  background: #f5f5f5;
+  border-color: #bbb;
 }
 
-.stay-btn-sub {
+/* 楽天: わずかに影を強くし無意識の優先度を上げる */
+.btn--stay-rakuten-dual {
+  background: #fbfbfb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.btn--stay-rakuten-dual:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* じゃらん: 完全フラット */
+.btn--stay-jalan-dual {
+  background: #fafafa;
+  box-shadow: none;
+}
+
+.stay-btn-brand {
   display: block;
   font-size: 11px;
   font-weight: 400;
-  color: #888;
+  color: #999;
   margin-top: 4px;
 }
 

@@ -747,7 +747,7 @@ function buildStayHint(city) {
 
 /**
  * 宿泊セクション: 泊まる理由 + 楽天・じゃらん同列2カラムCTA。
- * daytrip 時は呼び出し元で showHotel=false により非表示。
+ * 補足テキストなし。ブランド名のみ。考えさせないUI。
  */
 function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   if (!hotelLinks) return '';
@@ -758,25 +758,23 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const stayReason = hotelLinks.stayReason ?? null;
-
-  // 泊まる理由（2行: 事実 + 感情）
   const nudge = buildStayNudge(city);
+
   const reasonHtml = (stayReason || nudge)
     ? `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`
     : '';
 
-  // 楽天・じゃらん同列2カラム（完全同サイズ）
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual" data-track="rakuten_click">${stayLabel}の宿を探す<span class="stay-btn-sub">掲載数が多い</span></a>` : '',
+                  class="btn btn--stay-dual btn--stay-rakuten-dual" data-track="rakuten_click">${stayLabel}の宿を探す<span class="stay-btn-brand">楽天</span></a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual" data-track="jalan_click">${stayLabel}の宿を探す<span class="stay-btn-sub">口コミが豊富</span></a>` : '',
+                  class="btn btn--stay-dual btn--stay-jalan-dual" data-track="jalan_click">${stayLabel}の宿を探す<span class="stay-btn-brand">じゃらん</span></a>` : '',
   ].filter(Boolean).join('');
 
   return `
     <div class="stay-section stay-section--primary">
       ${reasonHtml}
-      <p class="stay-section-heading">おすすめの宿予約サイト</p>
+      <p class="stay-section-heading">宿を探す</p>
       <div class="stay-dual-grid">${buttons}</div>
     </div>
   `;
