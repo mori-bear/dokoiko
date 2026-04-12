@@ -809,13 +809,13 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
  */
 function buildStayNudge(city) {
   const dt = city?.destType;
-  if (dt === 'onsen')    return 'せっかくなら1泊して楽しみたい場所';
-  if (dt === 'island')   return '時間を気にせずゆっくり回りたい';
-  if (dt === 'mountain' || dt === 'remote') return '時間を気にせずゆっくり回りたい';
-  if (dt === 'city')     return '1泊でちょうどいい旅';
-  if (dt === 'sight')    return 'せっかくなら1泊して楽しみたい場所';
-  if (dt === 'peninsula') return '時間を気にせずゆっくり回りたい';
-  return '1泊でちょうどいい旅';
+  if (dt === 'onsen')    return '1泊するとちょうどいい距離';
+  if (dt === 'island')   return '日帰りだともったいない';
+  if (dt === 'mountain' || dt === 'remote') return 'ゆっくり回るなら1泊がちょうどいい';
+  if (dt === 'city')     return '1泊するとちょうどいい距離';
+  if (dt === 'sight')    return '日帰りだともったいない';
+  if (dt === 'peninsula') return 'ゆっくり回るなら1泊がちょうどいい';
+  return '1泊するとちょうどいい距離';
 }
 
 /* ── 交通ブロック ── */

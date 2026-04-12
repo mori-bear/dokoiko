@@ -2249,6 +2249,28 @@ class Scorecard {
         : `nonJrOnlyなのにJR型 ${nonJrBadType}件: ${nonJrBadList.join(', ')}`
     );
 
+    // ferry/flight CTA で from/to が空でないことを確認
+    let emptyFromTo = 0;
+    const emptyFromToList = [];
+    for (const dep of DEPS_SAMPLE) {
+      for (const dest of DESTS.slice(0, 150)) {
+        try {
+          const tc = buildTransportContext(dep, dest);
+          const chain = tc?.bestRoute?.jrChainCta;
+          if (!chain) continue;
+          if ((chain.type === 'flight' || chain.type === 'ferry') && (!chain.from || !chain.to)) {
+            emptyFromTo++;
+            if (emptyFromToList.length < 5) emptyFromToList.push(`${dest.id}@${dep}`);
+          }
+        } catch { /* skip */ }
+      }
+    }
+    sc.check(emptyFromTo === 0,
+      emptyFromTo === 0
+        ? 'ferry/flight CTA: from/to全件存在'
+        : `ferry/flight from/to欠損 ${emptyFromTo}件: ${emptyFromToList.join(', ')}`
+    );
+
     sc.print();
     scorecards.push(sc);
   }

@@ -341,13 +341,13 @@ function resolveHasStay(dest) {
  * stayDescription（体験描写）はnudge側で使用するため、ここでは使わない。
  */
 const STAY_REASON_MAP = {
-  island:    '最終便が早く、日帰りだとゆっくり回れない',
-  mountain:  '移動が長く、日帰りだとほぼ移動で終わる',
-  remote:    '移動が長く、日帰りだとほぼ移動で終わる',
-  onsen:     '夜が本番のため宿泊前提',
-  peninsula: '移動が長く、日帰りだと慌ただしい',
-  sight:     '見どころが多く、日帰りだと駆け足になる',
-  city:      '夜の街も楽しめるので泊まりがいい',
+  onsen:     '山の宿で温泉に入って、夜はゆっくり過ごせる',
+  island:    '昼と夕方と夜で全然違う景色を楽しめる',
+  mountain:  '朝の景色が良いので1泊がちょうどいい',
+  remote:    '朝の景色が良いので1泊がちょうどいい',
+  city:      '夜ご飯や街歩きも含めて楽しめる',
+  sight:     '日帰りだと回りきれない',
+  peninsula: '日帰りだと回りきれない',
 };
 
 function resolveStayReason(dest) {

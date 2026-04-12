@@ -348,11 +348,7 @@ function classifySegmentType(mode, from, to, stepType = null) {
   if (/徒歩/.test(mode))             return 'walk';
   // stepType が rail なら flight 誤分類を禁止（X駅→Y空港でも rail_local のまま）
   if (stepType === 'rail')           return 'rail_local';
-  // stepType なしの従来ロジック（後方互換）
-  // 注: 空港名を含むだけでflight判定しない（空港アクセス鉄道を誤検出するため）
-  // flight判定は stepType === 'flight' または mode に「飛行機|航空」を含む場合のみ
-  if (/空港$/.test(from) && /空港$/.test(to)) return 'flight'; // 空港→空港のみflight
-  if (/空港$/.test(from) && /駅$/.test(to))   return 'rail_local';
+  // stepType なし: mode テキストのみで判定（文字列ベースの空港判定は完全廃止）
   if (/バス/.test(mode))             return 'local_bus';
   return 'rail_local';
 }
@@ -443,9 +439,11 @@ function buildJRChainCta(segments) {
     };
   }
 
-  // flight/ferryのみ（JRチェーンなし）→ 非JR単独CTA
-  if (flight) return { from: flight.from, to: flight.to, type: 'flight', allJR: false, nonJrOnly: true };
-  if (ferry)  return { from: ferry.from,  to: ferry.to,  type: 'ferry',  allJR: false, nonJrOnly: true };
+  // flight/ferryのみ（JRチェーンなし）→ from/to 明確時のみCTA生成
+  if (flight && flight.from && flight.to) return { from: flight.from, to: flight.to, type: 'flight', allJR: false, nonJrOnly: true };
+  if (ferry  && ferry.from  && ferry.to)  return { from: ferry.from,  to: ferry.to,  type: 'ferry',  allJR: false, nonJrOnly: true };
+  // from/to不明 → CTA生成不可（地図フォールバックに任せる）
+  if (flight || ferry) return null;
 
   // JRのみルート
   if (!mainChain) return null;

@@ -209,6 +209,8 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   }
 
   const departurePool = withStars.filter(d => {
+    // 宿泊不可フラグ（isStayable=false）は宿泊プランから除外
+    if (stayType !== 'daytrip' && d.isStayable === false) return false;
     if (!matchesStayType(d)) return false;
     if (departure && isSameCity(d, departure)) return false;
     if (departure && isSamePrefectureOvernight(d, departure, stayType)) return false;
@@ -226,6 +228,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
   const globalPool = withStars.filter(d => {
+    if (stayType !== 'daytrip' && d.isStayable === false) return false;
     if (!matchesStayType(d)) return false;
     if (excludeCar && d.requiresCar) return false;
     if (!matchesSituation(d)) return false;
