@@ -28,6 +28,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${buildCityBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
         ${buildCtaBlock(tc, transportLinks, city, departure, showHotel ? hotelLinks : null, stayCityName)}
+        ${showHotel ? buildStaySubCta(hotelLinks, city, stayCityName) : ''}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -778,17 +779,35 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 }
 
 /**
- * 「今じゃなくていい」を潰すナッジテキスト。
- * 距離・destTypeに基づいて1行返す。
+ * ページ下部のサブ宿CTA（2回目）。メインより控えめ。
+ */
+function buildStaySubCta(hotelLinks, city, stayCityName = null) {
+  if (!hotelLinks) return '';
+  const stayLinks = hotelLinks.links ?? [];
+  const rakuten = stayLinks.find(l => l.type === 'rakuten');
+  if (!rakuten) return '';
+  const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
+  return `
+    <div class="stay-sub-cta">
+      <a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+         class="btn btn--stay-sub" data-track="hotel_click">${stayLabel}の宿を探す</a>
+    </div>
+  `;
+}
+
+/**
+ * 「泊まりたくなる一言」ナッジテキスト（感情ベース）。
+ * stayReasonが「日帰りのデメリット」、nudgeが「泊まるメリット」。
  */
 function buildStayNudge(city) {
   const dt = city?.destType;
-  if (dt === 'onsen')    return '1泊でちょうどいい距離';
-  if (dt === 'island')   return '1泊するとゆっくり回れる';
-  if (dt === 'mountain' || dt === 'remote') return '1泊するとゆっくり回れる';
-  if (dt === 'city')     return '週末でも行ける距離';
-  if (dt === 'sight')    return '1泊でちょうどいい距離';
-  return null;
+  if (dt === 'onsen')    return 'せっかくなら1泊して楽しみたい場所';
+  if (dt === 'island')   return '時間を気にせずゆっくり回りたい';
+  if (dt === 'mountain' || dt === 'remote') return '時間を気にせずゆっくり回りたい';
+  if (dt === 'city')     return '1泊でちょうどいい旅';
+  if (dt === 'sight')    return 'せっかくなら1泊して楽しみたい場所';
+  if (dt === 'peninsula') return '時間を気にせずゆっくり回りたい';
+  return '1泊でちょうどいい旅';
 }
 
 /* ── 交通ブロック ── */

@@ -336,24 +336,22 @@ function resolveHasStay(dest) {
 }
 
 /**
- * 宿泊理由テキストを生成する（「泊まる理由」1行）。
- * destType + stayDescription に基づく。
+ * 宿泊理由テキスト（「日帰りのデメリット」= 事実ベース）。
+ * destType に基づいて固定テンプレから生成。
+ * stayDescription（体験描写）はnudge側で使用するため、ここでは使わない。
  */
 const STAY_REASON_MAP = {
-  island:    '最終便が早く日帰りだと慌ただしい',
-  mountain:  '移動が長く日帰りだとほぼ移動で終わる',
-  remote:    '移動が長く日帰りだとほぼ移動で終わる',
-  onsen:     '夜の温泉がメインなので宿泊がいい',
-  peninsula: '移動が長く日帰りだと慌ただしい',
+  island:    '最終便が早く、日帰りだとゆっくり回れない',
+  mountain:  '移動が長く、日帰りだとほぼ移動で終わる',
+  remote:    '移動が長く、日帰りだとほぼ移動で終わる',
+  onsen:     '夜が本番のため宿泊前提',
+  peninsula: '移動が長く、日帰りだと慌ただしい',
+  sight:     '見どころが多く、日帰りだと駆け足になる',
+  city:      '夜の街も楽しめるので泊まりがいい',
 };
 
 function resolveStayReason(dest) {
-  // stayDescription があればそれを使用（1文目のみ）
-  if (dest?.stayDescription) {
-    const first = dest.stayDescription.split('。')[0];
-    if (first.length <= 40) return first;
-  }
-  return STAY_REASON_MAP[dest?.destType] ?? null;
+  return STAY_REASON_MAP[dest?.destType] ?? '1泊するとゆっくり回れる';
 }
 
 /**
