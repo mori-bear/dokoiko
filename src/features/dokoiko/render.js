@@ -348,33 +348,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const best = tc?.bestRoute;
   const chainCta = best?.jrChainCta;
 
-  // ① 予約CTA + finalAccess（連続した行動として一体表示）
-  const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
-  let actionHtml = '';
-  if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
-    const mainCta = transportLinks?.find(l => l.type === 'main-cta');
-    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
-      seenUrls.add(mainCta.cta.url);
-      const gatewayCity = resolveGatewayCity(best, city);
-      // showFinalAccess: セグメント実態ベースで表示判定（JRのみなら非表示）
-      const shouldShow = best?.showFinalAccess !== false && !chainCta.allJR;
-      const accessText = shouldShow ? buildAccessText(best?.finalAccess, city, gatewayCity) : '';
-      const accessHtml = accessText ? `
-        <details class="final-access-details">
-          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの乗り換え</summary>
-          <div class="final-access-body">${accessText}</div>
-        </details>` : '';
-      actionHtml = `
-        <div class="cta-action">
-          <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>
-          ${accessHtml}
-        </div>`;
-    }
-  }
-
-  // ② 地図CTA
+  // ① 地図CTA（ルート直下・CTAより上）
   const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
   let mapHtml = '';
   if (mapUrl) {
@@ -383,15 +357,46 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
        class="btn btn--maps btn--action">地図で行き方を見る</a>`;
   }
 
-  // ③ シェア（画像付き1ボタン）
+  // ② 予約CTA（地図の下）
+  const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
+  let ctaHtml = '';
+  if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
+    const mainCta = transportLinks?.find(l => l.type === 'main-cta');
+    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
+      const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
+      seenUrls.add(mainCta.cta.url);
+      ctaHtml = `
+        <div class="cta-action">
+          <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>
+        </div>`;
+    }
+  }
+
+  // ③ finalAccess（CTAの下・必要時のみ折りたたみ表示）
+  let accessHtml = '';
+  if (chainCta && !tc?.mapOnlyFallback && !suppressBooking) {
+    const gatewayCity = resolveGatewayCity(best, city);
+    const shouldShow = best?.showFinalAccess !== false && !chainCta.allJR;
+    const accessText = shouldShow ? buildAccessText(best?.finalAccess, city, gatewayCity) : '';
+    if (accessText) {
+      accessHtml = `
+        <details class="final-access-details">
+          <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
+          <div class="final-access-body">${accessText}</div>
+        </details>`;
+    }
+  }
+
+  // ④ シェア（画像付き1ボタン）
   const shareHtml = `
     <div class="share-inline">
       <button class="btn-share btn-share--x" id="share-img-btn">Xでシェア</button>
     </div>`;
 
   // CTAなし時：地図で直接案内
-  if (!actionHtml && mapHtml) {
-    actionHtml = `
+  if (!ctaHtml && mapHtml) {
+    ctaHtml = `
       <div class="cta-action">
         <a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
            class="btn btn--maps btn--action">そのまま行く（予約不要）</a>
@@ -401,8 +406,9 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
 
   return `
     <div class="cta-block">
-      ${actionHtml}
       ${mapHtml ? `<div class="cta-group">${mapHtml}</div>` : ''}
+      ${ctaHtml}
+      ${accessHtml}
       ${shareHtml}
     </div>`;
 }
@@ -621,10 +627,10 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
       ${reasonHtml}
       ${viaLineHtml}
       ${ctaGroupHtml}
-      ${shareInlineHtml}
       ${staySection}
       ${detailsBlock}
       ${rentalHintHtml}
+      ${shareInlineHtml}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
     </div>

@@ -455,8 +455,10 @@ function classifyTransport(segments) {
   const mainSegs = segments.filter(s =>
     s.type !== 'walk' && s.type !== 'rental' && s.type !== 'local_bus'
   );
+  // 優先順位: flight > shinkansen > limited > rail > ferry > bus
   if (mainSegs.some(s => s.type === 'flight'))      return 'flight';
   if (mainSegs.some(s => s.type === 'shinkansen'))  return 'shinkansen';
+  if (mainSegs.some(s => s.type === 'rail_express' && isJRSegment(s))) return 'limited';
   if (mainSegs.some(s => s.type === 'ferry'))       return 'ferry';
   if (mainSegs.some(s => s.type === 'highway_bus')) return 'bus';
   const hasPrivate = mainSegs.some(s =>
@@ -694,7 +696,7 @@ export function buildTransportContext(departure, city) {
   // CTA の to を駅/市に正規化（観光スポット名のみを排除）
   if (jrChainCta) {
     const cleanTo = jrChainCta.to?.replace(/駅$|空港$|港$/, '') ?? '';
-    const SPOT_PATTERN = /海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ/;
+    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
     if (SPOT_PATTERN.test(cleanTo)) {
       jrChainCta.to = repStation || city?.displayName || city?.name || jrChainCta.to;
     }

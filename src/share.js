@@ -47,15 +47,14 @@ export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId)
 /** シェア用テキスト生成（出発地ベース・口語調） */
 export function buildShareText(city, departure) {
   const name = city.displayName || city.name;
-  const url  = location.href;
-  return `${departure}からなら、${name}に行けるらしい\n${url}`;
+  return `${departure}から${name}って意外と行ける\nhttps://tabidokoiko.com`;
 }
 
 /** Xシェアウィンドウを開く（出発地ベースコピー） */
 export function openXShare(city, departure) {
   const url  = location.href;
   const name = city.displayName || city.name;
-  const text = `${departure}からなら、${name}に行けるらしい`;
+  const text = `${departure}から${name}って意外と行ける`;
   window.open(
     `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
     '_blank',

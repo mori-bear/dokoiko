@@ -80,7 +80,7 @@ export async function captureShareCard(city, departure, transportContext = null)
       ${accessLine ? `<div style="font-size:12px;color:#666;line-height:1.5;margin-top:4px;opacity:0.7;">→ ${escHtml(accessLine)}</div>` : ''}
     </div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">
-      <div style="font-size:12px;color:#888;margin-bottom:4px;">👇 行き方すぐ出る</div>
+      <div style="font-size:12px;color:#888;margin-bottom:4px;">行き方すぐ出る</div>
       <div style="font-size:13px;color:#1c1c1c;font-weight:600;letter-spacing:0.05em;">tabidokoiko.com</div>
     </div>
   `;
