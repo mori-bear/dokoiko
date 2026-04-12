@@ -2267,8 +2267,9 @@ class Scorecard {
     for (const dest of DESTS) {
       const h = buildHotelLinks(dest);
       const label = h.stayCityName;
-      // 温泉は宿泊地として成立するのでスキップ
-      if (label && /温泉/.test(label)) continue;
+      // ホワイトリスト登録済み温泉名はスキップ（正規表現ではなくhotelAreas照合）
+      const isOnsenArea = HOTEL_AREAS_RAW.some(a => a.name === label && a.name.includes('温泉'));
+      if (label && isOnsenArea) continue;
       if (!label || !STAY_SPOT.test(label)) continue;
       // representativeStation（駅名クリーン）と一致 → 実在市名なのでOK
       const repClean = (dest.representativeStation ?? '').replace(/駅$/, '');

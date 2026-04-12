@@ -32,6 +32,11 @@ const AFFILIATE    = await loadJson('../data/affiliateProviders.json', import.me
 const AREAS_BY_ID  = new Map(HOTEL_AREAS.map(a => [a.id, a]));
 const AREAS_BY_NAME = new Map(HOTEL_AREAS.map(a => [a.name, a]));
 
+/** hotelAreas.json に登録された温泉エリア名のホワイトリスト */
+const ONSEN_STAY_AREAS = new Set(
+  HOTEL_AREAS.filter(a => a.name.includes('温泉')).map(a => a.name)
+);
+
 /* アフィリエイト設定 */
 const RAKUTEN_AFID = AFFILIATE.rakuten.affiliateId;   // 5113ee4b.8662cfc5.5113ee4c.119de89a
 const JALAN_VC_SID = AFFILIATE.jalan.vcSid;           // 3764408
@@ -63,7 +68,8 @@ function isWeak(dest) {
  */
 function resolveStayArea(dest) {
   const name = dest.displayName || dest.name;
-  if (/温泉/.test(name)) return name;
+  // 温泉名はホワイトリスト照合（「温泉」を含むだけでは許可しない）
+  if (ONSEN_STAY_AREAS.has(name)) return name;
   if (dest.isIsland || dest.destType === 'island') return name;
   const area = lookupAreaById(dest.id);
   if (area?.name) return area.name;
@@ -76,7 +82,7 @@ function resolveStayArea(dest) {
  * 観光地名（川/山/岬/湖/海岸等）は宿泊地として不自然なため、
  * 駅名・市区町村名に変換する。
  *
- * 温泉名は宿泊地として成立するのでそのまま使用。
+ * 温泉名はホワイトリスト（ONSEN_STAY_AREAS）に登録された名称のみ許可。
  *
  * @param {string} rawName — resolveStayArea / hubCity の出力値
  * @param {object} dest    — destinations.json エントリ
@@ -86,8 +92,8 @@ const STAY_LABEL_SPOT = /川$|山$|岳$|峰$|滝$|湖$|渓谷|海岸|岬$|ロー
 
 function resolveStayLabel(rawName, dest) {
   if (!rawName) return dest?.displayName || dest?.name || '';
-  // 温泉名はOK（宿泊地として成立）
-  if (/温泉/.test(rawName)) return rawName;
+  // ホワイトリスト登録済み温泉名はそのまま許可
+  if (ONSEN_STAY_AREAS.has(rawName)) return rawName;
   // 観光地パターンに一致しなければそのまま
   if (!STAY_LABEL_SPOT.test(rawName)) return rawName;
   // 観光地名 → 駅名 or fallbackCity に変換
