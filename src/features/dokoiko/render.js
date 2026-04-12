@@ -27,8 +27,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
       <div class="result-card">
         ${buildCityBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
-        ${buildCtaBlock(tc, transportLinks, city, departure)}
-        ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
+        ${buildCtaBlock(tc, transportLinks, city, departure, showHotel ? hotelLinks : null, stayCityName)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -343,7 +342,7 @@ function buildRouteBlock(tc, departure, destLabel, city) {
     </div>`;
 }
 
-function buildCtaBlock(tc, transportLinks, city, departure) {
+function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, stayCityName = null) {
   const seenUrls = new Set();
   const best = tc?.bestRoute;
   const chainCta = best?.jrChainCta;
@@ -415,10 +414,15 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   const orderB = `${ctaHtml}${mapGroup}`;   // B: 予約CTA → 地図
   const ctaOrder = state.ctaOrder === 'B' ? orderB : orderA;
 
+  // ⑤ 宿CTA（finalAccessの後・シェアの前）
+  const stayHtml = hotelLinks ? buildStaySection(hotelLinks, city, stayCityName, tc) : '';
+
+  // 順番固定: 地図 → 交通CTA → finalAccess → 宿 → シェア
   return `
     <div class="cta-block">
       ${ctaOrder}
       ${accessHtml}
+      ${stayHtml}
       ${shareHtml}
     </div>`;
 }
@@ -741,31 +745,39 @@ function buildStayHint(city) {
 }
 
 /**
- * 宿泊セクション: stayPriorityヒント + 宿CTA。
- * daytrip 時は呼び出し元（buildActionBlock）で showHotel=false により非表示。
+ * 宿泊セクション: 泊まる理由 + 宿CTA（楽天のみ）。
+ * daytrip 時は呼び出し元で showHotel=false により非表示。
+ *
+ * hasStay=true  → 「〇〇の宿を探す」
+ * hasStay=false → 「△△の宿を探す（拠点）」
  */
 function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   if (!hotelLinks) return '';
   const stayLinks = hotelLinks.links ?? [];
   const rakuten   = stayLinks.find(l => l.type === 'rakuten');
-  const jalan     = stayLinks.find(l => l.type === 'jalan');
-  if (!rakuten && !jalan) return '';
+  if (!rakuten) return '';
 
-  // 宿ラベルはリンク生成時の都市名を優先（gatewayCity ではなく宿の実体に合わせる）
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
-  const stayHint = buildStayHint(city);
+  const hasStay = hotelLinks.hasStay !== false;
+  const stayReason = hotelLinks.stayReason ?? null;
 
-  const buttons = [
-    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten btn--action" data-track="hotel_click">${stayLabel}で泊まる（楽天）</a>` : '',
-    jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan btn--action" data-track="hotel_click">${stayLabel}で泊まる（じゃらん）</a>` : '',
-  ].filter(Boolean).join('');
+  // 宿CTA文言
+  const btnLabel = hasStay
+    ? `${stayLabel}の宿を探す`
+    : `${stayLabel}の宿を探す（拠点）`;
+
+  // 泊まる理由（1行）
+  const reasonHtml = stayReason
+    ? `<p class="stay-reason">${stayReason}</p>`
+    : '';
 
   return `
     <div class="stay-section">
-      ${stayHint}
-      <div class="stay-buttons">${buttons}</div>
+      ${reasonHtml}
+      <div class="stay-buttons">
+        <a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+           class="btn btn--stay-rakuten btn--action" data-track="hotel_click">${btnLabel}</a>
+      </div>
     </div>
   `;
 }

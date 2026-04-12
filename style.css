@@ -1268,6 +1268,13 @@ body {
   line-height: 1.5;
 }
 
+.stay-reason {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
 .stay-heading {
   font-size: 13px;
   font-weight: 600;

@@ -320,12 +320,51 @@ export function resolveStay(dest) {
 }
 
 /**
+ * 目的地に直接泊まれるか判定する。
+ * 小島・山岳・秘境・半島 → false（拠点泊が現実的）
+ * 温泉・都市・観光地 → true
+ */
+function resolveHasStay(dest) {
+  const dt = dest?.destType;
+  if (dt === 'mountain' || dt === 'remote') return false;
+  if (dt === 'peninsula') return false;
+  // 島: 宿泊施設がある大きな島はtrue、小島はfalse
+  if (dt === 'island' || dest?.isIsland) {
+    return dest?.stayPriority === 'high';
+  }
+  return true;
+}
+
+/**
+ * 宿泊理由テキストを生成する（「泊まる理由」1行）。
+ * destType + stayDescription に基づく。
+ */
+const STAY_REASON_MAP = {
+  island:    '最終便が早く日帰りだと慌ただしい',
+  mountain:  '移動が長く日帰りだとほぼ移動で終わる',
+  remote:    '移動が長く日帰りだとほぼ移動で終わる',
+  onsen:     '夜の温泉がメインなので宿泊がいい',
+  peninsula: '移動が長く日帰りだと慌ただしい',
+};
+
+function resolveStayReason(dest) {
+  // stayDescription があればそれを使用（1文目のみ）
+  if (dest?.stayDescription) {
+    const first = dest.stayDescription.split('。')[0];
+    if (first.length <= 40) return first;
+  }
+  return STAY_REASON_MAP[dest?.destType] ?? null;
+}
+
+/**
  * @param {object} dest — destination エントリ
  * @returns {{
  *   links: Array,               // 宿リンク（rakuten/jalan）
  *   stayCityName: string,       // UI表示用の宿泊地名
  *   bestUrl: string|null,       // 最良の宿リンクURL（1CTA用）
  *   bestType: string|null,      // 'rakuten' | 'jalan'
+ *   hasStay: boolean,           // 目的地に直接泊まれるか
+ *   stayReason: string|null,    // 泊まる理由（1行）
  * }}
  */
 export function buildHotelLinks(dest) {
@@ -352,6 +391,8 @@ export function buildHotelLinks(dest) {
         stayCityName: resolveStayLabel(dest.hubCity, dest),
         bestUrl:  links[0]?.url  ?? null,
         bestType: links[0]?.type ?? null,
+        hasStay:    resolveHasStay(dest),
+        stayReason: resolveStayReason(dest),
       };
     }
   }
@@ -370,5 +411,7 @@ export function buildHotelLinks(dest) {
     stayCityName: resolveStayLabel(resolveStayArea(dest), dest),
     bestUrl:  links[0]?.url  ?? null,
     bestType: links[0]?.type ?? null,
+    hasStay:    resolveHasStay(dest),
+    stayReason: resolveStayReason(dest),
   };
 }
