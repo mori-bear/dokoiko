@@ -58,24 +58,44 @@ function isWeak(dest) {
 }
 
 /**
- * 宿検索エリアを解決する（観光エリア粒度）。
- *
- * 優先順位:
- *   1. 温泉名（城崎温泉、有馬温泉 etc.）→ そのまま使用
- *   2. 島名（直島、石垣島 etc.）→ そのまま使用
- *   3. hotelAreas のエリア名 → エリア名を使用
- *   4. fallback: 都市名
+ * 宿検索エリアを解決する（観光エリア粒度 — 楽天/じゃらん検索キーワード用）。
+ * UIラベルとは分離。検索には「四万十川」でも有効（楽天でヒットする）。
  */
 function resolveStayArea(dest) {
   const name = dest.displayName || dest.name;
-  // 温泉名はそのまま（楽天で温泉名検索すると観光エリア粒度でヒット）
   if (/温泉/.test(name)) return name;
-  // 島名はそのまま
   if (dest.isIsland || dest.destType === 'island') return name;
-  // hotelAreas にエリア名がある場合
   const area = lookupAreaById(dest.id);
   if (area?.name) return area.name;
   return name;
+}
+
+/**
+ * 宿UIラベルを解決する（「〜で泊まる」の表示用）。
+ *
+ * 観光地名（川/山/岬/湖/海岸等）は宿泊地として不自然なため、
+ * 駅名・市区町村名に変換する。
+ *
+ * 温泉名は宿泊地として成立するのでそのまま使用。
+ *
+ * @param {string} rawName — resolveStayArea / hubCity の出力値
+ * @param {object} dest    — destinations.json エントリ
+ * @returns {string} UIに表示する宿泊地名
+ */
+const STAY_LABEL_SPOT = /川$|山$|岳$|峰$|滝$|湖$|渓谷|海岸|岬$|ロード$|街道/;
+
+function resolveStayLabel(rawName, dest) {
+  if (!rawName) return dest?.displayName || dest?.name || '';
+  // 温泉名はOK（宿泊地として成立）
+  if (/温泉/.test(rawName)) return rawName;
+  // 観光地パターンに一致しなければそのまま
+  if (!STAY_LABEL_SPOT.test(rawName)) return rawName;
+  // 観光地名 → 駅名 or fallbackCity に変換
+  const clean = (n) => String(n ?? '').replace(/駅$/, '');
+  const rep = clean(dest?.representativeStation);
+  if (rep) return rep;
+  if (dest?.fallbackCity) return dest.fallbackCity;
+  return dest?.displayName || dest?.name || rawName;
 }
 
 function lookupAreaById(destId) {
@@ -322,7 +342,7 @@ export function buildHotelLinks(dest) {
     if (links.length) {
       return {
         links,
-        stayCityName: dest.hubCity,
+        stayCityName: resolveStayLabel(dest.hubCity, dest),
         bestUrl:  links[0]?.url  ?? null,
         bestType: links[0]?.type ?? null,
       };
@@ -340,7 +360,7 @@ export function buildHotelLinks(dest) {
 
   return {
     links,
-    stayCityName: resolveStayArea(dest),
+    stayCityName: resolveStayLabel(resolveStayArea(dest), dest),
     bestUrl:  links[0]?.url  ?? null,
     bestType: links[0]?.type ?? null,
   };

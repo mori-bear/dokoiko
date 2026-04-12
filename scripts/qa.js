@@ -2254,6 +2254,44 @@ class Scorecard {
   }
 
   /* ───────────────────────────────
+     [8x] 宿ラベル整合性チェック
+     - stayCityNameに観光地名（川/山/岬/湖/海岸）が入っていないか
+  ─────────────────────────────── */
+  {
+    const { buildHotelLinks } = await import('../src/hotel/hotelLinkBuilder.js');
+    const sc = new Scorecard('[8x] 宿ラベル整合性');
+
+    const STAY_SPOT = /川$|山$|岳$|峰$|滝$|湖$|渓谷|海岸|岬$|ロード$|街道/;
+    let spotLabel = 0;
+    const spotLabelList = [];
+    for (const dest of DESTS) {
+      const h = buildHotelLinks(dest);
+      const label = h.stayCityName;
+      // 温泉は宿泊地として成立するのでスキップ
+      if (label && /温泉/.test(label)) continue;
+      if (!label || !STAY_SPOT.test(label)) continue;
+      // representativeStation（駅名クリーン）と一致 → 実在市名なのでOK
+      const repClean = (dest.representativeStation ?? '').replace(/駅$/, '');
+      if (label === repClean) continue;
+      // hotelAreas にエリアとして存在 かつ hubCity === label → 市名として信頼
+      if (label === dest.hubCity) {
+        const area = HOTEL_AREAS_RAW.find(a => a.name === label);
+        if (area) continue;
+      }
+      spotLabel++;
+      if (spotLabelList.length < 10) spotLabelList.push(`${dest.id}:${label}`);
+    }
+    sc.check(spotLabel === 0,
+      spotLabel === 0
+        ? `宿ラベル: 観光地名なし（全件市区町村/駅名）`
+        : `宿ラベルに観光地名 ${spotLabel}件: ${spotLabelList.join(', ')}`
+    );
+
+    sc.print();
+    scorecards.push(sc);
+  }
+
+  /* ───────────────────────────────
      [9] QA 結果サマリ
   ─────────────────────────────── */
   console.log('\n══════════════════════════════════');
