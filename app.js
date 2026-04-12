@@ -13,11 +13,14 @@ import {
   updatePageMeta,
 } from './src/share.js';
 import { captureShareCard, shareOrDownload } from './src/share-image.js';
+import { initAnalytics, trackEvent, reportError } from './src/analytics.js';
 
 async function init() {
   console.log('[INIT START]');
+  initAnalytics();
   bindHandlers(go, retry);
   bindShareHandlers();
+  bindTrackHandlers();
   bindExampleLinks();
   bindLocationButton();
 
@@ -85,6 +88,7 @@ function go() {
 }
 
 function retry() {
+  trackEvent('retry', { from: state.departure });
   state.poolIndex++;
   if (state.poolIndex >= state.pool.length) {
     buildPool(); // reshuffle
@@ -106,6 +110,20 @@ function draw() {
     const plan = buildTravelPlan(city, state.departure);
 
     state.lastTransportContext = plan.transportContext;
+
+    // ── 行動ログ + エラー検知 ──
+    const destId = city.id ?? 'unknown';
+    trackEvent('page_view', { from: state.departure, destId });
+    const tc = plan.transportContext;
+    if (!tc?.bestRoute?.jrChainCta && !tc?.mapOnlyFallback) {
+      reportError('CTA_MISSING', { destId, from: state.departure });
+    }
+    if (!tc?.bestRoute?.segments?.length && !tc?.mapOnlyFallback) {
+      reportError('ROUTE_EMPTY', { destId, from: state.departure });
+    }
+    if (!tc?.mapUrl && !plan.transportLinks?.some(l => l.type === 'map-cta')) {
+      reportError('MAP_TARGET_MISSING', { destId, from: state.departure });
+    }
 
     renderResult({
       city,
@@ -235,6 +253,7 @@ function bindShareHandlers() {
     btn.disabled = true;
     btn.textContent = '生成中…';
     try {
+      trackEvent('share_click', { from: state.departure, destId: city.id });
       const canvas = await captureShareCard(city, state.departure, state.lastTransportContext);
       await shareWithImage(canvas, city, state.departure, state.lastTransportContext);
     } catch (err) {
@@ -255,12 +274,6 @@ async function shareWithImage(canvas, city, departure, tc) {
   const name = city.displayName || city.name;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const chainCta = tc?.bestRoute?.jrChainCta;
-  const ctaProvider = tc?.cta?.type ?? tc?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
-  const PROV = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
-  const TYPE = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
-  const prov = PROV[ctaProvider] ?? '';
-  const hint = chainCta ? (TYPE[chainCta.type] ?? '') : '';
-
   let text;
   if (chainCta) {
     const to = clean(chainCta.to);
@@ -286,6 +299,21 @@ async function shareWithImage(canvas, city, departure, tc) {
     '_blank',
     'noopener,noreferrer,width=550,height=420',
   );
+}
+
+/* ── data-track クリック計測 ── */
+
+function bindTrackHandlers() {
+  document.addEventListener('click', (e) => {
+    const tracked = e.target.closest('[data-track]');
+    if (!tracked) return;
+    const event = tracked.dataset.track;
+    const city = state.pool[state.poolIndex];
+    trackEvent(event, {
+      from: state.departure,
+      destId: city?.id ?? 'unknown',
+    });
+  });
 }
 
 /* ── フォームエラー ── */

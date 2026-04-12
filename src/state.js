@@ -13,4 +13,11 @@ export const state = {
   pool:         [],
   poolIndex:    0,
   lastTransportContext: null,
+
+  /**
+   * CTA表示順パターン（ABテスト用）
+   *   'A' — 地図 → 予約CTA → 宿（デフォルト）
+   *   'B' — 予約CTA → 地図 → 宿
+   */
+  ctaOrder: 'A',
 };

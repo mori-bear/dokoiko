@@ -14,6 +14,7 @@ import { DEPARTURE_CITY_INFO }                   from '../../config/constants.js
 import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuilder.js';
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
+import { state }                                  from '../../state.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, transportContext = {} }) {
   try {
@@ -354,7 +355,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
   if (mapUrl) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action">地図で行き方を見る</a>`;
+       class="btn btn--maps btn--action" data-track="map_click">地図で行き方を見る</a>`;
   }
 
   // ② 予約CTA（地図の下）
@@ -368,7 +369,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       ctaHtml = `
         <div class="cta-action">
           <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action">${label}</a>
+             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action" data-track="cta_click">${label}</a>
         </div>`;
     }
   }
@@ -409,10 +410,15 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
     mapHtml = '';
   }
 
+  // CTA表示順: state.ctaOrder で切り替え（ABテスト対応）
+  const mapGroup = mapHtml ? `<div class="cta-group">${mapHtml}</div>` : '';
+  const orderA = `${mapGroup}${ctaHtml}`;   // A: 地図 → 予約CTA
+  const orderB = `${ctaHtml}${mapGroup}`;   // B: 予約CTA → 地図
+  const ctaOrder = state.ctaOrder === 'B' ? orderB : orderA;
+
   return `
     <div class="cta-block">
-      ${mapHtml ? `<div class="cta-group">${mapHtml}</div>` : ''}
-      ${ctaHtml}
+      ${ctaOrder}
       ${accessHtml}
       ${shareHtml}
     </div>`;
@@ -480,12 +486,22 @@ function buildSegmentAccessText(segments, city) {
   });
   if (!accessSegs.length) return '';
   const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', rental: 'レンタカー' };
-  return accessSegs.map(s => {
-    const from = clean(s.from);
-    const to = clean(s.to);
-    const mode = MODE_LABEL[s.type] || s.mode || '乗換';
-    return `${from} → ${to}（${mode}）`;
-  }).join(' → ');
+  const steps = accessSegs
+    .filter(s => {
+      // from===to や徒歩すぐ等の無意味ステップを除外
+      const from = clean(s.from);
+      const to = clean(s.to);
+      if (from === to) return false;
+      if (s.type === 'walk') return false;
+      return true;
+    })
+    .map(s => {
+      const from = clean(s.from);
+      const to = clean(s.to);
+      const mode = MODE_LABEL[s.type] || s.mode || '乗換';
+      return `${from} → ${to}（${mode}）`;
+    });
+  return steps.join(' → ');
 }
 
 /** セグメントのmode文字列からJR系か判定（render側用・簡易版） */
@@ -741,9 +757,9 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-rakuten btn--action">${stayLabel}で泊まる（楽天）</a>` : '',
+                  class="btn btn--stay-rakuten btn--action" data-track="hotel_click">${stayLabel}で泊まる（楽天）</a>` : '',
     jalan   ? `<a href="${jalan.url}"   target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-jalan btn--action">${stayLabel}で泊まる（じゃらん）</a>` : '',
+                  class="btn btn--stay-jalan btn--action" data-track="hotel_click">${stayLabel}で泊まる（じゃらん）</a>` : '',
   ].filter(Boolean).join('');
 
   return `
