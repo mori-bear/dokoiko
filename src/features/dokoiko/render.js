@@ -386,7 +386,7 @@ function buildCtaBlock(tc, transportLinks, city, departure) {
       if (accessText) {
         accessHtml = `
           <details class="final-access-details">
-            <summary class="final-access-summary">${gatewayCity || '到着駅'}からの行き方</summary>
+            <summary class="final-access-summary">その先の行き方</summary>
             <div class="final-access-body">${accessText}</div>
           </details>`;
       }
@@ -956,41 +956,36 @@ const CTA_TYPE_HINT = {
 };
 
 /**
- * JRチェーンCTAから2行HTMLを生成する。
+ * CTA文言を1ボタン1メッセージで生成する。
  *
- * transport.type別ルール:
- *   allJR        → ${to}まで予約する / e5489で予約（新幹線）
- *   mixed(JR+他) → ${gatewayStation}まで予約する / e5489で予約（${gatewayStation}まで → フェリーで${dest}）
- *   nonJrOnly    → 公式サイトを見る / Skyscanner or フェリー予約
+ * 文言ルール（完全固定）:
+ *   allJR   → ${to}まで予約する（${provider}・${hint}）
+ *   mixed   → ${gateway}まで予約する（${provider}）
+ *   nonJR   → ${dest}への行き方を見る（${transport}）
+ *
+ * 「予約」は予約可能なケースのみ。予約できないものに「予約」と言わない。
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const to   = clean(chainCta.to);
   const provider = CTA_PROVIDER[providerType] ?? null;
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
-  const suffix = hint ? `（${hint}）` : '';
 
-  // ① nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）
+  // nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）→ 「予約」は使わない
   if (chainCta.nonJrOnly) {
-    const line1 = `${to}の予約サイトを見る`;
-    const line2 = provider ? `${provider}で確認${suffix}` : `公式サイトで確認${suffix}`;
-    return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
+    const sub = hint || (provider ?? '');
+    return sub ? `${to}への行き方を見る（${sub}）` : `${to}への行き方を見る`;
   }
 
-  // ② mixed（JR + フェリー/飛行機）
+  // mixed（JR + フェリー/飛行機）→ gateway まで予約
   if (chainCta.nonJrType) {
-    const nonJrLabel = chainCta.nonJrType === 'flight' ? '飛行機' : 'フェリー';
-    const nonJrDest  = clean(chainCta.nonJrDest ?? '');
-    const line1 = `${to}まで予約する`;
-    const subDetail = nonJrDest ? `${to}まで → ${nonJrLabel}で${nonJrDest}` : `${to}から${nonJrLabel}に乗換`;
-    const line2 = provider ? `${provider}で予約（${subDetail}）` : `予約する（${subDetail}）`;
-    return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
+    const sub = [provider, hint].filter(Boolean).join('・');
+    return sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
   }
 
-  // ③ allJR
-  const line1 = `${to}まで予約する`;
-  const line2 = provider ? `${provider}で予約${suffix}` : `予約する${suffix}`;
-  return `<span class="cta-route">${line1}</span><br><span class="cta-provider">${line2}</span>`;
+  // allJR → 最終目的地まで予約
+  const sub = [provider, hint].filter(Boolean).join('・');
+  return sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
 }
 
 function buildMainCtaLabel(type) {

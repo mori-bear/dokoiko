@@ -2227,6 +2227,28 @@ class Scorecard {
         : `gatewayStation欠損 ${noGateway}件: ${noGatewayList.join(', ')}`
     );
 
+    // nonJrOnly かつ type が ferry/flight であること（予約可能なJRが混ざっていないか）
+    let nonJrBadType = 0;
+    const nonJrBadList = [];
+    for (const dep of DEPS_SAMPLE) {
+      for (const dest of DESTS.slice(0, 150)) {
+        try {
+          const tc = buildTransportContext(dep, dest);
+          const chain = tc?.bestRoute?.jrChainCta;
+          if (!chain?.nonJrOnly) continue;
+          if (!['flight', 'ferry'].includes(chain.type)) {
+            nonJrBadType++;
+            if (nonJrBadList.length < 5) nonJrBadList.push(`${dest.id}@${dep}:${chain.type}`);
+          }
+        } catch { /* skip */ }
+      }
+    }
+    sc.check(nonJrBadType === 0,
+      nonJrBadType === 0
+        ? 'nonJrOnly整合: 全件flight/ferryのみ'
+        : `nonJrOnlyなのにJR型 ${nonJrBadType}件: ${nonJrBadList.join(', ')}`
+    );
+
     sc.print();
     scorecards.push(sc);
   }

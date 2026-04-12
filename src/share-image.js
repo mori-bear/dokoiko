@@ -26,18 +26,24 @@ export async function captureShareCard(city, departure, transportContext = null)
   const repStation = city.representativeStation || city.displayName || city.name;
   const routeLine  = departure ? `${departure} → ${repStation}` : '';
 
-  // CTA（2行構造: 区間 + 予約手段）
+  // CTA（1行構造）
   const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
   const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
   const TYPE_HINT = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
+  const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
   const provName = PROV_MAP[ctaProvider] ?? null;
   const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
-  const ctaLine1 = chainCta ? `${clean(chainCta.from)} → ${clean(chainCta.to)}` : '';
-  const ctaLine2 = chainCta
-    ? (provName ? `${provName}${typeHint ? `（${typeHint}）` : ''}` : `予約${typeHint ? `（${typeHint}）` : ''}`)
-    : '';
+  let ctaLine = '';
+  if (chainCta) {
+    const to = clean(chainCta.to);
+    if (chainCta.nonJrOnly) {
+      ctaLine = typeHint ? `${to}への行き方を見る（${typeHint}）` : `${to}への行き方を見る`;
+    } else {
+      const sub = [provName, typeHint].filter(Boolean).join('・');
+      ctaLine = sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
+    }
+  }
 
   // finalAccess（シェア画像用: allJR時は非表示、矢印つなぎで最短表現）
   const fa = best?.finalAccess;
@@ -74,9 +80,8 @@ export async function captureShareCard(city, departure, transportContext = null)
     <div style="font-size:44px;font-weight:800;color:#1c1c1c;line-height:1.15;margin-bottom:12px;">${escHtml(name)}</div>
     <div style="font-size:13px;color:#999;margin-bottom:20px;">${escHtml(prefecture)}${tags ? `｜${escHtml(tags)}` : ''}</div>
     ${routeLine ? `<div style="font-size:15px;color:#1c1c1c;font-weight:600;margin-bottom:16px;">${escHtml(routeLine)}</div>` : ''}
-    ${ctaLine1 || accessLine ? `<div style="margin-bottom:0;">
-      ${ctaLine1 ? `<div style="font-size:18px;color:#e65100;font-weight:700;line-height:1.3;">${escHtml(ctaLine1)}</div>` : ''}
-      ${ctaLine2 ? `<div style="font-size:13px;color:#e65100;font-weight:400;line-height:1.5;margin-top:2px;opacity:0.85;">${escHtml(ctaLine2)}</div>` : ''}
+    ${ctaLine || accessLine ? `<div style="margin-bottom:0;">
+      ${ctaLine ? `<div style="font-size:16px;color:#e65100;font-weight:700;line-height:1.3;">${escHtml(ctaLine)}</div>` : ''}
       ${accessLine ? `<div style="font-size:12px;color:#666;line-height:1.5;margin-top:4px;opacity:0.7;">→ ${escHtml(accessLine)}</div>` : ''}
     </div>` : ''}
     <div style="margin-top:28px;padding-top:16px;border-top:1px solid #eee;text-align:center;">

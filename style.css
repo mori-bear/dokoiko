@@ -1106,17 +1106,6 @@ body {
   margin-bottom: 8px;
 }
 
-.cta-route {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.cta-provider {
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.85;
-}
-
 .cta-access-next {
   font-size: 12px;
   color: #666;
