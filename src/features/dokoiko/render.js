@@ -779,9 +779,9 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten" data-track="rakuten_click">楽天で今の空室を見る</a>` : '',
+                  class="btn btn-rakuten" data-track="rakuten_click">楽天で今の空室を見る<span class="btn-sub-hint">ポイント貯まる</span></a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan" data-track="jalan_click">じゃらんで今の空室を見る</a>` : '',
+                  class="btn btn-jalan" data-track="jalan_click">じゃらんで今の空室を見る<span class="btn-sub-hint">口コミ豊富</span></a>` : '',
   ].filter(Boolean).join('');
 
   return `

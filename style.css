@@ -1332,7 +1332,7 @@ body {
   font-weight: 700;
   line-height: 1.4;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(191,0,0,0.25);
   transition: opacity 0.15s;
 }
 .btn-rakuten:hover { opacity: 0.9; }
@@ -1351,9 +1351,18 @@ body {
   font-weight: 700;
   line-height: 1.4;
   text-decoration: none;
+  opacity: 0.95;
   transition: opacity 0.15s;
 }
-.btn-jalan:hover { opacity: 0.9; }
+.btn-jalan:hover { opacity: 0.88; }
+
+.btn-sub-hint {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 2px;
+}
 
 /* サブ宿CTA（ページ下部・2回目） */
 .stay-sub-cta {
