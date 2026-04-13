@@ -354,7 +354,7 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   if (mapUrl) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action" data-track="map_click">地図で行き方を見る</a>`;
+       class="btn btn--maps btn--action" data-track="map_click">現地までのルートを見る</a>`;
   }
 
   // ② 予約CTA（地図の下）
@@ -766,9 +766,9 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten" data-track="rakuten_click">楽天で宿を見る</a>` : '',
+                  class="btn btn-rakuten" data-track="rakuten_click">楽天で空室を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan" data-track="jalan_click">じゃらんで宿を見る</a>` : '',
+                  class="btn btn-jalan" data-track="jalan_click">じゃらんで空室を見る</a>` : '',
   ].filter(Boolean).join('');
 
   return `
@@ -791,9 +791,9 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で宿を見る</a>` : '',
+                  class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で空室を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan btn-jalan--sub" data-track="jalan_click">じゃらんで宿を見る</a>` : '',
+                  class="btn btn-jalan btn-jalan--sub" data-track="jalan_click">じゃらんで空室を見る</a>` : '',
   ].filter(Boolean).join('');
   return `
     <div class="stay-sub-cta">
@@ -808,13 +808,13 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
  */
 function buildStayNudge(city) {
   const dt = city?.destType;
-  if (dt === 'onsen')    return '1泊するとちょうどいい距離';
-  if (dt === 'island')   return '日帰りだともったいない';
-  if (dt === 'mountain' || dt === 'remote') return 'ゆっくり回るなら1泊がちょうどいい';
-  if (dt === 'city')     return '1泊するとちょうどいい距離';
-  if (dt === 'sight')    return '日帰りだともったいない';
-  if (dt === 'peninsula') return 'ゆっくり回るなら1泊がちょうどいい';
-  return '1泊するとちょうどいい距離';
+  if (dt === 'onsen')    return '今の空室をチェック';
+  if (dt === 'island')   return '宿を確保してゆっくり回る';
+  if (dt === 'mountain' || dt === 'remote') return '宿を確保してゆっくり回る';
+  if (dt === 'city')     return '週末でもまだ予約できる';
+  if (dt === 'sight')    return '週末は埋まりやすい';
+  if (dt === 'peninsula') return '宿を確保してゆっくり回る';
+  return '今の空室をチェック';
 }
 
 /* ── 交通ブロック ── */

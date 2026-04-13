@@ -1304,14 +1304,17 @@ body {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  background: #e60023;
+  min-height: 56px;
+  background: #bf0000;
   color: #fff;
-  padding: 14px;
+  padding: 16px 12px;
   border-radius: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 1.4;
   text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   transition: opacity 0.15s;
 }
 .btn-rakuten:hover { opacity: 0.9; }
@@ -1320,13 +1323,15 @@ body {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  background: #ff8a00;
+  min-height: 56px;
+  background: #ff7a00;
   color: #fff;
-  padding: 14px;
+  padding: 16px 12px;
   border-radius: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 1.4;
   text-decoration: none;
   transition: opacity 0.15s;
 }

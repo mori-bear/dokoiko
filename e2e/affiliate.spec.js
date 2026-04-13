@@ -211,3 +211,59 @@ test.describe('リンク遷移検証（じゃらん）', () => {
   });
 
 });
+
+// ────────────────────────────────────────────────────────────────
+
+test.describe('遷移品質チェック', () => {
+
+  test('楽天リンクが5秒以内にページ遷移完了する', async ({ page, context }) => {
+    await goToResult(page);
+    const { rakuten } = await getHotelLinks(page);
+    if (await rakuten.count() === 0) return;
+
+    const start = Date.now();
+    const [newPage] = await Promise.all([
+      context.waitForEvent('page'),
+      rakuten.click(),
+    ]);
+    await newPage.waitForLoadState('domcontentloaded', { timeout: 10000 });
+    const elapsed = Date.now() - start;
+
+    expect(elapsed).toBeLessThan(5000);
+
+    const title = await newPage.title();
+    const hasHotelTitle = /ホテル|宿|旅館|温泉|楽天トラベル|travel/i.test(title);
+    if (!hasHotelTitle) {
+      const cityName = await getCityName(page);
+      logFail('rakuten_title_ng', cityName, title);
+    }
+
+    await newPage.close();
+  });
+
+  test('じゃらんリンクが5秒以内にページ遷移完了する', async ({ page, context }) => {
+    await goToResult(page);
+    const { jalan } = await getHotelLinks(page);
+    if (await jalan.count() === 0) return;
+
+    const start = Date.now();
+    const [newPage] = await Promise.all([
+      context.waitForEvent('page'),
+      jalan.click(),
+    ]);
+    await newPage.waitForLoadState('domcontentloaded', { timeout: 10000 });
+    const elapsed = Date.now() - start;
+
+    expect(elapsed).toBeLessThan(5000);
+
+    const title = await newPage.title();
+    const hasHotelTitle = /ホテル|宿|旅館|温泉|じゃらん|jalan/i.test(title);
+    if (!hasHotelTitle) {
+      const cityName = await getCityName(page);
+      logFail('jalan_title_ng', cityName, title);
+    }
+
+    await newPage.close();
+  });
+
+});
