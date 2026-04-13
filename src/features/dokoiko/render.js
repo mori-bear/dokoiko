@@ -766,15 +766,14 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual btn--stay-rakuten-dual" data-track="rakuten_click">${stayLabel}の宿を探す<span class="stay-btn-brand">楽天</span></a>` : '',
+                  class="btn btn-rakuten" data-track="rakuten_click">楽天で宿を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual btn--stay-jalan-dual" data-track="jalan_click">${stayLabel}の宿を探す<span class="stay-btn-brand">じゃらん</span></a>` : '',
+                  class="btn btn-jalan" data-track="jalan_click">じゃらんで宿を見る</a>` : '',
   ].filter(Boolean).join('');
 
   return `
     <div class="stay-section stay-section--primary">
       ${reasonHtml}
-      <p class="stay-section-heading">宿を探す</p>
       <div class="stay-dual-grid">${buttons}</div>
     </div>
   `;
@@ -792,9 +791,9 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual-sub" data-track="rakuten_click">${stayLabel}の宿（楽天）</a>` : '',
+                  class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で宿を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn--stay-dual-sub" data-track="jalan_click">${stayLabel}の宿（じゃらん）</a>` : '',
+                  class="btn btn-jalan btn-jalan--sub" data-track="jalan_click">じゃらんで宿を見る</a>` : '',
   ].filter(Boolean).join('');
   return `
     <div class="stay-sub-cta">

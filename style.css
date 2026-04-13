@@ -1293,88 +1293,57 @@ body {
 }
 
 /* 宿CTA 2カラムグリッド（楽天・じゃらん同列） */
-.stay-section-heading {
-  font-size: 13px;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 10px;
-}
-
 .stay-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-.btn--stay-dual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.btn-rakuten {
+  display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 10px 14px;
+  background: #e60023;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.3;
-  color: #333;
-  background: #fafafa;
-  border: 1.5px solid #ddd;
-  border-radius: 10px;
   text-decoration: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: opacity 0.15s;
 }
-.btn--stay-dual:hover {
-  border-color: #bbb;
-}
+.btn-rakuten:hover { opacity: 0.9; }
 
-/* 楽天: わずかに影を強くし無意識の優先度を上げる */
-.btn--stay-rakuten-dual {
-  background: #fbfbfb;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.btn--stay-rakuten-dual:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* じゃらん: 完全フラット */
-.btn--stay-jalan-dual {
-  background: #fafafa;
-  box-shadow: none;
-}
-
-.stay-btn-brand {
+.btn-jalan {
   display: block;
-  font-size: 11px;
-  font-weight: 400;
-  color: #999;
-  margin-top: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #ff8a00;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s;
 }
+.btn-jalan:hover { opacity: 0.9; }
 
 /* サブ宿CTA（ページ下部・2回目） */
 .stay-sub-cta {
   margin-top: 16px;
 }
 .stay-dual-grid--sub {
-  gap: 6px;
+  gap: 8px;
 }
-.btn--stay-dual-sub {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 8px 10px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: #666;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: border-color 0.15s;
+.btn-rakuten--sub,
+.btn-jalan--sub {
+  padding: 10px;
+  font-size: 13px;
 }
-.btn--stay-dual-sub:hover { border-color: #999; }
 
 .stay-heading {
   font-size: 13px;
