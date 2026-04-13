@@ -13341,18 +13341,18 @@
       "minutes": 30
     },
     {
-      "id": "e0906",
       "from": "hub:大阪",
       "to": "hub:松阪",
-      "type": "bus",
-      "minutes": 90
+      "type": "rail",
+      "service": "近鉄",
+      "minutes": 120
     },
     {
-      "id": "e0907",
       "from": "hub:松阪",
       "to": "hub:大阪",
-      "type": "bus",
-      "minutes": 90
+      "type": "rail",
+      "service": "近鉄",
+      "minutes": 120
     },
     {
       "id": "e0908",
@@ -19022,6 +19022,62 @@
       "type": "local",
       "minutes": 0,
       "local": true
+    },
+    {
+      "from": "hub:名古屋",
+      "to": "hub:松阪",
+      "type": "rail",
+      "service": "近鉄・JR紀勢本線",
+      "minutes": 70
+    },
+    {
+      "from": "hub:松阪",
+      "to": "hub:名古屋",
+      "type": "rail",
+      "service": "近鉄・JR紀勢本線",
+      "minutes": 70
+    },
+    {
+      "from": "hub:名古屋",
+      "to": "hub:上野市",
+      "type": "rail",
+      "service": "近鉄",
+      "minutes": 80
+    },
+    {
+      "from": "hub:上野市",
+      "to": "hub:名古屋",
+      "type": "rail",
+      "service": "近鉄",
+      "minutes": 80
+    },
+    {
+      "from": "hub:名古屋",
+      "to": "hub:加賀温泉",
+      "type": "rail",
+      "service": "特急しらさぎ+新幹線",
+      "minutes": 120
+    },
+    {
+      "from": "hub:加賀温泉",
+      "to": "hub:名古屋",
+      "type": "rail",
+      "service": "特急しらさぎ+新幹線",
+      "minutes": 120
+    },
+    {
+      "from": "hub:名古屋",
+      "to": "hub:永平寺口",
+      "type": "rail",
+      "service": "特急しらさぎ+えちぜん鉄道",
+      "minutes": 130
+    },
+    {
+      "from": "hub:永平寺口",
+      "to": "hub:名古屋",
+      "type": "rail",
+      "service": "特急しらさぎ+えちぜん鉄道",
+      "minutes": 130
     }
   ]
 }

@@ -137,6 +137,9 @@ export function resolveRoute(departure, destination) {
     ? candidates[0]
     : candidates.reduce((b, c) => scoreRoute(c.steps) >= scoreRoute(b.steps) ? c : b);
 
+  /* 遠回り検出: 合計移動時間が直線距離ベースの妥当時間の1.5倍以上なら警告 */
+  _warnDetour(departure, destination, best);
+
   /* 最大ステップ数制限: 3ステップまで（ユーザーが迷わない範囲） */
   if (best.steps.length > 3) {
     best.steps = best.steps.slice(0, 3);
@@ -153,6 +156,24 @@ export function matchesSituation(destination, userType) {
   const sits = destination.situations;
   if (!sits?.length) return true; // 未設定は全対象
   return sits.includes(userType);
+}
+
+/* ── 遠回り検出 ── */
+
+function _warnDetour(departure, destination, route) {
+  if (!route?.steps?.length) return;
+  const depCoords  = DEPARTURE_COORDS[departure];
+  const destCoords = (destination.lat && destination.lng) ? { lat: destination.lat, lng: destination.lng } : null;
+  if (!depCoords || !destCoords) return;
+
+  const directKm = calcDistanceKm(depCoords, destCoords);
+  // 直線距離ベースの妥当時間: 鉄道平均100km/h + 30分バッファ
+  const expectedMin = (directKm / 100) * 60 + 30;
+  const totalMin = route.steps.reduce((sum, s) => sum + (s.minutes ?? 0), 0);
+
+  if (totalMin > 0 && totalMin > expectedMin * 1.5) {
+    console.warn(`[route:detour] ${departure}→${destination.id}: ${totalMin}min (expected ~${Math.round(expectedMin)}min, ${directKm.toFixed(0)}km)`);
+  }
 }
 
 /* ────────────────────────────────────────
