@@ -28,7 +28,6 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${buildCityBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
         ${buildCtaBlock(tc, transportLinks, city, departure, showHotel ? hotelLinks : null, stayCityName)}
-        ${showHotel ? buildStaySubCta(hotelLinks, city, stayCityName) : ''}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>

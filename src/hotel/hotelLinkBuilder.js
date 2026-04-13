@@ -153,6 +153,7 @@ function buildRakutenAffilUrl(destUrl) {
  * 観光エリア名で直接検索し、都道府県レベルより精度の高い結果を返す
  */
 function buildRakutenKeywordUrl(keyword) {
+  if (!keyword) return null;
   const destUrl = `https://travel.rakuten.co.jp/yado/?f_query=${encodeURIComponent(keyword)}&f_max=30`;
   return buildRakutenAffilUrl(destUrl);
 }
