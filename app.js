@@ -312,6 +312,7 @@ function bindTrackHandlers() {
     trackEvent(event, {
       from: state.departure,
       destId: city?.id ?? 'unknown',
+      destName: city?.displayName ?? city?.name ?? 'unknown',
       destType: city?.destType ?? 'unknown',
       stayArea: state.lastTransportContext?.bestRoute?.jrChainCta?.to ?? city?.displayName ?? city?.name ?? '',
     });

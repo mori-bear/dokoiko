@@ -1279,11 +1279,29 @@ body {
   margin-bottom: 10px;
 }
 
+.stay-closer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin: 4px 0 0;
+}
+
 .stay-nudge-sub {
   font-size: 12px;
   color: var(--text-sub);
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   opacity: 0.8;
+}
+
+.stay-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #c0392b;
+  background: #fef2f2;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin: 4px 0 8px;
 }
 
 .stay-section--primary {
@@ -1308,7 +1326,7 @@ body {
   background: #bf0000;
   color: #fff;
   padding: 16px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
@@ -1327,7 +1345,7 @@ body {
   background: #ff7a00;
   color: #fff;
   padding: 16px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   font-size: 15px;
   font-weight: 700;

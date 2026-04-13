@@ -124,16 +124,28 @@ function matchesTheme(city, theme) {
   return matchTheme(city, theme);
 }
 
+/** destType別の収益寄与度ブースト */
+const DEST_TYPE_BOOST = {
+  onsen:     1.5,  // 温泉：宿CV率高
+  island:    1.3,  // 島：宿泊ほぼ必須
+  mountain:  1.2,  // 山岳：泊まり前提
+  remote:    1.2,  // 秘境：泊まり前提
+  city:      1.0,  // 都市：標準
+  sight:     0.9,  // 観光地：宿導線やや弱
+  peninsula: 1.0,
+};
+
 function getWeight(city, theme) {
   const base = city.weight ?? 1;
   const capW = PREF_CAPITALS.has(city.name) ? 0.6 : 1;
+  const dtW  = DEST_TYPE_BOOST[city.destType] ?? 1;
 
   let themeW = 1;
   if (theme) {
     themeW = matchTheme(city, theme) ? 3.0 : 0.3;
   }
 
-  return base * capW * themeW;
+  return base * capW * dtW * themeW;
 }
 
 function weightedShuffle(arr, theme) {

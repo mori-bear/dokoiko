@@ -77,6 +77,18 @@ const TAG_COLOR_MAP = {
   '渓谷':   'tag-nature',
 };
 
+/* ── 宿泊バッジ（タイトル直下・泊まり前提の空気を作る） ── */
+
+function buildStayBadge(city) {
+  const dt = city?.destType;
+  if (dt === 'onsen')    return '<p class="stay-badge">1泊でちょうどいい距離</p>';
+  if (dt === 'island')   return '<p class="stay-badge">宿込みで楽しむ旅</p>';
+  if (dt === 'mountain' || dt === 'remote') return '<p class="stay-badge">宿込みで楽しむ旅</p>';
+  if (dt === 'city')     return '<p class="stay-badge">1泊でちょうどいい距離</p>';
+  if (dt === 'sight')    return '<p class="stay-badge">1泊でちょうどいい距離</p>';
+  return '';
+}
+
 /* ── 都市ブロック ── */
 
 function buildCityBlock(city) {
@@ -103,12 +115,14 @@ function buildCityBlock(city) {
   // stayPriority ヒント（宿CTAの直前に配置 — buildActionBlockで使用）
   // ここでは city-block 内に含めず、buildActionBlock 側で挿入する
 
+  const stayBadge = buildStayBadge(city);
   return `
     <div class="city-block">
       <div class="city-header">
         <h2 class="city-name">${nameDisplay}</h2>
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
+      ${stayBadge}
       ${taglineHtml}
       ${descHtml}
       ${spotsHtml}
@@ -760,15 +774,15 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const stayReason = hotelLinks.stayReason ?? null;
   const nudge = buildStayNudge(city);
 
-  const reasonHtml = (stayReason || nudge)
-    ? `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`
-    : '';
+  // 決断テキスト: stayReason（体験）→ closer（断定）→ nudge（urgency）
+  const closer = buildStayCloser(city);
+  const reasonHtml = `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${closer ? `<p class="stay-closer">${closer}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`;
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten" data-track="rakuten_click">楽天で空室を見る</a>` : '',
+                  class="btn btn-rakuten" data-track="rakuten_click">楽天で今の空室を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan" data-track="jalan_click">じゃらんで空室を見る</a>` : '',
+                  class="btn btn-jalan" data-track="jalan_click">じゃらんで今の空室を見る</a>` : '',
   ].filter(Boolean).join('');
 
   return `
@@ -791,9 +805,9 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で空室を見る</a>` : '',
+                  class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で今の空室を見る</a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan btn-jalan--sub" data-track="jalan_click">じゃらんで空室を見る</a>` : '',
+                  class="btn btn-jalan btn-jalan--sub" data-track="jalan_click">じゃらんで今の空室を見る</a>` : '',
   ].filter(Boolean).join('');
   return `
     <div class="stay-sub-cta">
@@ -815,6 +829,20 @@ function buildStayNudge(city) {
   if (dt === 'sight')    return '週末は埋まりやすい';
   if (dt === 'peninsula') return '宿を確保してゆっくり回る';
   return '今の空室をチェック';
+}
+
+/**
+ * 決断を押す断定文（短く断定・CTA直前）。
+ */
+function buildStayCloser(city) {
+  const dt = city?.destType;
+  if (dt === 'onsen')    return 'ここは泊まりで完成する';
+  if (dt === 'island')   return '日帰りだともったいない';
+  if (dt === 'mountain' || dt === 'remote') return '朝の景色は泊まらないと見れない';
+  if (dt === 'city')     return '週末でもまだ間に合う';
+  if (dt === 'sight')    return '泊まるともう1段楽しい';
+  if (dt === 'peninsula') return '日帰りだともったいない';
+  return '泊まるともう1段楽しい';
 }
 
 /* ── 交通ブロック ── */
