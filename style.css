@@ -1443,6 +1443,15 @@ body {
   font-size: 13px;
 }
 
+/* CTA直下のステーションノート（最寄り駅・バスあり案内） */
+.cta-station-note {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--text-sub);
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
 /* T4: 地図CTA（カード最上部に移動） */
 .maps-cta-primary {
   margin: 12px 0 0;

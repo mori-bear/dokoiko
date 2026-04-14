@@ -472,12 +472,17 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
     const mainCta = transportLinks?.find(l => l.type === 'main-cta');
     if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildChainCtaHtml(chainCta, mainCta.cta.type);
+      const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city);
       seenUrls.add(mainCta.cta.url);
+
+      // サブテキスト生成（T3/T4）
+      const stationNote = buildCtaStationNote(chainCta, city, best?.segments ?? []);
+
       ctaHtml = `
         <div class="cta-action">
           <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
              class="btn ${actionBtnClass(mainCta.cta.type)} btn--action" data-track="cta_click">${label}</a>
+          ${stationNote}
         </div>`;
     }
   }
@@ -1127,27 +1132,88 @@ const CTA_TYPE_HINT = {
 };
 
 /**
- * CTA文言を1ボタン1メッセージで生成する。
- *
- * 文言ルール（完全固定）:
- *   allJR / mixed → このルートで行く（${provider}）
- *   nonJR         → ${dest}への行き方を見る（${transport}）
- *
- * Maps CTAがメイン。JR CTAはサブ（交通手段の選択肢）として表示。
+ * 予約ステーション解決（T1/T2 優先順位）:
+ *   1. city.bookingStation（明示的オーバーライド）
+ *   2. chainCta.to（transportEngineが算出したJR到達点）
+ *   3. city.fallbackStation（任意フォールバック）
+ *   4. city.accessStation（最寄り駅）
  */
-function buildChainCtaHtml(chainCta, providerType = null) {
-  const provider = CTA_PROVIDER[providerType] ?? null;
+function resolveBookingStation(city, chainCta) {
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  if (city?.bookingStation)   return clean(city.bookingStation);
+  if (chainCta?.to)           return clean(chainCta.to);
+  if (city?.fallbackStation)  return clean(city.fallbackStation);
+  if (city?.accessStation)    return clean(city.accessStation);
+  return null;
+}
+
+/**
+ * CTA直下のサブテキストを生成する（T3/T4）。
+ *
+ * 表示ルール:
+ *   - onsen/mountain/remote/hidden/ruins かつ local_bus あり
+ *     → 「※○○駅からバスで向かいます」
+ *   - JR到達点（bookingStation）と最寄り駅（accessStation）が異なる
+ *     → 「※最寄り駅：○○駅」
+ *   - island で港が終点
+ *     → 「※○○港から乗船」
+ *   - 上記以外 → 空文字
+ */
+function buildCtaStationNote(chainCta, city, segments) {
+  if (!chainCta || chainCta.nonJrOnly) return '';
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+
+  const bookingStation = resolveBookingStation(city, chainCta);
+  const accessSt = city?.accessStation ? clean(city.accessStation) : null;
+  const dt = city?.destType;
+
+  // T4: island + ferry → 港から乗船ヒント
+  if (dt === 'island' && chainCta.nonJrType === 'ferry') {
+    const port = chainCta.nonJrDest ? clean(chainCta.nonJrDest) : null;
+    if (port) return `<p class="cta-station-note">※${port}港から乗船</p>`;
+  }
+
+  // T4: onsen/mountain/remote/hidden/ruins + バス → バスあり明示
+  const busDest = new Set(['onsen', 'mountain', 'remote', 'hidden', 'ruins', 'view']);
+  const hasBus = segments.some(s => s.type === 'local_bus');
+  if (hasBus && busDest.has(dt) && bookingStation) {
+    return `<p class="cta-station-note">※${bookingStation}駅からバスで向かいます</p>`;
+  }
+
+  // T3: JR到達点と最寄り駅が異なる → 最寄り駅を案内
+  if (bookingStation && accessSt && accessSt !== bookingStation) {
+    return `<p class="cta-station-note">※最寄り駅：${accessSt}駅</p>`;
+  }
+
+  return '';
+}
+
+/**
+ * CTA文言を生成する。
+ *
+ * 文言ルール:
+ *   nonJR   → ${dest}への行き方を見る（${transport}）
+ *   JR/mixed → このルートで行く（${station}駅まで）
+ */
+function buildChainCtaHtml(chainCta, providerType = null, city = null) {
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
 
   // nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）
   if (chainCta.nonJrOnly) {
+    const provider = CTA_PROVIDER[providerType] ?? null;
     const sub = hint || (provider ?? '');
     const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
     const to = clean(chainCta.to);
     return sub ? `${to}への行き方を見る（${sub}）` : `${to}への行き方を見る`;
   }
 
-  // allJR / mixed → シンプルな「このルートで行く」+ provider
+  // JR/mixed → 「このルートで行く（○○駅まで）」（T3）
+  const station = resolveBookingStation(city, chainCta);
+  if (station) {
+    const suffix = chainCta.type === 'ferry' ? '港まで' : '駅まで';
+    return `このルートで行く（${station}${suffix}）`;
+  }
+  const provider = CTA_PROVIDER[providerType] ?? null;
   const sub = [provider, hint].filter(Boolean).join('・');
   return sub ? `このルートで行く（${sub}）` : 'このルートで行く（JR）';
 }
