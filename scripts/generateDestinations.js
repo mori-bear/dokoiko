@@ -5,14 +5,10 @@
  * 正規化・分類・重複排除して generated.json に出力する。
  *
  * 使い方:
- *   node scripts/generateDestinations.js          # 本番実行（数分〜）
- *   node scripts/generateDestinations.js --test   # 1カテゴリのみサンプル取得
- *
- * 注意:
- *   - Wikipedia API にアクセスするためネット接続が必要
- *   - rate limit: 500ms sleep / query
- *   - 生成データは最低限のフィールド（id/name/prefecture/lat/lng/destType）
- *   - 詳細フィールド（finalAccess/stayDescription等）は手動エンリッチ必要
+ *   node scripts/generateDestinations.js                # 本番実行（数分〜）
+ *   node scripts/generateDestinations.js --test         # 1カテゴリのみサンプル
+ *   node scripts/generateDestinations.js --batch=200    # 生成件数上限
+ *   node scripts/generateDestinations.js --auto-merge   # enrich→merge→dedupe→validate自動実行
  *
  * 出力: src/data/destinations/generated.json
  */
@@ -20,6 +16,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -29,6 +26,7 @@ const EXISTING_FILE = path.join(PROJECT_ROOT, 'src/data/destinations.json');
 
 const WIKIPEDIA_API = 'https://ja.wikipedia.org/w/api.php';
 const TEST_MODE = process.argv.includes('--test');
+const AUTO_MERGE = process.argv.includes('--auto-merge');
 // --batch=200 形式でバッチサイズ指定（destination件数上限）
 const BATCH_ARG = process.argv.find(a => a.startsWith('--batch='));
 const BATCH_LIMIT = BATCH_ARG ? parseInt(BATCH_ARG.split('=')[1], 10) : null;
@@ -298,6 +296,9 @@ async function main() {
   for (const [nn, { name, destType, prefecture }] of allItems.entries()) {
     const info = infoAll[name] ?? {};
     if (!prefecture || !info.lat || !info.lng) continue; // 必須情報なしはスキップ
+    // 日本実効支配範囲外（北方領土等）は除外
+    if (info.lat < 24 || info.lat > 46) continue;
+    if (info.lng < 122 || info.lng > 146) continue;
 
     const capital = PREF_CAPITAL[prefecture] ?? null;
     const region  = PREF_REGION[prefecture]  ?? null;
@@ -347,6 +348,34 @@ async function main() {
   const topPrefs = Object.entries(byPref).sort((a, b) => b[1] - a[1]).slice(0, 10);
   console.log('\n[分布 Top10]');
   topPrefs.forEach(([p, n]) => console.log(`  ${p}: ${n}件`));
+
+  /* ⑥ --auto-merge: enrich → merge → dedupe → validate を自動実行 */
+  if (AUTO_MERGE) {
+    console.log('\n═══════════════════════════════════');
+    console.log('  auto-merge パイプライン実行');
+    console.log('═══════════════════════════════════');
+
+    const runStep = (label, cmd) => {
+      console.log(`\n[${label}]`);
+      try {
+        execSync(cmd, { stdio: 'inherit', cwd: PROJECT_ROOT });
+      } catch (err) {
+        console.error(`[${label}] 失敗:`, err.message);
+        throw err;
+      }
+    };
+
+    runStep('enrich',   'node scripts/enrichDestinations.js');
+    runStep('merge',    'node scripts/mergeDestinations.js');
+    runStep('dedupe',   'node scripts/deduplicateDestinations.js --apply');
+    runStep('validate', 'node scripts/validateStructure.js');
+
+    /* 最終件数ログ */
+    const final = JSON.parse(fs.readFileSync(EXISTING_FILE, 'utf8'));
+    console.log('\n═══════════════════════════════════');
+    console.log(`  ✓ final destinations: ${final.length}件`);
+    console.log('═══════════════════════════════════');
+  }
 }
 
 main().catch(err => {

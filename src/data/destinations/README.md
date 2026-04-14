@@ -5,27 +5,67 @@
 - `generated.json` — Wikipedia APIから自動生成された目的地データ（最低限フィールド）
 - `enriched.json`  — `generated.json` をUI使用可能な品質に自動エンリッチしたデータ
 
-## 2段階パイプライン
-
-### Stage 1: 生成（generate）
+## 完全自動パイプライン
 
 ```bash
-# テストモード（北海道のみ・約1分）
-node scripts/generateDestinations.js --test
-
-# 本番実行（全47都道府県 × 9カテゴリ・数十分〜1時間）
-node scripts/generateDestinations.js
+# 一発実行（generate → enrich → merge → dedupe → validate）
+node scripts/generateDestinations.js --batch=200 --auto-merge
 ```
 
-### 処理フロー
+処理フロー:
+```
+Wikipedia API
+     ↓ generate
+generated.json
+     ↓ enrich
+enriched.json
+     ↓ merge（destinations.json に追加・id重複は既存優先・安全ガード）
+destinations.json
+     ↓ dedupe（name + prefecture で重複排除）
+destinations.json（重複なし）
+     ↓ validate（structure のみ）
+最終件数ログ
+```
 
-1. 都道府県 × カテゴリ（温泉/島/山/観光地/滝/湖/城/神社/寺院）で Wikipedia API 取得
-2. 正規化（括弧内除去・空白除去）
-3. 既存 `destinations.json` との重複排除
-4. ページの緯度経度取得
-5. `generated.json` に出力
+## 個別ステップ実行
 
-### 出力フィールド
+```bash
+# ステージ1: 生成
+node scripts/generateDestinations.js --batch=500
+
+# ステージ2: エンリッチ
+node scripts/enrichDestinations.js
+
+# ステージ3: マージ
+node scripts/mergeDestinations.js
+
+# ステージ4: 重複排除
+node scripts/deduplicateDestinations.js --apply
+
+# ステージ5: 検証
+node scripts/validateStructure.js
+```
+
+## 自動ガード
+
+- **安全ガード**: name/lat/lng/destType 欠損はスキップ
+- **日本範囲外除外**: lat<24 or lat>46 / lng<122 or lng>146（北方領土等）
+- **id重複保護**: 既存 destinations.json を優先
+- **name+prefecture重複**: 手動登録（`_generated` フラグなし）を優先
+
+## 注意：本番QA通過には追加エンリッチが必要
+
+完全自動生成データは既存 `node scripts/qa.js` の厳密チェックに未対応:
+- `travelTime` / `stayRecommendation` 未設定
+- `island` の `ferryGateway` 整合性（ports.json との紐づけ）
+- catch文字数制限（30文字以内）
+
+推奨運用:
+1. `--auto-merge` でstaging環境（別ファイル）にマージ
+2. 手動で不足フィールドを補完
+3. QA通過後に本番 destinations.json にマージ
+
+## 出力フィールド（enriched）
 
 ```json
 {
@@ -40,51 +80,17 @@ node scripts/generateDestinations.js
   "hubCity": "札幌",
   "fallbackCity": "札幌",
   "isStayable": true,
+  "stayDescription": "温泉に2回入って、部屋でゆっくりして寝る",
+  "tags": ["温泉", "自然", "街歩き"],
+  "primary": ["温泉"],
+  "weight": 1.5,
+  "stayPriority": "high",
+  "onsenLevel": 2,
+  "accessStation": "札幌駅",
+  "railProvider": "ekinet",
+  "finalAccess": { "type": "train", "line": "在来線", "to": "阿寒湖温泉" },
   "_generated": true,
+  "_enriched": true,
   "_source": "wikipedia"
 }
 ```
-
-### Stage 2: エンリッチ（enrich）
-
-```bash
-# generated.json → enriched.json
-node scripts/enrichDestinations.js
-```
-
-自動付与する項目:
-- `stayDescription` / `description` / `catch` — destType別テンプレ
-- `finalAccess` — train/ferry/bus の構造化オブジェクト
-- `transportHubs` / `accessStation` / `gateway` — 都道府県別代表駅
-- `railProvider` / `jrArea` — 都道府県別JR系統
-- `tags` / `primary` / `secondary` — destType別固定セット
-- `weight` — onsen 1.5 > island 1.3 > mountain 1.2 > sight 1.0
-- `stayPriority` / `onsenLevel` / `departures` — デフォルト値
-- `isIsland` / `requiresCar` 等のフラグ
-
-### 一括実行
-
-```bash
-node scripts/generateDestinations.js && node scripts/enrichDestinations.js
-```
-
-## マージ手順
-
-```bash
-# 1. パイプライン実行
-node scripts/generateDestinations.js
-node scripts/enrichDestinations.js
-
-# 2. 本番マージ（手動）
-# src/data/destinations.json に src/data/destinations/enriched.json を結合
-# ※ _generated/_enriched フラグで識別可能
-
-# 3. QA検証
-node scripts/qa.js
-```
-
-## 注意
-
-- `_generated: true` / `_enriched: true` フラグで自動生成物を識別
-- エンリッチ結果は UI で即使用可能な品質（全必須フィールド埋め）
-- 品質を高めたい場合は手動で `finalAccess.line`, `stayDescription`, `spots` 等を上書き

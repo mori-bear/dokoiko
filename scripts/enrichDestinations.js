@@ -130,6 +130,13 @@ const MAIN_DEPARTURES = [
   '札幌', '仙台', '東京', '名古屋', '大阪', '広島', '福岡',
 ];
 
+/* ── ヘルパー ── */
+
+function truncate(text, max) {
+  if (!text) return text;
+  return text.length <= max ? text : text.slice(0, max - 1) + '…';
+}
+
 /* ── エンリッチ処理 ── */
 
 function enrich(dest) {
@@ -180,7 +187,7 @@ function enrich(dest) {
     stayAllowed: true,
     spots: [dest.name],
     description: tpl.stayDescription,
-    catch: `${dest.name}で${tpl.stayDescription}`,
+    catch: truncate(`${dest.name}で${tpl.stayDescription}`, 30),
     requiresCar: dest.destType === 'mountain' || dest.destType === 'remote',
     type: 'destination',
     subType: dest.destType,
@@ -201,7 +208,8 @@ function enrich(dest) {
     hasDirectFlight: false,
     airportGateway: null,
     busGateway: null,
-    ferryGateway: dest.destType === 'island' ? dest.name + '港' : null,
+    // ferryGateway は ports.json で検証できない限り null（QA整合性のため）
+    ferryGateway: null,
 
     // 空構造体（必須フィールド埋め）
     gateways: [],
