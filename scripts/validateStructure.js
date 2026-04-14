@@ -26,11 +26,16 @@ const VALID_TYPES = new Set([
   'hidden', 'view', 'weird', 'ruins', 'portTown', 'railway',
 ]);
 
+// 旅行目的地として不適な destType（交通ハブ系）
+const BAD_DEST_TYPES = new Set(['airport', 'station', 'terminal', 'transport_hub', 'access_point']);
+// 名前に含まれてはいけないキーワード
+const BAD_NAME_PATTERN = /空港|ターミナル|バスターミナル/;
+
 const OUT_CSV = path.join(ROOT, 'structure_validation_failures.csv');
 const rows = ['type,destId,field,detail'];
 
 let missingFields = 0, badLatLng = 0, badType = 0, badWeight = 0, badNumber = 0, duplicateIds = 0,
-    missingStayUrl = 0, badStayUrl = 0, ok = 0;
+    missingStayUrl = 0, badStayUrl = 0, airportDest = 0, ok = 0;
 const seenIds = new Set();
 
 for (const d of DESTS) {
@@ -57,6 +62,21 @@ for (const d of DESTS) {
   if (d.destType && !VALID_TYPES.has(d.destType)) {
     rows.push(`bad_destType,${d.id},destType,"${d.destType}" not in valid set`);
     badType++;
+    fail++;
+  }
+
+  // 空港・ターミナル系 destType 検知（旅行目的地として不適）
+  if (BAD_DEST_TYPES.has(d.destType)) {
+    rows.push(`airport_destType,${d.id},destType,"${d.destType}" is transport hub — should not be destination`);
+    airportDest++;
+    fail++;
+  }
+
+  // 名前に空港・ターミナルを含む場合も検知
+  const checkName = d.displayName || d.name || '';
+  if (BAD_NAME_PATTERN.test(checkName)) {
+    rows.push(`airport_name,${d.id},name,"${checkName}" contains transport hub keyword`);
+    airportDest++;
     fail++;
   }
 
@@ -101,4 +121,5 @@ fs.writeFileSync(OUT_CSV, rows.join('\n'));
 console.log(`[validateStructure] ok=${ok}/${DESTS.length}`);
 console.log(`  missingFields=${missingFields}, badLatLng=${badLatLng}, badType=${badType}, badWeight=${badWeight}, duplicateIds=${duplicateIds}`);
 console.log(`  missingStayUrl=${missingStayUrl}, badStayUrl=${badStayUrl}`);
+if (airportDest > 0) console.log(`  ⚠️  airportDest=${airportDest} — 空港・ターミナル系の目的地が含まれています！要削除`);
 console.log(`  → ${OUT_CSV}`);

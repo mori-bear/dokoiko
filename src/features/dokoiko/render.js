@@ -1132,18 +1132,29 @@ const CTA_TYPE_HINT = {
 };
 
 /**
- * 予約ステーション解決（T1/T2 優先順位）:
+ * 予約ステーション解決（優先順位）:
  *   1. city.bookingStation（明示的オーバーライド）
- *   2. chainCta.to（transportEngineが算出したJR到達点）
+ *   2. chainCta.to（transportEngineが算出したJR到達点）— 空港は除外
  *   3. city.fallbackStation（任意フォールバック）
- *   4. city.accessStation（最寄り駅）
+ *   4. city.accessStation — 空港の場合は除外（駅ではないため）
+ *
+ * 空港名はアクセス手段であり「どこまで行くか」の駅名として表示しない。
  */
 function resolveBookingStation(city, chainCta) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  if (city?.bookingStation)   return clean(city.bookingStation);
-  if (chainCta?.to)           return clean(chainCta.to);
-  if (city?.fallbackStation)  return clean(city.fallbackStation);
-  if (city?.accessStation)    return clean(city.accessStation);
+  const isAirport = (n) => /空港/.test(String(n ?? ''));
+
+  if (city?.bookingStation)  return clean(city.bookingStation);
+
+  // chainCta.to が空港の場合は使わない（例: 鹿児島空港 → JR駅ではない）
+  if (chainCta?.to && !isAirport(chainCta.to)) return clean(chainCta.to);
+
+  if (city?.fallbackStation) return clean(city.fallbackStation);
+
+  // accessStation が空港の場合は hubCity にフォールバック
+  if (city?.accessStation && !isAirport(city.accessStation)) return clean(city.accessStation);
+  if (city?.hubCity)         return clean(city.hubCity);
+
   return null;
 }
 
@@ -1162,25 +1173,28 @@ function resolveBookingStation(city, chainCta) {
 function buildCtaStationNote(chainCta, city, segments) {
   if (!chainCta || chainCta.nonJrOnly) return '';
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const isAirport = (n) => /空港/.test(String(n ?? ''));
 
   const bookingStation = resolveBookingStation(city, chainCta);
-  const accessSt = city?.accessStation ? clean(city.accessStation) : null;
+  // accessStation が空港の場合はノート表示から除外（駅名として表示しない）
+  const rawAccess = city?.accessStation ?? '';
+  const accessSt = isAirport(rawAccess) ? null : (rawAccess ? clean(rawAccess) : null);
   const dt = city?.destType;
 
-  // T4: island + ferry → 港から乗船ヒント
+  // island + ferry → 港から乗船ヒント
   if (dt === 'island' && chainCta.nonJrType === 'ferry') {
     const port = chainCta.nonJrDest ? clean(chainCta.nonJrDest) : null;
     if (port) return `<p class="cta-station-note">※${port}港から乗船</p>`;
   }
 
-  // T4: onsen/mountain/remote/hidden/ruins + バス → バスあり明示
+  // onsen/mountain/remote/hidden/ruins + バス → バスあり明示
   const busDest = new Set(['onsen', 'mountain', 'remote', 'hidden', 'ruins', 'view']);
   const hasBus = segments.some(s => s.type === 'local_bus');
   if (hasBus && busDest.has(dt) && bookingStation) {
     return `<p class="cta-station-note">※${bookingStation}駅からバスで向かいます</p>`;
   }
 
-  // T3: JR到達点と最寄り駅が異なる → 最寄り駅を案内
+  // JR到達点と最寄り駅が異なる → 最寄り駅を案内（空港アクセスは除外）
   if (bookingStation && accessSt && accessSt !== bookingStation) {
     return `<p class="cta-station-note">※最寄り駅：${accessSt}駅</p>`;
   }

@@ -316,7 +316,9 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     if (!matchesDeparture(d)) return false;
     if (excludeCar && d.requiresCar) return false;
     if (!matchesSituation(d)) return false;
-    // 空港・ターミナル系は旅行目的地として不適（T1/T5）
+    // 空港・ターミナル・交通ハブ系は旅行目的地として完全除外
+    const BAD_TYPES = new Set(['airport', 'station', 'terminal', 'transport_hub', 'access_point']);
+    if (BAD_TYPES.has(d.destType)) return false;
     const dname = d.displayName || d.name || '';
     if (/空港|ターミナル/.test(dname)) return false;
     return true;
@@ -329,11 +331,15 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   }
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
+  const BAD_TYPES_GLOBAL = new Set(['airport', 'station', 'terminal', 'transport_hub', 'access_point']);
   const globalPool = withStars.filter(d => {
     if (stayType !== 'daytrip' && d.isStayable === false) return false;
     if (!matchesStayType(d)) return false;
     if (excludeCar && d.requiresCar) return false;
     if (!matchesSituation(d)) return false;
+    if (BAD_TYPES_GLOBAL.has(d.destType)) return false;
+    const dname = d.displayName || d.name || '';
+    if (/空港|ターミナル/.test(dname)) return false;
     return true;
   });
   const themedGlobal = theme ? globalPool.filter(d => matchesTheme(d, theme)) : globalPool;
