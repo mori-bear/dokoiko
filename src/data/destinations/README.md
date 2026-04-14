@@ -2,9 +2,12 @@
 
 ## ファイル
 
-- `generated.json` — Wikipedia APIから自動生成された目的地データ
+- `generated.json` — Wikipedia APIから自動生成された目的地データ（最低限フィールド）
+- `enriched.json`  — `generated.json` をUI使用可能な品質に自動エンリッチしたデータ
 
-## 生成パイプライン
+## 2段階パイプライン
+
+### Stage 1: 生成（generate）
 
 ```bash
 # テストモード（北海道のみ・約1分）
@@ -42,9 +45,46 @@ node scripts/generateDestinations.js
 }
 ```
 
+### Stage 2: エンリッチ（enrich）
+
+```bash
+# generated.json → enriched.json
+node scripts/enrichDestinations.js
+```
+
+自動付与する項目:
+- `stayDescription` / `description` / `catch` — destType別テンプレ
+- `finalAccess` — train/ferry/bus の構造化オブジェクト
+- `transportHubs` / `accessStation` / `gateway` — 都道府県別代表駅
+- `railProvider` / `jrArea` — 都道府県別JR系統
+- `tags` / `primary` / `secondary` — destType別固定セット
+- `weight` — onsen 1.5 > island 1.3 > mountain 1.2 > sight 1.0
+- `stayPriority` / `onsenLevel` / `departures` — デフォルト値
+- `isIsland` / `requiresCar` 等のフラグ
+
+### 一括実行
+
+```bash
+node scripts/generateDestinations.js && node scripts/enrichDestinations.js
+```
+
+## マージ手順
+
+```bash
+# 1. パイプライン実行
+node scripts/generateDestinations.js
+node scripts/enrichDestinations.js
+
+# 2. 本番マージ（手動）
+# src/data/destinations.json に src/data/destinations/enriched.json を結合
+# ※ _generated/_enriched フラグで識別可能
+
+# 3. QA検証
+node scripts/qa.js
+```
+
 ## 注意
 
-- 生成データは `_generated: true` フラグ付き
-- 本番 destinations.json にマージする前に手動エンリッチメントが必要:
-  - `stayDescription`, `finalAccess`, `transportHubs`, `tags`, `primary`, `onsenLevel` 等
-- マージ前に `node scripts/qa.js` で品質検証
+- `_generated: true` / `_enriched: true` フラグで自動生成物を識別
+- エンリッチ結果は UI で即使用可能な品質（全必須フィールド埋め）
+- 品質を高めたい場合は手動で `finalAccess.line`, `stayDescription`, `spots` 等を上書き
