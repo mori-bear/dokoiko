@@ -18,6 +18,7 @@ import { state }                                  from '../../state.js';
 
 export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, transportContext = {} }) {
   try {
+    // daytrip のみ宿泊セクション非表示。free / 2night / 3night+ はすべて表示
     const showHotel = stayType !== 'daytrip';
     const tc = transportContext;
     const destLabel = city.displayName || city.name;

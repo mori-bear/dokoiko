@@ -113,6 +113,7 @@ function isSameCity(destination, departure) {
 
 function isSamePrefectureOvernight(destination, departure, stayType) {
   if (stayType === 'daytrip') return false;
+  // free / 2night / 3night+ はすべて宿泊前提として扱う
   if (destination.isIsland || destination.destType === 'island') return false;
   const destPref = DESTINATION_PREFECTURE_MAP[destination.id];
   if (!destPref) return false;
@@ -144,13 +145,14 @@ const DEST_TYPE_BOOST = {
 
 /**
  * travelTimeScore: 出発地からの移動時間による重み係数
- * Math.exp(-t / 90) で急減衰。/90 により長距離が強く抑制される。
- * フロアなし: 近さがそのまま有利になるが weight上限キャップ + destTypeバランス制御で補正。
+ * Math.exp(-t / 180) で緩やかに減衰。
+ * stayType フィルタ（daytrip≤120 / 1night≤240）で距離範囲を絞るため、
+ * weight側は許容範囲内での相対差を表現するだけでよく、/180 が適切。
  * 出発地依存のため recomputeWeight.js（静的weight）ではなくここで適用。
  */
 function travelTimeScore(minutes) {
   if (minutes == null) return 1;
-  return Math.exp(-minutes / 90);
+  return Math.exp(-minutes / 180);
 }
 
 function getWeight(city, theme) {
@@ -279,16 +281,16 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
 
   /**
    * travelTimeMinutes ベースの日程フィルタ（片道時間制限）
-   *   daytrip: 片道 150分以内
-   *   1night : 片道 300分以内
-   *   2night+: 制限なし
-   * travelTimeMinutes は片道換算とみなす。
+   *   daytrip : 片道 120分以内（2時間）
+   *   1night  : 片道 240分以内（4時間）
+   *   free    : 制限なし
+   *   2night / 3night+ : 後方互換として制限なし扱い
    */
   function matchesStayType(d) {
     const oneWay = d.travelTimeMinutes;
-    if (stayType === 'daytrip'  && oneWay > 150) return false;
-    if (stayType === '1night'   && oneWay > 300) return false;
-    if (stayType === '2night'   && oneWay > 480) return false;
+    if (stayType === 'daytrip' && oneWay > 120) return false;
+    if (stayType === '1night'  && oneWay > 240) return false;
+    // 'free' / '2night' / '3night+' : 制限なし
     return true;
   }
 

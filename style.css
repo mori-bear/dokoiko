@@ -355,6 +355,16 @@ body {
   gap: 8px;
 }
 
+/* 旅の長さボタン内の距離ヒント */
+.stay-hint {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.65;
+  margin-top: 1px;
+  line-height: 1;
+}
+
 .sel-btn {
   background: var(--btn-bg);
   color: var(--text);

@@ -29,10 +29,11 @@ const LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : 20;
 
 /**
  * travelTimeBonus: selectionEngine と同一の指数減衰式
- * Math.exp(-min / 90) で急減衰。selectionEngine.js の travelTimeScore と一致。
+ * Math.exp(-min / 180) で緩やかに減衰。selectionEngine.js の travelTimeScore と一致。
+ * stayType フィルタ（daytrip≤120 / 1night≤240）で範囲を絞るため weight 側は緩やかでよい。
  */
 function travelTimeBonus(min) {
-  return Math.exp(-min / 90);
+  return Math.exp(-min / 180);
 }
 
 /** selectionEngine.js と同一 */

@@ -77,7 +77,7 @@
           <span class="hero-examples-label">例えば</span>
           <a class="hero-example-link" href="?from=東京&nights=1night&theme=温泉">東京から温泉1泊</a>
           <a class="hero-example-link" href="?from=大阪&nights=daytrip&theme=街歩き">大阪から日帰り街歩き</a>
-          <a class="hero-example-link" href="?from=福岡&nights=2night&theme=絶景">福岡から絶景2泊</a>
+          <a class="hero-example-link" href="?from=福岡&nights=free&theme=絶景">福岡から絶景旅</a>
         </div>
       </section>
 
@@ -140,14 +140,13 @@
           </div>
         </div>
 
-        <!-- 旅の長さ -->
+        <!-- 旅の長さ / 距離フィルタ -->
         <div class="control-group">
           <label class="control-label">旅の長さ</label>
           <div class="btn-group">
-            <button class="sel-btn" data-stay="daytrip">日帰り</button>
-            <button class="sel-btn active" data-stay="1night">1泊</button>
-            <button class="sel-btn" data-stay="2night">2泊</button>
-            <button class="sel-btn" data-stay="3night+">3泊以上</button>
+            <button class="sel-btn" data-stay="daytrip">日帰り<span class="stay-hint">〜2時間</span></button>
+            <button class="sel-btn active" data-stay="1night">1泊<span class="stay-hint">〜4時間</span></button>
+            <button class="sel-btn" data-stay="free">制限なし</button>
           </div>
         </div>
 
