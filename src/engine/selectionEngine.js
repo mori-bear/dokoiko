@@ -135,30 +135,54 @@ const DEST_TYPE_BOOST = {
   peninsula: 1.0,
 };
 
+/**
+ * travelTimeScore: 出発地からの移動時間による重み係数
+ * Math.exp(-t / 120) で指数減衰。90分をフロア値として設定することで、
+ * 近郊都市（尼崎・豊田など30分以内）が旅行先として不当に上位に出ることを防ぐ。
+ * 出発地依存のため recomputeWeight.js（静的weight）ではなくここで適用。
+ */
+function travelTimeScore(minutes) {
+  if (minutes == null) return 1;
+  return Math.exp(-Math.max(minutes, 90) / 120);
+}
+
 function getWeight(city, theme) {
   const base = city.weight ?? 1;
   const capW = PREF_CAPITALS.has(city.name) ? 0.6 : 1;
   const dtW  = DEST_TYPE_BOOST[city.destType] ?? 1;
+  const ttW  = travelTimeScore(city.travelTimeMinutes);
 
   let themeW = 1;
   if (theme) {
     themeW = matchTheme(city, theme) ? 3.0 : 0.3;
   }
 
-  return base * capW * dtW * themeW;
+  return base * capW * dtW * ttW * themeW;
 }
 
+/**
+ * weightedShuffle: 重み付きシャッフル
+ * 同一destTypeが連続して選ばれた場合、weight × 0.9 でペナルティを与え多様性を確保。
+ */
 function weightedShuffle(arr, theme) {
   const result = [];
   const pool = arr.map(item => ({ item, w: getWeight(item, theme) }));
+  let lastType = null;
   while (pool.length > 0) {
-    const total = pool.reduce((s, e) => s + e.w, 0);
+    // 直前と同一 destType にペナルティ → 多様性制御
+    const total = pool.reduce((s, e) => {
+      const aw = (lastType != null && e.item.destType === lastType) ? e.w * 0.9 : e.w;
+      return s + aw;
+    }, 0);
     let r = Math.random() * total;
     let idx = pool.length - 1;
+    let cumW = 0;
     for (let i = 0; i < pool.length; i++) {
-      r -= pool[i].w;
-      if (r <= 0) { idx = i; break; }
+      const aw = (lastType != null && pool[i].item.destType === lastType) ? pool[i].w * 0.9 : pool[i].w;
+      cumW += aw;
+      if (r <= cumW) { idx = i; break; }
     }
+    lastType = pool[idx].item.destType;
     result.push(pool[idx].item);
     pool.splice(idx, 1);
   }

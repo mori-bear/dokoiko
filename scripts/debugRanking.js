@@ -28,16 +28,12 @@ const LIMIT_ARG = process.argv.find(a => a.startsWith('--limit='));
 const LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : 20;
 
 /**
- * travelTimeBonus: 近い目的地を出発地ごとにブースト
- * selectionEngineはtravelTimeをフィルタに使うだけで重みに反映しないため、
- * debugRankingでは「出発地から近いほど上位」という実態に合ったスコアを算出する。
+ * travelTimeBonus: selectionEngine と同一の指数減衰式
+ * Math.exp(-max(min,90) / 120) で90分フロアを設けることで
+ * 近郊都市が旅行先として不当に上位に出ることを防ぐ。
  */
 function travelTimeBonus(min) {
-  if (min <= 90)  return 1.30;
-  if (min <= 150) return 1.15;
-  if (min <= 240) return 1.00;
-  if (min <= 360) return 0.85;
-  return 0.70;
+  return Math.exp(-Math.max(min, 90) / 120);
 }
 
 /**

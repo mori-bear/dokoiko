@@ -1,10 +1,10 @@
 /**
  * recomputeWeight.js — destination.weight を複合要素で再計算
  *
- * weight = base × accessBonus × penalty × popularity × stayScore
+ * weight = base × accessBonus × penalty × popularity × stayScore × cityTourBonus
  *
  * base(destType):
- *   onsen 1.5 / island 1.3 / mountain 1.2 / city 1.0 / sight 0.9
+ *   onsen 1.5 / island 1.3 / mountain 1.2 / city 1.0 / sight 1.0
  *
  * accessBonus(accessPoint.type):
  *   station 1.1 / airport 1.0 / port 0.95 / bus 0.85
@@ -18,7 +18,12 @@
  *   マイナー（_generated かつ無名）→ 0.9
  *
  * stayScore:
- *   onsen → 1.2 / island → 1.1 / sight → 1.0 / 他 → 1.0
+ *   onsen → 1.0 / island → 1.1 / mountain → 1.1 / 他 → 1.0
+ *
+ * cityTourBonus:
+ *   歴史・街歩き・寺社・城下町 タグあり → 1.15 / なし → 1.0
+ *
+ * ※ travelTimeScore は出発地依存のため selectionEngine.js で動的適用。
  *
  * 使い方:
  *   node scripts/recomputeWeight.js              # dry-run
@@ -98,6 +103,26 @@ const STAY_SCORE = {
   peninsula:1.0,
 };
 
+/**
+ * cityTourBonus: 都市観光タグによるブースト
+ * 歴史・街歩き・寺社タグを持つ都市観光系目的地を強化し、
+ * 京都・鎌倉・奈良・金沢・長崎などが適切に上位に出るようにする。
+ *
+ * 注: travelTimeScore は出発地依存のため selectionEngine.js で動的適用する。
+ *     recomputeWeight.js はあくまでも静的weight（出発地非依存）を計算する。
+ */
+const CITY_TOUR_TAGS = new Set(['歴史', '街歩き', '寺社', '古都', '城下町', '宿場町', '城']);
+
+function cityTourBonus(dest) {
+  const allTags = [
+    ...(dest.primary   ?? []),
+    ...(dest.secondary ?? []),
+    ...(dest.tags      ?? []),
+  ];
+  if (allTags.some(t => CITY_TOUR_TAGS.has(t))) return 1.15;
+  return 1.0;
+}
+
 /* route warning から penalty対象を収集（任意・ファイル無くてもOK） */
 const detourIds = new Set();
 const tooLongIds = new Set();
@@ -121,8 +146,9 @@ for (const d of DESTS) {
   if (tooLongIds.has(d.id)) penalty *= 0.8;
   const popularity = popularityFactor(d);
   const stayScore  = STAY_SCORE[d.destType] ?? 1.0;
+  const cityBonus  = cityTourBonus(d);
 
-  const newWeight = Math.round(base * access * penalty * popularity * stayScore * 100) / 100;
+  const newWeight = Math.round(base * access * penalty * popularity * stayScore * cityBonus * 100) / 100;
   if (d.weight !== newWeight) {
     if (APPLY) d.weight = newWeight;
     changed++;
