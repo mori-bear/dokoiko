@@ -777,11 +777,16 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const closer = buildStayCloser(city);
   const reasonHtml = `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${closer ? `<p class="stay-closer">${closer}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`;
 
+  // 温泉時はじゃらんの強みを活かす
+  const isOnsen = city?.destType === 'onsen';
+  const jalanMain = isOnsen ? 'じゃらんで温泉宿を見る' : 'じゃらんで今の空室を見る';
+  const jalanHint = isOnsen ? '温泉に強い' : '口コミ豊富';
+
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-rakuten" data-track="rakuten_click">楽天で今の空室を見る<span class="btn-sub-hint">ポイント貯まる</span></a>` : '',
+                  class="btn btn-stay btn-rakuten" data-track="rakuten_click"><span class="btn-stay-main">楽天で今の空室を見る</span><small class="btn-stay-sub">ポイント貯まる</small></a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-jalan" data-track="jalan_click">じゃらんで今の空室を見る<span class="btn-sub-hint">口コミ豊富</span></a>` : '',
+                  class="btn btn-stay btn-jalan" data-track="jalan_click"><span class="btn-stay-main">${jalanMain}</span><small class="btn-stay-sub">${jalanHint}</small></a>` : '',
   ].filter(Boolean).join('');
 
   return `

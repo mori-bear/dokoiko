@@ -1318,51 +1318,55 @@ body {
   margin-top: 12px;
 }
 
-.btn-rakuten {
-  display: block;
+/* 宿CTA共通: 2段構造（メインテキスト + 補足） */
+.btn-stay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 100%;
   min-height: 56px;
-  background: #bf0000;
-  color: #fff;
-  padding: 16px 12px;
+  padding: 12px 10px;
   border-radius: 12px;
   text-align: center;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(191,0,0,0.25);
   transition: opacity 0.15s;
 }
-.btn-rakuten:hover { opacity: 0.9; }
 
-.btn-jalan {
+.btn-stay-main {
   display: block;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 56px;
-  background: #ff7a00;
-  color: #fff;
-  padding: 16px 12px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1.4;
-  text-decoration: none;
-  opacity: 0.95;
-  transition: opacity 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
-.btn-jalan:hover { opacity: 0.88; }
 
-.btn-sub-hint {
+.btn-stay-sub {
   display: block;
   font-size: 11px;
   font-weight: 400;
   opacity: 0.85;
-  margin-top: 2px;
+  margin-top: 4px;
+  white-space: nowrap;
 }
+
+.btn-rakuten {
+  background: #bf0000;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(191,0,0,0.25);
+}
+.btn-rakuten:hover { opacity: 0.9; }
+
+.btn-jalan {
+  background: #ff7a00;
+  color: #fff;
+  opacity: 0.95;
+}
+.btn-jalan:hover { opacity: 0.88; }
 
 /* サブ宿CTA（ページ下部・2回目） */
 .stay-sub-cta {

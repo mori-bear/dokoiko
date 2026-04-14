@@ -174,6 +174,16 @@ function buildJalanAffilUrl(rawJalanUrl) {
 }
 
 /**
+ * じゃらんキーワード検索URL（スポット単位・UTF-8）
+ * 温泉名・スポット名で直接検索し、県・市レベルより精度向上。
+ */
+function buildJalanKeywordUrl(keyword) {
+  if (!keyword) return null;
+  const rawUrl = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}`;
+  return buildJalanAffilUrl(rawUrl);
+}
+
+/**
  * 3段フォールバック + キーワード検索で楽天URLを解決
  *
  * エリア特化ページ（.html）がある → そのまま使用
@@ -218,9 +228,27 @@ function resolveRakutenUrl(dest) {
 }
 
 /**
- * 3段フォールバックでじゃらんURLを解決
+ * じゃらんURLをスポット単位で解決（CV向上: 温泉名/島名で検索）
+ *
+ * 優先順位:
+ *   1. 温泉（destType=onsen or ONSEN_STAY_AREAS一致）→ 温泉名でキーワード検索
+ *   2. 島（destType=island）→ 島名でキーワード検索
+ *   3. hotelAreas.jalanUrl（Shift-JIS市区町村検索）→ 既存
+ *   4. fallbackCity の jalanUrl
+ *   5. 最終フォールバック: displayName でキーワード検索
  */
 function resolveJalanUrl(dest) {
+  const name = dest.displayName || dest.name;
+
+  // 温泉: 温泉名で直接検索（じゃらんの強み）
+  if (dest.destType === 'onsen' || ONSEN_STAY_AREAS.has(name)) {
+    return buildJalanKeywordUrl(name);
+  }
+  // 島: 島名で直接検索
+  if (dest.destType === 'island' || dest.isIsland) {
+    return buildJalanKeywordUrl(name);
+  }
+
   // Tier1: dest自身のエリア（weak でなければ優先）
   if (!isWeak(dest)) {
     const area = lookupAreaById(dest.id);
@@ -233,12 +261,12 @@ function resolveJalanUrl(dest) {
     if (fbArea?.jalanUrl) return buildJalanAffilUrl(fbArea.jalanUrl);
   }
 
-  // Tier3: dest 自身のエリア（weak でも使用 — 都道府県レベルでも0より良い）
+  // Tier3: dest 自身のエリア（weak でも使用）
   const area = lookupAreaById(dest.id);
   if (area?.jalanUrl) return buildJalanAffilUrl(area.jalanUrl);
 
-  // 最終安全網: 見つからない場合は生じない想定だが念のため
-  return null;
+  // 最終フォールバック: displayNameでキーワード検索
+  return buildJalanKeywordUrl(name);
 }
 
 /**
