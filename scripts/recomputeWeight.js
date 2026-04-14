@@ -1,26 +1,24 @@
 /**
- * recomputeWeight.js — destination.weight を destType + アクセス良さで再計算
+ * recomputeWeight.js — destination.weight を複合要素で再計算
  *
- * weight = base(destType) × accessBonus × penalty
+ * weight = base × accessBonus × penalty × popularity × stayScore
  *
- * base:
- *   onsen:    1.5（最強・宿CV率高）
- *   island:   1.3（宿泊ほぼ必須）
- *   mountain: 1.2（泊まり前提）
- *   remote:   1.2
- *   city:     1.0（標準）
- *   sight:    0.9（宿導線やや弱）
- *   peninsula:1.0
+ * base(destType):
+ *   onsen 1.5 / island 1.3 / mountain 1.2 / city 1.0 / sight 0.9
  *
- * accessBonus:
- *   accessPoint.type === 'station' → 1.1（駅アクセス良）
- *   accessPoint.type === 'airport' → 1.0
- *   accessPoint.type === 'port'    → 0.95
- *   accessPoint.type === 'bus'     → 0.85（バスアクセスのみ）
+ * accessBonus(accessPoint.type):
+ *   station 1.1 / airport 1.0 / port 0.95 / bus 0.85
  *
- * penalty（route_validation_warnings.csvから引き継ぎ可能）:
- *   detour候補 → × 0.9
- *   too_long候補 → × 0.8
+ * penalty(route_validation_warnings):
+ *   detour ×0.9 / too_long ×0.8
+ *
+ * popularity:
+ *   メジャー観光地（富士山・鎌倉・箱根・京都等）→ 1.2
+ *   中堅 → 1.0
+ *   マイナー（_generated かつ無名）→ 0.9
+ *
+ * stayScore:
+ *   onsen → 1.2 / island → 1.1 / sight → 1.0 / 他 → 1.0
  *
  * 使い方:
  *   node scripts/recomputeWeight.js              # dry-run
@@ -47,7 +45,7 @@ const BASE_WEIGHT = {
   remote:    1.2,
   peninsula: 1.0,
   city:      1.0,
-  sight:     0.9,
+  sight:     1.0,  // 0.9→1.0: 京都・鎌倉・宮島など有名観光地が適切に上位に出るように
 };
 
 const ACCESS_BONUS = {
@@ -55,6 +53,49 @@ const ACCESS_BONUS = {
   airport: 1.0,
   port:    0.95,
   bus:     0.85,
+};
+
+/** 有名観光地ホワイトリスト（ブースト対象） */
+const POPULAR_DESTINATIONS = new Set([
+  // 温泉系メジャー
+  '熱海', '箱根', '有馬温泉', '城崎温泉', '草津温泉', '道後温泉', '別府', '由布院',
+  '黒川温泉', '登別温泉', '下呂温泉', '銀山温泉', '鬼怒川温泉',
+  // 観光地メジャー
+  '京都', '奈良', '鎌倉', '金沢', '日光', '富士河口湖', '富士山', '白川郷',
+  '高山', '伊勢', '松本', '軽井沢', '清里', '日本平',
+  // 島・自然メジャー
+  '宮島', '屋久島', '石垣島', '宮古島', '直島', '小豆島',
+  '富良野', '美瑛', '知床', '阿寒湖', '札幌', '小樽', '函館', '登別',
+  '上高地', '立山黒部', '尾瀬', '阿蘇', '高千穂',
+  // 都市メジャー
+  '横浜', '神戸', '広島', '長崎', '福岡',
+]);
+
+/**
+ * popularity スコア
+ *   メジャー観光地 → 1.2
+ *   手動登録（_generatedなし）→ 1.0
+ *   自動生成（無名）→ 0.9
+ */
+function popularityFactor(dest) {
+  const name = dest.displayName || dest.name;
+  if (POPULAR_DESTINATIONS.has(name)) return 1.2;
+  if (dest._generated) return 0.9;
+  return 1.0;
+}
+
+/** stayScore: 宿泊導線の強さ
+ * onsenは selectionEngine 側で DEST_TYPE_BOOST(1.5) が別途掛かるため
+ * ここでは1.0に抑え、weight二重ブーストを防ぐ。
+ */
+const STAY_SCORE = {
+  onsen:    1.0,  // 1.2→1.0: engineでDEST_TYPE_BOOST(1.5)が別途掛かるため二重ブーストを防止
+  island:   1.1,
+  mountain: 1.1,  // 追加: 上高地・立山黒部など山岳宿泊の強さを反映
+  sight:    1.0,
+  city:     1.0,
+  remote:   1.0,
+  peninsula:1.0,
 };
 
 /* route warning から penalty対象を収集（任意・ファイル無くてもOK） */
@@ -78,8 +119,10 @@ for (const d of DESTS) {
   let penalty = 1.0;
   if (detourIds.has(d.id))  penalty *= 0.9;
   if (tooLongIds.has(d.id)) penalty *= 0.8;
+  const popularity = popularityFactor(d);
+  const stayScore  = STAY_SCORE[d.destType] ?? 1.0;
 
-  const newWeight = Math.round(base * access * penalty * 100) / 100;
+  const newWeight = Math.round(base * access * penalty * popularity * stayScore * 100) / 100;
   if (d.weight !== newWeight) {
     if (APPLY) d.weight = newWeight;
     changed++;
