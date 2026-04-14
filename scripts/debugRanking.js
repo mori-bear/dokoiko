@@ -15,7 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 const { buildShuffledPool } = await import('../src/engine/selectionEngine.js');
-const { calculateTravelTimeMinutes } = await import('../src/engine/distanceCalculator.js');
+const { calculateTravelTimeMinutes, haversineKm } = await import('../src/engine/distanceCalculator.js');
 
 const DESTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/destinations.json'), 'utf8'));
 
@@ -35,13 +35,38 @@ function travelTimeBonus(min) {
   return Math.exp(-min / 90);
 }
 
+/** selectionEngine.js と同一 */
+const DEST_TYPE_BOOST = {
+  onsen:     1.5,
+  island:    1.3,
+  mountain:  1.2,
+  remote:    1.2,
+  city:      1.0,
+  sight:     0.9,
+  peninsula: 1.0,
+};
+
+/** selectionEngine.js と同一 — 県庁所在地ペナルティ */
+const PREF_CAPITALS = new Set([
+  '札幌', '青森', '盛岡', '仙台', '秋田', '山形', '福島',
+  '水戸', '宇都宮', '前橋', '東京', '横浜', '新潟',
+  '富山', '金沢', '福井', '甲府', '長野', '岐阜', '静岡',
+  '名古屋', '津', '大津', '京都', '大阪', '神戸', '奈良',
+  '和歌山', '鳥取', '松江', '岡山', '広島', '山口',
+  '徳島', '高松', '松山', '高知',
+  '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '那覇',
+]);
+
+const SAPPORO = [43.0642, 141.3469];
+
 /**
  * selectionEngine と同一の travelTime 補正を適用する。
- * 現在: 札幌発で道内距離が一律 60min になるため 1.5倍補正。
+ * 札幌発: hubCity='札幌'で一律60minになる目的地を座標距離で補正。
  */
-function applyDepartureCorrection(travelMin, departure) {
-  if (departure === '札幌' && travelMin <= 180) {
-    return Math.min(Math.round(travelMin * 1.5), 360);
+function applyDepartureCorrection(travelMin, departure, dest) {
+  if (departure === '札幌' && travelMin <= 60 && dest.lat && dest.lng) {
+    const distKm = haversineKm(SAPPORO[0], SAPPORO[1], dest.lat, dest.lng);
+    return Math.max(30, Math.min(Math.round(distKm), 360));
   }
   return travelMin;
 }
@@ -60,8 +85,15 @@ function rankByWeight(dests, departure) {
     })
     .map(d => {
       const rawMin = calculateTravelTimeMinutes(departure, d);
-      const travelMin = applyDepartureCorrection(rawMin, departure);
-      const adjustedScore = (d.weight ?? 1) * travelTimeBonus(travelMin);
+      const travelMin = applyDepartureCorrection(rawMin, departure, d);
+      const base    = d.weight ?? 1;
+      const capW    = PREF_CAPITALS.has(d.name) ? 0.6 : 1;
+      const dtW     = DEST_TYPE_BOOST[d.destType] ?? 1;
+      const ttW     = travelTimeBonus(travelMin);
+      // 近郊cityペナルティ: selectionEngine.js と同一
+      const nearCityW = (d.destType === 'city' && travelMin < 45 && base < 1.1)
+        ? 0.5 : 1;
+      const adjustedScore = base * capW * dtW * ttW * nearCityW;
       return { ...d, travelMin, adjustedScore };
     })
     .filter(d => d.travelMin && d.travelMin < 600) // 10時間以内

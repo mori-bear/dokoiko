@@ -14,7 +14,7 @@
  *   - タグ不一致: weight × 0.4 で抑制（ランダム性は残す）
  */
 
-import { calculateTravelTimeMinutes, calculateDistanceStars } from './distanceCalculator.js';
+import { calculateTravelTimeMinutes, calculateDistanceStars, haversineKm } from './distanceCalculator.js';
 
 /**
  * テーマ判定（v2）
@@ -152,12 +152,17 @@ function getWeight(city, theme) {
   const dtW  = DEST_TYPE_BOOST[city.destType] ?? 1;
   const ttW  = travelTimeScore(city.travelTimeMinutes);
 
+  // 近郊cityペナルティ: 45分未満かつweight<1.1のcityは旅行先として弱い
+  // (横浜・鎌倉などPOPULAR扱いでweightが高い目的地は除外)
+  const nearCityW = (city.destType === 'city' && (city.travelTimeMinutes ?? 999) < 45 && base < 1.1)
+    ? 0.5 : 1;
+
   let themeW = 1;
   if (theme) {
     themeW = matchTheme(city, theme) ? 3.0 : 0.3;
   }
 
-  return base * capW * dtW * ttW * themeW;
+  return base * capW * dtW * ttW * nearCityW * themeW;
 }
 
 /**
@@ -234,14 +239,18 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     return d.situations.includes(situation);
   }
 
+  // 札幌座標（北海道補正で使用）
+  const SAPPORO = [43.0642, 141.3469];
+
   const withStars = destinations
     .filter(d => d.type !== 'spot')
     .map(d => {
       let travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
-      // 北海道補正: distanceCalculatorが道内を一律~60minと計算するため実態に合わせて補正
-      // 1.5倍することで遠い道内目的地が適切に抑制され、他地方との比較が公平になる
-      if (departure === '札幌' && travelTimeMinutes <= 180) {
-        travelTimeMinutes = Math.min(Math.round(travelTimeMinutes * 1.5), 360);
+      // 北海道補正: hubCity='札幌'の目的地が一律60minになる問題を座標距離で補正
+      // haversine距離(km) / 60km/h ≈ 分換算で実距離ベースの時間を算出
+      if (departure === '札幌' && travelTimeMinutes <= 60 && d.lat && d.lng) {
+        const distKm = haversineKm(SAPPORO[0], SAPPORO[1], d.lat, d.lng);
+        travelTimeMinutes = Math.max(30, Math.min(Math.round(distKm), 360));
       }
       return {
         ...d,
