@@ -9,7 +9,7 @@
  *   → jalan.net/uw/uwp2011/uww2011init.do?keyword={keyword} に飛ぶ
  *
  * エンコードルール:
- *   じゃらん keyword: hotelAreas.json の Shift-JIS 済み jalanUrl を優先使用
+ *   すべて UTF-8 / encodeURIComponent のみ使用（Shift-JIS廃止）
  *   楽天リンク先URL: encodeURIComponent 1回のみ
  *
  * ハブ判定: dest.hubCity !== dest.name のとき hubCity エリアを直接使用
@@ -167,7 +167,7 @@ function isCoarseRakutenPath(path) {
 
 /**
  * じゃらん VC アフィリエイトリンク
- * rawJalanUrl は Shift-JIS 済み URL を使う（hotelAreas.json の jalanUrl）
+ * jalanUrl は UTF-8 encodeURIComponent 済みの URL（Shift-JIS廃止）
  */
 function buildJalanAffilUrl(rawJalanUrl) {
   return appendDateParams(`https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`);
