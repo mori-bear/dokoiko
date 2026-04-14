@@ -1,0 +1,12100 @@
+[
+  {
+    "name": "堺",
+    "prefecture": "大阪府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "堺",
+    "tags": [
+      "歴史",
+      "世界遺産",
+      "文化"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "TAOYA日光霧降",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ウトロ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "オーロラ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "オソウシ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "オホーツクオムイ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "かみゆうべつ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "さるふつ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ジョイランド樽前",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "トムラウシ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ぬかびら温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ヌプントムラウシ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "びふか温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ピンネシリ温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "ぽんぴら温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "阿寒湖",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "阿寒湖温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "阿寒湖温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "愛山渓温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "旭岳温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "芦別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "伊香保温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "伊香保温泉",
+    "tags": [
+      "温泉",
+      "街歩き",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "伊達温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "伊東",
+    "prefecture": "静岡県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "伊東温泉",
+    "tags": [
+      "温泉",
+      "海",
+      "街歩き"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "伊豆高原",
+    "prefecture": "静岡県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "伊豆高原",
+    "tags": [
+      "温泉",
+      "海",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "稲垣温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "臼別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "雲仙",
+    "prefecture": "長崎県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "雲仙",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "雲仙温泉",
+    "prefecture": "長崎県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "雲仙温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "益子温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "越後湯沢",
+    "prefecture": "新潟県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "越後湯沢",
+    "tags": [
+      "温泉",
+      "スキー",
+      "雪"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "猿ヶ京温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "遠刈田温泉",
+    "prefecture": "宮城県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "遠刈田温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "塩原温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "塩原温泉",
+    "tags": [
+      "温泉",
+      "渓谷",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "塩別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "奥嬬恋温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "奥入瀬渓流温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "奥飛騨温泉",
+    "prefecture": "岐阜県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "奥飛騨温泉郷",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "奥美利河温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "黄金崎不老不死温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "温根湯温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "温泉津",
+    "prefecture": "島根県",
+    "destType": "onsen",
+    "area": "中国",
+    "hub": "温泉津温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "海"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "下風呂温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "下呂温泉",
+    "prefecture": "岐阜県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "下呂温泉",
+    "tags": [
+      "温泉",
+      "街歩き",
+      "寺社"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "加賀温泉",
+    "prefecture": "石川県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "加賀温泉郷",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "歌登温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "花巻",
+    "prefecture": "岩手県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "花巻",
+    "tags": [
+      "温泉",
+      "自然",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "花敷温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "芽登温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "会津若松",
+    "prefecture": "福島県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "会津若松",
+    "tags": [
+      "温泉",
+      "城",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "貝取澗温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "丸瀬布温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "岩尾温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "岩尾別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "嬉野温泉",
+    "prefecture": "佐賀県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "嬉野温泉",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "鬼怒川温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "鬼怒川温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "川"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "宮ノ下",
+    "prefecture": "神奈川県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宮ノ下",
+    "tags": [
+      "温泉",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "金花湯",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "銀山温泉",
+    "prefecture": "山形県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "銀山温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "街歩き"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "見市温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "後生掛温泉",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "後生掛温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "高山",
+    "prefecture": "岐阜県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "高山",
+    "tags": [
+      "温泉",
+      "山",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "黒松内温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "沙流川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "三朝温泉",
+    "prefecture": "鳥取県",
+    "destType": "onsen",
+    "area": "中国",
+    "hub": "三朝温泉",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "三斗小屋温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "山鹿",
+    "prefecture": "熊本県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "山鹿",
+    "tags": [
+      "温泉",
+      "祭り",
+      "文化"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "山代温泉",
+    "prefecture": "石川県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "山代温泉",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "酸ヶ湯",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "四万温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "四万温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "指宿",
+    "prefecture": "鹿児島県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "指宿",
+    "tags": [
+      "温泉",
+      "自然",
+      "離島"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "支笏湖",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "支笏湖温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "支笏湖いとう温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "支笏湖温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "枝幸温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "雌阿寒温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "鹿の湯",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "鹿沢温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "鹿部温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "樹海温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "修善寺",
+    "prefecture": "静岡県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "修善寺",
+    "tags": [
+      "温泉",
+      "歴史",
+      "寺社"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "秋元温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "秋保温泉",
+    "prefecture": "宮城県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "秋保温泉",
+    "tags": [
+      "温泉",
+      "滝",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "十勝岳温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "十勝川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "十和田湖畔温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "渋温泉",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "渋温泉",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "初山別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "小国",
+    "prefecture": "熊本県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "小国",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "上の湯温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "上牧温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "城ヶ倉温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "城崎温泉",
+    "prefecture": "兵庫県",
+    "destType": "onsen",
+    "area": "関西",
+    "hub": "城崎温泉",
+    "tags": [
+      "温泉",
+      "城"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "尻焼温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "神威脇温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "神居岩温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "人吉",
+    "prefecture": "熊本県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "人吉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "城"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "諏訪",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "諏訪温泉",
+    "tags": [
+      "温泉",
+      "寺社",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "水上温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "水上温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "滝"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "水無海浜温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "菅野温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "瀬戸瀬温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "瀬石温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "青荷温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "赤倉温泉",
+    "prefecture": "新潟県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "赤倉温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "千走川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "川汲温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "川原湯温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "川中温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "川北温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "川俣温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "浅虫温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "然別湖畔温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "層雲峡温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "相乗温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "相泊温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "草津温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "草津温泉",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "蔵王",
+    "prefecture": "宮城県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "蔵王",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "大雪高原温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "大鰐温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "滝の湯温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "濁川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "谷地温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "谷地頭温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "男鹿",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "男鹿温泉",
+    "tags": [
+      "温泉",
+      "海",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "男鹿温泉",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "男鹿温泉",
+    "tags": [
+      "温泉",
+      "海"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "知内温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "稚内温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "竹田",
+    "prefecture": "大分県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "竹田温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "城"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "秩父別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "中岳温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "中禅寺温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "仲洞爺温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "朝里川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "長万部温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "蔦温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "定山渓",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "定山渓",
+    "tags": [
+      "温泉",
+      "自然",
+      "海"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "定山渓温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "天塩温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "天塩川温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "天人峡温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "田沢湖",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "田沢湖",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "田辺",
+    "prefecture": "和歌山県",
+    "destType": "onsen",
+    "area": "関西",
+    "hub": "田辺",
+    "tags": [
+      "温泉",
+      "歴史",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "登別",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "登別",
+    "tags": [
+      "温泉",
+      "自然",
+      "海"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "登別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "湯河原温泉",
+    "prefecture": "神奈川県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "湯河原温泉",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "湯西川温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "湯田温泉",
+    "prefecture": "山口県",
+    "destType": "onsen",
+    "area": "中国",
+    "hub": "湯田温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "湯布院",
+    "prefecture": "大分県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "湯布院",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "湯涌温泉",
+    "prefecture": "石川県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "湯涌温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "洞川温泉",
+    "prefecture": "奈良県",
+    "destType": "onsen",
+    "area": "関西",
+    "hub": "洞川温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "精神"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "洞爺湖",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "洞爺湖",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "洞爺湖温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "道後温泉",
+    "prefecture": "愛媛県",
+    "destType": "onsen",
+    "area": "四国",
+    "hub": "道後温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "那須",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "那須温泉",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "那須温泉郷",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "二股ラヂウム温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "日光",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "日光",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "日光湯元温泉",
+    "prefecture": "栃木県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "日田",
+    "prefecture": "大分県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "日田温泉",
+    "tags": [
+      "温泉",
+      "歴史"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "乳頭温泉",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "乳頭温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "乳頭温泉郷",
+    "prefecture": "秋田県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "乳頭温泉郷",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "熱海",
+    "prefecture": "静岡県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "熱海",
+    "tags": [
+      "温泉",
+      "海",
+      "城"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "馬門温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "盃温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "白浜",
+    "prefecture": "和歌山県",
+    "destType": "onsen",
+    "area": "関西",
+    "hub": "白浜",
+    "tags": [
+      "温泉",
+      "海",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "白老温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "箱根",
+    "prefecture": "神奈川県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "箱根",
+    "tags": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "板留温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "飯山",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "飯山温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "美作",
+    "prefecture": "岡山県",
+    "destType": "onsen",
+    "area": "中国",
+    "hub": "美作",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "美利河温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "氷見",
+    "prefecture": "富山県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "氷見",
+    "tags": [
+      "温泉",
+      "海",
+      "街歩き"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "浜頓別温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "富士河口湖",
+    "prefecture": "山梨県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "富士河口湖",
+    "tags": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "敷島温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "武雄温泉",
+    "prefecture": "佐賀県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "武雄温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "平田内温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "別所温泉",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "別所温泉",
+    "tags": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "別府",
+    "prefecture": "大分県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "別府",
+    "tags": [
+      "温泉",
+      "海"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "片品温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "法師温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "豊富温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "北見温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "北湯沢温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "万座温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "妙高高原",
+    "prefecture": "新潟県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "妙高高原",
+    "tags": [
+      "温泉",
+      "山",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "霧島",
+    "prefecture": "鹿児島県",
+    "destType": "onsen",
+    "area": "九州",
+    "hub": "霧島",
+    "tags": [
+      "温泉",
+      "山",
+      "寺社"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "鳴子温泉",
+    "prefecture": "宮城県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "鳴子温泉",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "網走湖畔温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "野沢温泉",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "野沢温泉",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "野沢菜の里・野沢温泉",
+    "prefecture": "長野県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "野沢菜の里・野沢温泉",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "有毒温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "有馬温泉",
+    "prefecture": "兵庫県",
+    "destType": "onsen",
+    "area": "関西",
+    "hub": "有馬温泉",
+    "tags": [
+      "温泉",
+      "歴史",
+      "山"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "由仁温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "養老牛温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "羅臼温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "雷電温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "落合温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "利尻ふれあい温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "利尻富士温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "流山温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "礼文島温泉",
+    "prefecture": "北海道",
+    "destType": "onsen",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "老神温泉",
+    "prefecture": "群馬県",
+    "destType": "onsen",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "和倉温泉",
+    "prefecture": "石川県",
+    "destType": "onsen",
+    "area": "中部",
+    "hub": "和倉温泉",
+    "tags": [
+      "温泉",
+      "海",
+      "離島"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "嶽温泉",
+    "prefecture": "青森県",
+    "destType": "onsen",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "温泉"
+    ],
+    "priority": "high"
+  },
+  {
+    "name": "うるま",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "うるま",
+    "tags": [
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "旭川",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "旭川",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊賀",
+    "prefecture": "三重県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "伊賀上野",
+    "tags": [
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊賀上野",
+    "prefecture": "三重県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "伊賀上野",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊根",
+    "prefecture": "京都府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "伊根",
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊勢",
+    "prefecture": "三重県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "伊勢",
+    "tags": [
+      "海",
+      "街歩き",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊勢崎",
+    "prefecture": "群馬県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "伊勢崎",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "井原",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "井原",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "一関",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "一関",
+    "tags": [
+      "歴史",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇都宮",
+    "prefecture": "栃木県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇部",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "宇部",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇和島",
+    "prefecture": "愛媛県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "宇和島",
+    "tags": [
+      "城",
+      "温泉",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "臼杵",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "臼杵",
+    "tags": [
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "益子",
+    "prefecture": "栃木県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "益子",
+    "tags": [
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "越前市",
+    "prefecture": "福井県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "越前市",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "越前大野",
+    "prefecture": "福井県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "大野",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "延岡",
+    "prefecture": "宮崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "延岡",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "遠野",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "遠野",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "塩尻",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "塩尻",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奥州",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "奥州",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "横須賀",
+    "prefecture": "神奈川県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "横須賀",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "横浜",
+    "prefecture": "神奈川県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "横浜",
+    "tags": [
+      "街",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "岡崎",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "岡崎",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "下関",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "下関",
+    "tags": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "下田",
+    "prefecture": "静岡県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "下田",
+    "tags": [
+      "歴史",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "角館",
+    "prefecture": "秋田県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "角館",
+    "tags": [
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "掛川",
+    "prefecture": "静岡県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "掛川",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "笠岡",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "笠岡",
+    "tags": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "笠間",
+    "prefecture": "茨城県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "笠間",
+    "tags": [
+      "陶芸",
+      "寺社",
+      "文化"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "橿原",
+    "prefecture": "奈良県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "橿原",
+    "tags": [
+      "歴史",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "釜石",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "釜石",
+    "tags": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鎌倉",
+    "prefecture": "神奈川県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "鎌倉",
+    "tags": [
+      "寺社",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "寒河江",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "寒河江",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "観音寺",
+    "prefecture": "香川県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "観音寺",
+    "tags": [
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "丸亀",
+    "prefecture": "香川県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "丸亀",
+    "tags": [
+      "城",
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "岸和田",
+    "prefecture": "大阪府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "岸和田",
+    "tags": [
+      "歴史",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "岩国",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "岩国",
+    "tags": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "喜多方",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "喜多方",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "喜如嘉",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "喜如嘉",
+    "tags": [
+      "文化",
+      "自然",
+      "工芸"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "気仙沼",
+    "prefecture": "宮城県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "気仙沼",
+    "tags": [
+      "海",
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "吉野ヶ里",
+    "prefecture": "佐賀県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "吉野ヶ里",
+    "tags": [
+      "歴史",
+      "遺跡",
+      "文化"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "杵築",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "杵築",
+    "tags": [
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "久慈",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "久慈",
+    "tags": [
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "久留米",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "久留米",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "球磨川",
+    "prefecture": "熊本県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "球磨川",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "牛窓",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "牛窓",
+    "tags": [
+      "海",
+      "街歩き",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "境港",
+    "prefecture": "鳥取県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "米子",
+    "tags": [
+      "街歩き",
+      "グルメ",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "琴平",
+    "prefecture": "香川県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "琴平",
+    "tags": [
+      "街歩き",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "近江八幡",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "近江八幡",
+    "tags": [
+      "歴史",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "釧路",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "釧路",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "郡山",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "郡山",
+    "tags": [
+      "街",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "郡上八幡",
+    "prefecture": "岐阜県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "郡上八幡",
+    "tags": [
+      "渓谷",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "犬山",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "犬山",
+    "tags": [
+      "城",
+      "歴史",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "五所川原",
+    "prefecture": "青森県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "五所川原",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "呉",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "呉",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "御坊",
+    "prefecture": "和歌山県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "御坊",
+    "tags": [
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "弘前",
+    "prefecture": "青森県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "弘前",
+    "tags": [
+      "歴史",
+      "城",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "江差",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "江差",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "甲賀",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "甲賀",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高崎",
+    "prefecture": "群馬県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "高崎",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高松",
+    "prefecture": "香川県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "高松",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "今治",
+    "prefecture": "愛媛県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "今治",
+    "tags": [
+      "街歩き",
+      "海",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "佐原",
+    "prefecture": "千葉県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "佐原",
+    "tags": [
+      "歴史",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "佐世保",
+    "prefecture": "長崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "佐世保",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "佐野",
+    "prefecture": "栃木県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "佐野",
+    "tags": [
+      "グルメ",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "妻籠",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "妻籠",
+    "tags": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "坂出",
+    "prefecture": "香川県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "坂出",
+    "tags": [
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三浦",
+    "prefecture": "神奈川県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "三浦",
+    "tags": [
+      "海",
+      "食",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三原",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "三原",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三好",
+    "prefecture": "徳島県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "三好",
+    "tags": [
+      "自然",
+      "絶景"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三次",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "三次",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三島",
+    "prefecture": "静岡県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "三島",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "糸魚川",
+    "prefecture": "新潟県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "糸魚川",
+    "tags": [
+      "自然",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "糸満",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "糸満",
+    "tags": [
+      "歴史",
+      "平和",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鹿嶋",
+    "prefecture": "茨城県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "鹿嶋",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "七尾",
+    "prefecture": "石川県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "七尾",
+    "tags": [
+      "温泉",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "室戸",
+    "prefecture": "高知県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "室戸",
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "室蘭",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "室蘭",
+    "tags": [
+      "自然",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "若狭小浜",
+    "prefecture": "福井県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "若狭小浜",
+    "tags": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "酒田",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "酒田",
+    "tags": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "秋田",
+    "prefecture": "秋田県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "秋田",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宿毛",
+    "prefecture": "高知県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "宿毛",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "出雲",
+    "prefecture": "島根県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "出雲",
+    "tags": [
+      "寺社",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "出石",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "出石",
+    "tags": [
+      "歴史",
+      "城",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小樽",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "小樽",
+    "tags": [
+      "海",
+      "歴史",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小田原",
+    "prefecture": "神奈川県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "小田原",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小布施",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "小布施",
+    "tags": [
+      "街歩き",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "松江",
+    "prefecture": "島根県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "松江",
+    "tags": [
+      "歴史",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "松阪",
+    "prefecture": "三重県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "松阪",
+    "tags": [
+      "食",
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "松代",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "松代温泉",
+    "tags": [
+      "歴史",
+      "温泉",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "松島",
+    "prefecture": "宮城県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "松島",
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "沼津",
+    "prefecture": "静岡県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "沼津",
+    "tags": [
+      "海",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "沼田",
+    "prefecture": "群馬県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "沼田",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上越",
+    "prefecture": "新潟県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "上越",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "常滑",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "常滑",
+    "tags": [
+      "陶芸",
+      "文化",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "信楽",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "信楽",
+    "tags": [
+      "陶芸",
+      "文化",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "新宮",
+    "prefecture": "和歌山県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "新宮",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "新庄",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "新庄",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "水戸",
+    "prefecture": "茨城県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "成田",
+    "prefecture": "千葉県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "成田",
+    "tags": [
+      "寺社",
+      "食",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "西条",
+    "prefecture": "愛媛県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "西条",
+    "tags": [
+      "街歩き",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "西条（酒都）",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "西条（酒都）",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "西脇",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "西脇",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "石巻",
+    "prefecture": "宮城県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "石巻",
+    "tags": [
+      "街",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "赤穂",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "赤穂",
+    "tags": [
+      "歴史",
+      "城",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "仙北",
+    "prefecture": "秋田県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "仙北",
+    "tags": [
+      "温泉",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "川越",
+    "prefecture": "埼玉県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "川越",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "倉吉",
+    "prefecture": "鳥取県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "倉吉",
+    "tags": [
+      "歴史",
+      "温泉",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "倉敷",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "倉敷",
+    "tags": [
+      "歴史",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "草津（滋賀）",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "草津（滋賀）",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "足利",
+    "prefecture": "栃木県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "足利",
+    "tags": [
+      "歴史",
+      "自然",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "村上",
+    "prefecture": "新潟県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "村上",
+    "tags": [
+      "歴史",
+      "グルメ",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "多治見",
+    "prefecture": "岐阜県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "多治見",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "帯広",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "帯広",
+    "tags": [
+      "自然",
+      "グルメ",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大垣",
+    "prefecture": "岐阜県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "大垣",
+    "tags": [
+      "歴史",
+      "城",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大曲",
+    "prefecture": "秋田県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "大曲",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大宰府",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "大宰府",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大洲",
+    "prefecture": "愛媛県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "大洲",
+    "tags": [
+      "歴史",
+      "山",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大船渡",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "大船渡",
+    "tags": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大津",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "大津",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大内宿",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "大内宿",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大分",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "大分",
+    "tags": [
+      "グルメ",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "丹波篠山",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "丹波篠山",
+    "tags": [
+      "歴史",
+      "グルメ",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "知覧",
+    "prefecture": "鹿児島県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "知覧",
+    "tags": [
+      "歴史",
+      "武家屋敷",
+      "文化"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "竹原",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "竹原",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "中津",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "中津",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "中津川",
+    "prefecture": "岐阜県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "中津川",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "朝倉",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "朝倉",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "銚子",
+    "prefecture": "千葉県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "銚子",
+    "tags": [
+      "海",
+      "街歩き",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "長井",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "長井",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "長岡",
+    "prefecture": "新潟県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "長岡",
+    "tags": [
+      "自然",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "長浜",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "長浜",
+    "tags": [
+      "歴史",
+      "自然",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鳥羽",
+    "prefecture": "三重県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "鳥羽",
+    "tags": [
+      "街歩き",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "津山",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "津山",
+    "tags": [
+      "歴史",
+      "城",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "津和野",
+    "prefecture": "島根県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "津和野",
+    "tags": [
+      "歴史",
+      "寺社",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鶴岡",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "鶴岡",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "天童",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "天童",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "都城",
+    "prefecture": "宮崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "都城",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "土浦",
+    "prefecture": "茨城県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "土浦",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "唐津",
+    "prefecture": "佐賀県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "唐津",
+    "tags": [
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "東広島",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "東広島",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "東根",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "東根",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "読谷村",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "読谷村",
+    "tags": [
+      "海",
+      "歴史",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "苫小牧",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "苫小牧",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "敦賀",
+    "prefecture": "福井県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "敦賀",
+    "tags": [
+      "海",
+      "街歩き",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奈良井宿",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "奈良井宿",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "内子",
+    "prefecture": "愛媛県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "内子",
+    "tags": [
+      "街歩き",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南九州",
+    "prefecture": "鹿児島県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "南九州",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南三陸",
+    "prefecture": "宮城県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "南三陸",
+    "tags": [
+      "海",
+      "食",
+      "復興"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南知多",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "南知多",
+    "tags": [
+      "海",
+      "食",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "尼崎",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "尼崎",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日出",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "日出",
+    "tags": [
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日置",
+    "prefecture": "鹿児島県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "日置",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日南",
+    "prefecture": "宮崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "日南",
+    "tags": [
+      "海",
+      "歴史",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日立",
+    "prefecture": "茨城県",
+    "destType": "city",
+    "area": "関東",
+    "hub": "日立",
+    "tags": [
+      "自然",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "入善",
+    "prefecture": "富山県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "入善",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "能代",
+    "prefecture": "秋田県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "能代",
+    "tags": [
+      "自然",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "波佐見",
+    "prefecture": "長崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "波佐見",
+    "tags": [
+      "歴史",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "馬籠",
+    "prefecture": "岐阜県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "馬籠",
+    "tags": [
+      "歴史",
+      "山",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "萩",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "萩",
+    "tags": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白河",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "白河",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白石",
+    "prefecture": "宮城県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "白石",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白老",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "白老",
+    "tags": [
+      "文化",
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "函館",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "函館",
+    "tags": [
+      "街",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "八代",
+    "prefecture": "熊本県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "八代",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "飯田",
+    "prefecture": "長野県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "飯田",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "尾道",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "尾道",
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "美保関",
+    "prefecture": "島根県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "米子",
+    "tags": [
+      "街歩き",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "彦根",
+    "prefecture": "滋賀県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "彦根",
+    "tags": [
+      "歴史",
+      "自然",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浜松",
+    "prefecture": "静岡県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "浜松",
+    "tags": [
+      "グルメ",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浜田",
+    "prefecture": "島根県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "浜田",
+    "tags": [
+      "海",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "富田林",
+    "prefecture": "大阪府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "富田林",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "富良野",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "富良野",
+    "tags": [
+      "街歩き",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "舞鶴",
+    "prefecture": "京都府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "舞鶴",
+    "tags": [
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伏見",
+    "prefecture": "京都府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "伏見",
+    "tags": [
+      "寺社",
+      "グルメ",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "福岡",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "福岡",
+    "tags": [
+      "グルメ",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "福山",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "福山",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "福知山",
+    "prefecture": "京都府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "福知山",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "福島",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "福島",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "平戸",
+    "prefecture": "長崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "平戸",
+    "tags": [
+      "歴史",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "平泉周辺",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "平泉周辺",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "米子",
+    "prefecture": "鳥取県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "米子",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "米沢",
+    "prefecture": "山形県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "米沢",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宝塚",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "宝塚",
+    "tags": [
+      "街",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "豊橋",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "豊橋",
+    "tags": [
+      "グルメ",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "豊後高田",
+    "prefecture": "大分県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "豊後高田",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "豊田",
+    "prefecture": "愛知県",
+    "destType": "city",
+    "area": "中部",
+    "hub": "豊田",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "防府",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "防府",
+    "tags": [
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北九州",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "北九州",
+    "tags": [
+      "街",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北見",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "北見",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北上",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "北上",
+    "tags": [
+      "桜",
+      "自然",
+      "川"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北谷",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "北谷",
+    "tags": [
+      "街",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "本宮",
+    "prefecture": "福島県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "本宮",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "名護",
+    "prefecture": "沖縄県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "名護",
+    "tags": [
+      "海",
+      "自然",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "明石",
+    "prefecture": "兵庫県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "明石",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鳴門",
+    "prefecture": "徳島県",
+    "destType": "city",
+    "area": "四国",
+    "hub": "鳴門",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "網走",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "網走",
+    "tags": [
+      "街歩き",
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "門司港",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "門司港",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "野辺地",
+    "prefecture": "青森県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "野辺地",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "矢掛",
+    "prefecture": "岡山県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "矢掛",
+    "tags": [
+      "歴史",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "柳井",
+    "prefecture": "山口県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "柳井",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "文化"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "柳川",
+    "prefecture": "福岡県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "柳川",
+    "tags": [
+      "街歩き",
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "余市",
+    "prefecture": "北海道",
+    "destType": "city",
+    "area": "北海道",
+    "hub": "余市",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "嵐山",
+    "prefecture": "京都府",
+    "destType": "city",
+    "area": "関西",
+    "hub": "嵐山",
+    "tags": [
+      "竹林",
+      "寺社",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "陸前高田",
+    "prefecture": "岩手県",
+    "destType": "city",
+    "area": "東北",
+    "hub": "陸前高田",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "龍神温泉",
+    "prefecture": "和歌山県",
+    "destType": "city",
+    "area": "関西",
+    "hub": "白浜",
+    "tags": [
+      "温泉",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鞆の浦",
+    "prefecture": "広島県",
+    "destType": "city",
+    "area": "中国",
+    "hub": "鞆の浦",
+    "tags": [
+      "歴史",
+      "海",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "飫肥",
+    "prefecture": "宮崎県",
+    "destType": "city",
+    "area": "九州",
+    "hub": "飫肥",
+    "tags": [
+      "歴史",
+      "海",
+      "城"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊豆大島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "伊豆大島",
+    "tags": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊良部島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "伊良部島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "隠岐の島",
+    "prefecture": "島根県",
+    "destType": "island",
+    "area": "中国",
+    "hub": "隠岐の島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奄美大島",
+    "prefecture": "鹿児島県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "奄美大島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "屋久島",
+    "prefecture": "鹿児島県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "屋久島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "海士町",
+    "prefecture": "島根県",
+    "destType": "island",
+    "area": "中国",
+    "hub": "海士町",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "久米島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "久米島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宮古島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "宮古島",
+    "tags": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宮島",
+    "prefecture": "広島県",
+    "destType": "island",
+    "area": "中国",
+    "hub": "宮島",
+    "tags": [
+      "離島",
+      "海",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "五島列島",
+    "prefecture": "長崎県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "五島列島",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "甑島",
+    "prefecture": "鹿児島県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "甑島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "佐渡島",
+    "prefecture": "新潟県",
+    "destType": "island",
+    "area": "中部",
+    "hub": "佐渡島",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "座間味島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "座間味島",
+    "tags": [
+      "離島",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三宅島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "三宅島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "式根島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "式根島",
+    "tags": [
+      "離島",
+      "海",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "種子島",
+    "prefecture": "鹿児島県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "種子島",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "周防大島",
+    "prefecture": "山口県",
+    "destType": "island",
+    "area": "中国",
+    "hub": "周防大島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小豆島",
+    "prefecture": "香川県",
+    "destType": "island",
+    "area": "四国",
+    "hub": "小豆島",
+    "tags": [
+      "離島",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小浜島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "小浜島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "新島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "新島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "神津島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "神津島",
+    "tags": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "西表島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "西表島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "石垣島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "石垣島",
+    "tags": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "竹富島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "竹富島",
+    "tags": [
+      "離島",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "直島",
+    "prefecture": "香川県",
+    "destType": "island",
+    "area": "四国",
+    "hub": "直島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "渡嘉敷島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "渡嘉敷島",
+    "tags": [
+      "離島",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "柏島",
+    "prefecture": "高知県",
+    "destType": "island",
+    "area": "四国",
+    "hub": "柏島",
+    "tags": [
+      "離島",
+      "海",
+      "秘境"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "八丈島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "八丈島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "与那国島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "与那国島",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "あさひかわ北彩都ガーデン",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "あしかがフラワーパーク",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "いの町",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "いの町",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "うらかわ優駿ビレッジAERU",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "オホーツクとっかりセンター",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "キロロリゾート",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "こもれび森のイバライド",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "サホロリゾート",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "サンタプレゼントパーク・マロースゲレンデ",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "チキウ岬",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "トマム",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "トマム",
+    "tags": [
+      "スキー",
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "トラピスト修道院",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "トロッコ王国美深",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "ニセコ",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "ニセコ",
+    "tags": [
+      "スキー",
+      "山",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "ノーザンホースパーク",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "のぼりべつクマ牧場",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "ピョウタンの滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "ファーム富田",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "フレペの滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "メルヘン交差点",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "阿蘇",
+    "prefecture": "熊本県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "阿蘇",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "阿南",
+    "prefecture": "徳島県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "阿南",
+    "tags": [
+      "海",
+      "自然",
+      "野生動物"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "愛南",
+    "prefecture": "愛媛県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "愛南",
+    "tags": [
+      "海",
+      "自然",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "綾里",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "綾里",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "安曇野",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "安曇野",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊佐城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "伊方",
+    "prefecture": "愛媛県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "伊方",
+    "tags": [
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "一宮（東浪見）",
+    "prefecture": "千葉県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "一宮（東浪見）",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "茨城県護国神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "因島",
+    "prefecture": "広島県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "因島",
+    "tags": [
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇陀",
+    "prefecture": "奈良県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "宇陀",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇都宮城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宇都宮二荒山神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "烏山城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "姥神大神宮",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浦臼神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浦河神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "永山神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "永平寺",
+    "prefecture": "福井県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "永平寺",
+    "tags": [
+      "寺社",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "益子町",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "越前海岸",
+    "prefecture": "福井県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "越前海岸",
+    "tags": [
+      "海",
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "榎本城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奥尻島",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奥多摩",
+    "prefecture": "東京都",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "奥多摩",
+    "tags": [
+      "山",
+      "自然",
+      "川"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "牡鹿半島",
+    "prefecture": "宮城県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "牡鹿半島",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "恩納村",
+    "prefecture": "沖縄県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "恩納村",
+    "tags": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "下北半島",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "下北半島",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "花の拠点「はなふる」",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "会津美里",
+    "prefecture": "福島県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "会津美里",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "笠間稲荷神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "笠間城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "蒲郡",
+    "prefecture": "愛知県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "蒲郡",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "釜加神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "館山",
+    "prefecture": "千葉県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "館山",
+    "tags": [
+      "海",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "館城",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "丸瀬布森林公園いこいの森",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "岩見沢神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "義経神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "吉野",
+    "prefecture": "奈良県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "吉野",
+    "tags": [
+      "自然",
+      "歴史",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "宮古",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "宮古",
+    "tags": [
+      "海",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "牛久シャトー",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "恐山",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "恐山",
+    "tags": [
+      "霊場",
+      "自然",
+      "精神"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "襟裳岬",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "金山町",
+    "prefecture": "山形県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "金山町",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "九十九里",
+    "prefecture": "千葉県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "九十九里",
+    "tags": [
+      "海",
+      "自然",
+      "食"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "串本",
+    "prefecture": "和歌山県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "串本",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "軽井沢",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "軽井沢",
+    "tags": [
+      "山",
+      "自然",
+      "滝"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "結城城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "剣山",
+    "prefecture": "徳島県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "剣山",
+    "tags": [
+      "山",
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "元和台海浜公園",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "古河城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "呼人神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "戸隠",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "戸隠",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "戸切地陣屋",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "五箇山",
+    "prefecture": "富山県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "高山",
+    "tags": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "五稜郭",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "御代田",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "御代田",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "厚岸",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "厚岸",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "江の島",
+    "prefecture": "神奈川県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "江の島",
+    "tags": [
+      "海",
+      "寺社",
+      "街歩き"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "江別神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "香嵐渓",
+    "prefecture": "愛知県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "香嵐渓",
+    "tags": [
+      "紅葉",
+      "自然",
+      "川"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高島",
+    "prefecture": "滋賀県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "高島",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高尾山",
+    "prefecture": "東京都",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "高尾山",
+    "tags": [
+      "山",
+      "寺社",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高野山",
+    "prefecture": "和歌山県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "高野山",
+    "tags": [
+      "山",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "高梁",
+    "prefecture": "岡山県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "高梁",
+    "tags": [
+      "城",
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "国営ひたち海浜公園",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "国王神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "国後島",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "国東",
+    "prefecture": "大分県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "国東",
+    "tags": [
+      "歴史",
+      "寺社",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "黒部",
+    "prefecture": "富山県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "黒部",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "今帰仁",
+    "prefecture": "沖縄県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "今帰仁",
+    "tags": [
+      "城",
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "今泉八坂神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "根室半島チャシ跡群",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "佐野プレミアム・アウトレット",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "札幌八幡宮",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "殺生石",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "三陸（大槌）",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "三陸（大槌）",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "山寺",
+    "prefecture": "山形県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "山寺",
+    "tags": [
+      "寺社",
+      "山",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "山彦の滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "四万十",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "四万十川",
+    "tags": [
+      "自然",
+      "渓谷"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "四万十川",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "四万十川",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "志摩",
+    "prefecture": "三重県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "志摩",
+    "tags": [
+      "海",
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "糸島",
+    "prefecture": "福岡県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "糸島",
+    "tags": [
+      "海",
+      "街歩き",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "時代村",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鹿島神宮",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "室戸岬",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "室戸岬",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "社台滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "珠洲",
+    "prefecture": "石川県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "珠洲",
+    "tags": [
+      "海",
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "酒列磯前神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "就実の丘",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "秋吉台",
+    "prefecture": "山口県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "秋吉台",
+    "tags": [
+      "自然",
+      "洞窟",
+      "高原"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "十勝ヒルズ",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "十勝岳望岳台",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "十勝千年の森",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "十和田",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "十和田",
+    "tags": [
+      "湖",
+      "自然",
+      "紅葉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "十和田湖",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "十和田湖",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "出羽三山",
+    "prefecture": "山形県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "出羽三山",
+    "tags": [
+      "寺社",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "出水",
+    "prefecture": "鹿児島県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "出水",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "女化神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "勝浦",
+    "prefecture": "千葉県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "勝浦",
+    "tags": [
+      "海",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "勝山",
+    "prefecture": "福井県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "勝山",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小川の滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小樽運河",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "小田城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "松前城",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "焼尻島",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "焼津",
+    "prefecture": "静岡県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "焼津",
+    "tags": [
+      "グルメ",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "象潟",
+    "prefecture": "秋田県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "象潟",
+    "tags": [
+      "自然",
+      "絶景"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上高地",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "松本",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上士幌",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "上士幌",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上松",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "上松",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上川神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "上野ファーム",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "乗鞍",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "乗鞍",
+    "tags": [
+      "山",
+      "自然",
+      "高山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "常磐神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浄土ヶ浜",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "浄土ヶ浜",
+    "tags": [
+      "海",
+      "絶景"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "新見",
+    "prefecture": "岡山県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "新見",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "深浦",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "深浦",
+    "tags": [
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "深川市桜山公園",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "真鍋庭園",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "神田城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "壬生城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "須崎",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "須崎",
+    "tags": [
+      "グルメ",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "水郷筑波国定公園",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "水戸東照宮",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "水戸八幡宮",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "清水円山展望台",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "清里",
+    "prefecture": "山梨県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "清里",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "西山荘",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "青島",
+    "prefecture": "宮崎県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "青島",
+    "tags": [
+      "海",
+      "自然",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "静神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "石見銀山",
+    "prefecture": "島根県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "石見銀山",
+    "tags": [
+      "歴史",
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "石狩弁天社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "積丹",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "積丹",
+    "tags": [
+      "海",
+      "街歩き",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "増毛",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "増毛",
+    "tags": [
+      "グルメ",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "足摺岬",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "足摺岬",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "多功城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "多和平",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "太田山神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "太平山神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "帯廣神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "袋田の滝",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大潟村",
+    "prefecture": "秋田県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "大潟村",
+    "tags": [
+      "自然",
+      "街"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大宜味",
+    "prefecture": "沖縄県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "大宜味",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大山",
+    "prefecture": "鳥取県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "大山温泉",
+    "tags": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大杉神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大瀬観光やな",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大雪山",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "旭川",
+    "tags": [
+      "山",
+      "自然",
+      "登山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大雪展望台",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大洗",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "大洗",
+    "tags": [
+      "海",
+      "寺社",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大洗磯前神社",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "大島（山口）",
+    "prefecture": "山口県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "大島（山口）",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "樽前山神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "丹後",
+    "prefecture": "京都府",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "丹後",
+    "tags": [
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "知床国立公園",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "地獄谷野猿公苑",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "地獄谷野猿公苑",
+    "tags": [
+      "自然",
+      "温泉",
+      "野生動物"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "稚内",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "稚内",
+    "tags": [
+      "自然",
+      "秘境",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "筑波",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "筑波",
+    "tags": [
+      "山",
+      "自然",
+      "文化"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "秩父",
+    "prefecture": "埼玉県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "秩父",
+    "tags": [
+      "寺社",
+      "自然",
+      "渓谷"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "中久喜城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "中札内美術村",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "中土佐",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "中土佐",
+    "tags": [
+      "グルメ",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "長節湖",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "長門",
+    "prefecture": "山口県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "長門",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鳥取",
+    "prefecture": "鳥取県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "鳥取",
+    "tags": [
+      "自然",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "津南",
+    "prefecture": "新潟県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "津南",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "天に続く道",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "天橋立",
+    "prefecture": "京都府",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "天橋立",
+    "tags": [
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "天草",
+    "prefecture": "熊本県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "天草",
+    "tags": [
+      "海",
+      "歴史",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "天竜峡",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "天竜峡温泉",
+    "tags": [
+      "渓谷",
+      "自然",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "土浦城",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "土佐市",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "土佐市",
+    "tags": [
+      "海",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "土佐清水",
+    "prefecture": "高知県",
+    "destType": "sight",
+    "area": "四国",
+    "hub": "土佐清水",
+    "tags": [
+      "海",
+      "歴史"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "唐沢山城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "唐沢山神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "島原",
+    "prefecture": "長崎県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "島原",
+    "tags": [
+      "歴史",
+      "城",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "東川町",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "当別",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "当別",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "徳山大神宮",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "奈良",
+    "prefecture": "奈良県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "奈良",
+    "tags": [
+      "歴史",
+      "寺社",
+      "滝"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "那須高原",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "那須高原りんどう湖ファミリー牧場",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "那智勝浦",
+    "prefecture": "和歌山県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "那智勝浦",
+    "tags": [
+      "寺社",
+      "滝",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南阿蘇",
+    "prefecture": "熊本県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "南阿蘇",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南伊豆",
+    "prefecture": "静岡県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "南伊豆",
+    "tags": [
+      "海",
+      "温泉",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南豪神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南城",
+    "prefecture": "沖縄県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "南城",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南砺",
+    "prefecture": "富山県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "南砺",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "南部陣屋",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "二風谷ファミリーランド",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日光杉並木",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日光東照宮",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日向",
+    "prefecture": "宮崎県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "日向",
+    "tags": [
+      "海",
+      "寺社",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "日高山岳ビラパーク",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "納沙布岬",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白ひげの滝",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白川郷",
+    "prefecture": "岐阜県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "高山",
+    "tags": [
+      "山",
+      "城",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白馬",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "白馬",
+    "tags": [
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "白老仙台藩陣屋跡",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "八雲",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "八雲",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "飯生神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "飛騨古川",
+    "prefecture": "岐阜県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "飛騨古川",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "飛鳥",
+    "prefecture": "奈良県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "飛鳥",
+    "tags": [
+      "歴史",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "尾瀬",
+    "prefecture": "群馬県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "尾瀬",
+    "tags": [
+      "自然",
+      "湿原",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "尾鷲",
+    "prefecture": "三重県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "尾鷲",
+    "tags": [
+      "海",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "美瑛",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "美瑛",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "美山",
+    "prefecture": "京都府",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "美山",
+    "tags": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "美祢",
+    "prefecture": "山口県",
+    "destType": "sight",
+    "area": "中国",
+    "hub": "美祢",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浜名湖",
+    "prefecture": "静岡県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "浜名湖",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "富士宮",
+    "prefecture": "静岡県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "富士宮",
+    "tags": [
+      "山",
+      "寺社",
+      "食"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "福原城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "平川",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "平川",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "平泉",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "平泉",
+    "tags": [
+      "歴史",
+      "寺社"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "弁天台場",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北海道",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北海道護國神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "北海道神宮",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "本部",
+    "prefecture": "沖縄県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "本部",
+    "tags": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "枕崎",
+    "prefecture": "鹿児島県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "枕崎",
+    "tags": [
+      "グルメ",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "岬",
+    "prefecture": "大阪府",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "岬",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "網走神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "木曽",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "木曽",
+    "tags": [
+      "歴史",
+      "自然",
+      "山"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "木幡神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "紋別",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "紋別",
+    "tags": [
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "野間池",
+    "prefecture": "鹿児島県",
+    "destType": "sight",
+    "area": "九州",
+    "hub": "野間池",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "野木神社",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "薬師寺八幡宮",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "由良",
+    "prefecture": "和歌山県",
+    "destType": "sight",
+    "area": "関西",
+    "hub": "由良",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "夕張神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "余市蒸溜所",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "裏磐梯",
+    "prefecture": "福島県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "裏磐梯",
+    "tags": [
+      "湖",
+      "自然",
+      "紅葉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "立山黒部",
+    "prefecture": "富山県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "立山黒部",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "留辺蘂神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "龍泉洞",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "龍泉洞",
+    "tags": [
+      "自然",
+      "絶景"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "緑の島",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "輪島",
+    "prefecture": "石川県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "輪島",
+    "tags": [
+      "離島",
+      "歴史",
+      "海"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "浪岡",
+    "prefecture": "青森県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "浪岡",
+    "tags": [
+      "歴史",
+      "グルメ"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "六花の森",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "麓郷の森",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "鷲城",
+    "prefecture": "栃木県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "偕楽園",
+    "prefecture": "茨城県",
+    "destType": "sight",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "猊鼻渓",
+    "prefecture": "岩手県",
+    "destType": "sight",
+    "area": "東北",
+    "hub": "猊鼻渓",
+    "tags": [
+      "自然",
+      "絶景"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "蓼科",
+    "prefecture": "長野県",
+    "destType": "sight",
+    "area": "中部",
+    "hub": "蓼科",
+    "tags": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "蘆別神社",
+    "prefecture": "北海道",
+    "destType": "sight",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "観光"
+    ],
+    "priority": "medium"
+  },
+  {
+    "name": "粟国島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "粟国島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "伊江島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "伊江島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "伊平屋島",
+    "prefecture": "沖縄県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "伊平屋島",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "壱岐",
+    "prefecture": "長崎県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "壱岐",
+    "tags": [
+      "離島",
+      "海",
+      "歴史"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "久賀島",
+    "prefecture": "長崎県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "久賀島",
+    "tags": [
+      "歴史",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "犬島",
+    "prefecture": "岡山県",
+    "destType": "island",
+    "area": "中国",
+    "hub": "犬島",
+    "tags": [
+      "離島",
+      "海",
+      "アート"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "志々島",
+    "prefecture": "香川県",
+    "destType": "island",
+    "area": "四国",
+    "hub": "高松",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "小値賀島",
+    "prefecture": "長崎県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "小値賀島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "青ヶ島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "青ヶ島",
+    "tags": [
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "対馬",
+    "prefecture": "長崎県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "対馬",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "姫島",
+    "prefecture": "大分県",
+    "destType": "island",
+    "area": "九州",
+    "hub": "姫島",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "豊島",
+    "prefecture": "香川県",
+    "destType": "island",
+    "area": "四国",
+    "hub": "豊島",
+    "tags": [
+      "離島",
+      "海",
+      "アート"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "利尻島",
+    "prefecture": "北海道",
+    "destType": "island",
+    "area": "北海道",
+    "hub": "利尻島",
+    "tags": [
+      "離島",
+      "海",
+      "山"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "利島",
+    "prefecture": "東京都",
+    "destType": "island",
+    "area": "関東",
+    "hub": "利島",
+    "tags": [
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "礼文島",
+    "prefecture": "北海道",
+    "destType": "island",
+    "area": "北海道",
+    "hub": "礼文島",
+    "tags": [
+      "離島",
+      "海",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "1839峰",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "1967峰",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "アトサヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "アポイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イクルシベ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イソサンヌプリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イドンナップ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イユダニヌプリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イルムケップ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イワオヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "イワケシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ウイーヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ウエンザル岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ウエンシリ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ウコタキヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ウペペサンケ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "エサオマントッタベツ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "エタンパック山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "えびの",
+    "prefecture": "宮崎県",
+    "destType": "mountain",
+    "area": "九州",
+    "hub": "えびの",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "えびの高原",
+    "prefecture": "宮崎県",
+    "destType": "mountain",
+    "area": "九州",
+    "hub": "えびの高原",
+    "tags": [
+      "山",
+      "自然",
+      "秘境"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オキシマップ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オコツナイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オサッペヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オションナイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オダッシュ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オッカバケ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オプタテシケヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オプタテシケ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オムシャヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オヤコツ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オロエナイ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "オロフレ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "カムイエクウチカウシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "カルルス山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "カンジウシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "クテクンベツ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "クマネシリ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "コイカクシュサツナイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "コトニヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "サシルイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "サマッカリヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "サマッケヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "サマッケヌプリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "サワンチサップ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "シアッシリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "シートートムシメヌ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "シタバヌプリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "シューパロ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "セタウシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ソエマツ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ソーキップ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "タウシュベツ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "タツナラシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "チセヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "チトカニウシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "チロロ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トーノシケヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トキタイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トサモシベ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トッカリムイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トムラウシ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "トヨニ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ナイタイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ナメワッカ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニシュオマナイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニセイカウシュッペ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニセイチャロマップ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニセコアンヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニタトルシュケ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニトヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニフシオヤコツ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニペソツ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ニレシ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ヌ牛別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ハッタオマナイ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "パンケヌーシ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "パンケ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "パンベツ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピウケナイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピシカチナイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピセナイ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピッシリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピパイロ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピヤシリ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "ピラトコミ山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "阿寒富士",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "愛別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "旭岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "旭山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "芦別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "羽田山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "羽幌岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "英嶺山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "遠音別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "於鬼頭岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "奥手稲山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "奥徳富岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "奥入瀬",
+    "prefecture": "青森県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "奥入瀬",
+    "tags": [
+      "自然",
+      "渓谷",
+      "滝"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "温泉富士",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "音威富士",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "音更山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "化雲岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "加波山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "海別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "開陽台",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "釜臥山",
+    "prefecture": "青森県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "観音岩山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "岩船山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "岩保木山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "岩木山",
+    "prefecture": "青森県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "青森",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "岩櫃山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "喜登牛山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "喜茂別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "久山岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "泣面山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "鋸山",
+    "prefecture": "千葉県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "鋸山",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "漁岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "狭薄山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "九度山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "苦頓別山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "空沼岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "靴幅山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "隈根尻山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "栗駒",
+    "prefecture": "宮城県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "栗駒",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "栗生山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "薫別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "群別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "恵山丸山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "恵庭岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "月山",
+    "prefecture": "山形県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "月山",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "戸蔦別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "袴腰岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "五天山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "江鳶山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "皇海山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "硬石山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "糠真布",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "糠平山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "荒井山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "荒船山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "高原山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "高鈴山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "黒松内岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "昆布岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "佐幌岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "察来山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "札内岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "札幌岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "三瓶山",
+    "prefecture": "島根県",
+    "destType": "mountain",
+    "area": "中国",
+    "hub": "三瓶山",
+    "tags": [
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "四阿山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "四国カルスト",
+    "prefecture": "愛媛県",
+    "destType": "mountain",
+    "area": "四国",
+    "hub": "四国カルスト",
+    "tags": [
+      "山",
+      "高原",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "支湧別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "至仏山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "七飯岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "射的山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "斜内山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "斜里岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "社満射岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "主府久",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "手稲山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "狩勝山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "狩場山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "狩振岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "珠文岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "十勝岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "十勝幌尻岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "宿弗山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "春香山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "暑寒別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "渚滑岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "女峰山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "小泉岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "小天狗岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "小平蘂岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "小平蘂山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "昭和新山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "沼ノ原山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "上ホロカメットク山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "常呂山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "尻別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "新冠泥火山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "榛名山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "神居尻山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "神社山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "仁頃山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "錐山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "西クマネシリ岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "西ヌプカウシヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "西川岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "西別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "石狩岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "積丹岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "赤城山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "尖峰",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "川流布山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "浅間山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "銭函天狗山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "然別火山群",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "層雲峡",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "層雲峡温泉",
+    "tags": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "草津白根山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "測量山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "帯広岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "大千軒岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "滝ノ上山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "竪破山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "谷川岳",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "谷倉山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "樽前山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "男体山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知円別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知駒岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知床岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知床硫黄山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知西別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "筑波山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "忠別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "長留内岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "椎葉",
+    "prefecture": "宮崎県",
+    "destType": "mountain",
+    "area": "九州",
+    "hub": "椎葉",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "定山渓天狗岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "徹別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "天塩岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "天塩富士",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "天都山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "島松山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "東ヌプカウシヌプリ",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "東三国山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "徳舜瞥山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "突哨山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "那須岳",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "日光白根山",
+    "prefecture": "栃木県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "宇都宮",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "猫山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "馬髭岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "泊山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "白雲岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "白旗山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "白砂山",
+    "prefecture": "群馬県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "前橋",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "白山",
+    "prefecture": "石川県",
+    "destType": "mountain",
+    "area": "中部",
+    "hub": "白山",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "函岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "函館山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "八溝山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "八幡平",
+    "prefecture": "岩手県",
+    "destType": "mountain",
+    "area": "東北",
+    "hub": "八幡平",
+    "tags": [
+      "山",
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "盤の沢山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "盤渓山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "飛騨高山（北アルプス側）",
+    "prefecture": "岐阜県",
+    "destType": "mountain",
+    "area": "中部",
+    "hub": "飛騨高山（北アルプス側）",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "美瑛岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "美瑛富士",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "美比内山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "美幌岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "美羅尾山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "百松沢山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "標津岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "浜益岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "富谷山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "風神山",
+    "prefecture": "茨城県",
+    "destType": "mountain",
+    "area": "関東",
+    "hub": "水戸",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "豊似岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "北ペトウトル山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "北戸蔦別岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "妙高",
+    "prefecture": "新潟県",
+    "destType": "mountain",
+    "area": "中部",
+    "hub": "妙高",
+    "tags": [
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "毛鐘尻山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "木禽岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "木挽山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "野塚岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "有珠山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "雄阿寒岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "雄冬山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "雄鉾岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "立牛岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "立山",
+    "prefecture": "富山県",
+    "destType": "mountain",
+    "area": "中部",
+    "hub": "立山",
+    "tags": [
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "崕山",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "鬱岳",
+    "prefecture": "北海道",
+    "destType": "mountain",
+    "area": "北海道",
+    "hub": "札幌",
+    "tags": [
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "淡路島",
+    "prefecture": "兵庫県",
+    "destType": "peninsula",
+    "area": "関西",
+    "hub": "淡路島",
+    "tags": [
+      "自然",
+      "街歩き",
+      "歴史"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "奥出雲",
+    "prefecture": "島根県",
+    "destType": "remote",
+    "area": "中国",
+    "hub": "奥出雲",
+    "tags": [
+      "山",
+      "自然",
+      "渓谷"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "角島",
+    "prefecture": "山口県",
+    "destType": "remote",
+    "area": "中国",
+    "hub": "角島",
+    "tags": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "菊池",
+    "prefecture": "熊本県",
+    "destType": "remote",
+    "area": "九州",
+    "hub": "菊池温泉",
+    "tags": [
+      "自然",
+      "温泉",
+      "渓谷"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "熊野",
+    "prefecture": "三重県",
+    "destType": "remote",
+    "area": "関西",
+    "hub": "熊野",
+    "tags": [
+      "秘境",
+      "自然",
+      "渓谷"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "熊野本宮",
+    "prefecture": "和歌山県",
+    "destType": "remote",
+    "area": "関西",
+    "hub": "熊野本宮",
+    "tags": [
+      "秘境",
+      "自然",
+      "寺社"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "高千穂",
+    "prefecture": "宮崎県",
+    "destType": "remote",
+    "area": "九州",
+    "hub": "高千穂",
+    "tags": [
+      "自然",
+      "渓谷",
+      "寺社"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "黒川温泉",
+    "prefecture": "熊本県",
+    "destType": "remote",
+    "area": "九州",
+    "hub": "黒川温泉",
+    "tags": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "根室",
+    "prefecture": "北海道",
+    "destType": "remote",
+    "area": "北海道",
+    "hub": "根室",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "三崎（佐田岬）",
+    "prefecture": "愛媛県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "松山",
+    "tags": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "十津川",
+    "prefecture": "奈良県",
+    "destType": "remote",
+    "area": "関西",
+    "hub": "十津川温泉",
+    "tags": [
+      "秘境",
+      "自然",
+      "温泉"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "仁淀川",
+    "prefecture": "高知県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "仁淀川",
+    "tags": [
+      "秘境",
+      "自然",
+      "川"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "祖谷",
+    "prefecture": "徳島県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "祖谷",
+    "tags": [
+      "秘境",
+      "温泉",
+      "滝"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "大歩危",
+    "prefecture": "徳島県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "大歩危",
+    "tags": [
+      "秘境",
+      "自然",
+      "渓谷"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "大豊",
+    "prefecture": "高知県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "大豊",
+    "tags": [
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "知床",
+    "prefecture": "北海道",
+    "destType": "remote",
+    "area": "北海道",
+    "hub": "知床",
+    "tags": [
+      "秘境",
+      "自然",
+      "海"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "梼原",
+    "prefecture": "高知県",
+    "destType": "remote",
+    "area": "四国",
+    "hub": "梼原",
+    "tags": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "奈義",
+    "prefecture": "岡山県",
+    "destType": "remote",
+    "area": "中国",
+    "hub": "奈義",
+    "tags": [
+      "自然",
+      "歴史"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "南山城",
+    "prefecture": "京都府",
+    "destType": "remote",
+    "area": "関西",
+    "hub": "南山城",
+    "tags": [
+      "自然",
+      "グルメ"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "南大隅",
+    "prefecture": "鹿児島県",
+    "destType": "remote",
+    "area": "九州",
+    "hub": "南大隅",
+    "tags": [
+      "自然",
+      "海"
+    ],
+    "priority": "low"
+  },
+  {
+    "name": "羅臼",
+    "prefecture": "北海道",
+    "destType": "remote",
+    "area": "北海道",
+    "hub": "羅臼",
+    "tags": [
+      "秘境",
+      "山",
+      "自然"
+    ],
+    "priority": "low"
+  }
+]
