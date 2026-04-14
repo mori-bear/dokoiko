@@ -52,6 +52,13 @@ const BASE_WEIGHT = {
   peninsula: 1.0,
   city:      1.0,
   sight:     1.0,  // 0.9→1.0: 京都・鎌倉・宮島など有名観光地が適切に上位に出るように
+  // ── ニッチ拡張 (T7) ──
+  hidden:    1.0,  // 隠れ名所：知られていない分ランダム性で出やすく
+  view:      1.1,  // 絶景：視覚的魅力が高い
+  weird:     0.9,  // 珍スポット：話題性重視・広くは受けない
+  ruins:     0.8,  // 遺構：マニア向け・一般受けが低い
+  portTown:  1.0,  // 港町：食＋景色バランス良い
+  railway:   0.8,  // ローカル線：体験特化・宿は別途必要
 };
 
 const ACCESS_BONUS = {
@@ -102,6 +109,13 @@ const STAY_SCORE = {
   city:     1.0,
   remote:   1.0,
   peninsula:1.0,
+  // ── ニッチ拡張 ──
+  hidden:   1.0,
+  view:     1.0,
+  weird:    1.0,
+  ruins:    1.0,
+  portTown: 1.1,  // 港町：漁師宿・旅館が充実
+  railway:  1.0,
 };
 
 /**

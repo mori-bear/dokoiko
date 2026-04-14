@@ -64,6 +64,8 @@ const REGION_TO_AREA = {
   '沖縄':   '九州',
 };
 
+/** 新destTypeもインデックスの area/hub で正しく処理される（追加設定不要）*/
+
 /** priorityを決定する */
 const HIGH_TAGS = new Set(['世界遺産', '有名', '観光地']);
 

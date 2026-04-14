@@ -35,15 +35,28 @@ const BATCH_LIMIT = BATCH_ARG ? parseInt(BATCH_ARG.split('=')[1], 10) : 500;
  * 「日本の温泉」は空なので、都道府県ごとに「〇〇県の温泉」で取得
  */
 const CATEGORY_TEMPLATES = [
-  { suffix: 'の温泉', destType: 'onsen' },
-  { suffix: 'の島',   destType: 'island' },
-  { suffix: 'の山',   destType: 'mountain' },
-  { suffix: 'の観光地', destType: 'sight' },
-  { suffix: 'の滝',   destType: 'sight' },
-  { suffix: 'の湖',   destType: 'sight' },
-  { suffix: 'の城',   destType: 'sight' },
-  { suffix: 'の神社', destType: 'sight' },
-  { suffix: 'の寺院', destType: 'sight' },
+  // ── 既存 ──
+  { suffix: 'の温泉',    destType: 'onsen' },
+  { suffix: 'の島',      destType: 'island' },
+  { suffix: 'の山',      destType: 'mountain' },
+  { suffix: 'の観光地',  destType: 'sight' },
+  { suffix: 'の滝',      destType: 'sight' },
+  { suffix: 'の湖',      destType: 'sight' },
+  { suffix: 'の城',      destType: 'sight' },
+  { suffix: 'の神社',    destType: 'sight' },
+  { suffix: 'の寺院',    destType: 'sight' },
+  // ── ニッチ拡張 (T2) ──
+  { suffix: 'の絶景',    destType: 'view' },      // 絶景スポット
+  { suffix: 'の展望台',  destType: 'view' },      // 展望台・景勝地
+  { suffix: 'の岬',      destType: 'view' },      // 岬・断崖
+  { suffix: 'の港',      destType: 'portTown' },  // 漁港・港町
+  { suffix: 'の峠',      destType: 'hidden' },    // 峠・隠れ道
+  { suffix: 'の廃寺',    destType: 'ruins' },     // 廃寺・廃墟
+  { suffix: 'の廃墟',    destType: 'ruins' },     // 産業遺産・廃墟
+  { suffix: 'の鉄道',    destType: 'railway' },   // ローカル線・廃線跡
+  { suffix: 'の秘境',    destType: 'hidden' },    // 秘境駅・秘境集落
+  { suffix: 'の集落',    destType: 'hidden' },    // 古民家・集落
+  { suffix: 'の奇岩',    destType: 'weird' },     // 奇岩・奇景
 ];
 
 /** 都道府県 × テンプレートでカテゴリリスト生成 */
@@ -269,7 +282,12 @@ async function main() {
       // 既に登録済みなら destType の整合性チェック（onsen/island/mountain優先）
       if (allItems.has(nn)) {
         const existing = allItems.get(nn);
-        if (['onsen','island','mountain'].includes(destType) && existing.destType === 'sight') {
+        // 優先順位: onsen/island/mountain > view/hidden/portTown/ruins/railway/weird > sight
+        const HIGH_PRIORITY = new Set(['onsen', 'island', 'mountain']);
+        const MED_PRIORITY  = new Set(['view', 'hidden', 'portTown', 'ruins', 'railway', 'weird']);
+        if (HIGH_PRIORITY.has(destType) && !HIGH_PRIORITY.has(existing.destType)) {
+          existing.destType = destType;
+        } else if (MED_PRIORITY.has(destType) && existing.destType === 'sight') {
           existing.destType = destType;
         }
         continue;

@@ -333,6 +333,12 @@ const DEST_TYPE_FEATURE = {
   sight:     '観光スポット',
   city:      '街歩き',
   peninsula: '半島・海',
+  hidden:    '隠れ名所',
+  view:      '絶景スポット',
+  weird:     '珍スポット',
+  ruins:     '遺構・廃墟',
+  portTown:  '港町・海の幸',
+  railway:   'ローカル線の旅',
 };
 
 function formatTravelTime(min) {
@@ -359,13 +365,20 @@ function buildReasonChips(city) {
 function buildCategoryBadge(city) {
   const dt = city.destType;
   const isIsland = city.isIsland || dt === 'island';
-  if (isIsland)       return `　<span class="type-badge type-island">島で非日常</span>`;
-  if (dt === 'onsen') return `　<span class="type-badge type-onsen">温泉で癒される</span>`;
+  if (isIsland)          return `　<span class="type-badge type-island">島で非日常</span>`;
+  if (dt === 'onsen')    return `　<span class="type-badge type-onsen">温泉で癒される</span>`;
   if (dt === 'mountain') return `　<span class="type-badge type-mountain">自然・絶景</span>`;
   if (dt === 'remote')   return `　<span class="type-badge type-remote">秘境</span>`;
   if (dt === 'city')     return `　<span class="type-badge type-city">街歩き・観光</span>`;
   if (dt === 'sight')    return `　<span class="type-badge type-sight">自然・絶景</span>`;
   if (dt === 'peninsula') return `　<span class="type-badge type-peninsula">半島</span>`;
+  // ── ニッチ拡張 ──
+  if (dt === 'hidden')   return `　<span class="type-badge type-hidden">隠れ名所</span>`;
+  if (dt === 'view')     return `　<span class="type-badge type-view">絶景</span>`;
+  if (dt === 'weird')    return `　<span class="type-badge type-weird">珍スポット</span>`;
+  if (dt === 'ruins')    return `　<span class="type-badge type-ruins">遺構</span>`;
+  if (dt === 'portTown') return `　<span class="type-badge type-portTown">港町</span>`;
+  if (dt === 'railway')  return `　<span class="type-badge type-railway">ローカル線</span>`;
   return '';
 }
 
@@ -401,7 +414,7 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   if (mapUrl) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action" data-track="map_click">Googleマップでルートを見る</a>`;
+       class="btn btn--maps btn--action" data-track="map_click">この旅で行く</a>`;
   }
 
   // ② 予約CTA（地図の下）
@@ -451,7 +464,7 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
     ctaHtml = `
       <div class="cta-action">
         <a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-           class="btn btn--maps btn--action">そのまま行く（予約不要）</a>
+           class="btn btn--maps btn--action">この旅で行く</a>
       </div>`;
     mapHtml = '';
   }

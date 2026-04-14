@@ -626,6 +626,14 @@ body {
 .type-remote    { background: #f5f0e8; color: #7a5000; }
 .type-peninsula { background: #e8f0f5; color: #2a6080; }
 
+/* ── ニッチ destType バッジ ── */
+.type-hidden   { background: #f0ede8; color: #6b4c2a; }   /* 隠れ名所: 土色 */
+.type-view     { background: #e8f2ff; color: #1a5fa8; }   /* 絶景: 青空 */
+.type-weird    { background: #fef0e8; color: #c05500; }   /* 珍スポット: オレンジ */
+.type-ruins    { background: #ebebeb; color: #555555; }   /* 遺構: グレー */
+.type-portTown { background: #e8f4f8; color: #1a7090; }   /* 港町: 海青 */
+.type-railway  { background: #f0f0f0; color: #444444; }   /* ローカル線: 鉄灰 */
+
 .city-meta-row {
   display: flex;
   gap: 20px;

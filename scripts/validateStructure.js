@@ -20,12 +20,17 @@ const ROOT = path.resolve(__dirname, '..');
 const DESTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/destinations.json'), 'utf8'));
 
 const REQUIRED = ['id', 'name', 'prefecture', 'lat', 'lng', 'destType', 'hubCity'];
-const VALID_TYPES = new Set(['onsen', 'island', 'mountain', 'city', 'sight', 'remote', 'peninsula']);
+const VALID_TYPES = new Set([
+  'onsen', 'island', 'mountain', 'city', 'sight', 'remote', 'peninsula',
+  // ── ニッチ拡張 (T1) ──
+  'hidden', 'view', 'weird', 'ruins', 'portTown', 'railway',
+]);
 
 const OUT_CSV = path.join(ROOT, 'structure_validation_failures.csv');
 const rows = ['type,destId,field,detail'];
 
-let missingFields = 0, badLatLng = 0, badType = 0, badWeight = 0, badNumber = 0, duplicateIds = 0, ok = 0;
+let missingFields = 0, badLatLng = 0, badType = 0, badWeight = 0, badNumber = 0, duplicateIds = 0,
+    missingStayUrl = 0, badStayUrl = 0, ok = 0;
 const seenIds = new Set();
 
 for (const d of DESTS) {
@@ -70,10 +75,30 @@ for (const d of DESTS) {
   }
   seenIds.add(d.id);
 
+  // staySearchUrl (T8): 宿泊プランは必須（daytrip専用でなければ）
+  if (d.isStayable !== false) {
+    if (!d.staySearchUrl) {
+      rows.push(`missing_staySearchUrl,${d.id},staySearchUrl,required for stayable dest`);
+      missingStayUrl++;
+      fail++;
+    } else if (!d.staySearchUrl.startsWith('https://')) {
+      rows.push(`bad_staySearchUrl,${d.id},staySearchUrl,must start with https://`);
+      badStayUrl++;
+      fail++;
+    }
+  }
+
+  // Maps URL 生成可否: lat/lng または hubCity が必要
+  if (!d.lat && !d.lng && !d.hubCity && !d.accessStation) {
+    rows.push(`no_maps_anchor,${d.id},maps,no lat/lng/hubCity/accessStation for Maps URL`);
+    fail++;
+  }
+
   if (fail === 0) ok++;
 }
 
 fs.writeFileSync(OUT_CSV, rows.join('\n'));
 console.log(`[validateStructure] ok=${ok}/${DESTS.length}`);
 console.log(`  missingFields=${missingFields}, badLatLng=${badLatLng}, badType=${badType}, badWeight=${badWeight}, duplicateIds=${duplicateIds}`);
+console.log(`  missingStayUrl=${missingStayUrl}, badStayUrl=${badStayUrl}`);
 console.log(`  → ${OUT_CSV}`);
