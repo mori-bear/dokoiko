@@ -31,15 +31,16 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
       : '';
 
     const el = document.getElementById('result-inner');
+    // T4レイアウト: 行き先 → チップ（文脈） → Maps（行く） → 宿（泊まる） → JR → 詳細
     el.innerHTML = `
       <div class="result-card">
         ${buildCityHeaderBlock(city)}
-        ${mapsCtaHtml}
         ${buildReasonChips(city)}
+        ${mapsCtaHtml}
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
+        ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
         ${buildCityDetailBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
-        ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -389,10 +390,9 @@ const DEST_TYPE_FEATURE = {
 
 function formatTravelTime(min) {
   if (!min) return null;
-  const h = Math.round(min / 60);
-  if (min <= 120) return min < 60 ? `近場（${min}分）` : `近場（約${h}時間）`;
-  if (min <= 300) return `ちょうどいい距離（約${h}時間）`;
-  return `遠出旅（約${h}時間）`;
+  if (min <= 120) return '近場';
+  if (min <= 300) return 'ちょうどいい距離';
+  return '遠出旅';
 }
 
 function buildReasonChips(city) {
@@ -863,22 +863,28 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const stayLinks = hotelLinks.links ?? [];
   const rakuten = stayLinks.find(l => l.type === 'rakuten');
   const jalan   = stayLinks.find(l => l.type === 'jalan');
-
-  // staySearchUrl（楽天アフィリエイト）優先 → 楽天URL → じゃらんURL
-  const hotelUrl = city?.staySearchUrl ?? rakuten?.url ?? jalan?.url ?? null;
-  if (!hotelUrl) return '';
+  if (!rakuten && !jalan) return '';
 
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const areaLabel = stayLabel || (city?.displayName || city?.name || 'このエリア');
 
+  const buttons = [
+    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn-stay btn-rakuten" data-track="rakuten_click">
+                  <span class="btn-stay-main">楽天で宿を見る</span>
+                  <small class="btn-stay-sub">ポイント貯まる</small>
+               </a>` : '',
+    jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn-stay btn-jalan" data-track="jalan_click">
+                  <span class="btn-stay-main">じゃらんで宿を見る</span>
+                  <small class="btn-stay-sub">温泉に強い</small>
+               </a>` : '',
+  ].filter(Boolean).join('');
+
   return `
     <div class="stay-section stay-section--primary" id="stay-section">
       <p class="stay-area-label">${areaLabel}で泊まる</p>
-      <a href="${hotelUrl}" target="_blank" rel="nofollow sponsored noopener"
-         class="btn btn-stay btn-stay--single" data-track="hotel_click">
-        <span class="btn-stay-main">このエリアで宿を探す</span>
-        <small class="btn-stay-sub">楽天トラベル</small>
-      </a>
+      <div class="stay-dual-grid">${buttons}</div>
     </div>
   `;
 }
@@ -1124,33 +1130,26 @@ const CTA_TYPE_HINT = {
  * CTA文言を1ボタン1メッセージで生成する。
  *
  * 文言ルール（完全固定）:
- *   allJR   → ${to}まで予約する（${provider}・${hint}）
- *   mixed   → ${gateway}まで予約する（${provider}）
- *   nonJR   → ${dest}への行き方を見る（${transport}）
+ *   allJR / mixed → このルートで行く（${provider}）
+ *   nonJR         → ${dest}への行き方を見る（${transport}）
  *
- * 「予約」は予約可能なケースのみ。予約できないものに「予約」と言わない。
+ * Maps CTAがメイン。JR CTAはサブ（交通手段の選択肢）として表示。
  */
 function buildChainCtaHtml(chainCta, providerType = null) {
-  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const to   = clean(chainCta.to);
   const provider = CTA_PROVIDER[providerType] ?? null;
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
 
-  // nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）→ 「予約」は使わない
+  // nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）
   if (chainCta.nonJrOnly) {
     const sub = hint || (provider ?? '');
+    const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+    const to = clean(chainCta.to);
     return sub ? `${to}への行き方を見る（${sub}）` : `${to}への行き方を見る`;
   }
 
-  // mixed（JR + フェリー/飛行機）→ gateway まで予約
-  if (chainCta.nonJrType) {
-    const sub = [provider, hint].filter(Boolean).join('・');
-    return sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
-  }
-
-  // allJR → 最終目的地まで予約
+  // allJR / mixed → シンプルな「このルートで行く」+ provider
   const sub = [provider, hint].filter(Boolean).join('・');
-  return sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
+  return sub ? `このルートで行く（${sub}）` : 'このルートで行く（JR）';
 }
 
 function buildMainCtaLabel(type) {
