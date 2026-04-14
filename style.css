@@ -515,6 +515,34 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* 理由チップ: 移動時間 + 特徴ラベル */
+.reason-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+
+.reason-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.reason-chip.chip--time {
+  background: #eef5ff;
+  color: #1a6abf;
+}
+
+.reason-chip.chip--type {
+  background: #f5f0e8;
+  color: #7a5000;
+}
+
 .operator-badge {
   display: inline-block;
   margin-left: 5px;

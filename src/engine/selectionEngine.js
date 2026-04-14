@@ -172,8 +172,11 @@ function getWeight(city, theme) {
  *   1. 連続ペナルティ: 直前と同一 destType → weight × 0.75
  *   2. 飽和ペナルティ: 同一 destType が3件超えた場合 → weight × 0.7
  *   両条件が重なる場合は乗算 (× 0.75 × 0.7 = × 0.525)
+ *
+ * 札幌発特別制御:
+ *   北海道 onsen は2件以上で ×0.10 — 大量の道内温泉が占有するのを防止
  */
-function weightedShuffle(arr, theme) {
+function weightedShuffle(arr, theme, departure = '') {
   const result = [];
   const pool = arr.map(item => ({ item, w: getWeight(item, theme) }));
   let lastType = null;
@@ -188,6 +191,10 @@ function weightedShuffle(arr, theme) {
     if (type === 'onsen') {
       if ((typeCounts['onsen'] ?? 0) >= 2)  w *= 0.60;  // 3件目以降 ×0.60
       if ((typeCounts['onsen'] ?? 0) >= 4)  w *= 0.40;  // 5件目以降 さらに ×0.40
+      // 札幌発: 北海道onsenは2件まで（道内温泉が独占するのを防止）
+      if (departure === '札幌' && e.item.region === '北海道') {
+        if ((typeCounts['onsen_hokkaido'] ?? 0) >= 2) w *= 0.10;
+      }
     }
     return w;
   }
@@ -204,6 +211,10 @@ function weightedShuffle(arr, theme) {
     const selected = pool[idx].item;
     lastType = selected.destType;
     typeCounts[lastType] = (typeCounts[lastType] ?? 0) + 1;
+    // 札幌発: 北海道onsen カウンター
+    if (departure === '札幌' && selected.destType === 'onsen' && selected.region === '北海道') {
+      typeCounts['onsen_hokkaido'] = (typeCounts['onsen_hokkaido'] ?? 0) + 1;
+    }
     result.push(selected);
     pool.splice(idx, 1);
   }
@@ -289,7 +300,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   if (departurePool.length > 0) {
     // ハードフィルタ: テーマ選択時は完全一致の候補を優先、0件の場合のみ全件にフォールバック
     const themed = theme ? departurePool.filter(d => matchesTheme(d, theme)) : departurePool;
-    return weightedShuffle(themed.length > 0 ? themed : departurePool, theme);
+    return weightedShuffle(themed.length > 0 ? themed : departurePool, theme, departure);
   }
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
@@ -301,7 +312,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     return true;
   });
   const themedGlobal = theme ? globalPool.filter(d => matchesTheme(d, theme)) : globalPool;
-  return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : globalPool, theme);
+  return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : globalPool, theme, departure);
 }
 
 /** 後方互換ラッパー（1件のみ返す） */

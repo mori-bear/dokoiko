@@ -115,6 +115,7 @@ function buildCityBlock(city) {
   // ここでは city-block 内に含めず、buildActionBlock 側で挿入する
 
   const stayBadge = buildStayBadge(city);
+  const reasonChips = buildReasonChips(city);
   return `
     <div class="city-block">
       <div class="city-header">
@@ -123,6 +124,7 @@ function buildCityBlock(city) {
       </div>
       ${stayBadge}
       ${taglineHtml}
+      ${reasonChips}
       ${descHtml}
       ${spotsHtml}
     </div>
@@ -319,19 +321,51 @@ function buildSpotList(spots) {
   `;
 }
 
+/**
+ * 理由チップ: 移動時間 + 特徴タグを小さなラベルで表示。
+ * "なぜこの旅先が出たのか" を直感的に伝える。
+ */
+const DEST_TYPE_FEATURE = {
+  onsen:     '温泉・癒し',
+  island:    '島・海',
+  mountain:  '自然・山',
+  remote:    '秘境・穴場',
+  sight:     '観光スポット',
+  city:      '街歩き',
+  peninsula: '半島・海',
+};
+
+function formatTravelTime(min) {
+  if (!min) return null;
+  if (min < 60) return `${min}分で行ける`;
+  if (min < 120) return '約1時間で行ける';
+  return `約${Math.round(min / 60)}時間で行ける`;
+}
+
+function buildReasonChips(city) {
+  const chips = [];
+
+  const timeLabel = formatTravelTime(city.travelTimeMinutes);
+  if (timeLabel) chips.push({ text: timeLabel, cls: 'chip--time' });
+
+  const featureLabel = DEST_TYPE_FEATURE[city.destType];
+  if (featureLabel) chips.push({ text: featureLabel, cls: 'chip--type' });
+
+  if (!chips.length) return '';
+  const html = chips.map(c => `<span class="reason-chip ${c.cls}">${c.text}</span>`).join('');
+  return `<div class="reason-chips">${html}</div>`;
+}
+
 function buildCategoryBadge(city) {
-  const isIsland    = city.isIsland || city.destType === 'island';
-  const isOnsen     = city.destType === 'onsen';
-  const isSight     = city.destType === 'sight';
-  const isMountain  = city.destType === 'mountain';
-  const isRemote    = city.destType === 'remote';
-  const isPeninsula = city.destType === 'peninsula';
-  if (isIsland)    return `　<span class="type-badge type-island">島</span>`;
-  if (isPeninsula) return `　<span class="type-badge type-peninsula">半島</span>`;
-  if (isOnsen)     return `　<span class="type-badge type-onsen">温泉</span>`;
-  if (isMountain)  return `　<span class="type-badge type-mountain">高原・山岳</span>`;
-  if (isRemote)    return `　<span class="type-badge type-remote">秘境</span>`;
-  if (isSight)     return `　<span class="type-badge type-sight">自然</span>`;
+  const dt = city.destType;
+  const isIsland = city.isIsland || dt === 'island';
+  if (isIsland)       return `　<span class="type-badge type-island">島で非日常</span>`;
+  if (dt === 'onsen') return `　<span class="type-badge type-onsen">温泉で癒される</span>`;
+  if (dt === 'mountain') return `　<span class="type-badge type-mountain">自然・絶景</span>`;
+  if (dt === 'remote')   return `　<span class="type-badge type-remote">秘境</span>`;
+  if (dt === 'city')     return `　<span class="type-badge type-city">街歩き・観光</span>`;
+  if (dt === 'sight')    return `　<span class="type-badge type-sight">自然・絶景</span>`;
+  if (dt === 'peninsula') return `　<span class="type-badge type-peninsula">半島</span>`;
   return '';
 }
 

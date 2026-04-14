@@ -59,6 +59,37 @@ function buildPool() {
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
   state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar);
   state.poolIndex = 0;
+  reorderPool();
+}
+
+/**
+ * 表示順制御:
+ *   1位: weight最大の目的地を先頭に（最も納得感の高い提案を最初に出す）
+ *   2〜5位: destTypeが連続しないよう再配置（多様性の視覚的バランス）
+ */
+function reorderPool() {
+  if (state.pool.length <= 1) return;
+
+  // 1位: weight最大を先頭へ
+  let maxIdx = 0;
+  for (let i = 1; i < state.pool.length; i++) {
+    if ((state.pool[i].weight ?? 1) > (state.pool[maxIdx].weight ?? 1)) maxIdx = i;
+  }
+  if (maxIdx !== 0) {
+    const best = state.pool.splice(maxIdx, 1)[0];
+    state.pool.unshift(best);
+  }
+
+  // 2〜5位: 直前と同一 destType なら後続から別 type を引き上げ
+  for (let pos = 1; pos <= Math.min(4, state.pool.length - 1); pos++) {
+    if (state.pool[pos].destType !== state.pool[pos - 1].destType) continue;
+    // 後続から異なるtypeを探して交換
+    const swapIdx = state.pool.slice(pos + 1).findIndex(d => d.destType !== state.pool[pos - 1].destType);
+    if (swapIdx !== -1) {
+      const actual = pos + 1 + swapIdx;
+      [state.pool[pos], state.pool[actual]] = [state.pool[actual], state.pool[pos]];
+    }
+  }
 }
 
 function go() {
