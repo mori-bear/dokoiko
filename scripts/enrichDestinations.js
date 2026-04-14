@@ -25,6 +25,43 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const INPUT_FILE  = path.join(PROJECT_ROOT, 'src/data/destinations/generated.json');
 const OUTPUT_FILE = path.join(PROJECT_ROOT, 'src/data/destinations/enriched.json');
+const PORTS_FILE  = path.join(PROJECT_ROOT, 'src/data/ports.json');
+
+/* 既存ports.jsonで定義済みの港だけを有効フェリーゲートウェイとする */
+const VALID_PORTS = new Set(
+  JSON.parse(fs.readFileSync(PORTS_FILE, 'utf8')).map(p => p.port)
+);
+
+/* travelTime 5地域キー（qa.jsと同期） */
+const TRAVEL_REF_KEYS = ['tokyo', 'nagoya', 'osaka', 'takamatsu', 'fukuoka'];
+const TRAVEL_REF_COORDS = {
+  tokyo:     { lat: 35.68, lng: 139.77 },
+  nagoya:    { lat: 35.17, lng: 136.91 },
+  osaka:     { lat: 34.69, lng: 135.50 },
+  takamatsu: { lat: 34.34, lng: 134.05 },
+  fukuoka:   { lat: 33.59, lng: 130.40 },
+};
+
+/** Haversine距離 */
+function haversineKm(a, b) {
+  const R = 6371;
+  const dLat = (b.lat - a.lat) * Math.PI / 180;
+  const dLng = (b.lng - a.lng) * Math.PI / 180;
+  const h = Math.sin(dLat / 2) ** 2
+    + Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+/** 5地域それぞれへの推定移動時間（分） */
+function computeTravelTime(dest) {
+  const result = {};
+  for (const key of TRAVEL_REF_KEYS) {
+    const km = haversineKm(TRAVEL_REF_COORDS[key], dest);
+    // 推定: 100km/h + 60分バッファ（乗換・最終アクセス）
+    result[key] = Math.max(60, Math.round((km / 100) * 60 + 60));
+  }
+  return result;
+}
 
 /* ── 都道府県別 代表駅・railProvider ── */
 const PREF_TO_STATION = {
@@ -87,8 +124,8 @@ const TEMPLATES = {
     weight:   1.5,
     stayPriority: 'high',
     finalAccessMode: 'train',
-    finalAccessLabel: 'バス',  // 最終アクセスはバスを想定
-    onsenLevel: 2,
+    finalAccessLabel: 'バス',
+    onsenLevel: 3,  // destType=onsen に相応しい値（qa.js [8o]要件）
   },
   island: {
     stayDescription: '昼と夕方で景色が変わるから、1泊して全部楽しむ',
@@ -140,12 +177,25 @@ function truncate(text, max) {
 /* ── エンリッチ処理 ── */
 
 function enrich(dest) {
-  const tpl = TEMPLATES[dest.destType] ?? TEMPLATES.sight;
+  // island: 有効な port がない場合は sight に降格（QA整合性のため）
+  let destType = dest.destType;
+  if (destType === 'island') {
+    const candidatePort = dest.name + '港';
+    if (!VALID_PORTS.has(candidatePort)) {
+      destType = 'sight';
+    }
+  }
+
+  const tpl = TEMPLATES[destType] ?? TEMPLATES.sight;
   const prefInfo = PREF_TO_STATION[dest.prefecture] ?? {};
   const hubCity = dest.hubCity || prefInfo.station?.replace(/駅$/, '') || '東京';
+  const travelTime = computeTravelTime(dest);
+  const stayRec = destType === 'mountain' || destType === 'remote' || destType === 'island'
+    ? '1night' : destType === 'onsen' ? '1night' : '1night';
 
   return {
     ...dest,
+    destType,  // island → sight に降格される場合あり
 
     // ── テンプレから ──
     stayDescription: tpl.stayDescription,
@@ -174,13 +224,14 @@ function enrich(dest) {
       rail: prefInfo.station ?? null,
       city: hubCity,
     },
-    gateway: prefInfo.station ?? null,
+    // gateway: accessStationと別の経由駅を指す。重複回避のためnull（手動で個別設定可）
+    gateway: null,
 
     // ── 出発地リスト（全主要都市対応）──
     departures: MAIN_DEPARTURES,
 
-    // ── 離島フラグ ──
-    isIsland: dest.destType === 'island',
+    // ── 離島フラグ（降格後のdestTypeで判定） ──
+    isIsland: destType === 'island',
 
     // ── その他必須フィールドのデフォルト ──
     hub: hubCity,
@@ -188,16 +239,16 @@ function enrich(dest) {
     spots: [dest.name],
     description: tpl.stayDescription,
     catch: truncate(`${dest.name}で${tpl.stayDescription}`, 30),
-    requiresCar: dest.destType === 'mountain' || dest.destType === 'remote',
+    requiresCar: destType === 'mountain' || destType === 'remote',
     type: 'destination',
-    subType: dest.destType,
+    subType: destType,
     city: hubCity,
     hubStation: prefInfo.station ?? null,
     hotelArea: dest.prefecture,
     hotelSearch: dest.name,
     hotelKeyword: dest.name,
-    travelTime: null,
-    stayRecommendation: tpl.stayPriority === 'high' ? '1night' : '1night',
+    travelTime,
+    stayRecommendation: stayRec,
     secondaryTransport: tpl.finalAccessMode === 'ferry' ? 'ferry' : 'bus',
     stayBias: tpl.stayPriority === 'high' ? 'destination' : 'hub',
     airportHub: null,

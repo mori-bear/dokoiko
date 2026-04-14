@@ -68,7 +68,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "愛山渓温泉",
     "hotelKeyword": "愛山渓温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 619,
+      "nagoya": 706,
+      "osaka": 771,
+      "takamatsu": 832,
+      "fukuoka": 993
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -161,7 +167,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "阿寒湖温泉",
     "hotelKeyword": "阿寒湖温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 623,
+      "nagoya": 724,
+      "osaka": 793,
+      "takamatsu": 859,
+      "fukuoka": 1028
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -254,7 +266,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "旭岳温泉",
     "hotelKeyword": "旭岳温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 614,
+      "nagoya": 701,
+      "osaka": 766,
+      "takamatsu": 828,
+      "fukuoka": 989
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -347,7 +365,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "朝里川温泉",
     "hotelKeyword": "朝里川温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 562,
+      "nagoya": 633,
+      "osaka": 693,
+      "takamatsu": 750,
+      "fukuoka": 905
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -440,7 +464,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "芦別温泉",
     "hotelKeyword": "芦別温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 600,
+      "nagoya": 682,
+      "osaka": 746,
+      "takamatsu": 806,
+      "fukuoka": 965
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -533,7 +563,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "網走湖畔温泉",
     "hotelKeyword": "網走湖畔温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 658,
+      "nagoya": 756,
+      "osaka": 824,
+      "takamatsu": 889,
+      "fukuoka": 1055
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -626,7 +662,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "岩尾別温泉",
     "hotelKeyword": "岩尾別温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 685,
+      "nagoya": 789,
+      "osaka": 858,
+      "takamatsu": 925,
+      "fukuoka": 1094
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -719,7 +761,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ウトロ温泉",
     "hotelKeyword": "ウトロ温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 681,
+      "nagoya": 785,
+      "osaka": 854,
+      "takamatsu": 920,
+      "fukuoka": 1090
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -812,7 +860,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "温根湯温泉",
     "hotelKeyword": "温根湯温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 632,
+      "nagoya": 726,
+      "osaka": 792,
+      "takamatsu": 856,
+      "fukuoka": 1020
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -905,7 +959,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "北湯沢温泉",
     "hotelKeyword": "北湯沢温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 528,
+      "nagoya": 601,
+      "osaka": 662,
+      "takamatsu": 721,
+      "fukuoka": 880
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -998,7 +1058,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "盃温泉",
     "hotelKeyword": "盃温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 557,
+      "nagoya": 620,
+      "osaka": 677,
+      "takamatsu": 733,
+      "fukuoka": 883
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1091,7 +1157,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "然別湖畔温泉",
     "hotelKeyword": "然別湖畔温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 595,
+      "nagoya": 688,
+      "osaka": 755,
+      "takamatsu": 818,
+      "fukuoka": 984
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1184,7 +1256,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "支笏湖温泉",
     "hotelKeyword": "支笏湖温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 541,
+      "nagoya": 618,
+      "osaka": 680,
+      "takamatsu": 740,
+      "fukuoka": 900
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1277,7 +1355,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "定山渓温泉",
     "hotelKeyword": "定山渓温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 551,
+      "nagoya": 625,
+      "osaka": 685,
+      "takamatsu": 744,
+      "fukuoka": 901
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1370,7 +1454,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "知内温泉",
     "hotelKeyword": "知内温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 456,
+      "nagoya": 524,
+      "osaka": 585,
+      "takamatsu": 645,
+      "fukuoka": 807
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1463,7 +1553,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "層雲峡温泉",
     "hotelKeyword": "層雲峡温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 621,
+      "nagoya": 710,
+      "osaka": 775,
+      "takamatsu": 837,
+      "fukuoka": 999
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1556,7 +1652,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "天人峡温泉",
     "hotelKeyword": "天人峡温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 612,
+      "nagoya": 700,
+      "osaka": 764,
+      "takamatsu": 826,
+      "fukuoka": 988
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1649,7 +1751,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "洞爺湖温泉",
     "hotelKeyword": "洞爺湖温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 522,
+      "nagoya": 593,
+      "osaka": 654,
+      "takamatsu": 712,
+      "fukuoka": 870
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1742,7 +1850,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "十勝岳温泉",
     "hotelKeyword": "十勝岳温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 597,
+      "nagoya": 684,
+      "osaka": 749,
+      "takamatsu": 811,
+      "fukuoka": 974
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1835,7 +1949,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "豊富温泉",
     "hotelKeyword": "豊富温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 695,
+      "nagoya": 767,
+      "osaka": 824,
+      "takamatsu": 879,
+      "fukuoka": 1025
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -1928,7 +2048,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "中岳温泉",
     "hotelKeyword": "中岳温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 617,
+      "nagoya": 705,
+      "osaka": 770,
+      "takamatsu": 832,
+      "fukuoka": 993
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2021,7 +2147,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "流山温泉",
     "hotelKeyword": "流山温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 485,
+      "nagoya": 557,
+      "osaka": 619,
+      "takamatsu": 679,
+      "fukuoka": 840
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2114,7 +2246,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "濁川温泉",
     "hotelKeyword": "濁川温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 491,
+      "nagoya": 559,
+      "osaka": 619,
+      "takamatsu": 678,
+      "fukuoka": 837
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2207,7 +2345,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ぬかびら温泉",
     "hotelKeyword": "ぬかびら温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 602,
+      "nagoya": 695,
+      "osaka": 762,
+      "takamatsu": 826,
+      "fukuoka": 992
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2300,7 +2444,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "登別温泉",
     "hotelKeyword": "登別温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 520,
+      "nagoya": 596,
+      "osaka": 658,
+      "takamatsu": 718,
+      "fukuoka": 878
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2393,7 +2543,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "二股ラヂウム温泉",
     "hotelKeyword": "二股ラヂウム温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 521,
+      "nagoya": 583,
+      "osaka": 641,
+      "takamatsu": 697,
+      "fukuoka": 850
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2486,7 +2642,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "水無海浜温泉",
     "hotelKeyword": "水無海浜温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 476,
+      "nagoya": 556,
+      "osaka": 620,
+      "takamatsu": 683,
+      "fukuoka": 849
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2579,7 +2741,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "雌阿寒温泉",
     "hotelKeyword": "雌阿寒温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 618,
+      "nagoya": 719,
+      "osaka": 788,
+      "takamatsu": 853,
+      "fukuoka": 1023
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2672,7 +2840,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "谷地頭温泉",
     "hotelKeyword": "谷地頭温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 468,
+      "nagoya": 542,
+      "osaka": 604,
+      "takamatsu": 665,
+      "fukuoka": 829
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2765,7 +2939,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "由仁温泉",
     "hotelKeyword": "由仁温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 559,
+      "nagoya": 640,
+      "osaka": 703,
+      "takamatsu": 763,
+      "fukuoka": 924
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2858,7 +3038,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "羅臼温泉",
     "hotelKeyword": "羅臼温泉",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 681,
+      "nagoya": 787,
+      "osaka": 857,
+      "takamatsu": 923,
+      "fukuoka": 1093
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "destination",
@@ -2883,99 +3069,6 @@
     "_enriched": true
   },
   {
-    "id": "gen_北海_択捉島",
-    "name": "択捉島",
-    "displayName": "択捉島",
-    "prefecture": "北海道",
-    "region": "北海道",
-    "lat": 45.225,
-    "lng": 147.875,
-    "destType": "island",
-    "hubCity": "札幌",
-    "fallbackCity": "札幌",
-    "isStayable": false,
-    "_generated": true,
-    "_source": "wikipedia",
-    "stayDescription": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "tags": [
-      "離島",
-      "海",
-      "自然"
-    ],
-    "primary": [
-      "離島",
-      "海"
-    ],
-    "secondary": [
-      "自然"
-    ],
-    "weight": 1.3,
-    "stayPriority": "medium",
-    "onsenLevel": 0,
-    "accessStation": "札幌駅",
-    "representativeStation": "札幌駅",
-    "railProvider": "ekinet",
-    "jrArea": "east",
-    "finalAccess": {
-      "type": "ferry",
-      "line": null,
-      "to": "択捉島"
-    },
-    "transportHubs": {
-      "rail": "札幌駅",
-      "city": "札幌"
-    },
-    "gateway": "札幌駅",
-    "departures": [
-      "札幌",
-      "仙台",
-      "東京",
-      "名古屋",
-      "大阪",
-      "広島",
-      "福岡"
-    ],
-    "isIsland": true,
-    "hub": "札幌",
-    "stayAllowed": true,
-    "spots": [
-      "択捉島"
-    ],
-    "description": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "catch": "択捉島で昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "requiresCar": false,
-    "type": "destination",
-    "subType": "island",
-    "city": "札幌",
-    "hubStation": "札幌駅",
-    "hotelArea": "北海道",
-    "hotelSearch": "択捉島",
-    "hotelKeyword": "択捉島",
-    "travelTime": null,
-    "stayRecommendation": "1night",
-    "secondaryTransport": "ferry",
-    "stayBias": "hub",
-    "airportHub": null,
-    "situations": [
-      "solo",
-      "couple",
-      "friends"
-    ],
-    "mapPoint": "択捉島",
-    "railGateway": "札幌駅",
-    "railNote": "フェリー",
-    "hasDirectFlight": false,
-    "airportGateway": null,
-    "busGateway": null,
-    "ferryGateway": "択捉島港",
-    "gateways": [],
-    "access": {
-      "steps": []
-    },
-    "localAccess": null,
-    "_enriched": true
-  },
-  {
     "id": "gen_北海_奥尻島",
     "name": "奥尻島",
     "displayName": "奥尻島",
@@ -2983,26 +3076,24 @@
     "region": "北海道",
     "lat": 42.14916667,
     "lng": 139.46722222,
-    "destType": "island",
+    "destType": "sight",
     "hubCity": "札幌",
     "fallbackCity": "札幌",
     "isStayable": false,
     "_generated": true,
     "_source": "wikipedia",
-    "stayDescription": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
     "tags": [
-      "離島",
-      "海",
+      "観光",
       "自然"
     ],
     "primary": [
-      "離島",
-      "海"
+      "観光"
     ],
     "secondary": [
       "自然"
     ],
-    "weight": 1.3,
+    "weight": 1,
     "stayPriority": "medium",
     "onsenLevel": 0,
     "accessStation": "札幌駅",
@@ -3010,7 +3101,7 @@
     "railProvider": "ekinet",
     "jrArea": "east",
     "finalAccess": {
-      "type": "ferry",
+      "type": "bus",
       "line": null,
       "to": "奥尻島"
     },
@@ -3028,25 +3119,31 @@
       "広島",
       "福岡"
     ],
-    "isIsland": true,
+    "isIsland": false,
     "hub": "札幌",
     "stayAllowed": true,
     "spots": [
       "奥尻島"
     ],
-    "description": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "catch": "奥尻島で昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "奥尻島で見どころが多く、1泊してゆっくり巡る",
     "requiresCar": false,
     "type": "destination",
-    "subType": "island",
+    "subType": "sight",
     "city": "札幌",
     "hubStation": "札幌駅",
     "hotelArea": "北海道",
     "hotelSearch": "奥尻島",
     "hotelKeyword": "奥尻島",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 492,
+      "nagoya": 544,
+      "osaka": 599,
+      "takamatsu": 653,
+      "fukuoka": 803
+    },
     "stayRecommendation": "1night",
-    "secondaryTransport": "ferry",
+    "secondaryTransport": "bus",
     "stayBias": "hub",
     "airportHub": null,
     "situations": [
@@ -3056,104 +3153,11 @@
     ],
     "mapPoint": "奥尻島",
     "railGateway": "札幌駅",
-    "railNote": "フェリー",
+    "railNote": "バス",
     "hasDirectFlight": false,
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": "奥尻島港",
-    "gateways": [],
-    "access": {
-      "steps": []
-    },
-    "localAccess": null,
-    "_enriched": true
-  },
-  {
-    "id": "gen_北海_色丹島",
-    "name": "色丹島",
-    "displayName": "色丹島",
-    "prefecture": "北海道",
-    "region": "北海道",
-    "lat": 43.79361111,
-    "lng": 146.74722222,
-    "destType": "island",
-    "hubCity": "札幌",
-    "fallbackCity": "札幌",
-    "isStayable": false,
-    "_generated": true,
-    "_source": "wikipedia",
-    "stayDescription": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "tags": [
-      "離島",
-      "海",
-      "自然"
-    ],
-    "primary": [
-      "離島",
-      "海"
-    ],
-    "secondary": [
-      "自然"
-    ],
-    "weight": 1.3,
-    "stayPriority": "medium",
-    "onsenLevel": 0,
-    "accessStation": "札幌駅",
-    "representativeStation": "札幌駅",
-    "railProvider": "ekinet",
-    "jrArea": "east",
-    "finalAccess": {
-      "type": "ferry",
-      "line": null,
-      "to": "色丹島"
-    },
-    "transportHubs": {
-      "rail": "札幌駅",
-      "city": "札幌"
-    },
-    "gateway": "札幌駅",
-    "departures": [
-      "札幌",
-      "仙台",
-      "東京",
-      "名古屋",
-      "大阪",
-      "広島",
-      "福岡"
-    ],
-    "isIsland": true,
-    "hub": "札幌",
-    "stayAllowed": true,
-    "spots": [
-      "色丹島"
-    ],
-    "description": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "catch": "色丹島で昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "requiresCar": false,
-    "type": "destination",
-    "subType": "island",
-    "city": "札幌",
-    "hubStation": "札幌駅",
-    "hotelArea": "北海道",
-    "hotelSearch": "色丹島",
-    "hotelKeyword": "色丹島",
-    "travelTime": null,
-    "stayRecommendation": "1night",
-    "secondaryTransport": "ferry",
-    "stayBias": "hub",
-    "airportHub": null,
-    "situations": [
-      "solo",
-      "couple",
-      "friends"
-    ],
-    "mapPoint": "色丹島",
-    "railGateway": "札幌駅",
-    "railNote": "フェリー",
-    "hasDirectFlight": false,
-    "airportGateway": null,
-    "busGateway": null,
-    "ferryGateway": "色丹島港",
+    "ferryGateway": null,
     "gateways": [],
     "access": {
       "steps": []
@@ -3169,26 +3173,24 @@
     "region": "北海道",
     "lat": 43.06433333,
     "lng": 141.34688889,
-    "destType": "island",
+    "destType": "sight",
     "hubCity": "札幌",
     "fallbackCity": "札幌",
     "isStayable": false,
     "_generated": true,
     "_source": "wikipedia",
-    "stayDescription": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
     "tags": [
-      "離島",
-      "海",
+      "観光",
       "自然"
     ],
     "primary": [
-      "離島",
-      "海"
+      "観光"
     ],
     "secondary": [
       "自然"
     ],
-    "weight": 1.3,
+    "weight": 1,
     "stayPriority": "medium",
     "onsenLevel": 0,
     "accessStation": "札幌駅",
@@ -3196,7 +3198,7 @@
     "railProvider": "ekinet",
     "jrArea": "east",
     "finalAccess": {
-      "type": "ferry",
+      "type": "bus",
       "line": null,
       "to": "北海道"
     },
@@ -3214,25 +3216,31 @@
       "広島",
       "福岡"
     ],
-    "isIsland": true,
+    "isIsland": false,
     "hub": "札幌",
     "stayAllowed": true,
     "spots": [
       "北海道"
     ],
-    "description": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "catch": "北海道で昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "北海道で見どころが多く、1泊してゆっくり巡る",
     "requiresCar": false,
     "type": "destination",
-    "subType": "island",
+    "subType": "sight",
     "city": "札幌",
     "hubStation": "札幌駅",
     "hotelArea": "北海道",
     "hotelSearch": "北海道",
     "hotelKeyword": "北海道",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 559,
+      "nagoya": 634,
+      "osaka": 696,
+      "takamatsu": 754,
+      "fukuoka": 912
+    },
     "stayRecommendation": "1night",
-    "secondaryTransport": "ferry",
+    "secondaryTransport": "bus",
     "stayBias": "hub",
     "airportHub": null,
     "situations": [
@@ -3242,11 +3250,11 @@
     ],
     "mapPoint": "北海道",
     "railGateway": "札幌駅",
-    "railNote": "フェリー",
+    "railNote": "バス",
     "hasDirectFlight": false,
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": "北海道港",
+    "ferryGateway": null,
     "gateways": [],
     "access": {
       "steps": []
@@ -3262,26 +3270,24 @@
     "region": "北海道",
     "lat": 44.43333333,
     "lng": 141.42388889,
-    "destType": "island",
+    "destType": "sight",
     "hubCity": "札幌",
     "fallbackCity": "札幌",
     "isStayable": false,
     "_generated": true,
     "_source": "wikipedia",
-    "stayDescription": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
     "tags": [
-      "離島",
-      "海",
+      "観光",
       "自然"
     ],
     "primary": [
-      "離島",
-      "海"
+      "観光"
     ],
     "secondary": [
       "自然"
     ],
-    "weight": 1.3,
+    "weight": 1,
     "stayPriority": "medium",
     "onsenLevel": 0,
     "accessStation": "札幌駅",
@@ -3289,7 +3295,7 @@
     "railProvider": "ekinet",
     "jrArea": "east",
     "finalAccess": {
-      "type": "ferry",
+      "type": "bus",
       "line": null,
       "to": "焼尻島"
     },
@@ -3307,25 +3313,31 @@
       "広島",
       "福岡"
     ],
-    "isIsland": true,
+    "isIsland": false,
     "hub": "札幌",
     "stayAllowed": true,
     "spots": [
       "焼尻島"
     ],
-    "description": "昼と夕方で景色が変わるから、1泊して全部楽しむ",
-    "catch": "焼尻島で昼と夕方で景色が変わるから、1泊して全部楽しむ",
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "焼尻島で見どころが多く、1泊してゆっくり巡る",
     "requiresCar": false,
     "type": "destination",
-    "subType": "island",
+    "subType": "sight",
     "city": "札幌",
     "hubStation": "札幌駅",
     "hotelArea": "北海道",
     "hotelSearch": "焼尻島",
     "hotelKeyword": "焼尻島",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 650,
+      "nagoya": 720,
+      "osaka": 777,
+      "takamatsu": 833,
+      "fukuoka": 980
+    },
     "stayRecommendation": "1night",
-    "secondaryTransport": "ferry",
+    "secondaryTransport": "bus",
     "stayBias": "hub",
     "airportHub": null,
     "situations": [
@@ -3335,11 +3347,11 @@
     ],
     "mapPoint": "焼尻島",
     "railGateway": "札幌駅",
-    "railNote": "フェリー",
+    "railNote": "バス",
     "hasDirectFlight": false,
     "airportGateway": null,
     "busGateway": null,
-    "ferryGateway": "焼尻島港",
+    "ferryGateway": null,
     "gateways": [],
     "access": {
       "steps": []
@@ -3416,7 +3428,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "愛別岳",
     "hotelKeyword": "愛別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 618,
+      "nagoya": 706,
+      "osaka": 771,
+      "takamatsu": 833,
+      "fukuoka": 994
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3509,7 +3527,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "旭岳",
     "hotelKeyword": "旭岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 616,
+      "nagoya": 704,
+      "osaka": 769,
+      "takamatsu": 831,
+      "fukuoka": 992
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3602,7 +3626,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "知床硫黄山",
     "hotelKeyword": "知床硫黄山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 687,
+      "nagoya": 792,
+      "osaka": 862,
+      "takamatsu": 928,
+      "fukuoka": 1098
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3695,7 +3725,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "石狩岳",
     "hotelKeyword": "石狩岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 611,
+      "nagoya": 701,
+      "osaka": 767,
+      "takamatsu": 830,
+      "fukuoka": 993
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3788,7 +3824,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "1839峰",
     "hotelKeyword": "1839峰",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 544,
+      "nagoya": 639,
+      "osaka": 707,
+      "takamatsu": 772,
+      "fukuoka": 942
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3881,7 +3923,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "イワオヌプリ",
     "hotelKeyword": "イワオヌプリ",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 543,
+      "nagoya": 610,
+      "osaka": 668,
+      "takamatsu": 725,
+      "fukuoka": 879
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -3974,7 +4022,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "有珠山",
     "hotelKeyword": "有珠山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 521,
+      "nagoya": 592,
+      "osaka": 653,
+      "takamatsu": 712,
+      "fukuoka": 870
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4067,7 +4121,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "海別岳",
     "hotelKeyword": "海別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 666,
+      "nagoya": 770,
+      "osaka": 840,
+      "takamatsu": 906,
+      "fukuoka": 1076
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4160,7 +4220,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ウペペサンケ山",
     "hotelKeyword": "ウペペサンケ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 602,
+      "nagoya": 694,
+      "osaka": 760,
+      "takamatsu": 824,
+      "fukuoka": 989
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4253,7 +4319,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "恵山丸山",
     "hotelKeyword": "恵山丸山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 477,
+      "nagoya": 556,
+      "osaka": 620,
+      "takamatsu": 682,
+      "fukuoka": 848
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4346,7 +4418,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "恵庭岳",
     "hotelKeyword": "恵庭岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 541,
+      "nagoya": 617,
+      "osaka": 678,
+      "takamatsu": 738,
+      "fukuoka": 897
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4439,7 +4517,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "雄阿寒岳",
     "hotelKeyword": "雄阿寒岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 625,
+      "nagoya": 727,
+      "osaka": 796,
+      "takamatsu": 862,
+      "fukuoka": 1032
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4532,7 +4616,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "奥手稲山",
     "hotelKeyword": "奥手稲山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 559,
+      "nagoya": 632,
+      "osaka": 692,
+      "takamatsu": 750,
+      "fukuoka": 906
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4625,7 +4715,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "奥徳富岳",
     "hotelKeyword": "奥徳富岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 601,
+      "nagoya": 675,
+      "osaka": 735,
+      "takamatsu": 792,
+      "fukuoka": 946
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4718,7 +4814,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "オコツナイ岳",
     "hotelKeyword": "オコツナイ岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 524,
+      "nagoya": 581,
+      "osaka": 637,
+      "takamatsu": 692,
+      "fukuoka": 842
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4811,7 +4913,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "オプタテシケ山",
     "hotelKeyword": "オプタテシケ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 602,
+      "nagoya": 690,
+      "osaka": 755,
+      "takamatsu": 817,
+      "fukuoka": 980
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4904,7 +5012,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "温泉富士",
     "hotelKeyword": "温泉富士",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 644,
+      "nagoya": 749,
+      "osaka": 819,
+      "takamatsu": 885,
+      "fukuoka": 1056
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -4997,7 +5111,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "遠音別岳",
     "hotelKeyword": "遠音別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 676,
+      "nagoya": 780,
+      "osaka": 850,
+      "takamatsu": 917,
+      "fukuoka": 1086
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5090,7 +5210,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "開陽台",
     "hotelKeyword": "開陽台",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 650,
+      "nagoya": 756,
+      "osaka": 827,
+      "takamatsu": 894,
+      "fukuoka": 1065
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5183,7 +5309,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "硬石山",
     "hotelKeyword": "硬石山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 553,
+      "nagoya": 628,
+      "osaka": 689,
+      "takamatsu": 749,
+      "fukuoka": 906
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5267,7 +5399,7 @@
       "上ホロカメットク山"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "上ホロカメットク山で朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "上ホロカメットク山で朝の空気と景色が別物、泊まらないと味わ…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -5276,7 +5408,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "上ホロカメットク山",
     "hotelKeyword": "上ホロカメットク山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 596,
+      "nagoya": 684,
+      "osaka": 749,
+      "takamatsu": 812,
+      "fukuoka": 974
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5360,7 +5498,7 @@
       "カムイエクウチカウシ山"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "カムイエクウチカウシ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "カムイエクウチカウシ山で朝の空気と景色が別物、泊まらないと…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -5369,7 +5507,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "カムイエクウチカウシ山",
     "hotelKeyword": "カムイエクウチカウシ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 549,
+      "nagoya": 643,
+      "osaka": 710,
+      "takamatsu": 775,
+      "fukuoka": 944
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5462,7 +5606,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "神居尻山",
     "hotelKeyword": "神居尻山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 591,
+      "nagoya": 667,
+      "osaka": 728,
+      "takamatsu": 787,
+      "fukuoka": 943
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5555,7 +5705,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "狩場山",
     "hotelKeyword": "狩場山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 523,
+      "nagoya": 581,
+      "osaka": 637,
+      "takamatsu": 692,
+      "fukuoka": 842
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5648,7 +5804,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "観音岩山",
     "hotelKeyword": "観音岩山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 552,
+      "nagoya": 626,
+      "osaka": 687,
+      "takamatsu": 746,
+      "fukuoka": 903
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5741,7 +5903,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "北ペトウトル山",
     "hotelKeyword": "北ペトウトル山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 597,
+      "nagoya": 690,
+      "osaka": 757,
+      "takamatsu": 820,
+      "fukuoka": 986
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5834,7 +6002,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "喜登牛山",
     "hotelKeyword": "喜登牛山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 612,
+      "nagoya": 707,
+      "osaka": 774,
+      "takamatsu": 839,
+      "fukuoka": 1005
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -5927,7 +6101,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "喜茂別岳",
     "hotelKeyword": "喜茂別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 611,
+      "nagoya": 679,
+      "osaka": 737,
+      "takamatsu": 792,
+      "fukuoka": 941
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6020,7 +6200,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "九度山",
     "hotelKeyword": "九度山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 659,
+      "nagoya": 740,
+      "osaka": 802,
+      "takamatsu": 860,
+      "fukuoka": 1015
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6113,7 +6299,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "クマネシリ岳",
     "hotelKeyword": "クマネシリ岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 613,
+      "nagoya": 706,
+      "osaka": 772,
+      "takamatsu": 836,
+      "fukuoka": 1001
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6206,7 +6398,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "隈根尻山",
     "hotelKeyword": "隈根尻山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 589,
+      "nagoya": 666,
+      "osaka": 727,
+      "takamatsu": 786,
+      "fukuoka": 943
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6290,7 +6488,7 @@
       "コイカクシュサツナイ岳"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "コイカクシュサツナイ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "コイカクシュサツナイ岳で朝の空気と景色が別物、泊まらないと…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -6299,7 +6497,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "コイカクシュサツナイ岳",
     "hotelKeyword": "コイカクシュサツナイ岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 546,
+      "nagoya": 641,
+      "osaka": 709,
+      "takamatsu": 775,
+      "fukuoka": 944
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6392,7 +6596,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "小泉岳",
     "hotelKeyword": "小泉岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 617,
+      "nagoya": 706,
+      "osaka": 771,
+      "takamatsu": 833,
+      "fukuoka": 995
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6485,7 +6695,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "小天狗岳",
     "hotelKeyword": "小天狗岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 553,
+      "nagoya": 626,
+      "osaka": 686,
+      "takamatsu": 745,
+      "fukuoka": 901
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6578,7 +6794,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "木挽山",
     "hotelKeyword": "木挽山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 556,
+      "nagoya": 631,
+      "osaka": 693,
+      "takamatsu": 752,
+      "fukuoka": 910
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6671,7 +6893,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "昆布岳",
     "hotelKeyword": "昆布岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 531,
+      "nagoya": 599,
+      "osaka": 658,
+      "takamatsu": 716,
+      "fukuoka": 871
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6682,99 +6910,6 @@
       "friends"
     ],
     "mapPoint": "昆布岳",
-    "railGateway": "札幌駅",
-    "railNote": "バス",
-    "hasDirectFlight": false,
-    "airportGateway": null,
-    "busGateway": null,
-    "ferryGateway": null,
-    "gateways": [],
-    "access": {
-      "steps": []
-    },
-    "localAccess": null,
-    "_enriched": true
-  },
-  {
-    "id": "gen_北海_指臼岳",
-    "name": "指臼岳",
-    "displayName": "指臼岳",
-    "prefecture": "北海道",
-    "region": "北海道",
-    "lat": 45.09972222,
-    "lng": 148.01972222,
-    "destType": "mountain",
-    "hubCity": "札幌",
-    "fallbackCity": "札幌",
-    "isStayable": false,
-    "_generated": true,
-    "_source": "wikipedia",
-    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
-    "tags": [
-      "山",
-      "自然",
-      "絶景"
-    ],
-    "primary": [
-      "山",
-      "自然"
-    ],
-    "secondary": [
-      "絶景"
-    ],
-    "weight": 1.2,
-    "stayPriority": "low",
-    "onsenLevel": 0,
-    "accessStation": "札幌駅",
-    "representativeStation": "札幌駅",
-    "railProvider": "ekinet",
-    "jrArea": "east",
-    "finalAccess": {
-      "type": "bus",
-      "line": null,
-      "to": "指臼岳"
-    },
-    "transportHubs": {
-      "rail": "札幌駅",
-      "city": "札幌"
-    },
-    "gateway": "札幌駅",
-    "departures": [
-      "札幌",
-      "仙台",
-      "東京",
-      "名古屋",
-      "大阪",
-      "広島",
-      "福岡"
-    ],
-    "isIsland": false,
-    "hub": "札幌",
-    "stayAllowed": true,
-    "spots": [
-      "指臼岳"
-    ],
-    "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "指臼岳で朝の空気と景色が別物、泊まらないと味わえない",
-    "requiresCar": true,
-    "type": "destination",
-    "subType": "mountain",
-    "city": "札幌",
-    "hubStation": "札幌駅",
-    "hotelArea": "北海道",
-    "hotelSearch": "指臼岳",
-    "hotelKeyword": "指臼岳",
-    "travelTime": null,
-    "stayRecommendation": "1night",
-    "secondaryTransport": "bus",
-    "stayBias": "hub",
-    "airportHub": null,
-    "situations": [
-      "solo",
-      "couple",
-      "friends"
-    ],
-    "mapPoint": "指臼岳",
     "railGateway": "札幌駅",
     "railNote": "バス",
     "hasDirectFlight": false,
@@ -6857,7 +6992,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "佐幌岳",
     "hotelKeyword": "佐幌岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 583,
+      "nagoya": 674,
+      "osaka": 740,
+      "takamatsu": 803,
+      "fukuoka": 968
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -6941,7 +7082,7 @@
       "サマッケヌプリ山"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "サマッケヌプリ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "サマッケヌプリ山で朝の空気と景色が別物、泊まらないと味わえ…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -6950,7 +7091,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "サマッケヌプリ山",
     "hotelKeyword": "サマッケヌプリ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 651,
+      "nagoya": 756,
+      "osaka": 826,
+      "takamatsu": 892,
+      "fukuoka": 1063
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7043,7 +7190,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "然別火山群",
     "hotelKeyword": "然別火山群",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 594,
+      "nagoya": 687,
+      "osaka": 754,
+      "takamatsu": 818,
+      "fukuoka": 984
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7136,7 +7289,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "標津岳",
     "hotelKeyword": "標津岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 650,
+      "nagoya": 754,
+      "osaka": 824,
+      "takamatsu": 891,
+      "fukuoka": 1061
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7229,7 +7388,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "積丹岳",
     "hotelKeyword": "積丹岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 568,
+      "nagoya": 631,
+      "osaka": 688,
+      "takamatsu": 743,
+      "fukuoka": 892
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7322,7 +7487,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "射的山",
     "hotelKeyword": "射的山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 620,
+      "nagoya": 704,
+      "osaka": 767,
+      "takamatsu": 827,
+      "fukuoka": 986
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7415,7 +7586,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "斜里岳",
     "hotelKeyword": "斜里岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 656,
+      "nagoya": 760,
+      "osaka": 829,
+      "takamatsu": 896,
+      "fukuoka": 1066
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7508,7 +7685,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "昭和新山",
     "hotelKeyword": "昭和新山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 521,
+      "nagoya": 593,
+      "osaka": 654,
+      "takamatsu": 712,
+      "fukuoka": 870
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7601,7 +7784,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "暑寒別岳",
     "hotelKeyword": "暑寒別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 604,
+      "nagoya": 677,
+      "osaka": 737,
+      "takamatsu": 795,
+      "fukuoka": 948
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7694,7 +7883,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "白旗山",
     "hotelKeyword": "白旗山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 552,
+      "nagoya": 629,
+      "osaka": 691,
+      "takamatsu": 750,
+      "fukuoka": 909
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7787,7 +7982,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "尻別岳",
     "hotelKeyword": "尻別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 537,
+      "nagoya": 608,
+      "osaka": 668,
+      "takamatsu": 726,
+      "fukuoka": 883
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7880,7 +8081,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "知床岳",
     "hotelKeyword": "知床岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 696,
+      "nagoya": 801,
+      "osaka": 871,
+      "takamatsu": 937,
+      "fukuoka": 1106
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -7973,7 +8180,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "測量山",
     "hotelKeyword": "測量山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 507,
+      "nagoya": 581,
+      "osaka": 643,
+      "takamatsu": 703,
+      "fukuoka": 864
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8066,7 +8279,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "樽前山",
     "hotelKeyword": "樽前山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 535,
+      "nagoya": 612,
+      "osaka": 675,
+      "takamatsu": 735,
+      "fukuoka": 895
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8159,7 +8378,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "知西別岳",
     "hotelKeyword": "知西別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 678,
+      "nagoya": 783,
+      "osaka": 853,
+      "takamatsu": 919,
+      "fukuoka": 1089
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8170,99 +8395,6 @@
       "friends"
     ],
     "mapPoint": "知西別岳",
-    "railGateway": "札幌駅",
-    "railNote": "バス",
-    "hasDirectFlight": false,
-    "airportGateway": null,
-    "busGateway": null,
-    "ferryGateway": null,
-    "gateways": [],
-    "access": {
-      "steps": []
-    },
-    "localAccess": null,
-    "_enriched": true
-  },
-  {
-    "id": "gen_北海_爺爺岳",
-    "name": "爺爺岳",
-    "displayName": "爺爺岳",
-    "prefecture": "北海道",
-    "region": "北海道",
-    "lat": 44.35333333,
-    "lng": 146.25222222,
-    "destType": "mountain",
-    "hubCity": "札幌",
-    "fallbackCity": "札幌",
-    "isStayable": false,
-    "_generated": true,
-    "_source": "wikipedia",
-    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
-    "tags": [
-      "山",
-      "自然",
-      "絶景"
-    ],
-    "primary": [
-      "山",
-      "自然"
-    ],
-    "secondary": [
-      "絶景"
-    ],
-    "weight": 1.2,
-    "stayPriority": "low",
-    "onsenLevel": 0,
-    "accessStation": "札幌駅",
-    "representativeStation": "札幌駅",
-    "railProvider": "ekinet",
-    "jrArea": "east",
-    "finalAccess": {
-      "type": "bus",
-      "line": null,
-      "to": "爺爺岳"
-    },
-    "transportHubs": {
-      "rail": "札幌駅",
-      "city": "札幌"
-    },
-    "gateway": "札幌駅",
-    "departures": [
-      "札幌",
-      "仙台",
-      "東京",
-      "名古屋",
-      "大阪",
-      "広島",
-      "福岡"
-    ],
-    "isIsland": false,
-    "hub": "札幌",
-    "stayAllowed": true,
-    "spots": [
-      "爺爺岳"
-    ],
-    "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "爺爺岳で朝の空気と景色が別物、泊まらないと味わえない",
-    "requiresCar": true,
-    "type": "destination",
-    "subType": "mountain",
-    "city": "札幌",
-    "hubStation": "札幌駅",
-    "hotelArea": "北海道",
-    "hotelSearch": "爺爺岳",
-    "hotelKeyword": "爺爺岳",
-    "travelTime": null,
-    "stayRecommendation": "1night",
-    "secondaryTransport": "bus",
-    "stayBias": "hub",
-    "airportHub": null,
-    "situations": [
-      "solo",
-      "couple",
-      "friends"
-    ],
-    "mapPoint": "爺爺岳",
     "railGateway": "札幌駅",
     "railNote": "バス",
     "hasDirectFlight": false,
@@ -8345,7 +8477,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "忠別岳",
     "hotelKeyword": "忠別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 612,
+      "nagoya": 701,
+      "osaka": 766,
+      "takamatsu": 828,
+      "fukuoka": 991
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8438,7 +8576,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "手稲山",
     "hotelKeyword": "手稲山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 559,
+      "nagoya": 632,
+      "osaka": 692,
+      "takamatsu": 751,
+      "fukuoka": 907
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8531,7 +8675,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "天塩岳",
     "hotelKeyword": "天塩岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 635,
+      "nagoya": 722,
+      "osaka": 786,
+      "takamatsu": 847,
+      "fukuoka": 1007
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8624,7 +8774,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "天塩富士",
     "hotelKeyword": "天塩富士",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 637,
+      "nagoya": 724,
+      "osaka": 788,
+      "takamatsu": 849,
+      "fukuoka": 1009
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8717,7 +8873,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "天都山",
     "hotelKeyword": "天都山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 660,
+      "nagoya": 759,
+      "osaka": 827,
+      "takamatsu": 891,
+      "fukuoka": 1058
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8810,7 +8972,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "十勝岳",
     "hotelKeyword": "十勝岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 598,
+      "nagoya": 686,
+      "osaka": 751,
+      "takamatsu": 813,
+      "fukuoka": 975
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8903,7 +9071,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "突哨山",
     "hotelKeyword": "突哨山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 622,
+      "nagoya": 706,
+      "osaka": 769,
+      "takamatsu": 829,
+      "fukuoka": 987
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -8996,7 +9170,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "泊山",
     "hotelKeyword": "泊山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 679,
+      "nagoya": 788,
+      "osaka": 859,
+      "takamatsu": 927,
+      "fukuoka": 1099
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9089,7 +9269,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "トムラウシ山",
     "hotelKeyword": "トムラウシ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 607,
+      "nagoya": 696,
+      "osaka": 761,
+      "takamatsu": 823,
+      "fukuoka": 986
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9182,7 +9368,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "泣面山",
     "hotelKeyword": "泣面山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 482,
+      "nagoya": 557,
+      "osaka": 620,
+      "takamatsu": 681,
+      "fukuoka": 844
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9275,7 +9467,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "新冠泥火山",
     "hotelKeyword": "新冠泥火山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 526,
+      "nagoya": 616,
+      "osaka": 683,
+      "takamatsu": 748,
+      "fukuoka": 916
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9368,7 +9566,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "西別岳",
     "hotelKeyword": "西別岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 640,
+      "nagoya": 744,
+      "osaka": 814,
+      "takamatsu": 881,
+      "fukuoka": 1052
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9452,7 +9656,7 @@
       "ニセイカウシュッペ山"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "ニセイカウシュッペ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ニセイカウシュッペ山で朝の空気と景色が別物、泊まらないと味…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -9461,7 +9665,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ニセイカウシュッペ山",
     "hotelKeyword": "ニセイカウシュッペ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 625,
+      "nagoya": 714,
+      "osaka": 779,
+      "takamatsu": 841,
+      "fukuoka": 1002
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9545,7 +9755,7 @@
       "ニセコアンヌプリ"
     ],
     "description": "朝の空気と景色が別物、泊まらないと味わえない",
-    "catch": "ニセコアンヌプリで朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ニセコアンヌプリで朝の空気と景色が別物、泊まらないと味わえ…",
     "requiresCar": true,
     "type": "destination",
     "subType": "mountain",
@@ -9554,7 +9764,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ニセコアンヌプリ",
     "hotelKeyword": "ニセコアンヌプリ",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 542,
+      "nagoya": 609,
+      "osaka": 668,
+      "takamatsu": 725,
+      "fukuoka": 879
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9647,7 +9863,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ニトヌプリ",
     "hotelKeyword": "ニトヌプリ",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 543,
+      "nagoya": 609,
+      "osaka": 668,
+      "takamatsu": 725,
+      "fukuoka": 878
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9740,7 +9962,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ニペソツ山",
     "hotelKeyword": "ニペソツ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 605,
+      "nagoya": 696,
+      "osaka": 762,
+      "takamatsu": 825,
+      "fukuoka": 990
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9833,7 +10061,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "袴腰岳",
     "hotelKeyword": "袴腰岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 480,
+      "nagoya": 554,
+      "osaka": 617,
+      "takamatsu": 677,
+      "fukuoka": 840
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -9926,7 +10160,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "白雲岳",
     "hotelKeyword": "白雲岳",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 616,
+      "nagoya": 705,
+      "osaka": 770,
+      "takamatsu": 832,
+      "fukuoka": 994
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10019,7 +10259,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "函館山",
     "hotelKeyword": "函館山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 468,
+      "nagoya": 542,
+      "osaka": 605,
+      "takamatsu": 666,
+      "fukuoka": 829
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10112,7 +10358,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "春香山",
     "hotelKeyword": "春香山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 561,
+      "nagoya": 632,
+      "osaka": 692,
+      "takamatsu": 750,
+      "fukuoka": 906
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10205,7 +10457,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "盤渓山",
     "hotelKeyword": "盤渓山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 555,
+      "nagoya": 629,
+      "osaka": 690,
+      "takamatsu": 749,
+      "fukuoka": 906
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10298,7 +10556,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "美瑛富士",
     "hotelKeyword": "美瑛富士",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 600,
+      "nagoya": 688,
+      "osaka": 753,
+      "takamatsu": 815,
+      "fukuoka": 978
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10391,7 +10655,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ピヤシリ山",
     "hotelKeyword": "ピヤシリ山",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 661,
+      "nagoya": 743,
+      "osaka": 805,
+      "takamatsu": 863,
+      "fukuoka": 1018
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10482,7 +10752,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "上野ファーム",
     "hotelKeyword": "上野ファーム",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 620,
+      "nagoya": 703,
+      "osaka": 767,
+      "takamatsu": 827,
+      "fukuoka": 986
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10564,7 +10840,7 @@
       "うらかわ優駿ビレッジAERU"
     ],
     "description": "見どころが多く、1泊してゆっくり巡る",
-    "catch": "うらかわ優駿ビレッジAERUで見どころが多く、1泊してゆっくり巡る",
+    "catch": "うらかわ優駿ビレッジAERUで見どころが多く、1泊してゆっ…",
     "requiresCar": false,
     "type": "destination",
     "subType": "sight",
@@ -10573,7 +10849,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "うらかわ優駿ビレッジAERU",
     "hotelKeyword": "うらかわ優駿ビレッジAERU",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 523,
+      "nagoya": 621,
+      "osaka": 690,
+      "takamatsu": 757,
+      "fukuoka": 929
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10664,7 +10946,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "襟裳岬",
     "hotelKeyword": "襟裳岬",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 514,
+      "nagoya": 619,
+      "osaka": 690,
+      "takamatsu": 759,
+      "fukuoka": 935
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10755,7 +11043,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "小樽運河",
     "hotelKeyword": "小樽運河",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 566,
+      "nagoya": 636,
+      "osaka": 695,
+      "takamatsu": 752,
+      "fukuoka": 906
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10837,7 +11131,7 @@
       "オホーツクとっかりセンター"
     ],
     "description": "見どころが多く、1泊してゆっくり巡る",
-    "catch": "オホーツクとっかりセンターで見どころが多く、1泊してゆっくり巡る",
+    "catch": "オホーツクとっかりセンターで見どころが多く、1泊してゆっく…",
     "requiresCar": false,
     "type": "destination",
     "subType": "sight",
@@ -10846,7 +11140,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "オホーツクとっかりセンター",
     "hotelKeyword": "オホーツクとっかりセンター",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 666,
+      "nagoya": 755,
+      "osaka": 820,
+      "takamatsu": 881,
+      "fukuoka": 1041
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -10937,7 +11237,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "キロロリゾート",
     "hotelKeyword": "キロロリゾート",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 557,
+      "nagoya": 628,
+      "osaka": 687,
+      "takamatsu": 745,
+      "fukuoka": 900
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11028,7 +11334,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "元和台海浜公園",
     "hotelKeyword": "元和台海浜公園",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 483,
+      "nagoya": 546,
+      "osaka": 604,
+      "takamatsu": 662,
+      "fukuoka": 819
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11119,7 +11431,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "サホロリゾート",
     "hotelKeyword": "サホロリゾート",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 583,
+      "nagoya": 674,
+      "osaka": 740,
+      "takamatsu": 804,
+      "fukuoka": 969
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11201,7 +11519,7 @@
       "サンタプレゼントパーク・マロースゲレンデ"
     ],
     "description": "見どころが多く、1泊してゆっくり巡る",
-    "catch": "サンタプレゼントパーク・マロースゲレンデで見どころが多く、1泊してゆっくり巡る",
+    "catch": "サンタプレゼントパーク・マロースゲレンデで見どころが多く、…",
     "requiresCar": false,
     "type": "destination",
     "subType": "sight",
@@ -11210,7 +11528,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "サンタプレゼントパーク・マロースゲレンデ",
     "hotelKeyword": "サンタプレゼントパーク・マロースゲレンデ",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 614,
+      "nagoya": 697,
+      "osaka": 759,
+      "takamatsu": 819,
+      "fukuoka": 977
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11301,7 +11625,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "就実の丘",
     "hotelKeyword": "就実の丘",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 609,
+      "nagoya": 693,
+      "osaka": 757,
+      "takamatsu": 818,
+      "fukuoka": 978
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11392,7 +11722,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "知床国立公園",
     "hotelKeyword": "知床国立公園",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 691,
+      "nagoya": 796,
+      "osaka": 866,
+      "takamatsu": 932,
+      "fukuoka": 1102
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11483,7 +11819,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "チキウ岬",
     "hotelKeyword": "チキウ岬",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 506,
+      "nagoya": 581,
+      "osaka": 643,
+      "takamatsu": 703,
+      "fukuoka": 864
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11574,7 +11916,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "トラピスト修道院",
     "hotelKeyword": "トラピスト修道院",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 466,
+      "nagoya": 538,
+      "osaka": 600,
+      "takamatsu": 660,
+      "fukuoka": 823
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11665,7 +12013,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "トロッコ王国美深",
     "hotelKeyword": "トロッコ王国美深",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 669,
+      "nagoya": 749,
+      "osaka": 811,
+      "takamatsu": 869,
+      "fukuoka": 1023
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11756,7 +12110,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ノーザンホースパーク",
     "hotelKeyword": "ノーザンホースパーク",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 544,
+      "nagoya": 626,
+      "osaka": 689,
+      "takamatsu": 751,
+      "fukuoka": 913
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11847,7 +12207,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "納沙布岬",
     "hotelKeyword": "納沙布岬",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 660,
+      "nagoya": 775,
+      "osaka": 848,
+      "takamatsu": 917,
+      "fukuoka": 1094
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -11938,7 +12304,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "東川町",
     "hotelKeyword": "東川町",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 613,
+      "nagoya": 698,
+      "osaka": 761,
+      "takamatsu": 822,
+      "fukuoka": 982
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12029,7 +12401,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "ファーム富田",
     "hotelKeyword": "ファーム富田",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 594,
+      "nagoya": 679,
+      "osaka": 743,
+      "takamatsu": 805,
+      "fukuoka": 966
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12120,7 +12498,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "麓郷の森",
     "hotelKeyword": "麓郷の森",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 589,
+      "nagoya": 676,
+      "osaka": 741,
+      "takamatsu": 803,
+      "fukuoka": 965
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12211,7 +12595,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "社台滝",
     "hotelKeyword": "社台滝",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 532,
+      "nagoya": 609,
+      "osaka": 671,
+      "takamatsu": 731,
+      "fukuoka": 891
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12302,7 +12692,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "五稜郭",
     "hotelKeyword": "五稜郭",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 471,
+      "nagoya": 545,
+      "osaka": 608,
+      "takamatsu": 669,
+      "fukuoka": 833
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12393,7 +12789,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "根室半島チャシ跡群",
     "hotelKeyword": "根室半島チャシ跡群",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 660,
+      "nagoya": 774,
+      "osaka": 847,
+      "takamatsu": 916,
+      "fukuoka": 1093
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12484,7 +12886,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "戸切地陣屋",
     "hotelKeyword": "戸切地陣屋",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 474,
+      "nagoya": 546,
+      "osaka": 608,
+      "takamatsu": 668,
+      "fukuoka": 830
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12575,7 +12983,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "弁天台場",
     "hotelKeyword": "弁天台場",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 469,
+      "nagoya": 543,
+      "osaka": 605,
+      "takamatsu": 666,
+      "fukuoka": 830
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12666,7 +13080,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "松前城",
     "hotelKeyword": "松前城",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 444,
+      "nagoya": 510,
+      "osaka": 571,
+      "takamatsu": 630,
+      "fukuoka": 792
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12757,7 +13177,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "北海道神宮",
     "hotelKeyword": "北海道神宮",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 558,
+      "nagoya": 633,
+      "osaka": 694,
+      "takamatsu": 753,
+      "fukuoka": 910
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12848,7 +13274,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "蘆別神社",
     "hotelKeyword": "蘆別神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 598,
+      "nagoya": 680,
+      "osaka": 743,
+      "takamatsu": 803,
+      "fukuoka": 962
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -12939,7 +13371,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "網走神社",
     "hotelKeyword": "網走神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 662,
+      "nagoya": 760,
+      "osaka": 828,
+      "takamatsu": 893,
+      "fukuoka": 1059
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13030,7 +13468,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "岩見沢神社",
     "hotelKeyword": "岩見沢神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 572,
+      "nagoya": 651,
+      "osaka": 714,
+      "takamatsu": 774,
+      "fukuoka": 933
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13121,7 +13565,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "姥神大神宮",
     "hotelKeyword": "姥神大神宮",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 473,
+      "nagoya": 537,
+      "osaka": 596,
+      "takamatsu": 654,
+      "fukuoka": 813
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13212,7 +13662,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "太田山神社",
     "hotelKeyword": "太田山神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 500,
+      "nagoya": 556,
+      "osaka": 613,
+      "takamatsu": 668,
+      "fukuoka": 820
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13303,7 +13759,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "帯廣神社",
     "hotelKeyword": "帯廣神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 575,
+      "nagoya": 672,
+      "osaka": 740,
+      "takamatsu": 805,
+      "fukuoka": 974
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13394,7 +13856,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "上川神社",
     "hotelKeyword": "上川神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 615,
+      "nagoya": 697,
+      "osaka": 760,
+      "takamatsu": 821,
+      "fukuoka": 979
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13485,7 +13953,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "樽前山神社",
     "hotelKeyword": "樽前山神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 535,
+      "nagoya": 616,
+      "osaka": 679,
+      "takamatsu": 740,
+      "fukuoka": 902
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13576,7 +14050,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "徳山大神宮",
     "hotelKeyword": "徳山大神宮",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 444,
+      "nagoya": 510,
+      "osaka": 571,
+      "takamatsu": 631,
+      "fukuoka": 793
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13667,7 +14147,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "永山神社",
     "hotelKeyword": "永山神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 619,
+      "nagoya": 702,
+      "osaka": 765,
+      "takamatsu": 826,
+      "fukuoka": 984
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13758,7 +14244,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "南豪神社",
     "hotelKeyword": "南豪神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 573,
+      "nagoya": 670,
+      "osaka": 738,
+      "takamatsu": 803,
+      "fukuoka": 973
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13849,7 +14341,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "北海道護國神社",
     "hotelKeyword": "北海道護國神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 617,
+      "nagoya": 700,
+      "osaka": 762,
+      "takamatsu": 823,
+      "fukuoka": 981
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -13940,7 +14438,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "夕張神社",
     "hotelKeyword": "夕張神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 566,
+      "nagoya": 648,
+      "osaka": 712,
+      "takamatsu": 773,
+      "fukuoka": 934
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -14031,7 +14535,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "義経神社",
     "hotelKeyword": "義経神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 537,
+      "nagoya": 624,
+      "osaka": 690,
+      "takamatsu": 753,
+      "fukuoka": 919
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -14122,7 +14632,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "呼人神社",
     "hotelKeyword": "呼人神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 657,
+      "nagoya": 756,
+      "osaka": 824,
+      "takamatsu": 889,
+      "fukuoka": 1055
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
@@ -14213,7 +14729,13 @@
     "hotelArea": "北海道",
     "hotelSearch": "留辺蘂神社",
     "hotelKeyword": "留辺蘂神社",
-    "travelTime": null,
+    "travelTime": {
+      "tokyo": 636,
+      "nagoya": 730,
+      "osaka": 797,
+      "takamatsu": 861,
+      "fukuoka": 1026
+    },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "stayBias": "hub",
