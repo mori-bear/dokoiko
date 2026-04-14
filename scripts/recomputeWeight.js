@@ -124,6 +124,29 @@ function cityTourBonus(dest) {
   return 1.0;
 }
 
+/**
+ * cityDistFactor: city の「どこかの拠点から近すぎる」ペナルティ
+ * destinations.json の travelTime オブジェクト最小値を近接度の代理指標として使用。
+ * < 60min → 近郊都市（尼崎・大垣・常滑等）→ ×0.85 でペナルティ
+ * >= 60min → 独立した目的地（鎌倉・函館等）→ ×1.1 でブースト
+ */
+function cityDistFactor(dest) {
+  if (dest.destType !== 'city') return 1.0;
+  const times = Object.values(dest.travelTime ?? {}).filter(v => v != null && v > 0);
+  const minT = times.length > 0 ? Math.min(...times) : 180;
+  return minT < 60 ? 0.85 : 1.1;
+}
+
+/**
+ * cityQualityFilter: POPULAR_DESTINATIONS に含まれない city は ×0.8
+ * 観光地としての認知度が低い都市（旅行先として弱い）を抑制する。
+ */
+function cityQualityFilter(dest) {
+  if (dest.destType !== 'city') return 1.0;
+  const name = dest.displayName || dest.name;
+  return POPULAR_DESTINATIONS.has(name) ? 1.0 : 0.8;
+}
+
 /* route warning から penalty対象を収集（任意・ファイル無くてもOK） */
 const detourIds = new Set();
 const tooLongIds = new Set();
@@ -148,8 +171,10 @@ for (const d of DESTS) {
   const popularity = popularityFactor(d);
   const stayScore  = STAY_SCORE[d.destType] ?? 1.0;
   const cityBonus  = cityTourBonus(d);
+  const cityDist   = cityDistFactor(d);     // city近郊ペナルティ / 独立地ブースト
+  const cityQual   = cityQualityFilter(d);  // 非有名city抑制
 
-  const rawWeight = base * access * penalty * popularity * stayScore * cityBonus;
+  const rawWeight = base * access * penalty * popularity * stayScore * cityBonus * cityDist * cityQual;
   const newWeight = Math.round(Math.min(rawWeight, 1.8) * 100) / 100;  // 上限1.8キャップ
   if (d.weight !== newWeight) {
     if (APPLY) d.weight = newWeight;

@@ -36,8 +36,20 @@ function travelTimeBonus(min) {
 }
 
 /**
+ * selectionEngine と同一の travelTime 補正を適用する。
+ * 現在: 札幌発で道内距離が一律 60min になるため 1.5倍補正。
+ */
+function applyDepartureCorrection(travelMin, departure) {
+  if (departure === '札幌' && travelMin <= 180) {
+    return Math.min(Math.round(travelMin * 1.5), 360);
+  }
+  return travelMin;
+}
+
+/**
  * shuffleは確率的なので、安定したランキング検証のため adjustedScore decreasing で表示。
  * adjustedScore = weight × travelTimeBonus により出発地ごとの距離を反映。
+ * selectionEngine.js と同一のパラメータ・補正を適用してエンジン挙動を近似。
  */
 function rankByWeight(dests, departure) {
   return dests
@@ -47,7 +59,8 @@ function rankByWeight(dests, departure) {
       return true;
     })
     .map(d => {
-      const travelMin = calculateTravelTimeMinutes(departure, d);
+      const rawMin = calculateTravelTimeMinutes(departure, d);
+      const travelMin = applyDepartureCorrection(rawMin, departure);
       const adjustedScore = (d.weight ?? 1) * travelTimeBonus(travelMin);
       return { ...d, travelMin, adjustedScore };
     })

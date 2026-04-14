@@ -178,7 +178,12 @@ function weightedShuffle(arr, theme) {
     const type = e.item.destType;
     let w = e.w;
     if (lastType != null && type === lastType)   w *= 0.75;  // 連続ペナルティ
-    if ((typeCounts[type] ?? 0) >= 3)            w *= 0.70;  // 飽和ペナルティ
+    if ((typeCounts[type] ?? 0) >= 3)            w *= 0.70;  // 飽和ペナルティ（全type共通）
+    // onsen専用飽和制御（温泉偏重を強力に抑制）
+    if (type === 'onsen') {
+      if ((typeCounts['onsen'] ?? 0) >= 2)  w *= 0.60;  // 3件目以降 ×0.60
+      if ((typeCounts['onsen'] ?? 0) >= 4)  w *= 0.40;  // 5件目以降 さらに ×0.40
+    }
     return w;
   }
 
@@ -232,7 +237,12 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   const withStars = destinations
     .filter(d => d.type !== 'spot')
     .map(d => {
-      const travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
+      let travelTimeMinutes = calculateTravelTimeMinutes(departure, d);
+      // 北海道補正: distanceCalculatorが道内を一律~60minと計算するため実態に合わせて補正
+      // 1.5倍することで遠い道内目的地が適切に抑制され、他地方との比較が公平になる
+      if (departure === '札幌' && travelTimeMinutes <= 180) {
+        travelTimeMinutes = Math.min(Math.round(travelTimeMinutes * 1.5), 360);
+      }
       return {
         ...d,
         travelTimeMinutes,
