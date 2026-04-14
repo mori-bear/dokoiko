@@ -29,11 +29,10 @@ const LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : 20;
 
 /**
  * travelTimeBonus: selectionEngine と同一の指数減衰式
- * Math.exp(-max(min,90) / 120) で90分フロアを設けることで
- * 近郊都市が旅行先として不当に上位に出ることを防ぐ。
+ * Math.exp(-min / 90) で急減衰。selectionEngine.js の travelTimeScore と一致。
  */
 function travelTimeBonus(min) {
-  return Math.exp(-Math.max(min, 90) / 120);
+  return Math.exp(-min / 90);
 }
 
 /**

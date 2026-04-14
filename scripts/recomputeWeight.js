@@ -23,6 +23,7 @@
  * cityTourBonus:
  *   歴史・街歩き・寺社・城下町 タグあり → 1.15 / なし → 1.0
  *
+ * ※ weight上限キャップ: 1.8（超高weight目的地が独占するのを防止）
  * ※ travelTimeScore は出発地依存のため selectionEngine.js で動的適用。
  *
  * 使い方:
@@ -148,7 +149,8 @@ for (const d of DESTS) {
   const stayScore  = STAY_SCORE[d.destType] ?? 1.0;
   const cityBonus  = cityTourBonus(d);
 
-  const newWeight = Math.round(base * access * penalty * popularity * stayScore * cityBonus * 100) / 100;
+  const rawWeight = base * access * penalty * popularity * stayScore * cityBonus;
+  const newWeight = Math.round(Math.min(rawWeight, 1.8) * 100) / 100;  // 上限1.8キャップ
   if (d.weight !== newWeight) {
     if (APPLY) d.weight = newWeight;
     changed++;

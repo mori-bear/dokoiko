@@ -137,13 +137,13 @@ const DEST_TYPE_BOOST = {
 
 /**
  * travelTimeScore: 出発地からの移動時間による重み係数
- * Math.exp(-t / 120) で指数減衰。90分をフロア値として設定することで、
- * 近郊都市（尼崎・豊田など30分以内）が旅行先として不当に上位に出ることを防ぐ。
+ * Math.exp(-t / 90) で急減衰。/90 により長距離が強く抑制される。
+ * フロアなし: 近さがそのまま有利になるが weight上限キャップ + destTypeバランス制御で補正。
  * 出発地依存のため recomputeWeight.js（静的weight）ではなくここで適用。
  */
 function travelTimeScore(minutes) {
   if (minutes == null) return 1;
-  return Math.exp(-Math.max(minutes, 90) / 120);
+  return Math.exp(-minutes / 90);
 }
 
 function getWeight(city, theme) {
@@ -161,29 +161,40 @@ function getWeight(city, theme) {
 }
 
 /**
- * weightedShuffle: 重み付きシャッフル
- * 同一destTypeが連続して選ばれた場合、weight × 0.9 でペナルティを与え多様性を確保。
+ * weightedShuffle: 重み付きシャッフル（多様性制御あり）
+ *
+ * 多様性ペナルティ（2段階）:
+ *   1. 連続ペナルティ: 直前と同一 destType → weight × 0.75
+ *   2. 飽和ペナルティ: 同一 destType が3件超えた場合 → weight × 0.7
+ *   両条件が重なる場合は乗算 (× 0.75 × 0.7 = × 0.525)
  */
 function weightedShuffle(arr, theme) {
   const result = [];
   const pool = arr.map(item => ({ item, w: getWeight(item, theme) }));
   let lastType = null;
+  const typeCounts = {};  // destType ごとの選出済み件数
+
+  function adjustedW(e) {
+    const type = e.item.destType;
+    let w = e.w;
+    if (lastType != null && type === lastType)   w *= 0.75;  // 連続ペナルティ
+    if ((typeCounts[type] ?? 0) >= 3)            w *= 0.70;  // 飽和ペナルティ
+    return w;
+  }
+
   while (pool.length > 0) {
-    // 直前と同一 destType にペナルティ → 多様性制御
-    const total = pool.reduce((s, e) => {
-      const aw = (lastType != null && e.item.destType === lastType) ? e.w * 0.9 : e.w;
-      return s + aw;
-    }, 0);
+    const total = pool.reduce((s, e) => s + adjustedW(e), 0);
     let r = Math.random() * total;
     let idx = pool.length - 1;
     let cumW = 0;
     for (let i = 0; i < pool.length; i++) {
-      const aw = (lastType != null && pool[i].item.destType === lastType) ? pool[i].w * 0.9 : pool[i].w;
-      cumW += aw;
+      cumW += adjustedW(pool[i]);
       if (r <= cumW) { idx = i; break; }
     }
-    lastType = pool[idx].item.destType;
-    result.push(pool[idx].item);
+    const selected = pool[idx].item;
+    lastType = selected.destType;
+    typeCounts[lastType] = (typeCounts[lastType] ?? 0) + 1;
+    result.push(selected);
     pool.splice(idx, 1);
   }
   return result;
