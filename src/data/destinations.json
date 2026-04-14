@@ -69825,5 +69825,6331 @@
     },
     "localAccess": null,
     "_enriched": true
+  },
+  {
+    "id": "gen_北海_アポイ岳",
+    "name": "アポイ岳",
+    "displayName": "アポイ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.10777778,
+    "lng": 143.02555556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "アポイ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "アポイ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "アポイ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "アポイ岳",
+    "hotelKeyword": "アポイ岳",
+    "travelTime": {
+      "tokyo": 521,
+      "nagoya": 622,
+      "osaka": 692,
+      "takamatsu": 759,
+      "fukuoka": 933
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "アポイ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_荒井山",
+    "name": "荒井山",
+    "displayName": "荒井山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.05183333,
+    "lng": 141.29313889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "荒井山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "荒井山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "荒井山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "荒井山",
+    "hotelKeyword": "荒井山",
+    "travelTime": {
+      "tokyo": 558,
+      "nagoya": 632,
+      "osaka": 693,
+      "takamatsu": 752,
+      "fukuoka": 909
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "荒井山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_漁岳",
+    "name": "漁岳",
+    "displayName": "漁岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.82111111,
+    "lng": 141.23555556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "漁岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "漁岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "漁岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "漁岳",
+    "hotelKeyword": "漁岳",
+    "travelTime": {
+      "tokyo": 542,
+      "nagoya": 617,
+      "osaka": 679,
+      "takamatsu": 738,
+      "fukuoka": 896
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "漁岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_1967峰",
+    "name": "1967峰",
+    "displayName": "1967峰",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.77227778,
+    "lng": 142.70647222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "1967峰"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "1967峰"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "1967峰で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "1967峰",
+    "hotelKeyword": "1967峰",
+    "travelTime": {
+      "tokyo": 557,
+      "nagoya": 649,
+      "osaka": 716,
+      "takamatsu": 781,
+      "fukuoka": 948
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "1967峰",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_イドンナップ岳",
+    "name": "イドンナップ岳",
+    "displayName": "イドンナップ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.63027778,
+    "lng": 142.64888889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "イドンナップ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "イドンナップ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "イドンナップ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "イドンナップ岳",
+    "hotelKeyword": "イドンナップ岳",
+    "travelTime": {
+      "tokyo": 547,
+      "nagoya": 640,
+      "osaka": 707,
+      "takamatsu": 772,
+      "fukuoka": 940
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "イドンナップ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ウエンシリ岳",
+    "name": "ウエンシリ岳",
+    "displayName": "ウエンシリ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.22888889,
+    "lng": 142.87638889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ウエンシリ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ウエンシリ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ウエンシリ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ウエンシリ岳",
+    "hotelKeyword": "ウエンシリ岳",
+    "travelTime": {
+      "tokyo": 652,
+      "nagoya": 737,
+      "osaka": 800,
+      "takamatsu": 861,
+      "fukuoka": 1019
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ウエンシリ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ウコタキヌプリ",
+    "name": "ウコタキヌプリ",
+    "displayName": "ウコタキヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.20861111,
+    "lng": 143.7975,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ウコタキヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ウコタキヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ウコタキヌプリで朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ウコタキヌプリ",
+    "hotelKeyword": "ウコタキヌプリ",
+    "travelTime": {
+      "tokyo": 603,
+      "nagoya": 703,
+      "osaka": 772,
+      "takamatsu": 838,
+      "fukuoka": 1008
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ウコタキヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_鬱岳",
+    "name": "鬱岳",
+    "displayName": "鬱岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.29166667,
+    "lng": 143.0825,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "鬱岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "鬱岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "鬱岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "鬱岳",
+    "hotelKeyword": "鬱岳",
+    "travelTime": {
+      "tokyo": 659,
+      "nagoya": 746,
+      "osaka": 809,
+      "takamatsu": 870,
+      "fukuoka": 1029
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "鬱岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_エサオマントッタベツ岳",
+    "name": "エサオマントッタベツ岳",
+    "displayName": "エサオマントッタベツ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.68944444,
+    "lng": 142.75777778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "エサオマントッタベツ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "エサオマントッタベツ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "エサオマントッタベツ岳で朝の空気と景色が別物、泊まらないと…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "エサオマントッタベツ岳",
+    "hotelKeyword": "エサオマントッタベツ岳",
+    "travelTime": {
+      "tokyo": 552,
+      "nagoya": 646,
+      "osaka": 713,
+      "takamatsu": 778,
+      "fukuoka": 947
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "エサオマントッタベツ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_江鳶山",
+    "name": "江鳶山",
+    "displayName": "江鳶山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.74388889,
+    "lng": 144.59722222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "江鳶山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "江鳶山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "江鳶山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "江鳶山",
+    "hotelKeyword": "江鳶山",
+    "travelTime": {
+      "tokyo": 652,
+      "nagoya": 755,
+      "osaka": 824,
+      "takamatsu": 891,
+      "fukuoka": 1060
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "江鳶山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_オッカバケ岳",
+    "name": "オッカバケ岳",
+    "displayName": "オッカバケ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.10444444,
+    "lng": 145.14833333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "オッカバケ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "オッカバケ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "オッカバケ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "オッカバケ岳",
+    "hotelKeyword": "オッカバケ岳",
+    "travelTime": {
+      "tokyo": 686,
+      "nagoya": 790,
+      "osaka": 860,
+      "takamatsu": 926,
+      "fukuoka": 1096
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "オッカバケ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_音威富士",
+    "name": "音威富士",
+    "displayName": "音威富士",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.73666667,
+    "lng": 142.29388889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "音威富士"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "音威富士"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "音威富士で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "音威富士",
+    "hotelKeyword": "音威富士",
+    "travelTime": {
+      "tokyo": 678,
+      "nagoya": 755,
+      "osaka": 815,
+      "takamatsu": 872,
+      "fukuoka": 1023
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "音威富士",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_音更山",
+    "name": "音更山",
+    "displayName": "音更山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.56166667,
+    "lng": 143.03527778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "音更山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "音更山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "音更山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "音更山",
+    "hotelKeyword": "音更山",
+    "travelTime": {
+      "tokyo": 612,
+      "nagoya": 702,
+      "osaka": 768,
+      "takamatsu": 831,
+      "fukuoka": 994
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "音更山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_オプタテシケヌプリ",
+    "name": "オプタテシケヌプリ",
+    "displayName": "オプタテシケヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.56722222,
+    "lng": 144.38111111,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "オプタテシケヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "オプタテシケヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "オプタテシケヌプリで朝の空気と景色が別物、泊まらないと味わ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "オプタテシケヌプリ",
+    "hotelKeyword": "オプタテシケヌプリ",
+    "travelTime": {
+      "tokyo": 637,
+      "nagoya": 739,
+      "osaka": 809,
+      "takamatsu": 875,
+      "fukuoka": 1045
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "オプタテシケヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_オムシャヌプリ",
+    "name": "オムシャヌプリ",
+    "displayName": "オムシャヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.30944444,
+    "lng": 143.05472222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "オムシャヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "オムシャヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "オムシャヌプリで朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "オムシャヌプリ",
+    "hotelKeyword": "オムシャヌプリ",
+    "travelTime": {
+      "tokyo": 534,
+      "nagoya": 633,
+      "osaka": 703,
+      "takamatsu": 770,
+      "fukuoka": 942
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "オムシャヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_オロフレ山",
+    "name": "オロフレ山",
+    "displayName": "オロフレ山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.56597222,
+    "lng": 141.08708333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "オロフレ山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "オロフレ山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "オロフレ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "オロフレ山",
+    "hotelKeyword": "オロフレ山",
+    "travelTime": {
+      "tokyo": 524,
+      "nagoya": 599,
+      "osaka": 660,
+      "takamatsu": 720,
+      "fukuoka": 879
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "オロフレ山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_化雲岳",
+    "name": "化雲岳",
+    "displayName": "化雲岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.56533333,
+    "lng": 142.86145833,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "化雲岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "化雲岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "化雲岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "化雲岳",
+    "hotelKeyword": "化雲岳",
+    "travelTime": {
+      "tokyo": 609,
+      "nagoya": 698,
+      "osaka": 763,
+      "takamatsu": 826,
+      "fukuoka": 988
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "化雲岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_カルルス山",
+    "name": "カルルス山",
+    "displayName": "カルルス山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.53972222,
+    "lng": 141.06444444,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "カルルス山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "カルルス山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "カルルス山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "カルルス山",
+    "hotelKeyword": "カルルス山",
+    "travelTime": {
+      "tokyo": 523,
+      "nagoya": 597,
+      "osaka": 658,
+      "takamatsu": 718,
+      "fukuoka": 877
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "カルルス山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_木禽岳",
+    "name": "木禽岳",
+    "displayName": "木禽岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.53055556,
+    "lng": 144.07722222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "木禽岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "木禽岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "木禽岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "木禽岳",
+    "hotelKeyword": "木禽岳",
+    "travelTime": {
+      "tokyo": 628,
+      "nagoya": 729,
+      "osaka": 797,
+      "takamatsu": 863,
+      "fukuoka": 1032
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "木禽岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_北戸蔦別岳",
+    "name": "北戸蔦別岳",
+    "displayName": "北戸蔦別岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.75055556,
+    "lng": 142.68694444,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "北戸蔦別岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "北戸蔦別岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "北戸蔦別岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "北戸蔦別岳",
+    "hotelKeyword": "北戸蔦別岳",
+    "travelTime": {
+      "tokyo": 555,
+      "nagoya": 648,
+      "osaka": 715,
+      "takamatsu": 779,
+      "fukuoka": 946
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "北戸蔦別岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_五天山",
+    "name": "五天山",
+    "displayName": "五天山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.04997222,
+    "lng": 141.25652778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "五天山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "五天山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "五天山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "五天山",
+    "hotelKeyword": "五天山",
+    "travelTime": {
+      "tokyo": 558,
+      "nagoya": 632,
+      "osaka": 692,
+      "takamatsu": 751,
+      "fukuoka": 908
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "五天山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_コトニヌプリ",
+    "name": "コトニヌプリ",
+    "displayName": "コトニヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.56027778,
+    "lng": 144.23888889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "コトニヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "コトニヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "コトニヌプリで朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "コトニヌプリ",
+    "hotelKeyword": "コトニヌプリ",
+    "travelTime": {
+      "tokyo": 633,
+      "nagoya": 735,
+      "osaka": 804,
+      "takamatsu": 870,
+      "fukuoka": 1039
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "コトニヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_狭薄山",
+    "name": "狭薄山",
+    "displayName": "狭薄山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.87711111,
+    "lng": 141.20530556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "狭薄山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "狭薄山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "狭薄山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "狭薄山",
+    "hotelKeyword": "狭薄山",
+    "travelTime": {
+      "tokyo": 546,
+      "nagoya": 620,
+      "osaka": 681,
+      "takamatsu": 740,
+      "fukuoka": 898
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "狭薄山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_サシルイ岳",
+    "name": "サシルイ岳",
+    "displayName": "サシルイ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.09527778,
+    "lng": 145.14361111,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "サシルイ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "サシルイ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "サシルイ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "サシルイ岳",
+    "hotelKeyword": "サシルイ岳",
+    "travelTime": {
+      "tokyo": 685,
+      "nagoya": 790,
+      "osaka": 859,
+      "takamatsu": 926,
+      "fukuoka": 1095
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "サシルイ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_察来山",
+    "name": "察来山",
+    "displayName": "察来山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.57833333,
+    "lng": 141.6175,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "察来山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "察来山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "察来山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "察来山",
+    "hotelKeyword": "察来山",
+    "travelTime": {
+      "tokyo": 595,
+      "nagoya": 671,
+      "osaka": 732,
+      "takamatsu": 790,
+      "fukuoka": 945
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "察来山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_札内岳",
+    "name": "札内岳",
+    "displayName": "札内岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.69388889,
+    "lng": 142.79666667,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "札内岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "札内岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "札内岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "札内岳",
+    "hotelKeyword": "札内岳",
+    "travelTime": {
+      "tokyo": 553,
+      "nagoya": 647,
+      "osaka": 715,
+      "takamatsu": 780,
+      "fukuoka": 948
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "札内岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_札幌岳",
+    "name": "札幌岳",
+    "displayName": "札幌岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.90027778,
+    "lng": 141.20055556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "札幌岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "札幌岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "札幌岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "札幌岳",
+    "hotelKeyword": "札幌岳",
+    "travelTime": {
+      "tokyo": 547,
+      "nagoya": 621,
+      "osaka": 682,
+      "takamatsu": 741,
+      "fukuoka": 899
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "札幌岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_サマッカリヌプリ",
+    "name": "サマッカリヌプリ",
+    "displayName": "サマッカリヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.58805556,
+    "lng": 144.21833333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "サマッカリヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "サマッカリヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "サマッカリヌプリで朝の空気と景色が別物、泊まらないと味わえ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "サマッカリヌプリ",
+    "hotelKeyword": "サマッカリヌプリ",
+    "travelTime": {
+      "tokyo": 635,
+      "nagoya": 736,
+      "osaka": 805,
+      "takamatsu": 870,
+      "fukuoka": 1039
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "サマッカリヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_サワンチサップ",
+    "name": "サワンチサップ",
+    "displayName": "サワンチサップ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.62888889,
+    "lng": 144.41833333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "サワンチサップ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "サワンチサップ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "サワンチサップで朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "サワンチサップ",
+    "hotelKeyword": "サワンチサップ",
+    "travelTime": {
+      "tokyo": 641,
+      "nagoya": 744,
+      "osaka": 813,
+      "takamatsu": 879,
+      "fukuoka": 1049
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "サワンチサップ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_シートートムシメヌ山",
+    "name": "シートートムシメヌ山",
+    "displayName": "シートートムシメヌ山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.43,
+    "lng": 142.07944444,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "シートートムシメヌ山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "シートートムシメヌ山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "シートートムシメヌ山で朝の空気と景色が別物、泊まらないと味…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "シートートムシメヌ山",
+    "hotelKeyword": "シートートムシメヌ山",
+    "travelTime": {
+      "tokyo": 655,
+      "nagoya": 732,
+      "osaka": 792,
+      "takamatsu": 849,
+      "fukuoka": 1001
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "シートートムシメヌ山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_島松山",
+    "name": "島松山",
+    "displayName": "島松山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.89336111,
+    "lng": 141.42502778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "島松山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "島松山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "島松山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "島松山",
+    "hotelKeyword": "島松山",
+    "travelTime": {
+      "tokyo": 549,
+      "nagoya": 626,
+      "osaka": 688,
+      "takamatsu": 747,
+      "fukuoka": 906
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "島松山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_定山渓天狗岳",
+    "name": "定山渓天狗岳",
+    "displayName": "定山渓天狗岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.01083333,
+    "lng": 141.10852778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "定山渓天狗岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "定山渓天狗岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "定山渓天狗岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "定山渓天狗岳",
+    "hotelKeyword": "定山渓天狗岳",
+    "travelTime": {
+      "tokyo": 554,
+      "nagoya": 626,
+      "osaka": 687,
+      "takamatsu": 745,
+      "fukuoka": 901
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "定山渓天狗岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_渚滑岳",
+    "name": "渚滑岳",
+    "displayName": "渚滑岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.04027778,
+    "lng": 142.91722222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "渚滑岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "渚滑岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "渚滑岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "渚滑岳",
+    "hotelKeyword": "渚滑岳",
+    "travelTime": {
+      "tokyo": 640,
+      "nagoya": 727,
+      "osaka": 791,
+      "takamatsu": 852,
+      "fukuoka": 1012
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "渚滑岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_神社山",
+    "name": "神社山",
+    "displayName": "神社山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.04613889,
+    "lng": 141.29972222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "神社山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "神社山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "神社山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "神社山",
+    "hotelKeyword": "神社山",
+    "travelTime": {
+      "tokyo": 558,
+      "nagoya": 632,
+      "osaka": 693,
+      "takamatsu": 752,
+      "fukuoka": 909
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "神社山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_銭函天狗山",
+    "name": "銭函天狗山",
+    "displayName": "銭函天狗山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.12136111,
+    "lng": 141.16280556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "銭函天狗山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "銭函天狗山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "銭函天狗山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "銭函天狗山",
+    "hotelKeyword": "銭函天狗山",
+    "travelTime": {
+      "tokyo": 562,
+      "nagoya": 634,
+      "osaka": 694,
+      "takamatsu": 752,
+      "fukuoka": 908
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "銭函天狗山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ソエマツ岳",
+    "name": "ソエマツ岳",
+    "displayName": "ソエマツ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.42722222,
+    "lng": 142.94694444,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ソエマツ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ソエマツ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ソエマツ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ソエマツ岳",
+    "hotelKeyword": "ソエマツ岳",
+    "travelTime": {
+      "tokyo": 539,
+      "nagoya": 637,
+      "osaka": 705,
+      "takamatsu": 772,
+      "fukuoka": 943
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ソエマツ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_空沼岳",
+    "name": "空沼岳",
+    "displayName": "空沼岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.865,
+    "lng": 141.25361111,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "空沼岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "空沼岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "空沼岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "空沼岳",
+    "hotelKeyword": "空沼岳",
+    "travelTime": {
+      "tokyo": 545,
+      "nagoya": 620,
+      "osaka": 682,
+      "takamatsu": 741,
+      "fukuoka": 899
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "空沼岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_大千軒岳",
+    "name": "大千軒岳",
+    "displayName": "大千軒岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 41.57944444,
+    "lng": 140.16083333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "大千軒岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "大千軒岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "大千軒岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "大千軒岳",
+    "hotelKeyword": "大千軒岳",
+    "travelTime": {
+      "tokyo": 454,
+      "nagoya": 520,
+      "osaka": 580,
+      "takamatsu": 640,
+      "fukuoka": 801
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "大千軒岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_チセヌプリ",
+    "name": "チセヌプリ",
+    "displayName": "チセヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.88805556,
+    "lng": 140.59666667,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "チセヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "チセヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "チセヌプリで朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "チセヌプリ",
+    "hotelKeyword": "チセヌプリ",
+    "travelTime": {
+      "tokyo": 543,
+      "nagoya": 609,
+      "osaka": 667,
+      "takamatsu": 724,
+      "fukuoka": 877
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "チセヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_チトカニウシ山",
+    "name": "チトカニウシ山",
+    "displayName": "チトカニウシ山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.90666667,
+    "lng": 143.04861111,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "チトカニウシ山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "チトカニウシ山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "チトカニウシ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "チトカニウシ山",
+    "hotelKeyword": "チトカニウシ山",
+    "travelTime": {
+      "tokyo": 634,
+      "nagoya": 722,
+      "osaka": 787,
+      "takamatsu": 849,
+      "fukuoka": 1010
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "チトカニウシ山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_トーノシケヌプリ",
+    "name": "トーノシケヌプリ",
+    "displayName": "トーノシケヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.60361111,
+    "lng": 140.84305556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "トーノシケヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "トーノシケヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "トーノシケヌプリで朝の空気と景色が別物、泊まらないと味わえ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "トーノシケヌプリ",
+    "hotelKeyword": "トーノシケヌプリ",
+    "travelTime": {
+      "tokyo": 525,
+      "nagoya": 596,
+      "osaka": 657,
+      "takamatsu": 715,
+      "fukuoka": 873
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "トーノシケヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_十勝幌尻岳",
+    "name": "十勝幌尻岳",
+    "displayName": "十勝幌尻岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.69555556,
+    "lng": 142.85944444,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "十勝幌尻岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "十勝幌尻岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "十勝幌尻岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "十勝幌尻岳",
+    "hotelKeyword": "十勝幌尻岳",
+    "travelTime": {
+      "tokyo": 554,
+      "nagoya": 649,
+      "osaka": 717,
+      "takamatsu": 782,
+      "fukuoka": 951
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "十勝幌尻岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_徳舜瞥山",
+    "name": "徳舜瞥山",
+    "displayName": "徳舜瞥山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.63416667,
+    "lng": 141.13138889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "徳舜瞥山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "徳舜瞥山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "徳舜瞥山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "徳舜瞥山",
+    "hotelKeyword": "徳舜瞥山",
+    "travelTime": {
+      "tokyo": 529,
+      "nagoya": 604,
+      "osaka": 665,
+      "takamatsu": 725,
+      "fukuoka": 884
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "徳舜瞥山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_戸蔦別岳",
+    "name": "戸蔦別岳",
+    "displayName": "戸蔦別岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.73861111,
+    "lng": 142.695,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "戸蔦別岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "戸蔦別岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "戸蔦別岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "戸蔦別岳",
+    "hotelKeyword": "戸蔦別岳",
+    "travelTime": {
+      "tokyo": 555,
+      "nagoya": 647,
+      "osaka": 714,
+      "takamatsu": 779,
+      "fukuoka": 946
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "戸蔦別岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_豊似岳",
+    "name": "豊似岳",
+    "displayName": "豊似岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.07694444,
+    "lng": 143.23305556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "豊似岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "豊似岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "豊似岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "豊似岳",
+    "hotelKeyword": "豊似岳",
+    "travelTime": {
+      "tokyo": 523,
+      "nagoya": 626,
+      "osaka": 697,
+      "takamatsu": 765,
+      "fukuoka": 940
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "豊似岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_七飯岳",
+    "name": "七飯岳",
+    "displayName": "七飯岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 41.92027778,
+    "lng": 140.73083333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "七飯岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "七飯岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "七飯岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "七飯岳",
+    "hotelKeyword": "七飯岳",
+    "travelTime": {
+      "tokyo": 479,
+      "nagoya": 552,
+      "osaka": 614,
+      "takamatsu": 675,
+      "fukuoka": 837
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "七飯岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_西クマネシリ岳",
+    "name": "西クマネシリ岳",
+    "displayName": "西クマネシリ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.51916667,
+    "lng": 143.23333333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "西クマネシリ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "西クマネシリ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "西クマネシリ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "西クマネシリ岳",
+    "hotelKeyword": "西クマネシリ岳",
+    "travelTime": {
+      "tokyo": 612,
+      "nagoya": 705,
+      "osaka": 772,
+      "takamatsu": 835,
+      "fukuoka": 1000
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "西クマネシリ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_西ヌプカウシヌプリ",
+    "name": "西ヌプカウシヌプリ",
+    "displayName": "西ヌプカウシヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.25555556,
+    "lng": 143.0825,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "西ヌプカウシヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "西ヌプカウシヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "西ヌプカウシヌプリで朝の空気と景色が別物、泊まらないと味わ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "西ヌプカウシヌプリ",
+    "hotelKeyword": "西ヌプカウシヌプリ",
+    "travelTime": {
+      "tokyo": 593,
+      "nagoya": 686,
+      "osaka": 753,
+      "takamatsu": 817,
+      "fukuoka": 983
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "西ヌプカウシヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ニシュオマナイ岳",
+    "name": "ニシュオマナイ岳",
+    "displayName": "ニシュオマナイ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.45,
+    "lng": 142.89666667,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ニシュオマナイ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ニシュオマナイ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ニシュオマナイ岳で朝の空気と景色が別物、泊まらないと味わえ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ニシュオマナイ岳",
+    "hotelKeyword": "ニシュオマナイ岳",
+    "travelTime": {
+      "tokyo": 540,
+      "nagoya": 636,
+      "osaka": 705,
+      "takamatsu": 771,
+      "fukuoka": 942
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ニシュオマナイ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ニセイチャロマップ岳",
+    "name": "ニセイチャロマップ岳",
+    "displayName": "ニセイチャロマップ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.76166667,
+    "lng": 143.16055556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ニセイチャロマップ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ニセイチャロマップ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ニセイチャロマップ岳で朝の空気と景色が別物、泊まらないと味…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ニセイチャロマップ岳",
+    "hotelKeyword": "ニセイチャロマップ岳",
+    "travelTime": {
+      "tokyo": 626,
+      "nagoya": 717,
+      "osaka": 782,
+      "takamatsu": 845,
+      "fukuoka": 1008
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ニセイチャロマップ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_ニレシ岳",
+    "name": "ニレシ岳",
+    "displayName": "ニレシ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.16972222,
+    "lng": 142.25388889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "ニレシ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "ニレシ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "ニレシ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "ニレシ岳",
+    "hotelKeyword": "ニレシ岳",
+    "travelTime": {
+      "tokyo": 576,
+      "nagoya": 661,
+      "osaka": 725,
+      "takamatsu": 787,
+      "fukuoka": 949
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "ニレシ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_函岳",
+    "name": "函岳",
+    "displayName": "函岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.66583333,
+    "lng": 142.41222222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "函岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "函岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "函岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "函岳",
+    "hotelKeyword": "函岳",
+    "travelTime": {
+      "tokyo": 674,
+      "nagoya": 753,
+      "osaka": 814,
+      "takamatsu": 871,
+      "fukuoka": 1024
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "函岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_パンケヌーシ岳",
+    "name": "パンケヌーシ岳",
+    "displayName": "パンケヌーシ岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.8725,
+    "lng": 142.77083333,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "パンケヌーシ岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "パンケヌーシ岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "パンケヌーシ岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "パンケヌーシ岳",
+    "hotelKeyword": "パンケヌーシ岳",
+    "travelTime": {
+      "tokyo": 564,
+      "nagoya": 657,
+      "osaka": 723,
+      "takamatsu": 788,
+      "fukuoka": 955
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "パンケヌーシ岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_パンケ山",
+    "name": "パンケ山",
+    "displayName": "パンケ山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 44.85694444,
+    "lng": 142.14972222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "パンケ山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "パンケ山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "パンケ山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "パンケ山",
+    "hotelKeyword": "パンケ山",
+    "travelTime": {
+      "tokyo": 684,
+      "nagoya": 759,
+      "osaka": 819,
+      "takamatsu": 875,
+      "fukuoka": 1024
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "パンケ山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_盤の沢山",
+    "name": "盤の沢山",
+    "displayName": "盤の沢山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.91917972,
+    "lng": 141.23203778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "盤の沢山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "盤の沢山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "盤の沢山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "盤の沢山",
+    "hotelKeyword": "盤の沢山",
+    "travelTime": {
+      "tokyo": 549,
+      "nagoya": 623,
+      "osaka": 684,
+      "takamatsu": 743,
+      "fukuoka": 901
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "盤の沢山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_美瑛岳",
+    "name": "美瑛岳",
+    "displayName": "美瑛岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.43994444,
+    "lng": 142.70630556,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "美瑛岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "美瑛岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "美瑛岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "美瑛岳",
+    "hotelKeyword": "美瑛岳",
+    "travelTime": {
+      "tokyo": 599,
+      "nagoya": 687,
+      "osaka": 752,
+      "takamatsu": 814,
+      "fukuoka": 977
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "美瑛岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_東ヌプカウシヌプリ",
+    "name": "東ヌプカウシヌプリ",
+    "displayName": "東ヌプカウシヌプリ",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.24583333,
+    "lng": 143.10222222,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "東ヌプカウシヌプリ"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "東ヌプカウシヌプリ"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "東ヌプカウシヌプリで朝の空気と景色が別物、泊まらないと味わ…",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "東ヌプカウシヌプリ",
+    "hotelKeyword": "東ヌプカウシヌプリ",
+    "travelTime": {
+      "tokyo": 593,
+      "nagoya": 686,
+      "osaka": 753,
+      "takamatsu": 817,
+      "fukuoka": 983
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "東ヌプカウシヌプリ",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_美幌岳",
+    "name": "美幌岳",
+    "displayName": "美幌岳",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.18880556,
+    "lng": 143.20627778,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "美幌岳"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "美幌岳"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "美幌岳で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "美幌岳",
+    "hotelKeyword": "美幌岳",
+    "travelTime": {
+      "tokyo": 529,
+      "nagoya": 631,
+      "osaka": 702,
+      "takamatsu": 769,
+      "fukuoka": 944
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "美幌岳",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_百松沢山",
+    "name": "百松沢山",
+    "displayName": "百松沢山",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.02088889,
+    "lng": 141.20388889,
+    "destType": "mountain",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": false,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "朝の空気と景色が別物、泊まらないと味わえない",
+    "tags": [
+      "山",
+      "自然",
+      "絶景"
+    ],
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "絶景"
+    ],
+    "weight": 1.2,
+    "stayPriority": "low",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "百松沢山"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "百松沢山"
+    ],
+    "description": "朝の空気と景色が別物、泊まらないと味わえない",
+    "catch": "百松沢山で朝の空気と景色が別物、泊まらないと味わえない",
+    "requiresCar": true,
+    "type": "destination",
+    "subType": "mountain",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "百松沢山",
+    "hotelKeyword": "百松沢山",
+    "travelTime": {
+      "tokyo": 555,
+      "nagoya": 629,
+      "osaka": 689,
+      "takamatsu": 748,
+      "fukuoka": 905
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "百松沢山",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_あさひかわ北彩都ガーデン",
+    "name": "あさひかわ北彩都ガーデン",
+    "displayName": "あさひかわ北彩都ガーデン",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.80833333,
+    "lng": 142.48583333,
+    "destType": "sight",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": true,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
+    "tags": [
+      "観光",
+      "自然"
+    ],
+    "primary": [
+      "観光"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "weight": 1,
+    "stayPriority": "medium",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "あさひかわ北彩都ガーデン"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "あさひかわ北彩都ガーデン"
+    ],
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "あさひかわ北彩都ガーデンで見どころが多く、1泊してゆっくり…",
+    "requiresCar": false,
+    "type": "destination",
+    "subType": "sight",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "あさひかわ北彩都ガーデン",
+    "hotelKeyword": "あさひかわ北彩都ガーデン",
+    "travelTime": {
+      "tokyo": 620,
+      "nagoya": 703,
+      "osaka": 767,
+      "takamatsu": 827,
+      "fukuoka": 986
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "あさひかわ北彩都ガーデン",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_大雪展望台",
+    "name": "大雪展望台",
+    "displayName": "大雪展望台",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.85683333,
+    "lng": 142.761,
+    "destType": "sight",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": true,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
+    "tags": [
+      "観光",
+      "自然"
+    ],
+    "primary": [
+      "観光"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "weight": 1,
+    "stayPriority": "medium",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "大雪展望台"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "大雪展望台"
+    ],
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "大雪展望台で見どころが多く、1泊してゆっくり巡る",
+    "requiresCar": false,
+    "type": "destination",
+    "subType": "sight",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "大雪展望台",
+    "hotelKeyword": "大雪展望台",
+    "travelTime": {
+      "tokyo": 627,
+      "nagoya": 713,
+      "osaka": 777,
+      "takamatsu": 838,
+      "fukuoka": 998
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "大雪展望台",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_多和平",
+    "name": "多和平",
+    "displayName": "多和平",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.43722222,
+    "lng": 144.58861111,
+    "destType": "sight",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": true,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
+    "tags": [
+      "観光",
+      "自然"
+    ],
+    "primary": [
+      "観光"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "weight": 1,
+    "stayPriority": "medium",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "多和平"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "多和平"
+    ],
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "多和平で見どころが多く、1泊してゆっくり巡る",
+    "requiresCar": false,
+    "type": "destination",
+    "subType": "sight",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "多和平",
+    "hotelKeyword": "多和平",
+    "travelTime": {
+      "tokyo": 634,
+      "nagoya": 739,
+      "osaka": 809,
+      "takamatsu": 876,
+      "fukuoka": 1048
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "多和平",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_天に続く道",
+    "name": "天に続く道",
+    "displayName": "天に続く道",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 43.90684444,
+    "lng": 144.79869944,
+    "destType": "sight",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": true,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
+    "tags": [
+      "観光",
+      "自然"
+    ],
+    "primary": [
+      "観光"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "weight": 1,
+    "stayPriority": "medium",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "天に続く道"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "天に続く道"
+    ],
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "天に続く道で見どころが多く、1泊してゆっくり巡る",
+    "requiresCar": false,
+    "type": "destination",
+    "subType": "sight",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "天に続く道",
+    "hotelKeyword": "天に続く道",
+    "travelTime": {
+      "tokyo": 666,
+      "nagoya": 770,
+      "osaka": 839,
+      "takamatsu": 905,
+      "fukuoka": 1075
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "天に続く道",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
+  },
+  {
+    "id": "gen_北海_十勝千年の森",
+    "name": "十勝千年の森",
+    "displayName": "十勝千年の森",
+    "prefecture": "北海道",
+    "region": "北海道",
+    "lat": 42.93222222,
+    "lng": 142.86833333,
+    "destType": "sight",
+    "hubCity": "札幌",
+    "fallbackCity": "札幌",
+    "isStayable": true,
+    "_generated": true,
+    "_source": "wikipedia",
+    "stayDescription": "見どころが多く、1泊してゆっくり巡る",
+    "tags": [
+      "観光",
+      "自然"
+    ],
+    "primary": [
+      "観光"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "weight": 1,
+    "stayPriority": "medium",
+    "onsenLevel": 0,
+    "accessStation": "札幌駅",
+    "representativeStation": "札幌駅",
+    "railProvider": "ekinet",
+    "jrArea": "east",
+    "finalAccess": {
+      "type": "bus",
+      "line": null,
+      "to": "十勝千年の森"
+    },
+    "transportHubs": {
+      "rail": "札幌駅",
+      "city": "札幌"
+    },
+    "gateway": null,
+    "departures": [
+      "札幌",
+      "仙台",
+      "東京",
+      "名古屋",
+      "大阪",
+      "広島",
+      "福岡"
+    ],
+    "isIsland": false,
+    "hub": "札幌",
+    "stayAllowed": true,
+    "spots": [
+      "十勝千年の森"
+    ],
+    "description": "見どころが多く、1泊してゆっくり巡る",
+    "catch": "十勝千年の森で見どころが多く、1泊してゆっくり巡る",
+    "requiresCar": false,
+    "type": "destination",
+    "subType": "sight",
+    "city": "札幌",
+    "hubStation": "札幌駅",
+    "hotelArea": "北海道",
+    "hotelSearch": "十勝千年の森",
+    "hotelKeyword": "十勝千年の森",
+    "travelTime": {
+      "tokyo": 569,
+      "nagoya": 663,
+      "osaka": 730,
+      "takamatsu": 794,
+      "fukuoka": 961
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "stayBias": "hub",
+    "airportHub": null,
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "mapPoint": "十勝千年の森",
+    "railGateway": "札幌駅",
+    "railNote": "バス",
+    "hasDirectFlight": false,
+    "airportGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "gateways": [],
+    "access": {
+      "steps": []
+    },
+    "localAccess": null,
+    "_enriched": true
   }
 ]

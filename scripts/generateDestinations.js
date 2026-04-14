@@ -27,9 +27,9 @@ const EXISTING_FILE = path.join(PROJECT_ROOT, 'src/data/destinations.json');
 const WIKIPEDIA_API = 'https://ja.wikipedia.org/w/api.php';
 const TEST_MODE = process.argv.includes('--test');
 const AUTO_MERGE = process.argv.includes('--auto-merge');
-// --batch=200 形式でバッチサイズ指定（destination件数上限）
+// --batch=N 形式でバッチサイズ指定（destination件数上限・デフォルト500）
 const BATCH_ARG = process.argv.find(a => a.startsWith('--batch='));
-const BATCH_LIMIT = BATCH_ARG ? parseInt(BATCH_ARG.split('=')[1], 10) : null;
+const BATCH_LIMIT = BATCH_ARG ? parseInt(BATCH_ARG.split('=')[1], 10) : 500;
 
 /* ── 都道府県別カテゴリテンプレート ──
  * 「日本の温泉」は空なので、都道府県ごとに「〇〇県の温泉」で取得
@@ -106,22 +106,31 @@ const PREF_REGION = {
 };
 
 /* ── 除外ワード（イベント、施設名等） ── */
-const EXCLUDE_PATTERN = /[（(]|祭|博覧会|フェスティバル|イベント|一覧|リスト|年表|歴史|建築|アーカイブ|資料|文書|法人|協会|学校|大学|病院|ホテル$|旅館$/;
+const EXCLUDE_PATTERN = /[（(]|祭|博覧会|フェスティバル|イベント|一覧|リスト|年表|歴史|建築|アーカイブ|資料|文書|法人|協会|学校|大学|病院|ホテル$|旅館$|駅$/;
 
 /* ── ヘルパー ── */
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-async function wikiRequest(params) {
+async function wikiRequest(params, retries = 3) {
   const url = new URL(WIKIPEDIA_API);
   url.search = new URLSearchParams({
     format: 'json',
     ...params,
     origin: '*',
   });
-  const res = await fetch(url, { headers: { 'User-Agent': 'dokoiko-generator/1.0' } });
-  if (!res.ok) throw new Error(`Wikipedia API ${res.status}`);
-  return res.json();
+  for (let i = 0; i < retries; i++) {
+    const res = await fetch(url, { headers: { 'User-Agent': 'dokoiko-generator/1.0' } });
+    if (res.ok) return res.json();
+    if (res.status === 429) {
+      // rate limit: 指数バックオフ
+      const wait = 2000 * Math.pow(2, i);
+      await sleep(wait);
+      continue;
+    }
+    throw new Error(`Wikipedia API ${res.status}`);
+  }
+  throw new Error('Wikipedia API 429 (max retries)');
 }
 
 /** カテゴリ内ページ一覧取得（再帰・深さ制限あり） */
@@ -373,7 +382,7 @@ async function main() {
     /* 最終件数ログ */
     const final = JSON.parse(fs.readFileSync(EXISTING_FILE, 'utf8'));
     console.log('\n═══════════════════════════════════');
-    console.log(`  ✓ final destinations: ${final.length}件`);
+    console.log(`  ✓ FINAL COUNT: ${final.length}件`);
     console.log('═══════════════════════════════════');
   }
 }
