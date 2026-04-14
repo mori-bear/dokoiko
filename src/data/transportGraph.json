@@ -19128,6 +19128,76 @@
       "to": "city:姫路",
       "type": "local",
       "minutes": 0
+    },
+    {
+      "from": "hub:神戸",
+      "to": "hub:大阪",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 15
+    },
+    {
+      "from": "hub:大阪",
+      "to": "hub:神戸",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 15
+    },
+    {
+      "from": "hub:神戸",
+      "to": "hub:岡山",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 50
+    },
+    {
+      "from": "hub:岡山",
+      "to": "hub:神戸",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 50
+    },
+    {
+      "from": "hub:神戸",
+      "to": "hub:姫路",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 20
+    },
+    {
+      "from": "hub:姫路",
+      "to": "hub:神戸",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 20
+    },
+    {
+      "from": "hub:倉敷",
+      "to": "hub:福山",
+      "type": "rail",
+      "service": "山陽本線",
+      "minutes": 40
+    },
+    {
+      "from": "hub:福山",
+      "to": "hub:倉敷",
+      "type": "rail",
+      "service": "山陽本線",
+      "minutes": 40
+    },
+    {
+      "from": "hub:福山",
+      "to": "hub:広島",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 25
+    },
+    {
+      "from": "hub:広島",
+      "to": "hub:福山",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 25
     }
   ]
 }
