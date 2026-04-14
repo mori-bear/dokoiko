@@ -295,14 +295,14 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   /**
    * travelTimeMinutes ベースの日程フィルタ（片道時間制限）
    *   daytrip : 片道 120分以内（2時間）
-   *   1night  : 片道 300分以内（5時間）
-   *   free / 複数泊 : 制限なし
+   *   1night  : 片道 240分以内（4時間）
+   *   free / 2泊以上 : 制限なし
    *   2night / 3night+ : 後方互換として制限なし扱い
    */
   function matchesStayType(d) {
     const oneWay = d.travelTimeMinutes;
     if (stayType === 'daytrip' && oneWay > 120) return false;
-    if (stayType === '1night'  && oneWay > 300) return false;
+    if (stayType === '1night'  && oneWay > 240) return false;
     // 'free' / '2night' / '3night+' : 制限なし
     return true;
   }

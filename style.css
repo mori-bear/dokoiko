@@ -355,7 +355,16 @@ body {
   gap: 8px;
 }
 
-/* 旅の長さボタン内の距離ヒント */
+/* 日数ボタン内サブラベル（日帰り/1泊/2泊以上） */
+.sel-btn small.stay-sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 1px;
+}
+
+/* 旅の長さボタン内の距離ヒント（旧） */
 .stay-hint {
   display: block;
   font-size: 10px;
