@@ -58,8 +58,8 @@ for (const d of DESTS) {
     rows.push(`unknown_hub,${d.id},${name},hub="${hub}" not in areas/hubs`);
   }
 
-  // ③ accessStation が 駅/空港/港 で終わるか
-  if (station && !/駅$|空港$|港$|バスターミナル$/.test(station)) {
+  // ③ accessStation が 駅/空港/港/バス停 で終わるか
+  if (station && !/駅$|空港$|港$|バスターミナル$|バス停$/.test(station)) {
     badStation++;
     rows.push(`bad_station,${d.id},${name},accessStation="${station}" no suffix`);
   }

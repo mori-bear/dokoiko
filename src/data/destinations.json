@@ -16573,7 +16573,7 @@
     "mapPoint": "羽黒山五重塔",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "羽黒山",
+    "hubCity": "出羽三山",
     "stayPriority": "medium",
     "representativeStation": "鶴岡駅",
     "finalAccess": {
@@ -17469,7 +17469,7 @@
     "mapPoint": "佐渡金山",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "佐渡",
+    "hubCity": "佐渡島",
     "localHub": "新潟",
     "stayPriority": "high",
     "representativeStation": "両津港",
@@ -18021,7 +18021,7 @@
     "mapPoint": "小浜西組（重伝建）",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "小浜",
+    "hubCity": "若狭小浜",
     "stayPriority": "medium",
     "representativeStation": "小浜駅",
     "finalAccess": {
@@ -18361,7 +18361,7 @@
     "mapPoint": "越前海岸（水仙）",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "越前",
+    "hubCity": "越前市",
     "stayPriority": "medium",
     "representativeStation": "福井駅",
     "finalAccess": {
@@ -19368,7 +19368,7 @@
     "mapPoint": "龍源寺間歩",
     "subType": "mountain",
     "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
-    "hubCity": "大田 石見銀山",
+    "hubCity": "石見銀山",
     "stayPriority": "medium",
     "representativeStation": "大田市駅",
     "finalAccess": {
@@ -22865,7 +22865,7 @@
     "mapPoint": "剣山山頂",
     "subType": "sea",
     "stayDescription": "昼間は海岸を歩いて、夜は港町の食堂で地元の魚を食べる。",
-    "hubCity": "剣山 貞光",
+    "hubCity": "剣山",
     "stayPriority": "medium",
     "representativeStation": "貞光駅",
     "finalAccess": {
@@ -30253,7 +30253,7 @@
     "mapPoint": "地獄谷野猿公苑",
     "subType": "mountain",
     "stayDescription": "山の宿で温泉に2回入って、部屋から星を見ながら眠る。",
-    "hubCity": "湯田中",
+    "hubCity": "地獄谷野猿公苑",
     "stayPriority": "medium",
     "representativeStation": "湯田中駅",
     "finalAccess": {
@@ -31686,7 +31686,7 @@
     "mapPoint": "キンニャモニャセンター",
     "subType": "sea",
     "stayDescription": "昼間の海と夕暮れ、夜の島の静けさを1泊で全部味わう。",
-    "hubCity": "海士",
+    "hubCity": "海士町",
     "localHub": "松江",
     "stayPriority": "medium",
     "representativeStation": "菱浦港",
