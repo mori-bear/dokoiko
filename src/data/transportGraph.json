@@ -5762,6 +5762,16 @@
       "id": "station:shikinejima",
       "type": "station",
       "name": "式根島"
+    },
+    "hub:姫路": {
+      "id": "hub:姫路",
+      "type": "hub",
+      "name": "姫路"
+    },
+    "city:姫路": {
+      "id": "city:姫路",
+      "type": "city",
+      "name": "姫路"
     }
   },
   "edges": [
@@ -19078,6 +19088,46 @@
       "type": "rail",
       "service": "特急しらさぎ+えちぜん鉄道",
       "minutes": 130
+    },
+    {
+      "from": "hub:姫路",
+      "to": "hub:大阪",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 30
+    },
+    {
+      "from": "hub:大阪",
+      "to": "hub:姫路",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 30
+    },
+    {
+      "from": "hub:姫路",
+      "to": "hub:岡山",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 20
+    },
+    {
+      "from": "hub:岡山",
+      "to": "hub:姫路",
+      "type": "rail",
+      "service": "山陽新幹線",
+      "minutes": 20
+    },
+    {
+      "from": "city:姫路",
+      "to": "hub:姫路",
+      "type": "local",
+      "minutes": 0
+    },
+    {
+      "from": "hub:姫路",
+      "to": "city:姫路",
+      "type": "local",
+      "minutes": 0
     }
   ]
 }
