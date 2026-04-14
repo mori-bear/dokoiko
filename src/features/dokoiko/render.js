@@ -23,12 +23,23 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
     const tc = transportContext;
     const destLabel = city.displayName || city.name;
 
+    // 地図CTA URL（上部に配置）
+    const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+    const mapsCtaHtml = mapUrl
+      ? `<div class="maps-cta-primary"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
+           class="btn btn--maps btn--action" data-track="map_click" id="go-maps-btn">この旅で行く</a></div>`
+      : '';
+
     const el = document.getElementById('result-inner');
     el.innerHTML = `
       <div class="result-card">
-        ${buildCityBlock(city)}
+        ${buildCityHeaderBlock(city)}
+        ${mapsCtaHtml}
+        ${buildReasonChips(city)}
+        ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
+        ${buildCityDetailBlock(city)}
         ${buildRouteBlock(tc, departure, destLabel, city)}
-        ${buildCtaBlock(tc, transportLinks, city, departure, showHotel ? hotelLinks : null, stayCityName)}
+        ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -91,6 +102,42 @@ function buildStayBadge(city) {
 
 /* ── 都市ブロック ── */
 
+/** 都市名+バッジのみ（ヘッダー部分。T4レイアウト用） */
+function buildCityHeaderBlock(city) {
+  const categoryBadge = buildCategoryBadge(city);
+  const locationStr = city.prefecture || '';
+  const nameDisplay = city.displayName || city.name;
+  return `
+    <div class="city-block city-block--header">
+      <div class="city-header">
+        <h2 class="city-name">${nameDisplay}</h2>
+        <p class="city-sub">${locationStr}${categoryBadge}</p>
+      </div>
+    </div>
+  `;
+}
+
+/** タグライン・説明・スポット（セカンダリ情報。T4レイアウト用） */
+function buildCityDetailBlock(city) {
+  const displayTags = city.primary?.length
+    ? [...(city.primary ?? []), ...(city.secondary ?? [])]
+    : (city.tags ?? []);
+  const tagline = buildTagline(city);
+  const taglineHtml = tagline ? `<p class="city-tagline">${tagline}</p>` : '';
+  const descHtml = city.description
+    ? `<p class="city-description">${city.description}</p>`
+    : '';
+  const spotsHtml = buildSpotsLine(city, displayTags);
+  if (!taglineHtml && !descHtml && !spotsHtml) return '';
+  return `
+    <div class="city-detail">
+      ${taglineHtml}
+      ${descHtml}
+      ${spotsHtml}
+    </div>
+  `;
+}
+
 function buildCityBlock(city) {
   const categoryBadge = buildCategoryBadge(city);
   const displayTags = city.primary?.length
@@ -111,9 +158,6 @@ function buildCityBlock(city) {
 
   // スポット例（最大3つ）: spots優先、なければtags補完
   const spotsHtml = buildSpotsLine(city, displayTags);
-
-  // stayPriority ヒント（宿CTAの直前に配置 — buildActionBlockで使用）
-  // ここでは city-block 内に含めず、buildActionBlock 側で挿入する
 
   const stayBadge = buildStayBadge(city);
   const reasonChips = buildReasonChips(city);
@@ -345,9 +389,10 @@ const DEST_TYPE_FEATURE = {
 
 function formatTravelTime(min) {
   if (!min) return null;
-  if (min < 60) return `${min}分で行ける`;
-  if (min < 120) return '約1時間で行ける';
-  return `約${Math.round(min / 60)}時間で行ける`;
+  const h = Math.round(min / 60);
+  if (min <= 120) return min < 60 ? `近場（${min}分）` : `近場（約${h}時間）`;
+  if (min <= 300) return `ちょうどいい距離（約${h}時間）`;
+  return `遠出旅（約${h}時間）`;
 }
 
 function buildReasonChips(city) {
@@ -405,18 +450,20 @@ function buildRouteBlock(tc, departure, destLabel, city) {
     </div>`;
 }
 
-function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, stayCityName = null) {
+function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, stayCityName = null, skipMaps = false) {
   const seenUrls = new Set();
   const best = tc?.bestRoute;
   const chainCta = best?.jrChainCta;
 
-  // ① 地図CTA（ルート直下・CTAより上）
+  // ① 地図CTA（skipMaps=true の場合は上位レイアウトで既出のためスキップ）
   const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
   let mapHtml = '';
-  if (mapUrl) {
+  if (mapUrl && !skipMaps) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
        class="btn btn--maps btn--action" data-track="map_click" id="go-maps-btn">この旅で行く</a>`;
+  } else if (mapUrl) {
+    seenUrls.add(mapUrl); // URL重複防止のため登録のみ
   }
 
   // ② 予約CTA（地図の下）
@@ -461,8 +508,8 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
       <button class="btn-share btn-share--x" id="share-img-btn">Xでシェア</button>
     </div>`;
 
-  // CTAなし時：地図で直接案内
-  if (!ctaHtml && mapHtml) {
+  // CTAなし時：skipMaps=false の場合のみ地図で直接案内（skipMaps=true は上位で既出）
+  if (!ctaHtml && mapHtml && !skipMaps) {
     ctaHtml = `
       <div class="cta-action">
         <a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
@@ -816,36 +863,22 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const stayLinks = hotelLinks.links ?? [];
   const rakuten = stayLinks.find(l => l.type === 'rakuten');
   const jalan   = stayLinks.find(l => l.type === 'jalan');
-  if (!rakuten && !jalan) return '';
+
+  // staySearchUrl（楽天アフィリエイト）優先 → 楽天URL → じゃらんURL
+  const hotelUrl = city?.staySearchUrl ?? rakuten?.url ?? jalan?.url ?? null;
+  if (!hotelUrl) return '';
 
   const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
-  const stayReason = hotelLinks.stayReason ?? null;
-  const nudge = buildStayNudge(city);
-
-  // 決断テキスト: stayReason（体験）→ closer（断定）→ nudge（urgency）
-  const closer = buildStayCloser(city);
-  const reasonHtml = `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${closer ? `<p class="stay-closer">${closer}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`;
-
-  // エリア名: 「このエリアで泊まる」ラベル用
   const areaLabel = stayLabel || (city?.displayName || city?.name || 'このエリア');
-
-  // 温泉時はじゃらんの強みを活かす
-  const isOnsen = city?.destType === 'onsen';
-  const jalanMain = isOnsen ? 'じゃらんで温泉宿を見る' : 'じゃらんで空室を確認';
-  const jalanHint = isOnsen ? '温泉宿に強い' : '口コミ豊富';
-
-  const buttons = [
-    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-stay btn-rakuten" data-track="rakuten_click"><span class="btn-stay-main">楽天でおすすめ宿を見る</span><small class="btn-stay-sub">ポイント貯まる</small></a>` : '',
-    jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-stay btn-jalan" data-track="jalan_click"><span class="btn-stay-main">${jalanMain}</span><small class="btn-stay-sub">${jalanHint}</small></a>` : '',
-  ].filter(Boolean).join('');
 
   return `
     <div class="stay-section stay-section--primary" id="stay-section">
       <p class="stay-area-label">${areaLabel}で泊まる</p>
-      ${reasonHtml}
-      <div class="stay-dual-grid">${buttons}</div>
+      <a href="${hotelUrl}" target="_blank" rel="nofollow sponsored noopener"
+         class="btn btn-stay btn-stay--single" data-track="hotel_click">
+        <span class="btn-stay-main">このエリアで宿を探す</span>
+        <small class="btn-stay-sub">楽天トラベル</small>
+      </a>
     </div>
   `;
 }

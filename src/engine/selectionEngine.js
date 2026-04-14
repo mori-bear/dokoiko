@@ -303,6 +303,9 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     if (!matchesDeparture(d)) return false;
     if (excludeCar && d.requiresCar) return false;
     if (!matchesSituation(d)) return false;
+    // 空港・ターミナル系は旅行目的地として不適（T1/T5）
+    const dname = d.displayName || d.name || '';
+    if (/空港|ターミナル/.test(dname)) return false;
     return true;
   });
 
