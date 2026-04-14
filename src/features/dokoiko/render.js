@@ -326,20 +326,21 @@ function buildSpotList(spots) {
  * 理由チップ: 移動時間 + 特徴タグを小さなラベルで表示。
  * "なぜこの旅先が出たのか" を直感的に伝える。
  */
+/** destType別の理由文（ユーザーの「行く理由」を一言で補強） */
 const DEST_TYPE_FEATURE = {
-  onsen:     '温泉・癒し',
-  island:    '島・海',
-  mountain:  '自然・山',
-  remote:    '秘境・穴場',
-  sight:     '観光スポット',
-  city:      '街歩き',
-  peninsula: '半島・海',
-  hidden:    '隠れ名所',
-  view:      '絶景スポット',
-  weird:     '珍スポット',
-  ruins:     '遺構・廃墟',
-  portTown:  '港町・海の幸',
-  railway:   'ローカル線の旅',
+  onsen:     '温泉でゆっくりできる',
+  island:    '島で非日常を過ごせる',
+  mountain:  '自然の中に入れる',
+  remote:    '穴場で人が少ない',
+  sight:     '代表的な観光地を巡れる',
+  city:      '街を歩いて回れる',
+  peninsula: '海と自然を一度に楽しめる',
+  hidden:    '穴場で人が少ない',
+  view:      '絶景が見られる',
+  weird:     '珍しい体験ができる',
+  ruins:     '歴史の痕跡を感じられる',
+  portTown:  '新鮮な海の幸が食べられる',
+  railway:   'のんびりローカル線に乗れる',
 };
 
 function formatTravelTime(min) {
@@ -415,7 +416,7 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   if (mapUrl) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action" data-track="map_click">この旅で行く</a>`;
+       class="btn btn--maps btn--action" data-track="map_click" id="go-maps-btn">この旅で行く</a>`;
   }
 
   // ② 予約CTA（地図の下）
@@ -825,20 +826,24 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const closer = buildStayCloser(city);
   const reasonHtml = `<div class="stay-nudge">${stayReason ? `<p class="stay-reason">${stayReason}</p>` : ''}${closer ? `<p class="stay-closer">${closer}</p>` : ''}${nudge ? `<p class="stay-nudge-sub">${nudge}</p>` : ''}</div>`;
 
+  // エリア名: 「このエリアで泊まる」ラベル用
+  const areaLabel = stayLabel || (city?.displayName || city?.name || 'このエリア');
+
   // 温泉時はじゃらんの強みを活かす
   const isOnsen = city?.destType === 'onsen';
-  const jalanMain = isOnsen ? 'じゃらんで温泉宿を見る' : 'じゃらんで今の空室を見る';
-  const jalanHint = isOnsen ? '温泉に強い' : '口コミ豊富';
+  const jalanMain = isOnsen ? 'じゃらんで温泉宿を見る' : 'じゃらんで空室を確認';
+  const jalanHint = isOnsen ? '温泉宿に強い' : '口コミ豊富';
 
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
-                  class="btn btn-stay btn-rakuten" data-track="rakuten_click"><span class="btn-stay-main">楽天で今の空室を見る</span><small class="btn-stay-sub">ポイント貯まる</small></a>` : '',
+                  class="btn btn-stay btn-rakuten" data-track="rakuten_click"><span class="btn-stay-main">楽天でおすすめ宿を見る</span><small class="btn-stay-sub">ポイント貯まる</small></a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn-stay btn-jalan" data-track="jalan_click"><span class="btn-stay-main">${jalanMain}</span><small class="btn-stay-sub">${jalanHint}</small></a>` : '',
   ].filter(Boolean).join('');
 
   return `
-    <div class="stay-section stay-section--primary">
+    <div class="stay-section stay-section--primary" id="stay-section">
+      <p class="stay-area-label">${areaLabel}で泊まる</p>
       ${reasonHtml}
       <div class="stay-dual-grid">${buttons}</div>
     </div>

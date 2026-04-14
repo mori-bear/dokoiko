@@ -1354,6 +1354,22 @@ body {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.4s ease;
+}
+
+/* 「この旅で行く」クリック時のハイライト */
+.stay-section--highlight {
+  background: #fff8ee;
+}
+
+/* エリア名ラベル「〇〇で泊まる」 */
+.stay-area-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin: 0 0 8px;
+  letter-spacing: 0.3px;
 }
 
 /* 宿CTA 2カラムグリッド（楽天・じゃらん同列） */

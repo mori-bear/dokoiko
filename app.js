@@ -23,6 +23,7 @@ async function init() {
   bindTrackHandlers();
   bindExampleLinks();
   bindLocationButton();
+  bindMapsCta();
 
   // 出発地の優先順位: URLパラメータ > localStorage > デフォルト（東京）
   const urlParams = decodeUrlParams();
@@ -419,6 +420,25 @@ function bindLocationButton() {
       },
       { timeout: 8000, maximumAge: 60000 },
     );
+  });
+}
+
+/**
+ * マップCTA（「この旅で行く」）クリック時に宿セクションへスムーズスクロール。
+ * ユーザーが Maps を開いた直後、画面に戻ったときに宿リンクが目に入るようにする。
+ */
+function bindMapsCta() {
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#go-maps-btn')) return;
+    const stayEl = document.getElementById('stay-section');
+    if (!stayEl) return;
+    // Maps はバックグラウンドタブで開くため、少し遅延してスクロール
+    setTimeout(() => {
+      stayEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // 視線を引くため一時的にハイライトクラスを付与
+      stayEl.classList.add('stay-section--highlight');
+      setTimeout(() => stayEl.classList.remove('stay-section--highlight'), 1200);
+    }, 300);
   });
 }
 
