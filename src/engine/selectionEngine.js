@@ -144,22 +144,35 @@ const DEST_TYPE_BOOST = {
 };
 
 /**
- * travelTimeScore: 出発地からの移動時間による重み係数
- * Math.exp(-t / 180) で緩やかに減衰。
- * stayType フィルタ（daytrip≤120 / 1night≤240）で距離範囲を絞るため、
- * weight側は許容範囲内での相対差を表現するだけでよく、/180 が適切。
- * 出発地依存のため recomputeWeight.js（静的weight）ではなくここで適用。
+ * travelTimeScore: 出発地からの移動時間による重み係数（T4: テーマ別減衰）
+ *
+ * 減衰定数（decay）をテーマで変える:
+ *   温泉   → 220（遠め許容: 温泉は遠くても行く価値あり）
+ *   絶景   → 250（さらに遠め許容: 絶景は距離を厭わない）
+ *   海     → 200（やや遠め許容）
+ *   街歩き → 130（近場優先: 気軽に行ける街歩きがフィット）
+ *   グルメ → 150（やや近場優先）
+ *   default → 180
  */
-function travelTimeScore(minutes) {
+const THEME_DECAY = {
+  '温泉':   220,
+  '絶景':   250,
+  '海':     200,
+  '街歩き': 130,
+  'グルメ': 150,
+};
+
+function travelTimeScore(minutes, theme = null) {
   if (minutes == null) return 1;
-  return Math.exp(-minutes / 180);
+  const decay = THEME_DECAY[theme] ?? 180;
+  return Math.exp(-minutes / decay);
 }
 
 function getWeight(city, theme) {
   const base = city.weight ?? 1;
   const capW = PREF_CAPITALS.has(city.name) ? 0.6 : 1;
   const dtW  = DEST_TYPE_BOOST[city.destType] ?? 1;
-  const ttW  = travelTimeScore(city.travelTimeMinutes);
+  const ttW  = travelTimeScore(city.travelTimeMinutes, theme);
 
   // 近郊cityペナルティ: 45分未満かつweight<1.1のcityは旅行先として弱い
   // (横浜・鎌倉などPOPULAR扱いでweightが高い目的地は除外)
@@ -282,14 +295,14 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   /**
    * travelTimeMinutes ベースの日程フィルタ（片道時間制限）
    *   daytrip : 片道 120分以内（2時間）
-   *   1night  : 片道 240分以内（4時間）
-   *   free    : 制限なし
+   *   1night  : 片道 300分以内（5時間）
+   *   free / 複数泊 : 制限なし
    *   2night / 3night+ : 後方互換として制限なし扱い
    */
   function matchesStayType(d) {
     const oneWay = d.travelTimeMinutes;
     if (stayType === 'daytrip' && oneWay > 120) return false;
-    if (stayType === '1night'  && oneWay > 240) return false;
+    if (stayType === '1night'  && oneWay > 300) return false;
     // 'free' / '2night' / '3night+' : 制限なし
     return true;
   }

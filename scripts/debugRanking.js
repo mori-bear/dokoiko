@@ -2,9 +2,10 @@
  * debugRanking.js — 各出発地ごとの上位20件を出力してランキング品質検証
  *
  * 使い方:
- *   node scripts/debugRanking.js                  # 主要出発地7つ
- *   node scripts/debugRanking.js --dep=東京,大阪  # 指定出発地
- *   node scripts/debugRanking.js --limit=30       # 上位N件
+ *   node scripts/debugRanking.js                         # 主要出発地7つ
+ *   node scripts/debugRanking.js --dep=東京,大阪         # 指定出発地
+ *   node scripts/debugRanking.js --limit=30              # 上位N件
+ *   node scripts/debugRanking.js --theme=温泉            # テーマ別decay適用
  */
 
 import fs from 'fs';
@@ -27,13 +28,24 @@ const DEPS = DEP_ARG
 const LIMIT_ARG = process.argv.find(a => a.startsWith('--limit='));
 const LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : 20;
 
+const THEME_ARG = process.argv.find(a => a.startsWith('--theme='));
+const THEME = THEME_ARG ? THEME_ARG.split('=')[1] : null;
+
 /**
- * travelTimeBonus: selectionEngine と同一の指数減衰式
- * Math.exp(-min / 180) で緩やかに減衰。selectionEngine.js の travelTimeScore と一致。
- * stayType フィルタ（daytrip≤120 / 1night≤240）で範囲を絞るため weight 側は緩やかでよい。
+ * travelTimeBonus: selectionEngine と同一の指数減衰式（テーマ別対応）
+ * selectionEngine.js の THEME_DECAY / travelTimeScore と一致させる。
  */
-function travelTimeBonus(min) {
-  return Math.exp(-min / 180);
+const THEME_DECAY = {
+  '温泉':   220,
+  '絶景':   250,
+  '海':     200,
+  '街歩き': 130,
+  'グルメ': 150,
+};
+
+function travelTimeBonus(min, theme = null) {
+  const decay = THEME_DECAY[theme] ?? 180;
+  return Math.exp(-min / decay);
 }
 
 /** selectionEngine.js と同一 */
@@ -77,7 +89,7 @@ function applyDepartureCorrection(travelMin, departure, dest) {
  * adjustedScore = weight × travelTimeBonus により出発地ごとの距離を反映。
  * selectionEngine.js と同一のパラメータ・補正を適用してエンジン挙動を近似。
  */
-function rankByWeight(dests, departure) {
+function rankByWeight(dests, departure, theme = null) {
   return dests
     .filter(d => {
       // daytrip/1night 制限なしで全件対象
@@ -90,7 +102,7 @@ function rankByWeight(dests, departure) {
       const base    = d.weight ?? 1;
       const capW    = PREF_CAPITALS.has(d.name) ? 0.6 : 1;
       const dtW     = DEST_TYPE_BOOST[d.destType] ?? 1;
-      const ttW     = travelTimeBonus(travelMin);
+      const ttW     = travelTimeBonus(travelMin, THEME);
       // 近郊cityペナルティ: selectionEngine.js と同一
       const nearCityW = (d.destType === 'city' && travelMin < 45 && base < 1.1)
         ? 0.5 : 1;
@@ -103,10 +115,10 @@ function rankByWeight(dests, departure) {
 
 for (const dep of DEPS) {
   console.log(`\n══════════════════════════════════`);
-  console.log(`  ${dep} 発 上位${LIMIT}件`);
+  console.log(`  ${dep} 発 上位${LIMIT}件${THEME ? ` [テーマ:${THEME}]` : ''}`);
   console.log(`══════════════════════════════════`);
 
-  const ranked = rankByWeight(DESTS, dep).slice(0, LIMIT);
+  const ranked = rankByWeight(DESTS, dep, THEME).slice(0, LIMIT);
 
   const header = 'rank | score  | weight | type     | name'.padEnd(44) + ' | pref   | access       | travel';
   console.log(header);
