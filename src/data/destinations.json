@@ -108,6 +108,10 @@
     "representativeStation": "鎌倉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鎌倉"
     }
   },
   {
@@ -209,6 +213,10 @@
     "representativeStation": "熱海駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "熱海"
     }
   },
   {
@@ -354,6 +362,10 @@
         "type": "private",
         "access": "same"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "日光"
     }
   },
   {
@@ -470,6 +482,10 @@
     "representativeStation": "軽井沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "軽井沢"
     }
   },
   {
@@ -579,6 +595,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "河口湖駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "河口湖"
     }
   },
   {
@@ -692,6 +712,10 @@
     "representativeStation": "奈良駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "奈良"
     }
   },
   {
@@ -813,6 +837,10 @@
     "representativeStation": "石垣空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "石垣空港"
     }
   },
   {
@@ -942,6 +970,10 @@
     "representativeStation": "伊勢市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊勢市"
     }
   },
   {
@@ -1062,6 +1094,10 @@
     "representativeStation": "別府駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "別府"
     }
   },
   {
@@ -1175,6 +1211,10 @@
     "representativeStation": "小樽駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小樽"
     }
   },
   {
@@ -1295,6 +1335,10 @@
     "representativeStation": "富良野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "富良野"
     }
   },
   {
@@ -1427,6 +1471,10 @@
     "representativeStation": "松島海岸駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "松島海岸"
     }
   },
   {
@@ -1557,6 +1605,10 @@
     "representativeStation": "宮島口港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "宮島口港"
     }
   },
   {
@@ -1682,6 +1734,10 @@
     "representativeStation": "尾道駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "尾道"
     }
   },
   {
@@ -1812,6 +1868,10 @@
     "representativeStation": "池田港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "池田港"
     }
   },
   {
@@ -1937,6 +1997,10 @@
     "representativeStation": "境港駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "境港"
     }
   },
   {
@@ -2038,6 +2102,10 @@
     "representativeStation": "紀伊田辺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "紀伊田辺"
     }
   },
   {
@@ -2178,6 +2246,10 @@
     "representativeStation": "渡嘉敷港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "渡嘉敷港"
     }
   },
   {
@@ -2320,6 +2392,10 @@
     "representativeStation": "久米島空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "久米島空港"
     }
   },
   {
@@ -2442,6 +2518,10 @@
     "representativeStation": "宮古空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "宮古空港"
     }
   },
   {
@@ -2569,6 +2649,10 @@
     "representativeStation": "神津島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "神津島港"
     }
   },
   {
@@ -2687,6 +2771,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "小田原駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "箱根湯本"
     }
   },
   {
@@ -2798,6 +2886,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "三島駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "修善寺"
     }
   },
   {
@@ -2912,6 +3004,10 @@
     "representativeStation": "草津温泉バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "草津温泉バスターミナル"
     }
   },
   {
@@ -3033,6 +3129,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "熱海駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊豆急下田"
     }
   },
   {
@@ -3170,6 +3270,10 @@
     "representativeStation": "元町港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "元町港"
     }
   },
   {
@@ -3288,6 +3392,10 @@
     "representativeStation": "金沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金沢"
     }
   },
   {
@@ -3413,6 +3521,10 @@
         "type": "private",
         "access": "same"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "有馬温泉"
     }
   },
   {
@@ -3525,6 +3637,10 @@
     "representativeStation": "城崎温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "城崎温泉"
     }
   },
   {
@@ -3636,6 +3752,10 @@
     "representativeStation": "倉敷駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "倉敷"
     }
   },
   {
@@ -3739,6 +3859,10 @@
     "representativeStation": "白浜駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白浜"
     }
   },
   {
@@ -3854,6 +3978,10 @@
     "representativeStation": "高山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高山"
     }
   },
   {
@@ -3970,6 +4098,10 @@
     "representativeStation": "鳥羽駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鳥羽"
     }
   },
   {
@@ -4099,6 +4231,10 @@
     "representativeStation": "由布院駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "由布院"
     }
   },
   {
@@ -4209,6 +4345,10 @@
     "representativeStation": "博多駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "博多"
     }
   },
   {
@@ -4326,6 +4466,10 @@
     "representativeStation": "阿蘇駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "阿蘇"
     }
   },
   {
@@ -4476,6 +4620,10 @@
     "representativeStation": "安房港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "安房港"
     }
   },
   {
@@ -4580,6 +4728,10 @@
     "representativeStation": "熊本駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "熊本"
     }
   },
   {
@@ -4691,6 +4843,10 @@
     "representativeStation": "平泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "平泉"
     }
   },
   {
@@ -4801,6 +4957,10 @@
     "representativeStation": "角館駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "角館"
     }
   },
   {
@@ -4913,6 +5073,10 @@
     "representativeStation": "会津若松駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "会津若松"
     }
   },
   {
@@ -5018,6 +5182,10 @@
     "representativeStation": "蔵王駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "蔵王"
     }
   },
   {
@@ -5134,6 +5302,10 @@
     "representativeStation": "萩駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "萩"
     }
   },
   {
@@ -5250,6 +5422,10 @@
     "representativeStation": "下関駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "下関"
     }
   },
   {
@@ -5383,6 +5559,10 @@
     "representativeStation": "宮浦港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "宮浦港"
     }
   },
   {
@@ -5500,6 +5680,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "高松駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "琴電琴平"
     }
   },
   {
@@ -5618,6 +5802,10 @@
     "representativeStation": "宇和島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宇和島"
     }
   },
   {
@@ -5725,6 +5913,10 @@
     "representativeStation": "洞爺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "洞爺"
     }
   },
   {
@@ -5823,6 +6015,10 @@
     "representativeStation": "登別駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "登別"
     }
   },
   {
@@ -5939,6 +6135,10 @@
     "representativeStation": "知床斜里駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "知床斜里"
     }
   },
   {
@@ -6058,6 +6258,10 @@
     "representativeStation": "輪島バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "輪島バスターミナル"
     }
   },
   {
@@ -6162,6 +6366,10 @@
     "representativeStation": "加賀温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "加賀温泉"
     }
   },
   {
@@ -6275,6 +6483,10 @@
     "representativeStation": "白馬駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白馬"
     }
   },
   {
@@ -6384,6 +6596,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "福知山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "天橋立"
     }
   },
   {
@@ -6503,6 +6719,10 @@
     "representativeStation": "伊根港バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "伊根港バス停"
     }
   },
   {
@@ -6614,6 +6834,10 @@
     "representativeStation": "指宿駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "指宿"
     }
   },
   {
@@ -6726,6 +6950,10 @@
     "representativeStation": "佐世保駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "佐世保"
     }
   },
   {
@@ -6833,6 +7061,10 @@
     "representativeStation": "佐世保駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "佐世保"
     }
   },
   {
@@ -6930,6 +7162,10 @@
     "representativeStation": "鳥取駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鳥取"
     }
   },
   {
@@ -7029,6 +7265,10 @@
     "representativeStation": "秋田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "秋田"
     }
   },
   {
@@ -7141,6 +7381,10 @@
     "representativeStation": "三ノ宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "三ノ宮"
     }
   },
   {
@@ -7251,6 +7495,10 @@
       "from": "高尾",
       "line": "ケーブルカー",
       "to": "高尾山"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高尾山口"
     }
   },
   {
@@ -7362,6 +7610,10 @@
     "representativeStation": "館山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "館山"
     }
   },
   {
@@ -7479,6 +7731,10 @@
     "representativeStation": "五箇山バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "五箇山バス停"
     }
   },
   {
@@ -7588,6 +7844,10 @@
     "representativeStation": "札幌駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "札幌"
     }
   },
   {
@@ -7703,6 +7963,10 @@
     "representativeStation": "美瑛駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "美瑛"
     }
   },
   {
@@ -7822,6 +8086,10 @@
     "representativeStation": "宮古駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宮古"
     }
   },
   {
@@ -7936,6 +8204,10 @@
     "representativeStation": "酒田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "酒田"
     }
   },
   {
@@ -8045,6 +8317,10 @@
     "representativeStation": "熊本駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "熊本"
     }
   },
   {
@@ -8180,6 +8456,10 @@
     "representativeStation": "名瀬港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "名瀬港"
     }
   },
   {
@@ -8315,6 +8595,10 @@
     "representativeStation": "福江港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "福江港"
     }
   },
   {
@@ -8419,6 +8703,10 @@
     "representativeStation": "諫早駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "諫早"
     }
   },
   {
@@ -8532,6 +8820,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "高知駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宿毛"
     }
   },
   {
@@ -8651,6 +8943,10 @@
     "representativeStation": "大歩危駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大歩危"
     }
   },
   {
@@ -8765,6 +9061,10 @@
     "representativeStation": "津和野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "津和野"
     }
   },
   {
@@ -8876,6 +9176,10 @@
     "representativeStation": "犬山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "犬山"
     }
   },
   {
@@ -8994,6 +9298,10 @@
     "representativeStation": "南木曽駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "南木曽"
     }
   },
   {
@@ -9099,6 +9407,10 @@
     "representativeStation": "園部駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "園部"
     }
   },
   {
@@ -9216,6 +9528,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "富山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "立山"
     }
   },
   {
@@ -9333,6 +9649,10 @@
     "representativeStation": "氷見駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "氷見"
     }
   },
   {
@@ -9436,6 +9756,10 @@
     "representativeStation": "田沢湖駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "田沢湖"
     }
   },
   {
@@ -9540,6 +9864,10 @@
     "representativeStation": "湯田温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "湯田温泉"
     }
   },
   {
@@ -9636,6 +9964,10 @@
     "representativeStation": "嬉野温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "嬉野温泉"
     }
   },
   {
@@ -9746,6 +10078,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "長野駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小布施"
     }
   },
   {
@@ -9855,6 +10191,10 @@
     "representativeStation": "内子駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "内子"
     }
   },
   {
@@ -9959,6 +10299,10 @@
     "representativeStation": "高知駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高知"
     }
   },
   {
@@ -10065,6 +10409,10 @@
     "representativeStation": "阿波池田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "阿波池田"
     }
   },
   {
@@ -10174,6 +10522,10 @@
     "representativeStation": "木次駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "木次"
     }
   },
   {
@@ -10281,6 +10633,10 @@
     "representativeStation": "大石田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大石田"
     }
   },
   {
@@ -10386,6 +10742,10 @@
     "representativeStation": "会津若松駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "会津若松"
     }
   },
   {
@@ -10488,6 +10848,10 @@
     "representativeStation": "飯山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飯山"
     }
   },
   {
@@ -10599,6 +10963,10 @@
     "representativeStation": "竹原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "竹原"
     }
   },
   {
@@ -10717,6 +11085,10 @@
     "representativeStation": "南木曽駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "南木曽"
     }
   },
   {
@@ -10835,6 +11207,10 @@
     "representativeStation": "中津川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中津川"
     }
   },
   {
@@ -10947,6 +11323,10 @@
     "representativeStation": "長浜駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長浜"
     }
   },
   {
@@ -11059,6 +11439,10 @@
     "representativeStation": "彦根駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "彦根"
     }
   },
   {
@@ -11186,6 +11570,10 @@
         "name": "なんば",
         "type": "jr"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高野山"
     }
   },
   {
@@ -11303,6 +11691,10 @@
     "representativeStation": "下呂駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "下呂"
     }
   },
   {
@@ -11411,6 +11803,10 @@
     "representativeStation": "鳴子温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鳴子温泉"
     }
   },
   {
@@ -11514,6 +11910,10 @@
     "representativeStation": "中之条駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中之条"
     }
   },
   {
@@ -11637,6 +12037,10 @@
     "representativeStation": "弘前駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "弘前"
     }
   },
   {
@@ -11751,6 +12155,10 @@
     "representativeStation": "八戸駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八戸"
     }
   },
   {
@@ -11865,6 +12273,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宇都宮駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "益子"
     }
   },
   {
@@ -11980,6 +12392,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "上田駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "別所温泉"
     }
   },
   {
@@ -12086,6 +12502,10 @@
     "representativeStation": "豊岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "豊岡"
     }
   },
   {
@@ -12184,6 +12604,10 @@
     "representativeStation": "和倉温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "和倉温泉"
     }
   },
   {
@@ -12287,6 +12711,10 @@
     "representativeStation": "倉吉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "倉吉"
     }
   },
   {
@@ -12398,6 +12826,10 @@
     "representativeStation": "飫肥駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飫肥"
     }
   },
   {
@@ -12513,6 +12945,10 @@
     "representativeStation": "人吉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "人吉"
     }
   },
   {
@@ -12629,6 +13065,10 @@
     "representativeStation": "上高地バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "上高地バスターミナル"
     }
   },
   {
@@ -12734,6 +13174,10 @@
     "representativeStation": "水上駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "水上"
     }
   },
   {
@@ -12845,6 +13289,10 @@
     "representativeStation": "熊本駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "熊本"
     }
   },
   {
@@ -12970,6 +13418,10 @@
     "representativeStation": "今治駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "今治"
     }
   },
   {
@@ -13101,6 +13553,10 @@
     "representativeStation": "伊予大洲駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊予大洲"
     }
   },
   {
@@ -13229,6 +13685,10 @@
     "representativeStation": "積丹バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "積丹バスターミナル"
     }
   },
   {
@@ -13365,6 +13825,10 @@
     "representativeStation": "出雲市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "出雲市"
     }
   },
   {
@@ -13473,6 +13937,10 @@
     "representativeStation": "珠洲バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "珠洲バスターミナル"
     }
   },
   {
@@ -13618,6 +14086,10 @@
         "name": "天王寺",
         "type": "jr"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "吉野"
     }
   },
   {
@@ -13737,6 +14209,10 @@
     "representativeStation": "新宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新宮"
     }
   },
   {
@@ -13889,6 +14365,10 @@
     "representativeStation": "大原港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "大原港"
     }
   },
   {
@@ -14023,6 +14503,10 @@
     "representativeStation": "備中高梁駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "備中高梁"
     }
   },
   {
@@ -14150,6 +14634,10 @@
     "representativeStation": "飛騨古川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飛騨古川"
     }
   },
   {
@@ -14277,6 +14765,10 @@
     "representativeStation": "宇佐駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宇佐"
     }
   },
   {
@@ -14407,6 +14899,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "熱海駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊豆高原"
     }
   },
   {
@@ -14535,6 +15031,10 @@
     "representativeStation": "紀伊田辺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "紀伊田辺"
     }
   },
   {
@@ -14651,6 +15151,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "中村駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中村"
     }
   },
   {
@@ -14786,6 +15290,10 @@
     "representativeStation": "日南駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "日南"
     }
   },
   {
@@ -14901,6 +15409,10 @@
     "representativeStation": "門司港駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "門司港"
     }
   },
   {
@@ -15031,6 +15543,10 @@
     "representativeStation": "筑前前原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "筑前前原"
     }
   },
   {
@@ -15166,6 +15682,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "諫早駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "島原"
     }
   },
   {
@@ -15279,6 +15799,10 @@
     "representativeStation": "敦賀駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "敦賀"
     }
   },
   {
@@ -15395,6 +15919,10 @@
     "representativeStation": "詫間駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "詫間"
     }
   },
   {
@@ -15521,6 +16049,10 @@
     "representativeStation": "層雲峡バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "層雲峡バスターミナル"
     }
   },
   {
@@ -15664,6 +16196,10 @@
     "representativeStation": "香深港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "香深港"
     }
   },
   {
@@ -15800,6 +16336,10 @@
     "representativeStation": "鴛泊港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "鴛泊港"
     }
   },
   {
@@ -15908,6 +16448,10 @@
     "representativeStation": "釧路駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "釧路"
     }
   },
   {
@@ -16019,6 +16563,10 @@
     "representativeStation": "網走駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "網走"
     }
   },
   {
@@ -16136,6 +16684,10 @@
     "representativeStation": "支笏湖バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "支笏湖バス停"
     }
   },
   {
@@ -16248,6 +16800,10 @@
     "representativeStation": "遠野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "遠野"
     }
   },
   {
@@ -16367,6 +16923,10 @@
     "representativeStation": "男鹿駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "男鹿"
     }
   },
   {
@@ -16465,6 +17025,10 @@
     "representativeStation": "米沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "米沢"
     }
   },
   {
@@ -16578,6 +17142,10 @@
     "representativeStation": "鶴岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鶴岡"
     }
   },
   {
@@ -16687,6 +17255,10 @@
     "representativeStation": "仙台駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "仙台"
     }
   },
   {
@@ -16804,6 +17376,10 @@
     "representativeStation": "五所川原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "五所川原"
     }
   },
   {
@@ -16920,6 +17496,10 @@
         "type": "private",
         "access": "same"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "川越"
     }
   },
   {
@@ -17022,6 +17602,10 @@
     "representativeStation": "那須塩原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "那須塩原"
     }
   },
   {
@@ -17129,6 +17713,10 @@
     "representativeStation": "銚子駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "銚子"
     }
   },
   {
@@ -17237,6 +17825,10 @@
     "representativeStation": "足利駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "足利"
     }
   },
   {
@@ -17338,6 +17930,10 @@
     "representativeStation": "那須塩原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "那須塩原"
     }
   },
   {
@@ -17475,6 +18071,10 @@
     "representativeStation": "両津港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "両津港"
     }
   },
   {
@@ -17588,6 +18188,10 @@
     "representativeStation": "清里駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "清里"
     }
   },
   {
@@ -17683,6 +18287,10 @@
     "representativeStation": "天竜峡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "天竜峡"
     }
   },
   {
@@ -17796,6 +18404,10 @@
     "representativeStation": "上諏訪駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上諏訪"
     }
   },
   {
@@ -17910,6 +18522,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "福井駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "永平寺口"
     }
   },
   {
@@ -18026,6 +18642,10 @@
     "representativeStation": "小浜駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小浜"
     }
   },
   {
@@ -18147,6 +18767,10 @@
     "representativeStation": "平湯温泉バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "平湯温泉バスターミナル"
     }
   },
   {
@@ -18253,6 +18877,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "下田駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "下田"
     }
   },
   {
@@ -18367,6 +18995,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "福井駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "武生"
     }
   },
   {
@@ -18481,6 +19113,10 @@
     "representativeStation": "伊東駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊東"
     }
   },
   {
@@ -18582,6 +19218,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "上野市駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上野市"
     }
   },
   {
@@ -18694,6 +19334,10 @@
     "representativeStation": "橿原神宮前駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "橿原神宮前"
     }
   },
   {
@@ -18802,6 +19446,10 @@
     "representativeStation": "五条駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "五条"
     }
   },
   {
@@ -18901,6 +19549,10 @@
     "representativeStation": "東舞鶴駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "東舞鶴"
     }
   },
   {
@@ -19038,6 +19690,10 @@
         "name": "天王寺",
         "type": "jr"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飛鳥"
     }
   },
   {
@@ -19151,6 +19807,10 @@
     "representativeStation": "米子駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "米子"
     }
   },
   {
@@ -19268,6 +19928,10 @@
     "representativeStation": "温泉津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "温泉津"
     }
   },
   {
@@ -19373,6 +20037,10 @@
     "representativeStation": "大田市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大田市"
     }
   },
   {
@@ -19493,6 +20161,10 @@
     "representativeStation": "岩国駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "岩国"
     }
   },
   {
@@ -19603,6 +20275,10 @@
     "representativeStation": "倉吉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "倉吉"
     }
   },
   {
@@ -19734,6 +20410,10 @@
     "representativeStation": "大畠駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大畠"
     }
   },
   {
@@ -19852,6 +20532,10 @@
     "representativeStation": "江川崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "江川崎"
     }
   },
   {
@@ -19973,6 +20657,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宿毛駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宿毛"
     }
   },
   {
@@ -20093,6 +20781,10 @@
     "representativeStation": "伊予西条駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊予西条"
     }
   },
   {
@@ -20203,6 +20895,10 @@
     "representativeStation": "宇和島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宇和島"
     }
   },
   {
@@ -20312,6 +21008,10 @@
     "representativeStation": "豊後竹田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "豊後竹田"
     }
   },
   {
@@ -20430,6 +21130,10 @@
     "representativeStation": "臼杵駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "臼杵"
     }
   },
   {
@@ -20547,6 +21251,10 @@
     "representativeStation": "日田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "日田"
     }
   },
   {
@@ -20655,6 +21363,10 @@
     "representativeStation": "川棚温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "川棚温泉"
     }
   },
   {
@@ -20750,6 +21462,10 @@
     "representativeStation": "武雄温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "武雄温泉"
     }
   },
   {
@@ -20858,6 +21574,10 @@
     "representativeStation": "杵築駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "杵築"
     }
   },
   {
@@ -21003,6 +21723,10 @@
     "representativeStation": "対馬空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "対馬空港"
     }
   },
   {
@@ -21142,6 +21866,10 @@
     "representativeStation": "郷ノ浦港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "郷ノ浦港"
     }
   },
   {
@@ -21282,6 +22010,10 @@
     "representativeStation": "西之表港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "西之表港"
     }
   },
   {
@@ -21397,6 +22129,10 @@
     "representativeStation": "熊本駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "熊本"
     }
   },
   {
@@ -21534,6 +22270,10 @@
     "representativeStation": "竹富港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "竹富港"
     }
   },
   {
@@ -21672,6 +22412,10 @@
     "representativeStation": "与那国空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "与那国空港"
     }
   },
   {
@@ -21791,6 +22535,10 @@
     "representativeStation": "那覇バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "那覇バスターミナル"
     }
   },
   {
@@ -21907,6 +22655,10 @@
     "representativeStation": "那覇バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "那覇バスターミナル"
     }
   },
   {
@@ -22055,6 +22807,10 @@
     "representativeStation": "座間味港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "座間味港"
     }
   },
   {
@@ -22198,6 +22954,10 @@
     "representativeStation": "伊江港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "伊江港"
     }
   },
   {
@@ -22321,6 +23081,10 @@
     "representativeStation": "小浜港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "小浜港"
     }
   },
   {
@@ -22423,6 +23187,10 @@
     "representativeStation": "長野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長野"
     }
   },
   {
@@ -22528,6 +23296,10 @@
     "representativeStation": "飯山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飯山"
     }
   },
   {
@@ -22637,6 +23409,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "矢掛駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "矢掛"
     }
   },
   {
@@ -22757,6 +23533,10 @@
     "representativeStation": "津山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "津山"
     }
   },
   {
@@ -22870,6 +23650,10 @@
     "representativeStation": "貞光駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "貞光"
     }
   },
   {
@@ -22997,6 +23781,10 @@
     "representativeStation": "延岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "延岡"
     }
   },
   {
@@ -23086,6 +23874,10 @@
     "representativeStation": "釜石駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "釜石"
     }
   },
   {
@@ -23176,6 +23968,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "一ノ関駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大船渡"
     }
   },
   {
@@ -23265,6 +24061,10 @@
     "representativeStation": "久慈駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "久慈"
     }
   },
   {
@@ -23380,6 +24180,10 @@
     "representativeStation": "稚内空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "稚内空港"
     }
   },
   {
@@ -23495,6 +24299,10 @@
     "representativeStation": "帯広空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "帯広空港"
     }
   },
   {
@@ -23619,6 +24427,10 @@
     "representativeStation": "羅臼バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "羅臼バスターミナル"
     }
   },
   {
@@ -23738,6 +24550,10 @@
     "representativeStation": "江差バスターミナル",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "江差バスターミナル"
     }
   },
   {
@@ -23848,6 +24664,10 @@
     "representativeStation": "新花巻駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新花巻"
     }
   },
   {
@@ -23972,6 +24792,10 @@
     "representativeStation": "八幡平頂上バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "八幡平頂上バス停"
     }
   },
   {
@@ -24085,6 +24909,10 @@
     "representativeStation": "田沢湖駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "田沢湖"
     }
   },
   {
@@ -24208,6 +25036,10 @@
     "representativeStation": "山寺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "山寺"
     }
   },
   {
@@ -24317,6 +25149,10 @@
     "representativeStation": "気仙沼駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "気仙沼"
     }
   },
   {
@@ -24432,6 +25268,10 @@
     "representativeStation": "伊香保温泉バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "伊香保温泉バス停"
     }
   },
   {
@@ -24551,6 +25391,10 @@
       "from": "藤沢",
       "line": "江ノ電",
       "to": "江ノ島"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "片瀬江ノ島"
     }
   },
   {
@@ -24672,6 +25516,10 @@
         "type": "private",
         "access": "same"
       }
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "秩父"
     }
   },
   {
@@ -24783,6 +25631,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "水戸駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大洗"
     }
   },
   {
@@ -24892,6 +25744,10 @@
     "representativeStation": "佐野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "佐野"
     }
   },
   {
@@ -25006,6 +25862,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "美濃市駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "郡上八幡"
     }
   },
   {
@@ -25120,6 +25980,10 @@
     "representativeStation": "奈良井駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "奈良井"
     }
   },
   {
@@ -25228,6 +26092,10 @@
     "representativeStation": "糸魚川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "糸魚川"
     }
   },
   {
@@ -25339,6 +26207,10 @@
     "representativeStation": "村上駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "村上"
     }
   },
   {
@@ -25443,6 +26315,10 @@
     "representativeStation": "賢島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "賢島"
     }
   },
   {
@@ -25541,6 +26417,10 @@
     "representativeStation": "大垣駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大垣"
     }
   },
   {
@@ -25656,6 +26536,10 @@
     "representativeStation": "武生駅",
     "finalAccess": {
       "type": "car"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "越前海岸"
     }
   },
   {
@@ -25763,6 +26647,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "妙高高原駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "妙高高原"
     }
   },
   {
@@ -25859,6 +26747,10 @@
     "representativeStation": "長岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長岡"
     }
   },
   {
@@ -25966,6 +26858,10 @@
     "representativeStation": "篠山口駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "篠山口"
     }
   },
   {
@@ -26073,6 +26969,10 @@
     "representativeStation": "紀伊勝浦駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "紀伊勝浦"
     }
   },
   {
@@ -26193,6 +27093,10 @@
     "representativeStation": "本宮大社前バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "本宮大社前バス停"
     }
   },
   {
@@ -26307,6 +27211,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "相生駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "赤穂"
     }
   },
   {
@@ -26423,6 +27331,10 @@
     "representativeStation": "伏見稲荷駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伏見稲荷"
     }
   },
   {
@@ -26537,6 +27449,10 @@
     "representativeStation": "鞆の浦バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "鞆の浦バス停"
     }
   },
   {
@@ -26657,6 +27573,10 @@
     "representativeStation": "境港駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "境港"
     }
   },
   {
@@ -26779,6 +27699,10 @@
     "representativeStation": "牛窓バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "牛窓バス停"
     }
   },
   {
@@ -26877,6 +27801,10 @@
     "representativeStation": "笠岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "笠岡"
     }
   },
   {
@@ -26991,6 +27919,10 @@
     "representativeStation": "特牛駅",
     "finalAccess": {
       "type": "car"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "角島大橋"
     }
   },
   {
@@ -27122,6 +28054,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "松山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "道後温泉"
     }
   },
   {
@@ -27235,6 +28171,10 @@
     "representativeStation": "丸亀駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "丸亀"
     }
   },
   {
@@ -27358,6 +28298,10 @@
     "representativeStation": "三崎港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "三崎港"
     }
   },
   {
@@ -27477,6 +28421,10 @@
     "representativeStation": "西鉄柳川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "西鉄柳川"
     }
   },
   {
@@ -27592,6 +28540,10 @@
     "representativeStation": "宮崎空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "宮崎空港"
     }
   },
   {
@@ -27718,6 +28670,10 @@
     "representativeStation": "川内港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "川内港"
     }
   },
   {
@@ -27836,6 +28792,10 @@
     "representativeStation": "鹿児島空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "鹿児島空港"
     }
   },
   {
@@ -27956,6 +28916,10 @@
     "representativeStation": "えびの高原バス停",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "えびの高原バス停"
     }
   },
   {
@@ -28070,6 +29034,10 @@
     "representativeStation": "那覇空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
     }
   },
   {
@@ -28184,6 +29152,10 @@
     "representativeStation": "那覇空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
     }
   },
   {
@@ -28301,6 +29273,10 @@
     "representativeStation": "那覇空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
     }
   },
   {
@@ -28409,6 +29385,10 @@
     "representativeStation": "倶知安駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "倶知安"
     }
   },
   {
@@ -28530,6 +29510,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "旭川駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "旭岳温泉"
     }
   },
   {
@@ -28628,6 +29612,10 @@
     "representativeStation": "白老駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白老"
     }
   },
   {
@@ -28729,6 +29717,10 @@
     "representativeStation": "トマム駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "トマム"
     }
   },
   {
@@ -28846,6 +29838,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "八戸駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "十和田湖"
     }
   },
   {
@@ -28963,6 +29959,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "下北駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "恐山"
     }
   },
   {
@@ -29084,6 +30084,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "猪苗代駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "五色沼入口"
     }
   },
   {
@@ -29203,6 +30207,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "気仙沼駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "南三陸"
     }
   },
   {
@@ -29305,6 +30313,10 @@
     "representativeStation": "北上駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "北上"
     }
   },
   {
@@ -29406,6 +30418,10 @@
     "representativeStation": "鬼怒川温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鬼怒川温泉"
     }
   },
   {
@@ -29526,6 +30542,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "沼田駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "鳩待峠"
     }
   },
   {
@@ -29630,6 +30650,10 @@
     "representativeStation": "つくば駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "つくば"
     }
   },
   {
@@ -29731,6 +30755,10 @@
     "representativeStation": "笠間駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "笠間"
     }
   },
   {
@@ -29832,6 +30860,10 @@
     "representativeStation": "成田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "成田"
     }
   },
   {
@@ -29949,6 +30981,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "東金駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "九十九里海岸"
     }
   },
   {
@@ -30053,6 +31089,10 @@
     "representativeStation": "三崎口駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "三崎口"
     }
   },
   {
@@ -30154,6 +31194,10 @@
     "representativeStation": "奥多摩駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "奥多摩"
     }
   },
   {
@@ -30259,6 +31303,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "湯田中駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "湯田中"
     }
   },
   {
@@ -30380,6 +31428,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "茅野駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "蓼科"
     }
   },
   {
@@ -30481,6 +31533,10 @@
     "representativeStation": "越後湯沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "越後湯沢"
     }
   },
   {
@@ -30583,6 +31639,10 @@
     "representativeStation": "富士宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "富士宮"
     }
   },
   {
@@ -30704,6 +31764,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "松本駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "畳平"
     }
   },
   {
@@ -30803,6 +31867,10 @@
     "representativeStation": "常滑駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "常滑"
     }
   },
   {
@@ -30920,6 +31988,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "豊田市駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "香嵐渓"
     }
   },
   {
@@ -31024,6 +32096,10 @@
     "representativeStation": "内海駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "内海"
     }
   },
   {
@@ -31127,6 +32203,10 @@
     "representativeStation": "嵐山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "嵐山"
     }
   },
   {
@@ -31227,6 +32307,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "信楽駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "信楽"
     }
   },
   {
@@ -31346,6 +32430,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "下市口駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "洞川温泉"
     }
   },
   {
@@ -31448,6 +32536,10 @@
     "representativeStation": "松阪駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "松阪"
     }
   },
   {
@@ -31555,6 +32647,10 @@
     "representativeStation": "堺東駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "堺東"
     }
   },
   {
@@ -31692,6 +32788,10 @@
     "representativeStation": "菱浦港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "菱浦港"
     }
   },
   {
@@ -31810,6 +32910,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "新山口駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "秋吉台"
     }
   },
   {
@@ -31909,6 +33013,10 @@
     "representativeStation": "柳井駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "柳井"
     }
   },
   {
@@ -32053,6 +33161,10 @@
     "representativeStation": "西郷港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "西郷港"
     }
   },
   {
@@ -32181,6 +33293,10 @@
     "representativeStation": "犬島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "犬島港"
     }
   },
   {
@@ -32317,6 +33433,10 @@
     "representativeStation": "家浦港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "家浦港"
     }
   },
   {
@@ -32436,6 +33556,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "高知駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "仁淀川"
     }
   },
   {
@@ -32557,6 +33681,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "須崎駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "梼原"
     }
   },
   {
@@ -32656,6 +33784,10 @@
     "representativeStation": "阿南駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "阿南"
     }
   },
   {
@@ -32776,6 +33908,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "松山駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "四国カルスト"
     }
   },
   {
@@ -32876,6 +34012,10 @@
     "representativeStation": "青島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "青島"
     }
   },
   {
@@ -32996,6 +34136,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "玉名駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "山鹿温泉"
     }
   },
   {
@@ -33100,6 +34244,10 @@
     "representativeStation": "吉野ヶ里公園駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "吉野ヶ里公園"
     }
   },
   {
@@ -33226,6 +34374,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宇佐駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "国東"
     }
   },
   {
@@ -33347,6 +34499,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "鹿児島中央駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "知覧"
     }
   },
   {
@@ -33483,6 +34639,10 @@
     "representativeStation": "小値賀港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "小値賀港"
     }
   },
   {
@@ -33609,6 +34769,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宮古空港"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "伊良部島"
     }
   },
   {
@@ -33752,6 +34916,10 @@
     "representativeStation": "粟国港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "粟国港"
     }
   },
   {
@@ -33878,6 +35046,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "那覇バスターミナル"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "糸満"
     }
   },
   {
@@ -34003,6 +35175,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "那覇バスターミナル"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "喜如嘉"
     }
   },
   {
@@ -34139,6 +35315,10 @@
     "representativeStation": "三宅島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "三宅島港"
     }
   },
   {
@@ -34282,6 +35462,10 @@
     "representativeStation": "八丈島空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "八丈島空港"
     }
   },
   {
@@ -34419,6 +35603,10 @@
     "representativeStation": "新島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "新島港"
     }
   },
   {
@@ -34548,6 +35736,10 @@
     "representativeStation": "式根島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "式根島港"
     }
   },
   {
@@ -34642,6 +35834,10 @@
     "representativeStation": "白河駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白河"
     }
   },
   {
@@ -34735,6 +35931,10 @@
     "representativeStation": "喜多方駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "喜多方"
     }
   },
   {
@@ -34829,6 +36029,10 @@
     "representativeStation": "郡山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "郡山"
     }
   },
   {
@@ -34925,6 +36129,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "盛駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "盛"
     }
   },
   {
@@ -35018,6 +36226,10 @@
     "representativeStation": "一ノ関駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "一ノ関"
     }
   },
   {
@@ -35113,6 +36325,10 @@
     "representativeStation": "男鹿駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "男鹿"
     }
   },
   {
@@ -35207,6 +36423,10 @@
     "representativeStation": "象潟駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "象潟"
     }
   },
   {
@@ -35302,6 +36522,10 @@
     "representativeStation": "山形駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "山形"
     }
   },
   {
@@ -35395,6 +36619,10 @@
     "representativeStation": "さくらんぼ東根駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "さくらんぼ東根"
     }
   },
   {
@@ -35490,6 +36718,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "関山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "関山"
     }
   },
   {
@@ -35582,6 +36814,10 @@
     "representativeStation": "湯河原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "湯河原"
     }
   },
   {
@@ -35676,6 +36912,10 @@
     "representativeStation": "横須賀駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "横須賀"
     }
   },
   {
@@ -35770,6 +37010,10 @@
     "representativeStation": "三島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "三島"
     }
   },
   {
@@ -35864,6 +37108,10 @@
     "representativeStation": "沼津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "沼津"
     }
   },
   {
@@ -35958,6 +37206,10 @@
     "representativeStation": "浜松駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "浜松"
     }
   },
   {
@@ -36052,6 +37304,10 @@
     "representativeStation": "掛川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "掛川"
     }
   },
   {
@@ -36146,6 +37402,10 @@
     "representativeStation": "岡崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "岡崎"
     }
   },
   {
@@ -36240,6 +37500,10 @@
     "representativeStation": "豊橋駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "豊橋"
     }
   },
   {
@@ -36334,6 +37598,10 @@
     "representativeStation": "多治見駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "多治見"
     }
   },
   {
@@ -36428,6 +37696,10 @@
     "representativeStation": "長野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長野"
     }
   },
   {
@@ -36522,6 +37794,10 @@
     "representativeStation": "近江八幡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "近江八幡"
     }
   },
   {
@@ -36616,6 +37892,10 @@
     "representativeStation": "宝塚駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宝塚"
     }
   },
   {
@@ -36710,6 +37990,10 @@
     "representativeStation": "明石駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "明石"
     }
   },
   {
@@ -36804,6 +38088,10 @@
     "representativeStation": "鳴門駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鳴門"
     }
   },
   {
@@ -36899,6 +38187,10 @@
     "representativeStation": "福山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "福山"
     }
   },
   {
@@ -36993,6 +38285,10 @@
     "representativeStation": "三原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "三原"
     }
   },
   {
@@ -37085,6 +38381,10 @@
     "representativeStation": "防府駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "防府"
     }
   },
   {
@@ -37179,6 +38479,10 @@
     "representativeStation": "唐津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "唐津"
     }
   },
   {
@@ -37271,6 +38575,10 @@
     "representativeStation": "太宰府駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "太宰府"
     }
   },
   {
@@ -37365,6 +38673,10 @@
     "representativeStation": "中津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中津"
     }
   },
   {
@@ -37459,6 +38771,10 @@
     "representativeStation": "根室駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "根室"
     }
   },
   {
@@ -37553,6 +38869,10 @@
     "representativeStation": "東室蘭駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "東室蘭"
     }
   },
   {
@@ -37647,6 +38967,10 @@
     "representativeStation": "苫小牧駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "苫小牧"
     }
   },
   {
@@ -37740,6 +39064,10 @@
     "representativeStation": "石巻駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "石巻"
     }
   },
   {
@@ -37833,6 +39161,10 @@
     "representativeStation": "日立駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "日立"
     }
   },
   {
@@ -37924,6 +39256,10 @@
     "representativeStation": "鹿島神宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鹿島神宮"
     }
   },
   {
@@ -38016,6 +39352,10 @@
     "representativeStation": "白石蔵王駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白石蔵王"
     }
   },
   {
@@ -38110,6 +39450,10 @@
     "representativeStation": "能代駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "能代"
     }
   },
   {
@@ -38203,6 +39547,10 @@
     "representativeStation": "天童駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "天童"
     }
   },
   {
@@ -38297,6 +39645,10 @@
     "representativeStation": "鶴岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鶴岡"
     }
   },
   {
@@ -38392,6 +39744,10 @@
     "representativeStation": "八郎潟駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八郎潟"
     }
   },
   {
@@ -38487,6 +39843,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "陸前高田駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "陸前高田"
     }
   },
   {
@@ -38582,6 +39942,10 @@
     "representativeStation": "宮古駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宮古"
     }
   },
   {
@@ -38673,6 +40037,10 @@
     "representativeStation": "本宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "本宮"
     }
   },
   {
@@ -38766,6 +40134,10 @@
     "representativeStation": "水沢江刺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "水沢江刺"
     }
   },
   {
@@ -38860,6 +40232,10 @@
     "representativeStation": "猊鼻渓駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "猊鼻渓"
     }
   },
   {
@@ -38953,6 +40329,10 @@
     "representativeStation": "角館駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "角館"
     }
   },
   {
@@ -39046,6 +40426,10 @@
     "representativeStation": "寒河江駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "寒河江"
     }
   },
   {
@@ -39140,6 +40524,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "入善駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "入善"
     }
   },
   {
@@ -39233,6 +40621,10 @@
     "representativeStation": "七尾駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "七尾"
     }
   },
   {
@@ -39325,6 +40717,10 @@
     "representativeStation": "福知山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "福知山"
     }
   },
   {
@@ -39417,6 +40813,10 @@
     "representativeStation": "甲賀駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "甲賀"
     }
   },
   {
@@ -39509,6 +40909,10 @@
     "representativeStation": "富田林駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "富田林"
     }
   },
   {
@@ -39603,6 +41007,10 @@
     "representativeStation": "岸和田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "岸和田"
     }
   },
   {
@@ -39697,6 +41105,10 @@
     "representativeStation": "尼崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "尼崎"
     }
   },
   {
@@ -39791,6 +41203,10 @@
     "representativeStation": "西脇市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "西脇市"
     }
   },
   {
@@ -39885,6 +41301,10 @@
     "representativeStation": "津山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "津山"
     }
   },
   {
@@ -39978,6 +41398,10 @@
     "representativeStation": "西条駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "西条"
     }
   },
   {
@@ -40072,6 +41496,10 @@
     "representativeStation": "福山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "福山"
     }
   },
   {
@@ -40163,6 +41591,10 @@
     "representativeStation": "大杉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大杉"
     }
   },
   {
@@ -40257,6 +41689,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宿毛駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宿毛"
     }
   },
   {
@@ -40351,6 +41787,10 @@
     "representativeStation": "阿波池田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "阿波池田"
     }
   },
   {
@@ -40445,6 +41885,10 @@
     "representativeStation": "大分駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大分"
     }
   },
   {
@@ -40539,6 +41983,10 @@
     "representativeStation": "金沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金沢"
     }
   },
   {
@@ -40633,6 +42081,10 @@
     "representativeStation": "由良駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "由良"
     }
   },
   {
@@ -40727,6 +42179,10 @@
     "representativeStation": "みさき公園駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "みさき公園"
     }
   },
   {
@@ -40821,6 +42277,10 @@
     "representativeStation": "小倉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小倉"
     }
   },
   {
@@ -40915,6 +42375,10 @@
     "representativeStation": "甘木駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "甘木"
     }
   },
   {
@@ -41009,6 +42473,10 @@
     "representativeStation": "えびの駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "えびの"
     }
   },
   {
@@ -41102,6 +42570,10 @@
     "representativeStation": "人吉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "人吉"
     }
   },
   {
@@ -41209,6 +42681,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "鹿児島中央駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "知覧バスセンター"
     }
   },
   {
@@ -41315,6 +42791,10 @@
     "representativeStation": "鹿児島中央駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鹿児島中央"
     }
   },
   {
@@ -41419,6 +42899,10 @@
     "representativeStation": "那覇空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
     }
   },
   {
@@ -41523,6 +43007,10 @@
     "representativeStation": "那覇空港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
     }
   },
   {
@@ -41617,6 +43105,10 @@
     "representativeStation": "新高岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新高岡"
     }
   },
   {
@@ -41711,6 +43203,10 @@
     "representativeStation": "金沢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金沢"
     }
   },
   {
@@ -41806,6 +43302,10 @@
     "representativeStation": "月ヶ瀬口駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "月ヶ瀬口"
     }
   },
   {
@@ -41899,6 +43399,10 @@
     "representativeStation": "新宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新宮"
     }
   },
   {
@@ -42009,6 +43513,10 @@
     "representativeStation": "姫島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "姫島港"
     }
   },
   {
@@ -42107,6 +43615,10 @@
     "representativeStation": "利島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "利島港"
     }
   },
   {
@@ -42200,6 +43712,10 @@
     "representativeStation": "上越妙高駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上越妙高"
     }
   },
   {
@@ -42307,6 +43823,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "関山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "妙高はねうまライン妙高高原"
     }
   },
   {
@@ -42417,6 +43937,10 @@
     "representativeStation": "函館駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "函館"
     }
   },
   {
@@ -42522,6 +44046,10 @@
     "representativeStation": "旭川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "旭川"
     }
   },
   {
@@ -42627,6 +44155,10 @@
     "representativeStation": "釧路駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "釧路"
     }
   },
   {
@@ -42720,6 +44252,10 @@
     "representativeStation": "余市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "余市"
     }
   },
   {
@@ -42815,6 +44351,10 @@
     "representativeStation": "厚岸駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "厚岸"
     }
   },
   {
@@ -42918,6 +44458,10 @@
     "representativeStation": "北見駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "北見"
     }
   },
   {
@@ -43011,6 +44555,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "紋別駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "紋別市街"
     }
   },
   {
@@ -43107,6 +44655,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "留萌駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "留萌"
     }
   },
   {
@@ -43201,6 +44753,10 @@
     "representativeStation": "福島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "福島"
     }
   },
   {
@@ -43294,6 +44850,10 @@
     "representativeStation": "大曲駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大曲"
     }
   },
   {
@@ -43387,6 +44947,10 @@
     "representativeStation": "新庄駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新庄"
     }
   },
   {
@@ -43492,6 +45056,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "米沢駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長井"
     }
   },
   {
@@ -43590,6 +45158,10 @@
     "representativeStation": "横浜駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "横浜"
     }
   },
   {
@@ -43687,6 +45259,10 @@
     "representativeStation": "水戸駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "水戸"
     }
   },
   {
@@ -43781,6 +45357,10 @@
     "representativeStation": "宇都宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宇都宮"
     }
   },
   {
@@ -43875,6 +45455,10 @@
     "representativeStation": "高崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高崎"
     }
   },
   {
@@ -43969,6 +45553,10 @@
     "representativeStation": "小田原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小田原"
     }
   },
   {
@@ -44063,6 +45651,10 @@
     "representativeStation": "佐原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "佐原"
     }
   },
   {
@@ -44158,6 +45750,10 @@
     "representativeStation": "浜金谷駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "浜金谷"
     }
   },
   {
@@ -44252,6 +45848,10 @@
     "representativeStation": "勝浦駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "勝浦"
     }
   },
   {
@@ -44344,6 +45944,10 @@
     "representativeStation": "穂高駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "穂高"
     }
   },
   {
@@ -44440,6 +46044,10 @@
     "representativeStation": "飯田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飯田"
     }
   },
   {
@@ -44534,6 +46142,10 @@
     "representativeStation": "中津川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中津川"
     }
   },
   {
@@ -44628,6 +46240,10 @@
     "representativeStation": "焼津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "焼津"
     }
   },
   {
@@ -44723,6 +46339,10 @@
     "representativeStation": "弁天島駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "弁天島"
     }
   },
   {
@@ -44817,6 +46437,10 @@
     "representativeStation": "蒲郡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "蒲郡"
     }
   },
   {
@@ -44911,6 +46535,10 @@
     "representativeStation": "豊田市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "豊田市"
     }
   },
   {
@@ -45005,6 +46633,10 @@
     "representativeStation": "大津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大津"
     }
   },
   {
@@ -45099,6 +46731,10 @@
     "representativeStation": "草津駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "草津"
     }
   },
   {
@@ -45194,6 +46830,10 @@
     "representativeStation": "マキノ駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "マキノ"
     }
   },
   {
@@ -45289,6 +46929,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "天橋立駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "天橋立"
     }
   },
   {
@@ -45394,6 +47038,10 @@
     "representativeStation": "尾鷲駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "尾鷲"
     }
   },
   {
@@ -45488,6 +47136,10 @@
     "representativeStation": "御坊駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "御坊"
     }
   },
   {
@@ -45582,6 +47234,10 @@
     "representativeStation": "串本駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "串本"
     }
   },
   {
@@ -45687,6 +47343,10 @@
     "representativeStation": "松江駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "松江"
     }
   },
   {
@@ -45789,6 +47449,10 @@
     "representativeStation": "浜田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "浜田"
     }
   },
   {
@@ -45882,6 +47546,10 @@
     "representativeStation": "呉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "呉"
     }
   },
   {
@@ -45975,6 +47643,10 @@
     "representativeStation": "三次駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "三次"
     }
   },
   {
@@ -46069,6 +47741,10 @@
     "representativeStation": "長門市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長門市"
     }
   },
   {
@@ -46161,6 +47837,10 @@
     "representativeStation": "美祢駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "美祢"
     }
   },
   {
@@ -46267,6 +47947,10 @@
     "representativeStation": "高松駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高松"
     }
   },
   {
@@ -46361,6 +48045,10 @@
     "representativeStation": "坂出駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "坂出"
     }
   },
   {
@@ -46457,6 +48145,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "波介川口駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "波介川口"
     }
   },
   {
@@ -46551,6 +48243,10 @@
     "representativeStation": "観音寺駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "観音寺"
     }
   },
   {
@@ -46654,6 +48350,10 @@
     "representativeStation": "博多駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "博多"
     }
   },
   {
@@ -46748,6 +48448,10 @@
     "representativeStation": "久留米駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "久留米"
     }
   },
   {
@@ -46842,6 +48546,10 @@
     "representativeStation": "八代駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八代"
     }
   },
   {
@@ -46943,6 +48651,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "熊本駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "杖立温泉"
     }
   },
   {
@@ -47035,6 +48747,10 @@
     "representativeStation": "出水駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "出水"
     }
   },
   {
@@ -47128,6 +48844,10 @@
     "representativeStation": "枕崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "枕崎"
     }
   },
   {
@@ -47221,6 +48941,10 @@
     "representativeStation": "都城駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "都城"
     }
   },
   {
@@ -47317,6 +49041,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "南城駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "南城市役所"
     }
   },
   {
@@ -47405,6 +49133,10 @@
     "representativeStation": "青ヶ島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "青ヶ島港"
     }
   },
   {
@@ -47495,6 +49227,10 @@
     "representativeStation": "久賀島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "久賀島港"
     }
   },
   {
@@ -47588,6 +49324,10 @@
     "representativeStation": "土佐久礼駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "土佐久礼"
     }
   },
   {
@@ -47684,6 +49424,10 @@
     "representativeStation": "八幡浜駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八幡浜"
     }
   },
   {
@@ -47779,6 +49523,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "奈半利駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "奈半利"
     }
   },
   {
@@ -47886,6 +49634,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "大畠駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "大島大橋"
     }
   },
   {
@@ -47980,6 +49732,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "井原駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "井原"
     }
   },
   {
@@ -48073,6 +49829,10 @@
     "representativeStation": "新見駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新見"
     }
   },
   {
@@ -48168,6 +49928,10 @@
     "representativeStation": "榛原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "榛原"
     }
   },
   {
@@ -48262,6 +50026,10 @@
     "representativeStation": "林野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "林野"
     }
   },
   {
@@ -48355,6 +50123,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "中村駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "中村"
     }
   },
   {
@@ -48457,6 +50229,10 @@
     "representativeStation": "米子駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "米子"
     }
   },
   {
@@ -48549,6 +50325,10 @@
     "representativeStation": "加賀温泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "加賀温泉"
     }
   },
   {
@@ -48643,6 +50423,10 @@
     "representativeStation": "高山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高山"
     }
   },
   {
@@ -48736,6 +50520,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "上野市駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上野市"
     }
   },
   {
@@ -48831,6 +50619,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "宮ノ下駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宮ノ下"
     }
   },
   {
@@ -48924,6 +50716,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "湯田中駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "湯田中"
     }
   },
   {
@@ -49018,6 +50814,10 @@
     "representativeStation": "白石蔵王駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "白石蔵王"
     }
   },
   {
@@ -49113,6 +50913,10 @@
     "representativeStation": "鹿角花輪駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鹿角花輪"
     }
   },
   {
@@ -49207,6 +51011,10 @@
     "representativeStation": "飯山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飯山"
     }
   },
   {
@@ -49315,6 +51123,10 @@
     "representativeStation": "越前大野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "越前大野"
     }
   },
   {
@@ -49421,6 +51233,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "福井駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "勝山"
     }
   },
   {
@@ -49509,6 +51325,10 @@
     "representativeStation": "野間池港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "野間池港"
     }
   },
   {
@@ -49603,6 +51423,10 @@
     "representativeStation": "伊集院駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊集院"
     }
   },
   {
@@ -49697,6 +51521,10 @@
     "representativeStation": "田沢湖駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "田沢湖"
     }
   },
   {
@@ -49791,6 +51619,10 @@
     "representativeStation": "碇ヶ関駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "碇ヶ関"
     }
   },
   {
@@ -49885,6 +51717,10 @@
     "representativeStation": "くりこま高原駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "くりこま高原"
     }
   },
   {
@@ -49979,6 +51815,10 @@
     "representativeStation": "浪岡駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "浪岡"
     }
   },
   {
@@ -50074,6 +51914,10 @@
     "representativeStation": "下北駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "下北"
     }
   },
   {
@@ -50166,6 +52010,10 @@
     "representativeStation": "八戸駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八戸"
     }
   },
   {
@@ -50261,6 +52109,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "大槌駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大槌"
     }
   },
   {
@@ -50352,6 +52204,10 @@
     "representativeStation": "平泉駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "平泉"
     }
   },
   {
@@ -50446,6 +52302,10 @@
     "representativeStation": "沼田駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "沼田"
     }
   },
   {
@@ -50540,6 +52400,10 @@
     "representativeStation": "土浦駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "土浦"
     }
   },
   {
@@ -50634,6 +52498,10 @@
     "representativeStation": "石巻駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "石巻"
     }
   },
   {
@@ -50728,6 +52596,10 @@
     "representativeStation": "上総一ノ宮駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上総一ノ宮"
     }
   },
   {
@@ -50821,6 +52693,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "御代田駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "御代田"
     }
   },
   {
@@ -50914,6 +52790,10 @@
     "representativeStation": "西条駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "西条"
     }
   },
   {
@@ -51021,6 +52901,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "釜石駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "綾里"
     }
   },
   {
@@ -51115,6 +52999,10 @@
     "representativeStation": "野辺地駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "野辺地"
     }
   },
   {
@@ -51209,6 +53097,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "石狩当別駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "石狩当別"
     }
   },
   {
@@ -51304,6 +53196,10 @@
     "representativeStation": "深浦駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "深浦"
     }
   },
   {
@@ -51398,6 +53294,10 @@
     "representativeStation": "伊勢崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊勢崎"
     }
   },
   {
@@ -51491,6 +53391,10 @@
     "representativeStation": "塩尻駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "塩尻"
     }
   },
   {
@@ -51584,6 +53488,10 @@
     "representativeStation": "会津本郷駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "会津本郷"
     }
   },
   {
@@ -51677,6 +53585,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "立山駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "立山"
     }
   },
   {
@@ -51769,6 +53681,10 @@
     "representativeStation": "大田市駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大田市"
     }
   },
   {
@@ -51870,6 +53786,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "延岡駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "椎葉村役場"
     }
   },
   {
@@ -51962,6 +53882,10 @@
     "representativeStation": "帯広駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "帯広"
     }
   },
   {
@@ -52056,6 +53980,10 @@
     "representativeStation": "八雲駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "八雲"
     }
   },
   {
@@ -52149,6 +54077,10 @@
     "representativeStation": "須崎駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "須崎"
     }
   },
   {
@@ -52252,6 +54184,10 @@
     "representativeStation": "宇部新川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宇部新川"
     }
   },
   {
@@ -52345,6 +54281,10 @@
     "representativeStation": "糸魚川駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "糸魚川"
     }
   },
   {
@@ -52439,6 +54379,10 @@
     "representativeStation": "上松駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上松"
     }
   },
   {
@@ -52533,6 +54477,10 @@
     "representativeStation": "諫早駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "諫早"
     }
   },
   {
@@ -52627,6 +54575,10 @@
     "representativeStation": "伊野駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "伊野"
     }
   },
   {
@@ -52721,6 +54673,10 @@
     "representativeStation": "日出駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "日出"
     }
   },
   {
@@ -52812,6 +54768,10 @@
     "representativeStation": "津南駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "津南"
     }
   },
   {
@@ -52906,6 +54866,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "黒部駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "黒部"
     }
   },
   {
@@ -53000,6 +54964,10 @@
     "representativeStation": "金山駅",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金山"
     }
   },
   {
@@ -53089,6 +55057,10 @@
     "representativeStation": "伊平屋島港",
     "finalAccess": {
       "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "伊平屋島港"
     }
   },
   {
@@ -53185,6 +55157,10 @@
     "finalAccess": {
       "type": "bus",
       "from": "大宜味駅"
+    },
+    "accessPoint": {
+      "type": "bus",
+      "name": "大宜味村"
     }
   }
 ]

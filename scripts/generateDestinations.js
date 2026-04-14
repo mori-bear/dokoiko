@@ -29,6 +29,9 @@ const EXISTING_FILE = path.join(PROJECT_ROOT, 'src/data/destinations.json');
 
 const WIKIPEDIA_API = 'https://ja.wikipedia.org/w/api.php';
 const TEST_MODE = process.argv.includes('--test');
+// --batch=200 形式でバッチサイズ指定（destination件数上限）
+const BATCH_ARG = process.argv.find(a => a.startsWith('--batch='));
+const BATCH_LIMIT = BATCH_ARG ? parseInt(BATCH_ARG.split('=')[1], 10) : null;
 
 /* ── 都道府県別カテゴリテンプレート ──
  * 「日本の温泉」は空なので、都道府県ごとに「〇〇県の温泉」で取得
@@ -268,6 +271,14 @@ async function main() {
     }
   }
   console.log(`[generate] 重複排除後: ${allItems.size} 件`);
+
+  /* バッチ制限: --batch=N で生成件数を上限N件に切り詰め */
+  if (BATCH_LIMIT && allItems.size > BATCH_LIMIT) {
+    const limited = new Map([...allItems.entries()].slice(0, BATCH_LIMIT));
+    console.log(`[generate] バッチ制限 ${BATCH_LIMIT}件に切り詰め（元 ${allItems.size}件）`);
+    allItems.clear();
+    for (const [k, v] of limited) allItems.set(k, v);
+  }
 
   /* ② メタデータ取得（緯度経度・都道府県） */
   console.log('[generate] メタデータ取得中...');

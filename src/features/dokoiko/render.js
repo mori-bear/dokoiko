@@ -367,7 +367,7 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   if (mapUrl) {
     seenUrls.add(mapUrl);
     mapHtml = `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-       class="btn btn--maps btn--action" data-track="map_click">現地までのルートを見る</a>`;
+       class="btn btn--maps btn--action" data-track="map_click">Googleマップでルートを見る</a>`;
   }
 
   // ② 予約CTA（地図の下）

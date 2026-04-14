@@ -1,12 +1,12 @@
 /**
- * validateRoutes.js — 全destination × 主要出発地で経路品質を検証
+ * validateRoutes.js — 全destination × 主要出発地で経路品質を監視（warning only）
  *
- * チェック項目:
- *   - unreachable: ルートが生成できない
- *   - detour: 直線距離ベース妥当時間の1.5倍以上
- *   - too_long: 総所要時間10時間以上
+ * 【方針転換 2026-04】
+ * transportGraph は「参考ルート」として扱い、正確な経路はGoogleマップに委譲。
+ * detour / too_long / unreachable は FAIL ではなく WARNING として記録のみ。
  *
- * 出力: route_validation_failures.csv
+ * 出力: route_validation_warnings.csv（旧 failures から改名）
+ * QA合格条件: 本スクリプトのFAIL件数は合否に影響しない
  */
 
 import fs from 'fs';
@@ -22,7 +22,7 @@ const { calcDistanceKm } = await import('../src/utils/geo.js');
 
 const DESTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/destinations.json'), 'utf8'));
 const MAIN_DEPS = ['東京', '大阪', '名古屋', '福岡', '仙台', '札幌', '広島'];
-const OUT_CSV = path.join(ROOT, 'route_validation_failures.csv');
+const OUT_CSV = path.join(ROOT, 'route_validation_warnings.csv');
 
 const rows = ['type,departure,destId,destName,directKm,expectedMin,actualMin,detail'];
 let unreachable = 0, detour = 0, tooLong = 0, ok = 0;
@@ -69,5 +69,8 @@ for (const dep of MAIN_DEPS) {
 }
 
 fs.writeFileSync(OUT_CSV, rows.join('\n'));
-console.log(`[validateRoutes] OK=${ok}, unreachable=${unreachable}, detour=${detour}, too_long=${tooLong}`);
+console.log(`[validateRoutes] (WARNING ONLY - not a FAIL)`);
+console.log(`  OK=${ok}, unreachable=${unreachable}, detour=${detour}, too_long=${tooLong}`);
 console.log(`  → ${OUT_CSV}`);
+console.log('  ※正確な経路はGoogleマップに委譲。本検証はモニタリング目的のみ');
+// 常にexit 0（QA合否に影響させない）
