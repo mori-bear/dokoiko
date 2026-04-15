@@ -40,7 +40,6 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
         ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
         ${buildCityDetailBlock(city)}
-        ${buildRouteBlock(tc, departure, destLabel, city)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -476,7 +475,8 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
       // 駅あり → 鉄道予約CTA: 「このルートで行く（○○まで）」
       const mainCta = transportLinks?.find(l => l.type === 'main-cta');
       if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-        const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city);
+        const fromLabel = best?.displayRoute?.from ?? departure;
+        const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city, fromLabel);
         seenUrls.add(mainCta.cta.url);
         const stationNote = buildCtaStationNote(chainCta, city, best?.segments ?? []);
         ctaHtml = `
@@ -1251,7 +1251,7 @@ function buildCtaStationNote(chainCta, city, segments) {
  *   nonJR   → ${dest}への行き方を見る（${transport}）
  *   JR/mixed → このルートで行く（${station}駅まで）
  */
-function buildChainCtaHtml(chainCta, providerType = null, city = null) {
+function buildChainCtaHtml(chainCta, providerType = null, city = null, fromLabel = null) {
   const hint = CTA_TYPE_HINT[chainCta.type] ?? '';
 
   // nonJrOnly（飛行機/フェリーのみ・JRチェーンなし）
@@ -1263,22 +1263,37 @@ function buildChainCtaHtml(chainCta, providerType = null, city = null) {
     return sub ? `${to}への行き方を見る（${sub}）` : `${to}への行き方を見る`;
   }
 
-  // JR/mixed → 「このルートで行く（○○まで）」
+  // JR/mixed → 「このルートで行く（出発 → ○○駅）」
   // ※ buildCtaBlock で station !== null が確認済みの場合のみここに到達する
   const station = resolveBookingStation(city, chainCta);
   if (station) {
     const stationObj = resolveBookingStationObj(city, chainCta);
     const company = stationObj?.company;
-    // 非JR: 「片瀬江ノ島駅（小田急）まで」のように会社名を添える
+    // 非JR: 「片瀬江ノ島駅（小田急）」のように会社名を添える
     const stationLabel = (company && company !== 'JR')
       ? `${station}駅（${company}）`
       : `${station}駅`;
+    if (fromLabel) {
+      const suffix = chainCta.type === 'ferry' ? '港' : stationLabel;
+      return `このルートで行く（${fromLabel} → ${suffix}）`;
+    }
     const suffix = chainCta.type === 'ferry' ? '（港まで）' : `（${stationLabel}まで）`;
     return `このルートで行く${suffix}`;
   }
   const provider = CTA_PROVIDER[providerType] ?? null;
   const sub = [provider, hint].filter(Boolean).join('・');
   return sub ? `このルートで行く（${sub}）` : 'このルートで行く（JR）';
+}
+
+/**
+ * e5489 駅間検索URL を生成する。
+ * @param {string} from    — 出発駅名（"新大阪" 等、"駅"なしでも可）
+ * @param {string} station — 到着駅名（"湯田温泉" 等）
+ */
+function buildE5489Url(from, station) {
+  const dep = encodeURIComponent(String(from ?? '').replace(/駅$/, ''));
+  const arr = encodeURIComponent(String(station ?? '').replace(/駅$/, ''));
+  return `https://e5489.jr-odekake.net/od/pc/index.html#/dep/train?dep=${dep}&arr=${arr}`;
 }
 
 function buildMainCtaLabel(type) {

@@ -124,30 +124,35 @@ function buildJalanUrl(area) {
 /**
  * 楽天キーワード検索URL を生成する。
  *
+ * 単体ワード禁止: 必ず「地名＋都道府県名」にすることで楽天のエリア認識を確実にする。
+ *
  * キーワード決定ロジック（優先順位）:
- *   1. keyword（stayArea.rakuten — 絶対このまま使用）
- *   2. onsen 目的地でキーワードに「温泉」なし → 「温泉」補完
- *   3. hotelAreas に直接エントリなし かつ 汎用ワード → 「宿」補完
- *      ただし温泉/宿/ホテル/旅館を含む場合は補完しない
+ *   1. keyword（stayArea.rakuten）がある場合 → "{keyword} {prefecture}"
+ *   2. onsen 目的地でキーワードに「温泉」なし → "{keyword}温泉 {prefecture}"
+ *   3. keyword が空 / fallback → "{prefecture} 宿"
  */
 function buildRakutenKeywordUrl(keyword, dest) {
-  if (!keyword) return null;
+  // 都道府県名（末尾の県/府/都/道を除去）
+  const pref = String(dest?.prefecture ?? '').replace(/[県府都道]$/, '');
+
+  if (!keyword) {
+    // ③ fallback: "都道府県 宿"
+    return pref ? buildRakutenAffilUrl(buildRakutenUrl(`${pref} 宿`)) : null;
+  }
+
   let q = keyword;
-  // ② 温泉目的地 → 「温泉」補完
+
+  // ② 温泉目的地でキーワードに「温泉」なし → 「温泉」補完
   if (dest?.destType === 'onsen' && !q.includes('温泉')) {
     q = q + '温泉';
   }
-  // ③ hotelAreas に直接エントリなし → 「宿」補完（検索精度向上）
-  else if (!hasDirectHotelArea(dest) && !/温泉|宿|ホテル|旅館/.test(q)) {
-    q = q + ' 宿';
-  }
-  return buildRakutenAffilUrl(buildRakutenUrl(q));
-}
 
-/** dest が hotelAreas.json に直接エントリ（.html パス）を持つか判定 */
-function hasDirectHotelArea(dest) {
-  const area = lookupAreaById(dest?.id);
-  return !!(area?.rakutenPath?.includes('.html'));
+  // ① 単体ワード禁止: 都道府県名を付加（既に含む場合はスキップ）
+  if (pref && !q.includes(pref)) {
+    q = `${q} ${pref}`;
+  }
+
+  return buildRakutenAffilUrl(buildRakutenUrl(q));
 }
 
 function buildJalanKeywordUrl(keyword) {
