@@ -1148,27 +1148,43 @@ const CTA_TYPE_HINT = {
 /**
  * 予約ステーション解決（優先順位）:
  *   1. city.bookingStation（destinations.json に明示設定 — null なら非表示）
- *   2. chainCta.to（transport engine が算出した JR 到達点）— 空港は除外
- *      ※ city.bookingStation が設定済みの場合はこのフォールバックを使わない
+ *      形式: { name: "片瀬江ノ島駅", company: "小田急" } | null
+ *      旧形式(string)も受け付ける（後方互換）
+ *   2. chainCta.to（transport engine が算出した到達点）— 空港は除外
  *
  * 空港名はアクセス手段であり「どこまで行くか」の駅名として表示しない。
  * accessStation / fallbackStation / hubCity からの自動生成は廃止。
- * 存在しない駅（例: 龍神温泉駅）を生成しないための安全策。
  */
 function resolveBookingStation(city, chainCta) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const isAirport = (n) => /空港/.test(String(n ?? ''));
 
-  // destinations.json に bookingStation が明示設定済みの場合はそれのみ使用
-  // null が設定されている = 「駅なし」確定 → レンタカー表示に切り替え
   if ('bookingStation' in (city ?? {})) {
-    return city.bookingStation ? clean(city.bookingStation) : null;
+    const bs = city.bookingStation;
+    if (!bs) return null;
+    // 新形式: {name, company}
+    if (typeof bs === 'object' && bs.name) return clean(bs.name);
+    // 旧形式: string
+    return clean(String(bs));
   }
 
-  // 後方互換フォールバック: chainCta.to が空港でなければ使用
-  // （migrateBookingData.js 実行後は事実上ここには到達しない）
   if (chainCta?.to && !isAirport(chainCta.to)) return clean(chainCta.to);
+  return null;
+}
 
+/**
+ * bookingStation の完全情報（{name, company}）を返す。
+ * 旧形式(string)の場合は company="JR" として補完。
+ * @returns {{name: string, company: string} | null}
+ */
+function resolveBookingStationObj(city, chainCta) {
+  if ('bookingStation' in (city ?? {})) {
+    const bs = city.bookingStation;
+    if (!bs) return null;
+    if (typeof bs === 'object' && bs.name) return bs;
+    // 旧形式 → JRとして扱う
+    return { name: String(bs), company: 'JR' };
+  }
   return null;
 }
 
@@ -1205,10 +1221,13 @@ function buildCtaStationNote(chainCta, city, segments) {
   const busDest = new Set(['onsen', 'mountain', 'remote', 'hidden', 'ruins', 'view']);
   const hasBus = segments.some(s => s.type === 'local_bus');
   if (hasBus && busDest.has(dt) && bookingStation) {
-    return `<p class="cta-station-note">※${bookingStation}駅からバスで向かいます</p>`;
+    const stationObj = resolveBookingStationObj(city, chainCta);
+    const company = stationObj?.company;
+    const companyNote = (company && company !== 'JR') ? `（${company}）` : '';
+    return `<p class="cta-station-note">※${bookingStation}駅${companyNote}からバスで向かいます</p>`;
   }
 
-  // JR到達点と最寄り駅が異なる → 最寄り駅を案内（空港アクセスは除外）
+  // 到達点と最寄り駅が異なる → 最寄り駅を案内（空港アクセスは除外）
   if (bookingStation && accessSt && accessSt !== bookingStation) {
     return `<p class="cta-station-note">※最寄り駅：${accessSt}駅</p>`;
   }
@@ -1239,7 +1258,13 @@ function buildChainCtaHtml(chainCta, providerType = null, city = null) {
   // ※ buildCtaBlock で station !== null が確認済みの場合のみここに到達する
   const station = resolveBookingStation(city, chainCta);
   if (station) {
-    const suffix = chainCta.type === 'ferry' ? '（港まで）' : `（${station}まで）`;
+    const stationObj = resolveBookingStationObj(city, chainCta);
+    const company = stationObj?.company;
+    // 非JR: 「片瀬江ノ島駅（小田急）まで」のように会社名を添える
+    const stationLabel = (company && company !== 'JR')
+      ? `${station}駅（${company}）`
+      : `${station}駅`;
+    const suffix = chainCta.type === 'ferry' ? '（港まで）' : `（${stationLabel}まで）`;
     return `このルートで行く${suffix}`;
   }
   const provider = CTA_PROVIDER[providerType] ?? null;
