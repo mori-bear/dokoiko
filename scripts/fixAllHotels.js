@@ -4,6 +4,10 @@
 //
 // 使い方: node scripts/fixAllHotels.js
 // 出力:   各 destination に { hotelLinks: { rakuten, jalan } } を追加
+//
+// ■ 安全装置（全国フォールバック防止）
+//   keyword 生成後に品質チェックを実施し、NG なら 3 段階の自動修正を試みる。
+//   すべてのステップで NG の場合は keywordOverrides.json に追記してログ出力する。
 
 import fs   from 'fs';
 import path from 'path';
@@ -15,6 +19,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DESTS_PATH       = path.join(__dirname, '../src/data/destinations.json');
 const HOTEL_AREAS_PATH = path.join(__dirname, '../src/data/hotelAreas.json');
 const AFFILIATE_PATH   = path.join(__dirname, '../src/data/affiliateProviders.json');
+const OVERRIDES_PATH   = path.join(__dirname, '../src/data/keywordOverrides.json');
 
 const dests       = JSON.parse(fs.readFileSync(DESTS_PATH, 'utf-8'));
 const HOTEL_AREAS = JSON.parse(fs.readFileSync(HOTEL_AREAS_PATH, 'utf-8'));
@@ -82,12 +87,93 @@ function buildJalanAffilUrl(rawJalanUrl) {
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`;
 }
 
+// ── 楽天キーワード品質チェック ────────────────────────────────────────
+
+// 都道府県名リスト（キーワード内包チェック用）
+const PREFECTURE_NAMES = new Set([
+  '北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島',
+  '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川',
+  '新潟', '富山', '石川', '福井', '山梨', '長野', '岐阜',
+  '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫',
+  '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
+  '徳島', '香川', '愛媛', '高知',
+  '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄',
+]);
+
+/**
+ * 楽天キーワードの品質を検証する（静的チェック）。
+ *
+ * FAIL 条件:
+ *   - キーワードが空
+ *   - 2語未満（1語のみ）
+ *   - 都道府県名が含まれない
+ *   - 「温泉」or「宿」が含まれない
+ *
+ * @returns {{ ok: boolean, reason?: string }}
+ */
+function validateKeywordQuality(keyword) {
+  if (!keyword || !keyword.trim()) {
+    return { ok: false, reason: 'キーワードが空' };
+  }
+
+  const tokens = keyword.trim().split(/\s+/);
+  if (tokens.length < 2) {
+    return { ok: false, reason: `1語のみ（"${keyword}"）` };
+  }
+
+  const hasPref = [...PREFECTURE_NAMES].some(p => keyword.includes(p));
+  if (!hasPref) {
+    return { ok: false, reason: `都道府県名なし（"${keyword}"）` };
+  }
+
+  if (!keyword.includes('温泉') && !keyword.includes('宿')) {
+    return { ok: false, reason: `「温泉」「宿」なし（"${keyword}"）` };
+  }
+
+  return { ok: true };
+}
+
+/**
+ * キーワード品質 NG 時の 3 段階自動修正。
+ *
+ * Step1: "{name} {prefecture} 温泉/宿"
+ * Step2: 温泉地なら "{name}温泉郷 {prefecture} 温泉"
+ * Step3: hubCity ベースに切替 "{hubCity} {prefecture} 温泉/宿"
+ *
+ * @returns {{ keyword: string, step: number } | null}
+ */
+function autoFixKeyword(dest) {
+  const isOnsen = dest.destType === 'onsen' || (dest.tags?.includes('温泉') ?? false);
+  const suffix  = isOnsen ? '温泉' : '宿';
+  const pref    = dest.prefecture ?? '';
+
+  // Step 1: name ベース
+  if (dest.name && pref) {
+    const kw1 = `${dest.name} ${pref} ${suffix}`;
+    if (validateKeywordQuality(kw1).ok) return { keyword: kw1, step: 1 };
+  }
+
+  // Step 2: 温泉地なら「温泉郷」補完
+  if (isOnsen && dest.name && pref) {
+    const kw2 = `${dest.name}温泉郷 ${pref} 温泉`;
+    if (validateKeywordQuality(kw2).ok) return { keyword: kw2, step: 2 };
+  }
+
+  // Step 3: hubCity ベース
+  if (dest.hubCity && pref) {
+    const kw3 = `${dest.hubCity} ${pref} ${suffix}`;
+    if (validateKeywordQuality(kw3).ok) return { keyword: kw3, step: 3 };
+  }
+
+  return null;
+}
+
 // ── 楽天URL生成 ──────────────────────────────────────────────────────
 
-// ── 楽天キーワード強制補正マップ ─────────────────────────────────────
+// ── 楽天キーワード強制補正マップ（人間キュレーション） ─────────────────
 // name に key が含まれる場合、value を固定キーワードとして使用する。
 // 理由: 単体キーワードだと楽天が全国フォールバックするエリア名の修正。
-const KEYWORD_OVERRIDES = new Map([
+const KEYWORD_OVERRIDES_STATIC = new Map([
   ['霧島',    '霧島温泉郷 鹿児島 温泉'],
   ['霧島温泉', '霧島温泉郷 鹿児島 温泉'],
   ['阿蘇',    '阿蘇温泉 熊本 温泉'],
@@ -95,37 +181,49 @@ const KEYWORD_OVERRIDES = new Map([
   ['高山',    '飛騨高山 岐阜 宿'],
 ]);
 
+// 自動生成 override（src/data/keywordOverrides.json から読み込み）
+// フォーマット: { "dest_id": "keyword" }
+const OVERRIDES_FILE = fs.existsSync(OVERRIDES_PATH)
+  ? JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf-8'))
+  : {};
+
 /**
  * 楽天キーワードを生成する。
  *
- * ① KEYWORD_OVERRIDES 強制補正（全国フォールバック防止）
- * ② hubCity 最優先（最も安定したエリア名）
- * ③ 都道府県（必須）
- * ④ 温泉 or 宿
+ * ① KEYWORD_OVERRIDES_STATIC（人間キュレーション、name包含マッチ）
+ * ② 自動生成 override（ID 完全一致）
+ * ③ hubCity 最優先（最も安定したエリア名）
+ * ④ 都道府県（必須）
+ * ⑤ 温泉 or 宿
  */
 function buildRakutenKeyword(dest) {
-  // 強制補正: KEYWORD_OVERRIDES に一致する name を持つ場合
-  for (const [key, override] of KEYWORD_OVERRIDES) {
+  // ① 静的補正（name 包含マッチ）
+  for (const [key, override] of KEYWORD_OVERRIDES_STATIC) {
     if (dest.name && dest.name.includes(key)) {
       return override;
     }
   }
 
+  // ② 自動生成 override（ID 完全一致）
+  if (OVERRIDES_FILE[dest.id]) {
+    return OVERRIDES_FILE[dest.id];
+  }
+
   const parts = [];
 
-  // ① hubCity最優先（最も安定）、なければ name
+  // ③ hubCity最優先（最も安定）、なければ name
   if (dest.hubCity) {
     parts.push(dest.hubCity);
   } else if (dest.name) {
     parts.push(dest.name);
   }
 
-  // ② 都道府県（必須）
+  // ④ 都道府県（必須）
   if (dest.prefecture) {
     parts.push(dest.prefecture);
   }
 
-  // ③ 温泉 or 宿
+  // ⑤ 温泉 or 宿
   if (dest.tags?.includes('温泉')) {
     parts.push('温泉');
   } else {
@@ -197,15 +295,46 @@ function resolveJalanUrl(dest) {
 
 // ── メイン ───────────────────────────────────────────────────────────
 
-let updated = 0;
+let updated        = 0;
+let autoFixed      = 0;     // 自動修正が成功した件数
+let overrideAdded  = 0;     // overrides.json に追記した件数
+const failList     = [];    // 全ステップ失敗（人間レビュー必要）
+const newOverrides = { ...OVERRIDES_FILE }; // 自動修正結果を蓄積
 
 for (const dest of dests) {
   if (dest.type !== 'destination') continue;
 
-  // 楽天: buildRakutenKeyword が hubCity を内部で優先するため全件統一処理
-  const rakutenUrl = buildRakutenKeywordUrl(dest);
+  // ── 楽天キーワード生成 + 安全チェック ──────────────────────────────
 
-  // じゃらん: hubCity がある場合は hubCity のエリアを優先
+  let keyword = buildRakutenKeyword(dest);
+  const check = validateKeywordQuality(keyword);
+
+  if (!check.ok) {
+    // 自動修正チェーン（Step1 → Step2 → Step3）
+    const fix = autoFixKeyword(dest);
+
+    if (fix) {
+      // 修正成功 → override として記録（次回実行でも使われる）
+      if (!newOverrides[dest.id] || newOverrides[dest.id] !== fix.keyword) {
+        newOverrides[dest.id] = fix.keyword;
+        overrideAdded++;
+      }
+      keyword = fix.keyword;
+      autoFixed++;
+      console.log(`  ✏ [step${fix.step}] ${dest.name} (${dest.id})`);
+      console.log(`    NG: "${buildRakutenKeyword(dest)}" → OK: "${fix.keyword}"`);
+    } else {
+      // 全ステップ失敗
+      failList.push({ id: dest.id, name: dest.name, reason: check.reason, keyword });
+      console.error(`  ❌ [FAIL] ${dest.name} (${dest.id}): ${check.reason}`);
+    }
+  }
+
+  // keyword → URL
+  const searchUrl   = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
+  const rakutenUrl  = buildRakutenAffilUrl(searchUrl);
+
+  // ── じゃらんURL ─────────────────────────────────────────────────────
   const destName = dest.displayName || dest.name;
   let jalanUrl;
   if (dest.hubCity && dest.hubCity !== destName) {
@@ -224,5 +353,30 @@ for (const dest of dests) {
   updated++;
 }
 
+// ── override ファイル保存 ────────────────────────────────────────────
+
+fs.writeFileSync(OVERRIDES_PATH, JSON.stringify(newOverrides, null, 2), 'utf-8');
+
+// ── destinations.json 保存 ───────────────────────────────────────────
+
 fs.writeFileSync(DESTS_PATH, JSON.stringify(dests, null, 2), 'utf-8');
+
+// ── 結果サマリ ───────────────────────────────────────────────────────
+
+console.log('');
 console.log(`✓ ホテルリンク事前生成完了: ${updated}件`);
+console.log(`  自動修正: ${autoFixed}件`);
+console.log(`  override追加: ${overrideAdded}件`);
+
+if (failList.length > 0) {
+  console.error(`\n⚠ 人間レビュー必要（全ステップ失敗 ${failList.length}件）:`);
+  for (const f of failList) {
+    console.error(`   ${f.name} (${f.id}): ${f.reason}`);
+    console.error(`   → KEYWORD_OVERRIDES_STATIC に追加してください`);
+  }
+  console.error(`\n   ヒント: KEYWORD_OVERRIDES_STATIC に以下を追加:`);
+  for (const f of failList) {
+    console.error(`   ['${f.name}', '${f.name} ${f.keyword.split(' ').slice(1).join(' ')}'],`);
+  }
+  process.exit(1);
+}
