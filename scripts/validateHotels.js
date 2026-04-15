@@ -47,6 +47,27 @@ function buildRakutenCheckUrl(area) {
   return `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeArea(area)}`;
 }
 
+/**
+ * 楽天アフィリエイトURL から実際の楽天 URL を抽出する。
+ * `pc=ENCODED_URL` パラメータをデコードして返す。
+ * アフィリエイトURLでない場合はそのまま返す。
+ */
+function extractRakutenDestUrl(affilUrl) {
+  if (!affilUrl) return null;
+  const m = affilUrl.match(/[?&]pc=([^&]+)/);
+  if (!m) return affilUrl;
+  try { return decodeURIComponent(m[1]); } catch { return affilUrl; }
+}
+
+/**
+ * URL が楽天のエリア直接ページ（SSR）かどうかを判定する。
+ * /yado/PREF/AREA.html 形式 → true
+ * /yado/japan.html?f_query= → false（JS レンダリング）
+ */
+function isRakutenDirectPage(url) {
+  return /\/yado\/[^/]+\/[^?#/]+\.html/.test(url ?? '');
+}
+
 function buildJalanCheckUrl(area) {
   if (!area) return null;
   // じゃらんは Shift-JIS(CP932) エンコードのキーワードを要求する
@@ -97,15 +118,31 @@ async function fetchWithTimeout(url, ms = TIMEOUT_MS) {
 // ── 楽天コンテンツ判定 ───────────────────────────────────────────────
 function validateRakutenContent(body, url) {
   if (!body) return { ok: false, reason: 'empty response' };
+
+  const direct = isRakutenDirectPage(url);
+
+  // 全国マップページ検出（直接エリアページが地図にフォールバックした場合）
+  // ※ keyword search (japan.html?f_query=) は JS レンダリングのため除外
+  if (direct && /地図から宿泊先を探す/.test(body)) {
+    return { ok: false, reason: '全国マップ（エリアページ不在）' };
+  }
+
   // 0件 / 該当なし 判定
   if (/該当する宿泊施設がありません|ご指定の条件に一致する宿泊施設が見つかりません/.test(body)) {
     return { ok: false, reason: '検索結果0件' };
   }
-  // 宿一覧らしき内容があるか
+
+  // 直接エリアページ（SSR）: 件数表示が必須
+  if (direct) {
+    if (/件中|件の宿|件の施設|のホテル・旅館/.test(body)) return { ok: true };
+    if (/404|Not Found|ページが見つかりません/.test(body)) return { ok: false, reason: '404ページ' };
+    return { ok: false, reason: '宿一覧なし（SSR）' };
+  }
+
+  // キーワード検索ページ（JS レンダリング）: 基本チェックのみ
   if (/ホテル|旅館|宿泊施設|施設名|一人当たり/.test(body)) {
     return { ok: true };
   }
-  // エラーページ
   if (/404|Not Found|ページが見つかりません/.test(body)) {
     return { ok: false, reason: '404ページ' };
   }
@@ -137,10 +174,14 @@ function validateJalanContent(body, url) {
 
 // ── 1件を検証 ───────────────────────────────────────────────────────
 async function validateOne(dest) {
-  const rakutenArea = dest.stayArea?.rakuten ?? dest.stayArea;
-  const jalanArea   = dest.stayArea?.jalan   ?? dest.stayArea;
+  const jalanArea = dest.stayArea?.jalan ?? dest.stayArea;
 
-  const rakutenUrl = buildRakutenCheckUrl(rakutenArea);
+  // 楽天: hotelLinks.rakuten があれば実際の URL を使用（エリア直接ページの SSR 検証が可能）
+  // なければ stayArea からキーワード検索 URL を構築（後方互換）
+  const rakutenUrl = dest.hotelLinks?.rakuten
+    ? extractRakutenDestUrl(dest.hotelLinks.rakuten)
+    : buildRakutenCheckUrl(dest.stayArea?.rakuten ?? dest.stayArea);
+
   const jalanUrl   = buildJalanCheckUrl(jalanArea);
 
   const result = {

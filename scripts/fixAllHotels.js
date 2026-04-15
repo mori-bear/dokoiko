@@ -121,11 +121,33 @@ function buildJalanUrl(area) {
   return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encoded}`;
 }
 
+/**
+ * 楽天キーワード検索URL を生成する。
+ *
+ * キーワード決定ロジック（優先順位）:
+ *   1. keyword（stayArea.rakuten — 絶対このまま使用）
+ *   2. onsen 目的地でキーワードに「温泉」なし → 「温泉」補完
+ *   3. hotelAreas に直接エントリなし かつ 汎用ワード → 「宿」補完
+ *      ただし温泉/宿/ホテル/旅館を含む場合は補完しない
+ */
 function buildRakutenKeywordUrl(keyword, dest) {
   if (!keyword) return null;
   let q = keyword;
-  if (dest?.destType === 'onsen' && !q.includes('温泉')) q += '温泉';
+  // ② 温泉目的地 → 「温泉」補完
+  if (dest?.destType === 'onsen' && !q.includes('温泉')) {
+    q = q + '温泉';
+  }
+  // ③ hotelAreas に直接エントリなし → 「宿」補完（検索精度向上）
+  else if (!hasDirectHotelArea(dest) && !/温泉|宿|ホテル|旅館/.test(q)) {
+    q = q + ' 宿';
+  }
   return buildRakutenAffilUrl(buildRakutenUrl(q));
+}
+
+/** dest が hotelAreas.json に直接エントリ（.html パス）を持つか判定 */
+function hasDirectHotelArea(dest) {
+  const area = lookupAreaById(dest?.id);
+  return !!(area?.rakutenPath?.includes('.html'));
 }
 
 function buildJalanKeywordUrl(keyword) {
@@ -135,15 +157,35 @@ function buildJalanKeywordUrl(keyword) {
 
 // ── 宿エリア解決 ──────────────────────────────────────────────────────
 
+/**
+ * 楽天検索キーワード用エリアを解決する。
+ *
+ * 優先順位:
+ *   1. stayArea.rakuten（設定済みなら絶対これ）
+ *   2. 温泉ホワイトリスト一致
+ *   3. 島
+ *   4. hotelAreas.name
+ *   5. mainSpot（温泉を含む場合は優先 — "{mainSpot}温泉" として使用される）
+ *   6. dest.name
+ */
 function resolveStayArea(dest) {
+  // ① stayArea.rakuten が設定済みなら最優先（建前: 絶対これ）
   const sa = getStayAreaFor(dest, 'rakuten');
   if (sa) return sa;
+
   const name = dest.displayName || dest.name;
+  // ② 温泉ホワイトリスト
   if (ONSEN_STAY_AREAS.has(name)) return name;
+  // ③ 島
   if (dest.isIsland || dest.destType === 'island') return name;
+  // ④ hotelAreas エントリ
   const area = lookupAreaById(dest.id);
   if (area?.name) return area.name;
-  if (dest.mainSpot) return dest.mainSpot;
+  // ⑤ mainSpot（温泉含む場合は優先）
+  if (dest.mainSpot) {
+    if (dest.mainSpot.includes('温泉') || dest.destType === 'onsen') return dest.mainSpot;
+  }
+  // ⑥ dest.name
   return name;
 }
 

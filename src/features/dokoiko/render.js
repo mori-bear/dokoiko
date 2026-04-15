@@ -767,16 +767,25 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // レンタカー（車があると便利な場合のみ・最下部配置）
+  // レンタカー: requiresCar=true またはstayAreaが山岳・湖・高原・温泉郷系のエリア
+  const _saStr = (() => {
+    const sa = city?.stayArea;
+    if (!sa) return '';
+    return typeof sa === 'object' ? (sa.rakuten ?? sa.jalan ?? '') : String(sa);
+  })();
+  const _needsRentalHint = !mapOnlyFallback && (
+    city?.requiresCar === true ||
+    /温泉郷|高原|山|湖/.test(_saStr)
+  );
   let rentalHintHtml = '';
-  if (!mapOnlyFallback && city?.requiresCar === true) {
+  if (_needsRentalHint) {
     const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
       rentalHintHtml = `<div class="rental-hint">
         <span class="rental-hint-label">レンタカー推奨エリア</span>
         <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-           class="btn btn-rental btn--action-sm">レンタカーを探す</a>
+           class="btn btn-rental btn--action-sm">レンタカーで行く</a>
       </div>`;
     }
   }
