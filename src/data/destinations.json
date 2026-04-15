@@ -229,8 +229,8 @@
     "bookingStation": "熱海駅",
     "mainSpot": "熱海城",
     "stayArea": {
-      "rakuten": "熱海",
-      "jalan": "熱海"
+      "rakuten": "熱海温泉",
+      "jalan": "熱海温泉"
     }
   },
   {
@@ -385,8 +385,8 @@
     "bookingStation": "日光駅",
     "mainSpot": "東照宮",
     "stayArea": {
-      "rakuten": "日光",
-      "jalan": "日光"
+      "rakuten": "日光温泉",
+      "jalan": "日光温泉"
     }
   },
   {
@@ -1159,8 +1159,8 @@
     "bookingStation": "別府駅",
     "mainSpot": "地獄めぐり",
     "stayArea": {
-      "rakuten": "別府",
-      "jalan": "別府"
+      "rakuten": "別府温泉",
+      "jalan": "別府温泉"
     }
   },
   {
@@ -2220,11 +2220,11 @@
       "name": "紀伊田辺"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%BE%8D%E7%A5%9E%E6%B8%A9%E6%B3%89&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%BE%8D%E7%A5%9E%E6%B8%A9%E6%B3%89",
-    "bookingStation": null,
+    "bookingStation": "紀伊田辺駅",
     "mainSpot": "龍神温泉元湯",
     "stayArea": {
-      "rakuten": "白浜",
-      "jalan": "白浜"
+      "rakuten": "龍神温泉",
+      "jalan": "龍神温泉"
     }
   },
   {
@@ -2927,8 +2927,8 @@
     "bookingStation": "箱根湯本駅",
     "mainSpot": "芦ノ湖",
     "stayArea": {
-      "rakuten": "箱根",
-      "jalan": "箱根"
+      "rakuten": "箱根温泉",
+      "jalan": "箱根温泉"
     }
   },
   {
@@ -3049,8 +3049,8 @@
     "bookingStation": "修善寺駅",
     "mainSpot": "修禅寺",
     "stayArea": {
-      "rakuten": "修善寺",
-      "jalan": "修善寺"
+      "rakuten": "修善寺温泉",
+      "jalan": "修善寺温泉"
     }
   },
   {
@@ -4078,8 +4078,8 @@
     "bookingStation": "白浜駅",
     "mainSpot": "白良浜",
     "stayArea": {
-      "rakuten": "白浜",
-      "jalan": "白浜"
+      "rakuten": "白浜温泉",
+      "jalan": "白浜温泉"
     }
   },
   {
@@ -4471,8 +4471,8 @@
     "bookingStation": "由布院駅",
     "mainSpot": "湯の坪街道",
     "stayArea": {
-      "rakuten": "湯布院",
-      "jalan": "湯布院"
+      "rakuten": "湯布院温泉",
+      "jalan": "湯布院温泉"
     }
   },
   {
@@ -5478,8 +5478,8 @@
     "bookingStation": "蔵王駅",
     "mainSpot": "お釜",
     "stayArea": {
-      "rakuten": "蔵王",
-      "jalan": "蔵王"
+      "rakuten": "蔵王温泉",
+      "jalan": "蔵王温泉"
     }
   },
   {
@@ -6251,8 +6251,8 @@
     "bookingStation": "洞爺駅",
     "mainSpot": "洞爺湖",
     "stayArea": {
-      "rakuten": "洞爺湖",
-      "jalan": "洞爺湖"
+      "rakuten": "洞爺湖温泉",
+      "jalan": "洞爺湖温泉"
     }
   },
   {
@@ -6360,8 +6360,8 @@
     "bookingStation": "登別駅",
     "mainSpot": "地獄谷",
     "stayArea": {
-      "rakuten": "登別",
-      "jalan": "登別"
+      "rakuten": "登別温泉",
+      "jalan": "登別温泉"
     }
   },
   {
@@ -7228,8 +7228,8 @@
     "bookingStation": "指宿駅",
     "mainSpot": "砂むし会館",
     "stayArea": {
-      "rakuten": "指宿",
-      "jalan": "指宿"
+      "rakuten": "指宿温泉",
+      "jalan": "指宿温泉"
     }
   },
   {
@@ -8301,8 +8301,8 @@
     "bookingStation": "札幌駅",
     "mainSpot": "定山渓温泉街",
     "stayArea": {
-      "rakuten": "定山渓",
-      "jalan": "定山渓"
+      "rakuten": "定山渓温泉",
+      "jalan": "定山渓温泉"
     }
   },
   {
@@ -9209,8 +9209,8 @@
     "bookingStation": "諫早駅",
     "mainSpot": "雲仙地獄",
     "stayArea": {
-      "rakuten": "雲仙",
-      "jalan": "雲仙"
+      "rakuten": "雲仙温泉",
+      "jalan": "雲仙温泉"
     }
   },
   {
@@ -15908,8 +15908,8 @@
     "bookingStation": "紀伊田辺駅",
     "mainSpot": "闘鶏神社",
     "stayArea": {
-      "rakuten": "白浜",
-      "jalan": "白浜"
+      "rakuten": "白浜温泉",
+      "jalan": "白浜温泉"
     }
   },
   {
@@ -17402,8 +17402,8 @@
     "bookingStation": null,
     "mainSpot": "マリモ",
     "stayArea": {
-      "rakuten": "阿寒湖",
-      "jalan": "阿寒湖"
+      "rakuten": "阿寒湖温泉",
+      "jalan": "阿寒湖温泉"
     }
   },
   {
@@ -17652,8 +17652,8 @@
     "bookingStation": null,
     "mainSpot": "支笏湖ビジターセンター",
     "stayArea": {
-      "rakuten": "支笏湖",
-      "jalan": "支笏湖"
+      "rakuten": "支笏湖温泉",
+      "jalan": "支笏湖温泉"
     }
   },
   {
@@ -17905,8 +17905,8 @@
     "bookingStation": "男鹿駅",
     "mainSpot": "ナマハゲ館",
     "stayArea": {
-      "rakuten": "男鹿",
-      "jalan": "男鹿"
+      "rakuten": "男鹿温泉",
+      "jalan": "男鹿温泉"
     }
   },
   {
@@ -26360,8 +26360,8 @@
     "bookingStation": "田沢湖駅",
     "mainSpot": "田沢湖",
     "stayArea": {
-      "rakuten": "田沢湖",
-      "jalan": "田沢湖"
+      "rakuten": "田沢湖温泉",
+      "jalan": "田沢湖温泉"
     }
   },
   {
@@ -26740,8 +26740,8 @@
     "bookingStation": "渋川駅",
     "mainSpot": "伊香保石段街",
     "stayArea": {
-      "rakuten": "伊香保",
-      "jalan": "伊香保"
+      "rakuten": "伊香保温泉",
+      "jalan": "伊香保温泉"
     }
   },
   {
@@ -26867,7 +26867,7 @@
       "name": "片瀬江ノ島"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%B1%9F%E3%81%AE%E5%B3%B6&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%B1%9F%E3%81%AE%E5%B3%B6",
-    "bookingStation": "片瀬江ノ島駅",
+    "bookingStation": "藤沢駅",
     "mainSpot": "江島神社",
     "stayArea": {
       "rakuten": "江の島",
@@ -28203,8 +28203,8 @@
     "bookingStation": "妙高高原駅",
     "mainSpot": "妙高山",
     "stayArea": {
-      "rakuten": "妙高高原",
-      "jalan": "妙高高原"
+      "rakuten": "妙高高原温泉",
+      "jalan": "妙高高原温泉"
     }
   },
   {
@@ -28926,7 +28926,7 @@
       "name": "伏見稲荷"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E4%BC%8F%E8%A6%8B&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E4%BC%8F%E8%A6%8B",
-    "bookingStation": "伏見稲荷駅",
+    "bookingStation": "稲荷駅",
     "mainSpot": "伏見稲荷大社",
     "stayArea": {
       "rakuten": "伏見",
@@ -29691,7 +29691,7 @@
       "name": "道後温泉"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89",
-    "bookingStation": "道後温泉駅",
+    "bookingStation": "松山駅",
     "mainSpot": "道後温泉本館",
     "stayArea": {
       "rakuten": "道後温泉",
@@ -30079,7 +30079,7 @@
       "name": "西鉄柳川"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%9F%B3%E5%B7%9D&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%9F%B3%E5%B7%9D",
-    "bookingStation": "西鉄柳川駅",
+    "bookingStation": null,
     "mainSpot": "柳川川下り",
     "stayArea": {
       "rakuten": "柳川",
@@ -32441,7 +32441,7 @@
       "name": "つくば"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%AD%91%E6%B3%A2&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%AD%91%E6%B3%A2",
-    "bookingStation": "つくば駅",
+    "bookingStation": null,
     "mainSpot": "筑波山",
     "stayArea": {
       "rakuten": "筑波",
@@ -33383,8 +33383,8 @@
     "bookingStation": "越後湯沢駅",
     "mainSpot": "石打丸山スキー場",
     "stayArea": {
-      "rakuten": "越後湯沢",
-      "jalan": "越後湯沢"
+      "rakuten": "越後湯沢温泉",
+      "jalan": "越後湯沢温泉"
     }
   },
   {
@@ -34564,7 +34564,7 @@
       "name": "堺東"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%A0%BA&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%A0%BA",
-    "bookingStation": "堺東駅",
+    "bookingStation": "堺市駅",
     "mainSpot": "仁徳天皇陵古墳",
     "stayArea": {
       "rakuten": "堺",
@@ -36140,8 +36140,8 @@
     "bookingStation": "玉名駅",
     "mainSpot": "山鹿灯籠民芸館",
     "stayArea": {
-      "rakuten": "山鹿",
-      "jalan": "山鹿"
+      "rakuten": "山鹿温泉",
+      "jalan": "山鹿温泉"
     }
   },
   {
@@ -40863,7 +40863,7 @@
       "name": "太宰府"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%A4%A7%E5%AE%B0%E5%BA%9C&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%A4%A7%E5%AE%B0%E5%BA%9C",
-    "bookingStation": "太宰府駅",
+    "bookingStation": null,
     "mainSpot": "太宰府天満宮",
     "stayArea": {
       "rakuten": "大宰府",
@@ -44726,7 +44726,7 @@
       "name": "みさき公園"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B2%AC&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B2%AC",
-    "bookingStation": "みさき公園駅",
+    "bookingStation": null,
     "mainSpot": "友ヶ島",
     "stayArea": {
       "rakuten": "岬",
@@ -51649,8 +51649,8 @@
     "bookingStation": "熊本駅",
     "mainSpot": "杖立温泉",
     "stayArea": {
-      "rakuten": "小国",
-      "jalan": "小国"
+      "rakuten": "黒川温泉",
+      "jalan": "黒川温泉"
     }
   },
   {
@@ -53122,8 +53122,8 @@
     "bookingStation": "林野駅",
     "mainSpot": "湯郷温泉",
     "stayArea": {
-      "rakuten": "美作",
-      "jalan": "美作"
+      "rakuten": "湯郷温泉",
+      "jalan": "湯郷温泉"
     }
   },
   {
@@ -53757,8 +53757,8 @@
     "bookingStation": "宮ノ下駅",
     "mainSpot": "富士屋ホテル",
     "stayArea": {
-      "rakuten": "宮ノ下",
-      "jalan": "宮ノ下"
+      "rakuten": "箱根温泉",
+      "jalan": "箱根温泉"
     }
   },
   {

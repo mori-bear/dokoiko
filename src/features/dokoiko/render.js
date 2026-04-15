@@ -884,7 +884,7 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   const jalan   = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
 
-  const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
+  const stayLabel = city?.stayArea?.rakuten || hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const areaLabel = stayLabel || (city?.displayName || city?.name || 'このエリア');
 
   const buttons = [
@@ -917,7 +917,7 @@ function buildStaySubCta(hotelLinks, city, stayCityName = null) {
   const rakuten = stayLinks.find(l => l.type === 'rakuten');
   const jalan   = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
-  const stayLabel = hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
+  const stayLabel = city?.stayArea?.rakuten || hotelLinks.stayCityName || stayCityName || city?.displayName || city?.name || '';
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn-rakuten btn-rakuten--sub" data-track="rakuten_click">楽天で今の空室を見る</a>` : '',
@@ -1934,7 +1934,7 @@ function buildStayBlock(hotelLinks, city, stayType, stayCityName = null) {
 
   const travelMins = city?.travelTimeMinutes ?? 0;
   const isDaytrip  = stayType === 'daytrip';
-  const stayLabel = stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
+  const stayLabel = city?.stayArea?.rakuten || stayCityName || hotelLinks.stayCityName || city?.displayName || city?.name || '';
 
   // 日帰りで遠い場合: 滞在提案メモ（時間表示なし）
   const longDaytripNote = isDaytrip && travelMins >= 150

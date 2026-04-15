@@ -85,16 +85,19 @@ function getStayAreaFor(dest, service) {
  *   5. dest.name（最終フォールバック）
  */
 function resolveStayArea(dest) {
-  // stayArea が設定済みならそれを最優先
+  // 1. stayArea が設定済みならそれを最優先
   const sa = getStayAreaFor(dest, 'rakuten');
   if (sa) return sa;
 
   const name = dest.displayName || dest.name;
-  // 温泉名はホワイトリスト照合（「温泉」を含むだけでは許可しない）
+  // 2. 温泉名はホワイトリスト照合（「温泉」を含むだけでは許可しない）
   if (ONSEN_STAY_AREAS.has(name)) return name;
   if (dest.isIsland || dest.destType === 'island') return name;
+  // 3. hotelAreas エントリ
   const area = lookupAreaById(dest.id);
   if (area?.name) return area.name;
+  // 4. mainSpot（表示スポット名 — 市・町・県レベルより精度が高い）
+  if (dest.mainSpot) return dest.mainSpot;
   return name;
 }
 
@@ -187,12 +190,14 @@ function safeEncode(area) {
 
 /**
  * エリア名を正規化する（エンコード前の前処理）。
- * 余分な空白・全角スペース・制御文字を除去する。
+ * 余分な空白・全角スペース・% 記号・制御文字を除去する。
  */
 function normalizeArea(area) {
   return String(area ?? '')
     .trim()
     .replace(/[\u3000\s]+/g, ' ')  // 全角スペース → 半角スペースに統一
+    .replace(/%/g, '')             // %文字除去（URL二重エンコード防止）
+    .replace(/[\x00-\x1F\x7F]/g, '') // 制御文字除去
     .trim();
 }
 
