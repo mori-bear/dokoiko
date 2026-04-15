@@ -118985,5 +118985,832 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%2587%25E6%25B2%25BB%2520%25E4%25BA%25AC%25E9%2583%25BD%25E5%25BA%259C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2546%258E%25A1"
     }
+  },
+  {
+    "id": "shirahone-onsen",
+    "name": "白骨温泉",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野",
+      "名古屋"
+    ],
+    "weight": 1.55,
+    "description": "乗鞍岳の山麓に湧く白濁の硫黄泉。江戸時代から湯治の地として知られ、今も鄙びた温泉宿が点在する。",
+    "tags": [
+      "温泉",
+      "自然",
+      "山"
+    ],
+    "spots": [
+      "泡の湯旅館",
+      "白骨の湯",
+      "乗鞍岳"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "白骨温泉",
+    "gateways": {
+      "rail": [
+        "松本駅"
+      ],
+      "airport": [],
+      "bus": [
+        "白骨温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "松本",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "松本駅",
+    "busGateway": "白骨温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.2667,
+    "lng": 137.6478,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 155,
+      "osaka": 200,
+      "nagoya": 130,
+      "fukuoka": 370,
+      "takamatsu": 280
+    },
+    "stayRecommendation": "1night",
+    "city": "松本市",
+    "hubStation": "松本駅",
+    "accessStation": "松本駅",
+    "hotelArea": "nagano",
+    "hotelKeyword": "白骨温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "松本駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "松本駅",
+          "to": "白骨温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "松本",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "松本駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "松本駅",
+      "to": "白骨温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "白濁の硫黄泉が、山奥でひっそり待っていた。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "山"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "泡の湯旅館",
+    "subType": "onsen",
+    "stayDescription": "白濁の湯に浸かり、川のせせらぎを聞きながら眠る山の一夜。",
+    "hubCity": "白骨温泉",
+    "stayPriority": "high",
+    "representativeStation": "松本駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "松本駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "松本"
+    },
+    "bookingStation": {
+      "name": "松本駅",
+      "company": "JR"
+    },
+    "mainSpot": "泡の湯旅館",
+    "stayArea": {
+      "rakuten": "白骨温泉",
+      "jalan": "白骨温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2599%25BD%25E9%25AA%25A8%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%2592%258D%259C%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "matsunoyama-onsen",
+    "name": "松之山温泉",
+    "type": "destination",
+    "region": "中部",
+    "hub": "niigata",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "長野"
+    ],
+    "weight": 1.45,
+    "description": "草津・有馬と並ぶ日本三大薬湯の一つ。豪雪地帯の山里に湧く高温の塩化物泉は、保温性が高く「温まりの湯」として知られる。",
+    "tags": [
+      "温泉",
+      "自然",
+      "雪",
+      "秘境"
+    ],
+    "spots": [
+      "凌雲閣",
+      "ナステビュウ湯の山",
+      "美人林"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "松之山温泉",
+    "gateways": {
+      "rail": [
+        "十日町駅"
+      ],
+      "airport": [],
+      "bus": [
+        "松之山温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "十日町",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "十日町駅",
+    "busGateway": "松之山温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "新潟県",
+    "lat": 37.0742,
+    "lng": 138.5614,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 250,
+      "nagoya": 210,
+      "fukuoka": 380,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "1night",
+    "city": "十日町市",
+    "hubStation": "十日町駅",
+    "accessStation": "十日町駅",
+    "hotelArea": "niigata",
+    "hotelKeyword": "松之山温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "十日町駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "十日町駅",
+          "to": "松之山温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "十日町",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "十日町駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "十日町駅",
+      "to": "松之山温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "日本三大薬湯の一つ。雪深い山里で体が温まる。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "雪",
+      "秘境"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "凌雲閣",
+    "subType": "onsen",
+    "stayDescription": "薬効の高い湯に何度でも浸かれる。雪景色の山里で過ごす静かな一夜。",
+    "hubCity": "松之山温泉",
+    "stayPriority": "high",
+    "representativeStation": "十日町駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "十日町駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "十日町"
+    },
+    "bookingStation": {
+      "name": "十日町駅",
+      "company": "JR"
+    },
+    "mainSpot": "凌雲閣",
+    "stayArea": {
+      "rakuten": "松之山温泉",
+      "jalan": "松之山温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259D%25BE%25E4%25B9%258B%25E5%25B1%25B1%25E6%25B8%25A9%25E6%25B3%2589%2520%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25BC%2594%2556%258E%2552%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "hijori-onsen",
+    "name": "肘折温泉",
+    "type": "destination",
+    "region": "東北",
+    "hub": "yamagata",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台",
+      "東京"
+    ],
+    "weight": 1.45,
+    "description": "最上川源流域の山中に開けた湯治の温泉街。江戸時代から続く朝市と、赤茶色の炭酸泉が訪れる人を迎える。",
+    "tags": [
+      "温泉",
+      "秘境",
+      "自然",
+      "湯治"
+    ],
+    "spots": [
+      "肘折温泉街",
+      "朝市",
+      "銅山川"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "肘折温泉",
+    "gateways": {
+      "rail": [
+        "新庄駅"
+      ],
+      "airport": [],
+      "bus": [
+        "肘折温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "新庄",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "新庄駅",
+    "busGateway": "肘折温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "山形県",
+    "lat": 38.7322,
+    "lng": 140.2014,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 420,
+      "nagoya": 380,
+      "fukuoka": 530,
+      "takamatsu": 470
+    },
+    "stayRecommendation": "1night",
+    "city": "大蔵村",
+    "hubStation": "新庄駅",
+    "accessStation": "新庄駅",
+    "hotelArea": "yamagata",
+    "hotelKeyword": "肘折温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "新庄駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "新庄駅",
+          "to": "肘折温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "新庄",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "新庄駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "新庄駅",
+      "to": "肘折温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "江戸の湯治文化がそのまま残る、山奥の温泉街。",
+    "primary": [
+      "温泉",
+      "秘境"
+    ],
+    "secondary": [
+      "自然",
+      "湯治"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "肘折温泉街",
+    "subType": "onsen",
+    "stayDescription": "朝市で地元の人と言葉を交わし、炭酸泉で体をほぐす。山奥の温泉街の静かな時間。",
+    "hubCity": "肘折温泉",
+    "stayPriority": "high",
+    "representativeStation": "新庄駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "新庄駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "新庄"
+    },
+    "bookingStation": {
+      "name": "新庄駅",
+      "company": "JR"
+    },
+    "mainSpot": "肘折温泉街",
+    "stayArea": {
+      "rakuten": "肘折温泉",
+      "jalan": "肘折温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%2582%2598%25E6%258A%2598%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%25B1%25B1%25E5%25BD%25A2%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2549%2590%25DC%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "takayu-onsen",
+    "name": "高湯温泉",
+    "type": "destination",
+    "region": "東北",
+    "hub": "sendai-t",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台",
+      "東京"
+    ],
+    "weight": 1.5,
+    "description": "吾妻山麓に湧く強硫黄泉の秘湯。白濁した湯と強い硫黄の香りが山の宿に漂い、福島市内から最もアクセスしやすい本格秘湯として知られる。",
+    "tags": [
+      "温泉",
+      "自然",
+      "秘境",
+      "湯治"
+    ],
+    "spots": [
+      "旅館玉子湯",
+      "安達屋旅館",
+      "吾妻スカイライン"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "高湯温泉",
+    "gateways": {
+      "rail": [
+        "福島駅"
+      ],
+      "airport": [],
+      "bus": [
+        "高湯温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "福島",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "福島駅",
+    "busGateway": "高湯温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "福島県",
+    "lat": 37.7317,
+    "lng": 140.3581,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 100,
+      "osaka": 295,
+      "nagoya": 245,
+      "fukuoka": 435,
+      "takamatsu": 375
+    },
+    "stayRecommendation": "1night",
+    "city": "福島市",
+    "hubStation": "福島駅",
+    "accessStation": "福島駅",
+    "hotelArea": "fukushima",
+    "hotelKeyword": "高湯温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "福島駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "福島駅",
+          "to": "高湯温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "福島",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "福島駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "福島駅",
+      "to": "高湯温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "白濁の強硫黄泉が、福島の山に湧いている。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "秘境",
+      "湯治"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "旅館玉子湯",
+    "subType": "onsen",
+    "stayDescription": "強烈な硫黄の湯に全身を委ねる。翌朝は吾妻の山が窓から見える。",
+    "hubCity": "高湯温泉",
+    "stayPriority": "high",
+    "representativeStation": "福島駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "福島駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "福島"
+    },
+    "bookingStation": {
+      "name": "福島駅",
+      "company": "JR"
+    },
+    "mainSpot": "旅館玉子湯",
+    "stayArea": {
+      "rakuten": "高湯温泉",
+      "jalan": "高湯温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25AB%2598%25E6%25B9%25AF%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A6%258F%25E5%25B3%25B6%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2582%2593%2592%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "oyu-onsen-akita",
+    "name": "大湯温泉",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "仙台",
+      "東京"
+    ],
+    "weight": 1.4,
+    "description": "十和田湖の南西に位置する温泉地。近くには縄文時代の大湯環状列石が残り、温泉と古代のロマンを同時に楽しめる北東北の秘境。",
+    "tags": [
+      "温泉",
+      "自然",
+      "縄文",
+      "秘境"
+    ],
+    "spots": [
+      "大湯環状列石",
+      "大湯温泉街",
+      "十和田湖"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "大湯温泉",
+    "gateways": {
+      "rail": [
+        "鹿角花輪駅"
+      ],
+      "airport": [],
+      "bus": [
+        "大湯温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "鹿角",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "鹿角花輪駅",
+    "busGateway": "大湯温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "秋田県",
+    "lat": 40.2308,
+    "lng": 140.7558,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 230,
+      "osaka": 445,
+      "nagoya": 400,
+      "fukuoka": 560,
+      "takamatsu": 510
+    },
+    "stayRecommendation": "1night",
+    "city": "鹿角市",
+    "hubStation": "鹿角花輪駅",
+    "accessStation": "鹿角花輪駅",
+    "hotelArea": "akita",
+    "hotelKeyword": "大湯温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "鹿角花輪駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "鹿角花輪駅",
+          "to": "大湯温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "鹿角",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "鹿角花輪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "鹿角花輪駅",
+      "to": "大湯温泉"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "縄文の遺跡と温泉が同居する、秋田の山里。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "縄文",
+      "秘境"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "大湯環状列石",
+    "subType": "onsen",
+    "stayDescription": "縄文人も見たかもしれない星空の下で温泉に浸かる。十和田湖へも足を伸ばせる。",
+    "hubCity": "大湯温泉",
+    "stayPriority": "medium",
+    "representativeStation": "鹿角花輪駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "鹿角花輪駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "鹿角花輪"
+    },
+    "bookingStation": {
+      "name": "鹿角花輪駅",
+      "company": "JR"
+    },
+    "mainSpot": "大湯環状列石",
+    "stayArea": {
+      "rakuten": "大湯温泉",
+      "jalan": "大湯温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E6%25B9%25AF%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%2593%2592%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "takarakawa-onsen",
+    "name": "宝川温泉",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1.45,
+    "description": "谷川連峰の深山・宝川沿いに湧く秘湯。4つの混浴大露天風呂を持つ「汪泉閣」が唯一の宿として知られ、山の自然と大湯船が圧倒的な体験をもたらす。",
+    "tags": [
+      "温泉",
+      "自然",
+      "秘境",
+      "山"
+    ],
+    "spots": [
+      "汪泉閣",
+      "宝川沿い露天風呂",
+      "谷川岳"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "宝川温泉",
+    "gateways": {
+      "rail": [
+        "水上駅"
+      ],
+      "airport": [],
+      "bus": [
+        "宝川温泉"
+      ],
+      "ferry": []
+    },
+    "accessHub": "水上",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "onsen",
+    "railGateway": "水上駅",
+    "busGateway": "宝川温泉",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "群馬県",
+    "lat": 36.8942,
+    "lng": 138.9558,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 100,
+      "osaka": 240,
+      "nagoya": 200,
+      "fukuoka": 400,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "1night",
+    "city": "みなかみ町",
+    "hubStation": "水上駅",
+    "accessStation": "水上駅",
+    "hotelArea": "gunma",
+    "hotelKeyword": "宝川温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "水上駅",
+          "provider": "えきねっと"
+        },
+        {
+          "type": "local",
+          "from": "水上駅",
+          "to": "宝川温泉",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "水上",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "水上駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "from": "水上駅",
+      "to": "宝川温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "沢沿いの露天風呂が4つ並ぶ、山奥の一軒宿。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "秘境",
+      "山"
+    ],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "汪泉閣",
+    "subType": "onsen",
+    "stayDescription": "沢音を聞きながら大露天風呂に浸かる。山の夜は静かで、湯上がりの眠りが深い。",
+    "hubCity": "宝川温泉",
+    "stayPriority": "high",
+    "representativeStation": "水上駅",
+    "finalAccess": {
+      "type": "bus",
+      "from": "水上駅"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "水上"
+    },
+    "bookingStation": {
+      "name": "水上駅",
+      "company": "JR"
+    },
+    "mainSpot": "汪泉閣",
+    "stayArea": {
+      "rakuten": "宝川温泉",
+      "jalan": "宝川温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%259D%25E5%25B7%259D%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25BE%25A4%25E9%25A6%25AC%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%25F3%2590%25EC%2589%25B7%2590%25F2"
+    }
   }
 ]
