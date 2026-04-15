@@ -85,23 +85,45 @@ function buildJalanAffilUrl(rawJalanUrl) {
 // ── 楽天URL生成 ──────────────────────────────────────────────────────
 
 /**
+ * 楽天キーワードを生成する。
+ *
+ * ① hubCity 最優先（最も安定したエリア名）
+ * ② 都道府県（必須）
+ * ③ 温泉 or 宿
+ */
+function buildRakutenKeyword(dest) {
+  const parts = [];
+
+  // ① hubCity最優先（最も安定）、なければ name
+  if (dest.hubCity) {
+    parts.push(dest.hubCity);
+  } else if (dest.name) {
+    parts.push(dest.name);
+  }
+
+  // ② 都道府県（必須）
+  if (dest.prefecture) {
+    parts.push(dest.prefecture);
+  }
+
+  // ③ 温泉 or 宿
+  if (dest.tags?.includes('温泉')) {
+    parts.push('温泉');
+  } else {
+    parts.push('宿');
+  }
+
+  return parts.join(' ');
+}
+
+/**
  * 楽天キーワード検索URL を生成する。
- *
- * /yado/search/Japan/ を使用（japan.html?f_query= は全国ページにフォールバックするため廃止）。
- * キーワード: "{name} {prefecture} {温泉 | 宿}"
- *   - tags に「温泉」がある → 温泉
- *   - それ以外 → 宿
- *
- * @param {{ name?: string, displayName?: string, prefecture?: string, tags?: string[] }} dest
+ * japan.html?f_query= を使用（唯一 HTTP 200 を返すエンドポイント）。
+ * encodeURIComponent は1回のみ。
  */
 function buildRakutenKeywordUrl(dest) {
-  const parts = [];
-  const name = dest.displayName || dest.name;
-  if (name) parts.push(name);
-  if (dest.prefecture) parts.push(dest.prefecture);
-  parts.push(dest.tags?.includes('温泉') ? '温泉' : '宿');
-  const keyword = parts.join(' ');
-  const searchUrl = `https://travel.rakuten.co.jp/yado/search/Japan/?f_query=${encodeURIComponent(keyword)}`;
+  const keyword = buildRakutenKeyword(dest);
+  const searchUrl = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
   return buildRakutenAffilUrl(searchUrl);
 }
 
@@ -161,22 +183,19 @@ let updated = 0;
 for (const dest of dests) {
   if (dest.type !== 'destination') continue;
 
-  const destName = dest.displayName || dest.name;
-  let rakutenUrl, jalanUrl;
+  // 楽天: buildRakutenKeyword が hubCity を内部で優先するため全件統一処理
+  const rakutenUrl = buildRakutenKeywordUrl(dest);
 
-  // hubCity が目的地と異なる → hubCity の宿を検索（宿泊先が hubCity のため）
+  // じゃらん: hubCity がある場合は hubCity のエリアを優先
+  const destName = dest.displayName || dest.name;
+  let jalanUrl;
   if (dest.hubCity && dest.hubCity !== destName) {
     const hubArea = lookupAreaByName(dest.hubCity);
-    // 楽天: hubCity 名で検索（stayArea にあたる都市名を使用）
-    const hubDest = { name: dest.hubCity, prefecture: dest.prefecture, tags: dest.tags };
-    rakutenUrl = buildRakutenKeywordUrl(hubDest);
-    // じゃらん: 既存ロジック（jalanUrl が直接設定されていれば優先）
     jalanUrl = hubArea?.jalanUrl
       ? buildJalanAffilUrl(hubArea.jalanUrl)
       : buildJalanKeywordUrl(dest.hubCity);
   } else {
-    rakutenUrl = buildRakutenKeywordUrl(dest);
-    jalanUrl   = resolveJalanUrl(dest);
+    jalanUrl = resolveJalanUrl(dest);
   }
 
   dest.hotelLinks = {
