@@ -366,5 +366,61 @@
     "to": "佐田岬",
     "operator": null,
     "url": null
+  },
+  {
+    "destId": "kakeroma-island",
+    "destName": "加計呂麻島",
+    "from": "古仁屋港",
+    "to": "加計呂麻島",
+    "operator": "瀬戸内町フェリー",
+    "url": "https://town.setouchi.lg.jp/"
+  },
+  {
+    "destId": "tobishima-island",
+    "destName": "飛島",
+    "from": "酒田港",
+    "to": "飛島",
+    "operator": "酒田市フェリー",
+    "url": "https://www.city.sakata.lg.jp/"
+  },
+  {
+    "destId": "awashima-island",
+    "destName": "粟島",
+    "from": "岩船港",
+    "to": "粟島",
+    "operator": "粟島汽船",
+    "url": "https://awashimakisen.jp/"
+  },
+  {
+    "destId": "tarama-island",
+    "destName": "多良間島",
+    "from": "平良港",
+    "to": "多良間島",
+    "operator": "宮古フェリー",
+    "url": "https://miyako-ferry.co.jp/"
+  },
+  {
+    "destId": "mishima-yamaguchi",
+    "destName": "見島",
+    "from": "萩港",
+    "to": "見島",
+    "operator": "萩市営フェリー",
+    "url": "https://www.city.hagi.lg.jp/"
+  },
+  {
+    "destId": "teuri-island",
+    "destName": "天売島",
+    "from": "羽幌港",
+    "to": "天売島",
+    "operator": "ハートランドフェリー",
+    "url": "https://heartlandferry.jp/"
+  },
+  {
+    "destId": "ushibuka",
+    "destName": "牛深",
+    "from": "牛深港",
+    "to": "蔵之元港",
+    "operator": "天草宝島ライン",
+    "url": "https://takarajima-line.co.jp/"
   }
 ]
