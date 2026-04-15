@@ -469,21 +469,35 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   // ② 予約CTA（地図の下）
   const suppressBooking = best?.islandDisplayType === 'bus' || best?.islandDisplayType === 'car';
   let ctaHtml = '';
-  if (!tc?.mapOnlyFallback && !suppressBooking && chainCta) {
-    const mainCta = transportLinks?.find(l => l.type === 'main-cta');
-    if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
-      const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city);
-      seenUrls.add(mainCta.cta.url);
+  if (!tc?.mapOnlyFallback && !suppressBooking) {
+    const station = chainCta ? resolveBookingStation(city, chainCta) : null;
 
-      // サブテキスト生成（T3/T4）
-      const stationNote = buildCtaStationNote(chainCta, city, best?.segments ?? []);
-
-      ctaHtml = `
-        <div class="cta-action">
-          <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
-             class="btn ${actionBtnClass(mainCta.cta.type)} btn--action" data-track="cta_click">${label}</a>
-          ${stationNote}
-        </div>`;
+    if (chainCta && station !== null) {
+      // 駅あり → 鉄道予約CTA: 「このルートで行く（○○まで）」
+      const mainCta = transportLinks?.find(l => l.type === 'main-cta');
+      if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
+        const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city);
+        seenUrls.add(mainCta.cta.url);
+        const stationNote = buildCtaStationNote(chainCta, city, best?.segments ?? []);
+        ctaHtml = `
+          <div class="cta-action">
+            <a href="${mainCta.cta.url}" target="_blank" rel="noopener noreferrer"
+               class="btn ${actionBtnClass(mainCta.cta.type)} btn--action" data-track="cta_click">${label}</a>
+            ${stationNote}
+          </div>`;
+      }
+    } else if (!chainCta?.nonJrOnly) {
+      // 駅なし（bookingStation=null）→ レンタカーCTA
+      const destName = city?.displayName || city?.name || '';
+      const carUrl   = buildCarUrl(destName);
+      if (carUrl && !seenUrls.has(carUrl)) {
+        seenUrls.add(carUrl);
+        ctaHtml = `
+          <div class="cta-action">
+            <a href="${carUrl}" target="_blank" rel="noopener noreferrer"
+               class="btn btn-rental btn--action" data-track="car_click">レンタカーで行く</a>
+          </div>`;
+      }
     }
   }
 
@@ -1133,27 +1147,27 @@ const CTA_TYPE_HINT = {
 
 /**
  * 予約ステーション解決（優先順位）:
- *   1. city.bookingStation（明示的オーバーライド）
- *   2. chainCta.to（transportEngineが算出したJR到達点）— 空港は除外
- *   3. city.fallbackStation（任意フォールバック）
- *   4. city.accessStation — 空港の場合は除外（駅ではないため）
+ *   1. city.bookingStation（destinations.json に明示設定 — null なら非表示）
+ *   2. chainCta.to（transport engine が算出した JR 到達点）— 空港は除外
+ *      ※ city.bookingStation が設定済みの場合はこのフォールバックを使わない
  *
  * 空港名はアクセス手段であり「どこまで行くか」の駅名として表示しない。
+ * accessStation / fallbackStation / hubCity からの自動生成は廃止。
+ * 存在しない駅（例: 龍神温泉駅）を生成しないための安全策。
  */
 function resolveBookingStation(city, chainCta) {
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
   const isAirport = (n) => /空港/.test(String(n ?? ''));
 
-  if (city?.bookingStation)  return clean(city.bookingStation);
+  // destinations.json に bookingStation が明示設定済みの場合はそれのみ使用
+  // null が設定されている = 「駅なし」確定 → レンタカー表示に切り替え
+  if ('bookingStation' in (city ?? {})) {
+    return city.bookingStation ? clean(city.bookingStation) : null;
+  }
 
-  // chainCta.to が空港の場合は使わない（例: 鹿児島空港 → JR駅ではない）
+  // 後方互換フォールバック: chainCta.to が空港でなければ使用
+  // （migrateBookingData.js 実行後は事実上ここには到達しない）
   if (chainCta?.to && !isAirport(chainCta.to)) return clean(chainCta.to);
-
-  if (city?.fallbackStation) return clean(city.fallbackStation);
-
-  // accessStation が空港の場合は hubCity にフォールバック
-  if (city?.accessStation && !isAirport(city.accessStation)) return clean(city.accessStation);
-  if (city?.hubCity)         return clean(city.hubCity);
 
   return null;
 }
@@ -1221,11 +1235,12 @@ function buildChainCtaHtml(chainCta, providerType = null, city = null) {
     return sub ? `${to}への行き方を見る（${sub}）` : `${to}への行き方を見る`;
   }
 
-  // JR/mixed → 「このルートで行く（○○駅まで）」（T3）
+  // JR/mixed → 「このルートで行く（○○まで）」
+  // ※ buildCtaBlock で station !== null が確認済みの場合のみここに到達する
   const station = resolveBookingStation(city, chainCta);
   if (station) {
-    const suffix = chainCta.type === 'ferry' ? '港まで' : '駅まで';
-    return `このルートで行く（${station}${suffix}）`;
+    const suffix = chainCta.type === 'ferry' ? '（港まで）' : `（${station}まで）`;
+    return `このルートで行く${suffix}`;
   }
   const provider = CTA_PROVIDER[providerType] ?? null;
   const sub = [provider, hint].filter(Boolean).join('・');
@@ -1382,10 +1397,30 @@ function buildRouteSummary(departure, destLabel, city, routeSteps = null) {
 
 function buildDestMapUrl(city) {
   if (!city) return null;
-  // 目的地の優先順位: 観光スポット → 宿エリア → 駅名 → 都市名
-  const spot = city.spots?.[0] ?? null;
-  const name = spot || city.displayName || city.name || '';
+  // mainSpot 優先 → 観光スポット → 都市名
+  const name = city.mainSpot || city.spots?.[0] || city.displayName || city.name || '';
   return name ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}` : null;
+}
+
+/**
+ * Google Maps transit 経路 URL（出発地 → 最寄り駅）
+ * bookingStation が null のとき null を返す。
+ */
+function buildTransitUrl(from, station) {
+  if (!from || !station) return null;
+  return `https://www.google.com/maps/dir/?api=1` +
+    `&origin=${encodeURIComponent(from)}` +
+    `&destination=${encodeURIComponent(station + '駅')}` +
+    `&travelmode=transit`;
+}
+
+/**
+ * レンタカー検索 URL（Google Maps スポット検索）
+ * bookingStation が null の目的地に表示する。
+ */
+function buildCarUrl(destination) {
+  if (!destination) return null;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(destination)}`;
 }
 
 /**

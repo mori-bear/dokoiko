@@ -63,10 +63,32 @@ function isWeak(dest) {
 }
 
 /**
+ * stayArea フィールドからサービス別キーワードを取得。
+ * stayArea が string → 楽天・じゃらん共通（後方互換）
+ * stayArea が { rakuten, jalan } → サービス別
+ */
+function getStayAreaFor(dest, service) {
+  const sa = dest.stayArea;
+  if (!sa) return null;
+  if (typeof sa === 'string') return sa;
+  const other = service === 'rakuten' ? 'jalan' : 'rakuten';
+  return sa[service] ?? sa[other] ?? null;
+}
+
+/**
  * 宿検索エリアを解決する（観光エリア粒度 — 楽天/じゃらん検索キーワード用）。
- * UIラベルとは分離。検索には「四万十川」でも有効（楽天でヒットする）。
+ * 優先順位:
+ *   1. dest.stayArea.rakuten（migrateBookingData.js で設定済み）
+ *   2. ONSEN_STAY_AREAS ホワイトリスト
+ *   3. 島名
+ *   4. hotelAreas エリア名
+ *   5. dest.name（最終フォールバック）
  */
 function resolveStayArea(dest) {
+  // stayArea が設定済みならそれを最優先
+  const sa = getStayAreaFor(dest, 'rakuten');
+  if (sa) return sa;
+
   const name = dest.displayName || dest.name;
   // 温泉名はホワイトリスト照合（「温泉」を含むだけでは許可しない）
   if (ONSEN_STAY_AREAS.has(name)) return name;
@@ -149,13 +171,43 @@ function buildRakutenAffilUrl(destUrl) {
 }
 
 /**
+ * 二重エンコード防止エンコーダー。
+ * すでに encodeURIComponent 済みの文字列が渡された場合、一度デコードしてから再エンコードする。
+ * Shift_JIS 完全廃止 — UTF-8 のみ使用。
+ */
+function safeEncode(area) {
+  try {
+    return decodeURIComponent(area) !== area
+      ? encodeURIComponent(decodeURIComponent(area))
+      : encodeURIComponent(area);
+  } catch {
+    return encodeURIComponent(area);
+  }
+}
+
+/**
+ * 楽天キーワード検索 純粋URL（アフィリエイトなし）
+ * Shift_JIS 廃止・safeEncode で二重エンコード防止
+ */
+function buildRakutenUrl(area) {
+  return `https://travel.rakuten.co.jp/yado/japan.html?f_query=${safeEncode(area)}`;
+}
+
+/**
+ * じゃらんキーワード検索 純粋URL（アフィリエイトなし）
+ * Shift_JIS 廃止・safeEncode で二重エンコード防止
+ */
+function buildJalanUrl(area) {
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${safeEncode(area)}`;
+}
+
+/**
  * 楽天キーワード検索URL（エリア特化ページがない場合のフォールバック）
  * 観光エリア名で直接検索し、都道府県レベルより精度の高い結果を返す
  */
 function buildRakutenKeywordUrl(keyword) {
   if (!keyword) return null;
-  const destUrl = `https://travel.rakuten.co.jp/yado/?f_query=${encodeURIComponent(keyword)}&f_max=30`;
-  return buildRakutenAffilUrl(destUrl);
+  return buildRakutenAffilUrl(buildRakutenUrl(keyword));
 }
 
 /** rakutenPath が都道府県レベル（粗粒度）かどうかを判定 */
@@ -167,7 +219,7 @@ function isCoarseRakutenPath(path) {
 
 /**
  * じゃらん VC アフィリエイトリンク
- * jalanUrl は UTF-8 encodeURIComponent 済みの URL（Shift-JIS廃止）
+ * jalanUrl は UTF-8 safeEncode 済みの URL（Shift-JIS廃止）
  */
 function buildJalanAffilUrl(rawJalanUrl) {
   return appendDateParams(`https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=${JALAN_VC_SID}&pid=${JALAN_VC_PID}&vc_url=${encodeURIComponent(rawJalanUrl)}`);
@@ -179,8 +231,7 @@ function buildJalanAffilUrl(rawJalanUrl) {
  */
 function buildJalanKeywordUrl(keyword) {
   if (!keyword) return null;
-  const rawUrl = `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(keyword)}`;
-  return buildJalanAffilUrl(rawUrl);
+  return buildJalanAffilUrl(buildJalanUrl(keyword));
 }
 
 /**
@@ -231,14 +282,19 @@ function resolveRakutenUrl(dest) {
  * じゃらんURLをスポット単位で解決（CV向上: 温泉名/島名で検索）
  *
  * 優先順位:
- *   1. 温泉（destType=onsen or ONSEN_STAY_AREAS一致）→ 温泉名でキーワード検索
- *   2. 島（destType=island）→ 島名でキーワード検索
- *   3. hotelAreas.jalanUrl（Shift-JIS市区町村検索）→ 既存
- *   4. fallbackCity の jalanUrl
- *   5. 最終フォールバック: displayName でキーワード検索
+ *   1. dest.stayArea.jalan（migrateBookingData.js で設定済み）
+ *   2. 温泉（destType=onsen or ONSEN_STAY_AREAS一致）→ 温泉名でキーワード検索
+ *   3. 島（destType=island）→ 島名でキーワード検索
+ *   4. hotelAreas.jalanUrl（UTF-8市区町村検索）
+ *   5. fallbackCity の jalanUrl
+ *   6. 最終フォールバック: displayName でキーワード検索
  */
 function resolveJalanUrl(dest) {
   const name = dest.displayName || dest.name;
+
+  // stayArea.jalan が設定済みならそれを最優先（文字化け防止）
+  const jalanArea = getStayAreaFor(dest, 'jalan');
+  if (jalanArea) return buildJalanKeywordUrl(jalanArea);
 
   // 温泉: 温泉名で直接検索（じゃらんの強み）
   if (dest.destType === 'onsen' || ONSEN_STAY_AREAS.has(name)) {
