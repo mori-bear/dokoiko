@@ -186,28 +186,47 @@ function safeEncode(area) {
 }
 
 /**
+ * エリア名を正規化する（エンコード前の前処理）。
+ * 余分な空白・全角スペース・制御文字を除去する。
+ */
+function normalizeArea(area) {
+  return String(area ?? '')
+    .trim()
+    .replace(/[\u3000\s]+/g, ' ')  // 全角スペース → 半角スペースに統一
+    .trim();
+}
+
+/**
  * 楽天キーワード検索 純粋URL（アフィリエイトなし）
  * Shift_JIS 廃止・safeEncode で二重エンコード防止
  */
 function buildRakutenUrl(area) {
-  return `https://travel.rakuten.co.jp/yado/japan.html?f_query=${safeEncode(area)}`;
+  return `https://travel.rakuten.co.jp/yado/japan.html?f_query=${safeEncode(normalizeArea(area))}`;
 }
 
 /**
  * じゃらんキーワード検索 純粋URL（アフィリエイトなし）
- * Shift_JIS 廃止・safeEncode で二重エンコード防止
+ * Shift_JIS 廃止・normalizeArea + safeEncode で二重エンコード防止
  */
 function buildJalanUrl(area) {
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${safeEncode(area)}`;
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${safeEncode(normalizeArea(area))}`;
 }
 
 /**
  * 楽天キーワード検索URL（エリア特化ページがない場合のフォールバック）
  * 観光エリア名で直接検索し、都道府県レベルより精度の高い結果を返す
+ *
+ * @param {string} keyword — 検索キーワード
+ * @param {object} [dest]  — destinations エントリ（温泉補完に使用）
  */
-function buildRakutenKeywordUrl(keyword) {
+function buildRakutenKeywordUrl(keyword, dest) {
   if (!keyword) return null;
-  return buildRakutenAffilUrl(buildRakutenUrl(keyword));
+  let q = keyword;
+  // 温泉目的地でキーワードに「温泉」が含まれない場合は補完（検索精度向上）
+  if (dest?.destType === 'onsen' && !q.includes('温泉')) {
+    q = q + '温泉';
+  }
+  return buildRakutenAffilUrl(buildRakutenUrl(q));
 }
 
 /** rakutenPath が都道府県レベル（粗粒度）かどうかを判定 */
@@ -251,7 +270,7 @@ function resolveRakutenUrl(dest) {
     // 粗粒度 → キーワード検索で観光エリア粒度に
     if (path) {
       const stayArea = resolveStayArea(dest);
-      return buildRakutenKeywordUrl(stayArea);
+      return buildRakutenKeywordUrl(stayArea, dest);
     }
   }
 
@@ -263,7 +282,7 @@ function resolveRakutenUrl(dest) {
       return buildRakutenAffilUrl(buildRakutenDestUrl(path));
     }
     if (path) {
-      return buildRakutenKeywordUrl(dest.fallbackCity);
+      return buildRakutenKeywordUrl(dest.fallbackCity, dest);
     }
   }
 
@@ -275,7 +294,7 @@ function resolveRakutenUrl(dest) {
   }
   // 最終フォールバック: キーワード検索
   const stayArea = resolveStayArea(dest);
-  return buildRakutenKeywordUrl(stayArea);
+  return buildRakutenKeywordUrl(stayArea, dest);
 }
 
 /**
