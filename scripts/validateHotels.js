@@ -115,6 +115,38 @@ async function fetchWithTimeout(url, ms = TIMEOUT_MS) {
   }
 }
 
+// ── 楽天キーワード品質チェック（静的検証） ──────────────────────────
+//
+// japan.html?f_query= は JS-rendered のためコンテンツ検証は不可。
+// f_query パラメータの内容で品質を静的に判定する。
+//
+// FAIL 条件:
+//   - キーワードが 1 語以下（都市名のみ、地名なし）
+//   - キーワードが空
+//
+// WARN 条件:
+//   - 都道府県名が含まれない（全国フォールバックリスク）
+function validateRakutenKeyword(url) {
+  let keyword = '';
+  try {
+    const parsed = new URL(url);
+    keyword = decodeURIComponent(parsed.searchParams.get('f_query') ?? '');
+  } catch {
+    return { ok: false, reason: 'URL パース失敗' };
+  }
+
+  if (!keyword) {
+    return { ok: false, reason: 'f_query が空' };
+  }
+
+  const tokens = keyword.trim().split(/\s+/);
+  if (tokens.length < 2) {
+    return { ok: false, reason: `キーワードが1語（"${keyword}"）` };
+  }
+
+  return { ok: true };
+}
+
 // ── 楽天コンテンツ判定 ───────────────────────────────────────────────
 //
 // 注意: japan.html?f_query= は JS レンダリングページのため、
@@ -197,15 +229,24 @@ async function validateOne(dest) {
 
   // 楽天
   if (rakutenUrl) {
-    const r = await fetchWithTimeout(rakutenUrl);
-    const content = r.status === 200 ? validateRakutenContent(r.body, rakutenUrl) : { ok: false, reason: `HTTP ${r.status}` };
-    result.rakuten = { url: rakutenUrl, ok: content.ok, status: r.status, reason: content.reason, finalUrl: r.url };
-    if (!content.ok) {
+    // 静的キーワード品質チェック（リクエスト前）
+    const kwCheck = validateRakutenKeyword(rakutenUrl);
+    if (!kwCheck.ok) {
       const keyword = (() => { try { return decodeURIComponent(new URL(rakutenUrl).searchParams.get('f_query') ?? ''); } catch { return ''; } })();
-      console.error(`  ❌ [楽天] ${dest.name}: ${content.reason ?? 'HTTP ' + r.status}`);
-      console.error(`     keyword="${keyword}" url=${rakutenUrl}`);
+      result.rakuten = { url: rakutenUrl, ok: false, status: 0, reason: kwCheck.reason };
+      console.error(`  ❌ [楽天キーワード] ${dest.name}: ${kwCheck.reason}`);
+      console.error(`     keyword="${keyword}"`);
+    } else {
+      const r = await fetchWithTimeout(rakutenUrl);
+      const content = r.status === 200 ? validateRakutenContent(r.body, rakutenUrl) : { ok: false, reason: `HTTP ${r.status}` };
+      result.rakuten = { url: rakutenUrl, ok: content.ok, status: r.status, reason: content.reason, finalUrl: r.url };
+      if (!content.ok) {
+        const keyword = (() => { try { return decodeURIComponent(new URL(rakutenUrl).searchParams.get('f_query') ?? ''); } catch { return ''; } })();
+        console.error(`  ❌ [楽天] ${dest.name}: ${content.reason ?? 'HTTP ' + r.status}`);
+        console.error(`     keyword="${keyword}" url=${rakutenUrl}`);
+      }
+      await sleep(DELAY_BETWEEN);
     }
-    await sleep(DELAY_BETWEEN);
   }
 
   // じゃらん（タイムアウトは WARN として扱う）

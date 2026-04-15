@@ -84,17 +84,31 @@ function buildJalanAffilUrl(rawJalanUrl) {
 
 // ── 楽天URL生成 ──────────────────────────────────────────────────────
 
+// ── 楽天キーワード強制補正マップ ─────────────────────────────────────
+// name に key が含まれる場合、value を固定キーワードとして使用する。
+// 理由: 単体キーワードだと楽天が全国フォールバックするエリア名の修正。
+const KEYWORD_OVERRIDES = new Map([
+  ['霧島',    '霧島温泉郷 鹿児島 温泉'],
+  ['霧島温泉', '霧島温泉郷 鹿児島 温泉'],
+  ['阿蘇',    '阿蘇温泉 熊本 温泉'],
+  ['日田',    '日田温泉 大分 温泉'],
+  ['高山',    '飛騨高山 岐阜 宿'],
+]);
+
 /**
  * 楽天キーワードを生成する。
  *
- * ① hubCity 最優先（最も安定したエリア名）
- * ② 都道府県（必須）
- * ③ 温泉 or 宿
+ * ① KEYWORD_OVERRIDES 強制補正（全国フォールバック防止）
+ * ② hubCity 最優先（最も安定したエリア名）
+ * ③ 都道府県（必須）
+ * ④ 温泉 or 宿
  */
 function buildRakutenKeyword(dest) {
-  // 強制補正: 霧島系（単体キーワードだと全国フォールバックするため）
-  if (dest.name && (dest.name.includes('霧島') || dest.name.includes('霧島温泉'))) {
-    return '霧島温泉郷 鹿児島 温泉';
+  // 強制補正: KEYWORD_OVERRIDES に一致する name を持つ場合
+  for (const [key, override] of KEYWORD_OVERRIDES) {
+    if (dest.name && dest.name.includes(key)) {
+      return override;
+    }
   }
 
   const parts = [];
