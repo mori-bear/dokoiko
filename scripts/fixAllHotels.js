@@ -124,30 +124,41 @@ function buildJalanUrl(area) {
 /**
  * 楽天キーワード検索URL を生成する。
  *
- * 単体ワード禁止: 必ず「地名＋都道府県名」にすることで楽天のエリア認識を確実にする。
- *
  * キーワード決定ロジック（優先順位）:
- *   1. keyword（stayArea.rakuten）がある場合 → "{keyword} {prefecture}"
- *   2. onsen 目的地でキーワードに「温泉」なし → "{keyword}温泉 {prefecture}"
- *   3. keyword が空 / fallback → "{prefecture} 宿"
+ *   ① keyword が「温泉」含む（stayArea.rakuten / mainSpot が温泉系）
+ *     → "{keyword} {prefecture} 温泉"（温泉ワード必ず末尾付与）
+ *   ② onsen 目的地でキーワードに「温泉」なし
+ *     → "{keyword}温泉 {prefecture} 温泉"
+ *   ③ その他: 単体ワード禁止 → "{keyword} {prefecture}"
+ *   NG fallback（keyword なし）:
+ *     - onsen → "{prefecture} 温泉"
+ *     - それ以外 → "{prefecture} 宿"
  */
 function buildRakutenKeywordUrl(keyword, dest) {
-  // 都道府県名（末尾の県/府/都/道を除去）
   const pref = String(dest?.prefecture ?? '').replace(/[県府都道]$/, '');
+  const isOnsen = dest?.destType === 'onsen';
 
+  // NG fallback: keyword なし
   if (!keyword) {
-    // ③ fallback: "都道府県 宿"
+    if (isOnsen) return pref ? buildRakutenAffilUrl(buildRakutenUrl(`${pref} 温泉`)) : null;
     return pref ? buildRakutenAffilUrl(buildRakutenUrl(`${pref} 宿`)) : null;
   }
 
   let q = keyword;
 
-  // ② 温泉目的地でキーワードに「温泉」なし → 「温泉」補完
-  if (dest?.destType === 'onsen' && !q.includes('温泉')) {
-    q = q + '温泉';
+  // ② onsen かつ keyword に「温泉」なし → 温泉を補完
+  if (isOnsen && !q.includes('温泉')) {
+    q = `${q}温泉`;
   }
 
-  // ① 単体ワード禁止: 都道府県名を付加（既に含む場合はスキップ）
+  // ①②: 「温泉」含む → "{keyword} {pref} 温泉" 形式で温泉ワードを末尾強制
+  if (q.includes('温泉')) {
+    const withPref = (pref && !q.includes(pref)) ? `${q} ${pref}` : q;
+    const withOnsen = withPref.endsWith('温泉') ? withPref : `${withPref} 温泉`;
+    return buildRakutenAffilUrl(buildRakutenUrl(withOnsen));
+  }
+
+  // ③ 単体ワード禁止: 都道府県名を付加
   if (pref && !q.includes(pref)) {
     q = `${q} ${pref}`;
   }
