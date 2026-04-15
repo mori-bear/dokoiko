@@ -408,7 +408,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2597%25A5%25E5%2585%2589%2520%25E6%25A0%2583%25E6%259C%25A8%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25FA%258C%25F5%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "karuizawa",
@@ -669,7 +670,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AF%258C%25E5%25A3%25AB%25E6%25B2%25B3%25E5%258F%25A3%25E6%25B9%2596%2520%25E5%25B1%25B1%25E6%25A2%25A8%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2578%258E%256D%2589%25CD%258C%25FB%258C%25CE"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "nara",
@@ -936,7 +938,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%259F%25B3%25E5%259E%25A3%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25CE%258A%255F%2593%2587"
-    }
+    },
+    "accessType": "plane"
   },
   {
     "id": "ise",
@@ -1490,7 +1493,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AF%258C%25E8%2589%25AF%25E9%2587%258E%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2578%2597%25C7%2596%25EC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "matsushima",
@@ -1785,7 +1789,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%25AE%25E5%25B3%25B6%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%257B%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "onomichi",
@@ -2073,7 +2078,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E8%25B1%2586%25E5%25B3%25B6%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2593%25A4%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "mihonoseki",
@@ -2204,7 +2210,10 @@
       "name": "境港"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%BE%8E%E4%BF%9D%E9%96%A2&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%BE%8E%E4%BF%9D%E9%96%A2",
-    "bookingStation": null,
+    "bookingStation": {
+      "name": "境港駅",
+      "company": "JR"
+    },
     "mainSpot": "美保神社",
     "stayArea": {
       "rakuten": "米子",
@@ -2213,7 +2222,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25B1%25B3%25E5%25AD%2590%2520%25E5%25B3%25B6%25E6%25A0%25B9%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E9%25B3%25A5%25E5%258F%2596%25E7%259C%258C%2520%25E7%25B1%25B3%25E5%25AD%2590"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "ryujin-onsen",
@@ -2332,7 +2342,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2599%25BD%25E6%25B5%259C%2520%25E5%2592%258C%25E6%25AD%258C%25E5%25B1%25B1%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E5%2592%258C%25E6%25AD%258C%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%2592%258C%25E6%25AD%258C%25E5%25B1%25B1%25E7%2599%25BD%25E6%25B5%259C"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "tokashiki-jima",
@@ -2487,7 +2498,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B8%25A1%25E5%2598%2589%25E6%2595%25B7%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%256E%2589%25C3%2595%257E%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kumejima",
@@ -2644,7 +2656,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B9%2585%25E7%25B1%25B3%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%2576%2595%25C4%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "miyakojima",
@@ -2781,7 +2794,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%25AE%25E5%258F%25A4%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%257B%258C%25C3%2593%2587"
-    }
+    },
+    "accessType": "plane"
   },
   {
     "id": "kouzushima",
@@ -2923,7 +2937,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25A5%259E%25E6%25B4%25A5%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%255F%2592%25C3%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "hakone",
@@ -3320,7 +3335,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%258D%2589%25E6%25B4%25A5%25E7%2594%25BA%2520%25E7%25BE%25A4%25E9%25A6%25AC%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%2590%2592%25C3%2592%25AC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "shimoda",
@@ -3611,7 +3627,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BC%258A%25E8%25B1%2586%25E5%25A4%25A7%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25C9%2593%25A4%2591%25E5%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "shirakawago-t",
@@ -5109,7 +5126,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B1%258B%25E4%25B9%2585%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AE%258B%2576%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "amakusa",
@@ -5741,7 +5759,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%2594%25B5%25E7%258E%258B%2520%25E5%25AE%25AE%25E5%259F%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25A0%2589%25A4%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "hagi",
@@ -6157,7 +6176,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%259B%25B4%25E5%25B3%25B6%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%25BC%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kotohira",
@@ -6553,7 +6573,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B4%259E%25E7%2588%25BA%25E6%25B9%2596%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25B4%2596%25EA%258C%25CE%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "noboribetsu",
@@ -7457,7 +7478,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BC%258A%25E6%25A0%25B9%2520%25E4%25BA%25AC%25E9%2583%25BD%25E5%25BA%259C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25C9%258D%25AA"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "ibusuki",
@@ -7841,7 +7863,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B9%25B3%25E6%2588%25B8%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%25BD%258C%25CB"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "tottori",
@@ -9398,7 +9421,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A5%2584%25E7%25BE%258E%25E5%25A4%25A7%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2582%2594%25FC%2591%25E5%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "goto",
@@ -9548,7 +9572,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BA%2594%25E5%25B3%25B6%25E5%2588%2597%25E5%25B3%25B6%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258C%25DC%2593%2587%2597%25F1%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "unzen",
@@ -11462,7 +11487,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%25A4%25E6%2588%25B8%2520%25E9%25AB%2598%25E7%259F%25A5%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25BA%258C%25CB"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "iya",
@@ -11961,7 +11987,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E5%2586%2585%25E5%25AE%25BF%2520%25E7%25A6%258F%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%2593%25E0%258F%2568"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "nozawa-onsen",
@@ -13674,7 +13701,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%259B%258A%25E5%25AD%2590%2520%25E6%25A0%2583%25E6%259C%25A8%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2576%258E%2571"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "bessho-onsen",
@@ -13931,7 +13959,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2587%25BA%25E7%259F%25B3%2520%25E5%2585%25B5%25E5%25BA%25AB%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%256F%2590%25CE"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "wakura-onsen",
@@ -14168,7 +14197,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%2589%25E6%259C%259D%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%25B3%25A5%25E5%258F%2596%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%254F%2592%25A9%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "obi",
@@ -15105,7 +15135,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E6%25B4%25B2%2520%25E6%2584%259B%25E5%25AA%259B%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258F%2546"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "shakotan",
@@ -15998,7 +16029,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25A5%25BF%25E8%25A1%25A8%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25BC%2595%255C%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "takahashi",
@@ -16440,7 +16472,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25B1%258A%25E5%25BE%258C%25E9%25AB%2598%25E7%2594%25B0%2520%25E5%25A4%25A7%25E5%2588%2586%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%254C%258C%25E3%258D%2582%2593%2563"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "izu-kogen",
@@ -17021,7 +17054,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2597%25A5%25E5%258D%2597%2520%25E5%25AE%25AE%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25FA%2593%25EC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "mojiko",
@@ -17717,7 +17751,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25AB%2598%25E6%259D%25BE%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E9%25AB%2598%25E6%259D%25BE%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "sounkyo",
@@ -18016,7 +18051,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25A4%25BC%25E6%2596%2587%25E5%25B3%25B6%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2597%25E7%2595%25B6"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "rishiri-island",
@@ -18167,7 +18203,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2588%25A9%25E5%25B0%25BB%25E5%25B3%25B6%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2597%2598%2590%254B"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "akan",
@@ -18290,7 +18327,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2598%25BF%25E5%25AF%2592%25E6%25B9%2596%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25A2%258A%25A6%258C%25CE%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "abashiri",
@@ -18419,7 +18457,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25B6%25B2%25E8%25B5%25B0%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%25D4%2591%2596"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "shikotsu",
@@ -18551,7 +18590,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2594%25AF%25E7%25AC%258F%25E6%25B9%2596%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%2578%25E2%2594%258C%25CE%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "tono",
@@ -18681,7 +18721,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2581%25A0%25E9%2587%258E%2520%25E5%25B2%25A9%25E6%2589%258B%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2593%2596%25EC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "oga",
@@ -18818,7 +18859,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2594%25B7%25E9%25B9%25BF%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E7%2594%25B7%25E9%25B9%25BF%25E6%25B8%25A9%25E6%25B3%2589"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yonezawa",
@@ -19581,7 +19623,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2582%25A3%25E9%25A0%2588%25E6%25B8%25A9%25E6%25B3%2589%2520%25E6%25A0%2583%25E6%259C%25A8%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25DF%2590%257B%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "choshi",
@@ -20103,7 +20146,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BD%2590%25E6%25B8%25A1%25E5%25B3%25B6%2520%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%25B2%2593%256E"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kiyosato",
@@ -20880,7 +20924,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A5%25A5%25E9%25A3%259B%25E9%25A8%25A8%25E6%25B8%25A9%25E6%25B3%2589%25E9%2583%25B7%2520%25E5%25B2%2590%25E9%2598%259C%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E5%25B2%2590%25E9%2598%259C%25E7%259C%258C%2520%25E9%25AB%2598%25E5%25B1%25B1%25E5%25B8%2582"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "minami-izu",
@@ -21136,7 +21181,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25B6%258A%25E5%2589%258D%25E5%25B8%2582%2520%25E7%25A6%258F%25E4%25BA%2595%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%257A%2591%254F%2589%25B7%2590%25F2%2520%2589%257A%2591%254F%2596%25A6"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "ito",
@@ -21375,7 +21421,10 @@
       "name": "上野市"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E4%BC%8A%E8%B3%80&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E4%BC%8A%E8%B3%80",
-    "bookingStation": null,
+    "bookingStation": {
+      "name": "伊賀上野駅",
+      "company": "JR"
+    },
     "mainSpot": "伊賀流忍者博物館",
     "stayArea": {
       "rakuten": "伊賀上野",
@@ -22172,7 +22221,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B8%25A9%25E6%25B3%2589%25E6%25B4%25A5%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%25B3%25B6%25E6%25A0%25B9%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25B7%2590%25F2%2592%25C3%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "iwami-ginzan",
@@ -22707,7 +22757,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2591%25A8%25E9%2598%25B2%25E5%25A4%25A7%25E5%25B3%25B6%2520%25E5%25B1%25B1%25E5%258F%25A3%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25FC%2596%2568%2591%25E5%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "shimanto",
@@ -22976,7 +23027,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259F%258F%25E5%25B3%25B6%2520%25E9%25AB%2598%25E7%259F%25A5%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%2590%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "saijo",
@@ -23369,7 +23421,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25AB%25B9%25E7%2594%25B0%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%25A4%25A7%25E5%2588%2586%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%257C%2593%2563%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "usuki",
@@ -23766,7 +23819,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B3%25A2%25E4%25BD%2590%25E8%25A6%258B%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%2567%258D%25B2%258C%25A9%2520%2597%254C%2593%2563"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "takeo-onsen",
@@ -24165,7 +24219,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AF%25BE%25E9%25A6%25AC%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25CE%2594%256E"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "iki-island",
@@ -24319,7 +24374,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A3%25B1%25E5%25B2%2590%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25EB%258A%25F2"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "tanegashima",
@@ -24474,7 +24530,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25A8%25AE%25E5%25AD%2590%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25ED%258E%2571%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kikuchi",
@@ -24756,7 +24813,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25AB%25B9%25E5%25AF%258C%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%257C%2595%2578%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "yonaguni-island",
@@ -24909,7 +24967,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%258E%25E9%2582%25A3%25E5%259B%25BD%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2597%255E%2593%25DF%258D%2591%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "nakijin",
@@ -25337,7 +25396,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BA%25A7%25E9%2596%2593%25E5%2591%25B3%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%25C0%258A%25D4%2596%25A1%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "ie-island",
@@ -25495,7 +25555,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BC%258A%25E6%25B1%259F%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25C9%258D%255D%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kohama-island",
@@ -25633,7 +25694,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E6%25B5%259C%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2595%256C%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "matsushiro",
@@ -25741,7 +25803,10 @@
       "name": "長野"
     },
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%9D%BE%E4%BB%A3&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%9D%BE%E4%BB%A3",
-    "bookingStation": null,
+    "bookingStation": {
+      "name": "長野駅",
+      "company": "JR"
+    },
     "mainSpot": "松代城跡",
     "stayArea": {
       "rakuten": "松代温泉",
@@ -25750,7 +25815,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259D%25BE%25E4%25BB%25A3%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25BC%2591%25E3%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "iiyama",
@@ -25873,7 +25939,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25A3%25AF%25E5%25B1%25B1%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%25D1%258E%2552%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yakake",
@@ -27002,7 +27069,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B8%25AF%25E5%25BA%2583%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25D1%258D%254C"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "rausu",
@@ -27281,7 +27349,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B1%259F%25E5%25B7%25AE%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%255D%258D%25B7"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "hanamaki",
@@ -27409,7 +27478,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%258A%25B1%25E5%25B7%25BB%2520%25E5%25B2%25A9%25E6%2589%258B%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25D4%258A%25AA%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "hachimantai",
@@ -27682,7 +27752,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2594%25B0%25E6%25B2%25A2%25E6%25B9%2596%2520%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%2563%2591%25F2%258C%25CE%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yamadera",
@@ -29630,7 +29701,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A6%2599%25E9%25AB%2598%25E9%25AB%2598%25E5%258E%259F%2520%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%25AD%258D%2582%258D%2582%258C%25B4%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "nagaoka",
@@ -30808,7 +30880,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2589%259B%25E7%25AA%2593%2520%25E5%25B2%25A1%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%258D%2591%258B"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "kasaoka",
@@ -30924,7 +30997,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25AC%25A0%25E5%25B2%25A1%2520%25E5%25B2%25A1%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258A%257D%2589%25AA"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "tsunoshima",
@@ -31885,7 +31959,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2594%2591%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2599%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kirishima",
@@ -32021,7 +32096,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%259C%25A7%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%25B6%2593%2587%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "ebino-kogen",
@@ -32417,7 +32493,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2590%258D%25E8%25AD%25B7%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%25BC%258C%25EC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yomitanson",
@@ -32549,7 +32626,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25AA%25AD%25E8%25B0%25B7%25E6%259D%2591%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25C7%2592%254A%2591%25BA"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "niseko",
@@ -36492,7 +36570,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B5%25B7%25E5%25A3%25AB%25E7%2594%25BA%2520%25E5%25B3%25B6%25E6%25A0%25B9%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258A%2543%258E%256D%2592%25AC"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "akiyoshidai",
@@ -36904,7 +36983,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%259A%25A0%25E5%25B2%2590%25E3%2581%25AE%25E5%25B3%25B6%2520%25E5%25B3%25B6%25E6%25A0%25B9%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2542%258A%25F2%2582%25CC%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "inujima",
@@ -37047,7 +37127,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%258A%25AC%25E5%25B3%25B6%2520%25E5%25B2%25A1%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258C%25A2%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "teshima",
@@ -37198,7 +37279,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25B1%258A%25E5%25B3%25B6%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%254C%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "niyodogawa",
@@ -38541,7 +38623,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E5%2580%25A4%25E8%25B3%2580%25E5%25B3%25B6%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2592%256C%2589%25EA"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "irabu-island",
@@ -38682,7 +38765,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BC%258A%25E8%2589%25AF%25E9%2583%25A8%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25C9%2597%25C7%2595%2594%2593%2587"
-    }
+    },
+    "accessType": "plane"
   },
   {
     "id": "aguni-island",
@@ -38840,7 +38924,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25B2%259F%25E5%259B%25BD%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25BE%258D%2591%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "itoman",
@@ -38981,7 +39066,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25B3%25B8%25E6%25BA%2580%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%2585%2596%259E"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "kijoka",
@@ -39121,7 +39207,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2596%259C%25E5%25A6%2582%25E5%2598%2589%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258B%2558%2596%25A1%2591%25BA"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "miyakejima",
@@ -39272,7 +39359,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%2589%25E5%25AE%2585%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%254F%2591%25EE%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "hachijojima",
@@ -39430,7 +39518,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2585%25AB%25E4%25B8%2588%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%25AA%258F%25E4%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "niijima",
@@ -39582,7 +39671,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2596%25B0%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%2556%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "shikinejima",
@@ -39726,7 +39816,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BC%258F%25E6%25A0%25B9%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25AE%258D%25AA%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "shirakawa",
@@ -40399,7 +40490,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2594%25B7%25E9%25B9%25BF%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%256A%258E%25AD%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "kisakata",
@@ -40848,7 +40940,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25B5%25A4%25E5%2580%2589%25E6%25B8%25A9%25E6%25B3%2589%2520%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25D4%2591%2571%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yugawara-onsen",
@@ -46869,7 +46962,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B9%25AF%25E6%25B6%258C%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%2592%2597%254F%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yura-wakayama",
@@ -47665,7 +47759,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%258D%2597%25E4%25B9%259D%25E5%25B7%259E%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25EC%258B%25E3%258F%2542"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "minamiosumi",
@@ -47911,7 +48006,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%258C%2597%25E8%25B0%25B7%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%2592%254A"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "uruma",
@@ -48033,7 +48129,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E3%2581%2586%25E3%2582%258B%25E3%2581%25BE%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2582%25A4%2582%25E9%2582%25DC"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "nanto",
@@ -48606,7 +48703,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A7%25AB%25E5%25B3%25B6%2520%25E5%25A4%25A7%25E5%2588%2586%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2550%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "toshima",
@@ -48719,7 +48817,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%2588%25A9%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2597%2598%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "joetsu",
@@ -49674,7 +49773,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%258C%2597%25E8%25A6%258B%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%258C%25A9"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "monbetsu",
@@ -54452,7 +54552,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E5%259B%25BD%2520%25E7%2586%258A%25E6%259C%25AC%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2595%2590%25EC%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "izumi-kagoshima",
@@ -54998,7 +55099,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%259D%2592%25E3%2583%25B6%25E5%25B3%25B6%2520%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25C2%2583%2596%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kugashima",
@@ -55103,7 +55205,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B9%2585%25E8%25B3%2580%25E5%25B3%25B6%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%2576%2589%25EA%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "nakatosa",
@@ -56914,7 +57017,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2581%25A0%25E5%2588%2588%25E7%2594%25B0%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%25AE%25AE%25E5%259F%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2593%258A%25A0%2593%2563%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "hachimantai-onsen",
@@ -57027,7 +57131,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BE%258C%25E7%2594%259F%25E6%258E%259B%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A7%258B%25E7%2594%25B0%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258C%25E3%2590%25B6%258A%257C%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "iiyama-onsen",
@@ -57604,7 +57709,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2597%25A5%25E7%25BD%25AE%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25FA%2592%2575"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "shimokitazawa-nyuto",
@@ -60981,7 +61087,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%259B%25B2%25E4%25BB%2599%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E5%25B4%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%255F%2590%25E5%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "kochi-ino",
@@ -61642,7 +61749,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BC%258A%25E5%25B9%25B3%25E5%25B1%258B%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25C9%2595%25BD%2589%25AE%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "ogimi",
@@ -119943,7 +120051,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%259F%25B3%25E5%259E%25A3%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E7%259F%25B3%25E5%259E%25A3%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "yoron-island",
@@ -120064,7 +120173,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%258E%25E8%25AB%2596%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2597%255E%2598%255F%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "kakeroma-island",
@@ -120197,7 +120307,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A5%2584%25E7%25BE%258E%25E5%25A4%25A7%25E5%25B3%25B6%2520%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E9%25B9%25BF%25E5%2585%2590%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25A5%2584%25E7%25BE%258E%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "tobishima-island",
@@ -120323,10 +120434,7 @@
       "type": "port",
       "name": "酒田"
     },
-    "bookingStation": {
-      "name": "酒田駅",
-      "company": "JR"
-    },
+    "bookingStation": null,
     "mainSpot": "飛島灯台",
     "stayArea": {
       "rakuten": "飛島",
@@ -120335,7 +120443,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2585%2592%25E7%2594%25B0%2520%25E5%25B1%25B1%25E5%25BD%25A2%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E5%25B1%25B1%25E5%25BD%25A2%25E7%259C%258C%2520%25E9%2585%2592%25E7%2594%25B0%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "awashima-island",
@@ -120461,10 +120570,7 @@
       "type": "port",
       "name": "岩船"
     },
-    "bookingStation": {
-      "name": "村上駅",
-      "company": "JR"
-    },
+    "bookingStation": null,
     "mainSpot": "内浦海水浴場",
     "stayArea": {
       "rakuten": "粟島",
@@ -120473,7 +120579,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259D%2591%25E4%25B8%258A%2520%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E6%2596%25B0%25E6%25BD%259F%25E7%259C%258C%2520%25E6%259D%2591%25E4%25B8%258A%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "tarama-island",
@@ -120600,7 +120707,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%25AE%25E5%258F%25A4%25E5%25B3%25B6%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25AE%25E5%258F%25A4%25E5%25B3%25B6%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "mishima-yamaguchi",
@@ -120726,10 +120834,7 @@
       "type": "port",
       "name": "萩"
     },
-    "bookingStation": {
-      "name": "萩駅",
-      "company": "JR"
-    },
+    "bookingStation": null,
     "mainSpot": "見島牛放牧地",
     "stayArea": {
       "rakuten": "見島",
@@ -120738,7 +120843,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%2590%25A9%2520%25E5%25B1%25B1%25E5%258F%25A3%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E5%25B1%25B1%25E5%258F%25A3%25E7%259C%258C%2520%25E8%2590%25A9%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "teuri-island",
@@ -120865,7 +120971,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A9%25E5%25A3%25B2%25E5%25B3%25B6%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%2556%2594%2584%2593%2587"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "omishima-island",
@@ -121142,7 +121249,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BA%258C%25E5%25B2%2590%25E6%25B8%25A9%25E6%25B3%2589%2520%25E7%25A6%258F%25E5%25B3%25B6%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25F1%258A%25F2%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "otari-onsen",
@@ -121277,7 +121385,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E8%25B0%25B7%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2592%254A%2589%25B7%2590%25F2"
-    }
+    },
+    "accessType": "car"
   },
   {
     "id": "yunokami-onsen",
@@ -121928,7 +122037,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A9%25E8%258D%2589%2520%25E7%2586%258A%25E6%259C%25AC%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%25E7%2586%258A%25E6%259C%25AC%25E7%259C%258C%2520%25E5%25A4%25A9%25E8%258D%2589%25E5%25B8%2582"
-    }
+    },
+    "accessType": "ferry"
   },
   {
     "id": "minami-aizu",
