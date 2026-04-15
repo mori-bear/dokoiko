@@ -92,6 +92,11 @@ function buildJalanAffilUrl(rawJalanUrl) {
  * ③ 温泉 or 宿
  */
 function buildRakutenKeyword(dest) {
+  // 強制補正: 霧島系（単体キーワードだと全国フォールバックするため）
+  if (dest.name && (dest.name.includes('霧島') || dest.name.includes('霧島温泉'))) {
+    return '霧島温泉郷 鹿児島 温泉';
+  }
+
   const parts = [];
 
   // ① hubCity最優先（最も安定）、なければ name
