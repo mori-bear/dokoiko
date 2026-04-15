@@ -44,7 +44,7 @@ function encodeArea(area) {
 
 function buildRakutenCheckUrl(area) {
   if (!area) return null;
-  return `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeArea(area)}`;
+  return `https://travel.rakuten.co.jp/yado/search/Japan/?f_query=${encodeArea(area)}`;
 }
 
 /**
@@ -60,12 +60,12 @@ function extractRakutenDestUrl(affilUrl) {
 }
 
 /**
- * URL が楽天のエリア直接ページ（SSR）かどうかを判定する。
- * /yado/PREF/AREA.html 形式 → true
- * /yado/japan.html?f_query= → false（JS レンダリング）
+ * URL が楽天の正規検索フォーマット（/yado/search/Japan/）かどうかを判定する。
+ * /yado/search/Japan/?f_query= → true（有効）
+ * それ以外 → false（無効: 全国ページにフォールバックする可能性）
  */
-function isRakutenDirectPage(url) {
-  return /\/yado\/[^/]+\/[^?#/]+\.html/.test(url ?? '');
+function isRakutenSearchPage(url) {
+  return /\/yado\/search\//.test(url ?? '');
 }
 
 function buildJalanCheckUrl(area) {
@@ -119,12 +119,14 @@ async function fetchWithTimeout(url, ms = TIMEOUT_MS) {
 function validateRakutenContent(body, url) {
   if (!body) return { ok: false, reason: 'empty response' };
 
-  const direct = isRakutenDirectPage(url);
+  // URL フォーマット検証: /yado/search/ を含まない場合は FAIL
+  if (!isRakutenSearchPage(url)) {
+    return { ok: false, reason: '無効URLフォーマット（/yado/search/以外）' };
+  }
 
-  // 全国マップページ検出（直接エリアページが地図にフォールバックした場合）
-  // ※ keyword search (japan.html?f_query=) は JS レンダリングのため除外
-  if (direct && /地図から宿泊先を探す/.test(body)) {
-    return { ok: false, reason: '全国マップ（エリアページ不在）' };
+  // 全国ページ検出: 全国マップ・主要都市一覧にリダイレクトされた場合は FAIL
+  if (/全国マップ|主要都市|地図から宿泊先を探す/.test(body)) {
+    return { ok: false, reason: '全国ページにフォールバック' };
   }
 
   // 0件 / 該当なし 判定
@@ -132,19 +134,14 @@ function validateRakutenContent(body, url) {
     return { ok: false, reason: '検索結果0件' };
   }
 
-  // 直接エリアページ（SSR）: 件数表示が必須
-  if (direct) {
-    if (/件中|件の宿|件の施設|のホテル・旅館/.test(body)) return { ok: true };
-    if (/404|Not Found|ページが見つかりません/.test(body)) return { ok: false, reason: '404ページ' };
-    return { ok: false, reason: '宿一覧なし（SSR）' };
-  }
-
-  // キーワード検索ページ（JS レンダリング）: 基本チェックのみ
-  if (/ホテル|旅館|宿泊施設|施設名|一人当たり/.test(body)) {
-    return { ok: true };
-  }
+  // 404
   if (/404|Not Found|ページが見つかりません/.test(body)) {
     return { ok: false, reason: '404ページ' };
+  }
+
+  // 基本チェック（JS レンダリングページのため緩め）
+  if (/ホテル|旅館|宿泊施設|施設名|一人当たり/.test(body)) {
+    return { ok: true };
   }
   // 判定不能（ログのみ、OKとして扱う）
   return { ok: true, reason: 'content-check-skipped' };
