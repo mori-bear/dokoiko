@@ -29,3 +29,6 @@ scripts/dev/
 
 # ワークツリー
 .claude/worktrees/
+
+# 検証ログ（自動生成）
+logs/*.json

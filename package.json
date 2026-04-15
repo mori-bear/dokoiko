@@ -1,9 +1,12 @@
 {
   "type": "module",
   "scripts": {
-    "predeploy": "node scripts/predeploy-check.js",
-    "qa":        "node scripts/qa.js",
-    "test:e2e":  "playwright test"
+    "predeploy":        "node scripts/predeploy-check.js",
+    "qa":               "node scripts/qa.js",
+    "test:e2e":         "playwright test",
+    "validate:hotels":  "node scripts/validateHotels.js",
+    "validate:hotels:full": "node scripts/validateHotels.js --full",
+    "build":            "npm run qa && node scripts/validateHotels.js"
   },
   "dependencies": {
     "iconv-lite": "^0.7.2",

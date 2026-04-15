@@ -25,6 +25,7 @@
 import { loadJson }       from '../lib/loadJson.js';
 import { getDefaultDates } from '../utils/date.js';
 import { calcDistanceKm }  from '../utils/geo.js';
+import iconv               from 'iconv-lite';
 
 /* hotelAreas.json / affiliateProviders.json を起動時に1回ロード */
 const HOTEL_AREAS  = await loadJson('../data/hotelAreas.json',        import.meta.url);
@@ -211,10 +212,17 @@ function buildRakutenUrl(area) {
 
 /**
  * じゃらんキーワード検索 純粋URL（アフィリエイトなし）
- * Shift_JIS 廃止・normalizeArea + safeEncode で二重エンコード防止
+ * じゃらんnetは Shift-JIS(CP932) エンコードのキーワードを要求するため、
+ * iconv-lite でエンコードしてから URL パーセントエンコードする。
  */
 function buildJalanUrl(area) {
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${safeEncode(normalizeArea(area))}`;
+  const normalized = normalizeArea(area);
+  // Shift-JIS(CP932) でエンコード → パーセントエンコード
+  const sjisBytes = iconv.encode(normalized, 'cp932');
+  const encoded = Array.from(sjisBytes)
+    .map(b => '%' + b.toString(16).toUpperCase().padStart(2, '0'))
+    .join('');
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encoded}`;
 }
 
 /**
