@@ -6,7 +6,7 @@
     "test:e2e":         "playwright test",
     "validate:hotels":  "node scripts/validateHotels.js",
     "validate:hotels:full": "node scripts/validateHotels.js --full",
-    "build":            "npm run qa && node scripts/validateHotels.js"
+    "build":            "node scripts/fixAllHotels.js && npm run qa && node scripts/validateHotels.js"
   },
   "dependencies": {
     "iconv-lite": "^0.7.2",
