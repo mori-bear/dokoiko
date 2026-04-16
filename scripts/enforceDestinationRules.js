@@ -1,9 +1,11 @@
 // scripts/enforceDestinationRules.js
-// 離島・山奥温泉・港町に対してルールを一括適用する
+// 離島・山奥温泉・港町・秘境に対してルールを一括適用する
 //
-// ■ 離島:  bookingStation=null / accessType=ferry|plane / hubCity=最寄り都市
+// ■ 離島:    bookingStation=null / accessType=ferry|plane
 // ■ 山奥温泉: accessType=car（requiresCar=true のもの）
-// ■ 港町: railGateway設定済みでbookingStationなし → bookingStation を付与
+// ■ 港町:    railGateway設定済みでbookingStationなし → bookingStation を付与
+// ■ 秘境/山奥タグ: accessType=car, requiresCar=true（非離島のみ）
+// ■ 離島タグ:      requiresCar=true（到着後レンタカー推奨）
 //
 // node scripts/enforceDestinationRules.js
 
@@ -86,6 +88,42 @@ for (const d of dests) {
   } else if (d.requiresCar) {
     mark(d, 'accessType', 'car', '港町・車必須');
   }
+}
+
+// ── ⑤ 秘境・山奥タグルール（非離島） ───────────────────────────────
+
+console.log('\n【⑤ 秘境・山奥タグ（非離島 → car強制）】');
+
+/** destination の全タグを配列で返す（tags / primary / secondary 統合） */
+function getAllTags(d) {
+  return [
+    ...(Array.isArray(d.tags)      ? d.tags      : []),
+    ...(Array.isArray(d.primary)   ? d.primary   : []),
+    ...(Array.isArray(d.secondary) ? d.secondary : []),
+  ];
+}
+
+for (const d of dests) {
+  const tags = getAllTags(d);
+  const isHikyou = tags.some(t => ['秘境', '山奥'].includes(t));
+  if (!isHikyou) continue;
+
+  const isIsland = d.destType === 'island' || d.isIsland === true;
+  if (isIsland) continue;  // 離島は accessType を変えない（ferry/plane を維持）
+
+  mark(d, 'accessType', 'car',  '秘境/山奥タグ→accessType=car');
+  mark(d, 'requiresCar', true,  '秘境/山奥タグ→requiresCar=true');
+}
+
+// ── ⑥ 離島タグルール（到着後レンタカー） ────────────────────────────
+
+console.log('\n【⑥ 離島タグ（requiresCar → 到着後レンタカー）】');
+
+for (const d of dests) {
+  const tags = getAllTags(d);
+  if (!tags.includes('離島')) continue;
+  // 到着後の島内移動にレンタカーが必要な島
+  mark(d, 'requiresCar', true, '離島タグ→到着後レンタカー推奨');
 }
 
 // ── 保存 ─────────────────────────────────────────────────────────────

@@ -232,12 +232,23 @@ function selectBestRoute(candidates, rejected) {
 
 export function resolveAccessType(city, transportType) {
   const dt = city?.destType;
+  const isIsland = dt === 'island' || city?.isIsland === true;
+
+  // 離島: primary は ferry/plane のまま（到着後レンタカーは別途 requiresCar で表示）
+  if (isIsland) return transportType;
+
+  // 半島・秘境地域: secondaryTransport または requiresCar で car/bus を決定
   if (dt === 'peninsula' || dt === 'remote') {
     if (city.secondaryTransport === 'bus')  return 'bus';
     if (city.secondaryTransport === 'car')  return 'car';
     if (city.requiresCar === true)           return 'car';
     return 'bus';
   }
+
+  // 秘境/山奥 (onsen/mountain/sight 等で requiresCar=true):
+  // 電車CTAのみを禁止 → レンタカーで行く
+  if (city?.requiresCar === true) return 'car';
+
   return transportType;
 }
 

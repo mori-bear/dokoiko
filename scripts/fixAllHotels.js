@@ -190,11 +190,12 @@ const OVERRIDES_FILE = fs.existsSync(OVERRIDES_PATH)
 /**
  * 楽天キーワードを生成する。
  *
+ * 優先順位:
  * ① KEYWORD_OVERRIDES_STATIC（人間キュレーション、name包含マッチ）
  * ② 自動生成 override（ID 完全一致）
- * ③ hubCity 最優先（最も安定したエリア名）
- * ④ 都道府県（必須）
- * ⑤ 温泉 or 宿
+ * ③ hubCity あり → "{hubCity} {prefecture} 宿"
+ * ④ name に「温泉」含む or destType=onsen → "{name} {prefecture} 温泉"
+ * ⑤ その他 → "{name} {prefecture} 宿"
  */
 function buildRakutenKeyword(dest) {
   // ① 静的補正（name 包含マッチ）
@@ -209,33 +210,25 @@ function buildRakutenKeyword(dest) {
     return OVERRIDES_FILE[dest.id];
   }
 
-  const parts = [];
+  const pref = dest.prefecture ?? '';
+  const name = dest.displayName || dest.name || '';
 
-  // ③ hubCity最優先（最も安定）、なければ name
-  if (dest.hubCity) {
-    parts.push(dest.hubCity);
-  } else if (dest.name) {
-    parts.push(dest.name);
+  // ③ hubCity: 拠点都市でホテルを検索（hubCity は宿泊地 → suffix は宿）
+  // hubCity === name の場合（自身をhubに設定）は名前ベースロジックで処理する
+  if (dest.hubCity && dest.hubCity !== name) {
+    return `${dest.hubCity} ${pref} 宿`;
   }
 
-  // ④ 都道府県（必須）
-  if (dest.prefecture) {
-    parts.push(dest.prefecture);
-  }
+  // ④ 温泉判定: name に「温泉」含む OR destType=onsen → suffix は「温泉」
+  const isOnsen = name.includes('温泉') || dest.destType === 'onsen';
+  const suffix  = isOnsen ? '温泉' : '宿';
 
-  // ⑤ 温泉 or 宿
-  if (dest.tags?.includes('温泉')) {
-    parts.push('温泉');
-  } else {
-    parts.push('宿');
-  }
-
-  return parts.join(' ');
+  return `${name} ${pref} ${suffix}`;
 }
 
 /**
  * 楽天キーワード検索URL を生成する。
- * japan.html?f_query= を使用（唯一 HTTP 200 を返すエンドポイント）。
+ * japan.html?f_query= を使用（/yado/search/ は HTTP 404 のため不可）。
  * encodeURIComponent は1回のみ。
  */
 function buildRakutenKeywordUrl(dest) {
