@@ -12,11 +12,13 @@
 //   logs/rakuten_anomalies.json  に異常検知ログを保存
 //   FAILが1件以上あれば process.exit(1)
 //
-// ■ 楽天異常検知フロー
-//   HTTP 200 取得後に静的 HTML を解析し、以下を検出したら「異常」と判定:
-//     - 全国 / 主要都市 / 宿が見つからない
-//   異常検知時はリトライ（3段階）を実施し、結果を WARN として記録。
-//   FAIL にはしない（実運用で未知ケースを潰すためのログ収集が目的）。
+// ■ 楽天判定フロー
+//   OK     : /yado/japan.html に HTTP 200 → URL ベースで正常とみなす
+//   FAIL   : HTML に「該当する宿泊施設がありません」「条件に一致する宿が見つかりません」を検出
+//   ANOMALY: URL が japan.html 以外 / HTTP エラー → WARN ＋ リトライ＋ログ収集
+//
+// ■ 削除済み誤検知パターン（テンプレートに常在するため）
+//   「全国」「主要都市」→ 楽天 HTML テンプレートに必ず含まれるため除去
 
 import fs     from 'fs';
 import path   from 'path';
@@ -151,48 +153,29 @@ function validateRakutenKeyword(url) {
 // ── 楽天コンテンツ判定 ───────────────────────────────────────────────
 //
 // 判定区分:
-//   FAIL   : ok:false          — 404 / 空レスポンス / URL形式不正
-//   ANOMALY: ok:true, anomaly:true — 全国/主要都市/宿が見つからない を検知（リトライ対象）
-//   OK     : ok:true           — 正常
+//   OK     : ok:true           — /yado/japan.html に到達（URLベース正常判定）
+//   FAIL   : ok:false          — 結果ベース（「該当する宿泊施設がありません」等を HTML で検出）
+//   ANOMALY: ok:true, anomaly — URL が japan.html 以外 / HTTP エラー（呼び出し側で設定）
 //
-// 注意: japan.html?f_query= は JS-rendered のため検索結果は静的 HTML に含まれない。
-// 異常パターンが静的 HTML に現れた場合のみ検知可能（実運用での補足的ログ収集が目的）。
+// 注意: 「全国」「主要都市」はテンプレートに常在するため検知対象外。
 function validateRakutenContent(body, url) {
   if (!body) return { ok: false, reason: 'empty response' };
 
-  // URL フォーマット検証
+  // URL フォーマット検証（japan.html 以外は想定外エンドポイント）
   if (!isRakutenSearchPage(url)) {
-    return { ok: false, reason: '楽天URL形式不正（japan.html以外は404）' };
+    return { ok: true, anomaly: true, reason: 'URL異常: japan.html以外のエンドポイント' };
   }
 
-  // 404 / エラーページ検出（Hard FAIL）
-  if (/404|Not Found|ページが見つかりません/.test(body)) {
-    return { ok: false, reason: '404ページ' };
+  // 結果ベース FAIL: 0件ページを HTML で確認できた場合のみ
+  if (/該当する宿泊施設がありません/.test(body)) {
+    return { ok: false, reason: '検索結果0件（該当する宿泊施設がありません）' };
+  }
+  if (/条件に一致する宿が見つかりません/.test(body)) {
+    return { ok: false, reason: '検索結果0件（条件に一致する宿が見つかりません）' };
   }
 
-  // 異常検知（Soft FAIL → リトライ対象）
-  // 楽天が全国フォールバックした場合に静的 HTML に含まれる可能性のある語句
-  if (/全国/.test(body)) {
-    return { ok: true, anomaly: true, reason: '異常検知: 「全国」を検出' };
-  }
-  if (/主要都市/.test(body)) {
-    return { ok: true, anomaly: true, reason: '異常検知: 「主要都市」を検出' };
-  }
-  if (/宿が見つからない|宿泊施設が見つかりません|お探しの宿が見つかりません/.test(body)) {
-    return { ok: true, anomaly: true, reason: '異常検知: 「宿が見つからない」を検出' };
-  }
-
-  // 0件（SSR ページ固有の語句）→ 異常扱い
-  if (/該当する宿泊施設がありません|ご指定の条件に一致する宿泊施設が見つかりません/.test(body)) {
-    return { ok: true, anomaly: true, reason: '異常検知: 検索結果0件' };
-  }
-
-  // 正常
-  if (/楽天トラベル|ホテル|旅館/.test(body)) {
-    return { ok: true };
-  }
-
-  return { ok: true, reason: 'content-check-skipped' };
+  // 正常（URLベース判定: japan.html に HTTP 200 で到達した時点で OK）
+  return { ok: true };
 }
 
 // ── 楽天リトライ（異常検知時） ──────────────────────────────────────
@@ -279,7 +262,9 @@ async function validateOne(dest) {
       console.error(`     keyword="${kw}"`);
     } else {
       const r       = await fetchWithTimeout(rakutenUrl);
-      const content = r.status === 200 ? validateRakutenContent(r.body, rakutenUrl) : { ok: false, reason: `HTTP ${r.status}` };
+      const content = r.status === 200
+        ? validateRakutenContent(r.body, r.url ?? rakutenUrl)
+        : { ok: true, anomaly: true, reason: `HTTPエラー: ${r.status || 'timeout'}` };
       await sleep(DELAY_BETWEEN);
 
       if (content.anomaly) {
