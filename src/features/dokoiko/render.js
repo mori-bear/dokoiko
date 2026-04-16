@@ -839,9 +839,11 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        </details>`
     : '';
 
-  // requiresCar=true の rental-primary は ctaGroup より先に表示（最優先CTA）
-  const rentalPrimaryHtml = _isMandatoryCar ? rentalHintHtml : '';
-  const rentalSecHtml     = _isMandatoryCar ? '' : rentalHintHtml;
+  // requiresCar=true かつ ferry/plane ではない場合のみ rental を最優先（PRIMARY）に配置。
+  // ferry/plane（離島）では到着後にレンタカーが必要なため SECONDARY（ctaGroupの後）に表示。
+  const _isTransitFirst = accessType === 'ferry' || accessType === 'plane';
+  const rentalPrimaryHtml = (_isMandatoryCar && !_isTransitFirst) ? rentalHintHtml : '';
+  const rentalSecHtml     = (_isMandatoryCar && !_isTransitFirst) ? '' : rentalHintHtml;
 
   return `
     <div class="action-block">
