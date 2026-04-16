@@ -36,10 +36,13 @@ export function buildRouteMapUrl(departure, city, destOverride = null) {
 
   // destination 優先順:
   //   1. destOverride（hubCity など、明示指定）
-  //   2. lat,lng（座標が使えるなら最も正確、選択画面を排除）
-  //   3. city.name（最終フォールバック）
+  //   2. city.navigation（秘境・山奥・温泉郷 のナビ地点）
+  //   3. lat,lng（座標が使えるなら最も正確、選択画面を排除）
+  //   4. city.name（最終フォールバック）
   // 空港・駅名は使わない
+  const nav = city.navigation;
   const dest = destOverride
+    ?? (nav?.lat && nav?.lng ? `${nav.lat},${nav.lng}` : null)
     ?? ((city.lat && city.lng) ? `${city.lat},${city.lng}` : null)
     ?? city.displayName
     ?? city.name;

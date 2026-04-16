@@ -1471,6 +1471,13 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
+/* ナビ先ヒント（秘境・温泉郷など navigation フィールドがある場合） */
+.nav-point-hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--text-muted, #888);
+  text-align: center;
+}
 
 /* T3: 宿CTA 一本化ボタン */
 .btn-stay--single {
@@ -1735,6 +1742,23 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 /* Googleマップボタン（地図で行き方を見る）*/
 .btn-maps          { background: #34a853; color: #fff; }
 .btn-maps:hover    { background: #2d9044; }
+
+/* レンタカー必須CTA（requiresCar=true — 最優先表示） */
+.rental-primary {
+  margin-top: 12px;
+}
+.rental-primary .btn-rental.btn--action {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.rental-primary-note {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--text-muted, #888);
+  text-align: center;
+}
 
 /* レンタカーヒント（車があると便利） */
 .rental-hint {

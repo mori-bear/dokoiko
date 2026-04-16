@@ -25,9 +25,13 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
 
     // 地図CTA URL（上部に配置）
     const mapUrl = tc?.mapUrl ?? buildTransitMapUrl(departure, city);
+    const navPoint    = city.navigation;
+    const navHintHtml = navPoint?.name
+      ? `<p class="nav-point-hint">ナビ先: ${navPoint.name}</p>`
+      : '';
     const mapsCtaHtml = mapUrl
       ? `<div class="maps-cta-primary"><a href="${mapUrl}" target="_blank" rel="noopener noreferrer"
-           class="btn btn--maps btn--action" data-track="map_click" id="go-maps-btn">この旅で行く</a></div>`
+           class="btn btn--maps btn--action" data-track="map_click" id="go-maps-btn">この旅で行く</a>${navHintHtml}</div>`
       : '';
 
     const el = document.getElementById('result-inner');
@@ -488,14 +492,17 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
       }
     } else if (!chainCta?.nonJrOnly) {
       // 駅なし（bookingStation=null）→ レンタカーCTA
-      const destName = city?.displayName || city?.name || '';
-      const carUrl   = buildCarUrl(destName);
+      const destName   = city?.displayName || city?.name || '';
+      const carUrl     = buildCarUrl(destName);
+      const carLabel   = city?.requiresCar === true
+        ? 'レンタカーで行く（必須）'
+        : 'レンタカーで行く';
       if (carUrl && !seenUrls.has(carUrl)) {
         seenUrls.add(carUrl);
         ctaHtml = `
           <div class="cta-action">
             <a href="${carUrl}" target="_blank" rel="noopener noreferrer"
-               class="btn btn-rental btn--action" data-track="car_click">レンタカーで行く</a>
+               class="btn btn-rental btn--action" data-track="car_click">${carLabel}</a>
           </div>`;
       }
     }
@@ -767,26 +774,37 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
     ? `<div class="cta-group">${ctaItems.join('')}</div>`
     : '';
 
-  // レンタカー: requiresCar=true またはstayAreaが山岳・湖・高原・温泉郷系のエリア
+  // レンタカー: requiresCar=true（必須）またはstayAreaが山岳・湖・高原・温泉郷系のエリア（推奨）
   const _saStr = (() => {
     const sa = city?.stayArea;
     if (!sa) return '';
     return typeof sa === 'object' ? (sa.rakuten ?? sa.jalan ?? '') : String(sa);
   })();
+  const _isMandatoryCar = city?.requiresCar === true;
   const _needsRentalHint = !mapOnlyFallback && (
-    city?.requiresCar === true ||
+    _isMandatoryCar ||
     /温泉郷|高原|山|湖/.test(_saStr)
   );
   let rentalHintHtml = '';
   if (_needsRentalHint) {
-    const destCity = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
+    const destCity   = city?.accessStation?.replace(/空港$|港$/, '') || city?.displayName || city?.name || null;
     const rentalLink = buildRentalLink(destCity);
     if (rentalLink?.url && !seenCtaUrls.has(rentalLink.url)) {
-      rentalHintHtml = `<div class="rental-hint">
-        <span class="rental-hint-label">レンタカー推奨エリア</span>
-        <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
-           class="btn btn-rental btn--action-sm">レンタカーで行く</a>
-      </div>`;
+      if (_isMandatoryCar) {
+        // 必須: 最優先CTA（大きいボタン・先頭表示）
+        rentalHintHtml = `<div class="rental-primary">
+          <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+             class="btn btn-rental btn--action" data-track="car_click">レンタカーで行く（必須）</a>
+          <p class="rental-primary-note">このエリアへのアクセスにはレンタカーが必要です</p>
+        </div>`;
+      } else {
+        // 推奨: 従来のヒント表示
+        rentalHintHtml = `<div class="rental-hint">
+          <span class="rental-hint-label">レンタカー推奨エリア</span>
+          <a href="${rentalLink.url}" target="_blank" rel="nofollow sponsored noopener"
+             class="btn btn-rental btn--action-sm">レンタカーで行く</a>
+        </div>`;
+      }
     }
   }
 
@@ -821,15 +839,20 @@ function buildActionBlock(links, hotelLinks, stayType, departure, destLabel, cit
        </details>`
     : '';
 
+  // requiresCar=true の rental-primary は ctaGroup より先に表示（最優先CTA）
+  const rentalPrimaryHtml = _isMandatoryCar ? rentalHintHtml : '';
+  const rentalSecHtml     = _isMandatoryCar ? '' : rentalHintHtml;
+
   return `
     <div class="action-block">
       ${routeLineHtml}
       ${reasonHtml}
       ${viaLineHtml}
+      ${rentalPrimaryHtml}
       ${ctaGroupHtml}
       ${staySection}
       ${detailsBlock}
-      ${rentalHintHtml}
+      ${rentalSecHtml}
       ${shareInlineHtml}
       <button class="retry-btn-inline" data-action="retry">別の旅を見る</button>
       <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
