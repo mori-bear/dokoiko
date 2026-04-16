@@ -140,8 +140,8 @@ function validateRakutenKeyword(url) {
   }
 
   const tokens = keyword.trim().split(/\s+/);
-  if (tokens.length < 2) {
-    return { ok: false, reason: `キーワードが1語（"${keyword}"）` };
+  if (tokens.length <= 2) {
+    return { ok: false, reason: `キーワードが2語以下（"${keyword}"） — 全国フォールバックリスク` };
   }
 
   return { ok: true };
@@ -168,6 +168,12 @@ function validateRakutenContent(body, url) {
   // 0件（SSR エリアページの場合のみ表示される語句）
   if (/該当する宿泊施設がありません|ご指定の条件に一致する宿泊施設が見つかりません/.test(body)) {
     return { ok: false, reason: '検索結果0件' };
+  }
+
+  // 全国フォールバック検出（静的HTMLに含まれる場合のみ — JS-rendered は対象外）
+  // 楽天が曖昧キーワードで全国ページを返した場合、初期HTMLに含まれる可能性のある語句
+  if (/全国の宿泊施設一覧|全国から絞り込む|主要都市から選ぶ/.test(body)) {
+    return { ok: false, reason: '全国フォールバック検出（静的HTMLに全国/主要都市を確認）' };
   }
 
   // JS レンダリングページのテンプレート確認: ページ自体が返っているか

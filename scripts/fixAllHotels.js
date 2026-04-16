@@ -181,6 +181,12 @@ const KEYWORD_OVERRIDES_STATIC = new Map([
   ['高山',    '飛騨高山 岐阜 宿'],
 ]);
 
+// ── 温泉郷強制上書きリスト ─────────────────────────────────────────────
+// name にキーが含まれる場合、"{baseName}温泉郷 {prefecture} 温泉" を強制生成する。
+// 対象: 地名単体では楽天が全国解釈するリスクの高い有名温泉地。
+// name が「温泉」で終わる場合は「温泉」を除いて「温泉郷」に変換し二重化を防ぐ。
+const FORCE_ONSEN = ['霧島', '阿蘇', '日田', '由布院', '黒川', '別府'];
+
 // 自動生成 override（src/data/keywordOverrides.json から読み込み）
 // フォーマット: { "dest_id": "keyword" }
 const OVERRIDES_FILE = fs.existsSync(OVERRIDES_PATH)
@@ -193,9 +199,10 @@ const OVERRIDES_FILE = fs.existsSync(OVERRIDES_PATH)
  * 優先順位:
  * ① KEYWORD_OVERRIDES_STATIC（人間キュレーション、name包含マッチ）
  * ② 自動生成 override（ID 完全一致）
- * ③ hubCity あり → "{hubCity} {prefecture} 宿"
- * ④ name に「温泉」含む or destType=onsen → "{name} {prefecture} 温泉"
- * ⑤ その他 → "{name} {prefecture} 宿"
+ * ③ FORCE_ONSEN（温泉郷強制 — 全国フォールバックリスク排除）
+ * ④ hubCity あり → "{hubCity} {prefecture} 宿"
+ * ⑤ name に「温泉」含む or destType=onsen → "{name} {prefecture} 温泉"
+ * ⑥ その他 → "{name} {prefecture} 宿"
  */
 function buildRakutenKeyword(dest) {
   // ① 静的補正（name 包含マッチ）
@@ -213,13 +220,22 @@ function buildRakutenKeyword(dest) {
   const pref = dest.prefecture ?? '';
   const name = dest.displayName || dest.name || '';
 
-  // ③ hubCity: 拠点都市でホテルを検索（hubCity は宿泊地 → suffix は宿）
+  // ③ FORCE_ONSEN: 曖昧地名 → 温泉郷キーワードに強制変換
+  // name が「温泉」で終わる場合は除去（"黒川温泉" → "黒川温泉郷" ≠ "黒川温泉温泉郷"）
+  for (const k of FORCE_ONSEN) {
+    if (dest.name && dest.name.includes(k)) {
+      const baseName = name.endsWith('温泉') ? name.slice(0, -2) : name;
+      return `${baseName}温泉郷 ${pref} 温泉`;
+    }
+  }
+
+  // ④ hubCity: 拠点都市でホテルを検索（hubCity は宿泊地 → suffix は宿）
   // hubCity === name の場合（自身をhubに設定）は名前ベースロジックで処理する
   if (dest.hubCity && dest.hubCity !== name) {
     return `${dest.hubCity} ${pref} 宿`;
   }
 
-  // ④ 温泉判定: name に「温泉」含む OR destType=onsen → suffix は「温泉」
+  // ⑤ 温泉判定: name に「温泉」含む OR destType=onsen → suffix は「温泉」
   const isOnsen = name.includes('温泉') || dest.destType === 'onsen';
   const suffix  = isOnsen ? '温泉' : '宿';
 
@@ -300,6 +316,12 @@ for (const dest of dests) {
   // ── 楽天キーワード生成 + 安全チェック ──────────────────────────────
 
   let keyword = buildRakutenKeyword(dest);
+
+  // ② 弱いキーワード検知（2語以下 → 温泉を補完）
+  if (keyword.split(/\s+/).filter(Boolean).length <= 2) {
+    keyword += ' 温泉';
+  }
+
   const check = validateKeywordQuality(keyword);
 
   if (!check.ok) {
