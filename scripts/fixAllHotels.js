@@ -45,6 +45,23 @@ const DEST_TO_AREA_ID = {
   'esashi-hokkaido': 'esashi',
 };
 
+// 都道府県名 → Rakuten Travel URL コード
+// dest.prefecture の値に合わせた完全一致キー（北海道/東京都/京都府/大阪府 + XX県）
+const PREF_CODE_MAP = {
+  '北海道': 'hokkaido', '青森県': 'aomori', '岩手県': 'iwate', '宮城県': 'miyagi',
+  '秋田県': 'akita',   '山形県': 'yamagata', '福島県': 'fukushima', '茨城県': 'ibaraki',
+  '栃木県': 'tochigi', '群馬県': 'gunma', '埼玉県': 'saitama', '千葉県': 'chiba',
+  '東京都': 'tokyo',   '神奈川県': 'kanagawa', '新潟県': 'niigata', '富山県': 'toyama',
+  '石川県': 'ishikawa','福井県': 'fukui', '山梨県': 'yamanashi', '長野県': 'nagano',
+  '岐阜県': 'gifu',   '静岡県': 'shizuoka', '愛知県': 'aichi', '三重県': 'mie',
+  '滋賀県': 'shiga',  '京都府': 'kyoto', '大阪府': 'osaka', '兵庫県': 'hyogo',
+  '奈良県': 'nara',   '和歌山県': 'wakayama', '鳥取県': 'tottori', '島根県': 'shimane',
+  '岡山県': 'okayama','広島県': 'hiroshima', '山口県': 'yamaguchi', '徳島県': 'tokushima',
+  '香川県': 'kagawa', '愛媛県': 'ehime', '高知県': 'kochi', '福岡県': 'fukuoka',
+  '佐賀県': 'saga',   '長崎県': 'nagasaki', '熊本県': 'kumamoto', '大分県': 'oita',
+  '宮崎県': 'miyazaki','鹿児島県': 'kagoshima', '沖縄県': 'okinawa',
+};
+
 // ── ユーティリティ ────────────────────────────────────────────────────
 
 function isWeak(dest) {
@@ -180,6 +197,16 @@ const KEYWORD_OVERRIDES_STATIC = new Map([
   ['日田',    '日田温泉 大分 温泉'],
   ['高山',    '飛騨高山 岐阜 宿'],
   ['高千穂',  '高千穂 宮崎 宿'],
+  ['黒川',    '黒川温泉 熊本 温泉'],
+  ['別府',    '別府温泉 大分 温泉'],
+  ['湯布院',  '湯布院温泉 大分 温泉'],
+  ['由布院',  '湯布院温泉 大分 温泉'],
+  ['草津',    '草津温泉 群馬 温泉'],
+  ['箱根',    '箱根温泉 神奈川 温泉'],
+  ['軽井沢',  '軽井沢 長野 宿'],
+  ['白川郷',  '白川郷 岐阜 宿'],
+  ['知床',    '知床 北海道 宿'],
+  ['屋久島',  '屋久島 鹿児島 宿'],
 ]);
 
 // ── 温泉郷強制上書きリスト ─────────────────────────────────────────────
@@ -244,12 +271,31 @@ function buildRakutenKeyword(dest) {
 }
 
 /**
- * 楽天キーワード検索URL を生成する。
- * japan.html?f_query= を使用（/yado/search/ は HTTP 404 のため不可）。
- * encodeURIComponent は1回のみ。
+ * 楽天 destination URL を生成する。
+ *
+ * 優先順位:
+ * ① hotelAreas.json の rakutenPath（エリア別ページ → 最も絞られた結果）
+ * ② 都道府県別ページ /yado/{prefCode}/ （県内全宿を表示 → 確実に動作）
+ * ③ f_query フォールバック（SPA全国マップになるが最後の手段）
  */
-function buildRakutenKeywordUrl(dest) {
-  const keyword = buildRakutenKeyword(dest);
+function buildRakutenDestUrl(dest) {
+  // ① エリアパス（hotelAreas.json に rakutenPath がある場合）
+  const areaId = DEST_TO_AREA_ID[dest.id] ?? dest.id;
+  const area   = AREAS_BY_ID.get(areaId);
+  if (area?.rakutenPath) {
+    const url = `https://travel.rakuten.co.jp${area.rakutenPath}`;
+    return buildRakutenAffilUrl(url);
+  }
+
+  // ② 都道府県別ページ
+  const prefCode = PREF_CODE_MAP[dest.prefecture];
+  if (prefCode) {
+    const url = `https://travel.rakuten.co.jp/yado/${prefCode}/`;
+    return buildRakutenAffilUrl(url);
+  }
+
+  // ③ f_query フォールバック（全国マップになる可能性あり）
+  const keyword   = buildRakutenKeyword(dest);
   const searchUrl = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
   return buildRakutenAffilUrl(searchUrl);
 }
@@ -346,9 +392,8 @@ for (const dest of dests) {
     }
   }
 
-  // keyword → URL
-  const searchUrl   = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
-  const rakutenUrl  = buildRakutenAffilUrl(searchUrl);
+  // keyword → URL（エリアパス優先、都道府県フォールバック）
+  const rakutenUrl = buildRakutenDestUrl(dest);
 
   // ── じゃらんURL ─────────────────────────────────────────────────────
   const destName = dest.displayName || dest.name;
