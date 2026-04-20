@@ -333,6 +333,7 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
   // 最終フォールバック: 距離のみ（出発地制約なし）
   const BAD_TYPES_GLOBAL = new Set(['airport', 'station', 'terminal', 'transport_hub', 'access_point']);
   const globalPool = withStars.filter(d => {
+    if (departure && isSameCity(d, departure)) return false;
     if (stayType !== 'daytrip' && d.isStayable === false) return false;
     if (!matchesStayType(d)) return false;
     if (excludeCar && d.requiresCar) return false;

@@ -1282,7 +1282,8 @@
       "osaka": 585,
       "nagoya": 530,
       "fukuoka": 735,
-      "takamatsu": 685
+      "takamatsu": 685,
+      "sapporo": 40
     },
     "stayRecommendation": "3night+",
     "secondaryTransport": null,
@@ -1411,7 +1412,8 @@
       "osaka": 695,
       "nagoya": 640,
       "fukuoka": 845,
-      "takamatsu": 795
+      "takamatsu": 795,
+      "sapporo": 120
     },
     "stayRecommendation": "3night+",
     "secondaryTransport": null,
@@ -6514,7 +6516,8 @@
       "osaka": 635,
       "nagoya": 580,
       "fukuoka": 785,
-      "takamatsu": 735
+      "takamatsu": 735,
+      "sapporo": 110
     },
     "stayRecommendation": "3night+",
     "secondaryTransport": null,
@@ -6639,7 +6642,8 @@
       "osaka": 620,
       "nagoya": 565,
       "fukuoka": 770,
-      "takamatsu": 720
+      "takamatsu": 720,
+      "sapporo": 90
     },
     "stayRecommendation": "3night+",
     "secondaryTransport": null,
@@ -6759,7 +6763,8 @@
       "osaka": 295,
       "nagoya": 245,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "sapporo": 300
     },
     "stayRecommendation": "1night",
     "city": "斜里町",
@@ -8688,7 +8693,8 @@
       "osaka": 555,
       "nagoya": 500,
       "fukuoka": 705,
-      "takamatsu": 655
+      "takamatsu": 655,
+      "sapporo": 60
     },
     "stayRecommendation": "2night",
     "city": "札幌市",
@@ -8818,7 +8824,8 @@
       "osaka": 670,
       "nagoya": 615,
       "fukuoka": 820,
-      "takamatsu": 770
+      "takamatsu": 770,
+      "sapporo": 140
     },
     "stayRecommendation": "3night+",
     "secondaryTransport": null,
@@ -15246,7 +15253,8 @@
       "osaka": 585,
       "nagoya": 530,
       "fukuoka": 735,
-      "takamatsu": 685
+      "takamatsu": 685,
+      "sapporo": 140
     },
     "stayRecommendation": "3night+",
     "city": "積丹町",
@@ -17853,7 +17861,8 @@
       "osaka": 675,
       "nagoya": 620,
       "fukuoka": 825,
-      "takamatsu": 775
+      "takamatsu": 775,
+      "sapporo": 180
     },
     "stayRecommendation": "3night+",
     "city": "上川町",
@@ -18001,7 +18010,8 @@
       "osaka": 890,
       "nagoya": 835,
       "fukuoka": 1040,
-      "takamatsu": 990
+      "takamatsu": 990,
+      "sapporo": 420
     },
     "stayRecommendation": "3night+",
     "city": "北海礼文島",
@@ -18153,7 +18163,8 @@
       "osaka": 890,
       "nagoya": 835,
       "fukuoka": 1040,
-      "takamatsu": 990
+      "takamatsu": 990,
+      "sapporo": 400
     },
     "stayRecommendation": "3night+",
     "city": "北海利尻島",
@@ -18302,7 +18313,8 @@
       "osaka": 295,
       "nagoya": 245,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "sapporo": 240
     },
     "stayRecommendation": "1night",
     "city": "釧路市",
@@ -18426,7 +18438,8 @@
       "osaka": 295,
       "nagoya": 245,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "sapporo": 270
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -18555,7 +18568,8 @@
       "osaka": 160,
       "nagoya": 160,
       "fukuoka": 160,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "sapporo": 70
     },
     "stayRecommendation": "1night",
     "city": "千歳市",
@@ -26907,7 +26921,8 @@
       "osaka": 290,
       "nagoya": 240,
       "fukuoka": 250,
-      "takamatsu": 255
+      "takamatsu": 255,
+      "sapporo": 360
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -27041,7 +27056,8 @@
       "osaka": 240,
       "nagoya": 190,
       "fukuoka": 195,
-      "takamatsu": 200
+      "takamatsu": 200,
+      "sapporo": 180
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -27176,7 +27192,8 @@
       "osaka": 310,
       "nagoya": 260,
       "fukuoka": 265,
-      "takamatsu": 270
+      "takamatsu": 270,
+      "sapporo": 320
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -27316,7 +27333,8 @@
       "osaka": 360,
       "nagoya": 310,
       "fukuoka": 315,
-      "takamatsu": 320
+      "takamatsu": 320,
+      "sapporo": 210
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -32743,7 +32761,8 @@
       "osaka": 470,
       "nagoya": 415,
       "fukuoka": 620,
-      "takamatsu": 570
+      "takamatsu": 570,
+      "sapporo": 120
     },
     "hotelArea": "hokkaido",
     "hotelKeyword": "ニセコ",
@@ -32869,7 +32888,8 @@
       "osaka": 460,
       "nagoya": 405,
       "fukuoka": 610,
-      "takamatsu": 560
+      "takamatsu": 560,
+      "sapporo": 130
     },
     "hotelArea": "hokkaido",
     "hotelKeyword": "旭岳",
@@ -33003,7 +33023,8 @@
       "osaka": 590,
       "nagoya": 535,
       "fukuoka": 740,
-      "takamatsu": 690
+      "takamatsu": 690,
+      "sapporo": 40
     },
     "hotelArea": "hokkaido",
     "hotelKeyword": "白老",
@@ -33120,7 +33141,8 @@
       "osaka": 530,
       "nagoya": 475,
       "fukuoka": 680,
-      "takamatsu": 630
+      "takamatsu": 630,
+      "sapporo": 150
     },
     "hotelArea": "hokkaido",
     "hotelKeyword": "トマム",
@@ -43282,7 +43304,8 @@
       "osaka": 590,
       "nagoya": 545,
       "fukuoka": 720,
-      "takamatsu": 655
+      "takamatsu": 655,
+      "sapporo": 360
     },
     "stayRecommendation": "2night",
     "city": "根室市",
@@ -43395,7 +43418,8 @@
       "osaka": 470,
       "nagoya": 420,
       "fukuoka": 615,
-      "takamatsu": 555
+      "takamatsu": 555,
+      "sapporo": 100
     },
     "stayRecommendation": "2night",
     "city": "室蘭市",
@@ -43507,7 +43531,8 @@
       "osaka": 440,
       "nagoya": 395,
       "fukuoka": 590,
-      "takamatsu": 530
+      "takamatsu": 530,
+      "sapporo": 60
     },
     "stayRecommendation": "2night",
     "city": "苫小牧市",
@@ -49162,7 +49187,8 @@
       "osaka": 540,
       "nagoya": 470,
       "fukuoka": 710,
-      "takamatsu": 590
+      "takamatsu": 590,
+      "sapporo": 210
     },
     "stayRecommendation": "2night",
     "city": "函館市",
@@ -49290,7 +49316,8 @@
       "osaka": 210,
       "nagoya": 200,
       "fukuoka": 235,
-      "takamatsu": 220
+      "takamatsu": 220,
+      "sapporo": 90
     },
     "stayRecommendation": "1night",
     "city": "旭川市",
@@ -49413,7 +49440,8 @@
       "osaka": 240,
       "nagoya": 220,
       "fukuoka": 260,
-      "takamatsu": 248
+      "takamatsu": 248,
+      "sapporo": 220
     },
     "stayRecommendation": "1night",
     "city": "釧路市",
@@ -49534,7 +49562,8 @@
       "osaka": 460,
       "nagoya": 410,
       "fukuoka": 650,
-      "takamatsu": 535
+      "takamatsu": 535,
+      "sapporo": 60
     },
     "stayRecommendation": "1night",
     "city": "余市町",
@@ -49646,7 +49675,8 @@
       "osaka": 290,
       "nagoya": 270,
       "fukuoka": 310,
-      "takamatsu": 295
+      "takamatsu": 295,
+      "sapporo": 280
     },
     "stayRecommendation": "2night",
     "city": "厚岸町",
@@ -49760,7 +49790,8 @@
       "osaka": 250,
       "nagoya": 232,
       "fukuoka": 272,
-      "takamatsu": 258
+      "takamatsu": 258,
+      "sapporo": 270
     },
     "stayRecommendation": "1night",
     "city": "北見市",
@@ -49879,7 +49910,8 @@
       "osaka": 245,
       "nagoya": 228,
       "fukuoka": 265,
-      "takamatsu": 252
+      "takamatsu": 252,
+      "sapporo": 280
     },
     "stayRecommendation": "1night",
     "city": "紋別市",
@@ -49989,7 +50021,8 @@
       "osaka": 480,
       "nagoya": 430,
       "fukuoka": 670,
-      "takamatsu": 555
+      "takamatsu": 555,
+      "sapporo": 220
     },
     "stayRecommendation": "2night",
     "city": "増毛町",
@@ -59621,7 +59654,8 @@
       "osaka": 450,
       "nagoya": 400,
       "fukuoka": 635,
-      "takamatsu": 520
+      "takamatsu": 520,
+      "sapporo": 50
     },
     "stayRecommendation": "1night",
     "city": "当別町",
@@ -60519,7 +60553,8 @@
       "osaka": 270,
       "nagoya": 250,
       "fukuoka": 285,
-      "takamatsu": 270
+      "takamatsu": 270,
+      "sapporo": 200
     },
     "stayRecommendation": "1night",
     "city": "上士幌町",
@@ -60631,7 +60666,8 @@
       "osaka": 490,
       "nagoya": 440,
       "fukuoka": 680,
-      "takamatsu": 565
+      "takamatsu": 565,
+      "sapporo": 170
     },
     "stayRecommendation": "2night",
     "city": "八雲町",
@@ -120970,7 +121006,8 @@
       "osaka": 480,
       "nagoya": 440,
       "fukuoka": 570,
-      "takamatsu": 520
+      "takamatsu": 520,
+      "sapporo": 240
     },
     "stayRecommendation": "1night",
     "city": "羽幌町",
