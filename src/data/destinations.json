@@ -46481,7 +46481,7 @@
       "豊楽寺（薬師堂）"
     ],
     "shinkansenAccess": false,
-    "requiresCar": false,
+    "requiresCar": true,
     "hotelSearch": "大豊",
     "gateways": {
       "rail": [
