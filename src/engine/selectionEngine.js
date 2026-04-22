@@ -324,10 +324,21 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     return true;
   });
 
-  if (departurePool.length > 0) {
+  // stayAllowed フィルタを適用
+  const withStayAllowed = departurePool.filter(d => {
+    if (!d.stayAllowed || d.stayAllowed.length === 0) return true;
+    return d.stayAllowed.includes(stayType);
+  });
+
+  // 0件になった場合は stayAllowed を無視
+  const finalPool = withStayAllowed.length > 0
+    ? withStayAllowed
+    : departurePool;
+
+  if (finalPool.length > 0) {
     // ハードフィルタ: テーマ選択時は完全一致の候補を優先、0件の場合のみ全件にフォールバック
-    const themed = theme ? departurePool.filter(d => matchesTheme(d, theme)) : departurePool;
-    return weightedShuffle(themed.length > 0 ? themed : departurePool, theme, departure);
+    const themed = theme ? finalPool.filter(d => matchesTheme(d, theme)) : finalPool;
+    return weightedShuffle(themed.length > 0 ? themed : finalPool, theme, departure);
   }
 
   // 最終フォールバック: 距離のみ（出発地制約なし）
@@ -343,8 +354,18 @@ export function buildShuffledPool(destinations, stayType, theme, departure = '',
     if (/空港|ターミナル/.test(dname)) return false;
     return true;
   });
-  const themedGlobal = theme ? globalPool.filter(d => matchesTheme(d, theme)) : globalPool;
-  return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : globalPool, theme, departure);
+
+  // globalPool にも stayAllowed フィルタを適用（0件時は元のプールにフォールバック）
+  const globalWithStayAllowed = globalPool.filter(d => {
+    if (!d.stayAllowed || d.stayAllowed.length === 0) return true;
+    return d.stayAllowed.includes(stayType);
+  });
+  const finalGlobalPool = globalWithStayAllowed.length > 0
+    ? globalWithStayAllowed
+    : globalPool;
+
+  const themedGlobal = theme ? finalGlobalPool.filter(d => matchesTheme(d, theme)) : finalGlobalPool;
+  return weightedShuffle(themedGlobal.length > 0 ? themedGlobal : finalGlobalPool, theme, departure);
 }
 
 /** 後方互換ラッパー（1件のみ返す） */
