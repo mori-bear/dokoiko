@@ -122361,5 +122361,935 @@
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25EC%2589%25EF%2592%25C3"
     },
     "accessType": "car"
+  },
+  {
+    "id": "shosenkyo",
+    "name": "昇仙峡",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kofu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1,
+    "description": "荒川上流に刻まれた渓谷美。奇岩・滝・紅葉が織りなす日本屈指の景勝地。",
+    "tags": [
+      "絶景",
+      "渓谷",
+      "自然"
+    ],
+    "spots": [
+      "仙娥滝",
+      "覚円峰",
+      "昇仙峡ロープウェイ"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "昇仙峡",
+    "gateways": {
+      "rail": [
+        "甲府駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "mountain",
+    "railGateway": "甲府駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "山梨県",
+    "city": "甲府市",
+    "lat": 35.7845,
+    "lng": 138.5656,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 130,
+      "osaka": 300,
+      "nagoya": 210,
+      "fukuoka": 480,
+      "takamatsu": 390
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "甲府駅",
+    "accessStation": "甲府駅",
+    "hotelArea": "yamanashi",
+    "hotelKeyword": "昇仙峡",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "甲府駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "甲府",
+    "gateway": "新宿駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "奇岩と渓流の峡に、時間が静かに流れる。",
+    "primary": [
+      "絶景",
+      "渓谷",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "仙娥滝",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "昇仙峡",
+    "stayPriority": "medium",
+    "representativeStation": "甲府駅",
+    "finalAccess": {
+      "type": "bus",
+      "description": "甲府駅からバスで昇仙峡口へ"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "甲府"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E6%2598%2587%25E4%25BB%2599%25E5%25B3%25A1&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E6%2598%2587%25E4%25BB%2599%25E5%25B3%25A1",
+    "bookingStation": {
+      "name": "甲府駅",
+      "company": "JR"
+    },
+    "mainSpot": "仙娥滝",
+    "stayArea": {
+      "rakuten": "昇仙峡",
+      "jalan": "昇仙峡"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "isawa-onsen",
+    "name": "石和温泉",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kofu",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1,
+    "description": "甲府盆地の大温泉郷。ぶどうと日本酒と温泉が揃う山梨の湯の里。",
+    "tags": [
+      "温泉",
+      "グルメ",
+      "ワイン"
+    ],
+    "spots": [
+      "石和温泉街",
+      "笛吹川",
+      "ぶどう畑"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "石和温泉",
+    "gateways": {
+      "rail": [
+        "石和温泉駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "onsen",
+    "railGateway": "石和温泉駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "山梨県",
+    "city": "笛吹市",
+    "lat": 35.65,
+    "lng": 138.6369,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 100,
+      "osaka": 280,
+      "nagoya": 190,
+      "fukuoka": 460,
+      "takamatsu": 370
+    },
+    "stayRecommendation": "1night",
+    "hubStation": "新宿駅",
+    "accessStation": "石和温泉駅",
+    "hotelArea": "yamanashi",
+    "hotelKeyword": "石和温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "石和温泉駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "甲府",
+    "gateway": "新宿駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ぶどう畑を抜けた先に、湯の里が待つ。",
+    "primary": [
+      "温泉",
+      "グルメ",
+      "ワイン"
+    ],
+    "secondary": [],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "石和温泉街",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "石和温泉",
+    "stayPriority": "medium",
+    "representativeStation": "石和温泉駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "石和温泉"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E7%259F%25B3%25E5%2592%258C%25E6%25B8%25A9%25E6%25B3%2589&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E7%259F%25B3%25E5%2592%258C%25E6%25B8%25A9%25E6%25B3%2589",
+    "bookingStation": {
+      "name": "石和温泉駅",
+      "company": "JR"
+    },
+    "mainSpot": "石和温泉街",
+    "stayArea": {
+      "rakuten": "石和温泉",
+      "jalan": "石和温泉"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "minobu",
+    "name": "身延",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kofu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1,
+    "description": "日蓮宗総本山・久遠寺の門前町。富士川沿いの杉並木と山懐の霊場が静寂を湛える。",
+    "tags": [
+      "寺社",
+      "歴史",
+      "自然"
+    ],
+    "spots": [
+      "身延山久遠寺",
+      "七面山",
+      "富士川"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "身延",
+    "gateways": {
+      "rail": [
+        "身延駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "sight",
+    "railGateway": "身延駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "山梨県",
+    "city": "身延町",
+    "lat": 35.3733,
+    "lng": 138.4408,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 150,
+      "osaka": 250,
+      "nagoya": 180,
+      "fukuoka": 440,
+      "takamatsu": 350
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "新宿駅",
+    "accessStation": "身延駅",
+    "hotelArea": "yamanashi",
+    "hotelKeyword": "身延",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "身延駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "甲府",
+    "gateway": "新宿駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "杉木立の参道を登ると、山の霊場が現れる。",
+    "primary": [
+      "寺社",
+      "歴史",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "身延山久遠寺",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "身延",
+    "stayPriority": "medium",
+    "representativeStation": "身延駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "身延"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E8%25BA%25AB%25E5%25BB%25B6&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E8%25BA%25AB%25E5%25BB%25B6",
+    "bookingStation": {
+      "name": "身延駅",
+      "company": "JR"
+    },
+    "mainSpot": "身延山久遠寺",
+    "stayArea": {
+      "rakuten": "身延",
+      "jalan": "身延"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "nagatoro",
+    "name": "長瀞",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1,
+    "description": "荒川の渓谷美と岩畳が広がる自然アクティビティの里。秩父鉄道で手軽に行ける渓谷体験。",
+    "tags": [
+      "渓谷",
+      "自然",
+      "アウトドア"
+    ],
+    "spots": [
+      "長瀞岩畳",
+      "宝登山神社",
+      "ライン下り"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "長瀞",
+    "gateways": {
+      "rail": [
+        "長瀞駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "sight",
+    "railGateway": "長瀞駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "埼玉県",
+    "city": "長瀞町",
+    "lat": 36.1156,
+    "lng": 139.1103,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 100,
+      "osaka": 300,
+      "nagoya": 240,
+      "fukuoka": 500,
+      "takamatsu": 410
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "池袋駅",
+    "accessStation": "長瀞駅",
+    "hotelArea": "saitama",
+    "hotelKeyword": "長瀞",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長瀞駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "秩父",
+    "gateway": "池袋駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "岩畳を歩くと、水面が宝石のように光る。",
+    "primary": [
+      "渓谷",
+      "自然",
+      "アウトドア"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "長瀞岩畳",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "長瀞",
+    "stayPriority": "medium",
+    "representativeStation": "長瀞駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長瀞"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E9%2595%25B7%25E7%2580%259E&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E9%2595%25B7%25E7%2580%259E",
+    "bookingStation": {
+      "name": "長瀞駅",
+      "company": "JR"
+    },
+    "mainSpot": "長瀞岩畳",
+    "stayArea": {
+      "rakuten": "長瀞",
+      "jalan": "長瀞"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "hanno",
+    "name": "飯能",
+    "type": "destination",
+    "region": "関東",
+    "hub": "tokyo-o",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "東京"
+    ],
+    "weight": 1,
+    "description": "西武線で気軽に行ける森と川の街。ムーミンバレーパークと天覧山の里山歩きが人気。",
+    "tags": [
+      "自然",
+      "街歩き",
+      "アウトドア"
+    ],
+    "spots": [
+      "ムーミンバレーパーク",
+      "天覧山",
+      "飯能河原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "飯能",
+    "gateways": {
+      "rail": [
+        "飯能駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "city",
+    "railGateway": "飯能駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "埼玉県",
+    "city": "飯能市",
+    "lat": 35.8556,
+    "lng": 139.3278,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 60,
+      "osaka": 280,
+      "nagoya": 220,
+      "fukuoka": 490,
+      "takamatsu": 400
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "池袋駅",
+    "accessStation": "飯能駅",
+    "hotelArea": "saitama",
+    "hotelKeyword": "飯能",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "飯能駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "秩父",
+    "gateway": "池袋駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "池袋から一時間、森と川の街に着く。",
+    "primary": [
+      "自然",
+      "街歩き",
+      "アウトドア"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "ムーミンバレーパーク",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "飯能",
+    "stayPriority": "medium",
+    "representativeStation": "飯能駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "飯能"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E9%25A3%25AF%25E8%2583%25BD&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E9%25A3%25AF%25E8%2583%25BD",
+    "bookingStation": {
+      "name": "飯能駅",
+      "company": "JR"
+    },
+    "mainSpot": "ムーミンバレーパーク",
+    "stayArea": {
+      "rakuten": "飯能",
+      "jalan": "飯能"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "yobuko",
+    "name": "呼子",
+    "type": "destination",
+    "region": "九州",
+    "hub": "saga",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "weight": 1,
+    "description": "玄界灘の突端にある港町。イカの活造りと朝市、断崖の七ツ釜遊覧船が名物。",
+    "tags": [
+      "グルメ",
+      "海",
+      "港町"
+    ],
+    "spots": [
+      "呼子朝市",
+      "イカ活造り",
+      "七ツ釜"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "呼子",
+    "gateways": {
+      "rail": [
+        "唐津駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "city",
+    "railGateway": "唐津駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "佐賀県",
+    "city": "唐津市",
+    "lat": 33.5456,
+    "lng": 129.8906,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 270,
+      "nagoya": 300,
+      "fukuoka": 90,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "唐津駅",
+    "accessStation": "唐津駅",
+    "hotelArea": "saga",
+    "hotelKeyword": "呼子",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "唐津駅",
+          "provider": "JR九州ネット予約"
+        }
+      ]
+    },
+    "fallbackCity": "唐津",
+    "gateway": "博多駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "透き通るイカと朝市の声、港の朝が始まる。",
+    "primary": [
+      "グルメ",
+      "海",
+      "港町"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "呼子朝市",
+    "subType": "sea",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "呼子",
+    "stayPriority": "medium",
+    "representativeStation": "唐津駅",
+    "finalAccess": {
+      "type": "bus",
+      "description": "唐津駅からバスで呼子へ"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "唐津"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E5%2591%25BC%25E5%25AD%2590&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E5%2591%25BC%25E5%25AD%2590",
+    "bookingStation": {
+      "name": "唐津駅",
+      "company": "JR"
+    },
+    "mainSpot": "呼子朝市",
+    "stayArea": {
+      "rakuten": "呼子",
+      "jalan": "呼子"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "arita",
+    "name": "有田",
+    "type": "destination",
+    "region": "九州",
+    "hub": "saga",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "weight": 1,
+    "description": "日本磁器発祥の地。白磁の窯元が連なる街並みと有田焼の歴史が深い文化の町。",
+    "tags": [
+      "街歩き",
+      "歴史",
+      "文化"
+    ],
+    "spots": [
+      "有田陶磁美術館",
+      "トンバイ塀の裏通り",
+      "泉山磁石場"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "有田",
+    "gateways": {
+      "rail": [
+        "有田駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "city",
+    "railGateway": "有田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "佐賀県",
+    "city": "有田町",
+    "lat": 33.1831,
+    "lng": 129.8869,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "jrkyushu",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 240,
+      "nagoya": 270,
+      "fukuoka": 80,
+      "takamatsu": 300
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "有田駅",
+    "accessStation": "有田駅",
+    "hotelArea": "saga",
+    "hotelKeyword": "有田",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "有田駅",
+          "provider": "JR九州ネット予約"
+        }
+      ]
+    },
+    "fallbackCity": "唐津",
+    "gateway": "博多駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "白磁の町を歩けば、陶磁の歴史が積もる。",
+    "primary": [
+      "街歩き",
+      "歴史",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "トンバイ塀の裏通り",
+    "subType": "sea",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "有田",
+    "stayPriority": "medium",
+    "representativeStation": "有田駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "有田"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E6%259C%2589%25E7%2594%25B0&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E6%259C%2589%25E7%2594%25B0",
+    "bookingStation": {
+      "name": "有田駅",
+      "company": "JR"
+    },
+    "mainSpot": "トンバイ塀の裏通り",
+    "stayArea": {
+      "rakuten": "有田",
+      "jalan": "有田"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
+  },
+  {
+    "id": "onuma",
+    "name": "大沼公園",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "hakodate",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "weight": 1,
+    "description": "駒ヶ岳と大沼湖が織りなす道南の景勝地。カヌー・サイクリング・散策が楽しめる自然公園。",
+    "tags": [
+      "自然",
+      "絶景",
+      "アウトドア"
+    ],
+    "spots": [
+      "大沼湖",
+      "駒ヶ岳",
+      "大島"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "大沼",
+    "gateways": {
+      "rail": [
+        "大沼公園駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "secondaryTransport": null,
+    "destType": "sight",
+    "railGateway": "大沼公園駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "北海道",
+    "city": "七飯町",
+    "lat": 41.9964,
+    "lng": 140.6717,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 270,
+      "osaka": 420,
+      "nagoya": 380,
+      "fukuoka": 510,
+      "takamatsu": 450,
+      "hakodate": 30,
+      "sapporo": 210
+    },
+    "stayRecommendation": "daytrip",
+    "hubStation": "新函館北斗駅",
+    "accessStation": "大沼公園駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "大沼",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大沼公園駅",
+          "provider": "えきねっと"
+        }
+      ]
+    },
+    "fallbackCity": "函館",
+    "gateway": "新函館北斗駅",
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "駒ヶ岳を映す湖面、船が静かにすべる。",
+    "primary": [
+      "自然",
+      "絶景",
+      "アウトドア"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "大沼湖",
+    "subType": "mountain",
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "hubCity": "大沼公園",
+    "stayPriority": "medium",
+    "representativeStation": "大沼公園駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大沼公園"
+    },
+    "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E5%25A4%25A7%25E6%25B2%25BC&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%25E5%25A4%25A7%25E6%25B2%25BC",
+    "bookingStation": {
+      "name": "大沼公園駅",
+      "company": "JR"
+    },
+    "mainSpot": "大沼湖",
+    "stayArea": {
+      "rakuten": "大沼",
+      "jalan": "大沼"
+    },
+    "hotelLinks": {
+      "rakuten": null,
+      "jalan": null
+    }
   }
 ]
