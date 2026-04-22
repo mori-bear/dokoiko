@@ -1525,7 +1525,7 @@
       "五大堂"
     ],
     "shinkansenAccess": false,
-    "requiresCar": true,
+    "requiresCar": false,
     "hotelSearch": "松島",
     "gateways": {
       "rail": [
@@ -3367,7 +3367,7 @@
       "爪木崎"
     ],
     "shinkansenAccess": false,
-    "requiresCar": true,
+    "requiresCar": false,
     "hotelSearch": "下田",
     "gateways": {
       "rail": [
@@ -14036,7 +14036,7 @@
       "足湯の宿"
     ],
     "shinkansenAccess": false,
-    "requiresCar": true,
+    "requiresCar": false,
     "hotelSearch": "和倉温泉",
     "gateways": {
       "rail": [
@@ -21271,7 +21271,7 @@
       "大室山"
     ],
     "shinkansenAccess": false,
-    "requiresCar": true,
+    "requiresCar": false,
     "hotelSearch": "伊東温泉",
     "gateways": {
       "rail": [
