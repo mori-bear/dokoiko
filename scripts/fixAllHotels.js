@@ -311,10 +311,16 @@ function buildRakutenDestUrl(dest) {
 
 // ── じゃらんURL生成 ──────────────────────────────────────────────────
 
-/** じゃらんキーワード検索URL（UTF-8 エンコード） */
+/** じゃらんキーワード検索URL（Shift_JIS / cp932 エンコード）
+ *  jalan.net の uww2011init.do エンドポイントは Shift_JIS でのみキーワードを受付、
+ *  UTF-8 を渡すと文字化けして検索結果がゼロ件になる（2026-04 時点の実測で確認済み）。 */
 function buildJalanUrl(area) {
   const normalized = normalizeArea(area);
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(normalized)}`;
+  const sjisBytes = iconv.encode(normalized, 'cp932');
+  const encoded = Array.from(sjisBytes)
+    .map(b => '%' + b.toString(16).toUpperCase().padStart(2, '0'))
+    .join('');
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encoded}`;
 }
 
 function buildJalanKeywordUrl(keyword) {

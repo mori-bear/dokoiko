@@ -14,6 +14,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import iconv from 'iconv-lite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -44,16 +45,35 @@ const fails = [];
 let okCount = 0;
 let total = 0;
 
-/** Shift_JIS 由来の 2バイト文字検出（%81-%9F は UTF-8 では先頭バイトにならない） */
-function hasShiftJis(url) {
+/** jalan.net の keyword が UTF-8 エンコードされていないか検査。
+ *  jalan.net は Shift_JIS を要求する仕様のため、UTF-8 キーワードは文字化けしてゼロ件ヒットになる。
+ *  判定: 両方式で decode し、"読める日本語" により近い方を採用。Shift_JIS が読めれば PASS、UTF-8 のみ読める場合のみ FAIL。
+ *  （ASCIIのみのキーワードは両方で同じ結果 → PASS 扱い） */
+function hasUtf8Japanese(url) {
   if (!url) return false;
-  const m = url.match(/keyword%3D([^&]+?)(?:&|$|%26)/);
-  if (!m) return false;
-  const decodedOnce = m[1].replace(/%25/g, '%');
-  if (/^%[89][0-9A-F]/.test(decodedOnce)) return true;
-  // 単一エンコードの場合（referral 経由でない素のURL）
-  if (/^%[89][0-9A-F]%[4-9A-F][0-9A-F]/.test(m[1])) return true;
-  return false;
+  // vc_url 内の keyword=... を抽出
+  const vcMatch = url.match(/vc_url=([^&]+)/);
+  const innerUrl = vcMatch ? decodeURIComponent(vcMatch[1]) : url;
+  const kwMatch = innerUrl.match(/keyword=([^&]*)/);
+  if (!kwMatch) return false;
+  const kwEnc = kwMatch[1];
+  // ASCII のみ（非 %XX エスケープで終わる）なら OK
+  if (!/%[0-9A-F]{2}/i.test(kwEnc)) return false;
+  // バイト列を復元
+  const bytes = [];
+  for (let i = 0; i < kwEnc.length; i++) {
+    if (kwEnc[i] === '%') { bytes.push(parseInt(kwEnc.substr(i + 1, 2), 16)); i += 2; }
+    else bytes.push(kwEnc.charCodeAt(i));
+  }
+  const buf = Buffer.from(bytes);
+  const sjis = iconv.decode(buf, 'cp932');
+  const utf8 = iconv.decode(buf, 'utf8');
+  // SJIS で読める日本語（漢字・ひらがな・カタカナが含まれ、�を含まない）なら OK
+  const sjisOK = !sjis.includes('�') && /[぀-ヿ一-鿿]/.test(sjis);
+  if (sjisOK) return false;
+  // UTF-8 で読めて SJIS で読めない → UTF-8 エンコードされている
+  const utf8OK = !utf8.includes('�') && /[぀-ヿ一-鿿]/.test(utf8);
+  return utf8OK;
 }
 
 /** URL が有効か（http/https + 空でない） */
@@ -130,8 +150,8 @@ for (const departure of DEPARTURES) {
         if (!isValidUrl(jalan)) {
           fails.push({ tag, reason: `jalan URL が無効: ${jalan}` });
         }
-        if (hasShiftJis(jalan)) {
-          fails.push({ tag, reason: `jalan に Shift_JIS エンコード: ${jalan?.slice(0, 80)}...` });
+        if (hasUtf8Japanese(jalan)) {
+          fails.push({ tag, reason: `jalan に UTF-8 日本語エンコード（jalan.netは SJIS を要求・文字化けしてゼロ件）: ${jalan?.slice(0, 80)}...` });
         }
         if (isRakutenFallback(rakuten)) {
           fails.push({ tag, reason: `rakuten が japan.html フォールバック` });
