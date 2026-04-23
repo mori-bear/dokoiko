@@ -2571,3 +2571,139 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   color: var(--text);
   border-bottom-style: solid;
 }
+
+/* ══════════════════════════════════════════
+   個別ページ: 行き方セクション（リッチ版）
+   ══════════════════════════════════════════ */
+
+.access-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.access-steps-list .step-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.15s;
+}
+.access-steps-list .step-item:last-child { margin-bottom: 0; }
+
+/* ステップ間の矢印（最後以外の下に小さな↓） */
+.access-steps-list .step-item:not(:last-child)::after {
+  content: "↓";
+  position: absolute;
+  left: 22px;
+  bottom: -14px;
+  color: var(--text-sub);
+  font-size: 12px;
+  line-height: 1;
+  z-index: 1;
+}
+
+.step-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: var(--btn-bg);
+  border-radius: 50%;
+}
+
+.step-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.step-text strong {
+  font-weight: 700;
+}
+
+.step-booking {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 2px 8px;
+  background: #eff2fd;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.step-booking:hover { text-decoration: underline; }
+
+.step-provider {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: #f2efe9;
+  border-radius: 999px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* ── 主要都市からの所要時間 ── */
+.travel-time-box {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--btn-bg);
+  border-radius: 12px;
+}
+.travel-time-label {
+  font-size: 12px;
+  color: var(--text-sub);
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+.travel-time-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 16px;
+}
+.travel-time-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--border);
+}
+.travel-time-list li:last-child,
+.travel-time-list li:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+.tt-label {
+  color: var(--text-sub);
+}
+.tt-value {
+  color: var(--text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+  .travel-time-list { grid-template-columns: 1fr; }
+  .access-steps-list .step-item { padding: 12px 14px; gap: 10px; }
+  .step-icon { width: 26px; height: 26px; font-size: 16px; }
+}

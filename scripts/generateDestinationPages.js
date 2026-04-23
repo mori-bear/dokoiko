@@ -34,7 +34,7 @@ function jsonEsc(str) {
   return JSON.stringify(str).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
 }
 
-/** 所要時間を人間向け文字列へ */
+/** 所要時間を人間向け文字列へ（接頭辞なし） */
 function formatMinutes(m) {
   if (!m || m <= 0) return '';
   const h = Math.floor(m / 60);
@@ -42,6 +42,173 @@ function formatMinutes(m) {
   if (h > 0 && min > 0) return `${h}時間${min}分`;
   if (h > 0)           return `${h}時間`;
   return `${min}分`;
+}
+
+/** 所要時間を「約○○」形式で返す（120分未満→分、120分以上→時間分） */
+function formatApproxMinutes(m) {
+  if (!m || m <= 0) return '';
+  if (m < 120) return `約${m}分`;
+  const h = Math.floor(m / 60);
+  const min = m % 60;
+  return min > 0 ? `約${h}時間${min}分` : `約${h}時間`;
+}
+
+/* ══════════════════════════════════════════
+   行き方セクション
+   ══════════════════════════════════════════ */
+
+/** access.steps.type → アイコン（local は method で分岐） */
+const LOCAL_METHOD_ICON = {
+  'バス':       '🚌',
+  '徒歩':       '🚶',
+  'レンタカー': '🚗',
+  'タクシー':   '🚕',
+  'フェリー':   '⛴',
+};
+
+function stepIcon(step) {
+  if (step.type === 'rail')   return '🚃';
+  if (step.type === 'flight') return '✈️';
+  if (step.type === 'ferry')  return '⛴';
+  if (step.type === 'local')  return LOCAL_METHOD_ICON[step.method] ?? '📍';
+  if (step.type === 'bus')    return '🚌';
+  return '📍';
+}
+
+/** provider ID → 予約サービス名 */
+const PROVIDER_LABEL = {
+  ekinet:       'えきねっと',
+  'えきねっと': 'えきねっと',
+  e5489:        'e5489',
+  jrkyushu:     '九州ネット予約',
+  '九州ネット予約': '九州ネット予約',
+  EX:           'スマートEX',
+  smartex:      'スマートEX',
+  'スマートEX': 'スマートEX',
+};
+
+/** ステップ1件を <li> HTML に変換 */
+function renderStep(step, prevTo) {
+  const icon = stepIcon(step);
+  const toRaw   = step.to   ?? '';
+  const fromRaw = step.from ?? '';
+  // from が前ステップの to と同一なら省略
+  const showFrom = fromRaw && fromRaw !== prevTo;
+  const arrow = toRaw
+    ? (showFrom ? `${esc(fromRaw)} → ${esc(toRaw)}` : `${esc(toRaw)}へ`)
+    : (showFrom ? esc(fromRaw) : '');
+
+  // 括弧内のサフィックス（method・operator・所要時間）
+  const meta = [];
+  if (step.type === 'rail') {
+    if (step.line) meta.push(step.line);
+  } else if (step.type === 'flight') {
+    meta.push('飛行機');
+  } else if (step.type === 'ferry') {
+    if (step.operator) meta.push(step.operator);
+    else               meta.push('フェリー');
+  } else if (step.type === 'local') {
+    if (step.method) meta.push(step.method);
+  }
+  if (step.minutes) meta.push(formatApproxMinutes(step.minutes));
+  const suffix = meta.length ? `（${esc(meta.join('・'))}）` : '';
+
+  // provider バッジ（えきねっと等、予約可を示唆）
+  const provName = step.provider ? PROVIDER_LABEL[step.provider] ?? step.provider : null;
+  const provBadge = provName ? `<span class="step-provider">${esc(provName)}で予約</span>` : '';
+
+  // bookingUrl（フェリー会社の予約ページ等）をリンク化
+  const bookingLink = step.bookingUrl
+    ? ` <a class="step-booking" href="${attr(step.bookingUrl)}" target="_blank" rel="nofollow noopener">予約サイトを開く</a>`
+    : '';
+
+  return `<li class="step-item"><span class="step-icon">${icon}</span><span class="step-text">${arrow}${suffix}${bookingLink}</span>${provBadge}</li>`;
+}
+
+/** パターン2: access.steps が無い場合のフォールバック */
+function synthesizeFallbackSteps(dest) {
+  const lines = [];
+  if (dest.shinkansenAccess === true) {
+    lines.push(`<li class="step-item"><span class="step-icon">🚄</span><span class="step-text">新幹線でアクセス可能</span></li>`);
+  }
+  if (dest.railGateway) {
+    lines.push(`<li class="step-item"><span class="step-icon">🚃</span><span class="step-text">最寄り駅: <strong>${esc(dest.railGateway)}</strong></span></li>`);
+  }
+  const fa = dest.finalAccess;
+  if (fa && typeof fa === 'object' && fa.type === 'train' && fa.line && fa.from && fa.to) {
+    lines.push(`<li class="step-item"><span class="step-icon">🚃</span><span class="step-text">${esc(fa.from)}から<strong>${esc(fa.line)}</strong>で${esc(fa.to)}へ</span></li>`);
+  }
+  if (dest.localAccess?.description) {
+    const la = dest.localAccess;
+    const icon = la.type === 'bus' ? '🚌' : la.type === 'ferry' ? '⛴' : la.type === 'rental' ? '🚗' : '📍';
+    lines.push(`<li class="step-item"><span class="step-icon">${icon}</span><span class="step-text">${esc(la.description)}</span></li>`);
+  }
+  if (dest.railNote) {
+    lines.push(`<li class="step-item"><span class="step-icon">📝</span><span class="step-text"><em>${esc(dest.railNote)}</em></span></li>`);
+  }
+  const ferryPorts = Array.isArray(dest.gateways?.ferry) ? dest.gateways.ferry : [];
+  if (ferryPorts.length) {
+    lines.push(`<li class="step-item"><span class="step-icon">⛴</span><span class="step-text">フェリー: <strong>${esc(ferryPorts[0])}</strong>から</span></li>`);
+  }
+  const airports = Array.isArray(dest.gateways?.airport) ? dest.gateways.airport : [];
+  if (airports.length) {
+    lines.push(`<li class="step-item"><span class="step-icon">✈️</span><span class="step-text">最寄り空港: <strong>${esc(airports[0])}</strong></span></li>`);
+  }
+  if (dest.secondaryTransport === 'bus') {
+    lines.push(`<li class="step-item"><span class="step-icon">🚌</span><span class="step-text">現地はバスで移動できます</span></li>`);
+  }
+  if (dest.requiresCar === true) {
+    lines.push(`<li class="step-item"><span class="step-icon">🚗</span><span class="step-text">※ 現地では車があると便利です</span></li>`);
+  }
+  return lines;
+}
+
+/** 主要都市からの所要時間リスト（近い順で最大4件） */
+const DEP_LABELS = {
+  tokyo: '東京', osaka: '大阪', fukuoka: '福岡',
+  sapporo: '札幌', takamatsu: '高松', nagoya: '名古屋',
+};
+function buildTravelTimeHtml(travelTime) {
+  const tt = travelTime ?? {};
+  const pairs = Object.entries(DEP_LABELS)
+    .filter(([key]) => tt[key] != null && tt[key] > 0)
+    .map(([key, label]) => ({ label, min: tt[key] }))
+    .sort((a, b) => a.min - b.min)
+    .slice(0, 4);
+  if (!pairs.length) return '';
+  return `
+        <div class="travel-time-box">
+          <p class="travel-time-label">主要都市からの所要時間</p>
+          <ul class="travel-time-list">
+            ${pairs.map(p => `<li><span class="tt-label">${esc(p.label)}から</span><span class="tt-value">${esc(formatApproxMinutes(p.min))}</span></li>`).join('')}
+          </ul>
+        </div>`;
+}
+
+/** 行き方セクション全体を返す */
+function buildAccessSectionHtml(dest) {
+  const steps = Array.isArray(dest.access?.steps) ? dest.access.steps : [];
+  let items = [];
+  if (steps.length > 0) {
+    // パターン1: access.steps を順に描画（from が前ステップ to と同じなら省略）
+    let prevTo = null;
+    for (const s of steps) {
+      items.push(renderStep(s, prevTo));
+      prevTo = s.to ?? prevTo;
+    }
+  } else {
+    // パターン2: フォールバック
+    items = synthesizeFallbackSteps(dest);
+  }
+  const stepsHtml = items.length
+    ? `<ol class="access-steps-list">${items.join('')}</ol>`
+    : '<p class="stay-note">現地情報をご確認ください。</p>';
+  const ttHtml = buildTravelTimeHtml(dest.travelTime);
+  return `
+      <section class="dest-section">
+        <h2>行き方</h2>
+        ${stepsHtml}${ttHtml}
+      </section>`;
 }
 
 /** 紹介文の先頭100文字（meta description 用・句読点で自然に切る） */
@@ -79,24 +246,8 @@ function renderPage(dest, allDests) {
   const ogImage = `${SITE_ORIGIN}/assets/ogp.png`;
   const title = `${name}への旅 | どこ行こ？`;
 
-  /* ── 行き方セクション ── */
-  const accessLines = [];
-  if (dest.railGateway) accessLines.push(`最寄り駅: <strong>${esc(dest.railGateway)}</strong>`);
-  const ferryPorts = Array.isArray(dest.gateways?.ferry) ? dest.gateways.ferry : [];
-  if (ferryPorts.length) accessLines.push(`フェリー: <strong>${esc(ferryPorts[0])}</strong>から`);
-  const airports = Array.isArray(dest.gateways?.airport) ? dest.gateways.airport : [];
-  if (airports.length) accessLines.push(`最寄り空港: <strong>${esc(airports[0])}</strong>`);
-  if (dest.requiresCar === true) {
-    accessLines.push('<span class="access-note">※ 現地では車でのアクセスがおすすめです</span>');
-  }
-  const travelTimePairs = [];
-  const tt = dest.travelTime ?? {};
-  for (const [key, label] of [['tokyo', '東京'], ['osaka', '大阪'], ['fukuoka', '福岡']]) {
-    if (tt[key] != null) travelTimePairs.push(`${label}から約${formatMinutes(tt[key])}`);
-  }
-  const travelTimeLine = travelTimePairs.length
-    ? `<p class="dest-travel-time">${travelTimePairs.map(esc).join(' / ')}</p>`
-    : '';
+  /* ── 行き方セクション（access.steps / フォールバック・共通の所要時間） ── */
+  const accessSectionHtml = buildAccessSectionHtml(dest);
 
   /* ── 宿泊セクション ── */
   const stayAllowed = Array.isArray(dest.stayAllowed) ? dest.stayAllowed : [];
@@ -221,11 +372,7 @@ function renderPage(dest, allDests) {
         </ul>
       </section>` : ''}
 
-      <section class="dest-section">
-        <h2>行き方</h2>
-        ${accessLines.length ? `<ul class="access-list">${accessLines.map(l => `<li>${l}</li>`).join('')}</ul>` : '<p class="stay-note">現地情報をご確認ください。</p>'}
-        ${travelTimeLine}
-      </section>
+      ${accessSectionHtml}
 
       ${stayHtml}
 
