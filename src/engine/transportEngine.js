@@ -738,11 +738,20 @@ export function buildTransportContext(departure, city) {
     const cleanTo = jrChainCta.to?.replace(/駅$|空港$|港$/, '') ?? '';
     const repClean = repStation?.replace(/駅$|空港$|港$/, '') ?? '';
     const destClean = (city?.displayName || city?.name || '').replace(/駅$|空港$|港$/, '');
-    // 既にrepStationまたはdisplayNameと一致 → 正しい駅名なので補正不要
-    const isKnownStation = cleanTo === repClean || cleanTo === destClean;
-    // 温泉/寺/神社/館/湖/港 等はisKnownStationガードで実在駅名を保護しつつ検出
-    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|渓谷|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$/;
-    if (!isKnownStation && SPOT_PATTERN.test(cleanTo)) {
+    const hubClean = (city?.hubCity || '').replace(/駅$|空港$|港$/, '');
+    const hubStationClean = (city?.hubStation || '').replace(/駅$|空港$|港$/, '');
+    // 既に駅・ハブ名と一致 → 正しい駅名なので補正不要
+    const isKnownStation = cleanTo === repClean || cleanTo === destClean
+                        || cleanTo === hubClean || cleanTo === hubStationClean;
+    // city.spots / city.mapPoint / city.finalPoint / city.mainSpot と一致 → 観光スポット確定
+    const isKnownSpot =
+      (Array.isArray(city?.spots) && (city.spots.includes(jrChainCta.to) || city.spots.includes(cleanTo)))
+      || city?.mapPoint === jrChainCta.to || city?.mapPoint === cleanTo
+      || city?.finalPoint === jrChainCta.to || city?.finalPoint === cleanTo
+      || city?.mainSpot === jrChainCta.to || city?.mainSpot === cleanTo;
+    // 観光地 suffix / 固有パターン（拡張版）
+    const SPOT_PATTERN = /温泉|海岸|海水浴|公園$|城$|城跡|神社$|神宮$|大社$|天満宮|稲荷$|寺$|古墳|観音|大仏$|大橋$|半島$|岬$|滝$|湖$|沼$|渓谷|渓流|キャンプ|ラーメン|うどん|グルメ|ミュージアム|ロード|館$|市場$|港$|パーク$|テーマパーク|ランド$|ワールド$|タワー$|展望台$|博物館$|美術館$|水族館$|動物園$|植物園$|遊園地$|記念館$|資料館$|劇場$|ホール$|ドーム$|スタジアム$|センター$|ガーデン$|ファーム$|ワイナリー$|マーケット$|洞窟$|鍾乳洞$|砂丘$|街$|町並み|通り$|朝市$|ストリート$|蒸溜所$|酒蔵|一本松$|本陣$|屋敷$|競技大会|まつり$|ふるさと村|堀$/;
+    if (!isKnownStation && (isKnownSpot || SPOT_PATTERN.test(cleanTo))) {
       console.warn('[CTA] 観光地名を検出・駅名に補正:', cleanTo, '→', repStation || city?.displayName || city?.name);
       jrChainCta.to = repStation || city?.displayName || city?.name || jrChainCta.to;
     }
