@@ -125891,5 +125891,1774 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25B3%25A5%25E5%258F%2596%2520%25E9%25B3%25A5%25E5%258F%2596%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%25B9%258E%25E6%258C%25A7%2520%2592%25B9%258E%25E6%258E%2573"
     }
+  },
+  {
+    "id": "ibukijima",
+    "name": "伊吹島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "いりこの聖地。瀬戸内に浮かぶ漁師の島。",
+    "tags": [
+      "海",
+      "グルメ",
+      "離島"
+    ],
+    "spots": [
+      "いりこ工場",
+      "伊吹島灯台",
+      "伊吹八幡神社"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "観音寺",
+    "gateways": {
+      "rail": [
+        "観音寺駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "伊吹島港"
+      ]
+    },
+    "accessHub": "観音寺",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "観音寺港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.1267,
+    "lng": 133.5233,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 180,
+      "nagoya": 220,
+      "fukuoka": 240,
+      "takamatsu": 90
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "観音寺市",
+    "hubStation": "観音寺駅",
+    "accessStation": "伊吹島港",
+    "hotelArea": "kagawa",
+    "port": "観音寺港",
+    "hotelKeyword": "観音寺",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "観音寺駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "観音寺駅",
+          "to": "観音寺港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "観音寺港",
+          "to": "伊吹島港"
+        },
+        {
+          "type": "local",
+          "from": "伊吹島港",
+          "to": "伊吹島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "観音寺",
+    "gateway": "観音寺駅",
+    "gatewayStations": [
+      {
+        "name": "観音寺駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "観音寺から伊吹島港へ",
+      "to": "伊吹島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "いりこの匂いが風に乗って、漁港に着いた。",
+    "primary": [
+      "海",
+      "グルメ",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "いりこ工場",
+    "subType": "sea",
+    "stayDescription": "観音寺の宿に泊まって、朝いちばんの船で伊吹島に渡る。",
+    "hubCity": "観音寺",
+    "stayPriority": "low",
+    "representativeStation": "伊吹島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "伊吹島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "いりこ工場",
+    "stayArea": {
+      "rakuten": "観音寺",
+      "jalan": "観音寺"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25A6%25B3%25E9%259F%25B3%25E5%25AF%25BA%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2590%25EC%258C%25A7%2520%258A%25CF%2589%25B9%258E%259B"
+    }
+  },
+  {
+    "id": "ogijima",
+    "name": "男木島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "坂と路地とアートの島。猫にも会える。",
+    "tags": [
+      "アート",
+      "猫",
+      "離島"
+    ],
+    "spots": [
+      "男木島灯台",
+      "男木島の魂",
+      "オンバ・ファクトリー"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "高松",
+    "gateways": {
+      "rail": [
+        "高松駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "男木港"
+      ]
+    },
+    "accessHub": "高松",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.4206,
+    "lng": 134.0672,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 280,
+      "osaka": 170,
+      "nagoya": 210,
+      "fukuoka": 250,
+      "takamatsu": 40
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "高松市",
+    "hubStation": "高松駅",
+    "accessStation": "男木港",
+    "hotelArea": "kagawa",
+    "port": "高松港",
+    "hotelKeyword": "高松",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "高松港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "男木港"
+        },
+        {
+          "type": "local",
+          "from": "男木港",
+          "to": "男木島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "高松",
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "高松から男木港へ",
+      "to": "男木港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "坂道の先で、猫が振り返った。",
+    "primary": [
+      "アート",
+      "猫",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "男木島灯台",
+    "subType": "sea",
+    "stayDescription": "高松の宿に泊まって、朝いちばんの船で男木島に渡る。",
+    "hubCity": "高松",
+    "stayPriority": "low",
+    "representativeStation": "男木港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "男木港"
+    },
+    "bookingStation": null,
+    "mainSpot": "男木島灯台",
+    "stayArea": {
+      "rakuten": "高松",
+      "jalan": "高松"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25AB%2598%25E6%259D%25BE%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2590%25EC%258C%25A7%2520%258D%2582%258F%25BC%258E%2573"
+    }
+  },
+  {
+    "id": "megijima",
+    "name": "女木島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "鬼ヶ島伝説が残る、高松から20分の島。",
+    "tags": [
+      "歴史",
+      "海",
+      "離島"
+    ],
+    "spots": [
+      "鬼ヶ島大洞窟",
+      "モアイ像",
+      "女木島海水浴場"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "高松",
+    "gateways": {
+      "rail": [
+        "高松駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "女木港"
+      ]
+    },
+    "accessHub": "高松",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "高松港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.3833,
+    "lng": 134.05,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 275,
+      "osaka": 165,
+      "nagoya": 205,
+      "fukuoka": 245,
+      "takamatsu": 30
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "高松市",
+    "hubStation": "高松駅",
+    "accessStation": "女木港",
+    "hotelArea": "kagawa",
+    "port": "高松港",
+    "hotelKeyword": "高松",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "高松港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "高松港",
+          "to": "女木港"
+        },
+        {
+          "type": "local",
+          "from": "女木港",
+          "to": "女木島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "高松",
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "高松から女木港へ",
+      "to": "女木港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "高松から20分、鬼ヶ島に上陸した。",
+    "primary": [
+      "歴史",
+      "海",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "鬼ヶ島大洞窟",
+    "subType": "sea",
+    "stayDescription": "高松の宿に泊まって、朝いちばんの船で女木島に渡る。",
+    "hubCity": "高松",
+    "stayPriority": "low",
+    "representativeStation": "女木港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "女木港"
+    },
+    "bookingStation": null,
+    "mainSpot": "鬼ヶ島大洞窟",
+    "stayArea": {
+      "rakuten": "高松",
+      "jalan": "高松"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25AB%2598%25E6%259D%25BE%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2590%25EC%258C%25A7%2520%258D%2582%258F%25BC%258E%2573"
+    }
+  },
+  {
+    "id": "honjima",
+    "name": "本島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "塩飽水軍の本拠地。重伝建の集落が残る。",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "離島"
+    ],
+    "spots": [
+      "笠島集落",
+      "塩飽勤番所",
+      "本島泊海水浴場"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "丸亀",
+    "gateways": {
+      "rail": [
+        "丸亀駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "本島港"
+      ]
+    },
+    "accessHub": "丸亀",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "丸亀港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.3667,
+    "lng": 133.7833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 175,
+      "nagoya": 215,
+      "fukuoka": 245,
+      "takamatsu": 60
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "丸亀市",
+    "hubStation": "丸亀駅",
+    "accessStation": "本島港",
+    "hotelArea": "kagawa",
+    "port": "丸亀港",
+    "hotelKeyword": "丸亀",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "丸亀駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "丸亀駅",
+          "to": "丸亀港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "丸亀港",
+          "to": "本島港"
+        },
+        {
+          "type": "local",
+          "from": "本島港",
+          "to": "本島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "丸亀",
+    "gateway": "丸亀駅",
+    "gatewayStations": [
+      {
+        "name": "丸亀駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "丸亀から本島港へ",
+      "to": "本島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "塩飽水軍の島で、古い石垣の路地を歩いた。",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "笠島集落",
+    "subType": "sea",
+    "stayDescription": "丸亀の宿に泊まって、朝いちばんの船で本島に渡る。",
+    "hubCity": "丸亀",
+    "stayPriority": "low",
+    "representativeStation": "本島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "本島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "笠島集落",
+    "stayArea": {
+      "rakuten": "丸亀",
+      "jalan": "丸亀"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%25B8%25E4%25BA%2580%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2590%25EC%258C%25A7%2520%258A%25DB%258B%2554%258E%2573"
+    }
+  },
+  {
+    "id": "sanagijima",
+    "name": "佐柳島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "飛び猫で有名になった、静かな猫の島。",
+    "tags": [
+      "猫",
+      "自然",
+      "離島"
+    ],
+    "spots": [
+      "飛び猫スポット",
+      "長崎の鼻",
+      "両墓制の墓地"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "多度津",
+    "gateways": {
+      "rail": [
+        "多度津駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "佐柳島港"
+      ]
+    },
+    "accessHub": "多度津",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "多度津港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.3,
+    "lng": 133.5833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 180,
+      "nagoya": 220,
+      "fukuoka": 250,
+      "takamatsu": 90
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "多度津町",
+    "hubStation": "多度津駅",
+    "accessStation": "佐柳島港",
+    "hotelArea": "kagawa",
+    "port": "多度津港",
+    "hotelKeyword": "多度津",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "多度津駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "多度津駅",
+          "to": "多度津港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "多度津港",
+          "to": "佐柳島港"
+        },
+        {
+          "type": "local",
+          "from": "佐柳島港",
+          "to": "佐柳島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "多度津",
+    "gateway": "多度津駅",
+    "gatewayStations": [
+      {
+        "name": "多度津駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "多度津から佐柳島港へ",
+      "to": "佐柳島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "猫が飛んだ、ただそれだけの島だった。",
+    "primary": [
+      "猫",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "飛び猫スポット",
+    "subType": "sea",
+    "stayDescription": "多度津の宿に泊まって、朝いちばんの船で佐柳島に渡る。",
+    "hubCity": "多度津",
+    "stayPriority": "low",
+    "representativeStation": "佐柳島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "佐柳島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "飛び猫スポット",
+    "stayArea": {
+      "rakuten": "多度津",
+      "jalan": "多度津"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%259A%25E5%25BA%25A6%25E6%25B4%25A5%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25BD%2593%2578%2592%25C3"
+    }
+  },
+  {
+    "id": "awashima-kagawa",
+    "name": "粟島（香川）",
+    "displayName": "粟島（香川）",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "高松",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "漂流郵便局がある、アートと海の島。",
+    "tags": [
+      "アート",
+      "海",
+      "離島"
+    ],
+    "spots": [
+      "粟島海洋記念館",
+      "漂流郵便局",
+      "粟島芸術家村"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "三豊",
+    "gateways": {
+      "rail": [
+        "詫間駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "粟島港"
+      ]
+    },
+    "accessHub": "三豊",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "須田港",
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "lat": 34.2333,
+    "lng": 133.6167,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 180,
+      "nagoya": 220,
+      "fukuoka": 250,
+      "takamatsu": 80
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "三豊市",
+    "hubStation": "詫間駅",
+    "accessStation": "粟島港",
+    "hotelArea": "kagawa",
+    "port": "須田港",
+    "hotelKeyword": "三豊",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "詫間駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "詫間駅",
+          "to": "須田港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "須田港",
+          "to": "粟島港"
+        },
+        {
+          "type": "local",
+          "from": "粟島港",
+          "to": "粟島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "三豊",
+    "gateway": "詫間駅",
+    "gatewayStations": [
+      {
+        "name": "詫間駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "須田港から粟島港へ",
+      "to": "粟島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "届かない手紙を置いて、島を一周した。",
+    "primary": [
+      "アート",
+      "海",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "漂流郵便局",
+    "subType": "sea",
+    "stayDescription": "漂流郵便局で手紙を書いて、ゆっくり島時間を過ごす。",
+    "hubCity": "三豊",
+    "stayPriority": "medium",
+    "representativeStation": "粟島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "粟島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "漂流郵便局",
+    "stayArea": {
+      "rakuten": "三豊",
+      "jalan": "三豊"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%2589%25E8%25B1%258A%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%254F%2596%254C"
+    }
+  },
+  {
+    "id": "okunoshima",
+    "name": "大久野島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "広島",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "700羽のうさぎが暮らす、瀬戸内のうさぎ島。",
+    "tags": [
+      "動物",
+      "自然",
+      "離島"
+    ],
+    "spots": [
+      "うさぎとの触れ合い",
+      "毒ガス資料館",
+      "大久野島ビジターセンター"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "大久野島",
+    "gateways": {
+      "rail": [
+        "忠海駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "大久野島桟橋"
+      ]
+    },
+    "accessHub": "竹原",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "忠海港",
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.3108,
+    "lng": 132.9925,
+    "stayBias": 2,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 170,
+      "nagoya": 200,
+      "fukuoka": 230,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "ferry",
+    "city": "竹原市",
+    "hubStation": "忠海駅",
+    "accessStation": "大久野島桟橋",
+    "hotelArea": "hiroshima",
+    "port": "忠海港",
+    "hotelKeyword": "大久野島",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "忠海駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "忠海駅",
+          "to": "忠海港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "忠海港",
+          "to": "大久野島桟橋"
+        },
+        {
+          "type": "local",
+          "from": "大久野島桟橋",
+          "to": "大久野島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "竹原",
+    "gateway": "忠海駅",
+    "gatewayStations": [
+      {
+        "name": "忠海駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "忠海港から大久野島へ",
+      "to": "大久野島桟橋"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "フェリーを降りた瞬間、うさぎの群れが足元に集まってきた。",
+    "primary": [
+      "動物",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "うさぎとの触れ合い",
+    "subType": "sea",
+    "stayDescription": "日帰り客が帰った後の静かな島で、うさぎと過ごす夕暮れ。",
+    "hubCity": "大久野島",
+    "localHub": "竹原",
+    "stayPriority": "high",
+    "representativeStation": "大久野島桟橋",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "大久野島桟橋"
+    },
+    "bookingStation": null,
+    "mainSpot": "うさぎとの触れ合い",
+    "stayArea": {
+      "rakuten": "大久野島",
+      "jalan": "大久野島"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E4%25B9%2585%25E9%2587%258E%25E5%25B3%25B6%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258B%2576%2596%25EC%2593%2587"
+    }
+  },
+  {
+    "id": "ikuchijima",
+    "name": "生口島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "広島",
+      "福山",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "レモンとアートの島。しまなみ海道の中間地点。",
+    "tags": [
+      "アート",
+      "自然",
+      "サイクリング"
+    ],
+    "spots": [
+      "耕三寺",
+      "レモン畑",
+      "未来心の丘"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "瀬戸田",
+    "gateways": {
+      "rail": [
+        "尾道駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "瀬戸田港"
+      ]
+    },
+    "accessHub": "尾道",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "尾道港",
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.3,
+    "lng": 133.0833,
+    "stayBias": 2,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 180,
+      "nagoya": 210,
+      "fukuoka": 240,
+      "takamatsu": 170,
+      "fukuyama": 60
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "ferry",
+    "city": "尾道市",
+    "hubStation": "尾道駅",
+    "accessStation": "瀬戸田港",
+    "hotelArea": "hiroshima",
+    "port": "尾道港",
+    "hotelKeyword": "瀬戸田",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "尾道駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "尾道駅",
+          "to": "尾道港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "尾道港",
+          "to": "瀬戸田港"
+        },
+        {
+          "type": "local",
+          "from": "瀬戸田港",
+          "to": "生口島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "尾道",
+    "gateway": "尾道駅",
+    "gatewayStations": [
+      {
+        "name": "尾道駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "尾道港から瀬戸田港へ",
+      "to": "瀬戸田港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "レモン畑の先に、白い丘の彫刻が光っていた。",
+    "primary": [
+      "アート",
+      "自然",
+      "サイクリング"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "耕三寺",
+    "subType": "sea",
+    "stayDescription": "瀬戸田の宿に泊まって、朝のしまなみ海道をレンタサイクルで走る。",
+    "hubCity": "生口島",
+    "localHub": "尾道",
+    "stayPriority": "high",
+    "representativeStation": "瀬戸田港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "瀬戸田港"
+    },
+    "bookingStation": null,
+    "mainSpot": "耕三寺",
+    "stayArea": {
+      "rakuten": "瀬戸田",
+      "jalan": "瀬戸田"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2594%259F%25E5%258F%25A3%25E5%25B3%25B6%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25A3%258C%25CB%2593%2563"
+    }
+  },
+  {
+    "id": "osakikamijima",
+    "name": "大崎上島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "広島",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "造船と温泉の島。橋のかからない瀬戸内の原風景。",
+    "tags": [
+      "自然",
+      "温泉",
+      "離島"
+    ],
+    "spots": [
+      "神峰山",
+      "きのえ温泉",
+      "大崎上島の造船所群"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "isIsland": true,
+    "hotelSearch": "大崎上島",
+    "gateways": {
+      "rail": [
+        "竹原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "垂水港"
+      ]
+    },
+    "accessHub": "竹原",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "竹原港",
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.25,
+    "lng": 132.9167,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 310,
+      "osaka": 180,
+      "nagoya": 210,
+      "fukuoka": 240,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "ferry",
+    "city": "大崎上島町",
+    "hubStation": "竹原駅",
+    "accessStation": "垂水港",
+    "hotelArea": "hiroshima",
+    "port": "竹原港",
+    "hotelKeyword": "大崎上島",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "竹原駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "竹原駅",
+          "to": "竹原港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "竹原港",
+          "to": "垂水港"
+        },
+        {
+          "type": "local",
+          "from": "垂水港",
+          "to": "大崎上島",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "竹原",
+    "gateway": "竹原駅",
+    "gatewayStations": [
+      {
+        "name": "竹原駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "竹原から垂水港経由でレンタカー",
+      "to": "垂水港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "橋のない島に渡ると、造船所の明かりが海に揺れていた。",
+    "primary": [
+      "自然",
+      "温泉",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 2,
+    "hasDirectFlight": false,
+    "mapPoint": "きのえ温泉",
+    "subType": "sea",
+    "stayDescription": "きのえ温泉の宿で、造船所の灯りを見ながら一泊する。",
+    "hubCity": "大崎上島",
+    "localHub": "竹原",
+    "stayPriority": "medium",
+    "representativeStation": "垂水港",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "垂水港"
+    },
+    "bookingStation": null,
+    "mainSpot": "きのえ温泉",
+    "stayArea": {
+      "rakuten": "大崎上島",
+      "jalan": "大崎上島"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E5%25B4%258E%25E4%25B8%258A%25E5%25B3%25B6%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258D%25E8%258F%25E3%2593%2587"
+    }
+  },
+  {
+    "id": "sensui-jima",
+    "name": "仙酔島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "広島",
+      "福山",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "鞆の浦から渡船5分。日本で最初の国立公園の島。",
+    "tags": [
+      "絶景",
+      "海",
+      "離島"
+    ],
+    "spots": [
+      "五色岩",
+      "田ノ浦海岸",
+      "仙酔島遊歩道"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "福山",
+    "gateways": {
+      "rail": [
+        "福山駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "仙酔島渡船"
+      ]
+    },
+    "accessHub": "福山",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "鞆の浦港",
+    "airportGateway": null,
+    "prefecture": "広島県",
+    "lat": 34.3775,
+    "lng": 133.38,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 165,
+      "nagoya": 195,
+      "fukuoka": 225,
+      "takamatsu": 170,
+      "fukuyama": 30
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "福山市",
+    "hubStation": "福山駅",
+    "accessStation": "仙酔島渡船",
+    "hotelArea": "hiroshima",
+    "port": "鞆の浦港",
+    "hotelKeyword": "福山",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "福山駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "福山駅",
+          "to": "鞆の浦港",
+          "method": "バス"
+        },
+        {
+          "type": "ferry",
+          "from": "鞆の浦港",
+          "to": "仙酔島渡船"
+        },
+        {
+          "type": "local",
+          "from": "仙酔島渡船",
+          "to": "仙酔島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "福山",
+    "gateway": "福山駅",
+    "gatewayStations": [
+      {
+        "name": "福山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "鞆の浦から仙酔島へ",
+      "to": "仙酔島渡船"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "鞆の浦から5分、日本で最初の国立公園に上陸した。",
+    "primary": [
+      "絶景",
+      "海",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "五色岩",
+    "subType": "sea",
+    "stayDescription": "福山の宿に泊まって、朝の鞆の浦から仙酔島に渡る。",
+    "hubCity": "福山",
+    "stayPriority": "low",
+    "representativeStation": "仙酔島渡船",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "仙酔島渡船"
+    },
+    "bookingStation": null,
+    "mainSpot": "五色岩",
+    "stayArea": {
+      "rakuten": "福山",
+      "jalan": "福山"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25A6%258F%25E5%25B1%25B1%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%254C%2593%2587%258C%25A7%2520%2595%259F%258E%2552"
+    }
+  },
+  {
+    "id": "shiraishijima",
+    "name": "白石島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "okayama-o",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "岡山",
+      "福山",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "花崗岩の美しいビーチ。笠岡から船で35分。",
+    "tags": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "spots": [
+      "白石島海水浴場",
+      "開龍寺",
+      "白石島の石切場跡"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "白石島",
+    "gateways": {
+      "rail": [
+        "笠岡駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "白石島港"
+      ]
+    },
+    "accessHub": "笠岡",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "笠岡港",
+    "airportGateway": null,
+    "prefecture": "岡山県",
+    "lat": 34.3667,
+    "lng": 133.4833,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 170,
+      "nagoya": 200,
+      "fukuoka": 230,
+      "takamatsu": 160,
+      "fukuyama": 40
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "ferry",
+    "city": "笠岡市",
+    "hubStation": "笠岡駅",
+    "accessStation": "白石島港",
+    "hotelArea": "okayama",
+    "port": "笠岡港",
+    "hotelKeyword": "白石島",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "笠岡駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "笠岡駅",
+          "to": "笠岡港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "笠岡港",
+          "to": "白石島港"
+        },
+        {
+          "type": "local",
+          "from": "白石島港",
+          "to": "白石島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "笠岡",
+    "gateway": "笠岡駅",
+    "gatewayStations": [
+      {
+        "name": "笠岡駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "笠岡港から白石島港へ",
+      "to": "白石島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "花崗岩の白い砂浜を、裸足で歩いた。",
+    "primary": [
+      "海",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "白石島海水浴場",
+    "subType": "sea",
+    "stayDescription": "島の民宿で、夜は星を、朝は海を眺めて過ごす。",
+    "hubCity": "白石島",
+    "localHub": "笠岡",
+    "stayPriority": "medium",
+    "representativeStation": "白石島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "白石島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "白石島海水浴場",
+    "stayArea": {
+      "rakuten": "白石島",
+      "jalan": "白石島"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%2599%25BD%25E7%259F%25B3%25E5%25B3%25B6%2520%25E5%25B2%25A1%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%2592%2590%25CE%2593%2587"
+    }
+  },
+  {
+    "id": "manabeshima",
+    "name": "真鍋島",
+    "type": "destination",
+    "region": "中国",
+    "hub": "okayama-o",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "岡山",
+      "福山",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "映画のロケ地にもなった、猫と漁師の島。",
+    "tags": [
+      "猫",
+      "自然",
+      "離島"
+    ],
+    "spots": [
+      "真鍋島の猫たち",
+      "真鍋邸",
+      "走り神輿"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "isIsland": true,
+    "hotelSearch": "笠岡",
+    "gateways": {
+      "rail": [
+        "笠岡駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "真鍋島港"
+      ]
+    },
+    "accessHub": "笠岡",
+    "railNote": "フェリー",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": "笠岡港",
+    "airportGateway": null,
+    "prefecture": "岡山県",
+    "lat": 34.3167,
+    "lng": 133.5333,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 300,
+      "osaka": 180,
+      "nagoya": 210,
+      "fukuoka": 240,
+      "takamatsu": 170,
+      "fukuyama": 50
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "笠岡市",
+    "hubStation": "笠岡駅",
+    "accessStation": "真鍋島港",
+    "hotelArea": "okayama",
+    "port": "笠岡港",
+    "hotelKeyword": "笠岡",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "笠岡駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "笠岡駅",
+          "to": "笠岡港",
+          "method": "徒歩"
+        },
+        {
+          "type": "ferry",
+          "from": "笠岡港",
+          "to": "真鍋島港"
+        },
+        {
+          "type": "local",
+          "from": "真鍋島港",
+          "to": "真鍋島",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "笠岡",
+    "gateway": "笠岡駅",
+    "gatewayStations": [
+      {
+        "name": "笠岡駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "笠岡港から真鍋島港へ",
+      "to": "真鍋島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "港に降りると、猫が当たり前のようについてきた。",
+    "primary": [
+      "猫",
+      "自然",
+      "離島"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "真鍋島の猫たち",
+    "subType": "sea",
+    "stayDescription": "笠岡の宿に泊まって、朝いちばんの船で真鍋島に渡る。",
+    "hubCity": "笠岡",
+    "stayPriority": "low",
+    "representativeStation": "真鍋島港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "port",
+      "name": "真鍋島港"
+    },
+    "bookingStation": null,
+    "mainSpot": "真鍋島の猫たち",
+    "stayArea": {
+      "rakuten": "笠岡",
+      "jalan": "笠岡"
+    },
+    "accessType": "ferry",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25AC%25A0%25E5%25B2%25A1%2520%25E5%25B2%25A1%25E5%25B1%25B1%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AA%258E%2552%258C%25A7%2520%258A%257D%2589%25AA%258E%2573"
+    }
   }
 ]

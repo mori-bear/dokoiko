@@ -449,5 +449,104 @@
     "nearestNode": "旭川空港",
     "method": "バス",
     "hubProvider": null
+  },
+  {
+    "port": "観音寺港",
+    "city": "観音寺",
+    "prefecture": "香川",
+    "lat": 34.1269,
+    "lng": 133.6594,
+    "accessType": "rail",
+    "nearestNode": "観音寺駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "丸亀港",
+    "city": "丸亀",
+    "prefecture": "香川",
+    "lat": 34.2992,
+    "lng": 133.7875,
+    "accessType": "rail",
+    "nearestNode": "丸亀駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "多度津港",
+    "city": "多度津",
+    "prefecture": "香川",
+    "lat": 34.275,
+    "lng": 133.7533,
+    "accessType": "rail",
+    "nearestNode": "多度津駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "須田港",
+    "city": "三豊",
+    "prefecture": "香川",
+    "lat": 34.245,
+    "lng": 133.6614,
+    "accessType": "rail",
+    "nearestNode": "詫間駅",
+    "method": "バス",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "忠海港",
+    "city": "竹原",
+    "prefecture": "広島",
+    "lat": 34.3286,
+    "lng": 132.9933,
+    "accessType": "rail",
+    "nearestNode": "忠海駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "尾道港",
+    "city": "尾道",
+    "prefecture": "広島",
+    "lat": 34.4044,
+    "lng": 133.2024,
+    "accessType": "rail",
+    "nearestNode": "尾道駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "竹原港",
+    "city": "竹原",
+    "prefecture": "広島",
+    "lat": 34.3339,
+    "lng": 132.9072,
+    "accessType": "rail",
+    "nearestNode": "竹原駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "鞆の浦港",
+    "city": "福山",
+    "prefecture": "広島",
+    "lat": 34.3817,
+    "lng": 133.3825,
+    "accessType": "rail",
+    "nearestNode": "福山駅",
+    "method": "バス",
+    "hubProvider": "e5489"
+  },
+  {
+    "port": "笠岡港",
+    "city": "笠岡",
+    "prefecture": "岡山",
+    "lat": 34.5064,
+    "lng": 133.5056,
+    "accessType": "rail",
+    "nearestNode": "笠岡駅",
+    "method": "徒歩",
+    "hubProvider": "e5489"
   }
 ]

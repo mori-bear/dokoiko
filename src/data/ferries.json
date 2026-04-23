@@ -422,5 +422,101 @@
     "to": "蔵之元港",
     "operator": "天草宝島ライン",
     "url": "https://takarajima-line.co.jp/"
+  },
+  {
+    "destId": "ibukijima",
+    "destName": "伊吹島",
+    "from": "観音寺港",
+    "to": "伊吹島港",
+    "operator": "ニューいぶき",
+    "url": "https://www.city.kanonji.kagawa.jp/"
+  },
+  {
+    "destId": "ogijima",
+    "destName": "男木島",
+    "from": "高松港",
+    "to": "男木港",
+    "operator": "雌雄島海運",
+    "url": "https://www.shikokukisen.com/"
+  },
+  {
+    "destId": "megijima",
+    "destName": "女木島",
+    "from": "高松港",
+    "to": "女木港",
+    "operator": "雌雄島海運",
+    "url": "https://www.shikokukisen.com/"
+  },
+  {
+    "destId": "honjima",
+    "destName": "本島",
+    "from": "丸亀港",
+    "to": "本島港",
+    "operator": "本島汽船",
+    "url": "https://honjimakisen.com/"
+  },
+  {
+    "destId": "sanagijima",
+    "destName": "佐柳島",
+    "from": "多度津港",
+    "to": "佐柳島港",
+    "operator": "三洋汽船",
+    "url": "https://www.town.tadotsu.lg.jp/"
+  },
+  {
+    "destId": "awashima-kagawa",
+    "destName": "粟島",
+    "from": "須田港",
+    "to": "粟島港",
+    "operator": "粟島汽船",
+    "url": "https://www.city.mitoyo.lg.jp/"
+  },
+  {
+    "destId": "okunoshima",
+    "destName": "大久野島",
+    "from": "忠海港",
+    "to": "大久野島桟橋",
+    "operator": "大三島フェリー",
+    "url": "https://www.omishimaferry.com/"
+  },
+  {
+    "destId": "ikuchijima",
+    "destName": "生口島",
+    "from": "尾道港",
+    "to": "瀬戸田港",
+    "operator": "瀬戸内クルージング",
+    "url": "https://s-cruise.jp/"
+  },
+  {
+    "destId": "osakikamijima",
+    "destName": "大崎上島",
+    "from": "竹原港",
+    "to": "垂水港",
+    "operator": "山陽商船",
+    "url": "https://hbr.jp/ferry/"
+  },
+  {
+    "destId": "sensui-jima",
+    "destName": "仙酔島",
+    "from": "鞆の浦港",
+    "to": "仙酔島渡船",
+    "operator": "平成いろは丸",
+    "url": "https://tomonoura.life/"
+  },
+  {
+    "destId": "shiraishijima",
+    "destName": "白石島",
+    "from": "笠岡港",
+    "to": "白石島港",
+    "operator": "三洋汽船",
+    "url": "https://www.city.kasaoka.okayama.jp/"
+  },
+  {
+    "destId": "manabeshima",
+    "destName": "真鍋島",
+    "from": "笠岡港",
+    "to": "真鍋島港",
+    "operator": "三洋汽船",
+    "url": "https://www.city.kasaoka.okayama.jp/"
   }
 ]
