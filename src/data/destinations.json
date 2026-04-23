@@ -62093,7 +62093,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "愛山渓温泉"
     ],
@@ -62203,7 +62206,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "阿寒湖温泉"
     ],
@@ -62313,7 +62319,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "旭岳温泉"
     ],
@@ -62423,7 +62432,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "朝里川温泉"
     ],
@@ -62533,7 +62545,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "芦別温泉"
     ],
@@ -62643,7 +62658,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "網走湖畔温泉"
     ],
@@ -62753,7 +62771,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩尾別温泉"
     ],
@@ -62863,7 +62884,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウトロ温泉"
     ],
@@ -62973,7 +62997,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "温根湯温泉"
     ],
@@ -63083,7 +63110,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北湯沢温泉"
     ],
@@ -63193,7 +63223,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "盃温泉"
     ],
@@ -63303,7 +63336,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "然別湖畔温泉"
     ],
@@ -63413,7 +63449,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "支笏湖温泉"
     ],
@@ -63523,7 +63562,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "定山渓温泉"
     ],
@@ -63633,7 +63675,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知内温泉"
     ],
@@ -63743,7 +63788,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "層雲峡温泉"
     ],
@@ -63853,7 +63901,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天人峡温泉"
     ],
@@ -63963,7 +64014,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "洞爺湖温泉"
     ],
@@ -64073,7 +64127,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝岳温泉"
     ],
@@ -64183,7 +64240,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "豊富温泉"
     ],
@@ -64293,7 +64353,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "中岳温泉"
     ],
@@ -64403,7 +64466,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "流山温泉"
     ],
@@ -64513,7 +64579,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "濁川温泉"
     ],
@@ -64623,7 +64692,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ぬかびら温泉"
     ],
@@ -64733,7 +64805,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "登別温泉"
     ],
@@ -64843,7 +64918,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "二股ラヂウム温泉"
     ],
@@ -64953,7 +65031,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "水無海浜温泉"
     ],
@@ -65063,7 +65144,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "雌阿寒温泉"
     ],
@@ -65173,7 +65257,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "谷地頭温泉"
     ],
@@ -65283,7 +65370,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "由仁温泉"
     ],
@@ -65393,7 +65483,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "羅臼温泉"
     ],
@@ -65501,7 +65594,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥尻島"
     ],
@@ -65609,7 +65705,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北海道"
     ],
@@ -65717,7 +65816,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "焼尻島"
     ],
@@ -65827,7 +65929,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "愛別岳"
     ],
@@ -65937,7 +66042,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "旭岳"
     ],
@@ -66047,7 +66155,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知床硫黄山"
     ],
@@ -66157,7 +66268,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "石狩岳"
     ],
@@ -66267,7 +66381,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "1839峰"
     ],
@@ -66377,7 +66494,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イワオヌプリ"
     ],
@@ -66487,7 +66607,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "有珠山"
     ],
@@ -66597,7 +66720,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "海別岳"
     ],
@@ -66707,7 +66833,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウペペサンケ山"
     ],
@@ -66817,7 +66946,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "恵山丸山"
     ],
@@ -66927,7 +67059,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "恵庭岳"
     ],
@@ -67037,7 +67172,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "雄阿寒岳"
     ],
@@ -67147,7 +67285,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥手稲山"
     ],
@@ -67257,7 +67398,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥徳富岳"
     ],
@@ -67367,7 +67511,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オコツナイ岳"
     ],
@@ -67477,7 +67624,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オプタテシケ山"
     ],
@@ -67587,7 +67737,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "温泉富士"
     ],
@@ -67697,7 +67850,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "遠音別岳"
     ],
@@ -67807,7 +67963,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "開陽台"
     ],
@@ -67917,7 +68076,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "硬石山"
     ],
@@ -68027,7 +68189,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "上ホロカメットク山"
     ],
@@ -68137,7 +68302,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "カムイエクウチカウシ山"
     ],
@@ -68247,7 +68415,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "神居尻山"
     ],
@@ -68357,7 +68528,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "狩場山"
     ],
@@ -68467,7 +68641,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "観音岩山"
     ],
@@ -68577,7 +68754,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北ペトウトル山"
     ],
@@ -68687,7 +68867,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "喜登牛山"
     ],
@@ -68797,7 +68980,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "喜茂別岳"
     ],
@@ -68907,7 +69093,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "九度山"
     ],
@@ -69017,7 +69206,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "クマネシリ岳"
     ],
@@ -69127,7 +69319,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "隈根尻山"
     ],
@@ -69237,7 +69432,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "コイカクシュサツナイ岳"
     ],
@@ -69347,7 +69545,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小泉岳"
     ],
@@ -69457,7 +69658,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小天狗岳"
     ],
@@ -69567,7 +69771,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "木挽山"
     ],
@@ -69677,7 +69884,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "昆布岳"
     ],
@@ -69787,7 +69997,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "佐幌岳"
     ],
@@ -69897,7 +70110,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サマッケヌプリ山"
     ],
@@ -70007,7 +70223,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "然別火山群"
     ],
@@ -70117,7 +70336,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "標津岳"
     ],
@@ -70227,7 +70449,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "積丹岳"
     ],
@@ -70337,7 +70562,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "射的山"
     ],
@@ -70447,7 +70675,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "斜里岳"
     ],
@@ -70557,7 +70788,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "昭和新山"
     ],
@@ -70667,7 +70901,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "暑寒別岳"
     ],
@@ -70777,7 +71014,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白旗山"
     ],
@@ -70887,7 +71127,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "尻別岳"
     ],
@@ -70997,7 +71240,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知床岳"
     ],
@@ -71107,7 +71353,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "測量山"
     ],
@@ -71217,7 +71466,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "樽前山"
     ],
@@ -71327,7 +71579,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知西別岳"
     ],
@@ -71437,7 +71692,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "忠別岳"
     ],
@@ -71547,7 +71805,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "手稲山"
     ],
@@ -71657,7 +71918,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天塩岳"
     ],
@@ -71767,7 +72031,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天塩富士"
     ],
@@ -71877,7 +72144,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天都山"
     ],
@@ -71987,7 +72257,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝岳"
     ],
@@ -72097,7 +72370,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "突哨山"
     ],
@@ -72207,7 +72483,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "泊山"
     ],
@@ -72317,7 +72596,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トムラウシ山"
     ],
@@ -72427,7 +72709,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "泣面山"
     ],
@@ -72537,7 +72822,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "新冠泥火山"
     ],
@@ -72647,7 +72935,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "西別岳"
     ],
@@ -72757,7 +73048,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニセイカウシュッペ山"
     ],
@@ -72867,7 +73161,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニセコアンヌプリ"
     ],
@@ -72977,7 +73274,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニトヌプリ"
     ],
@@ -73087,7 +73387,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニペソツ山"
     ],
@@ -73197,7 +73500,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "袴腰岳"
     ],
@@ -73307,7 +73613,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白雲岳"
     ],
@@ -73417,7 +73726,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "函館山"
     ],
@@ -73527,7 +73839,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "春香山"
     ],
@@ -73637,7 +73952,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "盤渓山"
     ],
@@ -73747,7 +74065,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美瑛富士"
     ],
@@ -73857,7 +74178,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピヤシリ山"
     ],
@@ -73965,7 +74289,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "上野ファーム"
     ],
@@ -74073,7 +74400,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "うらかわ優駿ビレッジAERU"
     ],
@@ -74181,7 +74511,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "襟裳岬"
     ],
@@ -74289,7 +74622,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小樽運河"
     ],
@@ -74397,7 +74733,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オホーツクとっかりセンター"
     ],
@@ -74505,7 +74844,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "キロロリゾート"
     ],
@@ -74613,7 +74955,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "元和台海浜公園"
     ],
@@ -74721,7 +75066,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サホロリゾート"
     ],
@@ -74829,7 +75177,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サンタプレゼントパーク・マロースゲレンデ"
     ],
@@ -74937,7 +75288,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "就実の丘"
     ],
@@ -75045,7 +75399,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知床国立公園"
     ],
@@ -75153,7 +75510,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "チキウ岬"
     ],
@@ -75261,7 +75621,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トラピスト修道院"
     ],
@@ -75369,7 +75732,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トロッコ王国美深"
     ],
@@ -75477,7 +75843,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ノーザンホースパーク"
     ],
@@ -75585,7 +75954,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "納沙布岬"
     ],
@@ -75693,7 +76065,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "東川町"
     ],
@@ -75801,7 +76176,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ファーム富田"
     ],
@@ -75909,7 +76287,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "麓郷の森"
     ],
@@ -76017,7 +76398,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "社台滝"
     ],
@@ -76125,7 +76509,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "五稜郭"
     ],
@@ -76233,7 +76620,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "根室半島チャシ跡群"
     ],
@@ -76341,7 +76731,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "戸切地陣屋"
     ],
@@ -76449,7 +76842,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "弁天台場"
     ],
@@ -76557,7 +76953,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "松前城"
     ],
@@ -76665,7 +77064,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北海道神宮"
     ],
@@ -76773,7 +77175,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "蘆別神社"
     ],
@@ -76881,7 +77286,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "網走神社"
     ],
@@ -76989,7 +77397,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩見沢神社"
     ],
@@ -77097,7 +77508,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "姥神大神宮"
     ],
@@ -77205,7 +77619,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "太田山神社"
     ],
@@ -77313,7 +77730,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "帯廣神社"
     ],
@@ -77421,7 +77841,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "上川神社"
     ],
@@ -77529,7 +77952,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "樽前山神社"
     ],
@@ -77637,7 +78063,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "徳山大神宮"
     ],
@@ -77745,7 +78174,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "永山神社"
     ],
@@ -77853,7 +78285,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "南豪神社"
     ],
@@ -77961,7 +78396,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北海道護國神社"
     ],
@@ -78069,7 +78507,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "夕張神社"
     ],
@@ -78177,7 +78618,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "義経神社"
     ],
@@ -78285,7 +78729,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "呼人神社"
     ],
@@ -78393,7 +78840,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "留辺蘂神社"
     ],
@@ -78503,7 +78953,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "アポイ岳"
     ],
@@ -78613,7 +79066,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "荒井山"
     ],
@@ -78723,7 +79179,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "漁岳"
     ],
@@ -78833,7 +79292,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "1967峰"
     ],
@@ -78943,7 +79405,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イドンナップ岳"
     ],
@@ -79053,7 +79518,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウエンシリ岳"
     ],
@@ -79163,7 +79631,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウコタキヌプリ"
     ],
@@ -79273,7 +79744,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鬱岳"
     ],
@@ -79383,7 +79857,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "エサオマントッタベツ岳"
     ],
@@ -79493,7 +79970,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "江鳶山"
     ],
@@ -79603,7 +80083,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オッカバケ岳"
     ],
@@ -79713,7 +80196,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "音威富士"
     ],
@@ -79823,7 +80309,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "音更山"
     ],
@@ -79933,7 +80422,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オプタテシケヌプリ"
     ],
@@ -80043,7 +80535,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オムシャヌプリ"
     ],
@@ -80153,7 +80648,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オロフレ山"
     ],
@@ -80263,7 +80761,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "化雲岳"
     ],
@@ -80373,7 +80874,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "カルルス山"
     ],
@@ -80483,7 +80987,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "木禽岳"
     ],
@@ -80593,7 +81100,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北戸蔦別岳"
     ],
@@ -80703,7 +81213,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "五天山"
     ],
@@ -80813,7 +81326,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "コトニヌプリ"
     ],
@@ -80923,7 +81439,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "狭薄山"
     ],
@@ -81033,7 +81552,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サシルイ岳"
     ],
@@ -81143,7 +81665,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "察来山"
     ],
@@ -81253,7 +81778,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "札内岳"
     ],
@@ -81363,7 +81891,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "札幌岳"
     ],
@@ -81473,7 +82004,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サマッカリヌプリ"
     ],
@@ -81583,7 +82117,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サワンチサップ"
     ],
@@ -81693,7 +82230,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "シートートムシメヌ山"
     ],
@@ -81803,7 +82343,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "島松山"
     ],
@@ -81913,7 +82456,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "定山渓天狗岳"
     ],
@@ -82023,7 +82569,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "渚滑岳"
     ],
@@ -82133,7 +82682,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "神社山"
     ],
@@ -82243,7 +82795,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "銭函天狗山"
     ],
@@ -82353,7 +82908,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ソエマツ岳"
     ],
@@ -82463,7 +83021,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "空沼岳"
     ],
@@ -82573,7 +83134,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大千軒岳"
     ],
@@ -82683,7 +83247,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "チセヌプリ"
     ],
@@ -82793,7 +83360,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "チトカニウシ山"
     ],
@@ -82903,7 +83473,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トーノシケヌプリ"
     ],
@@ -83013,7 +83586,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝幌尻岳"
     ],
@@ -83123,7 +83699,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "徳舜瞥山"
     ],
@@ -83233,7 +83812,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "戸蔦別岳"
     ],
@@ -83343,7 +83925,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "豊似岳"
     ],
@@ -83453,7 +84038,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "七飯岳"
     ],
@@ -83563,7 +84151,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "西クマネシリ岳"
     ],
@@ -83673,7 +84264,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "西ヌプカウシヌプリ"
     ],
@@ -83783,7 +84377,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニシュオマナイ岳"
     ],
@@ -83893,7 +84490,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニセイチャロマップ岳"
     ],
@@ -84003,7 +84603,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニレシ岳"
     ],
@@ -84113,7 +84716,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "函岳"
     ],
@@ -84223,7 +84829,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "パンケヌーシ岳"
     ],
@@ -84333,7 +84942,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "パンケ山"
     ],
@@ -84443,7 +85055,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "盤の沢山"
     ],
@@ -84553,7 +85168,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美瑛岳"
     ],
@@ -84663,7 +85281,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "東ヌプカウシヌプリ"
     ],
@@ -84773,7 +85394,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美幌岳"
     ],
@@ -84883,7 +85507,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "百松沢山"
     ],
@@ -84991,7 +85618,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "あさひかわ北彩都ガーデン"
     ],
@@ -85099,7 +85729,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大雪展望台"
     ],
@@ -85207,7 +85840,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "多和平"
     ],
@@ -85315,7 +85951,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天に続く道"
     ],
@@ -85423,7 +86062,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝千年の森"
     ],
@@ -85533,7 +86175,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "相泊温泉"
     ],
@@ -85643,7 +86288,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩尾温泉"
     ],
@@ -85753,7 +86401,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "歌登温泉"
     ],
@@ -85863,7 +86514,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "枝幸温泉"
     ],
@@ -85973,7 +86627,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "長万部温泉"
     ],
@@ -86083,7 +86740,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "貝取澗温泉"
     ],
@@ -86193,7 +86853,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川汲温泉"
     ],
@@ -86303,7 +86966,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川北温泉"
     ],
@@ -86413,7 +87079,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "菅野温泉"
     ],
@@ -86523,7 +87192,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "北見温泉"
     ],
@@ -86633,7 +87305,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白老温泉"
     ],
@@ -86743,7 +87418,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "瀬石温泉"
     ],
@@ -86853,7 +87531,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大雪高原温泉"
     ],
@@ -86963,7 +87644,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "滝の湯温泉"
     ],
@@ -87073,7 +87757,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天塩温泉"
     ],
@@ -87183,7 +87870,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "天塩川温泉"
     ],
@@ -87293,7 +87983,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝川温泉"
     ],
@@ -87403,7 +88096,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浜頓別温泉"
     ],
@@ -87513,7 +88209,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "びふか温泉"
     ],
@@ -87623,7 +88322,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピンネシリ温泉"
     ],
@@ -87733,7 +88435,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ぽんぴら温泉"
     ],
@@ -87843,7 +88548,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "有毒温泉"
     ],
@@ -87953,7 +88661,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "稚内温泉"
     ],
@@ -88063,7 +88774,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "さるふつ温泉"
     ],
@@ -88173,7 +88887,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "雷電温泉"
     ],
@@ -88283,7 +89000,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "阿寒富士"
     ],
@@ -88393,7 +89113,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "旭山"
     ],
@@ -88503,7 +89226,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "アトサヌプリ"
     ],
@@ -88613,7 +89339,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イクルシベ山"
     ],
@@ -88723,7 +89452,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イソサンヌプリ山"
     ],
@@ -88833,7 +89565,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イユダニヌプリ山"
     ],
@@ -88943,7 +89678,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イルムケップ山"
     ],
@@ -89053,7 +89791,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "イワケシ山"
     ],
@@ -89163,7 +89904,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウイーヌプリ"
     ],
@@ -89273,7 +90017,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "英嶺山"
     ],
@@ -89383,7 +90130,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "エタンパック山"
     ],
@@ -89493,7 +90243,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オサッペヌプリ"
     ],
@@ -89603,7 +90356,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オションナイ山"
     ],
@@ -89713,7 +90469,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "帯広岳"
     ],
@@ -89823,7 +90582,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小平蘂岳"
     ],
@@ -89933,7 +90695,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "雄冬山"
     ],
@@ -90043,7 +90808,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オロエナイ"
     ],
@@ -90153,7 +90921,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "狩勝山"
     ],
@@ -90263,7 +91034,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "狩振岳"
     ],
@@ -90373,7 +91147,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川流布山"
     ],
@@ -90483,7 +91260,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "錐山"
     ],
@@ -90593,7 +91373,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "クテクンベツ岳"
     ],
@@ -90703,7 +91486,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "サマッケヌプリ"
     ],
@@ -90813,7 +91599,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "シアッシリ山"
     ],
@@ -90923,7 +91712,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "シタバヌプリ山"
     ],
@@ -91033,7 +91825,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "斜内山"
     ],
@@ -91143,7 +91938,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "社満射岳"
     ],
@@ -91253,7 +92051,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "支湧別岳"
     ],
@@ -91363,7 +92164,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "宿弗山"
     ],
@@ -91473,7 +92277,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "珠文岳"
     ],
@@ -91583,7 +92390,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知駒岳"
     ],
@@ -91693,7 +92503,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ソーキップ岳"
     ],
@@ -91803,7 +92616,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "タウシュベツ山"
     ],
@@ -91913,7 +92729,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "立牛岳"
     ],
@@ -92023,7 +92842,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "知円別岳"
     ],
@@ -92133,7 +92955,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "チロロ岳"
     ],
@@ -92243,7 +93068,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トサモシベ"
     ],
@@ -92353,7 +93181,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トヨニ岳"
     ],
@@ -92463,7 +93294,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ナイタイ山"
     ],
@@ -92573,7 +93407,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ナメワッカ岳"
     ],
@@ -92683,7 +93520,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "仁頃山"
     ],
@@ -92793,7 +93633,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "西川岳"
     ],
@@ -92903,7 +93746,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニタトルシュケ山"
     ],
@@ -93013,7 +93859,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ニフシオヤコツ"
     ],
@@ -93123,7 +93972,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "糠平山"
     ],
@@ -93233,7 +94085,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "野塚岳"
     ],
@@ -93343,7 +94198,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ハッタオマナイ岳"
     ],
@@ -93453,7 +94311,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "パンベツ山"
     ],
@@ -93563,7 +94424,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピウケナイ山"
     ],
@@ -93671,7 +94535,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "清水円山展望台"
     ],
@@ -93779,7 +94646,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "長節湖"
     ],
@@ -93887,7 +94757,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝岳望岳台"
     ],
@@ -93995,7 +94868,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十勝ヒルズ"
     ],
@@ -94103,7 +94979,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "中札内美術村"
     ],
@@ -94211,7 +95090,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "二風谷ファミリーランド"
     ],
@@ -94319,7 +95201,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "のぼりべつクマ牧場"
     ],
@@ -94427,7 +95312,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "花の拠点「はなふる」"
     ],
@@ -94535,7 +95423,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "日高山岳ビラパーク"
     ],
@@ -94643,7 +95534,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "深川市桜山公園"
     ],
@@ -94751,7 +95645,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "丸瀬布森林公園いこいの森"
     ],
@@ -94859,7 +95756,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "メルヘン交差点"
     ],
@@ -94967,7 +95867,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "余市蒸溜所"
     ],
@@ -95075,7 +95978,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "六花の森"
     ],
@@ -95183,7 +96089,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小川の滝"
     ],
@@ -95291,7 +96200,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白ひげの滝"
     ],
@@ -95399,7 +96311,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "フレペの滝"
     ],
@@ -95507,7 +96422,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "館城"
     ],
@@ -95615,7 +96533,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "南部陣屋"
     ],
@@ -95725,7 +96646,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "上の湯温泉"
     ],
@@ -95835,7 +96759,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "かみゆうべつ温泉"
     ],
@@ -95945,7 +96872,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "神居岩温泉"
     ],
@@ -96055,7 +96985,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "黒松内温泉"
     ],
@@ -96165,7 +97098,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "見市温泉"
     ],
@@ -96275,7 +97211,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "沙流川温泉"
     ],
@@ -96385,7 +97324,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鹿の湯"
     ],
@@ -96495,7 +97437,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "支笏湖いとう温泉"
     ],
@@ -96605,7 +97550,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "樹海温泉"
     ],
@@ -96715,7 +97663,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "初山別温泉"
     ],
@@ -96825,7 +97776,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "伊達温泉"
     ],
@@ -96935,7 +97889,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "秩父別温泉"
     ],
@@ -97045,7 +98002,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "千走川温泉"
     ],
@@ -97155,7 +98115,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トムラウシ温泉"
     ],
@@ -97265,7 +98228,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "仲洞爺温泉"
     ],
@@ -97375,7 +98341,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ヌプントムラウシ温泉"
     ],
@@ -97485,7 +98454,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "丸瀬布温泉"
     ],
@@ -97595,7 +98567,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "芽登温泉"
     ],
@@ -97705,7 +98680,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "養老牛温泉"
     ],
@@ -97815,7 +98793,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "利尻富士温泉"
     ],
@@ -97925,7 +98906,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "加波山"
     ],
@@ -98035,7 +99019,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "高鈴山"
     ],
@@ -98145,7 +99132,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "竪破山"
     ],
@@ -98255,7 +99245,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "筑波山"
     ],
@@ -98365,7 +99358,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "富谷山"
     ],
@@ -98475,7 +99471,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "羽田山"
     ],
@@ -98585,7 +99584,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "風神山"
     ],
@@ -98695,7 +99697,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "八溝山"
     ],
@@ -98803,7 +99808,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "牛久シャトー"
     ],
@@ -98911,7 +99919,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "偕楽園"
     ],
@@ -99019,7 +100030,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "国営ひたち海浜公園"
     ],
@@ -99127,7 +100141,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "こもれび森のイバライド"
     ],
@@ -99235,7 +100252,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "水郷筑波国定公園"
     ],
@@ -99343,7 +100363,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "西山荘"
     ],
@@ -99451,7 +100474,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "袋田の滝"
     ],
@@ -99559,7 +100585,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "伊佐城"
     ],
@@ -99667,7 +100696,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小田城"
     ],
@@ -99775,7 +100807,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "笠間城"
     ],
@@ -99883,7 +100918,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "古河城"
     ],
@@ -99991,7 +101029,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "土浦城"
     ],
@@ -100099,7 +101140,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "結城城"
     ],
@@ -100207,7 +101251,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "茨城県護国神社"
     ],
@@ -100315,7 +101362,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大洗磯前神社"
     ],
@@ -100423,7 +101473,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大杉神社"
     ],
@@ -100531,7 +101584,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "女化神社"
     ],
@@ -100639,7 +101695,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "笠間稲荷神社"
     ],
@@ -100747,7 +101806,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鹿島神宮"
     ],
@@ -100855,7 +101917,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "国王神社"
     ],
@@ -100963,7 +102028,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "酒列磯前神社"
     ],
@@ -101071,7 +102139,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "静神社"
     ],
@@ -101179,7 +102250,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "常磐神社"
     ],
@@ -101287,7 +102361,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "水戸東照宮"
     ],
@@ -101395,7 +102472,10 @@
     ],
     "isIsland": false,
     "hub": "水戸",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "水戸八幡宮"
     ],
@@ -101505,7 +102585,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "TAOYA日光霧降"
     ],
@@ -101615,7 +102698,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川俣温泉"
     ],
@@ -101725,7 +102811,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "三斗小屋温泉"
     ],
@@ -101835,7 +102924,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "中禅寺温泉"
     ],
@@ -101945,7 +103037,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "那須温泉郷"
     ],
@@ -102055,7 +103150,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "日光湯元温泉"
     ],
@@ -102165,7 +103263,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "益子温泉"
     ],
@@ -102275,7 +103376,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "湯西川温泉"
     ],
@@ -102385,7 +103489,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩船山"
     ],
@@ -102495,7 +103602,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "皇海山"
     ],
@@ -102605,7 +103715,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "高原山"
     ],
@@ -102715,7 +103828,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "那須岳"
     ],
@@ -102825,7 +103941,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "男体山"
     ],
@@ -102935,7 +104054,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "日光白根山"
     ],
@@ -103045,7 +104167,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "女峰山"
     ],
@@ -103155,7 +104280,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "谷倉山"
     ],
@@ -103263,7 +104391,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "あしかがフラワーパーク"
     ],
@@ -103371,7 +104502,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大瀬観光やな"
     ],
@@ -103479,7 +104613,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "佐野プレミアム・アウトレット"
     ],
@@ -103587,7 +104724,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "時代村"
     ],
@@ -103695,7 +104835,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "殺生石"
     ],
@@ -103803,7 +104946,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "那須高原"
     ],
@@ -103911,7 +105057,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "那須高原りんどう湖ファミリー牧場"
     ],
@@ -104019,7 +105168,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "日光杉並木"
     ],
@@ -104127,7 +105279,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "益子町"
     ],
@@ -104235,7 +105390,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "宇都宮城"
     ],
@@ -104343,7 +105501,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "榎本城"
     ],
@@ -104451,7 +105612,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "唐沢山城"
     ],
@@ -104559,7 +105723,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "烏山城"
     ],
@@ -104667,7 +105834,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "神田城"
     ],
@@ -104775,7 +105945,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "多功城"
     ],
@@ -104883,7 +106056,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "中久喜城"
     ],
@@ -104991,7 +106167,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "福原城"
     ],
@@ -105099,7 +106278,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "壬生城"
     ],
@@ -105207,7 +106389,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鷲城"
     ],
@@ -105315,7 +106500,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "今泉八坂神社"
     ],
@@ -105423,7 +106611,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "宇都宮二荒山神社"
     ],
@@ -105531,7 +106722,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "太平山神社"
     ],
@@ -105639,7 +106833,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "唐沢山神社"
     ],
@@ -105747,7 +106944,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "木幡神社"
     ],
@@ -105855,7 +107055,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "日光東照宮"
     ],
@@ -105963,7 +107166,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "野木神社"
     ],
@@ -106071,7 +107277,10 @@
     ],
     "isIsland": false,
     "hub": "宇都宮",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "薬師寺八幡宮"
     ],
@@ -106181,7 +107390,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "老神温泉"
     ],
@@ -106291,7 +107503,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥嬬恋温泉"
     ],
@@ -106401,7 +107616,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鹿沢温泉"
     ],
@@ -106511,7 +107729,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "片品温泉"
     ],
@@ -106621,7 +107842,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "上牧温泉"
     ],
@@ -106731,7 +107955,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川中温泉"
     ],
@@ -106841,7 +108068,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "川原湯温泉"
     ],
@@ -106951,7 +108181,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "猿ヶ京温泉"
     ],
@@ -107061,7 +108294,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "敷島温泉"
     ],
@@ -107171,7 +108407,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "尻焼温泉"
     ],
@@ -107281,7 +108520,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "花敷温泉"
     ],
@@ -107391,7 +108633,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "法師温泉"
     ],
@@ -107501,7 +108746,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "万座温泉"
     ],
@@ -107611,7 +108859,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "赤城山"
     ],
@@ -107721,7 +108972,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浅間山"
     ],
@@ -107831,7 +109085,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "四阿山"
     ],
@@ -107941,7 +109198,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "荒船山"
     ],
@@ -108051,7 +109311,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩櫃山"
     ],
@@ -108161,7 +109424,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "草津白根山"
     ],
@@ -108271,7 +109537,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "栗生山"
     ],
@@ -108381,7 +109650,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "至仏山"
     ],
@@ -108491,7 +109763,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白砂山"
     ],
@@ -108601,7 +109876,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "谷川岳"
     ],
@@ -108711,7 +109989,10 @@
     ],
     "isIsland": false,
     "hub": "前橋",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "榛名山"
     ],
@@ -108821,7 +110102,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "臼別温泉"
     ],
@@ -108931,7 +110215,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オーロラ温泉"
     ],
@@ -109041,7 +110328,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥美利河温泉"
     ],
@@ -109151,7 +110441,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オソウシ温泉"
     ],
@@ -109261,7 +110554,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オホーツクオムイ温泉"
     ],
@@ -109371,7 +110667,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "神威脇温泉"
     ],
@@ -109481,7 +110780,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "金花湯"
     ],
@@ -109591,7 +110893,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "塩別温泉"
     ],
@@ -109701,7 +111006,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "鹿部温泉"
     ],
@@ -109811,7 +111119,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "瀬戸瀬温泉"
     ],
@@ -109921,7 +111232,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "平田内温泉"
     ],
@@ -110031,7 +111345,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美利河温泉"
     ],
@@ -110141,7 +111458,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "利尻ふれあい温泉"
     ],
@@ -110251,7 +111571,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "礼文島温泉"
     ],
@@ -110361,7 +111684,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ジョイランド樽前"
     ],
@@ -110469,7 +111795,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "国後島"
     ],
@@ -110577,7 +111906,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "緑の島"
     ],
@@ -110687,7 +112019,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "芦別岳"
     ],
@@ -110797,7 +112132,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩保木山"
     ],
@@ -110907,7 +112245,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ウエンザル岳"
     ],
@@ -111017,7 +112358,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オキシマップ山"
     ],
@@ -111127,7 +112471,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "於鬼頭岳"
     ],
@@ -111237,7 +112584,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "長留内岳"
     ],
@@ -111347,7 +112697,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オダッシュ山"
     ],
@@ -111457,7 +112810,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "小平蘂山"
     ],
@@ -111567,7 +112923,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "雄鉾岳"
     ],
@@ -111677,7 +113036,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "オヤコツ"
     ],
@@ -111787,7 +113149,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "カンジウシ山"
     ],
@@ -111897,7 +113262,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "久山岳"
     ],
@@ -112007,7 +113375,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "崕山"
     ],
@@ -112117,7 +113488,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "靴幅山"
     ],
@@ -112227,7 +113601,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "苦頓別山"
     ],
@@ -112337,7 +113714,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "黒松内岳"
     ],
@@ -112447,7 +113827,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "群別岳"
     ],
@@ -112557,7 +113940,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "薫別岳"
     ],
@@ -112667,7 +114053,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "毛鐘尻山"
     ],
@@ -112777,7 +114166,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "主府久"
     ],
@@ -112887,7 +114279,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "シューパロ岳"
     ],
@@ -112997,7 +114392,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "セタウシ山"
     ],
@@ -113107,7 +114505,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "尖峰"
     ],
@@ -113217,7 +114618,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "滝ノ上山"
     ],
@@ -113327,7 +114731,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "タツナラシ山"
     ],
@@ -113437,7 +114844,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "徹別岳"
     ],
@@ -113547,7 +114957,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トキタイ山"
     ],
@@ -113657,7 +115070,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "常呂山"
     ],
@@ -113767,7 +115183,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "トッカリムイ岳"
     ],
@@ -113877,7 +115296,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ヌ牛別岳"
     ],
@@ -113987,7 +115409,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "糠真布"
     ],
@@ -114097,7 +115522,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "沼ノ原山"
     ],
@@ -114207,7 +115635,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "猫山"
     ],
@@ -114317,7 +115748,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "羽幌岳"
     ],
@@ -114427,7 +115861,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浜益岳"
     ],
@@ -114537,7 +115974,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "馬髭岳"
     ],
@@ -114647,7 +116087,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "東三国山"
     ],
@@ -114757,7 +116200,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピシカチナイ山"
     ],
@@ -114867,7 +116313,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピセナイ山"
     ],
@@ -114977,7 +116426,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピッシリ山"
     ],
@@ -115087,7 +116539,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピパイロ岳"
     ],
@@ -115197,7 +116652,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美比内山"
     ],
@@ -115307,7 +116765,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "美羅尾山"
     ],
@@ -115417,7 +116878,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピラトコミ山"
     ],
@@ -115525,7 +116989,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "ピョウタンの滝"
     ],
@@ -115633,7 +117100,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "真鍋庭園"
     ],
@@ -115741,7 +117211,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "山彦の滝"
     ],
@@ -115849,7 +117322,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "白老仙台藩陣屋跡"
     ],
@@ -115957,7 +117433,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "飯生神社"
     ],
@@ -116065,7 +117544,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "石狩弁天社"
     ],
@@ -116173,7 +117655,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浦臼神社"
     ],
@@ -116281,7 +117766,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浦河神社"
     ],
@@ -116389,7 +117877,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "江別神社"
     ],
@@ -116497,7 +117988,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "釜加神社"
     ],
@@ -116605,7 +118099,10 @@
     ],
     "isIsland": false,
     "hub": "札幌",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "札幌八幡宮"
     ],
@@ -116715,7 +118212,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "相乗温泉"
     ],
@@ -116825,7 +118325,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "青荷温泉"
     ],
@@ -116935,7 +118438,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "秋元温泉"
     ],
@@ -117045,7 +118551,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "浅虫温泉"
     ],
@@ -117155,7 +118664,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "板留温泉"
     ],
@@ -117265,7 +118777,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "稲垣温泉"
     ],
@@ -117375,7 +118890,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "奥入瀬渓流温泉"
     ],
@@ -117485,7 +119003,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "大鰐温泉"
     ],
@@ -117595,7 +119116,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "落合温泉"
     ],
@@ -117705,7 +119229,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "黄金崎不老不死温泉"
     ],
@@ -117815,7 +119342,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "下風呂温泉"
     ],
@@ -117925,7 +119455,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "城ヶ倉温泉"
     ],
@@ -118035,7 +119568,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "酸ヶ湯"
     ],
@@ -118145,7 +119681,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "嶽温泉"
     ],
@@ -118255,7 +119794,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "蔦温泉"
     ],
@@ -118365,7 +119907,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "十和田湖畔温泉"
     ],
@@ -118475,7 +120020,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "馬門温泉"
     ],
@@ -118585,7 +120133,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "谷地温泉"
     ],
@@ -118695,7 +120246,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "岩木山"
     ],
@@ -118805,7 +120359,10 @@
     ],
     "isIsland": false,
     "hub": "青森",
-    "stayAllowed": true,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
     "spots": [
       "釜臥山"
     ],
