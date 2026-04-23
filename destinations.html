@@ -406,7 +406,7 @@
       const tags  = (dest.primary ?? []).slice(0, 4);
       const badge = TYPE_BADGE[dest.destType] ?? 'badge-city';
       const label = TYPE_LABEL[dest.destType] ?? dest.destType;
-      const url   = `./index.html?dest=${encodeURIComponent(dest.id)}`;
+      const url   = `./destinations/${encodeURIComponent(dest.id)}.html`;
 
       const a = document.createElement('a');
       a.className = 'dest-card';
@@ -457,7 +457,7 @@
 
     /* ── おすすめカード ── */
     function buildRecCard(dest) {
-      const url = `./index.html?dest=${encodeURIComponent(dest.id)}`;
+      const url = `./destinations/${encodeURIComponent(dest.id)}.html`;
       const a = document.createElement('a');
       a.className = 'rec-card';
       a.href = url;
