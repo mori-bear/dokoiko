@@ -93,6 +93,18 @@ const LOCAL_LINE_MAP = {
   'myoko-kogen':     'えちごトキめき鉄道',
   /* レンタカー */
   'karuizawa':       'しなの鉄道',
+  /* 私鉄（JR予約で到達できない・CTA to= は gateway で止める必要あり） */
+  'hakone':          '小田急箱根登山線',
+  'inuyama':         '名鉄犬山線',
+  'koyasan':         '南海高野線',
+  'yoshino':         '近鉄吉野線',
+  'asuka':           '近鉄吉野線',
+  'kotohira':        '琴電琴平線',
+  'enoshima':        '江ノ電',
+  'chichibu':        '秩父鉄道',
+  'kawagoe':         '東武東上線',
+  'takao':           '京王線',
+  'miyanoshita':     '小田急箱根登山線',
 };
 
 /* ────────────────────────────────────────

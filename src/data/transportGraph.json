@@ -19216,6 +19216,42 @@
       "minutes": 30,
       "provider": "e5489",
       "service": "JR京都線(新快速)"
+    },
+    {
+      "id": "e1657",
+      "from": "hub:東京",
+      "to": "hub:小田原",
+      "type": "rail",
+      "minutes": 35,
+      "provider": "ekinet",
+      "service": "東海道新幹線（こだま）"
+    },
+    {
+      "id": "e1658",
+      "from": "hub:小田原",
+      "to": "hub:東京",
+      "type": "rail",
+      "minutes": 35,
+      "provider": "ekinet",
+      "service": "東海道新幹線（こだま）"
+    },
+    {
+      "id": "e1659",
+      "from": "hub:小田原",
+      "to": "hub:箱根湯本",
+      "type": "rail",
+      "minutes": 16,
+      "provider": null,
+      "service": "小田急箱根登山線"
+    },
+    {
+      "id": "e1660",
+      "from": "hub:箱根湯本",
+      "to": "hub:小田原",
+      "type": "rail",
+      "minutes": 16,
+      "provider": null,
+      "service": "小田急箱根登山線"
     }
   ]
 }

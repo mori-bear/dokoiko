@@ -349,9 +349,26 @@ const SHINKANSEN_STATIONS = new Set([
 /**
  * gateway → accessStation 間のローカル交通ラベルを導出。
  *   city.busGateway や access.steps[1] の method から判定。
+ *   既知の私鉄区間は実際の路線名を返して isJRSegment が正しく私鉄判定できるようにする。
  */
-function _localSegmentMode(city) {
+const PRIVATE_LOCAL_LINES = {
+  '小田原駅→箱根湯本駅':     '小田急箱根登山線',
+  '名古屋駅→犬山駅':          '名鉄犬山線',
+  '高松駅→琴電琴平駅':        '琴電琴平線',
+  '難波駅→高野山駅':          '南海高野線',
+  '橿原神宮前駅→吉野駅':      '近鉄吉野線',
+  '名古屋駅→伊勢市駅':        '近鉄山田線',
+  '名古屋駅→鳥羽駅':          '近鉄鳥羽線',
+  '京都駅→奈良駅':            'JR奈良線',
+};
+
+function _localSegmentMode(city, gatewaySt = null, accessSt = null) {
   if (city.busGateway || city.secondaryTransport === 'bus') return 'バス';
+  // 既知の私鉄区間を優先（gateway→accessStation のペアで判定）
+  if (gatewaySt && accessSt) {
+    const key = `${gatewaySt}→${accessSt}`;
+    if (PRIVATE_LOCAL_LINES[key]) return PRIVATE_LOCAL_LINES[key];
+  }
   // access.steps に local step がある場合
   const steps = city.access?.steps;
   if (steps && steps.length >= 2) {
@@ -1554,7 +1571,7 @@ function buildCityTypeRoute(city, departure, fromCity) {
       // step 1 は新幹線経由か確認してラベルを決定
       const step1Mode = SHINKANSEN_STATIONS.has(gatewaySt) ? '新幹線' : '鉄道';
       // step 2 はローカル線・バスなど
-      const step2Mode = _localSegmentMode(city);
+      const step2Mode = _localSegmentMode(city, gatewaySt, accessSt);
       stepGroups.push({
         type: 'step-group',
         stepLabel: `${stepIdx(0)}  ${origin} → ${gatewaySt}（${step1Mode}）`,
@@ -1616,7 +1633,7 @@ function buildSuburbanRoute(city, departure, fromCity) {
 
     if (useGatewaySplit) {
       const step1Mode = SHINKANSEN_STATIONS.has(gatewaySt) ? '新幹線' : '鉄道';
-      const step2Mode = _localSegmentMode(city);
+      const step2Mode = _localSegmentMode(city, gatewaySt, accessSt);
       // ① departure → gateway
       stepGroups.push({
         type: 'step-group',

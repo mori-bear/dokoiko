@@ -27,15 +27,26 @@ export async function captureShareCard(city, departure, transportContext = null)
   const routeLine  = departure ? `${departure} → ${repStation}` : '';
 
   // CTA（1行構造）
+  // provider を主軸に判定:
+  //   skyscanner（航空券比較）→「${到着空港}への航空券を探す（Skyscanner）」
+  //   jr-*（JR予約）            →「${到着駅}まで予約する（provider・typeHint）」
+  //   JR無し（nonJrOnly）         →「${到着地}への行き方を見る（typeHint）」
+  // 新幹線ヒントは jrChainCta.type 由来だが provider=skyscanner とは併記しない。
   const chainCta = best?.jrChainCta;
   const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
-  const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX', 'skyscanner':'Skyscanner' };
+  const PROV_MAP = { 'jr-east':'えきねっと', 'jr-west':'e5489', 'jr-kyushu':'九州ネット予約', 'jr-ex':'EX' };
   const TYPE_HINT = { shinkansen:'新幹線', limited:'特急', flight:'飛行機', ferry:'フェリー' };
   const ctaProvider = transportContext?.cta?.type ?? transportContext?.stepGroups?.find(s => s.type === 'main-cta')?.cta?.type ?? null;
-  const provName = PROV_MAP[ctaProvider] ?? null;
-  const typeHint = chainCta ? (TYPE_HINT[chainCta.type] ?? '') : '';
   let ctaLine = '';
-  if (chainCta) {
+  if (ctaProvider === 'skyscanner') {
+    // 航空券CTA: label の `→ ${空港名}` を抽出、無ければ目的地名にフォールバック
+    const label = transportContext?.cta?.label ?? '';
+    const m = label.match(/→\s*([^)）]+?)[)）]?$/);
+    const airport = m ? clean(m[1].trim()) : clean(chainCta?.to) || (city.displayName || city.name || '');
+    ctaLine = `${airport}への航空券を探す（Skyscanner）`;
+  } else if (chainCta) {
+    const provName = PROV_MAP[ctaProvider] ?? null;
+    const typeHint = TYPE_HINT[chainCta.type] ?? '';
     const to = clean(chainCta.to);
     if (chainCta.nonJrOnly) {
       ctaLine = typeHint ? `${to}への行き方を見る（${typeHint}）` : `${to}への行き方を見る`;
@@ -43,6 +54,20 @@ export async function captureShareCard(city, departure, transportContext = null)
       const sub = [provName, typeHint].filter(Boolean).join('・');
       ctaLine = sub ? `${to}まで予約する（${sub}）` : `${to}まで予約する`;
     }
+  } else if (ctaProvider && ctaProvider.startsWith('jr-')) {
+    // JRチェーン無し（バス主体ルート等）でも JR CTA が出ている場合は hubStation / representativeStation を予約先にする
+    const provName = PROV_MAP[ctaProvider] ?? null;
+    const fallbackStation = city.hubStation || city.representativeStation || city.displayName || city.name || '';
+    const to = clean(fallbackStation);
+    if (to) ctaLine = provName ? `${to}まで予約する（${provName}）` : `${to}まで予約する`;
+  } else if (ctaProvider === 'ferry') {
+    // フェリー主体（離島等）
+    const destName = city.displayName || city.name || '';
+    ctaLine = `${destName}へフェリーで行く`;
+  } else {
+    // 最終フォールバック: 目的地への行き方を見る
+    const destName = city.displayName || city.name || '';
+    if (destName) ctaLine = `${destName}への行き方を見る`;
   }
 
   // finalAccess（シェア画像用: allJR時は非表示、矢印つなぎで最短表現）
