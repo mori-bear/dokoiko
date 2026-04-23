@@ -19198,6 +19198,24 @@
       "type": "rail",
       "service": "山陽新幹線",
       "minutes": 25
+    },
+    {
+      "id": "e1655",
+      "from": "hub:京都",
+      "to": "hub:大阪",
+      "type": "rail",
+      "minutes": 30,
+      "provider": "e5489",
+      "service": "JR京都線(新快速)"
+    },
+    {
+      "id": "e1656",
+      "from": "hub:大阪",
+      "to": "hub:京都",
+      "type": "rail",
+      "minutes": 30,
+      "provider": "e5489",
+      "service": "JR京都線(新快速)"
     }
   ]
 }

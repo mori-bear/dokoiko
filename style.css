@@ -1425,19 +1425,27 @@ body {
   white-space: nowrap;
 }
 
+/* 楽天・じゃらんボタンを同等の存在感に統一: 浮いている感じの box-shadow + hover 時に少し浮き上がる */
+.btn-rakuten,
+.btn-jalan {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.15s;
+}
+.btn-rakuten:hover,
+.btn-jalan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+}
+
 .btn-rakuten {
   background: #bf0000;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(191,0,0,0.25);
 }
-.btn-rakuten:hover { opacity: 0.9; }
 
 .btn-jalan {
   background: #ff7a00;
   color: #fff;
-  opacity: 0.95;
 }
-.btn-jalan:hover { opacity: 0.88; }
 
 /* サブ宿CTA（ページ下部・2回目） */
 .stay-sub-cta {
@@ -1827,19 +1835,7 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   font-size: 1.04em;
 }
 
-/* affiliate（楽天） */
-.btn-rakuten {
-  background: #e60012;
-  color: #fff;
-}
-.btn-rakuten:hover { opacity: 0.9; }
-
-/* affiliate（じゃらん） */
-.btn-jalan {
-  background: #ff7a32;
-  color: #fff;
-}
-.btn-jalan:hover { opacity: 0.9; }
+/* affiliate — 楽天・じゃらんの基本色定義（.btn-rakuten / .btn-jalan の重複上書き禁止・影は上で統一設定済み） */
 
 /* リトライエリア */
 

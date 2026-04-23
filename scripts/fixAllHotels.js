@@ -275,41 +275,46 @@ function buildRakutenKeyword(dest) {
  *
  * 優先順位:
  * ① hotelAreas.json の rakutenPath（エリア別ページ → 最も絞られた結果）
- * ② 都道府県別ページ /yado/{prefCode}/ （県内全宿を表示 → 確実に動作）
- * ③ f_query フォールバック（SPA全国マップになるが最後の手段）
+ * ② /search/?keyword={keyword} — 都道府県＋地名キーワードで検索（エリア特化）
+ * ③ 都道府県別ページ /yado/{prefCode}/ （最終フォールバック）
  */
 function buildRakutenDestUrl(dest) {
-  // ① エリアパス（hotelAreas.json に rakutenPath がある場合）
+  // ① エリアパス（hotelAreas.json に rakutenPath がある場合 — 最も精度が高い）
+  // 都道府県レベルの path（/yado/{prefCode}/ — .html なし）はエリア特化でないため拒否し、
+  // キーワード検索にフォールバックさせる
   const areaId = DEST_TO_AREA_ID[dest.id] ?? dest.id;
   const area   = AREAS_BY_ID.get(areaId);
-  if (area?.rakutenPath) {
+  const isPrefLevelPath = area?.rakutenPath && /^\/yado\/[a-z]+\/$/.test(area.rakutenPath);
+  if (area?.rakutenPath && !isPrefLevelPath) {
     const url = `https://travel.rakuten.co.jp${area.rakutenPath}`;
     return buildRakutenAffilUrl(url);
   }
 
-  // ② 都道府県別ページ
+  // ② キーワード検索（/yado/japan.html?f_query=）
+  //    楽天トラベルが現在サポートしている唯一のキーワード検索エンドポイント（HTTP 200）。
+  //    /search/?keyword= は 404 を返すため使用しない。
+  const keyword = buildRakutenKeyword(dest);
+  if (keyword) {
+    const url = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
+    return buildRakutenAffilUrl(url);
+  }
+
+  // ③ 都道府県別ページ（最終フォールバック）
   const prefCode = PREF_CODE_MAP[dest.prefecture];
   if (prefCode) {
     const url = `https://travel.rakuten.co.jp/yado/${prefCode}/`;
     return buildRakutenAffilUrl(url);
   }
 
-  // ③ f_query フォールバック（全国マップになる可能性あり）
-  const keyword   = buildRakutenKeyword(dest);
-  const searchUrl = `https://travel.rakuten.co.jp/yado/japan.html?f_query=${encodeURIComponent(keyword)}`;
-  return buildRakutenAffilUrl(searchUrl);
+  return null;
 }
 
 // ── じゃらんURL生成 ──────────────────────────────────────────────────
 
-/** じゃらんキーワード検索URL（Shift-JIS エンコード） */
+/** じゃらんキーワード検索URL（UTF-8 エンコード） */
 function buildJalanUrl(area) {
   const normalized = normalizeArea(area);
-  const sjisBytes = iconv.encode(normalized, 'cp932');
-  const encoded = Array.from(sjisBytes)
-    .map(b => '%' + b.toString(16).toUpperCase().padStart(2, '0'))
-    .join('');
-  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encoded}`;
+  return `https://www.jalan.net/uw/uwp2011/uww2011init.do?keyword=${encodeURIComponent(normalized)}`;
 }
 
 function buildJalanKeywordUrl(keyword) {

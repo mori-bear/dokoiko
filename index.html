@@ -207,7 +207,8 @@
   </footer>
 
   <!-- html2canvas: DOMをcanvasに変換（シェア画像生成） -->
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <!-- crossorigin: window.onerror が「Script error.」に丸められるのを防ぎ、本当のエラー内容を取得できるようにする -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
 
   <script type="module" src="./app.js?v=20260406" onerror="
     var msg = 'app.js モジュールの読み込みに失敗しました。\n\n' +
