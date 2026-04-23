@@ -532,6 +532,8 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   const shareHtml = `
     <div class="share-inline">
       <button class="btn-share btn-share--x" id="share-img-btn">Xでシェア</button>
+      <button class="btn-share btn-share--line" id="share-line-btn">LINEで送る</button>
+      <button class="btn-copy" id="share-copy-btn">リンクをコピー</button>
     </div>`;
 
   // CTAなし時：skipMaps=false の場合のみ地図で直接案内（skipMaps=true は上位で既出）

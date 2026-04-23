@@ -62,6 +62,18 @@ export function openXShare(city, departure) {
   );
 }
 
+/** LINEシェアウィンドウを開く */
+export function openLineShare(city, departure) {
+  const url = location.href;
+  const name = city.displayName || city.name;
+  const text = `${departure}から${name}って意外と行ける`;
+  window.open(
+    `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+    '_blank',
+    'noopener,noreferrer,width=550,height=420',
+  );
+}
+
 /** URLをクリップボードにコピー（toast表示つき） */
 export async function copyShareText(city, departure) {
   const url = location.href;
@@ -133,4 +145,5 @@ export function updatePageMeta(city, departure) {
   setMeta('og:title',       title);
   setMeta('og:description', desc);
   setMeta('og:url',         location.href);
+  setMeta('og:image', 'https://tabidokoiko.com/assets/ogp.png');
 }

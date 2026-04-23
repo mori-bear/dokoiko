@@ -10,6 +10,8 @@ import {
   decodeUrlParams,
   encodeStateToUrl,
   openXShare,
+  openLineShare,
+  copyShareText,
   updatePageMeta,
 } from './src/share.js';
 import { captureShareCard, shareOrDownload } from './src/share-image.js';
@@ -298,6 +300,22 @@ function bindShareHandlers() {
       btn.disabled = false;
       btn.textContent = original;
     }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#share-line-btn')) return;
+    const city = state.pool[state.poolIndex];
+    if (!city) return;
+    trackEvent('share_line_click', { from: state.departure, destId: city.id });
+    openLineShare(city, state.departure);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#share-copy-btn')) return;
+    const city = state.pool[state.poolIndex];
+    if (!city) return;
+    trackEvent('share_copy_click', { from: state.departure, destId: city.id });
+    copyShareText(city, state.departure);
   });
 }
 
