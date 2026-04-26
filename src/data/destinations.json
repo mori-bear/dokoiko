@@ -1276,7 +1276,7 @@
     "lng": 140.9946,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 445,
       "osaka": 585,
@@ -1406,7 +1406,7 @@
     "lng": 142.3834,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 555,
       "osaka": 695,
@@ -6517,7 +6517,7 @@
     "lng": 140.8045,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 495,
       "osaka": 635,
@@ -6644,7 +6644,7 @@
     "lng": 141.1063,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 480,
       "osaka": 620,
@@ -6765,7 +6765,7 @@
     "lng": 144.97,
     "stayBias": 2,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "secondaryTransport": "bus",
     "travelTime": {
       "tokyo": 160,
@@ -8699,7 +8699,7 @@
     "lng": 141.0938,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 415,
       "osaka": 555,
@@ -8830,7 +8830,7 @@
     "lng": 142.4746,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 530,
       "osaka": 670,
@@ -15266,7 +15266,7 @@
     "lng": 140.4563,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 445,
       "osaka": 585,
@@ -15631,7 +15631,8 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%258F%25A0%25E6%25B4%25B2%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25EC%258F%2546%2520%2594%255C%2593%256F"
     },
-    "accessType": "car"
+    "accessType": "car",
+    "railProvider": "ekinet"
   },
   {
     "id": "yoshino",
@@ -17877,7 +17878,7 @@
     "lng": 142.8728,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 535,
       "osaka": 675,
@@ -17941,7 +17942,7 @@
       "渓谷",
       "滝"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": true,
     "mapPoint": "流星の滝",
     "subType": "mountain",
@@ -18329,7 +18330,7 @@
     "lng": 144.0961,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 160,
       "osaka": 295,
@@ -18454,7 +18455,7 @@
     "lng": 144.2769,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 160,
       "osaka": 295,
@@ -18584,7 +18585,7 @@
     "lng": 141.3714,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 160,
       "osaka": 160,
@@ -19157,7 +19158,7 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": true,
     "mapPoint": "羽黒山五重塔",
     "subType": "mountain",
@@ -21744,7 +21745,7 @@
       "渓谷",
       "寺社"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": false,
     "mapPoint": "谷瀬の吊り橋",
     "subType": "remote",
@@ -21942,7 +21943,7 @@
     "lng": 135.8277,
     "stayBias": 0,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "operator": "近鉄",
     "operatorType": "private",
     "preferredTransferHub": "鶴橋",
@@ -24722,7 +24723,7 @@
       "歴史",
       "寺社"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": true,
     "mapPoint": "菊池渓谷",
     "subType": "remote",
@@ -26679,7 +26680,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2587%259C%25E7%259F%25B3%2520%25E5%25B2%25A9%25E6%2589%258B%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258A%2598%2590%25CE"
-    }
+    },
+    "railProvider": "ekinet"
   },
   {
     "id": "ofunato",
@@ -26787,7 +26789,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fiwate%2Fofunato.html",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%2591%2544%2593%256E"
-    }
+    },
+    "railProvider": "ekinet"
   },
   {
     "id": "kuji",
@@ -26894,7 +26897,8 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fiwate%2Fkuji.html",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%2576%258E%259C"
-    }
+    },
+    "railProvider": "ekinet"
   },
   {
     "id": "wakkanai",
@@ -26945,7 +26949,7 @@
     "lng": 141.6731,
     "stayBias": 2,
     "airportHub": "札幌",
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 160,
       "osaka": 290,
@@ -27080,7 +27084,7 @@
     "lng": 143.1965,
     "stayBias": 2,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 105,
       "osaka": 240,
@@ -27216,7 +27220,7 @@
     "lng": 145.194,
     "stayBias": 2,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 175,
       "osaka": 310,
@@ -27357,7 +27361,7 @@
     "lng": 140.1293,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "travelTime": {
       "tokyo": 225,
       "osaka": 360,
@@ -27690,7 +27694,7 @@
     "secondary": [
       "秘境"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": true,
     "mapPoint": "八幡平頂上",
     "subType": "mountain",
@@ -30274,7 +30278,7 @@
     "secondary": [
       "温泉"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": false,
     "mapPoint": "熊野本宮大社",
     "subType": "remote",
@@ -31299,7 +31303,7 @@
     "lng": 132.7855,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "travelTime": {
       "tokyo": 430,
       "osaka": 290,
@@ -31439,7 +31443,7 @@
     "lng": 133.798,
     "stayBias": 0,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "travelTime": {
       "tokyo": 260,
       "osaka": 85,
@@ -31570,7 +31574,7 @@
     "lng": 132.2274,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "travelTime": {
       "tokyo": 165,
       "osaka": 145,
@@ -32793,7 +32797,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "倶知安駅",
     "accessStation": "倶知安駅",
     "accessHub": null,
@@ -32839,7 +32843,7 @@
     "secondary": [
       "自然"
     ],
-    "onsenLevel": 1,
+    "onsenLevel": 2,
     "hasDirectFlight": false,
     "mapPoint": "グラン・ヒラフ",
     "subType": "mountain",
@@ -32920,7 +32924,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "旭川駅",
     "accessStation": "旭岳温泉",
     "accessHub": "旭川",
@@ -33055,7 +33059,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "白老駅",
     "accessStation": "白老駅",
     "accessHub": null,
@@ -33173,7 +33177,7 @@
     "stayRecommendation": "2night",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "トマム駅",
     "accessStation": "トマム駅",
     "accessHub": null,
@@ -33427,7 +33431,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "下北駅",
     "accessStation": "恐山",
     "accessHub": "下北",
@@ -34216,7 +34220,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "つくば駅",
     "accessStation": "つくば駅",
     "accessHub": null,
@@ -34711,7 +34715,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "三崎口駅",
     "accessStation": "三崎口駅",
     "accessHub": null,
@@ -34952,7 +34956,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "湯田中駅",
     "accessStation": "湯田中駅",
     "accessHub": null,
@@ -35844,7 +35848,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "ekinet",
     "hubStation": "内海駅",
     "accessStation": "内海駅",
     "accessHub": null,
@@ -36089,7 +36093,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "信楽駅",
     "accessStation": "信楽駅",
     "accessHub": null,
@@ -36206,7 +36210,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "下市口駅",
     "accessStation": "洞川温泉",
     "accessHub": "下市口",
@@ -36345,7 +36349,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "松阪駅",
     "accessStation": "松阪駅",
     "accessHub": null,
@@ -36464,7 +36468,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "堺東駅",
     "accessStation": "堺東駅",
     "accessHub": null,
@@ -37455,7 +37459,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "高知駅",
     "accessStation": "仁淀川",
     "accessHub": "高知",
@@ -37592,7 +37596,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "須崎駅",
     "accessStation": "梼原",
     "accessHub": "須崎",
@@ -37731,7 +37735,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "阿南駅",
     "accessStation": "阿南駅",
     "accessHub": null,
@@ -37848,7 +37852,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "car",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "e5489",
     "hubStation": "松山駅",
     "accessStation": "四国カルスト",
     "accessHub": "松山",
@@ -37987,7 +37991,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "jrkyushu",
     "hubStation": "青島駅",
     "accessStation": "青島駅",
     "accessHub": null,
@@ -38104,7 +38108,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "jrkyushu",
     "hubStation": "玉名駅",
     "accessStation": "山鹿温泉",
     "accessHub": "玉名",
@@ -38241,7 +38245,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "jrkyushu",
     "hubStation": "吉野ヶ里公園駅",
     "accessStation": "吉野ヶ里公園駅",
     "accessHub": null,
@@ -38366,7 +38370,7 @@
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "jrkyushu",
     "hubStation": "宇佐駅",
     "accessStation": "国東",
     "accessHub": "宇佐",
@@ -38509,7 +38513,7 @@
     "stayRecommendation": "daytrip",
     "secondaryTransport": "bus",
     "airportHub": null,
-    "railProvider": null,
+    "railProvider": "jrkyushu",
     "hubStation": "鹿児島中央駅",
     "accessStation": "知覧",
     "accessHub": "鹿児島",
