@@ -13836,7 +13836,8 @@
     ],
     "departures": [
       "長野",
-      "東京"
+      "東京",
+      "新潟"
     ],
     "weight": 1.8,
     "description": "信州最古と言われる温泉地、観音様が守る山里。静かな田舎の湯と古い建築が旅に落ち着きを与える。",
@@ -29174,7 +29175,8 @@
       "名古屋",
       "金沢",
       "富山",
-      "長野"
+      "長野",
+      "新潟"
     ],
     "weight": 1.11,
     "description": "フォッサマグナの大地に宝石ヒスイが採れる日本海の街。糸魚川ジオパークで大地の歴史に触れる旅。",
@@ -35929,7 +35931,10 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25A6%2599%25E5%25B5%2590%25E6%25B8%2593%2520%25E6%2584%259B%25E7%259F%25A5%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2597%2592%258C%256B"
-    }
+    },
+    "aliases": [
+      "足助"
+    ]
   },
   {
     "id": "minamichita",
@@ -48252,9 +48257,14 @@
     "access": {
       "steps": [
         {
-          "type": "rail",
-          "to": "那覇空港",
-          "provider": "e5489"
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "北谷",
+          "method": "レンタカー"
         }
       ]
     },
@@ -48376,9 +48386,14 @@
     "access": {
       "steps": [
         {
-          "type": "rail",
-          "to": "那覇空港",
-          "provider": "e5489"
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "local",
+          "from": "那覇空港",
+          "to": "うるま",
+          "method": "レンタカー"
         }
       ]
     },
@@ -122795,6 +122810,7 @@
     "region": "中部",
     "hub": "niigata",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [
@@ -128775,6 +128791,503 @@
     "hotelLinks": {
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25B9%25BF%25E5%25B3%25B6%2520%25E4%25BD%2590%25E8%25B3%2580%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25AD%2593%2587"
+    }
+  },
+  {
+    "id": "ikeda-osaka",
+    "name": "池田",
+    "type": "destination",
+    "region": "近畿",
+    "hub": null,
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "インスタントラーメン発祥の地。阪急宝塚線で大阪から30分。",
+    "tags": [
+      "グルメ",
+      "街歩き",
+      "文化"
+    ],
+    "spots": [
+      "インスタントラーメン発明記念館",
+      "池田城跡公園",
+      "呉春"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "池田",
+    "gateways": {
+      "rail": [
+        "池田駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "池田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "大阪府",
+    "city": "池田市",
+    "lat": 34.8222,
+    "lng": 135.4311,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 210,
+      "osaka": 30,
+      "nagoya": 120,
+      "fukuoka": 280,
+      "takamatsu": 180
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "hubStation": "大阪駅",
+    "accessStation": "池田駅",
+    "hotelArea": "osaka",
+    "hotelKeyword": "池田",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "池田駅"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "大阪駅",
+    "gatewayStations": [
+      {
+        "name": "大阪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大阪駅から池田駅へ",
+      "to": "池田駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "インスタントラーメン発祥の地",
+    "primary": [
+      "グルメ",
+      "街歩き",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "インスタントラーメン発明記念館",
+    "subType": null,
+    "stayDescription": "日帰りで池田の街歩きを楽しんで、夕方には大阪に戻る軽快なコース。",
+    "hubCity": "大阪",
+    "stayPriority": "medium",
+    "representativeStation": "池田駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "池田"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "池田駅",
+      "company": "JR"
+    },
+    "mainSpot": "インスタントラーメン発明記念館",
+    "stayArea": {
+      "rakuten": "池田",
+      "jalan": "池田"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E9%2598%25AA%2520%25E5%25A4%25A7%25E9%2598%25AA%25E5%25BA%259C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258D%25E3%2595%257B%2520%2591%25E5%258D%25E3%258E%2573"
+    }
+  },
+  {
+    "id": "gojo-nara",
+    "name": "五條",
+    "type": "destination",
+    "region": "近畿",
+    "hub": null,
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "重要伝統的建造物群保存地区の宿場町。吉野川沿いの古い街並み。",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "自然"
+    ],
+    "spots": [
+      "五條新町",
+      "栄山寺",
+      "賀名生の里歴史民俗資料館"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "五條",
+    "gateways": {
+      "rail": [
+        "五条駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "五条駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "city": "五條市",
+    "lat": 34.35,
+    "lng": 135.6833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 90,
+      "nagoya": 150,
+      "fukuoka": 360,
+      "takamatsu": 250
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "hubStation": "大阪駅",
+    "accessStation": "五条駅",
+    "hotelArea": "nara",
+    "hotelKeyword": "五條",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "五条駅"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "大阪駅",
+    "gatewayStations": [
+      {
+        "name": "大阪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大阪駅から五条駅へ",
+      "to": "五条駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "重要伝統的建造物群保存地区の宿場町",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "五條新町",
+    "subType": null,
+    "stayDescription": "吉野川の宿場町を歩いて、夜は静かな宿で古都の余韻に浸る旅。",
+    "hubCity": "五條",
+    "stayPriority": "medium",
+    "representativeStation": "五条駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "五条"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "五条駅",
+      "company": "JR"
+    },
+    "mainSpot": "五條新町",
+    "stayArea": {
+      "rakuten": "五條",
+      "jalan": "五條"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BA%2594%25E6%25A2%259D%2520%25E5%25A5%2588%25E8%2589%25AF%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258C%25DC%259E%258A"
+    }
+  },
+  {
+    "id": "yamatokoriyama",
+    "name": "大和郡山",
+    "type": "destination",
+    "region": "近畿",
+    "hub": null,
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "金魚の街として有名。お城と金魚と柳の風情ある城下町。",
+    "tags": [
+      "歴史",
+      "街歩き",
+      "文化"
+    ],
+    "spots": [
+      "郡山城跡",
+      "金魚ストリート",
+      "柳町商店街"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "大和郡山",
+    "gateways": {
+      "rail": [
+        "大和郡山駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "大和郡山駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "奈良県",
+    "city": "大和郡山市",
+    "lat": 34.6483,
+    "lng": 135.7883,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 60,
+      "nagoya": 110,
+      "fukuoka": 330,
+      "takamatsu": 230
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "hubStation": "大阪駅",
+    "accessStation": "大和郡山駅",
+    "hotelArea": "nara",
+    "hotelKeyword": "大和郡山",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "大和郡山駅"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "大阪駅",
+    "gatewayStations": [
+      {
+        "name": "大阪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大阪駅から大和郡山駅へ",
+      "to": "大和郡山駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "金魚の街として有名",
+    "primary": [
+      "歴史",
+      "街歩き",
+      "文化"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "郡山城跡",
+    "subType": null,
+    "stayDescription": "城下町と金魚池を巡って、日帰りで気軽に楽しむ奈良散策。",
+    "hubCity": "奈良",
+    "stayPriority": "medium",
+    "representativeStation": "大和郡山駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "大和郡山"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "大和郡山駅",
+      "company": "JR"
+    },
+    "mainSpot": "郡山城跡",
+    "stayArea": {
+      "rakuten": "大和郡山",
+      "jalan": "大和郡山"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A5%2588%25E8%2589%25AF%2520%25E5%25A5%2588%25E8%2589%25AF%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25DE%2597%25C7%258C%25A7%2520%2593%25DE%2597%25C7%258E%2573"
+    }
+  },
+  {
+    "id": "kashiwara-wine",
+    "name": "柏原",
+    "type": "destination",
+    "region": "近畿",
+    "hub": null,
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "大阪唯一のワイン産地。明治創業のカタシモワイナリーが有名。",
+    "tags": [
+      "グルメ",
+      "ワイン",
+      "自然"
+    ],
+    "spots": [
+      "カタシモワイナリー",
+      "大和川沿いのぶどう畑",
+      "玉手山公園"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "柏原",
+    "gateways": {
+      "rail": [
+        "柏原駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "柏原駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "大阪府",
+    "city": "柏原市",
+    "lat": 34.5833,
+    "lng": 135.6333,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 40,
+      "nagoya": 130,
+      "fukuoka": 290,
+      "takamatsu": 190
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "hubStation": "大阪駅",
+    "accessStation": "柏原駅",
+    "hotelArea": "osaka",
+    "hotelKeyword": "柏原",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "柏原駅"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "大阪駅",
+    "gatewayStations": [
+      {
+        "name": "大阪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "大阪駅から柏原駅へ",
+      "to": "柏原駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "大阪唯一のワイン産地",
+    "primary": [
+      "グルメ",
+      "ワイン",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "カタシモワイナリー",
+    "subType": null,
+    "stayDescription": "ワイナリー巡りとぶどう畑散策の昼下がり。日帰りで大阪に戻れる。",
+    "hubCity": "大阪",
+    "stayPriority": "medium",
+    "representativeStation": "柏原駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "柏原"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "柏原駅",
+      "company": "JR"
+    },
+    "mainSpot": "カタシモワイナリー",
+    "stayArea": {
+      "rakuten": "柏原",
+      "jalan": "柏原"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A7%25E9%2598%25AA%2520%25E5%25A4%25A7%25E9%2598%25AA%25E5%25BA%259C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%258D%25E3%2595%257B%2520%2591%25E5%258D%25E3%258E%2573"
     }
   }
 ]

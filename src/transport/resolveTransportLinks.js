@@ -581,6 +581,37 @@ function _buildFlightCta(fromIata, toAirport) {
 }
 
 /**
+ * 出発空港 = 目的地の出発空港の場合のフォールバック main-cta。
+ * 例: 那覇発 → 沖縄県内目的地（airportGateway=那覇空港 で OKA→OKA）。
+ * 優先順位: ferry → rental car（Maps検索） → Google Maps 経路
+ */
+function _buildSameAirportFallback(city, departure) {
+  // ① ferryGateway があればフェリーCTA
+  if (city?.ferryGateway) {
+    const ferry = buildFerryLinkForDest(city.id, city.ferryGateway, null, null)
+              ?? buildFerryLink(city.ferryGateway, null, null);
+    if (ferry) return ferry;
+  }
+  // ② requiresCar=true → レンタカーCTA（Maps検索）
+  if (city?.requiresCar) {
+    const dest = city?.displayName || city?.name || '';
+    return buildGoogleMapsLink(departure, dest, 'driving', `レンタカーで行く（${dest}）`);
+  }
+  // ③ Google Maps 経路（最後の砦）
+  const dest = city?.displayName || city?.name || '';
+  return buildGoogleMapsLink(departure, dest, 'driving', `${dest}までの行き方`);
+}
+
+/**
+ * 出発空港と目的地空港が同じか判定（OKA→OKA 等）。
+ */
+function _isSameAirport(departure, city) {
+  const fromIata = CITY_AIRPORT[departure];
+  const toIata   = AIRPORT_IATA[city?.airportGateway];
+  return !!(fromIata && toIata && fromIata === toIata);
+}
+
+/**
  * BFS step から JR予約プロバイダを導出する。
  * step.operator → 新幹線ライン名 → 出発地 jrArea の順に判定。
  */
@@ -618,6 +649,8 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
     const tType = _resolveTransportType(departure, city);
     if (tType === 'flight') {
       const fromIata = CITY_AIRPORT[departure] ?? null;
+      // 同一空港（OKA→OKA 等）はフォールバックへ
+      if (_isSameAirport(departure, city)) return _buildSameAirportFallback(city, departure);
       return _buildFlightCta(fromIata, city?.airportGateway ?? '');
     }
     if (tType === 'ferry') {
@@ -631,6 +664,8 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
     case 'flight': {
       const fromIata  = CITY_AIRPORT[departure] ?? null;
       const toAirport = primaryStep.to ?? '';
+      // 同一空港 → フェリー/レンタカー/Mapsへフォールバック（沖縄県内移動など）
+      if (_isSameAirport(departure, city)) return _buildSameAirportFallback(city, departure);
       // JR にフォールバックしない — flight ステップが明示されているので null を返す
       return _buildFlightCta(fromIata, toAirport);
     }
@@ -643,12 +678,15 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
         const toAirport = city?.airportGateway
           ?? (city?.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null)
           ?? null;
+        // 同一空港（沖縄県内）→ ferry/car/maps フォールバック
+        if (_isSameAirport(departure, city)) return _buildSameAirportFallback(city, departure);
         // flight CTA が生成できない場合でも JR は出さない
         return _buildFlightCta(fromIata, toAirport ?? '');
       }
       // 離島で直行便あり → 飛行機 CTA
       if (city?.isIsland && city?.airportGateway && city?.hasDirectFlight) {
         const fromIata = CITY_AIRPORT[departure] ?? null;
+        if (_isSameAirport(departure, city)) return _buildSameAirportFallback(city, departure);
         return _buildFlightCta(fromIata, city.airportGateway);
       }
       // EXCLUDE_FROM_JR_CTA 該当（私鉄専用駅）→ Yahoo乗換 main-cta
@@ -685,6 +723,8 @@ function _deriveMainCtaFromStepGroups(stepGroups, city, departure) {
   if (hasFlight || tType === 'flight') {
     const airport = city.airportGateway
         ?? (city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
+    // 同一空港（OKA→OKA 等）→ ferry/car/maps フォールバック
+    if (_isSameAirport(departure, city)) return _buildSameAirportFallback(city, departure);
     // JR にフォールバックしない — flight と判定されたら flight CTA or null
     return _buildFlightCta(fromIata, airport ?? '');
   }
