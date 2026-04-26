@@ -308,3 +308,22 @@ export function buildFerryLinkForDest(destId, ferryGateway, bookingUrl = null, o
   // DEST_FERRY_MAP にない → 港名ベースにフォールバック
   return buildFerryLink(ferryGateway);
 }
+
+/* ── Yahoo乗換 ── */
+
+/**
+ * Yahoo乗換案内の駅間検索URLを生成する。
+ * @param {string} fromStation — 出発駅名
+ * @param {string} toStation   — 到着駅名
+ * @returns {string|null}
+ */
+export function buildYahooTransitUrl(fromStation, toStation) {
+  if (!fromStation || !toStation) return null;
+  const base = 'https://transit.yahoo.co.jp/search/result';
+  const params = new URLSearchParams({
+    from: fromStation,
+    to: toStation,
+    type: '1',
+  });
+  return `${base}?${params.toString()}`;
+}

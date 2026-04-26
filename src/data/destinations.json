@@ -10195,7 +10195,7 @@
     "lng": 136.9434,
     "stayBias": 0,
     "airportHub": null,
-    "railProvider": "e5489",
+    "railProvider": null,
     "travelTime": {
       "tokyo": 145,
       "osaka": 115,
@@ -10264,7 +10264,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%8A%AC%E5%B1%B1&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%8A%AC%E5%B1%B1",
     "bookingStation": {
       "name": "犬山駅",
-      "company": "JR"
+      "company": "名鉄"
     },
     "mainSpot": "犬山城",
     "stayArea": {
@@ -12879,7 +12879,7 @@
     "lng": 135.5848,
     "stayBias": 1,
     "airportHub": null,
-    "railProvider": "e5489",
+    "railProvider": null,
     "secondaryTransport": "bus",
     "travelTime": {
       "tokyo": 260,
@@ -12964,7 +12964,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%AB%98%E9%87%8E%E5%B1%B1&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%AB%98%E9%87%8E%E5%B1%B1",
     "bookingStation": {
       "name": "高野山駅",
-      "company": "JR"
+      "company": "南海"
     },
     "mainSpot": "奥之院",
     "stayArea": {
@@ -21563,7 +21563,7 @@
     "lng": 135.7942,
     "stayBias": 0,
     "airportHub": null,
-    "railProvider": "e5489",
+    "railProvider": null,
     "travelTime": {
       "tokyo": 220,
       "osaka": 80,
@@ -21636,7 +21636,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%A9%BF%E5%8E%9F&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E6%A9%BF%E5%8E%9F",
     "bookingStation": {
       "name": "橿原神宮前駅",
-      "company": "JR"
+      "company": "近鉄"
     },
     "mainSpot": "橿原神宮",
     "stayArea": {
@@ -28440,7 +28440,7 @@
     "lng": 139.0853,
     "stayBias": 0,
     "airportHub": null,
-    "railProvider": "ekinet",
+    "railProvider": null,
     "travelTime": {
       "tokyo": 80,
       "osaka": 295,
@@ -28517,7 +28517,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%A7%A9%E7%88%B6&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E7%A7%A9%E7%88%B6",
     "bookingStation": {
       "name": "秩父駅",
-      "company": "JR"
+      "company": "秩父鉄道"
     },
     "mainSpot": "秩父神社",
     "stayArea": {
@@ -34017,7 +34017,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89",
     "bookingStation": {
       "name": "鬼怒川温泉駅",
-      "company": "JR"
+      "company": "東武"
     },
     "mainSpot": "鬼怒川温泉街",
     "stayArea": {
@@ -35648,7 +35648,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B8%B8%E6%BB%91&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B8%B8%E6%BB%91",
     "bookingStation": {
       "name": "常滑駅",
-      "company": "JR"
+      "company": "名鉄"
     },
     "mainSpot": "やきもの散歩道",
     "stayArea": {
@@ -36027,7 +36027,7 @@
     "staySearchUrl": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B5%90%E5%B1%B1&m=https%3A%2F%2Ftravel.rakuten.co.jp%2Fsearch%2F%3Fkeyword%3D%E5%B5%90%E5%B1%B1",
     "bookingStation": {
       "name": "嵐山駅",
-      "company": "JR"
+      "company": "阪急"
     },
     "mainSpot": "竹林の道",
     "stayArea": {

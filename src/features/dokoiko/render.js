@@ -11,7 +11,7 @@
  */
 
 import { DEPARTURE_CITY_INFO }                   from '../../config/constants.js';
-import { AIRPORT_IATA, buildRentalLink }          from '../../transport/linkBuilder.js';
+import { AIRPORT_IATA, buildRentalLink, buildYahooTransitUrl } from '../../transport/linkBuilder.js';
 import { buildNarrative }                         from '../../transport/routeNarrator.js';
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 import { state }                                  from '../../state.js';
@@ -480,7 +480,10 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
       const mainCta = transportLinks?.find(l => l.type === 'main-cta');
       if (mainCta?.cta?.url && !seenUrls.has(mainCta.cta.url)) {
         const fromLabel = best?.displayRoute?.from ?? departure;
-        const label = buildChainCtaHtml(chainCta, mainCta.cta.type, city, fromLabel);
+        // yahoo-transit は engine 側で完成ラベルを返しているので buildChainCtaHtml を経由しない
+        const label = mainCta.cta.type === 'yahoo-transit'
+          ? mainCta.cta.label
+          : buildChainCtaHtml(chainCta, mainCta.cta.type, city, fromLabel);
         seenUrls.add(mainCta.cta.url);
         const stationNote = buildCtaStationNote(chainCta, city, best?.segments ?? []);
         ctaHtml = `
@@ -505,6 +508,28 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
                class="btn btn-rental btn--action" data-track="car_click">${carLabel}</a>
           </div>`;
       }
+    }
+  }
+
+  // ②.5 Yahoo乗換（モーダルミックス: 駅まで電車・その先レンタカー）
+  // 条件: requiresCar=true / railGateway あり / hasDirectFlight=false / 出発駅が取れる
+  // 既存のレンタカーCTA（step-card 側 or buildCtaBlock の rental fallback）はそのまま残す
+  let yahooHtml = '';
+  if (
+    city?.requiresCar === true &&
+    city?.hasDirectFlight !== true &&
+    city?.railGateway
+  ) {
+    const fromStation = DEPARTURE_CITY_INFO[departure]?.rail;
+    const toStation   = city.railGateway;
+    const yahooUrl    = fromStation ? buildYahooTransitUrl(fromStation, toStation) : null;
+    if (yahooUrl && !seenUrls.has(yahooUrl)) {
+      seenUrls.add(yahooUrl);
+      yahooHtml = `
+        <div class="cta-action">
+          <a href="${yahooUrl}" target="_blank" rel="noopener noreferrer"
+             class="btn btn--action btn--yahoo" data-track="yahoo_click">Yahoo乗換で行き方を調べる（${fromStation} → ${toStation}）</a>
+        </div>`;
     }
   }
 
@@ -547,9 +572,10 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
   }
 
   // CTA表示順: state.ctaOrder で切り替え（ABテスト対応）
+  // Yahoo乗換は予約CTAの直後（レンタカー必須エントリ向け）
   const mapGroup = mapHtml ? `<div class="cta-group">${mapHtml}</div>` : '';
-  const orderA = `${mapGroup}${ctaHtml}`;   // A: 地図 → 予約CTA
-  const orderB = `${ctaHtml}${mapGroup}`;   // B: 予約CTA → 地図
+  const orderA = `${mapGroup}${ctaHtml}${yahooHtml}`;   // A: 地図 → 予約CTA → Yahoo
+  const orderB = `${ctaHtml}${yahooHtml}${mapGroup}`;   // B: 予約CTA → Yahoo → 地図
   const ctaOrder = state.ctaOrder === 'B' ? orderB : orderA;
 
   // ⑤ 宿CTA（交通CTAの直後・主役級配置）
@@ -713,6 +739,7 @@ function actionBtnClass(ctaType) {
   if (ctaType === 'jr-east')                           return 'btn--jr-east';   // えきねっと: 緑
   if (['skyscanner', 'google-flights'].includes(ctaType)) return 'btn--flight'; // 航空券: 青
   if (ctaType === 'ferry')                             return 'btn--ferry-cta'; // フェリー: オレンジ
+  if (ctaType === 'yahoo-transit')                     return 'btn--yahoo';     // Yahoo乗換: 赤
   const JR_WEST = new Set(['jr-west', 'jr-kyushu', 'jr-ex', 'jr-window']);
   if (JR_WEST.has(ctaType))                           return 'btn--jr';        // e5489等: 青
   return 'btn--booking';
@@ -927,12 +954,10 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn-stay btn-rakuten" data-track="rakuten_click">
                   <span class="btn-stay-main">楽天で宿を見る</span>
-                  <small class="btn-stay-sub">ポイント貯まる</small>
                </a>` : '',
     jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn-stay btn-jalan" data-track="jalan_click">
                   <span class="btn-stay-main">じゃらんで宿を見る</span>
-                  <small class="btn-stay-sub">温泉に強い</small>
                </a>` : '',
   ].filter(Boolean).join('');
 

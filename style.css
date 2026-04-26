@@ -1425,6 +1425,17 @@ body {
   white-space: nowrap;
 }
 
+/* Yahoo乗換ボタン（モーダルミックス: 駅まで電車・その先レンタカー）*/
+.btn--yahoo {
+  background: #FF0033;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(255, 0, 51, 0.25);
+}
+.btn--yahoo:hover {
+  opacity: 0.88;
+}
+
 /* 楽天・じゃらんボタンを同等の存在感に統一: 浮いている感じの box-shadow + hover 時に少し浮き上がる */
 .btn-rakuten,
 .btn-jalan {

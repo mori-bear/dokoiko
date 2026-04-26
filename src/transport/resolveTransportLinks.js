@@ -32,9 +32,42 @@ import {
   buildFerryLinkForDest,
   buildRentalLink,
   buildHighwayBusLink,
+  buildYahooTransitUrl,
   AIRPORT_HUB_GATEWAY,
   resolveMapMode,
 } from './linkBuilder.js';
+
+/**
+ * 私鉄駅が終点で JR 予約システム（e5489/えきねっと/JR九州/EX）でカバーされない目的地。
+ * ここに登録された ID は JR main-cta を生成せず、代わりに Yahoo乗換 main-cta を返す。
+ * （bookingStation.company は私鉄に修正済みでも、新幹線→在来線→私鉄の経路では
+ *  fallback ロジックが JR CTA を生成してしまうため、id ベースのハードコードで除外）
+ */
+const EXCLUDE_FROM_JR_CTA = new Set([
+  'kashihara',
+  'koyasan',
+  'kinugawa-onsen',
+  'tokoname',
+  'inuyama',
+  'chichibu',
+  'arashiyama',
+]);
+
+/**
+ * EXCLUDE_FROM_JR_CTA 該当時に Yahoo乗換 main-cta を組み立てる。
+ * 出発駅 / railGateway のいずれかが取れない場合は null を返す（呼び出し側でフォールバック）。
+ */
+function _buildYahooTransitMainCta(city, departure) {
+  const fromStation = DEPARTURE_CITY_INFO[departure]?.rail;
+  const toStation   = city?.railGateway;
+  const url = buildYahooTransitUrl(fromStation, toStation);
+  if (!url) return null;
+  return {
+    type: 'yahoo-transit',
+    url,
+    label: `Yahoo乗換で行き方を調べる（${fromStation} → ${toStation}）`,
+  };
+}
 import { buildRoute }     from '../engine/bfsEngine.js';
 import { resolveRoute }   from '../engine/routeResolver.js';
 import { loadJson }       from '../lib/loadJson.js';
@@ -568,9 +601,13 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
 
   // 沖縄のみ鉄道フォールバックを禁止（離島でも宮島・小豆島などは新幹線でアクセス可能）
   const isOkinawa     = city?.region === '沖縄';
-  const fallbackRail  = () => isOkinawa
-    ? null
-    : buildJrLink(_deriveJrProviderFromStep(null, departure));
+  // EXCLUDE_FROM_JR_CTA 該当（私鉄専用駅）→ JR CTA を出さず Yahoo乗換で代替
+  const isJrExcluded  = EXCLUDE_FROM_JR_CTA.has(city?.id);
+  const fallbackRail  = () => {
+    if (isOkinawa) return null;
+    if (isJrExcluded) return _buildYahooTransitMainCta(city, departure);
+    return buildJrLink(_deriveJrProviderFromStep(null, departure));
+  };
 
   if (!primaryStep) {
     // ステップ不明でも transport type で最終判定
@@ -610,6 +647,8 @@ function _deriveMainCtaFromSteps(steps, departure, city) {
         const fromIata = CITY_AIRPORT[departure] ?? null;
         return _buildFlightCta(fromIata, city.airportGateway);
       }
+      // EXCLUDE_FROM_JR_CTA 該当（私鉄専用駅）→ Yahoo乗換 main-cta
+      if (isJrExcluded) return _buildYahooTransitMainCta(city, departure);
       // 通常の鉄道 → JR リンク生成
       return buildJrLink(_deriveJrProviderFromStep(primaryStep, departure));
     }
@@ -651,6 +690,8 @@ function _deriveMainCtaFromStepGroups(stepGroups, city, departure) {
   }
   // 沖縄の場合は JR CTA を生成しない（離島は新幹線でハブ都市まで行く場合があるため除外しない）
   if (city?.region === '沖縄') return null;
+  // EXCLUDE_FROM_JR_CTA 該当（私鉄専用駅）→ Yahoo乗換 main-cta
+  if (EXCLUDE_FROM_JR_CTA.has(city?.id)) return _buildYahooTransitMainCta(city, departure);
   return buildJrLink(_deriveJrProviderFromStep(null, departure));
 }
 

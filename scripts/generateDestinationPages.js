@@ -261,10 +261,10 @@ function renderPage(dest, allDests) {
       : '';
     const btns = [
       rakutenUrl
-        ? `<a class="btn btn-stay btn-rakuten" href="${attr(rakutenUrl)}" target="_blank" rel="nofollow sponsored noopener"><span class="btn-stay-main">楽天で宿を見る</span><small class="btn-stay-sub">ポイント貯まる</small></a>`
+        ? `<a class="btn btn-stay btn-rakuten" href="${attr(rakutenUrl)}" target="_blank" rel="nofollow sponsored noopener"><span class="btn-stay-main">楽天で宿を見る</span></a>`
         : '',
       jalanUrl
-        ? `<a class="btn btn-stay btn-jalan" href="${attr(jalanUrl)}" target="_blank" rel="nofollow sponsored noopener"><span class="btn-stay-main">じゃらんで宿を見る</span><small class="btn-stay-sub">温泉に強い</small></a>`
+        ? `<a class="btn btn-stay btn-jalan" href="${attr(jalanUrl)}" target="_blank" rel="nofollow sponsored noopener"><span class="btn-stay-main">じゃらんで宿を見る</span></a>`
         : '',
     ].filter(Boolean).join('');
     stayHtml = `

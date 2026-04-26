@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "どこ行こ？" [ref=e4] [cursor=pointer]:
+        - /url: ./index.html
+      - navigation [ref=e5]:
+        - link "目的地一覧" [ref=e6] [cursor=pointer]:
+          - /url: ./destinations.html
+        - link "このサイトについて" [ref=e7] [cursor=pointer]:
+          - /url: ./pages/about.html
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: 週末の旅先、まだ決まってない人へ
+        - heading "旅先、1分で決まります。" [level=1] [ref=e12]
+        - paragraph [ref=e13]:
+          - text: 出発地と日程を選ぶだけで、
+          - text: ちゃんと行ける旅先を出します。
+        - generic [ref=e14]:
+          - generic [ref=e15]: 例えば
+          - link "東京から温泉1泊" [ref=e16] [cursor=pointer]:
+            - /url: "?from=東京&nights=1night&theme=温泉"
+          - link "大阪から日帰り街歩き" [ref=e17] [cursor=pointer]:
+            - /url: "?from=大阪&nights=daytrip&theme=街歩き"
+          - link "福岡から絶景旅" [ref=e18] [cursor=pointer]:
+            - /url: "?from=福岡&nights=free&theme=絶景"
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 出発地
+          - generic [ref=e22]:
+            - combobox "出発地" [ref=e23] [cursor=pointer]:
+              - option "札幌"
+              - option "函館"
+              - option "旭川"
+              - option "仙台"
+              - option "盛岡"
+              - option "東京"
+              - option "横浜"
+              - option "千葉"
+              - option "大宮"
+              - option "宇都宮"
+              - option "長野"
+              - option "静岡"
+              - option "名古屋"
+              - option "金沢"
+              - option "富山"
+              - option "大阪" [selected]
+              - option "京都"
+              - option "神戸"
+              - option "奈良"
+              - option "広島"
+              - option "福山"
+              - option "岡山"
+              - option "倉敷"
+              - option "姫路"
+              - option "松江"
+              - option "米子"
+              - option "高松"
+              - option "松山"
+              - option "高知"
+              - option "徳島"
+              - option "福岡"
+              - option "熊本"
+              - option "鹿児島"
+              - option "長崎"
+              - option "宮崎"
+            - button "今いる場所から探す" [ref=e24] [cursor=pointer]
+        - generic [ref=e25]:
+          - generic [ref=e26]: 日数
+          - generic [ref=e27]:
+            - button "サクッと 日帰り" [ref=e28] [cursor=pointer]:
+              - text: サクッと
+              - generic [ref=e29]: 日帰り
+            - button "ちょうどいい 1泊" [ref=e30] [cursor=pointer]:
+              - text: ちょうどいい
+              - generic [ref=e31]: 1泊
+            - button "しっかり旅 2泊以上" [ref=e32] [cursor=pointer]:
+              - text: しっかり旅
+              - generic [ref=e33]: 2泊以上
+        - generic [ref=e34]:
+          - generic [ref=e35]: テーマ
+          - generic [ref=e36]:
+            - button "こだわらない" [ref=e37] [cursor=pointer]
+            - button "温泉" [ref=e38] [cursor=pointer]
+            - button "絶景" [ref=e39] [cursor=pointer]
+            - button "海" [ref=e40] [cursor=pointer]
+            - button "街歩き" [ref=e41] [cursor=pointer]
+            - button "グルメ" [ref=e42] [cursor=pointer]
+        - generic [ref=e43]:
+          - generic [ref=e44]: オプション
+          - button "🚗 レンタカー不要のみ" [ref=e46] [cursor=pointer]
+        - button "どこ行こ？" [ref=e47] [cursor=pointer]
+  - contentinfo [ref=e48]:
+    - paragraph [ref=e49]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
+    - navigation [ref=e50]:
+      - link "このサイトについて" [ref=e51] [cursor=pointer]:
+        - /url: ./pages/about.html
+      - link "プライバシーポリシー" [ref=e52] [cursor=pointer]:
+        - /url: ./pages/privacy.html
+      - link "免責事項" [ref=e53] [cursor=pointer]:
+        - /url: ./pages/disclaimer.html
+    - paragraph [ref=e54]: © 2026 どこ行こ？
+```
