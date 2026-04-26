@@ -389,6 +389,18 @@ function renderPage(dest, allDests) {
 
       ${nearbyHtml}
 
+      <div class="dest-share">
+        <p class="dest-share-label">この旅先をシェアする</p>
+        <div class="share-inline">
+          <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(canonicalUrl)}&text=${encodeURIComponent(name + 'への旅 | どこ行こ？')}"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-share btn-share--x">Xでシェア</a>
+          <a href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(canonicalUrl)}"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-share btn-share--line">LINEで送る</a>
+        </div>
+      </div>
+
       <section class="dest-finder">
         <p class="dest-finder-lead">行き先が決まっていない人はこちら</p>
         <a href="../index.html" class="dest-finder-link">どこ行こ？で旅先を探す →</a>

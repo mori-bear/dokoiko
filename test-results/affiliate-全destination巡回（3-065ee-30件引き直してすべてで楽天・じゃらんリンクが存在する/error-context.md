@@ -96,48 +96,38 @@
       - generic [ref=e48]:
         - generic [ref=e50]:
           - generic [ref=e52]:
-            - heading "壬生城" [level=2] [ref=e53]
-            - paragraph [ref=e54]:
-              - text: 栃木県
-              - generic [ref=e55]: 自然・絶景
-          - generic [ref=e56]:
-            - generic [ref=e57]: 近場
-            - generic [ref=e58]: 代表的な観光地を巡れる
-          - link "この旅で行く" [ref=e60] [cursor=pointer]:
-            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=%E5%AE%87%E9%83%BD%E5%AE%AE&travelmode=transit
-          - generic [ref=e61]:
-            - paragraph [ref=e62]: 壬生城で泊まる
-            - generic [ref=e63]:
-              - link "楽天で宿を見る" [ref=e64] [cursor=pointer]:
-                - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AE%2587%25E9%2583%25BD%25E5%25AE%25AE%2520%25E6%25A0%2583%25E6%259C%25A8%25E7%259C%258C%2520%25E5%25AE%25BF&checkin=2026-05-03&checkout=2026-05-04
-                - generic [ref=e65]: 楽天で宿を見る
-              - link "じゃらんで宿を見る" [ref=e66] [cursor=pointer]:
-                - /url: https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25C8%2596%25D8%258C%25A7%2520%2589%2546%2593%2573%258B%257B&checkin=2026-05-03&checkout=2026-05-04
-                - generic [ref=e67]: じゃらんで宿を見る
-          - generic [ref=e68]:
-            - link "レンタカーで行く" [ref=e70] [cursor=pointer]:
-              - /url: https://www.google.com/maps/search/?api=1&query=%E5%A3%AC%E7%94%9F%E5%9F%8E
-            - group [ref=e71]:
-              - generic "▼ その先の行き方" [ref=e72] [cursor=pointer]
-            - generic [ref=e73]:
-              - button "Xでシェア" [ref=e74] [cursor=pointer]
-              - button "LINEで送る" [ref=e75] [cursor=pointer]
-              - button "リンクをコピー" [ref=e76] [cursor=pointer]
-          - generic [ref=e77]:
-            - paragraph [ref=e78]: 観光を楽しめる
-            - paragraph [ref=e79]: 見どころが多く、1泊してゆっくり巡る
-            - paragraph [ref=e80]: 壬生城
-          - paragraph [ref=e81]: ※実際の時刻・料金は各サービスでご確認ください
-          - generic [ref=e82]: どこ行こ？ — tabidokoiko.com
-        - button "別の旅先を見る（あと315件）" [active] [ref=e84] [cursor=pointer]
-  - contentinfo [ref=e85]:
-    - paragraph [ref=e86]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
-    - navigation [ref=e87]:
-      - link "このサイトについて" [ref=e88] [cursor=pointer]:
+            - heading "福井" [level=2] [ref=e53]
+            - paragraph [ref=e54]: 福井県
+          - generic [ref=e56]: ちょうどいい距離
+          - link "この旅で行く" [ref=e58] [cursor=pointer]:
+            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=%E7%A6%8F%E4%BA%95&travelmode=transit
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: 福井で泊まる
+            - link "楽天で宿を見る" [ref=e62] [cursor=pointer]:
+              - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Ffukui%2Ffukui.html&checkin=2026-05-03&checkout=2026-05-04
+              - generic [ref=e63]: 楽天で宿を見る
+          - generic [ref=e64]:
+            - link "このルートで行く（東京 → 福井駅）" [ref=e66] [cursor=pointer]:
+              - /url: https://www.eki-net.com/
+            - generic [ref=e67]:
+              - button "Xでシェア" [ref=e68] [cursor=pointer]
+              - button "LINEで送る" [ref=e69] [cursor=pointer]
+              - button "リンクをコピー" [ref=e70] [cursor=pointer]
+          - generic [ref=e71]:
+            - paragraph [ref=e72]: 東尋坊や一乗谷朝倉氏遺を食べ歩ける
+            - paragraph [ref=e73]: 恐竜王国・北陸の名城の地。東尋坊の断崖、一乗谷朝倉氏遺跡、越前がにが旅人を迎える。北陸新幹線開業で注目度急上昇。
+            - paragraph [ref=e74]: 東尋坊・一乗谷朝倉氏遺跡・恐竜博物館
+          - paragraph [ref=e75]: ※実際の時刻・料金は各サービスでご確認ください
+          - generic [ref=e76]: どこ行こ？ — tabidokoiko.com
+        - button "別の旅先を見る（あと315件）" [active] [ref=e78] [cursor=pointer]
+  - contentinfo [ref=e79]:
+    - paragraph [ref=e80]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
+    - navigation [ref=e81]:
+      - link "このサイトについて" [ref=e82] [cursor=pointer]:
         - /url: ./pages/about.html
-      - link "プライバシーポリシー" [ref=e89] [cursor=pointer]:
+      - link "プライバシーポリシー" [ref=e83] [cursor=pointer]:
         - /url: ./pages/privacy.html
-      - link "免責事項" [ref=e90] [cursor=pointer]:
+      - link "免責事項" [ref=e84] [cursor=pointer]:
         - /url: ./pages/disclaimer.html
-    - paragraph [ref=e91]: © 2026 どこ行こ？
+    - paragraph [ref=e85]: © 2026 どこ行こ？
 ```

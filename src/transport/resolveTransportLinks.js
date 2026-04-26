@@ -34,6 +34,7 @@ import {
   buildHighwayBusLink,
   buildYahooTransitUrl,
   AIRPORT_HUB_GATEWAY,
+  AIRPORT_IATA,
   resolveMapMode,
 } from './linkBuilder.js';
 
@@ -571,6 +572,9 @@ function _resolveTransportType(departure, city) {
  */
 function _buildFlightCta(fromIata, toAirport) {
   if (!fromIata || !toAirport) return null;
+  // 出発空港と到着空港が同じ場合は飛行機CTAを出さない（OKA→OKA 等の沖縄県内移動）
+  const toIata = AIRPORT_IATA[toAirport];
+  if (toIata && toIata === fromIata) return null;
   return buildSkyscannerLink(fromIata, toAirport)
       ?? buildGoogleFlightsLink(fromIata, toAirport)
       ?? null;

@@ -14,6 +14,7 @@ export const CITY_AIRPORT = {
   '函館':   'HKD',
   '旭川':   'AKJ',
   // 東北
+  '青森':   'AOJ',
   '仙台':   'SDJ',
   '盛岡':   'HNA',
   // 関東（羽田 or 成田を使用）
@@ -23,6 +24,7 @@ export const CITY_AIRPORT = {
   '大宮':   'HND',
   '宇都宮': 'HND',
   // 中部
+  '新潟':   'KIJ',
   '長野':   'MMJ',
   '静岡':   'FSZ',
   '名古屋': 'NGO',
@@ -48,4 +50,6 @@ export const CITY_AIRPORT = {
   '鹿児島': 'KOJ',
   '長崎':   'NGS',
   '宮崎':   'KMI',
+  // 沖縄
+  '那覇':   'OKA',
 };

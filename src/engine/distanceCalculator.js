@@ -172,7 +172,9 @@ function getHubRegion(hubCity, fallbackRegion) {
 const DEPARTURE_REF_KEY = {
   '東京':   'tokyo',   '横浜':  'tokyo',  '千葉':   'tokyo',
   '大宮':   'tokyo',   '宇都宮':'tokyo',  '仙台':   'tokyo',
-  '盛岡':   'tokyo',   '青森':  'tokyo',
+  '盛岡':   'tokyo',
+  '青森':   'aomori',
+  '新潟':   'niigata',
   '名古屋': 'nagoya',  '静岡':  'nagoya', '長野':   'nagoya',
   '富山':   'nagoya',  '金沢':  'nagoya',
   '大阪':   'osaka',   '京都':  'osaka',  '神戸':   'osaka',  '奈良':  'osaka',
@@ -180,6 +182,7 @@ const DEPARTURE_REF_KEY = {
   '高松':   'takamatsu','松山': 'takamatsu','高知':  'takamatsu','徳島': 'takamatsu',
   '福岡':   'fukuoka', '熊本':  'fukuoka','鹿児島': 'fukuoka',
   '長崎':   'fukuoka', '宮崎':  'fukuoka',
+  '那覇':   'naha',
 };
 
 /**
