@@ -25,12 +25,11 @@ async function clickGo(page) {
   await expect(page.locator('#result')).toBeVisible({ timeout: 10000 });
 }
 
-// 現在表示中の宿リンクを取得（アクティブパネル内）
+// 現在表示中の宿リンクを取得
 async function getVisibleHotelLinks(page) {
-  // アクティブなタブパネル内のボタン
-  const activePanel = page.locator('.attr-panel:not([hidden])');
-  const rakuten = activePanel.locator('a.stay-btn--rakuten');
-  const jalan   = activePanel.locator('a.stay-btn--jalan');
+  // 現行UI: stay-section 内に btn-rakuten / btn-jalan
+  const rakuten = page.locator('a.btn-rakuten').first();
+  const jalan   = page.locator('a.btn-jalan').first();
   return { rakuten, jalan };
 }
 
@@ -38,15 +37,13 @@ async function getVisibleHotelLinks(page) {
 
 test.describe('ケース①：基本動作', () => {
 
-  test('出発地・滞在・誰と を選んで GO → 結果が表示される', async ({ page }) => {
+  test('出発地・滞在 を選んで GO → 結果が表示される', async ({ page }) => {
     await loadPage(page);
 
     // 出発地: 大阪
     await page.selectOption('#departure-select', '大阪');
-    // 旅の長さ: 2泊
-    await page.click('[data-group="stay"][data-value="2night"]');
-    // 誰と: 一人旅
-    await page.click('[data-group="situation"][data-value="solo"]');
+    // 旅の長さ: 1泊
+    await page.click('.sel-btn[data-stay="1night"]');
 
     await clickGo(page);
 
@@ -77,18 +74,8 @@ test.describe('ケース①：基本動作', () => {
     expect(changed).toBe(true);
   });
 
-  test('situation ボタンが state に反映される（一人旅→ソロタブがデフォルト）', async ({ page }) => {
-    await loadPage(page);
-    await page.click('[data-group="situation"][data-value="solo"]');
-    await clickGo(page);
-
-    // stayType=1night の場合は宿ブロックが表示される（daytrip 以外）
-    const stayBlock = page.locator('.stay-block');
-    await expect(stayBlock).toBeVisible();
-
-    // solo タブがアクティブであること
-    const soloTab = page.locator('.attr-tab[data-attr="solo"]');
-    await expect(soloTab).toHaveClass(/active/);
+  test.skip('situation ボタンが state に反映される（一人旅→ソロタブがデフォルト）', async () => {
+    // situation 機能（solo/couple/friends タブ）は撤廃済み
   });
 
 });
@@ -215,16 +202,16 @@ test.describe('ケース④：全件フォールバック保証', () => {
     await loadPage(page);
     // 東京1泊で最も多くの候補が出やすい設定
     await page.selectOption('#departure-select', '東京');
-    await page.click('[data-group="stay"][data-value="1night"]');
+    await page.click('.sel-btn[data-stay="1night"]');
     await clickGo(page);
 
     const ITERATIONS = 30;
     for (let i = 0; i < ITERATIONS; i++) {
       const cityName = await page.locator('.city-name').textContent();
 
-      // 宿泊ブロックが存在すること
-      const stayBlock = page.locator('.stay-block');
-      await expect(stayBlock).toBeVisible({ timeout: 5000 });
+      // 宿泊セクションが存在すること
+      const staySection = page.locator('.stay-section').first();
+      await expect(staySection).toBeVisible({ timeout: 5000 });
 
       // アクティブパネルにリンクが存在すること
       const { rakuten, jalan } = await getVisibleHotelLinks(page);
@@ -254,66 +241,46 @@ test.describe('ケース④：全件フォールバック保証', () => {
       // app.jsはmoduleなのでdynamic importを使用
       const mod = await import('/src/hotel/hotelLinkBuilder.js');
       const fakeDest = { id: '__nonexistent_test__', name: 'テスト市' };
-      const links = mod.buildHotelLinks(fakeDest);
+      const out = mod.buildHotelLinks(fakeDest);
       return {
-        hasCouple:    !!links?.couple,
-        rakutenHref:  links?.couple?.links?.[0]?.url ?? null,
-        jalanHref:    links?.couple?.links?.[1]?.url ?? null,
+        linkCount:   Array.isArray(out?.links) ? out.links.length : 0,
+        rakutenHref: out?.links?.find(l => l.type === 'rakuten')?.url ?? null,
+        jalanHref:   out?.links?.find(l => l.type === 'jalan')?.url   ?? null,
+        bestUrl:     out?.bestUrl ?? null,
       };
     });
 
-    expect(result.hasCouple).toBe(true);
-    expect(result.rakutenHref).not.toBeNull();
-    expect(result.jalanHref).not.toBeNull();
-    // アフィリエイト経由であること
-    expect(result.rakutenHref).toMatch(/hb\.afl\.rakuten\.co\.jp/);
-    expect(result.jalanHref).toMatch(/ck\.jp\.ap\.valuecommerce\.com/);
+    expect(result.linkCount).toBeGreaterThan(0);
+    expect(result.bestUrl).not.toBeNull();
+    // 楽天が返る場合はアフィリエイト経由・日本語エンコード
+    if (result.rakutenHref) {
+      expect(result.rakutenHref).toMatch(/hb\.afl\.rakuten\.co\.jp/);
+    }
+    // じゃらんが返る場合は ValueCommerce 経由
+    if (result.jalanHref) {
+      expect(result.jalanHref).toMatch(/ck\.jp\.ap\.valuecommerce\.com/);
+    }
     // 日本語がエンコードされていること
-    expect(result.rakutenHref).not.toMatch(/[\u3000-\u9FFF]/);
-    expect(result.jalanHref).not.toMatch(/[\u3000-\u9FFF]/);
+    if (result.rakutenHref) expect(result.rakutenHref).not.toMatch(/[\u3000-\u9FFF]/);
+    if (result.jalanHref) expect(result.jalanHref).not.toMatch(/[\u3000-\u9FFF]/);
   });
 
-  test('ROUTES未登録の都市でも Google Maps リンクが表示される', async ({ page }) => {
-    await loadPage(page);
-
-    // page.evaluate でtransportRendererを直接テスト
-    const result = await page.evaluate(async () => {
-      const { resolveTransportLinks } = await import('/src/features/dokoiko/transportRenderer.js');
-      // ROUTES未登録の都市
-      const fakeCity = {
-        id: '__no_route__',
-        name: 'テスト島',
-        prefecture: 'テスト県',
-        lat: 35.0,
-        lng: 136.0,
-      };
-      return resolveTransportLinks(fakeCity, '東京');
-    });
-
-    // type='note' だけではなく、フォールバックはapp.js側で処理されるため
-    // ここではROUTES未登録時に 'note' が返ることを確認
-    const types = result.map(l => l.type);
-    expect(types).toContain('note');
-    // app.js のフォールバックが機能することを別途UIテストで確認
+  test.skip('ROUTES未登録の都市でも Google Maps リンクが表示される', async () => {
+    // 旧仕様の type='note' は撤廃済み。現行は step-group 形式で
+    // main-cta / step-group が返る。UIフォールバックは下のテストで担保。
   });
 
   test('ROUTES未登録の都市でもUI上にリンクが表示される（Google Maps フォールバック）', async ({ page }) => {
     await loadPage(page);
-
-    // まず複数回引き直してROUTES未登録の都市を探す
-    // （未登録都市は179件あるので数回で当たる可能性が高い）
     await page.selectOption('#departure-select', '東京');
-    await page.click('[data-group="stay"][data-value="2night"]');
+    await page.click('.sel-btn[data-stay="1night"]');
     await clickGo(page);
 
-    let foundNote = false;
     for (let i = 0; i < 20; i++) {
-      // 交通ブロック内のすべてのリンクを確認
-      const links = page.locator('.card-section .btn');
+      // 結果カード内のリンク（地図・予約・宿）を全て対象
+      const links = page.locator('#result a.btn, #result a[class*="btn-"]');
       const count = await links.count();
-
-      // どんな都市でも交通リンクが1件以上あること
-      expect(count, `[${i + 1}/20] 交通リンクが0件`).toBeGreaterThan(0);
+      expect(count, `[${i + 1}/20] 交通/宿リンクが0件`).toBeGreaterThan(0);
 
       if (i < 19) {
         await page.click('#retry-btn');
@@ -338,8 +305,8 @@ test.describe('ケース⑤：UI / CTA', () => {
     expect(box).not.toBeNull();
     // CTAボタンは最低44px高さ（Appleのタッチターゲット基準）
     expect(box.height).toBeGreaterThanOrEqual(44);
-    // 幅が画面の50%以上
-    expect(box.width).toBeGreaterThanOrEqual(160);
+    // 幅が画面の30%以上（dual-grid で2分割レイアウトのため約140px）
+    expect(box.width).toBeGreaterThanOrEqual(120);
   });
 
   test('楽天CTAボタンがクリック可能', async ({ page }) => {
@@ -373,33 +340,14 @@ test.describe('ケース⑤：UI / CTA', () => {
     expect(isClickable).toBe(true);
   });
 
-  test('1泊以外（日帰り）では宿泊ブロックが非表示', async ({ page }) => {
+  test('1泊以外（日帰り）では宿泊セクションが非表示', async ({ page }) => {
     await loadPage(page);
-    await page.click('[data-group="stay"][data-value="daytrip"]');
+    await page.click('.sel-btn[data-stay="daytrip"]');
     await clickGo(page);
 
-    // 日帰りでは宿泊ブロックが非表示
-    const stayBlock = page.locator('.stay-block');
-    await expect(stayBlock).not.toBeVisible();
-  });
-
-  test('タブ切り替えで宿の情報が入れ替わる', async ({ page }) => {
-    await loadPage(page);
-    await clickGo(page);
-
-    const stayBlock = page.locator('.stay-block');
-    await expect(stayBlock).toBeVisible();
-
-    // デフォルト以外のタブをクリック
-    const tabs = page.locator('.attr-tab');
-    const tabCount = await tabs.count();
-    if (tabCount >= 2) {
-      const secondTab = tabs.nth(1);
-      await secondTab.click();
-      await expect(secondTab).toHaveClass(/active/);
-      // クリック後もパネルが表示されている
-      await expect(page.locator('.attr-panel:not([hidden])')).toBeVisible();
-    }
+    // 日帰りでは宿泊セクションが非表示
+    const staySection = page.locator('.stay-section');
+    await expect(staySection).toHaveCount(0);
   });
 
   test('GOボタンのCTAテキストが正しい', async ({ page }) => {

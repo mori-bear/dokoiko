@@ -1,12 +1,14 @@
 export const DEPARTURES = [
   '札幌', '函館', '旭川',
-  '仙台', '盛岡',
+  '青森', '仙台', '盛岡',
   '東京', '横浜', '千葉', '大宮', '宇都宮',
+  '新潟',
   '長野', '静岡', '名古屋', '金沢', '富山',
   '大阪', '京都', '神戸', '奈良',
   '広島', '福山', '岡山', '倉敷', '姫路', '松江', '米子',
   '高松', '松山', '高知', '徳島',
   '福岡', '熊本', '鹿児島', '長崎', '宮崎',
+  '那覇',
 ];
 
 
@@ -27,11 +29,13 @@ export const DEPARTURE_COORDS = {
   '旭川':   { lat: 43.77, lng: 142.36 },
   '仙台':   { lat: 38.27, lng: 140.87 },
   '盛岡':   { lat: 39.70, lng: 141.15 },
+  '青森':   { lat: 40.82, lng: 140.75 },
   '東京':   { lat: 35.68, lng: 139.77 },
   '横浜':   { lat: 35.45, lng: 139.64 },
   '千葉':   { lat: 35.61, lng: 140.12 },
   '大宮':   { lat: 35.91, lng: 139.62 },
   '宇都宮': { lat: 36.55, lng: 139.88 },
+  '新潟':   { lat: 37.92, lng: 139.04 },
   '長野':   { lat: 36.65, lng: 138.19 },
   '静岡':   { lat: 34.97, lng: 138.38 },
   '名古屋': { lat: 35.17, lng: 136.91 },
@@ -57,6 +61,7 @@ export const DEPARTURE_COORDS = {
   '鹿児島': { lat: 31.60, lng: 130.55 },
   '長崎':   { lat: 32.74, lng: 129.87 },
   '宮崎':   { lat: 31.90, lng: 131.42 },
+  '那覇':   { lat: 26.21, lng: 127.68 },
 };
 
 export const DEPARTURE_CITY_INFO = {
@@ -65,6 +70,7 @@ export const DEPARTURE_CITY_INFO = {
   '函館':   { rail: '函館駅',       airport: '函館空港',                       iata: 'HKD', jrArea: 'east',    nearestHub: '札幌' },
   '旭川':   { rail: '旭川駅',       airport: '旭川空港',                       iata: 'AKJ', jrArea: 'east',    nearestHub: '札幌' },
   // ── 東北 ──
+  '青森':   { rail: '新青森駅',     airport: '青森空港',                       iata: 'AOJ', jrArea: 'east',    nearestHub: '仙台' },
   '仙台':   { rail: '仙台駅',       airport: '仙台空港',                       iata: 'SDJ', jrArea: 'east',    nearestHub: null   },
   '盛岡':   { rail: '盛岡駅',       airport: 'いわて花巻空港',                 iata: 'HNA', jrArea: 'east',    nearestHub: '仙台' },
   // ── 関東 ──
@@ -73,6 +79,8 @@ export const DEPARTURE_CITY_INFO = {
   '千葉':   { rail: '千葉駅',       airport: '成田国際空港',                   iata: 'TYO', jrArea: 'east',    nearestHub: '東京' },
   '大宮':   { rail: '大宮駅',       airport: '羽田空港 国内線ターミナル',       iata: 'TYO', jrArea: 'east',    nearestHub: '東京' },
   '宇都宮': { rail: '宇都宮駅',     airport: '羽田空港 国内線ターミナル',       iata: 'TYO', jrArea: 'east',    nearestHub: '東京' },
+  // ── 中部（甲信越含む）──
+  '新潟':   { rail: '新潟駅',       airport: '新潟空港',                       iata: 'KIJ', jrArea: 'east',    nearestHub: '東京' },
   // ── 中部 ──
   '長野':   { rail: '長野駅',       airport: '松本空港',                       iata: 'MMJ', jrArea: 'east',    nearestHub: '東京' },
   '静岡':   { rail: '静岡駅',       airport: '静岡空港',                       iata: 'FSZ', jrArea: 'west',    nearestHub: '東京' },
@@ -103,4 +111,6 @@ export const DEPARTURE_CITY_INFO = {
   '鹿児島': { rail: '鹿児島中央駅', airport: '鹿児島空港',                     iata: 'KOJ', jrArea: 'kyushu', nearestHub: '福岡' },
   '長崎':   { rail: '長崎駅',       airport: '長崎空港',                       iata: 'NGS', jrArea: 'kyushu', nearestHub: '福岡' },
   '宮崎':   { rail: '宮崎駅',       airport: '宮崎ブーゲンビリア空港',         iata: 'KMI', jrArea: 'kyushu', nearestHub: '福岡' },
+  // ── 沖縄 ──（鉄道はゆいレール、JRなしのため jrArea=null）
+  '那覇':   { rail: '那覇空港駅',   airport: '那覇空港 国内線ターミナル',       iata: 'OKA', jrArea: null,     nearestHub: null   },
 };

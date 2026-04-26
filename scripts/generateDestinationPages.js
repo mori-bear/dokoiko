@@ -243,7 +243,7 @@ function renderPage(dest, allDests) {
   const descSummary = descriptionSummary(dest.description);
 
   const canonicalUrl = `${SITE_ORIGIN}/destinations/${dest.id}.html`;
-  const ogImage = `${SITE_ORIGIN}/assets/ogp.png`;
+  const ogImage = `${SITE_ORIGIN}/assets/ogp/${dest.id}.png`;
   const title = `${name}への旅 | どこ行こ？`;
 
   /* ── 行き方セクション（access.steps / フォールバック・共通の所要時間） ── */
@@ -281,17 +281,28 @@ function renderPage(dest, allDests) {
       </section>`;
   }
 
-  /* ── 近くの旅先セクション（同じ県 + gen_* 除外 + 自身除外） ── */
-  const nearby = allDests
-    .filter(d => d.type === 'destination'
-              && !String(d.id).startsWith('gen_')
-              && d.id !== dest.id
-              && d.prefecture === dest.prefecture)
-    .slice(0, 6);
+  /* ── 近くの旅先セクション ──
+   * 同じ prefecture から最大4件 → 4件未満の場合は同じ region から計6件まで補完。
+   * gen_* と自身は常時除外。同じ region 内では重複しない（県内候補とID重複させない）。
+   */
+  const candidates = allDests.filter(d =>
+    d.type === 'destination' &&
+    !String(d.id).startsWith('gen_') &&
+    d.id !== dest.id
+  );
+  const samePref = candidates
+    .filter(d => d.prefecture === dest.prefecture)
+    .slice(0, 4);
+  const samePrefIds = new Set(samePref.map(d => d.id));
+  const sameRegion = candidates
+    .filter(d => d.region === dest.region && !samePrefIds.has(d.id) && d.prefecture !== dest.prefecture)
+    .slice(0, 6 - samePref.length);
+  const nearby = [...samePref, ...sameRegion];
+  const nearbyHeading = samePref.length >= 4 ? '近くの旅先' : '同じエリアの旅先';
   const nearbyHtml = nearby.length
     ? `
       <section class="dest-section">
-        <h2>近くの旅先</h2>
+        <h2>${nearbyHeading}</h2>
         <ul class="nearby-list">
           ${nearby.map(d => `<li><a href="./${attr(d.id)}.html">${esc(d.displayName || d.name)}<span class="nearby-pref">${esc(d.prefecture || '')}</span></a></li>`).join('')}
         </ul>

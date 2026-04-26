@@ -861,7 +861,8 @@
       "osaka": 120,
       "nagoya": 155,
       "fukuoka": 120,
-      "takamatsu": 210
+      "takamatsu": 210,
+      "naha": 60
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -2409,7 +2410,8 @@
       "osaka": 155,
       "nagoya": 155,
       "fukuoka": 155,
-      "takamatsu": 155
+      "takamatsu": 155,
+      "naha": 30
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -2564,7 +2566,8 @@
       "osaka": 155,
       "nagoya": 155,
       "fukuoka": 155,
-      "takamatsu": 155
+      "takamatsu": 155,
+      "naha": 30
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -2722,7 +2725,8 @@
       "osaka": 120,
       "nagoya": 155,
       "fukuoka": 120,
-      "takamatsu": 210
+      "takamatsu": 210,
+      "naha": 60
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -7165,7 +7169,8 @@
       "osaka": 400,
       "nagoya": 345,
       "fukuoka": 550,
-      "takamatsu": 500
+      "takamatsu": 500,
+      "niigata": 150
     },
     "stayRecommendation": "2night",
     "secondaryTransport": null,
@@ -12102,7 +12107,8 @@
       "osaka": 255,
       "nagoya": 200,
       "fukuoka": 405,
-      "takamatsu": 355
+      "takamatsu": 355,
+      "niigata": 120
     },
     "stayRecommendation": "daytrip",
     "city": "野沢温泉村",
@@ -13415,7 +13421,8 @@
       "osaka": 160,
       "nagoya": 195,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "aomori": 40
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -13557,7 +13564,8 @@
       "osaka": 160,
       "nagoya": 195,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "aomori": 90
     },
     "stayRecommendation": "1night",
     "city": "青森奥入瀬",
@@ -16007,7 +16015,8 @@
       "osaka": 150,
       "nagoya": 185,
       "fukuoka": 150,
-      "takamatsu": 240
+      "takamatsu": 240,
+      "naha": 90
     },
     "stayRecommendation": "1night",
     "city": "竹富町",
@@ -19367,7 +19376,8 @@
       "osaka": 160,
       "nagoya": 195,
       "fukuoka": 250,
-      "takamatsu": 250
+      "takamatsu": 250,
+      "aomori": 50
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -20133,7 +20143,8 @@
       "osaka": 250,
       "nagoya": 195,
       "fukuoka": 400,
-      "takamatsu": 350
+      "takamatsu": 350,
+      "niigata": 120
     },
     "stayRecommendation": "daytrip",
     "city": "新潟佐渡島",
@@ -25245,7 +25256,8 @@
       "osaka": 160,
       "nagoya": 160,
       "fukuoka": 160,
-      "takamatsu": 160
+      "takamatsu": 160,
+      "naha": 90
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -25388,7 +25400,8 @@
       "osaka": 155,
       "nagoya": 155,
       "fukuoka": 155,
-      "takamatsu": 155
+      "takamatsu": 155,
+      "naha": 45
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -25545,7 +25558,8 @@
       "osaka": 160,
       "nagoya": 160,
       "fukuoka": 160,
-      "takamatsu": 160
+      "takamatsu": 160,
+      "naha": 30
     },
     "stayRecommendation": "1night",
     "city": "沖縄伊江島",
@@ -29116,7 +29130,8 @@
       "osaka": 175,
       "nagoya": 155,
       "fukuoka": 310,
-      "takamatsu": 285
+      "takamatsu": 285,
+      "niigata": 90
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -29233,7 +29248,8 @@
       "osaka": 355,
       "nagoya": 300,
       "fukuoka": 450,
-      "takamatsu": 405
+      "takamatsu": 405,
+      "niigata": 60
     },
     "stayRecommendation": "daytrip",
     "secondaryTransport": null,
@@ -32667,7 +32683,8 @@
       "osaka": 150,
       "nagoya": 175,
       "fukuoka": 115,
-      "takamatsu": 215
+      "takamatsu": 215,
+      "naha": 30
     },
     "stayRecommendation": "2night",
     "secondaryTransport": "car",
@@ -33442,7 +33459,8 @@
       "nagoya": 355,
       "fukuoka": 560,
       "takamatsu": 510,
-      "hakodate": 150
+      "hakodate": 150,
+      "aomori": 120
     },
     "hotelArea": "aomori",
     "hotelKeyword": "むつ",
@@ -38816,7 +38834,8 @@
       "osaka": 235,
       "nagoya": 265,
       "fukuoka": 155,
-      "takamatsu": 235
+      "takamatsu": 235,
+      "naha": 60
     },
     "hotelArea": "okinawa",
     "port": null,
@@ -48087,7 +48106,8 @@
       "osaka": 360,
       "nagoya": 420,
       "fukuoka": 250,
-      "takamatsu": 380
+      "takamatsu": 380,
+      "naha": 20
     },
     "stayRecommendation": "2night",
     "city": "中頭郡北谷町",
@@ -48210,7 +48230,8 @@
       "osaka": 360,
       "nagoya": 420,
       "fukuoka": 250,
-      "takamatsu": 380
+      "takamatsu": 380,
+      "naha": 30
     },
     "stayRecommendation": "2night",
     "city": "うるま市",
@@ -49129,7 +49150,8 @@
       "osaka": 300,
       "nagoya": 250,
       "fukuoka": 530,
-      "takamatsu": 455
+      "takamatsu": 455,
+      "niigata": 90
     },
     "stayRecommendation": "1night",
     "city": "妙高市",
@@ -55097,7 +55119,8 @@
       "osaka": 195,
       "nagoya": 200,
       "fukuoka": 155,
-      "takamatsu": 185
+      "takamatsu": 185,
+      "naha": 30
     },
     "stayRecommendation": "1night",
     "city": "南城市",
@@ -58384,7 +58407,8 @@
       "nagoya": 495,
       "fukuoka": 730,
       "takamatsu": 655,
-      "hakodate": 150
+      "hakodate": 150,
+      "aomori": 120
     },
     "stayRecommendation": "2night",
     "city": "むつ市",
@@ -58495,7 +58519,8 @@
       "osaka": 430,
       "nagoya": 365,
       "fukuoka": 595,
-      "takamatsu": 520
+      "takamatsu": 520,
+      "aomori": 120
     },
     "stayRecommendation": "1night",
     "city": "十和田市",
@@ -61543,7 +61568,8 @@
       "osaka": 335,
       "nagoya": 280,
       "fukuoka": 540,
-      "takamatsu": 460
+      "takamatsu": 460,
+      "niigata": 120
     },
     "stayRecommendation": "1night",
     "city": "中魚沼郡津南町",
@@ -61982,7 +62008,8 @@
       "osaka": 205,
       "nagoya": 215,
       "fukuoka": 170,
-      "takamatsu": 200
+      "takamatsu": 200,
+      "naha": 90
     },
     "stayRecommendation": "1night",
     "city": "国頭郡大宜味村",
