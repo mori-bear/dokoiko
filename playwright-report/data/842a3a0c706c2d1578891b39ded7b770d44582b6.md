@@ -1,0 +1,151 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "どこ行こ？" [ref=e4] [cursor=pointer]:
+        - /url: ./index.html
+      - navigation [ref=e5]:
+        - link "目的地一覧" [ref=e6] [cursor=pointer]:
+          - /url: ./destinations.html
+        - link "このサイトについて" [ref=e7] [cursor=pointer]:
+          - /url: ./pages/about.html
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: 週末の旅先、まだ決まってない人へ
+        - heading "旅先、1分で決まります。" [level=1] [ref=e12]
+        - paragraph [ref=e13]:
+          - text: 出発地と日程を選ぶだけで、
+          - text: ちゃんと行ける旅先を出します。
+        - generic [ref=e14]:
+          - generic [ref=e15]: 例えば
+          - link "東京から温泉1泊" [ref=e16] [cursor=pointer]:
+            - /url: "?from=東京&nights=1night&theme=温泉"
+          - link "大阪から日帰り街歩き" [ref=e17] [cursor=pointer]:
+            - /url: "?from=大阪&nights=daytrip&theme=街歩き"
+          - link "福岡から絶景旅" [ref=e18] [cursor=pointer]:
+            - /url: "?from=福岡&nights=free&theme=絶景"
+          - link "東京から冬の旅" [ref=e19] [cursor=pointer]:
+            - /url: "?from=東京&nights=1night&theme=冬"
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: 出発地
+          - generic [ref=e23]:
+            - combobox "出発地" [ref=e24] [cursor=pointer]:
+              - option "札幌"
+              - option "函館"
+              - option "旭川"
+              - option "仙台"
+              - option "盛岡"
+              - option "東京" [selected]
+              - option "横浜"
+              - option "千葉"
+              - option "大宮"
+              - option "宇都宮"
+              - option "長野"
+              - option "静岡"
+              - option "名古屋"
+              - option "金沢"
+              - option "富山"
+              - option "大阪"
+              - option "京都"
+              - option "神戸"
+              - option "奈良"
+              - option "広島"
+              - option "福山"
+              - option "岡山"
+              - option "倉敷"
+              - option "姫路"
+              - option "松江"
+              - option "米子"
+              - option "高松"
+              - option "松山"
+              - option "高知"
+              - option "徳島"
+              - option "福岡"
+              - option "熊本"
+              - option "鹿児島"
+              - option "長崎"
+              - option "宮崎"
+            - button "今いる場所から探す" [ref=e25] [cursor=pointer]
+        - generic [ref=e26]:
+          - generic [ref=e27]: 日数
+          - generic [ref=e28]:
+            - button "サクッと 日帰り" [ref=e29] [cursor=pointer]:
+              - text: サクッと
+              - generic [ref=e30]: 日帰り
+            - button "ちょうどいい 1泊" [ref=e31] [cursor=pointer]:
+              - text: ちょうどいい
+              - generic [ref=e32]: 1泊
+            - button "しっかり旅 2泊以上" [ref=e33] [cursor=pointer]:
+              - text: しっかり旅
+              - generic [ref=e34]: 2泊以上
+        - generic [ref=e35]:
+          - generic [ref=e36]: テーマ
+          - generic [ref=e37]:
+            - button "こだわらない" [ref=e38] [cursor=pointer]
+            - button "温泉" [ref=e39] [cursor=pointer]
+            - button "絶景" [ref=e40] [cursor=pointer]
+            - button "海" [ref=e41] [cursor=pointer]
+            - button "街歩き" [ref=e42] [cursor=pointer]
+            - button "グルメ" [ref=e43] [cursor=pointer]
+            - button "🌸 春" [ref=e44] [cursor=pointer]
+            - button "🌊 夏" [ref=e45] [cursor=pointer]
+            - button "🍁 秋" [ref=e46] [cursor=pointer]
+            - button "⛄ 冬" [ref=e47] [cursor=pointer]
+        - generic [ref=e48]:
+          - generic [ref=e49]: オプション
+          - button "🚗 レンタカー不要のみ" [ref=e51] [cursor=pointer]
+        - button "もう一度探す" [ref=e52] [cursor=pointer]
+      - generic [ref=e53]:
+        - generic [ref=e55]:
+          - generic [ref=e57]:
+            - heading "四万温泉" [level=2] [ref=e58]
+            - paragraph [ref=e59]:
+              - text: 群馬県
+              - generic [ref=e60]: 温泉で癒される
+          - generic [ref=e61]:
+            - generic [ref=e62]: ちょうどいい距離
+            - generic [ref=e63]: 温泉でゆっくりできる
+          - link "この旅で行く" [ref=e65] [cursor=pointer]:
+            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=36.676%2C138.683&travelmode=transit
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: 四万温泉で泊まる
+            - generic [ref=e68]:
+              - link "楽天で宿を見る" [active] [ref=e69] [cursor=pointer]:
+                - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fgunma%2Fshimaonsen.html&checkin=2026-05-04&checkout=2026-05-05
+                - generic [ref=e70]: 楽天で宿を見る
+              - link "じゃらんで宿を見る" [ref=e71] [cursor=pointer]:
+                - /url: https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%256C%2596%259C%2589%25B7%2590%25F2&checkin=2026-05-04&checkout=2026-05-05
+                - generic [ref=e72]: じゃらんで宿を見る
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - link "このルートで行く（東京 → 中之条駅）" [ref=e75] [cursor=pointer]:
+                - /url: https://www.eki-net.com/
+              - paragraph [ref=e76]: ※中之条駅からバスで向かいます
+            - group [ref=e77]:
+              - generic "▼ その先の行き方" [ref=e78] [cursor=pointer]
+            - generic [ref=e79]:
+              - button "Xでシェア" [ref=e80] [cursor=pointer]
+              - button "LINEで送る" [ref=e81] [cursor=pointer]
+              - button "リンクをコピー" [ref=e82] [cursor=pointer]
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: 積善館や四万川ダムを歩ける
+            - paragraph [ref=e85]: 奥利根の山あいに湧く千年の歴史を持つ湯治場。江戸時代から続く古い旅館と山の静けさが、旅に特別感をもたらす。
+            - paragraph [ref=e86]: 積善館・四万川ダム・甌穴
+          - paragraph [ref=e87]: ※実際の時刻・料金は各サービスでご確認ください
+          - generic [ref=e88]: どこ行こ？ — tabidokoiko.com
+        - button "別の旅先を見る（あと352件）" [ref=e90] [cursor=pointer]
+  - contentinfo [ref=e91]:
+    - paragraph [ref=e92]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
+    - navigation [ref=e93]:
+      - link "このサイトについて" [ref=e94] [cursor=pointer]:
+        - /url: ./pages/about.html
+      - link "プライバシーポリシー" [ref=e95] [cursor=pointer]:
+        - /url: ./pages/privacy.html
+      - link "免責事項" [ref=e96] [cursor=pointer]:
+        - /url: ./pages/disclaimer.html
+    - paragraph [ref=e97]: © 2026 どこ行こ？
+```
