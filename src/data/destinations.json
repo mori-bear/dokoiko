@@ -1839,7 +1839,8 @@
     "departures": [
       "広島",
       "岡山",
-      "大阪"
+      "大阪",
+      "倉敷"
     ],
     "weight": 1.11,
     "description": "坂と猫と寺社が点在する瀬戸内の港町。映画の舞台にもなった風景を歩くと物語が生まれそうだ。",
@@ -14338,12 +14339,14 @@
     "region": "中国",
     "hub": "matsue",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [
       "岡山",
       "鳥取",
-      "大阪"
+      "大阪",
+      "米子"
     ],
     "weight": 1.65,
     "description": "世界屈指のラジウム泉が湧く三徳川沿いの温泉地。投入堂への険しい参拝と湯治の旅が組み合わさる場所だ。",
@@ -18060,7 +18063,9 @@
       "1night",
       "2night"
     ],
-    "departures": [],
+    "departures": [
+      "旭川"
+    ],
     "weight": 0.9,
     "description": "大雪山国立公園内の渓谷。断崖絶壁と滝が続く絶景と温泉が魅力。",
     "tags": [
@@ -22319,10 +22324,13 @@
     "region": "中国",
     "hub": "matsue",
     "stayAllowed": [
+      "daytrip",
       "1night",
       "2night"
     ],
-    "departures": [],
+    "departures": [
+      "米子"
+    ],
     "weight": 1.26,
     "description": "中国地方最高峰。「伯耆富士」とも呼ばれる美しい円錐形の山と大山寺が有名。",
     "tags": [
@@ -22850,7 +22858,9 @@
       "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "米子"
+    ],
     "weight": 1.11,
     "description": "白壁土蔵群と玉川沿いの街並みが美しい鳥取の城下町。三朝温泉も近い。",
     "tags": [
@@ -27618,9 +27628,12 @@
     "region": "北海道",
     "hub": "hakodate",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "函館"
+    ],
     "weight": 0.86,
     "description": "にしん漁で栄えた北海道最古の港町。古い商家が立ち並ぶ「いにしえ街道」に歴史が息づく。",
     "tags": [
@@ -30918,7 +30931,9 @@
       "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "倉敷"
+    ],
     "weight": 0.86,
     "description": "瀬戸内海の潮待ちの港として栄えた江戸時代の港町。「崖の上のポニョ」の舞台とも言われる石畳と雁木の港。",
     "tags": [
@@ -31334,7 +31349,9 @@
       "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "倉敷"
+    ],
     "weight": 1.11,
     "description": "干拓地と無数の離島が浮かぶ備後の港町。恐竜化石の産地としても有名で、笠岡諸島へのフェリーも出る。",
     "tags": [
@@ -33223,6 +33240,7 @@
     "hub": "asahikawa",
     "hotelSearch": "大雪山",
     "stayAllowed": [
+      "daytrip",
       "1night",
       "2night"
     ],
@@ -126127,7 +126145,8 @@
       "1night"
     ],
     "departures": [
-      "札幌"
+      "札幌",
+      "函館"
     ],
     "weight": 1,
     "description": "駒ヶ岳と大沼湖が織りなす道南の景勝地。カヌー・サイクリング・散策が楽しめる自然公園。",
@@ -126249,7 +126268,8 @@
     "weight": 1,
     "departures": [
       "大阪",
-      "高松"
+      "高松",
+      "米子"
     ],
     "description": "山陰海岸ジオパークを代表する奇岩と入江の連続する海岸線。透明度の高い日本海と松と岩の絶景が続く。",
     "tags": [
@@ -130819,7 +130839,9 @@
       "daytrip",
       "1night"
     ],
-    "departures": [],
+    "departures": [
+      "姫路"
+    ],
     "weight": 1,
     "description": "かつて日本最大の銀山だった生野。坑道探検と重伝建の街並みが残る。",
     "tags": [
@@ -131692,7 +131714,9 @@
     "stayAllowed": [
       "daytrip"
     ],
-    "departures": [],
+    "departures": [
+      "姫路"
+    ],
     "weight": 1,
     "description": "薄口醤油発祥の地。白壁の醤油蔵が並ぶ、三木露風「赤とんぼ」の故郷。",
     "tags": [
