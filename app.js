@@ -149,7 +149,8 @@ function draw() {
     const destId = city.id ?? 'unknown';
     trackEvent('page_view', { from: state.departure, destId });
     const tc = plan.transportContext;
-    if (!tc?.bestRoute?.jrChainCta && !tc?.mapOnlyFallback) {
+    if (!tc?.bestRoute?.jrChainCta && !tc?.mapOnlyFallback
+        && tc?.bestRoute?.transportType !== 'rail_private') {
       reportError('CTA_MISSING', { destId, from: state.departure });
     }
     if (!tc?.bestRoute?.segments?.length && !tc?.mapOnlyFallback) {

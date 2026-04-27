@@ -132057,5 +132057,782 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2596%25B0%25E5%25B1%2585%25E6%25B5%259C%2520%25E6%2584%259B%25E5%25AA%259B%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%2556%258B%258F%2595%256C"
     }
+  },
+  {
+    "id": "aji-peninsula",
+    "name": "庵治半島",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "世界三大銘石・庵治石の産地。透き通った海と漁師町の風景が広がる、高松近郊の隠れた半島。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "庵治石の採石場",
+      "庵治漁港",
+      "八栗寺"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "庵治",
+    "gateways": {
+      "rail": [
+        "高松駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "高松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "city": "高松市",
+    "lat": 34.3167,
+    "lng": 134.1833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 280,
+      "osaka": 170,
+      "nagoya": 210,
+      "fukuoka": 260,
+      "takamatsu": 40
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "hubStation": "高松駅",
+    "accessStation": "志度駅",
+    "hotelArea": "kagawa-takamatsu",
+    "hotelKeyword": "庵治",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "庵治半島",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高松駅からレンタカーで庵治半島へ",
+      "to": "庵治半島"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "世界三大銘石・庵治石の産地",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "庵治漁港",
+    "subType": null,
+    "stayDescription": "庵治石の採石場と漁港を巡り、透き通った海と漁師町の風景をゆっくり楽しむ。",
+    "hubCity": "高松",
+    "stayPriority": "medium",
+    "representativeStation": "高松駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高松"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "高松駅",
+      "company": "JR"
+    },
+    "mainSpot": "庵治漁港",
+    "stayArea": {
+      "rakuten": "高松",
+      "jalan": "高松"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25AB%2598%25E6%259D%25BE%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2581%2590%25EC%258C%25A7%2520%258D%2582%258F%25BC%258E%2573"
+    }
+  },
+  {
+    "id": "mitoyo",
+    "name": "三豊",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "日本のウユニ塩湖と呼ばれる父母ヶ浜と、瀬戸内を一望する紫雲出山。インスタ映えする絶景が集まる三豊エリア。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "父母ヶ浜",
+      "紫雲出山",
+      "荘内半島"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "三豊",
+    "gateways": {
+      "rail": [
+        "詫間駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "詫間駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "lat": 34.1833,
+    "lng": 133.7167,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 290,
+      "osaka": 175,
+      "nagoya": 215,
+      "fukuoka": 255,
+      "takamatsu": 60
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "hubStation": "高松駅",
+    "accessStation": "詫間駅",
+    "hotelArea": null,
+    "hotelKeyword": "三豊",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "詫間駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "詫間駅",
+          "to": "父母ヶ浜",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "詫間駅からレンタカーで父母ヶ浜へ",
+      "to": "父母ヶ浜"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "日本のウユニ塩湖・父母ヶ浜の絶景",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "父母ヶ浜",
+    "subType": null,
+    "stayDescription": "父母ヶ浜で夕日を眺め、紫雲出山から瀬戸内の絶景を楽しみながら三豊で1泊する。",
+    "hubCity": "三豊",
+    "stayPriority": "medium",
+    "representativeStation": "高松駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "詫間"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "詫間駅",
+      "company": "JR"
+    },
+    "mainSpot": "父母ヶ浜",
+    "stayArea": {
+      "rakuten": "三豊",
+      "jalan": "三豊"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%2589%25E8%25B1%258A%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%254F%2596%254C"
+    }
+  },
+  {
+    "id": "shionoe",
+    "name": "塩江",
+    "type": "destination",
+    "region": "四国",
+    "hub": "takamatsu",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "高松の奥座敷。山あいに湧く歴史ある温泉地で、紅葉シーズンは特に美しい。",
+    "tags": [
+      "温泉",
+      "自然",
+      "秘境"
+    ],
+    "spots": [
+      "塩江温泉街",
+      "内場ダム湖",
+      "鵜の瀬不動"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "塩江温泉",
+    "gateways": {
+      "rail": [
+        "高松駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "onsen",
+    "railGateway": "高松駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "香川県",
+    "city": "高松市",
+    "lat": 34.2167,
+    "lng": 134.0833,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 285,
+      "osaka": 175,
+      "nagoya": 215,
+      "fukuoka": 265,
+      "takamatsu": 45
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "hubStation": "高松駅",
+    "accessStation": "一宮駅",
+    "hotelArea": "kagawa-takamatsu",
+    "hotelKeyword": "塩江温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "高松駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "高松駅",
+          "to": "塩江温泉",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "高松駅",
+    "gatewayStations": [
+      {
+        "name": "高松駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高松駅からレンタカーで塩江温泉へ",
+      "to": "塩江温泉"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "高松の奥座敷・山あいの温泉地",
+    "primary": [
+      "温泉",
+      "自然",
+      "秘境"
+    ],
+    "secondary": [],
+    "onsenLevel": 3,
+    "hasDirectFlight": false,
+    "mapPoint": "塩江温泉街",
+    "subType": null,
+    "stayDescription": "塩江温泉の湯に浸かり、山あいの紅葉と歴史ある温泉街をゆっくり楽しむ。",
+    "hubCity": "塩江",
+    "stayPriority": "medium",
+    "representativeStation": "高松駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "高松"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "高松駅",
+      "company": "JR"
+    },
+    "mainSpot": "塩江温泉街",
+    "stayArea": {
+      "rakuten": "塩江温泉",
+      "jalan": "塩江温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A1%25A9%25E6%25B1%259F%2520%25E9%25A6%2599%25E5%25B7%259D%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2596%258D%255D%2589%25B7%2590%25F2"
+    }
+  },
+  {
+    "id": "shishikui",
+    "name": "宍喰",
+    "type": "destination",
+    "region": "四国",
+    "hub": "tokushima",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "徳島最南端の漁師町。海部川でのラフティングと新鮮な魚介が楽しめる、知る人ぞ知る秘境。",
+    "tags": [
+      "海",
+      "自然",
+      "港町"
+    ],
+    "spots": [
+      "宍喰漁港",
+      "宍喰温泉",
+      "海部川"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "宍喰",
+    "gateways": {
+      "rail": [
+        "宍喰駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "city",
+    "railGateway": "宍喰駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "徳島県",
+    "city": "海陽町",
+    "lat": 33.5,
+    "lng": 134.2833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 220,
+      "nagoya": 270,
+      "fukuoka": 380,
+      "takamatsu": 150
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "hubStation": "徳島駅",
+    "accessStation": "宍喰駅",
+    "hotelArea": null,
+    "hotelKeyword": "宍喰",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "宍喰駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "徳島駅",
+    "gatewayStations": [
+      {
+        "name": "徳島駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "徳島駅から宍喰駅へ",
+      "to": "宍喰駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "徳島最南端の漁師町",
+    "primary": [
+      "海",
+      "自然",
+      "港町"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "宍喰漁港",
+    "subType": null,
+    "stayDescription": "海部川でラフティングを楽しみ、新鮮な魚介に舌鼓を打ちながら宍喰で1泊する。",
+    "hubCity": "海陽",
+    "stayPriority": "medium",
+    "representativeStation": "徳島駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "宍喰"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "宍喰駅",
+      "company": "JR"
+    },
+    "mainSpot": "宍喰漁港",
+    "stayArea": {
+      "rakuten": "海陽",
+      "jalan": "海陽"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25B5%25B7%25E9%2599%25BD%2520%25E5%25BE%25B3%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258A%2543%2597%257A"
+    }
+  },
+  {
+    "id": "shimonada",
+    "name": "下灘",
+    "type": "destination",
+    "region": "四国",
+    "hub": "matsuyama",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "海に一番近い駅として有名な下灘駅。伊予灘に沈む夕日とホームの絶景は、日本で最も美しい駅のひとつ。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "下灘駅",
+      "伊予灘の夕日",
+      "白石の鼻展望台"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "下灘",
+    "gateways": {
+      "rail": [
+        "下灘駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "下灘駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "愛媛県",
+    "city": "大洲市",
+    "lat": 33.6167,
+    "lng": 132.55,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 360,
+      "osaka": 220,
+      "nagoya": 265,
+      "fukuoka": 290,
+      "takamatsu": 130
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "hubStation": "松山駅",
+    "accessStation": "下灘駅",
+    "hotelArea": "ozu",
+    "hotelKeyword": "下灘",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "下灘駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "松山駅",
+    "gatewayStations": [
+      {
+        "name": "松山駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rail",
+      "description": "松山駅から下灘駅へ",
+      "to": "下灘駅"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "海に一番近い駅",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "伊予灘の夕日展望スポット",
+    "subType": null,
+    "stayDescription": "下灘駅のホームから伊予灘の夕日を眺める、日本で最も美しい駅の旅。",
+    "hubCity": "松山",
+    "stayPriority": "low",
+    "representativeStation": "松山駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "下灘"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "下灘駅",
+      "company": "JR"
+    },
+    "mainSpot": "下灘駅",
+    "stayArea": {
+      "rakuten": "松山",
+      "jalan": "松山"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259D%25BE%25E5%25B1%25B1%2520%25E6%2584%259B%25E5%25AA%259B%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25A4%2595%2551%258C%25A7%2520%258F%25BC%258E%2552%258E%2573"
+    }
+  },
+  {
+    "id": "misaki-kochi",
+    "name": "三崎",
+    "type": "destination",
+    "region": "四国",
+    "hub": "kochi",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "高知の最南端エリア。黒潮洗う断崖と奇岩が続く竜串海岸と、足摺岬の雄大な太平洋。",
+    "tags": [
+      "絶景",
+      "海",
+      "秘境"
+    ],
+    "spots": [
+      "足摺岬",
+      "竜串海岸",
+      "叶崎灯台"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "土佐清水",
+    "gateways": {
+      "rail": [
+        "土佐清水駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": null,
+    "destType": "sight",
+    "railGateway": "土佐清水駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "高知県",
+    "city": "土佐清水市",
+    "lat": 32.7833,
+    "lng": 132.9833,
+    "stayBias": 0,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 390,
+      "osaka": 250,
+      "nagoya": 300,
+      "fukuoka": 330,
+      "takamatsu": 200
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "hubStation": "高知駅",
+    "accessStation": "土佐清水駅",
+    "hotelArea": "tosa-shimizu",
+    "hotelKeyword": "土佐清水",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "土佐清水駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "土佐清水駅",
+          "to": "竜串海岸",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": null,
+    "gateway": "高知駅",
+    "gatewayStations": [
+      {
+        "name": "高知駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "高知から土佐清水駅へ",
+      "to": "土佐清水駅"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "黒潮洗う高知の最南端",
+    "primary": [
+      "絶景",
+      "海",
+      "秘境"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "竜串海岸",
+    "subType": null,
+    "stayDescription": "足摺岬の雄大な太平洋と竜串海岸の奇岩を歩き、黒潮の恵みの海鮮で1泊する。",
+    "hubCity": "土佐清水",
+    "stayPriority": "medium",
+    "representativeStation": "高知駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "土佐清水"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "土佐清水駅",
+      "company": "JR"
+    },
+    "mainSpot": "竜串海岸",
+    "stayArea": {
+      "rakuten": "土佐清水",
+      "jalan": "土佐清水"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%259C%259F%25E4%25BD%2590%25E6%25B8%2585%25E6%25B0%25B4%2520%25E9%25AB%2598%25E7%259F%25A5%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%2582%2592%256D%258C%25A7%2520%2593%2579%258D%25B2%2590%25B4%2590%2585%258E%2573"
+    }
   }
 ]
