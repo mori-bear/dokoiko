@@ -8130,11 +8130,13 @@
     "region": "東北",
     "hub": "morioka",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [
       "仙台",
-      "盛岡"
+      "盛岡",
+      "青森"
     ],
     "weight": 1.11,
     "description": "竿燈まつりときりたんぽ鍋が有名な東北の雄都。千秋公園と比内地鶏・稲庭うどんの産地としても知られる。",
@@ -13541,7 +13543,8 @@
     ],
     "departures": [
       "仙台",
-      "東京"
+      "東京",
+      "青森"
     ],
     "weight": 1.11,
     "description": "津軽の城下町に日本一の桜の名所が広がる街。洋館や禅寺など明治の遺産も点在し、深い旅ができる。",
@@ -13681,11 +13684,13 @@
     "region": "東北",
     "hub": "morioka",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [
       "仙台",
-      "東京"
+      "東京",
+      "青森"
     ],
     "weight": 1.45,
     "description": "原生林を縫うように清流が流れる渓谷路。苔と滝と木漏れ日が、徒歩でしか味わえない静寂をつくっている。",
@@ -33621,13 +33626,15 @@
     "hub": "morioka",
     "hotelSearch": "十和田湖",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "stayBias": 1,
     "weight": 0.77,
     "departures": [
       "仙台",
-      "盛岡"
+      "盛岡",
+      "青森"
     ],
     "description": "神秘的な碧水をたたえる十和田湖と、奥入瀬渓流の清流。自然の造形美が心を洗う東北の名景。",
     "tags": [
@@ -33757,13 +33764,15 @@
     "hub": "morioka",
     "hotelSearch": "恐山",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "stayBias": 1,
     "weight": 0.77,
     "departures": [
       "盛岡",
-      "仙台"
+      "仙台",
+      "青森"
     ],
     "description": "日本三大霊場のひとつ。異界への入口と言われる硫黄の荒涼とした地に、精霊への祈りが響く。",
     "tags": [
@@ -58884,6 +58893,7 @@
     "region": "東北",
     "hub": null,
     "stayAllowed": [
+      "daytrip",
       "1night",
       "2night"
     ],
@@ -58999,6 +59009,7 @@
     "region": "東北",
     "hub": null,
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [],
@@ -119875,7 +119886,8 @@
       "名古屋",
       "大阪",
       "広島",
-      "福岡"
+      "福岡",
+      "青森"
     ],
     "isIsland": false,
     "hub": "青森",
@@ -119901,7 +119913,8 @@
       "nagoya": 494,
       "osaka": 561,
       "takamatsu": 626,
-      "fukuoka": 798
+      "fukuoka": 798,
+      "aomori": 30
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -120335,7 +120348,8 @@
       "名古屋",
       "大阪",
       "広島",
-      "福岡"
+      "福岡",
+      "青森"
     ],
     "isIsland": false,
     "hub": "青森",
@@ -120361,7 +120375,8 @@
       "nagoya": 466,
       "osaka": 532,
       "takamatsu": 598,
-      "fukuoka": 771
+      "fukuoka": 771,
+      "aomori": 35
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -120910,7 +120925,8 @@
       "名古屋",
       "大阪",
       "広島",
-      "福岡"
+      "福岡",
+      "青森"
     ],
     "isIsland": false,
     "hub": "青森",
@@ -120936,7 +120952,8 @@
       "nagoya": 480,
       "osaka": 548,
       "takamatsu": 614,
-      "fukuoka": 788
+      "fukuoka": 788,
+      "aomori": 55
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -121140,7 +121157,8 @@
       "名古屋",
       "大阪",
       "広島",
-      "福岡"
+      "福岡",
+      "青森"
     ],
     "isIsland": false,
     "hub": "青森",
@@ -121166,7 +121184,8 @@
       "nagoya": 480,
       "osaka": 548,
       "takamatsu": 614,
-      "fukuoka": 790
+      "fukuoka": 790,
+      "aomori": 100
     },
     "stayRecommendation": "1night",
     "secondaryTransport": "bus",
@@ -132866,11 +132885,13 @@
     "region": "東北",
     "hub": "morioka",
     "stayAllowed": [
+      "daytrip",
       "1night"
     ],
     "departures": [
       "東京",
-      "仙台"
+      "仙台",
+      "青森"
     ],
     "weight": 1.2,
     "description": "日本海と白神山地の間を縫うように走る絶景列車。断崖と海の景色が続き、沿線には不老ふ死温泉など秘湯も点在する。",
@@ -133026,7 +133047,8 @@
     ],
     "departures": [
       "東京",
-      "仙台"
+      "仙台",
+      "青森"
     ],
     "weight": 1.1,
     "description": "八戸市南端に広がる天然芝の海岸。波に磨かれた奇岩と松林が続く静かな海岸線は、三陸復興国立公園の一部。",
@@ -133070,7 +133092,8 @@
       "osaka": 300,
       "nagoya": 310,
       "fukuoka": 400,
-      "sendai": 105
+      "sendai": 105,
+      "aomori": 85
     },
     "stayRecommendation": "1night",
     "secondaryTransport": null,
@@ -138153,5 +138176,180 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2582%25A3%25E8%25A6%2587%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AB%2593%25EA%258C%25A7%2520%2593%25DF%2594%2565%258E%2573"
     }
+  },
+  {
+    "id": "hakkoda",
+    "name": "八甲田山",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "hubCity": "青森",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "青森"
+    ],
+    "weight": 1.2,
+    "description": "東北最大の火山群。ブナ林と湿原が広がり、冬はロープウェイからの樹氷が絶景。四季折々の自然が深い。",
+    "catch": "樹氷の海。青森からたった50分で、こんな世界がある。",
+    "tags": [
+      "自然",
+      "山",
+      "絶景",
+      "冬",
+      "春"
+    ],
+    "spots": [
+      "八甲田ロープウェイ",
+      "田代平湿原",
+      "睡蓮沼"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "青森 八甲田",
+    "gateways": {
+      "rail": [
+        "新青森駅"
+      ],
+      "airport": [],
+      "bus": [
+        "青森駅"
+      ],
+      "ferry": []
+    },
+    "accessHub": "青森",
+    "railNote": "バス・レンタカー",
+    "secondaryTransport": "bus",
+    "destType": "mountain",
+    "railGateway": "新青森駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "hasDirectFlight": false,
+    "prefecture": "青森県",
+    "city": "青森市",
+    "lat": 40.7733,
+    "lng": 140.8497,
+    "stayBias": 0,
+    "stayRecommendation": "1night",
+    "onsenLevel": 0,
+    "stayDescription": "朝靄の中を歩いて、昼に絶景を踏んで、夜は宿でぐっすり眠る。",
+    "mapPoint": "八甲田ロープウェイ",
+    "fallbackCity": "青森",
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 250,
+      "nagoya": 310,
+      "osaka": 390,
+      "takamatsu": 450,
+      "fukuoka": 460,
+      "aomori": 50
+    },
+    "hubStation": "新青森駅",
+    "accessStation": "新青森駅",
+    "hotelArea": "aomori",
+    "accessType": "car",
+    "hotelKeyword": "青森",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "新青森駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ]
+  },
+  {
+    "id": "sannai-maruyama",
+    "name": "三内丸山遺跡",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "hubCity": "青森",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "青森"
+    ],
+    "weight": 1,
+    "description": "縄文時代最大級の集落跡。六本柱の大型掘立柱建物が復元された広大な遺跡で、5500年前の暮らしを体感できる。",
+    "catch": "5500年前の集落が青森にある。縄文のスケールに圧倒される。",
+    "tags": [
+      "歴史",
+      "文化",
+      "遺跡"
+    ],
+    "spots": [
+      "六本柱建物跡",
+      "大型竪穴建物",
+      "縄文時遊館"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "青森",
+    "gateways": {
+      "rail": [
+        "新青森駅"
+      ],
+      "airport": [],
+      "bus": [
+        "青森駅"
+      ],
+      "ferry": []
+    },
+    "accessHub": "青森",
+    "railNote": "バス",
+    "secondaryTransport": "bus",
+    "destType": "sight",
+    "railGateway": "新青森駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "hasDirectFlight": false,
+    "prefecture": "青森県",
+    "city": "青森市",
+    "lat": 40.6847,
+    "lng": 140.6417,
+    "stayBias": 0,
+    "stayRecommendation": "daytrip",
+    "onsenLevel": 0,
+    "stayDescription": "縄文の遺跡をじっくり歩いて、その日のうちに帰る。",
+    "mapPoint": "三内丸山遺跡",
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 235,
+      "nagoya": 295,
+      "osaka": 375,
+      "takamatsu": 435,
+      "fukuoka": 445,
+      "aomori": 20
+    },
+    "hubStation": "新青森駅",
+    "accessStation": "新青森駅",
+    "hotelArea": "aomori",
+    "accessType": "bus",
+    "hotelKeyword": "青森",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "新青森駅",
+        "type": "shinkansen",
+        "priority": 1
+      }
+    ],
+    "situations": [
+      "couple",
+      "friends",
+      "solo",
+      "family"
+    ]
   }
 ]
