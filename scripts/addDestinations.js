@@ -1,9 +1,8 @@
-'use strict';
 /**
  * 54件の新規 destination + hotelAreas エントリを追加して 300件にする
  */
-const fs    = require('fs');
-const iconv = require('iconv-lite');
+import fs    from 'fs';
+import iconv from 'iconv-lite';
 
 function encodeShiftJIS(str) {
   const buf = iconv.encode(str, 'Shift_JIS');

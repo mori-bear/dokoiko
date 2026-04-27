@@ -133832,5 +133832,4326 @@
       "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E5%2580%2589%2520%25E7%25A6%258F%25E5%25B2%25A1%25E7%259C%258C%2520%25E5%25AE%25BF",
       "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2591%2571"
     }
+  },
+  {
+    "id": "bihoro-pass",
+    "name": "美幌峠",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.1,
+    "description": "屈斜路湖とカルデラを一望できる北海道東部の絶景峠。展望台からの雄大なパノラマは道内屈指。",
+    "tags": [
+      "絶景",
+      "自然",
+      "秋"
+    ],
+    "spots": [
+      "美幌峠展望台",
+      "屈斜路湖",
+      "弟子屈"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "網走",
+    "gateways": {
+      "rail": [
+        "網走駅"
+      ],
+      "airport": [
+        "女満別空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "網走",
+    "railNote": "女満別空港からレンタカー約30分",
+    "destType": "sight",
+    "railGateway": "網走駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "女満別空港",
+    "prefecture": "北海道",
+    "lat": 43.8256,
+    "lng": 144.1028,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 320,
+      "nagoya": 300,
+      "fukuoka": 330,
+      "sapporo": 200,
+      "takamatsu": 320
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "北海道網走郡美幌町",
+    "hubStation": "女満別空港",
+    "accessStation": "網走駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "網走",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "女満別空港"
+        },
+        {
+          "type": "local",
+          "from": "女満別空港",
+          "to": "美幌峠",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "網走",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "女満別空港から美幌峠へ",
+      "to": "美幌峠"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "地平線まで続くカルデラの大地に、湖が静かに光る。",
+    "primary": [
+      "絶景",
+      "自然"
+    ],
+    "secondary": [
+      "秋"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "美幌峠展望台",
+    "subType": null,
+    "stayDescription": "道東の大自然を展望台で感じ、網走か知床で1泊する。",
+    "hubCity": "網走",
+    "stayPriority": "medium",
+    "representativeStation": "女満別空港",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "女満別空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "美幌峠展望台",
+    "stayArea": {
+      "rakuten": "網走",
+      "jalan": "網走"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25B6%25B2%25E8%25B5%25B0%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%258A%2543%2593%25B9%2520%2596%25D4%2591%2596%258E%2573"
+    }
+  },
+  {
+    "id": "kamui-misaki",
+    "name": "神威岬",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "sapporo-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "札幌"
+    ],
+    "weight": 1.2,
+    "description": "積丹半島最先端に突き出す断崖の岬。コバルトブルーの「積丹ブルー」と奇岩の絶景が圧巻。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然",
+      "夏"
+    ],
+    "spots": [
+      "神威岬灯台",
+      "積丹ブルー",
+      "女人禁制の門"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "小樽",
+    "gateways": {
+      "rail": [
+        "小樽駅"
+      ],
+      "airport": [
+        "新千歳空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "小樽",
+    "railNote": "小樽からレンタカー約90分",
+    "destType": "sight",
+    "railGateway": "小樽駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "新千歳空港",
+    "prefecture": "北海道",
+    "lat": 43.3348,
+    "lng": 140.6547,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 330,
+      "nagoya": 310,
+      "fukuoka": 340,
+      "sapporo": 120,
+      "hakodate": 200
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "北海道積丹郡積丹町",
+    "hubStation": "小樽駅",
+    "accessStation": "小樽駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "小樽",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "小樽駅",
+          "provider": "ekinet"
+        },
+        {
+          "type": "local",
+          "from": "小樽駅",
+          "to": "神威岬",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "小樽",
+    "gateway": "新千歳空港",
+    "gatewayStations": [
+      {
+        "name": "新千歳空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "小樽駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "小樽から積丹半島へドライブ",
+      "to": "神威岬"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "積丹ブルーの海が、断崖の先に広がっていた。",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "神威岬灯台",
+    "subType": null,
+    "stayDescription": "積丹の絶景岬を満喫し、小樽で夜は海鮮と運河を楽しむ。",
+    "hubCity": "小樽",
+    "stayPriority": "medium",
+    "representativeStation": "小樽駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "小樽"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "小樽駅",
+      "company": "JR"
+    },
+    "mainSpot": "神威岬",
+    "stayArea": {
+      "rakuten": "小樽",
+      "jalan": "小樽"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E6%25A8%25BD%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%258A%2543%2593%25B9%2520%258F%25AC%2592%254D%258E%2573"
+    }
+  },
+  {
+    "id": "saroma-ko",
+    "name": "サロマ湖",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.1,
+    "description": "オホーツク海に面した日本最大の汽水湖。ホタテ・カキの産地でサンゴ草の群生でも知られる。",
+    "tags": [
+      "海",
+      "自然",
+      "食",
+      "秋"
+    ],
+    "spots": [
+      "サロマ湖",
+      "サンゴ草群生地",
+      "ワッカ原生花園"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "サロマ湖",
+    "gateways": {
+      "rail": [
+        "北見駅"
+      ],
+      "airport": [
+        "女満別空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "北見",
+    "railNote": "女満別空港からレンタカー約60分",
+    "destType": "sight",
+    "railGateway": "北見駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "女満別空港",
+    "prefecture": "北海道",
+    "lat": 44.1186,
+    "lng": 143.9203,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 190,
+      "osaka": 325,
+      "nagoya": 305,
+      "fukuoka": 340,
+      "sapporo": 240
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "北海道常呂郡佐呂間町",
+    "hubStation": "女満別空港",
+    "accessStation": "北見駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "サロマ湖",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "女満別空港"
+        },
+        {
+          "type": "local",
+          "from": "女満別空港",
+          "to": "サロマ湖",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "北見",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "女満別空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "女満別空港からサロマ湖へ",
+      "to": "サロマ湖"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "湖と海の間の細い砂州。その先にオホーツクが広がる。",
+    "primary": [
+      "海",
+      "自然",
+      "食"
+    ],
+    "secondary": [
+      "秋"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "ワッカ原生花園",
+    "subType": null,
+    "stayDescription": "サロマ湖の新鮮なホタテを食べ、湖畔のリゾートで道東の夜を過ごす。",
+    "hubCity": "佐呂間",
+    "stayPriority": "medium",
+    "representativeStation": "女満別空港",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "女満別空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "サロマ湖",
+    "stayArea": {
+      "rakuten": "サロマ湖",
+      "jalan": "サロマ湖"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25BD%2590%25E5%2591%2582%25E9%2596%2593%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%25B2%2598%2543%258A%25D4"
+    }
+  },
+  {
+    "id": "notsuke-hanto",
+    "name": "野付半島",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.15,
+    "description": "日本最大の砂嘴。枯れたトドワラ・ナラワラの原野と野生のエゾシカ・ラッコが棲む北の秘境。",
+    "tags": [
+      "絶景",
+      "自然",
+      "秘境"
+    ],
+    "spots": [
+      "トドワラ",
+      "ナラワラ",
+      "野付湾"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "知床",
+    "gateways": {
+      "rail": [
+        "釧路駅"
+      ],
+      "airport": [
+        "釧路空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "釧路",
+    "railNote": "釧路空港からレンタカー約2時間",
+    "destType": "remote",
+    "railGateway": "釧路駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "釧路空港",
+    "prefecture": "北海道",
+    "lat": 43.537,
+    "lng": 145.2025,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 340,
+      "nagoya": 315,
+      "fukuoka": 350,
+      "sapporo": 280
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "北海道野付郡別海町",
+    "hubStation": "釧路空港",
+    "accessStation": "釧路駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "知床",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "釧路空港"
+        },
+        {
+          "type": "local",
+          "from": "釧路空港",
+          "to": "野付半島",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "標津",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "釧路から野付半島へドライブ",
+      "to": "トドワラ"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "枯れた木々が地平線まで続く、この世の果ての景色。",
+    "primary": [
+      "絶景",
+      "自然",
+      "秘境"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "トドワラ",
+    "subType": null,
+    "stayDescription": "幻想的な野付半島を散策し、知床か根室で自然の恵みに泊まる。",
+    "hubCity": "標津",
+    "stayPriority": "medium",
+    "representativeStation": "釧路空港",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "釧路空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "トドワラ",
+    "stayArea": {
+      "rakuten": "知床",
+      "jalan": "知床"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%25A8%2599%25E6%25B4%25A5%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2557%2592%25C3"
+    }
+  },
+  {
+    "id": "mashu-ko",
+    "name": "摩周湖",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.3,
+    "description": "世界屈指の透明度を誇るカルデラ湖。霧の湖とも呼ばれ、展望台から見る青い湖面は神秘的。",
+    "tags": [
+      "絶景",
+      "自然",
+      "秋"
+    ],
+    "spots": [
+      "第一展望台",
+      "第三展望台",
+      "神の子池"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "摩周",
+    "gateways": {
+      "rail": [
+        "摩周駅"
+      ],
+      "airport": [
+        "釧路空港"
+      ],
+      "bus": [
+        "摩周バスターミナル"
+      ],
+      "ferry": []
+    },
+    "accessHub": "弟子屈",
+    "railNote": "釧路から摩周駅、バスで展望台へ",
+    "destType": "sight",
+    "railGateway": "摩周駅",
+    "busGateway": "摩周バスターミナル",
+    "ferryGateway": null,
+    "airportGateway": "釧路空港",
+    "prefecture": "北海道",
+    "lat": 43.5748,
+    "lng": 144.5308,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 310,
+      "nagoya": 285,
+      "fukuoka": 320,
+      "sapporo": 240,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "city": "北海道川上郡弟子屈町",
+    "hubStation": "摩周駅",
+    "accessStation": "摩周駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "摩周",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "釧路空港"
+        },
+        {
+          "type": "local",
+          "from": "釧路空港",
+          "to": "摩周駅",
+          "method": "JR"
+        },
+        {
+          "type": "local",
+          "from": "摩周駅",
+          "to": "摩周湖展望台",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "弟子屈",
+    "gateway": "釧路空港",
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "摩周駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "摩周駅から摩周湖展望台へバス",
+      "to": "第一展望台"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霧が晴れた瞬間に、信じられないほど青い湖が現れた。",
+    "primary": [
+      "絶景",
+      "自然"
+    ],
+    "secondary": [
+      "秋"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "第一展望台",
+    "subType": null,
+    "stayDescription": "霧の摩周湖と神の子池を訪ね、川湯温泉の湯治旅に泊まる。",
+    "hubCity": "弟子屈",
+    "stayPriority": "high",
+    "representativeStation": "摩周駅",
+    "finalAccess": {
+      "type": "bus",
+      "method": "路線バス"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "摩周"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "摩周駅",
+      "company": "JR"
+    },
+    "mainSpot": "第一展望台",
+    "stayArea": {
+      "rakuten": "摩周",
+      "jalan": "摩周"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BC%259F%25E5%25AD%2590%25E5%25B1%2588%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%25ED%258E%2571%258B%25FC"
+    }
+  },
+  {
+    "id": "kussharo-ko",
+    "name": "屈斜路湖",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1.2,
+    "description": "日本最大のカルデラ湖。砂浜を掘ると温泉が湧き出す「砂湯」と、白鳥の飛来が冬の風物詩。",
+    "tags": [
+      "温泉",
+      "自然",
+      "冬"
+    ],
+    "spots": [
+      "砂湯",
+      "和琴半島",
+      "美幌峠"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "屈斜路",
+    "gateways": {
+      "rail": [
+        "摩周駅"
+      ],
+      "airport": [
+        "釧路空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "弟子屈",
+    "railNote": "摩周駅からバスまたは車で約20分",
+    "destType": "sight",
+    "railGateway": "摩周駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "釧路空港",
+    "prefecture": "北海道",
+    "lat": 43.6078,
+    "lng": 144.3525,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 310,
+      "nagoya": 285,
+      "fukuoka": 320,
+      "sapporo": 230
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "bus",
+    "city": "北海道川上郡弟子屈町",
+    "hubStation": "摩周駅",
+    "accessStation": "摩周駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "屈斜路",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "釧路空港"
+        },
+        {
+          "type": "local",
+          "from": "釧路空港",
+          "to": "摩周駅",
+          "method": "JR"
+        },
+        {
+          "type": "local",
+          "from": "摩周駅",
+          "to": "砂湯",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "弟子屈",
+    "gateway": "釧路空港",
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 1
+      },
+      {
+        "name": "摩周駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "摩周駅から砂湯・屈斜路湖へ",
+      "to": "砂湯"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "砂浜を掘ると、そこに温かい湯が溢れ出してきた。",
+    "primary": [
+      "温泉",
+      "自然"
+    ],
+    "secondary": [
+      "冬"
+    ],
+    "onsenLevel": 2,
+    "hasDirectFlight": true,
+    "mapPoint": "砂湯",
+    "subType": null,
+    "stayDescription": "砂湯温泉で足を温め、摩周・屈斜路の神秘的な湖畔に泊まる。",
+    "hubCity": "弟子屈",
+    "stayPriority": "medium",
+    "representativeStation": "摩周駅",
+    "finalAccess": {
+      "type": "bus",
+      "method": "路線バス"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "摩周"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "摩周駅",
+      "company": "JR"
+    },
+    "mainSpot": "砂湯",
+    "stayArea": {
+      "rakuten": "屈斜路",
+      "jalan": "屈斜路"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BC%259F%25E5%25AD%2590%25E5%25B1%2588%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2592%25ED%258E%2571%258B%25FC"
+    }
+  },
+  {
+    "id": "uryunuma",
+    "name": "雨竜沼湿原",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "asahikawa",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "旭川",
+      "札幌"
+    ],
+    "weight": 1.1,
+    "description": "標高850mの高層湿原。ミズバショウとエゾカンゾウが一面に咲く初夏の花畑と蛇行する川が圧巻。",
+    "tags": [
+      "自然",
+      "秘境",
+      "夏"
+    ],
+    "spots": [
+      "雨竜沼湿原",
+      "南暑寒岳",
+      "ゲートパーク"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "旭川",
+    "gateways": {
+      "rail": [
+        "深川駅"
+      ],
+      "airport": [
+        "旭川空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "深川",
+    "railNote": "旭川空港からレンタカー約60分",
+    "destType": "remote",
+    "railGateway": "深川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "旭川空港",
+    "prefecture": "北海道",
+    "lat": 43.9378,
+    "lng": 141.9506,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 250,
+      "osaka": 390,
+      "nagoya": 370,
+      "fukuoka": 400,
+      "sapporo": 120
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "car",
+    "city": "北海道雨竜郡雨竜町",
+    "hubStation": "旭川空港",
+    "accessStation": "深川駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "旭川",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "旭川空港"
+        },
+        {
+          "type": "local",
+          "from": "旭川空港",
+          "to": "雨竜沼湿原",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "旭川",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "旭川空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "旭川から深川経由で雨竜沼湿原へ",
+      "to": "雨竜沼湿原ゲートパーク"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "高層湿原の花畑。ここが北海道だとは思えない。",
+    "primary": [
+      "自然",
+      "秘境"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "雨竜沼湿原",
+    "subType": null,
+    "stayDescription": "高層湿原のトレッキングで大自然を満喫し、旭川で食と文化を楽しむ。",
+    "hubCity": "旭川",
+    "stayPriority": "low",
+    "representativeStation": "旭川空港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "旭川空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "雨竜沼湿原",
+    "stayArea": {
+      "rakuten": "旭川",
+      "jalan": "旭川"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%2597%25AD%25E5%25B7%259D%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%258A%2543%2593%25B9%2520%2588%25AE%2590%25EC%258E%2573"
+    }
+  },
+  {
+    "id": "konsen-daichi",
+    "name": "根釧台地",
+    "type": "destination",
+    "region": "北海道",
+    "hub": "kushiro",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [],
+    "weight": 1,
+    "description": "北海道東部に広がる広大な酪農台地。霧の中を牛が歩く地平線の風景と、牧場グルメが魅力。",
+    "tags": [
+      "自然",
+      "秘境",
+      "農村"
+    ],
+    "spots": [
+      "別海牧場",
+      "野付半島",
+      "霧多布湿原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "釧路",
+    "gateways": {
+      "rail": [
+        "釧路駅"
+      ],
+      "airport": [
+        "釧路空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "釧路",
+    "railNote": "釧路空港からレンタカーで探索",
+    "destType": "remote",
+    "railGateway": "釧路駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "釧路空港",
+    "prefecture": "北海道",
+    "lat": 43.55,
+    "lng": 144.85,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 320,
+      "nagoya": 295,
+      "fukuoka": 330,
+      "sapporo": 260
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "北海道釧路郡",
+    "hubStation": "釧路駅",
+    "accessStation": "釧路駅",
+    "hotelArea": "hokkaido",
+    "hotelKeyword": "釧路",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "釧路空港"
+        },
+        {
+          "type": "local",
+          "from": "釧路空港",
+          "to": "根釧台地",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "釧路",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "釧路空港",
+        "type": "airport",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "釧路から根釧台地をドライブ",
+      "to": "別海"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "霧の中、牛が地平線の向こうへ歩いていく。",
+    "primary": [
+      "自然",
+      "秘境"
+    ],
+    "secondary": [
+      "農村"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "霧多布湿原",
+    "subType": null,
+    "stayDescription": "地平線まで続く牧草地帯をドライブし、釧路の湿原と夕日を楽しむ。",
+    "hubCity": "釧路",
+    "stayPriority": "low",
+    "representativeStation": "釧路駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "釧路空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "霧多布湿原",
+    "stayArea": {
+      "rakuten": "釧路",
+      "jalan": "釧路"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2587%25A7%25E8%25B7%25AF%2520%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%256B%258A%2543%2593%25B9%2520%258B%25FA%2598%2548%258E%2573"
+    }
+  },
+  {
+    "id": "chokai-san",
+    "name": "鳥海山",
+    "type": "destination",
+    "region": "東北",
+    "hub": "morioka",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "仙台"
+    ],
+    "weight": 1.1,
+    "description": "出羽富士とも呼ばれる東北第2の高峰。高山植物と雪渓、庄内平野と日本海を一望する大展望が魅力。",
+    "tags": [
+      "山",
+      "自然",
+      "夏"
+    ],
+    "spots": [
+      "鳥海山頂",
+      "胴腹滝",
+      "鉾立展望台"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "酒田",
+    "gateways": {
+      "rail": [
+        "酒田駅"
+      ],
+      "airport": [
+        "庄内空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "酒田",
+    "railNote": "酒田駅からレンタカーまたはバス",
+    "destType": "mountain",
+    "railGateway": "酒田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "庄内空港",
+    "prefecture": "山形県",
+    "lat": 39.0958,
+    "lng": 140.0572,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 190,
+      "osaka": 370,
+      "nagoya": 320,
+      "fukuoka": 450,
+      "sendai": 120,
+      "aomori": 180
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "山形県飽海郡遊佐町",
+    "hubStation": "酒田駅",
+    "accessStation": "酒田駅",
+    "hotelArea": "tohoku",
+    "hotelKeyword": "酒田",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "酒田駅",
+          "provider": "ekinet"
+        },
+        {
+          "type": "local",
+          "from": "酒田駅",
+          "to": "鳥海山麓",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "酒田",
+    "gateway": "秋田駅",
+    "gatewayStations": [
+      {
+        "name": "秋田駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "庄内空港",
+        "type": "airport",
+        "priority": 2
+      },
+      {
+        "name": "酒田駅",
+        "type": "major",
+        "priority": 3
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "酒田から鳥海山麓へドライブ",
+      "to": "鉾立展望台"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "山頂から、庄内平野と日本海が一望に広がる。",
+    "primary": [
+      "山",
+      "自然"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "鉾立展望台",
+    "subType": null,
+    "stayDescription": "東北の霊峰を登り、日本海の夕日と庄内の食で1泊する。",
+    "hubCity": "酒田",
+    "stayPriority": "medium",
+    "representativeStation": "酒田駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "酒田"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "酒田駅",
+      "company": "JR"
+    },
+    "mainSpot": "鳥海山頂",
+    "stayArea": {
+      "rakuten": "酒田",
+      "jalan": "酒田"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2585%2592%25E7%2594%25B0%2520%25E5%25B1%25B1%25E5%25BD%25A2%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%2552%258C%2560%258C%25A7%2520%258E%25F0%2593%2563%258E%2573"
+    }
+  },
+  {
+    "id": "eshima-miyagi",
+    "name": "江島",
+    "type": "destination",
+    "region": "東北",
+    "hub": "sendai-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "仙台"
+    ],
+    "weight": 1,
+    "description": "宮城県女川港からフェリーで渡る小島。牡蠣・ホタテの産地で、震災を乗り越えた島の素朴な暮らしが息づく。",
+    "tags": [
+      "島",
+      "海",
+      "食",
+      "自然"
+    ],
+    "spots": [
+      "江島港",
+      "牡蠣棚",
+      "高台展望台"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "石巻",
+    "gateways": {
+      "rail": [
+        "女川駅"
+      ],
+      "airport": [
+        "仙台空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "江島港"
+      ]
+    },
+    "accessHub": "石巻",
+    "railNote": "仙台からJR石巻線、女川港からフェリー",
+    "destType": "sight",
+    "railGateway": "女川駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "仙台空港",
+    "prefecture": "宮城県",
+    "lat": 38.449,
+    "lng": 141.593,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 170,
+      "osaka": 380,
+      "nagoya": 330,
+      "fukuoka": 460,
+      "sendai": 90
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "宮城県牡鹿郡女川町",
+    "hubStation": "女川駅",
+    "accessStation": "女川駅",
+    "hotelArea": "tohoku",
+    "hotelKeyword": "石巻",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "女川駅",
+          "provider": "ekinet"
+        },
+        {
+          "type": "ferry",
+          "from": "女川港",
+          "to": "江島港"
+        }
+      ]
+    },
+    "fallbackCity": "石巻",
+    "gateway": "仙台駅",
+    "gatewayStations": [
+      {
+        "name": "仙台駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "女川駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "女川港から江島へフェリー",
+      "to": "江島港"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "フェリーが遠ざかるにつれて、本土が小さくなっていく。",
+    "primary": [
+      "島",
+      "海",
+      "食"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "江島港",
+    "subType": null,
+    "stayDescription": "牡蠣の島へ渡り、三陸の海と漁村の暮らしに触れる日帰り旅。",
+    "hubCity": "女川",
+    "stayPriority": "low",
+    "representativeStation": "女川駅",
+    "finalAccess": {
+      "type": "ferry"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "女川"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "女川駅",
+      "company": "JR"
+    },
+    "mainSpot": "江島港",
+    "stayArea": {
+      "rakuten": "石巻",
+      "jalan": "石巻"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A5%25B3%25E5%25B7%259D%2520%25E5%25AE%25AE%25E5%259F%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%2597%2590%25EC"
+    }
+  },
+  {
+    "id": "kirigamine",
+    "name": "霧ヶ峰",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋"
+    ],
+    "weight": 1.2,
+    "description": "諏訪盆地の上に広がる高原。ニッコウキスゲの群生と360度の大展望が魅力のトレッキング名所。",
+    "tags": [
+      "山",
+      "高原",
+      "自然",
+      "夏"
+    ],
+    "spots": [
+      "車山高原",
+      "ニッコウキスゲ群生地",
+      "八島ヶ原湿原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "諏訪",
+    "gateways": {
+      "rail": [
+        "上諏訪駅"
+      ],
+      "airport": [],
+      "bus": [
+        "霧ヶ峰バス停"
+      ],
+      "ferry": []
+    },
+    "accessHub": "上諏訪",
+    "railNote": "上諏訪駅からバスまたはレンタカー",
+    "destType": "mountain",
+    "railGateway": "上諏訪駅",
+    "busGateway": "霧ヶ峰バス停",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 36.128,
+    "lng": 138.228,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 225,
+      "nagoya": 130,
+      "fukuoka": 385,
+      "niigata": 155
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "bus",
+    "city": "長野県諏訪市",
+    "hubStation": "上諏訪駅",
+    "accessStation": "上諏訪駅",
+    "hotelArea": "nagano",
+    "hotelKeyword": "諏訪",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "上諏訪駅",
+          "provider": "ekinet"
+        },
+        {
+          "type": "local",
+          "from": "上諏訪駅",
+          "to": "霧ヶ峰",
+          "method": "バス・レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "諏訪",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "上諏訪駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "上諏訪駅から霧ヶ峰へ",
+      "to": "車山高原"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霧が晴れると、高原一面に黄色い花が広がっていた。",
+    "primary": [
+      "山",
+      "自然",
+      "高原"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "車山高原",
+    "subType": null,
+    "stayDescription": "霧ヶ峰のトレッキングを楽しみ、上諏訪温泉で疲れを癒す。",
+    "hubCity": "上諏訪",
+    "stayPriority": "medium",
+    "representativeStation": "上諏訪駅",
+    "finalAccess": {
+      "type": "bus",
+      "method": "バス"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "上諏訪"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "上諏訪駅",
+      "company": "JR"
+    },
+    "mainSpot": "車山高原",
+    "stayArea": {
+      "rakuten": "諏訪",
+      "jalan": "諏訪"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E4%25B8%258A%25E8%25AB%258F%25E8%25A8%25AA%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25E3%2590%257A%2596%254B"
+    }
+  },
+  {
+    "id": "nyukasa",
+    "name": "入笠山",
+    "type": "destination",
+    "region": "中部",
+    "hub": "matsumoto-n",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋"
+    ],
+    "weight": 1.1,
+    "description": "ゴンドラで一気に上れる日本一のすずらんの群生地。360度の展望台から南アルプスと富士山が見える。",
+    "tags": [
+      "山",
+      "高原",
+      "花",
+      "夏"
+    ],
+    "spots": [
+      "入笠山頂",
+      "すずらん群生地",
+      "大阿原湿原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "富士見",
+    "gateways": {
+      "rail": [
+        "富士見駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "富士見",
+    "railNote": "富士見駅からゴンドラ乗り場まで送迎あり",
+    "destType": "mountain",
+    "railGateway": "富士見駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 35.919,
+    "lng": 138.1619,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "ekinet",
+    "travelTime": {
+      "tokyo": 120,
+      "osaka": 225,
+      "nagoya": 120,
+      "fukuoka": 385,
+      "niigata": 165
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "長野県伊那市",
+    "hubStation": "富士見駅",
+    "accessStation": "富士見駅",
+    "hotelArea": "nagano",
+    "hotelKeyword": "富士見",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "富士見駅",
+          "provider": "ekinet"
+        },
+        {
+          "type": "local",
+          "from": "富士見駅",
+          "to": "入笠山ゴンドラ",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "富士見",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "富士見駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "富士見駅から入笠山ゴンドラへ",
+      "to": "入笠山頂"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "ゴンドラを降りると、すずらんの海が広がっていた。",
+    "primary": [
+      "山",
+      "自然",
+      "花"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "入笠山頂",
+    "subType": null,
+    "stayDescription": "ゴンドラで入笠山に上り、富士見の高原リゾートで南アルプスの夜を楽しむ。",
+    "hubCity": "富士見",
+    "stayPriority": "medium",
+    "representativeStation": "富士見駅",
+    "finalAccess": {
+      "type": "gondola"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "富士見"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "富士見駅",
+      "company": "JR"
+    },
+    "mainSpot": "すずらん群生地",
+    "stayArea": {
+      "rakuten": "富士見",
+      "jalan": "富士見"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25AF%258C%25E5%25A3%25AB%25E8%25A6%258B%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2595%2578%258E%256D%258C%25A9"
+    }
+  },
+  {
+    "id": "ontake",
+    "name": "御嶽山",
+    "type": "destination",
+    "region": "中部",
+    "hub": "nagoya-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋"
+    ],
+    "weight": 1.1,
+    "description": "木曽に聳える信仰の霊峰。御嶽信仰の山岳修行の地で、7合目からの高山植物帯と剣ヶ峰の雄大な展望が広がる。",
+    "tags": [
+      "山",
+      "自然",
+      "歴史"
+    ],
+    "spots": [
+      "田の原天然公園",
+      "剣ヶ峰",
+      "御嶽ロープウェイ"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "木曽",
+    "gateways": {
+      "rail": [
+        "木曽福島駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "木曽福島",
+    "railNote": "木曽福島駅からバスまたはレンタカー",
+    "destType": "mountain",
+    "railGateway": "木曽福島駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "長野県",
+    "lat": 35.8936,
+    "lng": 137.48,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 210,
+      "nagoya": 90,
+      "fukuoka": 370
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "car",
+    "city": "長野県木曽郡王滝村",
+    "hubStation": "木曽福島駅",
+    "accessStation": "木曽福島駅",
+    "hotelArea": "nagano",
+    "hotelKeyword": "木曽",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "木曽福島駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "木曽福島駅",
+          "to": "田の原",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "木曽福島",
+    "gateway": "名古屋駅",
+    "gatewayStations": [
+      {
+        "name": "名古屋駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "木曽福島駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "木曽福島から御嶽山麓へ",
+      "to": "田の原天然公園"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "霊峰の頂に立つと、木曽谷がはるか下に見えた。",
+    "primary": [
+      "山",
+      "自然",
+      "歴史"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "田の原天然公園",
+    "subType": null,
+    "stayDescription": "信仰の霊峰・御嶽山を登り、木曽の宿場町で一夜を過ごす。",
+    "hubCity": "木曽福島",
+    "stayPriority": "medium",
+    "representativeStation": "木曽福島駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "木曽福島"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "木曽福島駅",
+      "company": "JR"
+    },
+    "mainSpot": "田の原天然公園",
+    "stayArea": {
+      "rakuten": "木曽",
+      "jalan": "木曽"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259C%25A8%25E6%259B%25BD%25E7%25A6%258F%25E5%25B3%25B6%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2596%25D8%2591%255D%2595%259F%2593%2587"
+    }
+  },
+  {
+    "id": "mitsuke-jima",
+    "name": "見附島",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.1,
+    "description": "能登半島先端に浮かぶ「軍艦島」の異名を持つ奇岩。夕日に照らされる独特のシルエットが幻想的な名勝。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "見附島",
+      "縁結びの鐘",
+      "珠洲塩田"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "珠洲",
+    "gateways": {
+      "rail": [
+        "七尾駅"
+      ],
+      "airport": [
+        "能登空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "珠洲",
+    "railNote": "金沢からバスまたはレンタカーで約2時間",
+    "destType": "sight",
+    "railGateway": "七尾駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "能登空港",
+    "prefecture": "石川県",
+    "lat": 37.4879,
+    "lng": 137.3082,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 270,
+      "osaka": 200,
+      "nagoya": 200,
+      "fukuoka": 360
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "石川県珠洲市",
+    "hubStation": "七尾駅",
+    "accessStation": "七尾駅",
+    "hotelArea": "ishikawa",
+    "hotelKeyword": "珠洲",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "七尾駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "七尾駅",
+          "to": "珠洲",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "珠洲",
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "能登空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "七尾から能登半島をドライブ",
+      "to": "見附島"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "海に浮かぶ軍艦。夕日に染まると、それは幻想的な絵になる。",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "見附島",
+    "subType": null,
+    "stayDescription": "奥能登の絶景岬をめぐり、珠洲の海の幸と塩田文化を楽しむ1泊。",
+    "hubCity": "珠洲",
+    "stayPriority": "medium",
+    "representativeStation": "七尾駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "七尾"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "七尾駅",
+      "company": "JR"
+    },
+    "mainSpot": "見附島",
+    "stayArea": {
+      "rakuten": "珠洲",
+      "jalan": "珠洲"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%258F%25A0%25E6%25B4%25B2%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25CE%2590%25EC%258C%25A7%2520%258E%25EC%258F%2546%258E%2573"
+    }
+  },
+  {
+    "id": "rokkozaki",
+    "name": "禄剛崎",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "能登半島最先端の岬。日の出と日の入りを同時に見られるという伝説と、灯台の眺望が有名。",
+    "tags": [
+      "絶景",
+      "海"
+    ],
+    "spots": [
+      "禄剛崎灯台",
+      "禄剛崎",
+      "狼煙の町"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "珠洲",
+    "gateways": {
+      "rail": [
+        "七尾駅"
+      ],
+      "airport": [
+        "能登空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "珠洲",
+    "railNote": "金沢から車で約2時間半",
+    "destType": "sight",
+    "railGateway": "七尾駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "能登空港",
+    "prefecture": "石川県",
+    "lat": 37.5323,
+    "lng": 137.3287,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 280,
+      "osaka": 210,
+      "nagoya": 210,
+      "fukuoka": 370
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "石川県珠洲市狼煙町",
+    "hubStation": "七尾駅",
+    "accessStation": "七尾駅",
+    "hotelArea": "ishikawa",
+    "hotelKeyword": "珠洲",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "七尾駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "七尾駅",
+          "to": "禄剛崎",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "珠洲",
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "能登空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "珠洲市街から禄剛崎灯台へ",
+      "to": "禄剛崎灯台"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "日本海と太平洋の境に立つ、能登半島の最先端。",
+    "primary": [
+      "絶景",
+      "海"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "禄剛崎灯台",
+    "subType": null,
+    "stayDescription": "能登最先端に立ち、奥能登の宿でアワビとサザエを味わう。",
+    "hubCity": "珠洲",
+    "stayPriority": "low",
+    "representativeStation": "七尾駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "七尾"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "七尾駅",
+      "company": "JR"
+    },
+    "mainSpot": "禄剛崎灯台",
+    "stayArea": {
+      "rakuten": "珠洲",
+      "jalan": "珠洲"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%258F%25A0%25E6%25B4%25B2%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25CE%2590%25EC%258C%25A7%2520%258E%25EC%258F%2546%258E%2573"
+    }
+  },
+  {
+    "id": "sozogi",
+    "name": "曽々木海岸",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1,
+    "description": "能登半島西岸の荒々しい断崖と奇岩が連続する海岸線。「窓岩」と波食地形の絶景で知られる。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "窓岩",
+      "曽々木海岸",
+      "千畳敷"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "輪島",
+    "gateways": {
+      "rail": [
+        "金沢駅"
+      ],
+      "airport": [
+        "能登空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "輪島",
+    "railNote": "輪島からレンタカーで約30分",
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "能登空港",
+    "prefecture": "石川県",
+    "lat": 37.4803,
+    "lng": 136.9706,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 275,
+      "osaka": 195,
+      "nagoya": 205,
+      "fukuoka": 360
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "石川県輪島市西保地区",
+    "hubStation": "金沢駅",
+    "accessStation": "輪島",
+    "hotelArea": "ishikawa",
+    "hotelKeyword": "輪島",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "曽々木海岸",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "輪島",
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "能登空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "輪島から海岸沿いに曽々木へドライブ",
+      "to": "窓岩"
+    },
+    "situations": [
+      "couple",
+      "solo"
+    ],
+    "catch": "断崖の向こうに、波に削られた窓が開いている。",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "窓岩",
+    "subType": null,
+    "stayDescription": "能登の荒海と奇岩を満喫し、輪島の朝市と漆器文化を堪能する。",
+    "hubCity": "輪島",
+    "stayPriority": "low",
+    "representativeStation": "金沢駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金沢"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "金沢駅",
+      "company": "JR"
+    },
+    "mainSpot": "窓岩",
+    "stayArea": {
+      "rakuten": "輪島",
+      "jalan": "輪島"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25BC%25AA%25E5%25B3%25B6%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25CE%2590%25EC%258C%25A7%2520%2597%25D6%2593%2587%258E%2573"
+    }
+  },
+  {
+    "id": "shiroyone-senmaida",
+    "name": "白米千枚田",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "日本海を背景に急斜面に広がる約1,004枚の棚田。日本の棚田百選に選ばれ、秋のイルミネーションも人気。",
+    "tags": [
+      "絶景",
+      "田舎",
+      "秋",
+      "冬"
+    ],
+    "spots": [
+      "白米千枚田",
+      "イルミネーション",
+      "奥能登塩田村"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "輪島",
+    "gateways": {
+      "rail": [
+        "金沢駅"
+      ],
+      "airport": [
+        "能登空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "輪島",
+    "railNote": "輪島からレンタカーで約20分",
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "能登空港",
+    "prefecture": "石川県",
+    "lat": 37.4681,
+    "lng": 136.8942,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 270,
+      "osaka": 190,
+      "nagoya": 200,
+      "fukuoka": 355
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "石川県輪島市白米町",
+    "hubStation": "金沢駅",
+    "accessStation": "輪島",
+    "hotelArea": "ishikawa",
+    "hotelKeyword": "輪島",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "白米千枚田",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "輪島",
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "能登空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "輪島から白米千枚田へドライブ",
+      "to": "白米千枚田"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "海に向かって降りていく、無数の小さな田んぼ。",
+    "primary": [
+      "絶景",
+      "田舎"
+    ],
+    "secondary": [
+      "秋",
+      "冬"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "白米千枚田",
+    "subType": null,
+    "stayDescription": "能登の絶景棚田を見て、輪島の朝市と海の幸で1泊する。",
+    "hubCity": "輪島",
+    "stayPriority": "medium",
+    "representativeStation": "金沢駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "金沢"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "金沢駅",
+      "company": "JR"
+    },
+    "mainSpot": "白米千枚田",
+    "stayArea": {
+      "rakuten": "輪島",
+      "jalan": "輪島"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%25BC%25AA%25E5%25B3%25B6%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2590%25CE%2590%25EC%258C%25A7%2520%2597%25D6%2593%2587%258E%2573"
+    }
+  },
+  {
+    "id": "tojinbo",
+    "name": "東尋坊",
+    "type": "destination",
+    "region": "中部",
+    "hub": "fukui",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.3,
+    "description": "日本海に面した玄武岩の断崖絶壁。高さ25mの柱状節理が1km以上続く天然記念物で、夕日の名所。",
+    "tags": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "spots": [
+      "東尋坊タワー",
+      "断崖散策路",
+      "芦原温泉"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "芦原温泉",
+    "gateways": {
+      "rail": [
+        "芦原温泉駅"
+      ],
+      "airport": [],
+      "bus": [
+        "東尋坊バス停"
+      ],
+      "ferry": []
+    },
+    "accessHub": "福井",
+    "railNote": "芦原温泉駅からバスで約20分",
+    "destType": "sight",
+    "railGateway": "芦原温泉駅",
+    "busGateway": "東尋坊バス停",
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "福井県",
+    "lat": 36.2354,
+    "lng": 136.0694,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 220,
+      "osaka": 140,
+      "nagoya": 160,
+      "fukuoka": 330
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "bus",
+    "city": "福井県坂井市三国町",
+    "hubStation": "芦原温泉駅",
+    "accessStation": "芦原温泉駅",
+    "hotelArea": "fukui",
+    "hotelKeyword": "芦原温泉",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "芦原温泉駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "芦原温泉駅",
+          "to": "東尋坊",
+          "method": "バス"
+        }
+      ]
+    },
+    "fallbackCity": "福井",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "芦原温泉駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "bus",
+      "description": "芦原温泉駅から東尋坊バスで",
+      "to": "東尋坊"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "断崖の端に立つと、波の音だけが聞こえた。",
+    "primary": [
+      "絶景",
+      "海",
+      "自然"
+    ],
+    "secondary": [],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "東尋坊",
+    "subType": null,
+    "stayDescription": "断崖の絶景を歩き、芦原温泉で越前ガニを味わう1泊。",
+    "hubCity": "芦原",
+    "stayPriority": "high",
+    "representativeStation": "芦原温泉駅",
+    "finalAccess": {
+      "type": "bus",
+      "method": "バス"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "芦原温泉"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "芦原温泉駅",
+      "company": "JR"
+    },
+    "mainSpot": "東尋坊",
+    "stayArea": {
+      "rakuten": "芦原温泉",
+      "jalan": "芦原温泉"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E8%258A%25A6%25E5%258E%259F%2520%25E7%25A6%258F%25E4%25BA%2595%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2588%25B0%258C%25B4"
+    }
+  },
+  {
+    "id": "shimanami-kaido",
+    "name": "しまなみ海道",
+    "type": "destination",
+    "region": "中国",
+    "hub": "hiroshima-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "広島",
+      "岡山",
+      "倉敷"
+    ],
+    "weight": 1.4,
+    "description": "広島・尾道と愛媛・今治を結ぶ7つの橋と6つの島。サイクリングロードとして世界的に有名な瀬戸内海道。",
+    "tags": [
+      "絶景",
+      "海",
+      "自転車",
+      "自然"
+    ],
+    "spots": [
+      "多々羅大橋",
+      "亀老山展望公園",
+      "大山祇神社"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "尾道",
+    "gateways": {
+      "rail": [
+        "尾道駅"
+      ],
+      "airport": [
+        "広島空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "尾道",
+    "railNote": "尾道駅から自転車レンタル可",
+    "destType": "remote",
+    "railGateway": "尾道駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "広島空港",
+    "prefecture": "広島県",
+    "lat": 34.405,
+    "lng": 133.199,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 270,
+      "osaka": 130,
+      "nagoya": 190,
+      "fukuoka": 150
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": null,
+    "city": "広島県尾道市",
+    "hubStation": "尾道駅",
+    "accessStation": "尾道駅",
+    "hotelArea": "hiroshima",
+    "hotelKeyword": "尾道",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "尾道駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": "尾道",
+    "gateway": "広島駅",
+    "gatewayStations": [
+      {
+        "name": "広島駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "広島空港",
+        "type": "airport",
+        "priority": 2
+      },
+      {
+        "name": "尾道駅",
+        "type": "major",
+        "priority": 3
+      }
+    ],
+    "localAccess": {
+      "type": "bike",
+      "description": "尾道から島々をサイクリング",
+      "to": "来島海峡大橋"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "橋を渡るたびに、瀬戸内海の島が一つずつ増えていく。",
+    "primary": [
+      "絶景",
+      "海",
+      "自転車"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "亀老山展望公園",
+    "subType": null,
+    "stayDescription": "瀬戸内の島々を橋でつなぎながら自転車で旅し、しまなみの宿で海の幸を堪能する。",
+    "hubCity": "尾道",
+    "stayPriority": "high",
+    "representativeStation": "尾道駅",
+    "finalAccess": {
+      "type": "bike"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "尾道"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "尾道駅",
+      "company": "JR"
+    },
+    "mainSpot": "多々羅大橋",
+    "stayArea": {
+      "rakuten": "尾道",
+      "jalan": "尾道"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%25BE%25E9%2581%2593%2520%25E5%25BA%2583%25E5%25B3%25B6%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258D%254C%2593%2587%258C%25A7%2520%2594%25F6%2593%25B9%258E%2573"
+    }
+  },
+  {
+    "id": "keta-taisha",
+    "name": "気多大社",
+    "type": "destination",
+    "region": "中部",
+    "hub": "kanazawa-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.1,
+    "description": "北陸の一の宮。縁結びの大社として知られ、一般人立入禁止の「入らずの森」に古代の神秘が漂う。",
+    "tags": [
+      "寺社",
+      "歴史",
+      "文化"
+    ],
+    "spots": [
+      "気多大社本殿",
+      "入らずの森",
+      "羽咋海岸"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "羽咋",
+    "gateways": {
+      "rail": [
+        "羽咋駅"
+      ],
+      "airport": [
+        "小松空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "羽咋",
+    "railNote": "金沢から七尾線で羽咋駅、徒歩15分",
+    "destType": "sight",
+    "railGateway": "金沢駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "小松空港",
+    "prefecture": "石川県",
+    "lat": 36.8682,
+    "lng": 136.7761,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 250,
+      "osaka": 170,
+      "nagoya": 175,
+      "fukuoka": 340
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "石川県羽咋市",
+    "hubStation": "羽咋駅",
+    "accessStation": "羽咋駅",
+    "hotelArea": "ishikawa",
+    "hotelKeyword": "羽咋",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "金沢駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "local",
+          "from": "金沢駅",
+          "to": "羽咋駅",
+          "method": "七尾線"
+        },
+        {
+          "type": "local",
+          "from": "羽咋駅",
+          "to": "気多大社",
+          "method": "徒歩"
+        }
+      ]
+    },
+    "fallbackCity": "金沢",
+    "gateway": "金沢駅",
+    "gatewayStations": [
+      {
+        "name": "金沢駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "小松空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "walk",
+      "description": "羽咋駅から気多大社まで徒歩15分",
+      "to": "気多大社"
+    },
+    "situations": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "catch": "千年の神域へ続く参道で、時代が止まる。",
+    "primary": [
+      "寺社",
+      "歴史"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "気多大社本殿",
+    "subType": null,
+    "stayDescription": "能登一の宮で縁結びを祈り、金沢に戻って海の幸と文化を楽しむ。",
+    "hubCity": "羽咋",
+    "stayPriority": "medium",
+    "representativeStation": "羽咋駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "羽咋"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "羽咋駅",
+      "company": "JR"
+    },
+    "mainSpot": "気多大社本殿",
+    "stayArea": {
+      "rakuten": "羽咋",
+      "jalan": "羽咋"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25BE%25BD%25E5%2592%258B%2520%25E7%259F%25B3%25E5%25B7%259D%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%2548%258D%25EE"
+    }
+  },
+  {
+    "id": "kaizu-osaki",
+    "name": "海津大崎",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "琵琶湖北岸、4kmにわたる湖岸の桜並木。「日本一の湖岸桜」と称される春の絶景スポット。",
+    "tags": [
+      "絶景",
+      "花",
+      "春",
+      "湖"
+    ],
+    "spots": [
+      "海津大崎の桜",
+      "奥琵琶湖パークウェイ",
+      "マキノ高原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "マキノ",
+    "gateways": {
+      "rail": [
+        "マキノ駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "マキノ",
+    "railNote": "大阪から湖西線でマキノ駅",
+    "destType": "sight",
+    "railGateway": "マキノ駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "滋賀県",
+    "lat": 35.4874,
+    "lng": 135.9723,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 100,
+      "nagoya": 130,
+      "fukuoka": 310
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "滋賀県高島市マキノ町",
+    "hubStation": "マキノ駅",
+    "accessStation": "マキノ駅",
+    "hotelArea": "shiga",
+    "hotelKeyword": "マキノ",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "マキノ駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": "高島",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "マキノ駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "walk",
+      "description": "マキノ駅から海津大崎へ湖岸散歩",
+      "to": "海津大崎"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "湖の上を覆うように、桜がトンネルを作っていた。",
+    "primary": [
+      "絶景",
+      "花",
+      "湖"
+    ],
+    "secondary": [
+      "春"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "海津大崎",
+    "subType": null,
+    "stayDescription": "春の湖岸桜並木を散策し、マキノ高原で琵琶湖を一望する。",
+    "hubCity": "マキノ",
+    "stayPriority": "medium",
+    "representativeStation": "マキノ駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "マキノ"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "マキノ駅",
+      "company": "JR"
+    },
+    "mainSpot": "海津大崎の桜",
+    "stayArea": {
+      "rakuten": "マキノ",
+      "jalan": "マキノ"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E3%2583%259E%25E3%2582%25AD%25E3%2583%258E%2520%25E6%25BB%258B%25E8%25B3%2580%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2583%257D%2583%254C%2583%256D"
+    }
+  },
+  {
+    "id": "chikubushima",
+    "name": "竹生島",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "stayAllowed": [
+      "daytrip"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "琵琶湖に浮かぶ神の島。竹生島神社と宝厳寺が島全体を覆い、かわら投げと急峻な石段の参拝が独特。",
+    "tags": [
+      "寺社",
+      "島",
+      "歴史",
+      "文化"
+    ],
+    "spots": [
+      "竹生島神社",
+      "宝厳寺",
+      "かわら投げ"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "長浜",
+    "gateways": {
+      "rail": [
+        "長浜駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": [
+        "長浜港"
+      ]
+    },
+    "accessHub": "長浜",
+    "railNote": "長浜港からフェリーで約30分",
+    "destType": "sight",
+    "railGateway": "長浜駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "滋賀県",
+    "lat": 35.452,
+    "lng": 136.1357,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 195,
+      "osaka": 90,
+      "nagoya": 100,
+      "fukuoka": 300
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "ferry",
+    "city": "滋賀県長浜市",
+    "hubStation": "長浜駅",
+    "accessStation": "長浜駅",
+    "hotelArea": "shiga",
+    "hotelKeyword": "長浜",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "長浜駅",
+          "provider": "e5489"
+        },
+        {
+          "type": "ferry",
+          "from": "長浜港",
+          "to": "竹生島"
+        }
+      ]
+    },
+    "fallbackCity": "長浜",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "長浜駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "長浜港から竹生島へフェリー",
+      "to": "竹生島港"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "湖の中に神の島がある。船が近づくほど、本当にそう思えた。",
+    "primary": [
+      "寺社",
+      "島",
+      "歴史"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "竹生島神社",
+    "subType": null,
+    "stayDescription": "琵琶湖の神の島で参拝し、長浜の城下町で近江牛と盆梅を楽しむ日帰り旅。",
+    "hubCity": "長浜",
+    "stayPriority": "medium",
+    "representativeStation": "長浜駅",
+    "finalAccess": {
+      "type": "ferry"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "長浜"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "長浜駅",
+      "company": "JR"
+    },
+    "mainSpot": "竹生島神社",
+    "stayArea": {
+      "rakuten": "長浜",
+      "jalan": "長浜"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2595%25B7%25E6%25B5%259C%2520%25E6%25BB%258B%25E8%25B3%2580%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258E%25A0%2589%25EA%258C%25A7%2520%2592%25B7%2595%256C%258E%2573"
+    }
+  },
+  {
+    "id": "metasequoia",
+    "name": "メタセコイア並木",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "osaka-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.2,
+    "description": "マキノ高原へ続く2.4kmのメタセコイア並木道。四季で変わる木のトンネルが「日本の道100選」に選定。",
+    "tags": [
+      "絶景",
+      "自然",
+      "秋",
+      "冬"
+    ],
+    "spots": [
+      "メタセコイア並木",
+      "マキノ高原",
+      "海津大崎"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "マキノ",
+    "gateways": {
+      "rail": [
+        "マキノ駅"
+      ],
+      "airport": [],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "マキノ",
+    "railNote": "大阪から湖西線でマキノ駅、徒歩20分",
+    "destType": "sight",
+    "railGateway": "マキノ駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": null,
+    "prefecture": "滋賀県",
+    "lat": 35.5245,
+    "lng": 135.9638,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 200,
+      "osaka": 95,
+      "nagoya": 120,
+      "fukuoka": 305
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "滋賀県高島市マキノ町",
+    "hubStation": "マキノ駅",
+    "accessStation": "マキノ駅",
+    "hotelArea": "shiga",
+    "hotelKeyword": "マキノ",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "マキノ駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": "高島",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "マキノ駅",
+        "type": "major",
+        "priority": 1
+      }
+    ],
+    "localAccess": {
+      "type": "walk",
+      "description": "マキノ駅からメタセコイア並木まで徒歩",
+      "to": "メタセコイア並木"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "並木の中を走ると、映画のワンシーンの中にいるみたいだった。",
+    "primary": [
+      "絶景",
+      "自然"
+    ],
+    "secondary": [
+      "秋",
+      "冬"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "メタセコイア並木",
+    "subType": null,
+    "stayDescription": "四季の表情を持つ並木道を歩き、マキノ高原リゾートで琵琶湖の夕日を見る。",
+    "hubCity": "マキノ",
+    "stayPriority": "medium",
+    "representativeStation": "マキノ駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "マキノ"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "マキノ駅",
+      "company": "JR"
+    },
+    "mainSpot": "メタセコイア並木",
+    "stayArea": {
+      "rakuten": "マキノ",
+      "jalan": "マキノ"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E3%2583%259E%25E3%2582%25AD%25E3%2583%258E%2520%25E6%25BB%258B%25E8%25B3%2580%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2583%257D%2583%254C%2583%256D"
+    }
+  },
+  {
+    "id": "tango-matsushima",
+    "name": "丹後松島",
+    "type": "destination",
+    "region": "近畿",
+    "hub": "kyoto-t",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "weight": 1.1,
+    "description": "宮津湾に点在する岩礁と松島の景観が「陸の松島」と称される名勝。天橋立と合わせた海の絶景が広がる。",
+    "tags": [
+      "絶景",
+      "海",
+      "歴史",
+      "自然"
+    ],
+    "spots": [
+      "丹後松島",
+      "天橋立",
+      "智恩寺"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "天橋立",
+    "gateways": {
+      "rail": [
+        "天橋立駅"
+      ],
+      "airport": [
+        "但馬空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "天橋立",
+    "railNote": "京都から特急はしだてで天橋立駅",
+    "destType": "sight",
+    "railGateway": "天橋立駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "但馬空港",
+    "prefecture": "京都府",
+    "lat": 35.587,
+    "lng": 135.208,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "e5489",
+    "travelTime": {
+      "tokyo": 240,
+      "osaka": 130,
+      "nagoya": 195,
+      "fukuoka": 350
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": null,
+    "city": "京都府宮津市",
+    "hubStation": "天橋立駅",
+    "accessStation": "天橋立駅",
+    "hotelArea": "kyoto",
+    "hotelKeyword": "天橋立",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "天橋立駅",
+          "provider": "e5489"
+        }
+      ]
+    },
+    "fallbackCity": "宮津",
+    "gateway": "京都駅",
+    "gatewayStations": [
+      {
+        "name": "京都駅",
+        "type": "shinkansen",
+        "priority": 1
+      },
+      {
+        "name": "天橋立駅",
+        "type": "major",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "walk",
+      "description": "天橋立駅から丹後松島・宮津湾を散策",
+      "to": "丹後松島"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "岩礁と松が連なる、日本海の小松島。",
+    "primary": [
+      "絶景",
+      "海",
+      "歴史"
+    ],
+    "secondary": [
+      "自然"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "天橋立",
+    "subType": null,
+    "stayDescription": "天橋立と丹後松島の絶景をめぐり、宮津の宿でカニと鯖を楽しむ。",
+    "hubCity": "天橋立",
+    "stayPriority": "medium",
+    "representativeStation": "天橋立駅",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "天橋立"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "天橋立駅",
+      "company": "JR"
+    },
+    "mainSpot": "天橋立",
+    "stayArea": {
+      "rakuten": "天橋立",
+      "jalan": "天橋立"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25A4%25A9%25E6%25A9%258B%25E7%25AB%258B%2520%25E4%25BA%25AC%25E9%2583%25BD%25E5%25BA%259C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%259E%2593%2573%2595%257B%2520%258B%257B%2592%25C3%258E%2573"
+    }
+  },
+  {
+    "id": "kuju-kogen",
+    "name": "久住高原",
+    "type": "destination",
+    "region": "九州",
+    "hub": "fukuoka-t",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "福岡"
+    ],
+    "weight": 1.1,
+    "description": "九州の屋根・九重連山の麓に広がる高原。コスモスとススキの秋景色と牧場・温泉が点在するドライブルート。",
+    "tags": [
+      "高原",
+      "山",
+      "温泉",
+      "秋"
+    ],
+    "spots": [
+      "久住高原コスモス",
+      "九重夢大吊橋",
+      "長者原"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "久住",
+    "gateways": {
+      "rail": [
+        "豊後竹田駅"
+      ],
+      "airport": [
+        "大分空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "熊本",
+    "railNote": "大分空港からレンタカーで約2時間",
+    "destType": "mountain",
+    "railGateway": "豊後竹田駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "大分空港",
+    "prefecture": "大分県",
+    "lat": 33.1092,
+    "lng": 131.2543,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "kyushu",
+    "travelTime": {
+      "tokyo": 340,
+      "osaka": 290,
+      "nagoya": 340,
+      "fukuoka": 120,
+      "takamatsu": 270
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "大分県竹田市久住町",
+    "hubStation": "豊後竹田駅",
+    "accessStation": "豊後竹田駅",
+    "hotelArea": "kyushu",
+    "hotelKeyword": "久住",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "豊後竹田駅",
+          "provider": "kyushu"
+        },
+        {
+          "type": "local",
+          "from": "豊後竹田駅",
+          "to": "久住高原",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "竹田",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "豊後竹田駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "大分空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "豊後竹田から久住高原へドライブ",
+      "to": "久住高原"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "草原の向こうに九重の山が連なり、空が低く感じた。",
+    "primary": [
+      "高原",
+      "山",
+      "温泉"
+    ],
+    "secondary": [
+      "秋"
+    ],
+    "onsenLevel": 2,
+    "hasDirectFlight": true,
+    "mapPoint": "久住高原",
+    "subType": null,
+    "stayDescription": "九重連山の高原をドライブし、長者原温泉で湯に浸かる1泊。",
+    "hubCity": "竹田",
+    "stayPriority": "medium",
+    "representativeStation": "豊後竹田駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "豊後竹田"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "豊後竹田駅",
+      "company": "JR"
+    },
+    "mainSpot": "九重夢大吊橋",
+    "stayArea": {
+      "rakuten": "久住",
+      "jalan": "久住"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E7%25AB%25B9%25E7%2594%25B0%2520%25E5%25A4%25A7%25E5%2588%2586%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2591%25E5%2595%25AA%258C%25A7%2520%2592%257C%2593%2563%258E%2573"
+    }
+  },
+  {
+    "id": "gokase",
+    "name": "五ヶ瀬",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "stayAllowed": [
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "weight": 1,
+    "description": "西日本唯一のスキー場がある宮崎県の山里。棚田と渓谷が広がり、焼畑農業が今も続く秘境の集落。",
+    "tags": [
+      "山",
+      "田舎",
+      "冬",
+      "秘境"
+    ],
+    "spots": [
+      "スキー場",
+      "五ヶ瀬川渓谷",
+      "棚田"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "五ヶ瀬",
+    "gateways": {
+      "rail": [
+        "延岡駅"
+      ],
+      "airport": [
+        "宮崎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "延岡",
+    "railNote": "延岡駅からレンタカーで約1時間半",
+    "destType": "remote",
+    "railGateway": "延岡駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "宮崎空港",
+    "prefecture": "宮崎県",
+    "lat": 32.8058,
+    "lng": 131.1056,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "kyushu",
+    "travelTime": {
+      "tokyo": 400,
+      "osaka": 360,
+      "nagoya": 400,
+      "fukuoka": 180,
+      "takamatsu": 330
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "宮崎県西臼杵郡五ヶ瀬町",
+    "hubStation": "延岡駅",
+    "accessStation": "延岡駅",
+    "hotelArea": "kyushu",
+    "hotelKeyword": "五ヶ瀬",
+    "access": {
+      "steps": [
+        {
+          "type": "rail",
+          "to": "延岡駅",
+          "provider": "kyushu"
+        },
+        {
+          "type": "local",
+          "from": "延岡駅",
+          "to": "五ヶ瀬",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "延岡",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "延岡駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "宮崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "延岡から山道を登って五ヶ瀬へ",
+      "to": "五ヶ瀬町"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "宮崎にこんな山里があるとは。山道が続いた。",
+    "primary": [
+      "山",
+      "田舎",
+      "秘境"
+    ],
+    "secondary": [
+      "冬"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": false,
+    "mapPoint": "五ヶ瀬川渓谷",
+    "subType": null,
+    "stayDescription": "西日本唯一の高地集落で棚田を歩き、ゆずや蕎麦の郷土料理に泊まる。",
+    "hubCity": "延岡",
+    "stayPriority": "low",
+    "representativeStation": "延岡駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "station",
+      "name": "延岡"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "延岡駅",
+      "company": "JR"
+    },
+    "mainSpot": "五ヶ瀬川渓谷",
+    "stayArea": {
+      "rakuten": "五ヶ瀬",
+      "jalan": "五ヶ瀬"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25BB%25B6%25E5%25B2%25A1%2520%25E5%25AE%25AE%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%257B%258D%25E8%258C%25A7%2520%2589%2584%2589%25AA%258E%2573"
+    }
+  },
+  {
+    "id": "ikoma-kogen",
+    "name": "生駒高原",
+    "type": "destination",
+    "region": "九州",
+    "hub": "kumamoto",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "福岡"
+    ],
+    "weight": 1.1,
+    "description": "霧島山麓に広がる標高600mの高原。コスモスとひまわりが広大に咲き誇る宮崎屈指の花の名所。",
+    "tags": [
+      "高原",
+      "花",
+      "自然",
+      "秋"
+    ],
+    "spots": [
+      "コスモス畑",
+      "ひまわり畑",
+      "霧島連山"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "小林",
+    "gateways": {
+      "rail": [
+        "小林駅"
+      ],
+      "airport": [
+        "宮崎空港"
+      ],
+      "bus": [],
+      "ferry": []
+    },
+    "accessHub": "小林",
+    "railNote": "宮崎空港からレンタカーで約1時間",
+    "destType": "remote",
+    "railGateway": "小林駅",
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "宮崎空港",
+    "prefecture": "宮崎県",
+    "lat": 31.9339,
+    "lng": 130.9258,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": "kyushu",
+    "travelTime": {
+      "tokyo": 380,
+      "osaka": 340,
+      "nagoya": 380,
+      "fukuoka": 160,
+      "takamatsu": 310
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "car",
+    "city": "宮崎県小林市",
+    "hubStation": "小林駅",
+    "accessStation": "小林駅",
+    "hotelArea": "kyushu",
+    "hotelKeyword": "小林",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "宮崎空港"
+        },
+        {
+          "type": "local",
+          "from": "宮崎空港",
+          "to": "生駒高原",
+          "method": "レンタカー"
+        }
+      ]
+    },
+    "fallbackCity": "小林",
+    "gateway": null,
+    "gatewayStations": [
+      {
+        "name": "小林駅",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "宮崎空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "car",
+      "description": "宮崎空港から霧島山麓の高原へ",
+      "to": "生駒高原コスモス畑"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "花畑の向こうに霧島の峰。これが宮崎だとは思えない景色だった。",
+    "primary": [
+      "高原",
+      "花",
+      "自然"
+    ],
+    "secondary": [
+      "秋"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "コスモス畑",
+    "subType": null,
+    "stayDescription": "霧島の花高原でコスモスに包まれ、宮崎牛と地鶏で食の旅を楽しむ。",
+    "hubCity": "小林",
+    "stayPriority": "medium",
+    "representativeStation": "小林駅",
+    "finalAccess": {
+      "type": "car"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "宮崎空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": {
+      "name": "小林駅",
+      "company": "JR"
+    },
+    "mainSpot": "コスモス畑",
+    "stayArea": {
+      "rakuten": "小林",
+      "jalan": "小林"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E5%25B0%258F%25E6%259E%2597%2520%25E5%25AE%25AE%25E5%25B4%258E%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258F%25AC%2597%25D1"
+    }
+  },
+  {
+    "id": "chinen-misaki",
+    "name": "知念岬",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "weight": 1.1,
+    "description": "南城市の高台に位置する岬公園。太平洋と久高島を一望できる絶景スポットで、斎場御嶽にも近い。",
+    "tags": [
+      "絶景",
+      "海",
+      "沖縄",
+      "夏"
+    ],
+    "spots": [
+      "知念岬公園",
+      "久高島の眺め",
+      "斎場御嶽"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "南城",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [
+        "知念バス停"
+      ],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": "那覇バスターミナルからバスで約1時間",
+    "destType": "sight",
+    "railGateway": null,
+    "busGateway": "知念バス停",
+    "ferryGateway": null,
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.1152,
+    "lng": 127.813,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 155,
+      "nagoya": 185,
+      "fukuoka": 125,
+      "naha": 50
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "car",
+    "city": "沖縄県南城市知念",
+    "hubStation": "那覇バスターミナル",
+    "accessStation": "那覇空港",
+    "hotelArea": "okinawa",
+    "hotelKeyword": "南城",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
+    },
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇から南城市知念岬へドライブ",
+      "to": "知念岬公園"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "太平洋の向こうに久高島が見えた。ここが琉球の聖地への入口だ。",
+    "primary": [
+      "絶景",
+      "海",
+      "沖縄"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "知念岬公園",
+    "subType": "sea",
+    "stayDescription": "琉球の聖地・南城市で知念岬と斎場御嶽をめぐり、那覇で泊まる。",
+    "hubCity": "那覇",
+    "stayPriority": "medium",
+    "representativeStation": "那覇空港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "知念岬公園",
+    "stayArea": {
+      "rakuten": "南城",
+      "jalan": "南城"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2582%25A3%25E8%25A6%2587%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AB%2593%25EA%258C%25A7%2520%2593%25DF%2594%2565%258E%2573"
+    }
+  },
+  {
+    "id": "bise",
+    "name": "備瀬のフクギ並木",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "weight": 1.2,
+    "description": "本部町備瀬集落を覆うフクギの防風林。木漏れ日の中を自転車で走れる「沖縄の原風景」として人気。",
+    "tags": [
+      "絶景",
+      "自然",
+      "沖縄",
+      "夏"
+    ],
+    "spots": [
+      "フクギ並木",
+      "備瀬崎",
+      "美ら海水族館"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": true,
+    "hotelSearch": "本部",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [
+        "本部バス停"
+      ],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": "那覇から高速バスで約2時間",
+    "destType": "sight",
+    "railGateway": null,
+    "busGateway": "本部バス停",
+    "ferryGateway": null,
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.6919,
+    "lng": 127.8851,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 160,
+      "nagoya": 190,
+      "fukuoka": 130,
+      "naha": 90
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "car",
+    "city": "沖縄県国頭郡本部町備瀬",
+    "hubStation": "那覇バスターミナル",
+    "accessStation": "那覇空港",
+    "hotelArea": "okinawa",
+    "hotelKeyword": "本部",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
+    },
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇から本部半島の備瀬へドライブ",
+      "to": "フクギ並木"
+    },
+    "situations": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "catch": "フクギのトンネルに差し込む光の中を、自転車で走った。",
+    "primary": [
+      "絶景",
+      "自然",
+      "沖縄"
+    ],
+    "secondary": [
+      "夏"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "フクギ並木",
+    "subType": "sea",
+    "stayDescription": "沖縄の原風景フクギ並木を自転車で走り、美ら海水族館で海を体感する1泊。",
+    "hubCity": "本部",
+    "stayPriority": "medium",
+    "representativeStation": "那覇空港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "フクギ並木",
+    "stayArea": {
+      "rakuten": "本部",
+      "jalan": "本部"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E6%259C%25AC%25E9%2583%25A8%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AB%2593%25EA%258C%25A7%2520%2596%257B%2595%2594%2592%25AC"
+    }
+  },
+  {
+    "id": "kudakajima",
+    "name": "久高島",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "weight": 1.2,
+    "description": "琉球の創世神話が息づく「神の島」。神聖なイザイホーの地で、島内には自転車でしか回れない聖域が広がる。",
+    "tags": [
+      "島",
+      "歴史",
+      "沖縄",
+      "文化"
+    ],
+    "spots": [
+      "イシキ浜",
+      "フボー御嶽",
+      "カベール岬"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "久高島",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [],
+      "ferry": [
+        "安座真港"
+      ]
+    },
+    "accessHub": null,
+    "railNote": "那覇から安座真港へバス、フェリーで25分",
+    "destType": "island",
+    "railGateway": null,
+    "busGateway": null,
+    "ferryGateway": null,
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.12,
+    "lng": 127.88,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 180,
+      "osaka": 160,
+      "nagoya": 190,
+      "fukuoka": 130,
+      "naha": 80
+    },
+    "stayRecommendation": "1night",
+    "secondaryTransport": "ferry",
+    "city": "沖縄県南城市知念久高",
+    "hubStation": "那覇バスターミナル",
+    "accessStation": "那覇空港",
+    "hotelArea": "okinawa",
+    "hotelKeyword": "久高島",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        },
+        {
+          "type": "ferry",
+          "from": "安座真港",
+          "to": "久高島"
+        }
+      ]
+    },
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "ferry",
+      "description": "安座真港から久高島へフェリー",
+      "to": "久高島港"
+    },
+    "situations": [
+      "solo",
+      "couple"
+    ],
+    "catch": "神の島に上陸すると、時間の流れ方が少し変わった気がした。",
+    "primary": [
+      "島",
+      "歴史",
+      "沖縄"
+    ],
+    "secondary": [
+      "文化"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "イシキ浜",
+    "subType": "sea",
+    "stayDescription": "琉球の神の島・久高島で自転車を借りて聖地をめぐり、静かな民宿に泊まる。",
+    "hubCity": "那覇",
+    "stayPriority": "high",
+    "representativeStation": "那覇空港",
+    "finalAccess": {
+      "type": "ferry"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "イシキ浜",
+    "stayArea": {
+      "rakuten": "久高島",
+      "jalan": "久高島"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2582%25A3%25E8%25A6%2587%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AB%2593%25EA%258C%25A7%2520%2593%25DF%2594%2565%258E%2573"
+    }
+  },
+  {
+    "id": "sefa-utaki",
+    "name": "斎場御嶽",
+    "type": "destination",
+    "region": "沖縄",
+    "hub": "naha",
+    "stayAllowed": [
+      "daytrip",
+      "1night"
+    ],
+    "departures": [
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "weight": 1.3,
+    "description": "琉球王国最高の聖地、世界遺産。巨大な三角岩の回廊を抜ける幻想的な参道と久高島を望む絶景が圧巻。",
+    "tags": [
+      "歴史",
+      "文化",
+      "沖縄",
+      "世界遺産"
+    ],
+    "spots": [
+      "三庫理",
+      "久高島遥拝所",
+      "大庫理"
+    ],
+    "shinkansenAccess": false,
+    "requiresCar": false,
+    "hotelSearch": "南城",
+    "gateways": {
+      "rail": [],
+      "airport": [
+        "那覇空港"
+      ],
+      "bus": [
+        "知念バス停"
+      ],
+      "ferry": []
+    },
+    "accessHub": null,
+    "railNote": "那覇バスターミナルからバスで約1時間",
+    "destType": "sight",
+    "railGateway": null,
+    "busGateway": "知念バス停",
+    "ferryGateway": null,
+    "airportGateway": "那覇空港",
+    "prefecture": "沖縄県",
+    "lat": 26.109,
+    "lng": 127.803,
+    "stayBias": 1,
+    "airportHub": null,
+    "railProvider": null,
+    "travelTime": {
+      "tokyo": 175,
+      "osaka": 155,
+      "nagoya": 185,
+      "fukuoka": 125,
+      "naha": 55
+    },
+    "stayRecommendation": "daytrip",
+    "secondaryTransport": "car",
+    "city": "沖縄県南城市知念",
+    "hubStation": "那覇バスターミナル",
+    "accessStation": "那覇空港",
+    "hotelArea": "okinawa",
+    "hotelKeyword": "南城",
+    "access": {
+      "steps": [
+        {
+          "type": "flight",
+          "to": "那覇空港"
+        }
+      ]
+    },
+    "fallbackCity": "那覇",
+    "gateway": "那覇バスターミナル",
+    "gatewayStations": [
+      {
+        "name": "那覇バスターミナル",
+        "type": "major",
+        "priority": 1
+      },
+      {
+        "name": "那覇空港",
+        "type": "airport",
+        "priority": 2
+      }
+    ],
+    "localAccess": {
+      "type": "rental",
+      "description": "那覇から南城市の世界遺産へ",
+      "to": "斎場御嶽"
+    },
+    "situations": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "catch": "巨岩の割れ目を抜けると、久高島が静かに海に浮かんでいた。",
+    "primary": [
+      "歴史",
+      "文化",
+      "沖縄"
+    ],
+    "secondary": [
+      "世界遺産"
+    ],
+    "onsenLevel": 0,
+    "hasDirectFlight": true,
+    "mapPoint": "三庫理",
+    "subType": null,
+    "stayDescription": "琉球最高の聖地で精神の旅を体験し、那覇の国際通りで沖縄料理を楽しむ。",
+    "hubCity": "那覇",
+    "stayPriority": "high",
+    "representativeStation": "那覇空港",
+    "finalAccess": {
+      "type": "walk"
+    },
+    "accessPoint": {
+      "type": "airport",
+      "name": "那覇空港"
+    },
+    "staySearchUrl": null,
+    "bookingStation": null,
+    "mainSpot": "三庫理",
+    "stayArea": {
+      "rakuten": "南城",
+      "jalan": "南城"
+    },
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%2582%25A3%25E8%25A6%2587%2520%25E6%25B2%2596%25E7%25B8%2584%25E7%259C%258C%2520%25E5%25AE%25BF",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2589%25AB%2593%25EA%258C%25A7%2520%2593%25DF%2594%2565%258E%2573"
+    }
   }
 ]

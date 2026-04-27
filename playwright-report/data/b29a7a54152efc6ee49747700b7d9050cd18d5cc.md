@@ -1,0 +1,150 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]: "[MODULE LOAD FAILURE] app.js が20秒経っても起動していません。 【確認手順】 1. F12 → Console タブを開く 2. 赤字のエラーを探す（\"SyntaxError\" \"Failed to fetch\" \"404\" など） 3. Network タブ → JS/Fetch で失敗しているファイルを確認 【よくある原因】 ・file:// で直接開いている → \"npx serve .\" で起動 ・GitHub Pagesでキャッシュが古い → Ctrl+Shift+R で強制リロード ・ネットワークエラー → オフラインかVPNを確認"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "どこ行こ？" [ref=e5] [cursor=pointer]:
+        - /url: ./index.html
+      - navigation [ref=e6]:
+        - link "目的地一覧" [ref=e7] [cursor=pointer]:
+          - /url: ./destinations.html
+        - link "このサイトについて" [ref=e8] [cursor=pointer]:
+          - /url: ./pages/about.html
+  - main [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - paragraph [ref=e12]: 週末の旅先、まだ決まってない人へ
+        - heading "旅先、1分で決まります。" [level=1] [ref=e13]
+        - paragraph [ref=e14]:
+          - text: 出発地と日程を選ぶだけで、
+          - text: ちゃんと行ける旅先を出します。
+        - generic [ref=e15]:
+          - generic [ref=e16]: 例えば
+          - link "東京から温泉1泊" [ref=e17] [cursor=pointer]:
+            - /url: "?from=東京&nights=1night&theme=温泉"
+          - link "大阪から日帰り街歩き" [ref=e18] [cursor=pointer]:
+            - /url: "?from=大阪&nights=daytrip&theme=街歩き"
+          - link "福岡から絶景旅" [ref=e19] [cursor=pointer]:
+            - /url: "?from=福岡&nights=free&theme=絶景"
+          - link "東京から冬の旅" [ref=e20] [cursor=pointer]:
+            - /url: "?from=東京&nights=1night&theme=冬"
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: 出発地
+          - generic [ref=e24]:
+            - combobox "出発地" [ref=e25] [cursor=pointer]:
+              - option "札幌"
+              - option "函館"
+              - option "旭川"
+              - option "仙台"
+              - option "盛岡"
+              - option "東京" [selected]
+              - option "横浜"
+              - option "千葉"
+              - option "大宮"
+              - option "宇都宮"
+              - option "長野"
+              - option "静岡"
+              - option "名古屋"
+              - option "金沢"
+              - option "富山"
+              - option "大阪"
+              - option "京都"
+              - option "神戸"
+              - option "奈良"
+              - option "広島"
+              - option "福山"
+              - option "岡山"
+              - option "倉敷"
+              - option "姫路"
+              - option "松江"
+              - option "米子"
+              - option "高松"
+              - option "松山"
+              - option "高知"
+              - option "徳島"
+              - option "福岡"
+              - option "熊本"
+              - option "鹿児島"
+              - option "長崎"
+              - option "宮崎"
+            - button "今いる場所から探す" [ref=e26] [cursor=pointer]
+        - generic [ref=e27]:
+          - generic [ref=e28]: 日数
+          - generic [ref=e29]:
+            - button "サクッと 日帰り" [ref=e30] [cursor=pointer]:
+              - text: サクッと
+              - generic [ref=e31]: 日帰り
+            - button "ちょうどいい 1泊" [ref=e32] [cursor=pointer]:
+              - text: ちょうどいい
+              - generic [ref=e33]: 1泊
+            - button "しっかり旅 2泊以上" [ref=e34] [cursor=pointer]:
+              - text: しっかり旅
+              - generic [ref=e35]: 2泊以上
+        - generic [ref=e36]:
+          - generic [ref=e37]: テーマ
+          - generic [ref=e38]:
+            - button "こだわらない" [ref=e39] [cursor=pointer]
+            - button "温泉" [ref=e40] [cursor=pointer]
+            - button "絶景" [ref=e41] [cursor=pointer]
+            - button "海" [ref=e42] [cursor=pointer]
+            - button "街歩き" [ref=e43] [cursor=pointer]
+            - button "グルメ" [ref=e44] [cursor=pointer]
+            - button "🌸 春" [ref=e45] [cursor=pointer]
+            - button "🌊 夏" [ref=e46] [cursor=pointer]
+            - button "🍁 秋" [ref=e47] [cursor=pointer]
+            - button "⛄ 冬" [ref=e48] [cursor=pointer]
+        - generic [ref=e49]:
+          - generic [ref=e50]: オプション
+          - button "🚗 レンタカー不要のみ" [ref=e52] [cursor=pointer]
+        - button "もう一度探す" [ref=e53] [cursor=pointer]
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - generic [ref=e58]:
+            - heading "飯山" [level=2] [ref=e59]
+            - paragraph [ref=e60]:
+              - text: 長野県
+              - generic [ref=e61]: 温泉で癒される
+          - generic [ref=e62]:
+            - generic [ref=e63]: 近場
+            - generic [ref=e64]: 温泉でゆっくりできる
+          - link "この旅で行く" [ref=e66] [cursor=pointer]:
+            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=%E9%A3%AF%E5%B1%B1%E6%B8%A9%E6%B3%89&travelmode=transit
+          - generic [ref=e67]:
+            - paragraph [ref=e68]: 飯山温泉で泊まる
+            - generic [ref=e69]:
+              - link "楽天で宿を見る" [ref=e70] [cursor=pointer]:
+                - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%25A3%25AF%25E5%25B1%25B1%25E6%25B8%25A9%25E6%25B3%2589%2520%25E9%2595%25B7%25E9%2587%258E%25E7%259C%258C%2520%25E5%25AE%25BF&checkin=2026-05-04&checkout=2026-05-05
+                - generic [ref=e71]: 楽天で宿を見る
+              - link "じゃらんで宿を見る" [active] [ref=e72] [cursor=pointer]:
+                - /url: https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2594%25D1%258E%2552%2589%25B7%2590%25F2&checkin=2026-05-04&checkout=2026-05-05
+                - generic [ref=e73]: じゃらんで宿を見る
+          - generic [ref=e74]:
+            - link "このルートで行く（東京 → 飯山駅）" [ref=e76] [cursor=pointer]:
+              - /url: https://www.eki-net.com/
+            - link "Yahoo乗換で行き方を調べる（東京駅 → 飯山駅）" [ref=e78] [cursor=pointer]:
+              - /url: https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC%E9%A7%85&to=%E9%A3%AF%E5%B1%B1%E9%A7%85&type=1
+            - generic [ref=e79]:
+              - button "Xでシェア" [ref=e80] [cursor=pointer]
+              - button "LINEで送る" [ref=e81] [cursor=pointer]
+              - button "リンクをコピー" [ref=e82] [cursor=pointer]
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: 菜の花公園や寺の町めぐりを歩ける
+            - paragraph [ref=e85]: 千曲川と菜の花が美しい北信濃の小京都。スキーリゾートと温泉も充実。
+            - paragraph [ref=e86]: 菜の花公園・寺の町めぐり・北竜湖
+          - paragraph [ref=e87]: ※実際の時刻・料金は各サービスでご確認ください
+          - generic [ref=e88]: どこ行こ？ — tabidokoiko.com
+        - button "別の旅先を見る（あと370件）" [ref=e90] [cursor=pointer]
+  - contentinfo [ref=e91]:
+    - paragraph [ref=e92]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
+    - navigation [ref=e93]:
+      - link "このサイトについて" [ref=e94] [cursor=pointer]:
+        - /url: ./pages/about.html
+      - link "プライバシーポリシー" [ref=e95] [cursor=pointer]:
+        - /url: ./pages/privacy.html
+      - link "免責事項" [ref=e96] [cursor=pointer]:
+        - /url: ./pages/disclaimer.html
+    - paragraph [ref=e97]: © 2026 どこ行こ？
+```

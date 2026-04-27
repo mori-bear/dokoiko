@@ -102,52 +102,46 @@
       - generic [ref=e53]:
         - generic [ref=e55]:
           - generic [ref=e57]:
-            - heading "日光" [level=2] [ref=e58]
+            - heading "銀山温泉" [level=2] [ref=e58]
             - paragraph [ref=e59]:
-              - text: 栃木県
+              - text: 山形県
               - generic [ref=e60]: 温泉で癒される
           - generic [ref=e61]:
             - generic [ref=e62]: ちょうどいい距離
             - generic [ref=e63]: 温泉でゆっくりできる
           - link "この旅で行く" [ref=e65] [cursor=pointer]:
-            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=36.7198%2C139.6981&travelmode=transit
+            - /url: https://www.google.com/maps/dir/?api=1&origin=%E6%9D%B1%E4%BA%AC%E9%A7%85&destination=38.7012%2C140.6427&travelmode=transit
           - generic [ref=e66]:
-            - paragraph [ref=e67]: 日光温泉で泊まる
+            - paragraph [ref=e67]: 銀山温泉で泊まる
             - generic [ref=e68]:
               - link "楽天で宿を見る" [active] [ref=e69] [cursor=pointer]:
-                - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Ftochigi%2Fnikko.html&checkin=2026-05-04&checkout=2026-05-05
+                - /url: https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyado%2Fjapan.html%3Ff_query%3D%25E9%258A%2580%25E5%25B1%25B1%25E6%25B8%25A9%25E6%25B3%2589%2520%25E5%25B1%25B1%25E5%25BD%25A2%25E7%259C%258C%2520%25E6%25B8%25A9%25E6%25B3%2589&checkin=2026-05-04&checkout=2026-05-05
                 - generic [ref=e70]: 楽天で宿を見る
               - link "じゃらんで宿を見る" [ref=e71] [cursor=pointer]:
-                - /url: https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%2593%25FA%258C%25F5%2589%25B7%2590%25F2&checkin=2026-05-04&checkout=2026-05-05
+                - /url: https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fuw%2Fuwp2011%2Fuww2011init.do%3Fkeyword%3D%258B%25E2%258E%2552%2589%25B7%2590%25F2&checkin=2026-05-04&checkout=2026-05-05
                 - generic [ref=e72]: じゃらんで宿を見る
           - generic [ref=e73]:
-            - generic [ref=e74]:
-              - link "このルートで行く（東京 → 日光駅）" [ref=e75] [cursor=pointer]:
-                - /url: https://www.eki-net.com/
-              - paragraph [ref=e76]: ※日光駅からバスで向かいます
-            - link "Yahoo乗換で行き方を調べる（東京駅 → 日光駅）" [ref=e78] [cursor=pointer]:
-              - /url: https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC%E9%A7%85&to=%E6%97%A5%E5%85%89%E9%A7%85&type=1
-            - group [ref=e79]:
-              - generic "▼ その先の行き方" [ref=e80] [cursor=pointer]
-            - generic [ref=e81]:
-              - button "Xでシェア" [ref=e82] [cursor=pointer]
-              - button "LINEで送る" [ref=e83] [cursor=pointer]
-              - button "リンクをコピー" [ref=e84] [cursor=pointer]
-          - generic [ref=e85]:
-            - paragraph [ref=e86]: 東照宮や中禅寺湖を歩ける
-            - paragraph [ref=e87]: 山と湖と滝に囲まれた世界遺産の聖地。社寺群と大自然が一体となった歴史ある山岳地。
-            - paragraph [ref=e88]: 東照宮・中禅寺湖・竜頭の滝
-          - paragraph [ref=e89]: ※実際の時刻・料金は各サービスでご確認ください
-          - generic [ref=e90]: どこ行こ？ — tabidokoiko.com
-        - button "別の旅先を見る（あと370件）" [ref=e92] [cursor=pointer]
-  - contentinfo [ref=e93]:
-    - paragraph [ref=e94]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
-    - navigation [ref=e95]:
-      - link "このサイトについて" [ref=e96] [cursor=pointer]:
+            - link "このルートで行く（東京 → 大石田駅）" [ref=e75] [cursor=pointer]:
+              - /url: https://www.eki-net.com/
+            - generic [ref=e76]:
+              - button "Xでシェア" [ref=e77] [cursor=pointer]
+              - button "LINEで送る" [ref=e78] [cursor=pointer]
+              - button "リンクをコピー" [ref=e79] [cursor=pointer]
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: 能登屋旅館や白銀の滝を歩ける
+            - paragraph [ref=e82]: 大正ロマンの洋館が川沿いに並ぶ山形の温泉街。雪景色とレトロな建物が、どこか懐かしい旅情をつくる。
+            - paragraph [ref=e83]: 能登屋旅館・白銀の滝・銀山川沿い散策
+          - paragraph [ref=e84]: ※実際の時刻・料金は各サービスでご確認ください
+          - generic [ref=e85]: どこ行こ？ — tabidokoiko.com
+        - button "別の旅先を見る（あと370件）" [ref=e87] [cursor=pointer]
+  - contentinfo [ref=e88]:
+    - paragraph [ref=e89]: 交通・宿泊情報は各社公式サイトでご確認ください。本サービスはアフィリエイト広告（楽天トラベル・じゃらん）を含みます。
+    - navigation [ref=e90]:
+      - link "このサイトについて" [ref=e91] [cursor=pointer]:
         - /url: ./pages/about.html
-      - link "プライバシーポリシー" [ref=e97] [cursor=pointer]:
+      - link "プライバシーポリシー" [ref=e92] [cursor=pointer]:
         - /url: ./pages/privacy.html
-      - link "免責事項" [ref=e98] [cursor=pointer]:
+      - link "免責事項" [ref=e93] [cursor=pointer]:
         - /url: ./pages/disclaimer.html
-    - paragraph [ref=e99]: © 2026 どこ行こ？
+    - paragraph [ref=e94]: © 2026 どこ行こ？
 ```
