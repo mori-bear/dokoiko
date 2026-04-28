@@ -16,6 +16,14 @@
   <meta name="twitter:title"      content="どこ行こ？ — まだ知らない街と、出会おう。">
   <meta name="twitter:description" content="まだ知らない街と、出会おう。出発地と日程を選ぶだけで、行ったことのない日本の街に出会えます。">
   <meta name="twitter:image"      content="https://tabidokoiko.com/assets/ogp.png">
+  <!-- Google Analytics 4 — G-XXXXXXXXXX を実際の計測IDに置き換えてください -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { send_page_view: false });
+  </script>
   <link rel="preload" href="./src/data/destinations.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="./style.css">
   <!-- JSクラッシュ可視化 + フォールバックタイマー（モジュールより前に同期実行） -->

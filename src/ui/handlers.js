@@ -6,7 +6,8 @@
  *
  * state は src/state.js から直接 import して参照する（引数受け取り禁止）。
  */
-import { state } from '../state.js';
+import { state }       from '../state.js';
+import { trackEvent } from '../analytics.js';
 
 function isResultVisible() {
   return !document.getElementById('result')?.hidden;
@@ -29,6 +30,7 @@ export function bindHandlers(onGo, onRetry) {
       console.log('[click] data-stay:', stayBtn.dataset.stay);
       state.stayType = stayBtn.dataset.stay;
       setActive('[data-stay]', stayBtn);
+      trackEvent('filter_change', { filterType: 'stay', filterValue: state.stayType });
       if (isResultVisible()) onGo();
       return;
     }
@@ -40,6 +42,7 @@ export function bindHandlers(onGo, onRetry) {
       console.log('[click] data-theme:', value || '(こだわらない)');
       state.theme = value || null;
       setActive('[data-theme]', themeBtn);
+      trackEvent('filter_change', { filterType: 'theme', filterValue: state.theme ?? 'none' });
       if (isResultVisible()) onGo();
       return;
     }
@@ -56,6 +59,7 @@ export function bindHandlers(onGo, onRetry) {
         setActive('[data-situation]', situBtn);
       }
       console.log('[click] situation:', state.situation);
+      trackEvent('filter_change', { filterType: 'situation', filterValue: state.situation ?? 'none' });
       if (isResultVisible()) onGo();
       return;
     }
@@ -66,6 +70,7 @@ export function bindHandlers(onGo, onRetry) {
       state.excludeCar = !state.excludeCar;
       exCarBtn.classList.toggle('active', state.excludeCar);
       console.log('[click] excludeCar:', state.excludeCar);
+      trackEvent('filter_change', { filterType: 'exclude_car', filterValue: state.excludeCar });
       if (isResultVisible()) onGo();
       return;
     }
@@ -98,6 +103,7 @@ export function bindHandlers(onGo, onRetry) {
       console.log('[change] departure:', e.target.value);
       state.departure = e.target.value;
       localStorage.setItem('departure', e.target.value);
+      trackEvent('filter_change', { filterType: 'departure', filterValue: state.departure });
       if (isResultVisible()) onGo();
     }
   });

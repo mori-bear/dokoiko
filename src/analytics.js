@@ -1,13 +1,27 @@
 /**
- * analytics.js — ユーザー行動ログ + エラー検知 + 改善ヒント
+ * analytics.js — ユーザー行動ログ + GA4計測ブリッジ + エラー検知
  *
  * 構造化ログを収集し、セッション終了時にまとめて出力する。
- * 外部送信はせずconsole出力のみ（将来的にエンドポイント追加可能）。
+ * gtag が利用可能な場合は GA4 にもイベントを送信する。
  *
  * ログ種別:
  *   event  — ユーザー行動（CTAクリック、シェア、リトライ）
  *   error  — 本番エラー（CTA欠損、ルート空、地図欠損）
  *   hint   — 改善ヒント（自動検出）
+ *
+ * GA4 イベントマッピング:
+ *   page_view        → view_destination
+ *   retry            → retry_destination
+ *   cta_click        → cta_click
+ *   map_click        → map_click
+ *   rakuten_click    → hotel_link_click  (hotel_service: 'rakuten')
+ *   jalan_click      → hotel_link_click  (hotel_service: 'jalan')
+ *   car_click        → car_click
+ *   yahoo_click      → transit_click
+ *   share_click      → share             (method: 'image')
+ *   share_line_click → share             (method: 'line')
+ *   share_copy_click → share             (method: 'copy')
+ *   filter_change    → filter_change
  */
 
 const _log = [];
@@ -30,6 +44,54 @@ export function trackEvent(event, data = {}) {
     timestamp: Date.now(),
   };
   _log.push(entry);
+
+  // GA4 送信（gtag が読み込まれている場合のみ）
+  if (typeof gtag === 'function') {
+    gtag('event', _toGa4Name(event), _toGa4Params(event, data));
+  }
+}
+
+/** trackEvent イベント名 → GA4 推奨イベント名 */
+function _toGa4Name(event) {
+  const MAP = {
+    'page_view':        'view_destination',
+    'retry':            'retry_destination',
+    'cta_click':        'cta_click',
+    'map_click':        'map_click',
+    'rakuten_click':    'hotel_link_click',
+    'jalan_click':      'hotel_link_click',
+    'car_click':        'car_click',
+    'yahoo_click':      'transit_click',
+    'share_click':      'share',
+    'share_line_click': 'share',
+    'share_copy_click': 'share',
+    'filter_change':    'filter_change',
+  };
+  return MAP[event] ?? event;
+}
+
+/** GA4 カスタムパラメータを組み立てる */
+function _toGa4Params(event, data) {
+  const p = {};
+  if (data.from)    p.departure   = data.from;
+  if (data.destId)  p.destination = data.destId;
+  if (data.destName) p.destination_name = data.destName;
+  if (data.stayArea) p.stay_area  = data.stayArea;
+
+  // ホテルリンク種別
+  if (event === 'rakuten_click') p.hotel_service = 'rakuten';
+  if (event === 'jalan_click')   p.hotel_service = 'jalan';
+
+  // シェア手段
+  if (event === 'share_click')      p.method = 'image';
+  if (event === 'share_line_click') p.method = 'line';
+  if (event === 'share_copy_click') p.method = 'copy';
+
+  // フィルター変更
+  if (data.filterType)  p.filter_type  = data.filterType;
+  if (data.filterValue !== undefined) p.filter_value = String(data.filterValue);
+
+  return p;
 }
 
 /* ── エラー検知 ── */
