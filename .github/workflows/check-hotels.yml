@@ -1,0 +1,17 @@
+name: Check Hotel Links
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # 毎週月曜 9:00 UTC（日本時間 18:00）
+  workflow_dispatch:       # 手動実行
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: ホテルリンク健全性チェック
+        run: node scripts/checkHotelLinks.js
