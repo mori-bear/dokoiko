@@ -528,7 +528,8 @@
       "滝"
     ],
     "secondary": [
-      "秋"
+      "秋",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -656,7 +657,8 @@
     ],
     "secondary": [
       "海",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -1496,7 +1498,8 @@
     ],
     "secondary": [
       "海",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -2088,7 +2091,9 @@
       "離島",
       "海"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "寒霞渓",
@@ -2229,7 +2234,8 @@
       "寺社"
     ],
     "secondary": [
-      "離島"
+      "離島",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -3360,7 +3366,8 @@
       "山"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -3658,7 +3665,8 @@
       "山"
     ],
     "secondary": [
-      "自然"
+      "自然",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -4474,7 +4482,8 @@
     "secondary": [
       "城",
       "秋",
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -5713,7 +5722,8 @@
     ],
     "secondary": [
       "秋",
-      "冬"
+      "冬",
+      "春"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -6110,7 +6120,8 @@
       "街歩き"
     ],
     "secondary": [
-      "離島"
+      "離島",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -7061,7 +7072,8 @@
       "海"
     ],
     "secondary": [
-      "寺社"
+      "寺社",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -7321,7 +7333,8 @@
       "山"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -8213,7 +8226,9 @@
       "街歩き",
       "グルメ"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "竿燈まつり",
@@ -8470,7 +8485,8 @@
     ],
     "secondary": [
       "歴史",
-      "秋"
+      "秋",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -9278,7 +9294,8 @@
       "山"
     ],
     "secondary": [
-      "街歩き"
+      "街歩き",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -9843,7 +9860,8 @@
       "山"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -10915,7 +10933,8 @@
     "secondary": [
       "山",
       "歴史",
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -11410,7 +11429,8 @@
       "寺社"
     ],
     "secondary": [
-      "春"
+      "春",
+      "秋"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -12170,7 +12190,9 @@
       "街歩き",
       "離島"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大内宿町並み",
@@ -13096,7 +13118,8 @@
       "寺社"
     ],
     "secondary": [
-      "春"
+      "春",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -13246,7 +13269,8 @@
       "寺社"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -14186,7 +14210,9 @@
       "城",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "出石城跡",
@@ -14836,7 +14862,8 @@
     ],
     "secondary": [
       "秋",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -14959,7 +14986,8 @@
       "滝"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -15089,7 +15117,9 @@
       "山",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "白川水源",
@@ -15529,7 +15559,9 @@
       "街歩き",
       "離島"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "神威岬",
@@ -15683,7 +15715,9 @@
       "歴史",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "出雲大社",
@@ -16589,7 +16623,8 @@
       "自然"
     ],
     "secondary": [
-      "山"
+      "山",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -16886,7 +16921,8 @@
       "城",
       "離島",
       "春",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -17456,7 +17492,9 @@
       "海"
     ],
     "secondary": [
-      "自然"
+      "自然",
+      "グルメ",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -17894,7 +17932,8 @@
       "歴史"
     ],
     "secondary": [
-      "夏"
+      "夏",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -18486,7 +18525,8 @@
       "山"
     ],
     "secondary": [
-      "自然"
+      "自然",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -19928,7 +19968,8 @@
     ],
     "secondary": [
       "秋",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -20057,7 +20098,8 @@
       "自然"
     ],
     "secondary": [
-      "夏"
+      "夏",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -20593,7 +20635,9 @@
       "山",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "清泉寮",
@@ -20839,7 +20883,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -21643,7 +21688,8 @@
       "城",
       "離島",
       "夏",
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -21762,7 +21808,9 @@
       "歴史",
       "城"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "伊賀流忍者博物館",
@@ -22953,7 +23001,9 @@
       "温泉",
       "城"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 1,
     "hasDirectFlight": true,
     "mapPoint": "白壁土蔵群",
@@ -23903,7 +23953,9 @@
       "歴史",
       "城"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
     "mapPoint": "臼杵石仏（国宝）",
@@ -27072,7 +27124,10 @@
       "自然",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ",
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "碁石海岸",
@@ -27594,7 +27649,8 @@
       "自然"
     ],
     "secondary": [
-      "海"
+      "海",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -28013,7 +28069,8 @@
     ],
     "secondary": [
       "秘境",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 2,
     "hasDirectFlight": true,
@@ -28961,7 +29018,8 @@
       "自然"
     ],
     "secondary": [
-      "夏"
+      "夏",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -30113,7 +30171,8 @@
     ],
     "secondary": [
       "滝",
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -30233,7 +30292,9 @@
       "歴史",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "長岡花火",
@@ -30358,7 +30419,8 @@
       "街歩き"
     ],
     "secondary": [
-      "城"
+      "城",
+      "秋"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -31031,7 +31093,9 @@
       "海",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鞆の浦港",
@@ -32683,7 +32747,8 @@
       "秘境"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -34263,7 +34328,8 @@
     ],
     "secondary": [
       "文化",
-      "春"
+      "春",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -34765,7 +34831,8 @@
       "文化"
     ],
     "secondary": [
-      "食"
+      "食",
+      "秋"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -35528,7 +35595,8 @@
       "温泉"
     ],
     "secondary": [
-      "リゾート"
+      "リゾート",
+      "夏"
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
@@ -38058,7 +38126,8 @@
       "自然"
     ],
     "secondary": [
-      "建築"
+      "建築",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -38177,7 +38246,9 @@
       "自然",
       "野生動物"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大浜海岸（アカウミガメ産卵地）",
@@ -38316,7 +38387,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -39580,7 +39652,8 @@
       "海"
     ],
     "secondary": [
-      "文化"
+      "文化",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -41353,7 +41426,9 @@
       "グルメ",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "東根温泉",
@@ -41467,7 +41542,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -42261,7 +42337,9 @@
       "歴史",
       "グルメ"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "岡崎城",
@@ -42597,7 +42675,9 @@
       "歴史",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "戸隠神社奥社",
@@ -43386,7 +43466,9 @@
     "primary": [
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "防府天満宮",
@@ -43608,7 +43690,9 @@
     "primary": [
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "太宰府天満宮",
@@ -44171,7 +44255,9 @@
       "街",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "石ノ森萬画館",
@@ -44727,7 +44813,9 @@
       "グルメ",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "舞鶴山公園（人間将棋）",
@@ -44952,7 +45040,10 @@
       "自然",
       "街"
     ],
-    "secondary": [],
+    "secondary": [
+      "春",
+      "秋"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "なまはげの里（近郊）",
@@ -45178,7 +45269,9 @@
       "海",
       "絶景"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "浄土ヶ浜",
@@ -45735,7 +45828,9 @@
       "グルメ",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "慈恩寺",
@@ -45958,7 +46053,9 @@
       "温泉",
       "海"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
     "mapPoint": "和倉温泉",
@@ -46293,7 +46390,9 @@
     "primary": [
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "富田林寺内町",
@@ -47191,7 +47290,9 @@
       "海",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ビオスの里（沖の島）",
@@ -47530,7 +47631,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "春"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -47981,7 +48083,9 @@
       "歴史",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "秋月城跡",
@@ -48095,7 +48199,8 @@
       "温泉"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
@@ -48941,7 +49046,8 @@
       "温泉"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 1,
     "hasDirectFlight": false,
@@ -49296,7 +49402,9 @@
       "海",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "姫島七不思議",
@@ -50726,7 +50834,8 @@
       "自然"
     ],
     "secondary": [
-      "春"
+      "春",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -50838,7 +50947,9 @@
       "歴史",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大曲花火競技大会",
@@ -51074,7 +51185,9 @@
     "primary": [
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "あやめ公園",
@@ -51306,7 +51419,9 @@
       "歴史",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "偕楽園",
@@ -51642,7 +51757,9 @@
       "歴史",
       "グルメ"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "小田原城",
@@ -52321,7 +52438,9 @@
       "グルメ",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "秋"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "栗きんとん老舗街",
@@ -53462,7 +53581,9 @@
       "歴史",
       "海"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "日高川",
@@ -54042,7 +54163,10 @@
       "自然",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ",
+      "秋"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霧の海展望台",
@@ -55526,7 +55650,9 @@
       "グルメ",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霧島神宮（近隣）",
@@ -58054,7 +58180,9 @@
       "歴史",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "越前大野城",
@@ -58287,7 +58415,9 @@
       "海",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "野間池港",
@@ -59200,7 +59330,9 @@
       "海",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "吉里吉里海岸",
@@ -59422,7 +59554,9 @@
       "自然",
       "グルメ"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "沼田城跡",
@@ -59534,7 +59668,9 @@
       "自然",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "霞ヶ浦サイクリングロード",
@@ -60226,7 +60362,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -62046,7 +62183,9 @@
       "海",
       "歴史"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "暘谷城跡（日出城）",
@@ -62158,7 +62297,8 @@
       "自然"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -62385,7 +62525,8 @@
       "歴史"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -122597,7 +122738,8 @@
     "secondary": [
       "自然",
       "湯治",
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
@@ -123694,7 +123836,8 @@
     "secondary": [
       "海",
       "秘境",
-      "夏"
+      "夏",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -124770,7 +124913,8 @@
     ],
     "secondary": [
       "港町",
-      "自然"
+      "自然",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -125035,7 +125179,8 @@
     ],
     "secondary": [
       "港町",
-      "みかん"
+      "みかん",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -125164,7 +125309,8 @@
     ],
     "secondary": [
       "文化",
-      "魚"
+      "魚",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -125419,7 +125565,8 @@
     ],
     "secondary": [
       "秋",
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -126241,7 +126388,9 @@
       "絶景",
       "アウトドア"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大沼湖",
@@ -126591,7 +126740,9 @@
       "自然",
       "港町"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "大浜海岸",
@@ -126939,7 +127090,9 @@
       "絶景",
       "チューリップ"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "砺波チューリップ公園",
@@ -129072,7 +129225,9 @@
       "自然",
       "離島"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "真鍋島の猫たち",
@@ -129319,7 +129474,9 @@
       "ワイン",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "秋"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "ワイナリー巡り",
@@ -129569,7 +129726,9 @@
       "歴史",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "鹿島酒蔵ツーリズム",
@@ -130318,7 +130477,9 @@
       "祭り",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "夏"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "柏崎えんま市",
@@ -130692,7 +130853,9 @@
       "自然",
       "街歩き"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "真鶴岬",
@@ -131069,7 +131232,9 @@
       "海",
       "秘境"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "清水寺庭園",
@@ -131318,7 +131483,9 @@
       "自然",
       "火山"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "桜島フェリー",
@@ -132202,7 +132369,9 @@
       "海",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "庵治漁港",
@@ -132465,7 +132634,9 @@
       "自然",
       "秘境"
     ],
-    "secondary": [],
+    "secondary": [
+      "秋"
+    ],
     "onsenLevel": 3,
     "hasDirectFlight": false,
     "mapPoint": "塩江温泉街",
@@ -132591,7 +132762,9 @@
       "自然",
       "港町"
     ],
-    "secondary": [],
+    "secondary": [
+      "グルメ"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "宍喰漁港",
@@ -133558,7 +133731,8 @@
       "絶景"
     ],
     "secondary": [
-      "冬"
+      "冬",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
@@ -133692,7 +133866,9 @@
       "絶景",
       "自然"
     ],
-    "secondary": [],
+    "secondary": [
+      "春"
+    ],
     "onsenLevel": 0,
     "hasDirectFlight": false,
     "mapPoint": "琴ヶ浜",
@@ -133958,7 +134134,8 @@
       "自然"
     ],
     "secondary": [
-      "秋"
+      "秋",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -137597,7 +137774,9 @@
       "自然"
     ],
     "secondary": [
-      "秋"
+      "秋",
+      "春",
+      "夏"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
@@ -138148,7 +138327,8 @@
       "沖縄"
     ],
     "secondary": [
-      "世界遺産"
+      "世界遺産",
+      "グルメ"
     ],
     "onsenLevel": 0,
     "hasDirectFlight": true,
