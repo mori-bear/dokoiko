@@ -2767,3 +2767,30 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   .access-steps-list .step-item { padding: 12px 14px; gap: 10px; }
   .step-icon { width: 26px; height: 26px; font-size: 16px; }
 }
+
+/* ── キーワード検索 ── */
+.search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+.search-input::placeholder { color: var(--text-sub); }
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,75,224,.1); }
+
+/* ── D4: iPhone SE (390px以下) 追加調整 ── */
+@media (max-width: 390px) {
+  .control-group { margin-bottom: 14px; }
+  .control-label { font-size: 12px; }
+  .btn-group { gap: 5px; }
+  .go-btn    { font-size: 15px; padding: 14px; }
+  .search-input { font-size: 13px; padding: 9px 12px; }
+}

@@ -10,6 +10,8 @@ export const state = {
   stayType:     '1night',
   theme:        null,
   situation:    null,
+  region:       null,
+  keyword:      '',
   excludeCar:   false,
   pool:         [],
   poolIndex:    0,

@@ -178,6 +178,22 @@
           </div>
         </div>
 
+        <!-- 地域 -->
+        <div class="control-group">
+          <label class="control-label">地域 <span class="label-optional">（任意）</span></label>
+          <div class="btn-group btn-group--scroll">
+            <button class="sel-btn" data-region="北海道">北海道</button>
+            <button class="sel-btn" data-region="東北">東北</button>
+            <button class="sel-btn" data-region="関東">関東</button>
+            <button class="sel-btn" data-region="中部">中部</button>
+            <button class="sel-btn" data-region="近畿">近畿</button>
+            <button class="sel-btn" data-region="中国">中国</button>
+            <button class="sel-btn" data-region="四国">四国</button>
+            <button class="sel-btn" data-region="九州">九州</button>
+            <button class="sel-btn" data-region="沖縄">沖縄</button>
+          </div>
+        </div>
+
         <!-- シチュエーション -->
         <div class="control-group">
           <label class="control-label">シチュエーション <span class="label-optional">（任意）</span></label>
@@ -194,6 +210,13 @@
           <div class="btn-group">
             <button class="sel-btn" data-exclude-car>🚗 レンタカー不要のみ</button>
           </div>
+        </div>
+
+        <!-- キーワード検索 -->
+        <div class="control-group">
+          <label class="control-label" for="keyword-search">キーワード <span class="label-optional">（任意）</span></label>
+          <input type="search" id="keyword-search" class="search-input"
+            placeholder="地名・温泉・桜など" autocomplete="off" autocorrect="off" spellcheck="false">
         </div>
 
         <!-- エラー -->

@@ -57,10 +57,34 @@ async function init() {
   }
 }
 
+function matchesKeyword(dest, kw) {
+  if (!kw) return true;
+  const hay = [
+    dest.name,
+    dest.prefecture ?? '',
+    dest.region ?? '',
+    ...(dest.primary ?? []),
+    ...(dest.secondary ?? []),
+    ...(dest.tags ?? []),
+    dest.description ?? '',
+    ...(dest.spots ?? []),
+  ].join(' ').toLowerCase();
+  return hay.includes(kw.toLowerCase());
+}
+
 function buildPool() {
   const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar, state.situation);
+  let pool = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar, state.situation);
+
+  if (state.region) {
+    pool = pool.filter(d => d.region === state.region);
+  }
+  if (state.keyword) {
+    pool = pool.filter(d => matchesKeyword(d, state.keyword));
+  }
+
+  state.pool      = pool;
   state.poolIndex = 0;
   reorderPool();
 }

@@ -64,6 +64,23 @@ export function bindHandlers(onGo, onRetry) {
       return;
     }
 
+    /* 地域（data-region） — 同じボタンを再クリックで解除 */
+    const regionBtn = e.target.closest('[data-region]');
+    if (regionBtn) {
+      const value = regionBtn.dataset.region;
+      if (state.region === value) {
+        state.region = null;
+        regionBtn.classList.remove('active');
+      } else {
+        state.region = value;
+        setActive('[data-region]', regionBtn);
+      }
+      console.log('[click] region:', state.region);
+      trackEvent('filter_change', { filterType: 'region', filterValue: state.region ?? 'none' });
+      if (isResultVisible()) onGo();
+      return;
+    }
+
     /* レンタカー除外（data-exclude-car） */
     const exCarBtn = e.target.closest('[data-exclude-car]');
     if (exCarBtn) {
@@ -95,6 +112,15 @@ export function bindHandlers(onGo, onRetry) {
       onRetry();
       return;
     }
+  });
+
+  /* ── キーワード検索（input）── */
+  document.addEventListener('input', (e) => {
+    if (e.target.id !== 'keyword-search') return;
+    state.keyword = e.target.value.trim();
+    console.log('[input] keyword:', state.keyword);
+    trackEvent('filter_change', { filterType: 'keyword', filterValue: state.keyword || 'empty' });
+    if (isResultVisible()) onGo();
   });
 
   /* ── 出発地セレクト（change）── */
