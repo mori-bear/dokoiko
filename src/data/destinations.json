@@ -138264,7 +138264,11 @@
       "couple",
       "friends",
       "solo"
-    ]
+    ],
+    "hotelLinks": {
+      "rakuten": "https://travel.rakuten.co.jp/HOTEL/142925/142925.html",
+      "jalan": "https://www.jalan.net/yad338841/"
+    }
   },
   {
     "id": "sannai-maruyama",
@@ -138350,6 +138354,10 @@
       "friends",
       "solo",
       "family"
-    ]
+    ],
+    "hotelLinks": {
+      "rakuten": "https://travel.rakuten.co.jp/HOTEL/157571/157571.html",
+      "jalan": "https://www.jalan.net/yad327896/"
+    }
   }
 ]
