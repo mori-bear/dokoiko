@@ -44,6 +44,22 @@ export function bindHandlers(onGo, onRetry) {
       return;
     }
 
+    /* シチュエーション（data-situation） — 同じボタンを再クリックで解除 */
+    const situBtn = e.target.closest('[data-situation]');
+    if (situBtn) {
+      const value = situBtn.dataset.situation;
+      if (state.situation === value) {
+        state.situation = null;
+        situBtn.classList.remove('active');
+      } else {
+        state.situation = value;
+        setActive('[data-situation]', situBtn);
+      }
+      console.log('[click] situation:', state.situation);
+      if (isResultVisible()) onGo();
+      return;
+    }
+
     /* レンタカー除外（data-exclude-car） */
     const exCarBtn = e.target.closest('[data-exclude-car]');
     if (exCarBtn) {
@@ -92,5 +108,6 @@ export function bindHandlers(onGo, onRetry) {
     'departure-select:', !!document.getElementById('departure-select'),
     'data-stay buttons:', document.querySelectorAll('[data-stay]').length,
     'data-theme buttons:', document.querySelectorAll('[data-theme]').length,
+    'data-situation buttons:', document.querySelectorAll('[data-situation]').length,
   );
 }

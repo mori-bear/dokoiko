@@ -5,38 +5,42 @@
  *   from      出発地（例: 東京）
  *   nights    旅の長さ（例: 1night / daytrip / 2night / 3night+）
  *   theme     テーマ（例: 温泉 / 絶景 / 海 / 街歩き / グルメ）省略=こだわらない
+ *   situation シチュエーション（solo / couple / friends）省略=こだわらない
  *   car       0 のときレンタカー除外（省略=false）
  *   dest      目的地ID（例: kinosaki-onsen）
  *
  * 例:
  *   https://tabidokoiko.com/?from=大阪&nights=1night&theme=温泉&dest=kinosaki-onsen
- *   https://tabidokoiko.com/?from=東京&nights=2night&dest=kanazawa
+ *   https://tabidokoiko.com/?from=東京&nights=1night&situation=couple
  */
 
 /** URLパラメータをオブジェクトにデコード */
 export function decodeUrlParams() {
   const p = new URLSearchParams(location.search);
-  const from       = p.get('from')   || null;
-  const nights     = p.get('nights') || null;
-  const theme      = p.get('theme')  || null;
+  const from       = p.get('from')      || null;
+  const nights     = p.get('nights')    || null;
+  const theme      = p.get('theme')     || null;
+  const situation  = p.get('situation') || null;
   const car        = p.get('car');
-  const dest       = p.get('dest')   || null;
+  const dest       = p.get('dest')      || null;
 
   return {
     from,
     nights,
     theme,
+    situation,
     excludeCar: car === '0',
     dest,
   };
 }
 
 /** URLにステートをエンコード（history.replaceState） */
-export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId) {
+export function encodeStateToUrl(departure, stayType, theme, excludeCar, destId, situation) {
   const p = new URLSearchParams();
   p.set('from',   departure);
   p.set('nights', stayType);
   if (theme)       p.set('theme', theme);
+  if (situation)   p.set('situation', situation);
   if (excludeCar)  p.set('car', '0');
   if (destId)      p.set('dest', destId);
 

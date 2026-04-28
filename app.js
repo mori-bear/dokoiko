@@ -60,7 +60,7 @@ async function init() {
 function buildPool() {
   const fromCityInfo = DEPARTURE_CITY_INFO[state.departure];
   const nearestHub   = fromCityInfo?.nearestHub ?? null;
-  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar);
+  state.pool      = buildShuffledPool(state.destinations, state.stayType, state.theme, state.departure, nearestHub, state.excludeCar, state.situation);
   state.poolIndex = 0;
   reorderPool();
 }
@@ -171,7 +171,7 @@ function draw() {
     });
 
     // URLとページメタを更新
-    encodeStateToUrl(state.departure, state.stayType, state.theme, state.excludeCar, city.id);
+    encodeStateToUrl(state.departure, state.stayType, state.theme, state.excludeCar, city.id, state.situation);
     updatePageMeta(city, state.departure);
 
     const remaining = state.pool.length - state.poolIndex - 1;
@@ -223,7 +223,7 @@ function bindExampleLinks() {
 /* ── URLからの状態復元 ── */
 
 function restoreFromUrl(urlParams) {
-  const { from, nights, theme, excludeCar, dest } = urlParams;
+  const { from, nights, theme, situation, excludeCar, dest } = urlParams;
 
   // 出発地
   if (from) setDeparture(from);
@@ -242,6 +242,14 @@ function restoreFromUrl(urlParams) {
   document.querySelectorAll('[data-theme]').forEach(b => {
     b.classList.toggle('active', (b.dataset.theme || null) === resolvedTheme);
   });
+
+  // シチュエーション
+  if (situation) {
+    state.situation = situation;
+    document.querySelectorAll('[data-situation]').forEach(b => {
+      b.classList.toggle('active', b.dataset.situation === situation);
+    });
+  }
 
   // レンタカー除外
   if (excludeCar) {
