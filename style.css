@@ -260,7 +260,8 @@ body {
   font-size: 15px;
   color: var(--text);
   cursor: pointer;
-  width: 100%;
+  flex: 1 1 auto; /* D3: flex-grow で余白を使う */
+  min-width: 0;   /* D3: flex内でshrink許可 */
   max-width: 200px;
 }
 
@@ -355,6 +356,22 @@ body {
   gap: 8px;
 }
 
+/* D2: テーマボタン横スクロール */
+.btn-group--scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  /* 右端フェード: コンテナに対してネガティブマージンで画面端まで広げる */
+  margin-right: -20px;
+  padding-right: 20px;
+}
+
+.btn-group--scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /* 日数ボタン内サブラベル（日帰り/1泊/2泊以上） */
 .sel-btn small.stay-sub {
   display: block;
@@ -379,7 +396,8 @@ body {
   color: var(--text);
   border: none;
   border-radius: 100px;
-  padding: 8px 18px;
+  padding: 10px 20px;
+  min-height: 44px; /* D1: iOS推奨タッチターゲット */
   font-size: 13px;
   font-family: inherit;
   cursor: pointer;
@@ -2155,7 +2173,22 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 
   .sel-btn {
     font-size: 12px;
-    padding: 7px 14px;
+    padding: 10px 14px; /* D1: min-height 44px を維持しつつ横を詰める */
+  }
+
+  /* D3: 小画面で出発地行を縦積み */
+  .departure-row {
+    flex-wrap: wrap;
+  }
+
+  .departure-select {
+    max-width: none;
+    width: 100%;
+  }
+
+  .btn-location {
+    width: 100%;
+    text-align: center;
   }
 }
 
