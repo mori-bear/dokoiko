@@ -114,10 +114,15 @@ export function bindHandlers(onGo, onRetry) {
     }
   });
 
-  /* ── キーワード検索（input）── */
+  /* ── キーワード検索（main + modal 両対応）── */
   document.addEventListener('input', (e) => {
-    if (e.target.id !== 'keyword-search') return;
+    if (e.target.id !== 'keyword-search' && e.target.id !== 'modal-keyword-search') return;
     state.keyword = e.target.value.trim();
+    // 両方の入力欄を同期
+    ['keyword-search', 'modal-keyword-search'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el !== e.target) el.value = state.keyword;
+    });
     console.log('[input] keyword:', state.keyword);
     trackEvent('filter_change', { filterType: 'keyword', filterValue: state.keyword || 'empty' });
     if (isResultVisible()) onGo();

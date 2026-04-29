@@ -151,6 +151,12 @@
           </div>
         </div>
 
+        <!-- 絞り込みボタン（?modal=1 時のみ表示） -->
+        <button id="filter-btn" class="filter-trigger" hidden>🔍 絞り込み</button>
+
+        <!-- フィルター群（?modal=1 時は非表示） -->
+        <div id="filter-controls">
+
         <!-- 日数選択 -->
         <div class="control-group">
           <label class="control-label">日数</label>
@@ -219,6 +225,8 @@
             placeholder="地名・温泉・桜など" autocomplete="off" autocorrect="off" spellcheck="false">
         </div>
 
+        </div><!-- /#filter-controls -->
+
         <!-- エラー -->
         <p id="form-error" class="form-error" hidden></p>
 
@@ -254,6 +262,78 @@
 
   <!-- html2canvas: DOMをcanvasに変換（シェア画像生成） -->
   <!-- crossorigin: window.onerror が「Script error.」に丸められるのを防ぎ、本当のエラー内容を取得できるようにする -->
+  <!-- モーダル型フィルター（?modal=1 feature flag） -->
+  <div id="filter-modal" class="filter-modal" hidden aria-modal="true" role="dialog" aria-label="絞り込み">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">絞り込み</span>
+        <button class="modal-close" id="modal-close" aria-label="閉じる">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="control-group">
+          <label class="control-label">日数</label>
+          <div class="btn-group">
+            <button class="sel-btn" data-stay="daytrip">サクッと<small class="stay-sub">日帰り</small></button>
+            <button class="sel-btn" data-stay="1night">ちょうどいい<small class="stay-sub">1泊</small></button>
+            <button class="sel-btn" data-stay="free">しっかり旅<small class="stay-sub">2泊以上</small></button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">テーマ</label>
+          <div class="btn-group btn-group--scroll">
+            <button class="sel-btn" data-theme="">こだわらない</button>
+            <button class="sel-btn" data-theme="温泉">温泉</button>
+            <button class="sel-btn" data-theme="絶景">絶景</button>
+            <button class="sel-btn" data-theme="海">海</button>
+            <button class="sel-btn" data-theme="街歩き">街歩き</button>
+            <button class="sel-btn" data-theme="グルメ">グルメ</button>
+            <button class="sel-btn" data-theme="春">🌸 春</button>
+            <button class="sel-btn" data-theme="夏">🌊 夏</button>
+            <button class="sel-btn" data-theme="秋">🍁 秋</button>
+            <button class="sel-btn" data-theme="冬">⛄ 冬</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">地域 <span class="label-optional">（任意）</span></label>
+          <div class="btn-group btn-group--scroll">
+            <button class="sel-btn" data-region="北海道">北海道</button>
+            <button class="sel-btn" data-region="東北">東北</button>
+            <button class="sel-btn" data-region="関東">関東</button>
+            <button class="sel-btn" data-region="中部">中部</button>
+            <button class="sel-btn" data-region="近畿">近畿</button>
+            <button class="sel-btn" data-region="中国">中国</button>
+            <button class="sel-btn" data-region="四国">四国</button>
+            <button class="sel-btn" data-region="九州">九州</button>
+            <button class="sel-btn" data-region="沖縄">沖縄</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">シチュエーション <span class="label-optional">（任意）</span></label>
+          <div class="btn-group">
+            <button class="sel-btn" data-situation="solo">ひとり旅</button>
+            <button class="sel-btn" data-situation="couple">カップル</button>
+            <button class="sel-btn" data-situation="friends">友人と</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">オプション</label>
+          <div class="btn-group">
+            <button class="sel-btn" data-exclude-car>🚗 レンタカー不要のみ</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="modal-keyword-search">キーワード <span class="label-optional">（任意）</span></label>
+          <input type="search" id="modal-keyword-search" class="search-input"
+            placeholder="地名・温泉・桜など" autocomplete="off" autocorrect="off" spellcheck="false">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-submit" id="modal-submit">🔍 この条件で探す</button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
 
   <script type="module" src="./app.js?v=20260406" onerror="
