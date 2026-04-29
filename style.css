@@ -2773,6 +2773,70 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 body.modal-mode #filter-controls { display: none !important; }
 body.modal-mode #filter-btn      { display: flex !important; }
 
+/* ── モーダル内グリッドレイアウト ── */
+/* ヘッダー・ボディ・フッターをコンパクトに */
+body.modal-mode .modal-header { padding: 10px 16px; }
+body.modal-mode .modal-body   { padding: 10px 14px; }
+body.modal-mode .modal-footer { padding: 10px 14px; }
+body.modal-mode .modal-body .control-group { margin-bottom: 0; gap: 5px; }
+
+/* ラベル */
+body.modal-mode .modal-body .control-label {
+  font-size: 10px;
+  letter-spacing: .6px;
+}
+
+/* ボタン共通: コンパクト化 */
+body.modal-mode .modal-body .sel-btn {
+  padding: 7px 4px;
+  font-size: 11px;
+  min-height: 34px;
+  line-height: 1.2;
+  text-align: center;
+}
+body.modal-mode .modal-body .sel-btn .stay-sub {
+  font-size: 9px;
+  display: block;
+}
+
+/* 日数: 3列 */
+#modal-days-group {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  flex-wrap: unset;
+  overflow: unset;
+}
+
+/* テーマ: 5列2行（10ボタンがちょうど収まる） */
+#modal-theme-group {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  flex-wrap: unset;
+  overflow: unset;
+}
+
+/* 地域: 3列3行（9ボタン） */
+#modal-region-group {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  flex-wrap: unset;
+  overflow: unset;
+}
+
+/* シチュエーション: 3列 */
+#modal-situation-group {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+/* オプション・キーワード: モーダル内では非表示（コンパクト化） */
+#modal-option-group,
+#modal-keyword-group { display: none !important; }
+
 /* ── 絞り込みボタン（feature flag trigger） ── */
 .filter-trigger {
   display: flex;

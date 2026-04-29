@@ -273,7 +273,7 @@
       <div class="modal-body">
         <div class="control-group">
           <label class="control-label">日数</label>
-          <div class="btn-group">
+          <div class="btn-group" id="modal-days-group">
             <button class="sel-btn" data-stay="daytrip">サクッと<small class="stay-sub">日帰り</small></button>
             <button class="sel-btn" data-stay="1night">ちょうどいい<small class="stay-sub">1泊</small></button>
             <button class="sel-btn" data-stay="free">しっかり旅<small class="stay-sub">2泊以上</small></button>
@@ -281,7 +281,7 @@
         </div>
         <div class="control-group">
           <label class="control-label">テーマ</label>
-          <div class="btn-group btn-group--scroll">
+          <div class="btn-group" id="modal-theme-group">
             <button class="sel-btn" data-theme="">こだわらない</button>
             <button class="sel-btn" data-theme="温泉">温泉</button>
             <button class="sel-btn" data-theme="絶景">絶景</button>
@@ -296,7 +296,7 @@
         </div>
         <div class="control-group">
           <label class="control-label">地域 <span class="label-optional">（任意）</span></label>
-          <div class="btn-group btn-group--scroll">
+          <div class="btn-group" id="modal-region-group">
             <button class="sel-btn" data-region="北海道">北海道</button>
             <button class="sel-btn" data-region="東北">東北</button>
             <button class="sel-btn" data-region="関東">関東</button>
@@ -310,19 +310,19 @@
         </div>
         <div class="control-group">
           <label class="control-label">シチュエーション <span class="label-optional">（任意）</span></label>
-          <div class="btn-group">
+          <div class="btn-group" id="modal-situation-group">
             <button class="sel-btn" data-situation="solo">ひとり旅</button>
             <button class="sel-btn" data-situation="couple">カップル</button>
             <button class="sel-btn" data-situation="friends">友人と</button>
           </div>
         </div>
-        <div class="control-group">
+        <div class="control-group" id="modal-option-group">
           <label class="control-label">オプション</label>
           <div class="btn-group">
             <button class="sel-btn" data-exclude-car>🚗 レンタカー不要のみ</button>
           </div>
         </div>
-        <div class="control-group">
+        <div class="control-group" id="modal-keyword-group">
           <label class="control-label" for="modal-keyword-search">キーワード <span class="label-optional">（任意）</span></label>
           <input type="search" id="modal-keyword-search" class="search-input"
             placeholder="地名・温泉・桜など" autocomplete="off" autocorrect="off" spellcheck="false">
