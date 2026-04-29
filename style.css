@@ -2768,6 +2768,11 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   .step-icon { width: 26px; height: 26px; font-size: 16px; }
 }
 
+/* ── モーダルモード（?modal=1）レイアウト制御 ── */
+/* CSS クラスで確実に非表示 (!important で flex コンテナの影響を排除) */
+body.modal-mode #filter-controls { display: none !important; }
+body.modal-mode #filter-btn      { display: flex !important; }
+
 /* ── 絞り込みボタン（feature flag trigger） ── */
 .filter-trigger {
   display: flex;

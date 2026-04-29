@@ -489,9 +489,8 @@ function bindModalHandlers() {
   const submitBtn      = document.getElementById('modal-submit');
   if (!filterControls || !filterBtn || !modal) return;
 
-  // 通常フィルター群を非表示 → 絞り込みボタンを表示
-  filterControls.hidden = true;
-  filterBtn.hidden      = false;
+  // body に modal-mode クラスを付与（CSS で !important 非表示を保証）
+  document.body.classList.add('modal-mode');
 
   // モーダル内のアクティブ状態を state から初期反映
   function syncModalState() {
