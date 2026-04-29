@@ -26,7 +26,6 @@ async function init() {
   bindExampleLinks();
   bindLocationButton();
   bindMapsCta();
-  bindModalHandlers();
 
   // 出発地の優先順位: URLパラメータ > localStorage > デフォルト（東京）
   const urlParams = decodeUrlParams();
@@ -473,65 +472,6 @@ function bindLocationButton() {
       { timeout: 8000, maximumAge: 60000 },
     );
   });
-}
-
-/* ── モーダル型フィルター（?modal=1 feature flag） ── */
-
-function bindModalHandlers() {
-  // feature flag: ?modal=1 のみ有効
-  if (!new URLSearchParams(location.search).has('modal')) return;
-
-  const filterControls = document.getElementById('filter-controls');
-  const filterBtn      = document.getElementById('filter-btn');
-  const modal          = document.getElementById('filter-modal');
-  const overlay        = document.getElementById('modal-overlay');
-  const closeBtn       = document.getElementById('modal-close');
-  const submitBtn      = document.getElementById('modal-submit');
-  if (!filterControls || !filterBtn || !modal) return;
-
-  // body に modal-mode クラスを付与（CSS で !important 非表示を保証）
-  document.body.classList.add('modal-mode');
-
-  // モーダル内のアクティブ状態を state から初期反映
-  function syncModalState() {
-    document.querySelectorAll('#filter-modal [data-stay]').forEach(b =>
-      b.classList.toggle('active', b.dataset.stay === state.stayType));
-    document.querySelectorAll('#filter-modal [data-theme]').forEach(b =>
-      b.classList.toggle('active', (b.dataset.theme || null) === state.theme));
-    document.querySelectorAll('#filter-modal [data-region]').forEach(b =>
-      b.classList.toggle('active', b.dataset.region === state.region));
-    document.querySelectorAll('#filter-modal [data-situation]').forEach(b =>
-      b.classList.toggle('active', b.dataset.situation === state.situation));
-    const exCar = document.querySelector('#filter-modal [data-exclude-car]');
-    if (exCar) exCar.classList.toggle('active', state.excludeCar);
-    const kw = document.getElementById('modal-keyword-search');
-    if (kw) kw.value = state.keyword;
-  }
-
-  // バッジ更新（アクティブフィルター数）
-  function updateBadge() {
-    const count = [
-      state.theme,
-      state.region,
-      state.situation,
-      state.keyword,
-      state.excludeCar || null,
-    ].filter(Boolean).length;
-    filterBtn.innerHTML = count > 0
-      ? `🔍 絞り込み<span class="badge">${count}</span>`
-      : '🔍 絞り込み';
-  }
-
-  function openModal()  { syncModalState(); modal.hidden = false; document.body.style.overflow = 'hidden'; }
-  function closeModal() { modal.hidden = true; document.body.style.overflow = ''; updateBadge(); }
-
-  filterBtn.addEventListener('click', openModal);
-  overlay.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
-  submitBtn.addEventListener('click', () => { closeModal(); go(); });
-
-  updateBadge();
-  console.log('[modal] feature flag active');
 }
 
 /**
