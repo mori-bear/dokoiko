@@ -2791,8 +2791,15 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   gap: 4px;
 }
 
-/* テーマ: 5列 × 2行（10ボタンがちょうど収まる） */
+/* テーマ（メイン5択）: 5列1行 */
 #theme-group {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+/* テーマ（続き5択）: 5列1行 */
+#theme-extra-group {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr);
   gap: 4px;
@@ -2810,6 +2817,27 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
+}
+
+/* ── 詳細条件トグル ── */
+.detail-toggle {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.detail-toggle.open {
+  color: var(--btn-active-bg, #2d4be0);
+  border-color: var(--btn-active-bg, #2d4be0);
+  border-style: solid;
 }
 
 /* ── キーワード検索 ── */

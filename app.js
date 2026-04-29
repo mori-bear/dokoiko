@@ -26,6 +26,7 @@ async function init() {
   bindExampleLinks();
   bindLocationButton();
   bindMapsCta();
+  bindDetailToggle();
 
   // 出発地の優先順位: URLパラメータ > localStorage > デフォルト（東京）
   const urlParams = decodeUrlParams();
@@ -304,6 +305,7 @@ function restoreFromUrl(urlParams) {
   }
 
   clearFormError();
+  openDetailIfNeeded();
   draw();
 }
 
@@ -472,6 +474,36 @@ function bindLocationButton() {
       { timeout: 8000, maximumAge: 60000 },
     );
   });
+}
+
+/* ── 詳細条件アコーディオン ── */
+
+const EXTRA_THEMES = ['グルメ', '春', '夏', '秋', '冬'];
+
+function bindDetailToggle() {
+  const toggle  = document.getElementById('detail-toggle');
+  const section = document.getElementById('detail-section');
+  if (!toggle || !section) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = !section.hidden;
+    section.hidden = isOpen;
+    toggle.textContent = isOpen ? '＋ 詳細条件を追加' : '－ 詳細条件を閉じる';
+    toggle.classList.toggle('open', !isOpen);
+  });
+}
+
+function openDetailIfNeeded() {
+  const toggle  = document.getElementById('detail-toggle');
+  const section = document.getElementById('detail-section');
+  if (!toggle || !section) return;
+  const hasDetail = state.region || state.situation || state.excludeCar ||
+    state.keyword || EXTRA_THEMES.includes(state.theme);
+  if (hasDetail && section.hidden) {
+    section.hidden = false;
+    toggle.textContent = '－ 詳細条件を閉じる';
+    toggle.classList.add('open');
+  }
 }
 
 /**
