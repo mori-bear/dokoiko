@@ -2768,178 +2768,49 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   .step-icon { width: 26px; height: 26px; font-size: 16px; }
 }
 
-/* ── モーダルモード（?modal=1）レイアウト制御 ── */
-/* CSS クラスで確実に非表示 (!important で flex コンテナの影響を排除) */
-body.modal-mode #filter-controls { display: none !important; }
-body.modal-mode #filter-btn      { display: flex !important; }
+/* ── フィルターグリッドレイアウト（トップページ） ── */
 
-/* ── モーダル内グリッドレイアウト ── */
-/* ヘッダー・ボディ・フッターをコンパクトに */
-body.modal-mode .modal-header { padding: 10px 16px; }
-body.modal-mode .modal-body   { padding: 10px 14px; }
-body.modal-mode .modal-footer { padding: 10px 14px; }
-body.modal-mode .modal-body .control-group { margin-bottom: 0; gap: 5px; }
+/* controls 全体のギャップを縮小してコンパクトに */
+.controls { gap: 12px; }
+.controls .control-group { gap: 5px; }
 
-/* ラベル */
-body.modal-mode .modal-body .control-label {
-  font-size: 10px;
-  letter-spacing: .6px;
-}
-
-/* ボタン共通: コンパクト化 */
-body.modal-mode .modal-body .sel-btn {
+/* フィルターボタン: 小さくしてグリッドに収める */
+.controls .sel-btn {
   padding: 7px 4px;
   font-size: 11px;
-  min-height: 34px;
+  min-height: 36px;
   line-height: 1.2;
   text-align: center;
 }
-body.modal-mode .modal-body .sel-btn .stay-sub {
-  font-size: 9px;
-  display: block;
-}
+.controls .sel-btn .stay-sub { font-size: 9px; display: block; }
 
 /* 日数: 3列 */
-#modal-days-group {
+#days-group {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
-  flex-wrap: unset;
-  overflow: unset;
 }
 
-/* テーマ: 5列2行（10ボタンがちょうど収まる） */
-#modal-theme-group {
+/* テーマ: 5列 × 2行（10ボタンがちょうど収まる） */
+#theme-group {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr);
   gap: 4px;
-  flex-wrap: unset;
-  overflow: unset;
 }
 
-/* 地域: 3列3行（9ボタン） */
-#modal-region-group {
+/* 地域: 3列 × 3行（9ボタン） */
+#region-group {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
-  flex-wrap: unset;
-  overflow: unset;
 }
 
 /* シチュエーション: 3列 */
-#modal-situation-group {
+#situation-group {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
 }
-
-/* オプション・キーワード: モーダル内では非表示（コンパクト化） */
-#modal-option-group,
-#modal-keyword-group { display: none !important; }
-
-/* ── 絞り込みボタン（feature flag trigger） ── */
-.filter-trigger {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  margin-bottom: 4px;
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  font-size: 14px;
-  font-family: inherit;
-  color: var(--text);
-  cursor: pointer;
-  transition: border-color 0.15s;
-}
-.filter-trigger:hover { border-color: var(--accent); }
-.filter-trigger .badge {
-  background: var(--btn-active-bg);
-  color: var(--btn-active-text);
-  border-radius: 999px;
-  padding: 2px 7px;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-/* ── モーダル（feature flag） ── */
-.filter-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-}
-.modal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.modal-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--white);
-  border-radius: 16px 16px 0 0;
-  max-height: 85vh;
-  overflow-y: auto;
-  animation: modal-slide-up 0.28s ease;
-}
-@keyframes modal-slide-up {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
-}
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  background: var(--white);
-  z-index: 1;
-}
-.modal-title {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--text);
-}
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 4px 8px;
-  color: var(--text-sub);
-  border-radius: var(--radius);
-}
-.modal-close:hover { background: var(--btn-bg); }
-.modal-body { padding: 16px 20px; }
-.modal-body .control-group:last-child { margin-bottom: 0; }
-.modal-footer {
-  padding: 14px 20px;
-  position: sticky;
-  bottom: 0;
-  background: var(--white);
-  border-top: 1px solid var(--border);
-}
-.modal-submit {
-  width: 100%;
-  padding: 14px;
-  background: var(--btn-active-bg);
-  color: var(--btn-active-text);
-  border: none;
-  border-radius: var(--radius);
-  font-size: 16px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-.modal-submit:hover { opacity: 0.88; }
 
 /* ── キーワード検索 ── */
 .search-input {
