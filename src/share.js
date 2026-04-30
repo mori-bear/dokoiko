@@ -151,12 +151,16 @@ export function updatePageMeta(city, departure) {
   setMeta('og:url',         location.href);
   setMeta('og:image', 'https://tabidokoiko.com/assets/ogp.png');
 
-  // canonical を現在の URL に動的更新
+  // canonical: dest={id} のみのクリーンURLを正規URLとして指定
+  // フィルターパラメータ（from/nights/theme等）は除外して重複コンテンツを防ぐ
   let canonical = document.querySelector('link[rel="canonical"]');
   if (!canonical) {
     canonical = document.createElement('link');
     canonical.setAttribute('rel', 'canonical');
     document.head.appendChild(canonical);
   }
-  canonical.setAttribute('href', location.href);
+  const canonicalUrl = city?.id
+    ? `https://tabidokoiko.com/?dest=${encodeURIComponent(city.id)}`
+    : 'https://tabidokoiko.com/';
+  canonical.setAttribute('href', canonicalUrl);
 }
