@@ -414,9 +414,16 @@ export function buildHotelLinks(dest) {
   const destName = dest.displayName || dest.name;
 
   /* ── ビルド時事前生成 URL を最優先使用（iconv-lite 不要） ── */
-  if (dest.hotelLinks?.rakuten || dest.hotelLinks?.jalan) {
-    const rakutenUrl = dest.hotelLinks.rakuten
-      ? appendDateParams(dest.hotelLinks.rakuten) : null;
+  /* rakutenArea（都道府県直リンク、要affiliate wrap）> rakuten（既affiliate済み）の優先順 */
+  if (dest.hotelLinks?.rakutenArea || dest.hotelLinks?.rakuten || dest.hotelLinks?.jalan) {
+    let rakutenUrl;
+    if (dest.hotelLinks.rakutenArea) {
+      rakutenUrl = buildRakutenAffilUrl(dest.hotelLinks.rakutenArea);
+    } else if (dest.hotelLinks.rakuten) {
+      rakutenUrl = appendDateParams(dest.hotelLinks.rakuten);
+    } else {
+      rakutenUrl = null;
+    }
     const jalanUrl = dest.hotelLinks.jalan
       ? appendDateParams(dest.hotelLinks.jalan) : null;
     const links = [

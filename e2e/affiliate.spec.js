@@ -63,9 +63,9 @@ test.describe('アフィリエイトリンク基本検証', () => {
     expect(href).not.toBeNull();
     expect(href).toMatch(/hb\.afl\.rakuten\.co\.jp/);
     expect(href).not.toMatch(/[\u3000-\u9FFF]/);
-    // リダイレクト先にf_queryまたは.htmlが含まれる（トップ遷移防止）
+    // リダイレクト先がトップ以外（f_query=キーワード、.html=エリアページ、areaSearchMain=都道府県）
     const pc = decodeURIComponent(href.match(/pc=([^&]+)/)?.[1] ?? '');
-    expect(pc).toMatch(/f_query|\.html/);
+    expect(pc).toMatch(/f_query|\.html|areaSearchMain/);
     // /yado/ のみ（トップ遷移）でないこと
     expect(pc).not.toBe('https://travel.rakuten.co.jp/yado/');
     expect(pc).not.toBe('https://travel.rakuten.co.jp/');

@@ -2791,17 +2791,17 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
   gap: 4px;
 }
 
-/* テーマ（メイン5択）: 5列1行 */
+/* テーマ（メイン6択）: 3列2行 */
 #theme-group {
   display: grid !important;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
 }
 
-/* テーマ（続き5択）: 5列1行 */
+/* 季節（4択）: 4列1行 */
 #theme-extra-group {
   display: grid !important;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
 
