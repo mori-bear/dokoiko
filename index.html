@@ -16,13 +16,14 @@
   <meta name="twitter:title"      content="どこ行こ？ — まだ知らない街と、出会おう。">
   <meta name="twitter:description" content="まだ知らない街と、出会おう。出発地と日程を選ぶだけで、行ったことのない日本の街に出会えます。">
   <meta name="twitter:image"      content="https://tabidokoiko.com/assets/ogp.png">
-  <!-- Google Analytics 4 — G-XXXXXXXXXX を実際の計測IDに置き換えてください -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <link rel="canonical" href="https://tabidokoiko.com/">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJKVC2DXY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', { send_page_view: false });
+    gtag('config', 'G-WCJKVC2DXY', { send_page_view: false });
   </script>
   <link rel="preload" href="./src/data/destinations.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="./style.css">
@@ -161,7 +162,7 @@
           </div>
         </div>
 
-        <!-- テーマ（メイン5択） -->
+        <!-- テーマ（メイン6択） -->
         <div class="control-group">
           <label class="control-label">テーマ</label>
           <div class="btn-group" id="theme-group">
@@ -170,6 +171,7 @@
             <button class="sel-btn" data-theme="絶景">絶景</button>
             <button class="sel-btn" data-theme="海">海</button>
             <button class="sel-btn" data-theme="街歩き">街歩き</button>
+            <button class="sel-btn" data-theme="グルメ">グルメ</button>
           </div>
         </div>
 
@@ -178,11 +180,10 @@
 
         <div id="detail-section" hidden>
 
-          <!-- テーマ（続き: グルメ・季節） -->
+          <!-- 季節（4択） -->
           <div class="control-group">
-            <label class="control-label">テーマ（続き）</label>
+            <label class="control-label">季節 <span class="label-optional">（任意）</span></label>
             <div class="btn-group" id="theme-extra-group">
-              <button class="sel-btn theme-extra" data-theme="グルメ">グルメ</button>
               <button class="sel-btn theme-extra" data-theme="春">🌸 春</button>
               <button class="sel-btn theme-extra" data-theme="夏">🌊 夏</button>
               <button class="sel-btn theme-extra" data-theme="秋">🍁 秋</button>

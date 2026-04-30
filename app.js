@@ -15,7 +15,7 @@ import {
   updatePageMeta,
 } from './src/share.js';
 import { captureShareCard, shareOrDownload } from './src/share-image.js';
-import { initAnalytics, trackEvent, reportError } from './src/analytics.js';
+import { initAnalytics, trackEvent, reportError } from './src/tracking.js';
 
 async function init() {
   console.log('[INIT START]');
@@ -478,7 +478,7 @@ function bindLocationButton() {
 
 /* ── 詳細条件アコーディオン ── */
 
-const EXTRA_THEMES = ['グルメ', '春', '夏', '秋', '冬'];
+const EXTRA_THEMES = ['春', '夏', '秋', '冬'];
 
 function bindDetailToggle() {
   const toggle  = document.getElementById('detail-toggle');

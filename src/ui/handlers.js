@@ -7,7 +7,7 @@
  * state は src/state.js から直接 import して参照する（引数受け取り禁止）。
  */
 import { state }       from '../state.js';
-import { trackEvent } from '../analytics.js';
+import { trackEvent } from '../tracking.js';
 
 function isResultVisible() {
   return !document.getElementById('result')?.hidden;
