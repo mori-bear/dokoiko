@@ -17,7 +17,7 @@
  *   rakuten_click    → hotel_link_click  (hotel_service: 'rakuten')
  *   jalan_click      → hotel_link_click  (hotel_service: 'jalan')
  *   car_click        → car_click
- *   yahoo_click      → transit_click
+
  *   share_click      → share             (method: 'image')
  *   share_line_click → share             (method: 'line')
  *   share_copy_click → share             (method: 'copy')
@@ -61,7 +61,7 @@ function _toGa4Name(event) {
     'rakuten_click':    'hotel_link_click',
     'jalan_click':      'hotel_link_click',
     'car_click':        'car_click',
-    'yahoo_click':      'transit_click',
+
     'share_click':      'share',
     'share_line_click': 'share',
     'share_copy_click': 'share',

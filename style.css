@@ -1443,16 +1443,7 @@ body {
   white-space: nowrap;
 }
 
-/* Yahoo乗換ボタン（モーダルミックス: 駅まで電車・その先レンタカー）*/
-.btn--yahoo {
-  background: #FF0033;
-  color: #fff;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(255, 0, 51, 0.25);
-}
-.btn--yahoo:hover {
-  opacity: 0.88;
-}
+
 
 /* 個別目的地ページのシェアボタン */
 .dest-share {
