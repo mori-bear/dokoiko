@@ -150,4 +150,13 @@ export function updatePageMeta(city, departure) {
   setMeta('og:description', desc);
   setMeta('og:url',         location.href);
   setMeta('og:image', 'https://tabidokoiko.com/assets/ogp.png');
+
+  // canonical を現在の URL に動的更新
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', location.href);
 }
