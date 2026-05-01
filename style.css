@@ -819,7 +819,9 @@ body {
   margin: 10px 0 4px;
   border-radius: 10px;
   text-align: center;
-  opacity: 0.85;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
 /* ── ルートメインCTA（最優先予約先・大ボタン）── */
@@ -1938,33 +1940,38 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 
 .btn-share {
   display: inline-block;
-  padding: 9px 18px;
-  border-radius: 100px;
-  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.15s;
-  border: none;
   cursor: pointer;
   font-family: inherit;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
 .btn-share--x {
-  background: #000;
-  color: #fff;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
 .btn-share--line {
-  background: #06c755;
-  color: #fff;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
 .btn-share--img {
-  background: var(--btn-bg);
-  color: var(--text);
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
 }
 
-.btn-share:hover { opacity: 0.82; }
+.btn-share:hover { opacity: 0.75; }
 
 .btn-share:disabled {
   opacity: 0.5;
@@ -1973,19 +1980,19 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 
 .btn-copy {
   display: inline-block;
-  padding: 9px 18px;
-  border-radius: 100px;
-  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 600;
-  background: var(--btn-bg);
-  color: var(--text);
-  border: 1px solid var(--border);
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
   cursor: pointer;
   font-family: inherit;
   transition: background 0.15s;
 }
 
-.btn-copy:hover { background: var(--btn-hover); }
+.btn-copy:hover { background: #eaeaea; }
 
 /* ── フッター ── */
 
@@ -2238,12 +2245,12 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 .stay-buttons a:hover { opacity: 0.86; }
 
 .stay-btn--rakuten {
-  background: #bf0000;
+  background: #333;
   color: #fff;
 }
 
 .stay-btn--jalan {
-  background: #ff7a32;
+  background: #555;
   color: #fff;
 }
 

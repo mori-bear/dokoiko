@@ -166,7 +166,6 @@ function buildCityBlock(city) {
   // スポット例（最大3つ）: spots優先、なければtags補完
   const spotsHtml = buildSpotsLine(city, displayTags);
 
-  const stayBadge = buildStayBadge(city);
   const reasonChips = buildReasonChips(city);
   return `
     <div class="city-block">
@@ -175,9 +174,8 @@ function buildCityBlock(city) {
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
       ${catchHtml}
-      ${stayBadge}
-      ${reasonChips}
       ${descHtml}
+      ${reasonChips}
       ${spotsHtml}
     </div>
   `;
