@@ -92,26 +92,15 @@ function buildPool() {
 
 /**
  * 表示順制御:
- *   1位: weight最大の目的地を先頭に（最も納得感の高い提案を最初に出す）
- *   2〜5位: destTypeが連続しないよう再配置（多様性の視覚的バランス）
+ *   先頭5件で destType が連続しないよう再配置（多様性の視覚的バランス）
+ *   先頭固定なし — weightedShuffle の結果をそのまま使う
  */
 function reorderPool() {
   if (state.pool.length <= 1) return;
 
-  // 1位: weight最大を先頭へ
-  let maxIdx = 0;
-  for (let i = 1; i < state.pool.length; i++) {
-    if ((state.pool[i].weight ?? 1) > (state.pool[maxIdx].weight ?? 1)) maxIdx = i;
-  }
-  if (maxIdx !== 0) {
-    const best = state.pool.splice(maxIdx, 1)[0];
-    state.pool.unshift(best);
-  }
-
-  // 2〜5位: 直前と同一 destType なら後続から別 type を引き上げ
+  // 先頭5件: 直前と同一 destType なら後続から別 type を引き上げ
   for (let pos = 1; pos <= Math.min(4, state.pool.length - 1); pos++) {
     if (state.pool[pos].destType !== state.pool[pos - 1].destType) continue;
-    // 後続から異なるtypeを探して交換
     const swapIdx = state.pool.slice(pos + 1).findIndex(d => d.destType !== state.pool[pos - 1].destType);
     if (swapIdx !== -1) {
       const actual = pos + 1 + swapIdx;
