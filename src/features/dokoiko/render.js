@@ -43,7 +43,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${mapsCtaHtml}
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
         ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
-        ${buildCityDetailBlock(city)}
+        ${buildCityDetailBlock(city, stayType)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
         <div class="card-brand-footer">どこ行こ？ — tabidokoiko.com</div>
       </div>
@@ -122,24 +122,49 @@ function buildCityHeaderBlock(city) {
 }
 
 /** タグライン・説明・スポット（セカンダリ情報。T4レイアウト用） */
-function buildCityDetailBlock(city) {
+function buildCityDetailBlock(city, stayType = '') {
   const displayTags = city.primary?.length
     ? [...(city.primary ?? []), ...(city.secondary ?? [])]
     : (city.tags ?? []);
-  const tagline = buildTagline(city);
-  const taglineHtml = tagline ? `<p class="city-tagline">${tagline}</p>` : '';
+  const catchHtml = city.catch
+    ? `<p class="city-catch">${city.catch}</p>`
+    : '';
   const descHtml = city.description
     ? `<p class="city-description">${city.description}</p>`
     : '';
   const spotsHtml = buildSpotsLine(city, displayTags);
-  if (!taglineHtml && !descHtml && !spotsHtml) return '';
+  const courseHtml = buildModelCourse(city, stayType);
+  if (!catchHtml && !descHtml && !spotsHtml && !courseHtml) return '';
   return `
     <div class="city-detail">
-      ${taglineHtml}
+      ${catchHtml}
       ${descHtml}
       ${spotsHtml}
+      ${courseHtml}
     </div>
   `;
+}
+
+function buildModelCourse(city, stayType) {
+  const spots = city.spots ?? [];
+  if (spots.length === 0) return '';
+  const s = (i) => spots[i] ?? null;
+  if (!s(0)) return '';
+
+  let body;
+  if (stayType === 'daytrip') {
+    const parts = [s(0), s(1), s(2)].filter(Boolean);
+    body = parts.join(' → ');
+  } else {
+    const day1 = [s(0), s(1)].filter(Boolean).join(' → ');
+    const day2 = s(2) ? `${s(2)} → 帰路` : '帰路';
+    body = `1日目: ${day1}<br>2日目: ${day2}`;
+  }
+  return `
+    <div class="model-course">
+      <p class="model-course-label">📅 ${stayType === 'daytrip' ? '1日のイメージ' : '旅のイメージ'}</p>
+      <p class="model-course-body">${body}</p>
+    </div>`;
 }
 
 function buildCityBlock(city) {
@@ -416,6 +441,16 @@ function buildReasonChips(city) {
   if (city.situations?.includes('solo'))   chips.push({ text: '🚶 ひとり旅向け', cls: 'chip--situation' });
   if (city.situations?.includes('couple')) chips.push({ text: '👫 カップル向け', cls: 'chip--situation' });
 
+  // 季節チップ（現在の月から自動判定）
+  const month = new Date().getMonth() + 1;
+  if ([3,4].includes(month)   && city.tags?.includes('春')) chips.push({ text: '🌸 今が春旅におすすめ', cls: 'chip--season' });
+  if ([7,8].includes(month)   && city.tags?.includes('夏')) chips.push({ text: '☀️ 今が夏旅におすすめ', cls: 'chip--season' });
+  if ([10,11].includes(month) && city.tags?.includes('秋')) chips.push({ text: '🍁 今が秋旅におすすめ', cls: 'chip--season' });
+  if ([12,1,2].includes(month) && city.tags?.includes('冬')) chips.push({ text: '❄️ 今が冬旅におすすめ', cls: 'chip--season' });
+
+  if (city.tags?.includes('世界遺産')) chips.push({ text: '🏛 世界遺産', cls: 'chip--special' });
+  if (city.tags?.includes('温泉'))     chips.push({ text: '♨️ 温泉あり', cls: 'chip--onsen' });
+
   if (!chips.length) return '';
   const html = chips.map(c => `<span class="reason-chip ${c.cls}">${c.text}</span>`).join('');
   return `<div class="reason-chips">${html}</div>`;
@@ -529,10 +564,10 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
       const accessText = segmentAccess || buildAccessText(best?.finalAccess, city, gatewayCity);
       if (accessText) {
         accessHtml = `
-          <details class="final-access-details">
-            <summary class="final-access-summary">その先の行き方</summary>
-            <div class="final-access-body">${accessText}</div>
-          </details>`;
+          <div class="final-access-block">
+            <p class="final-access-label">その先の行き方</p>
+            <p class="final-access-body">${accessText}</p>
+          </div>`;
       }
     }
   }
@@ -594,27 +629,13 @@ function buildAccessText(access, city, gatewayCity = null) {
     const trClean = trObj ? clean(trObj.name) : (typeof fa.transferStation === 'string' ? clean(fa.transferStation) : null);
     const midClean = mid ? clean(mid) : null;
     const isSame = trObj?.access === 'same';
-    // A. midStation + transferStation（徒歩乗換）
-    if (midClean && trClean && !isSame) {
-      return `${midClean}で${company}に乗換 → ${to}へ行く`;
-    }
-    // B. 同一駅乗換 → シンプル
-    if (isSame) {
-      return `${company}で${to}へ行く`;
-    }
-    // C. transferStation
-    if (trClean) {
-      return `${trClean}で${company}に乗換 → ${to}へ行く`;
-    }
-    // D. シンプル
-    return `${company}で${to}へ行く`;
+    if (midClean && trClean && !isSame) return `🚃 ${midClean}で${company}に乗換 → ${to}へ`;
+    if (isSame)  return `🚃 ${company}で${to}へ`;
+    if (trClean) return `🚃 ${trClean}で${company}に乗換 → ${to}へ`;
+    return `🚃 ${company}で${to}へ`;
   }
-  if (fa.type === 'bus') {
-    return `バスで${destName}へ行く`;
-  }
-  if (fa.type === 'car') {
-    return `車で${destName}へ行く`;
-  }
+  if (fa.type === 'bus')  return `🚌 バスで${destName}へ`;
+  if (fa.type === 'car')  return `🚗 車で${destName}へ`;
   return '';
 }
 
@@ -638,9 +659,9 @@ function buildSegmentAccessText(segments, city) {
   });
   if (!accessSegs.length) return '';
   const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', flight: '飛行機', rental: 'レンタカー' };
+  const MODE_ICON  = { local_bus: '🚌', highway_bus: '🚌', ferry: '⛴', flight: '✈️', rental: '🚗', walk: '🚶' };
   const steps = accessSegs
     .filter(s => {
-      // from===to や徒歩すぐ等の無意味ステップを除外
       const from = clean(s.from);
       const to = clean(s.to);
       if (from === to) return false;
@@ -651,7 +672,8 @@ function buildSegmentAccessText(segments, city) {
       const from = clean(s.from);
       const to = clean(s.to);
       const mode = MODE_LABEL[s.type] || s.mode || '乗換';
-      return `${from} → ${to}（${mode}）`;
+      const icon = MODE_ICON[s.type] || '🚃';
+      return `${icon} ${from} → ${to}（${mode}）`;
     });
   return steps.join(' → ');
 }
