@@ -152,8 +152,11 @@ function buildCityBlock(city) {
   const locationStr = city.prefecture || '';
 
   const nameDisplay = city.displayName || city.name;
-  const tagline = buildTagline(city);
-  const taglineHtml = tagline ? `<p class="city-tagline">${tagline}</p>` : '';
+
+  // キャッチコピー
+  const catchHtml = city.catch
+    ? `<p class="city-catch">${city.catch}</p>`
+    : '';
 
   // 説明文
   const descHtml = city.description
@@ -171,8 +174,8 @@ function buildCityBlock(city) {
         <h2 class="city-name">${nameDisplay}</h2>
         <p class="city-sub">${locationStr}${categoryBadge}</p>
       </div>
+      ${catchHtml}
       ${stayBadge}
-      ${taglineHtml}
       ${reasonChips}
       ${descHtml}
       ${spotsHtml}
@@ -406,6 +409,14 @@ function buildReasonChips(city) {
 
   const featureLabel = DEST_TYPE_FEATURE[city.destType];
   if (featureLabel) chips.push({ text: featureLabel, cls: 'chip--type' });
+
+  if (city.requiresCar === false) chips.push({ text: '🚃 車なしOK', cls: 'chip--car' });
+
+  if (city.stayRecommendation === 'daytrip') chips.push({ text: '☀️ 日帰り最適', cls: 'chip--stay' });
+  else if (city.stayRecommendation === '1night') chips.push({ text: '🌙 1泊がおすすめ', cls: 'chip--stay' });
+
+  if (city.situations?.includes('solo'))   chips.push({ text: '🚶 ひとり旅向け', cls: 'chip--situation' });
+  if (city.situations?.includes('couple')) chips.push({ text: '👫 カップル向け', cls: 'chip--situation' });
 
   if (!chips.length) return '';
   const html = chips.map(c => `<span class="reason-chip ${c.cls}">${c.text}</span>`).join('');
