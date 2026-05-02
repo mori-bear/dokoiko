@@ -16,7 +16,7 @@ import { buildNarrative }                         from '../../transport/routeNar
 import { buildRouteMapUrl }                       from '../../utils/map/buildRouteMapUrl.js';
 import { state }                                  from '../../state.js';
 
-export function renderResult({ city, transportLinks, hotelLinks, stayCityName = null, stayType, departure, transportContext = {} }) {
+export function renderResult({ city, transportLinks, hotelLinks, hubHotelLinks = null, stayCityName = null, stayType, departure, transportContext = {} }) {
   try {
     // daytrip のみ宿泊セクション非表示。free / 2night / 3night+ はすべて表示
     const showHotel = stayType !== 'daytrip';
@@ -42,6 +42,7 @@ export function renderResult({ city, transportLinks, hotelLinks, stayCityName = 
         ${buildReasonChips(city)}
         ${mapsCtaHtml}
         ${showHotel ? buildStaySection(hotelLinks, city, stayCityName, tc) : ''}
+        ${showHotel ? buildHubStaySection(hubHotelLinks, city) : ''}
         ${buildCtaBlock(tc, transportLinks, city, departure, null, stayCityName, true)}
         ${buildCityDetailBlock(city, stayType)}
         <p class="transport-disclaimer">※実際の時刻・料金は各サービスでご確認ください</p>
@@ -969,6 +970,37 @@ function buildStaySection(hotelLinks, city, stayCityName = null, tc = null) {
   return `
     <div class="stay-section stay-section--primary" id="stay-section">
       <p class="stay-area-label">${areaLabel}で泊まる</p>
+      <div class="stay-dual-grid">${buttons}</div>
+    </div>
+  `;
+}
+
+/**
+ * ハブ都市の宿セクション（乗り継ぎ・前泊）。
+ * hubCity が目的地と異なる場合のみ表示（奈良→京都、白川郷→高山 など）。
+ */
+function buildHubStaySection(hubHotelLinks, city) {
+  if (!hubHotelLinks) return '';
+  const stayLinks = hubHotelLinks.links ?? [];
+  const rakuten = stayLinks.find(l => l.type === 'rakuten');
+  const jalan   = stayLinks.find(l => l.type === 'jalan');
+  if (!rakuten && !jalan) return '';
+
+  const hubName = city.hubCity || hubHotelLinks.stayCityName || '';
+  const buttons = [
+    rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn-stay btn-rakuten" data-track="rakuten_click">
+                  <span class="btn-stay-main">楽天で宿を見る</span>
+               </a>` : '',
+    jalan   ? `<a href="${jalan.url}" target="_blank" rel="nofollow sponsored noopener"
+                  class="btn btn-stay btn-jalan" data-track="jalan_click">
+                  <span class="btn-stay-main">じゃらんで宿を見る</span>
+               </a>` : '',
+  ].filter(Boolean).join('');
+
+  return `
+    <div class="stay-section hub-stay-section">
+      <p class="stay-area-label">${hubName}に泊まる（乗り継ぎ・前泊）</p>
       <div class="stay-dual-grid">${buttons}</div>
     </div>
   `;

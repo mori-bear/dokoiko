@@ -24,10 +24,17 @@ export function buildTravelPlan(destination, departure) {
   const hotelLinks   = buildHotelLinks(destination);
   const stayCityName = resolveStay(destination);
 
+  /* ハブ都市が目的地自身と異なる場合: 目的地直接リンクとハブリンクを分離 */
+  const destName = destination.displayName || destination.name;
+  const hasHub   = destination.hubCity && destination.hubCity !== destName;
+  const destHotelLinks = hasHub ? buildHotelLinks({ ...destination, hubCity: null }) : hotelLinks;
+  const hubHotelLinks  = hasHub ? hotelLinks : null;
+
   return {
-    transportLinks:   context.stepGroups,  // render.js 互換: step-group 配列
-    hotelLinks,
-    stayCityName,                          // 宿泊地名（UI表示用）
-    transportContext: context,             // 拡張用: engine の完全コンテキスト
+    transportLinks:   context.stepGroups,
+    hotelLinks:       destHotelLinks,   // 目的地直接リンク（メイン）
+    hubHotelLinks,                      // ハブ都市リンク（前泊・乗り継ぎ）
+    stayCityName,
+    transportContext: context,
   };
 }

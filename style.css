@@ -1428,6 +1428,18 @@ body {
   transition: background 0.4s ease;
 }
 
+/* ハブ都市の前泊・乗り継ぎ宿セクション */
+.hub-stay-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #ddd;
+}
+
+.hub-stay-section .stay-area-label {
+  font-size: 13px;
+  color: #666;
+}
+
 /* 「この旅で行く」クリック時のハイライト */
 .stay-section--highlight {
   background: #fff8ee;
