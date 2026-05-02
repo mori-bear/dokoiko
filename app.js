@@ -155,7 +155,7 @@ function draw() {
   resultEl.hidden = false;
 
   try {
-    const plan = buildTravelPlan(city, state.departure);
+    const plan = buildTravelPlan(city, state.departure, state.destinations);
 
     state.lastTransportContext = plan.transportContext;
 

@@ -81,12 +81,12 @@ test.describe('アフィリエイトリンク基本検証', () => {
     expect(href).not.toMatch(/[\u3000-\u9FFF]/);
   });
 
-  test('宿CTAが重複していない（1セットのみ）', async ({ page }) => {
+  test('宿CTAが重複していない（最大2セット: 目的地 + ハブ拠点）', async ({ page }) => {
     await goToResult(page);
     const rakutenCount = await page.locator('a.btn-rakuten').count();
     const jalanCount   = await page.locator('a.btn-jalan').count();
-    expect(rakutenCount, `楽天CTA ${rakutenCount}個（1個のみ許可）`).toBeLessThanOrEqual(1);
-    expect(jalanCount, `じゃらんCTA ${jalanCount}個（1個のみ許可）`).toBeLessThanOrEqual(1);
+    expect(rakutenCount, `楽天CTA ${rakutenCount}個（2個まで許可）`).toBeLessThanOrEqual(2);
+    expect(jalanCount, `じゃらんCTA ${jalanCount}個（2個まで許可）`).toBeLessThanOrEqual(2);
   });
 
 });

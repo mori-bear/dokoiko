@@ -986,7 +986,9 @@ function buildHubStaySection(hubHotelLinks, city) {
   const jalan   = stayLinks.find(l => l.type === 'jalan');
   if (!rakuten && !jalan) return '';
 
-  const hubName = city.hubCity || hubHotelLinks.stayCityName || '';
+  const destName = city.displayName || city.name || '';
+  const hubCityName = city.hubCity && city.hubCity !== destName ? city.hubCity : null;
+  const hubName = hubCityName || hubHotelLinks.stayCityName || '';
   const buttons = [
     rakuten ? `<a href="${rakuten.url}" target="_blank" rel="nofollow sponsored noopener"
                   class="btn btn-stay btn-rakuten" data-track="rakuten_click">
