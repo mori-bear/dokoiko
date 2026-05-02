@@ -242,6 +242,23 @@ function buildJalanAffilUrl(rawJalanUrl) {
 }
 
 /**
+ * エリアの jalanUrl からじゃらんアフィリエイトURLを解決
+ */
+function resolveJalanUrl(dest) {
+  if (!isWeak(dest)) {
+    const area = lookupAreaById(dest.id);
+    if (area?.jalanUrl) return buildJalanAffilUrl(area.jalanUrl);
+  }
+  if (dest.fallbackCity) {
+    const fbArea = lookupAreaByName(dest.fallbackCity);
+    if (fbArea?.jalanUrl) return buildJalanAffilUrl(fbArea.jalanUrl);
+  }
+  const area = lookupAreaById(dest.id);
+  if (area?.jalanUrl) return buildJalanAffilUrl(area.jalanUrl);
+  return null;
+}
+
+/**
  * 3段フォールバック + キーワード検索で楽天URLを解決
  *
  * エリア特化ページ（.html）がある → そのまま使用
@@ -453,13 +470,17 @@ export function buildHotelLinks(dest) {
         ? buildRakutenKeywordUrl(dest.hubCity)
         : buildRakutenAffilUrl(buildRakutenDestUrl(hubRakutenPath)))
       : null;
-    if (hubRakutenUrl) {
-      const links = [{ type: 'rakuten', url: hubRakutenUrl }];
+    const hubJalanUrl = hubArea?.jalanUrl ? buildJalanAffilUrl(hubArea.jalanUrl) : null;
+    if (hubRakutenUrl || hubJalanUrl) {
+      const links = [
+        ...(hubRakutenUrl ? [{ type: 'rakuten', url: hubRakutenUrl }] : []),
+        ...(hubJalanUrl   ? [{ type: 'jalan',   url: hubJalanUrl   }] : []),
+      ];
       return {
         links,
         stayCityName: resolveStayLabel(dest.hubCity, dest),
         bestUrl:  links[0].url,
-        bestType: 'rakuten',
+        bestType: links[0].type,
         hasStay:    resolveHasStay(dest),
         stayReason: resolveStayReason(dest),
       };
@@ -467,8 +488,10 @@ export function buildHotelLinks(dest) {
   }
 
   const rakutenUrl = resolveRakutenUrl(dest);
+  const jalanUrl   = resolveJalanUrl(dest);
   const links = [
     ...(rakutenUrl ? [{ type: 'rakuten', url: rakutenUrl }] : []),
+    ...(jalanUrl   ? [{ type: 'jalan',   url: jalanUrl   }] : []),
   ];
   return {
     links,
