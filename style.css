@@ -552,6 +552,16 @@ body {
   border-top: 1px solid var(--border);
 }
 
+.spot-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+}
+.spot-link:hover {
+  border-bottom-color: #333;
+}
+
 /* 理由チップ: 移動時間 + 特徴ラベル */
 .reason-chips {
   display: flex;

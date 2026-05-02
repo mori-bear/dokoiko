@@ -35,6 +35,7 @@ export const CITY_AIRPORT = {
   '京都':   'ITM',
   '神戸':   'UKB',
   '奈良':   'ITM',
+  '和歌山': 'KIX',
   // 中国
   '広島':   'HIJ',
   '岡山':   'OKJ',

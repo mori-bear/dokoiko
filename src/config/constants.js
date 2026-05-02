@@ -4,7 +4,7 @@ export const DEPARTURES = [
   '東京', '横浜', '千葉', '大宮', '宇都宮',
   '新潟',
   '長野', '静岡', '名古屋', '金沢', '富山',
-  '大阪', '京都', '神戸', '奈良',
+  '大阪', '京都', '神戸', '奈良', '和歌山',
   '広島', '福山', '岡山', '倉敷', '姫路', '松江', '米子',
   '高松', '松山', '高知', '徳島',
   '福岡', '熊本', '鹿児島', '長崎', '宮崎',
@@ -62,6 +62,7 @@ export const DEPARTURE_COORDS = {
   '長崎':   { lat: 32.74, lng: 129.87 },
   '宮崎':   { lat: 31.90, lng: 131.42 },
   '那覇':   { lat: 26.21, lng: 127.68 },
+  '和歌山': { lat: 34.2261, lng: 135.1675 },
 };
 
 export const DEPARTURE_CITY_INFO = {
@@ -92,6 +93,7 @@ export const DEPARTURE_CITY_INFO = {
   '京都':   { rail: '京都駅',       airport: '大阪国際空港 国内線ターミナル',   iata: 'OSA', jrArea: 'west',    nearestHub: '大阪' },
   '神戸':   { rail: '三ノ宮駅',     airport: '神戸空港',                       iata: 'UKB', jrArea: 'west',    nearestHub: '大阪' },
   '奈良':   { rail: '奈良駅',       airport: '大阪国際空港 国内線ターミナル',   iata: 'OSA', jrArea: 'west',    nearestHub: '大阪' },
+  '和歌山': { rail: '和歌山駅',     airport: '関西国際空港',                   iata: 'KIX', jrArea: 'west',    nearestHub: '大阪' },
   // ── 中国 ──
   '広島':   { rail: '広島駅',       airport: '広島空港',                       iata: 'HIJ', jrArea: 'west',    nearestHub: null   },
   '福山':   { rail: '福山駅',       airport: '広島空港',                       iata: 'HIJ', jrArea: 'west',    nearestHub: '広島' },

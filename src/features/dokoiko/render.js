@@ -213,7 +213,11 @@ function buildCityBlock(city) {
 function buildSpotsLine(city, displayTags) {
   if (city.spots?.length) {
     const shortened = city.spots.slice(0, 3).map(shortenSpot);
-    return `<p class="city-spots">${shortened.join('・')}</p>`;
+    const links = shortened.map(spot => {
+      const q = encodeURIComponent(`${spot} ${city.name}`);
+      return `<a href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener" class="spot-link">${spot}</a>`;
+    });
+    return `<p class="city-spots">${links.join('・')}</p>`;
   }
   const fallback = (displayTags ?? []).slice(0, 3);
   return fallback.length ? `<p class="city-spots">${fallback.join('・')}</p>` : '';
