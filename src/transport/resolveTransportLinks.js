@@ -195,6 +195,26 @@ function hasFlightRoute(departure, airportName) {
   return FLIGHT_ROUTES.some(r => r.from === departure && r.to === airportName);
 }
 
+/**
+ * flightHub への直行便がない出発地向けに dest.hub の空港へフォールバック。
+ * 例: 高松→石垣空港(便なし) → 高松→那覇空港(便あり) に切り替える。
+ * _hubAirportName を上書きして返す（変更なしの場合は元の値をそのまま返す）。
+ */
+const HUB_ID_AIRPORT = {
+  'naha':    '那覇空港',
+  'sendai':  '仙台空港',
+  'sapporo': '新千歳空港',
+  'hiroshima': '広島空港',
+};
+function resolveHubAirport(city, departure, hubAirportName) {
+  if (!hubAirportName || !city.hub || hasFlightRoute(departure, hubAirportName)) return hubAirportName;
+  const altAirport = HUB_ID_AIRPORT[city.hub] ?? null;
+  if (altAirport && altAirport !== hubAirportName && hasFlightRoute(departure, altAirport)) {
+    return altAirport;
+  }
+  return hubAirportName;
+}
+
 /* ══════════════════════════════════════════════════════
    provider 判定
 ══════════════════════════════════════════════════════ */
@@ -1215,7 +1235,8 @@ function buildAutoLinks(city, departure, fromCity) {
   const fromIata   = CITY_AIRPORT[departure] ?? null;
 
   /* Phase 4③: flightHub 経由かどうか（ferry セクションのスキップ判定にも使用）*/
-  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+  const _hubAirportName = resolveHubAirport(city, departure,
+    city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
   const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
 
   /* 短距離 / 同一地方への飛行機は禁止 */
@@ -1581,7 +1602,8 @@ function buildOverviewStep(departure, city, fromCity) {
 function _appendFlightSteps(stepGroups, city, departure, fromCity) {
   const fromIata = CITY_AIRPORT[departure] ?? null;
 
-  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+  const _hubAirportName = resolveHubAirport(city, departure,
+    city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
   const isViaHub  = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
   const hasFlight = isFlightAllowed(city, departure) && !!(fromIata && (
     (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||
@@ -1841,7 +1863,8 @@ function buildIslandRoute(city, departure, fromCity) {
   const origin   = fromCity?.rail ?? departure;
   const fromIata = CITY_AIRPORT[departure] ?? null;
 
-  const _hubAirportName = city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null;
+  const _hubAirportName = resolveHubAirport(city, departure,
+    city.flightHub ? (AIRPORT_HUB_GATEWAY[city.flightHub] ?? null) : null);
   const isViaHub = !!(_hubAirportName && _hubAirportName !== city.airportGateway);
   const hasFlight = isFlightAllowed(city, departure) && !!(fromIata && (
     (city.airportGateway && hasFlightRoute(departure, city.airportGateway)) ||

@@ -1838,7 +1838,11 @@
     "prefecture": "沖縄県",
     "city": "那覇市",
     "hotelArea": "naha",
-    "jalanPath": "/47/LRG_470010/"
+    "jalanPath": "/47/LRG_470010/",
+    "hotelLinks": {
+      "rakuten": "https://hb.afl.rakuten.co.jp/hgc/5113ee4b.8662cfc5.5113ee4c.119de89a/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2Fyad%2Fsearch%2FareaSearchMain.do%3Ff_area%3D471%26f_keyword%3D%E9%82%A3%E8%A6%87",
+      "jalan": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3764408&pid=892559858&vc_url=https%3A%2F%2Fwww.jalan.net%2Fken%2Fjapan%2F471000%2F"
+    }
   },
   {
     "id": "matsumoto-n",
