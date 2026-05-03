@@ -563,15 +563,19 @@ function buildCtaBlock(tc, transportLinks, city, departure, hotelLinks = null, s
     const gatewayCity = resolveGatewayCity(best, city);
     const shouldShow = best?.showFinalAccess !== false && !chainCta.allJR;
     if (shouldShow) {
-      // セグメントベースの具体ルート（非JRセグメントを抽出）
-      const segmentAccess = buildSegmentAccessText(best?.segments, city);
+      // セグメントベースの具体ルート（非JRセグメントをステップ表示）
+      const stepsHtml   = buildAccessStepsHtml(best?.segments, city);
+      const segmentText = stepsHtml ? null : buildSegmentAccessText(best?.segments, city);
       // fallback: finalAccessオブジェクトから生成
-      const accessText = segmentAccess || buildAccessText(best?.finalAccess, city, gatewayCity);
-      if (accessText) {
+      const accessText  = segmentText || buildAccessText(best?.finalAccess, city, gatewayCity);
+      if (stepsHtml || accessText) {
+        const bodyHtml = stepsHtml
+          ? `<div class="access-steps">${stepsHtml}</div>`
+          : `<p class="final-access-body">${accessText}</p>`;
         accessHtml = `
           <div class="final-access-block">
             <p class="final-access-label">その先の行き方</p>
-            <p class="final-access-body">${accessText}</p>
+            ${bodyHtml}
           </div>`;
       }
     }
@@ -681,6 +685,30 @@ function buildSegmentAccessText(segments, city) {
       return `${icon} ${from} → ${to}（${mode}）`;
     });
   return steps.join(' → ');
+}
+
+/**
+ * セグメント配列から access-steps HTML を生成する。
+ * 非JR・非徒歩の乗り物をステップカードとして返す。
+ */
+function buildAccessStepsHtml(segments, city) {
+  if (!segments?.length) return null;
+  const clean = (n) => String(n ?? '').replace(/駅$|空港$|港$/, '');
+  const accessSegs = segments.filter(s => {
+    if (s.type === 'walk' || s.type === 'shinkansen') return false;
+    if (s.type === 'ferry' || s.type === 'flight') return true;
+    if ((s.type === 'rail_local' || s.type === 'rail_express') && isJRSegmentFromMode(s)) return false;
+    return true;
+  }).filter(s => clean(s.from) !== clean(s.to));
+  if (!accessSegs.length) return null;
+  const MODE_ICON  = { local_bus: '🚌', highway_bus: '🚌', ferry: '⛴', flight: '✈️', rental: '🚗', rail_local: '🚃', rail_express: '🚃' };
+  const MODE_LABEL = { local_bus: 'バス', highway_bus: '高速バス', ferry: 'フェリー', flight: '飛行機', rental: 'レンタカー', rail_local: '電車', rail_express: '特急' };
+  const steps = accessSegs.map(s => {
+    const icon = MODE_ICON[s.type] || '🚃';
+    const mode = MODE_LABEL[s.type] || s.mode || '乗換';
+    return `<div class="access-step"><span class="step-icon">${icon}</span><span class="step-text">${clean(s.from)} → ${clean(s.to)}（${mode}）</span></div>`;
+  });
+  return steps.join('<div class="step-connector">↓</div>');
 }
 
 /** セグメントのmode文字列からJR系か判定（render側用・簡易版） */

@@ -126,9 +126,10 @@ function showCopyToast() {
 /** ページタイトル + descriptionを動的更新（タブ表示 + 一部SNS対応） */
 export function updatePageMeta(city, departure) {
   const name = city.displayName || city.name;
-  const tags = Array.isArray(city.tags) ? city.tags.slice(0, 3).join('・') : '';
-  const title = `${departure}から行ける、ちょうどいい旅 | どこ行こ？`;
-  const desc  = `まだ知らない${name}に、ちゃんと行けるルート付きで。${tags ? tags + '。' : ''}`;
+  const title = `${name}の旅 | どこ行こ？`;
+  const desc = city.description
+    ? `${city.description}${name}への行き方・宿情報も掲載。出発地別に所要時間を確認できます。`
+    : `${name}（${city.prefecture ?? ''}）への行き方・宿・観光スポット情報。`;
 
   document.title = title;
 
@@ -152,7 +153,6 @@ export function updatePageMeta(city, departure) {
   setMeta('og:image', 'https://tabidokoiko.com/assets/ogp.png');
 
   // canonical: dest={id} のみのクリーンURLを正規URLとして指定
-  // フィルターパラメータ（from/nights/theme等）は除外して重複コンテンツを防ぐ
   let canonical = document.querySelector('link[rel="canonical"]');
   if (!canonical) {
     canonical = document.createElement('link');
@@ -163,4 +163,19 @@ export function updatePageMeta(city, departure) {
     ? `https://tabidokoiko.com/?dest=${encodeURIComponent(city.id)}`
     : 'https://tabidokoiko.com/';
   canonical.setAttribute('href', canonicalUrl);
+
+  // JSON-LD 構造化データ（TouristDestination）
+  const existing = document.querySelector('script[type="application/ld+json"]');
+  if (existing) existing.remove();
+  const jsonLd = document.createElement('script');
+  jsonLd.type = 'application/ld+json';
+  jsonLd.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'TouristDestination',
+    'name': name,
+    'description': desc,
+    'url': canonicalUrl,
+    ...(city.lat && city.lng ? { 'geo': { '@type': 'GeoCoordinates', 'latitude': city.lat, 'longitude': city.lng } } : {}),
+  });
+  document.head.appendChild(jsonLd);
 }

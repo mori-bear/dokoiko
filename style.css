@@ -395,9 +395,9 @@ body {
   background: var(--btn-bg);
   color: var(--text);
   border: none;
-  border-radius: 100px;
-  padding: 10px 20px;
-  min-height: 44px; /* D1: iOS推奨タッチターゲット */
+  border-radius: 20px;
+  padding: 8px 16px;
+  min-height: 36px;
   font-size: 13px;
   font-family: inherit;
   cursor: pointer;
@@ -1246,6 +1246,12 @@ body {
   line-height: 1.6;
   opacity: 0.85;
 }
+
+.access-steps { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+.access-step { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #f9f9f9; border-radius: 8px; font-size: 13px; border-left: 3px solid #ddd; }
+.step-connector { text-align: center; color: #bbb; font-size: 11px; padding: 2px 0; }
+.step-icon { font-size: 18px; min-width: 28px; }
+.step-text { color: #333; line-height: 1.4; }
 
 .model-course {
   background: #f9f9f9;
@@ -2845,11 +2851,15 @@ button, a, .btn, .go-btn, .sel-btn, .retry-btn, .stay-btn {
 }
 .controls .sel-btn .stay-sub { font-size: 9px; display: block; }
 
-/* 日数: 3列 */
+/* 日数: 4列 */
 #days-group {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+#days-group .sel-btn {
+  padding: 8px 4px;
+  font-size: 12px;
 }
 
 /* テーマ（メイン6択）: 3列2行 */
