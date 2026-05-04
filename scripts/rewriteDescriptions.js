@@ -1,68 +1,75 @@
-/**
- * rewriteDescriptions.js — 全目的地の説明文を感情に刺さる文章にリライト
- * Claude API (claude-sonnet-4-6) 使用
- */
+import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Anthropic from '@anthropic-ai/sdk';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DEST_FILE = path.join(__dirname, '../src/data/destinations.json');
-
 const client = new Anthropic();
-
-const SYSTEM_PROMPT = `あなたは旅行コピーライターです。目的地の説明文を、読んだ瞬間に「行きたい」と思わせる40〜60文字の日本語にリライトしてください。
-
-ルール:
-- 五感を刺激する情景描写を入れる
-- 体験・感情を主体に（何があるかより、どんな気持ちになるか）
-- 旅情・非日常感を前面に
-- 体言止めや余韻を使う
-- 観光パンフレット的な表現（〜がある・〜できる）は避ける
-- リライト後の説明文のみを返す（説明・引用符・前置き不要）`;
+const destFile = path.join(__dirname, '../src/data/destinations.json');
+const data = JSON.parse(fs.readFileSync(destFile, 'utf8'));
 
 async function rewrite(dest) {
-  const tags = (dest.tags ?? []).slice(0, 3).join('・');
-  const userMsg = `目的地情報: name=${dest.displayName || dest.name}, region=${dest.prefecture ?? dest.region}, tags=${tags}
-現在の説明文: ${dest.description ?? '（なし）'}`;
-
-  const msg = await client.messages.create({
+  const res = await client.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 120,
-    system: SYSTEM_PROMPT,
-    messages: [{ role: 'user', content: userMsg }],
+    max_tokens: 300,
+    messages: [{
+      role: 'user',
+      content: `
+以下の旅行先の「description」と「catch」を
+感情に刺さる日本語にリライトしてください。
+
+目的地: ${dest.name}
+都道府県: ${dest.prefecture}
+現在のdescription: ${dest.description}
+現在のcatch: ${dest.catch}
+タグ: ${dest.tags?.join('、')}
+スポット: ${dest.spots?.join('、')}
+
+【ルール】
+- description: 50〜80文字。五感を刺激する情景描写。「何があるか」より「どんな気持ちになるか」
+- catch: 30〜50文字。体言止め・余韻・旅情。読んだ瞬間に行きたくなる一文。
+- 観光パンフレット的な表現は避ける
+- JSONのみ出力（説明不要）
+
+出力形式:
+{"description": "...", "catch": "..."}
+      `
+    }]
   });
-  return msg.content[0]?.text?.trim() ?? dest.description;
+
+  const text = res.content[0].text.trim();
+  const clean = text.replace(/```json|```/g, '').trim();
+  return JSON.parse(clean);
 }
 
-const data = JSON.parse(fs.readFileSync(DEST_FILE, 'utf-8'));
-const targets = data.filter(d => d.type === 'destination');
+async function main() {
+  let updated = 0;
+  let errors = 0;
 
-console.log(`リライト対象: ${targets.length}件\n`);
-
-let done = 0;
-const samples = [];
-
-for (const dest of data) {
-  if (dest.type !== 'destination') continue;
-  try {
-    const newDesc = await rewrite(dest);
-    dest.description = newDesc;
-    done++;
-    if (done <= 5) samples.push({ name: dest.name, desc: newDesc });
-    if (done % 50 === 0) {
-      process.stdout.write(`  ${done}/${targets.length}件完了...\n`);
-      fs.writeFileSync(DEST_FILE, JSON.stringify(data, null, 2), 'utf-8');
+  for (let i = 0; i < data.length; i++) {
+    const dest = data[i];
+    try {
+      const result = await rewrite(dest);
+      data[i].description = result.description;
+      data[i].catch = result.catch;
+      updated++;
+      console.log(`✅ ${dest.name}: ${result.catch}`);
+    } catch (e) {
+      errors++;
+      console.error(`❌ ${dest.name}: ${e.message}`);
     }
-  } catch (err) {
-    console.warn(`⚠️ ${dest.name}: ${err.message}`);
+
+    // 50件ごとに中間保存
+    if (updated % 50 === 0) {
+      fs.writeFileSync(destFile, JSON.stringify(data, null, 2), 'utf8');
+      console.log(`💾 ${updated}件保存済み`);
+    }
+
+    await new Promise(r => setTimeout(r, 500));
   }
-  await new Promise(r => setTimeout(r, 500));
+
+  fs.writeFileSync(destFile, JSON.stringify(data, null, 2), 'utf8');
+  console.log(`\n🎉 完了: ${updated}件更新 / ${errors}件エラー`);
 }
 
-fs.writeFileSync(DEST_FILE, JSON.stringify(data, null, 2), 'utf-8');
-
-console.log(`\n=== 完了: ${done}件リライト ===\n`);
-console.log('【サンプル5件】');
-samples.forEach(s => console.log(` ${s.name}: ${s.desc}`));
+main().catch(console.error);
