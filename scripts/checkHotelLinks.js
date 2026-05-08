@@ -35,7 +35,7 @@ async function checkUrl(url, timeoutMs = 8000) {
 async function main() {
   console.log('🔍 ホテルリンク健全性チェック開始...\n');
 
-  const destFile = path.join(__dirname, '../src/data/destinations.json');
+  const destFile = path.join(__dirname, '../data/destinations.json');
   const destinations = JSON.parse(fs.readFileSync(destFile, 'utf-8'));
 
   let okCount = 0;
