@@ -3676,11 +3676,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_青森_浅虫温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_青森_板留温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3692,11 +3687,6 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_青森_奥入瀬渓流温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_青森_大鰐温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -7517,6 +7507,66 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/niche_沖縄_4/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/sapporo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/aomori/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/maebashi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/yamagata/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/fukushima/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/kofu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/matsue/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/yamaguchi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/kochi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/saga/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/oita/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/miyazaki/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
