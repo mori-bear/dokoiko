@@ -2526,16 +2526,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_中岳温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_流山温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_濁川温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2547,11 +2537,6 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_登別温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_二股ラヂウム温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2596,27 +2581,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_うらかわ優駿ビレッジAERU/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_襟裳岬/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_小樽運河/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_オホーツクとっかりセンター/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_元和台海浜公園/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2641,11 +2611,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_トロッコ王国美深/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_納沙布岬/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2657,11 +2622,6 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_麓郷の森/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_社台滝/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2696,21 +2656,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_蘆別神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_網走神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_岩見沢神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_姥神大神宮/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2721,52 +2666,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_帯廣神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_上川神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_樽前山神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_徳山大神宮/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_永山神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_北海道護國神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_夕張神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_義経神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_呼人神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_留辺蘂神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2896,11 +2801,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_ぽんぴら温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_稚内温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2912,11 +2812,6 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_雷電温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_清水円山展望台/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2946,17 +2841,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_深川市桜山公園/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_丸瀬布森林公園いこいの森/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_メルヘン交差点/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2971,27 +2856,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_小川の滝/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_白ひげの滝/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_フレペの滝/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_館城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_南部陣屋/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3071,11 +2941,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_ヌプントムラウシ温泉/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_丸瀬布温泉/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3106,11 +2971,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_こもれび森のイバライド/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_水郷筑波国定公園/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3126,37 +2986,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_伊佐城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_小田城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_笠間城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_古河城/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_土浦城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_結城城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_茨城県護国神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3171,11 +3006,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_女化神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_笠間稲荷神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3186,17 +3016,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_国王神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_酒列磯前神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_茨城_静神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3212,11 +3032,6 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_茨城_水戸八幡宮/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_TAOYA日光霧降/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3251,11 +3066,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_大瀬観光やな/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_栃木_佐野プレミアム・アウトレット/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3271,62 +3081,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_那須高原りんどう湖ファミリー牧場/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_栃木_日光杉並木/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_栃木_宇都宮城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_榎本城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_烏山城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_神田城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_多功城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_中久喜城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_福原城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_壬生城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_鷲城/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_今泉八坂神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3346,22 +3106,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_木幡神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_栃木_日光東照宮/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_野木神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_栃木_薬師寺八幡宮/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3491,11 +3236,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_ジョイランド樽前/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_国後島/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3526,32 +3266,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_飯生神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_石狩弁天社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/gen_北海_浦臼神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_浦河神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_江別神社/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tabidokoiko.com/destinations/gen_北海_釜加神社/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
