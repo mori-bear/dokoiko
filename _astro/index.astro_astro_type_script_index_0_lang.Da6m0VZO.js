@@ -8,7 +8,7 @@ function W(t,e,a,r){const o=(a-t)*Math.PI/180,i=(r-e)*Math.PI/180,u=Math.sin(o/2
            loading="lazy" />
       ${t.unsplashCredit?`<p class="rc-unsplash-credit">Photo by <a href="${t.unsplashCreditUrl}" target="_blank" rel="noopener">${t.unsplashCredit}</a> on Unsplash</p>`:""}
     </div>
-    <span class="rc-eyebrow">${a?`${s.departure}から ${a}`:s.departure+"から"}</span>
+    <span class="rc-eyebrow">${a?`${s.departure}から ${a}`:""}</span>
     <h2 class="rc-name">${r}</h2>
     <p class="rc-pref">${t.prefecture||""}${t.region?"　"+t.region:""}</p>
     ${l.length?`<div class="rc-tags">${l.slice(0,5).map(f=>`<span class="rc-tag">${f}</span>`).join("")}</div>`:""}
