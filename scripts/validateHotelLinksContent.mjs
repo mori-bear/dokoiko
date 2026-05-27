@@ -48,15 +48,19 @@ const PREF_ROMAJI = {
 function judgeOk({ text, status, url, finalUrl }, dest) {
   if (status === 0) return { ok: false, reason: 'NETWORK' };
   if (status >= 400) return { ok: false, reason: `HTTP_${status}` };
-  // dest名 or pref名 が body 内 (タイトル含む) にあるか
-  const needles = [dest.name, dest.prefecture, dest.prefecture?.replace(/[県府都]$/,'')].filter(Boolean);
-  const romaji = PREF_ROMAJI[dest.prefecture];
-  if (romaji) needles.push(romaji);
+  // 複数県(例: "長野県・岐阜県") を分割
+  const prefList = (dest.prefecture || '').split(/[・,／\/]/).map(s => s.trim()).filter(Boolean);
+  const needles = [dest.name, dest.prefecture];
+  for (const p of prefList) {
+    needles.push(p);                                 // "長野県"
+    needles.push(p.replace(/[県府都]$/, ''));         // "長野"
+    const r = PREF_ROMAJI[p] || PREF_ROMAJI[p.replace(/[県府都]$/, '') + '県'];
+    if (r) needles.push(r);                          // "nagano"
+  }
   const haystack = (text || '') + ' ' + (finalUrl || '');
   for (const n of needles) {
     if (n && haystack.includes(n)) return { ok: true, hit: n };
   }
-  // pref が含まれないなら NG
   return { ok: false, reason: 'NO_PREF_OR_NAME' };
 }
 
