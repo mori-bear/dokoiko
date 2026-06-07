@@ -54,6 +54,11 @@ const SPOT_URL_W = 1024; // spots[].imageUrl に保存する幅
 
 const UA = 'dokoiko-image-upgrade/1.0 (https://dokoiiko.com; morizou0718@gmail.com)';
 
+// 特定ID/スロットに使うCommonsファイルを強制指定(検索/Vision無しで適用・帰属付き)
+const OVERRIDES = {
+  'gen_北海_奥美利河温泉': { main: 'File:Oku-Pirika_spa_gaikan.jpg' },
+};
+
 // ---------- HTTP ----------
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // 429/503/5xx はバックオフして自動リトライ(Wikimediaのレート制限対策)
@@ -127,11 +132,22 @@ function isPhotoCandidate(c) {
   if (ar < 0.45 || ar > 3.2) return false;     // 極端な縦長/横長(パノラマ・図表)を除外
   return true;
 }
+function stripHtml(s) { return (s || '').replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(); }
+// extmetadata から CC帰属情報を抽出
+function creditFrom(ii) {
+  const m = ii?.extmetadata || {};
+  return {
+    author: stripHtml(m.Artist?.value).replace(/\s*\(talk\)\s*$/i, '').trim() || '',
+    license: m.LicenseShortName?.value || '',           // 例: "CC BY-SA 4.0", "CC0", "Public domain"
+    url: ii?.descriptionurl || '',                       // Commonsのファイルページ
+    attributionRequired: m.AttributionRequired?.value === 'true',
+  };
+}
 async function commonsSearch(query, limit = 20) {
   const params = new URLSearchParams({
     action: 'query', format: 'json', generator: 'search',
     gsrsearch: query, gsrnamespace: '6', gsrlimit: String(limit),
-    prop: 'imageinfo', iiprop: 'url|size|mime', iiurlwidth: String(SAVE_W),
+    prop: 'imageinfo', iiprop: 'url|size|mime|extmetadata', iiurlwidth: String(SAVE_W),
   });
   const url = 'https://commons.wikimedia.org/w/api.php?' + params.toString();
   let j;
@@ -143,10 +159,31 @@ async function commonsSearch(query, limit = 20) {
     out.push({
       title: p.title || '', url: ii.url, thumbUrl: ii.thumburl,
       width: ii.width, height: ii.height, mime: ii.mime,
-      index: p.index ?? 999,
+      index: p.index ?? 999, credit: creditFrom(ii),
     });
   }
   return out;
+}
+// 単一ファイルの thumb + credit を取得(オーバーライド/バックフィル用)
+async function fileInfo(title, w) {
+  const params = new URLSearchParams({
+    action: 'query', format: 'json', titles: title,
+    prop: 'imageinfo', iiprop: 'url|size|mime|extmetadata', iiurlwidth: String(w),
+  });
+  try {
+    const j = JSON.parse(await httpGet('https://commons.wikimedia.org/w/api.php?' + params.toString()));
+    const p = Object.values(j?.query?.pages || {})[0];
+    const ii = p?.imageinfo?.[0]; if (!ii) return null;
+    return { title: p.title, thumbUrl: ii.thumburl, url: ii.url, width: ii.width, height: ii.height, mime: ii.mime, credit: creditFrom(ii) };
+  } catch { return null; }
+}
+// Commonsの画像URLから File:タイトルを復元(バックフィル用)
+function titleFromCommonsUrl(u) {
+  if (!u || !/upload\.wikimedia\.org\/wikipedia\/commons\//.test(u)) return null;
+  let m = u.match(/\/commons\/thumb\/[0-9a-f]\/[0-9a-f]{2}\/([^/]+)\//);
+  if (!m) m = u.match(/\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/?]+)/);
+  if (!m) return null;
+  return 'File:' + decodeURIComponent(m[1]);
 }
 
 async function gatherCandidates(queries) {
@@ -214,8 +251,24 @@ async function fetchJpeg(url) {
   return buf;
 }
 
-async function processSlot({ d, slotKey, subject, place, queries, currentLocalPath, currentRemoteUrl }) {
+async function processSlot({ d, slotKey, subject, place, queries, currentLocalPath, currentRemoteUrl, override, preferReplace }) {
   const log = { slot: slotKey, subject, replaced: false, reason: '', candScores: [] };
+
+  // オーバーライド: 指定 File: を検索/Vision無しで強制適用(帰属付き)
+  if (override) {
+    const saveW = slotKey === 'main' ? SAVE_W : SPOT_URL_W;
+    const fi = await fileInfo(override, saveW);
+    if (!fi || !fi.thumbUrl) { log.reason = 'OVERRIDE_NOT_FOUND'; return log; }
+    if (!DRY) {
+      const fname = slotKey === 'main' ? 'main.jpg' : `${slotKey}.jpg`;
+      await downloadTo(fi.thumbUrl, path.join(SITE_IMG, d.id, fname));
+      await downloadTo(fi.thumbUrl, path.join(PUB_IMG, d.id, fname));
+    }
+    log.replaced = true; log.newUrl = fi.thumbUrl; log.newWidth = fi.width;
+    log.credit = fi.credit; log.reason = 'REPLACED (override)';
+    return log;
+  }
+
   const cands = await gatherCandidates(queries);
   log.candCount = cands.length;
   if (!cands.length) { log.reason = 'NO_CANDIDATES'; return log; }
@@ -252,8 +305,10 @@ async function processSlot({ d, slotKey, subject, place, queries, currentLocalPa
   log.currentScore = curScore;
   log.currentMeta = curMeta;
 
-  // 置換判定: 現在が不合格(<=0)なら候補合格で置換。現在も合格なら明確差(MARGIN)が必要。
-  const beats = curScore <= 0 ? best.score > 0 : best.score >= curScore + MARGIN;
+  // 置換判定: 現在が不合格(<=0)なら候補合格で置換。
+  // preferReplace(未帰属ヒーロー)=同等以上で置換しCC帰属を獲得。通常は明確差(MARGIN)が必要。
+  const margin = preferReplace ? 0 : MARGIN;
+  const beats = curScore <= 0 ? best.score > 0 : best.score >= curScore + margin;
   if (!beats) { log.reason = `KEEP (cand ${best.score} <= cur ${curScore})`; return log; }
 
   // 適用: 保存幅の正規 thumburl を API から取得(スポットは1024で軽量化)
@@ -270,6 +325,7 @@ async function processSlot({ d, slotKey, subject, place, queries, currentLocalPa
   log.replaced = true;
   log.newUrl = saveThumb;
   log.newWidth = best.cand.width;
+  log.credit = best.cand.credit || null;   // CC帰属
   log.reason = `REPLACED (cand ${best.score} > cur ${curScore})`;
   return log;
 }
@@ -338,11 +394,27 @@ async function main() {
     }, null, 2));
   }
 
+  function setMainCredit(id, credit) {
+    if (!credit) return;
+    const pd = pubMap.get(id), sd = siteMap.get(id);
+    if (pd) pd.imageCredit = credit;
+    if (sd) sd.imageCredit = credit;
+    dirty = true;
+  }
+  function setSpotCredit(id, i, credit) {
+    if (!credit) return;
+    const pd = pubMap.get(id), sd = siteMap.get(id);
+    if (pd?.spots?.[i]) pd.spots[i].imageCredit = credit;
+    if (sd?.spots?.[i]) sd.spots[i].imageCredit = credit;
+    dirty = true;
+  }
+
   async function handleOne(d) {
     const rec = { id: d.id, name: d.name, prefecture: d.prefecture, slots: [] };
     try {
       const doMain = SLOTS === 'all' || SLOTS === 'main';
       const doSpots = SLOTS === 'all' || SLOTS === 'spots';
+      const ov = OVERRIDES[d.id] || {};
       if (doMain) {
         const r = await processSlot({
           d, slotKey: 'main',
@@ -351,7 +423,10 @@ async function main() {
           queries: heroQueries(d),
           currentLocalPath: path.join(PUB_IMG, d.id, 'main.jpg'),
           currentRemoteUrl: null,
+          override: ov.main || null,
+          preferReplace: !d.imageCredit,   // 未帰属ヒーローは同等以上で置換しCC帰属を獲得
         });
+        if (r.replaced && !DRY) setMainCredit(d.id, r.credit);
         rec.slots.push(r);
       }
       if (doSpots && Array.isArray(d.spots)) {
@@ -364,13 +439,21 @@ async function main() {
             queries: spotQueries(d, sp.name),
             currentLocalPath: null,
             currentRemoteUrl: sp.imageUrl || null,
+            override: ov[`spot-${i + 1}`] || null,
           });
-          // spots[].imageUrl 更新
           if (r.replaced && !DRY) {
             const pd = pubMap.get(d.id), sd = siteMap.get(d.id);
             if (pd?.spots?.[i]) pd.spots[i].imageUrl = r.newUrl;
             if (sd?.spots?.[i]) sd.spots[i].imageUrl = r.newUrl;
+            setSpotCredit(d.id, i, r.credit);
             dirty = true;
+          } else if (!r.replaced && !DRY && sp.imageUrl && !sp.imageCredit) {
+            // バックフィル: 維持された既存Commons画像の帰属を安価に補完(Vision不要)
+            const t = titleFromCommonsUrl(sp.imageUrl);
+            if (t) {
+              const fi = await fileInfo(t, SPOT_URL_W);
+              if (fi?.credit?.author || fi?.credit?.license) { setSpotCredit(d.id, i, fi.credit); r.creditBackfilled = true; }
+            }
           }
           rec.slots.push(r);
         }
