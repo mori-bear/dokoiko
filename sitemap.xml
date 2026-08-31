@@ -11,6 +11,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://tabidokoiko.com/kyushu-fukko/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://tabidokoiko.com/destinations/kamakura/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6107,6 +6112,51 @@
   </url>
   <url>
     <loc>https://tabidokoiko.com/destinations/shomyoji/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/kannojigoku/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/yunohira-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/hagenoyu-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/yunotsuru-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/tsuetate-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/funagoya-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/kumanokawa-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/furuyu-onsen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabidokoiko.com/destinations/hinokage-onsen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
